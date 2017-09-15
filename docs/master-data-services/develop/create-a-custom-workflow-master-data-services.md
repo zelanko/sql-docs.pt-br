@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dacc515af7f4d05fc2bad2fd43535bc27c13ea76
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 290f862bc9e0295d940a832e07415831bab060bb
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
@@ -56,13 +56,13 @@ ms.lasthandoff: 08/02/2017
 5.  Aplique a regra de negócio a um membro que dispara seu fluxo de trabalho personalizado.  
   
 ### <a name="create-the-workflow-handler-assembly"></a>Crie o assembly de manipulador de fluxo de trabalho  
- Um fluxo de trabalho personalizado é um assembly de biblioteca de classe .NET que implementa a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. O Serviço de Integração de Fluxo de Trabalho MDS do SQL Server chama o método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> para executar seu código. Por exemplo de código que implementa <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>, consulte [exemplo de fluxo de trabalho personalizado &#40; Master Data Services &#41; ](../../master-data-services/develop/create-a-custom-workflow-example.md).  
+ Um fluxo de trabalho personalizado é um assembly de biblioteca de classe .NET que implementa a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. O Serviço de Integração de Fluxo de Trabalho MDS do SQL Server chama o método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> para executar seu código. Para obter o código de exemplo que implementa <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>, consulte [Exemplo de fluxo de trabalho personalizado&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  
   
  Siga estas etapas para usar o Visual Studio 2010 para criar um assembly que o Serviço de Integração de Fluxo de trabalho MDS do SQL Server possa chamar para tratar um fluxo de trabalho personalizado:  
   
-1.  No Visual Studio 2010, crie um novo **biblioteca de classes** projeto que usa o idioma de sua escolha. Para criar uma biblioteca de classes do c#, selecione a **Visual C# \Windows** tipos de projeto e selecione o **biblioteca de classes** modelo. Insira um nome para seu projeto, como **MDSWorkflowTest**e clique em **Okey**.  
+1.  No Visual Studio 2010, crie um novo projeto **Biblioteca de Classes** que usa a linguagem de sua escolha. Para criar uma Biblioteca de Classes C#, selecione os tipos de projetos **Visual C#\Windows** e selecione o modelo **Biblioteca de Classes**. Insira um nome para seu projeto, como **MDSWorkflowTest**, e clique em **OK**.  
   
-2.  Adicione uma referência a Microsoft.MasterDataServices.WorkflowTypeExtender.dll. Este assembly pode ser encontrado na \<sua pasta de instalação > \Master Data Services\WebApplication\bin.  
+2.  Adicione uma referência a Microsoft.MasterDataServices.WorkflowTypeExtender.dll. Esse assembly pode ser localizado em \<Sua pasta de instalação>\Master Data Services\WebApplication\bin.  
   
 3.  Adicione 'using Microsoft.MasterDataServices.Core.Workflow;' ao seu arquivo de código C#.  
   
@@ -70,12 +70,12 @@ ms.lasthandoff: 08/02/2017
   
 5.  Implemente a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. O método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> é chamado pelo Serviço de Integração de Fluxo de Trabalho MDS SQL Server para iniciar o fluxo de trabalho.  
   
-6.  Copie o assembly para o local do serviço SQL Server MDS fluxo de trabalho de integração do executável, denominado Microsoft.MasterDataServices.Workflow.exe, em \<sua pasta de instalação > \Master Data Services\WebApplication\bin.  
+6.  Copie seu assembly no local do executável do Serviço de Integração de Fluxo de trabalho MDS do SQL Server, denominado Microsoft.MasterDataServices.Workflow.exe, em \<Sua pasta de instalação>\Master Data Services\WebApplication\bin.  
   
 ### <a name="configure-sql-server-mds-workflow-integration-service"></a>Configurar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server  
  Edite o arquivo de configuração do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para incluir informações de conexão do seu banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e associe uma marca a seu assembly de manipulador de fluxo de trabalho seguindo estas etapas:  
   
-1.  Localize Microsoft.masterdataservices.Workflow.exe em \<sua pasta de instalação > \Master Data Services\WebApplication\bin.  
+1.  Localize Microsoft.MasterDataServices.Workflow.exe.config em \<Sua pasta de instalação>\Master Data Services\WebApplication\bin.  
   
 2.  Adicione as informações de conexão de banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] à configuração "ConnectionString". Se a sua instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usar agrupamento com diferenciação de maiúsculas e minúsculas, o nome do banco de dados deverá ser inserido exatamente da mesma forma que no banco de dados. Por exemplo, a marca de configuração completa poderia se parecer com:  
   
@@ -93,21 +93,21 @@ ms.lasthandoff: 08/02/2017
     </setting>  
     ```  
   
-     O texto interno do \<valor > marca está na forma de \<Workflow tag > =\<nome de tipo qualificado de assembly de fluxo de trabalho >. \<Marcação de fluxo de trabalho > é um nome que você usa para identificar o assembly de manipulador de fluxo de trabalho quando você cria uma regra de negócio em [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<nome de tipo qualificado de assembly de fluxo de trabalho > é o nome qualificado de namespace da classe do fluxo de trabalho, seguido por uma vírgula, seguido do nome de exibição do assembly. Se seu assembly usar um nome forte, você também terá que incluir informações de versão e seu PublicKeyToken. Você pode incluir vários \<Configuração > marcas se você tiver criado vários manipuladores de fluxo de trabalho para diferentes tipos de fluxos de trabalho.  
+     O texto interno da marca \<value> está na forma de \<Workflow tag>=\<assembly-qualified workflow type name>. \<Workflow tag> é um nome que você usa para identificar o assembly de manipulador de fluxo de trabalho ao criar uma regra de negócios em [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<assembly-qualified workflow type name> é o nome qualificado de namespace da sua classe de fluxo de trabalho, seguido por uma vírgula, seguida pelo nome de exibição do assembly. Se seu assembly usar um nome forte, você também terá que incluir informações de versão e seu PublicKeyToken. Você poderá incluir várias marcas \<setting> se tiver criado vários manipuladores de fluxo de trabalho para tipos diferentes de fluxos de trabalho.  
   
 > [!NOTE]  
->  Dependendo da configuração do seu servidor, você poderá visualizar um erro do tipo "Acesso negado" ao tentar salvar o arquivo Microsoft.MasterDataServices.Workflow.exe.config. Se isso ocorrer, desabilite temporariamente o UAC (Controle de Conta de Usuário) no servidor. Para fazer isso, abra o painel de controle, clique em **sistema e segurança**. Em **Central de ações**, clique em **alterar configurações de controle de conta de usuário**. No **configurações de controle de conta de usuário** caixa de diálogo, deslize a barra na parte inferior para que você nunca seja notificado. Reinicie seu computador e repita as etapas anteriores para editar seu arquivo de configuração. Depois de salvar o arquivo, reinicie suas configurações de UAC no nível padrão.  
+>  Dependendo da configuração do seu servidor, você poderá visualizar um erro do tipo "Acesso negado" ao tentar salvar o arquivo Microsoft.MasterDataServices.Workflow.exe.config. Se isso ocorrer, desabilite temporariamente o UAC (Controle de Conta de Usuário) no servidor. Para fazer isso, abra o Painel de controle e clique em **Sistema e Segurança**. Em **Central de Ações**, clique em **Alterar Configurações de Controle de Conta de Usuário**. Na caixa de diálogo **Configurações de Controle de Conta de Usuário**, deslize a barra para a parte inferior para que você nunca seja notificado. Reinicie seu computador e repita as etapas anteriores para editar seu arquivo de configuração. Depois de salvar o arquivo, reinicie suas configurações de UAC no nível padrão.  
   
-### <a name="start-sql-server-mds-workflow-integration-service"></a>Iniciar o serviço de integração de fluxo de trabalho MDS do SQL Server  
+### <a name="start-sql-server-mds-workflow-integration-service"></a>Iniciar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server  
  Por padrão, o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server não é instalado. Você deve instalar o serviço antes de usá-lo. Para obter a segurança máxima, crie um usuário local para o serviço e conceda a ele apenas as permissões necessárias para executar operações de fluxo de trabalho. Para criar um usuário, instale e inicie o serviço e siga estas etapas:  
   
 1.  Use o gerenciador Usuários e Grupos Locais para criar um usuário local denominado, por exemplo, mds_workflow_service.  
   
 2.  Use o SQL Server Management Studio para conceder a permissão de usuário a mds_workflow_service para executar o procedimento armazenado [mdm]. [udpExternalActionsGet]. Para fazer isso, crie um novo logon para a conta mds_workflow_service, crie um novo usuário no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], mapeie esse usuário para o logon de mds_workflow_service e conceda ao usuário a permissão de EXECUTE para o procedimento armazenado [mdm]. [udpExternalActionsGet].  
   
-3.  Conceda a permissão de usuário a mds_workflow_service para executar o assembly de manipulador de fluxo de trabalho. Para fazer isso, adicione o usuário mds_workflow_service o **segurança** guia o **propriedades** do fluxo de trabalho assembly de manipulador e conceda ao usuário mds_workflow_service permissões READ e EXECUTE.  
+3.  Conceda a permissão de usuário a mds_workflow_service para executar o assembly de manipulador de fluxo de trabalho. Para fazer isso, adicione o usuário mds_workflow_service à guia **Segurança** das **Propriedades** do assembly de manipulador de fluxo de trabalho e conceda ao usuário mds_workflow_service as permissões READ e EXECUTE.  
   
-4.  Conceda a permissão de usuário a mds_workflow_service para executar o executável do Serviço de Integração de Fluxo de Trabalho MDS do SQL Server. Para fazer isso, adicione o usuário mds_workflow_service o **segurança** guia do **propriedades** de Microsoft.MasterDataServices.Workflow.exe, em \<sua pasta de instalação > \Master Data Services\WebApplication\bin e conceda ao usuário mds_workflow_service permissões READ e EXECUTE.  
+4.  Conceda a permissão de usuário a mds_workflow_service para executar o executável do Serviço de Integração de Fluxo de Trabalho MDS do SQL Server. Para fazer isso, adicione o usuário de mds_workflow_service à guia **Segurança** das **Propriedades** de Microsoft.MasterDataServices.Workflow.exe, em \<Sua pasta de instalação>\Master Data Services\WebApplication\bin e conceda ao usuário mds_workflow_service permissões READ e EXECUTE.  
   
 5.  Instale o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server usando o utilitário de instalação .NET, denominado InstallUtil.exe. InstallUtil.exe pode ser encontrado na pasta de instalação .NET, como C:\Windows\Microsoft.NET\Framework\v4.0.30319\\. Instale o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server inserindo o seguinte em um prompt de comando elevado:  
   
@@ -117,27 +117,27 @@ ms.lasthandoff: 08/02/2017
   
      Especifique o usuário mds_workflow_service quando solicitado durante a instalação.  
   
-6.  Inicie o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server usando o snap-in Serviços. Para fazer isso, localizar o serviço de integração de fluxo de trabalho do SQL Server MDS no snap-in Serviços, selecione-o e clique no **iniciar** link.  
+6.  Inicie o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server usando o snap-in Serviços. Para fazer isso, localize o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server no snap-in Serviços, selecione-o e clique no link **Iniciar**.  
   
 ### <a name="create-a-workflow-business-rule"></a>Criar uma regra de negócio de fluxo de trabalho  
- Use o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para criar e publicar uma regra de negócio que iniciará o fluxo de trabalho quando aplicada. Você deve assegurar que sua regra de negócio contenha ações que alteram valores de atributo, de forma que a regra seja avaliada como falsa depois de ser aplicada uma vez. Por exemplo, sua regra de negócio pode ser avaliada como verdadeira quando um valor do atributo Price for maior que 500 e o valor do atributo Approved estiver em branco. A regra pode incluir duas ações: uma para definir o valor do atributo Approved como Pending e uma para iniciar o fluxo de trabalho. Alternativamente, talvez você queira criar uma regra que use a condição "has changed" e adicionar seus atributos a grupos de controle de alterações. Para obter mais informações sobre regras de negócio, consulte [regras de negócio &#40; Master Data Services &#41; ](../../master-data-services/business-rules-master-data-services.md).  
+ Use o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para criar e publicar uma regra de negócio que iniciará o fluxo de trabalho quando aplicada. Você deve assegurar que sua regra de negócio contenha ações que alteram valores de atributo, de forma que a regra seja avaliada como falsa depois de ser aplicada uma vez. Por exemplo, sua regra de negócio pode ser avaliada como verdadeira quando um valor do atributo Price for maior que 500 e o valor do atributo Approved estiver em branco. A regra pode incluir duas ações: uma para definir o valor do atributo Approved como Pending e uma para iniciar o fluxo de trabalho. Alternativamente, talvez você queira criar uma regra que use a condição "has changed" e adicionar seus atributos a grupos de controle de alterações. Para saber mais sobre regras de negócio, veja [Regras de negócio &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md).  
   
  Crie uma regra de negócio que inicie um fluxo de trabalho personalizado no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] seguindo estas etapas:  
   
-1.  No editor de regras de negócios de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], depois de especificar as condições da regra de negócio, arraste o **Iniciar fluxo de trabalho** ação do **ações externas** lista para o **, em seguida,** do painel **ação** rótulo.  
+1.  No editor de regra de negócios do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], depois que você especificar as condições da sua regra de negócios, arraste a ação **Iniciar Fluxo de Trabalho** da lista **Ações externas** para o rótulo **Ação** do painel **THEN**.  
   
-2.  No **Editar ação** painel, no **tipo de fluxo de trabalho** , digite a marca que identifica seu assembly de manipulador de fluxo de trabalho. Essa é a marca que você especificou no arquivo de configuração do assembly, por exemplo TEST.  
+2.  No painel **Editar Ação**, na caixa **Tipo de fluxo de trabalho**, digite a marca que identifica seu assembly de manipulador de fluxo de trabalho. Essa é a marca que você especificou no arquivo de configuração do assembly, por exemplo TEST.  
   
-3.  Opcionalmente, selecione o **incluir dados de membro** caixa de seleção. Escolha essa opção para incluir nomes de atributo e valores no XML transmitido ao manipulador de fluxo de trabalho.  
+3.  Opcionalmente, marque a caixa de seleção **Incluir dados de membro**. Escolha essa opção para incluir nomes de atributo e valores no XML transmitido ao manipulador de fluxo de trabalho.  
   
-4.  No **site de fluxo de trabalho** , digite o nome de um site. Talvez isso não se aplique ao seu fluxo de trabalho personalizado, mas pode ser usado para contexto adicionado.  
+4.  Na caixa **Local do fluxo de trabalho**, digite o nome de um site. Talvez isso não se aplique ao seu fluxo de trabalho personalizado, mas pode ser usado para contexto adicionado.  
   
-5.  No **nome do fluxo de trabalho** , digite o nome do fluxo de trabalho do Visual Studio. Talvez isso não se aplique ao seu fluxo de trabalho personalizado, mas pode ser usado para contexto adicionado.  
+5.  Na caixa **Nome do fluxo de trabalho**, digite o nome do seu fluxo de trabalho do Visual Studio. Talvez isso não se aplique ao seu fluxo de trabalho personalizado, mas pode ser usado para contexto adicionado.  
   
 6.  Salve e publique a regra de negócio.  
   
 ### <a name="apply-business-rules-to-start-a-workflow"></a>Aplicar regras de negócios para iniciar um fluxo de trabalho  
- Aplique a regra de negócio a seus dados para iniciar o fluxo de trabalho. Para fazer isso, use o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para editar a entidade que contém os membros que você deseja validar. Clique em **aplicar regras de negócio**. Em resposta à regra de negócio, o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] popula a fila do Service Broker do banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Quando Serviço de Integração de Fluxo de Trabalho MDS do SQL Server verificar a fila, enviará os dados ao assembly de manipulador de fluxo de trabalho especificado e limpará a fila. O assembly de manipulador de fluxo de trabalho executa qualquer ação que você tenha codificado para ele.  
+ Aplique a regra de negócio a seus dados para iniciar o fluxo de trabalho. Para fazer isso, use o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para editar a entidade que contém os membros que você deseja validar. Clique em **Aplicar regras de negócio**. Em resposta à regra de negócio, o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] popula a fila do Service Broker do banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Quando Serviço de Integração de Fluxo de Trabalho MDS do SQL Server verificar a fila, enviará os dados ao assembly de manipulador de fluxo de trabalho especificado e limpará a fila. O assembly de manipulador de fluxo de trabalho executa qualquer ação que você tenha codificado para ele.  
   
 ## <a name="troubleshoot-custom-workflows"></a>Solucionar problemas fluxos de trabalho personalizados  
  Se seu assembly de manipulador de fluxo de trabalho não receber dados, você poderá tentar depurar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server ou exibir a fila do Service Broker.  
@@ -152,10 +152,10 @@ ms.lasthandoff: 08/02/2017
 3.  No [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], atualize seu membro e aplique regras de negócios novamente. Logs detalhados são exibidos na janela do console.  
   
 ### <a name="view-the-service-broker-queue"></a>Exibir a fila do Service Broker  
- A fila do Service Broker que contém os dados mestre transmitidos como parte do fluxo de trabalho é: mdm.microsoft/mdm/queue/externalaction. As filas podem ser encontradas no **Pesquisador de objetos** do SQL Management Studio sob o nó do Service Broker do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] banco de dados. Esteja ciente de que, se o serviço limpou a fila corretamente, ela fila estará vazia.  
+ A fila do Service Broker que contém os dados mestre transmitidos como parte do fluxo de trabalho é: mdm.microsoft/mdm/queue/externalaction. As filas podem ser localizadas no **Pesquisador de Objetos** do SQL Management Studio sob o nó do Service Broker do banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Esteja ciente de que, se o serviço limpou a fila corretamente, ela fila estará vazia.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de fluxo de trabalho personalizado &#40; Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
- [Descrição do fluxo de trabalho personalizado XML &#40; Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
+ [Exemplo de fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
+ [Descrição XML do fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1a32cc8f778496f5609d44c17b69623b75b8c240
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-model-master-data-services"></a>Criar um modelo (Master Data Services)
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
   
  Para cada modelo criado, uma linha com oito colunas é adicionada à grade. As oito colunas são:  
   
--   **Status**: o status do modelo. Quando você clica o **Salvar modelo** botão, o ![atualização](../master-data-services/media/mds-model-status-updating.png "atualização") imagem for exibida, indicando que o modelo está atualizando. Se houver erros ao criar ou editar um modelo, o ![erro](../master-data-services/media/mds-model-status-error.png "erro") imagem é exibida. Caso contrário, o status será OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") será exibida.  
+-   **Status**: o status do modelo. Quando você clica no botão **Salvar modelo**, a imagem ![Atualizando](../master-data-services/media/mds-model-status-updating.png "Atualizando") é exibida, indicando que o modelo está sendo atualizando. Se houver erros ao criar ou editar um modelo, a imagem ![Erro](../master-data-services/media/mds-model-status-error.png "Erro") será exibida. Caso contrário, o status será OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") será exibida.  
   
 -   **Nome**: o nome do modelo.  
   
@@ -79,9 +79,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [Entidades &#40; Master Data Services &#41;](../master-data-services/entities-master-data-services.md)   
- [Excluir um modelo de &#40; Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Editar modelo &#40; Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
+ [Excluir um modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Editar Modelo &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
  [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

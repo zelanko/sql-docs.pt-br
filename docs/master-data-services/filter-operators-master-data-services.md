@@ -1,28 +1,33 @@
 ---
-title: "Operadores de filtro (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Operadores de filtro (Master Data Services) | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0d83ee33afcd50635a163a56f977e77fc6e6c68a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
-# Operadores de filtro (Master Data Services)
+# <a name="filter-operators-master-data-services"></a>Operadores de filtro (Master Data Services)
   Ao filtrar uma lista de membros, os seguintes operadores estão disponíveis.  
   
 > [!NOTE]  
 >  Quando você filtrar por vários critérios, todos os critérios devem ser verdadeiros para retornar resultados. Por exemplo, SquareFeet = 2000 **AND** Division <> 123.  
   
-## Operadores de filtro  
+## <a name="filter-operators"></a>Operadores de filtro  
   
 |Nome do controle|Description|  
 |------------------|-----------------|  

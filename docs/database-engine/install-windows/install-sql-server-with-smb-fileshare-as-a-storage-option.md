@@ -1,8 +1,10 @@
 ---
-title: "Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento | Microsoft Docs"
+title: Instalar o SQL Server com o armazenamento de compartilhamento de arquivo SMB | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,28 +17,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento
-  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os bancos de dados do sistema (Mestre, Modelo, MSDB e TempDB) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos SMB (protocolo SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar o SQL Server com o armazenamento de compartilhamento de arquivo SMB
+A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os bancos de dados do sistema (Mestre, Modelo, MSDB e TempDB) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos SMB (protocolo SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  O fluxo de arquivos não tem suporte em um compartilhamento de arquivos SMB.  
   
 ## <a name="installation-considerations"></a>Considerações sobre instalação  
   
-### <a name="smb-file-share-formats"></a>Formatos de compartilhamento de arquivo SMB:  
+### <a name="smb-fileshare-formats"></a>Formatos de compartilhamento de arquivo SMB:  
  Embora especificando o compartilhamento de arquivos SMB, os formatos de caminho a seguir têm suporte da UNC (Convenção de Nomenclatura Universal) para bancos de dados autônomos e FCI.  
   
 -   \\\ServerName\ShareName\  
   
 -   \\\ServerName\ShareName  
   
- Para obter mais informações sobre UNC, veja [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ Para obter mais informações sobre UNC, consulte [UNC](http://msdn.microsoft.com/library/gg465305.aspx).  
   
  O caminho UNC de loopback (um caminho UNC cujo nome de servidor é localhost, 127.0.0.1 ou o nome do computador local) não tem suporte. Como um caso especial, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o cluster de servidor de arquivos que está hospedado no mesmo nó em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado também não tem suporte. Para impedir essa situação, é recomendável que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o cluster de servidor de arquivos seja criado em clusters do Windows separados.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Unidades de rede mapeadas.  
   
-### <a name="supported-data-definition-language-ddl-statements"></a>Instruções DLL (linguagem de definição de dados) com suporte  
+### <a name="supported-data-definition-language-ddl-statements"></a>Instruções DDL (linguagem de definição de dados) com suporte  
  As instruções DDL de [!INCLUDE[tsql](../../includes/tsql-md.md)] e os procedimentos armazenados de mecanismo de banco de dados a seguir dão suporte a compartilhamentos de arquivos SMB:  
   
 1.  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
@@ -60,10 +62,6 @@ ms.lasthandoff: 08/02/2017
 3.  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 4.  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
-  
-5.  [sp_attach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
-  
-6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
   
 ### <a name="installation-options"></a>Opções de instalação  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Considerações sobre o sistema operacional (protocolo SMB vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Sistemas operacionais Windows diferentes têm versões de protocolo SMB diferentes e a versão do protocolo SMB é transparente para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode localizar os benefícios das versões diferentes do protocolo SMB com relação ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-|Sistema operacional|versão do protocolo SMB2|Benefícios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Sistema operacional|Versão do protocolo SMB2|Benefícios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Desempenho aprimorado em relação a versões de SMB anteriores.<br /><br /> Durabilidade, que ajuda a recuperar de pequenos problemas de rede temporários.|  
 |[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluindo o Server Core|2.1|Suporte para MTU grande, que beneficia transferências de dados grandes, como backup e restauração de SQL. Este recurso deve ser habilitado pelo usuário. Para obter mais detalhes sobre como habilitar essa funcionalidade, veja [Novidades no SMB](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Melhorias de desempenho significativas, especificamente para cargas de trabalho de estilo OLTP do SQL. Estas melhorias de desempenho exigem a aplicação de um hotfix. Para obter mais informações sobre o hotfix, confira [este link](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320).|  
@@ -102,12 +100,12 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     >  As permissões de compartilhamento FULL CONTROL e as permissões NTFS nas pastas de compartilhamento SMB devem ser restritas a: conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e usuários do Windows com funções de servidor admin.  
   
-     Era recomendado usar a conta de domínio como uma conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a conta do sistema for usada como uma conta de serviço, conceda as permissões para a conta do computador no formato: *<domain_name>***\\***<computer_name>***$**.  
+     Era recomendado usar a conta de domínio como uma conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a conta do sistema for usada como uma conta de serviço, conceda as permissões para a conta do computador no formato: \<*domain_name*>\\<*computer_name*>\*$*.  
   
     > [!NOTE]  
     >  Durante instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será necessário especificar a conta de domínio como uma conta de serviço se o compartilhamento de arquivos SMB for especificado como uma opção de armazenamento. Com o compartilhamento de arquivos SMB, a conta de Sistema somente poderá ser especificada como uma conta de serviço após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
     >   
-    >  Contas virtuais não podem ser autenticadas em um local remoto. Todas as contas virtuais usam a permissão da conta de máquina. Provisione a conta do computador no formato *<domain_name>***\\***<computer_name>***$**.  
+    >  Contas virtuais não podem ser autenticadas em um local remoto. Todas as contas virtuais usam a permissão da conta de máquina. Provisione a conta do computador no formato \<*domain_name*>\\<*computer_name*>\*$*.  
   
 -   A conta usada para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter permissões FULL CONTROL na pasta de compartilhamento de arquivos SMB usada como o diretório de dados ou qualquer outra pasta de dados (diretório de banco de dados de usuário, diretório de log de banco de dados de usuário, diretório de TempDB, diretório de log TempDB, diretório de backup) durante a instalação de cluster.  
   

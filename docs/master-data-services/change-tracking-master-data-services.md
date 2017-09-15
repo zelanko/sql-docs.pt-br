@@ -13,14 +13,14 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6851da978ab681f0236bc9737e7f628c0089abe0
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0def93a0f88d19ba894508d4a5d39de59dbd7a28
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-tracking-master-data-services"></a>Controle de alterações (Master Data Services)
@@ -36,15 +36,15 @@ ms.lasthandoff: 08/02/2017
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Adicionar atributos a um grupo de controle de alterações.|[Adicionar atributos a um grupo de controle de alterações &#40; Master Data Services &#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|Criar uma regra de negócios que inicie ações com base em alterações de atributos.|[Iniciar ações com base em alterações de valor de atributo &#40; Master Data Services &#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Adicionar atributos a um grupo de controle de alterações.|[Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Criar uma regra de negócios que inicie ações com base em alterações de atributos.|[Iniciar ações com base em alterações no valor do atributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Validação &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [Validação &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Regras de negócio &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [Atributos &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

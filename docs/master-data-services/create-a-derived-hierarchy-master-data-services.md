@@ -14,14 +14,14 @@ helpviewer_keywords:
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 65676239fa42e9e9f067dbd1973c005bd4198180
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 29edeb9cb8fd885c5339cb8f9329e0d9f16db78d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Criar uma hierarquia derivada (Master Data Services)
@@ -61,8 +61,8 @@ ms.lasthandoff: 08/02/2017
 9. Clique em **Voltar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Hierarquias derivadas &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
- [Hierarquias derivadas com extremidades explícitas &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Atributos baseados em domínio &#40; Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+ [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
+ [Hierarquias derivadas com limites explícitos &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [Atributos baseados em domínio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
   

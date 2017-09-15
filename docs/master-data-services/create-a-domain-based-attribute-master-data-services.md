@@ -16,14 +16,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 963b974e68187ecf4f42ad06c90ff1cb0ab3aa67
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a8242d0b8f5285201c32721c793aff995d50b88d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Criar um atributo baseado em domínio (Master Data Services)
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 |Coluna|Description|  
 |------------|-----------------|  
-|Status|O status do atributo.<br /><br /> Quando você clica em Salvar, o ![ícone de status de atualização](../master-data-services/media/mds-statusicon-updating.png "ícone de status de atualização") é exibida, indicando que o atributo está atualizando.<br /><br /> Se houver erros ao criar ou editar um atributo, o ![ícone de status de erro](../master-data-services/media/mds-statusicon-error.png "ícone de status de erro") imagem é exibida.<br /><br /> Caso contrário, o status é Okey e o ![ícone de status Okey](../master-data-services/media/mds-statusicon-ok.png "ícone de status Okey") imagem é exibida.|  
+|Status|O status do atributo.<br /><br /> Quando você clica em Salvar, a imagem ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização") é exibida, indicando que o atributo está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um atributo, a imagem ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro") será exibida.<br /><br /> Caso contrário, o status será OK e a imagem ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK") será exibida.|  
 |Nome|O nome do atributo.|  
 |Nome de Exibição|O nome de exibição do atributo.|  
 |Description|A descrição do atributo.|  
@@ -103,8 +103,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos baseados em domínio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Criar uma hierarquia derivada &#40; Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Alterar um nome de atributo e o tipo de dados &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Criar uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Alterar um nome de atributo e um tipo de dados &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Excluir um atributo &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

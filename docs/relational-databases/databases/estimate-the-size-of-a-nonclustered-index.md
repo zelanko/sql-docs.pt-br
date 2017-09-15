@@ -23,11 +23,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8302d2481e9fe2f6d47c87e2fbc9accd2e3c560d
+ms.translationtype: HT
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: 28b5c5dbf4ab85b11818648e2daf62621df64219
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar o tamanho de um índice não clusterizado
@@ -185,7 +185,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Calcule o tamanho da linha de índice:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (para a sobrecarga de cabeçalho de uma linha do índice) + 6 (para o ponteiro de ID da página filho)  
+     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (para a sobrecarga de cabeçalho de uma linha do índice)  
   
 6.  Calcule o número de linhas de índice por página (8.096 bytes livres por página):  
   

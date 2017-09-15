@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 534cc0e8f798c8d231936e1c89835257832c4b16
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
@@ -45,8 +45,7 @@ A figura a seguir mostra uma exibição de alto nível de um grupo de disponibil
 <a name="fig1"></a>
 ![Exibição de alto nível de um grupo de disponibilidade distribuída][1]
 
-Você pode configurar a movimentação de dados em grupos de disponibilidade distribuídos como síncrona ou assíncrona. No entanto, a movimentação de dados é ligeiramente diferente nos grupos de disponibilidade distribuídos comparado a um grupo de disponibilidade tradicional. Embora cada grupo de disponibilidade tenha uma réplica primária, há apenas uma cópia dos bancos de dados que fazem parte de um grupo de disponibilidade distribuído que pode aceitar inserções, atualizações e exclusões. Conforme mostrado na figura a seguir, o AG 1 é o grupo de disponibilidade primário. Sua réplica primária envia transações para as réplicas secundárias do AG 1 e a réplica primária do AG 2. Em seguida, a réplica primária do AG 2 mantém as réplicas secundárias do AG 2 atualizadas. 
-
+Você pode configurar a movimentação de dados em grupos de disponibilidade distribuídos como síncrona ou assíncrona. No entanto, a movimentação de dados é ligeiramente diferente nos grupos de disponibilidade distribuídos comparado a um grupo de disponibilidade tradicional. Embora cada grupo de disponibilidade tenha uma réplica primária, há apenas uma cópia dos bancos de dados que fazem parte de um grupo de disponibilidade distribuído que pode aceitar inserções, atualizações e exclusões. Conforme mostrado na figura a seguir, o AG 1 é o grupo de disponibilidade primário. Sua réplica primária envia transações para as réplicas secundárias do AG 1 e a réplica primária do AG 2. A réplica primária do AG 2 também é conhecida como um *encaminhador*. Um encaminhador é uma réplica primária em um grupo de disponibilidade secundário em um grupo de disponibilidade distribuída. O encaminhador recebe as transações da réplica primária no grupo de disponibilidade primária e os encaminha para as réplicas secundárias em seu próprio grupo de disponibilidade.  O encaminhador mantém as réplicas secundárias do AG 2 atualizadas. 
 
 ![Grupo de disponibilidade distribuída e sua movimentação de dados][2]
 
@@ -136,7 +135,7 @@ Os grupos de disponibilidade distribuídos podem ajudar você a expandir um farm
 * Use a réplica primária do segundo grupo de disponibilidade em um grupo de disponibilidade distribuído para criar outro grupo de disponibilidade distribuído, mesmo que o banco de dados não esteja no estado RECOVERY.
 * Você também pode usar a réplica primária do primeiro grupo de disponibilidade para criar outro grupo de disponibilidade distribuído.
 
-Em outras palavras, uma réplica primária pode fazer parte de dois grupos de disponibilidade distribuídos diferentes. A figura a seguir mostra AG 1 e AG 2 fazendo parte do AG 1 Distribuído, enquanto AG 2 e AG 3 fazem parte do AG 2 Distribuído. A réplica primária do AG 2 é uma réplica secundária para o AG 1 Distribuído e uma réplica primária do AG 2 Distribuído.
+Em outras palavras, uma réplica primária pode fazer parte de dois grupos de disponibilidade distribuídos diferentes. A figura a seguir mostra AG 1 e AG 2 fazendo parte do AG 1 Distribuído, enquanto AG 2 e AG 3 fazem parte do AG 2 Distribuído. A réplica primária (ou encaminhador) do AG 2 é uma réplica secundária para o AG 1 Distribuído e uma réplica primária do AG 2 Distribuído.
 
 ![Colocação em escala das leituras com grupos de disponibilidade distribuída][5]
 

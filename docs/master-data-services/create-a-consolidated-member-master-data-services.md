@@ -16,17 +16,17 @@ helpviewer_keywords:
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a50e1b7136542b4a230a461a81813e10730fba09
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a48fd41c90f01925b2cd884f33cf37bc0407d533
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
+# <a name="create-a-consolidated-member-master-data-services"></a>Criar um membro consolidado (Master Data Services)
   No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro consolidado quando você desejar um nó pai para uma hierarquia explícita. Se você quiser adicionar dados em massa, use as tabelas de preparo. Para obter mais informações, consulte [Importar dados de tabelas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
@@ -59,10 +59,10 @@ ms.lasthandoff: 08/02/2017
 10. Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar uma hierarquia explícita &#40; Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Criar um membro folha &#40; Master Data Services &#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
- [Membros &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
- [Hierarquias explícitas &#40; Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+ [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [Criar um membro folha &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
+ [Membros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [Hierarquias explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   
 

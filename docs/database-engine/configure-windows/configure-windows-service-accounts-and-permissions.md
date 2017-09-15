@@ -1,7 +1,7 @@
 ---
 title: "Configurar contas e permissões do serviço Windows | Microsoft Docs"
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 08/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -55,10 +55,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95e1b4bdb62d4c3795f5b22352936d95155ca958
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: 2fa9ca92039b8e26aecd78ca0f6c1bdc03f36d71
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
@@ -87,11 +87,11 @@ ms.lasthandoff: 08/02/2017
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent** : executa trabalhos, monitora o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dispara alertas e habilita a automação de algumas tarefas administrativas. O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent está presente, mas desabilitado em instâncias do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. O arquivo executável é \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe.  
   
--   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  : fornece funcionalidade de mineração de dados e OLAP (processamento analítico online) para aplicativos de business intelligence. O arquivo executável é \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.  
+-   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  – Fornece funcionalidade de mineração de dados e OLAP (processamento analítico online) para aplicativos de business intelligence. O arquivo executável é \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  : gerencia, executa, cria, agenda e entrega relatórios. O arquivo executável é \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  – Gerencia, executa, cria, agenda e entrega relatórios. O arquivo executável é \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  : fornece suporte de gerenciamento para o armazenamento e a execução de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O caminho do executável é \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  – Fornece suporte de gerenciamento para o armazenamento e a execução de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O caminho do executável é \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe  
   
 -   **Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: o serviço de resolução de nomes que especifica informações de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para computadores cliente. O caminho do executável é c:\Arquivos de Programas (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** : um ou mais computadores cliente do Distributed Replay Client que funcionam junto com um Distributed Replay Controller para simular cargas de trabalho simultâneas em relação a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  : um serviço confiável que hospeda executáveis externos fornecidos pela Microsoft, como o tempo de execução de R instalado como parte do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Processos de satélite podem ser iniciados pelo processo do Launchpad, mas serão controlados por recursos, com base na configuração da instância individual. O serviço Launchpad é executado em sua própria conta de usuário, e cada processo de satélite para um tempo de execução registrado específico herdará a conta de usuário do Launchpad. Processos de satélite são criados e destruídos sob demanda durante o tempo de execução.  
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  – Um serviço confiável que hospeda executáveis externos fornecidos pela Microsoft, como o tempo de execução de R instalado como parte do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Processos de satélite podem ser iniciados pelo processo do Launchpad, mas serão controlados por recursos, com base na configuração da instância individual. O serviço Launchpad é executado em sua própria conta de usuário, e cada processo de satélite para um tempo de execução registrado específico herdará a conta de usuário do Launchpad. Processos de satélite são criados e destruídos sob demanda durante o tempo de execução.  
   
  - **Mecanismo PolyBase do SQL Server** – fornece funcionalidades de consulta distribuída para fontes de dados externas.
  
@@ -285,7 +285,7 @@ As contas de serviço gerenciado, as contas de serviço gerenciado de grupo e as
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\MSSQLSERVER**. Instância nomeada: **NT SERVICE\MSSQL$**InstanceName.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> Permissão para iniciar o Gravador do SQL<br /><br /> Permissão para ler o serviço Log de Eventos<br /><br /> Permissão para ler o serviço Chamada de Procedimento Remoto|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:** \*<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\SQLSERVERAGENT**. Instância nomeada: **NT Service\SQLAGENT$***InstanceName*.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. Instância nomeada: **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] : **SQLServerMSASUser$***NomeDoComputador***$***PowerPivot*).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Somente tabular:<br /><br /> **Aumentar conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Ajustar cotas de memória para um processo** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Bloquear páginas na memória** (SeLockMemoryPrivilege): isso é necessário somente quando a paginação está totalmente desativada.<br /><br /> Somente para instalações de cluster de failover:<br /><br /> **Aumentar a prioridade de planejamento** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\ReportServer**. Instância nomeada: **NT SERVICE\\$***NomeDaInstância*).|**Fazer logon como um serviço** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\ReportServer**. Instância nomeada: **NT SERVICE\\ReportServer$***InstanceName*.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão e instância nomeada: **NT SERVICE\MsDtsServer130**. O[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não tem um processo separado para uma instância nomeada).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Permissão para gravar no log de eventos do aplicativo.<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Representar um cliente após autenticação** (SeImpersonatePrivilege)|  
 |**Pesquisa de texto completo:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\MSSQLFDLauncher**. Instância nomeada: **NT Service\ MSSQLFDLauncher$***InstanceName*.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão ou nomeada: **SQLServer2005SQLBrowserUser***$ComputerName*. O Navegador do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem um processo separado para uma instância nomeada.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  

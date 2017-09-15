@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ee405ebea31b8ca2a178b2d287a1ba1b8d4e97f8
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-index-master-data-services"></a>Criar um índice (Master Data Services)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
 |Nome da coluna|Description|  
 |-----------------|-----------------|  
-|Status|O status do índice.<br /><br /> Quando você clica em **salvar**, o ![ícone de status de atualização](../master-data-services/media/mds-statusicon-updating.png "ícone de status de atualização") imagem exibida indicando que o índice está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um índice, o ![ícone de status de erro](../master-data-services/media/mds-statusicon-error.png "ícone de status de erro") imagem é exibida.<br /><br /> Caso contrário, o status é Okey e o ![ícone de status Okey](../master-data-services/media/mds-statusicon-ok.png "ícone de status Okey") imagem é exibida.|  
+|Status|O status do índice.<br /><br /> Quando você clica em **Salvar**, a imagem ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização") é exibida, indicando que o índice está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um índice, a imagem ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro") será exibida.<br /><br /> Caso contrário, o status será OK e a imagem ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK") será exibida.|  
 |Nome|O nome do índice.|  
 |É Exclusivo|Especifica se o índice é exclusivo.|  
 |Sobre atributos|Mostra os nomes de exibição de atributos nos quais o índice é definido.|  

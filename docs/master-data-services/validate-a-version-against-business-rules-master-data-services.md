@@ -16,20 +16,20 @@ helpviewer_keywords:
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036659fbe3b6cafd1272180bbd37737062ed0967
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2a31c8b91872276636addc25c673f07ba5b11bc7
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Validar uma versão em relação a regras de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], valide uma versão para aplicar regras de negócio a todos os membros da versão do modelo.  
   
- Este procedimento explica como usar o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para validar dados. Se você tiver permissão no banco de dados MDS, poderá usar um procedimento armazenado no lugar. Para obter mais informações, consulte [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
+ Este procedimento explica como usar o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para validar dados. Se você tiver permissão no banco de dados MDS, poderá usar um procedimento armazenado no lugar. Para obter mais informações, consulte [Procedimento armazenado de validação &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
 > [!NOTE]  
 >  Todos os membros deverão ser validados antes que uma versão possa ser confirmada.  
@@ -62,13 +62,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Bloquear uma versão &#40; Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)  
+-   [Bloquear uma versão &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Status da validação &#40; Master Data Services &#41;](../master-data-services/validation-statuses-master-data-services.md)   
- [Armazenado de validação de procedimento &#40; Master Data Services &#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
- [Versões &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)   
- [Regras de negócio &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
- [Validar membros específicos em relação a regras de negócio &#40; Master Data Services &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [Status da validação &#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
+ [Procedimento armazenado de validação &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
+ [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

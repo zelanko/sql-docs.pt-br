@@ -1,35 +1,40 @@
 ---
-title: "Editar uma entidade (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "entidades [Master Data Services], alteração do nome"
+title: Editar uma entidade (Master Data Services) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bd0a151b21d3c8bfb138b4aac457587b84699228
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
-# Editar uma entidade (Master Data Services)
+# <a name="edit-an-entity-master-data-services"></a>Editar uma entidade (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode editar uma entidade.  
   
-## Pré-requisitos  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Para editar uma entidade  
+### <a name="to-edit-an-entity"></a>Para editar uma entidade  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
@@ -55,20 +60,20 @@ caps.handback.revision: 8
   
      Para obter mais informações, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
-## Status  
+## <a name="status"></a>Status  
  A coluna de status na grade mostra o status da operação na entidade. Quando você clica em **Salvar entidade**, a imagem a seguir é exibida, indicando que a entidade está atualizando.  
   
- ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")  
+ ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização")  
   
  Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.  
   
- ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status")  
+ ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro")  
   
  Quando o status for OK, a imagem a seguir será exibida.  
   
- ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")  
+ ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK")  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Hierarquias explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Excluir uma entidade &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  

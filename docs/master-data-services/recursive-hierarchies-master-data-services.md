@@ -14,14 +14,14 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], recursive hierarchies
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe31cff5144cda6c1e2166ad7f7b4ece8b18d3ab
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 21d8ccb0efe3e39e4636be3f6e6ebd2cf57184b2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Hierarquias recursivas (Master Data Services)
@@ -58,14 +58,14 @@ ms.lasthandoff: 08/02/2017
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Criar uma hierarquia derivada.|[Criar uma hierarquia derivada &#40; Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|Alterar o nome de uma hierarquia derivada existente.|[Alterar um nome de hierarquia derivada &#40; Master Data Services &#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|Excluir uma hierarquia derivada existente.|[Excluir uma hierarquia derivada &#40; Master Data Services &#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|Criar uma hierarquia derivada.|[Criar uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Alterar o nome de uma hierarquia derivada existente.|[Alterar o nome de uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Excluir uma hierarquia derivada existente.|[Excluir uma hierarquia derivada &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Atributos baseados em domínio &#40; Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Atributos baseados em domínio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Hierarquias derivadas &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

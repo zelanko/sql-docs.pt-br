@@ -1,7 +1,7 @@
 ---
 title: Configurar um publicador Oracle | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
@@ -28,12 +28,25 @@ ms.lasthandoff: 06/22/2017
   
 1.  Crie um usuário administrativo de replicação no banco de dados do Oracle, usando o script fornecido.  
   
-2.  Para as tabelas que você publicará, conceda a permissão SELECT diretamente em cada uma delas (não através de uma função) ao usuário administrativo Oracle que você criou na etapa 1.  
+2.  Para as tabelas que você publicar, conceda a permissão SELECT diretamente em cada uma delas (não por meio de uma função) ao usuário administrativo Oracle que você criou na etapa um.  
   
-3.  Instale o software do cliente Oracle e o provedor OLE DV no Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, pare e reinicie a instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se o Distribuidor estiver executando em uma plataforma de 64-bit, você deverá usar a versão de 64 bits do provedor OLE DB do Oracle.  
+3.  Instale o software do cliente Oracle e o provedor OLE DV no Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, pare e reinicie a instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se o Distribuidor estiver executando em uma plataforma de 64 bits, você deverá usar a versão de 64 bits do provedor OLE DB do Oracle.  
   
 4.  Configure o banco de dados Oracle como um Publicador no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte aos seguintes cenários heterogêneos para replicação transacional e de instantâneo:  
   
+-   Publicando dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para não assinantes do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   A publicação de dados para e do Oracle tem as seguintes restrições:  
+  | |2016 ou anterior |2017 ou posterior |
+  |-------|-------|--------|
+  |Replicação do Oracle |Dá suporte apenas ao Oracle 10g ou anterior |Dá suporte apenas ao Oracle 10g ou anterior |
+  |Replicação para o Oracle |Até Oracle 12c |Sem suporte |
+
+ A replicação heterogênea para assinantes que não são do SQL Server foi preterida. A publicação Oracle foi preterida. Para mover dados, crie soluções usando a captura de dados de alterações e o [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+
  Para obter uma lista de objetos que podem ser publicados em um banco de dados Oracle, consulte [Considerações de design e limitações para Publicadores Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
@@ -47,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  Um script de amostra foi fornecido para ajudar na instalação do esquema de usuário de replicação Oracle. O script está disponível no seguinte diretório após a instalação de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unidade>*:\\\Arquivos de Programas\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. Também está incluído no tópico [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
- Conecte-se ao banco de dados Oracle usando uma conta com privilégios DBA e execute o script. Os prompts de script do usuário e senha para o esquema de usuário administrativo de replicação, assim como o espaço de tabela padrão, no qual os objetos serão criados (o espaço de tabela já deve existir no banco de dados Oracle). Para obter informações sobre como especificar outros espaços de tabela para objetos, consulte [Gerenciar espaços de tabela Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Escolha um nome de usuário e uma senha forte e anote ambas as informações, pois serão solicitadas depois que o banco de dados Oracle estiver configurado como um Publicador. É recomendado que o esquema seja usado apenas para objetos exigidos pelo aplicativo, não crie tabelas para serem publicadas nesse esquema.  
+ Conecte-se ao banco de dados Oracle usando uma conta com privilégios DBA e execute o script. Os prompts de script do usuário e senha para o esquema de usuário administrativo de replicação, assim como o espaço de tabela padrão, no qual os objetos serão criados (o espaço de tabela já deve existir no banco de dados Oracle). Para obter informações sobre como especificar outros espaços de tabela para objetos, consulte [Gerenciar espaços de tabela Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Escolha um nome de usuário e uma senha forte e anote ambas as informações, pois você deve fornecê-las depois que o banco de dados Oracle estiver configurado como um Publicador. É recomendado que o esquema seja usado apenas para objetos exigidos pelo aplicativo, não crie tabelas para serem publicadas nesse esquema.  
   
 ### <a name="creating-the-user-schema-manually"></a>Criando manualmente o esquema de usuário  
  Se você criar manualmente o esquema de usuário de replicação, é necessário conceder ao esquema as permissões a seguir, diretamente ou através de uma função de banco de dados.  
@@ -97,7 +110,7 @@ ms.lasthandoff: 06/22/2017
  A conta sob a qual o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Distributor executa, deve receber permissões de gravação e leitura para o diretório (e todos os subdiretórios) no qual o software de rede cliente Oracle está instalado.  
   
 ### <a name="testing-connectivity-between-the-sql-server-distributor-and-the-oracle-publisher"></a>Testando conectividade entre o SQL Server Distributor e o Publicador Oracle  
- Quando estiver concluindo o Net Configuration Assistant deverá existir uma opção que irá testar a conexão do Publicador Oracle. Antes de você testar a conexão, garanta que a instância do banco de dados Oracle esteja on-line e que o Oracle Listener esteja executando. Se o teste for malsucedido, entre em contato com o DBA da Oracle, responsável pelo banco de dados ao qual você está tentando se conectar.  
+ Quando estiver concluindo o Net Configuration Assistant deverá existir uma opção que testará a conexão do Publicador Oracle. Antes de você testar a conexão, garanta que a instância do banco de dados Oracle esteja on-line e que o Oracle Listener esteja executando. Se o teste for malsucedido, entre em contato com o DBA da Oracle, responsável pelo banco de dados ao qual você está tentando se conectar.  
   
  Após você ter feito uma conexão bem sucedida com o Publicador Oracle tente fazer logon no banco de dados, usando a conta e senha associadas com o esquema de usuário administrativo de replicação que você criou. Enquanto estiver executando na mesma conta do Windows que o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa, realize o seguinte:  
   
@@ -111,7 +124,7 @@ ms.lasthandoff: 06/22/2017
   
      Por exemplo: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
-4.  Se a configuração de redes foi bem-sucedida, o logon terá sucesso e você visualizará um prompt `SQL` .  
+4.  Se a configuração de redes foi bem-sucedida, o logon terá sucesso e você visualizará um prompt `SQL`.  
   
 5.  Se você enfrentar problemas ao se conectar com o banco de dados Oracle, consulte a seção "O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor não pode se conectar à instância do banco de dados Oracle" em [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
@@ -139,3 +152,4 @@ ms.lasthandoff: 06/22/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
+

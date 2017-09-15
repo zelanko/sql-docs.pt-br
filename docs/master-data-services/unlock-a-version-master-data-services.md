@@ -14,14 +14,14 @@ helpviewer_keywords:
 - versions [Master Data Services], unlocking
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e575a205a7fbe7f18c2b0313555ec1cf1cb34e50
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f23351a989c3379355d63103b530012ca21b6d99
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="unlock-a-version-master-data-services"></a>Desbloquear uma versão (Master Data Services)
@@ -50,9 +50,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Bloquear uma versão &#40; Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)  
+-   [Bloquear uma versão &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Versões &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+ [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

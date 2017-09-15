@@ -14,14 +14,14 @@ helpviewer_keywords:
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
  Na área funcional **Gerenciamento de Versões** , os administradores podem exibir todas as transações de todos os usuários dos modelos aos quais têm acesso e reverter qualquer uma dessas transações.
  
 > [!NOTE]  
->  Os administradores podem exibir todas as transações para todos os usuários, desde que não têm a permissão somente leitura nível aplicado no **versão gerenciamento** área funcional. Por exemplo, se o nível de permissão de permissão e atualização somente leitura é definido para o administrador, o administrador não será capaz de ver outras transações de usuário porque a permissão somente leitura terão precedência sobre a permissão de atualização.
+>  Os administradores podem exibir todas as transações para todos os usuários, desde que não tenham o nível de permissão somente leitura aplicado na área funcional **Gerenciamento de Versão**. Por exemplo, se o nível de permissão somente leitura e de permissão de atualização estiver definido para o administrador, ele não poderá ver as transações de outro usuário porque a permissão somente leitura terá precedência sobre a permissão de atualização.
   
  Você pode configurar quanto tempo os dados do log de transações são retidos definindo a propriedade **Retenção de Log em Dias** nas configurações do sistema do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e definindo **Retenção de Log em Dias** ao criar ou editar um modelo. Para obter mais informações, consulte [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) e [Criar um modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -98,9 +98,9 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Os administradores &#40; Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)  
+-   [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [Anotações &#40; Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Anotações &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
   
 

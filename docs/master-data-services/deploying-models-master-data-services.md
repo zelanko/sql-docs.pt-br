@@ -15,21 +15,21 @@ helpviewer_keywords:
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24067aaaceb2ad1e6704027c4445be9bf393a18f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 021c2e7c829f8da9cf1633aa5047c561b11702d6
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="deploying-models-master-data-services"></a>Implantando modelos (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um pacote é um arquivo XML que contém uma estrutura de modelo implantável, e opcionalmente, dados do modelo. Use pacotes modelo para mover cópias de modelos de um ambiente MDS para outro, ou crie novos modelos em seu ambiente MDS existente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**Ferramenta MDSModelDeploy** é compatível com os pacotes criados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ou superior.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **Ferramenta MDSModelDeploy** é compatível com versões anteriores com os pacotes criados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ou superior.  
   
 ## <a name="tools-for-deploying-models"></a>Ferramentas para implantar modelos  
  Para trabalhar com pacotes de modelo, você pode usar uma das três ferramentas, dependendo de suas necessidades.  
@@ -75,12 +75,12 @@ ms.lasthandoff: 08/02/2017
 |----------------------|-----------|  
 |Crie um novo pacote de implantação de objetos de modelo e/ou dados usando a ferramenta MDSModelDeploy.|[Criar um pacote de implantação de modelo usando o MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
 |Crie um novo pacote de implantação somente de objetos de modelo usando o assistente.|[Criar um pacote de implantação de modelo usando o Assistente](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
-|Implante um pacote de objetos de modelo e dados usando a ferramenta MDSModelDeploy.|[Implantar um pacote de implantação de modelo usando o MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|Implante um pacote de objetos de modelo e dados usando a ferramenta MDSModelDeploy.|[Implantar um pacote de implantação de modelo usando MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
 |Implante um pacote somente de objetos de modelo usando o assistente.|[Implantar um pacote de implantação de modelo usando o Assistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
 |Edite um pacote de implantação de modelo para implantar partes selecionadas de um modelo, em vez do modelo inteiro.|[Editar um pacote de implantação de modelo](../master-data-services/edit-a-model-deployment-package.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Opções de implantação de modelo &#40; Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [Opções de implantação de modelo &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

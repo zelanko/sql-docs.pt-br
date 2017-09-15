@@ -1,5 +1,5 @@
 ---
-title: Requisitos (Master Data Services) do banco de dados | Microsoft Docs
+title: Requisitos do banco de dados (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 caps.latest.revision: 18
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9f48345ef6fb8bd0a27bf2d40a829e53e2eae308
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 16858dc8ab6dcad69792697b88811cba2689b1fe
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-requirements-master-data-services"></a>Requisitos do banco de dados (Master Data Services)
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/02/2017
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
  [Criar um banco de dados do Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Banco de dados dos Master Data Services](../../master-data-services/master-data-services-database.md)   
- [Conecte-se a uma caixa de diálogo banco de dados do Master Data Services](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
- [Criar Assistente de banco de dados &#40; Gerenciador de configuração do Master Data Services &#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
+ [Caixa de diálogo Conectar-se a um Banco de Dados do Master Data Services](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
+ [Assistente para Criar Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
   
   

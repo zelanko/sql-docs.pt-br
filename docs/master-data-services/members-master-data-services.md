@@ -18,14 +18,14 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3161b24f55c5473829b5d0a0ea090763d1203295
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="members-master-data-services"></a>Membros (Master Data Services)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
  Neste exemplo, a tabela representa uma entidade, as linhas da tabela representam membros e as colunas representam atributos. Cada célula representa um valor de atributo de um membro específico.  
   
- ![Entidade de Master Data Services representada como tabela](../master-data-services/media/mds-conc-entity-table.gif "entidade de Master Data Services representada como tabela")  
+ ![Entidade do Master Data Services representada como tabela](../master-data-services/media/mds-conc-entity-table.gif "Entidade do Master Data Services representada como tabela")  
   
 ## <a name="member-types"></a>Tipos de membro  
  Há três tipos de membros: membros folha, membros consolidados e membros de coleção.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="member-example"></a>Exemplo de membro  
  No exemplo a seguir, cada membro é composto de um valor dos atributos Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto.  
   
- ![Tabela de entidade de produto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "tabela de entidade de produto de bicicleta")  
+ ![Tabela de entidade de produto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidade de produto de bicicleta")  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
   

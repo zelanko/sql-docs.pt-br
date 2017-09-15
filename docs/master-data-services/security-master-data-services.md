@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a011cac6d34c73cffb9fba286ebe64ebb9e7103
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4b540d7f5a204d6543bc32b5ec46fef766c9b973
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="security-master-data-services"></a>Segurança (Master Data Services)
@@ -26,7 +26,7 @@ ms.lasthandoff: 08/02/2017
   
  Você também pode usar segurança para transformar alguém em um administrador de um modelo e área funcional específicos (por exemplo, para permitir que alguém crie versões do modelo de Cliente ou para dar a alguém a capacidade de definir permissões de segurança).  
   
- A segurança do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] é baseada em usuários e grupos do domínio local ou do Active Directory. A segurança do MDS permite que você use um nível granular de detalhes ao determinar os dados que um usuário pode acessar. Por causa da granularidade, a segurança pode se tornar facilmente complicada, e você deve ter cuidado ao usar sobreposição de usuários e grupos. Para obter mais informações, consulte [Sobrepondo permissões de usuário e grupo &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] é baseada em usuários e grupos do domínio local ou do Active Directory. A segurança do MDS permite que você use um nível granular de detalhes ao determinar os dados que um usuário pode acessar. Por causa da granularidade, a segurança pode se tornar facilmente complicada, e você deve ter cuidado ao usar sobreposição de usuários e grupos. Para obter mais informações, consulte [Sobrepondo permissões de usuário e grupo &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
  Você pode atribuir acesso de segurança na área funcional **Permissões de Usuário e de Grupo** do aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou por meio do serviço Web.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Os que acessam dados na área funcional **Gerenciador** .  
   
--   Os que têm a capacidade de executar tarefas administrativas em áreas diferentes do **Gerenciador**. Esses usuários são chamados [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Os que têm a capacidade de executar tarefas administrativas em áreas diferentes do **Gerenciador**. Esses usuários são chamados [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ## <a name="how-to-set-security"></a>Como definir a segurança  
  Para dar permissão a um usuário ou grupo para acessar dados ou funcionalidade no MDS, você deve atribuir:  
@@ -57,18 +57,18 @@ ms.lasthandoff: 08/02/2017
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Criar um usuário que permissão total para um modelo.|[Criar um administrador de modelo &#40; Master Data Services &#41;](../master-data-services/create-a-model-administrator-master-data-services.md)|  
-|Adicionar um grupo do Active Directory ao [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Essa é a primeira etapa ao dar uma permissão de grupo para acessar dados no aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Adicionar um grupo de &#40; Master Data Services &#41;](../master-data-services/add-a-group-master-data-services.md)|  
-|Atribuir permissão a uma área funcional do aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Atribuir permissões de área funcional &#40; Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
-|Atribuir permissão a valores de atributos por meio da atribuição de permissão a objetos modelo.|[Atribuir permissões de objeto modelo &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
-|Atribuir permissão a valores de membros por meio da atribuição de permissão a nós da hierarquia.|[Atribuir permissões de membro de hierarquia &#40; Master Data Services &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
+|Criar um usuário que permissão total para um modelo.|[Criar um administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)|  
+|Adicionar um grupo do Active Directory ao [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Essa é a primeira etapa ao dar uma permissão de grupo para acessar dados no aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Adicionar um grupo &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)|  
+|Atribuir permissão a uma área funcional do aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Atribuir permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
+|Atribuir permissão a valores de atributos por meio da atribuição de permissão a objetos modelo.|[Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|Atribuir permissão a valores de membros por meio da atribuição de permissão a nós da hierarquia.|[Atribuir permissões de membro de hierarquia &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Os administradores &#40; Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)   
- [Os usuários e grupos &#40; Master Data Services &#41;](../master-data-services/users-and-groups-master-data-services.md)   
- [Área funcional permissões &#40; Master Data Services &#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [Permissões de objeto modelo &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Permissões de membro de hierarquia &#40; Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Como as permissões são determinadas &#40; Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
+ [Usuários e grupos &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
+ [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [Permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Permissões de membro de hierarquia &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Como as permissões são determinadas &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

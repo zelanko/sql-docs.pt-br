@@ -14,14 +14,14 @@ helpviewer_keywords:
 - copying versions [Master Data Services]
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4ca0935b28c2dd7e863a6d75eaeff4b148cfc742
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 8b4c9d8f1ec2ab6bb3110a60433ed12cc8528b1a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="copy-a-version-master-data-services"></a>Copiar uma versão (Master Data Services)
@@ -51,9 +51,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Alterar um nome de versão &#40; Master Data Services &#41;](../master-data-services/change-a-version-name-master-data-services.md)  
+-   [Alterar o nome de uma versão &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Versões &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+ [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

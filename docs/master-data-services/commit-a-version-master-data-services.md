@@ -14,14 +14,14 @@ helpviewer_keywords:
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28fd453f17c08b708b4a49f1f4646eb1be7a51ab
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f038c98b3299103753cd9daa58e3edc5ebae568b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="commit-a-version-master-data-services"></a>Confirmar uma versão (Master Data Services)
@@ -54,13 +54,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Criar um sinalizador de versão &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+-   [Criar um sinalizador de versão &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
--   [Atribuir um sinalizador a uma versão &#40; Master Data Services &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [Atribuir um sinalizador a uma versão &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [Copiar uma versão &#40; Master Data Services &#41;](../master-data-services/copy-a-version-master-data-services.md)  
+-   [Copiar uma versão &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Versões &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+ [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

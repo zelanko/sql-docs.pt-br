@@ -17,49 +17,25 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 512d13d8349be9370bb222e1513f5166f2cabeee
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
   Este tópico descreve como proteger um banco de dados usando TDE (criptografia de dados transparente) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.  
+   
+##  <a name="Restrictions"></a> Limitações e restrições  
   
- **Neste tópico**  
-  
--   **Antes de começar:**  
-  
-     [Limitações e restrições](#Restrictions)  
-  
-     [Segurança](#Security)  
-  
--   **Para criar um banco de dados protegido por criptografia de dados transparente usando:**  
-  
-     [SQL Server Management Studio](#SSMSCreate)  
-  
-     [Transact-SQL](#TsqlCreate)  
-  
--   **Para mover um banco de dados usando:**  
-  
-     [SQL Server Management Studio](#SSMSMove)  
-  
-     [Transact-SQL](#TsqlMove)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de começar  
-  
-###  <a name="Restrictions"></a> Limitações e restrições  
-  
--   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou a chave assimétrica devem ser instalados no banco de dados **mestre** do servidor de destino, de forma que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possa acessar os arquivos do banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+-   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou a chave assimétrica devem ser instalados no banco de dados **mestre** do servidor de destino, de forma que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possa acessar os arquivos do banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 -   Você deve reter cópias do arquivo de certificado e do arquivo de chave privada para poder recuperar o certificado. A senha da chave privada não precisa ser igual à senha da chave mestra do banco de dados.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] armazena os arquivos criados aqui em **C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** por padrão. Os nomes e locais dos seus arquivos poderão ser diferentes.  
   
-###  <a name="Security"></a> Segurança  
-  
-####  <a name="Permissions"></a> Permissões  
+##  <a name="Permissions"></a> Permissões  
   
 -   Requer a permissão **CONTROL DATABASE** no banco de dados **mestre** para criar a chave mestra de banco de dados.  
   
@@ -68,6 +44,8 @@ ms.lasthandoff: 06/22/2017
 -   Requer a permissão **CONTROL DATABASE** no banco de dados e a permissão **VIEW DEFINITION** na chave assimétrica ou no certificado usado para criptografar a chave de criptografia do banco de dados.  
   
 ##  <a name="SSMSProcedure"></a> Para criar um banco de dados protegido por criptografia de dados transparente  
+
+Os procedimentos a seguir mostram a que você precisa criar um banco de dados protegido por TDE usando o SQL Server Management Studio e usando o Transact-SQL.
   
 ###  <a name="SSMSCreate"></a> Usando o SQL Server Management Studio  
   
@@ -109,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql  
     -- Create a database master key and a certificate in the master database.  
     USE master ;  
     GO  
@@ -161,7 +139,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> Para mover um banco de dados  
+##  <a name="TsqlProcedure"></a> Para mover um banco de dados protegido por Transparent Data Encryption 
+
+Os procedimentos a seguir mostram a que você precisa mover um banco de dados protegido por TDE usando o SQL Server Management Studio e usando o Transact-SQL.
   
 ###  <a name="SSMSMove"></a> Usando o SQL Server Management Studio  
   
@@ -282,7 +262,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql  
     -- Detach the TDE protected database from the source server.   
     USE master ;  
     GO  
@@ -327,6 +307,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
+ [Transparent Data Encryption com o Banco de Dados SQL do Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   

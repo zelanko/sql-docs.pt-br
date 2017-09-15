@@ -1,5 +1,5 @@
 ---
-title: "Visão geral do Master Data Services (MDS) | Microsoft Docs"
+title: "Visão geral do MDS (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/14/2017
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4b1f65db7d29cfd0e081694b208f1add5cae21eb
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-overview-mds"></a>Visão geral do MDS (Master Data Services)
   Este tópico descreve os principais recursos de organização e gerenciamento de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]permite que você gerencie um conjunto principal de dados da sua organização. Você pode organizar os dados em modelos, criar regras para atualizar os dados e controlar o que atualiza os dados. Com o Excel, você pode compartilhar o conjunto de dados mestre com outras pessoas em sua organização. 
+ O [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] permite que você gerencie um conjunto mestre de dados da sua organização. Você pode organizar os dados em modelos, criar regras para atualizar os dados e controlar quem atualiza os dados. Com o Excel, você pode compartilhar o conjunto de dados mestre com outras pessoas em sua organização. 
   
  >  Para ver uma descrição da arquitetura do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , consulte o artigo [Master Data Services – The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services – Noções básicas) em simple-talk.com. Para obter informações sobre os novos recursos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consulte [Novidades do MDS &#40;Master Data Services&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **Para obter instruções de como instalar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configurar o Site e o banco de dados e implantar os modelos de exemplo, consulte** [Instalação e configuração do Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
@@ -39,17 +39,17 @@ ms.lasthandoff: 08/02/2017
   
  Por exemplo, o seu modelo de produto online pode conter entidades como produto, cor e estilo. A entidade de cor pode conter membros para as cores vermelho, prata e preto.  
   
- ![Entidade de cor](../master-data-services/media/mds-productmodel-colorentity-composite.png "entidade de cor")  
+ ![Entidade de cor](../master-data-services/media/mds-productmodel-colorentity-composite.png "Entidade de cor")  
   
  Modelos também contêm atributos que são definidos em entidades. Um atributo contém valores que ajudam a descrever os membros da entidade. Há atributos de forma livre e atributos baseados em domínio.  Um atributo baseado em domínio contém valores que são preenchidos por membros de uma entidade e podem ser usados como valores de atributo para outras entidades.  
   
- Por exemplo, a entidade de produto poderia ter atributos de forma livre para custo e peso. E, há um atributo baseado em domínio para a cor ![número 1](../master-data-services/media/mds-number1.png "número 1") que contém valores que são preenchidos pelos membros de entidade de cor. Essa lista mestra de cores é usada como valores de atributo para a entidade Product ![número 2](../master-data-services/media/mds-number2.png "número 2").  
+ Por exemplo, a entidade de produto poderia ter atributos de forma livre para custo e peso. Além disso, há um atributo baseado em domínio para a cor ![Número 1](../master-data-services/media/mds-number1.png "Número 1") que contém valores populados pelos membros da entidade de cor. Essa lista mestra de cores é usada como valores de atributo para a entidade Produto ![Número 2](../master-data-services/media/mds-number2.png "Número 2").  
   
- ![O atributo baseado em domínio para a cor](../master-data-services/media/mds-productentity-color-domainattribute.png "atributo baseado em domínio para a cor")  
+ ![Atributo baseado em domínio para cor](../master-data-services/media/mds-productentity-color-domainattribute.png "Atributo baseado em domínio para cor")  
   
- As hierarquias derivadas são provenientes das relações entre entidades em um modelo. Estas são relações de atributo baseado em domínio. No modelo de produto, por exemplo, você pode ter uma hierarquia derivada de cor ![número 1](../master-data-services/media/mds-number1.png "número 1") que proveniente da relação entre a cor ![número 2](../master-data-services/media/mds-number2.png "número 2") e produto ![número 3](../master-data-services/media/mds-number3.png "número 3") entidades.  
+ As hierarquias derivadas são provenientes das relações entre entidades em um modelo. Estas são relações de atributo baseado em domínio. No modelo de produto, por exemplo, você pode ter uma hierarquia derivada de cor ![Número 1](../master-data-services/media/mds-number1.png "Número 1") proveniente da relação entre as entidades de cor ![Número 2](../master-data-services/media/mds-number2.png "Número 2") e produto ![Número 3](../master-data-services/media/mds-number3.png "Número 3").  
   
- ![Hierarquia derivada de cor](../master-data-services/media/mds-derivedhierarchy.png "cor de hierarquia derivada")  
+ ![Hierarquia derivada de cor](../master-data-services/media/mds-derivedhierarchy.png "Hierarquia derivada de cor")  
   
  Depois de definir uma estrutura básica para seus dados, você poderá iniciar a adição de registros de dados (membros) usando o recurso de importação. Você carrega dados em tabelas de preparo, valida os dados usando regras de negócio e carrega os dados nas tabelas MDS.  Você também pode usar as regras de negócio para definir valores de atributo.  
   

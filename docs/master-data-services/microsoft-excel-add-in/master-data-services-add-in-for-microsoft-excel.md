@@ -1,5 +1,5 @@
 ---
-title: Suplemento do Master Data Services para Microsoft Excel | Microsoft Docs
+title: Suplemento Master Data Services para Microsoft Excel | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/25/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Suplemento do Master Data Services para Microsoft Excel
@@ -30,8 +30,8 @@ ms.lasthandoff: 08/02/2017
  No [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], você pode usar o DQS (Data Quality Services) para combinar os dados antes de carregá-los no MDS. Isso ajuda a evitar dados duplicados no MDS.  
 
 ## <a name="downloads"></a>Downloads 
->*  Baixar o suplemento do Master Data Services para Excel para SQL Server 2016 SP1 do [esta página do Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=836866). 
->* Baixe o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para SQL Server 2017 CTP1 de [esta página do Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=836867). Este suplemento também funciona para o SQL Server de 2017 RC1.
+>*  Baixe o Suplemento Master Data Services para Excel para SQL Server 2016 SP1 [dessa página do Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?linkid=836866). 
+>* Baixe o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para SQL Server 2017 CTP1 [desta página do Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?linkid=836867). Este suplemento também funciona para o SQL Server de 2017 RC1.
 
  
   

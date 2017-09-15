@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 03997ff880842e2cb088ee5f79237a517aca9abb
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de Disponibilidade AlwaysOn (SQL Server)
@@ -89,28 +89,28 @@ ms.lasthandoff: 08/02/2017
     -   Cmdlets do PowerShell. Para obter mais informações, consulte [Visão geral de cmdlets do PowerShell para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Termos e definições  
- grupo de disponibilidade  
+ **grupo de disponibilidade**  
  Um contêiner para um conjunto de bancos de dados, *bancos de dados de disponibilidade*, que executam failover juntos.  
   
- banco de dados de disponibilidade  
+ **banco de dados de disponibilidade**  
  Um banco de dados que pertence a um grupo de disponibilidade. Para cada banco de dados de disponibilidade, o grupo de disponibilidade mantém uma única cópia de leitura/gravação (o *banco de dados primário*) e de uma a oito cópias somente leitura (*bancos de dados secundários*).  
   
- banco de dados primário  
+ **banco de dados primário**  
  A cópia de leitura-gravação de um banco de dados de disponibilidade.  
   
- banco de dados secundário  
+ **banco de dados secundário**  
  Uma cópia somente leitura de um banco de dados de disponibilidade.  
   
- réplica de disponibilidade  
+ **réplica de disponibilidade**  
  Uma instanciação de um grupo de disponibilidade que é hospedado por uma instância específica do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e que mantém uma cópia local de cada banco de dados de disponibilidade pertencente ao grupo de disponibilidade. Existem dois tipos de réplica de disponibilidade: uma única *réplica primária* e uma a oito *réplicas secundárias*.  
   
- réplica primária  
+ **réplica primária**  
  A réplica de disponibilidade que torna disponíveis os bancos de dados primários para conexões de leitura/gravação de clientes e, também, envia registros do log de transações para cada banco de dados primário a toda réplica secundária.  
   
- réplica secundária  
+ **réplica secundária**  
  Uma réplica de disponibilidade que mantém uma cópia secundária de cada banco de dados de disponibilidade e serve como destinos potenciais de failover para o grupo de disponibilidade. Opcionalmente, uma réplica secundária pode incluir o suporte ao acesso somente leitura para que bancos de dados secundários possam oferecer suporte à criação de backups em bancos de dados secundários.  
   
- ouvinte do grupo de disponibilidade  
+ **ouvinte do grupo de disponibilidade**  
  Um nome do servidor ao qual os clientes podem se conectar para acessar um banco de dados em uma réplica primária ou secundária de um grupo de disponibilidade AlwaysOn. Os ouvintes de grupo de disponibilidade direcionam conexões de entrada para a réplica primária ou para uma réplica secundária somente leitura.  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Bancos de dados independentes](../../../relational-databases/databases/contained-databases.md)  
   
--   [Criptografia de banco de dados](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+-   [Criptografia de banco de dados](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [Instantâneos do banco de dados](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   

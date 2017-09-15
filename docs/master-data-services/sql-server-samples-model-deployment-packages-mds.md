@@ -1,5 +1,5 @@
 ---
-title: "Exemplos do SQL Server: Modelo de implantação de pacotes (MDS) | Microsoft Docs"
+title: "Exemplos de SQL Server: Pacotes de implantação de modelo (MDS) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
@@ -14,23 +14,23 @@ keywords:
 - sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
+author: smartysanthosh
+ms.author: nagavo
 manager: craigg
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d7a031ba18c6782cdd73ae31ef395bc2ecdcf102
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bda0dbc730e24017dfc1978e691d3da654a15149
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="sql-server-examples-model-deployment-packages-mds"></a>Exemplos do SQL Server: Pacotes de implantação de modelo (MDS)
-  Pacotes de modelo de exemplo com dados são incluídos durante a instalação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. O local padrão para esses arquivos do pacote é \<drive > \Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
+# <a name="sql-server-examples-model-deployment-packages-mds"></a>Exemplos de SQL Server: Pacotes de implantação de modelo (MDS)
+  Pacotes de modelo de exemplo com dados são incluídos durante a instalação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. O local padrão desses arquivos de pacote é \<drive>\Arquivos de Programas\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
   
  Para obter instruções sobre como implantar os pacotes de modelo de exemplo, consulte [Implantando dados e modelos de exemplo](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Implante os pacotes de modelo de exemplo usando a [ferramenta MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]  
->  **Atualizações de exemplo[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Atualizações de amostra no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 >   
 >  Os pacotes de exemplo foram atualizados para dar suporte às novas funcionalidades a seguir.  
 >   

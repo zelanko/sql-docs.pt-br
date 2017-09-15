@@ -1,7 +1,7 @@
 ---
 title: Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 08/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: de6fef9bc4ccda44bd805d281dc0a3780aaa96c8
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: b5e469b56253649e0e23de004b3ae6de54dfb3e9
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn (SQL Server)
@@ -152,22 +152,22 @@ ms.lasthandoff: 08/02/2017
   
 1.  Altere o diretório (**cd**) para uma instância de servidor que você deseja habilitar para os Grupos de Disponibilidade AlwaysOn.  
   
-2.  Use o cmdlet **Enable-SqlAlways On** para habilitar os Grupos de Disponibilidade AlwaysOn.  
+2.  Use o cmdlet **Enable-SqlAlwaysOn** para habilitar Grupos de Disponibilidade AlwaysOn.  
   
      Para exibir a sintaxe de um cmdlet, use o cmdlet **Get-Help** no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
     > [!NOTE]  
-    >  Para obter informações sobre como controlar se o cmdlet **Enable-SqlAlways On** reiniciará o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , veja [Quando um cmdlet reinicia o serviço do SQL Server?](#WhenCmdletRestartsSQL), mais adiante neste tópico.  
+    >  Para obter informações sobre como controlar se o cmdlet **Enable-SqlAlwaysOn** reiniciará o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Quando um cmdlet reinicia o serviço do SQL Server?](#WhenCmdletRestartsSQL), mais adiante neste tópico.  
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-####  <a name="ExmplEnable-SqlHadrServic"></a> Exemplo: Enable-SqlAlways On  
+####  <a name="ExmplEnable-SqlHadrServic"></a> Exemplo: Enable-SqlAlwaysOn  
  O comando do PowerShell a seguir habilita o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância do SQL Server (*Computer*\\*Instance*).  
   
 ```  
-Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
 ```  
   
 ##  <a name="DisableAOAG"></a> Desabilitar Grupos de Disponibilidade AlwaysOn  
@@ -214,16 +214,16 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  Altere o diretório (**cd**) para uma instância de servidor atualmente habilitada que você deseja desabilitar para os Grupos de Disponibilidade AlwaysOn.  
   
-2.  Use o cmdlet **Disable-SqlAlways On** para habilitar Grupos de Disponibilidade AlwaysOn.  
+2.  Use o cmdlet **Disable-SqlAlwaysOn** para habilitar Grupos de Disponibilidade AlwaysOn.  
   
      Por exemplo, o comando a seguir desabilita os Grupos de Disponibilidade AlwaysOn em uma instância do SQL Server (*Computer*\\*Instance*).  Este comando requer a reinicialização da instância e você será solicitado a confirmar esta reinicialização.  
   
     ```  
-    Disable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+    Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
     ```  
   
     > [!IMPORTANT]  
-    >  Para obter informações sobre como controlar se o cmdlet **Disable-SqlAlways On** reiniciará o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , veja [Quando um cmdlet reinicia o serviço do SQL Server?](#WhenCmdletRestartsSQL), mais adiante neste tópico.  
+    >  Para obter informações sobre como controlar se o cmdlet **Disable-SqlAlwaysOn** reiniciará o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Quando um cmdlet reinicia o serviço do SQL Server?](#WhenCmdletRestartsSQL), mais adiante neste tópico.  
   
      Para exibir a sintaxe de um cmdlet, use o cmdlet **Get-Help** no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
@@ -232,7 +232,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a> Acompanhamento: Depois de desabilitar o AlwaysOn  
- Depois que você desabilitar os grupos de disponibilidade AlwaysOn, a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deverá ser reiniciada. O SQL Server Configuration Manager reinicia a instância de servidor automaticamente. Porém, se você usou o cmdlet **Disable-SqlAlways On** , precisará reiniciar a instância de servidor manualmente. Para obter mais informações, consulte [sqlservr Application](../../../tools/sqlservr-application.md).  
+ Depois que você desabilitar os grupos de disponibilidade AlwaysOn, a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deverá ser reiniciada. O SQL Server Configuration Manager reinicia a instância de servidor automaticamente. Porém, se você usou o cmdlet **Disable-SqlAlwaysOn**, precisará reiniciar a instância de servidor manualmente. Para obter mais informações, consulte [sqlservr Application](../../../tools/sqlservr-application.md).  
   
  Na instância de servidor reiniciada:  
   
@@ -253,7 +253,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 4.  Os bancos de dados secundários entram no estado RESTORING. Você pode excluí-los ou restaurá-los usando RESTORE WITH RECOVERY. No entanto, os bancos de dados restaurados não participarão mais da sincronização de dados de grupos de disponibilidade.  
   
 ##  <a name="WhenCmdletRestartsSQL"></a> Quando um cmdlet reinicia o serviço do SQL Server?  
- Em uma instância de servidor atualmente em execução, usando **Enable-SqlAlways On** ou **Disable-SqlAlways On** , alterar a configuração atual de AlwaysOn pode provocar a reinicialização do serviço do SQL Server. O comportamento de reinicialização depende das seguintes condições:  
+ Em uma instância de servidor atualmente em execução, usando **Enable-SqlAlwaysOn** ou **Disable-SqlAlwaysOn**, alterar a configuração atual de AlwaysOn pode provocar a reinicialização do serviço do SQL Server. O comportamento de reinicialização depende das seguintes condições:  
   
 |Parâmetro -NoServiceRestart especificado|Parâmetro -Force especificado|O serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] foi reiniciado?|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  

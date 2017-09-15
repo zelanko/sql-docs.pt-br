@@ -1,25 +1,30 @@
 ---
-title: "Permiss&#245;es de entidade (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "entidades [Master Data Services], permissões"
-  - "permissões [Master Data Services], entidades"
+title: "Permissões de entidade (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], permissions
+- permissions [Master Data Services], entities
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 86574d904f58a15eff67a45525bdffd5ca8da849
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
-# Permiss&#245;es de entidade (Master Data Services)
+# <a name="entity-permissions-master-data-services"></a>Permissões de entidade (Master Data Services)
   As permissões de entidade se aplicam a:  
   
 -   Todos os atributos da entidade, inclusive **Name** e **Code**, para os membros folha e consolidados.  
@@ -43,7 +48,7 @@ caps.handback.revision: 6
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas entre si. Ao atribuir permissões Criar, Atualizar e Excluir, a permissão Ler será atribuída automaticamente.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  

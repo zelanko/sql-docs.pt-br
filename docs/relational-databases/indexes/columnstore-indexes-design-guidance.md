@@ -14,17 +14,17 @@ caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b60c6ab2bc24a2865d06c949a0bb5b765fdc7454
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Índices columnstore – diretrizes de design
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Recomendações de alto nível para criação de índices columnstore. Poucas boas decisões ajudam a alcançar uma compactação de dados e desempenho de consultas altos que os índices columnstore foram criados para oferecer. 
+Recomendações de alto nível para criação de índices columnstore. Poucas boas decisões de design ajudam a alcançar uma compactação de dados e desempenho de consultas altos que os índices columnstore foram criados para oferecer. 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

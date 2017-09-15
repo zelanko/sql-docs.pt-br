@@ -1,5 +1,5 @@
 ---
-title: Teste o procedimento armazenado (Master Data Services) | Microsoft Docs
+title: Preparando procedimento armazenado (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -11,24 +11,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2c12151d25b7d563a8a37a7ccfd617bca5cb479
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 19ce25e1182e362761b1919f36d72623dd7289e7
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Preparando procedimento armazenado (Master Data Services)
   Ao iniciar o processo de preparo no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], você usa um entre três procedimentos armazenados.  
   
--   udp_\<name > _Leaf  
+-   stg.udp_\<name>_Leaf  
   
--   udp_\<name > _Consolidated  
+-   stg.udp_\<name>_Consolidated  
   
--   udp_\<name > _Relationship  
+-   stg.udp_\<name>_Relationship  
   
  Onde nome é o nome da tabela de preparo que foi especificada quando a entidade foi criada.  
   

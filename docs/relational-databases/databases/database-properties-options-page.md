@@ -2,7 +2,7 @@
 title: "Propriedades do banco de dados (página Opções) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 04/29/2016
+ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 67
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  Especifique um dos seguintes modelos para recuperar o banco de dados: **Full**, **Bulk-Logged**ou **simples**. Para obter mais informações sobre modelos de recuperação, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Nível de compatibilidade**  
- Especifique a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceita pelo banco de dados. Os valores possíveis são  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**e **SQL Server 2008 (100)**. Quando um banco de dados do SQL Server 2005 é atualizado para o SQL Server 2014, o nível de compatibilidade do banco de dados é alterado de 90 para 100.  O nível de compatibilidade 90 não tem suporte no SQL Server 2014. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Especifique a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceita pelo banco de dados. Para obter os valores possíveis, consulte [Nível de compatibilidade ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quando um banco de dados do SQL Server é atualizado, o nível de compatibilidade de banco de dados é mantido se possível ou alterado para o nível mínimo com suporte para o novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
  **Tipo de contenção**  
  Não especifique nada ou parcial para designar se este é um banco de dados independente. Para obter mais informações sobre bancos de dados independentes, consulte [Contained Databases](../../relational-databases/databases/contained-databases.md). A propriedade de servidor **Habilitar Bancos de Dados Independentes** deve ser definida como **TRUE** antes que um banco de dados possa ser configurado como independente.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
  **Fechamento Automático**  
  Especifique se o banco de dados é fechado corretamente e libera recursos depois da saída do último usuário. Os valores possíveis são **True** e **False**. Quando **True**, o banco de dados é desligado corretamente e seus recursos são liberados depois do logoff do último usuário.  
   
- Estatísticas incrementais de criação automática  
+ **Estatísticas incrementais de criação automática**  
  Especifique se você deseja usar a opção incremental durante a criação de estatísticas por partição. Para obter informações sobre estatísticas incrementais, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Criar Estatísticas Automaticamente**  
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
  Especifique se o banco de dados atualiza estatísticas de otimização desatualizadas automaticamente. Os valores possíveis são **True** e **False**. Quando definidas como **True**, todas as estatísticas desatualizadas necessárias à consulta para otimização são criadas automaticamente durante a otimização. Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Atualização Automática de Estatísticas de Forma Assíncrona**  
- Quando definidas como **True**, as consultas que iniciam uma atualização automática de estatísticas desatualizadas não aguardarão que as estatísticas sejam atualizadas antes da compilação. Consultas subsequentes usarão as estatísticas atualizadas quando elas estiverem disponíveis.  
+ Quando definidas como **True**, as consultas que iniciam uma atualização automática de estatísticas desatualizadas não aguardam que as estatísticas sejam atualizadas antes da compilação. Consultas subsequentes usam as estatísticas atualizadas quando elas estiverem disponíveis.  
   
  Quando definidas como **False**, as consultas que iniciam uma atualização automática de estatísticas desatualizadas aguardarão até que as estatísticas possam ser usadas no plano de otimização da consulta.  
   
@@ -130,6 +130,9 @@ ms.lasthandoff: 06/22/2017
  Especifique uma das seguintes opções para acesso não transacional através do sistema de arquivos aos dados FILESTREAM armazenados em FileTables: **OFF**, **READ_ONLY**ou **FULL**. Se FILESTREAM não estiver habilitado no servidor, esse valor será definido como OFF e será desabilitado. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Diversos  
+**Permitir o isolamento de instantâneo**  
+Habilita esse recurso.  
+
  **Padrão ANSI NULL**  
  Permita valores nulos para todos os tipos de dados ou colunas definidos pelo usuário que não estejam explicitamente definidos como **NOT NULL** durante uma instrução **CREATE TABLE** ou **ALTER TABLE** (o estado padrão). Para obter mais informações, veja [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) e [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md).  
   
@@ -155,7 +158,13 @@ ms.lasthandoff: 06/22/2017
  Quando definido como **True**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém as estatísticas de correlação entre as duas tabelas do banco de dados que estiverem vinculadas por uma restrição FOREIGN KEY e possuírem colunas **datetime** .  
   
  Quando **False**, as estatísticas de correlação não são mantidas.  
-  
+ 
+ **Durabilidade atrasada**  
+ Habilita esse recurso.  
+ 
+ **O Instantâneo de Leitura Confirmada Está Ativo**  
+ Habilita esse recurso.  
+ 
  **Anular Arredondamento Numérico**  
  Especifique como o banco de dados trata erros de arredondamento. Os valores possíveis são **True** e **False**. Quando **True**, um erro é gerado quando ocorrer perda de precisão em uma expressão. Quando **False**, perdas de precisão não geram mensagens de erro e o resultado é arredondado para a precisão da coluna ou variável que armazena o resultado. Para obter mais informações, veja [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).  
   
@@ -192,14 +201,27 @@ ms.lasthandoff: 06/22/2017
   
  **Tempo de Recuperação de Destino (Segundos)**  
  Especifica o salto máximo no tempo, expresso em segundos, para recuperar o banco de dados especificado no caso de uma falha. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
-  
+
+## <a name="service-broker"></a>Service Broker  
+**Agente Habilitado**  
+Habilita ou desabilita o Service Broker.  
+
+**Honrar Prioridade do Agente**  
+Propriedade do Service Broker somente leitura.  
+
+**Identificador do Service Broker**  
+Identificador somente leitura.  
+
 ## <a name="state"></a>Estado  
  **Banco de Dados Somente Leitura**  
- Especifique se o banco de dados é somente leitura. Os valores possíveis são **True** e **False**. Quando **True**, os usuários podem apenas ler dados no banco de dados. Os usuários não podem modificar os dados ou objetos de banco de dados. No entanto, o próprio banco de dados pode ser excluído usando a instrução DROP DATABASE. O banco de dados não pode estar em uso quando um novo valor para a opção **Banco de Dados Somente Leitura** estiver especificado. O banco de dados mestre é a exceção e só o administrador do sistema pode usar o mestre enquanto a opção estiver sendo definida.  
+ Especifique se o banco de dados é somente leitura. Os valores possíveis são **True** e **False**. Quando **True**, os usuários podem apenas ler dados no banco de dados. Os usuários não podem modificar os dados ou objetos de banco de dados. No entanto, o próprio banco de dados pode ser excluído usando a instrução `DROP DATABASE`. O banco de dados não pode estar em uso quando um novo valor para a opção **Banco de Dados Somente Leitura** estiver especificado. O banco de dados mestre é a exceção e só o administrador do sistema pode usar o mestre enquanto a opção estiver sendo definida.  
   
  **Estado do Banco de Dados**  
  Exiba o estado atual do banco de dados. Não é editável. Para obter mais informações sobre o **Estado do Banco de Dados**, consulte [Database States](../../relational-databases/databases/database-states.md)  
-  
+
+ **Criptografia Habilitada**  
+ Quando definido como **True**, esse banco de dados está habilitado para criptografia de banco de dados. Uma Chave de Criptografia do Banco de Dados é necessária para criptografia. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ 
  **Acesso Restrito**  
  Especifique quais usuários podem acessar o banco de dados. Os valores possíveis são:  
   
@@ -215,12 +237,10 @@ ms.lasthandoff: 06/22/2017
   
      Apenas membros das funções db_owner, dbcreator ou sysadmin podem usar o banco de dados.  
   
- **Criptografia Habilitada**  
- Quando definido como **True**, esse banco de dados está habilitado para criptografia de banco de dados. Uma Chave de Criptografia do Banco de Dados é necessária para criptografia. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
-  
+
+
 ## <a name="see-also"></a>Consulte também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
   
 

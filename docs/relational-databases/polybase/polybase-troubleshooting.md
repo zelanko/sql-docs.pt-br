@@ -2,7 +2,7 @@
 title: "Solução de problemas do PolyBase | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 8/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: ec61aa036b77b827ac021b56066e8047bd74c44a
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Solucionando problemas do PolyBase
@@ -227,8 +227,18 @@ ms.lasthandoff: 07/31/2017
  - O tamanho máximo de linha possível, incluindo o comprimento total das colunas de comprimento variável, não pode exceder 1 MB. 
  - O PolyBase não dá suporte aos tipos de dados de Hive 0,12 + (ou seja, Char(), VarChar())   
  - Durante a exportação de dados em um Formato de Arquivo ORC do SQL Server ou do Azure SQL Data Warehouse, as colunas com excesso de texto podem ser limitadas a até 50 colunas, devido a erros de memória insuficiente do Java. Para solucionar esse problema, exporte apenas um subconjunto das colunas.
-- [O PolyBase não é instalado durante a adição de um nó a um Cluster de Failover do SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
-  
+ - Não é possível ler ou gravar dados criptografados em repouso no Hadoop. Isso inclui a Criptografia Transparente ou as Zonas Criptografadas do HDFS.
+ - O PolyBase não poderá se conectar a uma instância de Hortonworks se o KNOX estiver habilitado. 
+ - O PolyBase não poderá se conectar à instância do Hadoop se a configuração hadoop.RPC.Protection estiver definida de qualquer maneira diferente de “autenticar”.
+
+[O PolyBase não é instalado durante a adição de um nó a um Cluster de Failover do SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+## <a name="hadoop-name-node-high-availability"></a>Alta disponibilidade do nó de nome do Hadoop
+O PolyBase não estabelece uma interface com os serviços de HA do nó de nome como o Zookeeper ou o Knox atualmente. No entanto, há uma solução comprovada que pode ser usada para fornecer a funcionalidade. 
+
+Solução alternativa: use o nome DNS para redirecionar conexões para o nó de nome ativo. Para fazer isso, você precisará garantir que a fonte de dados externa esteja usando um nome DNS para se comunicar com o nó de nome. Quando ocorrer o failover do nó de nome, você precisará alterar o endereço IP associado ao nome DNS usado na definição de fonte de dados externa. Isso redirecionará todas as novas conexões para o nó de nome correto. As conexões existentes falharão quando ocorrer failover. Para automatizar esse processo, uma "pulsação" pode executar o ping no nó de nome ativo. Se a pulsação falhar, é possível assumir que um failover ocorreu e alternar automaticamente para o endereço IP secundário.
+
+
 ## <a name="error-messages-and-possible-solutions"></a>Mensagens de erro e possíveis soluções
 
 Para solucionar erros de tabela externa, confira o blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions (Erros de instalação do PolyBase e possíveis soluções)").

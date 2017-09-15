@@ -1,24 +1,29 @@
 ---
-title: "Gerenciador de depend&#234;ncias de entidade | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "master data services"
+title: "Gerenciador de dependências de entidade | Microsoft Docs"
+ms.custom: 
+ms.date: 04/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- master data services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c365750c4c7519e27b9be74da30c4028491fe37e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
-# Gerenciador de depend&#234;ncias de entidade
+# <a name="entity-dependencies-explorer"></a>Gerenciador de dependências de entidade
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 adiciona uma nova página de gerenciador, Dependências da Entidade, que fornece uma maneira alternativa para visualizar relações entre membros de entidade em um modelo, conforme especificado por seus valores DBA (atributo baseado em domínio), mas sem a necessidade de definir uma Hierarquia Derivada primeiro.   
   
@@ -43,3 +48,5 @@ A exibição é totalmente editável, assim como na página Gerenciador de Hiera
   
   
   
+
+

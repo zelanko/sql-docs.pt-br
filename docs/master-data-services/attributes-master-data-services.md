@@ -18,14 +18,14 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-attributes-relate-to-other-model-objects"></a>Como os atributos se relacionam com outros objetos modelo  
  Você pode pensar em um atributo como uma coluna em uma tabela de entidade. Um valor de atributo é o valor usado para descrever um membro específico.  
   
- ![Entidade de Master Data Services representada como tabela](../master-data-services/media/mds-conc-entity-table.gif "entidade de Master Data Services representada como tabela")  
+ ![Entidade do Master Data Services representada como tabela](../master-data-services/media/mds-conc-entity-table.gif "Entidade do Master Data Services representada como tabela")  
   
  Ao criar uma entidade que contém muitos atributos, você pode organizar os atributos em grupos de atributos. Para obter mais informações, consulte [Grupos de atributos &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="attribute-examples"></a>Exemplos de atributos  
  No exemplo a seguir, a entidade tem os atributos: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Esses atributos descrevem os membros, Cada membro é representado por uma única linha de valores de atributo.  
   
- ![Tabela de entidade de produto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "tabela de entidade de produto de bicicleta")  
+ ![Tabela de entidade de produto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidade de produto de bicicleta")  
   
  No exemplo a seguir, a entidade Product contém:  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/02/2017
   
  Subcategory é uma entidade usada como atributo com base em domínio da entidade Product. Category é uma entidade usada como atributo com base em domínio de Subcategory. Assim como a entidade Product, as entidades Category e Subcategory contêm os atributos padrão Name e Code.  
   
- ![Estrutura de árvore de entidade de produto](../master-data-services/media/mds-conc-entity-ui.gif "estrutura de árvore de entidade de produto")  
+ ![Estrutura de árvore de entidade de produto](../master-data-services/media/mds-conc-entity-ui.gif "Estrutura de árvore de entidade de produto")  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
   

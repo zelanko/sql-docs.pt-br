@@ -1,5 +1,5 @@
 ---
-title: "Categorizados operações do serviço Web (Master Data Services) | Microsoft Docs"
+title: "Operações de serviço Web categorizadas (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5363c242248d57e23da9aae986f39825896d5162
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 783893453fecd48f129bd2936ed6e5f1b5a3bd2e
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Operações de serviço Web categorizadas (Master Data Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>|  
   
 ## <a name="entity-operations"></a>Operações de entidade  
- Estas operações são usadas para criar, atualizar e excluir os membros de uma única entidade. Para obter mais informações, consulte [entidades &#40; Master Data Services &#41; ](../../master-data-services/entities-master-data-services.md) e [membros &#40; Master Data Services &#41; ](../../master-data-services/members-master-data-services.md).  
+ Estas operações são usadas para criar, atualizar e excluir os membros de uma única entidade. Para obter mais informações, consulte [Entidades &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md) e [Membros &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md).  
   
 ||  
 |-|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersGet%2A>|  
   
 ## <a name="attribute-and-hierarchy-operations"></a>Operações de atributo e hierarquia  
- Estas operações são usadas para obter informações sobre atributos e hierarquias. Atributos e hierarquias também podem ser modificados com o uso das operações de modelo, como <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>. Para obter mais informações, consulte [atributos &#40; Master Data Services &#41; ](../../master-data-services/attributes-master-data-services.md) e [hierarquias &#40; Master Data Services &#41; ](../../master-data-services/hierarchies-master-data-services.md).  
+ Estas operações são usadas para obter informações sobre atributos e hierarquias. Atributos e hierarquias também podem ser modificados com o uso das operações de modelo, como <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>. Para obter mais informações, consulte [Atributos &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md) e [Hierarquias &#40;Master Data Services&#41;](../../master-data-services/hierarchies-master-data-services.md).  
   
 ||  
 |-|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesUpdate%2A>|  
   
 ## <a name="annotation-operations"></a>Operações de anotação  
- Estas operações são usadas para criar, atualizar e excluir anotações. Para obter mais informações, consulte [anotações &#40; Master Data Services &#41; ](../../master-data-services/annotations-master-data-services.md).  
+ Estas operações são usadas para criar, atualizar e excluir anotações. Para obter mais informações, consulte [Anotações &#40;Master Data Services&#41;](../../master-data-services/annotations-master-data-services.md).  
   
 ||  
 |-|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.TransactionsReverse%2A>|  
   
 ## <a name="version-and-validation-operations"></a>Operações de versão e validação  
- Estas operações são usadas para copiar e validar versões. Para obter mais informações, consulte [versões &#40; Master Data Services &#41; ](../../master-data-services/versions-master-data-services.md) e [validação &#40; Master Data Services &#41; ](../../master-data-services/validation-master-data-services.md).  
+ Estas operações são usadas para copiar e validar versões. Para obter mais informações, consulte [Versões &#40;Master Data Services&#41;](../../master-data-services/versions-master-data-services.md) e [Validação &#40;Master Data Services&#41;](../../master-data-services/validation-master-data-services.md).  
   
 ||  
 |-|  
@@ -124,7 +124,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>Operações de importação de dados  
- Estas operações são usadas para importar dados para um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Para obter mais informações, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Estas operações são usadas para importar dados para um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Para obter mais informações, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ||  
 |-|  
@@ -153,7 +153,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
 ## <a name="security-operations"></a>Operações de segurança  
- Estas operações são usadas para modificar as configurações de segurança que controlam o acesso ao banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Para obter mais informações, consulte [Segurança &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md).  
+ Estas operações são usadas para modificar as configurações de segurança que controlam o acesso ao banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Para obter mais informações, consulte [Segurança &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md).  
   
 ||  
 |-|  

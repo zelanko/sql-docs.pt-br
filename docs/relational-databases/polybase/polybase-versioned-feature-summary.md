@@ -1,7 +1,7 @@
 ---
 title: "Resumo de recursos com controle de versão do PolyBase | Microsoft Docs"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 08/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumo de recursos com controle de versão do PolyBase
@@ -44,8 +44,20 @@ Resumo dos recursos do PolyBase disponíveis para produtos e serviços do SQL Se
 |Executar consultas do PolyBase nas ferramentas de BI da Microsoft|sim|não|sim|sim|   
 
 
+## <a name="pushdown-computation-supported-t-sql-operators"></a>Operadores T-SQL com suporte para computação de aplicação
+No SQL Server e no APS, nem todos os operadores T-SQL podem ser aplicados ao cluster hadoop. A tabela a seguir lista todos com suporte e um subconjunto dos operadores sem suporte. 
 
-  
+||||
+|-|-|-| 
+|**Tipo de operador**|**Pode ser enviado por push para Hadoop**|**Pode ser enviado por push para Armazenamento de Blobs**|
+|Projeções de coluna|sim|não|
+|Predicados|sim|não|
+|Agregações|parcial|não|
+|Junções entre tabelas externas|não|não|
+|Junções entre tabelas externas e tabelas locais|não|não|
+|Classificações|não|não|
+
+Agregação parcial significa que uma agregação final deve ocorrer depois que os dados atingirem o SQL Server, mas uma parte da agregação ocorre no Hadoop. Este é uma agregação de computação de método comum em sistemas de Processamento Paralelo Maciço.  
 ## <a name="see-also"></a>Consulte também  
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   

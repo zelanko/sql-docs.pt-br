@@ -1,5 +1,5 @@
 ---
-title: "Configuração e instalação do Master Data Services | Microsoft Docs"
+title: "Instalação e configuração do Master Data Services | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/28/2017
@@ -12,22 +12,22 @@ ms.tgt_pltfrm:
 ms.topic: get-started-article
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 44
-author: sabotta
-ms.author: carlasab
+author: smartysanthosh
+ms.author: nagavo
 manager: craigg
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 25e5dc869efd2417c47b72c70ede7ba19ab54b46
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: da09783f5d8bdcd491f73a1b46390918bbb7dd8d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalação e configuração do Master Data Services
   Este artigo aborda a instalação do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em um computador com Windows Server 2012 R2, configuração do site e banco de dados do MDS e implantação dos dados e modelos de exemplo. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) permite que sua organização gerencie uma versão confiável dos dados.   
   
 > [!NOTE] 
-> Você pode instalar [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em um Windows 10 máquina quando você usar a edição de desenvolvedor que agora oferece suporte a [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
->>Para obter mais informações sobre o sistema operacional de suporte para diferentes [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] edições, consulte [requisitos de Hardware e Software para instalação do SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
+> Você pode instalar o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em um computador com Windows 10 quando usar a edição Developer que agora dá suporte para [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
+>>Para obter mais informações sobre o suporte ao sistema operacional para diferentes edições do [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], consulte [Requisitos de hardware e software para a instalação do SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
 
 Para obter uma visão geral de como organizar dados no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Visão geral do MDS (Master Data Services)](../master-data-services/master-data-services-overview-mds.md).     
   
@@ -37,24 +37,24 @@ Para obter links para vídeos e outros recursos de treinamento para ajudá-lo a 
   
 > **Download**  
 >-   Para baixar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   Tem uma conta do Azure?  Em seguida, acesse  **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**  para criar uma máquina Virtual com o SQL Server já instalado.  
+>-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o SQL Server já está instalado.  
  
 > **Não está conseguindo criar um site do MDS?**
 >>Confira este artigo de suporte da Microsoft para obter instruções sobre como resolver esse problema.
 [Não é possível criar um site do MDS por meio de uma conta de baixo privilégio no SQL Server 2016](https://aka.ms/mdssupport) 
 
-## <a name="internet-explorer-and-silverlight"></a>Silverlight e do Internet Explorer
-- Quando você instala [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em uma máquina Windows Server 2012, talvez você precise configurar o Internet Explorer Enhanced Security para permitir script para o site de aplicativo da Web. Caso contrário, navegando para o site no computador do servidor falhará.
-- Para trabalhar no aplicativo Web, o Silverlight 5 deve ser instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, você deverá instalá-lo quando você navega para uma área do aplicativo da Web que exija isso. Você pode instalar o Silverlight 5 em  **[aqui](https://www.microsoft.com/silverlight/)**.
+## <a name="internet-explorer-and-silverlight"></a>Internet Explorer e Silverlight
+- Quando você instala o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em um computador com Windows Server 2012, pode ser necessário configurar a Segurança Melhorada do Internet Explorer para permitir script para o site do aplicativo Web. Caso contrário, haverá falha ao navegar até o site de no computador de servidor.
+- Para trabalhar no aplicativo Web, o Silverlight 5 deve estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por **[aqui](https://www.microsoft.com/silverlight/)**.
 
-## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]em uma máquina Virtual do Azure
-Por padrão, quando você gira a uma máquina Virtual do Azure com [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] já instalado, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] também é instalado. 
+## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em uma máquina virtual do Azure
+Por padrão, quando você cria uma máquina virtual do Azure com [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] já instalado, o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] também é instalado. 
 
-Você está próxima etapa é instalar os serviços de informações da Internet (IIS). Consulte o [instalando e configurando o IIS](#InstallIIS) seção. 
+A próxima etapa é instalar o IIS (Serviços de Informações da Internet). Consulte a seção [Instalando e configurando o IIS](#InstallIIS). 
 
-Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], você encontrará o arquivo setup.exe no local padrão, `<drive>`: \SQLServer_13.0_Full.
+Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], encontrará o arquivo setup.exe no local padrão, `<drive>`:\SQLServer_13.0_Full.
   
-## <a name="InstallMDS"></a>Instalando o Master Data Services  
+## <a name="InstallMDS"></a> Instalando o Master Data Services  
  Você usa o assistente de instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou um prompt de comando para instalar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
  **Para instalar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] usando a Configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um computador Windows Server 2012 R2**  
@@ -69,15 +69,15 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
   
 3.  Conclua o assistente de instalação.  
 
-## <a name="InstallIIS"></a>Instalar e configurar o IIS
+## <a name="InstallIIS"></a> Instalando e configurando o IIS
   
 1.  No [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)], clique no ícone **Gerenciador do Servidor** na barra de tarefas da **Área de Trabalho**.  
   
-     ![Ícone para o Gerenciador do servidor na barra de tarefas do Windows Server 2012](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "ícone para o Gerenciador do servidor na barra de tarefas do Windows Server 2012")  
+     ![Ícone para o Gerenciador do Servidor na barra de tarefas do Windows Server 2012](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Ícone para o Gerenciador do Servidor na barra de tarefas do Windows Server 2012")  
   
 5.  Em **Gerenciador do Servidor**, clique em **Adicionar Funções e Recursos** no menu **Gerenciar** .  
    
-     ![No comando de menu Gerenciar servidor, adicionar funções e recursos](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "no servidor de gerenciamento, adicionar funções e recursos do comando de menu")  
+     ![No Gerenciador do Servidor, o comando de menu Adicionar Funções e Recursos](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "No Gerenciador do Servidor, o comando de menu Adicionar Funções e Recursos")  
   
 6.  Na página **Tipo de Instalação** do **Assistente para Adicionar Funções e Recursos**, aceite o valor padrão (**Instalação baseada em função ou em recurso**) e clique em **Avançar**.  
   
@@ -85,29 +85,29 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
   
      ![mds_AddRolesFeaturesWizard_ServerSelectionPage](../master-data-services/media/mds-addrolesfeatureswizard-serverselectionpage.png) 
   
-8. Sobre o **funções de servidor** , clique em **servidor Web** e, em seguida, clique em **próximo**. 
+8. Na página **Funções de Servidor**, clique em **Servidor Web** e clique em **Avançar**. 
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. Sobre o **recursos** , confirme que os seguintes recursos são selecionados e, em seguida, clique em **próximo**. Esses recursos são necessários para [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)].
+9. Na página **Recursos**, confirme se os recursos a seguir estão selecionados e clique em **Avançar**. Esses recursos são necessários para [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)].
   
     |Recursos|Recursos|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
-10. No painel esquerdo, clique em **função de servidor Web (IIS)** e, em seguida, clique em **serviços de função**.
-11. Sobre o **serviços de função** , confirme que os seguintes serviços estão selecionados e, em seguida, clique em **próximo**. Esses serviços são necessários para [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] em [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)].
+10. No painel esquerdo, clique em **Função de Servidor Web (IIS)** e, em seguida, clique em **Serviços de Função**.
+11. Na página **Serviços de Função**, confirme se os serviços a seguir estão selecionados e clique em **Avançar**. Esses serviços são necessários para [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] em [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)].
 
     > [!WARNING]  
     >  Não instale o serviço de função Publicação do WebDAV. Publicação do WebDAV não é compatível com o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-     |Serviços de função|Serviços de função|  
+     |Serviços de Função|Serviços de Função|  
     |-----------------------------|-----------------------------|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_PerformSecurity](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-performsecurity.png)|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage_AppDevsection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-appdevsection.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_ManageToolssection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-managetoolssection.png)|  
     |||  
   
-     Para obter uma lista dos recursos necessários e serviços de funções em outros sistemas operacionais, consulte [requisitos do aplicativo Web &#40; Master Data Services &#41; ](../master-data-services/install-windows/web-application-requirements-master-data-services.md) .   
+     Para obter uma lista dos recursos e dos serviços de funções necessários em outros sistemas operacionais, consulte [Requisitos do aplicativo Web &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md).   
   
  Para obter mais informações sobre como instalar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a configuração, veja [Instalar o SQL Server 2016 por meio do Assistente de Instalação &#40;Configuração&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
@@ -120,10 +120,10 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
 
  
 > [!WARNING]  
-    >  Você deve [instalar o IIS](#InstallIIS) antes de iniciar o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] do Configuration Manager. Caso contrário, o Configuration Manager exibirá um erro de serviços de informações de informações e você não poderá criar o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] aplicativo web.  
+    >  Você deve [instalar o IIS](#InstallIIS) antes de iniciar o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Caso contrário, o Configuration Manager exibirá um erro de Serviços de Informações e você não poderá criar o aplicativo Web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
     
-> **Requisitos de navegador**
->>O [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] aplicativo web funciona apenas no Internet Explorer (IE) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, Microsoft Edge e o Chrome.    
+> **Requisitos do navegador**
+>>O aplicativo Web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] funciona apenas no Internet Explorer (IE) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, para o Microsoft Edge e o Chrome.    
   
 1.  Inicie o [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]e clique em **Configuração do Banco de Dados** no painel esquerdo.  
   
@@ -132,11 +132,11 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
 3.  Na página **Servidor de Banco de Dados** , selecione o **Tipo de autenticação** e clique em **Testar Conexão** para confirmar se você pode se conectar ao banco de dados usando as credenciais para o tipo de autenticação selecionado. Clique em **Avançar**.
   
     > [!NOTE]  
-    >  Quando você seleciona **Usuário Atual – Segurança Integrada** como o tipo de autenticação, a caixa **Nome de usuário** é somente leitura e exibe o nome da conta de usuário do Windows que está conectado ao computador. Se você estiver executando [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em uma máquina Virtual (VM) do Azure, o **nome de usuário** caixa exibe o nome da VM e o nome de usuário para a conta de administrador local na máquina virtual. 
+    >  Quando você seleciona **Usuário Atual – Segurança Integrada** como o tipo de autenticação, a caixa **Nome de usuário** é somente leitura e exibe o nome da conta de usuário do Windows que está conectado ao computador. Se você estiver executando o [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em uma VM (máquina Virtual) do Azure, a caixa **Nome de usuário** exibe o nome da VM e o nome de usuário para a conta de administrador local na VM. 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Digite um nome no campo **Nome do banco de dados** . Opcionalmente, para selecionar um agrupamento do Windows, desmarque o **agrupamento padrão do SQL Server** caixa de seleção e clique em uma ou mais das opções disponíveis, como **diferencia maiusculas de minúsculas**. Clique em **Avançar**.
+4.  Digite um nome no campo **Nome do banco de dados** . Opcionalmente, para selecionar um agrupamento do Windows, desmarque a caixa de seleção **Agrupamento padrão do SQL Server** e clique em uma ou mais das opções disponíveis como **Diferenciar maiúsculas de minúsculas**. Clique em **Avançar**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -146,15 +146,15 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_AdminPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-adminpage.png)  
   
-6.  Clique em **Avançar** para exibir um resumo das configurações do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e em **Avançar** novamente para criar o banco de dados. O **progresso e conclusão** página será exibida.
+6.  Clique em **Avançar** para exibir um resumo das configurações do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e em **Avançar** novamente para criar o banco de dados. A página **Progresso e Conclusão** é exibida.
 
-7. Quando o banco de dados é criado e configurado, clique em **concluir**.  
+7. Quando o banco de dados estiver criado e configurado, clique em **Concluir**.  
   
      Para obter mais informações sobre as configurações do **Assistente para Criar Banco de Dados**, consulte [Assistente para Criar Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
-7.  No **configuração de banco de dados** página o [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], clique em **Selecionar banco de dados**.  
+7.  Na página **Configuração do Banco de Dados** do [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], clique em **Selecionar Banco de Dados**.  
   
-8.  Clique em **conectar**, selecione o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados que você criou na etapa 7 e, em seguida, clique em **Okey**. 
+8.  Clique em **Conectar**, selecione o banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] criado na Etapa 7 e clique em **OK**. 
 
     ![mds_2016ConfigManager_SelectDatabaseButton_ConnectToDatabaseDialog](../master-data-services/media/mds-2016configmanager-selectdatabasebutton-connecttodatabasedialog.png)  
   
@@ -194,7 +194,7 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Clique em **Aplicar**. O **configuração concluída** exibe da caixa de mensagem. Clique em **Okey** na caixa de mensagem para iniciar o aplicativo web. O endereço do site é http://*server name*/*web application*/. 
+15. Clique em **Aplicar**. A caixa de mensagem **Configuração Concluída** é exibida. Clique em **OK** na caixa de mensagem para iniciar o aplicativo Web. O endereço do site é http://*server name*/*web application*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -203,8 +203,8 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
   
  Você também pode usar o [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] para especificar configurações para os aplicativos Web e serviços Web associados ao banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Por exemplo, você pode especificar a frequência com que os dados são carregados ou os emails de validação são enviados. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-##  <a name="deploySample"></a>Implantando exemplos de modelos e dados  
- Os três pacotes de modelo de exemplo a seguir estão incluídos no  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   Esses modelos de exemplo incluem dados. **O local padrão para os pacotes de modelo de exemplo é %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
+##  <a name="deploySample"></a> Implantar dados e modelos de exemplo  
+ Os três pacotes de modelo de exemplo a seguir estão incluídos no  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   Esses modelos de exemplo incluem dados. **O local padrão dos pacotes de modelo de exemplo é %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
   
 -   chartofaccounts_en.pkg  
   
@@ -212,15 +212,15 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
   
 -   product_en.pkg  
   
- Você implanta os pacotes usando a ferramenta MDSModelDeploy. É o local padrão para a ferramenta MDSModelDeploy *unidade*\Program Files\Microsoft services\configuration. de dados do SQL Server \ 140\Master.  
+ Você implanta os pacotes usando a ferramenta MDSModelDeploy. O local padrão da ferramenta MDSModelDeploy é *drive*\Arquivos de Programas\Microsoft SQL Server\ 140\Master Data Services\Configuration.  
   
  Para obter informações sobre os pré-requisitos para executar essa ferramenta, consulte [Implantar um pacote de implantação de modelo usando MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
- Para obter informações sobre as atualizações feitas nos dados para dar suporte a novos recursos no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], consulte [exemplos do SQL Server: pacotes de implantação de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Para obter informações sobre as atualizações feitas nos dados para dar suporte aos novos recursos do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], consulte [Exemplos de SQL Server: Pacotes de implantação de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
  **Para implantar modelos de exemplo**  
   
-1.  Copie os pacotes de modelo de exemplo para *unidade*\Program Files\Microsoft SQL Server\140\Master Data services\configuration..  
+1.  Copie os pacotes de modelo de exemplo em *drive*\Arquivos de Programas\Microsoft SQL Server\140\Master Data Services\Configuration.  
   
 2.  Abra um Prompt de Comando Administrador: e procure MDSModelDeploy.exe, executando o comando a seguir.  
   
@@ -240,7 +240,7 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
     >  O primeiro valor do serviço na lista de valores retornados é aquele que você especificou para implantar um modelo.  
     >
     > [!NOTE]
-    > Para saber mais sobre as informações de metadados dos modelos de exemplo, consulte o arquivo Leiame disponível neste local "c:\Program Files\Microsoft SQL Server\140\Master Data services\configuration."
+    > Para saber mais sobre as informações de metadados dos modelos de exemplo, consulte o arquivo Leiame disponível neste local "c:\Arquivos de Programas\Microsoft SQL Server\140\Master Data Services\Configuration"
     >
    
      **Para implantar o modelo de exemplo chartofaccounts_en.pkg**  
@@ -266,7 +266,7 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
   
      A imagem a seguir mostra o comando para implantar o modelo de exemplo product_en.pkg.  
   
-     ![Linha de comando para implantar o modelo de exemplo do produto](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "linha de comando para implantar o modelo de exemplo do produto")  
+     ![Linha de comando para implantar o modelo de exemplo do produto](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "Linha de comando para implantar o modelo de exemplo do produto")  
   
 4.  Para exibir os modelos de exemplo, faça o seguinte.  
   
@@ -276,7 +276,7 @@ Se você estiver interessado em fazer alterações à instalação do [!INCLUDE[
   
     2.  Selecione um modelo na caixa de listagem **Modelo** e clique em **Explorer**.  
   
-         ![Web MDS, home page do site. ] (../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "Site da Web do MDS, a página inicial.")  
+         ![Site do MDS, home page.](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "Site do MDS, home page.")  
   
 ## <a name="next-step"></a>Próxima etapa  
  Crie um novo modelo e entidades para os dados. Consulte [Criar um modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md) e [Criar uma entidade &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
