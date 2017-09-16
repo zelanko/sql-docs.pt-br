@@ -1,12 +1,12 @@
 ---
-title: 'Tutorial: SQL Server Management Studio'
+title: 'Tutorial: SQL Server Management Studio (SSMS) | Microsoft Docs'
 ms.custom: 
-ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.date: 08/30/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- database-engine
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,47 +23,46 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: f632115506e3485e9d84476a95b0606f2c859e83
+ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
+ms.openlocfilehash: dde887f6e0999c5ebc107a300c33981a38ec7034
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-O tutorial do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  
+O tutorial SQL Server Management Studio (SSMS) apresenta o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
-Este tutorial o ajudará a compreender a apresentação de informações no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e como aproveitar os benefícios dos recursos. Observe que este tutorial usa o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] gratuito baixado no centro de download.  
+Este tutorial o ajudará a compreender a apresentação de informações no SSMS e como aproveitar os benefícios dele.
   
-O melhor modo de se familiarizar com o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] é praticando. Este tutorial o ensinará a administrar os componentes do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e encontrar os recursos que você usa com regularidade.  
+O melhor modo de se familiarizar com o SSMS é praticando. Este tutorial o ensinará a administrar os componentes do SSMS e encontrar os recursos que você usa com regularidade.  
   
 Este tutorial divide-se em três lições:  
   
-[Lição 1: Navegação básica no SQL Server Management Studio](../../tools/sql-server-management-studio/lesson-1-basic-navigation-in-sql-server-management-studio.md)  
+[Lição 1: Navegação básica no SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 Nesta lição você aprenderá a usar os componentes do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], a reconfigurar o layout do ambiente e a restaurar o layout padrão.  
   
-[Lição 2: Gravando Transact-SQL](../../tools/sql-server-management-studio/lesson-2-writing-transact-sql.md)  
-Nesta lição, você aprenderá a abrir o Editor de Consultas, gerenciar código e usar os outros recursos novos do Editor de Consultas.  
+[Lição 2: Gravando Transact-SQL](lesson-2-writing-transact-sql.md)  
+Nesta lição, você aprenderá a abrir o Editor de Consultas, gerenciar código e usar outros recursos do Editor de Consultas.  
   
-[Lição 3: Trabalhando com modelos, soluções e projetos de script](../../tools/sql-server-management-studio/lesson-3-working-with-templates-solutions-and-script-projects.md)  
+[Lição 3: Trabalhando com modelos, soluções e projetos de script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
 Nesta lição, você aprenderá a usar modelos e organizar scripts em soluções e projetos.  
   
 ## <a name="requirements"></a>Requisitos  
-Este tutorial foi desenvolvido para administradores experientes de bancos de dados e desenvolvedores de bancos de dados que não estão familiarizados com o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], mas que estão familiarizados com conceitos de bancos de dados e linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+Este tutorial foi desenvolvido para administradores experientes de bancos de dados e desenvolvedores de bancos de dados que não estão familiarizados com o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], mas que estão familiarizados com os conceitos de bancos de dados e com o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-Para que você possa usar o tutorial, os itens a seguir devem estar instalados no sistema:  
+Para que você possa usar o tutorial, os itens a seguir devem estar instalados:  
+
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou uma versão posterior com os bancos de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](http://sqlserversamples.codeplex.com).  
-  
--   Instale a versão mais recente do [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) no centro de download.  
-  
--   Internet Explorer 9.0 ou posterior.  
+-   Instale a versão mais recente do [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
+-   SQL Server 2016 ou posterior com o banco de dados de exemplo AdventureWorks. Para instalar o banco de dados de exemplo AdventureWorks, consulte [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014) e instale o banco de dados AdventureWorks2014 (OLTP).  
+
   
 ## <a name="see-also"></a>Consulte também  
 [Tutoriais do Mecanismo de Banco de Dados](../../relational-databases/database-engine-tutorials.md)  
