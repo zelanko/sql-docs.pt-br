@@ -1,0 +1,59 @@
+---
+title: "Método setDateTimeOffset (SQLServerCallableStatement) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 9383e14d-c83e-43c5-980c-50a3e0bedc31
+caps.latest.revision: 8
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: bb801d286db8f1f9a861508b15d0b50294c10419
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="setdatetimeoffset-method-sqlservercallablestatement"></a>Método setDateTimeOffset (SQLServerCallableStatement)
+[!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
+
+  Esse método foi adicionado no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0.  
+  
+ Define o valor da coluna especificada para o [DateTimeOffset classe](../../../connect/jdbc/reference/datetimeoffset-class.md) valor.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+  
+public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ *sCol*  
+  
+ O nome de uma coluna.  
+  
+ *t*  
+  
+ O [DateTimeOffset classe](../../../connect/jdbc/reference/datetimeoffset-class.md) objeto.  
+  
+## <a name="exceptions"></a>Exceções  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
+  
+## <a name="remarks"></a>Comentários  
+ Você pode recuperar um [DateTimeOffset classe](../../../connect/jdbc/reference/datetimeoffset-class.md) valor com [Getdatetimeoffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md).  
+  
+ [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) usa o ordinal da coluna.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+  
+  

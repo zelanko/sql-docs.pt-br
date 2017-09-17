@@ -1,7 +1,7 @@
 ---
 title: sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,18 +25,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4eb946d5b6ed5a9c6d33789166327bd2dd25d7c1
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 014cf6a2859bc60b4366418363681b1cd53dc5c6
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Um tipo de dados que armazena valores de vários tipos de dados com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)),[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,7 +68,7 @@ O **sql_variant** tipo de dados pertence à parte superior da lista de hierarqui
   
 |Hierarquia de tipos de dados|Família de tipos de dados|  
 |---|---|
-|**sql_variant**|**sql_variant**|  
+|**sql_variant**|sql_variant |  
 |**datetime2**|Data e hora|  
 |**datetimeoffset**|Data e hora|  
 |**datetime**|Data e hora|  
@@ -93,7 +91,7 @@ O **sql_variant** tipo de dados pertence à parte superior da lista de hierarqui
 |**char**|Unicode|  
 |**varbinary**|Binary|  
 |**binary**|Binary|  
-|**uniqueidentifier**|**Uniqueidentifier**|  
+|**uniqueidentifier**|Uniqueidentifier |  
   
 As seguintes regras se aplicam a **sql_variant** comparações:
 -   Quando **sql_variant** valores de tipos diferentes de dados base são comparados e os tipos de dados base estão em dados diferentes famílias de tipos, o valor cuja família de tipo de dados é mais alta no gráfico da hierarquia é considerado o mais de dois valores.  
@@ -115,7 +113,44 @@ A tabela a seguir lista os tipos de valores que não podem ser armazenados usand
 |**sql_variant**|**geografia**|  
 |**hierarchyid**|**geometria**|  
 |Tipos definidos pelo usuário|**datetimeoffset**|  
+
+## <a name="examples"></a>Exemplos  
+
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Usando um sql_variant em uma tabela  
+ O exemplo a seguir, cria uma tabela com um tipo de dados sql_variant. Em seguida, o exemplo recupera `SQL_VARIANT_PROPERTY` informações sobre o `colA` valor `46279.1` onde `colB`  = `1689`, considerando que `tableA` tem `colA` que é do tipo `sql_variant` e `colB`.  
   
+```sql    
+CREATE   TABLE tableA(colA sql_variant, colB int)  
+INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
+SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
+         SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',  
+         SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'  
+FROM      tableA  
+WHERE      colB = 1689  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Observe que cada um destes três valores é uma **sql_variant**.  
+  
+```  
+Base Type    Precision    Scale  
+---------    ---------    -----  
+decimal      8           2  
+  
+(1 row(s) affected)  
+```  
+  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Usando um sql_variant como uma variável   
+ O exemplo a seguir, cria uma variável usando o tipo de dados sql_variant e, em seguida, recupera `SQL_VARIANT_PROPERTY` informações sobre uma variável chamada @v1.  
+  
+```sql    
+DECLARE @v1 sql_variant;  
+SET @v1 = 'ABC';  
+SELECT @v1;  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');  
+```    
+
+
 ## <a name="see-also"></a>Consulte também
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [SQL_VARIANT_PROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)

@@ -1,7 +1,7 @@
 ---
 title: SQL_VARIANT_PROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8cc3088c7025333c5cea3766cc65f56efdd45134
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: bd9b181c04a96ee90b0bbb54546a1d925761224f
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
@@ -39,8 +39,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SQL_VARIANT_PROPERTY ( expression , property )  
 ```  
   
@@ -49,7 +47,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  É uma expressão do tipo **sql_variant**.  
   
  *propriedade*  
- Contém o nome do **sql_variant** propriedade para a qual informações deverá ser fornecido. *propriedade* é **varchar (**128**)**, e pode ser qualquer um dos valores a seguir.  
+ Contém o nome do **sql_variant** propriedade para a qual informações deverá ser fornecido. *propriedade* é **varchar (**128**)**, e pode ser qualquer um dos seguintes valores:  
   
 |Valor|Description|Tipo base de sql_variant retornado|  
 |-----------|-----------------|----------------------------------------|  
@@ -64,9 +62,10 @@ SQL_VARIANT_PROPERTY ( expression , property )
  **sql_variant**  
   
 ## <a name="examples"></a>Exemplos  
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Usando um sql_variant em uma tabela  
  O exemplo a seguir recupera `SQL_VARIANT_PROPERTY` informações sobre o `colA` valor `46279.1` onde `colB`  = `1689`, considerando que `tableA` tem `colA` que é do tipo `sql_variant` e `colB`.  
   
-```  
+```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
 INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
 SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
@@ -86,10 +85,10 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Usando um sql_variant como uma variável   
  O exemplo a seguir recupera `SQL_VARIANT_PROPERTY` informações sobre uma variável chamada @v1.  
   
-```  
+```sql    
 DECLARE @v1 sql_variant;  
 SET @v1 = 'ABC';  
 SELECT @v1;  

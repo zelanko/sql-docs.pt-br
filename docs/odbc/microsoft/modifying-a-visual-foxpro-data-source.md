@@ -1,0 +1,43 @@
+---
+title: Modificando uma fonte de dados do Visual FoxPro | Microsoft Docs
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Visual FoxPro data source [ODBC], changing
+- editing data sources [ODBC], Visual FoxPro
+ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
+caps.latest.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: a2a56fee03c4e839324ffe958031861f0e71bdeb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="modifying-a-visual-foxpro-data-source"></a>Modificando uma fonte de dados do Visual FoxPro
+### <a name="to-modify-a-visual-foxpro-data-source"></a>Para modificar uma fonte de dados do Visual FoxPro  
+  
+1.  Em computadores que executam o Windows 2000, abra o painel de controle do Windows e clique duas vezes em Ferramentas administrativas.  
+  
+2.  Clique duas vezes em fontes de dados (ODBC) para abrir a caixa de diálogo Administrador de fonte de dados ODBC. Esse ícone está disponível depois de instalar o Driver de ODBC do Visual FoxPro ou qualquer software de driver ODBC.  
+  
+    > [!NOTE]  
+    >  Se você estiver executando uma versão anterior do Windows, abra o painel de controle do Windows e clique duas vezes em 32 bits ODBC ou ODBC para abrir a caixa de diálogo Administrador de fonte de dados ODBC.  
+  
+3.  Na guia DSN de usuário ou DSN de sistema, selecione o nome da fonte de dados que você deseja modificar e clique em configurar.  
+  
+4.  No [caixa de diálogo a instalação do Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), selecionar e alterar os itens que você deseja modificar e, em seguida, clique em Okey.  
+  
+5.  Clique em Okey para salvar as alterações e fechar a caixa de diálogo Administrador de fonte de dados ODBC.  
+  
+ As alterações terão efeito na próxima vez que você acessar a fonte de dados do seu aplicativo.

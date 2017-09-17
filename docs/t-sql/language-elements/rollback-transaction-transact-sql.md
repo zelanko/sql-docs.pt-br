@@ -1,7 +1,7 @@
 ---
 title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e31f62560b4061610c0d3c0ec3147110a3e84644
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -55,7 +54,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Argumentos  
  *transaction_name*  
- É o nome atribuído à transação em BEGIN TRANSACTION. *transaction_name* devem estar em conformidade com as regras para identificadores, mas somente os primeiros 32 caracteres do nome da transação são usados. Ao aninhar transações, *transaction_name* deve ser o nome da instrução BEGIN TRANSACTION externa. *transaction_name* é sempre maiusculas e minúsculas, mesmo quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não diferencia maiusculas de minúsculas.  
+ É o nome atribuído à transação em BEGIN TRANSACTION. *transaction_name* devem estar em conformidade com as regras para identificadores, mas somente os primeiros 32 caracteres do nome da transação são usados. Ao aninhar transações, *transaction_name* deve ser o nome da instrução BEGIN TRANSACTION externa. *transaction_name* sempre diferencia maiusculas de minúsculas, mesmo quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não diferencia maiusculas de minúsculas.  
   
  **@***tran_name_variable*  
  É o nome de uma variável definida pelo usuário que contém um nome de transação válido. A variável deve ser declarada com uma **char**, **varchar**, **nchar**, ou **nvarchar** tipo de dados.  
@@ -74,7 +73,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION não pode referenciar um *savepoint_name* em transações distribuídas iniciadas tanto explicitamente com BEGIN DISTRIBUTED TRANSACTION ou escalonada a partir de uma transação local.  
   
- Uma transação não poderá ser revertida depois que uma instrução COMMIT TRANSACTION tiver sido executada, exceto quando COMMIT TRANSACTION estiver associada com uma transação aninhada que está contida dentro da transação que está sendo revertida. Nesta instância, a transação aninhada também será revertida, mesmo se você tiver emitido um COMMIT TRANSACTION para isto.  
+ Uma transação não poderá ser revertida depois que uma instrução COMMIT TRANSACTION tiver sido executada, exceto quando COMMIT TRANSACTION estiver associada com uma transação aninhada que está contida dentro da transação que está sendo revertida. Nesse caso, a transação aninhada será será revertida, mesmo se você tiver emitido um COMMIT TRANSACTION para ele.  
   
  Em uma transação, são permitidos nomes de ponto de salvamento duplicados, mas uma ROLLBACK TRANSACTION que usa o nome de ponto de salvamento duplicado reverte-se somente à SAVE TRANSACTION mais recente usando aquele nome de ponto de salvamento.  
   
@@ -89,11 +88,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   Não são executadas as instruções no lote depois da instrução que ativou o disparador.  
   
- @@TRANCOUNT é incrementada em um quando entrar em um disparador, mesmo quando no modo de confirmação automática. (O sistema trata um disparador como uma transação aninhada implícita.)  
+@@TRANCOUNT é incrementada em um quando entrar em um disparador, mesmo quando no modo de confirmação automática. (O sistema trata um disparador como uma transação aninhada implícita.)  
   
- Instruções ROLLBACK TRANSACTION em procedimentos armazenados não afetam instruções subsequentes no lote que chamou o procedimento; instruções subsequentes no lote são executadas. Instruções ROLLBACK TRANSACTION em disparadores finalizam o lote contendo a instrução que ativou o disparador; instruções subsequentes no lote são executadas.  
+Instruções ROLLBACK TRANSACTION em procedimentos armazenados não afetam instruções subsequentes no lote que chamou o procedimento; instruções subsequentes no lote são executadas. Instruções ROLLBACK TRANSACTION em disparadores finalizam o lote contendo a instrução que ativou o disparador; instruções subsequentes no lote são executadas.  
   
- O efeito de um ROLLBACK em cursores está definido por estas três regras:  
+O efeito de um ROLLBACK em cursores está definido por estas três regras:  
   
 1.  Com CURSOR_CLOSE_ON_COMMIT definido como ON, ROLLBACK fecha, mas desaloca todos os cursores abertos.  
   
@@ -108,21 +107,15 @@ ROLLBACK { TRAN | TRANSACTION }
  Requer associação à função **pública** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra o efeito da reversão de uma transação nomeada.  
+ O exemplo a seguir mostra o efeito da reversão de uma transação nomeada. Depois de criar uma tabela, as instruções a seguir inicia uma transação nomeada, inserir duas linhas e, em seguida, reverta a transação chamada na variável @TransactionName. Outra instrução fora da transação nomeada insere duas linhas. A consulta retorna os resultados das instruções anteriores.   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -133,13 +126,15 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
+  
   
 ## <a name="see-also"></a>Consulte também  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
