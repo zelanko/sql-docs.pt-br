@@ -1,6 +1,6 @@
 ---
-title: Atualizado - Reporting Services para documentos do SQL Server | Microsoft Docs
-description: "Trechos de código de exibição de conteúdo atualizado recentemente alterada na documentação de, para Reporting Services para Microsoft SQL Server."
+title: Atualizado - ADO para documentos do SQL Server | Microsoft Docs
+description: "Trechos de código de exibição de conteúdo atualizado para alterados recentemente na documentação, para ActiveX Data Objects (ADO) para o Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -14,15 +14,15 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
-ms.workload: reporting-services
+ms.workload: ado-activex-data-objects
 ms.translationtype: MT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 690b622224a31f4327b6dc199b1687f1726937c2
+ms.openlocfilehash: 3962091c42c67c0ad3319fc76577d4cab54abe5f
 ms.contentlocale: pt-br
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Novos e atualizados recentemente: Reporting Services para SQL Server
+# <a name="new-and-recently-updated-activex-data-objects-ado-for-sql-server"></a>Novos e atualizados recentemente: ActiveX Data Objects (ADO) para o SQL Server
 
 
 
@@ -35,7 +35,7 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 
 
 - *Intervalo de datas das atualizações:* &nbsp; **2017-07-18** &nbsp; - para - &nbsp; **2017-09-11**
-- *Área de assunto:* &nbsp; **Reporting Services para SQL Server**.
+- *Área de assunto:* &nbsp; **ActiveX Data Objects (ADO) para o SQL Server**.
 
 
 
@@ -73,43 +73,13 @@ Por essas e outras razões, não copie o código desses trechos, nem considere-o
 
 Essa lista compact fornece links para todos os artigos atualizados que estão listados na seção foram extraídas.
 
-1. [Propriedades do servidor (página avançadas) - Reporting Services](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-server-properties-advanced-page---reporting-servicestoolsserver-properties-advanced-page-reporting-servicesmd"></a>1. &nbsp;[Propriedades de servidor (página avançadas) - Reporting Services](tools/server-properties-advanced-page-reporting-services.md)
-
-*Atualizado em: 25-08-2017* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 122.  ms.author= "asaxton".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 92858a7e7239197af4ac2745ffc857d8c04f55cd e86bd4767f668b4ce80dc70056181d001f8e1b89  (PR=2953  ,  Filename=server-properties-advanced-page-reporting-services.md  ,  Dirpath=docs\reporting-services\tools\  ,  MergeCommitSha40=c003d58dd887ce1eddc142fa62f8050b73c0c935) -->
-
-
-
-**AccessControlAllowCredentials** indica se a resposta à solicitação do cliente pode ser exibida quando o sinalizador 'credenciais' está definido como true. O valor padrão é **false**.
-
-**AccessControlAllowHeaders** uma lista de separada por vírgulas dos cabeçalhos que o servidor permitirá quando um cliente faz uma solicitação. Essa propriedade pode ser uma cadeia de caracteres vazia, especificando * permitirá que todos os cabeçalhos.
-
-**AccessControlAllowMethods** uma lista de separados por vírgulas dos métodos HTTP que o servidor permitirá quando um cliente faz uma solicitação. Os valores padrão são (GET, PUT, POST, PATCH, DELETE), especificando * permitirá que todos os métodos.
-
-**AccessControlAllowOrigin** uma lista de separada por vírgulas de origens que o servidor permitirá quando um cliente faz uma solicitação. O valor padrão é em branco, que impede que todas as solicitações, especificando * permitirá que todas as origens quando as credenciais não estão definidas; Se as credenciais são especificadas de uma lista explícita de origens deve ser especificada.
-
-**AccessControlExposeHeaders** uma lista de separada por vírgulas dos cabeçalhos que o servidor irá expor para clientes. O valor padrão é vazio.
-
-**AccessControlMaxAge** Especifica o número de segundos que os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
-
-
+***Nenhum artigo nesta área foi atualizado recentemente no momento.***
 
 
 
