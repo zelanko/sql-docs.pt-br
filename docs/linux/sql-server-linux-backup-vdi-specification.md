@@ -141,7 +141,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
 | |**VD_E_INVALID** |O nome do dispositivo é inválido. Não é um dos nomes de conhecido que compõem o conjunto.
 
 **Comentários** VD_E_OPEN podem ser retornados sem problema. O cliente pode chamar OpenDevice por meio de um loop até que este código é retornado.
-Se mais de um dispositivo estiver configurado, por exemplo * n * dispositivos, o conjunto de dispositivo virtual retornará * n * interfaces de dispositivo exclusivo.
+Se mais de um dispositivo estiver configurado, por exemplo  *n*  dispositivos, o conjunto de dispositivo virtual retornará  *n*  interfaces de dispositivo exclusivo.
 
 O `GetConfiguration` função pode ser usada para aguardar até que os dispositivos podem ser abertos.
 Se essa função não for bem-sucedida, um valor nulo é retornado por meio de ppVirtualDevice.

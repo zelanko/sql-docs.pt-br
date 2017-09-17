@@ -31,7 +31,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="debugging-control-flow"></a>Depurando o fluxo de controle
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features e o tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  O [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluem recursos e ferramentas que você pode usar para detectar e solucionar problemas de fluxo de controle em um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte a pontos de interrupção em contêineres e tarefas.  
   
