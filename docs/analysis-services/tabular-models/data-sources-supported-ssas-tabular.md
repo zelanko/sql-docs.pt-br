@@ -1,24 +1,29 @@
 ---
-title: "Fontes de dados com suporte (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Fontes de dados com suporte (SSAS Tabular) | Microsoft Docs
+ms.custom: 
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e5457f0c2abf5f1b7cdae5ff2ae57b5298a72d82
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Fontes de dados com suporte (SSAS tabular)
+# <a name="data-sources-supported-ssas-tabular"></a>Fontes de dados com suporte (SSAS tabular)
   Este tópico descreve os tipos de fonte de dados que podem ser usados com modelos tabulares.  
   
 ##  <a name="bkmk_supported_ds"></a> Fontes de dados com suporte para modelos na memória  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
 |-|-|-|-|  
 |Origem|Versões|Tipo de arquivo|Provedores|  
 |Bancos de dados do Access|Microsoft Access 2010 e posterior.|.accdb ou .mdb|Provedor OLE DB ACE 14|  
-|Bancos de dados relacionais do SQL Server|Microsoft SQL Server 2008 e posterior, Microsoft Data Warehouse 2008 e posterior, Banco de Dados SQL do Microsoft Azure, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Observe que o APS (Analytics Platform System) era anteriormente conhecido como SQL PDW (Server Parallel Datawarehouse). Originalmente, conectar o PDW a partir do Analysis Services exigia um provedor de dados especial. Esse provedor foi substituído no SQL Server 2012. A partir do SQL Server 2012, o cliente nativo do SQL Server é usado para as conexões com o PDW/APS. Para saber mais sobre o APS, acesse o site [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 10.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
+|Bancos de dados relacionais do SQL Server|SQL Server 2008 e posterior, depósito de dados do SQL Server 2008 e posterior, o Azure SQL Database, Azure SQL Data Warehouse, Analytics Platform System (APS)<br /><br /> <br /><br /> Observe que o APS (Analytics Platform System) era anteriormente conhecido como SQL PDW (Server Parallel Datawarehouse). Originalmente, conectar o PDW a partir do Analysis Services exigia um provedor de dados especial. Esse provedor foi substituído no SQL Server 2012. A partir do SQL Server 2012, o cliente nativo do SQL Server é usado para as conexões com o PDW/APS. |(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 10.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
 |Bancos de dados relacionais da Oracle|Oracle 9i e posterior.|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de dados do .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bancos de dados relacionais do Teradata|Teradata V2R6 e posterior|(não se aplica)|Provedor OLE DB TDOLEDB<br /><br /> Provedor de .NET Data para Teradata|  
 |Bancos de dados relacionais do Informix||(não se aplica)|Provedor OLE DB para Informix|  
@@ -66,8 +71,9 @@ Colunas que contêm dados semelhantes em fontes de dados diferentes são a base 
   
 Os provedores OLE DB às vezes podem oferecer desempenho mais rápido para dados em grande escala. Ao escolher entre diferentes provedores para a mesma fonte de dados, experimente primeiro o provedor OLE DB.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Fontes de dados &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Importar dados &#40;SSAS de Tabela&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)  
+ [Importar dados &#40;SSAS de Tabela&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   
+

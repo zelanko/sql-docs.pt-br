@@ -1,33 +1,41 @@
 ---
-title: "Habilitar o modo DirectQuery no SSMS | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Habilitar o modo DirectQuery no SSMS | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 86bae72aacde357b372e48f83a429e8102553325
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Habilitar o modo DirectQuery no SSMS
+# <a name="enable-directquery-mode-in-ssms"></a>Habilitar o modo DirectQuery no SSMS
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Você pode alterar as propriedades de acesso a dados de um modelo de tabela que já tenha sido implantado, habilitando o modo DirectQuery, em que consultas são executadas em uma fonte de dados relacional de back-end em vez de nos dados em cache residentes na memória.  
   
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], as etapas de configuração do DirectQuery diferem de acordo com o nível de compatibilidade do modelo. Veja a seguir etapas que funcionam para todos os níveis de compatibilidade.  
   
- Este tópico pressupõe que você tenha criado e validado um modelo tabular na memória no nível de compatibilidade 1200 e somente precise habilitar o acesso DirectQuery e atualizar as cadeias de conexão. Se você estiver começando de um nível de compatibilidade inferior, precisará atualizá-lo manualmente primeiro. Consulte [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) para encontrar as etapas.  
+ Este tópico pressupõe que você tenha criado e validado um modelo de tabela na memória no nível de compatibilidade 1200 ou superior e somente precisa habilitar o acesso DirectQuery e atualizar as cadeias de conexão. Se você estiver começando de um nível de compatibilidade inferior, precisará atualizá-lo manualmente primeiro. Consulte [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) para encontrar as etapas.  
   
 > [!IMPORTANT]  
 >  É recomendável usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] em vez do Management Studio para alternar entre modos de armazenamento de dados. Quando você usa o  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para alterar o modelo e depois implantar o servidor, o modelo e o banco de dados permanecem em sincronia. Além disso, alterar os modos de armazenamento no modelo permite que você verifique os erros de validação que ocorrem. Ao usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] conforme a descrição neste artigo, os erros de validação não são relatados.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Habilitar o uso do modo DirectQuery em um modelo de tabela é um processo de várias etapas:  
   
 -   Certifique-se de que o modelo não tenha recursos que possam causar erros de validação no modo DirectQuery e altere o modo de armazenamento de dados no modelo de na memória para DirectQuery.  
@@ -44,7 +52,7 @@ caps.handback.revision: 18
   
 -   A última etapa é confirmar se o modo Consulta Direta está operacional por meio da execução de uma consulta.  
   
-## Etapa 1: Verificar o nível de compatibilidade  
+## <a name="step-1-check-the-compatibility-level"></a>Etapa 1: Verificar o nível de compatibilidade  
  As propriedades que definem o acesso aos dados são diferentes de acordo com os níveis de compatibilidade. Uma etapa preliminar é verificar o nível de compatibilidade do banco de dados.  
   
 1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conecte-se à instância que tem o modelo de tabela.  
@@ -55,7 +63,7 @@ caps.handback.revision: 18
   
  Quando você altera um modelo de tabela para o modo DirectQuery, o novo modo de armazenamento de dados entra em vigor imediatamente.  
   
-## Etapa 2a: Mudar um banco de dados de tabela 1200 para o modo DirectQuery  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>Etapa 2a: Mudar um banco de dados de tabela 1200 para o modo DirectQuery  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados > **Propriedades** > **Modelo** > **Modo Padrão**.  
   
@@ -67,7 +75,7 @@ caps.handback.revision: 18
     |**DirectQuery**|Consultas são executadas em um banco de dados relacional back-end, usando a conexão da fonte de dados definida para o modelo.<br /><br /> Consultas ao modelo são convertidas em consultas de banco de dados nativo e redirecionadas para a fonte de dados.<br /><br /> Quando você processa um modelo definido para o modo DirectQuery, somente metadados são compilados e implantados. Os dados em si são externos ao modelo, residindo nos arquivos de banco de dados da fonte de dados em funcionamento.|  
     |**Importar**|Consultas são executadas no banco de dados de tabela em MDX ou DAX.<br /><br /> Quando você processa um modelo definido para modo de Importação, os dados são recuperados de uma fonte de dados back-end e armazenados em disco. Quando o banco de dados é carregado, os dados são copiados totalmente para a memória para tornar verificações e consultas de tabela muito mais rápidas.<br /><br /> Esse é o modo padrão para modelos de tabela e é o único modo para certas fontes de dados (não relacionais).|  
   
-## Etapa 2b: Mudar um banco de dados de tabela 1100-1103 para o modo DirectQuery  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>Etapa 2b: Mudar um banco de dados de tabela 1100-1103 para o modo DirectQuery  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados > **Propriedades** > **Banco de Dados** > **DirectQueryMode**.  
   
@@ -91,9 +99,9 @@ caps.handback.revision: 18
   
 -   Você pode configurar partições no cache de modo que a partição primária usada no modo DirectQuery nunca seja processada e sempre faça referência à fonte relacional. Há muitas formas de usar partições para otimizar o design de modelo e a experiência de relatórios. Para obter mais informações, consulte [Definir partições em modelos DirectQuery &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
   
--   Após a implantação do modelo, você pode alterar o método de conexão preferencial. Por exemplo, você pode usar um modo híbrido para testes e alternar o modelo para **apenas DirectQuery** somente depois de testar bem relatórios ou consultas que usam o modelo. Para obter mais informações, consulte [Definir ou alterar o método de conexão preferencial para DirectQuery](../Topic/Set%20or%20Change%20the%20Preferred%20Connection%20Method%20for%20DirectQuery.md).  
+-   Após a implantação do modelo, você pode alterar o método de conexão preferencial. Por exemplo, você pode usar um modo híbrido para testes e alternar o modelo para **apenas DirectQuery** somente depois de testar bem relatórios ou consultas que usam o modelo. Para obter mais informações, consulte [Definir ou alterar o método de conexão preferencial para DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
-## Etapa 3: Verificar as propriedades de conexão do banco de dados  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>Etapa 3: Verificar as propriedades de conexão do banco de dados  
  Dependendo de como a conexão da fonte de dados seja configurada, alternar para o modo DirectQuery pode alterar o contexto de segurança da conexão. Ao alterar o modo de acesso de dados, examine as propriedades da cadeia de conexão e de representação para verificar se o logon é válido para conexões contínuas com o banco de dados de back-end.  
   
  Examine a seção **Configurar o Analysis Services para delegação confiável** em [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) para obter informações básicas sobre a delegação de uma identidade de usuário para cenários de DirectQuery.  
@@ -114,7 +122,7 @@ caps.handback.revision: 18
   
  A representação não pode ser usada quando o modelo é usado apenas na memória. A configuração **ImpersonateCurrentUser**é inválida, a menos que o modelo esteja usando o modo DirectQuery.  
   
-## Etapa 4: Validar o acesso do DirectQuery  
+## <a name="step-4-validate-directquery-access"></a>Etapa 4: Validar o acesso do DirectQuery  
   
 1.  Inicie um rastreamento usando o SQL Server Profiler ou xEvents no Management Studio, conectado ao banco de dados relacional no SQL Server.  
   
@@ -124,7 +132,7 @@ caps.handback.revision: 18
   
 3.  No rastreamento, você deve ver evidências de execução de consultas no banco de dados relacional.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)   

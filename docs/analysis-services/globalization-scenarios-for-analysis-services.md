@@ -1,31 +1,36 @@
 ---
-title: "Cen&#225;rios de globaliza&#231;&#227;o para o Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "suporte para vários idiomas [Analysis Services]"
-  - "idiomas [Analysis Services]"
-  - "SSAS, considerações internacionais"
-  - "considerações internacionais [Analysis Services]"
-  - "considerações globais [Analysis Services]"
-  - "SQL Server Analysis Services, considerações internacionais"
-  - "Analysis Services, considerações internacionais"
+title: "Cenários de globalização para Analysis Services | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple language support [Analysis Services]
+- languages [Analysis Services]
+- SSAS, international considerations
+- international considerations [Analysis Services]
+- global considerations [Analysis Services]
+- SQL Server Analysis Services, international considerations
+- Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 23602752bf7a996b66974ce3d5dcf9c8bf6389cd
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cen&#225;rios de globaliza&#231;&#227;o para o Analysis Services
+# <a name="globalization-scenarios-for-analysis-services"></a>Cenários de globalização para o Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] armazena e manipula dados multilíngues e metadados tanto nos modelos de dados tabulares quanto nos multidimensionais. O armazenamento de dados é Unicode (UTF-16), em conjuntos de caracteres que usam a codificação Unicode. Se você carregar dados ANSI em um modelo de dados, os caracteres são armazenados usando pontos de código equivalentes a Unicode.  
   
  As implicações do suporte a Unicode significam que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode armazenar dados em qualquer uma das linguagens com suporte pelo cliente e servidor de sistemas operacionais Windows, permissão de leitura, gravação, classificação e comparação de dados em qualquer conjunto de caracteres usado em um computador Windows. Aplicativos clientes de BI que consomem dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podem representar dados no idioma de preferência do usuário, supondo que os dados encontram-se no mesmo idioma do modelo.  
@@ -67,11 +72,11 @@ caps.handback.revision: 39
 |Implementando o suporte à tradução|Criar usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para gerar arquivos de tradução que você preenche e depois importa de volta para o modelo.<br /><br /> Consulte [Traduções em modelos de tabela &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para ver mais detalhes.|Crie usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir as traduções da legenda, descrição e tipos de conta para cubos e medidas, dimensão e atributos.<br /><br /> Consulte [Traduções em modelos multidimensionais &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) para obter mais informações. Uma lição sobre como usar esse recurso pode ser encontrada na [Lição 9: definindo perspectivas e traduções](../analysis-services/lesson-9-defining-perspectives-and-translations.md) do tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |Conversão de moeda|Não disponível.|A conversão de moeda é por meio de scripts MDX especializados que convertem medidas contendo dados de moeda. Você pode usar o Assistente de Business Intelligence em [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para gerar um script MDX que usa uma combinação de dados e metadados de dimensões, atributos e grupos de medidas para converter medidas contendo dados de moeda. Consulte [Conversões de moeda &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Suporte a tradução no Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Internacionalização para aplicativos do Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [Go Global Developer Center](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Gravando aplicativos da Windows Store com design adaptável baseado em localidade](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Desenvolvendo aplicativos universais do Windows com C# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Aplicativos da Windows Store de gravação com design adaptável baseado em localidade](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Desenvolvendo aplicativos universais do Windows com c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

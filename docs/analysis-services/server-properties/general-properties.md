@@ -1,55 +1,60 @@
 ---
-title: "Propriedades gerais | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "propriedade IdleConnectionTimeout"
-  - "propriedade InstanceVisible"
-  - "propriedade TempDir"
-  - "propriedade AdminTimeout"
-  - "propriedade MinIdleSessionTimeout"
-  - "propriedade MaxIdleSessionTimeout"
-  - "propriedade IdleOrphanSessionTimeout"
-  - "propriedade BackupDir"
-  - "propriedade CommitTimeout"
-  - "propriedade ExternalCommandTimeout"
-  - "propriedade Enabled"
-  - "propriedade ForceCommitTimeout"
-  - "propriedade Port"
-  - "propriedade CoordinatorShutdownMode"
-  - "propriedade ServerTimeou"
-  - "propriedade AllowedBrowsingFolders"
-  - "propriedade CoordinatorCancelCount"
-  - "propriedade DataDir"
-  - "propriedade CoordinatorQueryMaxThreads"
-  - "propriedade CoordinatorExecutionMode"
-  - "propriedade ExternalConnectionTimeout"
-  - "propriedade CollationName"
-  - "propriedade EnableFast1033Locale"
-  - "propriedade CoordinatorBuildMaxThreads"
-  - "propriedade Language"
-  - "propriedade StatisticsStoreSize"
-  - "propriedade RepositoryConnectionString"
+title: Propriedades gerais | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- IdleConnectionTimeout property
+- InstanceVisible property
+- TempDir property
+- AdminTimeout property
+- MinIdleSessionTimeout property
+- MaxIdleSessionTimeout property
+- IdleOrphanSessionTimeout property
+- BackupDir property
+- CommitTimeout property
+- ExternalCommandTimeout property
+- Enabled property
+- ForceCommitTimeout property
+- Port property
+- CoordinatorShutdownMode property
+- ServerTimeout property
+- AllowedBrowsingFolders property
+- CoordinatorCancelCount property
+- DataDir property
+- CoordinatorQueryMaxThreads property
+- CoordinatorExecutionMode property
+- ExternalConnectionTimeout property
+- CollationName property
+- EnableFast1033Locale property
+- CoordinatorBuildMaxThreads property
+- Language property
+- StatisticsStoreSize property
+- RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propriedades gerais
+# <a name="general-properties"></a>Propriedades gerais
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Este tópico documenta essas propriedades de servidor no arquivo msmdsrv.ini que não são incluídas em uma seção específica, como Segurança, Rede ou ThreadPool. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Aplica-se a:** modo de servidor Multidimensional e de Tabela, a menos que indicado em contrário  
   
-## Categoria não específica  
+## <a name="non-specific-category"></a>Categoria não específica  
  **AdminTimeout**  
  Uma propriedade de inteiro de 32 bits assinada que define o tempo limite do administrador em segundos. Essa é uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -73,15 +78,11 @@ caps.handback.revision: 29
  Uma propriedade de inteiro de 32 bits assinada que define o número máximo de threads alocados à criação de índices de partição. Aumente esse valor para acelerar a indexação da partição, pelo uso da memória. Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorCancelCount**  
- Uma propriedade de inteiro de 32 bits assinada que define com que frequência o servidor deve verificar se um evento de cancelamento ocorreu (com base na contagem de iterações internas). Diminua esse número para verificar cancelamentos frequentemente pelo desempenho geral.  
-  
- **CoordinatorCancelCount** é ignorado no modo de servidor de tabela.  
+ Uma propriedade de inteiro de 32 bits assinada que define com que frequência o servidor deve verificar se um evento de cancelamento ocorreu (com base na contagem de iterações internas). Diminua esse número para verificar cancelamentos frequentemente pelo desempenho geral. Essa propriedade é ignorada no modo de servidor tabular.  
   
  **CoordinatorExecutionMode**  
  Uma propriedade de inteiro de 32 bits assinada que define o número máximo de operações paralelas que o servidor tentará, incluindo operações de processamento e consulta. Zero (0) indica que o servidor decidirá, com base em um algoritmo interno. Um número positivo indica o número máximo de operações no total. Um número negativo, com o sinal invertido, indica o número máximo de operações por processador.  
-  
- **CoordinatorExecutionMode** é ignorado no modo de servidor de tabela.  
-  
+
  O valor padrão dessa propriedade é -4, que indica que o servidor está limitado a 4 operações paralelas por processador. Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorQueryMaxThreads**  
@@ -110,12 +111,12 @@ caps.handback.revision: 29
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **ExternalCommandTimeout**  
- Uma propriedade integer que define o tempo limite, em segundos, para comandos emitidos para servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Uma propriedade integer que define o tempo limite, em segundos, para comandos emitidos para servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  O valor padrão desta propriedade é 3600 (segundos).  
   
  **ExternalConnectionTimeout**  
- Uma propriedade de número inteiro que define o tempo limite, em segundos, para criar conexões a servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta propriedade é ignorada quando o tempo limite de uma conexão é especificado na cadeia de conexão.  
+ Uma propriedade de número inteiro que define o tempo limite, em segundos, para criar conexões a servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta propriedade é ignorada quando o tempo limite de uma conexão é especificado na cadeia de conexão.  
   
  O valor padrão desta propriedade é 60 (segundos).  
   
@@ -168,14 +169,14 @@ caps.handback.revision: 29
  **TempDir**  
  Uma propriedade de cadeia de caracteres que especifica o local para armazenar arquivos temporários usados durante o processamento, a restauração e outras operações. O valor padrão desta propriedade é determinado por configuração. Se não especificado, o padrão será o diretório de Dados.  
   
-## Categoria RequestPrioritization  
+## <a name="requestprioritization-category"></a>Categoria RequestPrioritization  
  **Ativado**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **StatisticsStoreSize**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

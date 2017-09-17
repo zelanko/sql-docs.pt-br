@@ -1,24 +1,29 @@
 ---
-title: "Conectar a um banco de dados de modelo de tabela (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Conecte-se a um banco de dados do modelo de tabela (SSAS) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85963e947dbed1fc2d1574a537d0e42f61fbba35
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Conectar a um banco de dados de modelo de tabela (SSAS)
+# <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a um banco de dados de modelo de tabela (SSAS)
   Após criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisará definir permissões que o disponibilizem para aplicativos cliente. Este tópico explica como conceder permissões e como conectar-se a um banco de dados de aplicativos cliente.  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 19
   
  A exibição de pastas de trabalho do Excel ou relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] que contêm dados de tabela exige que a conta usada para executar Serviços do Excel ou Reporting Services tenha permissões de administrador na instância do Analysis Services. São necessárias permissões administrativas para que esses serviços sejam confiáveis pela instância do Analysis Services.  
   
-#### Conceder o acesso administrativo no servidor  
+#### <a name="grant-administrative-access-on-the-server"></a>Conceder o acesso administrativo no servidor  
   
 1.  Na Administração Central, abra a página Configurar contas de serviço.  
   
@@ -76,13 +81,13 @@ caps.handback.revision: 19
   
 -   Crie uma fonte de dados compartilhada do Reporting Services que referencia um banco de dados de tabela como a fonte de dados. Você pode criar a fonte de dados compartilhada no SharePoint e pode usá-la para iniciar o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
-#### Conecte do Excel  
+#### <a name="connect-from-excel"></a>Conecte do Excel  
   
 1.  No Excel, na guia **Dados** , em **Obter Dados Externos**, clique em **De Outras Fontes**.  
   
 2.  Selecione **Do Analysis Services**.  
   
-3.  Em **Nome de Servidor**, especifique a instância do Analysis Services que hospeda o banco de dados. O nome do servidor costuma ser o nome do computador que executa o software do servidor. Se o servidor tiver sido instalado como uma instância nomeada, especifique o nome neste formato: \<nome_do_servidor>\\<nome_da_instância\>.  
+3.  Em **Nome de Servidor**, especifique a instância do Analysis Services que hospeda o banco de dados. O nome do servidor costuma ser o nome do computador que executa o software do servidor. Se o servidor foi instalado como uma instância nomeada, você deve especificar o nome neste formato: \<servername >\\< instancename\>.  
   
      A instância de servidor deve ser configurada para a implantação autônoma de tabela e a instância de servidor deve ter uma regra de entrada que permita o acesso a ela. Para mais informações, consulte [Determinar o modo de servidor de uma instância do Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) e [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 19
   
 5.  Selecione o banco de dados. Uma seleção válida mostrará um único cubo **Modelo** para o banco de dados. Clique em **Avançar** e em **Concluir**.  
   
- Depois que a conexão é estabelecida, você pode usar os dados para criar uma Tabela Dinâmica ou um Gráfico Dinâmico. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Depois que a conexão é estabelecida, você pode usar os dados para criar uma Tabela Dinâmica ou um Gráfico Dinâmico. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_sharepoint"></a> Conectar do SharePoint  
  Se estiver usando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para o SharePoint, você poderá criar um arquivo de conexão de modelo semântico de BI no SharePoint que fornece redirecionamento a um banco de dados executado em um servidor de modo tabular do Analysis Services. Uma conexão de modelo semântico de BI fornece um ponto de extremidade HTTP a um banco de dados. Isso também simplifica o acesso a modelo de tabela para trabalhadores do conhecimento que costumam usar documentos em um site do SharePoint. Trabalhadores do conhecimento só precisam saber o local do arquivo de conexão de modelo semântico de BI ou sua URL para acessar bancos de dados de modelo de tabela. Detalhes sobre o local do servidor ou o nome do banco de dados são encapsulados na conexão de modelo semântico de BI. Para obter mais informações sobre como criar e usar arquivos de conexão de modelo semântico de BI, consulte [Conexão de modelo semântico de BI &#40;.bism&#41; do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) e [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -102,19 +107,19 @@ caps.handback.revision: 19
   
  Na importação de dados, este erro do Microsoft Excel ocorre quando você tenta usar o Assistente para se conectar a um banco de dados de modelo de tabela em um servidor remoto do Analysis Services, e você não tem permissões suficientes. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   
- **Erro ao tentar estabelecer uma conexão com a fonte de dados externa. Falha na atualização das conexões a seguir: Área Restrita \<nome do modelo>**  
+ **Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As seguintes conexões não foram atualizadas: \<nome do modelo > área restrita**  
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque você não tem permissões suficientes no servidor remoto do Analysis Services. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   
- **Ocorreu um erro durante a tentativa de executar esta operação. Recarregue a pasta de trabalho e tente executar esta operação novamente.**  
+ **Ocorreu um erro durante a tentativa de executar esta operação. Recarregar a pasta de trabalho e, em seguida, tente executar a operação novamente.**  
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque os Serviços do Excel não são confiáveis para a instância do Analysis Services na qual os dados modelo são implantados. Para resolver este erro, conceda permissão administrativa de Serviços do Excel na instância do serviço Analysis Services. Consulte as instruções apresentadas antes neste tópico para conceder permissões de administrador. Se o erro persistir, recicle o pool de aplicativos de Serviços do Excel.  
   
  **Erro ao tentar estabelecer uma conexão com a fonte de dados externa usada na pasta de trabalho.**  
   
- No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque o usuário não tem permissões do SharePoint suficientes na pasta de trabalho. O usuário deve ter permissões de **Leitura** ou superior. Permissões **Exibir Apenas** não são suficientes para o acesso a dados.  
+ No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque o usuário não tem permissões do SharePoint suficientes na pasta de trabalho. O usuário deve ter permissões de **Leitura** ou superior. Permissões**Exibir Apenas** não são suficientes para o acesso a dados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

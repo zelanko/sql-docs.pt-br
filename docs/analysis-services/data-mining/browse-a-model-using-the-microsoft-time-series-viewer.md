@@ -1,32 +1,37 @@
 ---
-title: "Procurar um modelo usando o Visualizador MTS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mineração de dados [Analysis Services], colunas contínuas"
-  - "conteúdo do modelo de mineração, exibindo"
-  - "Visualizador MTS"
-  - "gráficos [Analysis Services]"
-  - "Visualizador MTS [Analysis Services]"
-  - "colunas contínuas"
-  - "algoritmos de regressão [Analysis Services]"
+title: Procurar um modelo usando o visualizador MTS | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], continuous columns
+- mining model content, viewing
+- Microsoft Time Series Viewer
+- charts [Analysis Services]
+- Time Series Viewer [Analysis Services]
+- continuous columns
+- regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0de59252e18921c4c280143b695000b5913a5aa2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Procurar um modelo usando o Visualizador MTS
-  O Visualizador Time Series da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração que são criados com o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. O algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de regressão que cria modelos de mineração de dados para previsão de colunas contínuas, tais como vendas de produtos, em um cenário de previsão. Esses modelos de série temporal podem incluir informações baseadas em diferentes algoritmos:  
+# <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Procurar um modelo usando o Visualizador MTS
+  O Visualizador Time Series da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração que são criados com o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de regressão que cria modelos de mineração de dados para previsão de colunas contínuas, tais como vendas de produtos, em um cenário de previsão. Esses modelos de série temporal podem incluir informações baseadas em diferentes algoritmos:  
   
 -   O algoritmo ARTxp foi otimizado para previsão a curto prazo.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 44
  Para obter mais informações sobre esses algoritmos, consulte [Algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm.md) e [Referência técnica do algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
 > [!NOTE]  
->  Para exibir informações detalhadas sobre as equações usadas no modelo e os padrões identificados, use o Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de Dados&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  Para exibir informações detalhadas sobre as equações usadas no modelo e os padrões identificados, use o Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de Dados&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Guias do Visualizador  
  Quando você navega em um modelo de mineração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ele é exibido na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no visualizador adequado ao modelo. O Visualizador MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece as seguintes guias:  
@@ -49,7 +54,7 @@ caps.handback.revision: 44
  **Observação** As informações indicadas para o conteúdo do modelo e na Legenda de Mineração dependem do algoritmo usado pelo modelo. Porém, as guias **Modelo** e **Gráficos** são as mesmas, independentemente da combinação de algoritmos.  
   
 ###  <a name="BKMK_Tree"></a> Modelo  
- Quando um modelo de série temporal é criado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresenta o modelo concluído como uma árvore. Se seus dados tiverem várias séries de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada série. Por exemplo, você está prevendo vendas para o Pacífico, América do Norte e regiões da Europa. As previsões para cada uma destas regiões são série de caso. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma árvore separada para cada uma destas séries. Para exibir uma série específica, selecione-a na lista **Árvore**.  
+ Quando um modelo de série temporal é criado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresenta o modelo concluído como uma árvore. Se seus dados tiverem várias séries de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada série. Por exemplo, você está prevendo vendas para o Pacífico, América do Norte e regiões da Europa. As previsões para cada uma destas regiões são série de caso. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma árvore separada para cada uma destas séries. Para exibir uma série específica, selecione-a na lista **Árvore** .  
   
  Para cada árvore, o modelo de série temporal contém um nó **Todos** e, depois, se divide em vários nós que representam estruturas periódicas identificadas pelo algoritmo. Você pode clicar em cada nó para exibir estatísticas tais como o número de casos e a equação.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 44
   
  Se criar um modelo misto, o nó raiz conterá apenas o número de casos e a equação ARIMA. Depois do nó de raiz, a árvore se divide em nós separados para cada estrutura periódica. Para cada nó não raiz, a Legenda de Mineração contém algoritmos ARTxp e ARIMA, a equação para o nó e o número de casos no nó. A equação do ARTxp é listada primeiro e rotulada como a equação de nó de árvore. Isto é seguido pela equação de ARIMA. Para obter mais informações sobre como interpretar essas informações, consulte [Referência técnica do algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
- De modo geral, o gráfico da árvore de decisão mostra a divisão mais importante, o nó **Todos**, à esquerda do visualizador. Nas árvores de decisão, a divisão após o nó **Todos** é a mais importante pois contém a condição que separa, com mais ênfase, os casos nos dados de treinamento. Em um modelo de série temporal, a ramificação principal indica o ciclo sazonal mais provável. Divisões após o nó **Todos** são exibidas à direita da ramificação.  
+ De modo geral, o gráfico da árvore de decisão mostra a divisão mais importante, o nó **Todos** , à esquerda do visualizador. Nas árvores de decisão, a divisão após o nó **Todos** é a mais importante pois contém a condição que separa, com mais ênfase, os casos nos dados de treinamento. Em um modelo de série temporal, a ramificação principal indica o ciclo sazonal mais provável. Divisões após o nó **Todos** são exibidas à direita da ramificação.  
   
  É possível expandir ou recolher os nós individuais na árvore para mostrar ou ocultar as divisões que ocorrem após cada nó. Também é possível usar as opções na guia **Árvore de Decisão** para interferir na maneira de exibição da árvore. Use o controle deslizante **Mostrar Nível** para ajustar o número de níveis exibidos na árvore. Use a opção **Expansão Padrão** para definir o número padrão de níveis exibidos em todas as árvores no modelo.  
   
@@ -81,14 +86,14 @@ caps.handback.revision: 44
   
  Você pode ajustar o intervalo de tempo exibido usando as opções de zoom. Pode também exibir um intervalo de tempo específico clicando no gráfico, arrastando uma seleção de tempo pelo gráfico e clicando novamente para ampliar o intervalo selecionado.  
   
- Você pode selecionar quantas **etapas** de tempo futuras deseja exibir no modelo usando as **Etapas de Previsão**. Se você marcar a caixa de seleção **Mostrar Desvios**, o visualizador fornecerá barras de erro para que seja possível verificar a exatidão do valor previsto.  
+ Você pode selecionar quantas **etapas** de tempo futuras deseja exibir no modelo usando as **Etapas de Previsão**. Se você marcar a caixa de seleção **Mostrar Desvios** , o visualizador fornecerá barras de erro para que seja possível verificar a exatidão do valor previsto.  
   
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Exemplos de consulta de um modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Exemplos de consulta de modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Visualizadores do Modelo de Mineração de Dados](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

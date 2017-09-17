@@ -1,37 +1,42 @@
 ---
-title: "Autoexists | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Autoexists | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Autoexists
+# <a name="autoexists"></a>Autoexists
   O conceito de *autoexists* limita o espaço de cubo a células que, de fato, existem no cubo em contraposição às que podem existir em decorrência da criação de todas as combinações possíveis de membros de hierarquia de atributos da mesma hierarquia. Isso porque os membros de uma hierarquia de atributo não podem existir com membros de outra hierarquia de atributo na mesma dimensão. Quando duas ou mais hierarquias de atributo da mesma dimensão são usadas em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para verificar se os membros desses atributos sejam corretamente confinados para atender aos critérios de todos os outros atributos.  
   
  Por exemplo, vamos supor que você esteja trabalhando com atributos da dimensão Geografia. Se houver uma expressão que retorne todos os membros do atributo City e outra que confine os membros do atributo Country a todos os países da Europa, isso resultará no confinamento dos membros de City apenas às cidades que pertençam a países da Europa. Isso por conta da característica autoexists do Analysis Services. Autoexists somente se aplica a atributos da mesma dimensão porque tenta impedir que os registros da dimensão excluídos em uma expressão do atributo sejam incluídos pelas outras expressões do atributo. Autoexists também pode ser considerado a interseção resultante das diferentes expressões de atributo em relação às linhas de dimensão.  
   
-## Existência da célula  
+## <a name="cell-existence"></a>Existência da célula  
  As seguintes células sempre existem:  
   
 -   O membro (All), de toda hierarquia, quando cruzado com membros de outras hierarquias na mesma dimensão.  
   
 -   Os membros calculados quando cruzados com seus irmãos não calculados, ou com seus pais ou descendentes de seus irmãos não calculados.  
   
-## Fornecendo células não existentes  
+## <a name="providing-non-existing-cells"></a>Fornecendo células não existentes  
  Uma célula não existente é uma célula fornecida pelo sistema como uma resposta para uma consulta ou um cálculo que solicita uma célula não existente no cubo. Por exemplo, se você tiver um cubo com uma hierarquia de atributo City e uma hierarquia de atributo Country pertencentes à dimensão Geography, além de uma medida Internet Sales Amount, o espaço desse cubo só incluirá os membros existentes entre si. Por exemplo, se a hierarquia de atributo Cidade incluir as cidades de Nova Iorque, Londres, Paris, Tóquio e Melbourne; e a hierarquia de atributo País incluir os países Estados Unidos, Reino Unido, França, Japão e Austrália; o espaço do cubo não incluirá o espaço (célula) na interseção Paris e Estados Unidos.  
   
  Ao consultar células que não existem, as células inexistentes retornarão nulas; ou seja, elas não poderão conter cálculos e você não poderá definir um cálculo que seja gravado nesse espaço. Por exemplo, a instrução a seguir inclui células que não existem.  
@@ -64,7 +69,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Note que 0 é usado para designar o eixo da coluna, que é a forma abreviada de eixo (0) – que é o eixo da coluna.  
   
- A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser escrita usando a nova * variante da função [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md).  
+ A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser escrita usando a nova * variante da função [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
   
 ```  
 SELECT   
@@ -89,7 +94,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Cada uma dessas três consultas anteriores demonstra o efeito do comportamento Autoexists no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-## Autoexists Deep e Shallow  
+## <a name="deep-and-shallow-autoexists"></a>Autoexists Deep e Shallow  
  Autoexists pode ser aplicado às expressões como Deep ou Shallow. **Deep Autoexists** significa que todas as expressões serão avaliadas para atender o espaço mais profundo possível após a aplicação das expressões de segmentação de dados, das expressões de subseleção no eixo etc. **Shallow Autoexists** quer dizer que as expressões externas são avaliadas antes da expressão atual e esses resultados são transmitidos à expressão atual. A configuração padrão é deep autoexists.  
   
  O cenário e os exemplos a seguir ajudarão a ilustrar os tipos diferentes de Autoexistss. Nos exemplos a seguir, dois conjuntos serão criados: um como uma expressão calculada e o outro como uma expressão constante.  
@@ -310,11 +315,11 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- O comportamento de Autoexists pode ser modificado usando o parâmetro AUTOEXISTS=[1|2|3] na cadeia de conexão; consulte [Propriedades XMLA com suporte &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para saber o uso do parâmetro.  
+ Comportamento de Autoexists pode ser modificado usando o AUTOEXISTS = [1 | 2 | 3] Parâmetros na cadeia de conexão; consulte [suporte para propriedades de XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso do parâmetro.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Principais conceitos em MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Espaço de cubo](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuplas](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Trabalhando com membros, tuplas e conjuntos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Totais visuais e totais não visuais](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   

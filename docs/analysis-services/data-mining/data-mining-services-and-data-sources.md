@@ -1,28 +1,33 @@
 ---
-title: "Servi&#231;os de minera&#231;&#227;o de dados e fontes de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Serviços de mineração de dados e fontes de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0207dac1835ae9e478802d2f3d501642d4866454
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Servi&#231;os de minera&#231;&#227;o de dados e fontes de dados
-  A mineração de dados requer uma conexão com uma instância do SQL Server Analysis Services. Os dados de um cubo não são necessários para a mineração de dados e o uso de fontes relacionais é recomendado; porém, a mineração de dados usa componentes fornecidos pelo mecanismo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+# <a name="data-mining-services-and-data-sources"></a>Serviços de mineração de dados e fontes de dados
+  A mineração de dados requer uma conexão com uma instância do SQL Server Analysis Services. Os dados de um cubo não são necessários para a mineração de dados e o uso de fontes relacionais é recomendado; porém, a mineração de dados usa componentes fornecidos pelo mecanismo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Este tópico contém informações que você deverá saber quando se conectar a uma instância do SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar, processar, implantar ou consultar modelos de mineração de dados.  
   
-## Serviços de mineração de dados  
+## <a name="data-mining-services"></a>Serviços de mineração de dados  
  O componente do servidor do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é o aplicativo msmdsrv.exe, que normalmente é executado como um serviço Windows. Esse aplicativo consiste em componentes de segurança, um componente de ouvinte do XML for Analysis (XMLA), um componente de processador de consulta e vários outros componentes internos que executam as seguintes funções:  
   
 -   Análise de instruções recebidas dos clientes  
@@ -43,18 +48,18 @@ caps.handback.revision: 19
   
 -   Gerenciamento de recursos do servidor  
   
-### Ouvinte XMLA  
+### <a name="xmla-listener"></a>Ouvinte XMLA  
  O componente ouvinte XMLA processa todas as comunicações de XMLA entre o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e seus clientes. O parâmetro de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Porta** no arquivo msmdsrv.ini pode ser usado para especificar uma porta na qual uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ouve. Um valor 0 nesse arquivo indica que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ouve na porta padrão. A menos que especificado de outro modo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa as seguintes portas TCP padrão:  
   
 |Porta|Description|  
 |----------|-----------------|  
 |2383|Instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|2382|Redirecionador para outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|2382|Redirecionador para outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |Atribuído dinamicamente na inicialização do servidor|Instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
   
  Para obter mais informações sobre como controlar as portas usadas por esse serviço, consulte [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-## Conectando-se a fontes de dados  
+## <a name="connecting-to-data-sources"></a>Conectando-se a fontes de dados  
  Sempre que você criar ou atualizar uma estrutura ou um modelo de mineração de dados, use os dados definidos por uma fonte de dados. A fonte de dados não contém os dados, que podem incluir pastas de trabalho do Excel, arquivos de texto e bancos de dados do SQL Server; ela somente define as informações de conexão.  Uma exibição da fonte de dados (DSV) serve como uma camada de abstração dessa fonte, modificando ou mapeando os dados que são obtidos da fonte.  
   
  Está além do escopo deste tópico descrever os requisitos de conexão para cada uma destas fontes. Para obter mais informações, consulte a documentação do provedor. No entanto, em geral você deveria estar atento aos seguintes requisitos do Analysis Services ao interagir com provedores:  
@@ -67,8 +72,8 @@ caps.handback.revision: 19
   
 -   Quando você move um modelo, os mesmos requisitos se aplicam: você deve configurar o acesso apropriado ao local da fonte de dados antiga, copiar as fontes de dados ou configurar uma nova fonte de dados. Além disso, você deve transferir logons e funções ou configurar permissões para permitir que os objetos de mineração de dados sejam processados e atualizados no novo local.  
   
-## Configurando permissões e propriedades do servidor  
- A mineração de dados exige permissões adicionais em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A maioria das propriedades de mineração de dados pode ser definida usando a [Caixa de diálogo Propriedades do Analysis Services &#40;Analysis Services&#41;](../Topic/Analysis%20Server%20Properties%20Dialog%20Box%20\(Analysis%20Services\).md).  
+## <a name="configuring-permissions-and-server-properties"></a>Configurando permissões e propriedades do servidor  
+ A mineração de dados exige permissões adicionais em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A maioria das propriedades de mineração de dados pode ser definida usando a [Caixa de diálogo Propriedades do Analysis Services &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/b01ec658-c191-49c9-a6cb-549b21a368ab).  
   
  Para obter mais informações sobre as propriedades que você pode configurar, consulte [Propriedades de servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 19
 > [!NOTE]  
 >  Para obter mais informações sobre o suporte para algoritmos de plug-in pelas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
-## Acesso programático a objetos de mineração de dados  
+## <a name="programmatic-access-to-data-mining-objects"></a>Acesso programático a objetos de mineração de dados  
  Você pode usar os seguintes modelos de objeto para criar uma conexão com um banco de dados do Analysis Services e trabalhar com objetos de mineração de dados:  
   
  **ADO** Usa OLE DB para se conectar a um servidor do Analysis Services. Quando você usa ADO, o cliente fica limitado a consultas de conjunto de linhas de esquema e instruções DMX.  
@@ -103,7 +108,7 @@ caps.handback.revision: 19
   
  **AMO** Interface de gerenciamento para o Analysis Services que substitui o DSO (Decision Support Objects). Quando se usa o AMO, operações como iteração de objetos requerem permissões mais elevadas do que as necessárias para utilizar outras interfaces. Isso ocorre porque o AMO acessa metadados diretamente, enquanto o ADOMD.NET e outras interfaces acessam apenas os esquemas de banco de dados.  
   
-### Navegue e consulte o acesso a servidores  
+### <a name="browse-and-query-access-to-servers"></a>Navegue e consulte o acesso a servidores  
  Você pode executar todos os tipos de previsões usando uma instância do Analysis Services no OLAP/Mineração de Dados, com as restrições a seguir:  
   
 -   Se você usar ADOMD de servidor, poderá usar DMX para acessar o servidor sem fazer uma conexão. Você pode copiar os resultados diretamente para uma tabela de dados. No entanto, você não pode usar ADOMD de servidor com instâncias remotas; só é possível consultar o servidor local.  
@@ -112,8 +117,8 @@ caps.handback.revision: 19
   
 -   O ADOMD.NET permite passar uma tabela inteira a ser usada como parâmetro; por isso você pode usar dados no cliente ou dados que estão indisponíveis para o servidor. Também é possível utilizar tabelas amoldadas como entrada de previsão.  
   
-### Usando procedimentos armazenados de mineração de dados  
- Um uso comum de procedimentos armazenados é o encapsulamento de consultas para reutilização. O cliente pode usar CALL para executar procedimentos armazenados, inclusive procedimentos armazenados do sistema do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+### <a name="using-data-mining-stored-procedures"></a>Usando procedimentos armazenados de mineração de dados  
+ Um uso comum de procedimentos armazenados é o encapsulamento de consultas para reutilização. O cliente pode usar CALL para executar procedimentos armazenados, inclusive procedimentos armazenados do sistema do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Se o procedimento retornar um conjunto de dados, o cliente receberá um conjunto de dados ou uma tabela de dados com uma tabela aninhada contendo as linhas. Por exemplo, se você criar uma consulta baseada no conteúdo de modelo, a consulta retornará o modelo inteiro. Para evitar que sejam retornadas muitas linhas, você pode gravar procedimentos armazenados usando o modelo de objeto ADOMD+.  
   
@@ -122,8 +127,8 @@ caps.handback.revision: 19
 > [!NOTE]  
 >  Os procedimentos armazenados não podem ser usados para alterar a segurança em objetos de servidor de dados. Quando você executa um procedimento armazenado, o contexto atual do usuário é usado para determinar o acesso a todos os objetos de servidor. Portanto, os usuários devem ter as permissões apropriadas em qualquer objeto de banco de dados que eles acessam.  
   
-## Consulte também  
- [Arquitetura física &#40;Analysis Services – Dados Multidimensionais&#41;](../Topic/Physical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+## <a name="see-also"></a>Consulte também  
+ [Arquitetura física &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [Arquitetura física &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Gerenciamento de soluções de mineração de dados e objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   

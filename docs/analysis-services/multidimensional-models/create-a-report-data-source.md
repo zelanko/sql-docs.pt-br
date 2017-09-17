@@ -1,29 +1,34 @@
 ---
-title: "Criar uma fonte de dados de relat&#243;rio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criar uma fonte de dados do relatório | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
-# Criar uma fonte de dados de relat&#243;rio
+# <a name="create-a-report-data-source"></a>Criar uma fonte de dados de relatório
   Para que o Power View se conecte a um modelo multidimensional, você deve criar uma definição de fonte de dados de relatório compartilhada, também conhecida como um arquivo .rsds, em uma biblioteca do SharePoint. O arquivo .rsds especifica o nome de uma instância de servidor do Analysis Services, um tipo de conexão, uma cadeia de conexão, além de credenciais usadas para se conectar ao modelo multidimensional. Quando um usuário clica no .rsds, um novo relatório em branco do Power View (um arquivo .rdlx) é aberto no navegador.  
   
  Para criar uma conexão .rsds, você deve ter o SQL Server 2012 (ou posterior) Reporting Services e o suplemento Reporting Services para SharePoint 2010 ou SharePoint 2013 instalado.  
   
-## Criar uma conexão de Fonte de Dados de Relatório (.rsds) para um modelo multidimensional  
+## <a name="create-a-report-data-source-rsds-connection-to-a-multidimensional-model"></a>Criar uma conexão de Fonte de Dados de Relatório (.rsds) para um modelo multidimensional  
  Antes de começar, você precisa saber:  
   
 -   O nome da instância de servidor do Analysis Services em execução no modo Multidimensional.  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 -   (Opcional) Identificador de localidade.  
   
-#### Para criar um arquivo de Fonte de Dados de Relatório compartilhada (.rsds) (SharePoint 2010)  
+#### <a name="to-create-a-shared-report-data-source-rsds-file-sharepoint-2010"></a>Para criar um arquivo de Fonte de Dados de Relatório compartilhada (.rsds) (SharePoint 2010)  
   
 1.  Clique na guia **Documentos** na faixa de opções da biblioteca.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  Caso você não veja o item **Fonte de Dados de Relatório** no menu, isso significa que o tipo de conteúdo da fonte de dados de relatório não foi habilitado para essa biblioteca. Para obter mais informações, veja [Adicionar os tipos de conteúdo do Reporting Services à sua biblioteca do SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
-3.  Na página **Propriedades da Fonte de Dados**, em **Nome**, digite um nome para o arquivo .rsds de conexão.  
+3.  Na página **Propriedades da Fonte de Dados** , em **Nome**, digite um nome para o arquivo .rsds de conexão.  
   
 4.  Em **Tipo de Fonte de Dados**, selecione **Modelo Semântico de BI da Microsoft para Power View**.  
   
