@@ -19,6 +19,7 @@
 ### [Instalar a pesquisa de texto completo do SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [Provisionar uma VM SQL no Azure](sql-server-linux-azure-virtual-machine.md)
+### [Registrar repositório GA](sql-server-linux-change-repo.md)
 
 ## Configurar
 ### [Configurar com mssql-conf](sql-server-linux-configure-mssql-conf.md)
