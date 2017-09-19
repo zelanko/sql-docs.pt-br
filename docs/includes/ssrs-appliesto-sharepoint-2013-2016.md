@@ -1,1 +1,1 @@
-![sim](media/yes.png)modo integrado do SharePoint
+![sim](media/yes.png)SharePoint
