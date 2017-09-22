@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
@@ -83,6 +83,8 @@ Cada logon pertence à função de servidor fixa `public` e cada usuário de ban
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ Essas contas de entidade de segurança não têm senhas que podem ser alteradas por administradores, pois são baseadas em certificados emitidos para a Microsoft.
   
 ## <a name="the-guest-user"></a>O Usuário convidado  
  Cada banco de dados inclui um `guest`. As permissões concedidas ao usuário `guest` são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O usuário `guest` não pode ser descartado, mas pode ser desabilitado revogando sua permissão CONNECT. A permissão CONNECT pode ser revogada executando `REVOKE CONNECT FROM GUEST;` em qualquer banco de dados diferente de `master` ou `tempdb`.  

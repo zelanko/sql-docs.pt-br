@@ -1,28 +1,28 @@
 ---
-title: "Atualizado — Documentos de bancos de dados relacionais | Microsoft Docs"
-description: "Exibir trechos de conteúdo atualizado para documentação de Bancos de Dados Relacionais alterada recentemente."
+title: "Atualizado – Documentos sobre o Data Quality Services para SQL Server | Microsoft Docs"
+description: "Exiba trechos do conteúdo atualizado com alterações recentes na documentação do Data Quality Services para Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
-editor: BYHAM
+editor: 
 ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
-ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
+ms.workload: data-quality-services
 ms.translationtype: HT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
+ms.openlocfilehash: c28c7e0a78c4fbbed04e2b30b7bdaff2638163ad
 ms.contentlocale: pt-br
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-relational-databases-docs"></a>Novos e recém-atualizados: documentos de Bancos de Dados Relacionais
+# <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Novo e atualizados recentemente: Data Quality Services para SQL Server
 
 
 
@@ -35,7 +35,7 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 
 
 - *Intervalo de datas das atualizações:* &nbsp; **18-07-2017** &nbsp; até &nbsp; **11-09-2017**
-- *Área de assunto:* &nbsp; **Bancos de dados relacionais**.
+- *Área de assunto:* &nbsp; **Data Quality Services para SQL Server**.
 
 
 
@@ -47,18 +47,7 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 Os links a seguir direcionam para novos artigos que foram adicionados recentemente.
 
 
-1. [Importar dados do Excel para o SQL Server ou Banco de Dados SQL do Azure](import-export/import-data-from-excel-to-sql.md)
-2. [Solucionar problemas de conectividade do PolyBase Kerberos](polybase/polybase-troubleshoot-connectivity.md)
-3. [TDE (Transparent Data Encryption)](security/encryption/transparent-data-encryption.md)
-4. [Transparent Data Encryption para o Data Warehouse e Banco de Dados SQL do Azure](security/encryption/transparent-data-encryption-azure-sql.md)
-5. [Transparent Data Encryption com suporte a Bring Your Own Key para o Data Warehouse e Banco de Dados SQL do Azure](security/encryption/transparent-data-encryption-byok-azure-sql.md)
-6. [PowerShell: habilitar a Transparent Data Encryption usando sua própria chave no Azure Key Vault](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
-7. [Girar o protetor de TDE (Transparent Data Encryption) usando o PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
-8. [Remover um protetor de TDE (Transparent Data Encryption) usando o PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
-9. [Termos de licença do SMO (Objetos de Gerenciamento Compartilhado) do SQL Server](server-management-objects-smo/smo-license-terms.md)
-10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
-11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
-12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+***Não existem novos artigos a serem listados no momento.***
 
 
 
@@ -84,56 +73,13 @@ Por essas e outras razões, não copie o código desses trechos, nem considere-o
 
 Essa lista compacta fornece links para todos os artigos atualizados listados na seção Trechos.
 
-1. [Ajuste automático](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1. &nbsp; [Ajuste automático](automatic-tuning/automatic-tuning.md)
-
-*Atualizado em: 16-08-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
-
-
-
-**Correção automática da escolha do plano**
-
-
-O ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] pode alternar automaticamente para o último bom plano conhecido sempre que a regressão da escolha do plano é detectada.
-
-![SQL plan choice correction--media/force-last-good-plan.png "Correção da escolha do plano do SQL")
-
-O ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] detecta automaticamente qualquer regressão da escolha do plano potencial, incluindo o plano que deve ser usado, em vez do plano incorreto.
-Quando o ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] aplica o último bom plano conhecido, ele automaticamente monitora o desempenho do plano forçado. Se o plano forçado não for melhor do que o plano regredido, o novo plano não será forçado e o ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] compilará um novo plano. Se o ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] verificar que o plano forçado é melhor do que o regredido, o plano forçado será retido até uma recompilação (por exemplo, na próxima alteração de esquema ou de estatísticas), caso ele seja melhor do que o plano regredido.
-
-**Habilitando a correção automática da escolha do plano**
-
-
-Habilite o ajuste automático por banco de dados e especifique que o último bom plano deve ser forçado sempre que uma regressão da alteração do plano for detectada. O ajuste automático é habilitado com o seguinte comando:
-
-```
-ALTER DATABASE current
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
-```
-Depois que você ativar essa opção, o ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] forçará automaticamente qualquer recomendação em que o ganho estimado de CPU seja maior do que 10 segundos, ou o número de erros no novo plano seja maior do que o número de erros no plano recomendado e verificará se o plano forçado é melhor do que o atual.
-
-**Alternativa – correção manual da escolha do plano**
-
-
-Sem o ajuste automático, os usuários devem monitorar o sistema periodicamente e procurar as consultas regredidas. Se um plano tiver regredido, o usuário deverá encontrar um
-
+***Nenhum artigo nesta área foi atualizado recentemente no momento.***
 
 
 

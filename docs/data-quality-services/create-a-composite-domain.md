@@ -1,26 +1,31 @@
 ---
-title: "Criar um dom&#237;nio composto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.createcd.f1"
-  - "sql13.dqs.dm.cdproperties.f1"
+title: "Criar um domínio de composição | Microsoft Docs"
+ms.custom: 
+ms.date: 11/22/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.createcd.f1
+- sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Criar um dom&#237;nio composto
-  Este tópico descreve como criar um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em um ou mais domínios únicos que se aplicam a um campo de dados único. Para obter mais informações sobre domínios compostos, consulte [Gerenciando um domínio composto](../data-quality-services/managing-a-composite-domain.md).  
+# <a name="create-a-composite-domain"></a>Criar um domínio composto
+  Este tópico descreve como criar um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em um ou mais domínios únicos que se aplicam a um campo de dados único. Para obter mais informações sobre domínios de composição, consulte [Gerenciando um domínio de composição](../data-quality-services/managing-a-composite-domain.md).  
   
  Há duas maneiras de criar um novo domínio composto. A primeira é durante a etapa Mapear da atividade de descoberta da base de dados de conhecimento, quando você está no processo de analisar um exemplo de dados para adicionar conhecimento a uma base de dados de conhecimento nova ou existente. A segunda é durante a atividade de gerenciamento de domínio, quando, em vez de alterar um domínio existente, você cria um novo domínio. Para criar um domínio composto, você já deve ter criado pelo menos dois domínios únicos para adicionar ao domínio composto. Somente os domínios únicos que já foram criados e não foram adicionados a um domínio composto existente estão disponíveis quando você cria um novo domínio composto. Um domínio único não pode ser adicionado a mais de um domínio composto e um domínio composto não pode ser adicionado a outro domínio composto.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 21
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Criar um domínio composto na atividade Descoberta da Base de Dados de Conhecimento  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo de cliente de qualidade de dados](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Abrir base de dados de conhecimento** e selecione uma base de dados de conhecimento ou clique em **Nova base de dados de conhecimento** e insira propriedades para a nova base de dados de conhecimento.  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 21
   
 4.  Na página **Mapa** , especifique uma conexão com a fonte de dados. Para obter mais informações, consulte [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
-5.  No **mapeamentos** da tabela, selecione uma coluna de origem na lista suspensa para o **coluna de origem** coluna de uma linha vazia. Verifique se a coluna de origem contém o domínio composto endereçado por dois domínios únicos existentes. Se não existir nenhum domínio único correspondente, clique no ícone **Criar um Domínio** .  
+5.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Verifique se a coluna de origem contém o domínio composto endereçado por dois domínios únicos existentes. Se não existir nenhum domínio único correspondente, clique no ícone **Criar um Domínio** .  
   
-6.  No **mapeamentos** da tabela, selecione uma coluna de origem na lista suspensa para o **coluna de origem** coluna de uma linha vazia. Verifique se a coluna de origem contém as partes do domínio composto que são endereçadas por dois domínios únicos existentes. Se não existir nenhum domínio único correspondente, clique no ícone **Criar um Domínio** para criá-los. Para obter mais informações, consulte [Create a Domain](../data-quality-services/create-a-domain.md).  
+6.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Verifique se a coluna de origem contém as partes do domínio composto que são endereçadas por dois domínios únicos existentes. Se não existir nenhum domínio único correspondente, clique no ícone **Criar um Domínio** para criá-los. Para obter mais informações, consulte [Create a Domain](../data-quality-services/create-a-domain.md).  
   
 7.  Clique no ícone **Criar um Domínio Composto** .  
   
@@ -78,20 +83,20 @@ caps.handback.revision: 21
   
 4.  Selecione uma das seguintes opções como o **Método de Análise**:  
   
-    -   **Dados de referência**: analisar os valores do campo de acordo com como os dados são formatados por referência Data Service (RDS). O Data Quality Services enviará os valores no domínio composto ao RDS e o RDS retornará os dados corrigidos e analisados de acordo com o domínio no domínio composto.  
+    -   **Dados de Referência**: analise os valores do campo de acordo com o modo como os dados são formatados pelo RDS (Serviços de Dados de Referência). O Data Quality Services enviará os valores no domínio composto ao RDS e o RDS retornará os dados corrigidos e analisados de acordo com o domínio no domínio composto.  
   
     -   **EM Ordem**: analise os valores do campo de acordo com a ordem dos domínios no domínio composto. O primeiro valor será incluído no primeiro domínio, o segundo valor no segundo domínio etc.  
   
     -   **Delimitadores**: analise os valores de campo com base no delimitador selecionado dentre os botões de opção exibidos quando os Delimitadores estão selecionados. Esses podem ser: **Guia**, **Ponto-e-vírgula**, **Vírgula**, **Espaço**ou **Outro**. Se **Outro**, insira o valor que atuará como o delimitador.  
   
-5.  Se você selecionou **Delimitadores** como o método de análise, também poderá selecionar **Usar Análise da Base de Dados de Conhecimento**. Para obter mais informações, consulte [Análise da Base de Dados de Conhecimento](#KnowledgeBaseParsing).  
+5.  Se você selecionou **Delimitadores** como o método de análise, também poderá selecionar **Usar Análise da Base de Dados de Conhecimento**. Para obter mais informações, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md).  
+6.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Acompanhamento: após a criação de um domínio composto  
- Depois que você criar um domínio composto, poderá executar outras tarefas de gerenciamento de domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [executar a descoberta de Conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md), ou [criar uma política de correspondência](../data-quality-services/create-a-matching-policy.md).  
+ Depois que você criar um domínio composto, poderá executar outras tarefas de gerenciamento de domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="KnowledgeBaseParsing"></a> Análise da Base de Dados de Conhecimento  
+##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
  O Data Quality Services permite que você analise os dados com base no conhecimento, não apenas no delimitador ou na ordem. A análise baseada em conhecimento é usada quando fontes de dados complexas são mapeadas para um domínio composto e você não está usando serviços de dados de referência. Você pode usar a análise baseada em conhecimento para analisar os dados a partir da fonte de dados nos domínios únicos relevantes. Com a análise baseada em conhecimento, o DQS primeiro tentará usar o conhecimento para analisar os dados complexos em domínios únicos. Se possível, ela identificará partes da cadeia de caracteres como em um ou mais domínios e analisará a cadeia de caracteres em seus vários domínios. Por exemplo, suponha que tem “John B. Doe” como valores complexos em um campo de nome completo representado por um domínio composto de Nome Completo. Se o DQS identificar “John” como no domínio Nome e “Doe” como no domínio Sobrenome, o DQS adicionará “B.” ao domínio de Segundo Nome com base no conhecimento do domínio.  
   
  Você poderá usar a análise baseada em conhecimento somente se também selecionar a análise baseada no delimitador. A análise baseada em conhecimento não substitui a análise baseada no delimitador, mas a aprimora. Somente se não houver nenhum conhecimento para fazer isso é que o DQS usará um delimitador para realizar a análise. Em algumas instâncias, o DQS poderá determinar parte da análise executando a análise baseada no conhecimento e depois determinar outra análise pela análise baseada no delimitador.  

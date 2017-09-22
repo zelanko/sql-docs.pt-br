@@ -1,25 +1,30 @@
 ---
-title: "Anexar dom&#237;nio ou dom&#237;nio composto para dados de refer&#234;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.refdata.f1"
-  - "sql13.dqs.dm.refcatalog.f1"
+title: "Anexar um domínio ou um domínio de composição aos dados de referência | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.refdata.f1
+- sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c59c87fa8fc86a1e760e90f7ee2a4f4d733836f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Anexar dom&#237;nio ou dom&#237;nio composto para dados de refer&#234;ncia
+# <a name="attach-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio composto para dados de referência
   Este tópico descreve como anexar domínios/domínios compostos em uma base de dados de conhecimento de qualidade de dados para um serviço de dados de referência, no Windows Azure Marketplace, a fim de compilar o conhecimento com base nos dados de referência de alta qualidade. Cada serviço de dados de referência contém um esquema (colunas de dados). Após anexar um domínio ou um domínio composto a um serviço de dados de referência, mapeie o domínio anexado ou os domínios individuais no domínio composto anexado para as colunas apropriadas em um esquema de serviço de dados de referência. Ao anexar um domínio composto a um serviço de dados de referência, você pode anexar apenas um domínio a um serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  
   
 > [!WARNING]  
@@ -29,19 +34,19 @@ caps.handback.revision: 17
   
  Neste tópico, criaremos quatro domínios: **Linha de endereço**, **Cidade**, **Estado**e **CEP**, em um domínio composto, **Verificação de Endereço**, anexaremos o domínio composto para o serviço de dados de referência de **Melissa Data – Dados de Endereço** , e mapearemos os domínios individuais no domínio composto para as colunas no esquema de serviço de dados de referência.  
   
-## Antes de começar  
+## <a name="before-you-begin"></a>Antes de começar  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
  Você deve configurar o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para usar serviços de dados de referência. Consulte [Configurar o DQS para usar dados de referência](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 ###  <a name="Security"></a> Segurança  
   
-#### Permissões  
+#### <a name="permissions"></a>Permissões  
  Você deve ter a função dqs_kb_editor no banco de dados DQS_MAIN para mapear domínios para os dados de referência.  
   
 ##  <a name="Map"></a> Mapear domínios para os dados de referência de Melissa Data  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo de cliente de qualidade de dados](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , em **Gerenciamento da Base de Dados de Conhecimento**, clique em **Nova base de dados de conhecimento**.  
   
@@ -66,9 +71,9 @@ caps.handback.revision: 17
          ![Caixa de diálogo Catálogo de Provedores de Dados de Referência Online](../data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Caixa de diálogo Catálogo de Provedores de Dados de Referência Online")  
   
         > [!NOTE]  
-        >  -   Na caixa de diálogo **Catálogo de Provedores de Dados de Referência Online** , o nó **DataMarket Data Quality Services** exibe todos os provedores de serviço de dados de referência que você assinou no Windows Azure Marketplace. Se você tiver configurado provedores de serviço de dados de referência terceirizado online direto no DQS, eles serão exibidos em outro nó chamado **3ª parte de provedores Online diretos** (não disponível agora como nenhum direto provedores de serviço de dados de referência de terceiros online são configurados no DQS).  
+        >  -   Na caixa de diálogo **Catálogo de Provedores de Dados de Referência Online** , o nó **DataMarket Data Quality Services** exibe todos os provedores de serviço de dados de referência que você assinou no Windows Azure Marketplace. Se você tiver configurado provedores diretos de serviço de dados de referência online terceirizados no DQS, eles aparecerão em outro nó chamado **Provedores Online Diretos Terceirizados** (não disponível agora, pois nenhum provedor direto de serviço de dados de referência online terceirizado está configurado no DQS).  
   
-9. Você retornará à guia **Dados de Referência** . Na área **Configurações de Provedor** , altere os valores nas seguintes caixas, se necessário:  
+9. Você retornará à guia **Dados de Referência** . Na área **Configurações de Provedor**, altere os valores das seguintes caixas, se necessário:  
   
     -   **Limite de Correção Automática**: as correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
   
@@ -81,10 +86,10 @@ caps.handback.revision: 17
  Você pode usar essa base de dados de conhecimento agora na atividade de limpeza de um projeto de qualidade de dados para padronizar e limpar os endereços americanos na fonte de dados com base no conhecimento fornecido por Melissa Data através do Windows Azure Marketplace.  
   
 ##  <a name="FollowUp"></a> Acompanhamento: Após mapear um domínio para os dados de referência  
- Crie um projeto de qualidade de dados e execute a atividade de limpeza na fonte de dados que contém endereços americanos, comparando-a com a base de dados de conhecimento criada neste tópico. Consulte [Limpar dados usando dados de referência e 40; 41; & externos Conhecimento](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
+ Crie um projeto de qualidade de dados e execute a atividade de limpeza na fonte de dados que contém endereços americanos, comparando-a com a base de dados de conhecimento criada neste tópico. Consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## Consulte também  
- [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)   
- [Limpeza de Dados](../data-quality-services/data-cleansing.md)  
+## <a name="see-also"></a>Consulte também  
+ [Serviços de Dados de Referência no DQS](../data-quality-services/reference-data-services-in-dqs.md)   
+ [Limpeza de dados](../data-quality-services/data-cleansing.md)  
   
   

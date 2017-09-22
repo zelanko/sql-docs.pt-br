@@ -1,27 +1,32 @@
 ---
-title: "Criar um projeto de qualidade de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dqproject.newdqproject.f1"
-helpviewer_keywords: 
-  - "create,data quality project"
-  - "projeto de qualidade de dados, criar"
+title: Criar um projeto de qualidade de dados | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dqproject.newdqproject.f1
+helpviewer_keywords:
+- create,data quality project
+- data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14dd208db2469021918b696d9a66121a708d3a9c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Criar um projeto de qualidade de dados
+# <a name="create-a-data-quality-project"></a>Criar um projeto de qualidade de dados
   Este tópico descreve como criar um projeto de qualidade de dados usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Um projeto de qualidade de dados é usado para executar a atividade de limpeza ou correspondência no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
@@ -36,7 +41,7 @@ caps.handback.revision: 10
   
 ##  <a name="Create"></a> Criar um projeto de qualidade de dados  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo de cliente de qualidade de dados](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Novo projeto de qualidade de dados**.  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 10
   
     1.  Na caixa **Nome** , digite um nome para o novo projeto de qualidade de dados.  
   
-    2.  (Opcional) No **Descrição** digite uma descrição para o novo projeto de qualidade de dados.  
+    2.  (Opcional) Na caixa **Descrição** , digite uma descrição para o novo projeto de qualidade de dados.  
   
-    3.  Na lista **Usar base de dados de conhecimento** , clique para selecionar uma base de dados de conhecimento a ser usada no projeto de qualidade de dados. O **detalhes da base de dados de Conhecimento: \< nome_da_base_de_dados_de_conhecimento >** área à direita exibe os nomes de domínio disponíveis na base de dados de Conhecimento selecionada.  
+    3.  Na lista **Usar base de dados de conhecimento** , clique para selecionar uma base de dados de conhecimento a ser usada no projeto de qualidade de dados. A área **Detalhes da base de dados de conhecimento: <Knowledge_Base_Name>** do lado direito exibe os nomes de domínio disponíveis na base de dados de conhecimento selecionada.  
   
     4.  Na área **Selecionar Atividade** , clique em uma atividade que você deseja executar usando este projeto de qualidade de dados:  
   
@@ -57,6 +62,6 @@ caps.handback.revision: 10
 4.  Clique em **Criar** para criar um projeto de qualidade de dados.  
   
 ##  <a name="FollowUp"></a> Acompanhamento: Após criar um projeto de qualidade de dados  
- Depois que você criar um projeto de qualidade de dados, verá um assistente que deverá ser usado para executar a atividade selecionada: limpeza ou correspondência. Para obter mais informações sobre a limpeza e correspondência de atividades, consulte [Limpeza de dados](../data-quality-services/data-cleansing.md) e [dados correspondentes](../data-quality-services/data-matching.md).  
+ Depois que você criar um projeto de qualidade de dados, verá um assistente que deverá ser usado para executar a atividade selecionada: limpeza ou correspondência. Para obter mais informações sobre a limpeza e correspondência de atividades, consulte [Limpeza de dados](../data-quality-services/data-cleansing.md) e [Correspondência de dados](../data-quality-services/data-matching.md).  
   
   

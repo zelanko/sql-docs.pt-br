@@ -1,22 +1,27 @@
 ---
-title: "Correspond&#234;ncia de dados | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Correspondência de dados | Microsoft Docs"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Correspond&#234;ncia de dados
+# <a name="data-matching"></a>Correspondência de dados
   O processo de correspondência de dados do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ajuda você a reduzir a duplicação de dados e a aprimorar a exatidão dos dados em uma fonte de dados. A correspondência analisa o grau de duplicação em todos os registros de uma única fonte de dados, retornando probabilidades ponderadas de uma correspondência entre cada conjunto de registros comparados. Você pode decidir então quais registros são correspondências e executar a ação apropriada nos dados de origem.  
   
  O processo de correspondência do DQS tem os seguintes benefícios:  
@@ -31,11 +36,11 @@ caps.handback.revision: 29
   
 -   Você pode reindexar dados copiados da origem para a tabela de preparo ou não reindexá-los, dependendo do estado da política de correspondência e dos dados de origem. Não reindexar pode melhorar o desempenho.  
   
- Você pode executar o processo de correspondência em conjunto com outros processos de limpeza de dados para melhorar qualidade de dados global. Você também pode executar a eliminação de duplicação de dados usando a funcionalidade DQS interna do Master Data Services. Para obter mais informações, consulte [Visão geral do Master Data Services & #40. MDS & 41;](../master-data-services/master-data-services-overview-mds.md).  
+ Você pode executar o processo de correspondência em conjunto com outros processos de limpeza de dados para melhorar qualidade de dados global. Você também pode executar a eliminação de duplicação de dados usando a funcionalidade DQS interna do Master Data Services. Para obter mais informações, consulte [Visão geral do MDS &#40;Master Data Services&#41;](../master-data-services/master-data-services-overview-mds.md).  
   
  A ilustração seguinte mostra como a correspondência de dados é feita no DQS:  
   
- ![Processo de Correspondência no DQS](../data-quality-services/media/dqs-matchingprocess.gif "Processo de Correspondência no DQS")  
+ ![Processo de correspondência no DQS](../data-quality-services/media/dqs-matchingprocess.gif "Matching Process in DQS")  
   
 ##  <a name="How"></a> Como executar a correspondência de dados  
  Assim como acontece com outros processos de qualidade de dados no DQS, você executa a correspondência ao criar uma base de dados de conhecimento e ao executar uma atividade de correspondência em um projeto de qualidade de dados nas seguintes etapas:  
@@ -67,12 +72,12 @@ caps.handback.revision: 29
   
  Você pode exportar os resultados do processo de correspondência para uma tabela do SQL Server ou para um arquivo .csv. Você pode exportar resultados correspondentes de duas formas: primeiro, os registros correspondentes e os registros não correspondentes, ou segundo, os registros de sobrevivência que incluem somente o registro sobrevivente para um cluster e os resultados não correspondentes. Nos registros de sobrevivência, se o mesmo registro for identificado como o sobrevivente para vários clusters, ele será exportado somente uma vez.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  Você pode executar as seguintes tarefas relacionadas à correspondência no DQS:  
   
 |||  
 |-|-|  
-|Criar e testar regras de correspondência em uma política de correspondência|[Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)|  
+|Criar e testar regras de correspondência em uma política de correspondência|[Criar uma política de correspondência](../data-quality-services/create-a-matching-policy.md)|  
 |Executar a correspondência em um projeto de qualidade de dados|[Executar um projeto de correspondência](../data-quality-services/run-a-matching-project.md)|  
   
   

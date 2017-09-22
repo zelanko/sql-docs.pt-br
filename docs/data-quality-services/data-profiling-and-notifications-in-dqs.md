@@ -1,22 +1,27 @@
 ---
-title: "Perfil de dados e notifica&#231;&#245;es no DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criação de perfil de dados e notificações no DQS | Microsoft Docs"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Perfil de dados e notifica&#231;&#245;es no DQS
+# <a name="data-profiling-and-notifications-in-dqs"></a>Perfil de dados e notificações no DQS
   A criação do perfil de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) é o processo de analisar os dados em uma fonte de dados existente e exibir estatísticas sobre os dados nas atividades do DQS. Isso fornece a você medições automatizadas da qualidade dos dados. A criação de perfil do DQS está integrada ao gerenciamento de conhecimento do DQS e aos projetos de qualidade de dados. É dinâmica e ajustável. A criação de perfil tem dois objetivos principais: primeiro, orientá-lo durante os processos de qualidade de dados e dar suporte às suas decisões e, segundo, avaliar a efetividade dos processos. A criação de perfil do DQS tem os seguintes benefícios:  
   
 -   A criação de perfil fornece informações sobre a qualidade da sua fonte de dados e o ajuda a identificar problemas de qualidade de dados.  
@@ -63,11 +68,11 @@ caps.handback.revision: 25
   
  Para obter mais informações sobre as estatísticas específicas de criação de perfil relacionadas a uma atividade, consulte as seções sobre Criação de Perfil nos seguintes tópicos:  
   
--   [Executar a descoberta da base de dados de conhecimento](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Executar descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Limpar dados usando o DQS e 40; interno & 41; Dados de Conhecimento](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [Criar uma política de correspondência](../data-quality-services/create-a-matching-policy.md)  
   
 -   [Executar um projeto de correspondência](../data-quality-services/run-a-matching-project.md)  
   
@@ -81,22 +86,22 @@ caps.handback.revision: 25
   
  Uma notificação é indicada por uma dica de ferramenta com um ponto de exclamação na guia **Criação de perfil** . As estatísticas associadas à notificação aparecem em vermelho para indicar a justificação estatística da notificação.  
   
- Você pode habilitar (o padrão) ou desabilitar notificações no **Configurações gerais** guia o **administração** seção da home page do cliente de qualidade de dados. Quando a notificação está desabilitada, as dicas de ferramenta não são exibidas e as estatísticas não aparecem em vermelho. Não há nenhum aprimoramento significativo no desempenho com a desabilitação de notificações. A criação de perfil ainda estará operacional se você desabilitar as notificações.  
+ Você pode habilitar (o padrão) ou desabilitar as notificações na guia **Configurações Gerais** da seção **Administração** da página inicial Cliente Data Quality. Quando a notificação está desabilitada, as dicas de ferramenta não são exibidas e as estatísticas não aparecem em vermelho. Não há nenhum aprimoramento significativo no desempenho com a desabilitação de notificações. A criação de perfil ainda estará operacional se você desabilitar as notificações.  
   
  Para condições específicas associadas às notificações de uma atividade, consulte o seguinte:  
   
--   [Executar a descoberta da base de dados de conhecimento](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Executar descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [Limpar dados usando o DQS e 40; interno & 41; Dados de Conhecimento](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)  
+-   [Criar uma política de correspondência](../data-quality-services/create-a-matching-policy.md)  
   
 -   [Executar um projeto de correspondência](../data-quality-services/run-a-matching-project.md)  
   
-## Tarefas relacionadas  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como habilitar ou desabilitar as notificações no DQS.|[Enable or Disable Profiling Notifications in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|Descreve como habilitar ou desabilitar as notificações no DQS.|[Habilitar ou desabilitar notificações de criação de perfil no DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   

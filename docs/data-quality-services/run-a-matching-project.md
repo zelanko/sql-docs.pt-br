@@ -1,26 +1,31 @@
 ---
-title: "Executar um projeto de correspond&#234;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.matchingproject.map.f1"
-  - "sql13.dqs.matchingproject.matching.f1"
-  - "sql13.dqs.matchingproject.export.f1"
+title: "Executar um projeto de correspondência | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.matchingproject.map.f1
+- sql13.dqs.matchingproject.matching.f1
+- sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Executar um projeto de correspond&#234;ncia
+# <a name="run-a-matching-project"></a>Executar um projeto de correspondência
   Este tópico descreve como executar a correspondência de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O processo de correspondência identifica clusters de registros de correspondência com base em regras de correspondência na política de correspondência, designa um registro de cada cluster como o sobrevivente com base em uma regra de sobrevivência, e exporta os resultados. O DQS executa o processo de correspondência, também chamado de eliminação de duplicação, em um processo assistido por computador, mas você cria regras de correspondência interativamente e seleciona a regra de correspondência a partir de várias opções; assim, você controla o processo de correspondência.  
   
  A correspondência é executada em três etapas: um processo de mapeamento no qual você identifica a fonte de dados e mapeia domínios para a fonte de dados, um processo de correspondência no qual você executa a análise de correspondência, e um processo de sobrevivência e exportação no qual você designa a regra de sobrevivência e exporta os resultados correspondentes. Cada um desses processos é executado em uma página separada do assistente da atividade de correspondência, permitindo que você percorra páginas diferentes, para executar o processo novamente e fechar um processo de correspondência específico e, depois, retornar ao mesmo estágio do processo. O DQS fornece estatísticas sobre a fonte de dados, as regras de correspondência e os resultados correspondentes que permitem a você tomar decisões conscientes sobre a correspondência e refinar o processo de correspondência.  
@@ -43,11 +48,11 @@ caps.handback.revision: 36
 ##  <a name="StartingaMatchingProject"></a> Primeira etapa: iniciando uma projeto de correspondência  
  Você executa a atividade de correspondência em um projeto de qualidade de dados criado no aplicativo cliente DQS.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo de cliente de qualidade de dados](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Novo Projeto de Qualidade de Dados** para executar a correspondência em um novo projeto de qualidade de dados. Insira um nome para o projeto de qualidade de dados, insira uma descrição e selecione a base de dados conhecimento a ser usada para correspondência em **Usar base de dados de conhecimento**. Clique em **Correspondência** da atividade. Clique em **Avançar** para prosseguir para o estágio de mapeamento.  
   
-3.  Clique em **Abrir projeto de qualidade de dados** para fazer a correspondência em um projeto existente de qualidade de dados. Selecione o projeto e clique em **Avançar**. (Ou você pode clicar em um projeto sob **Projeto de qualidade de dados recente**.) Se você abrir um projeto de correspondência que foi fechado, prosseguirá para o estágio de atividade de projeto de correspondência foi fechada (conforme indicado pelo **estado** coluna na tabela de projetos ou no nome do projeto em **projeto de qualidade de dados recente**). Se você abrir um projeto de correspondência que foi concluído, você passará para o **exportar** página (e não poderá voltar para as telas anteriores).  
+3.  Clique em **Abrir projeto de qualidade de dados** para fazer a correspondência em um projeto existente de qualidade de dados. Selecione o projeto e clique em **Avançar**. (Ou clique em um projeto em **Projeto de Qualidade de Dados Recente**.) Se você abrir um projeto de correspondência que foi fechado, continuará para o estágio em que a atividade de projeto de correspondência foi fechada (conforme indicado pela coluna **Estado** na tabela de projeto ou no nome de projeto em **Projeto de Qualidade de Dados Recente**). Se você abrir um projeto de correspondência que foi concluído, irá para a página **Exportar** (e não poderá retornar a telas anteriores).  
   
 ##  <a name="MappingStage"></a> Estágio de mapeamento  
  No estágio de mapeamento, identifique a origem dos dados nos quais você executará a correspondência e mapeie colunas de origem para domínios para disponibilizar os domínios para a atividade de política de correspondência.  
@@ -61,11 +66,11 @@ caps.handback.revision: 36
     > [!NOTE]  
     >  Você poderá mapear sua fonte de dados para um domínio DQS somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre tipos de dados que oferecem suporte no DQS, consulte [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Clique o **mais (+)** controle para adicionar uma linha à tabela mapeamentos ou **menos (-)** controle para remover uma linha.  
+4.  Clique no controle **mais (+)** para adicionar uma linha à tabela Mapeamentos ou no controle **menos (–)** para remover uma linha.  
   
 5.  Clique em **Visualizar fonte de dados** para visualizar os dados na tabela do SQL Server ou visualizar os dados selecionados ou a planilha do Excel selecionada.  
   
-6.  Clique em **Exibir/Selecionar domínios compostos** para exibir uma lista de domínios compostos disponíveis na base de dados de conhecimento e selecione conforme apropriado para mapeamento.  
+6.  Clique em **Exibir/Selecionar Domínios Compostos** para exibir uma lista dos domínios compostos disponíveis na base de dados de conhecimento e selecione conforme apropriado para mapeamento.  
   
 7.  Clique em **Avançar** para prosseguir para o estágio de correspondência.  
   
@@ -77,9 +82,9 @@ caps.handback.revision: 36
   
  Nos resultados correspondentes, você pode filtrar os dados desejados e rejeitar as correspondências não desejadas. Também é possível exibir os dados de criação de perfil do processo de correspondência como um todo, as especificações sobre as regras de correspondência que se aplicam e as estatísticas sobre os resultados correspondentes como um todo. O processo de correspondência pode identificar clusters sobrepostos e não sobrepostos e, se for executado várias vezes, pode ser executado em dados recém-copiados da origem e reindexados, ou em dados anteriores.  
   
-1.  Sobre o **página correspondência**, selecione **sobrepostos clusters** na lista suspensa para exibir os registros dinâmicos e registros a seguir para todos os clusters quando a correspondência é executada, mesmo que grupos de clusters tenham registros em comum. Selecione **Clusters não sobrepostos** para exibir clusters que tenham registros em comum como um cluster único quando a correspondência for executada.  
+1.  Na página **Correspondência**, selecione **Clusters sobrepostos** na lista suspensa para exibir os registros dinâmicos e os registros a seguir para todos os clusters quando a correspondência for executada, mesmo que grupos de clusters tenham registros em comum. Selecione **Clusters não sobrepostos** para exibir clusters que tenham registros em comum como um cluster único quando a correspondência for executada.  
   
-2.  Clique em **recarregar os dados da origem** (o padrão) para copiar dados da fonte de dados na tabela de preparação e reindexá-los quando você executar o projeto de correspondência. Clique em **executar nos dados anteriores** para executar um projeto de correspondência sem copiar os dados na tabela de preparação e reindexar os dados. A opção**Executar nos dados anteriores** está desabilitada para a primeira execução do projeto de correspondência ou se você alterar o mapeamento na página **Mapa** e depois pressionar **Sim** no pop-up seguinte. Em ambos os casos, você deverá reindexar. Não será necessário reindexar se o projeto de correspondência não tiver sido alterado. A execução nos dados anteriores pode ajudar no desempenho.  
+2.  Clique em **Recarregar os dados da origem** (o padrão) para copiar dados da origem de dados na tabela de preparação e reindexá-los quando você executar o projeto de correspondência. Clique em **Executar nos dados anteriores** para executar um projeto de correspondência sem copiar os dados na tabela de preparação e reindexar os dados. A opção**Executar nos dados anteriores** está desabilitada para a primeira execução do projeto de correspondência ou se você alterar o mapeamento na página **Mapa** e depois pressionar **Sim** no pop-up seguinte. Em ambos os casos, você deverá reindexar. Não será necessário reindexar se o projeto de correspondência não tiver sido alterado. A execução nos dados anteriores pode ajudar no desempenho.  
   
 3.  Clique em **Iniciar** para executar a correspondência na fonte de dados selecionada.  
   
@@ -89,13 +94,13 @@ caps.handback.revision: 36
   
 6.  Se você tiver várias regras de correspondência na política de correspondência, clique na guia **Regras de Correspondência** para identificar o ícone para cada regra e, depois, verifique qual regra identificou um registro como uma correspondência, identificando a regra na coluna **Regra** da tabela **Resultados Correspondentes** .  
   
-7.  Se você selecionar um registro não dinâmico na tabela e clique no **Exibir detalhes** ícone (ou clique duas vezes o registro), o DQS exibirá um **detalhes da pontuação de correspondência** pop-up que exibe o registro clicado duas vezes e seu registro dinâmico (e os valores em todos os campos), a pontuação entre eles e uma busca detalhada da correspondência de pontuação contribuições de cada campo. Ao clicar duas vezes em um registro dinâmico, você não exibirá o pop-up.  
+7.  Se você selecionar um registro não dinâmico na tabela e clicar no ícone **Exibir Detalhes** (ou clicar duas vezes no registro), o DQS exibirá um pop-up **Detalhes da Pontuação de Correspondência** que exibe o registro clicado duas vezes e seu registro dinâmico (e os valores em todos os campos), a pontuação entre eles e uma busca detalhada das contribuições de pontuação correspondentes de cada campo. Ao clicar duas vezes em um registro dinâmico, você não exibirá o pop-up.  
   
 8.  Clique no ícone **Recolher Tudo** para recolher os registros exibidos na tabela **Resultados Correspondentes** para incluir apenas o registro dinâmico, e não os registros duplicados. Clique em **Expandir Tudo** para expandir os registros exibidos na tabela Resultados Correspondentes para incluir todos os registros duplicados.  
   
 9. Para rejeitar um registro dos resultados correspondentes, clique na caixa de seleção **Rejeitado** para o registro.  
   
-10. Para alterar a pontuação mínima correspondente que determina o nível de correspondência deve ter um registro a ser exibido, selecione o **Min. Pontuação de correspondência** ícone acima do lado direito da tabela e insira um número mais alto. A pontuação mínima de correspondência é definida por padrão em 80%. Clique em **Atualizar** para alterar o conteúdo da tabela.  
+10. Para alterar a pontuação mínima de correspondência que determina o nível de correspondência que um registro deve ter para ser exibido, selecione o ícone **Pontuação Mín. de Correspondência** acima do lado direito da tabela e insira um número mais alto. A pontuação mínima de correspondência é definida por padrão em 80%. Clique em **Atualizar** para alterar o conteúdo da tabela.  
   
 11. Após a conclusão da análise, o botão **Iniciar** se transforma em um botão **Reiniciar** . Clique em **Reiniciar** para executar o projeto de análise novamente. No entanto, os resultados da análise anterior ainda não foram salvos; portanto, clicar em **Reiniciar** ocasionará a perda dos dados anteriores. Para continuar, clique em **Sim** na janela pop-up. Durante a execução da análise, não saia da página; do contrário, o processo de análise será encerrado.  
   
@@ -116,7 +121,7 @@ caps.handback.revision: 36
     > [!IMPORTANT]  
     >  O banco de dados de destino deve estar presente na mesma instância do SQL Server que o servidor do DQS. Caso contrário, ele não será exibido na lista suspensa.  
   
-3.  Marque a caixa de seleção **resultados correspondentes** para exportar resultados correspondentes (consulte acima para obter uma explicação) para a tabela designada em um banco de dados do SQL Server ou para o arquivo do Excel ou designado. csv. Marque a caixa de seleção **resultados de sobrevivência** para exportar resultados de sobrevivência (consulte acima para obter uma explicação) para a tabela designada em um banco de dados do SQL Server ou para o arquivo do Excel ou designado. csv.  
+3.  Marque a caixa de seleção para **Resultados Correspondentes** para exportar os resultados correspondentes(consulte acima para obter uma explicação) para a tabela designada em um banco de dados do SQL Server ou para o arquivo designado .csv ou do Excel. Marque a caixa de seleção para **Resultados de Sobrevivência** para exportar os resultados de sobrevivência (consulte acima para obter uma explicação) para a tabela designada em um banco de dados do SQL Server ou para o arquivo designado .csv ou do Excel.  
   
      Isto será exportado para resultados correspondentes:  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 36
   
 7.  Selecione a regra de sobrevivência da seguinte forma:  
   
-    -   Selecione **dinamizar registro** (o padrão) para identificar o registro sobrevivente como o registro dinâmico inicial escolhido arbitrariamente pelo DQS.  
+    -   Selecione **Registro dinâmico** (o padrão) para identificar o registro sobrevivente como o registro dinâmico inicial escolhido arbitrariamente pelo DQS.  
   
     -   Selecione **Registro mais completo e mais longo** para identificar o registro sobrevivente como aquele com o maior número de campos populados e com o maior número de termos em cada campo. Todos os campos de origem são verificados, até mesmo os campos que não foram mapeados para um domínio na página **Mapa** .  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 36
 ##  <a name="Profiler"></a> Guias Criador de Perfil e Resultados  
  As guias Criador de Perfil e Resultados contêm estatísticas para o processo de correspondência.  
   
-### Guia Criador de perfil  
+### <a name="profiler-tab"></a>Guia Criador de perfil  
  Clique na guia **Criador de perfil** para exibir estatísticas sobre o banco de dados de origem e para cada campo incluído na regra de política. As estatísticas serão atualizadas à medida que a regra de política for executada. A criação de perfis o ajuda a avaliar a eficácia do processo de eliminação de duplicação, ajudando a determinar até que ponto o processo pode melhorar a qualidade dos dados. A precisão na criação de perfis não é importante para um projeto de correspondência.  
   
  As estatísticas do banco de dados de origem incluem o seguinte:  
@@ -196,7 +201,7 @@ caps.handback.revision: 36
   
 -   **Integridade**: a porcentagem de conclusão da execução da regra.  
   
-### Notificações de Política de Correspondência  
+### <a name="matching-policy-notifications"></a>Notificações de Política de Correspondência  
  Para a atividade de política de correspondência, as seguintes condições resultam em notificações:  
   
 -   O campo está vazio em todos os registros; é recomendável eliminá-lo do mapeamento.  
@@ -209,7 +214,7 @@ caps.handback.revision: 36
   
 -   Há um nível alto de exclusividade neste campo. O uso desse campo na política de correspondência pode diminuir os resultados correspondentes.  
   
-### Guia Regras de Correspondência  
+### <a name="matching-rules-tab"></a>Guia Regras de Correspondência  
  Clique nesta guia para exibir uma lista das regras na política de correspondência e as condições em uma regra.  
   
  **Lista de regras**  
@@ -218,7 +223,7 @@ caps.handback.revision: 36
  **Tabela Regra de Correspondência**  
  Exibe cada condição na regra selecionada, inclusive domínio, valor de semelhança, peso e seleção pré-requisitada.  
   
-### Guia Resultados Correspondentes  
+### <a name="matching-results-tab"></a>Guia Resultados Correspondentes  
  Clique na guia **Resultados Correspondentes** para exibir estatísticas para a análise da fonte de dados que usa o conhecimento selecionado para o projeto e as regras de correspondência nessa base de dados de conhecimento. As estatísticas incluem o seguinte:  
   
 -   O número total de registros no banco de dados  

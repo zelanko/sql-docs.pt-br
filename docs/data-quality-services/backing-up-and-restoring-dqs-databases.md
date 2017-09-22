@@ -1,22 +1,27 @@
 ---
-title: "Fazendo backup e restaurando banco de dados do DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Fazendo backup e restaurando bancos de dados do DQS | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Fazendo backup e restaurando banco de dados do DQS
+# <a name="backing-up-and-restoring-dqs-databases"></a>Fazendo backup e restaurando banco de dados do DQS
   Este tópico descreve como fazer backup e restaurar os bancos de dados do DQS.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
@@ -43,7 +48,7 @@ caps.handback.revision: 12
   
 2.  No Pesquisador de Objetos, expanda o nó **Bancos de Dados** .  
   
-3.  Faça um backup do banco de dados DQS_STAGING_DATA. Para obter instruções passo a passo para backup de um banco de dados do SQL Server, consulte [criar um Backup completo do banco de dados & #40. SQL Server & 41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+3.  Faça um backup do banco de dados DQS_STAGING_DATA. Para obter instruções passo a passo de como fazer backup de um banco de dados do SQL Server, consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 4.  Faça backup do banco de dados DQS_PROJECTS.  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 12
   
 6.  Desconecte-se da instância atual do SQL Server e conecte-se à instância do SQL Server em que você deseja restaurar esses bancos de dados.  
   
-7.  Restaure o banco de dados DQS_MAIN. Para obter instruções passo a passo restaurar um banco de dados do SQL Server, consulte [restaurar um banco de dados de Backup usando o SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Restaure o banco de dados DQS_MAIN. Para obter instruções passo a passo de como restaurar um banco de dados do SQL Server, consulte [Restaurar um backup de banco de dados usando o SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Restaure o banco de dados DQS_PROJECTS.  
   
 9. Restaure o banco de dados DQS_STAGING_DATA.  
   
-10. No Pesquisador de objetos, clique com botão direito do servidor e, em seguida, clique em **nova consulta**.  
+10. No Pesquisador de Objetos, clique com o botão direito do mouse no servidor e, depois, clique em **Nova Consulta**.  
   
-11. Na janela do Editor de consultas, copie as seguintes instruções SQL e substitua *\< senha>* com a senha que você forneceu durante a instalação do DQS para a chave mestra de banco de dados:  
+11. Na janela Editor de Consultas, copie as seguintes instruções SQL e substitua *\<PASSWORD>* pela senha fornecida durante a instalação do DQS para a chave mestra do banco de dados:  
   
     ```  
     USE [DQS_MAIN]  
@@ -71,7 +76,7 @@ caps.handback.revision: 12
   
 12. Pressione F5 para executar as instruções. Consulte o painel **Resultados** para verificar se as instruções foram executadas com êxito.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciar bancos de dados do DQS](../data-quality-services/manage-dqs-databases.md)  
   
   

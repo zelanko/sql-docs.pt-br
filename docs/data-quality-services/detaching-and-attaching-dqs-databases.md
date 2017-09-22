@@ -1,28 +1,33 @@
 ---
-title: "Desanexando e anexando bancos de dados do DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Desanexando e anexando bancos de dados do DQS | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00f259597e28f7c2cf841f71dfeaf18467f1ebb0
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Desanexando e anexando bancos de dados do DQS
+# <a name="detaching-and-attaching-dqs-databases"></a>Desanexando e anexando bancos de dados do DQS
   Este tópico descreve como desanexar e anexar os bancos de dados do DQS.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Limitations"></a> Limitações e restrições  
- Para obter uma lista de limitações e restrições, consulte [anexar e desanexar banco de dados e 40; SQL Server & 41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ Para obter uma lista de limitações e restrições, veja [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
@@ -41,26 +46,26 @@ caps.handback.revision: 9
 -   Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para terminar as atividades em execução ou interromper os processos em execução no DQS.  
   
 ##  <a name="Detach"></a> Desanexar bancos de dados DQS  
- Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados DQS geralmente estão disponíveis no seguinte local no seu computador de serviços de qualidade de dados: C:\Program Files\Microsoft SQL Server\MSSQL13.*\< Nome_da_instância >*\MSSQL\DATA.  
+ Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados do DQS geralmente estão disponíveis no seguinte local no computador do Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL13.*<Instance_Name>*\MSSQL\DATA.  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
   
 2.  No Pesquisador de Objetos, expanda o nó **Bancos de Dados** .  
   
-3.  Clique com botão direito do **DQS_MAIN** banco de dados, aponte para **tarefas**, e, em seguida, clique em **Desanexar**. A caixa de diálogo **Desanexar Banco de Dados** é exibida.  
+3.  Clique com o botão direito do mouse no banco de dados **DQS_MAIN** , aponte para **Tarefas**e clique em **Desanexar**. A caixa de diálogo **Desanexar Banco de Dados** é exibida.  
   
-4.  Marque a caixa de seleção sob o **Drop** coluna e clique em **OK** desanexar o banco de dados DQS_MAIN.  
+4.  Marque a caixa de seleção na coluna **Descartar** e clique em **OK** para desanexar o banco de dados DQS_MAIN.  
   
 5.  Repita as etapas 3 e 4 com os bancos de dados DQS_PROJECTS e DQS_STAGING_DATA para desanexá-los.  
   
- Você também pode desanexar bancos de dados DQS usando as instruções Transact-SQL usando o procedimento armazenado sp_detach_db. Para obter mais informações sobre como desanexar bancos de dados usando instruções Transact-SQL, consulte [usando Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) em [desanexar um banco de dados](../relational-databases/databases/detach-a-database.md).  
+ Você também pode desanexar bancos de dados DQS usando as instruções Transact-SQL usando o procedimento armazenado sp_detach_db. Para obter mais informações sobre como desanexar bancos de dados usando instruções Transact-SQL, consulte [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) em [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
 ##  <a name="Attach"></a> Anexar bancos de dados DQS  
  Use as instruções a seguir para anexar um banco de dados DQS na mesma instância do SQL Server (de onde você desanexou) ou a uma instância diferente do SQL Server em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
   
-2.  No Pesquisador de objetos, clique com botão direito **bancos de dados**, e, em seguida, clique em **Attach**. A caixa de diálogo **Anexar Bancos de Dados** é exibida.  
+2.  No Pesquisador de Objetos, clique com o botão direito do mouse em **Bancos de Dados**e em **Anexar**. A caixa de diálogo **Anexar Bancos de Dados** é exibida.  
   
 3.  Para especificar o banco de dados a ser anexado, clique em **Adicionar**. A caixa de diálogo **Localizar Arquivos de Banco de Dados** é exibida.  
   
@@ -70,15 +75,15 @@ caps.handback.revision: 9
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  O **detalhes do banco de dados** painel (inferior) exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique o **Procurar** botão (...).  
+5.  O painel **detalhes do banco de dados** (inferior) exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** (...).  
   
-6.  Clique em **OK** anexar o banco de dados DQS_MAIN.  
+6.  Clique em **OK** para anexar o banco de dados DQS_MAIN.  
   
 7.  Repita as etapas 2 a 6 para os bancos de dados DQS_PROJECTS e DQS_STAGING_DATA para anexá-los.  
   
 8.  Você também deve executar as instruções Transact-SQL na próxima etapa depois de restaurar o banco de dados DQS_MAIN, caso contrário, uma mensagem de erro será exibida quando você tentar se conectar ao Data Quality Server usando o aplicativo Cliente Data Quality, e você não puder se conectar. Porém, você não precisa executar as etapas 9 e 10 se tiver acabado de anexar o banco de dados DQS_PROJECTS ou DQS_STAGING_DATA e não o DQS_MAIN.  
   
-     Para executar instruções Transact-SQL, no Pesquisador de objetos, clique com botão direito do servidor e, em seguida, clique em **nova consulta**.  
+     Para executar as instruções Transact-SQL, no Pesquisador de Objetos, clique com o botão direito do mouse no servidor e clique em **Nova Consulta**.  
   
 9. Na janela Editor de Consultas, copie as seguintes instruções SQL:  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 9
   
 11. Conecte-se ao Data Quality Server usando o Cliente Data Quality para verificar se é possível conectar-se com êxito.  
   
- Você também pode anexar bancos de dados DQS usando as instruções Transact-SQL. Para obter mais informações sobre como anexar bancos de dados usando instruções Transact-SQL, consulte [usando Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) em [anexar um banco de dados](../relational-databases/databases/attach-a-database.md).  
+ Você também pode anexar bancos de dados DQS usando as instruções Transact-SQL. Para obter mais informações sobre como anexar bancos de dados usando instruções Transact-SQL, consulte [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) em [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciar bancos de dados do DQS](../data-quality-services/manage-dqs-databases.md)  
   
   

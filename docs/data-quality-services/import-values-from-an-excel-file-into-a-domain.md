@@ -1,27 +1,32 @@
 ---
-title: "Importar valores de um arquivo do Excel para um dom&#237;nio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importfailing.f1"
-  - "sql13.dqs.kb.importselect.f1"
-  - "sql13.dqs.kb.failingvalues.f1"
+title: "Importar valores de um arquivo do Excel para um domínio | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importfailing.f1
+- sql13.dqs.kb.importselect.f1
+- sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c007da5bb365b81cd3a8bdd570c139077e44afbd
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Importar valores de um arquivo do Excel para um dom&#237;nio
-  Este tópico descreve como importar valores de um arquivo do Excel para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O uso de um arquivo do Excel para importar valores de domínio para o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que as pessoas que têm uma lista de valores de dados válidos em um arquivo do Excel ou um arquivo de texto importem esses valores para um domínio. De um arquivo do Excel, você pode importar valores de domínio para um ou vários domínios em uma base de dados de conhecimento. (Consulte [Domínios de importação de um arquivo do Excel na descoberta de Conhecimento](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) para obter mais informações sobre como importar domínios para uma base de Conhecimento.) Não há suporte para a exportação para um arquivo do Excel.  
+# <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores de um arquivo do Excel para um domínio
+  Este tópico descreve como importar valores de um arquivo do Excel para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O uso de um arquivo do Excel para importar valores de domínio para o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que as pessoas que têm uma lista de valores de dados válidos em um arquivo do Excel ou um arquivo de texto importem esses valores para um domínio. De um arquivo do Excel, você pode importar valores de domínio para um ou vários domínios em uma base de dados de conhecimento. (Consulte [Importar domínios de um arquivo do Excel na descoberta de conhecimento](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) para obter mais informações sobre como importar domínios para uma base de dados de conhecimento.) Não há suporte para a exportação para um arquivo do Excel.  
   
  Você pode importar valores de dados de duas maneiras:  
   
@@ -32,16 +37,16 @@ caps.handback.revision: 26
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
- Para importar domínios de um arquivo do Excel, o Excel deve ser instalado no computador que o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aplicativo está instalado para importar valores de domínio ou um domínio completo; você deve ter criado um arquivo do Excel com valores de domínio (consulte [como a importação funciona](#How)); e você deve ter criado e aberto uma base de dados de conhecimento para importar o domínio.  
+ Para importar domínios de um arquivo do Excel, o Excel deve ser instalado no computador em que o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] está instalado para que os valores de domínio ou um domínio completo sejam importados; você deve criar um arquivo do Excel com valores de domínio (consulte [How the import works](#How)); você deve criar e abrir uma base de dados de conhecimento para a qual o domínio será importado.  
   
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para importar valores de domínio de um arquivo do Excel.  
   
-##  <a name="Import"></a> Importar valores de um arquivo do Excel para um domínio.  
+##  <a name="Import"></a> Import values from an Excel file into a domain  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo de cliente de qualidade de dados](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra uma base de dados de conhecimento na atividade Gerenciamento de Domínio.  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 26
   
 6.  Na caixa de diálogo **Importar Valores de Domínio** , clique em **Procurar**.  
   
-7.  No **Selecione arquivo** caixa de diálogo, vá para a pasta que contém o arquivo do Excel que você deseja importar valores de domínio do, selecione o arquivo (com uma extensão. xlsx,. xls ou. csv) e, em seguida, clique em **Abrir**. O arquivo deve estar no cliente no qual você executa o DQS ou em um arquivo de compartilhamento ao qual o usuário tem acesso.  
+7.  Na caixa de diálogo **Selecionar arquivo** , vá para a pasta que contém o arquivo do Excel do qual serão importados valores de domínio, selecione o arquivo (que tem a extensão .xlsx, .xls ou .csv) e clique em **Abrir**. O arquivo deve estar no cliente no qual você executa o DQS ou em um arquivo de compartilhamento ao qual o usuário tem acesso.  
   
-8.  Do **planilha** lista suspensa, selecione a planilha que você estiver importando de.  
+8.  Na lista suspensa **Planilha** , selecione a planilha a partir da qual está realizando a importação.  
   
 9. Selecione **Usar primeira linha como cabeçalho** se a primeira linha da planilha representar o nome do domínio e todas as outras linhas representarem valores de domínio válidos.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 26
 14. Clique em **Concluir** para adicionar os valores à base de dados de conhecimento.  
   
 ##  <a name="FollowUp"></a> Acompanhamento: Após importar valores de um arquivo do Excel para um domínio  
- Depois que você importar valores para um domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [executar a descoberta de Conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md), ou [criar uma política de correspondência](../data-quality-services/create-a-matching-policy.md).  
+ Depois que você importar valores para um domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Synonyms"></a> Importando sinônimos  
  Os sinônimos são importados da seguinte maneira:  
@@ -87,7 +92,7 @@ caps.handback.revision: 26
   
 -   Se os valores não puderem ser conectados manualmente no aplicativo por algum motivo, isso não será aplicável através da operação de importação.  
   
-##  <a name="How"></a> Como a importação funciona  
+##  <a name="How"></a> How the import works  
  Os seguintes valores são importados por esta operação:  
   
  Na operação de importação, o DQS realiza a importação a partir de um arquivo do Excel, da seguinte maneira:  
@@ -102,11 +107,11 @@ caps.handback.revision: 26
   
 -   Cada linha representa um valor de domínio.  
   
--   A primeira linha representa nomes de domínio ou é o primeiro valor de dados ou registro, dependendo da configuração da caixa de seleção **Usar primeira linha como cabeçalho** . Se você selecionar **Usar primeira linha como cabeçalho** ao usar um arquivo .xslx ou .xls, qualquer nome de coluna nulo será convertido automaticamente em F*n*e qualquer duplicada terá um número acrescentado a eles.  
+-   A primeira linha representa nomes de domínio ou é o primeiro valor de dados ou registro, dependendo da configuração da caixa de seleção **Usar primeira linha como cabeçalho** . Se você selecionar **Use First Row as header** ao usar um arquivo .xslx ou .xls, qualquer nome de coluna nulo será convertido automaticamente em F*n*e qualquer duplicada terá um número acrescentado a eles.  
   
 -   Se você cancelar a operação de importação antes de concluí-la, a operação será revertida e nenhum dado será importado.  
   
--   Os valores da primeira coluna são importados para o domínio. Se, além da primeira coluna, uma ou mais colunas adicionais são preenchidas, então os valores nessas colunas serão adicionados como sinônimos (consulte [importando sinônimos](#Synonyms)).  
+-   Os valores da primeira coluna são importados para o domínio. Se, além da primeira coluna, uma ou mais colunas adicionais forem populadas, os valores dessas colunas serão adicionados como sinônimos (consulte [Importando sinônimos](#Synonyms)).  
   
     -   O formato esperado é que a primeira coluna será os valores principais, enquanto a segunda coluna e acima serão sinônimos.  
   

@@ -1,22 +1,27 @@
 ---
-title: "Conceitos do Data Quality Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Conceitos do Data Quality Services | Microsoft Docs
+ms.custom: 
+ms.date: 01/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
-# Conceitos do Data Quality Services
+# <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) em gerenciamento de conhecimento, projetos de qualidade de dados e administração de qualidade de dados.  
   
 ##  <a name="Knowledge"></a> Conceitos de gerenciamento de conhecimento  
@@ -32,24 +37,24 @@ caps.handback.revision: 17
   
  **Política de Correspondência**  
   
- Uma política de correspondência contém as regras de correspondência usadas para executar a eliminação de duplicação de dados. O processo de política de correspondência permite a você criar regras de correspondência, ajustá-las com base nos resultados correspondentes e na criação de perfis de dados, além de adicionar a política à base de dados de conhecimento. Para obter mais informações, consulte [Data Matching](../data-quality-services/data-matching.md).  
+ Uma política de correspondência contém as regras de correspondência usadas para executar a eliminação de duplicação de dados. O processo de política de correspondência permite a você criar regras de correspondência, ajustá-las com base nos resultados correspondentes e na criação de perfis de dados, além de adicionar a política à base de dados de conhecimento. Para obter mais informações, consulte [Correspondência de dados](../data-quality-services/data-matching.md).  
   
  **Serviços de Dados de Referência**  
   
  Você pode usar dados de referência para validar, corrigir e enriquecer seus dados, aproveitando os serviços de empresas que garantem a qualidade dos seus dados de referência. Você pode usar os serviços do Windows Azure Marketplace para se conectar a provedores de dados de referência ou pode usar uma conexão direta a um provedor. Para obter mais informações, consulte [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
- Para obter mais informações sobre o gerenciamento de dados de Conhecimento no DQS, consulte [Bases de conhecimento do DQS e domínios](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Para obter mais informações sobre o gerenciamento de conhecimento no DQS, consulte [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Conceitos de projeto de qualidade de dados  
- O administrador de dados executa operações de qualidade de dados (limpeza e correspondência) usando um projeto de qualidade de dados no aplicativo do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
+ O administrador de dados executa operações de qualidade de dados (limpeza e correspondência) usando um projeto de qualidade de dados no aplicativo do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
  **Limpeza de Dados**  
   
  A limpeza de dados no DQS é feita com base no conhecimento em uma base de dados de conhecimento do DQS. A limpeza de dados no DQS é um processo de duas etapas:  
   
--   **Limpeza auxiliada por computador**: o DQS usa o conhecimento na base de dados de Conhecimento selecionada para o projeto de limpeza para propor correções/sugestões aos valores em uma fonte de dados.  
+-   **Limpeza auxiliada por computador**: o DQS usa o conhecimento na base de dados de conhecimento selecionada para o projeto de limpeza para propor correções/sugestões aos valores em uma fonte de dados.  
   
--   **Limpeza interativa**: O administrador de dados pode executar o processo de limpeza interativo para alterar ou aumentar correções de dados que foram propostas pelo processo de limpeza de dados auxiliada por computador. O administrador de dados faz isso usando níveis de confiança e estatísticas identificadas pelo processo de limpeza de dados, ou inserindo manualmente suas próprias alterações no projeto.  
+-   **Limpeza interativa**: o administrador de dados pode executar o processo de limpeza interativo para alterar ou aumentar correções de dados que foram propostas pelo processo de limpeza de dados assistida por computador. O administrador de dados faz isso usando níveis de confiança e estatísticas identificadas pelo processo de limpeza de dados, ou inserindo manualmente suas próprias alterações no projeto.  
   
  Depois de limpar dados, o administrador de dados pode exportar os dados processados para um banco de dados do SQL Server, .csv ou um arquivo do Excel. Para obter mais informações, consulte [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 17
   
  A criação de perfil de dados fornece aos administradores de dados estatísticas em tempo real e informações sobre os dados que estão sendo processados pelo DQS para as atividades de limpeza e correspondência enquanto executa um projeto de qualidade de dados. A criação de perfil de dados ajuda a avaliar a efetividade das atividades de limpeza e correspondência em um projeto de qualidade de dados, e as notificações ajudam o usuário com ações que podem ser realizadas para aprimorar as atividades de limpeza de dados e correspondência de dados. Para obter mais informações, consulte [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
- Para obter mais informações sobre projetos de qualidade de dados no DQS, consulte [projetos de qualidade de dados e 40; DQS e 41;](../data-quality-services/data-quality-projects-dqs.md).  
+ Para obter mais informações sobre projetos de qualidade de dados no DQS, consulte [Projetos de qualidade de dados &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md).  
   
 ##  <a name="Admin"></a> Conceitos de administração do Data Quality  
  Um administrador de DQS pode executar a variedade de tarefas administrativas usando o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -84,11 +89,11 @@ caps.handback.revision: 17
   
  **Segurança do DQS**  
   
- Você usa funções do mecanismo de segurança do SQL Server para tornar o DQS seguro. Há três funções de DQS que determinam o nível de acesso para um usuário no aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]: dqs_administrator, dqs_kb_editor e dqs_kb_operator. Você não pode conceder funções aos usuários usando o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; isso é feito usando o SQL Server Management Studio. Para obter mais informações, consulte [DQS Security](../data-quality-services/dqs-security.md).  
+ Você usa funções do mecanismo de segurança do SQL Server para tornar o DQS seguro. Há três funções de DQS que determinam o nível de acesso para um usuário no aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor e dqs_kb_operator. Você não pode conceder funções aos usuários usando o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; isso é feito usando o SQL Server Management Studio. Para obter mais informações, consulte [DQS Security](../data-quality-services/dqs-security.md).  
   
  Para obter mais informações sobre a administração do DQS, consulte [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   
