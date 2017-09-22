@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar a pesquisa de texto completo do SQL Server no Linux
@@ -86,7 +86,7 @@ Se você precisar de uma instalação offline, localize o download do pacote de 
 
 ## <a name="supported-languages"></a>Idiomas com suporte
 
-Pesquisa de texto completo usa [separadores de palavras](https://msdn.microsoft.com/library/ms142509.aspx) que determinam como identificar palavras individuais com base no idioma. Você pode obter uma lista de separadores de palavras registrados, consultando o **sys. fulltext_languages** exibição do catálogo. Separadores de palavras para os seguintes idiomas são instalados com o SQL Server de 2017 RC2:
+Pesquisa de texto completo usa [separadores de palavras](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) que determinam como identificar palavras individuais com base no idioma. Você pode obter uma lista de separadores de palavras registrados, consultando o **sys. fulltext_languages** exibição do catálogo. Separadores de palavras para os seguintes idiomas são instalados com o SQL Server de 2017 RC2:
 
 | Idioma | ID de idioma |
 |---|---|
@@ -146,7 +146,7 @@ Pesquisa de texto completo usa [separadores de palavras](https://msdn.microsoft.
 
 ## <a id="filters"></a>Filtros
 
-Pesquisa de texto completo também funciona com texto armazenado em arquivos binários. Mas, nesse caso, um filtro instalado é necessária para processar o arquivo. Para obter mais informações sobre filtros, consulte [configurar e gerenciar filtros para pesquisa](https://msdn.microsoft.com/library/ms142499.aspx).
+Pesquisa de texto completo também funciona com texto armazenado em arquivos binários. Mas, nesse caso, um filtro instalado é necessária para processar o arquivo. Para obter mais informações sobre filtros, consulte [configurar e gerenciar filtros para pesquisa](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
 
 Você pode ver uma lista de filtros instalados chamando **sp_help_fulltext_system_components 'filter'**. Para SQL Server 2017 RC2, os filtros a seguir estão instalados:
 
@@ -258,9 +258,9 @@ Você pode ver uma lista de filtros instalados chamando **sp_help_fulltext_syste
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Pesquisa semântica
-[A pesquisa semântica](https://msdn.microsoft.com/library/gg492075.aspx) cria o recurso de pesquisa de texto completo para extrair e índice estatisticamente relevantes *frases-chave*. Isso permite que você consultar o significado dentro de documentos no banco de dados. Ele também ajuda a identificar documentos semelhantes.
+[A pesquisa semântica](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) cria o recurso de pesquisa de texto completo para extrair e índice estatisticamente relevantes *frases-chave*. Isso permite que você consultar o significado dentro de documentos no banco de dados. Ele também ajuda a identificar documentos semelhantes.
 
-Para usar a pesquisa semântica, você deve primeiro baixar e anexar o [banco de dados de estatísticas semânticas de idioma](https://msdn.microsoft.com/library/gg509085.aspx).
+Para usar a pesquisa semântica, você deve primeiro baixar e anexar o [banco de dados de estatísticas semânticas de idioma](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
 
 1. Em um computador Windows, [baixar o. Arquivo MSI para o banco de dados de estatísticas semânticas de idioma](https://www.microsoft.com/download/details.aspx?id=54277).
 

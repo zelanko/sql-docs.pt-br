@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 649c7cbd03b6d2e61dbbb572a34cdbcd2a7ab7cd
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novidades do SQL Server 2017 no Linux
@@ -131,7 +131,7 @@ No modo de compatibilidade 140:
 [Aprimoramentos do Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) nesta versão do CTP1.1:
 - Clonagem de CLR, Filestream/Filetable, objetos na memória e o repositório de consultas de banco de dados.
 - **CRIAR** ou **ALTER** operadores para objetos de programação.
-- Novo **dica USE** opção para fornecer dicas para o processador de consultas de consulta. Saiba mais aqui: [dicas de consulta](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
+- Novo **dica USE** opção para fornecer dicas para o processador de consultas de consulta. Saiba mais aqui: [dicas de consulta](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
 - Conta de serviço do SQL agora pode identificar programaticamente habilitar bloquear páginas na memória e a inicialização instantânea de arquivo permissões.
 - Suporte para a contagem de arquivos TempDB, tamanho do arquivo e as configurações de crescimento do arquivo.
 - Diagnóstico estendido no showplan XML.

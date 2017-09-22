@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Criar e executar trabalhos do SQL Server Agent no Linux
@@ -35,7 +35,7 @@ As seguintes etapas fornecem um exemplo de como criar um trabalho do SQL Server 
 > [!TIP]
 > Você pode usar qualquer cliente de T-SQL para executar esses comandos. Por exemplo, no Linux você pode usar [sqlcmd](sql-server-linux-setup-tools.md) ou [código do Visual Studio](sql-server-linux-develop-use-vscode.md). De um servidor remoto do Windows, você também pode executar consultas no SQL Server Management Studio (SSMS) ou usar a interface do usuário para o gerenciamento de trabalho, que é descrito na próxima seção.
 
-1. **Criar o trabalho**. O exemplo a seguir usa [sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx) para criar um trabalho denominado `Daily AdventureWorks Backup`.
+1. **Criar o trabalho**. O exemplo a seguir usa [sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql) para criar um trabalho denominado `Daily AdventureWorks Backup`.
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ As seguintes etapas fornecem um exemplo de como criar um trabalho do SQL Server 
 
     ```
 
-2. **Adicionar uma ou mais etapas de trabalho**. Script Transact-SQL a seguir usa [sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx) para criar uma etapa de trabalho que cria um backup do `AdventureWlorks2014` banco de dados.
+2. **Adicionar uma ou mais etapas de trabalho**. Script Transact-SQL a seguir usa [sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) para criar uma etapa de trabalho que cria um backup do `AdventureWlorks2014` banco de dados.
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ As seguintes etapas fornecem um exemplo de como criar um trabalho do SQL Server 
     GO
     ```
 
-3. **Criar uma agenda de trabalho**. Este exemplo usa [sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx) para criar uma agenda diária para o trabalho.
+3. **Criar uma agenda de trabalho**. Este exemplo usa [sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) para criar uma agenda diária para o trabalho.
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ As seguintes etapas fornecem um exemplo de como criar um trabalho do SQL Server 
    GO
     ```
 
-4. **Anexar a agenda de trabalho para o trabalho**. Use [sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx) para anexar a agenda de trabalho para o trabalho.
+4. **Anexar a agenda de trabalho para o trabalho**. Use [sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql) para anexar a agenda de trabalho para o trabalho.
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ As seguintes etapas fornecem um exemplo de como criar um trabalho do SQL Server 
     GO
     ```
 
-5. **Atribuir o trabalho a um servidor de destino**. Atribuir o trabalho a um servidor de destino com [sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx). Neste exemplo, o servidor local é o destino.
+5. **Atribuir o trabalho a um servidor de destino**. Atribuir o trabalho a um servidor de destino com [sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql). Neste exemplo, o servidor local é o destino.
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: e16cfa9447a63e1bb9b627bc3045727e7f481ef3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados em log por um pacote do Integration Services
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  Este tópico contém informações sobre as mensagens de evento comuns registradas por um pacote no log de eventos de Aplicativo. Por padrão, um pacote registra algumas dessas mensagens mesmo que você não tenha habilitado o log no pacote. Todavia, existem outras mensagens que serão registradas em log pelo pacote apenas se você tiver habilitado o log nele. Independentemente de o pacote registrar essas mensagens em log por padrão ou de o log estar habilitado, a Origem do Evento das mensagens é SQLISPackage.  
   
- Para obter informações gerais sobre como executar pacotes SSIS, consulte [Execução de projetos e pacotes](https://msdn.microsoft.com/library/ms141708.aspx).  
+ Para obter informações gerais sobre como executar pacotes SSIS, consulte [Execução de projetos e pacotes](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages).  
   
  Para obter informações sobre como solucionar problemas de execução de pacotes, consulte [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   

@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega de email no Reporting Services
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/09/2017
  Para um servidor de relatório de modo Nativo, a extensão de entrega de email é configurada pela ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de modo Nativo e pela edição dos arquivos de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para um servidor de relatório do modo do SharePoint, a extensão de entrega de email é configurada nas páginas de gerenciamento do SharePoint e em scripts do PowerShell.  
   
  
- Para obter informações sobre como configurar um servidor de relatório de modo nativo, consulte [Configurações de email – Modo nativo do Reporting Services (Configuration Manager)](https://msdn.microsoft.com/library/ms189342.aspx)
+ Para obter informações sobre como configurar um servidor de relatório de modo nativo, consulte [email configurações - modo nativo do Reporting Services (Configuration Manager)](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
  
  
  Para obter informações sobre como configurar um servidor de relatório do modo do SharePoint, consulte o seguinte:  
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas e permissões](../../reporting-services/security/tasks-and-permissions.md)   
- [Assinaturas e entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Atribuições de função](../../reporting-services/security/role-assignments.md)  
   

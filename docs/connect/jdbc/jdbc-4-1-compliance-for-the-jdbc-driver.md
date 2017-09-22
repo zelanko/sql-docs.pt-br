@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Conformidade do JDBC 4.1 com o JDBC Driver
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |Novo recurso|Description|  
 |-----------------|-----------------|  
-|Nova função de Escape<br /><br /> Escape de linhas de retorno limitado|Suporte parcial<br /><br /> Sintaxe de escape: limite \<linhas > [OFFSET < linha_offset >]<br /><br /> A sintaxe de escape tem duas partes: a parte obrigatória 'linhas' especifica o número de linhas a serem retornadas e a parte opcional 'linha_offset' especifica o número de linhas a serem ignoradas antes de começar a retornar linhas<br /><br /> O driver dará suporte apenas para a parte obrigatória, transformando a consulta usando 'TOP' em vez de LIMIT (o SQL Server não dá suporte a 'LIMIT').<br /><br /> O driver acionará uma exceção se a parte opcional 'linha_offset' for usada, já que o SQL Server não tem nenhum constructo interno para dar suporte.<br /><br /> Para obter detalhes, consulte [usando sequências de Escape SQL](https://msdn.microsoft.com/en-us/library/ms378045.aspx).|  
+|Nova função de Escape<br /><br /> Escape de linhas de retorno limitado|Suporte parcial<br /><br /> Sintaxe de escape: limite \<linhas > [OFFSET < linha_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
   
  A especificação de API do Java Database Connectivity 4.1 tem suporte pelo Microsoft JDBC Driver 4.2 para SQL Server, com os mapeamentos de tipo de dados a seguir.  
   

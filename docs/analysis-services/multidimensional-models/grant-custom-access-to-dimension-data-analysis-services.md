@@ -30,10 +30,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 06975a1a487f4627e25f3028db2ec77ce7525f21
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 4ef09ff12c41b6bb5a7610134cb317a81caaf3cf
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acesso personalizado a dados da dimensão (Analysis Services)
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
  A segurança básica de dimensão é a mais fácil, uma vez que basta selecionar quais atributos de dimensão e hierarquias de atributo devem ser incluídas ou excluídas da função. A segurança avançada é mais complexa e exige conhecimentos em scripts MDX. Veja abaixo a descrição das duas abordagens.  
 
 > [!NOTE]  
->  As instruções a seguir pressupõem uma conexão de cliente que emite consultas MDX. Se o cliente usa o DAX, como o Power View no Power BI, a segurança de dimensão não fica evidente nos resultados da consulta. Consulte [Compreendendo o Power View para modelos multidimensionais](https://msdn.microsoft.com/library/jj969574.aspx) .para obter mais informações.
+>  As instruções a seguir pressupõem uma conexão de cliente que emite consultas MDX. Se o cliente usa o DAX, como o Power View no Power BI, a segurança de dimensão não fica evidente nos resultados da consulta. Consulte [Compreendendo o Power View para modelos multidimensionais](/sql-docs/docs/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models) .para obter mais informações.
       
 ## <a name="prerequisites"></a>Pré-requisitos  
  Nem todos os membros de medidas ou dimensão podem ser usados ​​em cenários de acesso personalizados. A conexão irá falhar se uma função restringir o acesso a uma medida ou membro padrão ou restringir o acesso a medidas que fazem parte de expressões de medida.  

@@ -2,7 +2,7 @@
 title: DROP DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 09/15/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -30,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 347995e21c5930007404fd8a9dd8bb29d9879981
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Remove um ou mais bancos de dados de usuário ou instantâneos do banco de dados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -51,7 +51,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 ```  
   
 ```  
--- Azure SQL Database and Parallel Data Warehouse Syntax   
+-- Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse Syntax   
 DROP DATABASE database_name [;]  
 ```  
   
@@ -82,7 +82,7 @@ DROP DATABASE database_name [;]
 >  Descartar um banco de dados com FILE_SNAPSHOT backups associados a ele terá êxito, mas os arquivos de banco de dados que tenham instantâneos associados não serão excluídos para evitar a anulação os backups que faz referência a esses arquivos de banco de dados. O arquivo será truncado, mas não serão fisicamente excluído para manter os backups FILE_SNAPSHOT intactos. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- O descarte de um instantâneo de banco de dados o exclui de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exclui os arquivos físicos esparsos do Sistema de Arquivos NTFS utilizados pelo instantâneo. Para obter informações sobre como usar arquivos esparsos por instantâneos do banco de dados, consulte [instantâneos de banco de dados &#40; SQL Server &#41; ](../../relational-databases/databases/database-snapshots-sql-server.md). O cancelamento de um instantâneo do banco de dados limpa o cache de plano para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+ O descarte de um instantâneo de banco de dados o exclui de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exclui os arquivos físicos esparsos do Sistema de Arquivos NTFS utilizados pelo instantâneo. Para obter informações sobre como usar arquivos esparsos por instantâneos do banco de dados, consulte [instantâneos de banco de dados & #40; SQL Server & #41; ](../../relational-databases/databases/database-snapshots-sql-server.md). O cancelamento de um instantâneo do banco de dados limpa o cache de plano para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
   
 ## <a name="interoperability"></a>Interoperabilidade  
   
@@ -105,10 +105,15 @@ DROP DATABASE database_name [;]
  Descartar um banco de dados permite para o Stretch Database não remove os dados remotos. Se você deseja excluir os dados remotos, você precisa removê-lo manualmente.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- Você deve estar conectado ao banco de dados mestre para descartar um banco de dados.  
+ Você deve estar conectado ao banco de dados mestre para descartar um banco de dados.
   
- A instrução DROP DATABASE deve ser a única instrução em um lote de SQL, e você poderá descartar apenas um banco de dados de cada vez.  
+ A instrução DROP DATABASE deve ser a única instrução em um lote de SQL, e você poderá descartar apenas um banco de dados de cada vez.
   
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+ Você deve estar conectado ao banco de dados mestre para descartar um banco de dados.
+  
+ A instrução DROP DATABASE deve ser a única instrução em um lote de SQL, e você poderá descartar apenas um banco de dados de cada vez.
+
 ## <a name="permissions"></a>Permissões  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Usando Meus Relatórios (Construtor de Relatórios e SSRS)
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/09/2017
   
  Conceitualmente, a pasta Meus Relatórios é semelhante à pasta Meus Documentos no sistema de arquivos do Windows. Embora cada usuário tenha uma pasta chamada Meus Relatórios, a pasta que cada um acessa é diferente de todos os outros usuários. Exceto para os administradores do servidor de relatórios, outros usuários não podem acessar o conteúdo da pasta Meus Relatórios que pertence a você.  
   
- O recurso Meus Relatórios é opcional e pode ser desabilitado por um administrador de servidor de relatório. Se estiver habilitado, você verá uma pasta Meus Relatórios na pasta Base, que você pode acessar usando o Gerenciador de Relatórios em uma janela da Web. Para obter mais informações, consulte [Como localizar e exibir relatórios no Gerenciador de Relatórios &#40;Construtor de Relatórios e SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
+ O recurso Meus Relatórios é opcional e pode ser desabilitado por um administrador de servidor de relatório. Se estiver habilitado, você verá uma pasta Meus Relatórios na pasta Base, que você pode acessar usando o Gerenciador de Relatórios em uma janela da Web. Para obter mais informações, consulte [Localizando e exibindo relatórios no Gerenciador de relatórios &#40; Construtor de relatórios e SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
- Em um servidor de relatório configurado em modo integrado do SharePoint, não existe um equivalente à pasta Meus Relatórios. Para obter mais informações, consulte [Como localizar, exibir e gerenciar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ Em um servidor de relatório configurado em modo integrado do SharePoint, não existe um equivalente à pasta Meus Relatórios. Para obter mais informações, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -39,9 +39,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Crie um relatório pessoal vinculado e armazene-o em Meus Relatórios. Nem todos os relatórios estão disponíveis para serem vinculados. Para obter mais informações, consulte [Criar um relatório vinculado](../../reporting-services/reports/create-a-linked-report.md).  
   
--   Carregue um arquivo de definição de relatório (.rdl), arquivo de modelo de relatório (.smdl) ou outros arquivos do sistema de arquivos. Você pode carregar qualquer arquivo, mas o servidor de relatório só processa os arquivos de relatórios com uma extensão .rdl ou .smdl. Para obter mais informações, consulte Definições de Relatórios na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server e em [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
+-   Carregue um arquivo de definição de relatório (.rdl), arquivo de modelo de relatório (.smdl) ou outros arquivos do sistema de arquivos. Você pode carregar qualquer arquivo, mas o servidor de relatório só processa os arquivos de relatórios com uma extensão .rdl ou .smdl. Para obter mais informações, consulte as definições de relatório"o [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server e [carregar um arquivo ou relatório &#40; Gerenciador de relatórios &#41; ](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
--   Crie e publique seus próprios relatórios em Meus Relatórios. Para obter mais informações, consulte [Exibição do design de relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md).  
+-   Crie e publique seus próprios relatórios em Meus Relatórios. Para obter mais informações, consulte [modo de exibição de Design de relatório &#40; Construtor de relatórios &#41; ](../../reporting-services/report-builder/report-design-view-report-builder.md).  
   
  Normalmente, as permissões em Meus Relatórios permitem que você mesmo gerencie a pasta. No entanto, o administrador do servidor de relatório determina finalmente quais tarefas os usuários podem executar. Se permissões insuficientes lhe impedirem de trabalhar com Meus Relatórios, consulte seu administrador de servidor de relatório.  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  Quando você pesquisa em um banco de dados do servidor de relatório, o conteúdo da sua pasta Meus Relatórios é incluído na pesquisa, enquanto o conteúdo das outras pastas Meus Relatórios é excluído. Os resultados da pesquisa listam apenas os relatórios para os quais você tem acesso.  
   
 ## <a name="see-also"></a>Consulte também  
- [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 180690083e39317694190a89edc2b57fd9d4bbcf
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Noções básicas de ponta a ponta
@@ -37,11 +37,11 @@ Este artigo orienta você pela:
 ## <a name="before-we-start"></a>Antes de começar  
 Para acompanhar, você precisa destes produtos:  
   
-* Para criar fontes de dados e KPIs e publicar relatórios móveis e conjuntos de dados, você precisa acessar um servidor de relatório do [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [no modo nativo](https://msdn.microsoft.com/library/ms143711.aspx).  
-* Para [criar conjuntos de dados compartilhados](#shared-dataset), você precisa [instalar o Construtor de Relatórios](https://msdn.microsoft.com/library/ff519551.aspx).  
+* Para criar KPIs e fontes de dados e publicar os conjuntos de dados e relatórios móveis, você precisa acessar um [! INCLUIR[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server).  
+* Para [criar conjuntos de dados compartilhados](/sql-docs/docs/reporting-services/install-windows/install-report-builder).  
 * Para criar relatórios móveis, [instale o Publicador de Relatórios Móveis do SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Bancos de dados e scripts de exemplo do AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
-*  OU: banco de dados exemplo do World Wide Importers, disponível na página de [exemplos do Microsoft SQL Server](https://msdn.microsoft.com/library/mt748083.aspx) .
+*  OR: Dados de exemplo World Wide Importers, disponível no [Microsoft SQL Server Samples](/sql-docs/docs/sample/microsoft-sql-server-samples) página.
 * Para exibir o resultado: 
   *   [Inscreva-se no serviço do Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) e
   *  [Baixe o aplicativo móvel do Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) em seu dispositivo móvel: iOS, telefone com Android ou dispositivo com Windows 10.  
@@ -49,7 +49,7 @@ Para acompanhar, você precisa destes produtos:
   
 ## <a name="create-a-shared-data-source"></a>Criar uma fonte de dados compartilhados  
   
-Você pode criar uma fonte de dados compartilhada para seus relatórios móveis a partir de qualquer uma das fontes de dados com suporte do Reporting Services. Veja a [lista de fontes de dados com suporte](https://msdn.microsoft.com/library/ms159219.aspx).  
+Você pode criar uma fonte de dados compartilhada para seus relatórios móveis a partir de qualquer uma das fontes de dados com suporte do Reporting Services. Consulte o [lista de fontes de dados com suporte de](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).  
   
 1. De seu portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , clique em **Nova** > **Fonte de Dados**.  
   
@@ -66,11 +66,11 @@ Você pode criar uma fonte de dados compartilhada para seus relatórios móveis 
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-Leia mais sobre as [fontes de dados compartilhadas no Reporting Services](https://msdn.microsoft.com/library/ms155845.aspx).  
+Leia mais sobre as [fontes de dados compartilhadas no Reporting Services](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs).  
    
 ## <a name="shared-dataset">Criar um conjunto de dados compartilhado</a>  
   
-Use uma ferramenta de cliente existente do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , como o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para criar o conjunto de dados compartilhado.  Este passo a passo usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale o Construtor de Relatórios](https://msdn.microsoft.com/library/ff519551.aspx)ou o inicie em seu portal na Web. Você criará três conjuntos de dados, um para: o valor do KPI, a tendência do KPI e outro com mais campos para o relatório móvel do Reporting Services.   
+Use um existente [! INCLUIR[PRODUCT_NAME](/sql-docs/docs/reporting-services/install-windows/install-report-builder), ou iniciá-lo do seu portal da web. Você criará três conjuntos de dados, um para: o valor do KPI, a tendência do KPI e outro com mais campos para o relatório móvel do Reporting Services.   
   
 1. De seu portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , clique em **Novo** > **Relatório Paginado** para começar [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

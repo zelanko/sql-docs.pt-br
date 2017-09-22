@@ -18,11 +18,11 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c5a2673c5e38d6bd216116cd14225f1ed064487
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1ad3eee80539ea31af3ccf9e117b2f39b4921846
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios e SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
  Um relatório publicado é protegido por atribuições de função que usam o modelo de segurança baseada em funções do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Os relatórios publicados são acessados por meio de URLs, de Web Parts do SharePoint ou do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Outra opção é navegar até eles e abri-los no Construtor de Relatórios.  
   
 ### <a name="report-snapshots"></a>Instantâneos de relatório  
- Um relatório também pode ser publicado como um instantâneo que contém informações de layout e dados do momento em que foi executado inicialmente. Os instantâneos de relatório não são salvos em um formato de renderização específico. Em vez disso, os instantâneos de relatório são renderizados em um formato de exibição final (como HTML) somente quando solicitado por um usuário ou aplicativo. Para obter mais informações, consulte [Como localizar e exibir relatórios no Gerenciador de Relatórios &#40;Construtor de Relatórios e SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
+ Um relatório também pode ser publicado como um instantâneo que contém informações de layout e dados do momento em que foi executado inicialmente. Os instantâneos de relatório não são salvos em um formato de renderização específico. Em vez disso, os instantâneos de relatório são renderizados em um formato de exibição final (como HTML) somente quando solicitado por um usuário ou aplicativo. Para obter mais informações, consulte [Localizando e exibindo relatórios no Gerenciador de relatórios &#40; Construtor de relatórios e SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
 ## <a name="rendered-reports"></a>Relatórios renderizados  
  Um relatório renderizado é um relatório totalmente processado que contém dados e informações de layout em um formato adequado para exibição (como HTML). O relatório não pode ser exibido até ser renderizado em um formato de saída. Siga um destes procedimentos para renderizar um relatório:  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Consulte também  
  [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,8 +1,8 @@
 ---
 title: "Pontuação nativo | Microsoft Docs"
 ms.custom: 
-ms.date: 07/16/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,10 +13,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1cb06223e5274c1fa439eb9f7d82a005e93a47d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -30,25 +30,26 @@ Este tópico descreve os recursos do SQL Server 2017 que fornecem a pontuação 
 
 ## <a name="what-is-native-scoring-and-how-is-it-different-from-realtime-scoring"></a>Qual é a pontuação nativo e como ele é diferente de pontuação em tempo real?
 
-No SQL Server 2016, a Microsoft criou uma estrutura de extensibilidade que permite que os scripts de R a partir do T-SQL. Essa estrutura oferece suporte a qualquer operação que você pode executar em R, variando de funções simples para modelos de aprendizado de máquina complexa de treinamento. No entanto, a arquitetura dual-processo que pares R com o SQL Server significa que processos externos de R devem ser chamados para cada chamada, independentemente da complexidade da operação. Se você estiver carregando um modelo previamente treinado de uma tabela e pontuação em relação a ela em dados já existentes no SQL Server, a sobrecarga de chamar o processo de R externo representa um custo de desempenho desnecessários.
+No SQL Server 2016, a Microsoft criou uma estrutura de extensibilidade que permite que os scripts de R a partir do T-SQL. Essa estrutura oferece suporte a qualquer operação que você pode executar em R, variando de funções simples para modelos de aprendizado de máquina complexa de treinamento. No entanto, a arquitetura dual-processo requer invocar um processo externo do R para todas as chamadas, independentemente da complexidade da operação. Se você estiver carregando um modelo previamente treinado de uma tabela e pontuação em relação a ela em dados já existentes no SQL Server, a sobrecarga de chamar o processo de R externo representa um custo de desempenho desnecessários.
 
-_Pontuação_ é um processo de duas etapas: um modelo previamente treinado é carregado de uma tabela, e novos dados de entrada, linhas de tabela ou único, são passados para o modelo, o que gera novos valores (ou _pontuações_). A saída pode ser um valor de coluna única que representa a probabilidade de uma ou vários valores, incluindo um intervalo de confiança, erro ou outro complemento útil para a previsão.
+_Pontuação_ é um processo de duas etapas. Primeiro, você pode especificar um modelo previamente treinado para carregar de uma tabela. Em segundo lugar, passagem de novos dados de entrada para a função, para gerar valores de previsão (ou _pontuações_). A entrada pode ser linhas de tabela ou único. Você pode optar por um valor de coluna única que representa a probabilidade de saída, ou pode gerar vários valores, como um intervalo de confiança, erro ou outro complemento útil para a previsão.
 
-Quando muitas linhas de dados de pontuação, os novos valores geralmente são inseridos em uma tabela como parte do procedimento de pontuação.  No entanto, você também pode recuperar uma única pontuação em tempo real. Quando as entradas de pontuação, o modelo pode armazenados em cache para que ele pode ser recarregado no rápido de memória.
+Quando a entrada inclui muitas linhas de dados, é normalmente mais rápido inserir os valores de previsão em uma tabela como parte do processo de classificação.  Gerar uma pontuação único é mais comum em um cenário onde você obter valores de entrada de uma solicitação de usuário ou do formulário e retorna a pontuação a um aplicativo cliente. Para melhorar o desempenho ao gerar pontuações sucessivas, SQL Server pode armazenar em cache o modelo para que ele possa ser recarregado na memória.
 
 Para dar suporte a pontuação rápido, serviços de aprendizado de máquina do SQL Server (e Microsoft Server de aprendizado de máquina) fornecem bibliotecas internas de pontuação que funcionam em R ou no T-SQL. Há diferentes opções dependendo de qual versão você tem.
 
-**Nativo de pontuação**
+**Pontuação nativa**
 
-+ A função de previsão no Transact-SQL pode ser usada para _pontuação nativo_ de qualquer instância do SQL Server 2017. Requer apenas que você tenha um modelo já treinado e salvos em uma tabela ou pode ser chamado por meio do T-SQL. É um tipo de pontuação em tempo real que usa funções nativas do T-SQL; Nenhuma configuração adicional necessária.
++ A função de previsão no Transact-SQL dá suporte a _pontuação nativo_ em qualquer instância do SQL Server 2017. Requer apenas que você tenha um modelo já está treinado, que pode ser chamado usando o T-SQL. Pontuação nativo usando o T-SQL tem estas vantagens:
 
-   O tempo de execução de R não é chamado e não precisa ser instalado.
+    + Nenhuma configuração adicional é necessária.
+    + O tempo de execução de R não é chamado. Não é necessário para instalar o R.
 
 **Em tempo real de pontuação**
 
 + **sp_rxPredict** é um procedimento armazenado para em tempo real de pontuação que pode ser usado para gerar pontuações de qualquer tipo de modelo com suporte, sem chamar o tempo de execução de R.
 
-  Esta opção para usar em tempo real de pontuação também está disponível no SQL Server 2016, se você atualizar os componentes de R usando o instalador autônomo do Microsoft R Server. sp_rxPredict também é suportado no SQL Server 2017 e pode ser uma boa opção se você está Pontuando em um tipo de modelo não tem suportado pela função de previsão.
+  Esse procedimento armazenado também está disponível no SQL Server 2016, se você atualizar os componentes de R usando o instalador autônomo do Microsoft R Server. Também há suporte para sp_rxPredict 2017 do SQL Server. Portanto, você pode usar essa função quando a geração de pontuações com um tipo de modelo não é suportado pela função de previsão.
 
 + A função rxPredict pode ser usada para pontuação rápida no código de R.
 
@@ -58,7 +59,7 @@ Para obter um exemplo em tempo real de pontuação em ação, consulte [final fi
 
 ## <a name="how-native-scoring-works"></a>Funciona como nativa de pontuação
 
-Pontuação nativo usa bibliotecas nativas C++ da Microsoft que podem ler o modelo de um formato binário especial e gerar pontuações. Como um modelo pode ser publicado e usado para pontuação sem a necessidade de chamar o interpretador de R, a sobrecarga de várias interações do processo é reduzida. Isso dá suporte a desempenho muito mais rápido de previsão em cenários de produção da empresa.
+Pontuação nativo usa bibliotecas nativas C++ da Microsoft que podem ler o modelo de um formato binário especial e gerar pontuações. Como um modelo pode ser publicado e usado para pontuação sem a necessidade de chamar o interpretador de R, a sobrecarga de várias interações do processo é reduzida. Portanto, pontuação nativo oferece suporte a desempenho muito mais rápido de previsão em cenários de produção da empresa.
 
 Para gerar pontuações usando essa biblioteca, chame a função de pontuação e passar as seguintes entradas necessárias:
 
@@ -71,6 +72,11 @@ Para obter exemplos de código, juntamente com instruções sobre como preparar 
 
 + [Como realizar em tempo real de pontuação](r/how-to-do-realtime-scoring.md)
 
+Para uma solução completa que inclui uma pontuação nativo, consulte estes exemplos da equipe de desenvolvimento do SQL Server:
+
++ Implantar seu script ML: [usando um modelo de Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Implantar seu script ML: [usando um modelo de R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
+
 ## <a name="requirements"></a>Requisitos
 
 Plataformas com suporte são os seguintes:
@@ -80,11 +86,11 @@ Plataformas com suporte são os seguintes:
     Pontuação nativo usando PREVER requer 2017 do SQL Server.
     Ele funciona em qualquer versão do SQL Server de 2017, inclusive Linux.
 
-    Você também pode realizar em tempo real de pontuação usando sp_rxPredict, que exige a ativação de SQL CLR.
+    Você também pode realizar em tempo real de pontuação usando sp_rxPredict. Para usar este procedimento armazenado requer que você habilite [integração CLR do SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
 + SQL Server 2016
 
-   Em tempo real de pontuação usando sp_rxPredict é possível com o SQL Server 2016 e também pode ser executado no Microsoft R Server. Essa opção requer SQLCLR esteja habilitado e que você instale a atualização do Microsoft R Server.
+   Em tempo real usando sp_rxPredict de pontuação é possível com o SQL Server 2016 e também pode ser executado no Microsoft R Server. Essa opção requer SQLCLR esteja habilitado e que você instale a atualização do Microsoft R Server.
    Para obter mais informações, consulte [em tempo real de pontuação](Real-time-scoring.md)
 
 ### <a name="model-preparation"></a>Preparação de modelo
@@ -100,7 +106,7 @@ Plataformas com suporte são os seguintes:
   + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
   + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
 Se você precisar usar modelos de MicrosoftML, use em tempo real com sp_rxPredict de pontuação.
 
@@ -112,5 +118,5 @@ Não há suporte para os seguintes tipos de modelo:
 + Modelos usando o `rxGlm` ou `rxNaiveBayes` algoritmos em RevoScaleR
 + Modelos PMML
 + Modelos criados usando outras bibliotecas de R de CRAN ou outros repositórios
-+ Modelos que contêm qualquer outro tipo de transformação de R
++ Modelos que contêm qualquer outra transformação de R
 

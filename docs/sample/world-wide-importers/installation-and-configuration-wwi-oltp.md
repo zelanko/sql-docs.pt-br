@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4102284612e0838fb876708b959266994a0f2b96
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installation-and-configuration"></a>Instalação e configuração
@@ -28,7 +28,7 @@ Wide World Importers OLTP instruções de instalação e configuração do banco
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (ou superior) ou [banco de dados do SQL Azure](https://azure.microsoft.com/services/sql-database/). Para obter a versão completa do exemplo, use o SQL Server Developer/avaliação/Enterprise Edition.
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Para obter os melhores resultados, use a versão de junho de 2016 ou posterior.
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Para obter os melhores resultados, use a versão de junho de 2016 ou posterior.
 
 ## <a name="download"></a>Download
 
@@ -56,7 +56,7 @@ Para restaurar um backup de uma instância do SQL Server, você pode usar o Mana
 5. Se necessário, altere o local de destino para os dados e arquivos de log, além de **arquivos** painel. Observe que é uma prática recomendada para colocar os dados e arquivos de log em unidades diferentes.
 6. Clique em **OK**. Isso irá iniciar a restauração do banco de dados. Depois de concluir, você terá o banco de dados de WideWorldImporters instalados na instância do SQL Server.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Banco de dados SQL do Azure
 
 Para importar um bacpac para um novo banco de dados SQL, você pode usar o Management Studio.
 

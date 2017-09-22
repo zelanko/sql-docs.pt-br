@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 512850416baf922583636a6aefb2c19c9039d11b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 9b2fb2de59b10315691ea177522fd9c36da4f4c8
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Etapa 3: prova de conceito da conexão ao SQL usando PHP
@@ -83,7 +83,7 @@ O [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) função 
   
 ## <a name="step-3--insert-a-row"></a>Etapa 3: Inserir uma linha  
   
-Neste exemplo, você verá como executar um [inserir](https://msdn.microsoft.com/library/ms174335.aspx) instrução passar com segurança, os parâmetros que proteger seu aplicativo de [injeção SQL](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnerabilidade e recuperar o geradoautomaticamente[Primary Key](https://msdn.microsoft.com/library/ms179610.aspx) valor.    
+Neste exemplo, você verá como executar um [inserir](/sql-docs/docs/t-sql/statements/insert-transact-sql) instrução passar com segurança, os parâmetros que proteger seu aplicativo de [injeção SQL](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) valor.    
   
   
 ```php 

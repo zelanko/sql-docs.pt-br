@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2be7d74bde1731e9b4312ec80eb8a9a75b0c4d70
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -177,10 +177,10 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
 **-j** Imprime mensagens de erro bruto na tela.
   
  **-K** *application_intent*  
- Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor com suporte no momento é **ReadOnly**. Se **-K** não for especificado, o utilitário sqlcmd não dará suporte à conectividade com uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [Secundárias ativas: Réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx)  
+ Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor com suporte no momento é **ReadOnly**. Se **-K** não for especificado, o utilitário sqlcmd não dará suporte à conectividade com uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [Secundárias ativas: Réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups)  
   
  **-M** *multisubnet_failover*  
- Sempre especifique **- M** ao conectar-se ao ouvinte do grupo de disponibilidade de um grupo de disponibilidade do SQL Server ou uma instância de Cluster de Failover do SQL Server. **-M** proporciona maior rapidez na detecção do servidor (atualmente) ativo e na conexão a ele. Se **-M** não for especificado, **-M** estará desativado. Para obter mais informações sobre [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consulte [Ouvintes do grupo de disponibilidade, conectividade do cliente e failover do aplicativo (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx), [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e Grupos de Disponibilidade AlwaysOn (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx e [Secundárias Ativas: Réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx.  
+ Sempre especifique **- M** ao conectar-se ao ouvinte do grupo de disponibilidade de um grupo de disponibilidade do SQL Server ou uma instância de Cluster de Failover do SQL Server. **-M** proporciona maior rapidez na detecção do servidor (atualmente) ativo e na conexão a ele. Se **-M** não for especificado, **-M** estará desativado. Para obter mais informações sobre [! INCLUIR[ssHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover), [criação e configuração de grupos de disponibilidade &#40; SQL Server &#41; ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e grupos de disponibilidade AlwaysOn (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx, e [secundárias ativas: réplicas secundárias legíveis (sempre em grupos de disponibilidade)](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  Essa opção é usada pelo cliente para solicitar uma conexão criptografada.  
@@ -215,11 +215,11 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  Especifica a instância do SQL Server ao qual se conectar. Define a variável de script SQLCMDSERVER do **sqlcmd** .  
   
- Especifique *nome_do_servidor* para se conectar à instância padrão do SQL Server no computador servidor. Especifique *nome_do_servidor* [  **\\**  *instance_name* ] para se conectar a uma instância nomeada do SQL Server no computador servidor. Se nenhum servidor for especificado, **sqlcmd** se conecta à instância padrão do SQL Server no computador local. Essa opção é necessária quando você executa o **sqlcmd** em um computador remoto na rede.  
+ Especifique *nome_do_servidor* para se conectar à instância padrão do SQL Server no computador servidor. Especifique *nome_do_servidor* [ ** \\ ** *instance_name* ] para se conectar a uma instância nomeada do SQL Server no computador servidor. Se nenhum servidor for especificado, **sqlcmd** se conecta à instância padrão do SQL Server no computador local. Essa opção é necessária quando você executa o **sqlcmd** em um computador remoto na rede.  
   
  O*protocolo* pode ser **tcp** (TCP/IP), **lpc** (memória compartilhada) ou **np** (pipes nomeados).  
   
- Se você não especificar um *nome_do_servidor* [  **\\**  *instance_name* ] ao iniciar **sqlcmd**, SQL Server procura e usa a variável de ambiente SQLCMDSERVER.  
+ Se você não especificar um *nome_do_servidor* [ ** \\ ** *instance_name* ] ao iniciar **sqlcmd**, SQL Server procura e usa a variável de ambiente SQLCMDSERVER.  
   
 > [!NOTE]  
 >  A variável de ambiente OSQLSERVER foi mantida para compatibilidade com versões anteriores. A variável de ambiente SQLCMDSERVER tem precedência em relação à variável de ambiente OSQLSERVER; o que significa que o **sqlcmd** e **osql** podem ser usados próximos um do outro sem interferência e que scripts antigos continuarão funcionado.  
@@ -685,7 +685,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
   
  **Comandos diversos**  
   **:r \<** *filename***>**  
- Analisa instruções Transact-SQL adicionais e **sqlcmd** comandos do arquivo especificado por  **\<**  *filename***>**no cache de instrução.  
+ Analisa instruções Transact-SQL adicionais e **sqlcmd** comandos do arquivo especificado por ** \< ** *filename***>**no cache de instrução.  
   
  Se o arquivo contém instruções de Transact-SQL que não são seguidas por **VÁ**, você deve inserir **VÁ** na linha que segue **: r**.  
   

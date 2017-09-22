@@ -27,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cc307b473ce31150de8a970a6d44e46dcdc04c3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0ec83d1e567c44abba880716bbd700af2810be60
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="integration-services-service-ssis-service"></a>Serviço do Integration Services (Serviço SSIS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/03/2017
  Quando você instala o componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] também é instalado. Por padrão, o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é iniciado e o tipo de inicialização do serviço é definido como automático. Porém, você também precisa instalar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para usar o serviço para gerenciar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em execução e armazenados.  
   
 > [!NOTE]
-> Para se conectar diretamente a uma instância do Serviço Integration Services herdado, você precisa usar a versão do SSMS (SQL Server Management Studio) alinhada com a versão do SQL Server na qual o Serviço Integration Services está em execução. Por exemplo, para se conectar ao Serviço Integration Services herdados executados em uma instância do SQL Server 2016, você precisa usar a versão do SSMS liberada para o SQL Server 2016. [Baixe o SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).
+> Para se conectar diretamente a uma instância do Serviço Integration Services herdado, você precisa usar a versão do SSMS (SQL Server Management Studio) alinhada com a versão do SQL Server na qual o Serviço Integration Services está em execução. Por exemplo, para se conectar ao Serviço Integration Services herdados executados em uma instância do SQL Server 2016, você precisa usar a versão do SSMS liberada para o SQL Server 2016. [Baixe o SSMS (SQL Server Management Studio)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
 >
 >   Na caixa de diálogo **Conectar ao Servidor** do SSMS, não é possível inserir o nome de um servidor no qual uma versão anterior do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esteja em execução. No entanto, para gerenciar pacotes armazenados em um servidor remoto, não é necessário se conectar à instância do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nesse servidor remoto. Em vez disso, edite o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de forma que o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exiba os pacotes armazenados no servidor remoto.   
   
@@ -278,7 +278,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
  Para se conectar a uma instância do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um servidor remoto, a partir do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de outro aplicativo de gerenciamento, é necessário um conjunto específico de direitos no servidor para os usuários do aplicativo.  
   
 > [!IMPORTANT]
-> Para se conectar diretamente a uma instância do Serviço Integration Services herdado, você precisa usar a versão do SSMS (SQL Server Management Studio) alinhada com a versão do SQL Server na qual o Serviço Integration Services está em execução. Por exemplo, para se conectar ao Serviço Integration Services herdados executados em uma instância do SQL Server 2016, você precisa usar a versão do SSMS liberada para o SQL Server 2016. [Baixe o SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).
+> Para se conectar diretamente a uma instância do Serviço Integration Services herdado, você precisa usar a versão do SSMS (SQL Server Management Studio) alinhada com a versão do SQL Server na qual o Serviço Integration Services está em execução. Por exemplo, para se conectar ao Serviço Integration Services herdados executados em uma instância do SQL Server 2016, você precisa usar a versão do SSMS liberada para o SQL Server 2016. [Baixe o SSMS (SQL Server Management Studio)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
 >
 >  Para gerenciar pacotes armazenados em um servidor remoto, você não precisa conectar-se à instância do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] naquele servidor remoto. Em vez disso, edite o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de forma que o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exiba os pacotes armazenados no servidor remoto.
   

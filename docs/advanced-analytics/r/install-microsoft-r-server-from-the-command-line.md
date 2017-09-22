@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 811709fae77dee6daa46a97a51c44c02e372d9a8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 87d6c0b358d7747b20ed37f159e713cc10018866
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-microsoft-r-server-from-the-command-line"></a>Instalar o Microsoft R Server na Linha de comando
@@ -83,7 +83,7 @@ Por padrão, todos os resumos e logs de instalação do SQL Server e os recursos
 
 Uma subpasta separada é criada para cada recurso instalado.
 
-Para configurar a outra instância do Microsoft R Server com os mesmos parâmetros, você pode usar novamente o arquivo de configuração que é criado durante a instalação. Para obter mais informações, consulte [Instalar o SQL Server usando um arquivo de configuração](https://msdn.microsoft.com/library/dd239405.aspx)
+Para configurar a outra instância do Microsoft R Server com os mesmos parâmetros, você pode usar novamente o arquivo de configuração que é criado durante a instalação. Para obter mais informações, consulte [instalar o SQL Server usando um arquivo de configuração](/sql-docs/docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file)
 
 
 ## <a name="customize-your-r-environment"></a>Personalizar o seu ambiente de R

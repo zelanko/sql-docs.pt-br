@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f34a56282f5901fe13131cdd2e1c688054fca85f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="database-catalog"></a>Catálogo de banco de dados
@@ -33,7 +33,7 @@ WideWorldImporters usa esquemas para finalidades diferentes, como armazenamento 
 
 Esses esquemas contenham os dados. Um número de tabelas é necessárias para todos os outros esquemas e está localizado no esquema do aplicativo.
 
-|Esquema|Description|
+|esquema|Description|
 |-----------------------------|---------------------|
 |Aplicativo|Todo o aplicativo usuários, contatos e parâmetros. Isso também contém tabelas de referência com dados que são usados por vários esquemas|
 |Purchasing|Item de estoque de compras de fornecedores e detalhes sobre fornecedores.|  
@@ -44,7 +44,7 @@ Esses esquemas contenham os dados. Um número de tabelas é necessárias para to
 
 Esses esquemas são usados para aplicativos externos que não têm permissão para acessar as tabelas de dados diretamente. Elas contêm exibições e procedimentos armazenados usados por aplicativos externos.
 
-|Esquema|Description|
+|esquema|Description|
 |-----------------------------|---------------------|
 |Site|Todo o acesso ao banco de dados do site da empresa é a este esquema.|
 |Relatórios|Todo o acesso ao banco de dados de relatórios do Reporting Services é a este esquema.|
@@ -56,7 +56,7 @@ Observe que os relatórios e PowerBI esquemas não são usadas na versão inicia
 
 Esquemas de finalidade especial
 
-|Esquema|Description|
+|esquema|Description|
 |-----------------------------|---------------------|
 |Integração|Objetos e procedimentos necessários para a integração do data warehouse (ou seja, migrando os dados para o banco de dados WideWorldImportersDW).|
 |Sequências|Contém sequências usadas por todas as tabelas no aplicativo.|
@@ -181,7 +181,7 @@ Esses são os procedimentos usados por um aplicativo cliente, como um front-end 
 
 ### <a name="integration-schema"></a>Esquema de integração
 
-Os procedimentos armazenados nesse esquema são usados pelo processo de ETL. Obter os dados necessários de várias tabelas para o período de tempo necessário para o [pacote ETL](https://msdn.microsoft.com/library/mt734218.aspx).
+Os procedimentos armazenados nesse esquema são usados pelo processo de ETL. Obter os dados necessários de várias tabelas para o período de tempo necessário para o [pacote ETL](/sql-docs/docs/sample/world-wide-importers/etl-workflow).
 
 ### <a name="dataloadsimulation-schema"></a>Esquema de DataLoadSimulation
 

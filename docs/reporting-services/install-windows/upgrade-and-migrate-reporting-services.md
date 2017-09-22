@@ -21,10 +21,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 46bb863944694292395b50621acaf87259a3260b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/17/2017
   
     2.  Os utilitários e as ferramentas de configuração do servidor de relatório que são atualizados para a nova versão incluem a ferramenta Configuração do modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , os utilitários de linha de comando, por exemplo, RS.exe e o Construtor de Relatórios.  
   
-    3.  Outras ferramentas cliente como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] são um download separado e precisam ser atualizadas separadamente. Para obter mais informações, consulte [Baixar o SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).
+    3.  Outras ferramentas de cliente, como [! INCLUIR[ssManStudioFull](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é um download separado. Para obter mais informações, consulte [SQL Server Data Tools no Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
   
@@ -252,4 +252,4 @@ ms.lasthandoff: 08/17/2017
 [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md)   
 [Atualizar para o SQL Server 2016 usando o Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

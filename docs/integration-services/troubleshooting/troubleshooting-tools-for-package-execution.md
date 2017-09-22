@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: d4d50bedde83e493c8327d9321ebcfb12bc12985
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
@@ -72,9 +72,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Solucionar problemas de execução de pacotes por meio dos logs  
  Você pode controlar muitas ocorrências em seus pacotes de execução ativando os logs. Os provedores de logs capturam as informações sobre os eventos especificados para análise posterior e salvam essas informações em uma tabela de banco de dados, um arquivo simples, um arquivo XML ou outro formato de saída suportado.  
   
--   **Habilitar logs**. Você pode refinar a saída de logs selecionando apenas os eventos e apenas os itens de informação que deseja capturar. Para obter mais informações, consulte [Log do SSIS (Integration Services)](https://msdn.microsoft.com/library/ms140246.aspx).  
+-   **Habilitar logs**. Você pode refinar a saída de logs selecionando apenas os eventos e apenas os itens de informação que deseja capturar. Para obter mais informações, consulte [Log do SSIS (Integration Services)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
   
--   **Selecione o evento de Diagnóstico do pacote para solucionar problemas do provedor.** Existem mensagens de log que ajudam a solucionar os problemas de interação do pacote com as fontes de dados externas. Para obter mais informações, consulte [Solução de problemas de conectividade de pacotes de ferramentas](https://msdn.microsoft.com/library/cc879309.aspx).  
+-   **Selecione o evento de Diagnóstico do pacote para solucionar problemas do provedor.** Existem mensagens de log que ajudam a solucionar os problemas de interação do pacote com as fontes de dados externas. Para obter mais informações, consulte [Solução de problemas de conectividade de pacotes de ferramentas](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
   
 -   **Aprimorar a saída de log padrão**. Normalmente, o log acrescenta linhas ao destino de log sempre que um pacote é executado. Embora cada linha de saída do log identifique o pacote de acordo com seu nome e identificador exclusivos, além de identificar também a execução do pacote por um ExecutionID exclusivo, uma quantidade muito grande de saídas de logs em uma lista simples pode dificultar a análise.  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/03/2017
  Se você encontrar um erro do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que não seja acompanhado de uma descrição, localize a descrição no [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md) e procure o erro pelo número. No momento, a lista não inclui informações para solução de problemas.  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
- [Depurando o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md)  
+ [Depurar o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Entrada de blog, [Adicionando o nome da coluna de erro a uma saída de erro](http://go.microsoft.com/fwlink/?LinkId=261546)em dougbert.com.  

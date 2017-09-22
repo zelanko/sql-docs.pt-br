@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14789bafd555a4980875de78c85b32f535a8c0fe
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Instalar pré-treinado modelos no SQL Server de aprendizado de máquina
@@ -37,8 +37,8 @@ Modelos previamente treinados estavam disponíveis para dar suporte a clientes q
 
 Atualmente, os modelos que estão disponíveis são modelos de rede neurais profundas (DNN) para classificação de imagem e análise de sentimento. Todos os quatro modelos pré-treinado foram treinados CNTK. A configuração de cada rede baseia as implementações de referência a seguir:
 
-+ Resnet-18
-+ 50 Resnet
++ ResNet-18
++ 50 ResNet
 + ResNet 101
 + AlexNet
 
@@ -133,3 +133,4 @@ A imagem deve ser redimensionada para atender aos requisitos do modelo treinado:
 Este exemplo demonstra o uso do modelo pré-treinado para classificação:
 
 [Análise de sentimento usando o recurso de texto](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
+

@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ba3bacb78e49319db1e458d776cead3429e6c60
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cf762b3aaeb222e456b0b46256a7d7f0efddbf48
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-analysis-services"></a>Instalar o SQL Server Analysis Services
@@ -32,9 +32,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="get-tools-and-designers"></a>Obter ferramentas e designers  
  A Instalação do SQL Server não instala mais as ferramentas de gerenciamento ou designers de modelo usados para design de soluções ou administração de servidor. Nesta versão, as ferramentas têm uma instalação separada, que você pode obter por meio dos links a seguir:  
   
--   [Baixar o SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)  
+-   [Baixar o SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
   
--   [Baixar o SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)  
+-   [Baixar o SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
  Você precisará SSMS e SSDT para trabalhar com dados e instâncias do Analysis Services. Ferramentas podem ser instaladas em qualquer lugar, mas não se esqueça de configurar portas no servidor antes de tentar uma conexão. Veja [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) para obter detalhes.  
   

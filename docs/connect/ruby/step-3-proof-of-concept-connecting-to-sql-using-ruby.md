@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91659ce1d2946923480c1fc1a0bcf9a6a15094d8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a645a57cac6eef7507aed9ea81df9fc75eb32dd4
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Etapa 3: Prova de conceito da conexão ao SQL usando o Ruby
@@ -58,7 +58,7 @@ No exemplo de código, o [TinyTds::Result](https://github.com/rails-sqlserver/ti
   
 ## <a name="step-3--insert-a-row"></a>Etapa 3: Inserir uma linha  
   
-Neste exemplo, você verá como executar um [inserir](https://msdn.microsoft.com/library/ms174335.aspx) instrução passar com segurança, os parâmetros que proteger seu aplicativo de [injeção SQL](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnerabilidade e recuperar o geradoautomaticamente[Primary Key](https://msdn.microsoft.com/library/ms179610.aspx) valor.    
+Neste exemplo, você verá como executar um [inserir](/sql-docs/docs/t-sql/statements/insert-transact-sql) instrução passar com segurança, os parâmetros que proteger seu aplicativo de [injeção SQL](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) valor.    
   
 Para usar TinyTDS com o Azure, é recomendável que você execute várias `SET` instruções para alterar como a sessão atual controla informações específicas. Recomendado `SET` instruções são fornecidas no exemplo de código. Por exemplo, `SET ANSI_NULL_DFLT_ON` permitirá novas colunas criadas para permitir valores nulos, mesmo se o status de nulidade da coluna não é explicitamente declarado.  
   

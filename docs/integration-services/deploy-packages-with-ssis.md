@@ -25,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 939f988b8d91e93aa8f1cc4ef4b555af7b26cf67
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ced8482c76d970ccd2c146fff04d63279082b1c9
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-packages-with-ssis"></a>Implantar pacotes com o SSIS
@@ -57,14 +57,14 @@ Este tutorial destina-se a usuários que já estão familiarizados com as opera�
 - Dados de exemplo, pacotes concluídos, configurações e um Leiame. Esses arquivos são instalados juntos, se você baixar os [Bancos de dados de exemplo do Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).     
 > **Observação!** Verifique se que você tem permissão para criar e remover tabelas no AdventureWorks ou outros dados que você usa.         
     
--   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).    
+-   [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).    
     
 **Computador de destino.** O computador no qual você implanta os pacotes **deve ter os seguintes componentes instalados:**    
     
 - SQL Server
 - Dados de exemplo, pacotes concluídos, configurações e um Leiame. Esses arquivos são instalados juntos, se você baixar os [Bancos de dados de exemplo do Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
     
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
     

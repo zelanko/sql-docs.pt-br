@@ -2,8 +2,8 @@
 title: Usar o Python com revoscalepy para criar um modelo | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/03/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,19 +15,19 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b7e166971ff74add56bce628838c82a9a6c1128
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Usar o Python com revoscalepy para criar um modelo
 
-Este exemplo demonstra como você pode criar um modelo de regressão logística no SQL Server, usando um algoritmo do **revoscalepy** pacote.
+Este exemplo demonstra como você pode criar um modelo de regressão linear no SQL Server, usando um algoritmo do **revoscalepy** pacote.
 
 O **revoscalepy** pacote Python contém objetos, transformações, e algoritmos semelhantes àqueles fornecidos para o **RevoScaleR** pacote para a linguagem R. Com essa biblioteca, você pode criar um contexto de computação, mover dados entre contextos de computação, transformam dados e treinar modelos de previsão usando algoritmos populares, como a regressão logística e linear, árvores de decisão e muito mais.
 
-Para obter mais informações, consulte [novidades revoscalepy?](../python/what-is-revoscalepy.md)
+Para obter mais informações, consulte [novidades revoscalepy?](../python/what-is-revoscalepy.md) e [referência de função do Python](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -112,8 +112,8 @@ Vamos examinar o código e destacar algumas etapas principais.
 
 Uma fonte de dados é diferente de um contexto de computação. O _fonte de dados_ define os dados usados em seu código. O _contexto de computação_ define onde o código será executado.
 
-1. Criar variáveis de Python, tais como `sql_query` e `sql_connection_string`, que definem a fonte e os dados que você deseja usar. Passar essas variáveis para o construtor RxSqlServerData para implementar o **o objeto de fonte de dados** chamado `data_source`.
-2. Criar um objeto de contexto de computação usando o **RxInSqlServer** construtor. Neste exemplo, você passa a mesma cadeia de conexão que você definiu anteriormente, supondo que os dados estão na mesma instância do SQL Server que você usará como o contexto de computação. No entanto, a fonte de dados e o contexto de computação podem estar em servidores diferentes. Resultante **objeto de contexto de computação** chamado `sql_cc`.
+1. Criar variáveis de Python, tais como `sql_query` e `sql_connection_string`, que definem a fonte e os dados que você deseja usar. Passar essas variáveis para o [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) construtor para implementar o **o objeto de fonte de dados** chamado `data_source`.
+2. Criar um objeto de contexto de computação usando o [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) construtor. Neste exemplo, você passa a mesma cadeia de conexão que você definiu anteriormente, supondo que os dados estão na mesma instância do SQL Server que você usará como o contexto de computação. No entanto, a fonte de dados e o contexto de computação podem estar em servidores diferentes. Resultante **objeto de contexto de computação** chamado `sql_cc`.
 3. Escolha o contexto de computação ativa. Por padrão, as operações são executadas localmente, o que significa que se você não especificar um contexto de computação diferente, os dados serão obtidos da fonte de dados e ajuste o modelo será executado no ambiente atual do Python.
 
 ### <a name="changing-compute-contexts"></a>Alterando os contextos de computação
@@ -126,17 +126,15 @@ O mesmo se aplica na chamada para **rxsummary**, onde o contexto de computação
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
-Você também pode usar a função **rxsetcomputecontext** para alternar entre os contextos de computação que já foi definidos. 
+Você também pode usar a função [rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context) para alternar entre os contextos de computação que já foi definidos.
 
 ### <a name="setting-the-degree-of-parallelism"></a>Definir o grau de paralelismo
 
-Quando você define o contexto de computação, você também pode definir parâmetros que controlam como os dados são manipulados pelo contexto de computação. Esses parâmetros são diferentes dependendo do tipo de fonte de dados. 
+Quando você define o contexto de computação, você também pode definir parâmetros que controlam como os dados são manipulados pelo contexto de computação. Esses parâmetros são diferentes dependendo do tipo de fonte de dados.
 
 Contextos de computação do SQL Server, você pode definir o tamanho do lote, ou fornecer dicas sobre o grau de paralelismo a ser usado na execução de tarefas.
 
-O exemplo foi executado em um computador com quatro processadores, portanto, definimos o *num_tasks* parâmetro 4. Se você definir esse valor como 0, o SQL Server usa o padrão, que é executar o máximo de tarefas em paralelo possível, nas configurações atuais de MAXDOP para o servidor. No entanto, até mesmo em servidores com vários processadores, o número exato de tarefas que podem ser alocados depende de vários outros fatores, como configurações do servidor e outros trabalhos em execução. 
-
-Para obter mais informações, consulte [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver).
+O exemplo foi executado em um computador com quatro processadores, portanto, definimos o *num_tasks* parâmetro 4. Se você definir esse valor como 0, o SQL Server usa o padrão, que é executar o máximo de tarefas em paralelo possível, nas configurações atuais de MAXDOP para o servidor. No entanto, até mesmo em servidores com vários processadores, o número exato de tarefas que podem ser alocados depende de vários outros fatores, como configurações do servidor e outros trabalhos em execução.
 
 ## <a name="related-samples"></a>Exemplos relacionados
 

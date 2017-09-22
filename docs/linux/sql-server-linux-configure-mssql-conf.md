@@ -1,19 +1,19 @@
 ---
 title: Configurar o SQL Server no Linux | Microsoft Docs
 description: "Este tópico descreve como usar a ferramenta mssql conf para definir configurações de 2017 do SQL Server no Linux."
-author: luisbosquez
-ms.author: lbosq
+author: rothja
+ms.author: jroth
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server no Linux com a ferramenta mssql conf
@@ -53,7 +53,11 @@ ms.lasthandoff: 09/05/2017
 
 ## <a id="collation"></a>Alterar o agrupamento do SQL Server
 
-O **definir agrupamento** opção altera o valor de agrupamento para qualquer um dos agrupamentos com suporte:
+O **definir agrupamento** opção altera o valor de agrupamento para qualquer um dos agrupamentos com suporte.
+
+1. Primeiro [qualquer banco de dados de usuário de backup](sql-server-linux-backup-and-restore-database.md) no seu servidor.
+
+1. Em seguida, use o [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) procedimento armazenado para desanexar os bancos de dados do usuário.
 
 1. Execute o **definir agrupamento** opção e siga as instruções:
 
@@ -61,7 +65,9 @@ O **definir agrupamento** opção altera o valor de agrupamento para qualquer um
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. O utilitário mssql conf tentará restaurar os bancos de dados usando o agrupamento especificado e reinicie o serviço. Se houver erros, ele reverterá o agrupamento para o valor anterior.
+1. O utilitário mssql conf tentará alterar para o valor de agrupamento especificado e reinicie o serviço. Se houver erros, ele reverterá o agrupamento para o valor anterior.
+
+1. Restaurar os backups de banco de dados do usuário.
 
 Para obter uma lista de agrupamentos com suporte, execute o [sys. fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) função: `SELECT Name from sys.fn_helpcollations()`.
 

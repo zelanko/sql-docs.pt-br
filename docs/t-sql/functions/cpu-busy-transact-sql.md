@@ -1,7 +1,7 @@
 ---
 title: '@@CPU_BUSY (Transact-SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,13 +28,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 165aef4dc063f9487c5ee581981fc013d6f40ff0
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: f01d73c9ec0a0aca7237603169f8a290af0ce225
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cpubusy-transact-sql"></a>@@CPU_BUSY (Transact-SQL)
+# <a name="x40x40cpubusy-transact-sql"></a>& #x 40; & #x 40. CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Retorna o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gastou desde que foi iniciado pela última vez. Resultados em incrementos de tempo de CPU, ou "tiques" e é cumulativo para todas as CPUs, portanto pode exceder o tempo decorrido real. Multiplique por@TIMETICKS para converter em microssegundos.
@@ -46,7 +46,7 @@ Retorna o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql
+```
 @@CPU_BUSY  
 ```  
   

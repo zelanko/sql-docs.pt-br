@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 75bbcf35ae4547c1ba2404324b31eeb4bdd7ea1e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e2c1a69f81bafe3f1165c50950bb10fbfc87b579
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Use o PowerShell no Windows para gerenciar o SQL Server no Linux
@@ -24,7 +24,7 @@ Este tópico apresenta [do SQL Server PowerShell](https://msdn.microsoft.com/en-
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Instale a versão mais recente do SQL PowerShell no Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) no Windows está incluído no [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx). Ao trabalhar com o SQL Server, você deve usar sempre a versão mais recente do SSMS e do PowerShell do SQL. A versão mais recente do SSMS está sempre atualizada e otimizados e funciona atualmente com o SQL Server de 2017 RC2 no Linux. Para baixar e instalar a versão mais recente, consulte [baixar o SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Para se manter atualizado, a versão mais recente do SSMS avisa você quando há uma nova versão disponível para download. 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) no Windows está incluído no [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms). Ao trabalhar com o SQL Server, você deve usar sempre a versão mais recente do SSMS e do PowerShell do SQL. A versão mais recente do SSMS está sempre atualizada e otimizados e funciona atualmente com o SQL Server de 2017 RC2 no Linux. Para baixar e instalar a versão mais recente, consulte [baixar o SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Para se manter atualizado, a versão mais recente do SSMS avisa você quando há uma nova versão disponível para download. 
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -71,7 +71,7 @@ Copie e cole os comandos a seguir no prompt do PowerShell. Quando você executar
 - Criar uma instância do [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) objeto
 - Conecte-se para o **Server** e exibir algumas propriedades
 
-Lembre-se de substituir  **\<your_server_instance\>**  com o endereço IP ou o nome do host de sua instância do SQL Server de 2017 RC2 no Linux.
+Lembre-se de substituir ** \<your_server_instance\> ** com o endereço IP ou o nome do host de sua instância do SQL Server de 2017 RC2 no Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -111,7 +111,7 @@ Copie e cole os comandos a seguir no prompt do PowerShell. Ele podem levar algun
 - Use o **Get-SqlErrorLog** cmdlet para se conectar à instância do SQL Server 2017 no Linux e recuperar erro logs desde **ontem**
 - Direcionar a saída para o **Out-GridView** cmdlet
 
-Lembre-se de substituir  **\<your_server_instance\>**  com o endereço IP ou o nome do host de sua instância do SQL Server de 2017 RC2 no Linux.
+Lembre-se de substituir ** \<your_server_instance\> ** com o endereço IP ou o nome do host de sua instância do SQL Server de 2017 RC2 no Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -123,5 +123,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>Consulte também
-- [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx)
+- [SQL Server PowerShell](/sql-docs/docs/relational-databases/scripting/sql-server-powershell)
 

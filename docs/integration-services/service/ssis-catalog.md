@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: 82784542c0f6c21bf803590aa4af0ea7942516cf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -455,7 +455,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
     ```  
   
-     Os procedimentos armazenados CLR do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] exigem que permissões de UNSAFE sejam concedidas ao logon porque o logon exige acesso adicional a recursos restritos, como a API do Microsoft Win32. Para obter mais informações sobre a permissão de código UNSAFE, consulte [Criando um assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os procedimentos armazenados CLR exigem que permissões de UNSAFE sejam concedidas ao logon porque o logon exige acesso adicional a recursos restritos, como a API do Microsoft Win32. Para obter mais informações sobre a permissão de código UNSAFE, consulte [Criando um assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -467,11 +467,11 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 3.  Restaure o banco de dados SSISDB do backup usando a caixa de diálogo **Restaurar Banco de Dados** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte os tópicos a seguir.  
   
-    -   [Restaurar o banco de dados &#40;Página geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
+    -   [Restaurar banco de dados &#40;página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
-    -   [Restaurar o banco de dados &#40;Página arquivos&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   [Restaurar banco de dados &#40;página Arquivos&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
   
-    -   [Restaurar o banco de dados &#40;Página Opções&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
+    -   [Restaurar banco de dados &#40;página Opções&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
   
 4.  Execute os scripts que você criou no procedimento [Para fazer backup do banco de dados SSIS](#backup) para ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup e Trabalho de Manutenção do Servidor SSIS. Confirme que o SQL Server Agent foi iniciado.  
   
@@ -563,7 +563,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
      ![Examine os resultados do Assistente de atualização do SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "revisar os resultados do Assistente de atualização do SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>AlwaysOn para catálogo do SSIS (SSISDB)
-  O recurso Grupos de Disponibilidade AlwaysOn é uma solução de alta disponibilidade e recuperação de desastres que fornece uma alternativa de nível corporativo para espelhamento de banco de dados. Um grupo de disponibilidade permite um ambiente de failover para um conjunto discreto de bancos de dados de usuário, conhecidos como bancos de dados de disponibilidade, que fazem failover juntos. Para obter mais informações, confira [Grupos de Disponibilidade AlwaysOn](https://msdn.microsoft.com/library/hh510230.aspx).  
+  O recurso Grupos de Disponibilidade AlwaysOn é uma solução de alta disponibilidade e recuperação de desastres que fornece uma alternativa de nível corporativo para espelhamento de banco de dados. Um grupo de disponibilidade permite um ambiente de failover para um conjunto discreto de bancos de dados de usuário, conhecidos como bancos de dados de disponibilidade, que fazem failover juntos. Para obter mais informações, confira [Grupos de Disponibilidade AlwaysOn](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).  
   
  Para fornecer a alta disponibilidade ao catálogo do SSIS (SSISDB) e seu conteúdo (projetos, pacotes, logs de execução, etc.), você pode adicionar o banco de dados do SSISDB (da mesma forma que qualquer outro banco de dados de usuário) a um Grupo de Disponibilidade AlwaysOn. Quando ocorre um failover, um dos nós secundários automaticamente se torna o novo nó primário.  
  
@@ -585,7 +585,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 2.  Instalar o recurso SSIS (SQL Server 2016 com Integration Services) em cada nó do cluster.  
   
-3.  Habilite grupos de disponibilidade AlwaysOn para cada instância do SQL Server. Confira [Habilitar Grupos de Disponibilidade Always On](https://msdn.microsoft.com/library/ff878259.aspx) para obter detalhes.  
+3.  Habilite grupos de disponibilidade AlwaysOn para cada instância do SQL Server. Confira [Habilitar Grupos de Disponibilidade Always On](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) para obter detalhes.  
   
 ###  <a name="Firsttime"></a> Configurar o suporte do SSIS para Always On  
   
@@ -607,12 +607,12 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
 3.  Clique em **Habilitar Integração CLR**. Esse catálogo usa procedimentos armazenados CLR.  
   
-4.  Clique em **Habilitar a execução automática de procedimento armazenado do Integration Services na inicialização do SQL Server** para habilitar o procedimento armazenado [catalog.startup](https://msdn.microsoft.com/library/hh230984.aspx) a ser executado toda vez que a instância do servidor SSIS for reiniciada. O procedimento armazenado executa a manutenção do estado das operações para o catálogo SSISDB. Ele corrigirá o status de todos os pacotes que estavam sendo executados se e quando a instância do servidor SSIS ficar inoperante.  
+4.  Clique em **Habilitar a execução automática de procedimento armazenado do Integration Services na inicialização do SQL Server** para habilitar o procedimento armazenado [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) a ser executado toda vez que a instância do servidor SSIS for reiniciada. O procedimento armazenado executa a manutenção do estado das operações para o catálogo SSISDB. Ele corrigirá o status de todos os pacotes que estavam sendo executados se e quando a instância do servidor SSIS ficar inoperante.  
   
-5.  Digite uma **senha**e clique em **OK**. A senha protege a chave mestra do banco de dados que é usada para criptografar os dados do catálogo. Salve a senha em um local seguro. É recomendado que você também faça backup da chave mestra do banco de dados. Para obter mais informações, consulte [Back Up a Database Master Key](https://msdn.microsoft.com/library/aa337546.aspx).  
+5.  Digite uma **senha**e clique em **OK**. A senha protege a chave mestra do banco de dados que é usada para criptografar os dados do catálogo. Salve a senha em um local seguro. É recomendado que você também faça backup da chave mestra do banco de dados. Para obter mais informações, consulte [Back Up a Database Master Key](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key).  
   
 ####  <a name="Step2"></a> Etapa 2: Adicionar o SSISDB a um Grupo de Disponibilidade Always On  
- Adicionar o banco de dados do SSISDB a um Grupo de Disponibilidade Always On é quase igual a adicionar qualquer outro banco de dados de usuário em um grupo de disponibilidade. Confira [Use the Availability Group Wizard](https://msdn.microsoft.com/library/hh403415.aspx)(Usar o assistente do Grupo de Disponibilidade).  
+ Adicionar o banco de dados do SSISDB a um Grupo de Disponibilidade Always On é quase igual a adicionar qualquer outro banco de dados de usuário em um grupo de disponibilidade. Confira [Use the Availability Group Wizard](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)(Usar o assistente do Grupo de Disponibilidade).  
   
  Você precisa fornecer a senha que especificou ao criar o Catálogo do SSIS na página **Selecionar Bancos de Dados** do assistente **Novo Grupo de Disponibilidade** .  
   

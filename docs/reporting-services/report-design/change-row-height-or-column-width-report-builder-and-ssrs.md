@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Alterar a altura da linha ou a largura da coluna (Construtor de Relatórios e SSRS)
@@ -70,11 +70,11 @@ ms.lasthandoff: 08/09/2017
 3.  Clique para prender a borda da coluna e movê-la para a esquerda ou direita para ajustar a largura da coluna.  
   
 ## <a name="see-also"></a>Consulte também  
- [Região de dados Tablix (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Células da região de dados Tablix, linhas e colunas (construtor de relatórios) e SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Região de dados Tablix (construtor de relatórios e SSRS)](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Células da região de dados Tablix, linhas e colunas (construtor de relatórios) e SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
  [Tabelas (construtor de relatórios e SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrizes (construtor de relatórios e SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
- [Listas (construtor de relatórios e SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [Matrizes (construtor de relatórios e SSRS)](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
+ [Listas (construtor de relatórios e SSRS)](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
  [Tabelas, matrizes e listas (construtor de relatórios e SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -15,18 +15,18 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e02c46bc1e068d75d9a67413f45b303616ccd82b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2d0ac1f1a8e9a78539a2c7824f06d3ed3507c0b5
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>Use sempre criptografado com o ODBC Driver 13.1 para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-Este artigo fornece informações sobre como desenvolver aplicativos de ODBC usando [sempre criptografados (mecanismo de banco de dados)](https://msdn.microsoft.com/library/mt163865.aspx) e [ODBC Driver 13.1 para SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+Este artigo fornece informações sobre como desenvolver aplicativos de ODBC usando [sempre criptografados (mecanismo de banco de dados)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) e [ODBC Driver 13.1 para SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
-O Always Encrypted permite que os aplicativos cliente criptografem dados confidenciais e nunca revelem os dados nem as chaves de criptografia para o SQL Server ou o Banco de Dados SQL do Azure. Um sempre criptografado habilitado driver, como o ODBC Driver 13.1 para SQL Server, consegue isso criptografando e descriptografando dados confidenciais no aplicativo cliente de forma transparente. O driver determina automaticamente quais parâmetros de consulta correspondem às colunas de banco de dados confidenciais (protegidas com o Always Encrypted) e criptografa os valores desses parâmetros antes de passar os dados para o SQL Server ou o Banco de Dados SQL do Azure. Da mesma forma, o driver descriptografa de modo transparente os dados recuperados das colunas de banco de dados criptografadas nos resultados da consulta. Para obter mais informações, veja [Always Encrypted (Mecanismo de Banco de Dados)](https://msdn.microsoft.com/library/mt163865.aspx).
+O Always Encrypted permite que os aplicativos cliente criptografem dados confidenciais e nunca revelem os dados nem as chaves de criptografia para o SQL Server ou o Banco de Dados SQL do Azure. Um sempre criptografado habilitado driver, como o ODBC Driver 13.1 para SQL Server, consegue isso criptografando e descriptografando dados confidenciais no aplicativo cliente de forma transparente. O driver determina automaticamente quais parâmetros de consulta correspondem às colunas de banco de dados confidenciais (protegidas com o Always Encrypted) e criptografa os valores desses parâmetros antes de passar os dados para o SQL Server ou o Banco de Dados SQL do Azure. Da mesma forma, o driver descriptografa de modo transparente os dados recuperados das colunas de banco de dados criptografadas nos resultados da consulta. Para obter mais informações, veja [Always Encrypted (Mecanismo de Banco de Dados)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine).
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
@@ -240,7 +240,7 @@ Esta seção descreve as categorias de erros comuns ao consultar colunas criptog
 
 ##### <a name="unsupported-data-type-conversion-errors"></a>Erros de conversão de tipo de dados sem suporte
 
-O Always Encrypted dá suporte a algumas conversões de tipos de dados criptografados. Consulte [sempre criptografados (mecanismo de banco de dados)](https://msdn.microsoft.com/library/mt163865.aspx) para a lista detalhada de conversões de tipo com suporte. Para evitar erros de conversão de tipo de dados, certifique-se de que você observar os seguintes pontos ao usar SQLBindParameter com parâmetros que se destinam a colunas criptografadas:
+O Always Encrypted dá suporte a algumas conversões de tipos de dados criptografados. Consulte [sempre criptografados (mecanismo de banco de dados)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) para a lista detalhada de conversões de tipo com suporte. Para evitar erros de conversão de tipo de dados, certifique-se de que você observar os seguintes pontos ao usar SQLBindParameter com parâmetros que se destinam a colunas criptografadas:
 
 - O tipo SQL do parâmetro é exatamente o mesmo que o tipo da coluna de destino ou a conversão do tipo SQL para o tipo da coluna é suportada.
 
@@ -284,7 +284,7 @@ Esta seção descreve as otimizações de desempenho internas no ODBC Driver 13.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controle de ida e volta para recuperar metadados para parâmetros de consulta
 
-Se o sempre criptografado está habilitado para uma conexão, o ODBC Driver 13.1 para SQL Server, por padrão, chame [sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum parâmetro os valores) para o SQL Server. Esse procedimento armazenado analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados e nesse caso, retorna as informações relacionadas à criptografia para cada parâmetro para permitir que o driver para criptografá-los. O comportamento acima garante um alto nível de transparência para o aplicativo cliente: O aplicativo (e o desenvolvedor do aplicativo) não precisam estar ciente de quais consultas acessam colunas criptografadas, desde que os valores que se destinam a colunas criptografadas sejam passados para o driver em parâmetros.
+Se o sempre criptografado está habilitado para uma conexão, o ODBC Driver 13.1 para SQL Server, por padrão, chame [sp_describe_parameter_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum parâmetro os valores) para o SQL Server. Esse procedimento armazenado analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados e nesse caso, retorna as informações relacionadas à criptografia para cada parâmetro para permitir que o driver para criptografá-los. O comportamento acima garante um alto nível de transparência para o aplicativo cliente: O aplicativo (e o desenvolvedor do aplicativo) não precisam estar ciente de quais consultas acessam colunas criptografadas, desde que os valores que se destinam a colunas criptografadas sejam passados para o driver em parâmetros.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Por instrução sempre criptografado comportamento
 
@@ -344,7 +344,7 @@ O ODBC Driver 13.1 para SQL Server é fornecido com os seguintes provedores de r
 |Cofre de Chave do Azure |Armazenamento de CMKs em um cofre de chaves do Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Repositório de certificados do Windows|Armazena CMKs localmente no armazenamento de chaves do Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
 
-- Você (ou seu DBA) precisa certificar-se de que o nome do provedor, configurado nos metadados de chave mestra de coluna, está correto e o caminho da chave mestra de coluna está em conformidade com o formato do caminho da chave para o provedor especificado. É recomendável configurar as chaves usando ferramentas como o SQL Server Management Studio, que gera automaticamente os nomes de provedor válidos e os caminhos de chaves ao emitir a instrução [CREATE COLUMN MASTER KEY (Transact-SQL)](https://msdn.microsoft.com/library/mt146393.aspx) .
+- Você (ou seu DBA) precisa certificar-se de que o nome do provedor, configurado nos metadados de chave mestra de coluna, está correto e o caminho da chave mestra de coluna está em conformidade com o formato do caminho da chave para o provedor especificado. É recomendável configurar as chaves usando ferramentas como o SQL Server Management Studio, que gera automaticamente os nomes de provedor válidos e os caminhos de chaves ao emitir a instrução [CREATE COLUMN MASTER KEY (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) .
 
 - Você precisa garantir que seu aplicativo pode acessar a chave no armazenamento de chaves. Isso pode envolver a concessão de acesso ao seu aplicativo para a chave e/ou o armazenamento de chaves, dependendo do repositório de chaves, ou executar outras etapas de configuração de armazenamento de chaves específico. Por exemplo, para acessar o Cofre de chaves do Azure, você precisa fornecer as credenciais corretas para o armazenamento de chaves.
 
@@ -514,10 +514,10 @@ Para obter um exemplo de como implementar seu próprio provedor de armazenamento
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Limitações do driver ODBC ao usar sempre criptografado
 
 ### <a name="bulk-copy-function-usage"></a>Uso de funções de cópia em massa
-Usar o [funções de cópia em massa SQL](https://msdn.microsoft.com/library/ms130792.aspx) não tem suporte ao usar o driver ODBC com o sempre criptografado. Nenhuma criptografia/descriptografia transparente ocorrerá em colunas criptografadas que são usadas com as funções de cópia em massa de SQL.
+Usar o [funções de cópia em massa SQL](/sql-docs/docs/relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc) não tem suporte ao usar o driver ODBC com o sempre criptografado. Nenhuma criptografia/descriptografia transparente ocorrerá em colunas criptografadas que são usadas com as funções de cópia em massa de SQL.
 
 ### <a name="asynchronous-operations"></a>Operações assíncronas
-Enquanto o driver ODBC permitirá o uso de [operações assíncronas](https://msdn.microsoft.com/library/ms131658.aspx) com sempre criptografado, há um impacto de desempenho nas operações de quando sempre criptografado está habilitado. A chamada para `sys.sp_describe_parameter_encryption` para determinar os metadados de criptografia para a instrução está bloqueando e fará com que o driver de espera para o servidor retornar os metadados antes de retornar `SQL_STILL_EXECUTING`.
+Enquanto o driver ODBC permitirá o uso de [operações assíncronas](/sql-docs/docs/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel) com sempre criptografado, há um impacto de desempenho nas operações de quando sempre criptografado está habilitado. A chamada para `sys.sp_describe_parameter_encryption` para determinar os metadados de criptografia para a instrução está bloqueando e fará com que o driver de espera para o servidor retornar os metadados antes de retornar `SQL_STILL_EXECUTING`.
 
 ## <a name="always-encrypted-api-summary"></a>Resumo de APIs de sempre criptografado
 
@@ -552,7 +552,7 @@ Enquanto o driver ODBC permitirá o uso de [operações assíncronas](https://ms
 
 ## <a name="see-also"></a>Consulte também
 
-- [Always Encrypted (mecanismo de banco de dados)](https://msdn.microsoft.com/library/mt163865.aspx)
+- [Always Encrypted (mecanismo de banco de dados)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)
 - [Blog do Always Encrypted](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 
 

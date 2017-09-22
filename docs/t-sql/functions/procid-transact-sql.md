@@ -1,7 +1,7 @@
 ---
 title: '@@PROCID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,13 +29,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b44e112203f0933d90a4161e0b9dd0ceb0292332
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 9288f472601621b3177e3fa978bb2f53324881c8
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="procid-transact-sql"></a>@@PROCID (Transact-SQL)
+# <a name="x40x40procid-transact-sql"></a>& #x 40; & #x 40. PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o ID (identificador) do objeto do módulo [!INCLUDE[tsql](../../includes/tsql-md.md)] atual. Um módulo [!INCLUDE[tsql](../../includes/tsql-md.md)] pode ser um procedimento armazenado, uma função definida pelo usuário ou um gatilho. @@PROCID não pode ser especificado em módulos CLR ou os dados em processo provedor de acesso.  
@@ -45,7 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 @@PROCID  
 ```  
   
@@ -87,3 +86,4 @@ EXECUTE dbo.usp_FindName 'P%', 'A%';
  [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
+

@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 21010e4ad5633aced0c59c9016fbfbab8324c6fe
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8fe9d54e1d635b5c8f1dd6e00e33bd92136343b4
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Usando dados de cubos OLAP no R
@@ -81,7 +81,7 @@ Se você for novo no OLAP ou nas consultas MDX, consulte estes artigos da Wikip�
 
 ### <a name="samples"></a>Exemplos
 
-Se você quiser saber mais sobre cubos, você pode criar o cubo que é usado nesses exemplos, seguindo o tutorial do Analysis Services até Lição 4: [Criar um Cubo OLAP](https://msdn.microsoft.com/library/ms170208.aspx)
+Se você quiser saber mais sobre cubos, você pode criar o cubo que é usado nesses exemplos, seguindo o tutorial do Analysis Services até Lição 4: [Criar um Cubo OLAP](/sql-docs/docs/analysis-services/multidimensional-modeling-adventure-works-tutorial)
 
 Você também pode baixar um cubo existente como um backup e restaurá-lo em uma instância do Analysis Services. Por exemplo, você pode baixar um cubo completamente processado do [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)em formato compactado, e restaurá-lo na sua instância do SSAS. Para obter mais informações, consulte [Backup e Restauração](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)ou [Cmdlet Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 

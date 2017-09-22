@@ -15,10 +15,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 572af6f86f015c88141bb6e78b781b5825be155c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>O que &#39; s novos no SQL Server de 2017 Analysis Services
@@ -110,7 +110,7 @@ No SSDT, é possível selecionar o novo nível de compatibilidade 1400 ao criar 
 >[!NOTE]
 > O espaço de trabalho integrado na versão de dezembro do SSDT (SQL Server Data Tools) dá suporte ao nível de compatibilidade 1400. Se você criar novos projetos de modelo de tabela em uma instância de servidor do Espaço de Trabalho, essa instância ou qualquer instância implantada deverá ser o [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 1.1. 
 
-Para atualizar um modelo tabular existente no SSDT, no Gerenciador de soluções, clique com botão direito **Model.bim**e, em seguida, em **propriedades**, defina o **nível de compatibilidade** propriedade  **SQL Server 2017 (1400)**. 
+Para atualizar um modelo tabular existente no SSDT, no Gerenciador de soluções, clique com botão direito **Model.bim**e, em seguida, em **propriedades**, defina o **nível de compatibilidade** propriedade ** SQL Server 2017 (1400)**. 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -185,7 +185,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="dax-enhancements"></a>Melhorias do DAX
-Esta versão inclui um operador `IN` para expressões DAX. Isso é semelhante ao operador [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) geralmente usado para especificar vários valores em uma cláusula `WHERE` .
+Esta versão inclui um operador `IN` para expressões DAX. Isso é semelhante ao operador [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) geralmente usado para especificar vários valores em uma cláusula `WHERE`.
 
 Anteriormente, era comum especificar filtros de vários valores usando o operador lógico `OR` , como na seguinte expressão de medida:
 

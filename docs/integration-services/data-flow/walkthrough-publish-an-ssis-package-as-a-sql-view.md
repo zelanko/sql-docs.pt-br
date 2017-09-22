@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe3ec4ebb7b62bd1bee9e6ba43c630bc17460dbb
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a7479a6682c2cd95e3cc465b74642347bf682951
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: publicar um Pacote SSIS como um modo SQL
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou posterior com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-2.  [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
+2.  [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Etapa 1: Compilar e implantar o projeto do SSIS no catálogo do SSIS  
  Nesta etapa, você cria um pacote do SSIS que extrai dados de uma fonte de dados para a qual o SSIS dá suporte (neste exemplo, usamos um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) e promove a saída dos dados usando um componente de Destino do Streaming de Dados. Em seguida, você compila e implanta o projeto do SSIS no catálogo do SSIS.  
@@ -272,6 +272,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
 ## <a name="see-also"></a>Consulte também  
  [Destino do Streaming de Dados](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configurar destino do fluxo de dados](../../integration-services/data-flow/configure-data-streaming-destination.md)  
+ [Configurar destino do streaming de dados](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   

@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a4fa8a4080a8483aba8494dd1195c7fbb1aec67a
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7fc69e2d9a5e86e63ceb40e43befa65ab2cfdb7d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Dados de cópia em massa com bcp para o SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Este tópico mostra como usar o [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) utilitário de linha de comando para dados de cópia em massa entre uma instância do SQL Server de 2017 RC2 no Linux e um arquivo de dados em um formato especificado pelo usuário.
+Este tópico mostra como usar o [bcp](/sql-docs/docs/tools/bcp-utility) utilitário de linha de comando para dados de cópia em massa entre uma instância do SQL Server de 2017 RC2 no Linux e um arquivo de dados em um formato especificado pelo usuário.
 
 Você pode usar `bcp` para importar grande número de linhas em tabelas do SQL Server ou para exportar dados de tabelas do SQL Server para arquivos de dados. Exceto quando usado com a opção queryout `bcp` não requer conhecimento de Transact-SQL. O `bcp` utilitário de linha de comando funciona com o Microsoft SQL Server em execução no local ou na nuvem, no Linux, Windows ou Docker e banco de dados do SQL Azure e Azure SQL Data Warehouse.
 
@@ -136,8 +136,8 @@ Isso deve exibir o seguinte na janela de terminal:
 ```
 
 ## <a name="see-also"></a>Consulte também
-- [utilitário bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx)
-- [Formatos de dados para compatibilidade usando bcp](https://msdn.microsoft.com/en-us/library/ms190759.aspx)
-- [Importação em massa dados usando BULK INSERT](https://msdn.microsoft.com/en-us/library/ms175915.aspx)
-- [INSERÇÃO em MASSA (Transact-SQL)](https://msdn.microsoft.com/en-us/library/ms188365.aspx)
+- [utilitário bcp](/sql-docs/docs/tools/bcp-utility)
+- [Formatos de dados para compatibilidade usando bcp](/sql-docs/docs/relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server)
+- [Importação em massa dados usando BULK INSERT](/sql-docs/docs/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server)
+- [INSERÇÃO em MASSA (Transact-SQL)](/sql-docs/docs/t-sql/statements/bulk-insert-transact-sql)
 
