@@ -72,7 +72,7 @@ Quando você define as propriedades de conexão, você também especificar o ban
   
     -   Se você estiver se conectando a uma instância nomeada, digite o nome do computador, uma barra invertida e o nome da instância. Por exemplo: MyServer\MyInstance.  
   
-    -   Para se conectar a uma instância de usuário ativa do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], se conectar usando pipes nomeados protocolo e especificar o nome do pipe, por exemplo, \\ \\.\pipe\sql\query.. Para obter mais informações, consulte o [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentação.  
+    -   Para se conectar a uma instância de usuário ativa do [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], se conectar usando pipes nomeados protocolo e especificar o nome do pipe, por exemplo, \\ \\\pipe\sql\query. Para obter mais informações, consulte o [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentação.  
   
 3.  Se sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está configurado para aceitar conexões em uma porta não padrão, insira o número da porta que é usado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conexões a **porta do servidor** caixa. Para a instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], o número da porta padrão é 1433. Para instâncias nomeadas, o SSMA tentará obter o número da porta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] serviço do navegador.  
   
