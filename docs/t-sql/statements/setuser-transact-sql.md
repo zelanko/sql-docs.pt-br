@@ -58,7 +58,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ## <a name="remarks"></a>Comentários  
  SETUSER pode ser usado por um membro de **sysadmin** fixo de função de servidor ou o proprietário do banco de dados para adotar a identidade de outro usuário para testar as permissões do outro usuário. Associação na função de banco de dados fixa do db_owner não é suficiente.  
   
- Use SETUSER somente com usuários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SETUSER não tem suporte com usuários de Windows. Quando SETUSER é usado para assumir a identidade de outro usuário, todo objeto que o usuário da representação cria é de propriedade do usuário representado. Por exemplo, se o proprietário do banco de dados assume a identidade de usuário **Margaret** e cria uma tabela chamada **pedidos**, o **pedidos** tabela é de propriedade **Margaret **, não o administrador do sistema.  
+ Use SETUSER somente com usuários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SETUSER não tem suporte com usuários de Windows. Quando SETUSER é usado para assumir a identidade de outro usuário, todo objeto que o usuário da representação cria é de propriedade do usuário representado. Por exemplo, se o proprietário do banco de dados assume a identidade de usuário **Margaret** e cria uma tabela chamada **pedidos**, o **pedidos** tabela é de propriedade **Margaret** , não o administrador do sistema.  
   
  SETUSER permanece em vigor até que outra instrução SETUSER seja emitida ou até que o banco de dados atual seja alterado com a instrução USE.  
   
