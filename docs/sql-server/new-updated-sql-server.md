@@ -16,10 +16,10 @@ ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: bd22355518bde09b5af006062b2ec03cf11a7597
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7f1c64e11e1bec44a558cec10c3d1f90f4951dfd
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Novos e recém-atualizados: documentos do SQL Server
@@ -61,7 +61,7 @@ Os links a seguir direcionam para novos artigos que foram adicionados recentemen
 
 ## <a name="updated-articles-with-excerpts"></a>Artigo atualizado com trechos
 
-Esta seção exibe os trechos de atualizações coletados de artigos que passaram por uma grande atualização recentemente.
+Esta seção exibe os trechos de atualizações coletados de artigos que passaram por uma atualização extensa recentemente.
 
 Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes um trecho é separado da sintaxe de markdown importante que circunda no artigo real. Portanto, esses trechos servem apenas como orientações gerais. Os trechos só mostram a você se vale a pena clicar e visitar o artigo real conforme seus interesses.
 
@@ -104,7 +104,7 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 
 
 - Baixe **gratuitamente** a [**edição do desenvolvedor do SQL Server 2016!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Baixe a versão mais recente do [SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).
+- Baixe a versão mais recente do [SSMS (SQL Server Management Studio)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
 - Tem uma conta do Azure? Ative uma [Máquina Virtual com o SQL Server 2016 já instalado](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
 **Mecanismo de Banco de Dados do SQL Server 2016**
@@ -135,31 +135,31 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
     Then run Run-533-*.BAT
 -->
 
-Esta seção lista os artigos muito semelhantes a artigos atualizados recentemente em outras áreas de assunto, dentro do nosso repositório GitHub.com: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
+Esta seção lista artigos muito semelhantes a artigos atualizados recentemente em outras áreas de assunto, em nosso repositório público GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Áreas de assunto que têm artigos novos ou atualizados recentemente
 
-- [Novo + Atualizado (3 + 12): documentos de **Análise Avançada para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Novo + Atualizado (5 + 0): documentos de **Conexão ao SQL**](../connect/new-updated-connect.md)
-- [Novo + Atualizado (5 + 1): documentos do **Mecanismo de Banco de Dados do SQL**](../database-engine/new-updated-database-engine.md)
-- [Novo + Atualizado (19 + 82): documentos do **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
-- [Novo + Atualizado (1 + 8): documentos do **Linux para SQL**](../linux/new-updated-linux.md)
-- [Novo + Atualizado (12 + 1): documentos de **Bancos de Dados Relacionais do SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Novo + Atualizado (0 + 1): documentos do **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Novo + Atualizado (7 + 1): documentos do **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Novo + Atualizado (1 + 1): documentos do **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Novo + atualizado (0 + 2): documentos do **SSMA (SQL Server Migration Assistant)**](../ssma/new-updated-ssma.md)
-- [Novo + Atualizado (1 + 4): documentos do **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Novo + Atualizado (4 + 1): documentos do **Transact-SQL**](../t-sql/new-updated-t-sql.md)
-- [Novo + Atualizado (0 + 1): documentos de **Ferramentas para SQL**](../tools/new-updated-tools.md)
+- [Novo + Atualizado (3+12): documentos sobre a **Análise Avançada para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Novo + Atualizado (5+0): documentos sobre a **Conexão ao SQL**](../connect/new-updated-connect.md)
+- [Novo + Atualizado (5+1): documentos sobre o **Mecanismo de Banco de Dados do SQL**](../database-engine/new-updated-database-engine.md)
+- [Novo + Atualizado (19+82): documentos sobre o **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
+- [Novo + Atualizado (1+8): documentos sobre o **Linux para SQL**](../linux/new-updated-linux.md)
+- [Novo + Atualizado (12+1): documentos sobre os **Bancos de Dados Relacionais do SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Novo + Atualizado (0+1): documentos sobre o **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Novo + Atualizado (7+1): documentos sobre o **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Novo + Atualizado (1+1): documentos sobre o **SSDT (SQL Server Data Tools)**](../ssdt/new-updated-ssdt.md)
+- [Novo + Atualizado (0+2): documentos sobre o **SSMA (SQL Server Migration Assistant)**](../ssma/new-updated-ssma.md)
+- [Novo + Atualizado (1+4): documentos sobre o **SSMS (SQL Server Management Studio)**](../ssms/new-updated-ssms.md)
+- [Novo + Atualizado (4+1): documentos sobre o **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Novo + Atualizado (0+1): documentos sobre as **Ferramentas para SQL**](../tools/new-updated-tools.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Áreas de assunto que não têm nenhum artigo novo ou atualizado recentemente
 
 - [Novo + atualizado (0 + 0): documentos do **ADO (ActiveX Data Objects) para SQL**](../ado/new-updated-ado.md)
-- [Novo + Atualizado (0 + 0): documentos do **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Novo + Atualizado (0+0): documentos sobre o **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
 - [Novo + atualizado (0 + 0): documentos do **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Extensões DMX (Data Mining) para SQL**](../dmx/new-updated-dmx.md)
-- [Novo + Atualizado (0 + 0): documentos do **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Novo + Atualizado (0+0): documentos sobre o **MDS (Master Data Services) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Expressão MDX para SQL**](../mdx/new-updated-mdx.md)
 - [Novo + atualizado (0 + 0): documentos do **ODBC (Open Database Connectivity) para SQL**](../odbc/new-updated-odbc.md)
 - [Novo + atualizado (0 + 0): documentos do **PowerShell para SQL**](../powershell/new-updated-powershell.md)

@@ -1,32 +1,37 @@
 ---
-title: "Refer&#234;ncia de mensagens e erros do Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "números de erros [Integration Services]"
-  - "hresults [Integration Services]"
-  - "erros [Integration Services], listados"
+title: "Referência de mensagens e erros do Integration Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error numbers [Integration Services]
+- hresults [Integration Services]
+- errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/26/2017
+
 ---
-# Refer&#234;ncia de mensagens e erros do Integration Services
-  As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime>.  
+# <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
+  As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
   
  Esta lista pode ser útil quando você encontrar um código de erro sem descrição. No momento, a lista não inclui informações para solução de problemas.  
   
 > [!IMPORTANT]  
->  Muitas das mensagens de erro exibidas enquanto você trabalha com o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são de outros componentes. Neste tópico, são apresentados todos os erros provocados pelos componentes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Caso você não encontre seu erro na lista, ele foi provocado por um componente fora do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Entre eles, provedores OLE DB, outros componentes de banco de dados, como o [!INCLUDE[ssDE](../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], ou outros serviços ou componentes, como o sistema de arquivos, servidor SMTP, MSMQ (serviço de enfileiramento de mensagens) e assim por diante. Para obter informações sobre essas mensagens externas de erro, consulte a documentação específica do componente.  
+>  Muitas das mensagens de erro exibidas enquanto você trabalha com o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são de outros componentes. Neste tópico, são apresentados todos os erros provocados pelos componentes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Caso você não encontre seu erro na lista, ele foi provocado por um componente fora do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Entre eles, provedores OLE DB, outros componentes de banco de dados, como o [!INCLUDE[ssDE](../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ou outros serviços ou componentes, como o sistema de arquivos, servidor SMTP, MSMQ (serviço de enfileiramento de mensagens) e assim por diante. Para obter informações sobre essas mensagens externas de erro, consulte a documentação específica do componente.  
   
  Esta lista contém os seguintes grupos de mensagens:  
   
@@ -357,7 +362,7 @@ caps.handback.revision: 44
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|O nome de objeto "%1" não é válido. O nome deve começar com um caractere alfabético.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|O nome de objeto "%1" não é válido. O nome deve começar com um caractere alfabético ou sublinhado "_".|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|O nome de objeto "%1" não é válido. O nome deve conter apenas caracteres alfanuméricos ou sublinhados "_".|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|O nome de objeto "%1" não é válido. O nome não pode conter nenhum dos caracteres a seguir: / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|O nome de objeto "%1" não é válido. O nome não pode conter nenhum dos caracteres a seguir: / \ : ? " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Falha ao carregar a propriedade de valor "%1" usando a persistência padrão.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|O gerenciador de conexões "%1" não é do tipo "%2"|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" está vazio|  
@@ -1441,9 +1446,9 @@ caps.handback.revision: 44
 |0xC02020FF|-1071636225|DTS_E_GETSCHEMATABLEFAILED|O %1 não pôde recuperar informações de coluna pelo comando SQL. O seguinte erro ocorreu: %2|  
 |0xC0202100|-1071636224|DTS_E_SOURCETABLENAMENOTPROVIDED|Não foi fornecido um nome de tabela de origem.|  
 |0xC0203110|-1071632112|DTS_E_CACHE_INVALID_INDEXPOS|A posição do índice do cache, %1!d!, não é válida. Para colunas sem índice, a posição do índice deve ser 0. Para colunas de índice, a posição de índice deve ser um número sequencial, positivo.|  
-|0xC0203111|-1071632111|DTS_E_CACHE_DUPLICATE_INDEXPOS|A posição do índice, %1!d!, é uma duplicata. Para colunas sem-índice, a posição de índice deve ser 0. Para colunas de índice, a posição de índice deve ser um número sequencial, positivo.|  
+|0xC0203111|-1071632111|DTS_E_CACHE_DUPLICATE_INDEXPOS|A posição do índice, %1!d!, é uma duplicata. Para colunas sem índice, a posição do índice deve ser 0. Para colunas de índice, a posição de índice deve ser um número sequencial, positivo.|  
 |0xC0203112|-1071632110|DTS_E_CACHE_TOO_FEW_INDEX_COLUMNS|Pelo menos uma coluna de índice deve ser especificada para o gerenciador de conexões do Cache. Para especificar uma coluna de índice, defina a propriedade Index Position da coluna de cache.|  
-|0xC0203113|-1071632109|DTS_E_CACHE_INDEXPOS_NOT_CONTINUOUS|Posições de índice de cache devem ser contíguas. Para colunas sem-índice, a posição de índice deve ser 0. Para colunas de índice, a posição de índice deve ser um número sequencial, positivo.|  
+|0xC0203113|-1071632109|DTS_E_CACHE_INDEXPOS_NOT_CONTINUOUS|Posições de índice de cache devem ser contíguas. Para colunas sem índice, a posição do índice deve ser 0. Para colunas de índice, a posição de índice deve ser um número sequencial, positivo.|  
 |0xC0204000|-1071628288|DTS_E_PROPERTYNOTSUPPORTED|A propriedade "%1" não pode ser definida como "%2". Não existe suporte para a propriedade que está sendo definida no objeto especificado. Verifique o nome, as maiúsculas e minúsculas e a ortografia da propriedade.|  
 |0xC0204002|-1071628286|DTS_E_CANTCHANGEPROPERTYTYPE|O tipo de propriedade não pode ser alterado do tipo definido pelo componente.|  
 |0xC0204003|-1071628285|DTS_E_CANTADDOUTPUTID|Falha na ID de saída %1!d! durante a inserção. Não foi criada nova saída.|  
@@ -2210,7 +2215,7 @@ caps.handback.revision: 44
 |0x4002F326|1073935142|DTS_I_ERRMSGTASK_TRANSFEREDNERRORMESSAGES|"%1" Mensagens de Erro foram transferidas.|  
 |0x4002F351|1073935185|DTS_I_STOREDPROCSTASKS_TRANSFEREDNSPS|A tarefa transferiu "%1" Procedimentos Armazenados.|  
 |0x4002F352|1073935186|DTS_I_TRANSOBJECTSTASK_TRANSFEREDNOBJECTS|Foram transferidos "%1" objetos.|  
-|0x4002F358|1073935192|DTS_I_TRANSOBJECTSTASK_NOSPSTOTRANSFER|Não existem Procedimentos Armazenados para serem transferidos.|  
+|0x4002F358|1073935192|DTS_I_TRANSOBJECTSTASK_NOSPSTOTRANSFER|Não existem procedimentos armazenados para serem transferidos.|  
 |0x4002F362|1073935202|DTS_I_TRANSOBJECTSTASK_NORULESTOTRANSFER|Não existem Regras para serem transferidas.|  
 |0x4002F366|1073935206|DTS_I_TRANSOBJECTSTASK_NOTABLESTOTRANSFER|Não existem Tabelas para serem transferidas.|  
 |0x4002F370|1073935216|DTS_I_TRANSOBJECTSTASK_NOVIEWSTOTRANSFER|Não existem Exibições para serem transferidas.|  
@@ -2336,3 +2341,4 @@ caps.handback.revision: 44
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|O %1 não permite a inserção de colunas de metadados externos.|  
   
   
+
