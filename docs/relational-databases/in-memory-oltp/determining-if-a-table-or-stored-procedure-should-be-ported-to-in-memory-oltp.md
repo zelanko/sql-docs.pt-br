@@ -43,7 +43,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     >  O desempenho de um sistema de banco de dados depende de vários fatores e nem todos podem ser observados e medidos pelo coletor de desempenho da transação. Portanto, o relatório de análise de desempenho da transação não garante que os ganhos de desempenho reais corresponderão a essas previsões, caso elas sejam feitas.  
   
- O relatório de Análise de Desempenho da Transação e os consultores de migração são instalados como parte do SSMS (SQL Server Management Studio) quando você seleciona **Ferramentas de Gerenciamento – Básico** ou **Ferramentas de Gerenciamento – Avançado** ao instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ou quando você [baixa o SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).  
+ O relatório de Análise de Desempenho da Transação e os consultores de migração são instalados como parte do SSMS (SQL Server Management Studio) quando você seleciona **Ferramentas de Gerenciamento – Básico** ou **Ferramentas de Gerenciamento – Avançado** ao instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ou quando você [baixa o SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Relatórios de Análise de desempenho da transação  
  Você pode gerar relatórios de análise de desempenho da transação no **Pesquisador de Objetos** clicando com o botão direito no banco de dados, selecionando **Relatórios**, **Relatórios Padrão**e **Visão Geral da Análise de Desempenho da Transação**. O banco de dados deve ter uma carga de trabalho ativa, ou uma execução recente de uma carga de trabalho, para gerar um relatório de análise significativo.  

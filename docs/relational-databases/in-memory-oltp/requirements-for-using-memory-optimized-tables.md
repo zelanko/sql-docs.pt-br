@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   O OLTP in-memory é instalado como parte dos **Serviços de Mecanismo de Banco de Dados**.  
   
-     Para instalar a geração de relatórios ([Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP in-memory](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (para gerenciar o OLTP in-memory por meio do Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [Baixar o SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).  
+     Para instalar a geração de relatórios ([Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP in-memory](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (para gerenciar o OLTP in-memory por meio do Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [Baixar o SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).   
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Observações importantes sobre o uso do [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   

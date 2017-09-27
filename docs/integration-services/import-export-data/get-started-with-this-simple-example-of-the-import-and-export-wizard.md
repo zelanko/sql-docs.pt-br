@@ -15,17 +15,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1b59268e884d3e797a74ef65d9e75c405d75a0d5
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Começar com esse exemplo simples de Assistente de importação e exportação
 Saiba o que esperar do SQL Server Assistente de importação e exportação examinando um cenário comum - importando dados de uma planilha do Excel para um banco de dados do SQL Server. Mesmo se você planeja usar uma fonte diferente e um destino diferente, este tópico mostra mais do que você precisa saber sobre como executar o assistente.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Pré - é o assistente instalado em seu computador?
-Se você deseja executar o assistente, mas você não tiver [! INCLUIR[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Se você deseja executar o assistente, mas não tem o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado no computador, é possível instalar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalando o SSDT (SQL Server Data Tools). Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Eis os dados de origem do Excel para este exemplo
 Aqui está a fonte de dados que você pretende copiar - uma pequena tabela de duas colunas na planilha da pasta de trabalho do WizardWalkthrough.xlsx Excel WizardWalkthrough.

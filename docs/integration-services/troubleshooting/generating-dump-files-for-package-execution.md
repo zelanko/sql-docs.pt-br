@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Gerando arquivos de despejo para execução de pacote
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/21/2017
   
      Chame esse procedimento armazenado para pausar a execução de um pacote e criar um arquivo de despejo.  
   
- Se estiver usando o modelo de implantação de pacote, você criará os arquivos de despejo de depuração usando o utilitário **dtexec** ou **dtutil** para especificar uma opção de despejo de depuração na linha de comando. Para obter mais informações, consulte [utilitário dtexec](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages) e [implantação de pacote herdado &#40; SSIS &#41; ](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ Se estiver usando o modelo de implantação de pacote, você criará os arquivos de despejo de depuração usando o utilitário **dtexec** ou **dtutil** para especificar uma opção de despejo de depuração na linha de comando. Para saber mais, veja [Utilitário dtexec](../../integration-services/packages/dtexec-utility.md) e [Utilitário dtutil](../../integration-services/dtutil-utility.md). Para obter mais informações sobre o modelo de implantação de pacote, consulte [Implantar projetos e pacotes do SSIS (Integration Services)](https://msdn.microsoft.com/library/hh213290.aspx) e [Implantação de pacote herdado &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## <a name="debug-dump-file-format"></a>Formato do arquivo de despejo de depuração  
  Ao especificar uma opção de despejo de depuração, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria os seguintes arquivos de despejo de depuração:  
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/21/2017
   
 -   O arquivo de despejo de depuração .tmp. Esse é um arquivo de texto formatado.  
   
- Por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena esses arquivos na pasta, * \<unidade >:*\Program Files\Microsoft Server\110\Shared\ErrorDumps de SQL.  
+ Por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena esses arquivos na pasta,  *\<unidade >:*\Program Files\Microsoft Server\110\Shared\ErrorDumps de SQL.  
   
  A tabela a seguir descreve apenas algumas seções no arquivo .tmp. O arquivo .tmp inclui dados adicionais que não estão listados na tabela.  
   
