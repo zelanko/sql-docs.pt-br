@@ -1,7 +1,7 @@
 ---
 title: "Assistente de migração do SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: e6cdbf2e39051ad4298966863f16fb7295f6a8a5
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
-Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para automatizar a migração de banco de dados para o SQL Server do Microsoft Access, DB2, MySQL, Oracle e Sybase.  
+Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para automatizar a migração de banco de dados para o SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
   
 ## <a name="migration-sources"></a>Fontes de migração  
   
@@ -37,7 +37,7 @@ Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para
   
 -   [Assistente de migração do SQL Server para Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [Assistente de migração do SQL Server para Sybase ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-  [Assistente de migração do SQL Server para SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>Fontes com suporte e versões de destino
 Para fontes com suporte, revise as informações no Centro de Download para baixar o SSMA.
@@ -49,19 +49,18 @@ As seguintes versões de destino têm suporte para o SSMA.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL Database
+- Banco de dados SQL do Azure
 - SQL Server 2017 no Windows e Linux (visualização)
 - * * Do azure SQL Data Warehouse
 
 * * Este destino só é suportado por SSMA para Oracle.
  
-
 ## <a name="downloads"></a>Downloads
 - [SSMA para Access](http://aka.ms/ssmaforaccess)
 - [SSMA para DB2](http://aka.ms/ssmafordb2)
 - [SSMA para MySql](http://aka.ms/ssmaformysql)
 - [SSMA para Oracle](http://aka.ms/ssmafororacle)
-- [SSMA para Sybase ASE](http://aka.ms/ssmaforsybase)
+- [SSMA para SAP ASE](http://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Obter suporte do SSMA  
 **Ajuda e suporte para Microsoft SQL Server SSMA (Migration Assistant):**  

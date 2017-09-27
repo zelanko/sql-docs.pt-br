@@ -2,7 +2,7 @@
 title: O que &#39; s do SSMA para Access(AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 06347e6e199fe2aea5f4854b3b355bf28d8d1769
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: d955f186e5a533839becdec5aefebc0af750bef1
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-access-accesstosql"></a>O que &#39; s do SSMA para Access (AccessToSQL)
 Este tópico lista SSMA para alterações de acesso de cada versão.  
+
+## <a name="ssma-v75"></a>V 7.5 do SSMA
+A versão v 7.5 do SSMA para Access foi aprimorada com vários aprimoramentos para assegurar maior acessibilidade para pessoas com deficiências.
+
+> [!IMPORTANT]
+> O .net 4.5.2 é um pré-requisito de instalação v SSMA 7.5. Além disso, começando com v 7.4, a versão de 32 bits do SSMA está sendo descontinuada.
 
 ## <a name="ssma-v74"></a>V 7.4 do SSMA
 A versão v 7.4 do SSMA para Access contém as seguintes alterações:

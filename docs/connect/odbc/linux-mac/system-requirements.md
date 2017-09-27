@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13f3c7b9384ee0d8ff74d4d51e6726c52ecc8098
+ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
+ms.openlocfilehash: 75c8c9daea3f26dc694ae66597649f399a986456
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="system-requirements"></a>Requisitos do sistema
@@ -39,7 +39,9 @@ Os drivers de Linux e macOS estão disponíveis apenas para as versões de 64 bi
 - Debian Linux 8
 - Enterprise RedHat Linux 6
 - Enterprise RedHat Linux 7
+- SuSE Linux Enterprise Server 11
 - SuSE Linux Enterprise Server 12
+- Ubuntu Linux 14.04
 - Ubuntu Linux 15.10
 - Ubuntu Linux 16.04
 - Ubuntu Linux 16.10
@@ -80,5 +82,4 @@ A instalação de pacotes para o [!INCLUDE[msCoName](../../../includes/msconame_
 [Problemas conhecidos nesta versão do driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  
 
 [Notas de versão](../../../connect/odbc/linux-mac/release-notes.md)  
-
 

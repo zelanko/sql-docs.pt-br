@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
@@ -73,7 +73,7 @@ Detalhes do pacote e locais de download para os pacotes RPM e Debian são listad
 | [SQL Server Data Tools para Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Código do Visual Studio](https://code.visualstudio.com) com o [mssql extensão](https://aka.ms/mssql-marketplace) | mais recente |
 
-### <a name="unsupported-features-and-services"></a>Serviços e recursos sem suporte
+### <a name="Unsupported"></a>Serviços e recursos sem suporte
 
 Os seguintes recursos e serviços não estão disponíveis no Linux neste momento. Suporte a esses recursos será habilitado cada vez durante a cadência mensal de atualizações do programa de visualização.
 
@@ -810,7 +810,7 @@ As seções a seguir descrevem problemas conhecidos com esta versão do SQL Serv
 
 - SQL Server Configuration Manager não pode se conectar ao SQL Server no Linux.
 
-- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\>**  método em vez disso, por enquanto. 
+- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\> ** método em vez disso, por enquanto. 
 
 #### <a name="databases"></a>Bancos de dados
 - Bancos de dados do sistema não podem ser movidos com o utilitário mssql conf.
@@ -987,7 +987,7 @@ As seções a seguir descrevem problemas conhecidos com esta versão do SQL Serv
 
 - SQL Server Configuration Manager não pode se conectar ao SQL Server no Linux.
 
-- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\>**  método em vez disso, por enquanto. 
+- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\> ** método em vez disso, por enquanto. 
 
 #### <a name="databases"></a>Bancos de dados
 - Não há suporte para alterar os locais de arquivos de log e de dados TempDB.
@@ -1147,7 +1147,7 @@ As seções a seguir descrevem problemas conhecidos com esta versão do SQL Serv
 
 - SQL Server Configuration Manager não pode se conectar ao SQL Server no Linux.
 
-- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\>**  método em vez disso, por enquanto. 
+- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\> ** método em vez disso, por enquanto. 
 
 #### <a name="databases"></a>Bancos de dados
 - Não há suporte para alterar os locais de arquivos de log e de dados TempDB.
@@ -1292,7 +1292,7 @@ As seções a seguir descrevem problemas conhecidos com esta versão do CTP do S
 
 - SQL Server Configuration Manager não pode se conectar ao SQL Server no Linux.
 
-- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\>**  método em vez disso, por enquanto. 
+- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\> ** método em vez disso, por enquanto. 
 
 #### <a name="databases"></a>Bancos de dados
 - Não há suporte para alterar os locais de arquivos de log e de dados TempDB.
@@ -1424,7 +1424,7 @@ As seções a seguir descrevem problemas conhecidos com esta versão do SQL Serv
 
 - SQL Server Configuration Manager não pode se conectar ao SQL Server no Linux.
 
-- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\>**  método em vez disso, por enquanto.
+- **CREATE ASSEMBLY** não funcionará durante a tentativa de usar um arquivo. Use o **FROM \<bits\> ** método em vez disso, por enquanto.
 
 #### <a name="databases"></a>Bancos de dados
 - Não há suporte para alterar os locais de arquivos de log e de dados TempDB.
