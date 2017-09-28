@@ -41,8 +41,6 @@ Retorna o nome de uma coluna de um número de identificação de tabela correspo
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COL_NAME ( table_id , column_id )  
 ```  
   

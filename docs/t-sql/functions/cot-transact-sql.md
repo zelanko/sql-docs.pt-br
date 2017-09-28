@@ -39,8 +39,6 @@ Uma função matemática que retorna a cotangente trigonométrica do ângulo esp
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COT ( float_expression )  
 ```  
   

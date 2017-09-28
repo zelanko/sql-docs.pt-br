@@ -40,8 +40,6 @@ Uma função matemática que retorna o ângulo em radianos, cujo cosseno é espe
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ACOS ( float_expression )  
 ```  
   

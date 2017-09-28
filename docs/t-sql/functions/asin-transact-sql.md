@@ -40,8 +40,6 @@ Retorna o ângulo em radianos, cujo seno é especificado **float** expressão. I
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ASIN ( float_expression )  
 ```  
   

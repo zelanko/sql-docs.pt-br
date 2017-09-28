@@ -40,8 +40,6 @@ Retorna a configuração atual da opção ou propriedade de banco de dados espec
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATABASEPROPERTYEX ( database , property )  
 ```  
   

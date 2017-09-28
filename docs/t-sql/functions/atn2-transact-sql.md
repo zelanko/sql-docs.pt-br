@@ -40,8 +40,6 @@ Retorna o ângulo, em radianos, entre o eixo x positivo e o raio a partir da ori
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATN2 ( float_expression , float_expression )  
 ```  
   

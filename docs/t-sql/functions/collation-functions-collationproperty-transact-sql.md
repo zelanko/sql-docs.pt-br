@@ -39,8 +39,6 @@ Retorna a propriedade de um agrupamento especificado no [!INCLUDE[ssCurrent](../
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   

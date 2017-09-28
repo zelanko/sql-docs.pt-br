@@ -41,8 +41,6 @@ Pesquisa uma expressão para outra e retorna sua posição inicial, se for local
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   

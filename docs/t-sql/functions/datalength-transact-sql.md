@@ -42,8 +42,6 @@ Retorna o número de bytes usado para representar qualquer expressão.
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATALENGTH ( expression )   
 ```  
   

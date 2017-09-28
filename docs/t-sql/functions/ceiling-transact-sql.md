@@ -40,8 +40,6 @@ Retorna o menor inteiro maior que ou igual a expressão numérica especificada.
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CEILING ( numeric_expression )  
 ```  
   
