@@ -35,7 +35,7 @@ Embora seja divertido para levar os wrappers desativar todos os novos recursos, 
 
 Vamos dar uma olhada em alguns dos principais novos recursos nesta versão.
 
-## <a name="1400-compatibility-level-for-tabular-models"></a>Nível de Compatibilidade&1400; para modelos de tabela
+## <a name="1400-compatibility-level-for-tabular-models"></a>Nível de Compatibilidade 1400; para modelos de tabela
   Para aproveitar muitos dos novos recursos e funcionalidade descrita aqui, modelos de tabela novos ou existentes devem ser definidos ou atualizados para o nível de compatibilidade 1400. Os modelos no nível de compatibilidade 1400 não podem ser implantados no SQL Server 2016 SP1 ou anterior nem ter o downgrade para níveis de compatibilidade inferiores. Para obter mais informações, consulte [nível de compatibilidade para modelos de tabela do Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).
   
 No SSDT, é possível selecionar o novo nível de compatibilidade 1400 ao criar novos projetos de modelo de tabela. 
