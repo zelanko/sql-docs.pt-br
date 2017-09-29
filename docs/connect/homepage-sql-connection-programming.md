@@ -95,7 +95,7 @@ Linguagens .NET gerenciados, como c# e Visual Basic, são os usuários mais comu
 
 <a name="an-116-csharp-ef-orm" />
 
-## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Logotipo do Entity Framework][image-ref-333-ef] Entity Framework (EF) com C & #x x23;
+## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Logotipo do Entity Framework][image-ref-333-ef] Entity Framework (EF) com C&#x23;
 
 Entity Framework (EF) fornece um mapeamento relacional de objeto (ORM). ORM torna mais fácil para seu código-fonte Oriented programação OOP () manipular os dados que foi recuperados de um banco de dados relacional do SQL.
 
@@ -118,7 +118,7 @@ O [página inicial para Entity Framework](http://docs.microsoft.com/ef/) apresen
 |     |     |
 | :-- | :-- |
 | [EF 6. x](http://docs.microsoft.com/ef/ef6/) | Primeiro, a Microsoft lançou EF em agosto de 2008. Em março de 2015, a Microsoft anunciou que EF 6. x foi a versão final que desenvolve Microsoft. A Microsoft lançou o código-fonte para o domínio público.<br /><br />Inicialmente EF fazia parte do .NET Framework. Mas EF 6. x foi removido do .NET Framework.<br /><br />[Código-fonte EF 6. x no Github no repositório *aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [Núcleo EF](http://docs.microsoft.com/ef/core/) | A Microsoft lançou o núcleo de EF recentemente desenvolvidos em junho de 2016. Núcleo EF destina-se a melhor flexibilidade e portabilidade. EF Core pode executar em sistemas operacionais além apenas o Microsoft Windows. E EF Core pode interagir com outros bancos de dados relacionais e bancos de dados além apenas o Microsoft SQL Server.<br /><br />**C & #x x23; exemplos de código:**<br />[Guia de Introdução do Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Guia de Introdução ao EF principal no .NET Framework com um banco de dados existente](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [Núcleo EF](http://docs.microsoft.com/ef/core/) | A Microsoft lançou o núcleo de EF recentemente desenvolvidos em junho de 2016. Núcleo EF destina-se a melhor flexibilidade e portabilidade. EF Core pode executar em sistemas operacionais além apenas o Microsoft Windows. E EF Core pode interagir com outros bancos de dados relacionais e bancos de dados além apenas o Microsoft SQL Server.<br /><br />**C&#x23; exemplos de código:**<br />[Guia de Introdução do Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Guia de Introdução ao EF principal no .NET Framework com um banco de dados existente](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF e as tecnologias relacionadas são poderosas e são muito a aprender para o desenvolvedor que queira mestre toda a área.
