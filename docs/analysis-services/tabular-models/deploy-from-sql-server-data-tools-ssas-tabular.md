@@ -28,14 +28,14 @@ ms.lasthandoff: 09/01/2017
 # <a name="deploy-from-sql-server-data-tools"></a>Implantar das Ferramentas de Dados do SQL Server
   Use as tarefas neste tópico para implantar uma solução de modelo de tabela usando o comando implantar no SSDT.  
   
-##  <a name="bkmk_deploy"></a> Configure deployment options and deployment server properties  
+##  <a name="bkmk_deploy"></a> Configurar as propriedades Opções de Implantação e Servidor de Implantação  
  Antes de implantar sua solução modelo tabular, primeiro especifique as propriedades Deployment Options e Deployment Server. Para obter mais informações sobre configurações e propriedades de implantação, consulte [implantação de solução de modelo Tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
 #### <a name="to-configure-options-and-properties"></a>Configurar propriedades e opções  
   
 1.  No SSDT, em **Solution Explorer**, clique no nome do projeto e, em seguida, clique em **propriedades**.  
   
-2.  No ** \<nome do projeto > propriedades** caixa de diálogo, na **opções de implantação**, especifique as configurações de propriedade se diferentes das configurações padrão.  
+2.  No  **\<nome do projeto > propriedades** caixa de diálogo, na **opções de implantação**, especifique as configurações de propriedade se diferentes das configurações padrão.  
   
     > [!NOTE]  
     >  Para modelos em modo armazenado em cache, o **Modo de Consulta** é sempre **Na Memória**.  

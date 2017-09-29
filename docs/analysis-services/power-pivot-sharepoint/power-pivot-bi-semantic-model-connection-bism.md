@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> Bancos de dados com suporte  
  Um modelo de conexão semântica de BI aponta para dados de modelo de tabela. Há duas fontes para estes dados:  
   
--   Um banco de dados de modelo de tabela que é executado em uma instância do Analysis Services autônoma em modo de servidor de tabela. Uma implantação de uma instância autônoma do Analysis Services é externa ao farm. O acesso a fontes de dados fora do farm requer permissões adicionais, sobre as quais você pode ler neste tópico: [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Um banco de dados de modelo de tabela que é executado em uma instância do Analysis Services autônoma em modo de servidor de tabela. Uma implantação de uma instância autônoma do Analysis Services é externa ao farm. O acesso a fontes de dados fora do farm requer permissões adicionais, sobre as quais você pode ler neste tópico: [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] salvas no SharePoint. Bancos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inseridos em pastas de trabalho do Excel são equivalentes a bancos de dados do modelo tabular que são executados em um servidor autônomo de modo de tabela do Analysis Services. Se você já usa o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel e o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, poderá definir uma conexão de modelo semântico de BI que aponte para pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em uma biblioteca do SharePoint e compilar relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] usando dados existentes do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  Você pode usar pastas de trabalho criadas na versão SQL Server 2008 R2 ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  [Criar uma conexão de modelo semântico de BI para uma pasta de trabalho do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

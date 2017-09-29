@@ -91,7 +91,7 @@ Configuração e ajuste de desempenho requer a criação de uma base sólida, no
 
 + [Ajuste de desempenho de R no SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
 
-    Fornece orientação para configurar o hardware que [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md) ] está instalado e para configurar a instância do SQL Server para oferecer melhor suporte a scripts externos. Isso é especialmente útil para **os administradores de banco de dados**.
+    Fornece orientação para configurar o hardware que [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] está instalado e para configurar a instância do SQL Server para oferecer melhor suporte a scripts externos. Isso é especialmente útil para **os administradores de banco de dados**.
 
 + [Ajuste de desempenho de R no SQL Server - código e dados de otimização](..\r\r-and-data-optimization-r-services.md)
 
