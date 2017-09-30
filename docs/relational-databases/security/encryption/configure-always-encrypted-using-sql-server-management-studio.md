@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurar o Always Encrypted usando o SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Este artigo descreve as tarefas para configurar o Always Encrypted e gerenciar bancos de dados que usam o Always Encrypted como [SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx).
+Este artigo descreve as tarefas para configurar o Always Encrypted e gerenciar bancos de dados que usam o Always Encrypted como [SSMS (SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
 Quando você usa o SSMS para configurar o Always Encrypted, o SSMS lida com dados sensíveis e chaves do Always Encrypted, por isso, as chaves e os dados aparecem em texto não criptografado dentro do processo do SSMS. Portanto, é importante que você execute o SSMS em um computador seguro. Se seu banco de dados estiver hospedado no SQL Server, certifique-se de que o SSMS seja executado em um computador diferente do computador que hospeda a instância do SQL Server. Como o objetivo principal do Always Encrypted é garantir que os dados confidenciais criptografados estejam seguros mesmo se o sistema do banco de dados for comprometido, a execução de um script do PowerShell que processa chaves ou dados confidenciais no computador do SQL Server pode reduzir ou anular os benefícios do recurso. Para obter recomendações adicionais, consulte [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Considerações de segurança para o Gerenciamento de Chaves).
 
@@ -89,7 +89,7 @@ Supondo que `SSN` seja uma coluna `char(11)` criptografada na tabela `Patients` 
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> Habilitando e desabilitando Always Encrypted para uma conexão de banco de dados   
 
 Habilitar o Always Encrypted para uma conexão de banco de dados instrui o .NET Framework Data Provider para SQL Server, usado pelo SQL Server Management Studio, a tentar de forma transparente:   
 -   Descriptografar todos os valores que são recuperados de colunas criptografadas e retornados nos resultados da consulta.   
@@ -105,7 +105,7 @@ Para desabilitar o Always Encrypted para uma conexão de banco de dados, especif
 >  4.   Selecione a guia **Propriedades Adicionais** e digite `Column Encryption Setting=Enabled` (para habilitar o comportamento de Always Encrypted) ou remover a configuração (para desabilitar o comportamento de Always Encrypted).   
 >  5.   Clique em **Conectar**.   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Parametrização de Always Encrypted   
  
 A Parametrização de Always Encrypted é um recurso do SQL Server Management Studio que converte automaticamente as variáveis Transact-SQL em parâmetros de consulta (instâncias da [Classe SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Requer pelo menos o SSMS versão 17.0) Isso permite que o .NET Framework Data Provider para SQL Server subjacente detecte dados destinados a colunas criptografadas e criptografe esses dados antes de enviá-los para o banco de dados. 
   
@@ -285,7 +285,7 @@ Provisione uma nova chave mestra de coluna seguindo as etapas na seção Provisi
 Normalmente, uma chave mestra de coluna protege uma ou mais chaves de criptografia de coluna. Cada chave de criptografia de coluna tem um valor criptografado armazenado no banco de dados, que é o produto da criptografia da chave de criptografia de coluna com a chave mestra de coluna.
 Nesta etapa, criptografe cada uma das chaves de criptografia de coluna que são protegidas com a chave mestra de coluna que você está girando, com a nova chave mestra de coluna, e armazene o novo valor criptografado no banco de dados. Como resultado, cada chave de criptografia de coluna afetada pela rotação terá dois valores criptografados: um valor criptografado com a chave mestra de coluna existente e um novo valor criptografado com a nova chave mestra de coluna.
 
-1.  Usando o **Pesquisador de Objetos**, navegue até a pasta  **Segurança > Chaves Always Encrypted > Chaves Mestras de Coluna** e localize a chave mestra de coluna que você está girando.
+1.  Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança &gt; Chaves Always Encrypted &gt; Chaves Mestras de Coluna** e localize a chave mestra de coluna que você está girando.
 2.  Clique com o botão direito do mouse na chave mestra de coluna e selecione **Girar**.
 3.  Na caixa de diálogo **Rotação de Chave Mestra de Coluna** , selecione o nome de sua nova chave mestra de coluna, criada na Etapa 1, no campo **Destino** .
 4.  Examine a lista de chaves de criptografia de coluna, protegidas pelas chaves mestras de coluna existente. Essas chaves serão afetadas pela rotação.
@@ -328,7 +328,7 @@ O SQL Server Management Studio emitirá instruções [ALTER COLUMN ENCRYPTION KE
 **Etapa 5: Excluir metadados para a chave mestra de coluna antigo**
 
 Se você optar por remover a definição da chave mestra de coluna antiga do banco de dados, use as etapas abaixo. 
-1.  Usando o **Pesquisador de Objetos**, navegue até a pasta  **Segurança > Chaves Always Encrypted > Chaves Mestras de Coluna** e localize a chave mestra de coluna antiga a ser removida do banco de dados.
+1.  Usando o **Pesquisador de Objetos**, navegue até a pasta **Segurança &gt; Chaves Always Encrypted &gt; Chaves Mestras de Coluna** e localize a chave mestra de coluna antiga a ser removida do banco de dados.
 2.  Clique com o botão direito do mouse na chave mestra de coluna antiga e selecione **Excluir**. (Isso gerará e emitirá uma instrução [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) para remover os metadados da chave mestra de coluna.)
 3.  Clique em **OK**.
 

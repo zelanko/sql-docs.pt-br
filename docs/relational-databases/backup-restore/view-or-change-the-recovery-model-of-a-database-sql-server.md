@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   Um *modelo de recuperação* é uma propriedade de banco de dados que controla como as transações são registradas, se o log de transações exige (e permite) backup e que tipos de operações de restauração estão disponíveis. Existem três modelos de recuperação: simples, completo e bulk-logged. Geralmente, um banco de dados usa o modelo de recuperação completa ou o modelo de recuperação simples. É possível alternar para outro modelo de recuperação do banco de dados a qualquer momento. Os banco de dados **modelo** define o modelo de recuperação padrão de novos bancos de dados.  
   
-  Para obter mais uma explicação mais detalhada sobre os [modelos de recuperação](https://msdn.microsoft.com/library/ms189275.aspx), veja [Modelos de recuperação do SQL Server](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) fornecido pelo pessoal da [MSSQLTips!](https://www.mssqltips.com/)
+  Para obter mais uma explicação mais detalhada sobre os [modelos de recuperação](recovery-models-sql-server.md), veja [Modelos de recuperação do SQL Server](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) fornecido pelo pessoal da [MSSQLTips!](https://www.mssqltips.com/)
   
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 
--   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   [Back up the transaction log](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
   
 -   A recuperação pontual não é possível com modelo bulk-logged. A execução de transações sob o modelo de recuperação bulk-logged que exigem uma restauração do log de transações, pode sujeitá-las à perda de dados. Para maximizar a recuperabilidade de dados em um cenário de recuperação de desastres, mude para o modelo de recuperação bulk-logged somente nas seguintes condições:  
   

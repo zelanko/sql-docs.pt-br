@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 41831fe1852600666f5f3cf370cbab675e723cca
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Fazer backup de um log de transações (SQL Server)
@@ -31,11 +31,11 @@ ms.lasthandoff: 06/22/2017
    
 ##  <a name="Restrictions"></a> Limitações e restrições  
   
--   A instrução BACKUP não é permitida em uma transação explícita ou [implícita](https://msdn.microsoft.com/library/ms187807.aspx) .  Uma transação explícita é aquela para a qual você define o início e término da transação explicitamente.
+-   A instrução BACKUP não é permitida em uma transação explícita ou [implícita](../../t-sql/statements/set-implicit-transactions-transact-sql.md) .  Uma transação explícita é aquela para a qual você define o início e término da transação explicitamente.
   
 ##  <a name="Recommendations"></a> Recomendações  
   
--   Se um banco de dados usar o [modelo de recuperação](https://msdn.microsoft.com/library/ms189275.aspx) total ou log de transação em massa, você deverá fazer backup do log de transações com regularidade suficiente para proteger os dados e impedir que o [log de transações fique cheio](https://msdn.microsoft.com/library/ms175495.aspx). Isso trunca o log e oferece suporte à restauração do banco de dados para um período específico. 
+-   Se um banco de dados usar o [modelo de recuperação](recovery-models-sql-server.md) total ou log de transação em massa, você deverá fazer backup do log de transações com regularidade suficiente para proteger os dados e impedir que o [log de transações fique cheio](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). Isso trunca o log e oferece suporte à restauração do banco de dados para um período específico. 
   
 -   Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com frequência, essas mensagens de êxito serão acumuladas muito rapidamente, resultando em logs de erros imensos que dificultam a localização de outras mensagens. Nessas situações, você pode suprimir essas entradas de log usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   

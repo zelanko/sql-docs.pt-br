@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>Como o Repositório de Consultas coleta dados
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|O Repositório de Consultas divide o tempo em janelas de tempo geradas automaticamente (intervalos) e armazena estatísticas agregadas no intervalo para cada plano executado. O tamanho do intervalo é controlado pela opção de configuração Intervalo de Coleta de Estatísticas (em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou `INTERVAL_LENGTH_MINUTES` usando [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Estatísticas agregadas de tempo de execução para planos executados. Todas as métricas capturadas são expressas na forma de quatro funções de estatística: média, mínima, máxima e desvio padrão.|  
   
- Para obter detalhes adicionais sobre modos de exibição do Repositório de Consultas, veja a seção **Exibições, funções e procedimentos relacionados** de [Monitorando o desempenho com o repositório de consultas](https://msdn.microsoft.com/library/dn817826.aspx).  
+ Para obter detalhes adicionais sobre modos de exibição do Repositório de Consultas, veja a seção **Exibições, funções e procedimentos relacionados** de [Monitorando o desempenho com o repositório de consultas](monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="query-processing"></a>Query Processing  
  O Repositório de Consultas interage com o pipeline de processamento de consulta nos pontos-chave a seguir:  

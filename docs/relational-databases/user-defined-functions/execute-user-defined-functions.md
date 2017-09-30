@@ -17,18 +17,18 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08287922d15adabd1128da2edbb1caa65bc3f85f
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 121ec11d9bf1dbd380716da37e78463467d41f54
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="execute-user-defined-functions"></a>Executar funções definidas pelo usuário
   Execute uma função definida pelo usuário usando o Transact-SQL.
   
 
-> **Observação:** visite  [função definida pelo usuário](https://msdn.microsoft.com/library/ms191007.aspx) e [Criar função (Transact SQL](https://msdn.microsoft.com/library/ms186755.aspx) para saber mais sobre funções definidas pelo usuário. 
+> **Observação:** visite  [função definida pelo usuário](user-defined-functions.md) e [Criar função (Transact SQL](../../t-sql/statements/create-function-transact-sql.md) para saber mais sobre funções definidas pelo usuário. 
   
  
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Security"></a> Segurança  
   
- Não são solicitadas permissões para executar a instrução [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) . Porém, permissões **são necessárias** nos protegíveis mencionados na cadeia de caracteres EXECUTE. Por exemplo, se a cadeia de caracteres tiver uma instrução [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) , o chamador da instrução EXECUTE deverá ter a permissão INSERT na tabela de destino. As permissões são verificadas quando a instrução EXECUTE for encontrada, mesmo se ela estiver incluída em um módulo. Para obter mais informações, veja [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
+ Não são solicitadas permissões para executar a instrução [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) . Porém, permissões **são necessárias** nos protegíveis mencionados na cadeia de caracteres EXECUTE. Por exemplo, se a cadeia de caracteres tiver uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) , o chamador da instrução EXECUTE deverá ter a permissão INSERT na tabela de destino. As permissões são verificadas quando a instrução EXECUTE for encontrada, mesmo se ela estiver incluída em um módulo. Para obter mais informações, veja [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   

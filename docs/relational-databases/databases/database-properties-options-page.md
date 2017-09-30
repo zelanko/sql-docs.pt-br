@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
@@ -105,10 +105,10 @@ ms.lasthandoff: 08/29/2017
  Especifique o modelo de estimativa de cardinalidade do otimizador de consulta para os secundários, se houver, independentemente do nível de compatibilidade do banco de dados. Isso é equivalente ao [Sinalizador de Rastreamento 9481](https://support.microsoft.com/en-us/kb/2801413).  
   
  **DOP Máximo**  
- Especifique a configuração padrão [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) para o primário que deve ser usado para as instruções.  
+ Especifique a configuração padrão [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) para o primário que deve ser usado para as instruções.  
   
  **DOP Máximo para Secundário**  
- Especifique a configuração padrão [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) para os secundários, se houver, que devem ser usados para as instruções.  
+ Especifique a configuração padrão [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) para os secundários, se houver, que devem ser usados para as instruções.  
   
  **Detecção de parâmetros**  
  Habilita ou desabilita o parâmetro de detecção no primário. Isso é equivalente ao [Sinalizador de Rastreamento 4136](https://support.microsoft.com/en-us/kb/980653).  

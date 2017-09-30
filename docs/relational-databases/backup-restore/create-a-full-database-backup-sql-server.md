@@ -20,10 +20,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
@@ -153,7 +153,7 @@ ms.lasthandoff: 07/31/2017
 22. Na seção **criptografia** , use a caixa de seleção **Criptografar backup** para decidir se deverá ser usada criptografia para o backup. Use a lista suspensa **Algoritmo** para selecionar um algoritmo de criptografia.  Use a lista suspensa **Certificado ou Chave Assimétrica** para selecionar um Certificado ou Chave Assimétrica existente. A criptografia tem suporte no SQL Server 2014 ou posterior. Para obter mais detalhes sobre as opções de criptografia, consulte [Fazer backup do banco de dados &#40;página Opções de Backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
-É possível usar o [Assistente de Plano de Manutenção](https://msdn.microsoft.com/library/ms191002.aspx) para criar backups de bancos de dados. 
+É possível usar o [Assistente de Plano de Manutenção](../maintenance-plans/use-the-maintenance-plan-wizard.md) para criar backups de bancos de dados. 
 
 ### <a name="examples"></a>Exemplos  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.  Backup completo no disco no local padrão**

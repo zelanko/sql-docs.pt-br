@@ -18,11 +18,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d23b661d9fd99090a5140100513886d8351460b9
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
@@ -78,7 +78,7 @@ Características do log de transações [!INCLUDE[ssDEnoversion](../../includes/
 -  O log de transações pode ser implementado em vários arquivos. Os arquivos podem ser definidos para expandir automaticamente definindo-se o valor FILEGROWTH como log. Isso reduz a possibilidade de realizar a execução fora de espaço no log de transações, e ao mesmo tempo reduz a sobrecarga administrativa. Para obter mais informações, veja [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).
 -  O mecanismo para reutilizar o espaço dentro dos arquivos de log é rápido e tem efeito mínimo em taxa de transferência de transações.
 
-##  <a name="Truncation"></a> Transaction log truncation  
+##  <a name="Truncation"></a> Truncamento do log de transações  
  O truncamento de log libera espaço no arquivo de log para ser reutilizado pelo log de transações. Você deve truncar regularmente o log de transações para impedir que ele preencha o espaço alocado (o que certamente ocorrerá). Vários fatores podem atrasar o truncamento de log, portanto, o monitoramento do tamanho do log é importante. Algumas operações podem ser registradas em log minimamente para reduzir o impacto no tamanho do log de transações.  
  
   O truncamento de log exclui arquivos de log virtuais inativos do log de transações lógicas de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , liberando espaço no log lógico para reutilização pelo log de transações físicas. Se um log de transações nunca for truncado, eventualmente, ele preencherá todo o espaço em disco alocado para seus arquivos de log físicos.  
@@ -118,12 +118,12 @@ Características do log de transações [!INCLUDE[ssDEnoversion](../../includes/
 |13|OLDEST_PAGE|Se um banco de dados estiver configurado para usar pontos de verificação indiretos, a página mais antiga no banco de dados poderá ser mais antiga do que o LSN do ponto de verificação. Nesse caso, a página mais antiga pode atrasar o truncamento de log. (Todos os modelos de recuperação)<br /><br /> Para obter informações sobre pontos de verificação indiretos, consulte [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Esse valor não é usado atualmente.|  
   
-##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
- O*registro mínimo em log* envolve o registro somente das informações que são necessárias para recuperar a transação sem oferecer suporte à recuperação pontual. Este tópico identifica as operações com registro mínimo em log no [modelo de recuperação](https://msdn.microsoft.com/library/ms189275.aspx) bulk-logged (como também no modelo de recuperação simples, exceto quando há um backup em execução).  
+##  <a name="MinimallyLogged"></a> Operações que podem ser minimamente registradas em log  
+ O*registro mínimo em log* envolve o registro somente das informações que são necessárias para recuperar a transação sem oferecer suporte à recuperação pontual. Este tópico identifica as operações com registro mínimo em log no [modelo de recuperação](../backup-restore/recovery-models-sql-server.md) bulk-logged (como também no modelo de recuperação simples, exceto quando há um backup em execução).  
   
 > **OBSERVAÇÃO!** O log mínimo não tem suporte para tabelas com otimização de memória.  
   
-> **OUTRA OBSERVAÇÃO!** No [modelo de recuperação](https://msdn.microsoft.com/library/ms189275.aspx)completa, todas as operações em massa são completamente registradas. Porém, você pode minimizar o log de um conjunto de operações em massa alternando o banco de dados temporariamente para o modelo de recuperação bulk-logged, nas operações em massa. O registro mínimo em log é mais eficiente do que o registro completo, e reduz a possibilidade de que uma operação em massa em grande escala preencha o espaço do log de transações disponível durante uma transação em massa. Porém, se o banco de dados for danificado ou perdido quando o registro mínimo em log estiver em vigor, você não poderá recuperar o banco de dados até o ponto de falha.  
+> **OUTRA OBSERVAÇÃO!** No [modelo de recuperação](../backup-restore/recovery-models-sql-server.md)completa, todas as operações em massa são completamente registradas. Porém, você pode minimizar o log de um conjunto de operações em massa alternando o banco de dados temporariamente para o modelo de recuperação bulk-logged, nas operações em massa. O registro mínimo em log é mais eficiente do que o registro completo, e reduz a possibilidade de que uma operação em massa em grande escala preencha o espaço do log de transações disponível durante uma transação em massa. Porém, se o banco de dados for danificado ou perdido quando o registro mínimo em log estiver em vigor, você não poderá recuperar o banco de dados até o ponto de falha.  
   
  As operações a seguir, completamente registradas sob o modelo de recuperação completa, têm log mínimo no modelo de recuperação simples e bulk-logged:  
   
@@ -151,7 +151,7 @@ Quando a replicação transacional está habilitada, as operações SELECT INTO 
   
     -   Recriação de novo heap DROP INDEX (se aplicável). (A desalocação de páginas de índice durante uma operação [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) **sempre** é totalmente registrada em log.)
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Gerenciando o log de transações**  
   
 -   [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

@@ -15,11 +15,11 @@ caps.latest.revision: 31
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9113272fdba93720cdca5dcedb737092af8d4e1d
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 69fce52c0c651388656f5065b1b7b84ff98cbe82
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices columnstore – diretrizes de carregamento de dados
@@ -32,7 +32,7 @@ Opções e recomendações para carregar dados em um índice columnstore usando 
 
 ## <a name="what-is-bulk-loading"></a>O que é carregamento em massa?
 *Carregamento em massa* refere-se ao modo em que um grande número de linhas é adicionado a um armazenamento de dados. É o modo de melhor desempenho para mover dados para um índice columnstore porque opera em lotes de linhas. O carregamento em massa preenche rowgroups até a capacidade máxima e compacta-os diretamente no columnstore. Somente as linhas ao final de uma carga que não atende ao mínimo de 102.400 linhas por rowgroup vão para o deltastore.  
-Para executar uma carga em massa, você pode usar o [Utilitário bcp](https://msdn.microsoft.com/library/ms162802.aspx), o [Integration Services](https://msdn.microsoft.com/library/ms141026.aspx) ou selecionar linhas de uma tabela de preparo.
+Para executar uma carga em massa, você pode usar o [Utilitário bcp](../../tools/bcp-utility.md), o [Integration Services](../../integration-services/sql-server-integration-services.md) ou selecionar linhas de uma tabela de preparo.
 
 ![Carregando em um índice columnstore clusterizado](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Carregando em um índice columnstore clusterizado")  
   
@@ -103,7 +103,7 @@ INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <
   
 ## <a name="what-is-trickle-insert"></a>O que é a inserção de fluxo?
 
-*Inserção de fluxo* refere-se à forma como linhas individuais são movidas para o índice columnstore. As inserções de fluxo usam a instrução [INSERT INTO](https://msdn.microsoft.com/library/ms174335.aspx). Com a inserção de fluxo, todas as linhas vão para o deltastore. Isso é útil para um número pequeno de linhas, mas não é prático para grandes cargas.
+*Inserção de fluxo* refere-se à forma como linhas individuais são movidas para o índice columnstore. As inserções de fluxo usam a instrução [INSERT INTO](../../t-sql/statements/insert-transact-sql.md). Com a inserção de fluxo, todas as linhas vão para o deltastore. Isso é útil para um número pequeno de linhas, mas não é prático para grandes cargas.
   
 ```  
 INSERT INTO <table-name> VALUES (<set of values>)  

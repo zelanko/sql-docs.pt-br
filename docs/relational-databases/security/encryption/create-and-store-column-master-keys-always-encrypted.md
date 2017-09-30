@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1167a74aff5a5cfa495bc5a00a6b52e30a5c2e7b
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Criar e armazenar chaves mestras de coluna (Always Encrypted)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-*Chaves mestras de coluna* são chaves de proteção de chave usadas no Sempre Criptografado para criptografar chaves de criptografia de coluna. As chaves mestras de coluna devem ser armazenadas em um repositório de chaves confiável e precisam estar acessíveis aos aplicativos que precisam criptografar ou descriptografar dados e às ferramentas para a configuração do Sempre Criptografado e o gerenciamento de chaves Sempre Criptografado.
+*Chaves mestras de coluna* são chaves de proteção de chave usadas no Always Encrypted para criptografar chaves de criptografia de coluna. As chaves mestras de coluna devem ser armazenadas em um repositório de chaves confiável e precisam estar acessíveis aos aplicativos que precisam criptografar ou descriptografar dados e às ferramentas para a configuração do Sempre Criptografado e o gerenciamento de chaves Sempre Criptografado.
 
 Este artigo fornece detalhes para selecionar um repositório de chaves e criar chaves mestras de coluna para o Sempre Criptografado. Para obter uma visão detalhada, confira [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)(Visão geral do gerenciamento de chaves do Sempre Criptografado).
 
@@ -51,7 +51,7 @@ Os provedores internos disponíveis dependem do driver, da versão do driver e d
 
 ### <a name="supported-tools"></a>Ferramentas com suporte
 
-Você pode usar o [SQL Server Management Studio](https://msdn.microsoft.com/library/Hh213248.aspx) e o [módulo SqlServer do PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) para configurar o Sempre Criptografado e gerenciar chaves dele. Para obter uma lista de quais repositórios de chaves essas ferramenta dão suporte, veja:
+Você pode usar o [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) e o [módulo SqlServer do PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) para configurar o Always Encrypted e gerenciar chaves dele. Para obter uma lista de quais repositórios de chaves essas ferramenta dão suporte, veja:
 
 - [Configurar o Always Encrypted usando o SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configurar o Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
@@ -86,14 +86,14 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Criar um certificado autoassinado usando o SSMS (SQL Server Management Studio)
 
 Para obter detalhes, veja [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)(Configurar o Sempre Criptografado usando o SQL Server Management Studio).
-Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Sempre Criptografado no Repositório de Certificados do Windows, veja [Sempre Criptografado – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de banco de dados e armazenar as chaves de criptografia no Repositório de Certificados do Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
+Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Always Encrypted no Repositório de Certificados do Windows, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de banco de dados e armazenar as chaves de criptografia no Repositório de Certificados do Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>Disponibilizando certificados para aplicativos e usuários
 
-Se a chave mestra de coluna for um certificado armazenado na localização do repositório de certificados do *computador local* , você precisará exportar o certificado com a chave privada e importá-lo para todos os computadores que hospedam aplicativos que devem criptografar ou descriptografar dados armazenados em colunas criptografadas ou ferramentas para a configuração do Sempre Criptografado e o gerenciamento das chaves do Sempre Criptografado. Além disso, cada usuário deve ter uma permissão de leitura para o certificado armazenado na localização do repositório de certificados do computador local para poder usar o certificado como uma chave mestra de coluna.
+Se a chave mestra de coluna for um certificado armazenado na localização do repositório de certificados do *computador local* , você precisará exportar o certificado com a chave privada e importá-lo para todos os computadores que hospedam aplicativos que devem criptografar ou descriptografar dados armazenados em colunas criptografadas ou ferramentas para a configuração do Always Encrypted e o gerenciamento das chaves do Always Encrypted. Além disso, cada usuário deve ter uma permissão de leitura para o certificado armazenado na localização do repositório de certificados do computador local para poder usar o certificado como uma chave mestra de coluna.
 
-Se a chave mestra de coluna for um certificado armazenado na localização do repositório de certificados do *computador local* , você precisará exportar o certificado com a chave privada e importá-lo para a localização do repositório de certificados do usuário atual de todas as contas de usuário que executam aplicativos que devem criptografar ou descriptografar dados armazenados em colunas criptografadas ou ferramentas para a configuração do Sempre Criptografado e o gerenciamento das chaves do Sempre Criptografado (em todos os computadores que contém esses aplicativos ou essas ferramentas). Nenhuma configuração de permissão é necessária – depois de fazer logon em um computador, um usuário pode acessar todos os certificados em sua localização do repositório de certificados do usuário atual.
+Se a chave mestra de coluna for um certificado armazenado na localização do repositório de certificados do *computador local* , você precisará exportar o certificado com a chave privada e importá-lo para a localização do repositório de certificados do usuário atual de todas as contas de usuário que executam aplicativos que devem criptografar ou descriptografar dados armazenados em colunas criptografadas ou ferramentas para a configuração do Always Encrypted e o gerenciamento das chaves do Always Encrypted (em todos os computadores que contém esses aplicativos ou essas ferramentas). Nenhuma configuração de permissão é necessária – depois de fazer logon em um computador, um usuário pode acessar todos os certificados em sua localização do repositório de certificados do usuário atual.
 
 #### <a name="using-powershell"></a>Usando o PowerShell
 Use os cmdlets [Import-PfxCertificate](https://msdn.microsoft.com/library/hh848625.aspx) e [Export-PfxCertificate](https://msdn.microsoft.com/library/hh848635.aspx) para importar e exportar um certificado.
@@ -137,7 +137,7 @@ $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destinatio
 
 #### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 
-Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Sempre Criptografado em um Cofre de Chaves do Azure, veja [Sempre Criptografado – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de dados e armazenar as chaves de criptografia no Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
+Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Always Encrypted em um Cofre de Chaves do Azure, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de dados e armazenar as chaves de criptografia no Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Disponibilizando as chaves do Cofre de Chaves do Azure para aplicativos e usuários
 
@@ -240,8 +240,8 @@ Confira a documentação do HSM e do CSP para saber como configurar o CSP em um 
 ## <a name="additional-resources"></a>Recursos adicionais  
 
 - [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Sempre criptografados (mecanismo de banco de dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Desenvolver aplicativos usando o Sempre Criptografado com o Provedor de Dados .NET Framework para SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+- [Always Encrypted (mecanismo de banco de dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Desenvolver aplicativos usando o Always Encrypted com o Provedor de Dados .NET Framework para SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Blog do Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
 

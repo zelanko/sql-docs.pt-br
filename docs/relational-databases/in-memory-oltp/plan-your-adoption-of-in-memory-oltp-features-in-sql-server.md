@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
@@ -99,7 +99,7 @@ Uma maneira de converter a tabela baseada em disco em uma tabela com otimizaçã
 A ferramenta Orientador de Otimização de Memória pode gerar um script para ajudar a implementar a conversão de uma tabela baseada em disco para uma tabela com otimização de memória. A ferramenta é instalada como parte do SSDT (SQL Server Data Tools).
 
 - [Orientador de otimização da memória](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [Baixar o SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)
+- [Baixar o SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### <a name="dacpac-file"></a>Arquivo .dacpac

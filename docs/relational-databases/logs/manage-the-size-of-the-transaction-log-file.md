@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: cd1931ef0f77c0a1e31c29833f38c51416e267c8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9076e3fbddd2af5459e4d8895ce969c61a4315ad
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
@@ -78,7 +78,7 @@ Monitore o uso do espaço de log usando [DBCC SQLPERF (LOGSPACE)](https://docs.m
 -   Para alterar o tamanho do arquivo atual em unidades KB, MB, GB e TB, use a opção SIZE.  
   -   Para alterar o incremento de crescimento, use a opção FILEGROWTH. Um valor 0 indica que o crescimento automático está definido como off e nenhum espaço adicional é permitido. Um pequeno crescimento automático em um arquivo de log também pode prejudicar o desempenho. O incremento de crescimento do arquivo em um arquivo de log deve ser suficientemente grande para evitar a expansão frequente. O incremento de crescimento padrão de 10 por cento, em geral, é satisfatório.  
 
-Para obter informações sobre como alterar a propriedade de crescimento de arquivo em um arquivo de log, consulte [ALTER DATABASE (Transact-SQL)](https://msdn.microsoft.com/library/ms174269.aspx).  
+Para obter informações sobre como alterar a propriedade de crescimento de arquivo em um arquivo de log, consulte [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
 -   Para controlar ao máximo o tamanho de um arquivo de log em unidades KB, MB, GB e TB, ou para definir o crescimento como UNLIMITED, use a opção MAXSIZE.  
   

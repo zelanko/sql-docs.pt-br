@@ -24,10 +24,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -36,7 +36,7 @@ ms.lasthandoff: 07/31/2017
   Este tópico explica como restaurar um backup completo do banco de dados usando o SQL Server Management Studio.    
        
 ### <a name="important"></a>Importante:    
-Antes de poder restaurar um banco de dados no modelo de recuperação completa ou bulk-logged, talvez seja necessário fazer backup do log de transações ativas (conhecido como a [parte final do log](https://msdn.microsoft.com/library/ms179314.aspx)). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
+Antes de poder restaurar um banco de dados no modelo de recuperação completa ou bulk-logged, talvez seja necessário fazer backup do log de transações ativas (conhecido como a [parte final do log](tail-log-backups-sql-server.md)). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
 
 Ao restaurar um banco de dados de outra instância, considere as informações descritas em [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).   
     

@@ -16,11 +16,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backups de instantâneo de arquivo para arquivos de banco de dados no Azure
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 >  Após o backup inicial completo, obrigatório para estabelecer a cadeia de backup de log de transações (que pode ser um backup de instantâneo de arquivo), basta executar os backups de log de transações, pois cada conjunto de backups de instantâneo de arquivo do log de transações contém instantâneos de arquivo de todos os arquivos de banco de dados, e pode ser usado para executar uma restauração de banco de dados ou uma restauração de log. Após o backup inicial completo do banco de dados, não é necessário realizar outros backups completos ou diferenciais, pois o serviço de Armazenamento de Blobs do Azure lida com as diferenças entre cada instantâneo de arquivo e o estado atual do blob de base de cada arquivo de banco de dados.  
   
 > [!NOTE]  
->  Para obter um tutorial sobre como usar o SQL Server 2016 com o serviço de Armazenamento de Blobs do Microsoft Azure, confira [Tutorial: usando o serviço de Armazenamento de Blobs do Microsoft Azure com bancos de dados do SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx)  
+>  Para obter um tutorial sobre como usar o SQL Server 2016 com o serviço de Armazenamento de Blobs do Microsoft Azure, confira [Tutorial: usando o serviço de Armazenamento de Blobs do Microsoft Azure com bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ### <a name="restore-using-file-snapshot-backups"></a>Restaurar usando backups de instantâneo de arquivo  
  Como cada conjunto de backups de instantâneo de arquivo contém um instantâneo de arquivo de cada arquivo de banco de dados, e um processo de restauração exige no máximo dois conjuntos adjacentes de backup de instantâneo de arquivo. Isso é verdadeiro independentemente de o conjunto de backup ser de um backup de banco de dados completo ou de um backup de log. Isso é muito diferente do processo de restauração que usa arquivos de backup de streaming tradicional para executar o processo de restauração. Com o backup de streaming tradicional, o processo de restauração exige o uso de uma cadeia inteira de conjuntos de backup: o backup completo, um backup diferencial e um ou mais backups de log de transações. A parte de recuperação do processo de restauração permanece a mesma, independentemente de a restauração usar um backup de instantâneo de arquivo ou um conjunto de backup de streaming.  
@@ -184,7 +184,7 @@ GO
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutorial: usando o serviço de Armazenamento de Blobs do Microsoft Azure com bancos de dados do SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Tutorial: usando o serviço de Armazenamento de Blobs do Microsoft Azure com bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
 

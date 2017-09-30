@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transações com tabelas com otimização de memória
@@ -84,18 +84,18 @@ Portanto, é necessário ter uma dica de tabela na tabela com otimização de me
   
   
   
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
+      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+      GO  
   
-    BEGIN TRANSACTION; – Transação explícita.  
+      BEGIN TRANSACTION;  -- Explicit transaction.  
   
       -- Order_mo  is a memory-optimized table.  
-    SELECT *  
+      SELECT *  
        FROM  
-                dbo.Order_mo  as o  WITH (SNAPSHOT)  – Dica de tabela.  
+                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
            JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
       
-    COMMIT TRANSACTION;  
+      COMMIT TRANSACTION;  
   
 Observe que pode-se evitar a necessidade da dica `WITH (SNAPSHOT)` com o uso da opção de banco de dados `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`. Quando essa opção é definida como `ON`, o acesso a uma tabela com otimização de memória em um nível de isolamento inferior é elevado automaticamente para o isolamento SNAPSHOT.  
   
@@ -308,7 +308,7 @@ No exemplo de código Transact-SQL a seguir:
   
 - Nenhuma instrução explícita de controle de transação é permitida dentro do corpo de um processo nativo BEGIN TRANSACTION, ROLLBACK TRANSACTION e assim por diante são todos não permitidos.  
   
-- Para obter mais informações sobre o controle de transações com blocos ATOMIC, veja [Blocos atômicos](https://msdn.microsoft.com/library/dn452281.aspx)  
+- Para obter mais informações sobre o controle de transações com blocos ATOMIC, veja [Blocos atômicos](atomic-blocks-in-native-procedures.md)  
   
 <a name="othertxnlinks44ni"/>  
   

@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4d54ac6d74c9794acfcc241e56ee6c128c9c50e2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: db336415059b9bc6b6251d9e590ac852903b66f8
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-engine-tutorials"></a>Tutoriais do Mecanismo de Banco de Dados
@@ -48,10 +48,10 @@ Este tutorial usa um cenário para ilustrar os conceitos de segurança do [!INCL
 [Tutorial: Administrando servidores com o uso do Gerenciamento Baseado em Políticas](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 Este tutorial ensina como criar políticas que impõem padrões de administração de site.  
   
-[Tutorial: backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Tutorial: Backup e restauração do SQL Server para o serviço de armazenamento de Blob do Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 Este tutorial ilustra como fazer um backup do SQL Server e uma restauração do SQL Server para o serviço de armazenamento de Blob do Windows Azure.  
   
-[Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016 ](https://msdn.microsoft.com/library/dn466438.aspx)  
+[Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016 ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 Este tutorial explica como armazenar diretamente os arquivos de dados do SQL Server no serviço de armazenamento de Blob do Windows Azure.  
   
 ## <a name="see-also"></a>Consulte também  

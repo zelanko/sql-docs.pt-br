@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
@@ -48,7 +48,7 @@ ms.lasthandoff: 07/31/2017
 
  Com cada uma dessas abordagens, a lógica para a migração ou limpeza de dados históricos baseia-se na coluna que corresponde ao término do período na tabela atual. O final do valor do período para cada linha determina o momento em que a versão de linha se torna "fechada", ou seja, quando ela chega à tabela de histórico. Por exemplo, a condição `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` especifica que dados históricos com mais de um mês precisam ser removidos ou movidos da tabela de histórico.  
   
-> **OBSERVAÇÃO:**  os exemplos deste tópico usam este [exemplo de Tabela Temporal](https://msdn.microsoft.com/library/mt590957.aspx).  
+> **OBSERVAÇÃO:**  os exemplos deste tópico usam este [exemplo de Tabela Temporal](creating-a-system-versioned-temporal-table.md).  
   
 ## <a name="using-stretch-database-approach"></a>Utilização da abordagem do Stretch Database  
   
@@ -58,12 +58,12 @@ ms.lasthandoff: 07/31/2017
   
  Ao utilizar a abordagem do Stretch Database, você pode ampliar algumas ou todas as tabelas de histórico temporal para o Azure e, assim, o SQL Server moverá silenciosamente os dados históricos para o Azure. Habilitar a ampliação de uma tabela de histórico não altera a forma como você interage com a tabela temporal em termos de modificação de dados e consultas temporais.  
   
--   **Ampliar toda a tabela de histórico:** configure o Stretch Database para a tabela de histórico inteira se o seu cenário principal for a auditoria de dados no ambiente com alterações frequentes dos dados e consultas relativamente raras em dados históricos.  Em outras palavras, use essa abordagem se o desempenho de consultas temporais não for crítico. Nesse caso, o custo-benefício fornecido pelo Azure pode ser atraente.   
+-   **Ampliar toda a tabela de histórico:** configure o Stretch Database para a tabela de histórico inteira se seu cenário principal for a auditoria de dados no ambiente com alterações frequentes dos dados e consultas relativamente raras em dados históricos.  Em outras palavras, use essa abordagem se o desempenho de consultas temporais não for crítico. Nesse caso, o custo-benefício fornecido pelo Azure pode ser atraente.   
     Ao ampliar a tabela de histórico inteira, você pode usar o Assistente de Ampliação ou o Transact-SQL. Exemplos de ambos são exibidos abaixo.  
   
 -   **Ampliar uma parte da tabela de histórico:** configure o Stretch Database para apenas uma parte de sua tabela de histórico para melhorar o desempenho se o cenário principal envolver principalmente a consulta de dados históricos recentes e você desejar preservar a opção para consultar dados históricos mais antigos, quando necessário, ao armazenar esses dados remotamente a um custo menor. Com o Transact-SQL, você pode fazer isso especificando uma função de predicado para selecionar as linhas que serão migradas da tabela de histórico, em vez de todas as linhas.  Quando você trabalha com tabelas temporais, geralmente faz sentido mover dados com base na condição de tempo (ou seja, com base na idade da versão de linha na tabela de histórico).    
     Usando uma função de predicado determinística, você pode manter parte do histórico no mesmo banco de dados com os dados atuais, enquanto o restante é migrado para o Azure.    
-    Para obter exemplos e limitações, consulte [Selecionar linhas para migração usando uma função de filtro (Stretch Database)](https://msdn.microsoft.com/library/mt613432.aspx). Como as funções não determinísticas não são válidas, se você quiser transferir dados históricos usando o modo de janela deslizante, precisaria alterar regularmente a definição da função de predicado embutido para que a janela de linhas que você mantém localmente fosse constante em termos de idade. A janela deslizante permite mover constantemente dados históricos com mais de um mês para o Azure. Um exemplo dessa abordagem é exibido abaixo.  
+    Para obter exemplos e limitações, consulte [Selecionar linhas para migração usando uma função de filtro (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Como as funções não determinísticas não são válidas, se você quiser transferir dados históricos usando o modo de janela deslizante, precisaria alterar regularmente a definição da função de predicado embutido para que a janela de linhas que você mantém localmente fosse constante em termos de idade. A janela deslizante permite mover constantemente dados históricos com mais de um mês para o Azure. Um exemplo dessa abordagem é exibido abaixo.  
   
 > **OBSERVAÇÃO:** o Stretch Database migra dados para o Azure. Portanto, você precisa ter uma conta do Azure e uma assinatura para cobrança. Para obter uma conta de avaliação gratuita do Azure, clique em [Avaliação gratuita de um mês](https://azure.microsoft.com/pricing/free-trial/).  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 07/31/2017
   
      ![Página Selecionar endereço IP do Assistente do Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Selecionar endereço IP do Assistente do Stretch Database")  
   
-6.  Após a conclusão do assistente, verifique se o seu banco de dados foi habilitado com êxito para Stretch. Observe os ícones no Pesquisador de Objetos indicando que o banco de dados foi transferido  
+6.  Após a conclusão do assistente, verifique se seu banco de dados foi habilitado com êxito para Stretch. Observe os ícones no Pesquisador de Objetos indicando que o banco de dados foi transferido  
   
 > **OBSERVAÇÃO:** se a opção Habilitar Banco de Dados para Stretch falhar, examine o log de erros. Um erro comum é a configuração incorreta da regra de firewall.  
   
@@ -111,7 +111,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Usando o Transact-SQL para alongar uma parte da tabela de histórico  
- Para transferir apenas uma parte da tabela de histórico, comece criando uma [função de predicado embutido](https://msdn.microsoft.com/library/mt613432.aspx). Para este exemplo, vamos supor que você tenha configurado a função de predicado embutido pela primeira vez no dia 1 de dezembro de 2015 e deseja alongar para o Azure todas as datas de histórico anteriores ao dia 1 de novembro de 2015. Para fazer isso, comece criando a seguinte função:  
+ Para transferir apenas uma parte da tabela de histórico, comece criando uma [função de predicado embutido](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Para este exemplo, vamos supor que você tenha configurado a função de predicado embutido pela primeira vez no dia 1 de dezembro de 2015 e deseja alongar para o Azure todas as datas de histórico anteriores ao dia 1 de novembro de 2015. Para fazer isso, comece criando a seguinte função:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -165,7 +165,7 @@ COMMIT ;
  Use o SQL Server Agent ou outro mecanismo de agendamento para garantir uma definição de função de predicado válida o tempo todo.  
   
 ## <a name="using-table-partitioning-approach"></a>Uso da Abordagem de Particionamento de Tabela  
- O[Particionamento de tabela](https://msdn.microsoft.com/library/ms188730.aspx) pode tornar as tabelas grandes mais gerenciáveis e escalonáveis. Usando a abordagem de particionamento de tabela, você pode usar partições de tabela de histórico para implementar a limpeza de dados personalizados ou o arquivamento offline com base em uma condição de tempo. O particionamento de tabela também oferece benefícios de desempenho ao consultar tabelas temporais em um subconjunto de histórico de dados por meio da eliminação da partição.  
+ O[Particionamento de tabela](../partitions/create-partitioned-tables-and-indexes.md) pode tornar as tabelas grandes mais gerenciáveis e escalonáveis. Usando a abordagem de particionamento de tabela, você pode usar partições de tabela de histórico para implementar a limpeza de dados personalizados ou o arquivamento offline com base em uma condição de tempo. O particionamento de tabela também oferece benefícios de desempenho ao consultar tabelas temporais em um subconjunto de histórico de dados por meio da eliminação da partição.  
   
  Com o particionamento de tabela, você pode implementar uma abordagem de janela deslizante para mover a parte mais antiga dos dados históricos da tabela de histórico e manter constante o tamanho da parte retida em termos de idade, mantendo os dados na tabela de histórico iguais ao período de retenção necessário. A operação de extração de dados da tabela de histórico é suportada enquanto SYSTEM_VERSIONING estiver configurado como ATIVO. Isso significa que você pode limpar uma parte dos dados de histórico sem introduzir uma janela de manutenção ou bloquear suas cargas de trabalho regulares.  
   
@@ -431,13 +431,13 @@ COMMIT;
 ## <a name="using-temporal-history-retention-policy-approach"></a>Usando a abordagem de política de retenção de histórico temporal
 > **Observação:** “Usando a abordagem de política de retenção de histórico temporal” aplica-se a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e ao SQL Server 2017 partir do CTP 1.3.  
 
-A retenção de histórico temporal pode ser configurada no nível da tabela individual, permitindo aos usuários criar políticas de vencimento flexíveis. A aplicação de retenção temporal é simples: requer apenas um parâmetro a ser definido durante a criação da tabela ou alteração do esquema.
+A retenção de histórico temporal pode ser configurado no nível de tabela individual, que permite aos usuários criar políticas de vencimento flexíveis. A aplicação de retenção temporal é simples: requer apenas um parâmetro a ser definido durante a criação da tabela ou alteração do esquema.
 
-Depois de definir a política de retenção, o Banco de Dados SQL do Azure começa a verificar regularmente se há linhas de histórico qualificadas para a limpeza automática de dados. A identificação das linhas correspondentes e a remoção delas da tabela de histórico ocorrem de forma transparente na tarefa em segundo plano, que é agendada e executada pelo sistema. A condição de vencimento para as linhas da tabela de histórico é verificada com base na coluna que representa o final do período SYSTEM_TIME. Se o período de retenção for definido como seis meses, por exemplo, as linhas da tabela qualificadas para limpeza atenderão a seguinte condição:
+Depois de definir a política de retenção, o Banco de Dados SQL do Azure começa a verificar regularmente se há linhas de histórico qualificadas para a limpeza automática de dados. A identificação das linhas correspondentes e sua remoção da tabela de histórico ocorrem de forma transparente na tarefa em segundo plano que é agendada e executada pelo sistema. A condição de vencimento para as linhas da tabela de histórico é verificada com base na coluna que representa o final do período SYSTEM_TIME. Se o período de retenção for definido como seis meses, por exemplo, as linhas de tabela qualificadas para limpeza atenderão a seguinte condição:
 ```
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 ```
-No exemplo anterior, supomos que a coluna ValidTo corresponde ao final do período SYSTEM_TIME.
+No exemplo anterior, supomos que a coluna de ValidTo corresponde ao final do período SYSTEM_TIME.
 ### <a name="how-to-configure-retention-policy"></a>Como configurar a política de retenção?
 Antes de configurar a política de retenção para uma tabela temporal, verifique primeiro se a retenção de histórico temporal está habilitada no nível do banco de dados:
 ```
@@ -469,7 +469,7 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-Você pode especificar o período de retenção usando unidades de tempo diferentes: DAYS (dias), WEEKS (semanas), MONTHS (meses) e YEARS (anos). Se HISTORY_RETENTION_PERIOD for omitido, a retenção será considerada INFINITE (infinita). Também é possível usar a palavra-chave INFINITE explicitamente.
+Você pode especificar o período de retenção usando unidades de tempo diferentes: DAYS (dias), WEEKS (semanas), MONTHS (meses) e YEARS (anos). Se HISTORY_RETENTION_PERIOD for omitido, a retenção será considerada INFINITE (infinita). Também é possível usar a palavras-chave INFINITE explicitamente.
 Em alguns cenários, pode ser útil configurar a retenção após a criação da tabela ou alterar o valor configurado anteriormente. Neste caso, use a instrução ALTER TABLE:
 ```
 ALTER TABLE dbo.WebsiteUserInfo
@@ -489,9 +489,9 @@ LEFT JOIN sys.tables T2
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
 ### <a name="how-sql-database-deletes-aged-rows"></a>Como o Banco de Dados SQL exclui linhas antigas?
-O processo de limpeza depende do layout do índice da tabela de histórico. É importante observar que *somente tabelas de histórico com um índice clusterizado (árvore B ou columnstore) podem ter uma política de retenção finita configurada*. Uma tarefa em segundo plano é criada para executar a limpeza de dados antigos para todas as tabelas temporais com período de retenção finito. A lógica de limpeza para o índice clusterizado rowstore (árvore B) exclui as linhas antigas em partes menores (até 10K) minimizando a pressão sobre o log do banco de dados e o subsistema de E/S. Embora a lógica de limpeza utilize o índice de árvore B necessário, a ordem das exclusões para as linhas mais antigas que o período de retenção não pode ser garantida. Portanto, *não assuma nenhuma dependência na ordem de limpeza em seus aplicativos*.
+O processo de limpeza depende do layout do índice da tabela de histórico. É importante observar que *somente tabelas de histórico com um índice clusterizado (árvore B ou columnstore) podem ter uma política de retenção finita configurada*. Uma tarefa em segundo plano é criada para executar a limpeza de dados antigos para todas as tabelas temporais com período de retenção finito. A lógica de limpeza para o índice clusterizado rowstore (árvore B) exclui as linhas antigas em partes menores (até 10K) minimizando a pressão sobre o log do banco de dados e o subsistema de E/S. Embora a lógica de limpeza utilize o índice de árvore B necessário, a ordem das exclusões para as linhas mais antigas que o período de retenção não pode ser garantido com certeza. Portanto, *não assuma nenhuma dependência na ordem de limpeza em seus aplicativos*.
 
-A tarefa de limpeza para o columnstore clusterizado remove grupos de linha inteiros de uma vez (que normalmente contêm 1 milhão de linhas em cada), o que é muito eficiente, especialmente quando os dados históricos são gerados em alta velocidade.
+A tarefa de limpeza para o columnstore clusterizado remove grupos de linha inteiros de uma vez (que normalmente contém 1 milhão de linhas em cada), o que é muito eficiente, especialmente quando os dados históricos são gerados em alta velocidade.
 
 ![Retenção de columnstore clusterizado](../../relational-databases/tables/media/cciretention.png "Retenção de columnstore clusterizado")
 

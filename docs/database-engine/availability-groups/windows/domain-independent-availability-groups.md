@@ -1,7 +1,7 @@
 ---
 title: "Grupos de disponibilidade independentes de domínio (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 847c34fedcaa48149a6545d830af021aae26f530
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -45,7 +45,7 @@ A próxima figura mostra um exemplo de um Grupo de Disponibilidade Independente 
 
 ![Cluster de Grupo de Trabalho com dois nós ingressados em um domínio][2]
 
-Um Grupo de Disponibilidade Independente de Domínio não serve apenas para cenários de recuperação de desastre ou multissite. Ele pode ser implantado em um data center individual e até mesmo usado com um [Grupo de Disponibilidade Básico](https://msdn.microsoft.com/library/mt614935.aspx) (também conhecido como um grupo de disponibilidade da Standard Edition) para fornecer uma arquitetura semelhante à que costumava ser obtida usando o Espelhamento de Banco de Dados com certificados, conforme mostrado.
+Um Grupo de Disponibilidade Independente de Domínio não serve apenas para cenários de recuperação de desastre ou multissite. Ele pode ser implantado em um data center individual e até mesmo usado com um [Grupo de Disponibilidade Básico](basic-availability-groups-always-on-availability-groups.md) (também conhecido como um grupo de disponibilidade da Standard Edition) para fornecer uma arquitetura semelhante à que costumava ser obtida usando o Espelhamento de Banco de Dados com certificados, conforme mostrado.
 
 
 ![Exibição de alto nível de um AG na Standard Edition][3]
@@ -123,7 +123,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. Crie o ponto de extremidade que será usado pelo grupo de disponibilidade em cada instância que será uma réplica. Para grupos de disponibilidade, o ponto de extremidade deve ter um tipo de DATABASE_MIRRORING. O ponto de extremidade usa o certificado criado na Etapa 4 para essa instância para autenticação. Uma sintaxe de exemplo é mostrada abaixo para a criação de um ponto de extremidade usando um certificado. Use o método de criptografia apropriado e outras opções relevantes para o ambiente. Para obter mais informações sobre as opções disponíveis, consulte [CREATE ENDPOINT (Transact-SQL)](https://msdn.microsoft.com/library/ms181591.aspx).
+12. Crie o ponto de extremidade que será usado pelo grupo de disponibilidade em cada instância que será uma réplica. Para grupos de disponibilidade, o ponto de extremidade deve ter um tipo de DATABASE_MIRRORING. O ponto de extremidade usa o certificado criado na Etapa 4 para essa instância para autenticação. Uma sintaxe de exemplo é mostrada abaixo para a criação de um ponto de extremidade usando um certificado. Use o método de criptografia apropriado e outras opções relevantes para o ambiente. Para obter mais informações sobre as opções disponíveis, consulte [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED
@@ -141,7 +141,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. Quando os certificados subjacentes e a segurança do ponto de extremidade são configurados, crie o grupo de disponibilidade usando seu método preferido. É recomendável fazer backup manualmente, copiar e restaurar o backup usado para inicializar a secundária ou usar a [propagação automática](https://msdn.microsoft.com/library/mt735149.aspx). O uso do Assistente para inicializar as réplicas secundárias envolve o uso de arquivos do protocolo SMB, que talvez não funcionem ao usar um Cluster de Grupo de Trabalho não ingressado no domínio.
+14. Quando os certificados subjacentes e a segurança do ponto de extremidade são configurados, crie o grupo de disponibilidade usando seu método preferido. É recomendável fazer backup manualmente, copiar e restaurar o backup usado para inicializar a secundária ou usar a [propagação automática](automatically-initialize-always-on-availability-group.md). O uso do Assistente para inicializar as réplicas secundárias envolve o uso de arquivos do protocolo SMB, que talvez não funcionem ao usar um Cluster de Grupo de Trabalho não ingressado no domínio.
 15. Se estiver criando um ouvinte, verifique se seu nome e endereço IP são registrados no DNS.
 
 ### <a name="next-steps"></a>Próximas etapas 
@@ -151,8 +151,6 @@ GO
 - [Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Criar um grupo de disponibilidade com o Transact-SQL](create-an-availability-group-transact-sql.md)
-
->Este conteúdo foi escrito por [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

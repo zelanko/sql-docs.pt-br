@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Arquivos de dados do SQL Server no Microsoft Azure
@@ -30,7 +30,7 @@ ms.lasthandoff: 07/31/2017
   
  Este tópico apresenta os conceitos e as considerações que são essenciais para armazenar arquivos de dados do SQL Server no serviço de Armazenamento do Microsoft Azure.  
   
- Para ter uma experiência prática sobre como usar esse novo recurso, consulte [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016 ](https://msdn.microsoft.com/library/dn466438.aspx).  
+ Para ter uma experiência prática sobre como usar esse novo recurso, consulte [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016 ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Por que usar Arquivos de Dados do SQL Server no Microsoft Azure? 
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
   
 -   **Benefícios de alta disponibilidade e recuperação de desastres:** usar o recurso de arquivos de dados do SQL Server no Microsoft Azure pode simplificar as soluções de alta disponibilidade e recuperação de desastres. Por exemplo, se uma máquina virtual no Microsoft Azure ou em uma instância do SQL Server falhar, você poderá recriar seus bancos de dados em uma nova instância do SQL Server apenas restabelecendo links para os Blobs do Microsoft Azure.  
   
--   **Benefícios de segurança:** esse novo aprimoramento permite que você separe uma instância de computação de uma instância de armazenamento. Você pode ter um banco de dados totalmente criptografado com a descriptografia ocorrendo apenas na instância de computação, mas não em uma instância de armazenamento. Ou seja, com esse novo aprimoramento, você poderá criptografar todos os dados na nuvem pública usando certificados de TDE (Criptografia de Dados Transparente), que são separados fisicamente dos dados. As chaves de TDE podem ser armazenadas no banco de dados mestre, que é armazenado localmente em seu computador local seguro fisicamente e com backup feito localmente. Você pode usar essas chaves locais para criptografar os dados, que residem no Armazenamento do Microsoft Azure. Se as suas credenciais de conta de armazenamento de nuvem forem roubadas, seus dados permanecerão seguros porque os certificados de TDE sempre residirão no local.  
+-   **Benefícios de segurança:** esse novo aprimoramento permite que você separe uma instância de computação de uma instância de armazenamento. Você pode ter um banco de dados totalmente criptografado com a descriptografia ocorrendo apenas na instância de computação, mas não em uma instância de armazenamento. Ou seja, com esse novo aprimoramento, você poderá criptografar todos os dados na nuvem pública usando certificados de TDE (Criptografia de Dados Transparente), que são separados fisicamente dos dados. As chaves de TDE podem ser armazenadas no banco de dados mestre, que é armazenado localmente em seu computador local seguro fisicamente e com backup feito localmente. Você pode usar essas chaves locais para criptografar os dados, que residem no Armazenamento do Microsoft Azure. Se suas credenciais de conta de armazenamento de nuvem forem roubadas, seus dados permanecerão seguros porque os certificados de TDE sempre residirão no local.  
   
 -   **Backup de instantâneo:**  Este recurso permite usar os instantâneos do Azure para fornecer backups quase imediatos e restaurações mais rápidas para os arquivos de banco de dados armazenados usando o serviço de Armazenamento de Blobs do Azure. Esse recurso permite que você simplifique as políticas de backup e restauração. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>Suporte ao SQL Server Management Studio  
  O SQL Server Management Studio permite usar esse recurso por meio de várias janelas da caixa de diálogo. Por exemplo, você pode digitar o caminho da URL do contêiner de armazenamento, como > https://teststorageaccnt.blob.core.windows.net/testcontainer/:
  
- como um **Caminho** em várias janelas de diálogo, como **Novo Banco de Dados**, **Anexar Banco de Dados**e **Restaurar Banco de Dados**. Para obter mais informações, consulte [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx).  
+ como um **Caminho** em várias janelas de diálogo, como **Novo Banco de Dados**, **Anexar Banco de Dados**e **Restaurar Banco de Dados**. Para obter mais informações, consulte [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ### <a name="sql-server-management-objects-support"></a>Suporte ao SQL Server Management Objects  
  Ao usar o recurso Arquivos de Dados do SQL Server no Azure, há suporte para o SMO (SQL Server Management Objects). Se um objeto SMO exigir um caminho de arquivo, use o formato de URL do BLOB em vez do caminho de um arquivo local, como `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Para obter mais informações sobre SQL SMO (Server Management Objects), consulte [Guia de Programação do SQL SMO &#40;SQL Server Management Objects&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) nos Manuais Online do SQL Server.  
@@ -155,10 +155,10 @@ ON
     Resolução: você poderá ver este erro ao tentar remover uma credencial que ainda está sendo usada por um arquivo de banco de dados ativo no Armazenamento do Azure. Para descartar a credencial, primeiro exclua o blob associado que contém esse arquivo de banco de dados. Para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
   
 -   *A assinatura de acesso compartilhado não foi criada no contêiner corretamente.*   
-     Resolução: verifique se você criou uma assinatura de acesso compartilhado no contêiner corretamente. Examine as instruções fornecidas na Lição 2 no [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016 ](https://msdn.microsoft.com/library/dn466435.aspx).  
+     Resolução: verifique se você criou uma assinatura de acesso compartilhado no contêiner corretamente. Examine as instruções fornecidas na Lição 2 no [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016 ](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
   
 -   *A credencial do SQL Server não foi criada corretamente.*   
-    Resolução: verifique se você usou "Assinatura de Acesso Compartilhado" para o campo **Identidade** e se criou um segredo corretamente. Examine as instruções fornecidas na Lição 3 no [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](https://msdn.microsoft.com/library/dn466436.aspx).  
+    Resolução: verifique se você usou "Assinatura de Acesso Compartilhado" para o campo **Identidade** e se criou um segredo corretamente. Examine as instruções fornecidas na Lição 3 no [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](../lesson-3-database-backup-to-url.md).  
   
  **Erros de blob de concessão:**  
   
@@ -167,10 +167,10 @@ ON
  **Erros de banco de dados**  
   
 1.  *Erros ao criar um banco de dados*   
-    Resolução: examine as instruções fornecidas na Lição 4 no [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](https://msdn.microsoft.com/library/dn466431.aspx).  
+    Resolução: examine as instruções fornecidas na Lição 4 no [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
   
 2.  *Erros ao executar a instrução Alter*   
-    Resolução: execute a instrução Alter Database mudar quando o banco de dados estiver online. Ao copiar os arquivos de dados no Armazenamento do Azure, sempre crie um blob de páginas, não um blob de blocos. Caso contrário, ALTER Database falhará. Examine as instruções fornecidas na Lição 7 no [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx).  
+    Resolução: execute a instrução Alter Database mudar quando o banco de dados estiver online. Ao copiar os arquivos de dados no Armazenamento do Azure, sempre crie um blob de páginas, não um blob de blocos. Caso contrário, ALTER Database falhará. Examine as instruções fornecidas na Lição 7 no [Tutorial: Usando o serviço de armazenamento de Blobs do Microsoft Azure com bancos de dados SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 3.  *Código de erro 5120 Não é possível abrir o arquivo físico “%.\*ls”. Erro no sistema operacional %d: “%ls”*   
     Resolução: atualmente, essa nova melhoria não dá suporte a mais de uma instância do SQL Server que acessa os mesmos arquivos de banco de dados no Armazenamento do Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente, e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro *5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"*.  

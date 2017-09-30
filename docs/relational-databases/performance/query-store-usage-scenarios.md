@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
@@ -136,7 +136,7 @@ ms.lasthandoff: 09/01/2017
 5.  Use o Repositório de Consultas para correções de regressão e análise: geralmente, as novas alterações do otimizador de consulta geram planos melhores. No entanto, o Repositório de Consultas fornecerá uma maneira fácil de identificar as regressões de escolha do plano e corrigi-las usando um mecanismo para forçar plano.  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificar e melhorar cargas de trabalho ad hoc  
- Algumas cargas de trabalho não têm consultas dominantes que você possa ajustar a fim de melhorar o desempenho geral do aplicativo. Geralmente, essas cargas de trabalho são caracterizadas por um número relativamente grande de consultas diferentes, cada uma delas consumindo parte dos recursos do sistema. Sendo exclusivas, essas consultas são executadas muito raramente (em geral, apenas uma vez, por isso, ad hoc), de modo que o respectivo consumo do tempo de execução não é crítico. Por outro lado, considerando que esse aplicativo está gerando novas consultas o tempo todo, uma parte significativa dos recursos do sistema é gasto na compilação de consulta, o que não é ideal. Essa não é uma situação ideal para o Repositório de Consultas, uma vez que o número grande de consultas e planos enchem o espaço que você reservou, o que significa que o Repositório de Consultas provavelmente acabará no modo somente leitura muito rapidamente. Se você ativou a **Política de Limpeza Baseada em Tamanho** ([altamente recomendado](https://msdn.microsoft.com/library/mt604821.aspx) para manter o Repositório de Consultas sempre funcionando), o processo em segundo plano limpará as estruturas do Repositório de Consultas na maior parte do tempo, também usando recursos significativos do sistema.  
+ Algumas cargas de trabalho não têm consultas dominantes que você possa ajustar a fim de melhorar o desempenho geral do aplicativo. Geralmente, essas cargas de trabalho são caracterizadas por um número relativamente grande de consultas diferentes, cada uma delas consumindo parte dos recursos do sistema. Sendo exclusivas, essas consultas são executadas muito raramente (em geral, apenas uma vez, por isso, ad hoc), de modo que o respectivo consumo do tempo de execução não é crítico. Por outro lado, considerando que esse aplicativo está gerando novas consultas o tempo todo, uma parte significativa dos recursos do sistema é gasto na compilação de consulta, o que não é ideal. Essa não é uma situação ideal para o Repositório de Consultas, uma vez que o número grande de consultas e planos enchem o espaço que você reservou, o que significa que o Repositório de Consultas provavelmente acabará no modo somente leitura muito rapidamente. Se você ativou a **Política de Limpeza Baseada em Tamanho** ([altamente recomendado](best-practice-with-the-query-store.md) para manter o Repositório de Consultas sempre funcionando), o processo em segundo plano limpará as estruturas do Repositório de Consultas na maior parte do tempo, também usando recursos significativos do sistema.  
   
  A exibição**Principais Consultas de Consumo de Recursos** fornecerá a primeira indicação da natureza ad hoc da carga de trabalho:  
   

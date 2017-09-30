@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6631665bbb24d8404e6b115ee0dd608bb6dbef85
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solução de problemas em um log de transação completa (SQL Server Erro 9002)
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
  Para descobrir o que está impedindo o truncamento de log em um determinado caso, use as colunas **log_reuse_wait** e **log_reuse_wait_desc** da exibição de catálogo do **sys.database**. Para obter mais informações, veja [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Para descrições de fatores que podem adiar o truncamento de log, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > **IMPORTANTE:**  
->  Se o banco de dados estava em recuperação quando o erro 9002 aconteceu, depois de resolver o problema, recupere o banco de dados usando [ALTER DATABASE *database_name* SET ONLINE.](https://msdn.microsoft.com/library/bb522682.aspx)  
+>  Se o banco de dados estava em recuperação quando o erro 9002 aconteceu, depois de resolver o problema, recupere o banco de dados usando [ALTER DATABASE *database_name* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
  As alternativas para responder a um log de transações completo incluem:  
   
@@ -104,14 +104,14 @@ ms.lasthandoff: 07/31/2017
 ## <a name="complete-or-kill-a-long-running-transaction"></a>Concluir ou encerrar uma transação de longa duração
 ### <a name="discovering-long-running-transactions"></a>Descobrindo transações demoradas
 Uma transação muito demorada pode fazer com que o log de transações fique cheio. Para procurar transações demoradas, use um dos seguintes:
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx).**
-Essa exibição de gerenciamento dinâmico retorna informações sobre as transações no banco de dados. Para uma transação demorada, as colunas de interesse específico incluem a hora do primeiro registro de log [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx), o estado atual da transação [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx)e o [LSN (número de sequência de log)](https://msdn.microsoft.com/library/ms191459.aspx) do registro de início do log de transações [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx).
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).**
+Essa exibição de gerenciamento dinâmico retorna informações sobre as transações no banco de dados. Para uma transação demorada, as colunas de interesse específico incluem a hora do primeiro registro de log [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md), o estado atual da transação [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)e o [LSN (número de sequência de log)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) do registro de início do log de transações [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx).**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).**
 Essa instrução permite identificar a ID do proprietário da transação, de modo que seja possível localizar potencialmente a origem da transação para um término mais ordenado (confirmar, em vez de revertê-la).
 
 ### <a name="kill-a-transaction"></a>Encerrar uma transação
-Às vezes, você precisa encerrar o processo. Talvez seja necessário usar a instrução [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Use esta instrução com muito cuidado, especialmente quando processos críticos que você não deseja encerrar estiverem em execução. Para obter mais informações, consulte [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
+Às vezes, você precisa encerrar o processo. Talvez seja necessário usar a instrução [KILL](../../t-sql/language-elements/kill-transact-sql.md) . Use esta instrução com muito cuidado, especialmente quando processos críticos que você não deseja encerrar estiverem em execução. Para obter mais informações, consulte [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>Consulte também  
 [Artigo de suporte da base de dados – Um log de transações aumenta inesperadamente ou fica cheio no SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

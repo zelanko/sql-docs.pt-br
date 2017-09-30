@@ -20,11 +20,11 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f568f9e74e17bce1d2e5af044e8820e49203a210
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dc76b8cf1cdd104a0a536389d768ad6165ac8fc3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-pull-subscription"></a>Criar uma assinatura pull
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Se o valor de **allow_pull** for **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando **allow_pull** para **@property** e **true** para **@value**.  
   
-2.  No Assinante, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique **@publisher** e **@publication**. Para obter mais informações sobre assinaturas de atualização, consulte [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+2.  No Assinante, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique **@publisher** e **@publication**. Para obter mais informações sobre assinaturas de atualização, consulte [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).   
   
 3.  No Assinante, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique o seguinte:  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 06/22/2017
   
     -   (Opcional) Um valor de **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**, se for necessário usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao conectar-se ao Publicador.  
   
-    -   Agenda para o trabalho do Merge Agent para essa assinatura. Para obter mais informações, consulte [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+    -   Agenda para o trabalho do Merge Agent para essa assinatura. Para obter mais informações, consulte [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 4.  No Publicador, execute [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Especifique **@publication**, **@subscriber**, **@subscriber_db**, e o valor **pull** para **@subscription_type**. Isso registra a assinatura pull.  
   
@@ -269,21 +269,21 @@ GO
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para criar uma assinatura pull em um instantâneo ou em uma publicação transacional  
   
-1.  Crie conexões com o Assinante e o Publicador usando a Classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie conexões para o Assinante e Publicador, usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> usando a conexão do Publicador da etapa 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> usando a conexão com o Publicador da etapa 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se esse método retornar **false**, as propriedades especificadas na etapa 2 estarão incorretas ou a publicação não existe no servidor.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar **false**, as propriedades especificadas na etapa 2 estarão incorretas ou a publicação não existe no servidor.  
   
-4.  Execute um AND lógico bit a bit (**&** no Visual C# e **And** no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> como o resultado de um OR lógico bit a bit (**|** no Visual C# e **Or** no Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar assinaturas pull.  
+4.  Realize uma lógica AND de bit a bit (**&** no Visual C# e **And** no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> para o resultado de uma lógica bit a bit OR (**|** no Visual C# e **Or** em Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar assinaturas pull.  
   
-5.  Se o banco de dados de assinatura não existir, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database>. Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
+5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
   
-6.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
+6.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
   
 7.  Defina as seguintes propriedades de assinatura:  
   
-    -   A <xref:Microsoft.SqlServer.Management.Common.ServerConnection> com o Assinante criado na etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   O <xref:Microsoft.SqlServer.Management.Common.ServerConnection> para o Assinante criado na etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
     -   Nome do banco de dados de assinatura para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
@@ -293,39 +293,39 @@ GO
   
     -   Nome da publicação para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   Os campos <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para fornecer as credenciais da conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] com a qual o Agente de Distribuição é executado no Assinante. Essa conta é usada para fazer conexões locais com o Assinante e para fazer conexões remotas que usam a Autenticação do Windows.  
+    -   Os parâmetros <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para fornecer as credenciais para a conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] em que o Distribution Agent é executado no Assinante. Essa conta é usada para fazer conexões locais com o Assinante e para fazer conexões remotas que usam a Autenticação do Windows.  
   
         > [!NOTE]  
-        >  Não é necessário definir <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> quando a assinatura é criada por um membro da função de servidor fixa **sysadmin**, no entanto, isso é recomendado. Nesse caso, o agente representará a conta do SQL Server Agent. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  Não é necessário definir <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> quando a assinatura for criada por um membro da função de servidor fixa **sysadmin** ; no entanto, é recomendado. Nesse caso, o agente representará a conta do SQL Server Agent. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Opcional) Um valor **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para criar um trabalho de agente que é usado para sincronizar a assinatura. Se você especificar **false** (o padrão), a assinatura só poderá ser sincronizada de forma programática e você deverá especificar propriedades adicionais de <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> ao acessar esse objeto da propriedade <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A>. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   (Opcional) Um valor de **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para criar um trabalho de agente que seja usado para sincronizar a assinatura. Se você especificar **false** (o padrão), a assinatura pode ser sincronizada apenas de forma programada e é preciso especificar propriedades adicionais para <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> ao acessar esse objeto da propriedade <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> . Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
         > [!NOTE]  
         >  SQL Server Agent is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Quando você especifica um valor de **true** para Assinantes do Express, o trabalho de agente não é criado. Porém, importantes metadados relacionados a assinatura são armazenados no Assinante.  
   
-    -   (Opcional) Defina os campos x<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ao usar a Autenticação do SQL Server para conectar-se ao Distribuidor.  
+    -   (Opcional) Defina os campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ao usar a Autenticação do SQL Server para conexão com o Distribuidor.  
   
-8.  Chame o método <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>.  
+8.  Chame o método <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> .  
   
-9. Usando a instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> da etapa 2, chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.MakePullSubscriptionWellKnown%2A> para registrar a assinatura pull no Publicador. Se esse registro já existir, haverá uma exceção.  
+9. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> da etapa 2, chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.MakePullSubscriptionWellKnown%2A> para registrar a assinatura pull com o Publicador. Se esse registro já existir, haverá uma exceção.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>Para criar uma assinatura pull para a publicação de mesclagem  
   
-1.  Crie conexões com o Assinante e o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Crie conexões para o Assinante e o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> usando a conexão do Publicador da etapa 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> usando a conexão com o Publicador da etapa 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se esse método retornar **false**, as propriedades especificadas na etapa 2 estarão incorretas ou a publicação não existe no servidor.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar **false**, as propriedades especificadas na etapa 2 estarão incorretas ou a publicação não existe no servidor.  
   
-4.  Execute um AND lógico bit a bit (**&** no Visual C# e **And** no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> como o resultado de um OR lógico bit a bit (**|** no Visual C# e **Or** no Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar assinaturas pull.  
+4.  Realize uma lógica AND de bit a bit (**&** no Visual C# e **And** no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> para o resultado de uma lógica bit a bit OR (**|** no Visual C# e **Or** em Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar assinaturas pull.  
   
-5.  Se o banco de dados de assinatura não existir, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database>. Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
+5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
   
-6.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
+6.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
   
 7.  Defina as seguintes propriedades de assinatura:  
   
-    -   A <xref:Microsoft.SqlServer.Management.Common.ServerConnection> com o Assinante criado na etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   O <xref:Microsoft.SqlServer.Management.Common.ServerConnection> para o Assinante criado na etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
     -   Nome do banco de dados de assinatura para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
@@ -335,20 +335,20 @@ GO
   
     -   Nome da publicação para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   Os campos <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para fornecer as credenciais da conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] com a qual o Agente de Mesclagem é executado no Assinante. Essa conta é usada para fazer conexões locais com o Assinante e para fazer conexões remotas que usam a Autenticação do Windows.  
+    -   Os parâmetros <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para fornecer as credenciais para a conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] na qual o Merge Agent é executado no Assinante. Essa conta é usada para fazer conexões locais com o Assinante e para fazer conexões remotas que usam a Autenticação do Windows.  
   
         > [!NOTE]  
-        >  Não é necessário definir <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> quando a assinatura é criada por um membro da função de servidor fixa **sysadmin**, no entanto, isso é recomendado. Nesse caso, o agente representará a conta do SQL Server Agent. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  Não é necessário definir <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> quando a assinatura for criada por um membro da função de servidor fixa **sysadmin** ; no entanto, é recomendado. Nesse caso, o agente representará a conta do SQL Server Agent. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Opcional) Um valor **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para criar um trabalho de agente que é usado para sincronizar a assinatura. Se você especificar **false** (o padrão), a assinatura somente poderá ser sincronizada de forma programática e será preciso especificar propriedades adicionais para <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> ao acessar esse objeto da propriedade <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A>. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   (Opcional) Um valor de **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para criar um trabalho de agente que seja usado para sincronizar a assinatura. Se você especificar **false** (o padrão), a assinatura pode ser sincronizada apenas de forma programada e é preciso especificar propriedades adicionais para <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> ao acessar esse objeto da propriedade <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> . Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-    -   (Opcional) Defina os campos x<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ao usar a Autenticação do SQL Server para conectar-se ao Distribuidor.  
+    -   (Opcional) Defina os campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ao usar a Autenticação do SQL Server para conexão com o Distribuidor.  
   
-    -   (Opcional) Defina os campos x<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> ao usar a Autenticação do SQL Server para conectar-se ao Publicador.  
+    -   (Opcional) Defina os campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> ao usar a Autenticação do SQL Server para conexão com o Publicador.  
   
-8.  Chame o método <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>.  
+8.  Chame o método <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> .  
   
-9. Usando a instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> da etapa 2, chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> para registrar a assinatura pull no Publicador. Se esse registro já existir, haverá uma exceção.  
+9. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> da etapa 2, chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> para registrar a assinatura pull com o Publicador. Se esse registro já existir, haverá uma exceção.  
   
 ###  <a name="PShellExample"></a> Exemplo (RMO)  
  Esse exemplo cria uma assinatura pull para uma publicação transacional. As credenciais da conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] usadas para criar o trabalho do Distribution Agent são passadas em tempo de execução.  

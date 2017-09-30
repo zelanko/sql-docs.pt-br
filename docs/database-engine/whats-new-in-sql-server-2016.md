@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
@@ -38,7 +38,7 @@ Para examinar quais são as novidades em outros componentes do SQL Server, veja 
 
 #### <a name="try-it-out"></a>Experimente
 
-- Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![baixar](../analysis-services/media/download.png "download").
+- Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse ** [Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![baixar](../analysis-services/media/download.png "download").
 
 - Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.
 
@@ -438,7 +438,7 @@ A propagação direta permite que uma réplica secundária seja propagada automa
 ###  <a name="Tools"></a> Aprimoramentos de ferramentas
 
 ####  <a name="SSMS"></a> Management Studio
-Baixar o [SSMS (SQL Server Management Studio) mais recente](https://msdn.microsoft.com/library/mt238290.aspx)
+Baixar o [SSMS (SQL Server Management Studio) mais recente](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dá suporte à ADAL (Active Directory Authentication Library), que está em desenvolvimento para conexão com o Microsoft Azure. Isso substitui a autenticação baseada em certificado, usada no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - A instalação[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige a instalação do .NET 4.6 como um pré-requisito. O .NET 4.6 será instalado automaticamente pela instalação quando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] for instalado.
