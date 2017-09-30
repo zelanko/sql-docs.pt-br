@@ -6,6 +6,28 @@
 ## [Artigos novos e atualizados recentemente](new-updated-integration-services.md)
 ## [Recursos do Integration Services compatíveis com as edições do SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Compatibilidade com versões anteriores do Integration Services](integration-services-backward-compatibility.md)
+
+# Guias de início rápido
+## Implantar
+### [Implantar com SSMS](./ssis-quickstart-deploy-ssms.md)
+### [Implantar com Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Implantar com Transact-SQL (código VS)](ssis-quickstart-deploy-tsql-vscode.md)
+### [Implantar por meio do prompt de comando](./ssis-quickstart-deploy-cmdline.md)
+### [Implantar com o PowerShell](ssis-quickstart-deploy-powershell.md)
+### [Implantar com C#](./ssis-quickstart-deploy-dotnet.md) 
+## Executar
+### [Executar com SSMS](./ssis-quickstart-run-ssms.md)
+### [Executar com Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+### [Executar com Transact-SQL (código VS)](ssis-quickstart-run-tsql-vscode.md)
+### [Executar por meio do prompt de comando](./ssis-quickstart-run-cmdline.md)
+### [Executar com o PowerShell](ssis-quickstart-run-powershell.md)
+### [Executar com C#](./ssis-quickstart-run-dotnet.md) 
+
+# [Migrar pacotes do SSIS por lift-and-shift para o Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Tutorial – implantar, executar e monitorar um pacote no Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Conectar-se ao catálogo do SSIS no Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Agendar a execução do pacote no Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Conectar-se a fontes de dados com a autenticação do Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 # [Instalar ou atualizar](../integration-services/install-windows/install-integration-services.md)
 
 # [Ferramentas de desenvolvimento e gerenciamento](integration-services-ssis-development-and-management-tools.md)
