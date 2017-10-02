@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Há algumas entidades fora dos bancos de dados de DQS que devem existir para que os bancos de dados de DQS sejam funcionais como o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], especificamente os dois logons do SQL Server (##MS_dqs_db_owner_login ## e ##MS_dqs_service_login ##), e um procedimento armazenado de inicialização (DQInitDQS_MAIN) no banco de dados mestre.  
   
- Para obter informações detalhadas sobre backup e restauração no SQL Server, consulte [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+ Para obter informações detalhadas sobre backup e restauração no SQL Server, consulte [Fazer backup e restaurar bancos de dados do SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>Tamanho de crescimento automático padrão e modelo de recuperação para bancos de dados DQS  
  Para impedir que os bancos de dados DQS e os logs de transação cresçam infinitamente e que potencialmente preencham o disco rígido:  
