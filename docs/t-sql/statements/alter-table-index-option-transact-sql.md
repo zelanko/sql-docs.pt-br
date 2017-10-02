@@ -70,7 +70,7 @@ ms.lasthandoff: 09/08/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- PAD_INDEX ** = ** {ON | **OFF** }  
+ PAD_INDEX  **=**  {ON | **OFF** }  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o preenchimento do índice. O padrão é OFF.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/08/2017
  DESATIVAR ou *fillfactor* não for especificado  
  As páginas de nível de intermediário são preenchidas até próximo de sua capacidade, deixando espaço suficiente para pelo menos uma linha do tamanho máximo que o índice pode ter, dado o conjunto de chaves em páginas intermediárias.  
   
- Fator de preenchimento ** = ** *fator de preenchimento*  
+ Fator de preenchimento  **=**  *fator de preenchimento*  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica uma porcentagem que indica quanto [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher o nível folha de cada página de índice durante a criação ou alteração do índice. O valor especificado deve ser um valor inteiro entre 1 e 100. O padrão é 0.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  Os valores 0 e 100 do fator de preenchimento são idênticos em todos os aspectos.  
   
- IGNORE_DUP_KEY ** = ** {ON | **OFF** }  
+ IGNORE_DUP_KEY  **=**  {ON | **OFF** }  
  Especifica a resposta de erro quando uma operação de inserção tenta inserir valores da chave duplicada em um índice exclusivo. A opção IGNORE_DUP_KEY aplica-se apenas a operações de inserção depois que o índice é criado ou recriado. A opção não tem nenhum efeito ao executar [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), ou [atualização](../../t-sql/queries/update-transact-sql.md). O padrão é OFF.  
   
  ON  
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/08/2017
   
  Na sintaxe compatível com versões anteriores, WITH IGNORE_DUP_KEY é equivalente a WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE ** = ** {ON | **OFF** }  
+ STATISTICS_NORECOMPUTE  **=**  {ON | **OFF** }  
  Especifica se as estatísticas são recalculadas. O padrão é OFF.  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  A atualização automática de estatísticas está habilitada.  
   
- ALLOW_ROW_LOCKS ** = ** { **ON** | OFF}  
+ ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica se bloqueios de linha são permitidos. O padrão é ON.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  Bloqueios de linha não são usados.  
   
- ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}  
+ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica se bloqueios de página são permitidos. O padrão é ON.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  Bloqueios de página não são usados.  
   
- SORT_IN_TEMPDB ** = ** {ON | **OFF** }  
+ SORT_IN_TEMPDB  **=**  {ON | **OFF** }  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica se deseja armazenar os resultados de classificação em **tempdb**. O padrão é OFF.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  Os resultados intermediários de classificação são armazenados no mesmo banco de dados que o índice.  
   
- ON-LINE ** = ** {ON | **OFF** }  
+ ON-LINE  **=**  {ON | **OFF** }  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF. REBUILD pode ser executado como uma operação ONLINE.  
@@ -168,7 +168,7 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MAXDOP ** = ** *max_degree_of_parallelism*  
+ MAXDOP  **=**  *max_degree_of_parallelism*  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Substitui o **grau máximo de paralelismo** opção de configuração para a duração da operação de índice. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
@@ -210,7 +210,7 @@ ms.lasthandoff: 09/08/2017
   
  Para obter mais informações sobre compactação, consulte [compactação de dados](../../relational-databases/data-compression/data-compression.md).  
   
-EM partições **(** { \<partition_number_expression > | \<intervalo >} [ **,**... * n * ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+EM partições **(** { \<partition_number_expression > | \<intervalo >} [ **,**...  *n*  ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica as partições às quais se aplica a configuração DATA_COMPRESSION. Se a tabela não for particionada, o argumento ON PARTITIONS gerará um erro. Se a cláusula ON PARTITIONS não for fornecida, a opção DATA_COMPRESSION se aplica a todas as partições de uma tabela particionada.  
   
