@@ -7,6 +7,8 @@
 ## [Arquitetura e visão geral](architecture-overview-machine-learning.md)
 ## [Diferenças nos recursos de aprendizado de máquina entre edições do SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
+## [Usando o R em Bancos de Dados SQL do Azure](r/using-r-in-azure-sql-database.md)
+
 # [serviços do Machine Learning – R](r/sql-server-r-services.md)
 
 ## [Introdução](r/getting-started-with-sql-server-r-services.md)
