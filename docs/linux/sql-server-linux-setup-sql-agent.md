@@ -4,16 +4,16 @@ description: "Este tópico descreve como instalar o SQL Server Agent no Linux."
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1f6f741a87a13e5b5bc8ba83741e86b065378bad
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 83f6e12a38d5fef4ab27cc39257906c4263aa846
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Instalar o agente do SQL Server no Linux
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/02/2017
 As etapas a seguir instala o SQL Server Agent (**mssql-server-agente**) no Linux. O [do SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) executa trabalhos agendados do SQL Server. Para obter informações sobre os recursos com suporte para esta versão do SQL Server Agent, consulte o [notas de versão](sql-server-linux-release-notes.md).
 
 > [!NOTE]
-> Antes de instalar o SQL Server Agent, primeiro [instalar o SQL Server RC2 +](sql-server-linux-setup.md#platforms). Isso configura as chaves e os repositórios que você usa quando você instala o **mssql-server-agente** pacote.
+> Antes de instalar o SQL Server Agent, primeiro [instalar o SQL Server 2017](sql-server-linux-setup.md#platforms). Isso configura as chaves e os repositórios que você usa quando você instala o **mssql-server-agente** pacote.
 
 Instale o SQL Server Agent para sua plataforma:
 

@@ -11,17 +11,17 @@ ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 61b4ba948df071768380d4a6f2b4ddc4421692d8
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Migrar bancos de dados e os dados estruturados para o SQL Server no Linux 
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Você pode migrar seus bancos de dados e os dados para o SQL Server de 2017 RC2 em execução no Linux. O método que você optar por usar depende dos dados de origem e o seu cenário específico. As seções a seguir fornecem práticas recomendadas para vários cenários de migração.
+Você pode migrar seus bancos de dados e dados para 2017 do SQL Server em execução no Linux. O método que você optar por usar depende dos dados de origem e o seu cenário específico. As seções a seguir fornecem práticas recomendadas para vários cenários de migração.
 
 ## <a name="migrate-from-sql-server-on-windows"></a>Migrar do SQL Server no Windows
 Se você quiser migrar bancos de dados do SQL Server no Windows para o SQL Server 2017 no Linux, a técnica recomendada é usar o SQL Server backup e restauração.

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f76aa1cfbcad38e383abca8a79005b3851767e2a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
@@ -66,7 +66,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> Considerações sobre a instalação em computadores de 64 bits  
  Em um computador de 64 bits, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala a versão de 64 bits do utilitário **dtexec** (dtexec.exe). Se for necessário executar alguns pacotes no modo de 32 bits, você precisará instalar a versão de 32 bits do utilitário **dtexec** . Para instalar a versão de 32 bits do utilitário **dtexec** , você deve selecionar Ferramentas de Cliente ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante a instalação.  
   
- Por padrão, um computador de 64 bits que tem as versões de 64 e de 32 bits de um prompt de comando do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instaladas executará a versão de 32 bits no prompt de comando. A versão de 32 bits é executada porque o caminho do diretório da versão de 32 bits aparece na variável de ambiente PATH antes do caminho do diretório da versão de 64 bits. (Normalmente, o caminho do diretório de 32 bits é * \<drive >*: \Program \Microsoft SQL Server\110\DTS\Binn arquivos (x86), enquanto o caminho do diretório de 64 bits é * \<drive >*: \Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ Por padrão, um computador de 64 bits que tem as versões de 64 e de 32 bits de um prompt de comando do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instaladas executará a versão de 32 bits no prompt de comando. A versão de 32 bits é executada porque o caminho do diretório da versão de 32 bits aparece na variável de ambiente PATH antes do caminho do diretório da versão de 64 bits. (Normalmente, o caminho do diretório de 32 bits é  *\<drive >*: \Program \Microsoft SQL Server\110\DTS\Binn arquivos (x86), enquanto o caminho do diretório de 64 bits é  *\<drive >*: \Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > **OBSERVAÇÃO:** se você usar o SQL Server Agent para executar o utilitário, o SQL Server Agent usará automaticamente a versão de 64 bits do utilitário. O SQL Server Agent usa o Registro, não a variável de ambiente PATH, para localizar o executável correto do utilitário.  
   
@@ -217,11 +217,11 @@ dtexec /option [value] [/option [value]]...
   
      Para examinar vários exemplos da opção **/ConsoleLog** , consulte a seção **Comentários** .  
   
--   * * /D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+--   **/D [ts]** *package_path*: (opcional). Carrega um pacote do Armazenamento de Pacotes SSIS. Os pacotes que estão armazenados no Armazenamento de Pacotes SSIS são implantados usando o modelo de implantação de pacote herdado. Para executar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projeto, use a opção **/ISServer** . Para obter mais informações sobre os modelos de implantação de pacote e projeto, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
-     O argumento *package_path* especifica o caminho relativo do pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] , iniciando na raiz do Repositório de Pacotes SSIS, e inclui o nome do pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Se o caminho ou o nome do arquivo especificado no argumento *package_path* contiver um espaço, você deverá colocar o argumento *package_path* entre aspas.  
+     The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     A opção **/DTS** não pode ser usada junto com a opção **/File** ou a opção **/SQL** . Se várias opções forem especificadas, o **dtexec** falhará.  
+     The **/DTS** option cannot be used together with the **/File** or **/SQL** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/De[crypt]**  *password*: (opcional). Define a senha de decodificação usada ao carregar um pacote com criptografia de senha.  
   
@@ -233,7 +233,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** *código de erro*: por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta, * \<drive >*: \Program Files\Microsoft Server\110\Shared\ErrorDumps SQL.  
+     **/Dump** *código de erro*: por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta,  *\<drive >*: \Program Files\Microsoft Server\110\Shared\ErrorDumps SQL.  
   
     > **OBSERVAÇÃO:** os arquivos de despejo de depuração podem conter informações confidenciais. Use uma ACL (lista de controle de acesso) para restringir o acesso aos arquivos ou copie os arquivos em uma pasta que tenha acesso restrito. Por exemplo, antes de enviar os arquivos de depuração para o serviço de suporte da Microsoft, recomendamos que você remova todas as informações confidenciais.  
   
@@ -245,7 +245,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (opcional) cria os arquivos de despejo de depuração, .mdmp e .tmp, quando ocorre um erro enquanto o pacote está em execução.  
   
-     Por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta, * \<drive >*: pasta \Program Files\Microsoft Server\110\Shared\ErrorDumps SQL.  
+     Por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta,  *\<drive >*: pasta \Program Files\Microsoft Server\110\Shared\ErrorDumps SQL.  
   
     > **OBSERVAÇÃO:** os arquivos de despejo de depuração podem conter informações confidenciais. Use uma ACL (lista de controle de acesso) para restringir o acesso aos arquivos ou copie os arquivos em uma pasta que tenha acesso restrito. Por exemplo, antes de enviar os arquivos de depuração para o serviço de suporte da Microsoft, recomendamos que você remova todas as informações confidenciais.  
   
@@ -262,10 +262,9 @@ dtexec /option [value] [/option [value]]...
      Use a opção **/Env [Reference]** com as opções **/ISServer** e **/Server** .  
   
      Este parâmetro é usado pelo SQL Server Agent.  
-  
--   * * /F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
-  
-     O argumento *filespec* especifica o caminho e nome de arquivo do pacote. Você pode especificar o caminho como local ou de UNC (Convenção Universal de Nomenclatura). Se o caminho ou o nome do arquivo especificado no argumento *filespec* contiver um espaço, você deverá colocar o argumento *filespec* entre aspas.  
+  --   **/F [ile]** *filespec*: (opcional). Carrega um pacote que é salvo no sistema de arquivos. Os pacotes que estão salvos no sistema de arquivos são implantados usando o modelo de implantação de pacote herdado. Para executar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projeto, use a opção **/ISServer** . Para obter mais informações sobre os modelos de implantação de pacote e projeto, consulte [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)  
+
+  O argumento *filespec* especifica o caminho e nome de arquivo do pacote. Você pode especificar o caminho como local ou de UNC (Convenção Universal de Nomenclatura). Se o caminho ou o nome do arquivo especificado no argumento *filespec* contiver um espaço, você deverá colocar o argumento *filespec* entre aspas.  
   
      A opção **/File** não pode ser usada junto com a opção **/DTS** ou a opção **/SQL** . Se várias opções forem especificadas, o **dtexec** falhará.  
   
@@ -413,21 +412,21 @@ dtexec /option [value] [/option [value]]...
   
      A opção **/Ser[ver]** é necessária quando a opção **/ISServer** é especificada.  
   
--   * * /SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+--   **/SQ [L]** *package_path*: carrega um pacote que é armazenado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], na **msdb** banco de dados. Os pacotes que estão armazenados no banco de dados **msdb** são implantados usando o modelo de implantação de pacote. Para executar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o modelo de implantação de projeto, use a opção **/ISServer** . Para obter mais informações sobre os modelos de implantação de pacote e projeto, consulte [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
-     O argumento *package_path* especifica o caminho e nome de arquivo do pacote a recuperar. Se forem incluídas pastas no caminho, elas terminarão com barras invertidas ("\\"). O valor *package_path* pode estar entre aspas. Se o caminho ou o nome do arquivo especificado no argumento *package_path* contiver um espaço, você deverá colocar o argumento *package_path* entre aspas.  
+     The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     Você pode usar as opções **/User**, **/Password**e **/Server** com a opção **/SQL** .  
+     You can use the **/User**, **/Password**, and **/Server** options together with the **/SQL** option.  
   
-     Se você omitir a opção **/User** , a Autenticação do Windows será usada para acessar o pacote. Se você usar a opção **/User** , o nome de logon **/User** especificado será associado à Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     If you omit the **/User** option, Windows Authentication is used to access the package. If you use the **/User** option, the **/User** login name specified is associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
-     A opção **/Password** é usada apenas junto com a opção **/User** . Se você usar a opção **/Password** , o pacote será acessado com as informações de nome de usuário e senha fornecidas. Se você omitir a opção **/Password** , uma senha em branco será usada.  
+     The **/Password** option is used only together with the **/User** option. If you use the **/Password** option, the package is accessed with the user name and password information provided. If you omit the **/Password** option, a blank password is used.  
   
-    > **IMPORTANTE:** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    > **IMPORTANT!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     Se a opção **/Server** for omitida, será assumida a instância local padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     If the **/Server** option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed.  
   
-     A opção **/SQL** não pode ser usada junto com a opção **/DTS** ou a opção **/File** . Se várias opções forem especificadas, o **dtexec** falhará.  
+     The **/SQL** option cannot be used together with the **/DTS** or **/File** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/Su[m]**: (opcional). Mostra um contador incremental que contém o número de linhas que serão recebidas pelo próximo componente.  
   

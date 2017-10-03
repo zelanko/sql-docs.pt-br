@@ -4,29 +4,29 @@ description: "Este tutorial mostra como usar o SQL Server Management Studio no W
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 3c48596ed8bb4b4febc5982a3f37609f2ef4281f
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b4e70106782541d771a2539d025a0a6dd75c34d9
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Use o SQL Server Management Studio (SSMS) no Windows para gerenciar o SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Este tópico mostra como usar [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) para se conectar ao SQL Server 2017 RC2 no Linux. O SSMS é um aplicativo do Windows, então use SSMS, quando você tiver um computador Windows que pode se conectar a uma instância remota do SQL Server no Linux. 
+Este tópico mostra como usar [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) para se conectar ao SQL Server 2017 no Linux. O SSMS é um aplicativo do Windows, então use SSMS, quando você tiver um computador Windows que pode se conectar a uma instância remota do SQL Server no Linux.
 
 Depois de se conectar com êxito, você deve executar uma consulta simples do Transact-SQL (T-SQL) para verificar a comunicação com o banco de dados.
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio"></a>Instale a versão mais recente do SQL Server Management Studio
 
-Ao trabalhar com o SQL Server, você deve usar sempre a versão mais recente do SQL Server Management Studio (SSMS). A versão mais recente do SSMS está sempre atualizada e otimizados e funciona atualmente com o SQL Server 2017 em Linux. Para baixar e instalar a versão mais recente, consulte [baixar o SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Para se manter atualizado, a versão mais recente do SSMS avisa você quando há uma nova versão disponível para download. 
+Ao trabalhar com o SQL Server, você deve usar sempre a versão mais recente do SQL Server Management Studio (SSMS). A versão mais recente do SSMS está sempre atualizada e otimizados e funciona atualmente com o SQL Server 2017 em Linux. Para baixar e instalar a versão mais recente, consulte [baixar o SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para se manter atualizado, a versão mais recente do SSMS avisa você quando há uma nova versão disponível para download. 
 
 ## <a name="connect-to-sql-server-on-linux"></a>Conecte-se ao SQL Server no Linux
 
@@ -59,9 +59,9 @@ As etapas a seguir mostram como se conectar ao SQL Server 2017 no Linux com o SS
      
 ## <a name="run-sample-queries"></a>Executar consultas de exemplo
 
-Depois de se conectar ao seu servidor, você pode se conectar a um banco de dados e executar uma consulta de exemplo. Se você for novo para escrever consultas, consulte [escrever instruções de Transact-SQL](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements).
+Depois de se conectar ao seu servidor, você pode se conectar a um banco de dados e executar uma consulta de exemplo. Se você for novo para escrever consultas, consulte [escrever instruções de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-1. Identifica um banco de dados para usar para executar uma consulta. Isso pode ser um novo banco de dados criado na [tutorial do Transact-SQL](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements). Ou poderia ser o **AdventureWorks** exemplo de banco de dados que você [baixado e restaurado](sql-server-linux-migrate-restore-database.md).
+1. Identifica um banco de dados para usar para executar uma consulta. Isso pode ser um novo banco de dados criado na [tutorial do Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). Ou poderia ser o **AdventureWorks** exemplo de banco de dados que você [baixado e restaurado](sql-server-linux-migrate-restore-database.md).
 2. Em **Pesquisador de objetos**, navegue até o banco de dados de destino no servidor.
 2. O banco de dados e, em seguida, selecione **nova consulta**:
 
@@ -81,7 +81,7 @@ Depois de se conectar ao seu servidor, você pode se conectar a um banco de dado
 
 Além das consultas, você pode usar instruções T-SQL para criar e gerenciar bancos de dados.
 
-Se você estiver familiarizado com o T-SQL, consulte [Tutorial: gravando instruções de Transact-SQL](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements) e [referência Transact-SQL (mecanismo de banco de dados)](https://msdn.microsoft.com/library/bb510741.aspx).
+Se você estiver familiarizado com o T-SQL, consulte [Tutorial: gravando instruções de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md) e [referência Transact-SQL (mecanismo de banco de dados)](https://msdn.microsoft.com/library/bb510741.aspx).
 
 Para obter mais informações sobre como usar o SSMS, consulte [usar o SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx).
 

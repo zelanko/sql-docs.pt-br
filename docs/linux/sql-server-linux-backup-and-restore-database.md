@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6bd05a89f0c06bc03de931b898be18f3cbea0c8c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Backup e restauração de bancos de dados do SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Fazer o backup de bancos de dados do SQL Server de 2017 RC2 no Linux com as mesmas ferramentas de outras plataformas. Em um servidor Linux, você pode usar `sqlcmd` para se conectar ao SQL Server e fazer backups. No Windows, você pode se conectar ao SQL Server no Linux e fazer backups com a interface do usuário. A funcionalidade de backup é o mesmo entre plataformas. Por exemplo, você pode fazer backup de bancos de dados localmente, para unidades remotas ou a [serviço de armazenamento de BLOBs do Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
+Você pode usar backups de bancos de dados do 2017 do SQL Server no Linux com as mesmas ferramentas de outras plataformas. Em um servidor Linux, você pode usar `sqlcmd` para se conectar ao SQL Server e fazer backups. No Windows, você pode se conectar ao SQL Server no Linux e fazer backups com a interface do usuário. A funcionalidade de backup é o mesmo entre plataformas. Por exemplo, você pode fazer backup de bancos de dados localmente, para unidades remotas ou a [serviço de armazenamento de BLOBs do Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## <a name="backup-with-sqlcmd"></a>Backup com sqlcmd
 
@@ -75,7 +75,7 @@ Você pode usar o SSMS em um computador Windows para se conectar a um banco de d
 
 As etapas a seguir percorrer fazer um backup com o SSMS. 
 
-1. Inicie o SSMS e conectar-se ao seu servidor no SQL Server de 2017 RC2 no Linux.
+1. Inicie o SSMS e conectar-se ao seu servidor no SQL Server 2017 no Linux.
 
 1. No Pesquisador de objetos, clique com botão direito no banco de dados, clique em **tarefas**e, em seguida, clique em **backup...** .
 

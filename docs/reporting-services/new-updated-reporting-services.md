@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: reporting-services
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 690b622224a31f4327b6dc199b1687f1726937c2
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b4a8b5b8db36f4ae7418934311eb6706de0ea43a
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Novos e atualizados recentemente: Reporting Services para SQL Server
@@ -34,7 +34,7 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 
 
 
-- *Intervalo de datas das atualizações:* &nbsp; **2017-07-18** &nbsp; - para - &nbsp; **2017-09-11**
+- *Intervalo de datas das atualizações:* &nbsp; **2017-09-11** &nbsp; - para - &nbsp; **2017-09-27**
 - *Área de assunto:* &nbsp; **Reporting Services para SQL Server**.
 
 
@@ -44,10 +44,11 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 
 ## <a name="new-articles-created-recently"></a>Novos artigos criados recentemente
 
-Os links a seguir saltar para novos artigos que foram adicionados recentemente.
+Os links a seguir direcionam para novos artigos que foram adicionados recentemente.
 
 
-***Não existem novos artigos a serem listados no momento.***
+1. [Adicionar a web part do Visualizador de relatório a uma página do SharePoint](report-server-sharepoint/add-report-viewer-web-part-to-page.md)
+2. [Implantar a web part do Visualizador de relatórios em um site do SharePoint](report-server-sharepoint/deploy-report-viewer-web-part.md)
 
 
 
@@ -55,7 +56,7 @@ Os links a seguir saltar para novos artigos que foram adicionados recentemente.
 
 ## <a name="updated-articles-with-excerpts"></a>Artigo atualizado com trechos
 
-Esta seção exibe os trechos de atualizações coletados a partir de artigos que encontraram recentemente uma atualização grande.
+Esta seção exibe os trechos de atualizações coletados de artigos que passaram por uma atualização extensa recentemente.
 
 Os trechos exibidos aqui aparecerão separados de seu contexto de semântico apropriado. Além disso, às vezes um trecho é separado da sintaxe de markdown importante que circunda no artigo real. Portanto, esses trechos servem apenas como orientações gerais. Os trechos só mostram a você se vale a pena clicar e visitar o artigo real conforme seus interesses.
 
@@ -69,47 +70,17 @@ Por essas e outras razões, não copie o código desses trechos, nem considere-o
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Lista compacta dos artigos atualizados recentemente
+### <a name="compact-list-of-articles-updated-recently"></a>Lista compacta dos artigos atualizados recentemente
 
-Essa lista compact fornece links para todos os artigos atualizados que estão listados na seção foram extraídas.
-
-1. [Propriedades do servidor (página avançadas) - Reporting Services](#TitleNum_1)
+Essa lista compacta fornece links para todos os artigos atualizados listados na seção Trechos.
 
 
 
 
-&nbsp;
 
 &nbsp;
 
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-server-properties-advanced-page---reporting-servicestoolsserver-properties-advanced-page-reporting-servicesmd"></a>1. &nbsp;[Propriedades de servidor (página avançadas) - Reporting Services](tools/server-properties-advanced-page-reporting-services.md)
-
-*Atualizado em: 25-08-2017* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 122.  ms.author= "asaxton".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 92858a7e7239197af4ac2745ffc857d8c04f55cd e86bd4767f668b4ce80dc70056181d001f8e1b89  (PR=2953  ,  Filename=server-properties-advanced-page-reporting-services.md  ,  Dirpath=docs\reporting-services\tools\  ,  MergeCommitSha40=c003d58dd887ce1eddc142fa62f8050b73c0c935) -->
-
-
-
-**AccessControlAllowCredentials** indica se a resposta à solicitação do cliente pode ser exibida quando o sinalizador 'credenciais' está definido como true. O valor padrão é **false**.
-
-**AccessControlAllowHeaders** uma lista de separada por vírgulas dos cabeçalhos que o servidor permitirá quando um cliente faz uma solicitação. Essa propriedade pode ser uma cadeia de caracteres vazia, especificando * permitirá que todos os cabeçalhos.
-
-**AccessControlAllowMethods** uma lista de separados por vírgulas dos métodos HTTP que o servidor permitirá quando um cliente faz uma solicitação. Os valores padrão são (GET, PUT, POST, PATCH, DELETE), especificando * permitirá que todos os métodos.
-
-**AccessControlAllowOrigin** uma lista de separada por vírgulas de origens que o servidor permitirá quando um cliente faz uma solicitação. O valor padrão é em branco, que impede que todas as solicitações, especificando * permitirá que todas as origens quando as credenciais não estão definidas; Se as credenciais são especificadas de uma lista explícita de origens deve ser especificada.
-
-**AccessControlExposeHeaders** uma lista de separada por vírgulas dos cabeçalhos que o servidor irá expor para clientes. O valor padrão é vazio.
-
-**AccessControlMaxAge** Especifica o número de segundos que os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
-
-
+***Nenhum artigo nesta área foi atualizado recentemente no momento.***
 
 
 
@@ -123,35 +94,35 @@ Essa lista compact fornece links para todos os artigos atualizados que estão li
     Then run Run-533-*.BAT
 -->
 
-Esta seção lista os artigos muito semelhantes para artigos atualizados recentemente em outras áreas de assunto, em nosso repositório público de GitHub.com: [sql/MicrosoftDocs-documentos](https://github.com/MicrosoftDocs/sql-docs/).
+Esta seção lista artigos muito semelhantes a artigos atualizados recentemente em outras áreas de assunto, em nosso repositório público GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Áreas de assunto que têm artigos novos ou atualizados recentemente
 
-- [Novo + atualizado (3 + 12): **Advanced Analytics para o SQL** documentos](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Novo + atualizado (5 + 0): **conectar-se ao SQL** documentos](../connect/new-updated-connect.md)
-- [Novo + atualizado (5 + 1): **mecanismo de banco de dados do SQL** documentos](../database-engine/new-updated-database-engine.md)
-- [Novo + atualizado (19 + 82): **Integration Services para SQL** documentos](../integration-services/new-updated-integration-services.md)
-- [Novo + atualizado (1 + 8): **Linux para o SQL** documentos](../linux/new-updated-linux.md)
-- [Novo + atualizado (12 + 1): **bancos de dados relacionais do SQL** documentos](../relational-databases/new-updated-relational-databases.md)
-- [Novo + atualizado (0 + 1): **Reporting Services para SQL** documentos](../reporting-services/new-updated-reporting-services.md)
-- [Novo + atualizado (7 + 1): **Microsoft SQL Server** documentos](../sql-server/new-updated-sql-server.md)
-- [Novo + atualizado (1 + 1): **SQL Server Data Tools (SSDT)** documentos](../ssdt/new-updated-ssdt.md)
-- [Novo + atualizado (0 + 2): **Migration Assistant SSMA (SQL Server)** documentos](../ssma/new-updated-ssma.md)
-- [Novo + atualizado (1 + 4): **SQL Server Management Studio (SSMS)** documentos](../ssms/new-updated-ssms.md)
-- [Novo + atualizados (4 + 1): **Transact-SQL** documentos](../t-sql/new-updated-t-sql.md)
-- [Novo + atualizado (0 + 1): **Tools para SQL** documentos](../tools/new-updated-tools.md)
+- [Novo + atualizado (0 + 1): **Advanced Analytics para o SQL** documentos](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Novo + atualizado (0 + 1): **Analysis Services para SQL** documentos](../analysis-services/new-updated-analysis-services.md)
+- [Novo + atualizados (4 + 1): **mecanismo de banco de dados do SQL** documentos](../database-engine/new-updated-database-engine.md)
+- [Novo + atualizado (17 + 0): **Integration Services para SQL** documentos](../integration-services/new-updated-integration-services.md)
+- [Novo + atualizado (3 + 0): **Linux para o SQL** documentos](../linux/new-updated-linux.md)
+- [Novo + atualizado (1 + 1): **bancos de dados relacionais do SQL** documentos](../relational-databases/new-updated-relational-databases.md)
+- [Novo + atualizado (2 + 0): **Reporting Services para SQL** documentos](../reporting-services/new-updated-reporting-services.md)
+- [Novo + atualizado (0 + 1): **SQL Server Management Studio (SSMS)** documentos](../ssms/new-updated-ssms.md)
+- [Novo + atualizado (0 + 1): **Transact-SQL** documentos](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Áreas de assunto que não têm nenhum artigo novo ou atualizado recentemente
 
 - [Novo + atualizado (0 + 0): documentos do **ADO (ActiveX Data Objects) para SQL**](../ado/new-updated-ado.md)
-- [Novo + atualizado (0 + 0): **Analysis Services para SQL** documentos](../analysis-services/new-updated-analysis-services.md)
+- [Novo + atualizado (0 + 0): **conectar-se ao SQL** documentos](../connect/new-updated-connect.md)
 - [Novo + atualizado (0 + 0): documentos do **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Extensões DMX (Data Mining) para SQL**](../dmx/new-updated-dmx.md)
-- [Novo + atualizado (0 + 0): **Master Data Services (MDS) para SQL** documentos](../master-data-services/new-updated-master-data-services.md)
+- [Novo + Atualizado (0+0): documentos sobre o **MDS (Master Data Services) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Novo + atualizado (0 + 0): documentos de **Expressão MDX para SQL**](../mdx/new-updated-mdx.md)
 - [Novo + atualizado (0 + 0): documentos do **ODBC (Open Database Connectivity) para SQL**](../odbc/new-updated-odbc.md)
 - [Novo + atualizado (0 + 0): documentos do **PowerShell para SQL**](../powershell/new-updated-powershell.md)
 - [Novo + atualizado (0 + 0): documentos de **Exemplos para SQL**](../sample/new-updated-sample.md)
+- [Novo + atualizado (0 + 0): **Microsoft SQL Server** documentos](../sql-server/new-updated-sql-server.md)
+- [Novo + Atualizado (0 + 0): documentos do **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Novo + atualizado (0 + 0): documentos do **SSMA (SQL Server Migration Assistant)**](../ssma/new-updated-ssma.md)
+- [Novo + atualizado (0 + 0): **Tools para SQL** documentos](../tools/new-updated-tools.md)
 - [Novo + atualizado (0 + 0): documentos do **XQuery para SQL**](../xquery/new-updated-xquery.md)
 
 

@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2555a719c2677c2c573a07dfa803ad80b3946ebf
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitorar a execução de pacotes e outras operações
@@ -203,6 +203,6 @@ ms.lasthandoff: 09/21/2017
     -   **Todas as Conexões**  
 
 ## <a name="see-also"></a>Consulte também  
- [Execução de projetos e pacotes](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
- [Relatórios para solução de problemas de execução de pacote](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
+ [Execução de projetos e pacotes](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [Relatórios para solução de problemas de execução de pacote](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
 

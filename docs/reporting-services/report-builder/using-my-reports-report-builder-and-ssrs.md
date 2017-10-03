@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fc31861f7eef73a2ddb88faa4aa59b1bf289d2ea
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Usando Meus Relatórios (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
   
  Conceitualmente, a pasta Meus Relatórios é semelhante à pasta Meus Documentos no sistema de arquivos do Windows. Embora cada usuário tenha uma pasta chamada Meus Relatórios, a pasta que cada um acessa é diferente de todos os outros usuários. Exceto para os administradores do servidor de relatórios, outros usuários não podem acessar o conteúdo da pasta Meus Relatórios que pertence a você.  
   
- O recurso Meus Relatórios é opcional e pode ser desabilitado por um administrador de servidor de relatório. Se estiver habilitado, você verá uma pasta Meus Relatórios na pasta Base, que você pode acessar usando o Gerenciador de Relatórios em uma janela da Web. Para obter mais informações, consulte [Localizando e exibindo relatórios no Gerenciador de relatórios &#40; Construtor de relatórios e SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
+ O recurso Meus Relatórios é opcional e pode ser desabilitado por um administrador de servidor de relatório. Se estiver habilitado, você verá uma pasta Meus Relatórios na pasta Base, que você pode acessar usando o Gerenciador de Relatórios em uma janela da Web. Para obter mais informações, consulte [Localizando e exibindo relatórios no Gerenciador de relatórios &#40; Construtor de relatórios e SSRS &#41; ](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
  Em um servidor de relatório configurado em modo integrado do SharePoint, não existe um equivalente à pasta Meus Relatórios. Para obter mais informações, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   

@@ -4,23 +4,23 @@ description: "Este tutorial de início rápido mostra como instalar o SQL Server
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/20/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Instalar o SQL Server e criar um banco de dados no SUSE Linux Enterprise Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Neste tutorial de início rápido, você deve primeiro instalar 2017 RC2 do SQL Server no SUSE Linux Enterprise Server (SLES) v12 SP2. Conecte-se com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
+Neste tutorial de início rápido, você deve primeiro instalar 2017 do SQL Server no SUSE Linux Enterprise Server (SLES) v12 SP2. Conecte-se com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 > [!TIP]
 > Este tutorial requer entrada do usuário e uma conexão de internet. Se você estiver interessado no [autônoma](sql-server-linux-setup.md#unattended) ou [offline](sql-server-linux-setup.md#offline) procedimentos de instalação, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
@@ -37,12 +37,18 @@ Para outros requisitos de sistema, consulte [requisitos de sistema do SQL Server
 
 Para configurar o SQL Server em SLES, execute os seguintes comandos em um terminal para instalar o **mssql server** pacote:
 
+> [!IMPORTANT]
+> Se você instalou anteriormente um CTP ou a versão RC do SQL Server 2017, remova primeiro o repositório antigo antes de registrar um dos repositórios GA. Para obter mais informações, consulte [alterar os repositórios do repositório de visualização no repositório de GA](sql-server-linux-change-repo.md)
+
 1. Baixe o arquivo de configuração do Microsoft SQL Server SLES repositório:
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    sudo zypper --gpg-auto-import-keys refresh
    ```
+
+   > [!NOTE]
+   > Este é o repositório de atualização cumulativa (CU). Para obter mais informações sobre as opções de repositório e suas diferenças, consulte [alterar repositórios de origem](sql-server-linux-setup.md#repositories).
 
 1. Execute os comandos a seguir para instalar o SQL Server:
 
@@ -57,14 +63,10 @@ Para configurar o SQL Server em SLES, execute os seguintes comandos em um termin
    ```
 
    > [!TIP]
-   > Certifique-se de especificar uma senha forte para a conta SA (mínimo 8 caracteres, incluindo letras maiusculas e minúsculas, dígitos de base 10 e/ou símbolos não alfanuméricos).
+   > Se você estiver tentando 2017 do SQL Server neste tutorial, as seguintes edições são licenciadas livremente: Evaluation, Developer e Express.
 
-   > [!TIP]
-   > Ao instalar o RC2, não há licenças adquiridas devem tentar qualquer uma das edições. Como é um versão release candidate, a seguinte mensagem aparece independentemente da edição que você selecione:
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > Esta mensagem não reflete a edição que você selecionou. Ele se relaciona com o período de visualização para RC2.
+   > [!NOTE]
+   > Certifique-se de especificar uma senha forte para a conta SA (mínimo 8 caracteres, incluindo letras maiusculas e minúsculas, dígitos de base 10 e/ou símbolos não alfanuméricos).
 
 1. Quando a configuração estiver concluída, verifique se o serviço está em execução:
 

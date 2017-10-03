@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Gráficos de mapa de árvore e explosão solar no Reporting Services
@@ -32,12 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  Um gráfico de mapa de árvore divide a área do gráfico em retângulos que representam os diferentes níveis e os tamanhos relativos da hierarquia de dados. O mapa é semelhante às ramificações de uma árvore, começando com um tronco e dividindo-se em galhos menores. Cada retângulo é dividido em retângulos menores que representa o próximo nível na hierarquia. Os retângulos superiores do mapa de árvore são organizados com o retângulo maior no canto superior esquerdo do gráfico até o retângulo menor no canto inferior direito.  Dentro de um retângulo, o próximo nível mais alto também é disposto com retângulos do canto superior esquerdo para o canto inferior direito.  
   
- Por exemplo, na imagem do exemplo de mapa de árvore a seguir, a região Southwest é a maior, e Germany é a menor. Dentro da região Southwest, Road Bikes são maiores do que Mountain Bikes.  
+ Por exemplo, na imagem a seguir do exemplo de mapa de árvore, a região Southwest é a maior e Germany é a menor. Dentro da região Southwest, Road Bikes são maiores do que Mountain Bikes.  
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Para inserir um gráfico de mapa de árvore e configurá-lo com os exemplos de dados de Adventureworks  
- **Observação:** antes de adicionar um gráfico ao relatório, crie uma fonte de dados e um conjunto de dados.  Para obter os exemplos de dados e um exemplo de consulta, confira a seção [Exemplo de dados do Adventureworks](#bkmk_sample_data) neste tópico.  
+   
+[!NOTE] Antes de adicionar um gráfico ao relatório, crie uma fonte de dados e o conjunto de dados.  Para obter os exemplos de dados e um exemplo de consulta, confira a seção [Exemplo de dados do Adventureworks](#bkmk_sample_data) neste tópico.  
   
 1.  Clique com o botão direito do mouse na superfície do design, clique em **Inserir**e em **Gráfico** .  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Para inserir um gráfico de explosão solar e configurá-lo com os exemplos de dados de Adventureworks  
- **Observação:** antes de adicionar um gráfico ao relatório, crie uma fonte de dados e um conjunto de dados.  Para obter os exemplos de dados e um exemplo de consulta, confira a seção [Exemplo de dados do Adventureworks](#bkmk_sample_data) neste tópico.  
+ [!NOTE] Antes de adicionar um gráfico ao relatório, crie uma fonte de dados e o conjunto de dados.  Para obter os exemplos de dados e um exemplo de consulta, confira a seção [Exemplo de dados do Adventureworks](#bkmk_sample_data) neste tópico.  
   
 1.  Clique com o botão direito do mouse na superfície do design, clique em **Inserir**e em **Gráfico** .  
   
@@ -100,11 +101,13 @@ ms.lasthandoff: 08/09/2017
   
 5.  Altere o título de gráfico padrão para "Vendas categorizadas por região, com o motivo das vendas".  
   
-6.  |||  
+6.
+    |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Para adicionar os valores dos grupos de categorias como rótulos à explosão solar, defina a propriedade do rótulo **Visible** = true e **UseValueAsLabel**= false.<br /><br /> Os valores de rótulo exibidos é afetada pelo tamanho da fonte, o tamanho da área geral do gráfico e o tamanho de retângulos específicos.  Para ver mais rótulos, altere a propriedade de fonte do Rótulo de LineTotal para 8 pt, em vez do padrão de 10 pt.|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Para adicionar os valores dos grupos de categorias como rótulos à explosão solar, defina a propriedade do rótulo **Visible** = true e **UseValueAsLabel**= false.<br /><br /> Os valores de rótulo exibidos é afetada pelo tamanho da fonte, o tamanho da área geral do gráfico e o tamanho de retângulos específicos.  Para ver mais rótulos, altere a propriedade de fonte do Rótulo de LineTotal para 8 pt, em vez do padrão de 10 pt.|
   
 7.  Se você quiser uma variedade de cores diferente, mude a propriedade **Paleta** do gráfico.  
+  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
@@ -171,7 +174,7 @@ ms.lasthandoff: 08/09/2017
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    -   clique em **OK**.  
+    -   Clique em **OK**.  
   
      Para obter mais informações sobre como criar um conjunto de dados, consulte [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   

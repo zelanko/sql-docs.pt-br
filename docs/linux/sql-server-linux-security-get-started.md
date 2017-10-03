@@ -4,17 +4,17 @@ description: "Este tópico descreve as ações de segurança típica."
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 9aaa786ec53296804f6300aad6add8c10b7fd699
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 254df7047188570cbf766efb29b486d77d095a98
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de segurança do SQL Server no Linux
@@ -27,7 +27,7 @@ Se você for um usuário do Linux que há de novo para o SQL Server, as tarefas 
 
 ## <a name="create-a-login-and-a-database-user"></a>Crie um logon e um usuário de banco de dados 
 
-Conceder a outros usuários acesso ao SQL Server, criando um logon no banco de dados mestre usando o [CREATE LOGIN](/sql-docs/docs/t-sql/statements/create-login-transact-sql) instrução. Por exemplo:
+Conceder a outros usuários acesso ao SQL Server, criando um logon no banco de dados mestre usando o [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instrução. Por exemplo:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -36,7 +36,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 >  [!NOTE]
 >  Use sempre uma senha forte em vez dos asteriscos acima.
 
-Logons podem se conectar ao SQL Server e tem acesso (com permissões limitadas) para o banco de dados mestre. Para se conectar a um banco de dados do usuário, um logon precisa de uma identidade correspondente no nível do banco de dados, chamado de usuário de banco de dados. Os usuários são específicos para cada banco de dados e devem ser criados separadamente em cada banco de dados para conceder acesso a eles. O exemplo a seguir move o cursor para o banco de dados AdventureWorks2014 e, em seguida, usa o [CREATE USER](/sql-docs/docs/t-sql/statements/create-user-transact-sql) instrução para criar um usuário chamado Larry que está associado com o logon nomeado Larry. Embora o logon e o usuário relacionados (mapeado para outro), eles são objetos diferentes. O logon é um princípio de nível de servidor. O usuário é uma entidade de segurança de nível de banco de dados.
+Logons podem se conectar ao SQL Server e tem acesso (com permissões limitadas) para o banco de dados mestre. Para se conectar a um banco de dados do usuário, um logon precisa de uma identidade correspondente no nível do banco de dados, chamado de usuário de banco de dados. Os usuários são específicos para cada banco de dados e devem ser criados separadamente em cada banco de dados para conceder acesso a eles. O exemplo a seguir move o cursor para o banco de dados AdventureWorks2014 e, em seguida, usa o [CREATE USER](../t-sql/statements/create-user-transact-sql.md) instrução para criar um usuário chamado Larry que está associado com o logon nomeado Larry. Embora o logon e o usuário relacionados (mapeado para outro), eles são objetos diferentes. O logon é um princípio de nível de servidor. O usuário é uma entidade de segurança de nível de banco de dados.
 
 ```
 USE AdventureWorks2014;
@@ -67,7 +67,7 @@ Agora, o logon Jerry pode criar mais logons, e o usuário Jerry pode criar mais 
 
 As pessoas primeiro para se conectar a um banco de dados do usuário será o administrador e as contas de proprietário de banco de dados. No entanto, esses usuários têm todas as permissões disponíveis no banco de dados. Isso é mais permissão do que a maioria dos usuários deve ter. 
 
-Quando você estiver apenas começando, você pode atribuir algumas categorias gerais de permissões usando o interno *funções de banco de dados fixas*. Por exemplo, o `db_datareader` função de banco de dados fixa pode ler todas as tabelas no banco de dados, mas não fazer alterações. Conceder a associação em uma função de banco de dados fixa usando o [ALTER ROLE](/sql-docs/docs/t-sql/statements/alter-role-transact-sql) instrução. O exemplo a seguir adicionar o usuário `Jerry` para o `db_datareader` função fixa de banco de dados.   
+Quando você estiver apenas começando, você pode atribuir algumas categorias gerais de permissões usando o interno *funções de banco de dados fixas*. Por exemplo, o `db_datareader` função de banco de dados fixa pode ler todas as tabelas no banco de dados, mas não fazer alterações. Conceder a associação em uma função de banco de dados fixa usando o [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) instrução. O exemplo a seguir adicionar o usuário `Jerry` para o `db_datareader` função fixa de banco de dados.   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,9 +76,9 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-Para obter uma lista das funções fixas de banco de dados, consulte [funções de nível de banco de dados](/sql-docs/docs/relational-databases/security/authentication-access/database-level-roles).
+Para obter uma lista das funções fixas de banco de dados, consulte [funções de nível de banco de dados](../relational-databases/security/authentication-access/database-level-roles.md).
 
-Posteriormente, quando estiver pronto para configurar o acesso mais preciso aos seus dados (recomendados), crie suas próprias funções de banco de dados definido pelo usuário usando [Criar função](/sql-docs/docs/t-sql/statements/create-role-transact-sql) instrução. Atribua permissões granulares específicas a você funções personalizadas.
+Posteriormente, quando estiver pronto para configurar o acesso mais preciso aos seus dados (recomendados), crie suas próprias funções de banco de dados definido pelo usuário usando [Criar função](../t-sql/statements/create-role-transact-sql.md) instrução. Atribua permissões granulares específicas a você funções personalizadas.
 
 Por exemplo, as instruções a seguir criam uma função de banco de dados denominada `Sales`, concede a `Sales` a capacidade de ver, atualizar e excluir linhas de grupo de `Orders` da tabela e, em seguida, adiciona o usuário `Jerry` para o `Sales` função.   
    
@@ -90,12 +90,12 @@ GRANT DELETE ON Object::Sales TO Orders;
 ALTER ROLE Sales ADD MEMBER Jerry;   
 ```   
 
-Para obter mais informações sobre o sistema de permissão, consulte [Introdução às permissões do mecanismo de banco de dados](/sql-docs/docs/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions).
+Para obter mais informações sobre o sistema de permissão, consulte [Introdução às permissões do mecanismo de banco de dados](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 
 ## <a name="configure-row-level-security"></a>Configurar a segurança de nível de linha  
 
-[Segurança em nível de linha](/sql-docs/docs/relational-databases/security/row-level-security) permite que você restrinja o acesso a linhas em um banco de dados com base no usuário que está executando uma consulta. Esse recurso é útil para cenários como garantir que os clientes possam acessar somente seus próprios dados ou que os funcionários possam acessar somente dados que são relevantes para seu departamento.   
+[Segurança em nível de linha](../relational-databases/security/row-level-security.md) permite que você restrinja o acesso a linhas em um banco de dados com base no usuário que está executando uma consulta. Esse recurso é útil para cenários como garantir que os clientes possam acessar somente seus próprios dados ou que os funcionários possam acessar somente dados que são relevantes para seu departamento.   
 
 As etapas a seguir o passo a passo de configuração de dois usuários com diferentes nível de linha acessem o `Sales.SalesOrderHeader` tabela. 
 
@@ -165,7 +165,7 @@ WITH (STATE = OFF);
 
 ## <a name="enable-dynamic-data-masking"></a>Habilitar o mascaramento de dados dinâmicos
 
-[Mascaramento de dados dinâmicos](/sql-docs/docs/relational-databases/security/dynamic-data-masking) permite limitar a exposição de dados confidenciais para os usuários de um aplicativo mascarando total ou parcialmente determinadas colunas. 
+[Mascaramento de dados dinâmicos](../relational-databases/security/dynamic-data-masking.md) permite limitar a exposição de dados confidenciais para os usuários de um aplicativo mascarando total ou parcialmente determinadas colunas. 
 
 Use um `ALTER TABLE` instrução para adicionar uma função de mascaramento para o `EmailAddress` coluna o `Person.EmailAddress` tabela: 
  
@@ -248,9 +248,9 @@ Para remover a TDE, execute`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF
 As operações de criptografia e descriptografia são agendadas em threads em segundo plano pelo SQL Server. É possível exibir o status dessas operações usando exibições do catálogo e de gerenciamento dinâmico na lista mostrada posteriormente neste tópico.   
 
 >  [!WARNING]
->  Os arquivos de backup de bancos de dados com TDE habilitada também são criptografados usando a chave de criptografia do banco de dados. Como resultado, quando você restaura esses backups, o certificado que protege a chave de criptografia do banco de dados deve estar disponível. Isso significa que, além de fazer backup do banco de dados, você deve assegurar que os backups dos certificados de servidor sejam mantidos para evitar perda de dados. Se o certificado não estiver mais disponível, haverá perda de dados. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](/sql-docs/docs/relational-databases/security/sql-server-certificates-and-asymmetric-keys).  
+>  Os arquivos de backup de bancos de dados com TDE habilitada também são criptografados usando a chave de criptografia do banco de dados. Como resultado, quando você restaura esses backups, o certificado que protege a chave de criptografia do banco de dados deve estar disponível. Isso significa que, além de fazer backup do banco de dados, você deve assegurar que os backups dos certificados de servidor sejam mantidos para evitar perda de dados. Se o certificado não estiver mais disponível, haverá perda de dados. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-Para obter mais informações sobre a TDE, consulte [criptografia de dados transparente (TDE)](/sql-docs/docs/relational-databases/security/encryption/transparent-data-encryption-tde).   
+Para obter mais informações sobre a TDE, consulte [criptografia de dados transparente (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
 
 ## <a name="configure-backup-encryption"></a>Configurar a criptografia de backup
@@ -280,10 +280,10 @@ WITH
 GO  
 ```
 
-Para obter mais informações, consulte [criptografia de Backup](/sql-docs/docs/relational-databases/backup-restore/backup-encryption).
+Para obter mais informações, consulte [criptografia de Backup](../relational-databases/backup-restore/backup-encryption.md).
 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre os recursos de segurança do SQL Server, consulte [Central de segurança do mecanismo de banco de dados do SQL Server e banco de dados do SQL Azure](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database).
+Para obter mais informações sobre os recursos de segurança do SQL Server, consulte [Central de segurança do mecanismo de banco de dados do SQL Server e banco de dados do SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 

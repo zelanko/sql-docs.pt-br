@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
@@ -271,7 +271,7 @@ static void Main()
   
 2.  Se o projeto e todos os pacotes passarem no teste de compatibilidade, clique em **OK** para converter o pacote.  
   
-> **OBSERVAÇÃO:** para converter um projeto no modelo de implantação de projeto, use o **Assistente de Conversão de Projeto do Integration Services**. Para obter mais informações, consulte [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **OBSERVAÇÃO:** para converter um projeto no modelo de implantação de projeto, use o **Assistente de Conversão de Projeto do Integration Services**. Para obter mais informações, consulte [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Assistente de Implantação do Integration Services
   O **Assistente de Implantação do Integration Services** dá suporte a dois modelos de implantação:
@@ -309,7 +309,7 @@ Inicie o assistente:
  A página permite revisar as configurações que você selecionou. Você pode alterar suas seleções clicando em **Anterior**ou clicando em qualquer uma das etapas no painel esquerdo. Clique em **Implantar** para começar o processo de implantação.  
   
 #### <a name="results"></a>Resultados  
- Depois que o processo de implantação estiver concluído, você deverá ver a página **Resultados** . Essa página exibe o êxito ou a falha de cada ação. Se a ação falhar, clique em **Com falha** na coluna **Resultado** para exibir uma explicação do erro. Clique em **Salvar relatório... ** para salvar os resultados em um arquivo XML ou clique em **fechar** para sair do assistente.
+ Depois que o processo de implantação estiver concluído, você deverá ver a página **Resultados** . Essa página exibe o êxito ou a falha de cada ação. Se a ação falhar, clique em **Com falha** na coluna **Resultado** para exibir uma explicação do erro. Clique em **Salvar relatório...**  para salvar os resultados em um arquivo XML ou clique em **fechar** para sair do assistente.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -403,7 +403,7 @@ Inicie o assistente:
 14. Clique em **OK** duas vezes para salvar as alterações.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Implantar e executar pacotes SSIS usando procedimentos armazenados
-  Quando você configura um [! INCLUIR[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+  Quando configura um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para usar o modelo de implantação de projeto, você pode usar procedimentos armazenados no catálogo do [!INCLUDE[ssIS](../../includes/ssis-md.md)] para implantar o projeto e executar os pacotes. Para obter informações sobre o modelo de implantação de projeto, consulte [Implantação de projetos e pacotes](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  Você também pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para implantar o projeto e executar os pacotes. Para obter mais informações, consulte os tópicos na seção **Consulte também** .  
   

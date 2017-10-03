@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Conformidade do JDBC 4.1 com o JDBC Driver
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/21/2017
   
 |Novo recurso|Description|  
 |-----------------|-----------------|  
-|Nova função de Escape<br /><br /> Escape de linhas de retorno limitado|Suporte parcial<br /><br /> Sintaxe de escape: limite \<linhas > [OFFSET < linha_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
+|Nova função de Escape<br /><br /> Escape de linhas de retorno limitado|Suporte parcial<br /><br /> Sintaxe de escape: limite \<linhas > [OFFSET < linha_offset >](using-sql-escape-sequences.md).|  
   
  A especificação de API do Java Database Connectivity 4.1 tem suporte pelo Microsoft JDBC Driver 4.2 para SQL Server, com os mapeamentos de tipo de dados a seguir.  
   

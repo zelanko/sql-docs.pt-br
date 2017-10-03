@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **Ajudar a garantir a integridade dos dados usando as transações**. Para obter mais informações, consulte [Transações do Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Reiniciar os pacotes a partir do ponto de falha usando os pontos de verificação**. Para saber mais, confira [Reiniciar pacotes por meio de pontos de verificação](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Reiniciar os pacotes a partir do ponto de falha usando os pontos de verificação**. Para saber mais, confira [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Capturar e manipular os erros de pacotes com os manipuladores de eventos  
  Você pode responder a muitos eventos gerados pelo pacote e os objetos no pacote usando os manipuladores de eventos.  
@@ -72,9 +72,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Solucionar problemas de execução de pacotes por meio dos logs  
  Você pode controlar muitas ocorrências em seus pacotes de execução ativando os logs. Os provedores de logs capturam as informações sobre os eventos especificados para análise posterior e salvam essas informações em uma tabela de banco de dados, um arquivo simples, um arquivo XML ou outro formato de saída suportado.  
   
--   **Habilitar logs**. Você pode refinar a saída de logs selecionando apenas os eventos e apenas os itens de informação que deseja capturar. Para obter mais informações, consulte [Log do SSIS (Integration Services)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
+-   **Habilitar logs**. Você pode refinar a saída de logs selecionando apenas os eventos e apenas os itens de informação que deseja capturar. Para obter mais informações, consulte [Log do SSIS (Integration Services)](../performance/integration-services-ssis-logging.md).  
   
--   **Selecione o evento de Diagnóstico do pacote para solucionar problemas do provedor.** Existem mensagens de log que ajudam a solucionar os problemas de interação do pacote com as fontes de dados externas. Para obter mais informações, consulte [Solução de problemas de conectividade de pacotes de ferramentas](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
+-   **Selecione o evento de Diagnóstico do pacote para solucionar problemas do provedor.** Existem mensagens de log que ajudam a solucionar os problemas de interação do pacote com as fontes de dados externas. Para obter mais informações, consulte [Solução de problemas de conectividade de pacotes de ferramentas](troubleshooting-tools-for-package-connectivity.md).  
   
 -   **Aprimorar a saída de log padrão**. Normalmente, o log acrescenta linhas ao destino de log sempre que um pacote é executado. Embora cada linha de saída do log identifique o pacote de acordo com seu nome e identificador exclusivos, além de identificar também a execução do pacote por um ExecutionID exclusivo, uma quantidade muito grande de saídas de logs em uma lista simples pode dificultar a análise.  
   

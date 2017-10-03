@@ -4,17 +4,17 @@ description: "Explore diferentes maneiras de usar e interagir com o SQL Server 2
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 6a187e6ad238743d0643ef56b76ace7977def228
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: bdfc7ef9eb8048f1009f3c7f1a61533b6b620f37
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurar imagens de contêiner de 2017 do SQL Server no Docker
@@ -96,13 +96,13 @@ O docker fornece uma maneira de executar vários contêineres de SQL Server no m
 O exemplo a seguir cria dois contêineres de SQL Server e mapeá-las para portas **1401** e **1402** no computador host.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 Agora há duas instâncias do SQL Server em execução em contêineres separados. Clientes podem se conectar a cada instância do SQL Server usando o endereço IP do host do Docker e o número da porta para o contêiner.
@@ -129,11 +129,11 @@ Suas alterações de configuração do SQL Server e os arquivos de banco de dado
 A primeira opção é um diretório de montagem no seu host como um volume de dados em seu contêiner. Para fazer isso, use o `docker run` com o `-v <host directory>:/var/opt/mssql` sinalizador. Isso permite que os dados sejam restaurados entre as execuções de contêiner.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
 ```
 
 Essa técnica também permite que você compartilhe e exibir os arquivos no host fora do Docker.
@@ -146,11 +146,11 @@ Essa técnica também permite que você compartilhe e exibir os arquivos no host
 A segunda opção é usar um contêiner de volume de dados. Você pode criar um contêiner de volume de dados, especificando um nome de volume em vez de um diretório de host com o `-v` parâmetro. O exemplo a seguir cria um volume de dados compartilhado denominado **sqlvolume**.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
 ```
 
 > [!NOTE]
@@ -230,35 +230,6 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 
-## <a id="upgrade"></a>Atualize o SQL Server em contêineres
-
-Para atualizar a imagem de contêiner com Docker, puxe a versão mais recente do registro. Use o `docker pull` comando:
-
-```bash
-docker pull microsoft/mssql-server-linux:latest
-```
-
-Isso atualiza a imagem do SQL Server para quaisquer novos contêineres que você criar, mas ele não será atualizado do SQL Server em qualquer contêiner em execução. Para fazer isso, você deve criar um novo contêiner com a imagem de contêiner mais recente do SQL Server e migrar os dados para esse novo contêiner.
-
-1. Primeiro, obtenha a imagem de contêiner mais recente do SQL Server.
-
-   ```bash
-   docker pull microsoft/mssql-server-linux:latest
-   ```
-
-1. Verifique se você estiver usando um do [técnicas de persistência de dados](#persist) para seu contêiner existente do SQL Server. Isso permite que você inicie um novo contêiner com os mesmos dados.
-
-1. Pare o contêiner do SQL Server com o `docker stop` comando.
-
-1. Criar um novo contêiner de SQL Server com `docker run` e especifique um diretório de host mapeada ou um contêiner de volume de dados. O novo contêiner agora usa uma nova versão do SQL Server com os dados existentes do SQL Server.
-
-   > [!IMPORTANT]
-   > Somente há suporte para atualização entre RC1 e RC2 neste momento.
-
-1. Verifique se seus bancos de dados e os dados no novo contêiner.
-
-1. Opcionalmente, remova o recipiente antigo com `docker rm`.
-
 ## <a name="run-a-specific-sql-server-container-image"></a>Executar uma imagem de contêiner específica do SQL Server
 
 Há cenários em que você talvez não queira usar a imagem de contêiner mais recente do SQL Server. Para executar uma imagem de contêiner específica do SQL Server, use as seguintes etapas:
@@ -285,6 +256,29 @@ Essas etapas também podem ser usadas para fazer o downgrade de um contêiner ex
 
 > [!IMPORTANT]
 > Upgrade e downgrade só são suportadas entre RC1 e RC2 neste momento.
+
+## <a id="upgrade"></a>Atualize o SQL Server em contêineres
+
+Para atualizar a imagem de contêiner com Docker, primeiro identifique a marca para a versão para a atualização. Chamar esta versão do registro com o `docker pull` comando:
+
+```bash
+docker pull microsoft/mssql-server-linux:<image_tag>
+```
+
+Isso atualiza a imagem do SQL Server para quaisquer novos contêineres que você criar, mas ele não será atualizado do SQL Server em qualquer contêiner em execução. Para fazer isso, você deve criar um novo contêiner com a imagem de contêiner mais recente do SQL Server e migrar os dados para esse novo contêiner.
+
+1. Verifique se você estiver usando um do [técnicas de persistência de dados](#persist) para seu contêiner existente do SQL Server. Isso permite que você inicie um novo contêiner com os mesmos dados.
+
+1. Pare o contêiner do SQL Server com o `docker stop` comando.
+
+1. Criar um novo contêiner de SQL Server com `docker run` e especifique um diretório de host mapeada ou um contêiner de volume de dados. Certifique-se de usar a marca específica para a atualização do SQL Server. O novo contêiner agora usa uma nova versão do SQL Server com os dados existentes do SQL Server.
+
+   > [!IMPORTANT]
+   > Somente há suporte para atualização entre RC1, RC2 e GA neste momento.
+
+1. Verifique se seus bancos de dados e os dados no novo contêiner.
+
+1. Opcionalmente, remova o recipiente antigo com `docker rm`.
 
 ## <a id="troubleshooting"></a>Solução de problemas
 
@@ -313,14 +307,14 @@ No Windows, verifique se você estiver iniciando o PowerShell ou o prompt de com
 
 Se o contêiner do SQL Server falhar na execução, tente os seguintes testes:
 
-- Se você receber um erro, como **' Falha ao criar o ponto de extremidade CONTAINER_NAME na ponte de rede. Erro ao iniciar o proxy: associação de 0.0.0.0:1433 escuta tcp: endereço já está em uso.' **, em seguida, você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso pode acontecer se você estiver executando o SQL Server localmente no computador host. Ele também pode ocorrer se você iniciar dois contêineres de SQL Server e tente mapear ambos na mesma porta de host. Se isso acontecer, use o `-p` parâmetro para mapear a porta 1433 do contêiner para uma porta de host diferente. Por exemplo: 
+- Se você receber um erro, como **' Falha ao criar o ponto de extremidade CONTAINER_NAME na ponte de rede. Erro ao iniciar o proxy: associação de 0.0.0.0:1433 escuta tcp: endereço já está em uso.'** , em seguida, você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso pode acontecer se você estiver executando o SQL Server localmente no computador host. Ele também pode ocorrer se você iniciar dois contêineres de SQL Server e tente mapear ambos na mesma porta de host. Se isso acontecer, use o `-p` parâmetro para mapear a porta 1433 do contêiner para uma porta de host diferente. Por exemplo: 
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.
     ```
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.
     ```
 
 - Verifique se há mensagens de erro do contêiner.
@@ -340,7 +334,7 @@ Se o contêiner do SQL Server falhar na execução, tente os seguintes testes:
 Se o processo do SQL Server estiver falhando dentro do contêiner, você deve criar um novo contêiner com **SYS_PTRACE** habilitado. Isso adiciona a capacidade de Linux para rastrear um processo, o que é necessário para a criação de um arquivo de despejo de memória em uma exceção. O arquivo de despejo pode ser usado pelo suporte para ajudar a solucionar o problema. O seguinte comando docker run habilita esse recurso.
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 ### <a name="sql-server-connection-failures"></a>Falhas de conexão do SQL Server

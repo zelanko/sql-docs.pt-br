@@ -1,19 +1,19 @@
 ---
-title: "Quais são as novidades do SQL Server de 2017 RC1 no Linux | Microsoft Docs"
+title: Novidades do SQL Server de 2017 no Linux | Microsoft Docs
 description: "Este tópico destaca o que há de novo para a versão atual do SQL Server 2017 no Linux."
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novidades do SQL Server 2017 no Linux
@@ -21,6 +21,13 @@ ms.lasthandoff: 09/21/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Este tópico descreve o que há de novo para 2017 do SQL Server em execução no Linux.
+
+## <a name="ga"></a>GA
+
+A versão Availaiblity geral (GA) contém as seguintes melhorias e correções:
+
+- Arquivos de banco de dados agora podem ser hospedados em NFS. Isso corrige problemas com cenários de disco compartilhados NFS, montar o armazenamento remoto para plataformas de contêiner e montar pastas de Docker para Windows.
+- Outras diversas correções de bugs e aprimoramentos.
 
 ## <a name="rc2"></a>RC2
 
@@ -131,7 +138,7 @@ No modo de compatibilidade 140:
 [Aprimoramentos do Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) nesta versão do CTP1.1:
 - Clonagem de CLR, Filestream/Filetable, objetos na memória e o repositório de consultas de banco de dados.
 - **CRIAR** ou **ALTER** operadores para objetos de programação.
-- Novo **dica USE** opção para fornecer dicas para o processador de consultas de consulta. Saiba mais aqui: [dicas de consulta](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
+- Novo **dica USE** opção para fornecer dicas para o processador de consultas de consulta. Saiba mais aqui: [dicas de consulta](../t-sql/queries/hints-transact-sql-query.md).
 - Conta de serviço do SQL agora pode identificar programaticamente habilitar bloquear páginas na memória e a inicialização instantânea de arquivo permissões.
 - Suporte para a contagem de arquivos TempDB, tamanho do arquivo e as configurações de crescimento do arquivo.
 - Diagnóstico estendido no showplan XML.

@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0a59b89b558922f27c91fb2452df157f7baa3918
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 39bd1c3e734a91d2219b405febbccd508c08b78e
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planejar a criação e implantação de relatórios | Reporting Services
@@ -96,7 +96,7 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
   
 -   [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [SQL Server Data Tools para Visual Studio 2015](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+-   [SQL Server Data Tools para Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_reportviewer"></a> Controles ReportViewer  
  Um controle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer pode exibir um relatório .rdlc no modo de visualização local ou no modo remoto, o controle pode exibir um arquivo .rdl hospedado em um servidor de relatório [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . A tabela a seguir fornece a lista de versões de RDL com suporte dos controles ReportViewer para processamento local (.rdlc). O suporte para RDL no lado do servidor é resumido na seção [Suporte para servidor de relatório e esquema RDL](#bkmk_report_server_rdl_schema_support).  

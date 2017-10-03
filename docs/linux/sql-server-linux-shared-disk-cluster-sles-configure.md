@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 02cf781a1035326ad5073f6a6d3219e8a7d9c070
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 8e4f84fe50051d1d09c5057a04840cbf19c4d1b0
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado SLES para SQL Server
@@ -23,9 +23,6 @@ ms.lasthandoff: 08/02/2017
 Este guia fornece instruções para criar um cluster de disco compartilhado de dois nós para o SQL Server no SUSE Linux Enterprise Server (SLES). A camada de clustering é baseada no SUSE [alta disponibilidade extensão (HAE)](https://www.suse.com/products/highavailability) criado na parte superior do [Pacemaker](http://clusterlabs.org/). 
 
 Para obter mais detalhes sobre a configuração de cluster, opções do recurso de agente, gerenciamento, as práticas recomendadas e recomendações, consulte [SUSE Linux Enterprise alta disponibilidade extensão 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
-
-> [!NOTE]
-> Neste ponto, a integração do SQL Server com Pacemaker no Linux não é como acoplada como com o WSFC no Windows. De dentro do SQL, não há nenhum conhecimento sobre a presença do cluster, orquestração todas as está fora de e o serviço é controlado como uma instância autônoma por Pacemaker. Além disso, o nome de rede virtual é específico para o WSFC, não há nenhum equivalente do mesmo em Pacemaker. É esperado que @@servername e sys para retornar o nome do nó, enquanto o sys.DM os_cluster_nodes dmvs de cluster e dm_os_cluster_properties não serão nenhum registro. Para usar uma cadeia de caracteres de conexão que aponta para um nome de servidor de cadeia de caracteres e não usar o IP, será necessário registrar no servidor DNS o IP usado para criar o recurso IP virtual (como explicado abaixo) com o nome de servidor escolhido.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

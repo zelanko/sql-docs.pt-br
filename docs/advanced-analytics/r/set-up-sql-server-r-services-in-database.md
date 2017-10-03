@@ -1,7 +1,7 @@
 ---
 title: "Configurar serviços de aprendizado de máquina do SQL Server (no banco de dados) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f0065068d53517626c7157c9be884549573ae08b
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurar serviços de aprendizado de máquina do SQL Server (no banco de dados)
@@ -97,15 +97,15 @@ Para usar o aprendizado de máquina, você deve instalar o SQL Server 2016 ou po
 
 6. Sobre o **pronto para instalar** página, verifique se os seguintes itens são incluídos e, em seguida, selecione **instalar**.
 
-   **SQL Server 2016**
-   - Serviços do Mecanismo de Banco de Dados
-   - R Services (no banco de dados)
-
    **SQL Server 2017**
    - Serviços do Mecanismo de Banco de Dados
    - Serviços de Machine Learning (No Banco de Dados)
    - R, Python ou ambos
-    
+
+   **SQL Server 2016**
+   - Serviços do Mecanismo de Banco de Dados
+   - R Services (no banco de dados)
+
 7. Quando a instalação for concluída, reinicie o computador.
 
 ##  <a name="bkmk_enableFeature"></a>Etapa 2: Habilitar serviços de script externo
@@ -189,12 +189,15 @@ No entanto, se você precisa executar scripts R de um cliente de ciência de dad
 
 1. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de Objetos, expanda **Segurança**, clique com o botão direito do mouse em **Logons**e selecione **Novo Logon**.
 2. No **logon - novo** caixa de diálogo, selecione **pesquisa**.
-3. Selecione o **tipos de objeto** e **grupos** caixas de seleção e desmarque todas as outras caixas de seleção. 
-4. Em **insira o nome do objeto para selecionar**, tipo **SQLRUserGroup**e, em seguida, selecione **verificar nomes**.  
-    O nome do grupo local que está associado ao serviço do Launchpad da instância deve resolver para algo como *instancename\SQLRUserGroup*. 
-5. Escolha **OK**.
-6. Por padrão, o logon é atribuído à função **pública** e tem permissão para se conectar ao mecanismo de banco de dados.
-7. Escolha **OK**.
+3. Selecione o **tipos de objeto** e **grupos** caixas de seleção e desmarque todas as outras caixas de seleção.
+4. Clique em **avançado**, verifique se o local de pesquisa é o computador atual e clique **Localizar agora**.
+5. Percorra a lista de contas de grupo no servidor até encontrar um que começa com `SQLRUserGroup`.
+    
+    + O nome do grupo associada com o serviço barra inicial para o _instância padrão_ é sempre apenas **SQLRUserGroup**. Selecione esta conta somente para a instância padrão.
+    + Se você estiver usando um _instância nomeada_, o nome da instância é acrescentado ao nome padrão, `SQLRUserGroup`. Portanto, se a instância é chamada "MLTEST", o nome do grupo de usuário padrão para esta instância seria **SQLRUserGroupMLTest**.
+5. Clique em **Okey** para fechar a caixa de diálogo de pesquisa avançada e verifique se você selecionou a conta correta para a instância. Cada instância pode usar seu próprio serviço de barra inicial e o grupo criado para esse serviço.
+6. Clique em **Okey** mais uma vez para fechar o **Selecionar usuário ou grupo** caixa de diálogo.
+7. No **logon - novo** caixa de diálogo, clique em **Okey**. Por padrão, o logon é atribuído à função **pública** e tem permissão para se conectar ao mecanismo de banco de dados.
 
 ### <a name="bkmk_AllowLogon"></a>Conceder aos usuários permissão para executar scripts externos
 

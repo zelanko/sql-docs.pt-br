@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega de email no Reporting Services
@@ -88,7 +88,7 @@ ms.lasthandoff: 09/21/2017
  Para um servidor de relatório de modo Nativo, a extensão de entrega de email é configurada pela ferramenta Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de modo Nativo e pela edição dos arquivos de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para um servidor de relatório do modo do SharePoint, a extensão de entrega de email é configurada nas páginas de gerenciamento do SharePoint e em scripts do PowerShell.  
   
  
- Para obter informações sobre como configurar um servidor de relatório de modo nativo, consulte [email configurações - modo nativo do Reporting Services (Configuration Manager)](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
+ Para obter informações sobre como configurar um servidor de relatório de modo nativo, consulte [email configurações - modo nativo do Reporting Services (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  Para obter informações sobre como configurar um servidor de relatório do modo do SharePoint, consulte o seguinte:  

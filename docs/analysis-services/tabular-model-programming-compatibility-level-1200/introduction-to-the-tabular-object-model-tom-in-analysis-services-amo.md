@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2f9e5d07831070ad69ccf23a3975fbdc19fa4c83
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introdução ao modelo de objeto de tabela (TOM) no Analysis Services AMO
@@ -51,17 +51,17 @@ TOM é criado sobre a infraestrutura AMO, que também acomoda Multidimensional e
 Isso tem algumas implicações práticas.
 Primeiro de tudo, quando você gerencia objetos que não são especificados em metadados de tabela (como uma **servidor** ou **banco de dados**), você precisará aproveitar partes da pilha de AMO existente que descrevem os objetos. Junto com a API herdada é o conceito de objetos principais e secundários que fornecem descrições granulares do estado do objeto como descoberta do servidor, ou quando salvos no servidor. A classe MajorObject no namespace Microsoft. AnalysisServices expõe métodos para **atualizar** e **atualização**. Os objetos menores são somente atualização ou salvo por meio do objeto principal que contém.
 
-Por outro lado, quando você gerencia objetos que fazem parte de metadados de tabela (como **modelo** ou **tabela**), utilize uma pilha de tabela totalmente nova. Dentro esta pilha, o atualizações são refinadas, que significa que todos os objetos de metadados (derivado a **MetadataObject** classe sob o namespace AnalysisServices) podem ser salvos individualmente no servidor. Normalmente, você deve descobrir todo o **modelo**, em seguida, fazer alterações em objetos de metadados individuais nele (como **tabela** ou **coluna**), chame ** Model.SaveChanges()** método (que compreende as alterações feitas por você no nível refinada), enviar comandos ao servidor para atualizar somente os objetos que foram alteradas.
+Por outro lado, quando você gerencia objetos que fazem parte de metadados de tabela (como **modelo** ou **tabela**), utilize uma pilha de tabela totalmente nova. Dentro esta pilha, o atualizações são refinadas, que significa que todos os objetos de metadados (derivado a **MetadataObject** classe sob o namespace AnalysisServices) podem ser salvos individualmente no servidor. Normalmente, você deve descobrir todo o **modelo**, em seguida, fazer alterações em objetos de metadados individuais nele (como **tabela** ou **coluna**), chame  **Model.SaveChanges()** método (que compreende as alterações feitas por você no nível refinada), enviar comandos ao servidor para atualizar somente os objetos que foram alteradas.
 
 ### <a name="tom-and-xmla"></a>TOM e XMLA
 
-Durante a transmissão, TOM usa o protocolo XMLA para se comunicar com o servidor do Analysis Services e para gerenciar objetos. Ao gerenciar objetos não tabulares, TOM usa [ASSL](/sql-docs/docs/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla), a extensão da linguagem de script do Analysis Services do XMLA. Ao gerenciar objetos tabulares, TOM usa o protocolo de tabela do SSAS, também uma extensão do XMLA. Consulte [documentação do protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obter mais informações.
+Durante a transmissão, TOM usa o protocolo XMLA para se comunicar com o servidor do Analysis Services e para gerenciar objetos. Ao gerenciar objetos não tabulares, TOM usa [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), a extensão da linguagem de script do Analysis Services do XMLA. Ao gerenciar objetos tabulares, TOM usa o protocolo de tabela do SSAS, também uma extensão do XMLA. Consulte [documentação do protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obter mais informações.
 
 ### <a name="tom-and-json"></a>TOM e JSON
 
-Metadados de tabela, que é estruturado como documentos JSON, tem um novo comando e o objeto de modelo da sintaxe de definição através de linguagem de script de modelo de tabela [TMSL](/sql-docs/docs/analysis-services/tabular-model-scripting-language-tmsl-reference). A linguagem de script usa JSON para o corpo de solicitações e respostas.
+Metadados de tabela, que é estruturado como documentos JSON, tem um novo comando e o objeto de modelo da sintaxe de definição através de linguagem de script de modelo de tabela [TMSL](../tabular-model-scripting-language-tmsl-reference.md). A linguagem de script usa JSON para o corpo de solicitações e respostas.
 
-Embora TMSL e TOM expõem os mesmos objetos (**tabela**, **coluna**, e assim por diante) e as mesmas operações (**criar**, **excluir**, ** Atualizar**), TOM não usa TMSL na conexão (ele usa o protocolo de tabela do SSAS MS em vez disso, conforme observado anteriormente).
+Embora TMSL e TOM expõem os mesmos objetos (**tabela**, **coluna**, e assim por diante) e as mesmas operações (**criar**, **excluir**,  **Atualizar**), TOM não usa TMSL na conexão (ele usa o protocolo de tabela do SSAS MS em vez disso, conforme observado anteriormente).
 
 Como um usuário, você pode optar por gerenciar bancos de dados tabulares por meio da biblioteca de TOM do seu programa em c# ou o script do PowerShell ou por meio de script TMSL executadas por meio do PowerShell, um trabalho do SQL Server Agent ou o SQL Server Management Studio (SSMS).
 

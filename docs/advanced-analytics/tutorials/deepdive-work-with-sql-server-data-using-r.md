@@ -20,10 +20,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6aa23c7a8f2daefcf0b138bb39926eb2e377c22b
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6db9cc485778e4074b5b648b23572edee3a0f42e
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="work-with-sql-server-data-using-r"></a>Trabalhar com dados do SQL Server usando o R
@@ -100,7 +100,7 @@ Esta seção lista alguns problemas comuns que podem ocorrer durante a configura
 
 - **Como posso verificar a conectividade de banco de dados e verificar as consultas SQL?**
   
-    Antes de executar o código do R usando o servidor, é recomendável verificar se o banco de dados pode ser acessado no ambiente de desenvolvimento do R. O [Gerenciador de Servidores no Visual Studio](https://msdn.microsoft.com/library/x603htbk.aspx) e o [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) são ferramentas gratuitas com recursos avançados de gerenciamento e conectividade de banco de dados.
+    Antes de executar o código do R usando o servidor, é recomendável verificar se o banco de dados pode ser acessado no ambiente de desenvolvimento do R. O [Gerenciador de Servidores no Visual Studio](https://msdn.microsoft.com/library/x603htbk.aspx) e o [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) são ferramentas gratuitas com recursos avançados de gerenciamento e conectividade de banco de dados.
   
     Se você não quiser instalar as ferramentas de gerenciamento de banco de dados adicionais, será possível criar um teste de conexão com a instância do SQL Server usando o [Administrador de Fonte de Dados ODBC](https://msdn.microsoft.com/library/ms714024.aspx) no Painel de Controle. Se o banco de dados estiver configurado corretamente e você inserir o nome de usuário correto e a senha, você deverá conseguir ver o banco de dados que acabou de criar e selecioná-lo como o banco de dados padrão.
   

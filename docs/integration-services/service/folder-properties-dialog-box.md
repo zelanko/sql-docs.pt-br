@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: dc9e7c04025c01db9eee05d467fc9b5317aa11ec
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 942e05985c353e6c6cc433ace0dfddd204b02252
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="folder-properties-dialog-box"></a>Caixa de diálogo Propriedades da Pasta
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
 5.  Clique em **OK** para aceitar as alterações e feche a caixa de diálogo **Propriedades das Pastas** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Integration Services &#40; SSIS &#41; Servidor](/sql-docs/docs/integration-services/integration-services-ssis-packages)   
+ [Integration Services &#40; SSIS &#41; Servidor](../integration-services-ssis-packages.md)   
  [Catalog. grant_permission &#40; Banco de dados SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   

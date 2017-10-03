@@ -1,7 +1,7 @@
 ---
 title: "Assistente de migração do SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 7a199b65ceb8fdd1692b37e307dd544c52ad618b
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
@@ -31,13 +31,13 @@ Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para
   
 -   [Assistente de migração do SQL Server para Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [Assistente de migração do SQL Server para DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+-   [Assistente de migração do SQL Server para DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
 -   [Assistente de migração do SQL Server para MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
 -   [Assistente de migração do SQL Server para Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [Assistente de migração do SQL Server para SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-   [Assistente de migração do SQL Server para SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>Fontes com suporte e versões de destino
 Para fontes com suporte, revise as informações no Centro de Download para baixar o SSMA.
@@ -77,7 +77,7 @@ As seguintes versões de destino têm suporte para o SSMA.
   
 -   Suporte Premier - se você tiver um contrato Premier, você pode obter Premier suporte a [portal Premier Online](https://premier.microsoft.com/).  
   
--   Serviços de consultoria – para migrações de parceiro assistido, vá a [Portal de parceiros](https://www.platformmodernization.org/Pages/default.aspx).  
+-   Serviços – para o parceiro de consultoria assistido migrações, acesse o [Portal de parceiros](https://www.platformmodernization.org/Pages/default.aspx).  
   
 ## <a name="legal-notice-ssma"></a>Aviso legal (SSMA)  
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  
@@ -88,7 +88,7 @@ A menos que indicado o contrário, os exemplos de empresas, organizações, prod
   
 A Microsoft pode ter patentes ou requisições para obtenção de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo desta documentação. A posse desta documentação não lhe confere nenhum direito sobre as citadas patentes, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual, salvo aqueles expressamente mencionados em um contrato de licença, por escrito, da Microsoft.  
   
-©2015 Microsoft Corporation. Todos os direitos reservados.  
+© Microsoft Corporation. 2017. Todos os direitos reservados.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, Gráfico Dinâmico, Tabela Dinâmica, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System e WinFX são marcas registradas ou comerciais da Microsoft Corporation nos Estados Unidos e/ou em outros países/regiões.  
   
@@ -101,7 +101,7 @@ O conteúdo que aparece na documentação do SQL Server somente é publicado dep
   
 Em alguns casos, determinado recurso pode não ser algo que os clientes devam usar diretamente; nesse caso, ele não está documentado. A menos que um recurso também seja abordado na documentação do SQL Server publicada pela Microsoft, o conteúdo de manuais ou sites de terceiros não tem suporte do atendimento ao cliente da Microsoft e não deve ser usado em aplicativos ou bancos de dados de produção.  
   
-Os clientes não devem usar APIs não documentadas, incluindo, dentre outras, procedimentos armazenados, procedimentos armazenados estendidos, funções, exibições, tabelas, colunas, propriedades ou metadados. O atendimento ao cliente da Microsoft não dará suporte a bancos de dados ou aplicativos que aproveitarem ou usarem pontos de entrada não documentados.  
+Os clientes não devem usar APIs não documentadas, incluindo, dentre outras, procedimentos armazenados, procedimentos armazenados estendidos, funções, exibições, tabelas, colunas, propriedades ou metadados. Suporte ao cliente Microsoft não oferece suporte a bancos de dados ou aplicativos que aproveitem ou usem pontos de entrada não documentados.  
   
 As atualizações de servidor e de banco de dados para versões futuras do SQL Server não estão garantidas para aplicativos e bancos de dados que aproveitem e usem pontos de entrada não documentados. O uso de recursos e funcionalidades do SQL Server deve ser limitado àqueles que estão incluídos na documentação do Microsoft SQL Server. Se um recurso não está descrito na documentação do Microsoft SQL Server, ele não tem suporte do SQL Server.  
   

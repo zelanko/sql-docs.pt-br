@@ -4,23 +4,23 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 7fc69e2d9a5e86e63ceb40e43befa65ab2cfdb7d
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1463c56a247a2d578fc0a69f96cb8ead829dfba3
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Dados de cópia em massa com bcp para o SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Este tópico mostra como usar o [bcp](/sql-docs/docs/tools/bcp-utility) utilitário de linha de comando para dados de cópia em massa entre uma instância do SQL Server de 2017 RC2 no Linux e um arquivo de dados em um formato especificado pelo usuário.
+Este tópico mostra como usar o [bcp](../tools/bcp-utility.md) utilitário de linha de comando para dados de cópia em massa entre uma instância do SQL Server 2017 no Linux e um arquivo de dados em um formato especificado pelo usuário.
 
 Você pode usar `bcp` para importar grande número de linhas em tabelas do SQL Server ou para exportar dados de tabelas do SQL Server para arquivos de dados. Exceto quando usado com a opção queryout `bcp` não requer conhecimento de Transact-SQL. O `bcp` utilitário de linha de comando funciona com o Microsoft SQL Server em execução no local ou na nuvem, no Linux, Windows ou Docker e banco de dados do SQL Azure e Azure SQL Data Warehouse.
 
@@ -136,8 +136,8 @@ Isso deve exibir o seguinte na janela de terminal:
 ```
 
 ## <a name="see-also"></a>Consulte também
-- [utilitário bcp](/sql-docs/docs/tools/bcp-utility)
-- [Formatos de dados para compatibilidade usando bcp](/sql-docs/docs/relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server)
-- [Importação em massa dados usando BULK INSERT](/sql-docs/docs/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server)
-- [INSERÇÃO em MASSA (Transact-SQL)](/sql-docs/docs/t-sql/statements/bulk-insert-transact-sql)
+- [utilitário bcp](../tools/bcp-utility.md)
+- [Formatos de dados para compatibilidade usando bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
+- [Importação em massa dados usando BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [INSERÇÃO em MASSA (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
 

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: eb3ac975b6962a36e1aaa60a421e977fe42cda90
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
@@ -315,7 +315,7 @@ Neste ponto, ambas as instâncias do SQL Server estão configuradas para executa
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA tiver agentes de cercamento para VMWare e KVM. Isolamento deve ser desabilitada em todos os outros hipervisores. Desabilitar agentes de isolamento não é recomendável em ambientes de produção. A partir do período de tempo RC2, não existem agentes isolamento para ambientes de nuvem ou o Hyper-v. Se você estiver executando uma dessas configurações, você precisa desabilitar o isolamento. \**Isso não é recomendado em um sistema de produção!**
+   > RHEL HA tiver agentes de cercamento para VMWare e KVM. Isolamento deve ser desabilitada em todos os outros hipervisores. Desabilitar agentes de isolamento não é recomendável em ambientes de produção. A partir do período de tempo, não existem agentes isolamento para ambientes de nuvem ou o Hyper-v. Se você estiver executando uma dessas configurações, você precisa desabilitar o isolamento. \**Isso não é recomendado em um sistema de produção!**
 
    O comando a seguir desabilita os agentes de isolamento.
 

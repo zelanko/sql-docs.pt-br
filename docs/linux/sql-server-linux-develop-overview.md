@@ -4,24 +4,24 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 7fcd3350796d88d02011f0d45e666851d69cfd78
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Como começar a desenvolver aplicativos para o SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Você pode criar aplicativos que se conectam ao 2017 RC2 do SQL Server no Linux de uma variedade de linguagens de programação, como c#, Java, Node.js, PHP, Python, Ruby e C++. Você também pode usar as estruturas de sites populares e estruturas de mapeamento relacional objeto (ORM).
+Você pode criar aplicativos que se conectam ao 2017 do SQL Server no Linux de uma variedade de linguagens de programação, como c#, Java, Node.js, PHP, Python, Ruby e C++. Você também pode usar as estruturas de sites populares e estruturas de mapeamento relacional objeto (ORM).
 
 > [!TIP]
 > Essas mesmas opções de desenvolvimento também habilitar destino do SQL Server em outras plataformas. Aplicativos podem direcionar o SQL Server em execução no local ou na nuvem, no Docker, Windows ou Linux em macOS. Ou você pode direcionar o banco de dados do SQL Azure e o Azure SQL Data Warehouse.
@@ -35,7 +35,7 @@ Você pode criar aplicativos que se conectam ao 2017 RC2 do SQL Server no Linux 
 - Experimente os exemplos de código.
 
 > [!TIP]
-> Se você quiser desenvolver para o SQL Server de 2017 RC2 no Docker, examine o **macOS** tutoriais.
+> Se você quiser desenvolver para o SQL Server 2017 no Docker, examine o **macOS** tutoriais.
 
 ## <a name="create-new-applications"></a>Criar novos aplicativos
 
@@ -43,11 +43,11 @@ Se você estiver criando um novo aplicativo, dê uma olhada em uma lista da [bib
 
 ## <a name="use-existing-applications"></a>Usar aplicativos existentes
 
-Se você tiver um aplicativo de banco de dados existente, você pode simplesmente alterar sua cadeia de caracteres de conexão para SQL Server 2017 RC2 no Linux de destino. Certifique-se de ler sobre o [problemas conhecidos](sql-server-linux-release-notes.md) no SQL Server de 2017 RC2 no Linux.
+Se você tiver um aplicativo de banco de dados existente, você pode simplesmente alterar sua cadeia de caracteres de conexão para destino 2017 do SQL Server no Linux. Certifique-se de ler sobre o [problemas conhecidos](sql-server-linux-release-notes.md) em 2017 do SQL Server no Linux.
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>Usar as ferramentas existentes do SQL no Windows com o SQL Server no Linux
 
-Ferramentas que são executados no momento no Windows, como o SSMS, o SSDT e o PowerShell, também funcionam com o SQL Server de 2017 RC2 no Linux. Embora eles não forem executados nativamente no Linux, você ainda pode gerenciar instâncias remotas do SQL Server no Linux. 
+Ferramentas que são executados no momento no Windows, como o SSMS, o SSDT e o PowerShell, também funcionam com 2017 do SQL Server no Linux. Embora eles não forem executados nativamente no Linux, você ainda pode gerenciar instâncias remotas do SQL Server no Linux. 
 
 Consulte os tópicos a seguir para obter mais informações:
 
@@ -62,7 +62,7 @@ Consulte os tópicos a seguir para obter mais informações:
 
 Você pode usar o novo [mssql extensão](https://aka.ms/mssql-marketplace) para [código do Visual Studio](https://code.visualstudio.com) no Windows, Linux e macOS. Para obter instruções passo a passo, consulte o tutorial a seguir:
 
-- [Use o código do Visual Studio](sql-server-linux-develop-use-vscode.md)
+- [Usar o Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 
 Você também pode usar novas ferramentas de linha de comando que são nativas para Linux. Essas ferramentas incluem o seguinte:
 

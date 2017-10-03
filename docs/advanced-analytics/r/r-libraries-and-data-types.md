@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bedc8b9d5e8e4c2a9bd8c3271a8463fc860f3fd5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c4ab2ed64eaaf970057987c7169d12e93c4380ad
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="r-libraries-and-r-data-types"></a>Tipos de dados de R e bibliotecas de R
@@ -80,9 +80,9 @@ A tabela a seguir mostra as alterações em tipos de dados e valores quando dado
 
 ## <a name="data-types-not-supported-by-r"></a>Tipos de dados sem suporte em R
 
-Das categorias de tipos de dados com suporte no [sistema de tipos do SQL Server](/sql-docs/docs/t-sql/data-types/data-types-transact-sql), os seguintes tipos provavelmente apresentam problemas quando passados para o código R:
+Das categorias de tipos de dados com suporte no [sistema de tipos do SQL Server](../../t-sql/data-types/data-types-transact-sql.md), os seguintes tipos provavelmente apresentam problemas quando passados para o código R:
 
-+ Tipos de dados listados no **outros** seção do tópico de sistema de tipo SQL: **cursor**, **timestamp**, **hierarchyid**, ** uniqueidentifier**, **sql_variant**, **xml**, **tabela**
++ Tipos de dados listados no **outros** seção do tópico de sistema de tipo SQL: **cursor**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabela**
 + Todos os tipos espaciais
 + **image**
 
@@ -111,7 +111,7 @@ Em geral, sempre que você tiver alguma dúvida sobre como uma estrutura de dado
 
 Ao recuperar dados de um banco de dados para uso em código R, você sempre deve eliminar colunas que não possam ser usadas em R, bem como colunas que não sejam úteis para análise, como GUIDS (identificador exclusivo), carimbos de data/hora e outras colunas usadas para auditoria ou informações de linhagem criadas pelos processos de ETL. 
 
-Observe que incluir colunas desnecessárias pode reduzir significativamente o desempenho do código R, especialmente se colunas de alta cardinalidade forem usadas como fatores. Portanto, é recomendável usar os procedimentos armazenados do sistema do SQL Server e modos de exibição de informações para obter os tipos de dados para uma determinada tabela com antecedência e eliminar ou converter as colunas incompatíveis. Para obter mais informações, consulte [Exibições do esquema de informações em Transact-SQL](/sql-docs/docs/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql)
+Observe que incluir colunas desnecessárias pode reduzir significativamente o desempenho do código R, especialmente se colunas de alta cardinalidade forem usadas como fatores. Portanto, é recomendável usar os procedimentos armazenados do sistema do SQL Server e modos de exibição de informações para obter os tipos de dados para uma determinada tabela com antecedência e eliminar ou converter as colunas incompatíveis. Para obter mais informações, consulte [Exibições do esquema de informações em Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
 Se R não der suporte para um determinado tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas você precisar usar as colunas de dados no script de R, será recomendável usar as funções [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) para garantir que as conversões de tipo de dados sejam executadas conforme o esperado antes de usar os dados no script de R.  
 

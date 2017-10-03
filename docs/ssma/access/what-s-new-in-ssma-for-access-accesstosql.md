@@ -1,5 +1,5 @@
 ---
-title: O que &#39; s do SSMA para Access(AccessToSQL) | Microsoft Docs
+title: 'O que & #39; s do SSMA para Access(AccessToSQL) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/22/2017
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: d955f186e5a533839becdec5aefebc0af750bef1
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 7595c51bf8cc0ec07a464a65c992c2f3a56b15c2
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-access-accesstosql"></a>O que &#39; s do SSMA para Access (AccessToSQL)
+# <a name="what39s-new-in-ssma-for-access-accesstosql"></a>O que & #39; s do SSMA para Access (AccessToSQL)
 Este tópico lista SSMA para alterações de acesso de cada versão.  
+
+## <a name="ssma-v76"></a>O SSMA v7.6
+A versão de v7.6 do SSMA para Access foi aprimorada com correções de destino que melhoram a qualidade e a conversão de métricas e com suporte para SQL Server 2017 (visualização pública). Suporte para SQL Server 2017 em Windows e Linux está em visualização pública e não deve ser usado para migrações de produção.
+
+> [!IMPORTANT]
+> Com v 7.4 do SSMA e versões posteriores, .net 4.5.2 é um pré-requisito de instalação e a versão de 32 bits da ferramenta foi descontinuada.
 
 ## <a name="ssma-v75"></a>V 7.5 do SSMA
 A versão v 7.5 do SSMA para Access foi aprimorada com vários aprimoramentos para assegurar maior acessibilidade para pessoas com deficiências.

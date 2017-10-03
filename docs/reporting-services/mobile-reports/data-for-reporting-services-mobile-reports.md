@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 105f4ca9859a2c8f0d16cb5e961dc1e395a83b62
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9cf879fae78095f5fa6cb6f10d20cb0dfe6d12a1
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Dados para relatórios móveis do Reporting Services
@@ -29,7 +29,7 @@ Você pode importar dados de dois tipos de fontes:
   
 * **Arquivos do Excel locais**: selecione um documento do Excel e escolha as planilhas a serem importadas. Após a importação, os dados são armazenados na definição de relatório móvel. Para atualizar os dados do arquivo original do Excel, use o comando **Atualizar Dados** no canto superior direito da guia [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Leia mais sobre [preparar dados do Excel para relatórios SSRS móveis](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
-* **[! INCLUIR[PRODUCT_NAME](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).   
+* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]conjuntos de dados compartilhados**: Navegue pela lista de conjuntos de dados publicados no servidor e selecione as opções para adicionar ao relatório móvel. Relatórios móveis baseados em dados de servidor sempre permanecem conectados aos conjuntos de dados do servidor original e refletem o estado mais recente dos dados no servidor. Veja uma [lista de fontes de dados com suporte](https://msdn.microsoft.com/library/ms159219.aspx).   
   
   Leia mais sobre [obter dados de conjuntos de dados no compartilhados no Publicador de Relatórios Móveis](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md).  
   

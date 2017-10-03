@@ -4,16 +4,16 @@ description: "Este tópico descreve como usar o DB Mail e alertas de Email com o
 author: meet-bhagdev
 ms.author: meetb
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 838a7d492f9826d966da205fc4727eae48ff6e42
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Email de banco de dados e alertas de Email com o SQL Agent no Linux
@@ -23,11 +23,12 @@ ms.lasthandoff: 08/02/2017
 As etapas a seguir mostram como configurar o email de banco de dados e usá-lo com o SQL Server Agent (**mssql-server-agente**) no Linux. 
 
 > [!NOTE]
-> Para usar o correio do banco de dados com o SQL Server no Linux, você precisa usar o SQL Server de 2017 RC2 ou posterior.
+> Para usar o correio do banco de dados com o SQL Server no Linux, você precisa usar o SQL Server de 2017 RC1 ou posterior.
 
 ## <a name="prerequisites"></a>Pré-requisitos
--   SQL Server 2017 RC2 e posterior
--   SQL Server Agent v14.0.800.90-2 e superior (se você planeja usar o email para alertas)
+
+- SQL Server 2017 RC1 e versões posteriores
+- SQL Server Agent v14.0.800.90-2 e superior (se você planeja usar o email para alertas)
 
 ## <a name="1-enable-db-mail"></a>1. Habilitar o DB Mail
 

@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/21/2017
 
  ## <a name="where-is-the-profiler"></a>Onde está o Profiler?
  
- Você pode iniciar o Profiler de várias maneiras no SSMS. [Aqui está um tópico que lista as maneiras de iniciar o criador de perfil.](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
+ Você pode iniciar o Profiler de várias maneiras no SSMS. [Aqui está um tópico que lista as maneiras de iniciar o criador de perfil.](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>Capturar e reproduzir dados de rastreamento 
 A tabela a seguir mostra os recursos que devem ser usados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para capturar e reproduzir seus dados de rastreamento.
@@ -57,8 +57,8 @@ A tabela a seguir mostra os recursos que devem ser usados no [!INCLUDE[ssCurrent
 ||||  
 |-|-|-|  
 |**Recurso\carga de trabalho**|**Mecanismo relacional**|**Analysis Services**|  
-|**Captura de rastreamento**|Interface gráfica do usuário[Eventos Estendidos](/sql-docs/docs/relational-databases/extended-events/extended-events) no SQL Server Management Studio|SQL Server Profiler|  
-|**Reprodução de rastreamento**|[Distributed Replay](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|SQL Server Profiler|  
+|**Captura de rastreamento**|Interface gráfica do usuário[Eventos Estendidos](../../relational-databases/extended-events/extended-events.md) no SQL Server Management Studio|SQL Server Profiler|  
+|**Reprodução de rastreamento**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
  O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma interface gráfica do usuário que o Rastreamento do SQL usa para monitorar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou do Analysis Services. Você pode capturar e salvar dados sobre cada evento em um arquivo ou tabela para análise posterior. Por exemplo, é possível monitorar um ambiente de produção para observar quais procedimentos armazenados estão afetando o desempenho devido à lentidão na execução. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]é usado para atividades como:  

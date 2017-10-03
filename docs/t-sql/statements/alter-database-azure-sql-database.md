@@ -3,7 +3,7 @@ title: ALTER DATABASE (banco de dados do SQL Azure) | Microsoft Docs
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 08/07/2017
+ms.date: 09/25/2017
 ms.prod: 
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe1ad8f6331d853b65ac10c64ae9d0349d962cfb
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: f525c0ca01f49be05c1920897951059b126c83e9
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (banco de dados do SQL Azure)
@@ -34,29 +34,27 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      -- Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 ALTER DATABASE { database_name }  
 {  
-    MODIFY NAME =new_database_name  
+    MODIFY NAME = new_database_name  
   | MODIFY ( <edition_options> [, ... n] )   
   | SET { <option_spec> [ ,... n ] }   
   | ADD SECONDARY ON SERVER <partner_server_name>  
-      [WITH (\<add-secondary-option>::= [, ... n] ) ]  
+      [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
   | FAILOVER  
   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
 }  
-  
+[;] 
+
 <edition_options> ::=   
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
-    | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
+    | SERVICE_OBJECTIVE = 
+                 {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
                  }   
 }  
@@ -65,21 +63,22 @@ ALTER DATABASE { database_name }
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
      | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' |
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
+                 {  <service-objective> 
                  | { ELASTIC_POOL ( name = <elastic_pool_name>) }   
                  }   
    }  
-  
- [;]  
+
+<service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
+                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+
 ```  
   
-```  
-SET OPTIONS AVAILABLE FOR SQL Database  
-Full descriptions of the set options are available in the topic   
-ALTER DATABASE SET Options. The supported syntax is listed here.  
-  
+```
+-- SET OPTIONS AVAILABLE FOR SQL Database  
+-- Full descriptions of the set options are available in the topic   
+-- ALTER DATABASE SET Options. The supported syntax is listed here.  
+
 <optionspec> ::=   
 {  
     <auto_option>   
@@ -107,7 +106,7 @@ ALTER DATABASE SET Options. The supported syntax is listed here.
 }  
   
 <compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }  
+COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
   
 <cursor_option> ::=   
 {  
@@ -191,15 +190,27 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
  Designa que o banco de dados em uso deve ser alterado.  
   
  MODIFY NAME  **=**  *new_database_name*  
- Renomeia o banco de dados com o nome especificado como *new_database_name*.  
-  
+ Renomeia o banco de dados com o nome especificado como *new_database_name*. O exemplo a seguir altera o nome de um banco de dados `db1` para `db2`:   
+
+```  
+ALTER DATABASE db1  
+    MODIFY Name = db2 ;  
+```    
+
  MODIFICAR (edição  **=**  ['basic' | 'padrão' | 'premium' | 'premiumrs']).    
- Altera a camada de serviço do banco de dados.  A alteração da edição falhará se a propriedade MAXSIZE do banco de dados é definida como um valor fora do intervalo válido admitido por essa edição.  
+ Altera a camada de serviço do banco de dados. O exemplo a seguir altera a edição para `premium`:
   
+```  
+ALTER DATABASE current 
+    MODIFY (EDITION = 'premium');
+``` 
+
+A alteração da edição falhará se a propriedade MAXSIZE do banco de dados é definida como um valor fora do intervalo válido admitido por essa edição.  
+
  MODIFICAR (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024... 4096] GB)  
  Especifica o tamanho máximo do banco de dados. O tamanho máximo deve estar em conformidade com o conjunto válido de valores da propriedade EDITION do banco de dados. A alteração do tamanho máximo do banco de dados pode fazer com que a EDIÇÃO do banco de dados seja alterada. A tabela a seguir lista os valores MAXSIZE com suporte e os padrões (D) para as camadas de serviço do [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**MAXSIZE**|**Basic**|**S2 S0**|**/S12 S3**|**P1 P6 e PRS1 PRS6**| **P11 P15** 
+|**MAXSIZE**|**Basic**|**S2 S0**|**/S12 S3**|**P1 P6 e PRS1 PRS6**|**P11 P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -217,10 +228,10 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 |200 GB|N/A|√|√|√|√|  
 |250 GB|N/A|√ (D)|√ (D)|√|√|  
 |300 GB|N/A|√|√|√|√|  
-|400 GB|N/A|√|√|√|√|
-|500 GB|N/A|√|√|√ (D)|√|
-|750 GB|N/A|√|√|√|√|
-|1024 GB|N/A|√|√|√|√ (D)|
+|400 GB|N/A|√|√|√|√|  
+|500 GB|N/A|√|√|√ (D)|√|  
+|750 GB|N/A|√|√|√|√|  
+|1024 GB|N/A|√|√|√|√ (D)|  
 |De 1024 GB até 4096 GB em incrementos de 256 GB *|N/A|N/A|N/A|N/A|√|√|  
   
  \*P11 e P15 permitem MAXSIZE até 4 TB com 1024 GB, sendo o tamanho padrão.  P11 e P15 podem usar até 4 TB de armazenamento incluído sem custos adicionais. Na camada Premium, MAXSIZE maior que 1 TB está atualmente disponível nas seguintes regiões: US East2, oeste dos EUA, nos Gov Virgínia, Europa Ocidental, Alemanha Central, Sul Leste da Ásia, Leste do Japão, Leste da Austrália, Canadá Central e Leste do Canadá. Para limitações atuais, consulte [único bancos de dados](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
@@ -233,11 +244,19 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 -   Se EDITION for especificado, mas MAXSIZE não for especificado, o valor padrão da edição será usado. Por exemplo, se EDITION for definido como Standard e MAXSIZE não for especificado, MAXSIZE será automaticamente definido como 500 MB.  
   
 -   Se MAXSIZE nem EDITION for especificado, a edição é definida como padrão (S0) e MAXSIZE for definido como 250 GB.  
+ 
+
+ MODIFICAR (SERVICE_OBJECTIVE = \<objetivo de serviço >)  
+ Especifica o nível de desempenho. A exemplo a seguir altera o objetivo de um banco de dados premium do serviço `P6`:
+ 
+```  
+ALTER DATABASE current 
+    MODIFY (SERVICE_OBJECTIVE = 'P6');
+```  
+ Os valores disponíveis para o objetivo de serviço são: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `PRS1`, `PRS2`, `PRS4`, e `PRS6`. Para descrições de objetivo de serviço e obter mais informações sobre o tamanho, as edições e as combinações de objetivos de serviço, consulte [camadas de serviço de banco de dados SQL do Azure e níveis de desempenho](http://msdn.microsoft.com/library/azure/dn741336.aspx). Se o SERVICE_OBJECTIVE especificado não é suportada pela edição, você receberá um erro. Para alterar o valor SERVICE_OBJECTIVE de uma camada para outra (por exemplo, de S1 para P1), você deve alterar também o valor EDITION.  
   
- MODIFICAR SERVICE_OBJECTIVE {'S0' | 'S1' | 'S2' | ' S3 "| 'S4' | 'S6' | 'S7' | 'S9' | '/S12' | 'P1' | 'P2' | 'P4' | 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
- Especifica o nível de desempenho. Para descrições de objetivo de serviço e obter mais informações sobre o tamanho, as edições e as combinações de objetivos de serviço, consulte [camadas de serviço de banco de dados SQL do Azure e níveis de desempenho](http://msdn.microsoft.com/library/azure/dn741336.aspx). Se o SERVICE_OBJECTIVE especificado não é suportada pela edição, você receberá um erro. Para alterar o valor SERVICE_OBJECTIVE de uma camada para outra (por exemplo, de S1 para P1), você deve alterar também o valor EDITION.  
-  
-ELASTIC_POOL (nome = \<elastic_pool_name >) para adicionar um banco de dados existente para um pool Elástico, defina o SERVICE_OBJECTIVE do banco de dados como ELASTIC_POOL e forneça o nome do pool Elástico. Você também pode usar esta opção para alterar o banco de dados para um pool Elástico diferente no mesmo servidor. Para obter mais informações, consulte [criar e gerenciar um pool Elástico de banco de dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Para remover um banco de dados de um pool Elástico, use ALTER DATABASE para definir o SERVICE_OBJECTIVE para um nível de desempenho do banco de dados único.  
+ MODIFICAR (SERVICE_OBJECTIVE = ELÁSTICA\_POOL (nome = \<elastic_pool_name >)  
+ Para adicionar um banco de dados existente para um pool Elástico, defina o SERVICE_OBJECTIVE do banco de dados como ELASTIC_POOL e forneça o nome do pool Elástico. Você também pode usar esta opção para alterar o banco de dados para um pool Elástico diferente no mesmo servidor. Para obter mais informações, consulte [criar e gerenciar um pool Elástico de banco de dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Para remover um banco de dados de um pool Elástico, use ALTER DATABASE para definir o SERVICE_OBJECTIVE para um nível de desempenho do banco de dados único.  
 
  Adicionar SECUNDÁRIO ON SERVER \<partner_server_name >  
  Cria um banco de dados replicação geográfica secundária com o mesmo nome em um servidor de parceiro, tornando o banco de dados local em uma replicação geográfica primário e começa a replicação de dados assíncrona do primário para o novo secundário. Se um banco de dados com o mesmo nome já existir no secundário, o comando falhará. O comando é executado no banco de dados mestre no servidor que hospeda o banco de dados local que se torna o principal.  
@@ -322,21 +341,17 @@ ELASTIC_POOL (nome = \<elastic_pool_name >) para adicionar um banco de dados exi
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-changing-the-name-of-a-database"></a>A. Alterando o nome de um banco de dados  
- O exemplo a seguir altera o nome do banco de dados `db1` para `db2`.  
-  
-```  
-ALTER DATABASE db1  
-Modify Name = db2 ;  
-```    
-
-### <a name="b-changing-the-edition-size-and-service-objective-for-an-existing-database"></a>B. Alterar o objetivo de edição, o tamanho e o serviço para um banco de dados existente
+### <a name="a-check-the-edition-options-and-change-them"></a>A. Verifique as opções de edição e alterá-los:
 
 ```
+SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
+        ServiceObjective = DATABASEPROPERTYEX('db1', 'ServiceObjective'),
+        MaxSizeInBytes =  DATABASEPROPERTYEX('db1', 'MaxSizeInBytes');
+
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="c-moving-a-database-to-a-different-elastic-pool"></a>C. Mover um banco de dados para um pool Elástico diferente  
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Mover um banco de dados para um pool Elástico diferente  
  Move um banco de dados existente em um pool chamado pool1:  
   
 ```  
@@ -344,8 +359,8 @@ ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
 ```  
   
-### <a name="d-add-a-geo-replication-secondary"></a>D. Adicionar um secundário de replicação geográfica  
- Cria um banco de dados secundário não legível db1 no servidor secondaryserver de db1 no servidor local.  
+### <a name="c-add-a-geo-replication-secondary"></a>C. Adicionar um secundário de replicação geográfica  
+ Cria um banco de dados secundário não legível db1 no servidor `secondaryserver` de db1 no servidor local.  
   
 ```  
 ALTER DATABASE db1   
@@ -353,16 +368,16 @@ ADD SECONDARY ON SERVER secondaryserver
 WITH ( ALLOW_CONNECTIONS = NO )  
 ```  
   
-### <a name="e-remove-a-geo-replication-secondary"></a>E. Remover um secundário de replicação geográfica  
- Remove o banco de dados secundário db1 em secondaryserver do servidor.  
+### <a name="d-remove-a-geo-replication-secondary"></a>D. Remover um secundário de replicação geográfica  
+ Remove o banco de dados secundário db1 no servidor `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1   
 REMOVE SECONDARY ON SERVER testsecondaryserver   
 ```  
   
-### <a name="f-failover-to-a-geo-replication-secondary"></a>F. Failover para um secundário de replicação geográfica  
- Promove db1 um banco de dados secundário no servidor secondaryserver se torne o novo banco de dados primário quando executada no servidor secondaryserver.  
+### <a name="e-failover-to-a-geo-replication-secondary"></a>E. Failover para um secundário de replicação geográfica  
+ Promove db1 um banco de dados secundário no servidor `secondaryserver` se torne o novo banco de dados primário quando executada no servidor `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1 FAILOVER  

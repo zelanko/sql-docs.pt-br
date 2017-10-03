@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ada9817d628b9c146899807bba35a6651842afa3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4fd91a36594a8d0d50e3f4eb8490497d6fe0e172
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Iniciar o Assistente de Importação e Exportação do SQL Server
@@ -42,7 +42,7 @@ Você pode iniciar o Assistente:
 -   Do [Visual Studio com o SSDT (SQL Server Data Tools)](#startVS).
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Pré - é o assistente instalado em seu computador?
-Se você deseja executar o assistente, mas você não tiver [! INCLUIR[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Se você deseja executar o assistente, mas não tem o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado no computador, é possível instalar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalando o SSDT (SQL Server Data Tools). Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 > [!NOTE]
 > Para usar a versão de 64 bits do SQL Server Assistente de importação e exportação, você precisa instalar o SQL Server. SQL Server Data Tools (SSDT) e SQL Server Management Studio (SSMS) são aplicativos de 32 bits, somente instalar os arquivos de 32 bits, incluindo a versão de 32 bits do assistente.
@@ -87,7 +87,7 @@ Execute a versão de 64 bits do assistente, a menos que você saiba que a fonte 
 
     ![Inicie o Assistente SSMS](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
 
-Se você não tem o SQL Server instalado, ou se tem o SQL Server, mas não tem o SQL Server Management Studio instalado, consulte [Baixar o SSMS (SQL Server Management Studio)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
+Se você não tem o SQL Server instalado, ou se tem o SQL Server, mas não tem o SQL Server Management Studio instalado, consulte [Baixar o SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md).
   
 ## <a name="startVS"></a>O Visual Studio
 ### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>Iniciar o SQL Server Assistente de importação e exportação do Visual Studio com SQL Server Data Tools (SSDT) 
@@ -103,10 +103,10 @@ Se você não tem o SQL Server instalado, ou se tem o SQL Server, mas não tem o
 
     ![Inicie pacotes do assistente](../../integration-services/import-export-data/media/start-wizard-packages.jpg)
 
-Se você não tem o Visual Studio instalado ou se tem o Visual Studio, mas não tem o SQL Server Data Tools instalado, consulte [Baixar o SSDT (SQL Server Data Tools)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Se você não tem o Visual Studio instalado ou se tem o Visual Studio, mas não tem o SQL Server Data Tools instalado, consulte [Baixar o SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="get-the-wizard"></a>Obter o Assistente
-Se você deseja executar o assistente, mas você não tiver [! INCLUIR[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Se você deseja executar o assistente, mas não tem o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado no computador, é possível instalar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalando o SSDT (SQL Server Data Tools). Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="get-help-while-the-wizard-is-running"></a>Obter ajuda enquanto o assistente está em execução
 > [!TIP]

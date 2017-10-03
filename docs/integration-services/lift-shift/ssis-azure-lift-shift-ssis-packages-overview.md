@@ -1,6 +1,6 @@
 ---
 title: Comparar e deslocar cargas de trabalho do SQL Server Integration Services para a nuvem | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 3d22689e440b2a498f76d43ede74ad3f6f756796
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Comparar e deslocar cargas de trabalho do SQL Server Integration Services para a nuvem
@@ -48,14 +48,20 @@ Você só precisa provisionar o IV SSIS uma vez. Depois disso, você pode usar f
 
 Fábrica de dados também dá suporte a outros tipos de tempos de execução de integração. Para saber mais sobre o IV SSIS e outros tipos de tempos de execução de integração, consulte [tempo de execução da integração do Azure Data Factory](/azure/data-factory/concepts-integration-runtime.md).
 
-## <a name="package-features-on-azure"></a>Recursos do pacote no Azure
+## <a name="prerequisites"></a>Pré-requisitos
+Os recursos descritos neste tópico exigem o SQL Server Data Tools (SSDT) versão 17.2 ou posterior, mas não precisam de 2017 do SQL Server ou SQL Server 2016. Quando você implanta pacotes no Azure, o Assistente de implantação de pacote sempre atualiza os pacotes para o formato mais recente do pacote.
+
+Para obter mais informações sobre os pré-requisitos no Azure, consulte [comparar e deslocar pacotes do SQL Server Integration Services (SSIS) para o Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+
+## <a name="ssis-features-on-azure"></a>Recursos do SSIS no Azure
+
 Quando você provisionar uma instância do banco de dados SQL para hospedar o SSISDB, o Azure Feature Pack para SSIS e o redistribuível de acesso são instalados. Esses componentes fornecem conectividade para o Excel e acessar arquivos e várias fontes de dados do Azure. Você não pode instalar componentes de terceiros para SSIS neste momento.
 
-Continuar projetar e criar pacotes no local no SSDT, ou no Visual Studio com o SSDT instalado.
+O nome do banco de dados SQL que hospeda o SSISDB torna-se a primeira parte do nome de quatro partes para usar ao implantar e gerenciar pacotes de SSDT e SSMS - `<sql_database_name>.database.windows.net`.
 
 Você precisa usar o modelo de implantação de projeto, não o modelo de implantação de pacote, para projetos que você implanta em SSISDB no banco de dados do SQL Azure.
 
-O nome do banco de dados SQL que hospeda o SSISDB torna-se a primeira parte do nome de quatro partes para usar ao implantar e gerenciar pacotes de SSDT e SSMS - `<sql_database_name>.database.windows.net`.
+Continuar projetar e criar pacotes no local no SSDT, ou no Visual Studio com o SSDT instalado.
 
 Para obter informações sobre como se conectar a fontes de dados locais da nuvem com autenticação do Windows, consulte [conectar a fontes de dados local com a autenticação do Windows](ssis-azure-connect-with-windows-auth.md).
 

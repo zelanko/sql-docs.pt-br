@@ -11,24 +11,24 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5f7c0f61cf9f441c56529ddaaddc96a0c318ce59
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 4639379a65fc28c363f6510c1a393df8840dc7f8
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Escolha a ferramenta certa para gerenciar o SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Há várias maneiras de gerenciar RC2 2017 do SQL Server no Linux. A seção a seguir fornecem uma visão geral das técnicas com ponteiros mais recursos e ferramentas de gerenciamento diferentes.
+Há várias maneiras de gerenciar 2017 do SQL Server no Linux. A seção a seguir fornecem uma visão geral das técnicas com ponteiros mais recursos e ferramentas de gerenciamento diferentes.
 
 ## <a name="mssql-conf"></a>MSSQL conf 
 O **mssql conf** ferramenta configura o SQL Server no Linux. Para obter mais informações, consulte [configurar o SQL Server no Linux com mssql conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Quase tudo o que você pode fazer em uma ferramenta de cliente também pode ser feito com instruções Transact-SQL. O SQL Server fornece [exibições de gerenciamento dinâmico (DMVs)](/sql-docs/docs/relational-databases/system-dynamic-management-views/system-dynamic-management-views) que consulta o status e a configuração do SQL Server. Também há [comandos Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) para tarefas de gerenciamento de banco de dados. Você pode executar esses comandos em qualquer ferramenta de cliente que dá suporte ao se conectar ao SQL Server e executar consultas Transact-SQL. Os exemplos incluem [sqlcmd](sql-server-linux-setup-tools.md), [código do Visual Studio](sql-server-linux-develop-use-vscode.md), e [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
+Quase tudo o que você pode fazer em uma ferramenta de cliente também pode ser feito com instruções Transact-SQL. O SQL Server fornece [exibições de gerenciamento dinâmico (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) que consulta o status e a configuração do SQL Server. Também há [comandos Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) para tarefas de gerenciamento de banco de dados. Você pode executar esses comandos em qualquer ferramenta de cliente que dá suporte ao se conectar ao SQL Server e executar consultas Transact-SQL. Os exemplos incluem [sqlcmd](sql-server-linux-setup-tools.md), [código do Visual Studio](sql-server-linux-develop-use-vscode.md), e [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio no Windows
 

@@ -1,7 +1,7 @@
 ---
 title: O que &#39; s no Integration Services no SQL Server de 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 07/11/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 63aba0f64bc63a3a86e5aa07245375938acdf6e4
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>O que &#39; s no Integration Services no SQL Server de 2017
@@ -29,13 +29,23 @@ Este tópico descreve os recursos adicionados ou atualizados no [!INCLUDE[ssSQLv
 
 ## <a name="highlights-of-this-release"></a>Destaques desta versão
 
-Aqui estão os novos recursos mais importantes no Integration Services para SQL Server 2017.
+Aqui estão os novos recursos mais importantes do Integration Services no SQL Server 2017.
 
 -   **Expansão**. Distribuir a execução de pacotes SSIS mais facilmente em vários computadores de trabalho e gerenciar execuções e funcionários de um único computador mestre. Para obter mais informações, consulte [Integration Services expansão](../integration-services/scale-out/integration-services-ssis-scale-out.md).
 
 -   **Serviços de integração em Linux**. Execute pacotes SSIS em computadores Linux. Para obter mais informações, consulte [extrair, transformar e carregar dados em Linux com o SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 -   **Melhorias de conectividade**. Conecte-se a feeds OData do Microsoft Dynamics AX Online e do Microsoft Dynamics CRM Online com os componentes atualizados do OData. 
+
+## <a name="new-in-azure-data-factory"></a>Nova fábrica de dados do Azure
+
+Com a visualização pública do Azure Data Factory versão 2 de setembro de 2017, agora você pode fazer as seguintes ações:
+-   Implante pacotes no banco de dados do catálogo do SSIS (SSISDB) no banco de dados do SQL Azure.
+-   Execute os pacotes implantados no Azure em tempo de execução de integração de SSIS do Azure, um componente do Azure Data Factory versão 2.
+
+Para obter mais informações, consulte [comparar e deslocar cargas de trabalho de serviços de integração do SQL Server para a nuvem](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Esses novos recursos requerem o SQL Server Data Tools (SSDT) versão 17.2 ou posterior, mas não precisam de 2017 do SQL Server ou SQL Server 2016. Quando você implanta pacotes no Azure, o Assistente de implantação de pacote sempre atualiza os pacotes para o formato mais recente do pacote.
 
 ## <a name="new-in-the-azure-feature-pack"></a>Novo no Azure Feature Pack
 

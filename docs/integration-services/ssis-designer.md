@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>Designer SSIS
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>Guia Parâmetros  
  Os parâmetros do Integration Services (SSIS) permitem atribuir valores às propriedades nos pacotes em tempo de execução do pacote. Você pode criar parâmetros de projeto em nível de projeto e parâmetros de pacote em nível de pacote. Os parâmetros do projeto são usados para fornecer uma entrada externa que o projeto recebe para um ou mais pacotes no projeto. Os parâmetros do pacote permitem modificar a execução do pacote sem a necessidade de editar e reimplantar o pacote. Esta guia permite gerenciar parâmetros de pacote.  
   
- Para obter mais informações sobre parâmetros, consulte [Parâmetros do SSIS (Integration Services)](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).  
+ Para obter mais informações sobre parâmetros, consulte [Parâmetros do SSIS (Integration Services)](integration-services-ssis-package-and-project-parameters.md).  
   
 > **IMPORTANTE:**  Os parâmetros estão disponíveis apenas para projetos desenvolvidos para o modelo de implantação de projeto. Portanto, você só verá a guia Parâmetros para pacotes que fazem parte de um projeto configurado para usar o modelo de implantação de projeto.  
   

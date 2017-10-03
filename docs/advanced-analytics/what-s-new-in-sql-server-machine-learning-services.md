@@ -2,7 +2,7 @@
 title: "O que &#39; s novo nos serviços de aprendizado de máquina | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>O que há de novo nos serviços de aprendizado de máquina no SQL Server
@@ -30,16 +30,13 @@ No SQL Server de 2017, aprendizado de máquina se tornará ainda mais potente, c
 
 Pegue o lançamento mais recente aqui! [Python no SQL Server 2017: aprimorada de aprendizado de máquina no banco de dados](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> Agora você pode executar R em bancos de dados do SQL Azure! Para obter mais informações, consulte [neste artigo](r/using-r-in-azure-sql-database.md), ou este blog da equipe de desenvolvimento do SQL Server: [visualização de apresentação dos serviços de aprendizado de máquina com suporte de R no banco de dados do SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/).
+
 ## <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 
 Servidor de aprendizado de máquina Microsoft no SQL Server agora fornece suporte abrangente para criar e implantar soluções de aprendizado de máquina em R ou Python. Aqui estão os destaques desta versão:
 
-> [!IMPORTANT]
-> 
-> Serviços de aprendizado de máquina, incluindo o uso de R ou Python, atualmente não têm suporte durante a execução do SQL Server no Linux ou no banco de dados do SQL Azure. Procure as alterações em uma versão posterior.
-> 
-> Pontuação nativo usando a função de previsão é suportada atualmente na edição Linux.
- 
 ### <a name="in-database-python-integration"></a>Integração de Python no banco de dados
 
 Você pode executar o Python em procedimentos armazenados ou executar remotamente usando o computador do SQL Server como o contexto de computação de Python. Essa integração abre novos caminhos para a grande comunidade de desenvolvedores de Python e os cientistas de dados, use o poder do SQL Server. 
@@ -60,9 +57,13 @@ Python em execução no banco de dados não envolve apenas de aprendizado de má
 
 + Suporte a Python no aprendizado de máquina do Microsoft Server (autônomo)
 
-    SQL Server 2017 inclui a opção para instalar uma versão autônoma da plataforma de aprendizado de máquina do Microsoft. Usando o servidor de aprendizado de máquina, você pode distribuir e dimensionar o código de R ou Python sem usar o SQL Server.
+    SQL Server 2017 inclui a opção para instalar uma versão autônoma do servidor de aprendizado de máquina do Microsoft. Usando o servidor de aprendizado de máquina, você pode distribuir e dimensionar o código de R ou Python sem usar o SQL Server.
 
-    Para obter um exemplo de Python em execução no servidor de aprendizado de máquina do Microsoft, consulte [publicar e consumir o código Python](python/publish-consume-python-code.md).
+### <a name="linux-support"></a>Suporte para Linux
+
+Aprendizado de máquina usando o R ou Python no banco de dados não é suportado atualmente no SQL Server no Linux. Procure os anúncios em uma versão posterior.
+
+No entanto, no Linux você pode executar [pontuação nativo](sql-native-scoring.md) usando a função PREVER T-SQL. Pontuação nativo permite a pontuação de um modelo pré-treinado muito rápido, sem chamar ou até mesmo exigir um tempo de execução de R. Isso significa que você pode usar o SQL Server no Linux para gerar previsões muito rápidos, para atender a aplicativos cliente.
 
 ### <a name="new-algorithms"></a>Novos algoritmos
 

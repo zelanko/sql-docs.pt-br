@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 06b07e613856bd9c3c66ec06d76c5e14ee8d4f4e
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-sources"></a>Fontes de Dados
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/21/2017
   
 > **OBSERVAÇÃO:** você pode adicionar fontes de dados somente a projetos que são configurados para usar o modelo de implantação de pacote. Se um projeto estiver configurado para usar o modelo de implantação de projeto, você usará gerenciadores de conexões criados no nível do projeto para compartilhar conexões, em vez de usar fontes de dados.  
 >   
->  Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages). Para obter mais informações sobre conversão de um projeto para o modelo de implantação de projetos, consulte [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Para obter mais informações sobre conversão de um projeto para o modelo de implantação de projetos, consulte [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
   
  As vantagens de usar fontes de dados em pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluem o seguinte:  
   

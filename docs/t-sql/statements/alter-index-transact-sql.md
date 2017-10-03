@@ -48,10 +48,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 68aa9ada24b5bcf1dedf7ff8d60d5fad31d68126
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -251,7 +251,7 @@ PARTITION
    
 **Aplica-se a**: SQL Server (começando com o SQL Server 2008) e o banco de dados do SQL Azure.  
   
- SORT_IN_TEMPDB, MAXDOP e DATA_COMPRESSION são as opções que podem ser especificadas ao recriar uma única partição (PARTITION = * n *). Índices XML não podem ser especificados em uma única operação de recriação de partição.  
+ SORT_IN_TEMPDB, MAXDOP e DATA_COMPRESSION são as opções que podem ser especificadas ao recriar uma única partição (PARTITION =  *n* ). Índices XML não podem ser especificados em uma única operação de recriação de partição.  
   
  DISABLE  
  Marca o índice como desabilitado e indisponível para uso pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Qualquer índice pode ser desabilitado. A definição de um índice desabilitado permanece no catálogo do sistema sem nenhum dado de índice subjacente. Desabilitar um índice clusterizado evita que o usuário acesse os dados da tabela subjacente. Para habilitar um índice, use ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING. Para obter mais informações, consulte [desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md) e [habilitar índices e restrições](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
@@ -356,7 +356,7 @@ FILLFACTOR = *fator de preenchimento*
   
  Para obter mais informações, consulte [opção SORT_IN_TEMPDB para índices](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY ** = ** {ON | OFF}  
+ IGNORE_DUP_KEY  **=**  {ON | OFF}  
  Especifica a resposta de erro quando uma operação de inserção tenta inserir valores da chave duplicada em um índice exclusivo. A opção IGNORE_DUP_KEY aplica-se apenas a operações de inserção depois que o índice é criado ou recriado. O padrão é OFF.  
   
  ON  
@@ -371,7 +371,7 @@ FILLFACTOR = *fator de preenchimento*
   
  Na sintaxe compatível com versões anteriores, WITH IGNORE_DUP_KEY é equivalente a WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE ** = ** {ON | OFF}  
+ STATISTICS_NORECOMPUTE  **=**  {ON | OFF}  
  Especifica se as estatísticas de distribuição são recomputadas. O padrão é OFF.  
   
  ON  
@@ -407,7 +407,7 @@ FILLFACTOR = *fator de preenchimento*
  
 **Aplica-se a**: SQL Server (começando com o SQL Server 2014) e o banco de dados do SQL Azure.  
   
- On-line ** = ** {ON | **OFF** } \<como se aplica a rebuild_index_option >  
+ On-line  **=**  {ON | **OFF** } \<como se aplica a rebuild_index_option >  
  Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF.  
   
  Para um índice XML ou índice espacial, só há suporte para ONLINE = OFF e, se ONLINE for definido como ON, um erro será gerado.  
@@ -431,9 +431,9 @@ FILLFACTOR = *fator de preenchimento*
   
 -   Um subconjunto de um índice particionado (é possível recriar online um índice particionado inteiro.)  
 
--  Antes de V12 no banco de dados SQL e SQL Server anterior ao SQL Server 2012, não é possível fazer o `ONLINE` opção para compilação de índice clusterizado ou recriar operações quando a tabela base contém **varchar (max)** ou **varbinary (max) ** colunas.
+-  Antes de V12 no banco de dados SQL e SQL Server anterior ao SQL Server 2012, não é possível fazer o `ONLINE` opção para compilação de índice clusterizado ou recriar operações quando a tabela base contém **varchar (max)** ou **varbinary (max)**  colunas.
 
-RETOMÁVEIS ** = ** {ON | **OFF**}
+RETOMÁVEIS  **=**  {ON | **OFF**}
 
 **Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)  
 
@@ -443,13 +443,13 @@ RETOMÁVEIS ** = ** {ON | **OFF**}
 
  DESATIVAR o índice de operação não é reiniciável.
 
-MAX_DURATION ** = ** *tempo* [**minutos**] usado com **RETOMÁVEL = ON** (requer **ONLINE = ON**).
+MAX_DURATION  **=**  *tempo* [**minutos**] usado com **RETOMÁVEL = ON** (requer **ONLINE = ON**).
  
 **Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)  
 
 Indica o tempo (um valor inteiro especificado em minutos) que um retomáveis online operação de índice é executada antes de ser pausado. 
 
-ALLOW_ROW_LOCKS ** = ** { **ON** | OFF}  
+ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
  
 **Aplica-se a**: SQL Server (começando com o SQL Server 2008) e o banco de dados do SQL Azure.  
   
@@ -461,7 +461,7 @@ ALLOW_ROW_LOCKS ** = ** { **ON** | OFF}
  OFF  
  Bloqueios de linha não são usados.  
   
-ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}  
+ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}  
   
 **Aplica-se a**: SQL Server (começando com o SQL Server 2008) e o banco de dados do SQL Azure.
   
@@ -476,7 +476,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}
 > [!NOTE]
 >  Um índice não pode ser reorganizado quando ALLOW_PAGE_LOCKS está definido como OFF.  
   
- MAXDOP ** = ** max_degree_of_parallelism  
+ MAXDOP  **=**  max_degree_of_parallelism  
  
 **Aplica-se a**: SQL Server (começando com o SQL Server 2008) e o banco de dados do SQL Azure.  
   
@@ -501,7 +501,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}
 > [!NOTE]
 >  Operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- COMPRESSION_DELAY ** = ** { **0** |*duração [minutos]* }  
+ COMPRESSION_DELAY  **=**  { **0** |*duração [minutos]* }  
  Este recurso está disponível a partir do SQL Server 2016  
   
  Para uma tabela baseada em disco, o atraso Especifica o número mínimo de minutos que um rowgroup delta no estado CLOSED deve permanecer no rowgroup delta antes do SQL Server pode compactá-las no rowgroup compactado. Como as tabelas baseadas em disco não controlar inserir e atualizar horários em linhas individuais, o SQL Server aplica o atraso para rowgroups delta no estado fechado.  
@@ -564,7 +564,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- On-line ** = ** {ON | **OFF** } \<como se aplica a single_partition_rebuild_index_option >  
+ On-line  **=**  {ON | **OFF** } \<como se aplica a single_partition_rebuild_index_option >  
  Especifica se um índice ou partição do índice de uma tabela subjacente pode ser reconstruída online ou offline. Se **RECRIAR** é executada online (**ON**) os dados nesta tabela estão disponíveis para consultas e modificação de dados durante a operação de índice.  O padrão é **OFF**.  
   
  ON  
@@ -580,7 +580,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **Aplica-se a**: SQL Server (começando com o SQL Server 2014) e o banco de dados do SQL Azure.
   
- Uma recriação de índice online precisa aguardar as operações de bloqueio nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recriação de índice online aguardará bloqueios de baixa prioridade, permitindo que outras operações continuem enquanto a operação de compilação de índice online estiver aguardando. A omissão de **WAIT AT LOW PRIORITY** opção é equivalente a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Para obter mais informações, consulte [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
+ Uma recriação de índice online precisa aguardar as operações de bloqueio nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recriação de índice online aguardará bloqueios de baixa prioridade, permitindo que outras operações continuem enquanto a operação de compilação de índice online estiver aguardando. A omissão de **WAIT AT LOW PRIORITY** opção é equivalente a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Para obter mais informações, consulte [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
  MAX_DURATION = *tempo* [**minutos**]  
   
@@ -618,7 +618,7 @@ WAIT_AT_LOW_PRIORITY usado com **RETOMÁVEL = ON** e **ONLINE = ON**.
   
 **Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)
   
- Retomar uma recompilação de índice online após uma pausa de espera de bloqueio de operações nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recriação de índice online aguardará bloqueios de baixa prioridade, permitindo que outras operações continuem enquanto a operação de compilação de índice online estiver aguardando. A omissão de **WAIT AT LOW PRIORITY** opção é equivalente a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Para obter mais informações, consulte [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
+ Retomar uma recompilação de índice online após uma pausa de espera de bloqueio de operações nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recriação de índice online aguardará bloqueios de baixa prioridade, permitindo que outras operações continuem enquanto a operação de compilação de índice online estiver aguardando. A omissão de **WAIT AT LOW PRIORITY** opção é equivalente a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Para obter mais informações, consulte [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 PAUSAR

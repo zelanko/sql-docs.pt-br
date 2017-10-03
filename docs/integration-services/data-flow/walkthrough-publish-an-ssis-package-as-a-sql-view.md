@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a7479a6682c2cd95e3cc465b74642347bf682951
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: publicar um Pacote SSIS como um modo SQL
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/21/2017
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou posterior com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-2.  [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Etapa 1: Compilar e implantar o projeto do SSIS no catálogo do SSIS  
  Nesta etapa, você cria um pacote do SSIS que extrai dados de uma fonte de dados para a qual o SSIS dá suporte (neste exemplo, usamos um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) e promove a saída dos dados usando um componente de Destino do Streaming de Dados. Em seguida, você compila e implanta o projeto do SSIS no catálogo do SSIS.  

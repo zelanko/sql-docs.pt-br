@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3d2e6ea5bd6d2436946a015addc1e25f3dd98ce1
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriedades do TCP/IP (Guia Endereços IP)
   Use a caixa de diálogo **Propriedades do TCP/IP (Guia Endereços IP)** para configurar as opções do protocolo TCP/IP de um endereço IP específico. Somente as **Portas TCP Dinâmicas** e a **Porta TCP** podem ser configuradas para todos os endereços de uma só vez com a seleção de **IP Tudo**.  
   
- As alterações terão efeito quando o SQL Server for reiniciado. Para obter informações sobre como iniciar e interromper o serviço SQL Server Browser, consulte [Iniciar e interromper o serviço SQL Server Browser](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).  
+ As alterações terão efeito quando o SQL Server for reiniciado. Para obter informações sobre como iniciar e interromper o serviço SQL Server Browser, consulte [Iniciar e interromper o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ## <a name="static-vs-dynamic-ports"></a>Portas estáticas vs. Portas dinâmicas  
  A instância padrão do SQL Server escuta as conexões de entrada na porta 1433. A porta pode ser alterada por razões de segurança ou por causa do requisito de um aplicativo cliente. Por padrão, instâncias nomeadas (inclusive do SQL Server Express) são configuradas para escutar em portas dinâmicas. Para configurar uma porta estática, deixe a caixa **Portas TCP Dinâmicas** em branco e forneça um número de porta disponível na caixa **Porta TCP** . Para obter mais informações sobre como abrir portas no firewall, consulte Configurando o firewall do Windows para permitir o acesso do SQL Server nos Manuais Online.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Escolhendo um protocolo de rede](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Criando uma cadeia de Conexão válida usando TCP/IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
+ [Criando uma cadeia de Conexão válida usando TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Serviço Navegador do SQL Server](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

@@ -4,22 +4,22 @@ description: "Exemplo de Script do SQL Server - instalação autônoma no SUSE L
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: de58e55b803eca22d3305f6e0a89f9e13883c627
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: e181fb02497f1673a8993687d159f6636aca4959
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Exemplo: De script de instalação autônoma do SQL Server para SUSE Linux Enterprise Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Esse exemplo de script de Bash instala 2017 RC2 do SQL Server no SUSE Linux Enterprise Server (SLES) v12 SP2 sem entrada interativa. Ele fornece exemplos de instalação do mecanismo de banco de dados, ferramentas de linha de comando do SQL Server, SQL Server Agent e executa as etapas de pós-instalação. Opcionalmente, você pode instalar a pesquisa de texto completo e criar um usuário administrativo.
+Esse exemplo de script de Bash instala 2017 do SQL Server no SUSE Linux Enterprise Server (SLES) v12 SP2 sem entrada interativa. Ele fornece exemplos de instalação do mecanismo de banco de dados, ferramentas de linha de comando do SQL Server, SQL Server Agent e executa as etapas de pós-instalação. Opcionalmente, você pode instalar a pesquisa de texto completo e criar um usuário administrativo.
 
 > [!TIP]
 > Se você não precisar de um script de instalação autônoma, a maneira mais rápida para instalar o SQL Server é seguir o [tutorial de início rápido para SLES](quickstart-install-connect-suse.md). Para outras informações de configuração, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
@@ -31,7 +31,7 @@ Esse exemplo de script de Bash instala 2017 RC2 do SQL Server no SUSE Linux Ente
 - Para outros requisitos de sistema, consulte [requisitos de sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
 
 > [!IMPORTANT]
-> SQL Server 2017 RC2 requer libsss_nss_idmap0, que não é fornecido pelos repositórios SLES padrão. Você pode instalá-lo do SDK SLES v12 SP2.
+> SQL Server 2017 requer libsss_nss_idmap0, que não é fornecido pelos repositórios SLES padrão. Você pode instalá-lo do SDK SLES v12 SP2.
 
 ## <a name="sample-script"></a>Exemplo de script
 
