@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 5fa4b384ee88f85c681f7600ebade1a0e5b5d17e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
@@ -109,7 +109,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Corrigido um problema ao tentar imprimir os resultados de uma consulta (como texto).  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - Corrigido um problema em que o SSMS descartava incorretamente tabelas e outros objetos ao gerar o script de exclusão desses objetos em um banco de dados do SQL Azure.
 - Corrigido um problema em que o SSMS ocasionalmente se recusava a iniciar com um erro como "Não é possível localizar um ou mais componentes. Reinstale o aplicativo"
-- Corrigido um problema em que o SPID na interface do usuário do SSMS poderia ficar obsoleto e fora de sincronia. https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- Um problema foi corrigido, no qual o SPID, na interface do usuário do SSMS, poderia ficar obsoleto e fora de sincronia. https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - Corrigido um problema na instalação do SSMS (silencioso) em que o argumento /passive era tratado como /quiet.
 - Corrigido um problema em que o SSMS ocasionalmente gera um erro de "Referência de objeto não definida para uma instância do objeto" na inicialização. http://connect.microsoft.com/SQLServer/feedback/details/3134698
 - Corrigido um problema no "Assistente de compactação de dados" que estava fazendo com que o SSMS falhasse ao pressionar 'Calcular' na Tabela de gráfico
@@ -355,7 +355,7 @@ Os seguintes problemas foram corrigidos nesta versão:
 
 * Corrigido um problema introduzido no SSMS 16.5.2 que estava causando a expansão do nó 'Table' quando a tabela tinha mais de uma coluna esparsa.
 
-* Os usuários podem implantar pacotes do SSIS contendo o Gerenciador de Conexões do OData, que se conectam a um recurso do Microsoft Dynamics AX/CRM Online para o catálogo do SSIS. Para obter mais informações, consulte [Gerenciador de Conexões do OData](https://msdn.microsoft.com/library/dn584133.aspx).
+* Os usuários podem implantar pacotes do SSIS contendo o Gerenciador de Conexões do OData, que se conectam a um recurso do Microsoft Dynamics AX/CRM Online para o catálogo do SSIS. Para obter mais informações, consulte [Gerenciador de Conexões do OData](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager).
 
 * Configurar Always Encrypted para uma tabela existente falha com erros em objetos não relacionados. [ID de Conexão 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -481,7 +481,7 @@ Disponibilidade geral | Número de versão: 13.0.15700.28
 
 * [Nova opção de autenticação **'Autenticação Universal do Active Directory'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Esse é um mecanismo de autenticação baseada em token orientado pelo Azure Active Directory que dá suporte a mecanismos de autenticação multifator, de senha e integrada.
 
-* Novos modelos de eventos estendidos correspondentes à funcionalidade dos modelos do SQL Server Profiler [(Item nº 2543925 do Microsoft Connect).](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool). Saiba mais sobre os [modelos do SQL Server Profiler](https://msdn.microsoft.com/library/ms190176.aspx)incluídos.
+* Novos modelos de eventos estendidos correspondentes à funcionalidade dos modelos do SQL Server Profiler [(Item nº 2543925 do Microsoft Connect).](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates).
 
 * Novas caixas de diálogo Criar banco de dados e Propriedades de banco de dados para bancos de dados do Azure SQL.
 

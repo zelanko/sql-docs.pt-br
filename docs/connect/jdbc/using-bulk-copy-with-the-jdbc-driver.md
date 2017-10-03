@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f42cd86be5f91b54e0ae862bee0fa64fb483c27d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4edc1b7348e9b34c924236819f0122ea5277d3e8
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Usando cópia em massa com o JDBC Driver
@@ -858,7 +858,7 @@ public class Program
  O aplicativo a seguir demonstra como carregar dados usando a classe SQLServerBulkCopy. Neste exemplo, um arquivo CSV é usado para copiar dados da tabela Production. Product no banco de dados AdventureWorks do SQL Server em uma tabela semelhante no banco de dados.  
   
 > [!IMPORTANT]  
->  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração da tabela](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Você também deve criar um arquivo CSV com dados exportados da tabela Production.Product e pode fazer isso com o SQL Server Management Studio (SSMS).  Se você não tiver o SSMS, você pode visitar [baixar o SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) obtê-lo.  
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração da tabela](../../ssms/download-sql-server-management-studio-ssms.md) obtê-lo.  
   
 1.  Abra **SQL Server Management Studio** e conecte-se ao SQL Server com o banco de dados AdventureWorks.  
   
@@ -866,7 +866,7 @@ public class Program
   
 3.  Para a fonte de dados, selecione o **fonte de dados** que permite que você se conectar ao SQL Server (por exemplo, SQL Server Native Client 11.0), verifique a configuração e, em seguida, **Avançar**  
   
-4.  Para o destino, selecione o **destino de arquivo simples** e insira um **nome de arquivo** com um destino, como c:\test\testbulkcsvexample.csv. Verifique se o **formato** é delimitada, de **qualificador de texto** é none e habilitar **nomes de coluna na primeira linha de dados**e, em seguida, selecione **Avançar**  
+4.  Para o destino, selecione o **destino de arquivo simples** e insira um **nome de arquivo** com um destino, como c:\test\testbulkcsvexample.csv.. Verifique se o **formato** é delimitada, de **qualificador de texto** é none e habilitar **nomes de coluna na primeira linha de dados**e, em seguida, selecione **Avançar**  
   
 5.  Selecione **escrever uma consulta para especificar os dados a serem transferidos** e **próximo**.  Insira seu **instrução SQL** selecione ProductID, nome, ProductNumber de Production. Product e **Avançar**  
   
