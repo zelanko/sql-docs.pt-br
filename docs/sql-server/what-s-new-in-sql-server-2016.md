@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fbfcabf1804a8438e07966bac9f612922b37fa4d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
@@ -38,7 +38,7 @@ Esta página fornece informações de resumo e links para informações mais det
 
  **Experimente o SQL Server hoje mesmo!** 
 - Baixe **gratuitamente** a [**edição do desenvolvedor do SQL Server 2016!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Baixe a versão mais recente do [SSMS (SQL Server Management Studio)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). 
+- Baixe a versão mais recente do [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md). 
 - Tem uma conta do Azure? Ative uma [Máquina Virtual com o SQL Server 2016 já instalado](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
 ## <a name="sql-server-2016-database-engine"></a>Mecanismo de Banco de Dados do SQL Server 2016
@@ -99,7 +99,7 @@ A Microsoft renovou completamente o Reporting Services nesta versão.
 - **Mecanismo de renderização de relatório reprojetado** que dá suporte a HTML5 
 - Novos **tipos de gráfico** mapa de árvore e explosão solar 
 
-Confira [Reporting Services (SSRS)](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs).
+Confira [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## <a name="next-steps"></a>Próximas etapas   
 - [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   

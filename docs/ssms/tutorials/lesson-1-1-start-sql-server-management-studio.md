@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6cc0ed90b88e52e4812011f56714a1f1a662636c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dab569e1d758587233b6f6a0cd00e966e325fcd1
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Lição 1-1 – Iniciar o SQL Server Management Studio
@@ -35,7 +35,7 @@ Para iniciar este tutorial, vamos olhar o [!INCLUDE[ssManStudioFull](../../inclu
   * Para versões mais antigas do Windows, no menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e clique em **SQL Server Management Studio**. Como alternativa, na caixa de diálogo **Executar** , digite **SSMS.exe** e clique em **OK**.  
   
     > [!NOTE]  
-    >  Caso o SSMS não seja exibido, você pode não ter instalado o SSMS com êxito. Instale o SSMS no [centro de download](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). O SSMS não é instalado automaticamente com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Use a versão mais recente para acessar todos os recursos.  
+    >  Caso o SSMS não seja exibido, você pode não ter instalado o SSMS com êxito. Instale o SSMS no [centro de download](../download-sql-server-management-studio-ssms.md). O SSMS não é instalado automaticamente com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Use a versão mais recente para acessar todos os recursos.  
   
 2.  Na próxima etapa, você se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o componente **Pesquisador de Objetos** do SSMS. Se o painel Pesquisador de Objetos não estiver visível, no menu **Exibir** , clique em **Pesquisador de Objetos**. No menu Pesquisador de Objetos, clique no botão **Conectar** e em **Mecanismo de Banco de Dados**. A caixa de diálogo **Conectar ao Servidor** deverá ser exibida. (Se você já tiver instalado o SSMS, as configurações do usuário poderão estar fazendo com que a caixa de diálogo **Conectar-se ao Servidor** seja exibida automaticamente.)  
   

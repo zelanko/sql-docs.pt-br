@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0a64043328380b107fb7e33716ec0bb48d061dd1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2417dafd4e1410a32f988ea950008da1dbaaaaa9
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Baixar o SQL Server Data Tools (SSDT)
@@ -123,11 +123,11 @@ Depois de instalar o SSDT, trabalhe com esses tutoriais para aprender a criar ba
   
 -   [Desenvolvimento de banco de dados offline orientado a projetos](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
   
--   [Tutorial SSIS: Criando um pacote ETL simples](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package)  
+-   [Tutorial SSIS: Criando um pacote ETL simples](../integration-services/ssis-how-to-create-an-etl-package.md)  
   
--   [Tutoriais do Analysis Services](/sql-docs/docs/analysis-services/analysis-services-tutorials-ssas)  
+-   [Tutoriais do Analysis Services](../analysis-services/analysis-services-tutorials-ssas.md)  
   
--   [Criando um relatório de tabela básico (Tutorial do SSRS)](/sql-docs/docs/reporting-services/create-a-basic-table-report-ssrs-tutorial)  
+-   [Criando um relatório de tabela básico (Tutorial do SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
 
