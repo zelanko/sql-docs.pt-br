@@ -112,7 +112,7 @@ ms.lasthandoff: 07/31/2017
   
  No prompt de comando do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, digite:  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, -r \n -T  
 ```  
   
@@ -145,7 +145,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
 ### <a name="examples"></a>Exemplos  
  Os exemplos nesta seção importam em massa dados de caracteres do arquivo de dados `Department-c-t.txt` criado no exemplo anterior na tabela `myDepartment` no banco de dados de exemplo [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] . Antes de executar os exemplos, é necessário criar essa tabela. Para criar essa tabela no esquema **dbo** , no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , execute o seguinte código:  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 DROP TABLE myDepartment;  
@@ -163,7 +163,7 @@ GO
   
  No prompt de comando do Windows, insira:  
   
-```  
+```cmd
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
@@ -178,7 +178,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
  No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , execute o seguinte código:  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'  

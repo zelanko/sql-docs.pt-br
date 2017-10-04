@@ -46,8 +46,6 @@ Criar tabela como selecionar (CTAS) é um dos recursos mais importantes do T-SQL
 ## <a name="syntax"></a>Sintaxe   
 
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-
 CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
