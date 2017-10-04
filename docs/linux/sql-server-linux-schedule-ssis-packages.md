@@ -7,7 +7,7 @@ manager: craigg
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
+ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
@@ -40,7 +40,7 @@ Para fins de manutenção e facilidade de gerenciamento, é recomendável coloca
 
 Aqui está um exemplo simples de um script de shell que contém apenas um único comando para executar um pacote. Você pode adicionar mais comandos conforme necessário.
 
-```
+```bash
 # A simple shell script that contains a simple package execution command
 # Script name: SSISpackageName.daily
 

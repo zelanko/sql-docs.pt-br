@@ -160,7 +160,7 @@ Neste ponto, ambas as instâncias do SQL Server estão configuradas para executa
 4. **Instalar o agente do recurso FCI para SQL Server**. Execute os seguintes comandos em ambos os nós:
 
     ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
     sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```
