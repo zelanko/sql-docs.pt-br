@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: ee06ae8d3a3a60d77e72ee9e55ee615a1bcf0cb9
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
@@ -40,7 +40,7 @@ Um grupo de disponibilidade tradicional tem recursos configurados em um cluster 
 
 Um grupo de disponibilidade distribuído exige que os grupos de disponibilidade subjacentes tenham um ouvinte. Em vez de fornecer o nome do servidor subjacente de uma instância autônoma (ou, no caso de uma instância de cluster de failover do SQL Server [FCI], o valor associado ao recurso de nome de rede) como você faria com um grupo de disponibilidade tradicional, especifique o ouvinte configurado para o grupo de disponibilidade distribuído com o parâmetro ENDPOINT_URL ao criá-lo. Embora cada grupo de disponibilidade subjacente do grupo de disponibilidade distribuído tenha um ouvinte, um grupo de disponibilidade distribuído não tem nenhum ouvinte.
 
-A figura a seguir mostra uma exibição de alto nível de um grupo de disponibilidade distribuído que abrange dois grupos de disponibilidade (AG 1 e AG 2), cada um configurado em seu próprio cluster WSFC. O grupo de disponibilidade distribuído tem um total de quatro réplicas, com dois em cada grupo de disponibilidade. Cada grupo de disponibilidade pode dar suporte a até o número máximo de réplicas, de modo que um grupo de disponibilidade distribuído baseado na Standard Edition pode ter até quatro réplicas e um baseado na Enterprise Edition pode ter até 18 réplicas no total.
+A figura a seguir mostra uma exibição de alto nível de um grupo de disponibilidade distribuído que abrange dois grupos de disponibilidade (AG 1 e AG 2), cada um configurado em seu próprio cluster WSFC. O grupo de disponibilidade distribuído tem um total de quatro réplicas, com dois em cada grupo de disponibilidade. Cada grupo de disponibilidade pode dar suporte a até o número máximo de réplicas, então uma disponibilidade distribuída pode ter até um total de 18 réplicas.
 
 <a name="fig1"></a>
 ![Exibição de alto nível de um grupo de disponibilidade distribuída][1]
@@ -59,7 +59,7 @@ A única maneira de fazer com que a réplica primária do AG 2 aceite inserçõe
 Atualmente, os grupos de disponibilidade distribuídos funcionam apenas com grupos de disponibilidade que são criados com a mesma versão principal do SQL Server. Por exemplo, todos os grupos de disponibilidade que fazem parte de um grupo de disponibilidade distribuído devem ser criados com o SQL Server 2016 atualmente. Como o recurso de grupos de disponibilidade distribuídos não existe no SQL Server 2012 ou 2014, os grupos de disponibilidade que foram criados com essas versões não podem fazer parte de grupos de disponibilidade distribuídos. 
 
 > [!NOTE]
-> Os grupos de disponibilidade distribuídos podem ser configurados com a Standard ou Enterprise Edition, mas não há suporte para a combinação de edições em um grupo de disponibilidade distribuído.
+> Grupos de disponibilidade distribuída não podem ser configurados com a Standard edition ou uma combinação da Standard e da Enterprise edition.
 
 Como há dois grupos de disponibilidade separados, o processo de instalação de um service pack ou de uma atualização cumulativa em uma réplica que faz parte de um grupo de disponibilidade distribuído é ligeiramente diferente do processo de um grupo de disponibilidade tradicional:
 
@@ -267,8 +267,6 @@ and ag.is_distributed = 1
 * [Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Criar um grupo de disponibilidade com o Transact-SQL](create-an-availability-group-transact-sql.md)
-
-Este conteúdo foi escrito por [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png

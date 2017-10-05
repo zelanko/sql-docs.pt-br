@@ -24,11 +24,11 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
@@ -74,11 +74,9 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
      Quando as políticas automatizadas não estão habilitadas, o Gerenciamento Baseado em Políticas não afetará o desempenho do sistema.  
   
 ## <a name="terms"></a>Termos  
- **Destino gerenciado pelo Gerenciamento Baseado em Políticas** 
- As entidades gerenciadas pelo Gerenciamento Baseado em Políticas, como uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], um banco de dados, uma tabela ou um índice. Todos os destinos em uma instância de servidor formam uma hierarquia de destino. Um conjunto de destino é aquele resultante da aplicação de um conjunto de filtros de destino à hierarquia de destino. Por exemplo, todas as tabelas do banco de dados de propriedade do esquema HumanResources.  
+ **Destino gerenciado pelo Gerenciamento Baseado em Políticas** Entidades que são gerenciadas pelo Gerenciamento Baseado em Políticas, como uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], um banco de dados, uma tabela ou um índice. Todos os destinos em uma instância de servidor formam uma hierarquia de destino. Um conjunto de destino é aquele resultante da aplicação de um conjunto de filtros de destino à hierarquia de destino. Por exemplo, todas as tabelas do banco de dados de propriedade do esquema HumanResources.  
   
- **Faceta do Gerenciamento Baseado em Políticas**
- Um conjunto de propriedades lógicas que modelam o comportamento ou as características de alguns tipos de destinos gerenciados. O número e as características das propriedades são incorporados à faceta e só podem ser adicionados ou removidos pelo criador da faceta. Um tipo de destino pode implementar uma ou mais facetas de gerenciamento, e uma faceta de gerenciamento pode ser implementada por um ou mais tipos de destino. Algumas propriedades de uma faceta só podem ser aplicadas a uma versão específica.  
+ **Faceta do Gerenciamento Baseado em Políticas** Um conjunto de propriedades lógicas que modelam o comportamento ou as características de alguns tipos de destinos gerenciados. O número e as características das propriedades são incorporados à faceta e só podem ser adicionados ou removidos pelo criador da faceta. Um tipo de destino pode implementar uma ou mais facetas de gerenciamento, e uma faceta de gerenciamento pode ser implementada por um ou mais tipos de destino. Algumas propriedades de uma faceta só podem ser aplicadas a uma versão específica.  
   
  **Condição de Gerenciamento Baseado em Políticas**  
  Uma expressão booliana que especifica um conjunto de estados permitidos de um destino gerenciado pelo Gerenciamento Baseado em Políticas em relação a uma faceta de gerenciamento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta observar agrupamentos ao avaliar uma condição. Quando os agrupamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não correspondem exatamente a agrupamentos do Windows, teste sua condição para determinar como o algoritmo resolve conflitos.  
@@ -108,7 +106,7 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
   
 ## <a name="links-to-specific-tasks"></a>Links para tarefas específicas 
 
- - [Armazenar as políticas de Gerenciamento Baseado em Políticas.](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [Armazenar as políticas de Gerenciamento Baseado em Políticas.](policy-based-management-storage.md)|  
  - [Configurar alertas para notificar os administradores de políticas sobre falhas](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [Criar uma nova condição de Gerenciamento baseado em Políticas](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [Excluir uma condição de Gerenciamento baseado em Políticas](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -121,8 +119,8 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
 
   
  ## <a name="examples"></a>Exemplos
- - [Criar a política desativada por padrão](https://msdn.microsoft.com/library/bb500172.aspx)
-  - [Configurar um servidor para executar a política desativada por padrão](https://msdn.microsoft.com/library/bb522470.aspx)
+ - [Criar a política desativada por padrão](lesson-1-1-create-the-off-by-default-policy.md)
+  - [Configurar um servidor para executar a política desativada por padrão](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## <a name="see-also"></a>Consulte também  
  [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

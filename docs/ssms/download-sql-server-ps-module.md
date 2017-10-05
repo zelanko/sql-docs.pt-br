@@ -17,22 +17,48 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: f55266b6ec28e2552047cc36a5060945006b2caa
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="download-sql-server-powershell-module"></a>Baixar o módulo do SQL Server PowerShell
 Como parte da versão 17.0 do SQL Server Management Studio, o módulo do SQL Server PowerShell agora é fornecido por meio da Galeria do PowerShell.  O módulo não está mais incluído no pacote de instalação do SSMS. Para usar o PowerShell com o SSMS 17.0 e versões mais recentes, o módulo do SQL Server deve ser instalado no computador como uma etapa adicional.
 
-A documentação completa sobre como instalar a versão mais recente do Windows Management Framework e como instalar os módulos do PowerShell em geral pode ser encontrada no site da [Galeria do PowerShell](https://www.powershellgallery.com/).
+Documentação completa sobre como instalar a versão mais recente do Windows Management Framework e como instalar os módulos do PowerShell em geral pode ser encontrado no site da [Galeria do PowerShell](https://www.powershellgallery.com/).
 
 O comando do PowerShell para instalar o módulo do SQL Server é:
 
-> Install-module -Name SqlServer -Scope CurrentUser
+> Install-Module -Name SqlServer
+
+Este comando instalará o módulo para todos os usuários do computador. Você precisará estar executando o processo do PowerShell como administrador.
+
+> Install-Module -Name SqlServer -Scope CurrentUser
+
+Este comando instalará o módulo para o usuário que executa o processo atual do PowerShell. Você não precisa estar executando o processo do PowerShell com direitos de administrador.
 
 Se houver versões anteriores dos módulos do SQL Server PowerShell no computador, pode ser necessário fornecer o parâmetro “-AllowClobber”.  
 
-As versões do módulo do SQL Server PowerShell fornecidas com a Galeria do PowerShell são compatíveis com controle de versão e exigem o PowerShell versão 5.0 ou superior.
+Se estiver como administrador e a instalação do módulo para todos os usuários do computador
+
+> Install-Module -Name SqlServer -AllowClobber
+
+Se não é possível executar como administrador ou instalar somente para o usuário atual
+
+> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
+
+Quando as versões atualizadas do módulo SqlServer estão disponíveis, você poderá atualizar a versão usando o comando Update-Module
+
+> Update-Module -Name SqlServer
+
+Para exibir as versões do módulo instalado no computador, você pode usar
+
+> Get-Module SqlServer -ListAvailable
+
+Para usar uma versão específica do módulo em seus scripts, você pode importá-lo com
+
+> Import-Module SqlServer -Version 21.0.17178
+
+As versões do módulo do SQL Server PowerShell fornecidas com a Galeria do PowerShell são compatíveis com controle de versão e exigem o PowerShell versão 5.0 ou superior. Você pode encontrar o módulo do SqlServer na [Galeria do PowerShell](https://www.powershellgallery.com/packages/Sqlserver/) 
 

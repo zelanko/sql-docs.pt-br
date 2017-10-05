@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d6ba2f29d8c6c21a6f96c575dbebc354e0885f8d
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar o SQL Server no Server Core
@@ -52,7 +52,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Não||  
 |SSDT ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|Não||  
 |Conectividade das ferramentas de cliente|Sim||  
-|Servidor do Integration Services|Sim|Para obter mais informações sobre o novo Servidor do Integration Services e seus recursos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [Servidor do SSIS (Integration Services)](https://msdn.microsoft.com/library/bb522534.aspx).|  
+|Servidor do Integration Services|Sim|Para saber mais sobre o novo servidor do Integration Services e seus recursos no [!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).|  
 |Compatibilidade das ferramentas de cliente com versões anteriores|Não||  
 |SDK de Ferramentas de cliente|Não||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online|Não||  

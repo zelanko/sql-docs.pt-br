@@ -12,6 +12,17 @@
 ## [Instalar e conectar – Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Executar e conectar – Docker](quickstart-install-connect-docker.md)
 
+# Tutoriais
+## [1_Migrar do Windows](sql-server-linux-migrate-restore-database.md)
+## [2_Migrar do Oracle](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)
+## [3_Migrar para Docker](tutorial-restore-backup-in-sql-server-container.md)
+## [4_Criar um trabalho](sql-server-linux-run-sql-server-agent-job.md)
+## [5_Configurar autenticação do AD](sql-server-linux-active-directory-authentication.md)
+## [6_Criar instância de Cluster de Failover](sql-server-linux-shared-disk-cluster-configure.md)
+### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+
 # Conceitos
 ## Instalar
 ### [Instalar o SQL Server](sql-server-linux-setup.md)
@@ -19,12 +30,13 @@
 ### [Instalar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [Instalar a pesquisa de texto completo do SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-### [Provisionar uma VM SQL no Azure](sql-server-linux-azure-virtual-machine.md)
+### [Registrar repositório GA](sql-server-linux-change-repo.md)
+### [Provisionar uma VM SQL no Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine)
 
 ## Configurar
 ### [Configurar com mssql-conf](sql-server-linux-configure-mssql-conf.md)
 ### [Variáveis de ambiente](sql-server-linux-configure-environment-variables.md)
-### [Docker](sql-server-linux-configure-docker.md)
+### [Configurar contêineres do Docker](sql-server-linux-configure-docker.md)
 ### [Comentários do cliente](sql-server-linux-customer-feedback.md)
 
 ## [Desenvolver](sql-server-linux-develop-overview.md)
@@ -36,12 +48,10 @@
 ## [Gerenciar](sql-server-linux-management-overview.md)
 ### [Usar o SSMS para gerenciar](sql-server-linux-manage-ssms.md)
 ### [Usar o PowerShell para gerenciar](sql-server-linux-manage-powershell.md)
-### [Criar e executar trabalhos](sql-server-linux-run-sql-server-agent-job.md)
 ### [Usar o envio de logs](sql-server-linux-use-log-shipping.md)
 ### [Usar o DB Mail e os alertas de email](sql-server-linux-db-mail-sql-agent.md)
 
 ## [Migrar](sql-server-linux-migrate-overview.md)
-### [Restaurar do Windows](sql-server-linux-migrate-restore-database.md)
 ### [Exportar e importar um BACPAC do Windows](sql-server-linux-migrate-ssms.md)
 ### [Migrar com o Assistente de Migração do SQL Server](sql-server-linux-migrate-ssma.md)
 ### [Cópia em massa com bcp](sql-server-linux-migrate-bcp.md)
@@ -53,7 +63,7 @@
 ## [Configurar a continuidade de negócios](sql-server-linux-business-continuity-dr.md)
 ### [Backup e restauração](sql-server-linux-backup-and-restore-database.md)
 #### [Interface de dispositivo virtual – Linux](sql-server-linux-backup-vdi-specification.md)
-### [Instância de cluster de failover](sql-server-linux-shared-disk-cluster-configure.md)
+### [Instância de cluster de failover](sql-server-linux-shared-disk-cluster-concepts.md)
 #### [Red Hat Enterprise Linux]()
 ##### [Configurar (complemento de alta disponibilidade)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [Operar (complemento de alta disponibilidade)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
@@ -72,9 +82,10 @@
 ## [Segurança](sql-server-linux-security-overview.md)
 ### [Introdução a recursos de segurança](sql-server-linux-security-get-started.md)
 ### [Criptografar conexões](sql-server-linux-encrypted-connections.md)
-### [Autenticação do Active Directory](sql-server-linux-active-directory-authentication.md)
 
-## [Otimizar o desempenho](sql-server-linux-performance-get-started.md)
+## Desempenho
+### [Práticas recomendadas](sql-server-linux-performance-best-practices.md)
+### [Introdução aos recursos de desempenho](sql-server-linux-performance-get-started.md)
 
 # Exemplos
 ## Instalação autônoma
@@ -85,6 +96,11 @@
 # Recursos
 ## [Solucionar problemas](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server, documentação](../sql-server/sql-server-technical-documentation.md)
+## Parceiros
+### [Monitoramento](../sql-server/partner-monitor-sql-server.md)
+### [Alta disponibilidade e recuperação de desastre](../sql-server/partner-hadr-sql-server.md)
+### [Gerenciamento](../sql-server/partner-management-sql-server.md)
+### [Desenvolvimento](../sql-server/partner-dev-sql-server.md)
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Estouro de pilha](http://stackoverflow.com/questions/tagged/sql-server)
 ## [Fóruns do MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 8b45a33dadae04400fbc0602f2aa4f6fc08d5df1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
@@ -59,9 +59,9 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- Para um banco de dados SQL Server definido no nível de compatibilidade 120, a ativação do [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 força o sistema a usar a CE versão 70.  
+ Para um banco de dados do SQL Server definido no nível de compatibilidade 120 ou acima, a ativação do [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 força o sistema a usar o CE versão 70.  
   
- **CE herdada:** para um banco de dados SQL Server definido no nível de compatibilidade 130, a CE versão 70 pode ser ativada usando o nível do banco de dados usando a [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+ **CE herdada:** para um banco de dados do SQL Server definido no nível de compatibilidade 120 e acima, o CE versão 70 pode ser ativado usando o nível do banco de dados usando [ALTERAR A CONFIGURAÇÃO NO ESCOPO DO BANCO DE DADOS](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```tsql  
 ALTER DATABASE
@@ -74,7 +74,7 @@ SELECT name, value
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
  
- Ou a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, o [Dica de Consulta](../../t-sql/queries/hints-transact-sql-query.md) `FORCE_LEGACY_CARDINALITY_ESTIMATION`.
+ Ou a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, o [Dica de Consulta](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```tsql  
 SELECT CustomerId, OrderAddedDate  

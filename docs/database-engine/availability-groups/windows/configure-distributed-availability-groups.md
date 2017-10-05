@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 
@@ -233,7 +233,10 @@ No momento, apenas o failover manual é permitido. A seguinte instrução Transa
         );  
        
       ```  
-  
+   >[!NOTE]
+   >Da mesma forma que para grupos de disponibilidade normal, o status de sincronização entre duas partes de réplicas de grupos de um grupo de disponibilidade distribuída depende do modo de disponibilidade de ambas as réplicas. Por exemplo, para que a confirmação síncrona ocorra, tanto o grupo de disponibilidade primária quanto o grupo de disponibilidade secundária atuais devem ser configurados para o modo de disponibilidade de confirmação síncrona.  
+
+
 1. Aguarde até que o status do grupo de disponibilidade distribuído seja alterado para `SYNCHRONIZED`. Execute a consulta a seguir no SQL Server que hospeda a réplica primária do grupo de disponibilidade primário. 
     
       ```sql  
@@ -340,3 +343,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

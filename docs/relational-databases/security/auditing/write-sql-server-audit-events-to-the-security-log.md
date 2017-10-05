@@ -1,7 +1,7 @@
 ---
 title: "Escrever eventos de auditoria do SQL Server no log de segurança | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,45 +19,32 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
----
-# <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança
-  em um ambiente de alta segurança, o log de Segurança do Windows é o local apropriado para gravar eventos que registram o acesso a objetos. Outros locais de auditoria têm suporte, mas estão mais sujeitos a falsificações.  
+---  
+
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+em um ambiente de alta segurança, o log de Segurança do Windows é o local apropriado para gravar eventos que registram o acesso a objetos. Outros locais de auditoria têm suporte, mas estão mais sujeitos a falsificações.  
   
  Há dois requisitos principais para gravar auditorias do servidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no log de Segurança do Windows:  
   
 -   É necessário configurar o acesso ao objeto de auditoria para capturar os eventos. A ferramenta de política de auditoria (`auditpol.exe`) expõe uma variedade de configurações de subpolíticas na categoria **acesso ao objeto de auditoria** . Para permitir que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audite o acesso a objetos, defina a configuração de **aplicativo gerado** .  
-  
 -   A conta que o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está executando deve ter a permissão **gerar auditorias de segurança** para gravar no log de Segurança do Windows. Por padrão, as contas LOCAL SERVICE e NETWORK SERVICE têm essa permissão. Esta etapa não será necessária se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver sendo executado em uma dessas contas.  
+-   Fornecer permissão total para a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conta de serviço para o hive de registro `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`.  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- A política de auditoria do Windows poderá afetar a auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se estiver configurada para gravar no log de segurança do Windows, com a possibilidade de se perder eventos se a política de auditoria não estiver configurada corretamente. Normalmente, o log de segurança do Windows é definido para substituir os eventos mais antigos. Isso preserva os eventos mais recentes. No entanto, se o log de segurança do Windows não estiver definido para substituir eventos mais antigos, quando ele estiver cheio, o sistema emitirá o evento 1104 do Windows (O log está cheio). Nesse momento:  
-  
+A política de auditoria do Windows poderá afetar a auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se estiver configurada para gravar no log de segurança do Windows, com a possibilidade de se perder eventos se a política de auditoria não estiver configurada corretamente. Normalmente, o log de segurança do Windows é definido para substituir os eventos mais antigos. Isso preserva os eventos mais recentes. No entanto, se o log de segurança do Windows não estiver definido para substituir eventos mais antigos, quando ele estiver cheio, o sistema emitirá o evento 1104 do Windows (O log está cheio). Nesse momento:  
 -   Nenhum outro evento de segurança será registrado  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não conseguirá detectar que o sistema não pode registrar os eventos no log de segurança, o que resultará na possível perda de eventos de auditoria  
-  
 -   Depois que o administrador do computador corrigir o log de segurança, o comportamento de log voltará ao normal.  
-  
- **Neste tópico**  
-  
--   **Antes de começar:**  
-  
-     [Limitações e restrições](#Restrictions)  
-  
-     [Segurança](#Security)  
-  
--   **Para gravar eventos de auditoria do SQL Server no log de segurança:**  
-  
-     [Definir a configuração de acesso ao objeto de auditoria no Windows usando auditpol](#auditpolAccess)  
-  
-     [Definir a configuração de acesso ao objeto de auditoria no Windows usando secpol](#secpolAccess)  
-  
-     [Conceder a permissão gerar auditorias de segurança a uma conta usando secpol](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -125,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+

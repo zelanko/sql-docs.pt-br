@@ -22,11 +22,11 @@ caps.latest.revision: 47
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e951423b908dacc56729ede2fcca7339ce83acf0
+ms.translationtype: HT
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: d088599955f156dd82f327bcc9833bbae64b6185
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd – Usar com variáveis de script
@@ -58,26 +58,32 @@ ms.lasthandoff: 06/22/2017
 ## <a name="implicitly-setting-scripting-variables"></a>Definindo implicitamente variáveis de script  
  Ao iniciar o **sqlcmd** com uma opção que contém uma variável **sqlcmd** relacionada, a variável **sqlcmd** será implicitamente definida com o valor especificado com a opção. No exemplo a seguir, o `sqlcmd` é iniciado com a opção `-l` . Isto define implicitamente a variável SQLLOGINTIMEOUT.  
   
- `c:\> sqlcmd -l 60`  
+```
+c:\> sqlcmd -l 60
+```
+ 
+Também é possível usar a opção **-v** para definir uma variável de script existente em um script. O script a seguir (o nome de arquivo é `testscript.sql`), `ColumnName` é uma variável de script.  
+ 
+```
+USE AdventureWorks2012;
+
+SELECT x.$(ColumnName)
+FROM Person.Person x
+WHERE x.BusinessEntityID < 5;
+```
+
+Assim você pode especificar o nome da coluna que deseja que retorne usando a opção `-v` :  
+ 
+```
+sqlcmd -v ColumnName ="FirstName" -i c:\testscript.sql
+```
+
+Para retornar uma coluna diferente usando o mesmo script, altere o valor da variável de script `ColumnName` .  
   
- Também é possível usar a opção **-v** para definir uma variável de script existente em um script. O script a seguir (o nome de arquivo é `testscript.sql`), `ColumnName` é uma variável de script.  
-  
- `USE AdventureWorks2012;`  
-  
- `SELECT x.$(ColumnName)`  
-  
- `FROM Person.Person x`  
-  
- `WHERE x.BusinessEntityID < 5;`  
-  
- Assim você pode especificar o nome da coluna que deseja que retorne usando a opção `-v` :  
-  
- `sqlcmd -v ColumnName ="FirstName" -i c:\testscript.sql`  
-  
- Para retornar uma coluna diferente usando o mesmo script, altere o valor da variável de script `ColumnName` .  
-  
- `sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql`  
-  
+```
+sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
+```
+
 ## <a name="guidelines-for-scripting-variable-names-and-values"></a>Diretrizes para nomes e valores de variáveis de script  
  Considere as seguintes diretrizes ao nomear variáveis de script:  
   
@@ -106,243 +112,226 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sqlcmd-scripting-variables"></a>Variáveis de script do sqlcmd  
  Variáveis definidas por **sqlcmd** são conhecidas como variáveis de script. A tabela a seguir lista variáveis de script do **sqlcmd** .  
   
-|Variável|Opção relacionada|R/W|Default|  
-|--------------|--------------------|----------|-------------|  
-|SQLCMDUSER*|-U|R|""|  
-|SQLCMDPASSWORD*|-P|--|""|  
-|SQLCMDSERVER*|-S|R|"DefaultLocalInstance"|  
-|SQLCMDWORKSTATION|-H|R|"ComputerName"|  
-|SQLCMDDBNAME|-d|R|""|  
-|SQLCMDLOGINTIMEOUT|-l|R/W|"8" (segundos)|  
-|SQLCMDSTATTIMEOUT|-t|R/W|"0" = espere indefinidamente|  
-|SQLCMDHEADERS|-H|R/W|"0"|  
-|SQLCMDCOLSEP|-S|R/W|" ."|  
-|SQLCMDCOLWIDTH|-w|R/W|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|R/W|"0"|  
-|SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
-|SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = ilimitado|  
-|SQLCMDEDITOR||R/W|"edit.com"|  
-|SQLCMDINI||R|""|  
+|        Variável         | Opção relacionada | R/W |         Default         |
+| ----------------------- | -------------- | --- | ----------------------- |
+| SQLCMDUSER*             | -U             | R   | ""                      |
+| SQLCMDPASSWORD*         | -P             | --  | ""                      |
+| SQLCMDSERVER*           | -S             | R   | "DefaultLocalInstance"  |
+| SQLCMDWORKSTATION       | -H             | R   | "ComputerName"          |
+| SQLCMDDBNAME            | -d             | R   | ""                      |
+| SQLCMDLOGINTIMEOUT      | -l             | R/W | "8" (segundos)           |
+| SQLCMDSTATTIMEOUT       | -t             | R/W | "0" = espere indefinidamente |
+| SQLCMDHEADERS           | -H             | R/W | "0"                     |
+| SQLCMDCOLSEP            | -S             | R/W | " ."                     |
+| SQLCMDCOLWIDTH          | -w             | R/W | "0"                     |
+| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDERRORLEVEL        | -M             | R/W | "0"                     |
+| SQLCMDMAXVARTYPEWIDTH   | -y             | R/W | "256"                   |
+| SQLCMDMAXFIXEDTYPEWIDTH | -y             | R/W | "0" = ilimitado         |
+| SQLCMDEDITOR            |                | R/W | "edit.com"              |
+| SQLCMDINI               |                | R   | ""                      |
+
+SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER são definidos ao usar **:Connect** .  
+
+R indica que o valor pode ser definido apenas uma vez durante a inicialização do programa.  
   
- \* SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER são definidos ao usar **:Connect** .  
-  
- R indica que o valor pode ser definido apenas uma vez durante a inicialização do programa.  
-  
- R/W indica que o valor pode ser redefinido usando o comando **setvar** e que comandos subsequentes usarão o novo valor.  
+R/W indica que o valor pode ser redefinido usando o comando **setvar** e que comandos subsequentes usarão o novo valor.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-the-setvar-command-in-a-script"></a>A. Usando o comando setvar em um script  
  Muitas opções do **sqlcmd** podem ser controladas em um script usando o comando **setvar** . No exemplo a seguir, o script `test.sql` é criado e nele a variável `SQLCMDLOGINTIMEOUT` é definida como `60` segundos e outra variável de script, `server`, é definida como `testserver`. O código a seguir está em `test.sql`.  
-  
- `:setvar SQLCMDLOGINTIMEOUT 60`  
-  
- `:setvar server "testserver"`  
-  
- `:connect $(server) -l $(SQLCMDLOGINTIMEOUT)`  
-  
- `USE AdventureWorks2012;`  
-  
- `SELECT FirstName, LastName`  
-  
- `FROM Person.Person;`  
-  
- `The script is then called by using sqlcmd:`  
-  
- `sqlcmd -i c:\test.sql`  
+
+```
+:setvar SQLCMDLOGINTIMEOUT 60
+:setvar server "testserver"
+:connect $(server) -l $(SQLCMDLOGINTIMEOUT)
+
+USE AdventureWorks2012;
+
+SELECT FirstName, LastName
+FROM Person.Person;
+```
+
+O script é então chamado usando o sqlcmd:
+
+```
+sqlcmd -i c:\test.sql
+```
   
 ### <a name="b-using-the-setvar-command-interactively"></a>B. Usando interativamente o comando setvar  
  O exemplo a seguir mostra como definir interativamente uma variável de script usando o comando `setvar` .  
-  
- `sqlcmd`  
-  
- `:setvar  MYDATABASE AdventureWorks2012`  
-  
- `USE $(MYDATABASE);`  
-  
- `GO`  
-  
+
+```
+sqlcmd
+:setvar  MYDATABASE AdventureWorks2012
+USE $(MYDATABASE);
+GO
+```
+
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Changed database context to 'AdventureWorks2012'`  
-  
- `1>`  
+```
+Changed database context to 'AdventureWorks2012'
+1>
+```
   
 ### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>C. Usando variáveis de ambiente de prompt de comando no sqlcmd  
  No exemplo a seguir, quatro variáveis de ambiente `are` são definidas e depois chamadas a partir do `sqlcmd`.  
-  
- `C:\>SET tablename=Person.Person`  
-  
- `C:\>SET col1=FirstName`  
-  
- `C:\>SET col2=LastName`  
-  
- `C:\>SET title=Ms.`  
-  
- `C:\>sqlcmd -d AdventureWorks2012`  
-  
- `1> SELECT TOP 5 $(col1) + ' ' + $(col2) AS Name`  
-  
- `2> FROM $(tablename)`  
-  
- `3> WHERE Title ='$(title)'`  
-  
- `4> GO`  
+
+```
+C:\>SET tablename=Person.Person
+C:\>SET col1=FirstName
+C:\>SET col2=LastName
+C:\>SET title=Ms.
+C:\>sqlcmd -d AdventureWorks2012
+1> SELECT TOP 5 $(col1) + ' ' + $(col2) AS Name
+2> FROM $(tablename)
+3> WHERE Title ='$(title)'
+4> GO
+```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. Usando variáveis de ambiente em nível de usuário no sqlcmd  
  No exemplo a seguir, a variável de ambiente de nível de usuário `%Temp%` está definida no prompt de comando e foi passada para o arquivo de entrada do `sqlcmd` . Para obter a variável de ambiente de nível de usuário: em **Painel de Controle**, clique duas vezes em **Sistema**. Clique na guia **Avançado** e em **Variáveis de Ambiente**.  
   
- O código a seguir está no arquivo de entrada `c:\testscript.txt`:  
-  
- `:OUT $(MyTempDirectory)`  
-  
- `USE AdventureWorks2012;`  
-  
- `SELECT FirstName`  
-  
- `FROM AdventureWorks2012.Person.Person`  
-  
- `WHERE BusinessEntityID` `< 5;`  
-  
- O código a seguir é inserido no prompt de comando:  
-  
- `C:\ >SET MyTempDirectory=%Temp%\output.txt`  
-  
- `C:\ >sqlcmd -i C:\testscript.txt`  
-  
+ O código a seguir está no arquivo de entrada `c:\testscript.txt`:
+
+```
+:OUT $(MyTempDirectory)
+USE AdventureWorks2012;
+
+SELECT FirstName
+FROM AdventureWorks2012.Person.Person
+WHERE BusinessEntityID` `< 5;
+```
+
+O código a seguir é inserido no prompt de comando:
+
+```
+C:\ >SET MyTempDirectory=%Temp%\output.txt
+C:\ >sqlcmd -i C:\testscript.txt
+```
+
  O resultado a seguir é enviado ao arquivo de saída C:\Documents and Settings\\<user\>\Local Settings\Temp\output.txt.  
-  
- `Changed database context to 'AdventureWorks2012'.`  
-  
- `FirstName`  
-  
- `--------------------------------------------------`  
-  
- `Gustavo`  
-  
- `Catherine`  
-  
- `Kim`  
-  
- `Humberto`  
-  
- `(4 rows affected)`  
-  
+
+```
+Changed database context to 'AdventureWorks2012'.
+FirstName
+--------------------------------------------------
+Gustavo
+Catherine
+Kim
+Humberto
+
+(4 rows affected)
+```
+
 ### <a name="e-using-a-startup-script"></a>E. Usando um script de inicialização  
  Um script de inicialização **sqlcmd** é executado quando **sqlcmd** é iniciado. O exemplo a seguir define a variável de ambiente de `SQLCMDINI`. Este é o conteúdo de `init.sql.`  
-  
- `SET NOCOUNT ON`  
-  
- `GO`  
-  
- `DECLARE @nt_username nvarchar(128)`  
-  
- `SET @nt_username = (SELECT rtrim(convert(nvarchar(128), nt_username))`  
-  
- `FROM sys.dm_exec_sessions WHERE spid = @@SPID)`  
-  
- `SELECT  @nt_username + ' is connected to ' +`  
-  
- `rtrim(CONVERT(nvarchar(20), SERVERPROPERTY('servername'))) +`  
-  
- `' (' +`  
-  
- `rtrim(CONVERT(nvarchar(20), SERVERPROPERTY('productversion'))) +`  
-  
- `')'`  
-  
- `:setvar SQLCMDMAXFIXEDTYPEWIDTH 100`  
-  
- `SET NOCOUNT OFF`  
-  
- `GO`  
-  
- `:setvar SQLCMDMAXFIXEDTYPEWIDTH`  
-  
+
+```
+SET NOCOUNT ON
+GO
+
+DECLARE @nt_username nvarchar(128)
+SET @nt_username = (SELECT rtrim(convert(nvarchar(128), nt_username))
+FROM sys.dm_exec_sessions WHERE spid = @@SPID)
+SELECT  @nt_username + ' is connected to ' +
+rtrim(CONVERT(nvarchar(20), SERVERPROPERTY('servername'))) +
+' (' +`  
+rtrim(CONVERT(nvarchar(20), SERVERPROPERTY('productversion'))) +
+')'
+:setvar SQLCMDMAXFIXEDTYPEWIDTH 100
+SET NOCOUNT OFF
+GO
+
+:setvar SQLCMDMAXFIXEDTYPEWIDTH
+```
+
  Isto chama o arquivo `init.sql` quando o `sqlcmd` é iniciado.  
   
- `C:\> SET sqlcmdini=c:\init.sql`  
-  
- `>1 Sqlcmd`  
-  
+```
+c:\> SET sqlcmdini=c:\init.sql
+>1 Sqlcmd
+```
+
  Esta é a saída.  
-  
- `>1 < user > is connected to < server > (9.00.2047.00)`  
+
+```
+>1 < user > is connected to < server > (9.00.2047.00)
+```
+
   
 > [!NOTE]  
 >  A opção **-X** desabilita o recurso de script de inicialização.  
   
 ### <a name="f-variable-expansion"></a>F. Expansão de variável  
  O exemplo a seguir mostra o trabalho com dados no formato de uma variável **sqlcmd** .  
-  
- `USE AdventureWorks2012;`  
-  
- `CREATE TABLE AdventureWorks2012.dbo.VariableTest`  
-  
- `(`  
-  
- `Col1 nvarchar(50)`  
-  
- `);`  
-  
- `GO`  
-  
+
+```
+USE AdventureWorks2012;
+CREATE TABLE AdventureWorks2012.dbo.VariableTest
+(
+Col1 nvarchar(50)
+);
+GO
+```
+
  Insira uma linha em `Col1` de `dbo.VariableTest` que contém o valor `$(tablename)`.  
-  
- `INSERT INTO AdventureWorks2012.dbo.VariableTest(Col1)`  
-  
- `VALUES('$(tablename)');`  
-  
- `GO`  
+
+```
+INSERT INTO AdventureWorks2012.dbo.VariableTest(Col1)
+VALUES('$(tablename)');
+GO
+```
   
  No prompt do `sqlcmd` , quando nenhuma variável for definida igual a `$(tablename)`, as instruções a seguir retornarão a linha.  
   
- `C:\> sqlcmd`  
-  
- `>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(tablename)';`  
-  
- `>2 GO`  
-  
- `>3 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(tablename)';`  
-  
- `>4 GO`  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `>1 Col1`  
-  
- `>2 ------------------`  
-  
- `>3 $(tablename)`  
-  
- `>4`  
-  
- `>5 (1 rows affected)`  
-  
+```
+C:\> sqlcmd
+>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(tablename)';
+>2 GO
+>3 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(tablename)';
+>4 GO
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+>1 Col1
+>2 ------------------
+>3 $(tablename)
+>4
+>5 (1 rows affected)
+```
+
  Dado que a variável `MyVar` foi definida como `$(tablename)`.  
-  
- `>6 :setvar MyVar $(tablename)`  
-  
+
+```
+>6 :setvar MyVar $(tablename)
+```
+
  Estas instruções retornam a linha e também a mensagem "variável de script 'tablename' não definida".  
-  
- `>6 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(tablename)';`  
-  
- `>7 GO`  
-  
- `>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(tablename)';`  
-  
- `>2 GO`  
-  
+
+```
+>6 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(tablename)';
+>7 GO
+
+>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(tablename)';
+>2 GO
+```
+
  Estas instruções retornam a linha.  
-  
- `>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(MyVar)';`  
-  
- `>2 GO`  
-  
- `>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(MyVar)';`  
-  
- `>2 GO`  
+
+```
+>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(MyVar)';
+>2 GO
+```
+
+```
+>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(MyVar)';
+>2 GO
+```
   
 ## <a name="see-also"></a>Consulte também  
  [Usar o utilitário sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   

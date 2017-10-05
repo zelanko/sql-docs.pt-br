@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
@@ -55,7 +55,7 @@ Os parâmetros padrão são bons para um início rápido, mas você deve monitor
   
  Conforme o Repositório de Consultas coleta consultas, planos de execução e estatísticas, seu tamanho no banco de dados cresce até esse limite ser atingido. Quando isso acontece, o Repositório de Consultas automaticamente altera o modo de operação para somente leitura e para de coletar novos dados, o que significa que a análise de desempenho não é mais precisa.  
   
- O valor padrão (100 MB) pode não ser suficiente se a sua carga de trabalho gerar muitos e planos e consultas diferentes, ou caso você deseje manter o histórico de consulta por um período de tempo maior. Controle o uso de espaço atual e aumente o Tamanho Máximo (MB) para impedir que o Repositório de Consultas passe para o modo somente leitura.  Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou execute o script a seguir para obter as informações mais recentes sobre o tamanho do Repositório de Consultas:  
+ O valor padrão (100 MB) pode não ser suficiente se sua carga de trabalho gerar muitos e planos e consultas diferentes, ou caso você deseje manter o histórico de consulta por um período de tempo maior. Controle o uso de espaço atual e aumente o Tamanho Máximo (MB) para impedir que o Repositório de Consultas passe para o modo somente leitura.  Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou execute o script a seguir para obter as informações mais recentes sobre o tamanho do Repositório de Consultas:  
   
 ```tsql 
 USE [QueryStoreDB];  
@@ -235,9 +235,9 @@ FROM sys.database_query_store_options;
   
  Se o problema persistir, isso indicará corrupção dos dados do Repositório de Consultas que estão persistidos no disco.
  
- O Repositório de Consultas pode ser recuperado executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado.
+ O Repositório de Consultas poderia ser recuperado executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado.
  
- Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura/gravação.  
+ Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura / gravação.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -283,7 +283,7 @@ Como resultado, o desempenho da carga de trabalho será abaixo do ideal e o Repo
 
   -   Parametrize consultas quando aplicável, por exemplo, encapsule consultas dentro de um procedimento armazenado ou sp_executesql. Para obter mais informações sobre este tópico, consulte [Reutilização de parâmetros e plano de execução](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
--   Use a opção [**Otimizar para Cargas de Trabalho Ad Hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) se a sua carga de trabalho contiver muitos lotes ad hoc de uso único com planos de consulta diferentes.  
+-   Use a opção [**Otimizar para Cargas de Trabalho Ad Hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) se sua carga de trabalho contiver muitos lotes ad hoc de uso único com planos de consulta diferentes.  
   
     -   Compare o número de valores query_hash distintos ao número total de entradas em sys.query_store_query. Se o índice estiver próximo de 1, a carga de trabalho ad hoc gerará consultas diferentes.  
   
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  Planos de execução fazem referência a objetos usando nomes de três partes `database.schema.object`.   
 
 Se você renomear um banco de dados, a imposição de plano falhará, causando recompilação em todas as execuções de consulta subsequentes.  
+
+##  <a name="Recovery"></a> Use sinalizadores de rastreamento em servidores de missão crítica para melhorar a recuperação de desastre
+ 
+  Os sinalizadores de rastreamento global 7745 e 7752 podem ser usados para melhorar o desempenho do Repositório de Consultas durante cenários de recuperação de desastres e alta disponibilidade.
   
+  O sinalizador de rastreamento 7745 impedirá o comportamento padrão em que o Repositório de Consultas grava dados em disco antes que o SQL Server possa ser desligado.
+  
+  O sinalizador de rastreamento 7752 permite ao SQL Server executar consultas antes que o Repositório de Consultas tenha sido totalmente carregado. O comportamento padrão do Repositório de Consultas impede que consultas sejam executadas antes que o Repositório de Consultas tenha sido recuperado.
+
 ## <a name="see-also"></a>Consulte também  
  [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Procedimentos armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
