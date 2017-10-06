@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `159180469909.18   158762853821.10`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+159180469909.18   158762853821.10
+ ```  
   
 ### <a name="c-using-var-with-over"></a>C. Usando VAR com failover  
  O exemplo a seguir retorna a variância estatística dos valores de cota de vendas para cada trimestre em um ano calendário. Observe que ORDER BY na cláusula OVER ordena a variância estatística e ORDER BY da instrução SELECT ordena o conjunto de resultados.  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              Variance`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             null`  
-  
- `2002  2        140000.0000             1200500000.00`  
-  
- `2002  3         70000.0000             1290333333.33`  
-  
- `2002  4        154000.0000             1580250000.00`  
+ ```
+Year  Quarter  SalesQuota              Variance
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             null
+2002  2        140000.0000             1200500000.00
+2002  3         70000.0000             1290333333.33
+2002  4        154000.0000             1580250000.00
+ ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

@@ -36,7 +36,6 @@ Instale a pesquisa de texto completo do SQL Server para sua plataforma:
 Use os comandos a seguir para instalar o **fts do mssql server** no Red Hat Enterprise Linux. 
 
 ```bash
-sudo yum update
 sudo yum install -y mssql-server-fts
 ```
 

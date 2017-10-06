@@ -213,9 +213,10 @@ GO
   
  O conjunto de resultados mostra que `ufnGetProductDealerPrice` não é uma função determinística.  
   
- `-----`  
-  
- `0`  
+ ```
+-----  
+0
+```  
   
 ### <a name="c-finding-the-objects-that-belong-to-a-specific-schema"></a>C. Localizando objetos que pertencem a um esquema específico  
  O exemplo a seguir usa a propriedade `SchemaId` para retornar todos os objetos que pertencem ao esquema `Production`.  

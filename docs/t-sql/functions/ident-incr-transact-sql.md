@@ -82,25 +82,18 @@ WHERE IDENT_INCR(TABLE_SCHEMA + '.' + TABLE_NAME) IS NOT NULL;
   
  Este é um conjunto de resultados parcial.  
   
- `TABLE_SCHEMA        TABLE_NAME                IDENT_INCR`  
-  
- `------------        ------------------------  ----------`  
-  
- `Person              Address                            1`  
-  
- `Production          ProductReview                      1`  
-  
- `Production          TransactionHistory                 1`  
-  
- `Person              AddressType                        1`  
-  
- `Production          ProductSubcategory                 1`  
-  
- `Person              vAdditionalContactInfo             1`  
-  
- `dbo                 AWBuildVersion                     1`  
-  
- `Production          BillOfMaterials                    1`  
+ ```
+ TABLE_SCHEMA        TABLE_NAME                IDENT_INCR  
+------------        ------------------------  ----------  
+Person              Address                            1  
+Production          ProductReview                      1  
+Production          TransactionHistory                 1  
+Person              AddressType                        1  
+Production          ProductSubcategory                 1  
+Person              vAdditionalContactInfo             1  
+dbo                 AWBuildVersion                     1  
+Production          BillOfMaterials                    1
+```  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

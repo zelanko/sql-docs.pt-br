@@ -207,11 +207,11 @@ GO
   
  O conjunto de resultados mostra que o tipo base do objeto subjacente, a tabela `Employee`, é uma tabela de usuário.  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### <a name="b-returning-a-property-value"></a>B. Retornando um valor de propriedade  
  O exemplo a seguir retorna o número de gatilhos UPDATE na tabela especificada.  

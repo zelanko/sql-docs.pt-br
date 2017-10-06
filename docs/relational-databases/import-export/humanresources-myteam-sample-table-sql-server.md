@@ -40,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 |**Título**|**nvarchar(50)**|Anulável|O cargo que o funcionário exerce na minha equipe.|  
 |**Plano de fundo**|**nvarchar(50)**|Não nulo|Data e hora da última atualização da linha. (Padrão)|  
   
- **Para criar HumanResources.myTeam**  
+**Para criar HumanResources.myTeam**  
   
 -   Use as seguintes instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/04/2017
     GO  
     ```  
   
- **Para popular HumanResources.myTeam**  
+**Para popular HumanResources.myTeam**  
   
 -   Execute as seguintes instruções `INSERT` para popular a tabela com duas linhas:  
   

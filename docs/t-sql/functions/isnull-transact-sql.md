@@ -76,11 +76,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------------------------`  
+ ```
+ -------------------------- 
+59.79  
   
- `59.79`  
-  
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="b-using-isnull"></a>B. Usando ISNULL  
  O exemplo a seguir seleciona a descrição, o percentual de desconto, a quantidade mínima e a quantidade máxima para todas as ofertas especiais em `AdventureWorks2012`. Se a quantidade máxima de uma oferta especial específica for NULL, a `MaxQty` mostrada no conjunto de resultados será `0.00`.  

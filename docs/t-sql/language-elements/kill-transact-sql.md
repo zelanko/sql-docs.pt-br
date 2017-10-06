@@ -116,8 +116,10 @@ Use @@SPID para exibir o valor de ID de sessão para a sessão atual.
   
  Se a reversão da ID da sessão ou UOW tiver sido concluída quando a instrução KILL *ID de sessão*|*UOW* com statusonly for executada, ou se nenhuma ID de sessão ou UOW estiver sendo revertida, KILL *ID de sessão*|*UOW* WITH STATUSONLY retornará o seguinte erro:  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  O mesmo relatório de status pode ser obtido pela repetição da mesma instrução KILL *ID de sessão*|*UOW* sem usar a opção WITH STATUSONLY; no entanto, é recomendável não fazer isso. Repetir um KILL *ID de sessão* instrução pode finalizar um novo processo se a reversão foi concluída e a ID de sessão foi reatribuída a uma nova tarefa para a nova instrução KILL seja executada. A especificação de WITH STATUSONLY impede que isso ocorra.  
   
