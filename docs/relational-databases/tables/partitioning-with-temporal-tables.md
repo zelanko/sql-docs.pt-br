@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0134010294aec01d47271a7e00e6a13e4a3ad208
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: cb93e468300aea6a666ad04e9ce6ad20e1b85fc2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="partitioning-with-temporal-tables"></a>Particionamento de Tabelas Temporais
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
   Você pode usar o particionamento na tabela atual e de histórico de forma independente. No entanto, o particionamento não pode ser usado para alterar o conteúdo dos dados sem o controle da versão do sistema.  
   
 > [!NOTE]  
->  O particionamento é um recurso do Enterprise Edition.  
+>  O particionamento é um recurso do Enterprise Edition no SQL Server 2016 antes do Service Pack 1 e versões anteriores. Há suporte para particionamento em todas as edições no SQL Server 2016 Service Pack 1 e versões posteriores.
   
 -   **Tabela atual:**  
   

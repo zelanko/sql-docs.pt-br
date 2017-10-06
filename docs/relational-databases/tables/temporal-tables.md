@@ -16,16 +16,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
+ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
+ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="temporal-tables"></a>Tabelas temporais
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  O SQL Server 2016 introduz o suporte para tabelas temporais com versão do sistema como um recurso de banco de dados que oferece suporte interno para fornecer informações sobre os dados armazenados na tabela em qualquer ponto no tempo, em vez de apenas os dados que estão corretos atualmente. Temporal é um recurso de banco de dados que foi introduzido no ANSI SQL 2011 e agora é oferecido no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  O SQL Server 2016 introduziu o suporte para tabelas temporais com versão do sistema como um recurso de banco de dados que oferece suporte interno para fornecer informações sobre os dados armazenados na tabela em qualquer ponto no tempo, em vez de apenas os dados que estão corretos atualmente. Temporal é um recurso de banco de dados que foi introduzido no ANSI SQL 2011.  
   
  **Início Rápido**  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 07/31/2017
 -   **Vídeo:** para obter uma discussão de 20 minutos sobre o recurso temporal, veja [Temporal no SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>O que é uma tabela temporal com versão do sistema?  
- Uma tabela temporal com versão do sistema é um novo tipo de tabela de usuário do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], projetado para manter um histórico completo de alterações de dados e permitir uma análise fácil de pontos no tempo. Esse tipo de tabela temporal é conhecido como tabela temporal com versão do sistema porque o período de validade para cada linha é gerenciado pelo sistema (ou seja, o mecanismo de banco de dados).  
+ Uma tabela temporal com versão do sistema é um tipo de tabela de usuário criada para manter um histórico completo de alterações de dados e permitir uma análise fácil de pontos no tempo. Esse tipo de tabela temporal é conhecido como tabela temporal com versão do sistema porque o período de validade para cada linha é gerenciado pelo sistema (ou seja, o mecanismo de banco de dados).  
   
  Cada tabela temporal tem duas colunas explicitamente definidas, cada um com um tipo de dados **datetime2** . Essas colunas são chamadas de colunas de período. Essas colunas de período são usadas exclusivamente pelo sistema para gravar o período de validade para cada linha sempre que uma linha é modificada.  
   

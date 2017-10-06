@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.translationtype: HT
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
      **Tipo de dados**  
      Selecione o tipo de dados base na caixa de listagem. A caixa de listagem exibe todos os tipos de dados, com exceção do tipo de dados **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** e **xml** . O tipo de dados definido pelo usuário existente não é editável.  
   
-     **Default**  
-     Opcionalmente, selecione uma regra ou um padrão para associar ao alias do tipo de dados definido pelo usuário.  
+     **Padrão**  
+     Opcionalmente, selecione um padrão para associar ao alias do tipo de dados definido pelo usuário.  
   
      **Comprimento/Precisão**  
      Exibe o comprimento ou a precisão do tipo de dados, conforme aplicável. **Tamanho** se aplica a tipos de dados definidos pelo usuário com base em caracteres; **Precisão** se aplica apenas a tipos de dados definidos pelo usuário com base numérica. O rótulo se altera dependendo do tipo de dados selecionado anteriormente. Essa caixa não será editável se o comprimento ou a precisão do tipo de dados selecionado for fixo.  
@@ -132,3 +132,4 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   
   
+

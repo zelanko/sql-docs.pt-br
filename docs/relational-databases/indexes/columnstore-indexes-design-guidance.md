@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 22b8b23b9bbee402de83a5327ea7fb8b7ec734e2
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Índices columnstore – diretrizes de design
@@ -50,7 +50,7 @@ Abaixo, há um resumo das opções e recomendações.
 | Opção columnstore | Recomendações para quando usar | Compactação |
 | :----------------- | :------------------- | :---------- |
 | Índice columnstore clusterizado | Use para:<br></br>1) Carga de trabalho de data warehouse tradicional com uma estrela ou esquema floco de neve<br></br>2) Cargas de trabalho IOT (Internet das Coisas) que inserem grandes volumes de dados com o mínimo de atualizações e exclusões. | Média de 10 vezes |
-| Índices btree não clusterizados em um índice columnstore clusterizado | Use para:<br></br>    1) Impor uma chave primária e restrições de chaves estrangeiras em um índice columnstore clusterizado.<br></br>    2) Acelerar consultas que pesquisam valores específicos ou pequenos intervalos de valores.<br></br>    3) Acelerar atualizações e exclusões de linhas específicos.| Em média, 10x mais um pouco de armazenamento adicional para os NCIs.|
+| Índices btree não clusterizados em um índice columnstore clusterizado | Use para:<br></br>    1) Impor uma chave primária e restrições de chaves estrangeiras em um índice columnstore clusterizado.<br></br>    2) Acelerar consultas que pesquisam valores específicos ou pequenos intervalos de valores.<br></br>    3) Acelerar atualizações e exclusões de linhas específicas.| Em média, 10x mais um pouco de armazenamento adicional para os NCIs.|
 | Índice columnstore não clusterizado em um índice btree ou de heap baseado em disco | Use para: <br></br>1) Uma carga de trabalho OLTP que tem algumas consultas de análise. É possível remover índices btree criados para análise e substituí-los por um índice columnstore não clusterizado.<br></br>2) Muitas cargas de trabalho OLTP tradicionais que realizam operações ETL (Extração, Transformação e Carregamento) para mover dados para um data warehouse separado. É possível eliminar a ETL e um data warehouse separado, criando um índice columnstore não clusterizado em algumas tabelas OLTP. | O NCCI é um índice adicional que requer, em média, 10% a mais de armazenamento.|
 | Índice columnstore em uma tabela na memória | As mesmas recomendações que o índice columnstore não clusterizado em uma tabela baseada em disco, a menos que a tabela base seja uma tabela na memória. | O índice columnstore é um índice adicional.|
 
@@ -131,7 +131,7 @@ A menos que você tenha um tamanho de dados grande o suficiente, um índice colu
 
 Exemplo:
 * Carregue 1.000.000 de linhas em uma partição ou em uma tabela não particionada. Você obtém um rowgroup compactado com 1.000.000 de linhas. Isso é ótimo para alta compactação de dados e rápido desempenho de consultas.
-* Carregue 1.000.000 de linhas uniformemente em 10 partições. Cada partição recebe 100.000 linhas que é menor que o limite mínimo de compactação columnstore. Como resultado, o índice columnstore poderia ter 10 rowgroups delta com 100.000 linhas em cada. Há maneiras de forçar os rowgroups delta no columnstore. No entanto, se essas forem as únicas linhas no índice columnstore, os rowgroups compactados serão muito pequenos para se ter melhores desempenho de consultas e compactação.
+* Carregue 1.000.000 de linhas uniformemente em 10 partições. Cada partição recebe 100.000 linhas, o que é menor que o limite mínimo de compactação columnstore. Como resultado, o índice columnstore poderia ter 10 rowgroups delta com 100.000 linhas em cada. Há maneiras de forçar os rowgroups delta no columnstore. No entanto, se essas forem as únicas linhas no índice columnstore, os rowgroups compactados serão muito pequenos para se ter melhores desempenho de consultas e compactação.
 
 Para obter mais informações sobre particionamento, consulte a postagem do blog de Sunil Agarwal, [Should I partition my columnstore index? (Devo particionar meu índice columnstore?)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/).
 
@@ -166,7 +166,7 @@ Para preservar a ordem de classificação durante a conversão:
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
     ON MyFactTable  
-    WITH DROP_EXISTING = ON;  
+    WITH (DROP_EXISTING = ON);  
     ```
 
 ## <a name="related-tasks"></a>Tarefas relacionadas  

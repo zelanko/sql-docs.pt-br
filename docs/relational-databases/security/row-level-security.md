@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.translationtype: HT
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
  O acesso aos dados no nível de linha em uma tabela é restrito por um predicado de segurança definido como uma função com valor de tabela embutida. A função é então invocada e imposta por uma política de segurança. Para predicados de filtro, não há nenhuma indicação ao aplicativo de que as linhas tenham sido filtradas no conjunto de resultados; se todas as linhas forem filtradas, um conjunto de null será retornado. Para predicados de bloqueio, todas as operações que violem o predicado falharão com um erro.  
   
- Predicados de filtro são aplicados durante a leitura de dados da tabela base, e ela afeta todas as operações get: **SELECT**, **DELETE** (ou seja, o usuário não pode excluir linhas filtradas), e **UPDATE** (ou seja, o usuário não pode atualizar linhas que são filtradas, embora seja possível atualizar linhas de modo que elas serão filtradas subsequentemente). Os predicados de bloqueio afetam todas as operações de gravação.  
+ Os predicados de filtro são aplicados durante a leitura de dados da tabela base e ela afeta todas as operações get: **SELECT**, **DELETE** (ou seja, o usuário não pode excluir linhas que são filtradas) e **UPDATE** (ou seja, o usuário não pode atualizar as linhas que são filtradas, embora seja possível atualizar as linhas de modo que sejam filtradas subsequentemente). Os predicados de bloqueio afetam todas as operações de gravação.  
   
 -   Os predicados AFTER INSERT e AFTER UPDATE podem impedir que os usuários atualizem linhas para valores que violem o predicado.  
   
@@ -63,9 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  Os predicados de filtro e bloqueio, bem como as políticas de segurança têm o seguinte comportamento:  
   
--   Você pode definir uma função de predicado que se une a outra tabela e/ou invoca uma função. Se a política de segurança for criada com `SCHEMABINDING = ON`, a junção ou a função será acessível pela consulta e funciona como esperado, sem nenhuma verificação de permissão adicional. Se a política de segurança for criada com `SCHEMABINDING = OFF`, os usuários precisarão ter permissões **SELECT** ou **EXECUTE** nessas tabelas e funções adicionais para consultar a tabela de destino.  
-  
-     Você pode definir uma função de predicado que se une a outra tabela e/ou invoca uma função. A associação/função é acessível a partir da consulta e funciona como esperado sem nenhuma verificação de permissão adicional.  
+-   Você pode definir uma função de predicado que se une a outra tabela e/ou invoca uma função. Se a política de segurança for criada com `SCHEMABINDING = ON`, a junção ou a função será acessível pela consulta e funciona como esperado, sem nenhuma verificação de permissão adicional. Se a política de segurança for criada com `SCHEMABINDING = OFF`, os usuários precisarão ter permissões **SELECT** ou **EXECUTE** nessas tabelas e funções adicionais para consultar a tabela de destino.
   
 -   Você pode fazer uma consulta em uma tabela que tenha um predicado de segurança definido mas desabilitado. Quaisquer linhas que tenham sido filtradas ou bloqueadas não serão afetadas.  
   

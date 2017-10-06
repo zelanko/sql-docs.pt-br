@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
@@ -73,7 +73,7 @@ ms.lasthandoff: 07/31/2017
   
  No prompt de comando do Windows, digite o seguinte comando `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt  
 ```  
   
@@ -103,7 +103,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  No prompt de comando do Windows, digite o seguinte comando `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T  
 ```  
   
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Para obter mais informações sobre como usar dados de caractere Unicode, veja [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Usando um formato de arquivo com a opção de página de código  
- Se você criar um arquivo de formato usando o comando bcp (ou seja, usando “`bcp forma`t …” ), informações sobre o agrupamento/página de código serão gravadas no arquivo de formato.   
+ Se você criar um arquivo de formato usando o comando bcp (ou seja, usando "`bcp forma`t..." ), informações sobre o agrupamento/página de código serão gravadas no arquivo de formato.   
 O arquivo de formato de exemplo a seguir, para uma tabela com 5 colunas, inclui o agrupamento.  
   
 ```  
@@ -203,13 +203,13 @@ A seguir, um exemplo do formato de arquivo sem as informações de agrupamento.
   
  No prompt de comando do Windows, digite o seguinte comando `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
 ```  
   
  O arquivo de formato gerado, `Department-c.xml`, contém os seguintes elementos XML:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -242,13 +242,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  No prompt de comando do Windows, digite o seguinte comando `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
 ```  
   
  O arquivo de formato gerado, `Department-n.xml`, contém os seguintes elementos XML:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
