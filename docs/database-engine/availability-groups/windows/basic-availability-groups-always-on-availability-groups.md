@@ -1,8 +1,10 @@
 ---
 title: "Grupos de disponibilidade básicos (Grupos de Disponibilidade AlwaysOn) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/27/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: ff8775c5af9f11abeec6ec04b894010a43f722ef
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Grupos de disponibilidade básicos (Grupos de Disponibilidade AlwaysOn)
@@ -32,23 +34,25 @@ ms.lasthandoff: 09/25/2017
 ## <a name="limitations"></a>Limitações  
  Grupos de disponibilidade básica usam um subconjunto de recursos em comparação com grupos de disponibilidade avançada no SQL Server 2016 Enterprise Edition. Grupos de disponibilidade básica incluem as seguintes limitações:  
   
--   Limite de duas réplicas (primárias e secundárias).  
+- Limite de duas réplicas (primárias e secundárias).  
   
--   Sem acesso de leitura na réplica secundária.  
+- Sem acesso de leitura na réplica secundária.  
   
--   Sem backups na réplica secundária.  
-  
--   Não há suporte para réplicas hospedadas em servidores que executam uma versão do SQL Server anterior ao SQL Server 2016 Community Technology Preview 3 (CTP3).  
-  
--   Não há suporte para adicionar ou remover uma réplica a um grupo de disponibilidade básica existente.  
-  
--   Suporte para um banco de dados de disponibilidade.  
-  
--   Grupos de disponibilidade básica não podem ser atualizados para grupos de disponibilidade avançada. O grupo deve ser removido e adicionado novamente a um grupo que contém servidores que executam somente o SQL Server 2016 Enterprise Edition.  
-  
--   Grupos de disponibilidade básica só têm suporte para servidores do Standard Edition. 
+- Sem backups na réplica secundária.  
 
--   Grupos de disponibilidade básicos não podem fazer parte de um grupo de disponibilidade distribuído. 
+- Sem verificações de integridade em réplicas secundárias. 
+
+- Não há suporte para réplicas hospedadas em servidores que executam uma versão do SQL Server anterior ao SQL Server 2016 Community Technology Preview 3 (CTP3).  
+  
+- Não há suporte para adicionar ou remover uma réplica a um grupo de disponibilidade básica existente.  
+  
+- Suporte para um banco de dados de disponibilidade.  
+  
+- Grupos de disponibilidade básica não podem ser atualizados para grupos de disponibilidade avançada. O grupo deve ser removido e adicionado novamente a um grupo que contém servidores que executam somente o SQL Server 2016 Enterprise Edition.  
+  
+- Grupos de disponibilidade básica só têm suporte para servidores do Standard Edition. 
+
+- Grupos de disponibilidade básicos não podem fazer parte de um grupo de disponibilidade distribuído. 
   
 ## <a name="configuration"></a>Configuração  
  Um grupo de disponibilidade básico AlwaysOn pode ser criado em quaisquer dois servidores SQL Server 2016 Standard Edition. Quando você cria um grupo de disponibilidade básica, deve especificar ambas as réplicas durante a criação.  
