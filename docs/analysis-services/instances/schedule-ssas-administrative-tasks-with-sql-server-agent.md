@@ -35,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
  Por padrão, os trabalhos são executados na conta de serviço. Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a conta padrão do SQL Server Agent é NT Service\SQLAgent$\<nome_da_instância >. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- Você também deveria ter um banco de dados de teste. Você pode implantar o banco de dados de exemplo multidimensional do AdventureWorks ou um projeto do tutorial multidimensional do Analysis Services para usar neste passo a passo. Para obter mais informações, consulte [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md).  
+ Você também deveria ter um banco de dados de teste. Você pode implantar o banco de dados de exemplo multidimensional do AdventureWorks ou um projeto do tutorial multidimensional do Analysis Services para usar neste passo a passo. Para obter mais informações, consulte [Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Exemplo 1: Processando uma dimensão em uma tarefa agendada  
  Este exemplo demonstra como criar e agendar um trabalho que processa uma dimensão.  

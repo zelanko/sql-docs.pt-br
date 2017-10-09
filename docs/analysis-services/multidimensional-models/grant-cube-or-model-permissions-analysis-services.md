@@ -89,7 +89,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  Quando o Excel abrir, use a guia Dados para se conectar ao Analysis Services. Como você está executando o Excel como um usuário diferente do Windows, a opção **Usar Autenticação do Windows** é o tipo de credencial correto para testar funções. Consulte [Conectar-se de aplicativos cliente &#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md) se precisar de ajuda com esta etapa.  
   
-     Se ocorrer erros durante a conexão, verifique a configuração de porta do Analysis Services e confirme se o servidor aceita conexões remotas. Consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) para configuração de porta.  
+     Se ocorrer erros durante a conexão, verifique a configuração de porta do Analysis Services e confirme se o servidor aceita conexões remotas. Consulte [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) para configuração de porta.  
   
 #### <a name="step-5-script-role-definition-and-assignments"></a>Etapa 5: Definição e atribuições de função de script  
   

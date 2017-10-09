@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
  **Cenário 1: o serviço não é iniciado**  
   
- A instância do SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) não é iniciada. Uma senha expirada interromperá a execução do serviço. Para obter mais informações sobre como alterar a senha, consulte [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) e [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
+ A instância do SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) não é iniciada. Uma senha expirada interromperá a execução do serviço. Para obter mais informações sobre como alterar a senha, consulte [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) e [Iniciar ou parar um Power Pivot para SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
  **Cenário 2a: Abrindo uma pasta de trabalho de versão anterior no servidor**  
   
