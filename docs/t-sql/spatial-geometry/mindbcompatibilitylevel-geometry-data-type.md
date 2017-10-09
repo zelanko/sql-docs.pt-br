@@ -50,28 +50,24 @@ Retorna o nível de compatibilidade do banco de dados mínimo que reconhece o **
 ### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. Testando a compatibilidade do tipo CircularString com o nível 110 de compatibilidade  
  O exemplo a seguir testa a compatibilidade de uma instância de `CircularString` com uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)';`  
-  
- `IF @g.MinDbCompatibilityLevel() <= 110`  
-  
- `BEGIN`  
-  
- `SELECT @g.ToString();`  
-  
- `END`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)'; 
+ IF @g.MinDbCompatibilityLevel() <= 110 
+ BEGIN 
+ SELECT @g.ToString(); 
+ END
+ ```  
   
 ### <a name="b-testing-linestring-type-for-compatibility-with-compatibility-level-100"></a>B. Testando a compatibilidade do tipo LineString com o nível 100 de compatibilidade  
  O exemplo a seguir testa a compatibilidade de uma instância de `LineString` com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 9, 5 6)';`  
-  
- `IF @g.MinDbCompatibilityLevel() <= 100`  
-  
- `BEGIN`  
-  
- `SELECT @g.ToString();`  
-  
- `END`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 9, 5 6)'; 
+ IF @g.MinDbCompatibilityLevel() <= 100 
+ BEGIN 
+ SELECT @g.ToString(); 
+ END
+``` 
   
 ## <a name="see-also"></a>Consulte também  
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  

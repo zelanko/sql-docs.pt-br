@@ -83,9 +83,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. Usando THROW para gerar uma exceção novamente  
  O exemplo a seguir mostra como usar a instrução `THROW` para gerar a última exceção lançada novamente.  
@@ -111,13 +113,12 @@ END CATCH;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `PRINT 'In catch block.';`  
-  
- `Msg 2627, Level 14, State 1, Line 1`  
-  
- `Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.`  
-  
- `The statement has been terminated.`  
+ ```
+ PRINT 'In catch block.';  
+ Msg 2627, Level 14, State 1, Line 1  
+ Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.  
+ The statement has been terminated.
+ ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. Usando FORMATMESSAGE com THROW  
  O exemplo a seguir mostra como usar a função `FORMATMESSAGE` com `THROW` para lançar uma mensagem de erro personalizada. O exemplo cria primeiro uma mensagem de erro definida pelo usuário usando `sp_addmessage`. Porque a instrução THROW não permite parâmetros de substituição no *mensagem* parâmetro da forma RAISERROR faz, a função FORMATMESSAGE é usado para transmitir os três valores de parâmetro esperados pela mensagem de erro 60000.  
@@ -138,9 +139,10 @@ THROW 60000, @msg, 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 60000, Level 16, State 1, Line 2`  
-  
- `This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).`  
+ ```
+ Msg 60000, Level 16, State 1, Line 2  
+ This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -153,9 +155,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ## <a name="see-also"></a>Consulte também  
  [FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   

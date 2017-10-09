@@ -548,11 +548,11 @@ GO
   
  Eis o conjunto de resultados gerado no dia 12 de abril de 2004 ('`2004-04-12'`). Observe que as colunas `ScrapReasonIDActual` e `ModifiedDate` refletem os valores gerados pela operação do gatilho, no lugar dos valores fornecidos na instrução `INSERT`.  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. Usando OUTPUT INTO com colunas de identidade e colunas computadas  
  O exemplo a seguir cria a tabela `EmployeeSales` e, em seguida, insere várias linhas nela por meio de uma instrução `INSERT` com uma instrução `SELECT`, para recuperar dados das tabelas de origem. A tabela `EmployeeSales` contém uma coluna de identidade (`EmployeeID`) e uma coluna computada (`ProjectedSales`).  

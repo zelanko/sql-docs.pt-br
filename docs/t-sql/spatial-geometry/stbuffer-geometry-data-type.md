@@ -77,23 +77,26 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
 ### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. Chamando STBuffer() com um parameter_value < 0 em uma instância de geometry unidimensional  
  O exemplo a seguir retorna uma instância `GeometryCollection` vazia:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Chamando STBuffer() com parameter_value < 0 em uma instância de Polygon  
  O exemplo a seguir retorna uma instância `Polygon` com um buffer negativo:  
   
- `DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'POLYGON((1 1, 1 5, 5 5, 5 1, 1 1))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 ### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. Chamando STBuffer() com parameter_value < 0 em uma instância de CurvePolygon  
  O exemplo a seguir retorna uma instância `Polygon` com um buffer negativo de uma instância `CurvePolygon`:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-1).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-1).ToString();
+ ```  
   
 > [!NOTE]  
 >  Uma instância `Polygon` é retornada, em vez de uma instância `CurvePolygon`.  Para retornar um `CurvePolygon` da instância, consulte [BufferWithCurves &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
@@ -101,47 +104,52 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. Chamando STBuffer() com um valor de parâmetro negativo que retorna uma instância vazia  
  O exemplo a seguir mostra o que ocorre quando o *distância* parâmetro for igual a -2 para o exemplo anterior.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.STBuffer(-2).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.STBuffer(-2).ToString();
+ ```  
   
  Isso **selecione** instrução retorna um`GEOMETRYCOLLECTION EMPTY.`  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Chamando STBuffer() com parameter_value = 0  
  O exemplo a seguir retorna uma cópia da instância `geometry` de chamada:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(0).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(0).ToString();
+ ```  
   
 ### <a name="f-calling-stbuffer-with-a-non-zero-parameter-value-that-is-extremely-small"></a>F. Chamando STBuffer() com um valor de parâmetro diferente de zero que é extremamente pequeno  
  O exemplo a seguir também retorna uma cópia da instância `geometry` de chamada:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.STBuffer(@distance).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';  
+ DECLARE @distance float = 1e-20;  
+ SELECT @g.STBuffer(@distance).ToString();
+ ```  
   
 ### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. Chamando STBuffer() com parameter_value > 0  
  O exemplo a seguir retorna uma instância `Polygon`:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer(2).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer(2).ToString();
+ ```  
   
 ### <a name="h-calling-stbuffer-with-a-string-parameter-value"></a>H. Chamando STBuffer() com um valor de parâmetro de cadeia de caracteres  
  O exemplo a seguir retorna a mesma instância `Polygon` como mencionado anteriormente, mas um parâmetro de cadeia de caracteres é passado ao método:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('2').ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('2').ToString();
+ ```  
   
  O exemplo a seguir lançará um erro:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.STBuffer('a').ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.STBuffer('a').ToString();
+ ```  
   
 > [!NOTE]  
 >  Os dois exemplos anteriores passaram um literal de cadeia de caracteres a `STBuffer()`.  O primeiro exemplo funciona porque o literal de cadeia de caracteres pode ser convertido em um valor numérico. Porém, o segundo exemplo lança `ArgumentException`.  
@@ -149,13 +157,12 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
 ### <a name="i-calling-stbuffer-on-a-multipoint-instance"></a>I. Chamando STBuffer() em instância de MultiPoint  
  O exemplo a seguir retorna duas instâncias `MultiPolygon` e uma instância `Polygon`:  
   
- `DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))';`  
-  
- `SELECT @g.STBuffer(1).ToString();`  
-  
- `SELECT @g.STBuffer(1.5).ToString();`  
-  
- `SELECT @g.STBuffer(1.6).ToString();`  
+```
+ DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))'; 
+ SELECT @g.STBuffer(1).ToString(); 
+ SELECT @g.STBuffer(1.5).ToString(); 
+ SELECT @g.STBuffer(1.6).ToString();
+ ```  
   
  Os dois primeiros **selecione** instruções retornam uma `MultiPolygon` instância porque o parâmetro *distância* é menor ou igual a 1/2 a distância entre os dois pontos (1 1) e (1 4). O terceiro **selecione** instrução retorna um `Polygon` instância porque as instâncias armazenadas em buffer dos dois pontos (1 1) e (1 4) se sobrepõem.  
   

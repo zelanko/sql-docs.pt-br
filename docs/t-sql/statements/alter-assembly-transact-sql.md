@@ -201,10 +201,10 @@ As seguintes permissões necessárias para alterar um assembly CLR quando `CLR s
 > [!NOTE]  
 >  O assembly `ComplexNumber` pode ser criado com a execução dos scripts de exemplo UserDefinedDataType. Para obter mais informações, consulte [tipo definido pelo usuário](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
- `ALTER ASSEMBLY ComplexNumber`  
-  
- `FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll'`  
-  
+ ```
+ ALTER ASSEMBLY ComplexNumber 
+ FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
+  ```
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. Adicionando um arquivo a ser associado a um assembly  
  O exemplo a seguir carrega o arquivo de código fonte `Class1.cs` a ser associado ao assembly `MyClass`. Este exemplo assume que o assembly `MyClass` já foi criado no banco de dados.  
   

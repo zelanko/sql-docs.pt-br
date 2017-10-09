@@ -271,19 +271,15 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  O arquivo de formato a seguir usa o tipo de dados `SQLFLT8` para mapear o segundo campo de dados para a segunda coluna:  
   
- `<?xml version="1.0"?>`  
-  
- `<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">`  
-  
- `<RECORD>`  
-  
- `<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/>`  
-  
- `<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW>`  
-  
- `<COLUMN SOURCE="1" NAME="c1" xsi:type="SQLFLT8"/>`  
-  
- `<COLUMN SOURCE="2" NAME="c2" xsi:type="SQLFLT8"/>  </ROW> </BCPFORMAT>`  
+ ```
+ <?xml version="1.0"?> 
+ <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <RECORD> 
+ <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/> 
+ <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW> 
+ <COLUMN SOURCE="1" NAME="c1" xsi:type="SQLFLT8"/> 
+ <COLUMN SOURCE="2" NAME="c2" xsi:type="SQLFLT8"/>  </ROW> </BCPFORMAT> 
+ ```
   
  Para usar esse arquivo de formato (usando o nome de arquivo `C:\t_floatformat-c-xml.xml`) ao importar os dados de teste para a tabela de teste, emita a seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   

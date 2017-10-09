@@ -1042,21 +1042,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `(1 row(s) affected)`  
-  
- `Test1Col`  
-  
- `-----------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
-  
- `Test2Col`  
-  
- `-----------`  
-  
- `2`  
+ ```
+ (1 row(s) affected) 
+ Test1Col 
+ ----------- 
+ 1 
+
+ (1 row(s) affected) 
+ Test2Col 
+ ----------- 
+ 2 
+ ```
   
  Quando você cria tabelas temporárias locais ou globais, a sintaxe CREATE TABLE suporta definições de restrições, exceto para restrições FOREIGN KEY. Se for especificada uma restrição FOREIGN KEY em uma tabela temporária, a instrução retornará uma mensagem de aviso informando que a restrição foi ignorada. A tabela ainda será criada sem as restrições FOREIGN KEY. Tabelas temporárias não podem ser referenciadas em restrições FOREIGN KEY.  
   

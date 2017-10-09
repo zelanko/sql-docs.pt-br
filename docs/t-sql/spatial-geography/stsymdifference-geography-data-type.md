@@ -72,9 +72,10 @@ SELECT @g.STSymDifference(@h).ToString();
 ### <a name="b-computing-the-symmetric-difference-with-fullglobe"></a>B. Computando a diferença simétrica com FullGlobe  
  O exemplo a seguir compara a diferença simétrica de um `Polygon` com `FullGlobe`.  
   
- `DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STSymDifference('FULLGLOBE').ToString();`  
+```
+ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STSymDifference('FULLGLOBE').ToString();
+ ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

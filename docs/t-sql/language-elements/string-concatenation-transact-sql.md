@@ -102,11 +102,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------------------------------------------`  
-  
- `The order is due on 04/23/2007`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------------------------------------------------  
+ The order is due on 04/23/2007  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="c-using-multiple-string-concatenation"></a>C. Usando concatenação de várias cadeias de caracteres  
  O exemplo a seguir concatena várias cadeias de caracteres para formar uma cadeia de caracteres longa a fim de exibir o sobrenome e a primeira inicial dos vice-presidentes na [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Uma vírgula é adicionada depois do sobrenome e um ponto depois da primeira inicial.  
@@ -125,17 +125,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name               Title`  
-  
- `-------------      ---------------`  
-  
- `Duffy, T.          Vice President of Engineering`  
-  
- `Hamilton, J.       Vice President of Production`  
-  
- `Welcker, B.        Vice President of Sales`  
-  
- `(3 row(s) affected)`  
+ ```
+ Name               Title  
+ -------------      ---------------`  
+ Duffy, T.          Vice President of Engineering  
+ Hamilton, J.       Vice President of Production  
+ Welcker, B.        Vice President of Sales  
+
+ (3 row(s) affected)
+ ```  
  
 ### <a name="d-using-large-strings-in-concatenation"></a>D. Usando cadeias de caracteres grandes em concatenação
 O exemplo a seguir concatena várias cadeias de caracteres para formar uma cadeia de caracteres longa e, em seguida, tenta calcular o comprimento da cadeia de caracteres final. O tamanho final do conjunto de resultados é 16000, porque é iniciado de avaliação de expressão da esquerda que é, @x + @z + @y = > (@x + @z) + @y. Nesse caso, o resultado de (@x + @z) são truncados em 8000 bytes e, em seguida, @y é adicionado ao conjunto de resultados, o que torna o comprimento da cadeia de caracteres final 16000. Como @y é uma cadeia de caracteres de tipo de valor grande, não ocorrerá truncamento.
@@ -151,13 +149,13 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `y      `  
+ ```
+ y        
+ -------  
+ 16000  
   
- `-------`  
-  
- `16000`  
-  
-  `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-string-concatenation"></a>E. Usando a concatenação de cadeias de caracteres  

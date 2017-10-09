@@ -56,19 +56,18 @@ ms.lasthandoff: 09/01/2017
  O exemplo a seguir usa `STIntersects()` para determinar se há interseção entre duas instâncias `geography`.  
   
 ```  
-DECLARE @g geography;  
-DECLARE @h geography;  
-SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
-SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
+ DECLARE @g geography;  
+ DECLARE @h geography;  
+ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326);  
+ SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326);  
 ```  
   
- `SELECT CASE @g.STIntersects(@h)`  
-  
- `WHEN 1 THEN '@g intersects @h'`  
-  
- `ELSE '@g does not intersect @h'`  
-  
- `END;`  
+ ```
+ SELECT CASE @g.STIntersects(@h) 
+ WHEN 1 THEN '@g intersects @h'  
+ ELSE '@g does not intersect @h'  
+ END;
+ ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Métodos do OGC em instâncias de Geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

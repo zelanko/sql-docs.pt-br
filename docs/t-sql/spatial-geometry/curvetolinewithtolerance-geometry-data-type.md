@@ -78,45 +78,46 @@ Retorna uma aproximação poligonal de uma **geometria** instância que contém 
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Usando valores de tolerância diferentes em uma instância de CircularString  
  O exemplo a seguir mostra como a definição da tolerância afeta a `LineString`instância retornada de um `CircularString` instância:  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
+ ```  
   
 ### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. Usando o método em uma instância de MultiLineString que contém uma LineString  
  O exemplo a seguir mostra o que é retornado de uma instância de `MultiLineString` que só contém uma instância de `LineString`:  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>C. Usando o método em uma instância de MultiLineString que contém várias LineStrings  
  O exemplo a seguir mostra o que é retornado de uma instância de `MultiLineString` que contém mais de uma instância `LineString`:  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9),(4 4, 9 18))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9),(4 4, 9 18))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Definindo o relativo como true para uma instância de CurvePolygon de invocação  
  O exemplo a seguir usa uma `CurvePolygon` instância para chamar `CurveToLineWithTolerance()` com *relativo* definido como true:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.CurveToLineWithTolerance(.5,1).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
+ ```  
   
 ### <a name="e-using-the-method-on-a-geometrycollection-instance"></a>E. Usando o método em uma instância de GeometryCollection  
  O exemplo a seguir chama `CurveToLineWithTolerance()` em um `GeometryCollection` que contém uma instância de `CurvePolygon` bidimensional e uma instância de `CircularString` unidimensional. `CurveToLineWithTolerance()` converte os dois tipos de segmento de arco circular para revestir tipos de segmento e os retorna em um tipo `GeometryCollection`.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('GEOMETRYCOLLECTION(CURVEPOLYGON( COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))), CIRCULARSTRING(4 4, 8 6, 9 5))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('GEOMETRYCOLLECTION(CURVEPOLYGON( COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))), CIRCULARSTRING(4 4, 8 6, 9 5))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
+ ```  
   
 ## <a name="see-also"></a>Consulte também  
  [CurveToLineWithTolerance &#40; tipo de dados geography &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   

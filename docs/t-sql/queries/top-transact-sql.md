@@ -113,13 +113,12 @@ ORDER BY Price ASC;
   
  Aqui está o conjunto de resultados.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `convertible   blue       15000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ convertible   blue       15000.00
+ ```  
   
  Os resultados inesperados são retornados porque a cláusula TOP é executada logicamente antes da cláusula ORDER BY, que classifica os resultados do operador (UNION ALL, neste caso). Assim, a consulta anterior retorna qualquer carro vermelho e qualquer carro azul e, em seguida, ordena o resultado dessa união pelo preço. O exemplo a seguir mostra o método correto de gravar essa consulta para obter o resultado desejado.  
   
@@ -141,13 +140,12 @@ FROM (SELECT TOP(1) Model, Color, Price
   
  Aqui está o conjunto de resultados.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `van           blue        8000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ van           blue        8000.00
+ ```  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Quando TOP é usado com INSERT, UPDATE, MERGE ou DELETE, as linhas referenciadas não são organizadas em nenhuma ordem, e a cláusula ORDER BY não pode ser especificada diretamente nessas instruções. Se você precisar usar TOP para inserir, excluir ou modificar linhas em uma ordem cronológica significativa, deverá usar TOP junto com uma cláusula ORDER BY especificada em uma instrução de subseleção. Consulte a seção Exemplos a seguir neste tópico.  
