@@ -10,24 +10,24 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 19493e3abce27068f71ca5640b62fe1b17261eb4
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: d70cf0645f00dc8a5296588548edb29b56380034
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Instalar o SQL Server e criar um banco de dados no Red Hat
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Neste tutorial de início rápido, você primeiro instalar 2017 do SQL Server no Red Hat Enterprise Linux (RHEL) 7.3. Conecte-se com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
+Neste tutorial de início rápido, você primeiro instalar 2017 do SQL Server no Red Hat Enterprise Linux (RHEL) 7.3 +. Conecte-se com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 > [!TIP]
 > Este tutorial requer entrada do usuário e uma conexão de internet. Se você estiver interessado no [autônoma](sql-server-linux-setup.md#unattended) ou [offline](sql-server-linux-setup.md#offline) procedimentos de instalação, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve ter uma máquina RHEL 7.3 com **pelo menos 3,25 GB** de memória.
+Você deve ter um 7.3 RHEL ou máquina 7.4 com **pelo menos 3,25 GB** de memória.
 
 Para instalar o Red Hat Enterprise Linux em seu próprio computador, vá para [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Você também pode criar máquinas virtuais RHEL no Azure. Consulte [criar e gerenciar máquinas virtuais Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e usar `--image RHEL` na chamada para `az vm create`.
 
@@ -52,7 +52,6 @@ Para configurar o SQL Server em RHEL, execute os seguintes comandos em um termin
 1. Execute os comandos a seguir para instalar o SQL Server:
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-server
    ```
 
@@ -95,14 +94,12 @@ Para criar um banco de dados, você precisa se conectar com uma ferramenta que p
 1. Se você tiver uma versão anterior do **mssql ferramentas** instalado, remova quaisquer pacotes de unixODBC mais antigos.
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. Execute os seguintes comandos para instalar **mssql ferramentas** com o pacote do desenvolvedor unixODBC.
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 

@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7ee541357482633787726addb17434dbd59b82d9
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 1d393c67c8489765aa92c861bc28c8e4d0e2eea4
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -122,7 +122,13 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  Para tabelas com uma ou mais dessas características, use a instrução DELETE.  
   
- TRUNCATE TABLE não pode ativar um gatilho porque a operação não registra exclusões de linhas individuais. Para obter mais informações, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ TRUNCATE TABLE não pode ativar um gatilho porque a operação não registra exclusões de linhas individuais. Para obter mais informações, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md). 
+ 
+ Em [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+
+- TRUNCATE TABLE não é permitida dentro da instrução EXPLICAR.
+
+- TRUNCATE TABLE não pode ser executado dentro de uma transação.
   
 ## <a name="truncating-large-tables"></a>Truncando tabelas grandes  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem a capacidade de descartar ou truncar tabelas que têm mais de 128 extensões sem manter bloqueios simultâneos em todas as extensões necessárias para o descarte.  

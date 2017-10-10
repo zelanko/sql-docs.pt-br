@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 709fd98f48764c19b4e358812c20cbf1dc52b8e4
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 21fdac9e8c4fffa0a87eee72e3587c2a3378ad66
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Enumerador Foreach ADO para enumerar linhas em tabelas. Por exemplo, você pode obter as linhas em um conjunto de registros ADO.  
   
-     O destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do tipo de dados **Object** . Geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. A variável especificada para o enumerador Foreach ADO deve ser de tipo de dados Object. Para obter mais informações sobre o destino Recordeset, consulte [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md).  
+     O destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do tipo de dados **Object** . Geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. A variável especificada para o enumerador Foreach ADO deve ser de tipo de dados Object. Para obter mais informações sobre o destino do conjunto de registros, consulte [usar um destino do conjunto de registros](../../integration-services/data-flow/use-a-recordset-destination.md).  
   
 -   O Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach enumera informações de esquema sobre uma fonte de dados. Por exemplo, você pode enumerar e obter uma lista das tabelas do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Enumerador de Blob do Azure Foreach para enumerar blobs em um contêiner de blob no Armazenamento do Azure.  
 
--   Enumerador de arquivo do ADLS de foreach para enumerar arquivos em um diretório ADLS.
+-   Enumerador de arquivo do ADLS foreach para enumerar arquivos em um diretório no repositório Azure Data Lake.
   
  O diagrama a seguir mostra um contêiner Loop Foreach que tem uma tarefa Sistema de Arquivos. O loop Foreach usa o enumerador de Arquivo Foreach e a tarefa Sistema de Arquivos é configurada para copiar um arquivo. Se a pasta que o enumerador especifica contiver quatro arquivos, o loop repetirá quatro vezes e copiará quatro arquivos.  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/29/2017
 |SMO Foreach|Especifique a conexão com um banco de dados e os objetos SMO a serem enumerados.|  
 |Enumerador de Arquivos Foreach HDFS|Especifique uma pasta e os arquivos a serem enumerados, o formato do nome de arquivo dos arquivos recuperados, e se as subpastas devem ser desviadas.|  
 |Blob do Azure Foreach|Especifica o contêiner de Blob do Azure em que os blobs de contêineres serão enumerados.|  
-|Arquivo foreach ADLS|Especifique o diretório ADLS que contém os arquivos a serem enumerados, juntamente com alguns filtros.|
+|Arquivo foreach ADLS|Especifique o diretório de repositório Azure Data Lake que contém os arquivos a serem enumerados.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Adicionar enumeração a um fluxo de controle com um contêiner Foreach Loop
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]inclui o contêiner Foreach Loop, um elemento de fluxo de controle que torna simples a inclusão de uma construção de loop que enumere arquivos e objetos no fluxo de controle de um pacote. Para obter mais informações, consulte [Contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -129,7 +129,7 @@ Este procedimento descreve como configurar um contêiner Loop Foreach, incluindo
   
 5.  Especifique um enumerador e defina opções de enumerador conforme mostrado a seguir:  
   
-    -   Para usar o enumerador de Arquivo Foreach, forneça a pasta que contém os arquivos a serem enumerados, especifique um filtro do nome e tipo de arquivo e especifique se o nome de arquivo totalmente qualificado deverá ser retornado. Indique também se você deseja a função recursiva em subpastas para obter mais arquivos.  
+    -   Para usar o enumerador de arquivo Foreach, forneça a pasta que contém os arquivos para enumerar, especifique um filtro para o tipo e o nome de arquivo e especifique se o nome de arquivo totalmente qualificado deve ser retornado. Indique também se você deseja a função recursiva em subpastas para obter mais arquivos.  
   
     -   Para usar o enumerador de Item Foreach, clique em **Colunas**e, na caixa de diálogo **Colunas Para Cada Item** , clique em **Adicionar** para adicionar colunas. Selecione um tipo de dados para cada coluna na lista **Tipo de Dados** e clique em **OK**.  
   
@@ -155,16 +155,16 @@ Este procedimento descreve como configurar um contêiner Loop Foreach, incluindo
   
          Depois, clique em EnumerationType e selecione um tipo de enumeração na lista. Se EnumerationType for **Navegador, Nó ou Texto de Nó**, clique em OuterXPathStringSourceType e selecione o tipo de fonte, clicando em seguida em OuterXPathString. Dependendo do conjunto de valores de OuterXPathStringSourceType, selecione uma variável ou uma conexão de arquivo da lista, crie uma nova variável ou conexão de arquivo ou digite a cadeia de caracteres da expressão de XML Path Language (XPath) externa.  
   
-         Se EnumerationType for **ElementCollection**,defina OuterXPathStringSourceType e OuterXPathString, conforme descrito acima. Depois, clique em InnerElementType e selecione um tipo de enumeração para os elementos internos e clique em InnerXPathStringSourceType. Dependendo do valor definido para InnerXPathStringSourceType, selecione uma variável ou uma conexão de arquivo, crie uma nova variável ou conexão de arquivo ou digite a cadeia de caracteres da expressão XPath interna.  
+         Se for EnumerationType **ElementCollection**, definir OuterXPathStringSourceType e OuterXPathString, conforme descrito acima. Depois, clique em InnerElementType e selecione um tipo de enumeração para os elementos internos e clique em InnerXPathStringSourceType. Dependendo do valor definido para InnerXPathStringSourceType, selecione uma variável ou uma conexão de arquivo, crie uma nova variável ou conexão de arquivo ou digite a cadeia de caracteres da expressão XPath interna.  
   
     -   Para usar o enumerador SMO Foreach, selecione uma conexão ADO.NET existente ou clique em **Nova conexão** na lista **Conexão** e então digite a cadeia de caracteres a ser usada ou clique em **Procurar**. Se você clicar em **Procurar**, na caixa de diálogo **Selecionar Enumeração SMO** , selecione o tipo de objeto a ser enumerado e o tipo de enumeração e clique em **OK**.  
   
 6.  Outra opção é clicar no botão Procurar **(…)** na caixa de texto **Expressões** na página **Coleção** para criar expressões que atualizem os valores de propriedade. Para obter mais informações, consulte [Adicionar ou alterar uma expressão de propriedade](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
-    >  As propriedades relacionadas na lista **Propriedade** variam por enumerador.  
+    >  As propriedades listadas no **propriedade** lista variam por enumerador.  
   
-7.  Opcionalmente, clique em **Mapeamentos de Variáveis** para mapear propriedades de objeto do valor da coleção e execute um dos procedimentos a seguir:  
+7.  Opcionalmente, clique em **mapeamentos de variáveis** para mapear propriedades de objeto para o valor da coleção e, em seguida, faça o seguinte:  
   
     1.  No **variáveis** lista, selecione uma variável ou clique em  **\<nova variável >** para criar uma nova variável.  
   
@@ -191,17 +191,17 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
 > [!NOTE]  
 >  Os nomes de objeto devem ser exclusivos em um pacote.  
   
- **Descrição**  
+ **Description**  
  Digite uma descrição do contêiner Loop Foreach.  
 
 ## <a name="collection-page---foreach-loop-editor"></a>Página de coleção - Editor de Loop Foreach
- Use a página **Coleção** da caixa de diálogo **Editor de Loop Foreach** para especificar o tipo de enumerador e configurá-lo.  
+ Use o **coleção** página do **Editor de Loop Foreach** caixa de diálogo para especificar o tipo de enumerador e configurar o enumerador.  
   
  Para saber mais sobre o contêiner Loop Foreach e como configurá-lo, consulte [Contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md) e [Configurar um contêiner Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### <a name="static-options"></a>Opções estáticas  
  **Enumerador**  
- Selecione o tipo de enumerador na lista. As opções dessa propriedade são listadas na tabela a seguir.  
+ Selecione o tipo de enumerador na lista. As opções desta propriedade estão listadas na seguinte tabela:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -214,7 +214,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
 |**Enumerador SMO foreach**|Enumera um objeto SMO. Se este valor for selecionado serão exibidas as opções dinâmicas na seção **Enumerador SMO Foreach**.|  
 |**Enumerador de Arquivos Foreach HDFS**|Enumere arquivos HDFS no local de HDFS especificado. Se esse valor for selecionado, serão exibidas as opções dinâmicas na seção **Enumerador de Arquivos Foreach HDFS**.|  
 |**Enumerador de Blob do Azure foreach**|Arquivos de Blob enumeráveis no local de Blob especificado. A seleção desse valor exibe as opções dinâmicas na seção **Enumerador de Blob do Azure Foreach**.|  
-|**Enumerador de arquivo foreach ADLS**|Enumere arquivos em ADLS com filtros. A seleção desse valor exibe as opções dinâmicas na seção, **enumerador de arquivo Foreach ADLS**.|
+|**Enumerador de arquivo foreach ADLS**|Enumere arquivos no diretório especificado do repositório Data Lake. A seleção desse valor exibe as opções dinâmicas na seção, **enumerador de arquivo Foreach ADLS**.|
   
  **Expressões**  
  Clique ou expanda **Expressões** para exibir a lista de expressões de propriedade existentes. Clique no botão de reticências **(...)** para adicionar uma expressão de propriedade para uma propriedade de enumerador ou edite e avalie uma expressão de propriedade existente.  
@@ -226,13 +226,13 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
 #### <a name="enumerator--foreach-file-enumerator"></a>Enumerador = Enumerador de Arquivo Foreach  
  Você usa o Enumerador de Arquivo Foreach para enumerar arquivos em uma pasta. Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL, você poderá usar o enumerador de arquivo Foreach para enumerar arquivos que contêm instruções SQL executadas pela tarefa Execute SQL. O enumerador pode ser configurado para incluir subpastas.  
   
- O conteúdo das pastas e subpastas que o enumerador de arquivo Foreach enumera pode alterar-se enquanto o loop estiver sendo executando porque processos externos ou tarefas no loop adicionam, renomeiam ou excluem arquivos enquanto o loop está em execução. Isso significa que podem acontecer várias situações inesperadas:  
+ O conteúdo das pastas e subpastas que o enumerador de arquivo Foreach enumera pode alterar-se enquanto o loop estiver sendo executando porque processos externos ou tarefas no loop adicionam, renomeiam ou excluem arquivos enquanto o loop está em execução. Essas alterações podem causar várias situações inesperadas:  
   
--   Se forem excluídos arquivos, uma tarefa no Loop Foreach poderá executar o trabalho em um conjunto de arquivos diferente dos arquivos usados por tarefas subsequentes.  
+-   Se forem excluídos arquivos, as ações de uma tarefa no Foreach Loop podem afetar um conjunto diferente de arquivos que os arquivos usados por tarefas subsequentes.  
   
--   Se forem renomeados arquivos e um processo externo adicionar arquivos automaticamente para substituir os arquivos renomeados, o Loop Foreach poderá executar o trabalho duas vezes no mesmo conteúdo de arquivo.  
+-   Se forem renomeados arquivos e um processo externo adiciona arquivos automaticamente para substituir os arquivos renomeados, as ações de tarefas no Foreach Loop podem afetar os mesmos arquivos duas vezes.  
   
--   Se forem adicionados arquivos, poderá ser difícil determinar para quais arquivos o Loop Foreach executou o trabalho.  
+-   Se forem adicionados arquivos, pode ser difícil determinar para quais arquivos o Foreach Loop afetados.  
   
  **Pasta**  
  Forneça o caminho da pasta raiz a enumerar.  
@@ -246,12 +246,12 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
 > [!NOTE]  
 >  Use caracteres curinga (*) para especificar os arquivos a serem incluídos na coleção. Por exemplo, para incluir arquivos com nomes que contêm "abc", use o seguinte filtro: \*abc\*.  
 >   
->  Quando você especifica uma extensão de nome de arquivo, o enumerador também retorna os arquivos que têm a mesma extensão com caracteres adicionais acrescentados. (É o mesmo comportamento do comando **dir** no sistema operacional, que também compara nomes de arquivos 8.3 para fins de compatibilidade com versões anteriores.) Este comportamento do enumerador poderia causar resultados inesperados. Por exemplo, você deseja enumerar somente arquivos do Excel 2003 e especifica "*.xls". Todavia, o enumerador também retornará arquivos do Excel 2007 porque esses arquivos têm a extensão ".xlsx".  
+>  Quando você especifica uma extensão de nome de arquivo, o enumerador também retorna os arquivos que têm a mesma extensão com caracteres adicionais acrescentados. (É o mesmo comportamento do comando **dir** no sistema operacional, que também compara nomes de arquivos 8.3 para fins de compatibilidade com versões anteriores.) Este comportamento do enumerador poderia causar resultados inesperados. Por exemplo, você deseja enumerar somente arquivos do Excel 2003 e especifica "*.xls". No entanto, o enumerador também retornará arquivos do Excel 2007 porque esses arquivos têm a extensão ". xlsx".  
 >   
 >  Você pode usar uma expressão para especificar os arquivos a serem incluídos em uma coleção, expandindo **Expressões** na página **Coleção** , selecionando a propriedade **FileSpec** e clicando no botão de reticências (…) para adicionar a expressão de propriedade.  
   
  **Totalmente qualificado**  
- Selecione para recuperar o caminho totalmente qualificado de nomes de arquivo. Se forem especificados caracteres curinga na opção Arquivos, os caminhos totalmente qualificados que retornarem corresponderão ao filtro.  
+ Selecione para recuperar o caminho totalmente qualificado de nomes de arquivo. Se forem especificados caracteres curinga na opção arquivos, os caminhos totalmente qualificados que são retornados correspondem ao filtro.  
   
  **Apenas nome**  
  Selecione para recuperar só os nomes de arquivo. Se forem especificados caracteres curinga na opção Arquivos, os nomes de arquivo que retornarem corresponderão ao filtro.  
@@ -342,7 +342,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Para saber mais sobre como trabalhar com documentos e dados XML, consulte "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" na Biblioteca MSDN.  
   
  **DocumentSourceType**  
- Selecione o tipo de origem do documento XML. As opções dessa propriedade são listadas na tabela a seguir.  
+ Selecione o tipo de origem do documento XML. As opções desta propriedade estão listadas na seguinte tabela:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **EnumerationType**  
- Selecione um tipo de enumeração na lista. As opções dessa propriedade são listadas na tabela a seguir.  
+ Selecione um tipo de enumeração na lista. As opções desta propriedade estão listadas na seguinte tabela:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -372,7 +372,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
 |**ElementCollection**|Enumera nós de elementos retornados por uma operação XPath.|  
   
  **OuterXPathStringSourceType**  
- Selecione o tipo de origem da cadeia XPath. As opções dessa propriedade são listadas na tabela a seguir.  
+ Selecione o tipo de origem da cadeia XPath. As opções desta propriedade estão listadas na seguinte tabela: 
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -395,7 +395,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Se **EnumerationType** for definido como **ElementCollection**, selecione o tipo de elemento interno na lista.  
   
  **InnerXPathStringSourceType**  
- Seleciona o tipo de origem da cadeia interna XPath. As opções dessa propriedade são listadas na tabela a seguir.  
+ Seleciona o tipo de origem da cadeia interna XPath. As opções desta propriedade estão listadas na seguinte tabela:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -415,7 +415,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerador = Enumerador SMO Foreach  
- Use o enumerador SMO Foreach para enumerar objetos SMO (SQL Server Management Object). Por exemplo, se o Loop Foreach incluir uma tarefa Execute SQL, você poderá usar o enumerador SMO Foreach para enumerar as tabelas no banco de dados **AdventureWorks** e executar consultas que contam o número de linhas em cada tabela.  
+ Use o enumerador SMO Foreach para enumerar objetos SMO (SQL Server Management Object). Por exemplo, se o Foreach Loop incluir uma tarefa Executar SQL, você pode usar o enumerador SMO Foreach para enumerar as tabelas de **AdventureWorks** de banco de dados e executar consultas que contam o número de linhas em cada tabela.  
   
  **Conexão**  
  Selecione um Gerenciador de conexão ADO.NET existente ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
@@ -440,14 +440,14 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Especifique o nome do diretório de HDFS contém os arquivos HDFS a serem enumerados.  
   
  **Filtro de nome de arquivo**  
- Especifique um filtro de nome para enumerar arquivos com um determinado padrão de nome. Por exemplo, MySheet*.xls\* incluirá arquivos como MySheet001.xls e MySheetABC.xlsx.  
+ Especifique um filtro de nome para enumerar arquivos com um determinado padrão de nome. Por exemplo, MySheet\* inclui arquivos como MySheet001.xls e MySheetABC.xlsx.  
   
  **Recuperar o nome de arquivo**  
  Especifique o tipo de nome do arquivo recuperado pelo SSIS.  
   
--   **Nome totalmente qualificado** significa o nome completo que contém o nome do arquivo e o caminho do diretório.  
+-   **Nome totalmente qualificado** significa o nome completo, que contém o nome de arquivo e caminho do diretório.  
   
--   **Somente nome** significa que somente o nome do arquivo é recuperado.  
+-   **Somente nome** significa que o nome de arquivo é recuperado sem o caminho.  
   
  **Desviar subpastas**  
  Especifique se deseja executar um loop recursivamente pelas subpastas.  
@@ -455,7 +455,7 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Na página **Mapeamentos de Variáveis** do editor, selecione ou crie uma variável para armazenar o nome do arquivo HDFS enumerado.  
   
 ####  <a name="ForeachAzureBlob"></a>Enumerador = enumerador de Blob do Azure Foreach  
- O  **Enumerador de Blob do Azure** habilita um pacote do SSIS a enumerar arquivos de Blob no local de Blob especificado. O nome do arquivo de blob enumerado pode ser armazenado em uma variável e usado em tarefas dentro do Contêiner do Loop Foreach.  
+ O  **Enumerador de Blob do Azure** habilita um pacote do SSIS a enumerar arquivos de Blob no local de Blob especificado. Você pode armazenar o nome do arquivo de blob enumerado em uma variável e usá-lo em tarefas dentro do contêiner de Loop Foreach.  
   
  O **Enumerador de Blob do Azure** é um componente do SSIS (SQL Server Integration Services) Feature Pack para Azure do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Baixe o Feature Pack [daqui](http://go.microsoft.com/fwlink/?LinkID=626967).  
   
@@ -465,28 +465,28 @@ Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nom
  Tópicos Relacionados: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Nome do contêiner de Blob**  
- Especifique o nome do contêiner de Blob que contém os arquivos de Blob a serem enumerados.  
+ Especifique o nome do contêiner de blob que contém os arquivos de blob a serem enumerados.
   
  **Diretório de blob**  
- Especifique o diretório de Blob que contém os arquivos de Blob a serem enumerados. O diretório de Blob é uma estrutura hierárquica virtual.  
+ Especifique o diretório de blob que contém os arquivos de blob a serem enumerados. O diretório de Blob é uma estrutura hierárquica virtual.  
   
  **Filtro de nome de blob**  
- Especifique um filtro de nome para enumerar arquivos com determinado padrão de nome. Por ex.: MySheet*.xls\* incluirá arquivos como MySheet001.xls e MySheetABC.xlsx.  
+ Especifique um filtro de nome para enumerar arquivos com determinado padrão de nome. Por exemplo, `MySheet*.xls\*` inclui arquivos como MySheet001.xls e MySheetABC.xlsx.  
   
  **Intervalo de tempo de blob do/para o filtro**  
- Especifique um filtro de intervalo de tempo. Arquivos modificados após **TimeRangeFrom** e antes de **TimeRangeTo** serão enumerados. 
+ Especifique um filtro de intervalo de tempo. Arquivos modificados após **TimeRangeFrom** e antes de **TimeRangeTo** são enumeradas. 
 
 ####  <a name="ForeachAdlsFile"></a>Enumerador = enumerador de arquivo Foreach ADLS 
-O **enumerador de arquivo ADLS** permite que um pacote do SSIS enumerar arquivos em ADLS com filtros. A barra (`/`)-prefixado caminho completo de arquivos enumerados pode ser armazenado em uma variável e usado em tarefas dentro do contêiner do Loop Foreach.
+O **enumerador de arquivo ADLS** permite que um pacote do SSIS enumere arquivos no repositório Azure Data Lake. Você pode armazenar o caminho completo do arquivo enumerado (prefixado com uma barra - `/`) em uma variável e use o caminho do arquivo em tarefas dentro do contêiner do Loop Foreach.
   
 **AzureDataLakeConnection**  
 Especifica um Gerenciador de conexão do Azure Data Lake ou cria um novo que se refere a uma conta ADLS.   
   
 **AzureDataLakeDirectory**  
-Especifica o diretório ADLS para pesquisar.
+Especifica o diretório ADLS que contém os arquivos a serem enumerados.
   
 **FileNamePattern**  
-Especifica um filtro de nome de arquivo. Somente os arquivos cujo nome corresponde ao padrão especificado serão enumerados. Curingas `*` e `?` têm suporte. 
+Especifica um filtro de nome de arquivo. Somente os arquivos cujos nomes correspondem ao padrão especificado são enumerados. Os curingas `*` e `?` têm suporte. 
   
 **SearchRecursively**  
 Especifica se a pesquisa recursivamente dentro do diretório especificado.  
@@ -494,26 +494,26 @@ Especifica se a pesquisa recursivamente dentro do diretório especificado.
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Mapeamentos de variáveis de página - Editor de Loop Foreach
  Use a página **Mapeamentos de Variáveis** da caixa de diálogo **Editor de Loop Foreach** para mapear variáveis para o valor da coleção. O valor da variável é atualizado com os valores da coleção em cada iteração do loop.  
   
- Para saber mais sobre como usar o contêiner do Loop Foreach em um pacote de Serviços de Integração, consulte [Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md) . Para saber mais sobre como configurá-lo, consulte [Configurar um contêiner do Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Para saber mais sobre como usar o contêiner Foreach Loop em um pacote do Integration Services, consulte [contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md). Para saber mais sobre como configurá-lo, consulte [Configurar um contêiner do Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
  O tutorial do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , Criando um Pacote ETL Simples, inclui uma lição que ensina a adicionar e configurar um Loop Foreach.  
   
 ### <a name="options"></a>Opções  
  **Variável**  
- Selecione uma variável existente ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Selecione uma variável existente ou clique em **nova variável...**  para criar uma nova variável.  
   
 > [!NOTE]  
 >  Depois que você mapeia uma variável, uma nova linha é adicionada automaticamente à lista **Variável**.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
- **Índice**  
+ **Index**  
  Se estiver usando o Enumerador de Item Foreach, especifique o índice da coluna no valor da coleção para mapear para a variável. Em outros tipos de enumerador, o índice é somente leitura.  
   
 > [!NOTE]  
 >  O índice é baseado em 0.  
   
-**Delete (excluir) (excluir)**  
+**Delete (excluir)**  
  Selecione uma variável e clique em **Excluir**.  
 
 ## <a name="schema-restrictions-dialog-box-adonet"></a>Caixa de diálogo restrições de esquema (ADO.NET)
@@ -548,7 +548,7 @@ Use a caixa de diálogo **Colunas Para Cada Item** para definir as colunas nos i
  Selecione uma coluna e clique em **Remover**.  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>caixa de diálogo Selecionar Enumeração SMO
-Use a caixa de diálogo **Selecionar Enumeração SMO** para especificar o objeto do SMO (Objetos de Gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enumerar e selecionar o tipo de enumeração.  
+Use a caixa de diálogo **Selecionar Enumeração SMO** para especificar o objeto do SMO (Objetos de Gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enumerar e selecionar o tipo de enumeração.  
   
 ### <a name="options"></a>Opções  
  **Enumerar**  

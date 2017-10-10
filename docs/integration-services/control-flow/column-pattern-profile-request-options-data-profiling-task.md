@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/08/2017
   
 -   **Delimitadores** Por padrão, a lista de delimitadores contém os seguintes caracteres: espaço, guia horizontal (\t), nova linha (\n) e retorno de carro (\r). É possível especificar delimitadores adicionais, mas não é possível remover os delimitadores padrão.  
   
--   **Símbolos** por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Por exemplo, se os símbolos forem "`()-`", será gerado o token ["(", "425", ")", "123", "-", "4567", ")"] para o valor "(425) 123-4567".  
+-   **Símbolos** por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%` , bem como a marca de escala. Por exemplo, se os símbolos forem "`()-`", será gerado o token ["(", "425", ")", "123", "-", "4567", ")"] para o valor "(425) 123-4567".  
   
  Um caractere não pode ser um delimitador e um símbolo ao mesmo tempo.  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 09/08/2017
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  
   
  **Símbolos**  
- Liste os símbolos que deveriam ser retidos como parte de padrões. Exemplos poderiam incluir "/" para datas, ":" para horários e "@" para endereços de email. Por padrão, a lista de **Símbolos** contém os seguintes caracteres: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`.  
+ Liste os símbolos que deveriam ser retidos como parte de padrões. Exemplos poderiam incluir "/" para datas, ":" para horários e "@" para endereços de email. Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  
   

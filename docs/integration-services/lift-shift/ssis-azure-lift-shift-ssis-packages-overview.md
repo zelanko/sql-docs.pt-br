@@ -1,6 +1,6 @@
 ---
 title: Comparar e deslocar cargas de trabalho do SQL Server Integration Services para a nuvem | Microsoft Docs
-ms.date: 09/28/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 85ab11747276f0c6c58b13cd409df3e5774915ae
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Comparar e deslocar cargas de trabalho do SQL Server Integration Services para a nuvem
@@ -46,12 +46,15 @@ Quando você provisiona a IV do SSIS, você pode expandir e expansão especifica
 
 Você só precisa provisionar o IV SSIS uma vez. Depois disso, você pode usar ferramentas familiares, como SQL Server Data Tools (SSDT) e o SQL Server Management Studio (SSMS) para implantar, configurar, executar, monitorar, agendar e gerenciar pacotes.
 
-Fábrica de dados também dá suporte a outros tipos de tempos de execução de integração. Para saber mais sobre o IV SSIS e outros tipos de tempos de execução de integração, consulte [tempo de execução da integração do Azure Data Factory](/azure/data-factory/concepts-integration-runtime.md).
+> [!NOTE]
+> Durante essa prévia pública, o tempo de execução de integração do Azure SSIS só está disponível nas regiões dos EUA Leste e Norte da Europa.
+
+Fábrica de dados também dá suporte a outros tipos de tempos de execução de integração. Para saber mais sobre o IV SSIS e outros tipos de tempos de execução de integração, consulte [tempo de execução da integração do Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 Os recursos descritos neste tópico exigem o SQL Server Data Tools (SSDT) versão 17.2 ou posterior, mas não precisam de 2017 do SQL Server ou SQL Server 2016. Quando você implanta pacotes no Azure, o Assistente de implantação de pacote sempre atualiza os pacotes para o formato mais recente do pacote.
 
-Para obter mais informações sobre os pré-requisitos no Azure, consulte [comparar e deslocar pacotes do SQL Server Integration Services (SSIS) para o Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Para obter mais informações sobre os pré-requisitos no Azure, consulte [comparar e deslocar pacotes do SQL Server Integration Services (SSIS) para o Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="ssis-features-on-azure"></a>Recursos do SSIS no Azure
 
@@ -68,7 +71,7 @@ Para obter informações sobre como se conectar a fontes de dados locais da nuve
 ## <a name="common-tasks"></a>Tarefas comuns
 
 ### <a name="provision"></a>Provisionar
-Antes de implantar e executar pacotes SSIS no Azure, você precisa provisionar o banco de dados de catálogo do SSISDB e o tempo de execução de integração do Azure SSIS. Siga o provisionamento as etapas neste artigo: [comparar e deslocar pacotes do SQL Server Integration Services (SSIS) para o Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Antes de implantar e executar pacotes SSIS no Azure, você precisa provisionar o banco de dados de catálogo do SSISDB e o tempo de execução de integração do Azure SSIS. Siga o provisionamento as etapas neste artigo: [comparar e deslocar pacotes do SQL Server Integration Services (SSIS) para o Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ### <a name="deploy-and-run-packages"></a>Implantar e executar pacotes
 Para implantar projetos e executar pacotes no banco de dados SQL, você pode usar uma das diversas ferramentas familiares e opções de script:
@@ -92,6 +95,6 @@ Para obter mais informações, consulte [SSIS de agendamento de execução de pa
 
 ## <a name="next-steps"></a>Próximas etapas
 Para começar com cargas de trabalho SSIS no Azure, consulte os seguintes artigos:
--   [Comparar e deslocar pacotes do SQL Server Integration Services (SSIS) para o Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)
+-   [Comparar e deslocar pacotes do SQL Server Integration Services (SSIS) para o Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)
 -   [Implantar, executar e monitorar um pacote do SSIS no Azure](ssis-azure-deploy-run-monitor-tutorial.md)
 

@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3e535ef444e43860e35befbf0f33fe1eb582801d
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a8c8f93212e62b148671305354599b88e6f3d318
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar o servidor de relatórios no modo nativo do Reporting Services
@@ -62,7 +62,7 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
 -   Informações de conexão, também conhecidas como DSN, (nome da fonte de dados) para os bancos de dados do servidor de relatório.  
   
- A Instalação não configura a conta de execução autônoma, o email do servidor de relatório, o backup das chaves de criptografia ou uma implantação de expansão. Você pode usar a ferramenta Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar essas propriedades. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ A Instalação não configura a conta de execução autônoma, o email do servidor de relatório, o backup das chaves de criptografia ou uma implantação de expansão. Você pode usar a ferramenta Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar essas propriedades. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
   
 ##  <a name="bkmk_whentoinstalldefaultconfig"></a> Quando instalar a configuração padrão para o modo nativo  
  Uma configuração padrão instala o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um estado operacional para que você possa usar o servidor de relatório imediatamente após a Instalação ser concluída. Especifique esse modo quando desejar economizar etapas pela eliminação de quaisquer tarefas de configuração necessárias, que de outra maneira precisariam ser executadas na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -155,7 +155,7 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
 9. Regras de configuração de recurso: verifique as regras aprovadas. O assistente de instalação avançará automaticamente para **Pronto para instalar** se todas as regras forem aprovadas.  Específicas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], as regras verificam se um catálogo do servidor de relatório e um banco de dados de catálogo temporário ainda não existem.  
   
-10. ![Observação](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Observação")no **pronto para instalar o** página, observe o caminho para o arquivo de configuração que você pode fazer referência a ele mais tarde para obter um bom Resumo inicial dos servidores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuração, incluindo os componentes instalados, contas de serviço e administradores.  
+10. Na página **Pronto para instalar**, anote o caminho para o arquivo de configuração, pois poderá ser consultado posteriormente para obter um bom resumo da configuração de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicial dos servidores, incluindo os componentes instalados, as contas de serviço e os administradores.  
   
 11. Depois que o assistente de instalação do SQL Server estiver concluído, verifique a instalação padrão do modo nativo usando as etapas básicas a seguir.  
   
@@ -188,8 +188,8 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
 [Configurar uma Conexão de banco de dados do servidor de relatório](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Instalação somente de arquivos &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
 [Inicializar um servidor de relatório](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
-[Configurar conexões SSL em um servidor de relatório do modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+[Configurar conexões SSL em um servidor de relatórios de modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
 

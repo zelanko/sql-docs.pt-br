@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4fe098c9d9f9b8e01deee95c1d52e3582b13658
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 5462b0eb9a5eedc48e841ba8aae3bb3514be447d
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="hierarchy-mdx"></a>Função Hierarchy (MDX)
@@ -51,7 +51,7 @@ Level_Expression.Hierarchy
  Uma linguagem MDX válida que retorna um nível.  
   
 ### <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna o nome da hierarquia Calendário na dimensão de dados no cubo Adventure Works.  
+ O exemplo a seguir retorna o nome da hierarquia calendário na dimensão data no cubo AdventureWorks.  
   
  `WITH`  
   

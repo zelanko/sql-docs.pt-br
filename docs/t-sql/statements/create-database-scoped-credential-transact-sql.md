@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e1eeda5d365f5c625e68c498c741754bf59c9d7
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 49ff2aa300fc8f8e74424ae6e334bee823e8176c
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CRIAR a CREDENCIAL de escopo do banco de dados (Transact-SQL)
@@ -103,7 +103,7 @@ GO
 ```  
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Criar um banco de dados de credencial com escopo de uma assinatura de acesso compartilhado.   
-O exemplo a seguir cria uma credencial no escopo do banco de dados que pode ser usada para criar um [fonte de dados externa](../../t-sql/statements/create-external-data-source-transact-sql.md), que pode executar operações em massa, como [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).   
+O exemplo a seguir cria uma credencial no escopo do banco de dados que pode ser usada para criar um [fonte de dados externa](../../t-sql/statements/create-external-data-source-transact-sql.md), que pode executar operações em massa, como [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Assinaturas de acesso compartilhado não pode ser usadas com o PolyBase no SQL Server, APS ou SQL DW.
 ```tsql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',

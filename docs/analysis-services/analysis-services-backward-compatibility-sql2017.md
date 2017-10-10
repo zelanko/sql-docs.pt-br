@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 972ab981eccb6271dfa2f18e0b482f43020ff36b
+ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
+ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilidade com versões anteriores do Analysis Services (SQL 2017)
@@ -40,10 +40,11 @@ Os recursos a seguir estão obsoletas nesta versão:
 |||  
 |-|-|  
 |**Modo/categoria**|**Recurso**|
-|Tabular|Grupos de medidas vinculados remotos|
+|Multidimensional|Mineração de dados|
+|Multidimensional|Grupos de medidas vinculados remotos|
 |Tabular|Modelos no nível de compatibilidade 1100 e 1103|
 |Tabular|Propriedades do modelo de objeto de tabela: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
-|Multidimensional|Mineração de dados|
+
 
 ## <a name="discontinued-features"></a>Recursos descontinuados
 Um *recurso Descontinuado* foi substituído em uma versão anterior. Ele pode continuar a ser incluído na versão atual, mas não é mais suportado. Recursos descontinuados podem ser removidos inteiramente em um futuro versão ou atualizar.
@@ -70,8 +71,9 @@ Não há nenhuma alteração de quebra nesta versão.
 ## <a name="behavior-changes"></a>Alterações de comportamento
 Um *alteração de comportamento* afeta como o mesmo recurso funciona na versão atual em comparação com a versão anterior. Somente as alterações de comportamento significativa descritas. Alterações na interface do usuário não são incluídas.
 
-Não há nenhuma alteração de comportamento nesta versão.
+Alterações em MDSCHEMA_MEASUREGROUP_DIMENSIONS e DISCOVER_CALC_DEPENDENCY, detalhado no [Novidades no SQL Server de 2017 CTP 2.1 para o Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) comunicado.
 
 
 ## <a name="see-also"></a>Consulte também
 [Compatibilidade com versões anteriores do Analysis Services (SQL Server 2016)](analysis-services-backward-compatibility.md)
+

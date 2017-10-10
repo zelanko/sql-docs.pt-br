@@ -1,7 +1,7 @@
 ---
-title: Instalar e gerenciar pacotes do R | Microsoft Docs
+title: Pacotes R instalados com o SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -12,105 +12,88 @@ ms.topic: article
 dev_langs:
 - R
 ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
-caps.latest.revision: 11
+caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ae30bfc42e42b69158dbba5a38b0bccbe93523b4
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 0e96334850554ab642e3372c3631f3ab672109d6
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="installing-and-managing-r-packages"></a>Instalar e gerenciar pacotes do R
- Qualquer solução de R que seja executada em [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] deve usar pacotes instalados na biblioteca padrão do R. Normalmente, as soluções de R farão referência a bibliotecas do usuário por meio da especificação de um caminho de arquivo no código R, mas isso não é recomendado para produção.
+# <a name="r-packages-installed-with-sql-server"></a>Pacotes R instalados com o SQL Server
 
-Portanto, é tarefa de administrador do banco de dados ou outro administrador no servidor assegurar que todos os pacotes necessários sejam instalados na instância [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Se você não tiver privilégios administrativos no computador que hospedar a instância do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], você poderá fornecer as informações do administrador sobre como instalar pacotes do R e fornecer acesso a um repositório de pacote seguro em que os pacotes solicitados pelos usuários possam ser obtidos. Esta seção fornece essas informações. 
+Este artigo descreve os pacotes de R que são instalados com o SQL Server e fornece informações sobre como gerenciar e exibir os pacotes existentes.
 
-> [!TIP]
-> O [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] fornece novos recursos para instalar e gerenciar pacotes do R que oferecem maior liberdade e controle sobre instalação e uso do pacote, tanto ao administrador de banco de dados quanto ao cientista de dados. Para obter mais informações, consulte [Gerenciamento de pacotes do R para o SQL Server](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md). 
+Este artigo também fornece links para informações sobre como adicionar novos pacotes para uso com o SQL Server.
 
-## <a name="installed-packages"></a>Pacotes instalados
-Quando você instala os [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], os pacotes **básicos** do R como `stats` e `utils` são instalados por padrão, juntamente com o pacote **RevoScaleR** que dá suporte a conexões com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- 
-> [!NOTE]  
->  Para obter uma lista de pacotes instalados por padrão, consulte [Pacotes instalados com o Microsoft R Open](https://mran.microsoft.com/rro/installed/).  
+**Aplica-se a:** serviços de aprendizado de máquina do SQL Server de 2017 (no banco de dados), SQL Server 2016 R Services (no banco de dados)
 
- Se você precisar de um pacote adicional do CRAN ou outro repositório, será necessário baixar o pacote e instalá-lo em sua estação de trabalho.  
-  
- Se você precisar executar o novo pacote no contexto do servidor, será necessário também que um administrador o instale no servidor.   
-   
-## <a name="where-and-how-to-get-new-packages"></a>Onde e como obter novos pacotes  
- Há várias fontes de pacotes R, os mais conhecidos entre eles são CRAN e Bioconductor. O site oficial da linguagem R ([https://www.r-project.org/](https://www.r-project.org/)) lista vários desses recursos. Muitos pacotes também são publicados no GitHub, onde é possível obter o código-fonte. No entanto, talvez você também tenha recebido pacotes R desenvolvidos por alguém de sua empresa.  
-  
- Independentemente da origem, os pacotes devem ser fornecidos no formato de um arquivo compactado para ser instalado. Além disso, para usar o pacote com os [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], certifique-se de obter o arquivo compactado no formato binário do Windows. (Alguns pacotes podem não dar suporte a esse formato.) Para obter mais informações sobre o conteúdo do formato de arquivo zip e como criar um pacote do R, recomendamos este tutorial, que pode ser baixado no formato PDF no site do projeto do R: [Freidrich Leisch: criação de pacotes do R](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf). 
-  
- Em geral, se o computador tiver acesso à Internet, os pacotes do R poderão ser instalados facilmente da linha de comando sem que precisem ser previamente baixados.  Geralmente esse não é o caso com servidores que executam o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  Portanto, para instalar o pacote do R em um computador **sem** acesso à Internet, será necessário baixar o pacote antecipadamente no formato compactado correto e, em seguida, copiar os arquivos compactados em uma pasta que possa ser acessada pelo computador. 
- 
- Os tópicos a seguir descrevem os dois métodos para instalar pacotes offline: 
+## <a name="what-is-the-instance-library-and-where-is-it"></a>O que é a biblioteca de instância e onde ele está?
 
-+ [Criar um repositório de pacote offline usando o miniCRAN](../../advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md)
+Qualquer solução de R que é executado no SQL Server pode usar somente os pacotes que estão instalados na biblioteca R padrão associada à instância.
 
-  Descreve como usar o pacote do R **miniCRAN** para criar um repositório offline. Esse é provavelmente o método mais eficiente se você precisa instalar os pacotes em vários servidores e gerenciar o repositório de um único local. 
-+ [Instalar novos pacotes do R da Internet](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md)
+Quando você instala os recursos de R no SQL Server, a biblioteca de pacote de R está localizada na pasta de instância.
 
-  Inclui instruções para instalar os pacotes offline copiando manualmente os arquivos compactados.   
++ Instância padrão *MSSQLSERVER* 
 
-## <a name="permissions-required-for-installing-r-packages"></a>Permissões necessárias para instalar pacotes de R  
-  
-Para instalar um novo pacote do R em um computador que está executando o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você precisa ter direitos administrativos no computador.   
+    2017 do SQL Server:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` 
+    
+    SQL Server 2016:`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
 
-Se você não tiver esses direitos, entre em contato com o administrador e forneça as informações sobre o pacote para instalação.  
-  
++ Instância nomeada *MyNamedInstance* 
 
-Se você estiver instalando um novo pacote do R em um computador que está sendo usado como uma estação de trabalho de R e o computador **não** tiver uma instância de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instalada, você ainda precisará de direitos administrativos no computador para instalar o pacote. Após a instalação do pacote, você pode executá-lo localmente.  
- 
-> [!NOTE]
-> Em [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], novas funções de banco de dados foram adicionadas para dar suporte a escopo de permissões de instalação do pacote em um nível de instância e um nível de banco de dados. Para obter mais informações, consulte [Gerenciamento de pacotes do R para o SQL Server](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
- 
+    2017 do SQL Server:`C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` 
+    
+    SQL Server 2016:`C:\Program Files\Microsoft SQL Server\MSSQL13.MyNamedInstance\R_SERVICES\library`
 
-### <a name="location-of-default-r-library-location-for-r-services"></a>Local da biblioteca padrão do R para o R Services
+Você pode executar a instrução a seguir para verificar a biblioteca padrão para a instância atual do R.
 
-Se você instalou os [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] usando a instância padrão, a biblioteca de pacotes do R usada pela instância está localizada na pasta da instância do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Por exemplo: 
-
-+ Instância padrão _MSSQLSERVER_
-  `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
-+ Instância nomeada _MyNamedInstance_
-  `C:\Program Files\Microsoft SQL Server\MSSQL13.MyNamedInstance\R_SERVICES\library` 
-
-
-Você pode executar a instrução a seguir para verificar a biblioteca padrão para a instância atual do R. 
-~~~~
+```SQL
 EXECUTE sp_execute_external_script  @language = N'R'
 , @script = N'OutputDataSet <- data.frame(.libPaths());'
 WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
-~~~~
+```
+## <a name="r-packages-installed-with-sql-server"></a>Pacotes R instalados com o SQL Server
 
-Para obter mais informações, consulte [Determinar quais pacotes estão instalados no SQL Server](../../advanced-analytics/r-services/determine-which-packages-are-installed-on-sql-server.md).
+Quando você instala a linguagem R no SQL Server, por padrão o R **base** pacotes estão instalados. Pacotes de base incluem a funcionalidade de núcleo fornecida por pacotes como `stats` e `utils`.
 
-## <a name="managing-installed-packages"></a>Gerenciar pacotes instalados
+Instalação do R no SQL Server 2016 e no SQL Server 2017 também inclui o **RevoScaleR** de pacote e pacotes aprimorados relacionados e provedores, que oferece suporte para contextos de computação remota, streaming, execução paralela de função rx, e muitos outros recursos.
 
-O [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] fornece novos recursos para instalar e gerenciar pacotes do R que oferecem maior liberdade e controle sobre instalação e uso do pacote, tanto ao administrador de banco de dados quanto ao cientista de dados. Para obter mais informações, consulte [Gerenciamento de pacotes do R para o SQL Server](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md). 
++ Para obter uma visão geral dos recursos aprimorados de R, consulte [sobre o servidor de aprendizado de máquina](https://docs.microsoft.com/r-server/what-is-microsoft-r-server)
 
-Se você está usando o SQL Server 2106 R Services, os novos recursos de gerenciamento de pacotes não estão disponíveis no momento. Enquanto isso, para determinar quais pacotes estão instalados no computador do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], use uma das seguintes opções:
++ Para baixar as bibliotecas de RevoScaleR em um computador cliente, instale [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)
 
-+ Exiba a biblioteca padrão, se você tiver permissões para a pasta.
-+ Execute um comando do R para listar os pacotes no local de biblioteca R_SERVICES
-+ Use um procedimento armazenado como o seguinte na instância:
-   ```SQL
-   EXECUTE sp_execute_external_script  @language=N'R'  
-        ,@script = N'str(OutputDataSet);  
-        packagematrix <- installed.packages();  
-        NameOnly <- packagematrix[,1];  
-        OutputDataSet <- as.data.frame(NameOnly);'  
-        ,@input_data_1 = N'SELECT 1 as col'  
-        WITH RESULT SETS ((PackageName nvarchar(250) ))   
-   ```
+## <a name="permissions-required-for-installing-r-packages"></a>Permissões necessárias para instalar pacotes de R
 
+No SQL Server 2016, o administrador precisava instalar novos pacotes de R em toda a instância. No SQL Server de 2017, novos recursos de banco de dados foram adicionados que possibilitam que o administrador de banco de dados para delegar o gerenciamento de pacote para os usuários selecionados.
 
- ## <a name="see-also"></a>Consulte também  
- [Gerenciando e monitorando soluções de R](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
+Esta seção descreve as permissões necessárias para instalar e gerenciar pacotes por versão.
+
++ SQL Server 2016 R Services (no banco de dados)
+
+    Para instalar um novo pacote de R em um computador que esteja executando [!INCLUDE [ssCurrent](..\..\includes\sscurrent-md.md)], você deve ter direitos administrativos no computador. É a tarefa do administrador de banco de dados ou outro administrador no servidor para garantir que todos os pacotes necessários estão instalados a [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] instância.
+
+    Se você não tem privilégios administrativos no computador que hospeda o [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] instância, você pode fornecer as informações do administrador sobre como instalar pacotes de R e fornecer acesso a um repositório de pacote seguro onde pacotes solicitado por usuários podem ser obtidos.
+
++ Serviços de Machine Learning do SQL Server 2017
+
+    Esta versão inclui funções de gerenciamento de pacote que permitem que o administrador de banco de dados delegar os direitos de instalação do pacote para os usuários selecionados. Se esse recurso foi habilitado, solicite que seu administrador de banco de dados você adicionar a uma das novas funções do pacote. Para obter mais informações, consulte [gerenciamento de pacotes de R para o SQL Server](r-package-management-for-sql-server-r-services.md).
+
+    Se você for um administrador na instância do SQL Server, você pode instalar novos pacotes conforme o desejado. Apenas certifique-se de usar a biblioteca padrão que é associada à instância. Pacotes instalados em outros locais não podem ser executado quando chamado a partir de um procedimento armazenado. Qualquer código de R que é executado usando o SQL Server como um contexto de computação também requer que os pacotes estejam disponíveis na biblioteca de instância.
+
++ R Server (Autônomo)
+
+    Você precisa de direitos administrativos no computador para instalar novos pacotes de R.
+
++ Outros ambientes de cliente
+
+    Se você estiver instalando um novo pacote de R em um computador que está sendo usado como uma estação de trabalho de R e o computador **não** tiver uma instância de [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] instalada, você ainda precisará de direitos administrativos no computador para Instale o pacote. Após a instalação do pacote, você pode executá-lo localmente.
+
+## <a name="managing-or-viewing-installed-packages"></a>Gerenciar ou exibir os pacotes instalados
+
+Há várias maneiras que você pode obter uma lista completa dos pacotes instalados no momento. Para obter mais informações, consulte [determinar quais pacotes estão instalados no SQL Server](determine-which-packages-are-installed-on-sql-server.md).
 

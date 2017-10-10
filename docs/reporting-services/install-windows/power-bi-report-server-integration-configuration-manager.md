@@ -2,7 +2,7 @@
 title: "Integração do servidor de relatórios de BI (Configuration Manager) de energia | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/17/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,14 @@ f1_keywords:
 - pbi
 - power bi
 - power bi integration
-ms.assetid: 902b7c31-7399-4855-90f2-42f89d847fff
-caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3d39c8851c43adba12102f7d2440ae55e8216e1e
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -33,13 +31,11 @@ ms.lasthandoff: 08/17/2017
 
 A página  **Integração do Power BI** no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager é usada para registrar o servidor de relatório no locatário gerenciado do Azure AD (Active Directory) desejado, a fim de permitir que os usuários do servidor de relatório fixem itens de relatório com suporte nos dashboards do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Para obter uma lista dos itens com suporte que podem ser fixados, veja [Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
-![rs_powerbi_icon](../../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")
-
 ##  <a name="bkmk_requirements"></a> Requisitos para integração do Power BI
 
 Além de uma conexão de Internet ativa para que você possa navegar até o serviço do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , estes são os requisitos para concluir a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
-- **Azure Active Directory:** sua organização deve usar o Azure Active Directory, que fornece gerenciamento de identidades e diretórios para serviços e aplicativos Web do Azure. Para saber mais, confira [O que é o Azure Active Directory?](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory:** sua organização deve usar o Azure Active Directory, que fornece gerenciamento de identidades e diretórios para serviços e aplicativos Web do Azure. Para obter mais informações, consulte [o que é o Active Directory do Azure?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
 - **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Office 365 e o Microsoft Intune.   Locatários virais não têm suporte no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
@@ -53,7 +49,7 @@ Além de uma conexão de Internet ativa para que você possa navegar até o serv
 
 Para obter mais informações sobre como armazenar credenciais, consulte a seção "Configurar credenciais armazenadas para uma fonte de dados específica do relatório" na [armazenar credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
-Um administrador pode examinar os arquivos de log do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para saber mais.  Ele verá mensagens semelhantes à seguinte. ![Observação](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Observação") uma ótima maneira de analisar e monitorar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] arquivos de log é usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query nos arquivos.  Para saber mais e para assistir a um vídeo curto, veja [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
+Um administrador pode examinar os arquivos de log do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para saber mais.  Ele verá mensagens semelhantes à seguinte. Uma ótima maneira de examinar e monitorar arquivos de log do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query nos arquivos.  Para saber mais e para assistir a um vídeo curto, veja [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
     subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
@@ -65,15 +61,13 @@ Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
 
 1. Selecione a página de integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 
-     ![rs_powerbi_integration](../../reporting-services/install-windows/media/ssrs-powerbi-integration.png "rs_powerbi_integration")
-
 2. Selecione **Registrar no Power BI**.
 
 3. Na caixa de diálogo de entrada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] , insira as credenciais que você usa para entrar no [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
 4. Depois que o registro tiver sido concluído, a seção **Detalhes do registro do Power BI** anotará a ID de Locatário do Azure e as URLs de Redirecionamento.  As URLs são usadas como parte do processo de entrada e comunicação do painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] para se comunicar de volta com o servidor de relatório registrado.
 
-5. ![Observação](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Observação") selecionar o **cópia** no botão de **resultados** janela para copiar os detalhes do registro para a área de transferência do Windows para que possa salvá-los para referência futura.
+5. Selecione o botão **Copiar** na janela **Resultados** para copiar os detalhes do registro na área de transferência do Windows e salvá-los para referência futura.
 
 ##  <a name="bkmk_unregister"></a> Cancelar o registro com o Power BI
 
@@ -127,7 +121,7 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 1. Os usuários visualizam relatórios no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e na primeira vez que clicarem para fixar um item de relatório do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Eles serão redirecionados para a página de logon do Azure AD. Eles também podem entrar por meio da página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para saber mais, confira [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. Eles serão redirecionados para a página de logon do Azure AD. Eles também podem entrar por meio da página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obter mais informações, consulte [minhas configurações para integração do Power BI &#40; portal web &#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
 3. Um token de segurança do usuário é retornado para o servidor de relatório.
 
@@ -139,7 +133,7 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 7. Uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é criada para gerenciar a atualização agendada do item de relatório para o bloco do painel. A assinatura usa o token de segurança que foi criado quando o usuário se conectou.
 
-     **Observação:**  o token é válido para **90 dias**, depois disso, os usuários precisam fazer logon novamente para criar um novo token. Quando o token tiver expirado, os blocos fixos ainda estarão exibidos no painel, mas os dados não serão atualizados.  As assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usadas para os itens fixados gerarão um erro até que um novo token de usuário seja criado. Veja [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5). para obter mais informações.
+     O token é válido para **90 dias**, depois que os usuários precisam fazer logon novamente para criar um novo token de usuário. Quando o token tiver expirado, os blocos fixos ainda estarão exibidos no painel, mas os dados não serão atualizados.  As assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usadas para os itens fixados gerarão um erro até que um novo token de usuário seja criado. Consulte [minhas configurações para integração do Power BI &#40; portal web &#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). para obter mais informações.
 
 Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas e, em vez disso, a ID do aplicativo e as URLS serão recuperadas do banco de dados ReportServer e o fluxo continuará com a etapa 5.
 
@@ -163,8 +157,8 @@ Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Minhas configurações para integração do Power BI](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Minhas configurações para integração do Power BI](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

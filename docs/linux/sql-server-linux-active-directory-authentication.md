@@ -2,7 +2,7 @@
 title: "Autenticação do Active Directory com o SQL Server no Linux | Microsoft Docs"
 description: "Este tutorial fornece as etapas de configuração para a autenticação do AAD para o SQL Server no Linux."
 author: meet-bhagdev
-ms.date: 09/25/2017
+ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
@@ -11,10 +11,10 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 57b03ac7c571bc23477b49c39104fa48220495cb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Autenticação do Active Directory com o SQL Server no Linux
@@ -50,13 +50,15 @@ Antes de configurar a autenticação do AD, você precisa:
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 > [!IMPORTANT]
-> Neste momento, o único método de autenticação com suporte para o ponto de extremidade de espelhamento de banco de dados é o certificado. Método de autenticação do WINDOWS será habilitado em uma versão futura.
+> Limitações:
+> - Neste momento, o único método de autenticação com suporte para o ponto de extremidade de espelhamento de banco de dados é o certificado. Método de autenticação do WINDOWS será habilitado em uma versão futura.
+> - Não há suporte para ferramentas de terceiros AD 3º como Centrify, Powerbroker e Vintela 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Unir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host ao domínio do AD
 
 Use as seguintes etapas para adicionar um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host a um domínio do Active Directory:
 
-1. Use ** [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html) ** para unir sua máquina host para seu domínio do AD. Se você ainda não fez isso, instale os pacotes de cliente Kerberos e realmd no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] máquina de host usando o Gerenciador de pacotes de distribuição Linux:
+1. Use  **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**  para unir sua máquina host para seu domínio do AD. Se você ainda não fez isso, instale os pacotes de cliente Kerberos e realmd no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] máquina de host usando o Gerenciador de pacotes de distribuição Linux:
 
    ```bash
    # RHEL
@@ -170,7 +172,7 @@ Para obter mais informações, consulte a documentação do Red Hat para [descob
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Criar usuário do AD para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e definir o SPN
 
   > [!NOTE]
-  > As próximas etapas, nós usaremos seu [nome de domínio totalmente qualificado](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se você estiver usando **Azure**, você terá que ** [criar um](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn) ** antes de continuar.
+  > As próximas etapas, nós usaremos seu [nome de domínio totalmente qualificado](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se você estiver usando **Azure**, você terá que  **[criar um](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  antes de continuar.
 
 1. No controlador de domínio, execute o [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) comando do PowerShell para criar um novo usuário do AD com uma senha que nunca expira. Este exemplo denomina a conta "mssql", mas o nome da conta pode ser qualquer coisa que você deseja. Você será solicitado a inserir uma nova senha para a conta:
 
@@ -206,7 +208,7 @@ Para obter mais informações, consulte a documentação do Red Hat para [descob
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Crie um arquivo keytab para o usuário do AD que você criou na etapa anterior. Para fazer isso, usamos o ** [ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. Quando solicitado, insira a senha para essa conta do AD.
+2. Crie um arquivo keytab para o usuário do AD que você criou na etapa anterior. Para fazer isso, usamos o  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. Quando solicitado, insira a senha para essa conta do AD.
 
    ```bash
    sudo ktutil

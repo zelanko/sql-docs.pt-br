@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f79bc1df77566540cdce25e12e7ed20c6836e122
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/01/2017
   
 |Propriedade|Valor|  
 |--------------|-----------|  
-|Sintaxe|**tempo** [(*precisão de frações de segundo*)]|  
+|Sintaxe|**tempo** [(*escala frações de segundo*)]|  
 |Uso|DECLARAR @MyTime **time(7)**<br /><br /> Criar tabela Table1 (Column1 **time(7)** )|  
-|*precisão de frações de segundo*|Especifica o número de dígitos para a parte fracionária dos segundos.<br /><br /> Pode ser um inteiro de 0 a 7. Para Informatica, isso pode ser um inteiro de 0 a 3.<br /><br /> A precisão fracionária padrão é de 7 (100 ns).|  
+|*escala de frações de segundo*|Especifica o número de dígitos para a parte fracionária dos segundos.<br /><br /> Pode ser um inteiro de 0 a 7. Para Informatica, isso pode ser um inteiro de 0 a 3.<br /><br /> A escala de frações de padrão é 7 (100 NS).|  
 |Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|hh [. nnnnnnn] (hh [. nnn] para Informatica)<br /><br /> Para obter mais informações, consulte a seção "Compatibilidade com versões anteriores de clientes de nível inferior" a seguir.|  
 |Intervalo|00:00:00.0000000 por meio de 23:59:59.9999999 (00:00:00.000 por meio de 23:59:59.999 para Informatica)|  
-|Intervalos de elementos|hh são dois dígitos, variando de 0 a 23, que representam a hora.<br /><br /> mm são dois dígitos, variando de 0 a 59, que representam o minuto.<br /><br /> ss são dois dígitos, variando de 0 a 59, que representam o segundo.<br /><br /> n* é de zero a sete dígitos, variando de 0 a 9999999, que representa as frações de segundo. Para Informatica, n\* é zero a três dígitos, variando de 0 a 999.|  
+|Intervalos de elementos|hh são dois dígitos, variando de 0 a 23, que representam a hora.<br /><br /> mm são dois dígitos, variando de 0 a 59, que representam o minuto.<br /><br /> ss são dois dígitos, variando de 0 a 59, que representam o segundo.<br /><br /> n\*é zero a sete dígitos, variando de 0 a 9999999, que representa as frações de segundo. Para Informatica, n\* é zero a três dígitos, variando de 0 a 999.|  
 |Comprimento de caracteres|mínimo de 8 posições (HH) para o máximo de 16 (. nnnnnnn). Para Informatica, o máximo é de 12 (hh:mm:ss.nnn).|  
 |Precisão, escala<br /><br /> (usuário especifica apenas escala)|Consulte a tabela a seguir.|  
 |Tamanho de armazenamento|5 bytes, fixos, são o padrão com o padrão de precisão de frações de segundo de 100 ns. Informatica, o padrão é 4 bytes, fixos, com o padrão de 1 MS fracionários precisão de segundo.|  

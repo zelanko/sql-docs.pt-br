@@ -1,5 +1,5 @@
 ---
-title: Instalar o Reporting Services no modo do SharePoint | Microsoft Docs
+title: Instalar o SharePoint do Reporting Services no modo | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/01/2016
@@ -19,14 +19,14 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 17effa28932798a3cd35427a0a7104d4aa355b56
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="install-reporting-services-sharepoint-mode"></a>Instalar o Reporting Services no modo do SharePoint
+# <a name="install-reporting-services-sharepoint-mode"></a>Instalar o modo do SharePoint do Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)][!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -44,7 +44,8 @@ Há dois componentes principais do [!INCLUDE[ssRSnoversion](../../includes/ssrsn
 |**Servidor de Relatório:** o servidor de relatório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado no Modo do SharePoint|O servidor de relatório controla o processamento e a renderização de dados e de relatórios, bem como a assinatura e o processamento de Alerta de Dados O servidor de relatório no modo do SharePoint é projetado e instalado como um Serviço Compartilhado do SharePoint.<br /><br /> **Como:** usar as mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instalar o servidor de relatório.|  
 |**Suplemento:** o servidor de relatório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos SharePoint, **rssharepoint.msi**.|O suplemento instala páginas e recursos de interface do usuário [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um servidor front-end de Web do SharePoint. Os recursos de interface do usuário incluem o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], páginas de administração na Administração Central do SharePoint, páginas de recursos usadas em bibliotecas de documentos do SharePoint e páginas de alertas de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> **Como:**  o suplemento pode ser instalado por meio de um download da Web ou pela mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).|  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a>Nesta seção
+
  [Combinações do SharePoint e do servidor e suplemento Reporting Services com suporte &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
  [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
@@ -68,4 +69,4 @@ Há dois componentes principais do [!INCLUDE[ssRSnoversion](../../includes/ssrsn
  [Arquitetura de alertas de dados e fluxo de trabalho](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
  [Gerenciador de alertas de dados para os administradores de alerta](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

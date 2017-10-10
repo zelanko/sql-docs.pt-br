@@ -1,5 +1,5 @@
 ---
-title: "Combinações do SharePoint e do servidor do Reporting Services com suporte | Microsoft Docs"
+title: "Combinações de servidor do SharePoint e Reporting Services com suporte | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/01/2017
@@ -19,15 +19,15 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinações com suporte do SharePoint e do servidor do Reporting Services
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinações com suporte do servidor do SharePoint e Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)][!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -38,7 +38,7 @@ Um servidor de relatório do SQL Server Reporting Services instalado no modo do 
 > [!NOTE]
 > Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
 
-## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinações de componentes do SharePoint e do Reporting Services com suporte
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinações suportadas dos componentes do SharePoint e Reporting Services
 
  A tabela a seguir resume as combinações com suporte do servidor de relatório, o suplemento do Reporting Services para produtos SharePoint e produtos SharePoint. As combinações que não estão listadas na tabela a seguir não têm suporte
 
@@ -66,7 +66,7 @@ Um servidor de relatório do SQL Server Reporting Services instalado no modo do 
 
  Para obter links para as páginas de download de suplementos, consulte [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 
- **Observações adicionais:**
+ **Considerações adicionais:**
 
 - Certifique-se de atualizar todos os servidores do SharePoint no farm. Isso inclui os servidores front-end da Web e de aplicativos.
 
@@ -86,4 +86,4 @@ Um servidor de relatório do SQL Server Reporting Services instalado no modo do 
  [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Requisitos de hardware e software para a instalação do SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

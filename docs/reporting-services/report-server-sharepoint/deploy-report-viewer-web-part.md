@@ -1,7 +1,7 @@
 ---
-title: "Implantar a web part do Visualizador de relatórios em um site do SharePoint | Microsoft Docs"
+title: "Implantar a web part do Visualizador de relatórios do SQL Server Reporting Services em um site do SharePoint | Microsoft Docs"
 ms.custom: 
-ms.date: 09/15/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,27 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: ed93b0fd5161686becb4cca05c005fd281f2c176
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="deploy-the-report-viewer-web-part-on-a-sharepoint-site"></a>Implantar a web part do Visualizador de relatórios em um site do SharePoint
+# <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implantar a web part do Visualizador de relatórios do SQL Server Reporting Services em um site do SharePoint
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-A Web Part do Visualizador de relatórios é uma Web Part personalizada que pode ser usado para exibir relatórios do SQL Server Reporting Services (modo nativo) dentro de seu site do SharePoint. Você pode usar a Web Part para exibir, navegar, imprimir e exportar relatórios em um servidor de relatório. A Web Part do Visualizador de relatórios é associada a arquivos de definição (. RDL) de relatório que são processados por um servidor de relatório do SQL Server Reporting Services ou um servidor de relatório do Power BI. Esta web part do Visualizador de relatórios não pode ser usado com relatórios do Power BI hospedados no servidor de relatório do Power BI.
+A web part do Visualizador de relatórios é uma parte da web personalizado que pode ser usada para exibir relatórios do SQL Server Reporting Services (modo nativo) dentro de seu site do SharePoint. Você pode usar a web part para exibir, navegar, imprimir e exportar relatórios em um servidor de relatório. A web part do Visualizador de relatórios está associada a arquivos de definição (. RDL) de relatório que são processados por um servidor de relatório do SQL Server Reporting Services ou um servidor de relatório do Power BI. Esta web part do Visualizador de relatórios não pode ser usado com relatórios do Power BI hospedados no servidor de relatório do Power BI.
 
 Use as instruções a seguir para implantar manualmente o pacote de solução que adiciona a web part do Visualizador de relatórios para um ambiente do SharePoint Server 2013 ou SharePoint Server 2016. Implantar a solução é uma etapa necessária para configurar a web part.
 
 **A web part do Visualizador de relatórios é um pacote de solução autônoma e não está associada com o modo integrado do SharePoint para SQL Server Reporting Services.**
 
 ## <a name="requirements"></a>Requisitos
-
-**Sistemas operacionais com suporte:**  
-* Windows Server 2008 R2 SP1 e posterior
 
 **Suporte a versões de servidor do SharePoint:**  
 * SharePoint Server 2016
@@ -48,7 +45,7 @@ Use as instruções a seguir para implantar manualmente o pacote de solução qu
 
 A web part do Visualizador de relatórios está disponível no Microsoft Download Center.
 
-[Baixe o pacote de solução web part Visualizador de relatórios](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
+[Baixe o pacote de solução web part Visualizador de relatórios](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>Implantar a solução de farm
 
@@ -84,15 +81,15 @@ Esta seção mostra como implantar o pacote de solução em seu farm do SharePoi
 
     ![Configurações de site do ícone de engrenagem.](media/sharepoint-site-settings.png)
 
-    Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que você geralmente pode acessar um site do SharePoint digitando *http://<computer name> * para abrir o conjunto de sites raiz.
+    Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que você geralmente pode acessar um site do SharePoint digitando *http://<computer name>*  para abrir o conjunto de sites raiz.
 
 3. Em **administração do conjunto de sites**, selecione **recursos de coleção de sites**.
 
-4. Role a página até encontrar o **Web Part do Visualizador de relatórios** recurso.
+4. Role a página até encontrar o **web part do Visualizador de relatórios** recurso.
 
 5. Selecione **Ativar**.
 
-    ![Ativar o recurso de Web Part do Visualizador de relatórios](media/web-part-activiate-feature.png)
+    ![Ativar o recurso de web part do Visualizador de relatórios](media/web-part-activiate-feature.png)
 
 6. Repita para outros conjuntos de sites, abrindo cada site e clicando em ações do Site.
 
@@ -124,9 +121,9 @@ Cancelamento da solução não remove a web part do Visualizador de relatórios 
 
     ![Configurações de site do ícone de engrenagem.](media/sharepoint-site-settings.png)
 
-    Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que você geralmente pode acessar um site do SharePoint digitando *http://<computer name> * para abrir o conjunto de sites raiz.
+    Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que você geralmente pode acessar um site do SharePoint digitando *http://<computer name>*  para abrir o conjunto de sites raiz.
 
-2. Em **Web Designer galerias**, selecione **Web parts**.
+2. Em **Web Designer galerias**, selecione **web parts**.
 
 3. Selecione o **ícone Editar** lado **ReportViewerNativeMode.dwp**. Não podem ser listado na primeira página de resultados.
 
@@ -134,7 +131,23 @@ Cancelamento da solução não remove a web part do Visualizador de relatórios 
 
     ![Editar e excluir a web part do modo nativo do Visualizador de relatórios](media/report-viewer-native-mode-edit-delete.png)
 
-Tentativa de exclusão da web part usando o PowerShell, mas não é um comando direto para ele. Para obter um exemplo de script, consulte [como excluir Web Parts da Galeria de Web Parts](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+Tentativa de exclusão da web part usando o PowerShell, mas não é um comando direto para ele. Para obter um exemplo de script, consulte [como excluir web parts da Galeria de web parts](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+
+## <a name="supported-languages"></a>Idiomas com suporte
+
+Os idiomas a seguir têm suporte com a web part:
+
+* Inglês (en)
+* Alemão (de)
+* Espanhol (sp)
+* Francês (fr)
+* Italiano ()
+* Japonês (ja)
+* Coreano (ko)
+* Português (Portugal)
+* Russo (ru)
+* Chinês (simplificado - zh-HANS e zh-CHS)
+* Chinês (tradicional - zh-HANT e zh-CHT)
 
 ## <a name="next-steps"></a>Próximas etapas
 

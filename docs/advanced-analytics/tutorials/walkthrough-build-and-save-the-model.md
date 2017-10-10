@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 437ec62abb0107e8a70926fd60d0c54cc6064122
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 281f5026bc3aa7dc67cff418eb0868eeb81bc80a
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Criar um modelo de R e salvar para o SQL Server
@@ -146,8 +146,9 @@ Nesta seção, você experimentará com ambas as técnicas.
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
+    ```
 
-3. Generate a local plot, based on the values stored in the output variable `pred`.
+3. Gerar um gráfico de local, com base nos valores armazenados na variável de saída `pred`.
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -232,10 +233,10 @@ A próxima e final lição, você aprenderá a executar pontuação usando o mod
 
 ## <a name="next-lesson"></a>Próxima lição
 
-[Implantar o modelo de R e usar em SQL](/walkthrough-deploy-and-use-the-model.md)
+[Implantar o modelo de R e usar em SQL](walkthrough-deploy-and-use-the-model.md)
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Criar recursos de dados usando R e SQL](/walkthrough-create-data-features.md)
+[Criar recursos de dados usando R e SQL](walkthrough-create-data-features.md)
 
 

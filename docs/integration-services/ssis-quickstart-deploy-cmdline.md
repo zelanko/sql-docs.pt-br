@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implantar um projeto do SSIS no prompt de comando com ISDeploymentWizard.exe
 Este tutorial de início rápido demonstra como implantar um projeto do SSIS no prompt de comando executando o Assistente de implantação do Integration Services, `ISDeploymentWizard.exe`.
 
-Para obter mais informações sobre o Assistente de implantação do Integration Services, consulte [Assistente de implantação do Integration Services](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+Para obter mais informações sobre o Assistente de implantação do Integration Services, consulte [Assistente de implantação do Integration Services](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Iniciar o Assistente de implantação do Integration Services
 1. Abra uma janela do prompt de comando.
@@ -46,7 +46,7 @@ Para obter mais informações sobre o Assistente de implantação do Integration
   
 5.  Depois que o processo de implantação estiver concluído, o **resultados** página será aberta. Essa página exibe o êxito ou a falha de cada ação.
     -   Se a ação falhou, clique em **falha** no **resultados** coluna para exibir uma explicação do erro.
-    -   Opcionalmente, clique em **Salvar relatório... ** para salvar os resultados em um arquivo XML.
+    -   Opcionalmente, clique em **Salvar relatório...**  para salvar os resultados em um arquivo XML.
     -   Clique em **fechar** para sair do assistente.
 
 ## <a name="next-steps"></a>Próximas etapas

@@ -1,7 +1,7 @@
 ---
 title: "Definir opções de processamento (Reporting Services no modo integrado do SharePoint) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,52 +10,38 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SharePoint integration [Reporting Services], content management
-- snapshots [Reporting Services], creating
-ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
-caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 645e4258f9185f748af496aa37aff13af08ce2a7
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Definir opções de processamento (Reporting Services no modo integrado do SharePoint)
-  Você pode definir opções de processamento em um relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para determinar quando ocorre o processamento de dados. Pode também definir um valor de tempo limite para o processamento de relatórios, além de opções que determinam se o histórico de relatórios está habilitado para o relatório atual.  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  Você pode definir opções de processamento em um relatório do Reporting Services para determinar quando ocorre o processamento de dados. Pode também definir um valor de tempo limite para o processamento de relatórios, além de opções que determinam se o histórico de relatórios está habilitado para o relatório atual.  
   
 -   Você pode executar um relatório como instantâneo de relatório para evitar que o relatório seja executado em momentos arbitrários (durante um backup agendado, por exemplo). Um instantâneo de relatório normalmente é criado e, em seguida, atualizado de acordo com um agendamento, permitindo marcar o horário exato em que ocorrerá o processamento de dados e do relatório. Se um relatório basear-se em consultas cujo processamento seja demorado ou que utilizem dados de uma fonte de dados que prefira que não seja acessada durante determinadas horas, você deverá executar o relatório como instantâneo.  
   
 -   Um servidor de relatório pode armazenar em cache uma cópia de um relatório processado e devolvê-la quando um usuário abrir o relatório. O armazenamento em cache é uma técnica de aprimoramento de desempenho. O armazenamento em cache pode diminuir o tempo necessário para recuperar um relatório, caso ele seja grande ou acessado frequentemente.  
   
 -   Um histórico de relatórios é uma coleção de cópias de um relatório executadas anteriormente. É possível usar o histórico de relatórios para manter ao longo do tempo um registro de um relatório. Um histórico de relatórios não se destina a relatórios que contenham dados confidenciais ou pessoais. Por este motivo, um histórico de relatórios pode incluir somente os relatórios que consultem uma fonte de dados utilizando um conjunto único de credenciais (armazenadas ou usadas para a execução de um relatório de forma autônoma) disponível para todos os usuários que executem um relatório.  
-  
-    > [!NOTE]  
-    >  A Integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com o SharePoint utiliza recursos de gerenciamento de inserção e extração de conteúdo do SharePoint para salvar atualizações em tipos de conteúdo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. isso inclui a criação de instantâneos de relatórios. Portanto, se você ativou o controle de versões em uma biblioteca de documentos, verá a versão de relatório atualizada quando um novo instantâneo de histórico de relatórios for criado. Esse é um efeito colateral de atualizar instantâneos. Quando um instantâneo é atualizado, ele faz com que a propriedade LastExecution do relatório se altere, e isso causa uma alteração na versão do relatório.  
-  
+
+    Integração do Reporting Services com o SharePoint usa o check-out e check-in de recursos de gerenciamento de conteúdo do SharePoint para salvar atualizações em tipos de conteúdo do Reporting Services. isso inclui a criação de instantâneos de relatórios. Portanto, se você ativou o controle de versões em uma biblioteca de documentos, verá a versão de relatório atualizada quando um novo instantâneo de histórico de relatórios for criado. Esse é um efeito colateral de atualizar instantâneos. Quando um instantâneo é atualizado, ele faz com que a propriedade LastExecution do relatório se altere, e isso causa uma alteração na versão do relatório.  
+
 -   Você pode especificar valores de tempo limite para definir limites para o uso dos recursos do sistema.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint|  
-  
- **Neste tópico:**  
-  
--   [Para definir opções de atualização de dados](#bkmk_set_data_refresh)  
-  
--   [Para definir opções de cache de relatório](#bkmk_set_report_caching)  
-  
--   [Para definir valores de tempo limite de processamento](#bkmk_set_processing)  
-  
--   [Para definir opções e limites de histórico de relatórios](#bkmk_set_report_history)  
-  
--   [Definir tempo limite de banco de dados](#bkmk_set_database_timeout)  
-  
-##  <a name="bkmk_set_data_refresh"></a> Para definir opções de atualização de dados  
+
+> [!NOTE]
+> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+
+## <a name="set-data-refresh-options"></a>Definir opções de atualização de dados
   
 1.  Aponte para um relatório na biblioteca.  
   
@@ -71,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Em **Opções de Instantâneo de Dados**, selecione **Criar ou atualizar o instantâneo quando esta página for salva** se você quiser criar imediatamente dados de instantâneo para serem usados com o relatório, sem aguardar o processamento de dados agendado.  
   
-##  <a name="bkmk_set_report_caching"></a> Para definir opções de cache de relatório  
+## <a name="set-report-caching-options"></a>Definir opções de cache de relatório
   
 1.  Aponte para um relatório na biblioteca.  
   
@@ -87,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Crie uma agenda compartilhada para limpar o cache em um horário especificado por você.  
   
-##  <a name="bkmk_set_processing"></a> Para definir valores de tempo limite de processamento  
+## <a name="set-processing-time-out-values"></a>Definir valores de tempo limite de processamento
   
 1.  Aponte para um relatório na biblioteca.  
   
@@ -95,7 +81,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Em **Tempo Limite de Processamento**, selecione **Usar a configuração padrão do site** se você quiser usar o valor especificado no nível do servidor de relatório. Caso contrário, selecione **Não especificar tempo limite para processamento de relatório** ou **Limitar o processamento de relatórios em segundos** se quiser substituir esse valor para que não haja tempo limite ou para que haja outros valores de tempo limite.  
   
-##  <a name="bkmk_set_report_history"></a> Para definir opções e limites de histórico de relatórios  
+## <a name="set-report-history-options-and-limits"></a>Definir opções e limites de histórico de relatórios
   
 1.  Aponte para um relatório na biblioteca.  
   
@@ -105,13 +91,14 @@ ms.lasthandoff: 08/09/2017
   
 4.  Em **Limites de Instantâneo de Histórico**, selecione **Usar a configuração padrão do site** se desejar usar o valor especificado no nível do servidor de relatório. Caso contrário, selecione **Não limitar o número de instantâneos** ou **Limitar o número de instantâneos** para especificar um valor personalizado.  
   
-##  <a name="bkmk_set_database_timeout"></a> Definir tempo limite de banco de dados  
+## <a name="set-database-timeout"></a>Definir tempo limite de banco de dados
   
-1.  Use o Windows PowerShell para definir o tempo limite de banco de dados de um servidor de relatório do SharePoint. Para obter mais informações, consulte a seção "Obter e definir Propriedades do banco de dados do aplicativo de serviço de relatório" [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+*  Use o Windows PowerShell para definir o tempo limite de banco de dados de um servidor de relatório do SharePoint. Para obter mais informações, consulte a seção "Obter e definir Propriedades do banco de dados do aplicativo de serviço de relatório" [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="next-steps"></a>Próximas etapas
+
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Cache de relatórios &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Definindo valores de tempo limite para o relatório e processamento de conjunto de dados compartilhado &#40; SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
-  
-  
+ [Armazenando relatórios em cache](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Definindo valores de tempo limite para processamento de relatório e conjunto de dados compartilhado](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Agendar a execução de um pacote do SSIS no Azure
@@ -58,13 +58,13 @@ Para agendar um pacote com o SQL Server Agent no local, crie um trabalho com uma
 
 ## <a name="elastic"></a>Agendar um pacote com trabalhos Elástico de banco de dados SQL
 
-Para obter mais informações sobre trabalhos Elásticos no banco de dados SQL, consulte [Gerenciando bancos de dados de nuvem expansíveis](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Para obter mais informações sobre trabalhos Elásticos no banco de dados SQL, consulte [Gerenciando bancos de dados de nuvem expansíveis](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
 Antes de usar trabalhos Elásticos para agendar pacotes do SSIS no banco de dados de catálogo do SSISDB em um servidor de banco de dados SQL, você deve fazer o seguinte:
 
-1.  Instalar e configurar os componentes de trabalhos do banco de dados Elástico. Para obter mais informações, consulte [visão geral da instalação do banco de dados Elástico trabalhos](/azure/sql-database/sql-database-elastic-jobs-service-installation.md).
+1.  Instalar e configurar os componentes de trabalhos do banco de dados Elástico. Para obter mais informações, consulte [visão geral da instalação do banco de dados Elástico trabalhos](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Crie credenciais no escopo do banco de dados que os trabalhos podem usar para enviar comandos para o banco de dados de catálogo do SSIS. Para obter mais informações, consulte [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -110,7 +110,7 @@ Para agendar um pacote com a atividade de procedimento armazenado do Azure Data 
 3.  Crie um conjunto de dados de saída que orienta o agendamento.
 4.  Crie um pipeline da fábrica de dados que usa a atividade de procedimento armazenado do SQL Server para executar o pacote do SSIS.
 
-Esta seção fornece uma visão geral dessas etapas. Um tutorial completo de fábrica de dados está além do escopo deste artigo. Para obter mais informações, consulte [a atividade de procedimento armazenado do SQL Server](/azure/data-factory/data-factory-stored-proc-activity.md).
+Esta seção fornece uma visão geral dessas etapas. Um tutorial completo de fábrica de dados está além do escopo deste artigo. Para obter mais informações, consulte [a atividade de procedimento armazenado do SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Criar um serviço vinculado do banco de dados SQL que hospeda o SSISDB
 O serviço vinculado permite que a fábrica de dados se conectar ao SSISDB.
@@ -221,4 +221,4 @@ Para obter mais informações sobre o código nesse script, consulte [implantar 
 ## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações sobre o SQL Server Agent, consulte [trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).
 
-Para obter mais informações sobre trabalhos Elásticos no banco de dados SQL, consulte [Gerenciando bancos de dados de nuvem expansíveis](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Para obter mais informações sobre trabalhos Elásticos no banco de dados SQL, consulte [Gerenciando bancos de dados de nuvem expansíveis](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).

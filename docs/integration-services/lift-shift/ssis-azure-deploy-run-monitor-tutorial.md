@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: c6018dbd63e9762b974ddc05995d5d2e3622ee26
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Implantar, executar e monitorar um pacote do SSIS no Azure
@@ -22,7 +22,7 @@ Este tutorial mostra como implantar um projeto do SQL Server Integration Service
 
 Antes de começar, verifique se que você tem a versão mais recente do SQL Server Management Studio ou 17.2. Para baixar a versão mais recente do SSMS, consulte [baixar o SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Verifique também se você configurar o banco de dados do SSISDB e provisionado o tempo de execução de integração do Azure SSIS. Para obter informações sobre como provisionar SSIS no Azure, consulte [comparar e deslocar pacotes do SQL Server Integration Services (SSIS) para o Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Verifique também se você configurar o banco de dados do SSISDB e provisionado o tempo de execução de integração do Azure SSIS. Para obter informações sobre como provisionar SSIS no Azure, consulte [comparar e deslocar pacotes do SQL Server Integration Services (SSIS) para o Azure](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Conecte-se ao banco de dados SSISDB
 
@@ -77,7 +77,7 @@ Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu 
   
 5.  Depois que o processo de implantação estiver concluído, o **resultados** página será aberta. Essa página exibe o êxito ou a falha de cada ação.
     -   Se a ação falhou, selecione **falha** no **resultados** coluna para exibir uma explicação do erro.
-    -   Opcionalmente, selecione **Salvar relatório... ** para salvar os resultados em um arquivo XML.
+    -   Opcionalmente, selecione **Salvar relatório...**  para salvar os resultados em um arquivo XML.
     -   Selecione **fechar** para sair do assistente.
 
 ## <a name="run-a-package"></a>Executar um pacote
@@ -86,7 +86,7 @@ Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu 
 
 2. Clique com botão direito e selecione **Execute** para abrir o **executar pacote** caixa de diálogo.
 
-3.  No **executar pacote** caixa de diálogo caixa, configure a execução do pacote, usando as configurações no **parâmetros**, **gerenciadores de Conexão**, e **avançado ** guias.
+3.  No **executar pacote** caixa de diálogo caixa, configure a execução do pacote, usando as configurações no **parâmetros**, **gerenciadores de Conexão**, e **avançado**  guias.
 
 4.  Selecione **Okey** para executar o pacote.
 
