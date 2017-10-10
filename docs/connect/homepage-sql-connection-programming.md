@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
 ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page do cliente de programação para o Microsoft SQL Server
@@ -52,9 +52,9 @@ Na tabela a seguir, cada imagem de idioma é um link para detalhes sobre como us
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[! [C# logotipo] [imagem-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[! [ORM do Entity Framework, do .NET Framework] [imagem-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[! [Logotipo de Java] [imagem-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[! [Node. js logotipo] [-ref-340-nó de imagem]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[! [Logotipo PHP] [imagem-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[! [Logotipo Python] [imagem-ref-370-python]](#an-180-python-docu) | &nbsp;[! [Ruby logotipo] [imagem-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp;[ ![C# logotipo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM do Entity Framework, do .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Logotipo de Java][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp;[ ![Logotipo Node. js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![Logotipo PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Logotipo Python][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Logotipo ruby][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -103,7 +103,7 @@ EF não tem relação direta ou indireta com as seguintes tecnologias:
 
 - .NET Framework
 - [O LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), ou [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Aprimoramentos da sintaxe de linguagem, como o ** => ** operador em c#.
+- Aprimoramentos da sintaxe de linguagem, como o  **=>**  operador em c#.
 - Programas útil geram código-fonte para classes que mapeiam para as tabelas no banco de dados SQL. Por exemplo, [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
