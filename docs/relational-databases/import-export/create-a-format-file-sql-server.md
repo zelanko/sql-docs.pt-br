@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Para obter mais informações sobre como usar dados de caractere Unicode, veja [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Usando um formato de arquivo com a opção de página de código  
- Se você criar um arquivo de formato usando o comando bcp (ou seja, usando "`bcp forma`t..." ), informações sobre o agrupamento/página de código serão gravadas no arquivo de formato.   
+Se você criar um arquivo de formato usando o comando bcp (isto é, usando `bcp format`), as informações sobre o agrupamento/página de código serão gravadas no arquivo de formato.   
 O arquivo de formato de exemplo a seguir, para uma tabela com 5 colunas, inclui o agrupamento.  
   
 ```  

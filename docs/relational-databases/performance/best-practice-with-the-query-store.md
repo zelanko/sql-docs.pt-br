@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
@@ -323,11 +323,11 @@ Se você renomear um banco de dados, a imposição de plano falhará, causando r
 
 ##  <a name="Recovery"></a> Use sinalizadores de rastreamento em servidores de missão crítica para melhorar a recuperação de desastre
  
-  Os sinalizadores de rastreamento global 7745 e 7752 podem ser usados para melhorar o desempenho do Repositório de Consultas durante cenários de recuperação de desastres e alta disponibilidade.
+  Os sinalizadores de rastreamento global 7745 e 7752 podem ser usados para melhorar o desempenho do Repositório de Consultas durante cenários de recuperação de desastres e alta disponibilidade. Para obter mais informações, consulte [Sinalizadores de rastreamento](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   O sinalizador de rastreamento 7745 impedirá o comportamento padrão em que o Repositório de Consultas grava dados em disco antes que o SQL Server possa ser desligado.
   
-  O sinalizador de rastreamento 7752 permite ao SQL Server executar consultas antes que o Repositório de Consultas tenha sido totalmente carregado. O comportamento padrão do Repositório de Consultas impede que consultas sejam executadas antes que o Repositório de Consultas tenha sido recuperado.
+  O sinalizador de rastreamento 7752 habilita o carregamento assíncrono do Repositório de Consultas e também permite que o SQL Server execute consultas antes que o Repositório de Consultas seja totalmente carregado. O comportamento padrão do Repositório de Consultas impede que consultas sejam executadas antes que o Repositório de Consultas tenha sido recuperado.
 
 ## <a name="see-also"></a>Consulte também  
  [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

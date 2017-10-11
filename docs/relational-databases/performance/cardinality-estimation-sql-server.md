@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
@@ -59,7 +59,7 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- Para um banco de dados do SQL Server definido no nível de compatibilidade 120 ou acima, a ativação do [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 força o sistema a usar o CE versão 70.  
+ Para um banco de dados do SQL Server definido no nível de compatibilidade 120 ou acima, a ativação do [sinalizador de rastreamento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) força o sistema a usar o CE versão 70.  
   
  **CE herdada:** para um banco de dados do SQL Server definido no nível de compatibilidade 120 e acima, o CE versão 70 pode ser ativado usando o nível do banco de dados usando [ALTERAR A CONFIGURAÇÃO NO ESCOPO DO BANCO DE DADOS](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
@@ -83,7 +83,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **Repositório de consultas:**a partir do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, o repositório de consultas é uma ferramenta útil para examinar o desempenho de suas consultas.  No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe), no **Pesquisador de Objetos** sob o nó de banco de dados, um nó **Repositório de Consultas** é exibido quando o repositório de consultas está ativado.  
+ **Repositório de consultas:** a começar no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o repositório de consultas é uma ferramenta útil para examinar o desempenho de suas consultas. No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], no **Pesquisador de Objetos**, no nó do seu banco de dados, um nó **Repositório de Consultas** é exibido quando o repositório de consultas está habilitado.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -103,9 +103,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > Recomendamos que você instale a versão mais recente do [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx) mensalmente.  
+ > É recomendado instalar a versão mais recente do [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) e atualizá-lo com frequência.  
   
- Outra opção para acompanhar o processo de estimativa de cardinalidade é usar o evento estendido chamado **query_optimizer_estimate_cardinality**.  O exemplo de código T-SQL a seguir é executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele grava um arquivo .xel em C:\Temp\ (embora o caminho possa ser alterado). Quando você abre o arquivo .xel no SSMS, as informações detalhadas são exibidas de forma amigável.  
+ Outra opção para acompanhar o processo de estimativa de cardinalidade é usar o evento estendido chamado **query_optimizer_estimate_cardinality**. O exemplo de código T-SQL a seguir é executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele grava um arquivo .xel em C:\Temp\ (embora o caminho possa ser alterado). Quando você abre o arquivo .xel no [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], as informações detalhadas são exibidas de forma amigável.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -134,7 +134,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- Para obter informações sobre eventos estendidos adaptados para o Banco de Dados SQL do Azure, veja [Eventos estendidos no Banco de Dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+ Para obter informações sobre eventos estendidos adaptados para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], veja [Eventos estendidos no Banco de Dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
   
 ## <a name="steps-to-assess-the-ce-version"></a>Etapas para avaliar a versão da CE  

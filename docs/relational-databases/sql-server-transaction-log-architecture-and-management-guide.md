@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
@@ -66,8 +66,15 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="physical_arch"></a> Arquitetura física de log de transações  
  O log de transações em um banco de dados mapeia um ou mais arquivos físicos. Conceitualmente, o arquivo de log é uma cadeia de caracteres de registros de log. Fisicamente, a sequência de registros de log é armazenada com eficiência no conjunto de arquivos físicos que implementam o log de transações. Deve haver, no mínimo, um arquivo de log para cada banco de dados.  
   
- O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divide cada arquivo de log físico interiormente em vários arquivos de log virtuais. Os arquivos de log virtuais não têm tamanho fixo e não há número fixo de arquivos de log virtuais para um arquivo de log físico. O [!INCLUDE[ssDE](../includes/ssde-md.md)] escolhe o tamanho dos arquivos de log virtuais dinamicamente enquanto está criando ou estendendo os arquivos de log. O [!INCLUDE[ssDE](../includes/ssde-md.md)] tenta manter um pequeno número de arquivos virtuais. O tamanho dos arquivos virtuais depois que um arquivo de log for estendido é a soma do tamanho do log existente com o tamanho do incremento do arquivo novo. O tamanho ou o número de arquivos de log virtuais não pode ser configurado nem definido por administradores.  
-  
+ O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divide cada arquivo de log físico internamente em vários VLFs (arquivos de log virtuais). Os arquivos de log virtuais não têm tamanho fixo e não há número fixo de arquivos de log virtuais para um arquivo de log físico. O [!INCLUDE[ssDE](../includes/ssde-md.md)] escolhe o tamanho dos arquivos de log virtuais dinamicamente enquanto está criando ou estendendo os arquivos de log. O [!INCLUDE[ssDE](../includes/ssde-md.md)] tenta manter um pequeno número de arquivos virtuais. O tamanho dos arquivos virtuais depois que um arquivo de log for estendido é a soma do tamanho do log existente com o tamanho do incremento do arquivo novo. O tamanho ou o número de arquivos de log virtuais não pode ser configurado nem definido por administradores.  
+
+> [!NOTE]
+> A criação do VLF segue este método:
+> - Se o próximo crescimento for menor que 1/8 do tamanho físico do log atual, crie 1 VLF que abranja o tamanho do crescimento (começando com [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
+> - Se o crescimento for menor que 64 MB, crie 4 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 1 MB, crie quatro VLFs de 256 KB)
+> - Se o crescimento for de 64 MB a 1 GB, crie 8 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 512 MB, crie oito VLFs de 64 MB)
+> - Se o crescimento for maior que 1 GB, crie 16 VLFs que abranjam o tamanho do crescimento (por exemplo, para um crescimento de 8 GB, crie dezesseis VLFs de 512 MB)
+
  O único momento em que arquivos de log virtuais afetam o desempenho do sistema é quando os arquivos de log físicos são definidos por valores baixos de *size* e *growth_increment* . O valor de *size* é o tamanho inicial do arquivo de log e o valor de *growth_increment* é a quantidade de espaço adicionada ao arquivo sempre que um novo espaço é necessário. Se os arquivos de log ficarem grandes por causa de diversos incrementos pequenos, eles terão muitos arquivos de log virtuais. Isso pode reduzir a velocidade de inicialização do banco de dados e também das operações de backup e restauração de log. Recomendamos que você atribua aos arquivos de log um valor de *size* próximo ao tamanho final necessário e também que tenha um valor de *growth_increment* relativamente grande. Para obter mais informações sobre esses parâmetros, consulte [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
  O log de transações é um arquivo embrulhado. Por exemplo, considere um banco de dados com um arquivo de log físico dividido em quatro arquivos de log virtuais. Quando o banco de dados é criado, o arquivo de log lógico começa no início do arquivo de log físico. Novos registros de log são adicionados no final do log lógico e expandem para o final do log físico. O truncamento de logs libera quaisquer logs virtuais cujos registros apareçam todos na frente do número mínimo de sequência de recuperação do log (MinLSN). O *MinLSN* é o número de sequência de log do registro de log mais antigo que deve estar presente para o êxito de uma reversão de todo o banco de dados. O log de transações no banco de dados de exemplo pareceria semelhante ao apresentado na ilustração a seguir.  
@@ -82,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Se a configuração de FILEGROWTH estiver habilitada para o log e houver espaço disponível no disco, o arquivo será estendido na quantidade especificada no parâmetro *growth_increment* e os novos registros de log serão adicionados à extensão. Para obter mais informações sobre a configuração de FILEGROWTH, consulte [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
--   Se a configuração de FILEGROWTH não estiver habilitada ou se o disco que estiver mantendo o arquivo de log tiver menos espaço livre do que a quantidade especificada em *growth_increment*, será gerado um erro 9002.  
+-   Se a configuração de FILEGROWTH não estiver habilitada ou se o disco que estiver mantendo o arquivo de log tiver menos espaço livre do que a quantidade especificada em *growth_increment*, será gerado um erro 9002. Consulte [Solução de problemas em um log de transações completo](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) para obter mais informações.  
   
  Se o log contiver diversos arquivos de log físico, o log lógico percorrerá todos os arquivos de log físico antes de voltar ao início do primeiro arquivo de log físico.  
   
@@ -106,7 +113,7 @@ ms.lasthandoff: 08/09/2017
  O truncamento de log pode ser atrasado por uma variedade de fatores. No caso de uma demora longa em truncamento de log, o log de transações pode ficar cheio. Para obter informações, consulte [Fatores que podem atrasar o truncamento de log](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) e [Solução de problemas de um log de transação completa &#40;Erro do SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
 ##  <a name="WAL"></a> Log de transações write-ahead  
- Esta seção descreve a função do log de transações write-ahead no registro de modificações de dados no disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa um WAL (log write-ahead), que garante que nenhuma modificação de dados seja gravada no disco antes de o registro de log associado ser gravado no disco. Isso mantém as propriedades ACID de uma transação.  
+ Esta seção descreve a função do log de transações write-ahead no registro de modificações de dados no disco. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa um algoritmo WAL (log write-ahead), que garante que nenhuma modificação de dados seja gravada no disco antes de o registro de log associado ser gravado no disco. Isso mantém as propriedades ACID de uma transação.  
   
  Para entender como o log write-ahead funciona, é importante saber como os dados modificados são gravados em disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantém um cache de buffer em que ele lê páginas de dados quando dados precisam ser recuperados. Quando uma página é modificada no cache do buffer, não é gravada imediatamente de volta no disco. Em vez disso, a página é marcada como *suja*. Uma página de dados pode ter mais de uma gravação lógica feita antes de ser gravada fisicamente no disco. Para cada gravação lógica, um registro de log de transações é inserido no cache de log que registra a modificação. Os registros de log devem ser gravados no disco antes de a página suja associada ser removida do cache do buffer e gravada no disco. O processo de ponto de verificação examina o cache do buffer periodicamente para buffers com páginas de um banco de dados especificado e grava todas as páginas sujas no disco. Os pontos de verificação economizam tempo durante uma recuperação posterior, pois criam um ponto em que todas as páginas sujas são gravadas no disco.  
   
@@ -217,8 +224,11 @@ O Log Reader Agent monitora o log de transações de cada banco de dados configu
 ## <a name="additional-reading"></a>Leitura adicional  
  Recomendamos a leitura dos artigos e livros a seguir, que fornecem mais informações sobre o log de transações.  
   
- [Noções básicas sobre registro em log e recuperação no SQL Server, por Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
-  
+ [Gerenciar o tamanho do arquivo de log de transações](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+ [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+ [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+ [O log de transações &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
+ [Noções básicas sobre registro em log e recuperação no SQL Server, por Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
  [Gerenciamento de log de transações do SQL Server, por Tony Davis e Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   
