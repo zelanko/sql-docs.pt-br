@@ -26,10 +26,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f594525c8d79e53b6b4ae1b223ab9b50e85e6a5d
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importar Dados em Massa Usando BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
@@ -37,7 +37,8 @@ ms.lasthandoff: 10/04/2017
 
   Este tópico fornece uma visão geral de como usar a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e a instrução INSERT...SELECT * FROM OPENROWSET(BULK...) para importação em massa de dados de um arquivo de dados em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico também descreve considerações de segurança sobre o uso de BULK INSERT e OPENROWSET(BULK...) e o uso desses métodos para importação em massa de uma fonte de dados remotos.  
   
-> **OBSERVAÇÃO** Quando você usa BULK INSERT ou OPENROWSET(BULK...), é importante entender como a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata a representação. Para obter mais informações, consulte "Considerações sobre segurança", posteriormente neste tópico.  
+> [!NOTE]
+> Para usar BULK INSERT ou OPENROWSET(BULK...), é importante entender como a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controla a representação. Para obter mais informações, consulte "Considerações sobre segurança", posteriormente neste tópico.  
   
 ## <a name="bulk-insert-statement"></a>instrução BULK INSERT  
  BULK INSERT carrega dados de um arquivo de dados em uma tabela. Essa funcionalidade é semelhante àquela fornecida pela opção **in** do comando **bcp** ; no entanto, o arquivo de dados é lido pelo processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter uma descrição da sintaxe de BULK INSERT, consulte [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
@@ -120,7 +121,8 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 GO  
 ```  
   
-> **OBSERVAÇÃO** Essa restrição não se aplica ao utilitário **bcp** , pois o cliente lê o arquivo sem levar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em consideração.  
+> [!NOTE]
+> Essa restrição não se aplica ao utilitário **bcp** porque o cliente lê o arquivo independentemente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 7a79319a6488d3d13d02a5c297f1ee8a99d76806
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/27/2017
 -   BULK INSERT  
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
-  
- **Observação:** para saber mais, veja 
-  - [Importar e exportar dados em massa usando o utilitário bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
-   - [Importar dados em massa usando BULK INSERT ou OPENROWSET(BULK...)(SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-    - [Como importar o XML para o SQL Server com o componente Carregamento em Massa do XML.](https://support.microsoft.com/en-us/kb/316005)
-     - [Coleções de esquema XML (SQL Server)](../xml/xml-schema-collections-sql-server.md)
+
+Para obter mais informações, consulte os tópicos a seguir.
+- [Importar e exportar dados em massa usando o utilitário bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
+- [Importar dados em massa usando BULK INSERT ou OPENROWSET(BULK...)(SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
+- [Como importar o XML para o SQL Server com o componente Carregamento em Massa do XML.](https://support.microsoft.com/en-us/kb/316005)
+- [Coleções de esquema XML (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos são:  
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="sample-table"></a>Tabela de exemplo  
  Para testar o exemplo A abaixo, crie a tabela de exemplo `T`.  
   
-```  
+```sql
 USE tempdb  
 CREATE TABLE T (IntCol int, XmlCol xml);  
 GO  
@@ -79,8 +79,8 @@ GO
 #### <a name="sample-data-file"></a>Arquivo de dados de exemplo  
  Antes de poder executar o exemplo A, você deve criar um arquivo codificado UTF-8 (`C:\SampleFolder\SampleData3.txt`) que contenha a seguinte instância de exemplo que especifica o esquema de codificação `UTF-8` .  
   
-```  
-\<?xml version="1.0" encoding="UTF-8"?>  
+```xml  
+<?xml version="1.0" encoding="UTF-8"?>  
 <Root>  
           <ProductDescription ProductModelID="5">  
              <Summary>Some Text</Summary>  
@@ -91,7 +91,7 @@ GO
 #### <a name="example-a"></a>Exemplo A  
  Esse exemplo usa a opção `SINGLE_BLOB` em uma instrução `INSERT ... SELECT * FROM OPENROWSET(BULK...)` para importar dados de um arquivo nomeado como `SampleData3.txt` e inserir uma instância XML na tabela com uma coluna, tabela de exemplo `T`.  
   
-```  
+```sql
 INSERT INTO T(XmlCol)  
 SELECT * FROM OPENROWSET(  
    BULK 'c:\SampleFolder\SampleData3.txt',  
@@ -120,7 +120,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="sample-data-file"></a>Arquivo de dados de exemplo  
  O exemplo B usa uma versão modificada do arquivo de dados de exemplo `SampleData3.txt` do exemplo anterior. Para executar esse exemplo, modifique o conteúdo desse arquivo como indicado abaixo:  
   
-```  
+```xml
 <Root>  
           <ProductDescription ProductModelID="10">  
              <Summary>Some New Text</Summary>  
@@ -130,7 +130,7 @@ SELECT * FROM OPENROWSET(
   
 #### <a name="example-b"></a>Exemplo B  
   
-```  
+```sql  
 -- Query before update shows initial state of XmlCol values.  
 SELECT * FROM T  
 UPDATE T  
@@ -166,14 +166,14 @@ GO
 #### <a name="sample-data-file"></a>Arquivo de dados de exemplo  
  Antes de poder testar esse exemplo de importação em massa, crie um arquivo (`C:\temp\Dtdfile.xml`) que contém a seguinte instância de exemplo:  
   
-```  
+```xml 
 <!DOCTYPE DOC [<!ATTLIST elem1 attr1 CDATA "defVal1">]><elem1>January</elem1>  
 ```  
   
 #### <a name="sample-table"></a>Tabela de exemplo  
  O exemplo que C usa a tabela de exemplo `T1` , criada pela seguinte instrução `CREATE TABLE` :  
   
-```  
+```sql  
 USE tempdb;  
 CREATE TABLE T1(XmlCol xml);  
 GO  
@@ -182,7 +182,7 @@ GO
 #### <a name="example-c"></a>Exemplo C  
  Este exemplo usa `OPENROWSET(BULK...)` e especifica a opção `CONVERT` na cláusula `SELECT` para importar os dados XML do `Dtdfile.xml` na tabela de exemplo `T1`.  
   
-```  
+```sql
 INSERT T1  
   SELECT CONVERT(xml, BulkColumn, 2) FROM   
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
@@ -226,7 +226,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
   
  Esse exemplo mostra como usar esse terminador de campo na tabela de exemplo `xTable` . Para criar essa tabela exemplo, use a seguinte instrução `CREATE TABLE` :  
   
-```  
+```sql
 USE tempdb;  
 CREATE TABLE xTable (xCol xml);  
 GO  
@@ -246,7 +246,7 @@ GO
 #### <a name="example-d"></a>Exemplo D  
  Este exemplo usa o arquivo de formato `Xmltable.fmt` em uma instrução `BULK INSERT` para importar o conteúdo de um arquivo de dados XML chamado `Xmltable.dat`.  
   
-```  
+```sql
 BULK INSERT xTable   
 FROM 'C:\Xmltable.dat'  
 WITH (FORMATFILE = 'C:\Xmltable.fmt');  
@@ -258,7 +258,7 @@ GO
 ## <a name="bulk_export_xml_data"></a> Exportação em massa de dados XML  
  O exemplo abaixo usa o `bcp` para exportar dados XML em massa da tabela criada no exemplo anterior usando o mesmo arquivo de formato XML. No comando `bcp` abaixo, `<server_name>` e `<instance_name>` representam espaços reservados que devem ser substituídos com os valores apropriados:  
   
-```  
+```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  
 ```  
   
