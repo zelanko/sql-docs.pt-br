@@ -20,6 +20,7 @@
 ### [Fontes de dados com suporte](data-sources-supported-ssas-tabular.md)  
 ### [Tipos de dados com suporte](data-types-supported-ssas-tabular.md)  
 ### [Representação](impersonation-ssas-tabular.md)  
+### [Importar dados usando uma consulta nativa](ssas-import-query.md)
 ### [Importar dados – Fonte de dados relacional](ssas-import-data-relational-data-source.md)  
 ### [Importar dados – Fonte de dados multidimensional](ssas-import-data-multidimensional-data-source.md)  
 ### [Importar dados – Feed de dados](ssas-import-data-data-feed.md)  
