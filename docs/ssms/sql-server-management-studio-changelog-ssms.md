@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio – Changelog (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8675cc8601681a6915281c6d9ea1bfd618db7df6
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 9b477c4c755e98d5aaae6ba92f4a67ff4d02d190
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
 Este artigo fornece detalhes sobre atualizações, aprimoramentos e correções de bug para as versões atuais e anteriores do SSMS. Baixe [versões anteriores do SSMS abaixo](#previous-ssms-releases).
 
-## <a name="ssms-172download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.2](download-sql-server-management-studio-ssms.md)
 
+## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+Geralmente disponível| Número de build: 14.0.17199.0
+
+### <a name="enhancements"></a>Aprimoramentos
+
+- Adição do novo assistente "Importar arquivo simples" para simplificar a experiência de importação de arquivos CSV com uma estrutura inteligente, exigindo a mínima intervenção do usuário ou o mínimo conhecimento especializado do domínio. Para obter detalhes, consulte [Import Flat File to SQL Wizard](../relational-databases/import-export/import-flat-file-wizard.md) (Assistente para Importar arquivo simples no SQL).
+- Adição do nó "XEvent Profiler" ao Pesquisador de Objetos. Para obter detalhes, consulte [Use the SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md) (Usar o SSMS XEvent Profiler).
+- Atualização da filtragem e da categorização de esperas no relatório histórico de esperas do Painel de desempenho.
+- Adição da verificação de sintaxe da função “Prever”.
+- Adição da verificação de sintaxe das consultas de Gerenciamento de biblioteca externa.
+- Adição do suporte SMO para Gerenciamento de biblioteca externa.
+- Adição do suporte "Iniciar PowerShell" à janela "Servidores registrados" (requer um novo módulo do SQL PowerShell).
+- Sempre ativo: adição do [suporte a roteamento de somente leitura](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) para grupos de disponibilidade.
+- Adição de uma opção de enviar detalhes do rastreamento para a Janela de Saída para os logons do “Active Directory – suporte universal com MFA” (desativado por padrão, precisa ser ativado nas configurações do usuário em “Ferramentas > Opções > Serviços do Azure > Azure Cloud > Nível de rastreamento da Janela de Saída do ADAL”). 
+- Repositório de Consultas: 
+  - A interface do usuário do Repositório de Consultas poderá ser acessada mesmo quando o QDS estiver DESATIVADO contanto que o QDS tenha registrado algum dado.
+  - Agora a interface do usuário do Repositório de Consultas expõe a categorização de esperas em todos os relatórios existentes. Isso permitirá que os clientes desbloqueiem os cenários das Principais consultas de espera e muitos outros.
+- Realização da inclusão dos cabeçalhos dos parâmetros de script opcionais (desativada por padrão; pode ser habilitada nas configurações do usuário em “Ferramentas > Opções > Pesquisador de Objetos do SQL Server > Script > Incluir cabeçalho dos parâmetros de script”) – [Item do Connect 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
+- Marca "RC" removida.
+
+### <a name="bug-fixes"></a>Correções de bugs
+
+**SSMS geral**
+
+- XEvent: 
+   - Correção do problema em que o SSMS abre apenas parte dos eventos no arquivo .xel.
+   - Melhoria na experiência “Observar dados dinâmicos” quando o banco de dados padrão não é 'mestre' – [Item do Connect 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
+- Sempre ativo: correção do problema em que "Restaurar backups de log" pode falhar com o erro "O log deste conjunto de backup termina em LSN x, o que é muito cedo para ser aplicado ao banco de dados".
+- Monitor de atividade de trabalho: correção de ícones inconsistentes – [Item do Connect 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
+- Repositório de Consultas: correção do problema em que o usuário não pode escolher o intervalo de datas "personalizado" para relatórios do Repositório de Consultas. Vinculado aos itens do Connect abaixo.
+   - [Item do Connect 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
+   - [Item do Connect 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
+- Correção do problema no qual a caixa de diálogo de conexão não “limpa” o banco de dados usado mais recentemente quando as informações salvas têm um banco de dados nomeado e quando o usuário seleciona <default>.
+- Script de objeto:
+    - Correção de um problema no qual "Gerar script de banco de dados" não está funcionando e está gerando um erro quando o usuário tem um banco de dados DW em pausa no servidor, mas selecionou outro banco de dados que não é do DW e tentou gerar o script dele.
+    - Correção de um problema no qual o cabeçalho dos Procedimentos armazenados com script não estava correspondendo às configurações do script, resultando em um script incorreto – [Item do Connect 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784).
+    - Habilitação nova do "botão de Script" ao direcionar objetos do SQL Azure.
+    - Correção do problema no qual o SSMS não estava permitindo scripts para “Alterar” ou “Executar” em alguns objetos (UDF, Exibição, SP, Gatilho) quando conectado a um banco de dados SQL do Azure – [Item do Connect 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386).
+- Editor de consultas:
+  - Melhoria do intellisense ao direcionar bancos de dados SQL do Azure.
+  - Correção de um problema no qual as consultas falhavam devido a um token de autenticação expirado (Autenticação universal).
+  - Melhoria do intellisense ao trabalhar com bancos de dados SQL do Azure (particularmente, ao se conectar a um Banco de Dados SQL do Azure, a gramática T-SQL mais recente (140) será usada).
+  - Correção do problema no qual abrir uma janela de consulta com uma conexão com a um banco de dados que não é do DataWarehouse em um servidor faria todas as janelas de consulta subsequentes desse servidor com os bancos de dados do DataWarehouse gerarem vários erros sobre tipos/opções sem suporte.
+- Always On:
+   - Adição da coluna do modo de propagação ao painel do Sempre Ativo e à página de propriedades do grupo de disponibilidade.
+   - Correção do problema no qual não era possível criar um grupo de disponibilidade do Linux quando o primário está no Windows – [Item do Connect 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856).
+- Correção de vários problemas de “Memória insuficiente” no SSMS ao executar consultas – [Item do Connect 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190), [Item do Connect 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864).
+- Profiler: 
+   - Correção do problema no qual o Profiler não estava funcionado ao direcionar o SQL 2005.
+   - Correção do problema no qual o Profiler não estava respeitando a opção de conexão “confiar no certificado do servidor”.
+- Monitor de atividade: correção de um problema em que o Monitor de atividade não funciona quando indicado no SQL Server em execução no Linux.
+- Correção de um problema com a classe de Transferência do SMO no qual ela não transferiria os objetos da Fonte de dados externos nem do Formato de arquivo externo; agora os objetos desses tipos devem ser corretamente incluídos na transferência.
+- Servidores registrados:
+   - Habilitação da consulta multisservidor para servidores do agente do usuário (ela tentará usar o mesmo token para todo servidor do agente do usuário no grupo).
+- Autenticação universal do AD:
+   - Correção do problema no qual não havia suporte à autenticação do Azure AD.
+   - Correção do problema no qual o designer de tabela/exibição não estava funcionando.
+   - Correção do problema no qual “Selecionar as primeiras 1000 linhas” e “Editar as primeiras 200 linhas” não estavam funcionando.
+- Restauração do banco de dados: correção de um problema em que a restauração omite a última pasta no caminho ao mover arquivos para um local alternativo.
+- Assistente de compactação:
+   - Correção de um problema com o assistente para gerenciar a compactação para índices; correção de um problema no qual os assistentes para compactar dados estavam corrompidos para o SQL 2016 e anteriores.
+        https://connect.microsoft.com/SQLServer/feedback/details/3139342
+   - Adição do Assistente de compactação às tabelas e índices do Azure.
+- Plano de execução: 
+   - Correção de um problema em que os operadores PDW não eram reconhecidos.
+- Propriedades de servidor:
+   - Correção de um problema com a incapacidade de modificar a afinidade de processador do servidor.
+
+
+**AS (Analysis Services)**
+
+- Correção de inúmeros problemas com o Assistente de implantação para dar suporte a modelos de nível de compatibilidade 1400 de tabela e fontes de dados do Power Query.
+- Agora o Assistente de implantação pode ser implantado no AS Azure ao ser executado na Linha de comando.
+- Ao usar a Autenticação do Windows no AS Azure, agora o usuário verá o nome da conta de usuário no Pesquisador de Objetos corretamente.
+
+
+### <a name="known-issues-in-this-173-release"></a>Problemas conhecidos nesta versão 17.3:
+
+**SSMS geral**
+
+- A funcionalidade SSMS a seguir não é compatível com a autenticação do Azure AD usando o agente do usuário com MFA:
+   - O Orientador de Otimização do Mecanismo de Banco de Dados não é compatível com a autenticação do Azure AD; há um problema conhecido em que a mensagem de erro apresentada ao usuário está um pouco criptografada “Não foi possível carregar o arquivo ou assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" em vez da mensagem esperada “O Orientador de Otimização do Mecanismo de Banco de Dados não é compatível com o Banco de Dados SQL do Microsoft Azure. (DTAClient)”.
+- A tentativa de analisar uma consulta nos resultados do DTA resulta em erro: "o objeto deve implementar IConvertible. (mscorlib)".
+- *Consultas retornadas* está ausente na lista de relatórios do Repositório de Consultas no Pesquisador de Objetos.
+   - Solução alternativa: clique com o botão direito do mouse no nó **Repositório de Consultas** e selecione **Exibir consultas retornadas**.
+
+**IS (Integration Services)**
+
+- O [execution_path] em [catalog]. [event_messagea] não está correto para execuções de pacote no Scale Out. O [Execution_path] começa com "\Package" em vez do nome do objeto do executável do pacote. Ao exibir o relatório de visão geral de execuções de pacote no SSMS, o link do "Caminho de execução" na Visão geral de execução não funciona. A solução alternativa é clicar em "Exibir mensagens” no relatório de visão geral para verificar todas as mensagens do evento.
+
+
+## <a name="previous-ssms-releases"></a>Versões anteriores do SSMS
+
+Baixe versões anteriores do SSMS clicando nos links de título nas seções a seguir.
+
+## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![baixar](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Disponibilidade geral | Número de build: 14.0.17177.0
 
 ### <a name="enhancements"></a>Aprimoramentos
@@ -77,11 +172,11 @@ Disponibilidade geral | Número de build: 14.0.17177.0
   - Use CTRL+F
 
 
-### <a name="analysis-services-as"></a>Analysis Services (AS)
+**AS (Analysis Services)**
 
 - Nova seleção de membro de função AAD para usuários sem endereço de email em modelos do AS Azure no SSMS
 
-### <a name="integration-services-is"></a>Integration Services (IS)
+**IS (Integration Services)**
 
 - Nova coluna adicionada ("Contagem Executada") para o relatório de execução para SSIS
 
@@ -100,7 +195,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - O componente **Servidor Registrado** não dá suporte à autenticação do Azure AD.
   - Não há suporte para o **Orientador de Otimização do Mecanismo de Banco de Dados** para autenticação do Azure AD. Há um problema conhecido em que a mensagem de erro apresentada ao usuário não é útil: *Não foi possível carregar o arquivo ou assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* em vez da esperada *O Orientador de Otimização do Mecanismo de Banco de Dados não dá suporte ao Banco de Dados SQL do Microsoft Azure. (DTAClient)*.
 
-**AS**
+**AS (Analysis Services)**
 
 - Pesquisador de Objetos do SQL Server no SSAS não mostrará o nome de usuário de autenticação do Windows nas propriedades de conexão do AS Azure.
 
@@ -140,7 +235,8 @@ The connection is broken and recovery is not possible. The client driver attempt
 - DTA: Corrigido um problema em que o DTAEngine.exe termina com Corrompimento de Heap ao avaliar a função de partição com determinados valores de limite.
 
 
-Analysis Services (AS)
+**AS (Analysis Services)**
+
 - Corrigido um problema em que o Banco de dados de restauração do AS falha com um erro se o banco de dados tiver um nome diferente da ID
 - Corrigido um problema que fazia com que a janela de consulta DAX ignorasse a opção de menu para alternar para IntelliSense habilitado
 - Corrigido um problema que impedia a conexão com o SSAS por endereços de http/https do IIS msmdpump
@@ -149,14 +245,9 @@ Analysis Services (AS)
 - Corrigido um problema extremamente raro que poderia fazer com que a caixa de diálogo Excluir banco de dados gerasse um erro ao carregar
 - Corrigido um problema que poderia ocorrer ao tentar exibir partições no modelo de nível de compatibilidade 1400 contendo uma mistura de consulta de SQL e definições de partição M
 
-Integration Services (IS)
+**IS (Integration Services)**
 - Corrigido um problema em que os relatórios de informações de execução de catálogo do SSISDB não podiam ser exibidos
 - Problemas corrigidos no SSMS relacionados ao desempenho insatisfatório com uma grande quantidade de pacotes/projetos
-
-
-## <a name="previous-ssms-releases"></a>Versões anteriores do SSMS
-
-Baixe versões anteriores do SSMS clicando nos links de título nas seções a seguir.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![baixar](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 Disponibilidade geral | Número de build: 14.0.17119.0
@@ -544,7 +635,7 @@ Disponibilidade geral | Número de versão: 13.0.15500.91
 
 * *Edição, 5 de julho:* suporte aprimorado para bancos de dados de tabela do SQL Server 2016 (nível de compatibilidade 1200) na caixa de diálogo Processo do Analysis Services e no assistente de Implantação do Analysis Services.
 
-* *Edição, 5 de julho:* nova opção na caixa de diálogo 'opções de execução de consulta' no SSMS para definir 'XACT_ABORT'. Essa opção é habilitada por padrão nessa versão do SSMS e instrui o SQL Server a reverter a transação inteira e anular o lote se ocorrer um erro em tempo de execução.
+* *Edição, 5 de julho:* nova opção na caixa de diálogo 'opções de execução de consulta' no SSMS para definir 'XACT_ABORT'. Essa opção será habilitada por padrão nessa versão do SSMS e instruirá o SQL Server a reverter a transação inteira e anular o lote se ocorrer um erro em tempo de execução.
 
 * Suporte para SQL Azure Data Warehouse no SSMS.
 
@@ -554,7 +645,7 @@ Disponibilidade geral | Número de versão: 13.0.15500.91
 
 * Tempos de conexão significativamente aprimorados para bancos de dados do SQL Azure.
 
-* Novo diálogo 'Backup para URL' para dar suporte à criação de credenciais de armazenamento do Azure para backups de banco de dados do SQL Server 2016. Essa caixa de diálogo fornece uma experiência mais simplificada para armazenar os backups de banco de dados em uma conta de armazenamento do Azure.
+* Nova caixa de diálogo “Backup em URL” para dar suporte à criação de credenciais de armazenamento do Azure para backups de banco de dados do SQL Server 2016. Essa caixa de diálogo fornece uma experiência mais simplificada para armazenar os backups de banco de dados em uma conta de armazenamento do Azure.
  
 * Diálogo Nova Restauração para simplificar a restauração de um backup de banco de dados do SQL Server 2016 do serviço de armazenamento do Microsoft Azure.
  

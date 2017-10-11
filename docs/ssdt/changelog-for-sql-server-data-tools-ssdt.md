@@ -1,7 +1,7 @@
 ---
 title: "Log de mudanças para o SSDT (SQL Server Data Tools) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/23/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,107 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0de164b7e0a0330902bc8d967d32d333c5ac15fe
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
 Este log de alterações é para o [SSDT (SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver postagens detalhadas sobre as novidades e alterações, visite [o blog da Equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 para Visual Studio 2015
+Número de build: 14.0.61709.290
+
+### <a name="whats-new"></a>Novidades
+
+**AS (Analysis Services)**
+
+- O Cosmos DB e o HDI Spark estão habilitados nos modelos 1400.
+- Propriedades da fonte de dados de tabela.
+- Agora a "Consulta em branco" é uma opção com suporte para a criação de uma nova consulta no Editor de consultas para modelos no nível de compatibilidade 1400.
+- Agora o Editor de consultas para modelos de modo 1400 permite salvar consultas sem que novas tabelas sejam processadas automaticamente.
+
+**RS (Reporting Services)**
+
+- Agora, ao serem abertos, os projetos solicitam a atualização do formato para dar suporte ao uso do MSBuild para criar e implantar.
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+**AS (Analysis Services)**
+
+- Modelos de nível de compatibilidade 1400 no modo de Consulta direta que têm perspectivas falham ao consultar ou descobrir metadados.
+
+**RS (Reporting Services)**
+
+- O novo formato do Projeto de relatório não mantém a associação do controle do código-fonte e gera um erro semelhante à mensagem:
+
+   *O arquivo de projeto C:\path não está associado ao controle do código-fonte, mas a solução contém informações de associação do controle do código-fonte nela.*
+ 
+   Para contornar esse problema, clique em **Usar associação da solução** toda vez que a solução for aberta.
+
+- Depois de atualizar seu projeto para o novo formato do MSBuild, pode haver falhar ao salvar com uma mensagem semelhante à seguinte:
+
+   *"O Parâmetro "unevaluatedValue" não pode ser nulo."*
+
+   Para contornar esse problema, atualize as *Configurações de projeto* e preencha a propriedade *Plataforma*.
+
+### <a name="bug-fixes"></a>Correções de bugs
+
+**AS (Analysis Services)**
+
+- Grande melhoria no desempenho ao carregar o modo de exibição de diagrama de modelos tabulares.
+- Inúmeros problemas corrigidos para melhorar a integração e a experiência com o PowerQuery nos modelos de nível de compatibilidade 1400.
+   - Problema que impedia a edição de permissões para origens de arquivo corrigido.
+   - Correção de um problema Não é possível alterar a origem de Origens de arquivo.
+   - Correção de um problema Interface do usuário incorreta exibida para Origens de arquivo.
+- Correção de um problema que fazia a propriedade "JoinOnDate" ser removida quando uma relação "Ingressar em data" se tornou inativa.
+- Agora a nova opção de consulta no Construtor de Consultas permite a criação de uma nova consulta em branco.
+- Correção de um problema que fazia as edições em uma consulta da fonte de dados existente não atualizarem a definição do modelo da tabela no nível de compatibilidade 1400.
+- Correção de problemas com expressões de contexto personalizado que podem ter causado exceções.
+- Ao importar a nova tabela com nome duplicado nos modelos tabulares do 1400, agora o usuário é notificado de que houve um conflito de nome e que o nome ajustado deve ser exclusivo.
+- O modo de representação do usuário atual foi removido dos modelos no Modo de importação, porque ele não é um cenário compatível.
+- Agora a integração com o PowerQuery é compatível com opções para fontes de dados adicionais (OData.Feed, Odbc.DataSource, Access.Database, SapBusinessWarehouse.Cubes).
+- Agora as cadeias de caracteres de Opções do PowerQuery para fontes de dados mostrarão corretamente o texto localizado com base na localidade do cliente.
+- Agora o modo de exibição de diagrama mostra colunas recém-criadas do Editor de consultas M nos modelos de nível de compatibilidade 1400.
+- Agora o Editor do Power Query oferece a opção de não importar dados.
+- Correção de um problema com a instalação de um cartucho de dados usado para importar tabelas do Oracle em modelos multidimensionais no VS2017.
+- Correção de um problema que talvez tenha ocasionado uma falha quando o mouse cursor deixava a barra de fórmulas de tabela em casos raros.
+- Correção de um problema na caixa de diálogo Editar propriedades da tabela, em que a alteração do nome da tabela alterava incorretamente o nome da tabela de origem, causando um erro inesperado.
+- Correção de uma falha que poderia ocorrer no VS2017 ao tentar invocar Testar segurança do cubo no designer Funções e no designer de guia Dados da célula em projetos multidimensionais.
+- SSDT: as propriedades não são editáveis para fontes de dados de tabela.
+- Correção de um problema que pode ter feito os builds MSBuild e DevEnv não funcionarem corretamente em alguns casos com arquivos de solução.
+- Grande melhoria no desempenho ao confirmar alterações de modelo (edições de DAX para medidas, colunas calculadas) quando um modelo tabular contém metadados maiores
+- Correção de inúmeros problemas com a importação de dados usando o PowerQuery nos modelos de nível de compatibilidade 1400
+   - A importação demora um pouco após clicar em Importar e a interface do usuário não mostra nenhum status
+   - Grande lista de tabelas na Exibição de navegador ao tentar selecionar tabelas a serem importadas muito lentamente
+   - Baixo desempenho do Editor de consultas que trabalham com uma lista de 35 consultas na exibição do Editor de consultas (problema na área de trabalho PBI também)
+   - A importação de várias tabelas desabilitava a barra de ferramentas e nunca podia ser concluída em algumas situações 
+   - O designer de modelo aparecia desabilitado e não mostrava nenhum dado após a importação de tabelas usando o PQ
+   - Desmarcar "Criar nova tabela" na interface do usuário do PQ ainda resultava na criação de uma nova tabela
+   - A fonte de dados da pasta não está solicitando credenciais 
+   - A referência de objeto não definia uma exceção que podia ocorrer ao tentar obter credenciais atualizadas na fonte de dados estruturada
+   - A abertura do gerenciador de partições com a expressão M era muito lenta
+   - Selecionar Propriedades na tabela no editor do PQ não mostrava as propriedades
+- Melhoria da robustez na integração da interface do usuário do Power Query para capturar exceções de nível superior ser mostrada na Janela de Saída
+- Correção de um problema com ChangeSource na fonte de dados de estrutura que não mantinha alterações na expressão de contexto
+- Correção de um problema no qual os erros de expressão M podiam causar falhas na atualização do modelo sem a exibição de uma mensagem de erro
+- Correção de um problema que fechava o SSDT com o erro "O build precisa ser interrompido antes que a solução possa ser fechada"
+- Correção de um problema no qual o VS talvez pareça ter parado de responder ao definir o modo de representação incorreto no modelo de nível de compatibilidade 1400 
+- Agora a propriedade das linhas de detalhes apenas serão serializadas no JSON quando ele não estiver vazio (alterado de padrão)
+- Agora o driver Oracle OLEDB está disponível na lista do modo de Consulta direta de tabela
+- Agora adicionar expressões M nos modelos tabulares de compatibilidade 1400 agora é exibido/atualizado no TME (Gerenciador de Modelos Tabular)
+- Correção de um problema que fazia o provedor MSOLAP não ser exibido no VS2017 ao tentar importar usando a fonte de dados “Outro” nos modelos de nível de compatibilidade pré-1400
+- Correção de um problema no qual a adição de uma translação por meio do TME pode causar problemas 
+- Correção de um problema na interface da Segurança em nível de objeto que fazia a guia ser exibida/oculta incorretamente em alguns casos
+- Correção de um problema em que a falha poderia ocorrer ao tentar abrir um modelo multidimensional carregado previamente usando a caixa de diálogo Conectar ao banco de dados
+- Correção de um problema que causava um erro ao adicionar assemblies personalizados a um modelo multidimensional
+
+**RS (Reporting Services)**
+
+- Correção de um problema com a compilação e o build do RDLC no VS 2017
 
 ## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT para Visual Studio 2017 (versão prévia 15.3.0)
 Número de build: 14.0.16121.0
@@ -51,7 +142,7 @@ Número de build: 14.0.61707.300
 
 
 **Projetos do AS:**
-- A Segurança em nível de objeto agora pode ser configurada na caixa de diálogo *Funções* para segurança avançada em modelos de tabelas de nível de compatibilidade 1400.
+- Agora a Segurança em nível de objeto pode ser configurada na caixa de diálogo *Funções* para segurança avançada em modelos tabulares de nível de compatibilidade 1400.
 - Nova seleção de membro de função AAD para usuários sem endereços de email em modelos do AS Azure em projetos SSDT AS para VS2017.
 - Nova propriedade de projeto "Sempre solicitar" do AS Azure em projetos de tabela do SSDT AS para personalizar o comportamento de armazenamento em cache de credenciais ADAL.
 
@@ -128,8 +219,8 @@ Número de build: 14.0.61704.140
 ### <a name="whats-new"></a>Novidades
 **Projetos de bancos de dados:**
 - Corrigir um índice clusterizado em uma exibição não bloqueará mais a implantação
-- Cadeias de caracteres de comparação de esquema relacionadas à criptografia de coluna usarão o próprio nome em vez do nome da instância.   
-- Adição de uma nova opção de linha de comando para SqlPackage: ModelFilePath.  Isso fornece uma opção para usuários avançados especificarem um arquivo model.xml externo para importação, publicação e operações de script   
+- As cadeias de caracteres de comparação de esquema relacionadas à criptografia de coluna usam o nome adequado em vez do nome da instância.   
+- Adição de uma nova opção de linha de comando para SqlPackage: ModelFilePath.  Isso oferece uma opção para que os usuários avançados especifiquem um arquivo model.xml externo para importação, publicação e operações de script   
 - A API do DacFx foi estendida para compatibilidade com a Autenticação Universal do Azure AD e MFA (Autenticação Multifator)
 
 **Projetos do IS:**
@@ -142,9 +233,9 @@ Número de build: 14.0.61704.140
     - O DirectQuery está disponível para SQL Oracle e Teradata e se o usuário já tiver instalado drivers de terceiros
     - Adicionar colunas por exemplo no PowerQuery
     - Opções de acesso a dados em modelos 1400 (propriedades do nível de modelo usadas pelo mecanismo M)
-        - Habilitar combinação rápida (o padrão é falso; quando definido como verdadeiro, o mecanismo de mashup ignorará os níveis de privacidade de fonte de dados ao combinar dados)
-        - Habilitar redirecionamentos herdados (o padrão é falso; quando definido como verdadeiro, o mecanismo de mashup seguirá redirecionamentos HTTP potencialmente não seguros.  Por exemplo, um redirecionamento de um HTTPS para um URI de HTTP)  
-        - Retornar valores de erro como Null (o padrão é falso; quando definido como verdadeiro, os erros no nível de célula serão retornados como nulo. Quando definido para falso, uma exceção será gerada se uma célula contiver um erro)  
+        - Habilitar combinação rápida (o padrão é false; quando definido como true, o mecanismo de mashup ignora os níveis de privacidade de fonte de dados ao combinar dados)
+        - Habilitar redirecionamentos herdados (o padrão é false; quando definido como true, o mecanismo de mashup segue redirecionamentos HTTP potencialmente não seguros.  Por exemplo, um redirecionamento de um HTTPS para um URI de HTTP)  
+        - Retornar valores de erro como Null (o padrão é false; quando definido como true, os erros no nível da célula são retornados como null. Quando definido como false, uma exceção será gerada se a célula contiver um erro)  
     - Fontes de dados adicionais (fontes de dados de arquivo) usando o PowerQuery
         - Excel 
         - Texto/CSV 
@@ -169,7 +260,7 @@ Número de build: 14.0.61704.140
 - Tabular: uma variedade de aprimoramentos e correções de desempenho para análise de DAX e barra de fórmulas.
 - Tabular: o Gerenciador de Modelos de Tabela não estará visível se nenhum projeto Tabular do SSAS estiver aberto.
 - Multidimensionais: corrigido um problema em que a caixa de diálogo de processamento não era utilizável em computadores com alto DPI.
-- Tabular: corrigido um problema em que o SSDT falha ao abrir qualquer projeto do BI quando o SSMS já está aberto.[Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabular: correção de um problema em que o SSDT falha ao abrir qualquer projeto do BI quando o SSMS já está aberto. [Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - Tabular: corrigido um problema em que hierarquias não estavam sendo corretamente salvas no arquivo bim em um modelo 1103.[Conectar Item](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabular: corrigido um problema em que modo de espaço de trabalho integrado era permitido em computadores de 32 bits mesmo quando não havia suporte.
 - Tabular: corrigido um problema em que clicar em qualquer coisa no modo de semisseleção (digitando uma expressão DAX mas clicando em uma medida, por exemplo) poderia causar falhas.
