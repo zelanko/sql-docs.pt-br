@@ -36,7 +36,7 @@ ms.lasthandoff: 09/12/2017
 >   
 >  Usar a Transformação de Limpeza DQS no Integration Services que executa a limpeza de dados no processo de empacotamento do Integration Services e é instalado automaticamente quando você instala o Integration Services. Para obter informações sobre a instalação do Integration Services, consulte [Instalar o Integration Services](../../integration-services/install-windows/install-integration-services.md).  
 >   
->  Habilitar a integração de DQS no Master Data Services para usar a funcionalidade de correspondência do DQS no Suplemento Master Data Services para Excel. Para obter mais informações, consulte [Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
+>  Habilitar a integração de DQS no Master Data Services para usar a funcionalidade de correspondência do DQS no Suplemento Master Data Services para Excel. Para obter mais informações, consulte [Habilitar a integração do Data Quality Services com Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
   
  A instalação do DQS é um processo de três partes:  
   
