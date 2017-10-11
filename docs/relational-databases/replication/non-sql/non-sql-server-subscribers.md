@@ -81,7 +81,7 @@ Para obter mais informações sobre como criar assinaturas ao Oracle e IBM DB2, 
   
     -   Para o Oracle, um servidor tem, no máximo, um banco de dados, assim não é necessário especificar o banco de dados.  
   
-    -   Para IBM DB2, o banco de dados é especificado na cadeia de conexão DB2. Para obter mais informações, consulte [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+    -   Para IBM DB2, o banco de dados é especificado na cadeia de conexão DB2. Para obter mais informações, consulte [Criar uma assinatura para um Assinante não SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 -   Se o Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver executando em uma plataforma de 64 bits, você deverá usar a versão de 64 bits do provedor OLE DB apropriado.  
   
