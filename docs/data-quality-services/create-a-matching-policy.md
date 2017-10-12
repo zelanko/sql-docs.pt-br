@@ -80,7 +80,7 @@ ms.lasthandoff: 09/09/2017
 4.  Em **Mapeamentos**, selecione um campo na fonte de dados para **Coluna de Origem**e selecione o domínio correspondente. Repita para todos os domínios que você usa no processo de correspondência. Crie domínios conforme necessário clicando em **Criar um Domínio** ou **Criar um Domínio Composto**.  
   
     > [!NOTE]  
-    >  Você poderá mapear sua fonte de dados para um domínio DQS enquanto cria uma política de correspondência somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre tipos de dados que oferecem suporte no DQS, consulte [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Você poderá mapear sua fonte de dados para um domínio DQS enquanto cria uma política de correspondência somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre tipos de dados que oferecem suporte no DQS, consulte [O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 5.  Clique no controle **mais (+)** para adicionar uma linha à tabela Mapeamentos ou no controle **menos (–)** para remover uma linha.  
   
@@ -191,7 +191,7 @@ ms.lasthandoff: 09/09/2017
 9. Clique em **Cancelar** para terminar a atividade Política de Correspondência, perder seu trabalho e retornar à página inicial do DQS.  
   
 ##  <a name="FollowUp"></a> Acompanhamento: após a criação de uma Política de Correspondência  
- Depois de criar uma política de correspondência, você pode executar um projeto de correspondência a partir da base de dados de conhecimento que contém a política de correspondência. Para obter mais informações, consulte [Run a Matching Project](../data-quality-services/run-a-matching-project.md).  
+ Depois de criar uma política de correspondência, você pode executar um projeto de correspondência a partir da base de dados de conhecimento que contém a política de correspondência. Para obter mais informações, consulte [Executar um projeto de correspondência](../data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Guias Criador de Perfil e Resultados  
  As guias Criador de perfil e Resultados contêm estatísticas para as páginas Política de Correspondência e Resultados de Correspondência.  

@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
-  Este tópico descreve como limpar seus dados usando um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A limpeza de dados é executada na fonte de dados com o uso de uma base de dados de conhecimento que foi criada no DQS a partir de um conjunto de dados de alta qualidade. Para obter mais informações, consulte [Building a Knowledge Base](../data-quality-services/building-a-knowledge-base.md).  
+  Este tópico descreve como limpar seus dados usando um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A limpeza de dados é executada na fonte de dados com o uso de uma base de dados de conhecimento que foi criada no DQS a partir de um conjunto de dados de alta qualidade. Para obter mais informações, consulte [Criando uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md).  
   
  A limpeza de dados é executada em quatro estágios: um estágio de *mapeamento* no qual você identifica a fonte de dados a ser limpa e executa seu mapeamento para os domínios necessários em uma base de dados de conhecimento, um estágio de *limpeza auxiliada por computador* no qual o DQS aplica a base de dados de conhecimento aos dados a serem limpos e propõe ou faz alterações na fonte de dados, um estágio de *limpeza interativa* em que os administradores de dados podem analisar as alterações de dados e aceitar ou rejeitar as alterações nos dados e, por fim, o estágio de *exportação* que permite exportar os dados limpos. Cada um desses processos é executado em uma página separada do assistente da atividade de limpeza, permitindo que você percorra páginas diferentes, para executar o processo novamente, e fechar um processo de limpeza específico e depois retornar ao mesmo estágio do processo. O DQS fornece estatísticas sobre a fonte de dados e os resultados da limpeza que permitem a você tomar decisões conscientes sobre a limpeza de dados.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
--   Você deve ter especificado valores de limites apropriados para a atividade de limpeza. Para obter informações sobre como fazer isso, consulte [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Você deve ter especificado valores de limites apropriados para a atividade de limpeza. Para obter informações sobre como fazer isso, consulte [Para obter informações sobre como fazer isso, consulte](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   Uma base de dados de conhecimento do DQS deve estar disponível no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] em relação ao qual você deseja comparar e limpar sua fonte de dados. Além disso, a base de dados de conhecimento deve conter conhecimento sobre o tipo de dados que você deseja limpar. Por exemplo, se você quiser limpar sua fonte de dados que contém endereços nos EUA, deverá ter uma base de dados de conhecimento que tenha sido criada a partir de dados de exemplo de “alta qualidade” para endereços nos EUA.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Create"></a> Criar um projeto de qualidade de dados de limpeza  
  Você deve usar um projeto de qualidade de dados para executar a operação de limpeza de dados. Para criar um projeto de qualidade de dados de limpeza  
   
-1.  Siga etapas 1 a 3 no tópico [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
+1.  Siga etapas 1 a 3 no tópico [Criar um projeto de qualidade de dados](../data-quality-services/create-a-data-quality-project.md).  
   
 2.  Na etapa 3.d, selecione a atividade **Limpeza** .  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 09/09/2017
 2.  Em **Mapeamentos**, mapeie as colunas de dados na sua fonte de dados com os domínios apropriados na base de dados de conhecimento selecionando uma coluna de origem na lista suspensa na **Coluna de Origem** e selecionando um domínio na lista suspensa na coluna **Domínio** na mesma linha. Repita essa etapa para mapear todas as colunas nos dados de origem com os domínios apropriados na base de dados de conhecimento. Se necessário, você pode clicar no ícone **Adicionar um mapeamento de coluna** para adicionar linhas à tabela de mapeamento.  
   
     > [!NOTE]  
-    >  Você poderá mapear sua fonte de dados para um domínio DQS para realizar limpeza de dados somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter informações sobre os tipos de dados de origem com suporte, consulte [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Você poderá mapear sua fonte de dados para um domínio DQS para realizar limpeza de dados somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter informações sobre os tipos de dados de origem com suporte, consulte [O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 3.  Clique no ícone **Visualizar fonte de dados** para visualizar os dados na tabela do SQL Server ou visualizar os dados selecionados ou a planilha do Excel selecionada.  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 09/09/2017
     >   
     >      Em ambos os casos, clique em **Sim** para usar a base de dados de conhecimento atualizada para a limpeza auxiliada por computador. Além disso, se houver conflitos entre os mapeamentos atuais e a base de dados de conhecimento atualizada (como exclusão de domínios ou alteração do tipo de dados), a mensagem também solicitará que você corrija os mapeamentos atuais para usar a base de dados de conhecimento atualizada. Clicar em **Sim** exibirá a página **Mapa** , na qual você poderá corrigir os mapeamentos antes de continuar com a limpeza auxiliada por computador.  
   
-2.  Durante o estágio de limpeza auxiliada por computador, você pode alternar no criador de perfil clicando na guia **Criador de Perfil** para exibir a criação de perfil de dados em tempo real e notificações. Para obter mais informações, consulte [Profiler Statistics](#Profiler).  
+2.  Durante o estágio de limpeza auxiliada por computador, você pode alternar no criador de perfil clicando na guia **Criador de Perfil** para exibir a criação de perfil de dados em tempo real e notificações. Para obter mais informações, consulte [Estatísticas do criador de perfil](#Profiler).  
   
 3.  Se você não estiver satisfeito com os resultados, clique em **Voltar** para retornar à página **Mapa** , modifique um ou mais mapeamentos conforme o necessário, volte à página **Limpar** e clique em **Reiniciar**.  
   
@@ -99,9 +99,9 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Interactive"></a> Estágio de limpeza interativa  
  No estágio de limpeza interativa, você pode visualizar as alterações que o DQS propôs e decidir se deseja implementá-las ou não, aprovando ou rejeitando as alterações. No painel esquerdo da página **Gerenciar e exibir resultados** , o DQS exibe uma lista de todos os domínios mapeados anteriormente no estágio de mapeamento junto com o número de valores nos dados de origem analisados em relação a cada domínio durante o estágio de limpeza auxiliada por computador. No painel direito da página **Gerenciar e exibir resultados** , com base na conformidade com as regras de domínio, regras de erro de sintaxe e algoritmos avançados, o DQS categoriza os dados em cinco guias usando o *nível de confiança*. O nível de confiança indica a extensão da certeza do DQS para a correção ou sugestão e se baseia nos seguintes valores de limite:  
   
--   **Limite de Correção Automático**: qualquer valor que tenha um nível de confiança acima desse limite será corrigido automaticamente pelo DQS. No entanto, o administrador de dados pode substituir a alteração durante a limpeza interativa. Você pode especificar o valor de limite de correção automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Limite de Correção Automático**: qualquer valor que tenha um nível de confiança acima desse limite será corrigido automaticamente pelo DQS. No entanto, o administrador de dados pode substituir a alteração durante a limpeza interativa. Você pode especificar o valor de limite de correção automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configurar valores de limite para limpeza e correspondência](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Limite de Sugestão Automático**: qualquer valor que tenha um nível de confiança acima deste limite, mas abaixo do limite de correção automático, será sugerido como um valor de substituição. O DQS só fará a alteração se o administrador de dados aprová-la. Você pode especificar o valor de limite de sugestão automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Limite de Sugestão Automático**: qualquer valor que tenha um nível de confiança acima deste limite, mas abaixo do limite de correção automático, será sugerido como um valor de substituição. O DQS só fará a alteração se o administrador de dados aprová-la. Você pode especificar o valor de limite de sugestão automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configurar valores de limite para limpeza e correspondência](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   **Outro**: qualquer valor abaixo do valor de limite de sugestão automática é mantido sem alteração pelo DQS.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/09/2017
     > [!NOTE]  
     >  O recurso do verificador ortográfico somente está disponível no painel superior (valores de domínio). Além disso, você não pode habilitar ou desabilitar o verificador ortográfico para domínios compostos. Os domínios filho em um domínio composto que são do tipo cadeia de caracteres e estão habilitados para o recurso do verificador ortográfico terão a funcionalidade de verificador ortográfico habilitada no estágio de limpeza interativa, por padrão.  
   
-4.  Durante o estágio de limpeza interativa, você pode alternar no criador de perfil clicando na guia **Criador de Perfil** para exibir a criação de perfil de dados em tempo real e notificações. Para obter mais informações, consulte [Profiler Statistics](#Profiler).  
+4.  Durante o estágio de limpeza interativa, você pode alternar no criador de perfil clicando na guia **Criador de Perfil** para exibir a criação de perfil de dados em tempo real e notificações. Para obter mais informações, consulte [Estatísticas do criador de perfil](#Profiler).  
   
 5.  Depois que você examinar todos os valores de domínio, clique em **Avançar** para passar para o estágio de exportação.  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 09/09/2017
   
     3.  **Arquivo do Excel**: clique em **Procurar**e especifique o nome e o local do arquivo do Excel para o qual você deseja exportar os dados limpos. Também é possível digitar o nome do arquivo do Excel junto com o caminho completo para o qual você deseja exportar os dados limpos. Por exemplo, "c:\ExportedData.xlsx". O arquivo é salvo no computador em que o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] está instalado.  
   
-2.  Marque a caixa de seleção **Padronizar Saída** para padronizar a saída com base no formato de saída selecionado para o domínio. Por exemplo, altere o valor da cadeia de caracteres para maiúsculas ou coloque a primeira letra da palavra em maiúscula. Para obter informações sobre como especificar o formato de saída de um domínio, consulte a lista **Saída de Formato para** em [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+2.  Marque a caixa de seleção **Padronizar Saída** para padronizar a saída com base no formato de saída selecionado para o domínio. Por exemplo, altere o valor da cadeia de caracteres para maiúsculas ou coloque a primeira letra da palavra em maiúscula. Para obter informações sobre como especificar o formato de saída de um domínio, consulte a lista **Saída de Formato para** em [Definir propriedades do domínio](../data-quality-services/set-domain-properties.md).  
   
 3.  Em seguida, selecione a saída de dados: exporte apenas os dados limpos ou exporte os dados limpos junto com as informações limpas.  
   
@@ -228,6 +228,6 @@ ms.lasthandoff: 09/09/2017
   
 -   O nível de exatidão do campo é muito baixo. Talvez você queira verificar o mapeamento ou considerar a execução da descoberta da base de dados de conhecimento primeiro.  
   
- Para obter mais informações sobre a criação de perfil, consulte [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Para obter mais informações sobre a criação de perfil, consulte [Perfil de dados e notificações no DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
