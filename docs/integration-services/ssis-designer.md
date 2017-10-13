@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="ssis-designer"></a>Designer SSIS
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  O diagrama a seguir exibe o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer e a janela **Caixa de Ferramentas** .  
   
- ![Captura de tela do SSIS Designer e caixa de ferramentas](../integration-services/media/denali-designerandtoolbox.gif "captura de tela do SSIS Designer e caixa de ferramentas")  
+ ![Captura de tela do Designer SSIS e da Caixa de Ferramentas](../integration-services/media/denali-designerandtoolbox.gif "Captura de tela do Designer SSIS e da Caixa de Ferramentas")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui caixas de diálogo e janelas adicionais para proporcionar maior funcionalidade aos pacotes e o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornece janelas e caixas de diálogo para configurar o ambiente de desenvolvimento e trabalhar com pacotes. Para obter mais informações, consulte [Interface do usuário do Integration Services](../integration-services/integration-services-user-interface.md).  
   
@@ -158,7 +158,7 @@ Use a guia **Fluxo de Dados** do Designer [!INCLUDE[ssIS](../includes/ssis-md.md
  **Delete (excluir)**  
  Selecione um manipulador de eventos e remova-o do pacote, clicando em **Excluir**.  
   
- **Clique aqui para criar um \<nome do manipulador de eventos\> para o executável \<nome executável\>**  
+ **Clique aqui para criar um \<nome do manipulador de eventos\> para o executável \<nome do executável\>**  
  Clique para criar o manipulador de eventos.  
   
  Crie o fluxo de controle arrastando os objetos gráficos que representam as tarefas e os contêiners [!INCLUDE[ssIS](../includes/ssis-md.md)] da **Caixa de Ferramentas** para a superfície de design da guia **Manipuladores de Eventos** e, em seguida, conectando os objetos usando as restrições de precedência para definir a sequência na qual eles serão executados.  
@@ -170,7 +170,7 @@ Use a guia **Explorador de Pacotes** do Designer [!INCLUDE[ssIS](../includes/ssi
   
  Clique com o botão direito do mouse em um elemento do pacote e clique em **Propriedades** para mostrar as propriedades do elemento na janela **Propriedades** ou clique em **Excluir** para excluir o elemento. 
  
-## <a name="progress-tab"></a>Guia progresso
+## <a name="progress-tab"></a>Guia Progresso
 Use a guia **Progresso** do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] para exibir o andamento da execução de um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] quando for executá-lo no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A guia **Progresso** lista a hora de início, a hora de conclusão e o tempo decorrido da validação e execução do pacote e seus executáveis, as informações ou avisos sobre o pacote, as notificações de andamento, o sucesso ou a falha do pacote e todas as mensagens de erro geradas durante a execução do pacote.  
   
  Para habilitar ou desabilitar a exibição de mensagens na guia **Progresso** , marque ou desmarque a opção **Depurar Relatório do Progresso** no menu **SSIS** . Desabilitar o relatório do progresso pode ajudar a melhorar o desempenho durante a execução de um pacote complexo no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
