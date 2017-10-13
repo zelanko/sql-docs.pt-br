@@ -59,14 +59,14 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) ou [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Criar uma base de dados de conhecimento](../data-quality-services/create-a-knowledge-base.md) ou [Abrir uma base de dados de conhecimento](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  O gerenciamento de domínio é executado em uma página do cliente Data Quality Services que contém cinco guias para operações de gerenciamento de domínio separadas. Não se trata de um processo controlado por assistente; qualquer operação de gerenciamento pode ser executada separadamente.  
   
-3.  Na **Lista de domínios** na página **Gerenciamento de Domínio** , selecione o domínio no qual você deseja alterar valores ou crie um novo domínio. Se você precisar criar um novo domínio, consulte [Create a Domain](../data-quality-services/create-a-domain.md). Clique na guia **Valores do Domínio** .  
+3.  Na **Lista de domínios** na página **Gerenciamento de Domínio** , selecione o domínio no qual você deseja alterar valores ou crie um novo domínio. Se você precisar criar um novo domínio, consulte [Criar um Domínio](../data-quality-services/create-a-domain.md). Clique na guia **Valores do Domínio** .  
   
-4.  Exiba os valores que você precisa modificar na tabela **Valor** . Para obter mais informações, consulte [How to Display the Appropriate Values](#Display) abaixo.  
+4.  Exiba os valores que você precisa modificar na tabela **Valor** . Para obter mais informações, consulte [Como exibir os valores apropriados](#Display) abaixo.  
   
 5.  Para alterar o estado de um valor, faça o seguinte:  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/09/2017
   
  Quando você está executando uma limpeza interativa de dados na página **Gerenciar e Exibir Resultados** da atividade **Limpeza** , os valores inválidos e com erro serão incluídos na guia **Inválido** da página **Gerenciar e Exibir Resultados** .  
   
-##  <a name="Display"></a> How to Display the Appropriate Values  
+##  <a name="Display"></a> Como exibir os valores apropriados  
  Você pode modificar a exibição da seguinte maneira:  
   
 -   Execute o recurso**Filtro** para filtrar os resultados desejados na tabela, com base no status, selecionando o status na lista suspensa **Filtro** .  
