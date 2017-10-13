@@ -80,14 +80,18 @@ A id de usuário e senha para se conectar.
 ### <a name="connection-string-format"></a>Formato de cadeia de caracteres de Conexão
 Aqui está o formato de uma cadeia de conexão típica.
 
+    ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>Insira a cadeia de caracteres de conexão
 Insira a cadeia de conexão a **ConnectionString** campo ou digite o nome DSN no **Dsn** campo, o **escolher uma fonte de dados** ou **escolha um destino** página. Depois de inserir a cadeia de caracteres de conexão, o assistente analisa a cadeia de caracteres e exibe as propriedades individuais e seus valores na lista.
 
 O exemplo a seguir usa essa cadeia de caracteres de conexão.
 
+    ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+    ```
 
 Esta é a tela que você vê depois de inserir a cadeia de caracteres de conexão.
 

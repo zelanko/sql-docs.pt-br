@@ -93,7 +93,9 @@ Se você quiser fornecer suas informações de conexão com uma cadeia de caract
 
 Este exemplo usará a cadeia de conexão a seguir, que se conecta ao Microsoft SQL Server.
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 Insira a cadeia de conexão do **ConnectionString** campo o **escolher uma fonte de dados** ou **escolha um destino** página. Depois de inserir a cadeia de caracteres de conexão, o assistente analisa a cadeia de caracteres e exibe as propriedades individuais e seus valores na lista.
 
@@ -138,20 +140,24 @@ Para compilar e testar a cadeia de caracteres de conexão para o driver ODBC no 
 
 10. Abra o arquivo salvo com o bloco de notas ou outro editor de texto. Aqui está o conteúdo do nosso exemplo do SQL Server.
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. Copie e cole os valores necessários em uma cadeia de caracteres de conexão na qual os pares nome-valor são separados por ponto e vírgula.
 
     Depois que você agrupa os valores necessários do DSN de arquivo de exemplo, você tem a seguinte cadeia de conexão.
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     Todas as configurações em um DSN criado pelo administrador de fonte de dados do ODBC para criar uma cadeia de conexão que funcione normalmente não é necessário.  
     -   Você sempre precisa especificar o driver ODBC.

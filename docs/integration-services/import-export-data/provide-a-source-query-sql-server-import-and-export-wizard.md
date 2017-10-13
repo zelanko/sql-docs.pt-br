@@ -65,19 +65,19 @@ Se a sua fonte de dados for Excel, consulte [Fornecer uma consulta de origem par
 Há três tipos de objetos do Excel que você pode consultar.
 -   **Planilha.** Para consultar uma planilha, acrescente o caractere $ ao final do nome da planilha e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$]
     ```
 
 -   **Intervalo nomeado.** Para consultar um intervalo nomeado, basta usar o nome do intervalo, por exemplo, **MyDataRange**.
     
-    ```
+    ```sql
     SELECT * FROM MyDataRange
     ```
 
 -   **Intervalo sem nome.** Para especificar um intervalo de células ainda não nomeado, acrescente o caractere $ ao final do nome da planilha, adicione a especificação do intervalo e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$A1:B4]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
 

@@ -72,14 +72,18 @@ O **Uid** (id de usuário) e **Pwd** (senha) para se conectar.
 ### <a name="connection-string-format"></a>Formato de cadeia de caracteres de Conexão
 Aqui está o formato de uma cadeia de conexão típica. 
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>Insira a cadeia de caracteres de conexão
 Insira a cadeia de conexão a **ConnectionString** campo ou digite o nome DSN no **Dsn** campo, o **escolher uma fonte de dados** ou **escolha um destino** página. Depois de inserir a cadeia de caracteres de conexão, o assistente analisa a cadeia de caracteres e exibe as propriedades individuais e seus valores na lista.
 
 O exemplo a seguir usa essa cadeia de caracteres de conexão.
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+    ```
 
 Esta é a tela que você vê depois de inserir a cadeia de caracteres de conexão.
 
