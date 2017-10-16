@@ -60,7 +60,7 @@ Informações sobre versão do Oracle:
 
  A replicação heterogênea para assinantes que não são do SQL Server foi preterida. A publicação Oracle foi preterida. Para mover dados, crie soluções usando a captura de dados de alterações e o [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
 
-Para obter mais informações sobre como criar assinaturas ao Oracle e IBM DB2, consulte [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+Para obter mais informações sobre como criar assinaturas ao Oracle e IBM DB2, consulte [Assinantes Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Considerações para Assinantes não SQL Server  
  Lembre-se das seguintes considerações ao replicar Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -73,7 +73,7 @@ Para obter mais informações sobre como criar assinaturas ao Oracle e IBM DB2, 
   
 -   Se a publicação tiver Assinantes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a publicação deverá ser habilitada para Assinantes não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de qualquer Assinante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ser criado.  
   
--   Por padrão, scripts gerados pelo Agente de Instantâneo para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usam identificadores sem aspas na sintaxe de `CREATE TABLE`. Portanto, uma tabela publicada nomeada 'teste' é reproduzida como 'TESTE'. Para usar o mesmo tipo de caixa (maiúscula/minúscula) como a tabela no banco de dados de publicação, use o parâmetro **-QuotedIdentifier** para o Agente de Distribuição. O parâmetro **-QuotedIdentifier** deve também ser usado se os nomes de objetos publicados (assim como tabelas, colunas e restrições) incluírem espaços ou palavras que são palavras reservadas na versão do banco de dados no Assinante não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações sobre esse parâmetro, consulte [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   Por padrão, scripts gerados pelo Agente de Instantâneo para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usam identificadores sem aspas na sintaxe de `CREATE TABLE`. Portanto, uma tabela publicada nomeada 'teste' é reproduzida como 'TESTE'. Para usar o mesmo tipo de caixa (maiúscula/minúscula) como a tabela no banco de dados de publicação, use o parâmetro **-QuotedIdentifier** para o Agente de Distribuição. O parâmetro **-QuotedIdentifier** deve também ser usado se os nomes de objetos publicados (assim como tabelas, colunas e restrições) incluírem espaços ou palavras que são palavras reservadas na versão do banco de dados no Assinante não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações sobre esse parâmetro, consulte [Agente de Distribuição de Replicação](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   A conta na qual o Agente de Distribuição é executado deve ter acesso de leitura ao diretório de instalação do provedor OLE DB.  
   
@@ -93,7 +93,7 @@ Para obter mais informações sobre como criar assinaturas ao Oracle e IBM DB2, 
   
 -   O valor NULL é tratado de forma diferente por bancos de dados diferentes, o que afeta como um valor em branco, uma cadeia de caracteres vazia e um NULL são representados. Isto, por sua vez, afeta o comportamento de valores inseridos em colunas com restrições exclusivas definidas. Por exemplo, o Oracle permite valores múltiplos de NULL em uma coluna que é considerada exclusiva, enquanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite apenas um único valor NULL em uma coluna exclusiva.  
   
-     Um fator adicional é como os valores de NULL, cadeias vazias, valores em branco são tratados quando a coluna é definida como NOT NULL. Para obter informações sobre como tratar deste assunto para Assinantes do Oracle, consulte [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
+     Um fator adicional é como os valores de NULL, cadeias vazias, valores em branco são tratados quando a coluna é definida como NOT NULL. Para obter informações sobre como tratar deste assunto para Assinantes do Oracle, consulte [Assinantes Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
   
 -   Os metadados relacionados à replicação (tabela de sequência de transação) não são excluídos de não assinantes do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando a assinatura é removida.  
   
