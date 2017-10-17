@@ -31,7 +31,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40locktimeout-transact-sql"></a>& #x 40; & #x 40. LOCK_TIMEOUT (Transact-SQL)
+# <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna a configuração de tempo limite do bloqueio atual em milissegundos para a sessão atual.  
@@ -68,7 +68,7 @@ Lock Timeout
 -1  
 ```  
   
- Este exemplo define LOCK_TIMEOUT como 1800 milissegundos e, em seguida, chama@LOCK_TIMEOUT.  
+ Este exemplo define LOCK_TIMEOUT como 1800 milissegundos e, em seguida, chama@LOCK_TIMEOUT .  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
@@ -86,7 +86,7 @@ Lock Timeout
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de configuração &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [Definir LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [Definir LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   
 

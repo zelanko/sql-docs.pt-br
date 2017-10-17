@@ -32,7 +32,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40connections-transact-sql"></a>& #x 40; & #x 40. CONEXÕES (Transact-SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONEXÕES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Retorna o número de tentativas de conexão, bem-sucedidas ou não, desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -53,7 +53,7 @@ Conexões são diferentes de usuários. Por exemplo, aplicativos podem abrir vá
   
 Para exibir um relatório que contém várias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estatísticas, inclusive tentativas de conexão, executadas **sp_monitor**.
   
-@@MAX_CONNECTIONS é o número máximo de conexões permitidas simultaneamente no servidor. @@CONNECTIONS é incrementado com cada tentativa de logon, portanto@CONNECTIONS pode ser maior que @@MAX_CONNECTIONS.
+@@MAX_CONNECTIONS é o número máximo de conexões permitidas simultaneamente no servidor. @@CONNECTIONS é incrementado com cada tentativa de logon, portanto @@CONNECTIONS pode ser maior que @@MAX_CONNECTIONS .
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir mostra o retorno do número de tentativas de logon a partir da data e hora atuais.
