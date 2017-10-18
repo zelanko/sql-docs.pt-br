@@ -30,7 +30,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40error-transact-sql"></a>& #x 40; & #x 40. Erro (Transact-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Erro (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o número do erro da última instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] executada.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. Usando@ERROR para detectar um erro específico  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. Usando @@ERROR para detectar um erro específico  
  O exemplo a seguir usa `@@ERROR` para verificar se existe violação de restrição (erro #547) em uma instrução `UPDATE`.  
   
 ```  
@@ -71,7 +71,7 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Usando@ERROR para sair de um procedimento condicionalmente  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Usando @@ERROR para sair de um procedimento condicionalmente  
  O exemplo a seguir usa `IF...ELSE` instruções para testar `@@ERROR` após um `INSERT` instrução em um procedimento armazenado. O valor da variável `@@ERROR` determina o código de retorno enviado ao programa que está chamando, indicando o sucesso ou a falha do procedimento.  
   
 ```  
@@ -106,7 +106,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. Usando@ERROR com @@ROWCOUNT  
+### <a name="c-using-error-with-rowcount"></a>C. Usando @@ERROR com @@ROWCOUNT   
  O exemplo a seguir usa `@@ERROR` com `@@ROWCOUNT` para validar a operação de uma instrução `UPDATE`. O valor de `@@ERROR` é verificado para não haver indicação de erro, e `@@ROWCOUNT` é usado para garantir que a atualização foi aplicada com sucesso na linha da tabela.  
   
 ```  
