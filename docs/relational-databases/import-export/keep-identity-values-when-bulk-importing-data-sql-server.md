@@ -18,11 +18,11 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2a20a9d0b7b8cc5aa32863bc687f7095ce33623a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Manter valores de identidade ao importar dados em massa (SQL Server)
@@ -53,7 +53,7 @@ Os exemplos neste tópico baseiam-se na tabela, no arquivo de dados e no arquivo
 
 ### **Tabela de exemplo**<a name="sample_table"></a>
 O script abaixo cria um banco de dados de teste e uma tabela chamada `myIdentity`.  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -177,7 +177,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
   
 ### **Como usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e manter valores de identidade sem um arquivo de formato**<a name="bulk_identity"></a>
 Argumento**KEEPIDENTITY** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -196,7 +196,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Como usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e manter valores de identidade com um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
 **KEEPIDENTITY** e o argumento **FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -214,7 +214,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Como usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e valores de identidade gerados sem um arquivo de formato**<a name="bulk_default"></a>
 Usando padrões.  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -232,7 +232,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Como usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e valores de identidade gerados com um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
 Usando os padrões e o argumento **FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -249,7 +249,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Como usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e manter valores de identidade com um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
 Dica de tabela**KEEPIDENTITY** e argumento **FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -269,7 +269,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
  
 ### **Como usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e valores de identidade gerados com um [arquivo de formato não XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
 Usando os padrões e o argumento **FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 

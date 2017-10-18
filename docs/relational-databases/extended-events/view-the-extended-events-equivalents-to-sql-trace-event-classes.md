@@ -19,11 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.translationtype: HT
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 008cdb3fc158b36793f7d4b42ee4b24fd2b56ea5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes do Rastreamento do SQL
@@ -71,20 +71,8 @@ ms.lasthandoff: 06/22/2017
   
 -   Para as classes de evento do Rastreamento do SQL configuráveis pelo usuário (UserConfigurable:1 a UserConfigurable:9), os Eventos Estendidos usam um único evento para substituí-las. O evento é chamado user_event. Este evento é gerado por meio de sp_trace_generateevent, o mesmo procedimento armazenado usado pelo Rastreamento do SQL. O evento user_event é retornado, independentemente de qual ID de evento é passada para o procedimento armazenado. No entanto, um campo event_id é retornado como parte dos dados do evento. Isso permite a você criar um predicado baseado na ID do evento. Por exemplo, se você usar UserConfigurable:0 (ID de evento = 82) no código, poderá adicionar o evento user_event à sessão e especificar o predicado “event_id = 82”. Portanto, você não precisa alterar o código, pois o procedimento armazenado sp_trace_generateevent gera o evento user_event dos Eventos Estendidos, e a classe de evento equivalente do Rastreamento do SQL.  
   
--   Se todas as colunas retornarem NULL com exceção da coluna Event Class, isso indicará que a classe de evento não foi migrada do Rastreamento do SQL.  
-  
--   Se apenas o valor da coluna Extended Events for NULL, isso indicará que qualquer um das seguintes condições é verdadeira:  
-  
-    -   A coluna Rastreamento do SQL é mapeada para um dos campos de dados associados ao evento de Eventos Estendidos.  
-  
-        > [!NOTE]  
-        >  Cada evento dos Eventos Estendidos tem um conjunto padrão de campos de dados que são incluídos automaticamente no conjunto de resultados.  
-  
-    -   A coluna de ação não tem um equivalente significativo dos Eventos Estendidos. Um exemplo disso é a coluna EventClass no Rastreamento do SQL. Essa coluna não é necessária nos Eventos Estendidos porque o nome do evento atende ao mesmo objetivo.  
-  
--   Para as classes de evento do Rastreamento do SQL configuráveis pelo usuário (UserConfigurable:1 a UserConfigurable:9), os Eventos Estendidos usam um único evento para substituí-las. O evento é chamado user_event. Este evento é gerado por meio de sp_trace_generateevent, o mesmo procedimento armazenado usado pelo Rastreamento do SQL. O evento user_event é retornado, independentemente de qual ID de evento é passada para o procedimento armazenado. No entanto, um campo event_id é retornado como parte dos dados do evento. Isso permite a você criar um predicado baseado na ID do evento. Por exemplo, se você usar UserConfigurable:0 (ID de evento = 82) no código, poderá adicionar o evento user_event à sessão e especificar o predicado “event_id = 82”. Portanto, você não precisa alterar o código, pois o procedimento armazenado sp_trace_generateevent gera o evento user_event dos Eventos Estendidos, e a classe de evento equivalente do Rastreamento do SQL.  
-  
 ## <a name="see-also"></a>Consulte também  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   
+

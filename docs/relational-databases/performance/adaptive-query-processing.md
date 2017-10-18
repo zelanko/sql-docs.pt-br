@@ -2,7 +2,7 @@
 title: "Processamento de consultas adaptável em bancos de dados Microsoft SQL | Microsoft Docs | Microsoft Docs"
 description: "Recursos de processamento de consulta adaptável para melhorar o desempenho da consulta no SQL Server (2017 e posteriores) e no Banco de Dados SQL do Azure."
 ms.custom: 
-ms.date: 08/02/2017
+ms.date: 10/13/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
-ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 
@@ -225,9 +225,10 @@ Os planos que usam execução intercalada podem ser forçados. O plano é a vers
 
 ## <a name="see-also"></a>Consulte também
 
-[Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+[Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+[Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demonstrando o Processamento de Consulta Adaptável](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 
 
