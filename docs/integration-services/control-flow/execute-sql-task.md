@@ -283,7 +283,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
 |Tipo de conexão|Marcador de parâmetro|Nome do parâmetro|Exemplo de comando SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2,...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<nome do parâmetro >|@\<nome do parâmetro >|Selecione FirstName, LastName, título da Person. Contact onde ContactID =@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<nome do parâmetro >|@\<nome do parâmetro >|Selecione FirstName, LastName, título da Person. Contact onde ContactID =@parmContactID |  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL e OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -376,7 +376,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
 -   O tipo de conexão ADO pode usar quaisquer dois nomes de parâmetro, como Param1 e Param2, mas os parâmetros devem ser mapeados pela posição original na lista de parâmetros.  
   
--   O [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o tipo de conexão usa os nomes de parâmetro @parmMinProductID e @parmMaxProductID.  
+-   O [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o tipo de conexão usa os nomes de parâmetro @parmMinProductID e @parmMaxProductID   
   
 ###  <a name="Stored_procedures"></a>Usar parâmetros com procedimentos armazenados  
  Os comandos SQL que executam procedimentos armazenados também podem usar mapeamento de parâmetro. As regras de como usar marcadores e nomes de parâmetros dependem do tipo de gerenciador de conexões utilizado por Executar SQL, assim como as regras para consultas parametrizadas.  
