@@ -220,7 +220,7 @@ Há suporte para as instruções DML a seguir.
 
 -   Funções de erro: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE  
 
--   Funções do sistema: @@rowcount. As instruções dentro de procedimentos armazenados compilados nativamente atualizam @@rowcount e você pode usar @@rowcount em um procedimento armazenado compilado nativamente para determinar o número de linhas afetadas pela última instrução executada nesse procedimento armazenado compilado nativamente. No entanto, @@rowcount é redefinido como 0 no início e no final da execução de um procedimento armazenado compilado nativamente.  
+-   Funções do sistema: @@rowcount.  As instruções dentro de procedimentos armazenados compilados nativamente atualizam @@rowcount e você pode usar @@rowcount em um procedimento armazenado compilado nativamente para determinar o número de linhas afetadas pela última instrução executada nesse procedimento armazenado compilado nativamente. No entanto, @@rowcount é redefinido como 0 no início e no final da execução de um procedimento armazenado compilado nativamente.  
 
 -   Funções de segurança: IS_MEMBER({'grupo' | 'função'}), IS_ROLEMEMBER ('função' [, 'entidade_do_banco_de_dados']), IS_SRVROLEMEMBER ('função' [, 'logon']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['logon']), SUSER_SID(['logon'] [, Param2]), SUSER_SNAME([sid_de_usuário_do_servidor]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['usuário']), USER_NAME([id]), CONTEXT_INFO().
 
