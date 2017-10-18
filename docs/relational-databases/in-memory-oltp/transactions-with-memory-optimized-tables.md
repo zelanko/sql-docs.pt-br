@@ -62,7 +62,7 @@ O SQL Server tem os seguintes modos de iniciação de transação:
 - **Explícita** - o Transact-SQL contém o código BEGIN TRANSACTION, juntamente com uma eventual COMMIT TRANSACTION. Duas ou mais instruções podem ser agrupadas na mesma transação.  
   - No modo explícito, é necessário usar a opção de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT ou um código de uma dica de tabela sobre o nível de isolamento da transação na tabela com otimização de memória da cláusula FROM.  
   
-- **Implícita** - quando SET IMPLICIT_TRANSACTION ON está em vigor. Talvez um nome melhor teria sido IMPLICIT_BEGIN_TRANSACTION, porque essas opções implicitamente realizam o equivalente a uma BEGIN TRANSACTION antes de cada instrução UPDATE se 0 = @@trancount. Portanto, depende do seu código T-SQL eventualmente emitir uma COMMIT TRANSACTION explícita.   
+- **Implícita** - quando SET IMPLICIT_TRANSACTION ON está em vigor. Talvez um nome melhor teria sido IMPLICIT_BEGIN_TRANSACTION, porque essas opções implicitamente realizam o equivalente a uma BEGIN TRANSACTION antes de cada instrução UPDATE se 0 = @@trancount.  Portanto, depende do seu código T-SQL eventualmente emitir uma COMMIT TRANSACTION explícita.   
   
 - **ATOMIC BLOCK** – Todas as instruções nos blocos ATOMIC sempre são executadas como parte de uma única transação. As ações do bloco atômico como um todo serão confirmadas em caso de êxito ou as ações serão todas revertidas quando ocorrer uma falha. Cada procedimento armazenado originalmente compilado requer um bloco ATOMIC.  
   
