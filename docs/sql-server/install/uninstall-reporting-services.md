@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Em **Programas e Recursos** , selecione **Microsoft SQL Server 2012**.  
   
-3.  No assistente de desinstalação, selecione a instância que inclui o recurso de instância RS [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do ****.  
+3.  No assistente de desinstalação, selecione a instância que inclui o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recurso de instância **RS** do.  
   
      ![rs_nativemode_uninstall_selectinstance](../../sql-server/install/media/rs-nativemode-uninstall-selectinstance.gif "rs_nativemode_uninstall_selectinstance")  
   
