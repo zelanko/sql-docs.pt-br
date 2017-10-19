@@ -37,10 +37,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03651b89f8cc8b7694e9e07531804053e64568ac
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 38abfb552f1bb969c132d5086ca007d36541a76c
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
@@ -190,10 +190,10 @@ GO
 ```  
   
 ### <a name="b-specifying-the-histogram-option"></a>B. Especificando a opção HISTROGRAM  
-O exemplo a seguir limita as informações de estatísticas exibidas para o índice `AK_Address_rowguid` aos dados de HISTOGRAM.
+Isso limita as informações de estatísticas exibidas para Customer_LastName para os dados de HISTOGRAMA.
   
 ```t-sql
-DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid) WITH HISTOGRAM;  
+DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
   
@@ -214,14 +214,6 @@ GO
 Os resultados mostram o cabeçalho, o vetor de densidade e parte do histograma.
   
 ![Resultados DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "resultados DBCC SHOW_STATISTICS")
-  
-### <a name="d-specifying-the-histogram-option"></a>D. Especificando a opção HISTROGRAM  
-Isso limita as informações de estatísticas exibidas para Customer_LastName para os dados de HISTOGRAMA.
-  
-```t-sql
-DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
-GO  
-```  
   
 ## <a name="see-also"></a>Consulte também  
 [Estatísticas](../../relational-databases/statistics/statistics.md)  

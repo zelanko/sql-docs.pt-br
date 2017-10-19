@@ -33,7 +33,7 @@ ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renomear um computador que hospeda uma instância autônoma do SQL Server
-Quando você altera o nome do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o novo nome será reconhecido durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não é necessário executar novamente a Instalação para redefinir o nome do computador. Em vez disso, use as etapas a seguir para atualizar os metadados do sistema armazenados em sys.servers e relatados pela função de sistema @@SERVERNAME. Atualize os metadados do sistema para que reflitam as alterações de nome do computador de conexões remotas e aplicativos que usam @@SERVERNAME ou que consultam o nome do servidor em sys.servers.  
+Quando você altera o nome do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o novo nome será reconhecido durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não é necessário executar novamente a Instalação para redefinir o nome do computador. Em vez disso, use as etapas a seguir para atualizar os metadados do sistema armazenados em sys.servers e relatados pela função de sistema @@SERVERNAME . Atualize os metadados do sistema para que reflitam as alterações de nome do computador de conexões remotas e aplicativos que usam @@SERVERNAME ou que consultam o nome do servidor em sys.servers.  
   
 As etapas a seguir não podem ser usadas para renomear uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elas só podem ser usadas para renomear a parte do nome de instância que corresponde ao nome do computador. Por exemplo, você pode alterar um computador denominado MB1 que hospede uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada Instance1 para outro nome, como MB2. Entretanto, a parte de instância do nome, Instance1, permanecerá inalterada. Neste exemplo, \\\\*ComputerName*\\*InstanceName* seria alterado de \\\MB1\Instance1 para \\\MB2\Instance1.  
   
@@ -82,7 +82,7 @@ As etapas a seguir não podem ser usadas para renomear uma instância do [!INCLU
   
 ## <a name="verify-renaming-operation"></a>Verificar a operação de renomeação  
   
--   Selecione informações de @@SERVERNAME ou sys.servers. A função @@SERVERNAME retornará o novo nome e a tabela sys.servers mostrará o novo nome. O exemplo a seguir mostra o uso de @@SERVERNAME.  
+-   Selecione informações de @@SERVERNAME ou sys.servers. A função @@SERVERNAME retornará o novo nome e a tabela sys.servers mostrará o novo nome. O exemplo a seguir mostra o uso de @@SERVERNAME .  
   
     ```  
     SELECT @@SERVERNAME AS 'Server Name';  

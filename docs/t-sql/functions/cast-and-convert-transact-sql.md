@@ -39,10 +39,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
@@ -190,7 +190,7 @@ Conversões implícitas são conversões que ocorrem sem especificar a função 
   
 ![Tabela de conversão de tipo de dados](../../t-sql/data-types/media/lrdatahd.png "tabela de conversão de tipo de dados")
   
-Ao converter entre **datetimeoffset** e os tipos de caracteres **char**, **varchar**, **nchar**, e **nvarchar ** o fuso horário convertido parte do deslocamento deve ser sempre de dois dígitos para HH e MM, por exemplo, -08:00.
+Ao converter entre **datetimeoffset** e os tipos de caracteres **char**, **varchar**, **nchar**, e **nvarchar**  o fuso horário convertido parte do deslocamento deve ser sempre de dois dígitos para HH e MM, por exemplo, -08:00.
   
 > [!NOTE]  
 >  Como dados Unicode sempre usam um número par de bytes, tenha cuidado ao converter **binário** ou **varbinary** em Unicode ou suporte para tipos de dados. Por exemplo, a conversão a seguir não retorna um valor hexadecimal de 41. Ela retorna 4100: `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`.  
@@ -219,7 +219,7 @@ Para atribuir um agrupamento diferente à saída, aplique a cláusula COLLATE à
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>Truncando e arredondando resultados
-Quando você converte caracteres ou expressões binárias (**char**, **nchar**, **nvarchar**, **varchar**, **binário**, ou **varbinary**) para uma expressão de um tipo de dados diferente, dados podem ser truncados, exibidos apenas parcialmente ou um erro será retornado como o resultado é curto demais para ser exibido. Conversões para **char**, **varchar**, **nchar**, **nvarchar**, **binário**, e ** varbinary** são truncados, com exceção das conversões mostradas na tabela a seguir.
+Quando você converte caracteres ou expressões binárias (**char**, **nchar**, **nvarchar**, **varchar**, **binário**, ou **varbinary**) para uma expressão de um tipo de dados diferente, dados podem ser truncados, exibidos apenas parcialmente ou um erro será retornado como o resultado é curto demais para ser exibido. Conversões para **char**, **varchar**, **nchar**, **nvarchar**, **binário**, e  **varbinary** são truncados, com exceção das conversões mostradas na tabela a seguir.
   
 |De tipo de dados|Em tipo de dados|Resultado|  
 |---|---|---|
@@ -304,7 +304,7 @@ Ao converter tipos de dados em que o tipo de dados de destino tem menos casas de
   
 `SELECT CAST(10.3496847 AS money);`
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Retorna uma mensagem de erro quando dados não numéricos **char**, **nchar**, **varchar**, ou **nvarchar** dados são convertidos em **int **, **float**, **numérico**, ou **decimal**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]também retorna um erro quando uma cadeia de caracteres vazia ("") é convertido em **numérico** ou **decimal**.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Retorna uma mensagem de erro quando dados não numéricos **char**, **nchar**, **varchar**, ou **nvarchar** dados são convertidos em **int** , **float**, **numérico**, ou **decimal**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]também retorna um erro quando uma cadeia de caracteres vazia ("") é convertido em **numérico** ou **decimal**.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>Determinadas conversões de datetime são não determinísticas
 A tabela a seguir lista os estilos para os quais a conversão de cadeia de caracteres em datetime é não determinística.
@@ -318,7 +318,7 @@ A tabela a seguir lista os estilos para os quais a conversão de cadeia de carac
 <sup>1</sup> com exceção dos estilos 20 e 21
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)
-A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se você usar agrupamentos de caracteres suplementares (SC), uma operação de CONVERSÃO de **nchar** ou **nvarchar** para um **nchar** ou ** nvarchar** tipo de comprimento menor não truncará dentro de um par substituto; truncará antes do caractere suplementar. Por exemplo, o fragmento de código a seguir deixa `@x` que contém só `'ab'`. Não há espaço suficiente para conter o caractere suplementar.
+A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se você usar agrupamentos de caracteres suplementares (SC), uma operação de CONVERSÃO de **nchar** ou **nvarchar** para um **nchar** ou  **nvarchar** tipo de comprimento menor não truncará dentro de um par substituto; truncará antes do caractere suplementar. Por exemplo, o fragmento de código a seguir deixa `@x` que contém só `'ab'`. Não há espaço suficiente para conter o caractere suplementar.
   
 ```sql
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
@@ -391,54 +391,44 @@ Computed
 ```  
   
 ### <a name="c-using-cast-to-concatenate"></a>C. Usando CAST para concatenar  
-O exemplo a seguir concatena expressões não binárias não caracteres usando `CAST`.
+O exemplo a seguir concatena expressões não são de caractere usando CONVERSÃO. Usa AdventureWorksDW.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
 SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM Production.Product  
+FROM dbo.DimProduct  
 WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 ListPrice
-------------------
+------------------------
 The list price is 357.06
 The list price is 364.09
 The list price is 364.09
 The list price is 364.09
-The list price is 364.09
-(5 row(s) affected)  
-```
+The list price is 364.09  
+```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>D. Usando CAST para produzir texto mais legível  
-O exemplo a seguir usa `CAST` na lista de seleção para converter a coluna `Name` em uma coluna `char(10)`.
+O exemplo a seguir usa a CONVERSÃO na lista de seleção para converter o `Name` coluna para um **char (10)** coluna. Usa AdventureWorksDW.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
-SELECT DISTINCT CAST(p.Name AS char(10)) AS Name, s.UnitPrice  
-FROM Sales.SalesOrderDetail AS s   
-JOIN Production.Product AS p   
-    ON s.ProductID = p.ProductID  
-WHERE Name LIKE 'Long-Sleeve Logo Jersey, M';  
-GO  
+SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
+FROM dbo.DimProduct  
+WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Name       UnitPrice
----------- -----------
-Long-Sleev 31.2437
-Long-Sleev 32.4935
-Long-Sleev 49.99
-(3 row(s) affected)  
-```
+Name        UnitPrice
+----------  ---------
+Long-Sleev  31.2437
+Long-Sleev  32.4935
+Long-Sleev  49.99  
+```  
   
 ### <a name="e-using-cast-with-the-like-clause"></a>E. Usando CAST com a cláusula LIKE  
 O exemplo a seguir converte a coluna `money` `SalesYTD` em uma `int` e, em seguida, em uma coluna `char(20)` de forma que ela possa ser usada com a cláusula `LIKE`.
@@ -673,47 +663,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### <a name="l-using-cast-to-concatenate"></a>L. Usando CAST para concatenar  
-O exemplo a seguir concatena expressões não são de caractere usando CONVERSÃO. Usa AdventureWorksDW.
-  
-```sql
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM dbo.DimProduct  
-WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-ListPrice
-------------------------
-The list price is 357.06
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09  
-```  
-  
-### <a name="m-using-cast-to-produce-more-readable-text"></a>M. Usando CAST para produzir texto mais legível  
-O exemplo a seguir usa a CONVERSÃO na lista de seleção para converter o `Name` coluna para um **char (10)** coluna. Usa AdventureWorksDW.
-  
-```sql
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
-FROM dbo.DimProduct  
-WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-Name        UnitPrice
-----------  ---------
-Long-Sleev  31.2437
-Long-Sleev  32.4935
-Long-Sleev  49.99  
-```  
-  
-### <a name="n-using-cast-with-the-like-clause"></a>N. Usando CAST com a cláusula LIKE  
+### <a name="l-using-cast-with-the-like-clause"></a>L. Usando CAST com a cláusula LIKE  
 O exemplo a seguir converte a **money** coluna `ListPrice` para um **int** tipo e, em seguida, para um **char(20)** tipo de forma que ele pode ser usado com a cláusula LIKE. Usa AdventureWorksDW.
   
 ```sql
@@ -722,7 +672,7 @@ FROM dbo.DimProduct
 WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
 ```  
   
-### <a name="o-using-cast-and-convert-with-datetime-data"></a>O. Usando CAST e CONVERT com dados datetime  
+### <a name="m-using-cast-and-convert-with-datetime-data"></a>M. Usando CAST e CONVERT com dados datetime  
 O exemplo a seguir exibe a data e hora atuais, usa a CONVERSÃO para alterar a data e hora atuais para um tipo de dados de caractere, e, em seguida, usa CONVERT exibe a data e hora no formato ISO 8601. Usa AdventureWorksDW.
   
 ```sql

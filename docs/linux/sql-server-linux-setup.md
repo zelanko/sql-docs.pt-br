@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
@@ -97,7 +97,7 @@ A reversão ou fazer downgrade do SQL Server para uma versão anterior, use as s
 > [!IMPORTANT]
 > Somente há suporte para downgrade entre RC1, RC2 e RTM no momento.
 
-## <a id="repositories"></a>Alterar os repositórios de origem
+## <a id="repositories"></a>Configurar repositórios de origem
 
 Quando você instala ou atualiza o SQL Server, você obter a versão mais recente do SQL Server do seu repositório Microsoft configurado. É importante observar que há dois tipos principais de repositórios para cada distribuição:
 
@@ -110,9 +110,9 @@ Cada versão de atualização Cumulativa e GDR contém o pacote completo do SQL 
 > [!NOTE]
 > Atualizando uma atualização cumulativa versão para uma versão GDR não tem suporte.
 
-Para alterar a partir do repositório GDR para o repositório de atualizações Cumulativas use as seguintes etapas:
+Para configurar as atualização Cumulativa ou GDR repositórios, use as seguintes etapas:
 
-1. Remove o repositório de visualização configurado anteriormente.
+1. Se necessário, remova o repositório previamente configurado.
 
    | Plataforma | Comando de remoção de repositório |
    |-----|-----|

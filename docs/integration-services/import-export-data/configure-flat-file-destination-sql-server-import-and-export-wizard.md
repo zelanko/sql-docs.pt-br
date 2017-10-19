@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e604c8c55cfa0bdb977840ee742d062573abeeeb
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 93fbd5e9429d06e3f011f6f0aff03d76a3db9000
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar Destino Arquivo Simples (Assistente de Importação e Exportação do SQL Server)
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/26/2017
 -   **Delimitador de linha**. Cada linha de dados na saída termina com um retorno de carro-linha combinação de alimentação.
 -   **Delimitador de coluna**. Colunas de dados dentro de cada linha são separadas por vírgula.
 
- ![Página de arquivo simples de configurar do Assistente de importação e exportação](../../integration-services/import-export-data/media/flat-file.png "página de arquivo simples de configurar do Assistente de importação e exportação")  
+ ![Configurar a página de arquivo simples do Assistente de importação e exportação](../../integration-services/import-export-data/media/flat-file.png)
   
 ## <a name="pick-a-source-table"></a>Selecione uma tabela de origem
  **Tabela ou exibição de origem**  

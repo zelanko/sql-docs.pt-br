@@ -1,6 +1,6 @@
 ---
 title: "Quais são as novidades no Reporting Services (SSRS) | Microsoft Docs"
-ms.date: 07/02/2017
+ms.date: 10/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -9,21 +9,14 @@ ms.technology:
 - reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- what's new [Reporting Services]
-- Reporting Services, what's new
-- SQL Server Reporting Services, what's new
-- SSRS, what's new
-ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-caps.latest.revision: 206
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
+ms.translationtype: MT
+ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
+ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 
@@ -32,20 +25,32 @@ ms.lasthandoff: 08/09/2017
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
 Saiba mais sobre o que há de novo no SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Isso aborda as principais áreas de recurso e é atualizado à medida que novos itens são lançados.
-  
+
   Para obter informações sobre o que há de novo em outras áreas do SQL Server, consulte [Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) ou [o que há de novo no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
-  
+
  **Download** ![download](../analysis-services/media/download.png "download")
- 
-- Para fazer o download da Visualização Técnica de janeiro de 2017 dos relatórios do Power BI no SQL Server Reporting Services, junto com a versão de área de trabalho do Power BI (SQL Server Reporting Services), vá para o **[Centro de downloads da Microsoft](https://go.microsoft.com/fwlink/?linkid=839351)**.
-  
--   Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
-  
--   Tem uma conta do Azure?  Em seguida, acesse  **[aqui](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)**  para criar uma máquina Virtual com o SQL Server já instalado.  
 
- ![Observação](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Observação") para obter as notas de versão atual, consulte [notas de versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) ou [notas de versão do servidor de relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-release-notes/).
+- Para baixar o SQL Server de 2017 Reporting Services, vá para o  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
-Para obter informações sobre o servidor de relatório do Power BI, consulte [Introdução ao servidor de relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+Para obter as notas de versão atual, consulte [notas de versão do SQL Server de 2017](../sql-server/sql-server-2017-release-notes.md) ou [notas de versão do servidor de relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). Para obter informações sobre o servidor de relatório do Power BI, consulte [Introdução ao servidor de relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+
+## <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
+
+### <a name="comments-on-reports"></a>Comentários em relatórios
+
+Agora, é possível inserir comentários nos relatórios, como uma forma de ampliar a perspectiva e colaborar com outras pessoas. Também é possível incluir anexos com comentários.
+
+![Comentários em um servidor de relatório](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
+
+Para obter mais informações, consulte [adicionar comentários a um relatório em um servidor de relatório](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
+
+### <a name="dax-queries-in-reporting-tools"></a>Consultas DAX em ferramentas de relatório
+
+Nas versões mais recentes do Construtor de Relatórios e do SQL Server Data Tools, é possível criar consultas DAX nativas em modelos de dados de tabela do SQL Server Analysis Services com suporte arrastando e soltando os campos desejados nos designers de consultas. Consulte o [blog do Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+
+### <a name="rest-api-support"></a>Suporte à API REST
+
+Para habilitar o desenvolvimento de aplicativos modernos e personalização, o SQL Server Reporting Services agora oferece suporte a uma totalmente OpenAPI compatível com API RESTful. A especificação de API e a documentação completa agora podem ser encontradas em [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 ## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Consultar o suporte do designer de DAX agora no construtor de relatórios e o SQL Server Data Tools
 
@@ -106,7 +111,7 @@ Os relatórios móveis do Reporting Services são relatórios dedicados e otimiz
  
 Para obter mais informações, consulte:  
   
--   [Combinações do SharePoint e do servidor e suplemento Reporting Services com suporte &#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [Combinações com suporte do SharePoint e Reporting Services Server e suplemento &#40; SQL Server 2016 &#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -131,9 +136,9 @@ Para obter mais informações, consulte:
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- Para obter mais informações, consulte [Integração do Servidor de Relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) e [Fixar itens do Reporting Services nos painéis do Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
+ Para obter mais informações, consulte [integração do servidor de relatório do Power BI &#40; Configuration Manager &#41; ](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) e [itens de Pin do Reporting Services nos painéis do Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
  
- **Renderização e exportação do PowerPoint:** o formato Microsoft PowerPoint (PPTX) é uma nova extensão de renderização do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Você pode exportar relatórios no formato PPTX de aplicativos comuns; Construtor de Relatórios, Designer de Relatórios (no SSDT) e o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Por exemplo, a imagem a seguir mostra o menu de exportação do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+ **Renderização e exportação do PowerPoint:** o formato Microsoft PowerPoint (PPTX) é uma nova extensão de renderização do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . Você pode exportar relatórios no formato PPTX de aplicativos comuns; Construtor de Relatórios, Designer de Relatórios (no SSDT) e o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Por exemplo, a imagem a seguir mostra o menu de exportação do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -175,7 +180,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![Lista de parâmetros no painel de dados de relatório e, no painel de parâmetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "lista de parâmetros no painel de dados de relatório e, no painel de parâmetros")  
 
   
-**Suporte a alto DPI:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] oferece suporte a dispositivos e dimensionamento de alto DPI (pontos por polegada).  Para saber mais sobre Alto DPI, veja o seguinte:  
+**Suporte a alto DPI:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] dá suporte a dispositivos e dimensionamento de Alto DPI (Pontos por Polegada).  Para saber mais sobre Alto DPI, veja o seguinte:  
   
 -   [Aprimoramentos de dimensionamento de DPI do Windows 8.1](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
@@ -190,6 +195,6 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Recursos do Reporting Services com suporte nas edições do SQL Server 2016](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Atualizar e migrar o Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-[Servidor de relatórios de BI de energia](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
+[Servidor de Relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

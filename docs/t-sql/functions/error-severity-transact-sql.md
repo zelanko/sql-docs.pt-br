@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11cbfa6cc0ca35e5bb5e3358bf9d9dc2dfcfb644
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 5c3cd713bcbb239c037ff0a43083058de117cb9b
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
@@ -100,22 +100,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorseverity-in-a-catch-block"></a>C. Usando ERROR_SEVERIRTY em um bloco CATCH  
- A exemplo a seguir mostra um `SELECT` instrução que gera um erro de divisão por zero. A severidade do erro é retornada.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_SEVERITY() AS ErrorSeverity;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>D. Usando ERROR_SEVERITY em um bloco CATCH com outras ferramentas de tratamento de erros  
+### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. Usando ERROR_SEVERITY em um bloco CATCH com outras ferramentas de tratamento de erros  
  O exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. Junto com a severidade, são retornadas as informações relacionadas ao erro.  
   
 ```  

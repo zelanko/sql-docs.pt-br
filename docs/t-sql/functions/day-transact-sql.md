@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98e0a1f548fdec917f265595a4a06ec795c5f37e
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 9edfdc46ede4c090080c09253e2bb213a384816c
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
@@ -71,24 +71,6 @@ A instrução a seguir retorna `1900, 1, 1`. O argumento para *data* é o númer
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-O exemplo a seguir retorna `30`. Este é o número do dia.
-  
-```sql
--- Uses AdventureWorks  
-  
-SELECT TOP 1 DAY('2010-07-30T01:01:01.1234')   
-FROM dbo.DimCustomer;  
-```  
-  
-O exemplo a seguir retorna `1900, 1, 1`. O argumento para *data* é o número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como janeiro 1, 1900.
-  
-```sql
--- Uses AdventureWorks  
-  
-SELECT TOP 1 YEAR(0), MONTH(0), DAY(0) FROM dbo.DimCustomer;  
 ```  
   
 ## <a name="see-also"></a>Consulte também

@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 49889c4b29de0d86859c1363ce13b9656645848d
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: d8887c50cb482e27bce63e08aa18b8ca54616faa
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
@@ -61,18 +61,6 @@ O DATALENGTH de NULL é NULL.
 >  Os níveis de compatibilidade podem afetar os valores de retorno. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir localiza o comprimento da coluna `Name` na tabela `Product`.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SELECT length = DATALENGTH(Name), Name  
-FROM Production.Product  
-ORDER BY Name;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 O exemplo a seguir localiza o comprimento da coluna `Name` na tabela `Product`.
   
 ```sql

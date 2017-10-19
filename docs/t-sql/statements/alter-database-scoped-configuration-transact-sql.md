@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTERAR a configuração de escopo do banco de dados (Transact-SQL)
@@ -119,7 +119,7 @@ Esse valor só é válido em secundários enquanto o banco de dados no primário
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRIMÁRIO}  
 
-Habilita ou desabilita os hotfixes de otimização de consulta, independentemente do nível de compatibilidade do banco de dados. O padrão é **OFF**. Isso equivale a habilitar [sinalizador de rastreamento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Habilita ou desabilita os hotfixes de otimização de consulta, independentemente do nível de compatibilidade do banco de dados. O padrão é **OFF**, que desabilita os hotfixes de otimização que foram lançados após o mais alto nível de compatibilidade disponível foi introduzido para uma versão específica de consulta (post-RTM). A definição para **ON** equivale a habilitar [sinalizador de rastreamento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
 > Para fazer isso no nível da consulta, adicione o **QUERYTRACEON** [dica de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para fazer isso no nível da consulta, adicione a dica USE [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md) em vez de usar o sinalizador de rastreamento.  
@@ -140,7 +140,6 @@ Habilita ou desabilita o cache de identidade no nível de banco de dados. O padr
 
 > [!NOTE] 
 > Essa opção só pode ser definida para o primário. Para obter mais informações, consulte [colunas de identidade](create-table-transact-sql-identity-property.md).  
->
 
 ##  <a name="Permissions"></a> Permissões  
  Requer alterar qualquer configuração de escopo do banco de dados   
@@ -156,7 +155,7 @@ no banco de dados. Essa permissão pode ser concedida por um usuário com permis
  O evento ALTER_DATABASE_SCOPED_CONFIGURATION é adicionado como um evento DDL que pode ser usado para acionar um gatilho DDL. Este é um filho do grupo ALTER_DATABASE_EVENTS gatilho.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- **MAXDOP**  
+**MAXDOP**  
   
  As configurações granulares podem substituir os global e o administrador de recursos pode limitar a todas as outras configurações de MAXDOP.  A lógica para a configuração de MAXDOP é o seguinte:  
   
@@ -170,15 +169,15 @@ no banco de dados. Essa permissão pode ser concedida por um usuário com permis
   
 -   A configuração sp_configure é substituída pelo administrador de recursos de configuração.  
   
- **QUERY_OPTIMIZER_HOTFIXES**  
+**QUERY_OPTIMIZER_HOTFIXES**  
   
  Quando a dica QUERYTRACEON é usada para permitir que o otimizador de consulta herdados ou hotfixes do otimizador de consulta, ele seria uma condição OR entre a dica de consulta e a configuração de escopo do banco de dados, configuração, o que significa que se o estiver habilitada, as opções serão aplicadas.  
   
- **GeoDR**  
+**GeoDR**  
   
  Legíveis bancos de dados secundários, por exemplo, grupos de disponibilidade AlwaysOn e GeoReplication, usam o valor secundário, verificando o estado do banco de dados. Mesmo que nós não recompilar durante o failover e tecnicamente o novo primário tem consultas que estão usando as configurações do secundárias, a ideia é que a configuração entre o primário e secundário só irão variar quando a carga de trabalho é diferente e, portanto, as consultas armazenadas em cache usando as configurações ideais, enquanto a novas consultas assumirão as novas configurações que são apropriadas para eles.  
   
- **DacFx**  
+**DacFx**  
   
  Como um novo recurso no banco de dados do SQL Azure e SQL Server 2016 que afeta o esquema de banco de dados ALTER DATABASE SCOPED CONFIGURATION, exportações do esquema (com ou sem dados) não poderá ser importado para uma versão mais antiga do SQL Server, por exemplo, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou < C2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Por exemplo, uma exportação para um [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) ou um [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) de um [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] banco de dados usado esse novo recurso não poderá ser importado para um servidor de nível inferior.  
   
@@ -245,7 +244,7 @@ Este exemplo define PARAMETER_SNIFFING banco de dados secundário, pois ela est�
 em um cenário de replicação geográfica.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. Definir QUERY_OPTIMIZER_HOTFIXES  

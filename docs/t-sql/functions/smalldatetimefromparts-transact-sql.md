@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 90be7b0ad4f7fcc7677f820e374705636891d458
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 0f561d37aae876f94946c8210665f642daec9755
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
@@ -61,9 +61,9 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
  **smalldatetime**  
   
 ## <a name="remarks"></a>Comentários  
- Isso funciona como um construtor para completamente inicializado **smalldatetime** valor. Se os argumentos não forem válidos, um erro será lançado. Se os argumentos necessários forem nulos, nulo será retornado.  
+ Essa função funciona como um construtor para completamente inicializado **smalldatetime** valor. Se os argumentos não forem válidos, um erro será lançado. Se os argumentos necessários forem nulos, nulo será retornado.  
   
- Essa função é capaz de ser remota para servidores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Ela não será remota para servidores que têm uma versão anterior ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Essa função é capaz de ser remota para servidores do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Não é remota para servidores que têm uma versão anterior [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -80,23 +80,6 @@ Result
   
 (1 row(s) affected)  
 ```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
-SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Result  
----------------------------  
-2011-01-01 00:00:00  
-  
-(1 row(s) affected)  
-```  
-  
   
 
 

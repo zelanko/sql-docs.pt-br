@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f989318c49c6782b82ebda2b51636900768dbd39
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: cb65492a3be74474cd5afccdcaf0487d7cbd5167
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
@@ -99,21 +99,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errornumber-in-a-catch-block"></a>C. Usando ERROR_NUMBER em um bloco CATCH  
- O exemplo de código a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. O número do erro é retornado.  
-  
-```  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_NUMBER() AS ErrorNumber;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>D. Usando ERROR_NUMBER em um bloco CATCH com outras ferramentas de tratamento de erros  
+### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. Usando ERROR_NUMBER em um bloco CATCH com outras ferramentas de tratamento de erros  
  O exemplo de código a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. Juntamente com o número do erro, são retornadas as informações relacionadas ao erro.  
   
 ```  

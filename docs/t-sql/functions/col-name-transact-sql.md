@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3028e409a8218b35bbf7cd4773e80ca27e8db8be
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: c697b619907bb3d80fbbff800b2ac29ef574af8d
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
@@ -65,29 +65,6 @@ O *table_id* e *column_id* juntos produzem uma cadeia de caracteres de nome de c
 Para obter mais informações sobre como obter os números de identificação de tabela e coluna, consulte [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
-O exemplo a seguir retorna o nome da primeira coluna da tabela `Employee` do banco de dados `AdventureWorks2012`.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SET NOCOUNT OFF;  
-GO  
-SELECT COL_NAME(OBJECT_ID('HumanResources.Employee'), 1) AS 'Column Name';  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
-Column Name
-------------------
-BusinessEntityID
-```
-  
-## <a name="examples"></a>Exemplos
-
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
 O exemplo a seguir retorna o nome da primeira coluna em uma amostra `Employee` tabela.
   
 ```sql

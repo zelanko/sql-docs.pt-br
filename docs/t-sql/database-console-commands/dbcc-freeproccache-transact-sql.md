@@ -1,7 +1,7 @@
 ---
 title: DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: b91dcf6191f6ec3336c9bf3d3588e8f1daad0867
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -62,20 +62,20 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>Argumentos  
  ({ *plan_handle* | *sql_handle* | *nome_do_pool* })  
- *plan_handle* identifica exclusivamente um plano de consulta para um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* é **varbinary(64)** e pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
+*plan_handle* identifica exclusivamente um plano de consulta para um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* é **varbinary(64)** e pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
  -   [exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.DM exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.DM exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
- *sql_handle* é o identificador SQL do lote a ser apagado. *sql_handle* é **varbinary(64)** e pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
+*sql_handle* é o identificador SQL do lote a ser apagado. *sql_handle* é **varbinary(64)** e pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
  -   [sys.DM exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.DM exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.DM exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.DM exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
- *nome_do_pool* é o nome de um pool de recursos do administrador de recursos. *nome_do_pool* é **sysname** e pode ser obtido consultando o [sys.DM resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) exibição de gerenciamento dinâmico.  
+*nome_do_pool* é o nome de um pool de recursos do administrador de recursos. *nome_do_pool* é **sysname** e pode ser obtido consultando o [sys.DM resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) exibição de gerenciamento dinâmico.  
  Para associar um grupo de carga de trabalho do administrador de recursos um pool de recursos, consulte o [sys.DM resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) exibição de gerenciamento dinâmico. Para obter informações sobre o grupo de carga de trabalho para uma sessão, consulte o [sys.DM exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) exibição de gerenciamento dinâmico.  
 
   
@@ -87,11 +87,14 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
  ALL  
  Limpe o cache do plano de consulta de cada nó de computação e a partir do nó de controle.  
-  
-## <a name="remarks"></a>Comentários  
-Use DBCC FREEPROCCACHE para limpar o cache do plano cuidadosamente. Por exemplo, liberar o cache do plano faz com que um procedimento armazenado seja recompilado em vez de reutilizado no cache. 
 
-Isso pode causar uma diminuição súbita e temporária no desempenho de consulta. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
+> [!NOTE]
+> Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` para limpar o cache de procedimento (plano) para o banco de dados no escopo.
+
+## <a name="remarks"></a>Comentários  
+Use DBCC FREEPROCCACHE para limpar o cache do plano cuidadosamente. Limpando o procedimento (plano) faz com que o cache de todos os planos a ser removido e consulta de entrada execuções compilará um novo plano, em vez de reutilizá qualquer plano armazenado em cache anteriormente. 
+
+Isso pode causar uma queda repentina e temporária no desempenho de consulta conforme o número de novas compilações. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
 
 As seguintes operações de reconfiguração também são limpas no cache de procedimento:
 -   contagem de bucket do cache de verificação de acesso  
@@ -115,16 +118,15 @@ As seguintes operações de reconfiguração também são limpas no cache de pro
 Quando a cláusula WITH NO_INFOMSGS não for especificada, DBCC FREEPROCCACHE retornará: "execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
   
 ## <a name="permissions"></a>Permissões  
-Aplica-se a: SQL Server, Parallel Data Warehouse 
-
+Aplica-se a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - Exige a permissão ALTER SERVER STATE no servidor.  
 
-Aplica-se a: SQL Data Warehouse do Azure
+Aplica-se a:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - Requer associação na função de servidor fixa DB_OWNER.  
 
 ## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Comentários gerais para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Vários comandos DBCC FREEPROCCACHE podem ser executados simultaneamente.
-Em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], limpar o cache do plano de consulta pode causar uma queda temporária no desempenho de consulta quando consultas são recompiladas. 
+Em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], limpar o cache de plano pode causar uma queda temporária no desempenho de consulta como um novo plano de compilação de consultas de entrada, em vez de reutilizá qualquer anteriormente plano armazenado em cache. 
 
 DBCC FREEPROCCACHE (computação) faz com que apenas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para recompilar consultas quando eles são executados em nós de computação. Ela não causa o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] para recompilar um plano de consulta paralela que é gerado no nó de controle.
 DBCC FREEPROCCACHE pode ser cancelado durante a execução.
@@ -135,11 +137,11 @@ Não há suporte para DBCC FREEPROCCAHCE em uma instrução de EXPLICAR.
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Metadados para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Uma nova linha é adicionada ao modo de exibição de sistema sys.pdw_exec_requests quando DBCC FREEPROCCACHE é executado.
-  
+
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Exemplos:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Apagando um plano de consulta do cache do plano  
-O exemplo a seguir apaga um plano de consulta do cache do plano especificando o identificador do plano de consulta. Para assegurar que a consulta de exemplo esteja no cache do plano, a consulta será executada primeiro. O `sys.dm`_`exec` \_ `cached_plans` e `sys.dm` \_ `exec` \_ `sql` \_ `text` exibições de gerenciamento dinâmico são consultadas para retornar o Identificador de plano para a consulta. 
+O exemplo a seguir apaga um plano de consulta do cache do plano especificando o identificador do plano de consulta. Para assegurar que a consulta de exemplo esteja no cache do plano, a consulta será executada primeiro. O `sys.dm_exec_cached_plans` e `sys.dm_exec_sql_text` exibições de gerenciamento dinâmico são consultadas para retornar o identificador de plano para a consulta. 
 
 O valor do identificador do plano do conjunto de resultados é inserido na instrução `DBCC FREEPROCACHE` para remover apenas o plano em questão do cache do plano.
   
@@ -195,7 +197,7 @@ O exemplo a seguir remove todos os caches de plano de consulta existente de nós
   
 ```sql
 USE UserDbSales;  
-DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;  
+DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
  O exemplo a seguir tem os mesmos resultados do exemplo anterior, exceto que as mensagens informativas serão exibidas nos resultados.  
@@ -211,12 +213,14 @@ Quando são solicitadas mensagens informativas e a execução for bem-sucedida, 
 O exemplo a seguir fornece o David permissão logon para executar DBCC FREEPROCCACHE.  
   
 ```sql
-GRANT ALTER SERVER STATE TO David;  
+GRANT ALTER SERVER STATE TO David; 
+GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)
+[Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)  
+[ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
 

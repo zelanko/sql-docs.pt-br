@@ -18,10 +18,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 5acf2de3fccc2f5180358f87bd02591811c59c72
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: 0a84b10114d785c9216a0902b2eefbcb0bd3f4c8
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gerenciador de conexões do Azure Data Lake Store
@@ -60,7 +60,8 @@ O Gerenciador de conexão do repositório Azure Data Lake é um componente do [S
         4. Para testar a conexão, selecione **Testar Conexão**.  
   
 6.  Selecione **Okey** para fechar o **Editor do Gerenciador de Conexão do Azure Data Lake repositório** caixa de diálogo.  
-  
+
+## <a name="view-the-properties-of-the-connection-manager"></a>Exibir as propriedades do Gerenciador de conexão
 Você pode ver as propriedades do gerenciador de conexões criado na janela **Propriedades** .  
   
   

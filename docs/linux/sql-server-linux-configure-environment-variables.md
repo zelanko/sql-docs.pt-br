@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 2bbb64b775ab59665ac2c8eefdd21e514b4906cd
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 72c648e147b628a4a99ffc9605ba42b11c83883e
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurar o SQL Server com variáveis de ambiente no Linux
@@ -34,7 +34,7 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL
 |-----|-----|
 | **ACCEPT_EULA** | Aceite o contrato de licença do SQL Server quando definido como qualquer valor (por exemplo, ' Y'). |
 | **MSSQL_SA_PASSWORD** | Configure a senha do usuário. |
-| **MSSQL_PID** | Defina a chave de produto ou a edição do SQL Server. Os valores possíveis incluem: avaliação, Developer, Express, Web, Standard, Enterprise ou uma chave de produto na forma de # # #-# # #-# # #-# # #-# # #, onde '#' é um número ou uma letra. |
+| **MSSQL_PID** | Defina a chave de produto ou a edição do SQL Server. Os valores possíveis incluem: </br></br>**Evaluation**</br>**Desenvolvedor**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Uma chave do produto**</br></br>Se especificar uma chave de produto, ela deve ser na forma de # # #-# # #-# # #-# # #-# # #, onde '#' é um número ou uma letra.|
 | **MSSQL_LCID** | Define a ID do idioma a ser usado para o SQL Server. Por exemplo, 1036 é francês. |
 | **MSSQL_COLLATION** | Define o agrupamento padrão do SQL Server. Isso substitui o mapeamento padrão de id de idioma (LCID) para agrupamento. |
 | **MSSQL_MEMORY_LIMIT_MB** | Define a quantidade máxima de memória (em MB) que pode usar o SQL Server. Por padrão é 80% da memória física total. |
@@ -79,6 +79,9 @@ Se você estiver executando o Docker no Windows, use a seguinte sintaxe com aspa
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
+
+> [!NOTE]
+> O processo de execução de edições de produção em contêineres é ligeiramente diferente. Para obter mais informações, consulte [executar imagens de contêiner de produção](sql-server-linux-configure-docker.md#production).
 
 ## <a name="next-steps"></a>Próximas etapas
 

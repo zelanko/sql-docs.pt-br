@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4531f8e411dbe24a67a6fd5d6ac987fcb2d90c18
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 7918cb0d2832e88f3e4218b98c7f606f559f2e4e
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
@@ -122,20 +122,6 @@ SELECT LOG(10);
   
  2.30
  ```  
-  
-### <a name="d-calculating-the-logarithm-of-the-exponent-of-a-number"></a>D. Calculando o logaritmo do expoente de um número  
- O exemplo a seguir calcula o `LOG` para o exponente de um número.  
-  
-```  
-SELECT LOG(EXP (10));  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
----------  
-10.00
-```  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   

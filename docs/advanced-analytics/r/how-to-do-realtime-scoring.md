@@ -1,7 +1,7 @@
 ---
 title: "Como realizar em tempo real de pontuação ou pontuação nativo no SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a72ac24f681d562adc7b43f02a4e91cdeb80bbc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Como realizar em tempo real de pontuação ou pontuação nativo no SQL Server
 
-Este tópico fornece instruções e código de exemplo de como executar a pontuação em tempo real e recursos nativos de pontuação no SQL Server 2016 e 2017 do SQL Server. O objetivo de pontuação em tempo real e pontuação nativo é melhorar o desempenho das operações de pontuação em lotes pequenos.
+Este tópico fornece instruções e código de exemplo de como executar a pontuação em tempo real e recursos nativos de pontuação em 2017 do SQL Server e SQL Server 2016. O objetivo de pontuação em tempo real e pontuação nativo é melhorar o desempenho das operações de pontuação em lotes pequenos.
 
 Tanto em tempo real de pontuação e nativo de pontuação são projetados para permitir o uso de uma máquina de modelo de aprendizado sem a necessidade de instalar o R. Tudo o que você precisa fazer é obter um modelo pré-treinado em um formato compatível e salvá-la em um banco de dados do SQL Server.
 
@@ -30,11 +30,11 @@ Tanto em tempo real de pontuação e nativo de pontuação são projetados para 
 As opções a seguir têm suporte para previsão de lote rápida:
 
 + **Pontuação nativo**: função PREVER T-SQL no SQL Server 2017
-+ **Em tempo real de pontuação**: usar o sp_rxPredict procedimento armazenado no SQL Server 2016 ou 2017 do SQL Server.
++ **Em tempo real de pontuação**: usando o sp\_rxPredict o procedimento armazenado no SQL Server 2016 ou 2017 do SQL Server.
 
 > [!NOTE]
 > Uso da função de previsão é recomendado em 2017 do SQL Server.
-> Para usar sp_rxPredict requer que você habilitar a integração do SQLCLR. Considere as implicações de segurança antes de habilitar essa opção.
+> Para usar sp\_rxPredict requer que você habilitar a integração do SQLCLR. Considere as implicações de segurança antes de habilitar essa opção.
 
 O processo geral de preparar o modelo e, em seguida, gerar pontuações é muito semelhante:
 
@@ -49,7 +49,7 @@ O processo geral de preparar o modelo e, em seguida, gerar pontuações é muito
 
 + Se usar sp\_rxPredict, algumas etapas adicionais são necessárias. Consulte [habilitar em tempo real de pontuação](#bkmk_enableRtScoring).
 
-+ No momento da redação deste artigo, apenas RevoScaleR e MicrosoftML podem criar modelos compatíveis. Tipos de modelo adicionais podem ser disponibilizados no futuro. Para obter a lista dos algoritmos com suporte no momento, consulte [em tempo real de pontuação](../real-time-scoring.md).
++ Neste momento, apenas RevoScaleR e MicrosoftML podem criar modelos compatíveis. Tipos de modelo adicionais podem ser disponibilizados no futuro. Para obter a lista dos algoritmos com suporte no momento, consulte [em tempo real de pontuação](../real-time-scoring.md).
 
 ### <a name="serialization-and-storage"></a>Serialização e armazenamento
 
@@ -80,7 +80,7 @@ Código de R, há duas maneiras de salvar o modelo em uma tabela:
 
 ## <a name="native-scoring-with-predict"></a>Nativo com previsão de pontuação
 
-Neste exemplo, você criará um modelo e, em seguida, chame a função de previsão em tempo real do T-SQL.
+Neste exemplo, você cria um modelo e, em seguida, chame a função de previsão em tempo real do T-SQL.
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Etapa 1. Preparar e salvar o modelo
 
@@ -159,7 +159,7 @@ A seguinte instrução de previsão simples obtém uma classificação do modelo
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
-  WHERE model_name = 'iris.dtree.model'
+  WHERE model_name = 'iris.dtree'
   AND model_version = 'v1');
 SELECT d.*, p.*
   FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
@@ -181,7 +181,7 @@ Esta seção descreve as etapas necessárias para configurar o **em tempo real**
 Você deve habilitar esse recurso para cada banco de dados que você deseja usar para pontuação. O administrador do servidor deve executar o utilitário de linha de comando, RegisterRExt.exe, que é incluído com o pacote RevoScaleR.
 
 > [!NOTE]
-> Em ordem de pontuação para trabalhar e em tempo real, a funcionalidade de SQL CLR precisa ser habilitado na instância e o banco de dados precisa ser marcado como confiável. Quando você executa o script, essas ações são executadas para você. No entanto, você deve considerar as implicações de segurança adicional de fazer isso.
+> Em ordem de pontuação para trabalhar e em tempo real, a funcionalidade de SQL CLR precisa ser habilitado na instância e o banco de dados precisa ser marcado como confiável. Quando você executa o script, essas ações são executadas para você. No entanto, você deve considerar as implicações de segurança adicional.
 
 1. Abra um prompt de comando com privilégios elevados e navegue até a pasta onde RegisterRExt.exe está localizado. O caminho a seguir pode ser usado em uma instalação padrão:
     
@@ -209,12 +209,9 @@ Você deve habilitar esse recurso para cada banco de dados que você deseja usar
 > 
 > No SQL Server de 2017, medidas adicionais de segurança estão em vigor para evitar problemas com a integração CLR. Essas medidas impõem restrições adicionais sobre o uso desse procedimento armazenado também.
 
-
 ### <a name="step-2-prepare-and-save-the-model"></a>Etapa 2. Preparar e salvar o modelo
 
-O formato binário exigido pelo sp\_rxPredict é o mesmo que para PREVER.
-
-Portanto, no seu código R, inclui uma chamada para [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)e certifique-se de especificar _realtimeScoringOnly_ = TRUE, como neste exemplo:
+O formato binário exigido pelo sp\_rxPredict é o mesmo que para PREVER. Portanto, no seu código R, inclui uma chamada para [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)e certifique-se de especificar _realtimeScoringOnly_ = TRUE, como neste exemplo:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -222,7 +219,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Etapa 3. Chamar sp_rxPredict
 
-Você chamar sp_rxPredict como você faria com qualquer outro procedimento armazenado. Na versão atual, o procedimento armazenado usa apenas dois parâmetros:  _@model_  para o modelo em formato binário, e  _@inputData_  para os dados a serem usados na pontuação, definido como uma consulta SQL válida .
+Você pode chamar sp\_rxPredict como você faria com qualquer outro procedimento armazenado. Na versão atual, o procedimento armazenado usa apenas dois parâmetros:  _@model_  para o modelo em formato binário, e  _@inputData_  para os dados a serem usados na pontuação, definido como uma consulta SQL válida .
 
 Como o formato binário é o mesmo que é usado pela função de previsão, você pode usar a tabela de modelos e dados do exemplo anterior.
 
@@ -238,17 +235,22 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> A chamada para `sp_rxPredict` falhará se os dados de entrada para pontuação não incluem colunas que correspondem aos requisitos do modelo. Atualmente, apenas os seguintes tipos de dados .NET têm suporte: double, float, short, ushort, long, ulong e cadeia de caracteres.
+> A chamada para sp\_rxPredict falhará se os dados de entrada para pontuação não incluem colunas que correspondem aos requisitos do modelo. Atualmente, apenas os seguintes tipos de dados .NET têm suporte: double, float, short, ushort, long, ulong e cadeia de caracteres.
 > 
 > Portanto, talvez seja necessário filtrar tipos sem suporte em seus dados de entrada antes de usá-lo para a pontuação em tempo real.
 > 
 > Para obter informações sobre tipos SQL correspondentes, consulte [mapeamento de tipo CLR SQL](https://msdn.microsoft.com/library/bb386947.aspx) ou [mapeamento de dados de parâmetro CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-### <a name="disable-realtime-scoring"></a>Desabilitar a pontuação em tempo real
+## <a name="disable-realtime-scoring"></a>Desabilitar a pontuação em tempo real
 
 Para desabilitar a funcionalidade de pontuação em tempo real, abra um prompt de comando com privilégios elevados e execute o seguinte comando:`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### <a name="realtime-scoring-in-microsoft-r-server"></a>Em tempo real de pontuação no Microsoft R Server
+## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>Em tempo real de pontuação no Microsoft R Server ou o servidor de aprendizado de máquina
 
-Para obter informações sobre em tempo real de pontuação em um ambiente distribuído com base no Microsoft R Server, consulte o [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) função disponível no [mrsDeploy pacote](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), que oferece suporte para Publicando modelos de pontuação, como um novo, um serviço web em execução no servidor de R e em tempo real.
+Servidor de aprendizado de máquina dá suporte a distribuídas em tempo real de pontuação de modelos publicados como um serviço web. Para obter mais informações, consulte estes tópicos:
 
++ [Quais são os serviços web no servidor de aprendizado de máquina?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [O que é operacionalização?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Implantar um modelo de Python como um serviço web com sdk azureml-modelo-management](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [Publicar um modelo em tempo real ou um bloco de código de R como um novo serviço da web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [pacote de mrsdeploy para R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

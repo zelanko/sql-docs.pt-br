@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protegendo aplicativos do JDBC Driver
@@ -36,9 +36,10 @@ ms.lasthandoff: 09/09/2017
 |[Validando entradas de usuário](../../connect/jdbc/validating-user-input.md)|Descreve técnicas para validar a entrada do usuário.|  
 |[Segurança do aplicativo](../../connect/jdbc/application-security.md)|Descreve como usar permissões de política de Java para ajudar a proteger um aplicativo do driver JDBC.|  
 |[Usando criptografia SSL](../../connect/jdbc/using-ssl-encryption.md)|Descreve como estabelecer um canal de comunicação seguro com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando SSL Secure Sockets Layer () do banco de dados.|  
-|[Modo FIPS](../../connect/jdbc/fips-mode.md)|Descreve como usar o driver JDBC em modo de reclamante FIPS.| 
+|[Modo FIPS](../../connect/jdbc/fips-mode.md)|Descreve como usar o driver JDBC em modo compatível com FIPS.| 
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

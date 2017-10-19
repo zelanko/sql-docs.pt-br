@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec170c756fd207c648e210de15df9d18024ea718
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: a31ab0658470cb614e1b9d633f19fbb1d8fe4a29
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -71,57 +71,6 @@ SOUNDEX ( character_expression )
 -   Índices (incluindo exibições indexadas) que contêm uma coluna computada persistida definida com SOUNDEX não pode ser consultado até que o índice seja reconstruído executando a instrução `ALTER INDEX ALL ON <object> REBUILD`.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra a função SOUNDEX e a função DIFFERENCE relacionada. No primeiro exemplo, os valores padrão de `SOUNDEX` são retornados para todas as consoantes. Retornar o `SOUNDEX` para `Smith` e `Smythe` gerará o mesmo resultado SOUNDEX, pois todas as vogais, a letra `y`, as letras duplicadas e a letra `h` não são incluídas.  
-  
-```  
--- Using SOUNDEX  
-SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Válido para um agrupamento Latin1_General.  
-  
-```  
-  
------ -----   
-S530  S530    
-  
-(1 row(s) affected)  
-```  
-  
- A função `DIFFERENCE` compara a diferença dos resultados de padrão de `SOUNDEX`. O exemplo a seguir mostra duas cadeias de caracteres que diferem somente nas vogais. A diferença retornada é `4`, a mais baixa diferença possível.  
-  
-```  
--- Using DIFFERENCE  
-SELECT DIFFERENCE('Smithers', 'Smythers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Válido para um agrupamento Latin1_General.  
-  
-```  
------------   
-4             
-  
-(1 row(s) affected)  
-```  
-  
- No exemplo a seguir, as cadeias de caracteres diferem em consoantes; portanto, a diferença retornada é `2`, a maior diferença.  
-  
-```  
-SELECT DIFFERENCE('Anothers', 'Brothers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Válido para um agrupamento Latin1_General.  
-  
-```  
------------   
-2             
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir mostra a função SOUNDEX e a função DIFFERENCE relacionada. No primeiro exemplo, os valores padrão de `SOUNDEX` são retornados para todas as consoantes. Retornar o `SOUNDEX` para `Smith` e `Smythe` gerará o mesmo resultado SOUNDEX, pois todas as vogais, a letra `y`, as letras duplicadas e a letra `h` não são incluídas.  
   
 ```  

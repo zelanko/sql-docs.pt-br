@@ -1,7 +1,7 @@
 ---
 title: Importar de uma fonte de dados relacional (SSAS Tabular) | Microsoft Docs
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1db6dd24d059f8c478967bc3c69652aaec0aeb51
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: d45d72ca09a8abce6d29f018fcbaa8f54415a637
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="import-data---relational-data-source"></a>Importar dados - fonte de dados relacional
-  Você pode importar dados de uma variedade de bancos de dados relacionais usando o Assistente de Importação de Tabela. O assistente está disponível em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no menu **Modelo** . Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador. Para obter mais informações sobre os provedores e as fontes de dados com suporte, consulte [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
-  
+  Para modelos de tabela na 1200 e níveis de compatibilidade inferiores, você pode importar dados de uma variedade de bancos de dados relacionais usando o Assistente de importação de tabela. O assistente está disponível em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no menu **Modelo** . Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador. Para obter mais informações sobre os provedores e as fontes de dados com suporte, consulte [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md). 
+ 
  O Assistente de Importação de Tabela dá suporte a importação de dados das seguintes fontes de dados:  
   
  **Bancos de dados relacionais**  
@@ -69,3 +69,4 @@ ms.lasthandoff: 09/01/2017
  [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ea034f7217d031c21cf22f6b5aaff9bf16355a9
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 1868f902cf41eba9637138d7333ac908c72cb76e
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
@@ -56,32 +56,6 @@ DIFFERENCE ( character_expression , character_expression )
  DIFFERENCE e SOUNDEX diferenciam agrupamentos.  
   
 ## <a name="examples"></a>Exemplos  
- Na primeira parte do exemplo a seguir, os valores `SOUNDEX` de duas cadeias de caracteres muito similares são comparados. Para um agrupamento Latin1_General `DIFFERENCE` retorna um valor de `4`. Na segunda parte do exemplo a seguir, o `SOUNDEX` valores para duas cadeias de caracteres muito diferentes são comparadas e um agrupamento Latin1_General `DIFFERENCE` retorna um valor de `0`.  
-  
-```  
--- Returns a DIFFERENCE value of 4, the least possible difference.  
-SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
-GO  
--- Returns a DIFFERENCE value of 0, the highest possible difference.  
-SELECT SOUNDEX('Blotchet-Halls'), SOUNDEX('Greene'), DIFFERENCE('Blotchet-Halls', 'Greene');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
------ ----- -----------   
-G650  G650  4             
-  
-(1 row(s) affected)  
-  
------ ----- -----------   
-B432  G650  0             
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Na primeira parte do exemplo a seguir, os valores `SOUNDEX` de duas cadeias de caracteres muito similares são comparados. Para um agrupamento Latin1_General `DIFFERENCE` retorna um valor de `4`. Na segunda parte do exemplo a seguir, o `SOUNDEX` valores para duas cadeias de caracteres muito diferentes são comparadas e um agrupamento Latin1_General `DIFFERENCE` retorna um valor de `0`.  
   
 ```  

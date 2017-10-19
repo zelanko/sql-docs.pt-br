@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: cd64185b31ad5aba9496e55031eae15ae46d5180
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 33fcf5ceb2481b517844cb5334dd67c97b039b77
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="x40x40language-transact-sql"></a>& #x 40; & #x 40. IDIOMA (Transact-SQL)
@@ -51,21 +51,6 @@ ms.lasthandoff: 09/19/2017
  Para exibir informações sobre configurações de idioma, incluindo nomes de idioma oficial válido, execute **sp_helplanguage** sem um parâmetro especificado.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna o idioma da sessão atual.  
-  
-```  
-SELECT @@LANGUAGE AS 'Language Name';  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Language Name                   
-------------------------------  
-us_english                      
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir retorna o idioma da sessão atual.  
   
 ```  

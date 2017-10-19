@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4ad800c684bcf69a52828969ca816a135901280
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: f54170fc9f17ff7eb69f5de8cfdf865fd31bd4d8
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
@@ -101,56 +101,6 @@ O exemplo a seguir demonstra o uso do *frações* e *precisão* parâmetros:
 2.  Quando *frações* tem um valor de 50 e *precisão* tem um valor de 2, em seguida, o valor de *frações* representa 50/100 de um segundo.  
   
 3.  Quando *frações* tem um valor de 500 e *precisão* tem um valor de 3, em seguida, o valor de *frações* representará 500/1000 de um segundo.  
-  
-```sql
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 50, 2 );  
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 500, 3 );  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-----------------------  
-2011-08-15 14:23:44.5  
-  
-(1 row(s) affected)  
-  
-----------------------  
-2011-08-15 14:23:44.50  
-  
-(1 row(s) affected)  
-  
-----------------------  
-2011-08-15 14:23:44.500  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-simple-example-without-fractions-of-a-second"></a>C. Exemplo simples sem frações de um segundo  
-  
-```sql
-SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
----------------------------  
-2010-12-31 23:59:59.0000000  
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="d-example-with-fractions-of-a-second"></a>D. Exemplo simples com frações de um segundo  
-O exemplo a seguir demonstra o uso do *frações* e *precisão* parâmetros:
-1.  Quando *frações* tem um valor de 5 e *precisão* tem um valor de 1, em seguida, o valor de *frações* representa 5 a 10 de segundo.  
-1.   Quando *frações* tem um valor de 50 e *precisão* tem um valor de 2, em seguida, o valor de *frações* representa 50/100 de um segundo.  
-1.   Quando *frações* tem um valor de 500 e *precisão* tem um valor de 3, em seguida, o valor de *frações* representará 500/1000 de um segundo.  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  
