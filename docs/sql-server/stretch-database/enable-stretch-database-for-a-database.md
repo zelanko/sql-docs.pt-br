@@ -56,7 +56,7 @@ ms.lasthandoff: 07/29/2017
   
  Para habilitar o Stretch Database no servidor manualmente, execute **sp_configure** e ative a opção **remover arquivo de dados** . O exemplo a seguir habilita a opção **remote data archive** definindo seu valor para 1.  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
