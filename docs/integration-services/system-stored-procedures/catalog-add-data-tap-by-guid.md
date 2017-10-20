@@ -29,12 +29,12 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql  
-add_data_tap_by_guid [ @execution_id = ] execution_id  
-[ @dataflow_task_guid = ] dataflow_task_guid   
-[ @dataflow_path_id_string = ] dataflow_path_id_string  
-[ @data_filename = ] data_filename  
-[ @max_rows = ] max_rows  
-[ @data_tap_id = ] data_tap_id  
+catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+, [ @dataflow_task_guid = ] dataflow_task_guid   
+, [ @dataflow_path_id_string = ] dataflow_path_id_string  
+, [ @data_filename = ] data_filename  
+, [ @max_rows = ] max_rows  
+, [ @data_tap_id = ] data_tap_id  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -63,12 +63,11 @@ add_data_tap_by_guid [ @execution_id = ] execution_id
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, um toque de dados é criado no caminho de fluxo de dados, `Paths[SRC DimDCVentor.OLE DB Source Output]`, na tarefa de fluxo de dados `{D978A2E4-E05D-4374-9B05-50178A8817E8}`. Os dados tocados são armazenados no arquivo DCVendorOutput.csv.  
   
-```  
+```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
 '{D978A2E4-E05D-4374-9B05-50178A8817E8}',   
 'Paths[SRC DimDCVentor.OLE DB Source Output]',   
 'D:\demos\datafiles\DCVendorOutput.csv'  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  

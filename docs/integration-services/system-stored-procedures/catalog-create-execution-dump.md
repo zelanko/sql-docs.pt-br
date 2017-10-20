@@ -29,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql  
-create_execution_dump [ @execution_id = ] execution_id  
+catalog.create_execution_dump [ @execution_id = ] execution_id  
   
 ```  
   
@@ -40,10 +40,8 @@ create_execution_dump [ @execution_id = ] execution_id
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, o pacote em execução com uma ID de execução de 88 é solicitado a criar um arquivo de despejo.  
   
-```  
-  
+```sql
 EXEC create_execution_dump @execution_id = 88  
-  
 ```  
   
 ## <a name="return-codes"></a>Códigos de retorno  

@@ -31,11 +31,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql  
-set_execution_parameter_value [ @execution_id = execution_id  
+catalog.set_execution_parameter_value [ @execution_id = execution_id  
     , [ @object_type = ] object_type  
     , [ @parameter_name = ] parameter_name  
     , [ @parameter_value = ] parameter_value  
-  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -117,16 +116,15 @@ set_execution_parameter_value [ @execution_id = execution_id
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir especifica que o servidor do Integration Services gera arquivos de despejo quando ocorre um erro durante a execução de um pacote.  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
-  
 ```  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir especifica que o servidor do Integration Services gera arquivos de despejo quando ocorrem eventos durante a execução de um pacote e especifica o evento que faz com que o servidor gere os arquivos.  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_EVENT',1  
   
