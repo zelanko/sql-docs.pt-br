@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
-ms.openlocfilehash: 3d753f75344e4958d36d214fcc74957204579088
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
@@ -39,7 +39,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
 - Uma nova geração de melhorias do processo de consulta que adaptará estratégias de otimização para as condições de tempo de execução da carga de trabalho do aplicativo. Para a primeira versão da família de recursos de **processamento de consulta adaptável**, temos três novas melhorias: **junções adaptáveis de modo de lote**, **comentários de concessão de memória de modo de lote** e **execução intercalada** para funções com valor de tabela de várias instruções.  Veja [Processamento de consultas adaptável em bancos de dados SQL](../relational-databases/performance/adaptive-query-processing.md).
 - O ajuste automático é um recurso de banco de dados que fornece informações sobre possíveis problemas de desempenho de consultas, recomenda soluções e corrige automaticamente os problemas identificados. O ajuste automático do [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] notifica você sempre que um possível problema de desempenho é detectado e permite aplicar as ações corretivas ou permite que o [!INCLUDE[ssde-md](../includes/ssde-md.md)] corrija automaticamente os problemas de desempenho. Para obter mais informações, consulte [Ajuste automático](../relational-databases/automatic-tuning/automatic-tuning.md).
 - MELHORIA DE DESEMPENHO PARA BUILD DE ÍNDICE NÃO CLUSTERIZADO EM TABELAS COM OTIMIZAÇÃO DE MEMÓRIA. O desempenho da recompilação de índice bwtree (não clusterizado) em tabelas MEMORY_OPTIMIZED durante a recuperação de banco de dados foi otimizado de modo significativo. Essa melhoria reduz consideravelmente o tempo de recuperação de banco de dados quando os índices não clusterizados são usados.  
-- [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) tem três colunas novas: socket_count, cores_per_socket e numa_node_count.
+- [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) tem três colunas novas: socket_count, cores_per_socket e numa_node_count. Isso é útil quando você executa o servidor em uma VM, já que exceder o NUMA pode gerar hosts sobrecarregados que resultam em problemas de desempenho.
 - Uma nova coluna modified_extent_page_count\, foi introduzida em [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) para controlar as alterações diferenciais em cada arquivo de banco de dados do banco de dados. A nova coluna modified_extent_page_count permite criar uma solução de backup inteligente, que faz o backup diferencial se o percentual de páginas alteradas no banco de dados está abaixo de um limite (digamos, 70-80%); caso contrário, ela faz o backup de banco de dados completo.
 - SELECT INTO… Em FileGroup – [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) agora dá suporte ao carregamento de uma tabela em um grupo de arquivos que não é um grupo de arquivos padrão do usuário, usando o suporte à palavra-chave **ON** adicionado à sintaxe SELECT INTO do T-SQL.
 - Melhorias de configuração do Tempdb – a configuração permite especificar um tamanho inicial do arquivo do tempdb de até **256 GB (262.144 MB)** por arquivo, com um aviso para os clientes informando se o tamanho do arquivo é definido como um valor maior que 1 GB e se a IFI não está habilitada. É importante entender a implicação de não habilitar a IFI (inicialização instantânea de arquivo), nos casos em que o tempo de configuração pode aumentar exponencialmente, dependendo do tamanho inicial do arquivo de dados do tempdb especificado. A IFI não é aplicável ao tamanho do log de transações e, portanto, a especificação de um valor maior do log de transações pode invariavelmente aumentar o tempo de configuração ao iniciar o tempdb durante a configuração, independentemente da configuração da IFI para a conta de serviço do SQL Server.

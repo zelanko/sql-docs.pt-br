@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
@@ -38,7 +38,7 @@ Para examinar quais são as novidades em outros componentes do SQL Server, veja 
 
 #### <a name="try-it-out"></a>Experimente
 
-- Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse ** [Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![baixar](../analysis-services/media/download.png "download").
+- Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![baixar](../analysis-services/media/download.png "download").
 
 - Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.
 
@@ -349,7 +349,8 @@ Várias melhorias dão suporte aos recursos descritos nas outras seções deste 
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) agora permite que muitas ações de coluna sejam executadas enquanto a tabela permanece disponível.
 - O índice de texto completo DMV [sys.dm_fts_index_keywords_position_by_document &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) retorna o local das palavras-chave em documentos. Essa DMV também foi adicionada no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 e [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1.
 - Uma nova dica de consulta **NO_PERFORMANCE_SPOOL** pode impedir que um operador de spool seja adicionado a planos de consulta. Isso pode melhorar o desempenho quando várias consultas simultâneas estiverem executando com operações de spool. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md).
-- A instrução [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) foi aprimorada para aceitar um argumento msg_string. O tamanho de chave de índice máximo de índices NONCLUSTERED foi aumentado para 1.700 bytes.
+- A instrução [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) foi aprimorada para aceitar um argumento msg_string.
+- O tamanho máximo de chave de índice para índices NONCLUSTERED foi aumentado para 1700 bytes.
 - Uma nova sintaxe DROP IF foi adicionada para as instruções drop relacionadas a AGGREGATE, ASSEMBLY, COLUMN, CONSTRAINT, DATABASE, DEFAULT, FUNCTION, INDEX, PROCEDURE, ROLE, RULE, SCHEMA, SECURITY POLICY, SEQUENCE, SYNONYM, TABLE, TRIGGER, TYPE, USER e VIEW. Consulte os tópicos individuais de sintaxe para conhecer a sintaxe.
 - A opção MAXDOP foi adicionada a [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md), [DBCC CHECKDB &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e a [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md) para especificar o grau de paralelismo.
 - Agora é possível definir SESSION_CONTEXT. Inclui as funções [SESSION_CONTEXT &#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md) e [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md), bem como o procedimento [sp_set_session_context &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).

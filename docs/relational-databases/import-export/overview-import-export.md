@@ -1,7 +1,7 @@
 ---
 title: Importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure | Microsoft Docs
 ms.custom: 
-ms.date: 09/12/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,10 +13,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 3c41be0642b13b63367c5601b716b506808472e7
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure
@@ -31,6 +31,11 @@ Importe dados com os comandos `BULK INSERT` ou `OPENROWSET(BULK...)`. Normalment
 
 ### <a name="use-bcp-from-the-command-prompt"></a>Usar o BCP no prompt de comando
 Importe e exporte dados com o utilitário de linha de comando BCP. Para obter mais informações, consulte [Importar e exportar dados em massa usando o utilitário BCP](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+
+### <a name="use-the-import-flat-file-wizard"></a>Usar o Assistente Importar Arquivo Simples
+Caso não precise de todas as opções de configuração disponíveis no Assistente de Importação e Exportação e em outras ferramentas, você pode importar um arquivo de texto para o SQL Server usando o **Assistente Importar Arquivo Simples** no SQL Server Management Studio. Para saber mais, veja os tópicos a seguir:
+- [Novidades do SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [Apresentamos os novo Assistente Importar Arquivo Simples no SQL Server Management Studio 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ### <a name="use-the-sql-server-import-and-export-wizard"></a>Usar o Assistente para Importação e Exportação do SQL Server
 Importe ou exporte dados de uma variedade de fontes e destinos com o Assistente para Importação e Exportação do SQL Server. Para usar o assistente, você deve ter o SSIS (SQL Server Integration Services) ou o SSDT (SQL Server Data Tools) instalado. Para obter mais informações, consulte [Importar e exportar dados com o Assistente para Importação e Exportação do SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).

@@ -18,10 +18,10 @@ ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: fddb53ecae2ab1f15ba50a42ea59f30bff740804
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/16/2017
 
 --- 
 
@@ -141,7 +141,7 @@ Para saber mais sobre a recuperação de backup do Banco de Dados SQL, consulte 
 
 Para garantir a rápida recuperação da chave e o acesso aos seus dados fora do Azure, recomendamos o seguinte:
 - Crie sua chave de criptografia localmente em um dispositivo HSM local. (Certifique-se de que é uma chave RSA 2048 assimétrica para ela poder ser armazenada no Azure Key Vault.)
-- Importe o arquivo de chave de criptografia (.pfx, .byok ou .backup) para o Azure Key Vault. 
+- Importe o arquivo de chave de criptografia (.pfx, .byok ou .backup) para o Azure Key Vault. Considere a possibilidade de usar um Key Vault com [exclusão reversível](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) habilitada para proteção de recuperação contra exclusão acidental de chaves.
 - Antes de usar a chave no Cofre de Chaves do Azure pela primeira vez, faça um backup da chave do Cofre de Chaves do Azure. Saiba mais sobre o comando [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
 - Sempre que qualquer alteração for feita na chave (por exemplo, adicionar ACLs, adicionar marcas, adicionar atributos da chave), certifique-se de fazer outro backup da chave do Azure Key Vault.
 - Durante a substituição de chave, **mantenha as versões anteriores da chave** no cofre de chaves para que os backups do banco de dados mais antigos possam ser restaurados. 
