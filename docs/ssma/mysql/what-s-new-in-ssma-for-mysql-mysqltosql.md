@@ -1,5 +1,5 @@
 ---
-title: O que &#39; s do SSMA para MySQL (MySQLToSql) | Microsoft Docs
+title: 'O que  #39; s do SSMA para MySQL (MySQLToSql) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/30/2017

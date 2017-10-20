@@ -1,5 +1,5 @@
 ---
-title: 'O que & #39; s do SSMA para DB2 (DB2ToSQL) | Microsoft Docs'
+title: O que &#39; s do SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/30/2017
@@ -24,7 +24,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-db2-db2tosql"></a>O que & #39; s do SSMA para DB2 (DB2ToSQL)
+# <a name="what39s-new-in-ssma-for-db2-db2tosql"></a>O que &#39; s do SSMA para DB2 (DB2ToSQL)
 Este tópico lista SSMA para DB2 alterações em cada versão.  
 
 ## <a name="ssma-v76"></a>O SSMA v7.6
