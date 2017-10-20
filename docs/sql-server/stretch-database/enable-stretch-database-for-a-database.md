@@ -84,7 +84,7 @@ GO
   
 3.  Para configurar um banco de dados do SQL Server para o Stretch Database, o banco de dados deve ter uma chave mestra de banco de dados. A chave mestra de banco de dados protege as credenciais usadas pelo Stretch Database para se conectar ao banco de dados remoto. Aqui está um exemplo que cria uma nova chave mestra de banco de dados.  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -103,7 +103,7 @@ GO
         
         Aqui está um exemplo que cria uma nova credencial.
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -127,7 +127,7 @@ GO
   
     2.  Forneça uma credencial de administrador existente com o argumento CREDENTIAL ou especifique FEDERATED_SERVICE_ACCOUNT = ON. O exemplo a seguir fornece uma credencial existente.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  

@@ -85,7 +85,7 @@ cleanup_server_log
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir chama o procedimento armazenado de cleanup_server_log.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

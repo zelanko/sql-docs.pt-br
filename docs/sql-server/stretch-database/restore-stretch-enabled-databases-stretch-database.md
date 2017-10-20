@@ -73,7 +73,7 @@ Para restaurar um banco de dados do Azure excluído no ponto em que ele foi excl
   
     -   Especifique se deseja fazer uma cópia dos dados remotos e conectar-se à cópia (recomendado).  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

@@ -34,7 +34,7 @@ Para obter instruções de junção de uma função de banco de dados, consulte 
 Chame o procedimento armazenado [catalog]. [update_logdb_info] com a cadeia de nome e a conexão do Sql Server como parâmetros.
 
 #### <a name="example"></a>Exemplo
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

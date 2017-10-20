@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
  
  Para ver quanto espaço uma tabela habilitada para Stretch está usando no SQL Server, execute a instrução a seguir.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
@@ -65,7 +65,7 @@ GO
  
 Para ver quanto espaço uma tabela habilitada para Stretch está usando no Azure, execute a instrução a seguir.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
@@ -119,7 +119,7 @@ Se, acidentalmente, você excluiu colunas da tabela remota, execute **sp_rda_rec
   
 Por exemplo, a consulta a seguir retorna apenas resultados locais.  
   
- ```tsql  
+ ```sql  
 USE <Stretch-enabled database name>;
 GO
 SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;

@@ -85,7 +85,7 @@ ms.lasthandoff: 07/29/2017
   
  Aqui está um exemplo que migra a tabela inteira e começa a migração de dados imediatamente.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -95,7 +95,7 @@ GO
   
  Aqui está um exemplo que migra apenas as linhas identificadas pela função com valor de tabela embutida `dbo.fn_stretchpredicate` e adia a migração de dados. Para obter mais informações sobre a função de filtro, veja [Select rows to migrate by using a filter function (Selecionar linhas a serem migradas usando uma função de filtro)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -112,7 +112,7 @@ ALTER TABLE <table name>
   
  Aqui está um exemplo que migra a tabela inteira e começa a migração de dados imediatamente.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name>
@@ -123,7 +123,7 @@ GO
   
  Aqui está um exemplo que migra apenas as linhas identificadas pela função com valor de tabela embutida `dbo.fn_stretchpredicate` e adia a migração de dados. Para obter mais informações sobre a função de filtro, veja [Select rows to migrate by using a filter function (Selecionar linhas a serem migradas usando uma função de filtro)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name> 
