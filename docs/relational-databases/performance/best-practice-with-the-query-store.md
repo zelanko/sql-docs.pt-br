@@ -76,7 +76,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Intervalo de Coleta de Estatísticas:** define o nível de granularidade para a estatística de tempo de execução coletada (o padrão é 1 hora). Considere usar o valor mais baixo se você precisar de granularidade mais fina ou menos tempo para detectar e mitigar os problemas, mas tenha em mente que isso afetará diretamente o tamanho dos dados do Repositório de Consultas. Use o SSMS ou Transact-SQL para definir um valor diferente para o Intervalo de Coleta de Estatísticas:  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Limite de Consulta Obsoleto (Dias):** política de limpeza com base em tempo que controla o período de retenção de estatísticas de tempo de execução persistentes e consultas inativas.  
@@ -86,7 +86,7 @@ Por padrão, o Repositório de Consultas está configurado para manter os dados 
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **Modo de Limpeza com Base no Tamanho:** especifica se a limpeza automática de dados ocorrerá quando o tamanho dos dados no Repositório de Consultas se aproximar do limite.  
