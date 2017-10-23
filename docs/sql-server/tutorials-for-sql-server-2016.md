@@ -11,9 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: craigg
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
 ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
@@ -22,8 +22,6 @@ ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriais do SQL Server
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornece tutoriais para ajudar você a aprender novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um tutorial abordar um recurso mais recente, ele indicará a versão mínima para concluir o tutorial.  
      
 -   Se um tutorial usar um dos bancos de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], baixe e use a versão mais recente do CodePlex. Para obter mais informações, consulte [Bancos de dados e scripts do AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
