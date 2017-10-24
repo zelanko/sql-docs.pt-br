@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd47944f218c6cb4d3bea571b27be990c5f7f530
@@ -119,3 +120,4 @@ Nesse cenário, você criará um aplicativo de Active Server Pages (ASP) que sal
 ## <a name="see-also"></a>Consulte também  
  [Método Save](../../../ado/reference/ado-api/save-method.md)   
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

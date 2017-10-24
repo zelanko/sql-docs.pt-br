@@ -26,6 +26,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  O AMO não pode ser usado para consultar dados. Para consultar dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], incluindo cubos e modelos de mineração, use o ADOMD.NET a partir de um aplicativo do usuário. Para obter mais informações, consulte [desenvolvendo com ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
   
+

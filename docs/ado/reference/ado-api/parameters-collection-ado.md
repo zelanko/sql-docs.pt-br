@@ -21,6 +21,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9dcfec51eb94eb1ca290ebb3323012e2aaa558b5
@@ -92,3 +93,4 @@ Contém todos os [parâmetro](../../../ado/reference/ado-api/parameter-object.md
  [(ADO) do método append](../../../ado/reference/ado-api/append-method-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)
+

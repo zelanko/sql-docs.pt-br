@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ae30d042b6e1f4a3590cd8d3a46a636004aead8
@@ -44,3 +45,4 @@ Especifica a direção de uma pesquisa de registro em um [registros](../../../ad
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Método Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f885a8585d3665efcc39bfe979b501d779c35c00
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  Além disso, dados de formatação no ADO permitirem criar novos **registros** objetos sem uma fonte de dados subjacente usando a **novo** palavra-chave para descrever os campos de pai e filho ** Conjuntos de registros**. O novo **registros** objeto pode ser preenchido com dados e armazenado de forma persistente. Os desenvolvedores também podem executar vários cálculos ou agregações (por exemplo, **soma**, **AVG**, e **MAX**) em campos de filho. Modelagem de dados também pode criar um pai **registros** de filho **registros** agrupar registros no filho e colocando uma linha no pai para cada grupo filho.  
   
  Regular SQL permite que você recupere dados usando **INGRESSAR** sintaxe, mas isso pode ser ineficiente e complicada porque dados redundantes pai são repetidos em cada registro retornado para uma relação pai-filho especificado. Modelagem de dados pode estar relacionada a um registro único pai no pai **registros** para vários registros filho no filho **registros**, evitando a redundância de um **INGRESSAR**. A maioria das pessoas localizar o pai-filho vários **registros** modelo de programação mais natural e mais fácil trabalhar com que a única **Recordset INGRESSAR** modelo.
+

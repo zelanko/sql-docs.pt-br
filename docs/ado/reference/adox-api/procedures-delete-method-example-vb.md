@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 83322007d526d1efa8fa72c5a982882dba52ef12
@@ -64,3 +65,4 @@ End Sub
  [Excluir método (ADOX coleções)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [Objeto de procedimento (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+

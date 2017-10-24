@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 76a3d94b97fa32e372cd6cc67367450d2f62530b
@@ -49,3 +50,4 @@ Indica a posição atual dentro de um [fluxo](../../../ado/reference/ado-api/str
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade Charset (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)
+

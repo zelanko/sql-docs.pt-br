@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
@@ -90,3 +91,4 @@ function alert(str)
 2.  Abra um prompt de comando e o cd para o diretório onde você salvou o arquivo JScript (rs.js).  
   
 3.  Tipo `CScript rs.js` do prompt de comando.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6875e6b2b967cf73511c73bf4ca7cdafed21557b
@@ -50,3 +51,4 @@ Especifica o tipo de cursor usado em uma [registros](../../../ado/reference/ado-
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Propriedade CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a14a03b6b0a0e2e879d745fd8d2f341c1bbf6c54
@@ -57,3 +58,4 @@ Para importar as bibliotecas do ADO para um aplicativo do Microsoft Visual Basic
 -   *msado20.tlb*, biblioteca de tipos 2.0 de ADO  
   
  Se seu aplicativo deve usar uma dessas bibliotecas ADO para fins de compatibilidade com versões anteriores, você precisa importar a versão apropriada da biblioteca de tipos. Para fazer isso, siga os procedimentos na seção anterior, substituindo *msado15.dll* por *msadoXX.tlb*, onde *XX* representa o número de versão, você precisa importar.
+

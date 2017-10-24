@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
@@ -242,3 +243,4 @@ No entanto, dependendo do algoritmo usado, alguns modelos podem ser muito grande
 [Ajuste de desempenho para R - R otimização de código e dados](../r/r-and-data-optimization-r-services.md)
 
 [Ajuste de desempenho - resultados de estudo de caso](../r/performance-case-study-r-services.md)
+

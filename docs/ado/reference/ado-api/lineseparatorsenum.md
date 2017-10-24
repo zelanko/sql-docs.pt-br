@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ebab43836ed3e933bfcee9fd75804ab7c6f2360b
@@ -40,3 +41,4 @@ Especifica o caractere usado como um separador de linha no texto [fluxo](../../.
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Propriedade LineSeparator (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)
+

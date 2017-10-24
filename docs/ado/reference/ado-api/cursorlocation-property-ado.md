@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6679a7a8a83f954039587776e5e668bd5ed05365
@@ -53,3 +54,4 @@ Indica o local do serviço de cursor.
   
 ## <a name="see-also"></a>Consulte também  
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b60f1804e6d465a397704b284c30611b42524420
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 -   Na biblioteca do SharePoint, clique na seta ao lado da conexão de fonte de dados de relatório compartilhada (o .rsds que se conecta ao modelo multidimensional) e clique em **Criar Relatório do Power View**.  
   
   
+

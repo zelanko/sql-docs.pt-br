@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
@@ -103,3 +104,4 @@ Configuração e ajuste de desempenho requer a criação de uma base sólida, no
 + [Ajuste de desempenho de R no SQL Server - métodos e resultados](..\r\performance-case-study-r-services.md)
 
     Resume os dados que foram usado dois estudos de caso, como o desempenho foi testado e como as otimizações afetados resultados.
+

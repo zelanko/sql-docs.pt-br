@@ -18,6 +18,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d57a877e5d332dfffc24ed6d3df14143ecae3442
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/01/2017
  Descreve como usar o Business Intelligence Wizard para aprimorar uma dimensão.  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8c15a8add685bf62faa307fc420f51a8c547776
@@ -57,3 +58,4 @@ Contém todos os [exibição](../../../ado/reference/adox-api/view-object-adox.m
  [Exemplo de método (VB) de atualização de modos de exibição](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+

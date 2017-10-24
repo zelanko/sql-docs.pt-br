@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
@@ -44,3 +45,4 @@ No ADO a maioria dos comandos resultar em algumas informações retornadas ao ch
  Para receber a mais de um conjuntos de resultados significa que você precisa fazer várias processamentos pela rede, uma para cada conjunto de dados encapsulado em uma **registros** objeto. Para redes lentas ou congestionadas, reduzindo o número de viagens de ida e pode ajudar a melhorar o desempenho do aplicativo. Portanto, alguns provedores oferecem suporte para receber vários **registros**s em uma única viagem de ida. Isso é discutido no tópico a seguir:  
   
 -   [Recebendo vários conjuntos de registros](../../../ado/guide/data/receiving-multiple-recordsets.md)
+

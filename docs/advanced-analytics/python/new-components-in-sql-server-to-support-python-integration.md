@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
@@ -149,3 +150,4 @@ O diagrama a seguir resume o fluxo de trabalho geral quando os scripts forem env
 ## <a name="next-steps"></a>Próximas etapas
 
 [Visão geral da arquitetura de Python no SQL Server](architecture-overview-sql-server-python.md)
+

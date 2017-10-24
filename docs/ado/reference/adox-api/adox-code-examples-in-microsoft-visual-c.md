@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cae03e9ba39212f0a8052089befd3874b08d0267
@@ -84,3 +85,4 @@ Estes tópicos fornecem código de exemplo para ajudá-lo a entender como usar A
 ## <a name="collections"></a>Coleções  
   
 -   [Exemplos da propriedade Command, coleção Parameters (VC++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)
+

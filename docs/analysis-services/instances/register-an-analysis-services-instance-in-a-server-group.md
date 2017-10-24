@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/01/2017
 3.  Clique com o botão direito do mouse no grupo de servidores e selecione Novo Registro de Servidor. Insira o nome de rede de um servidor local ou remoto, incluindo o nome de instância se o servidor foi instalado como uma instância nomeada. Opcionalmente, você pode fornecer um nome de servidor registrado que aparece em Servidores Registrados. Esse nome é usado apenas em Servidores Registrados. Você não pode usá-lo para renomear um servidor, nem em uma cadeia de conexão. Um nome de servidor registrado pode ser mais descritivo do que o nome de servidor real ou pode incluir outras características de identificação que o ajudem a distinguir esse servidor dos demais.  
   
   
+

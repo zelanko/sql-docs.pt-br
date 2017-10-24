@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d401bca51d735b2d0d633716cee732ad2ab9a086
@@ -61,3 +62,4 @@ recordset.Seek KeyValues, SeekOption
  [Exemplo de propriedade de índice (VC + +) e método de busca](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Localizar o método (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Propriedade Index](../../../ado/reference/ado-api/index-property.md)
+

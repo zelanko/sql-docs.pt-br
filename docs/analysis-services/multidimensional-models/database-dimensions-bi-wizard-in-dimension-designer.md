@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   Abra a dimensão à qual você deseja adicionar business intelligence e, na barra de ferramentas, clique no botão **Adicionar Business Intelligence** . Como alternativa, você pode clicar com o botão direito do mouse no Pesquisador de Objetos ou no Gerenciador de Soluções e, em seguida, clicar em **Adicionar Business Intelligence**.  
   
   
+

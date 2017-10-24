@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2d97c9d8450cd906def9aae3e386a836d32f4d92
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [Preparando e executando comandos](../../../ado/guide/data/preparing-and-executing-commands.md)  
   
 -   [Recebendo resultados](../../../ado/guide/data/receiving-results.md)
+

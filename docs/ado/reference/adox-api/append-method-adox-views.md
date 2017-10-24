@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 535f25f475f6357d467e2f7ac19a96ed6eea1605
@@ -64,3 +65,4 @@ Views.Append Name, Command
  [Acrescente o método (ADOX procedimentos)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [(Tabelas ADOX) do método append](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Método Append (Usuários do ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)
+

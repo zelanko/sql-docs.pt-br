@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3565b06fa33ddf0990b89724639d9538da37e9b6
@@ -54,3 +55,4 @@ Representa uma conta de usuário que tenha permissões de acesso dentro de um ba
  [Exemplo de métodos de SetPermissions (VB) e GetPermissions](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Coleção de grupos (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Coleção Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+

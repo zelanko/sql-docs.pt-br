@@ -25,6 +25,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ea45eae107fa55355adeb195e7e4fc5cf0a3c762
@@ -54,3 +55,4 @@ Indica a fonte de dados para um [registros](../../../ado/reference/ado-api/recor
  [Exemplo da propriedade Source (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Propriedade Source (erro de ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Propriedade Source (Registro ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)
+

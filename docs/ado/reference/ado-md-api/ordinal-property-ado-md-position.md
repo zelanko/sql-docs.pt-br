@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d29ba5afddbdd1aa3f477a8311538dac59611685
@@ -45,3 +46,4 @@ Identifica exclusivamente um [posição](../../../ado/reference/ado-md-api/posit
  [Objeto de conjunto de células (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Propriedade item (conjunto de células do ADO MD)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Propriedade Ordinal (Célula do ADO MD)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)
+

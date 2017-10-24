@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
@@ -358,3 +359,4 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 -   Por padrão os membros calculados não são permitidos em subseleções; No entanto, essa restrição pode ser alterada, em uma base por sessão, atribuindo um valor para o **subconsultas** propriedade de cadeia de caracteres de conexão em <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROP_MSMD_SUBQUERIES** propriedade [ Propriedades XMLA suportadas &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Consulte [Membros calculados em subseleções e subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obter uma explicação detalhada do comportamento de membros calculados dependendo dos valores de **SubQueries** ou **DBPROP_MSMD_SUBQUERIES**.  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ca8ee6c01299c3db45977a8e64c4f2afd46c7d3
@@ -47,3 +48,4 @@ Indica o número de membros para os quais o atual [membro](../../../ado/referenc
  [Propriedade Children (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Propriedade Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Coleção Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
+

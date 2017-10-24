@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 934b68032c6bede8499d331e869edceff958f7f4
@@ -49,3 +50,4 @@ Contém o [posição](../../../ado/reference/ado-md-api/position-object-ado-md.m
  [Objeto de eixo (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Objeto de célula (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Objeto Position (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
+

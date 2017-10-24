@@ -15,6 +15,7 @@ caps.latest.revision: 36
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
@@ -140,3 +141,4 @@ Para obter mais informações, consulte [pacote de gerenciamento](r/r-package-ma
 + [Configurar o R nos serviços de aprendizado de máquina do SQL Server](r/set-up-sql-server-r-services-in-database.md)
 
 + [Exemplos e tutoriais de aprendizado de máquina](tutorials/machine-learning-services-tutorials.md)
+

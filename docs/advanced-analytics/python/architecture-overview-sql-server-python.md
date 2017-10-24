@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1328a346dd9852cba349e38204b49faf32573611
@@ -55,3 +56,4 @@ Para obter mais informações, consulte [governança de recursos para R](../../a
 ## <a name="next-steps"></a>Próximas etapas
 
 [Executar Python usando o T-SQL](../tutorials/run-python-using-t-sql.md)
+

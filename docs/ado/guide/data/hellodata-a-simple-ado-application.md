@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1c7d61c6349945274febc92e4e6b5acfcc379b9
@@ -62,3 +63,4 @@ Este aplicativo simples percorre cada uma das quatro principais operações ADO:
 ||Caption|Editar dados|  
 |Botão de comando|Nome|cmdUpdateData|  
 ||Caption|Atualizar dados|
+

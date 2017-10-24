@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41dd48bcdb7a10b0aabdc4bbf4458aab0e593a1c
@@ -104,3 +105,4 @@ Estes tópicos fornecem código de exemplo para ajudá-lo a entender como usar A
 -   [Exemplo de coleções Views e Fields (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)  
   
 -   [Coleção Views, exemplo da propriedade CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
+

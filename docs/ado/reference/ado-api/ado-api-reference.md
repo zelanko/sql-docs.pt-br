@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
@@ -54,3 +55,4 @@ Esta seção da documentação do ADO contém tópicos para cada ADO objeto, col
  [Apêndice c: Programando com ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [Provedores de r: Apêndice](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [Histórico ADO](../../../ado/guide/ado-history.md)
+

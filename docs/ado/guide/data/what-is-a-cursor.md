@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
@@ -76,3 +77,4 @@ As operações em um ato de banco de dados relacional em um conjunto completo de
   
 ## <a name="scrollability"></a>Rolagem  
  O tipo de cursor usado pelo seu aplicativo também afeta a capacidade de mover-se através de linhas em um conjunto de resultados; Isso às vezes é chamado como rolagem. A capacidade de Avançar *e* com versões anteriores por meio de um resultado conjunto aumenta a complexidade do cursor e, portanto, é mais caro para implementar. Por esse motivo, você deve solicitar um cursor com essa funcionalidade somente quando necessário.
+

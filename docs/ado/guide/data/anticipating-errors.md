@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
@@ -37,3 +38,4 @@ Prevenção de erro é pelo menos tão importante quanto o tratamento de erros. 
  Verifique se **registros** objetos não estão além dos limites do **registros** antes de tentar mover o ponteiro do registro. Se você tentar **MoveNext** quando **EOF** é True ou **MovePrev** quando **BOF** for True, ocorrerá um erro. Se você executar qualquer uma da **mover** métodos quando ambos **EOF** e **BOF** for True, será gerado um erro.  
   
  Erros também ocorrerão se você tentar executar operações como **busca** e **localizar** em vazio **registros**.
+

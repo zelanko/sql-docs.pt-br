@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a5b417b2bfe5d995657ad86cf44b650b751f6a30
@@ -229,3 +230,4 @@ WHERE CatalogDescription.exist('
  Os predicados também podem afetar estaticamente o tipo inferido de uma expressão. Valores inteiros literais e **Last ()** função reduzem a cardinalidade da expressão de etapa filtrada para no máximo uma.  
   
   
+

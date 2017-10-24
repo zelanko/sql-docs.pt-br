@@ -20,6 +20,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a28c176cb6d08fee89ea5a0add547d1e2cee48c
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/01/2017
     >  Se o destino não der suporte a conjuntos de linhas hierárquicos, você poderá acrescentar a palavra-chave FALTTENED aos resultados para salvar como uma tabela plana.  
   
   
+

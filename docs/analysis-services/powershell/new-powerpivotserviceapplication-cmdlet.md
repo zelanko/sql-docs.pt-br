@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
@@ -111,3 +112,4 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  Este exemplo cria um novo aplicativo de serviço. O banco de dados do aplicativo de serviço é criado em um servidor de banco de dados denominado AdvWorks-SRV01 que foi instalado como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , uma configuração comum para várias instalações do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Você deve ter permissões de dbcreator na instância do SQL Server para criar o banco de dados. Você deve ser o db_owner no banco de dados de configuração do SharePoint. Como esse é o primeiro aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm, ele deve ser membro do grupo proxy padrão.  
   
   
+

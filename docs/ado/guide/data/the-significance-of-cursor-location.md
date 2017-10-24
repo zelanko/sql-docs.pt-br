@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
@@ -42,3 +43,4 @@ Cada cursor usa recursos temporários para armazenar seus dados. Esses recursos 
  No entanto, é importante ressaltar que é um cursor do lado do servidor — pelo menos temporariamente — consuma recursos do servidor preciosos para cada cliente ativo. Você deve planejar adequadamente para garantir que o hardware de servidor é capaz de gerenciar todos os cursores do lado do servidor solicitados por clientes ativos. Além disso, um cursor do lado do servidor pode ser lento porque ele fornece acesso somente de única linha, nenhum cursor de lote está disponível.  
   
  Cursores do lado do servidor são úteis quando a inserção, atualização ou exclusão de registros. Com cursores do lado do servidor, você pode ter várias instruções ativas na mesma conexão.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5d7757a6db51b6d5d1d5f10f303cd0f614b0132a
@@ -44,3 +45,4 @@ Especifica se os valores subjacentes são substituídos por uma chamada para [Re
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Método Resync](../../../ado/reference/ado-api/resync-method.md)
+

@@ -15,6 +15,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5b7ee95538ebc16084f6d3209469f0fa33b50fda
@@ -32,3 +33,4 @@ Esta seção contém os tópicos a seguir.
 -   [Referência de API do ADO MD](../../ado/reference/ado-md-api/ado-md-api-reference.md)  
   
 -   [Referência da API ADOX](../../ado/reference/adox-api/adox-api-reference.md)
+

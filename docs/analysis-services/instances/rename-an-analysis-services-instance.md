@@ -22,6 +22,7 @@ caps.latest.revision: 53
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
      Como você pode observar, as permissões de banco de dados e de arquivo antes concedidas ao “NT Service\ MSOLAP$TABULAR” não são mais válidas. Para garantir que tarefas e operações realizadas pelo serviço sejam executadas antes, você precisaria conceder novas permissões de banco de dados e de arquivo ao “NT Service\ MSOLAP$TAB2”.  
   
   
+

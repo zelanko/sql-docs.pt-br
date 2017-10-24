@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c0937fcab4319e24a2bd213971bea2761b94df75
@@ -46,3 +47,4 @@ Especifica o local do serviço de cursor.
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Propriedade CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)
+

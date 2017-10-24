@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 60d5d800137febfa9b0ba01994e3b32cd159ec31
@@ -35,3 +36,4 @@ Especifica o tipo de ação a ser executada quando [SetPermissions](../../../ado
 |**adAccessGrant**|1|O grupo ou usuário terá pelo menos as permissões solicitadas.|  
 |**adAccessRevoke**|4|Nenhum direito de acesso explícito do grupo ou usuário será revogado.|  
 |**adAccessSet**|2|O grupo ou usuário terá exatamente as permissões solicitadas.|
+

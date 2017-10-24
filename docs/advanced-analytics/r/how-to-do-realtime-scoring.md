@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
 ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
@@ -254,3 +255,4 @@ Servidor de aprendizado de máquina dá suporte a distribuídas em tempo real de
 + [Implantar um modelo de Python como um serviço web com sdk azureml-modelo-management](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publicar um modelo em tempo real ou um bloco de código de R como um novo serviço da web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [pacote de mrsdeploy para R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
+

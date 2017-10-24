@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 151e3018fa12d3f61cb06f12692f28fa9e5b7a91
@@ -42,3 +43,4 @@ Indica a exibição formatada de um [célula](../../../ado/reference/ado-md-api/
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de conjunto de células (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Propriedade Value (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)
+

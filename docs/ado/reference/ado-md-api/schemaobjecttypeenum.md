@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62aea6f8e996aed9752d153e717e725c4e20566c
@@ -35,3 +36,4 @@ Especifica o tipo de objeto a ser recuperado pelo [GetSchemaObject](../../../ado
 |**adObjectTypeHierarchy**|2|Um [hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objeto.|  
 |**adObjectTypeLevel**|3|Um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto.|  
 |**adObjectTypeMember**|4|Um [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objeto.|
+

@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6cc3b9cfb294610b39bf0a09fe704dcff325ee2a
@@ -34,3 +35,4 @@ Os exemplos a seguir exigem o Microsoft Visual Basic version 5.0 com Service Pac
 -   [Exemplo de conjunto de células](../../../ado/reference/ado-md-api/cellset-example-vb.md)  
   
 -   [Exemplo de catálogo](../../../ado/reference/ado-md-api/catalog-example-vb.md)
+

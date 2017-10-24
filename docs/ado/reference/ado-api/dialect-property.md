@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 73c7dfd6fe5aec706d5e27ce6d55f489285748c4
@@ -42,3 +43,4 @@ Indica o dialeto do [CommandText](../../../ado/reference/ado-api/commandtext-pro
   
 ## <a name="see-also"></a>Consulte também  
  [Método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)
+

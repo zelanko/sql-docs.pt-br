@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
@@ -39,3 +40,4 @@ Use o **CacheSize** propriedade para controlar quantos registros devem ser recup
  Registros recuperados do cache não refletem as alterações simultâneas que outros usuários feitos nos dados de origem. Para forçar uma atualização de todos os dados armazenados em cache, use o [Resync](../../../ado/reference/ado-api/resync-method.md) método.  
   
  Se **CacheSize** é definido como um valor maior que 1, os métodos de navegação ([mover](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) pode resultar na navegação excluído Registro, se a exclusão ocorrer depois que os registros foram recuperados. Após a busca inicial, exclusões subsequentes não serão refletidas em seu cache de dados até que você tentar acessar um valor de dados de uma linha excluída. Entretanto, a configuração **CacheSize** como 1 elimina esse problema, porque as linhas excluídas não podem ser obtidas.
+

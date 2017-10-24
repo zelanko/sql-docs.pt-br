@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5f06f02b24c9dc2699d4964e4da0c49948f82aad
@@ -41,3 +42,4 @@ Indica o número de níveis entre o [nível](../../../ado/reference/ado-md-api/l
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade LevelDepth (ADO MD)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)
+

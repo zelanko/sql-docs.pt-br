@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 87fde51ce69aed865eae5ce57511b3d21e32f1cd
@@ -199,3 +200,4 @@ void PrintComError(_com_error &e) {
  [Executar método (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Executar método (Conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Método Requery](../../../ado/reference/ado-api/requery-method.md)
+

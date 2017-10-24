@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a8533cd43964bf7bd2a456ff2cadce1be00b223
@@ -36,3 +37,4 @@ Especifica os campos especiais referenciados em uma [registro](../../../ado/refe
 |--------------|-----------|-----------------|  
 |**adDefaultStream**|-1|Faz referência ao campo que contém o padrão [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto associado a um **registro**.|  
 |**adRecordURL**|-2|Faz referência ao campo que contém a cadeia de caracteres de URL absoluta atual **registro**.|
+

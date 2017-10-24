@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3705d934ebfa548950cd3383184aa668f68ab59b
@@ -45,3 +46,4 @@ Este tópico descreve como os objetos são representados e relacionados MD ADO.
  [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Visão geral de esquemas Multidimensional e de dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Manipular dados multidimensionais](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+

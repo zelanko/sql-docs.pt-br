@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7b27969d78328118f98911c68eb555357bc3118
@@ -43,3 +44,4 @@ Nesse cenário, supõe-se ter o Microsoft Visual Basic 6.0, ADO 2.5 ou posterior
 ## <a name="see-also"></a>Consulte também  
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Etapa 2: Inicializar a caixa de listagem principal](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+

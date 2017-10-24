@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
@@ -170,3 +171,4 @@ Loop
  Fechando o original **registros** não fechar suas cópias, nem o fechamento fechar uma cópia original ou qualquer uma das outras cópias.  
   
  Você pode clonar um **registros** objeto apenas se ele dá suporte a indicadores. Valores de indicador são intercambiáveis; ou seja, uma referência de indicador de um **registros** objeto refere-se para o mesmo registro em qualquer um de seus clones.
+

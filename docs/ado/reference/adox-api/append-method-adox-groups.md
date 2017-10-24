@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ed08c3fc0f871c1e7fb8a5885f44390770d4a7a5
@@ -61,3 +62,4 @@ Groups.Append Group
  [(Tabelas ADOX) do método append](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Acrescente o método (ADOX usuários)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Método Append (Exibições do ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+

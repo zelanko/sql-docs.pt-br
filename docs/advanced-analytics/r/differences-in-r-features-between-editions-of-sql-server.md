@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b9b520b7fc7e97498f4b46a43ad991558025123a
@@ -114,3 +115,4 @@ Para obter mais informações sobre outros recursos do SQL Server, consulte:
 + [Edições e recursos com suporte para SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
 
 Para obter mais informações sobre como você pode otimizar sua solução para grandes conjuntos de dados e os recursos do Microsoft R, consulte o [Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips) documentação.
+

@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 524845f59338a483df89586847157e6d9eaa598c
@@ -57,3 +58,4 @@ Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/re
 ## <a name="see-also"></a>Consulte também  
  [Propriedade Source (erro de ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Propriedade Source (Conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+

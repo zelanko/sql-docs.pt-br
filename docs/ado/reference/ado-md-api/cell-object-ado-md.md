@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d6ef6e4e3cf888b60050bfd297863568d8112a57
@@ -64,3 +65,4 @@ Representa os dados na interseção de coordenadas de eixo contidos em um conjun
  [Objeto de conjunto de células (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Coleção de posições (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3da6260d5e0d4e503dae54e6ffc13f6d35f1890d
@@ -85,3 +86,4 @@ O **ADORecordsetConstruction** interface é usada para construir um ADO **regist
 ## <a name="see-also"></a>Consulte também  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propriedade Rowset (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
+

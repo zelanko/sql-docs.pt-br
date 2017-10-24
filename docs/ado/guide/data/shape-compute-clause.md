@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d2fad39eb54af49b9f25b7f5b62073df44afc814
@@ -147,3 +148,4 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [Comandos de forma em geral](../../../ado/guide/data/shape-commands-in-general.md)   
  [Propriedade de valor (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Funções do Visual Basic for Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+

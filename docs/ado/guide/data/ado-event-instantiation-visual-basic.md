@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56510bc99d0a6a7c20d18b93b22a60decdfcc2e2
@@ -70,3 +71,4 @@ End Sub
 ```  
   
  O **Conexão** objeto for declarado no **formulário** nível usando o **WithEvents** palavra-chave para habilitar a manipulação de eventos. O manipulador de eventos Form_Load realmente cria o objeto atribuindo um novo **Conexão** do objeto para *connEvent* e, em seguida, abre a conexão. Logicamente, um aplicativo real faria mais processamento no manipulador de eventos Form_Load que é mostrada aqui.
+

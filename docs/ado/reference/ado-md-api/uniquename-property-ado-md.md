@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db08f27a2c793c45b9083f2f3b3e83e5175562e7
@@ -45,3 +46,4 @@ Indica o nome ambíguo para o objeto atual.
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade Name (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)
+

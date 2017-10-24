@@ -18,6 +18,7 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
@@ -88,3 +89,4 @@ AS [t]
  [Consultas de previsão &#40;Mineração de dados&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   
+

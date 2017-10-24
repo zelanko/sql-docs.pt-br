@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eb9a6385a47030f5d9c9a283b56228ca68f596b
@@ -123,3 +124,4 @@ End Function
 ```  
   
  Nem todos os provedores oferecem suporte a comandos preparados. Se o provedor não oferece suporte a preparação de comando, ele pode retornar um erro assim que essa propriedade é definida como **True**. Se ele não retorna um erro, que ignora a solicitação para preparar o comando e conjuntos de **preparado** propriedade **false**.
+

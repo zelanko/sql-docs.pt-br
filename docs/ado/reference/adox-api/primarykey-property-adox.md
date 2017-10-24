@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8fe6b21d9b6de12e503086917edbb72b1c62ae8
@@ -47,3 +48,4 @@ Indica se o índice representa a chave primária na tabela.
 ## <a name="see-also"></a>Consulte também  
  [PrimaryKey e exemplo de propriedades exclusivas (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+

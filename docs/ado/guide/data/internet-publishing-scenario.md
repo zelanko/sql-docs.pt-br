@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0133ec4e0c30ee6bb2c3d43e46b9c0307a689e19
@@ -41,3 +42,4 @@ Este exemplo de código demonstra como usar ADO com o Microsoft OLE DB Provider 
 ## <a name="see-also"></a>Consulte também  
  [Provedor Microsoft OLE DB para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
  [O Provedor OLE DB para publicação na Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+

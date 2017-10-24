@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
@@ -80,3 +81,4 @@ ms.lasthandoff: 09/01/2017
 8.  Selecione **Habilitar esta fonte de dados** se desejar que a fonte de dados esteja ativa. Se a fonte de dados estiver configurada mas não ativa, os usuários receberão uma mensagem de erro quando tentarem criar um relatório.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ A exemplo a seguir mostra o **mínimo** necessários recursos a serem especifica
 3.  Reinicie o serviço do SQL Server para a instância reconfigurado. Isso reiniciará automaticamente relacionado [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] serviço também.
 
 3. Etapas adicionais poderão ser necessárias se você tiver uma configuração de segurança personalizada ou for usar o SQL Server para dar suporte a contextos de computação remota. Para obter mais informações, consulte [Solucionando problemas de instalação de aprendizado de máquina](../machine-learning-troubleshooting-faq.md).
+

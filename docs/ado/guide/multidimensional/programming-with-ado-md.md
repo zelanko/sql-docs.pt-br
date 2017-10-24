@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 912a3560ce2a2c361fe0990dfd12b94a80833430
@@ -31,3 +32,4 @@ Para usar o ADO MD com sua ferramenta de desenvolvimento, você deve estabelecer
  [Visão geral de esquemas Multidimensional e de dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Usando o ADO com ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [Manipular dados multidimensionais](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32d4298351d214912947ead9322fe1fc5a208eba
@@ -32,3 +33,4 @@ O comportamento do **AddNew** método depende do modo de atualização do **Reco
  No modo de atualização imediata (no qual o provedor grava as alterações à fonte de dados subjacente quando você chamar o **atualizar** método), chamar o **AddNew** método sem conjuntos de argumentos de ** EditMode** propriedade **adEditAdd.** O provedor armazena em cache localmente as alterações de valor de campo. Chamando o **atualização** método posta o novo registro no banco de dados e redefine o **EditMode** propriedade **adEditNone.** Se você passar o *FieldList* e *valores* argumentos, o ADO envia imediatamente o novo registro no banco de dados (sem **atualização** chamada é necessária); o **EditMode ** não altera o valor da propriedade (**adEditNone**).  
   
  No modo de atualização em lotes, chamando o **AddNew** método sem conjuntos de argumentos de **EditMode** propriedade **adEditAdd**. O provedor armazena em cache localmente as alterações de valor de campo. Chamando o **atualização** método adiciona o novo registro para o atual **registros** e redefine o **EditMode** propriedade **adEditNone**, mas o provedor não postar as alterações no banco de dados subjacentes até que você chame o **UpdateBatch** método. Se você passar o *FieldList* e *valores* argumentos, ADO envia o novo registro para o provedor de armazenamento em cache; você precisa chamar o **UpdateBatch** método para lançar o novo Registre o banco de dados subjacente. Para obter mais informações sobre **atualização** e **UpdateBatch**, consulte [atualizando e persistir dados](../../../ado/guide/data/updating-and-persisting-data.md).
+

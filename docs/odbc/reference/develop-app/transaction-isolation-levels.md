@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 13997d3c8d4bb3c4ea5ff47ec6e8d4c95b303d21
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
 |Serializável|A transação aguarda até que o bloqueio de gravação por outras transações de linhas sejam desbloqueadas; Isso impede que ler todos os dados "sujos".<br /><br /> A transação mantém um bloqueio de leitura (se ele lê apenas linhas) ou o bloqueio de gravação (se ele pode atualizar ou excluir linhas) no intervalo de linhas que ele afeta. Por exemplo, se a transação incluir a instrução SQL **selecione \* de pedidos**, o intervalo é de toda a tabela Orders; os bloqueios de leitura transação de tabela e não não permitir que as novas linhas a ser inserido nele. Se a transação incluir a instrução SQL **excluir de pedidos onde Status = 'CLOSED'**, o intervalo é de todas as linhas com um Status de "CLOSED"; os bloqueios de gravação de transação todas as linhas dos pedidos de tabela com um Status de "CLOSED" e não não permitir que qualquer linha a ser inserido ou atualizado, de modo que a linha resultante tem um Status de "CLOSED".<br /><br /> Porque outras transações não podem atualizar ou excluir as linhas no intervalo, a transação atual evita qualquer leituras não repetíveis. Porque outras transações não é possível inserir linhas no intervalo, a transação atual evita qualquer fantasmas. A transação libera o bloqueio quando ele for confirmado ou revertido.|  
   
  É importante observar que o nível de isolamento da transação não afeta a capacidade de uma transação para ver suas próprias alterações; as transações sempre podem ver qualquer alteração feita. Por exemplo, uma transação pode ser composto de dois **atualização** instruções, o primeiro deles gera o pagamento de todos os funcionários em 10 por cento e o segundo define o pagamento de funcionários por algum tempo máximo para esse valor. Essa operação é bem-sucedida como uma única transação porque a segunda **atualização** instrução pode ver os resultados da primeira.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3c0f801043d9d3f3125fdea54b176b1743e177f7
@@ -38,3 +39,4 @@ Especifica a regra para seguir quando um [chave](../../../ado/reference/adox-api
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Propriedade DeleteRule (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)
+

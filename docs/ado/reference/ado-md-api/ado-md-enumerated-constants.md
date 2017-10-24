@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a71d388074203703b1e90ab63758465eb7ae46f
@@ -40,3 +41,4 @@ Para ajudar a depuração, as constantes enumeradas do ADO MD listam um valor pa
  [Modelo de objeto ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [Objetos do ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [Propriedades do ADO MD](../../../ado/reference/ado-md-api/ado-md-properties.md)
+

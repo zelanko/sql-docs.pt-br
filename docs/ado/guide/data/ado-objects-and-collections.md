@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ec860c8e4d3766b983e38589418637c1d4eb3cc9
@@ -44,3 +45,4 @@ ADO consiste em nove objetos a seguir e quatro coleções.
   
 ## <a name="see-also"></a>Consulte também  
  [Modelo do objeto ADO](../../../ado/reference/ado-api/ado-object-model.md)
+

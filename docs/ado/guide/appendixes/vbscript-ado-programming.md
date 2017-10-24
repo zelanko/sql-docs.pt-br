@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
@@ -88,3 +89,4 @@ Response.Write("Success!")
 -   Não é possível usar **no erro goto \<rótulo >** em VBScript.  
   
 -   VBScript dá suporte a algumas das funções internas do Visual Basic, como **Msgbox**, **data**, e **IsNumeric**. Porém, como VBScript é um subconjunto do Visual Basic, nem todas as funções internas são suportadas. Por exemplo, o VBScript não dá suporte a **formato** função e as funções de e/s de arquivo.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 44d731d8c9e61c29f1dc9eb0c8ea12d57402639c
@@ -48,3 +49,4 @@ Para usar a versão mais recente do ADO em um aplicativo do Visual C++, use a se
 -   *msado21.tlb*, biblioteca de tipos 2.1 de ADO  
   
 -   *msado20.tlb*, biblioteca de tipos 2.0 de ADO
+

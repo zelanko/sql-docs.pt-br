@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8821ebd2fb20cf32c6b1921c36e45404421f415b
@@ -35,3 +36,4 @@ Uma forma com parâmetros típica comando APPEND possui uma cláusula que cria u
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de data shaping](../../../ado/guide/data/data-shaping-example.md)
+

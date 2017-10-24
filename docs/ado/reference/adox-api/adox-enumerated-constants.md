@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a43048c4ea1dff730c6be4d1f755bfa96bec34dd
@@ -44,3 +45,4 @@ Para ajudar a depuração, as constantes enumerada do ADOX listam um valor para 
 ## <a name="see-also"></a>Consulte também  
  [Referência da API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+

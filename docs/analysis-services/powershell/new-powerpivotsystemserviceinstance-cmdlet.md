@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
@@ -104,3 +105,4 @@ C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInsta
  Este exemplo denomina a instância do Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mas sem provisioná-la. Se você não fornecer um nome, o nome padrão Instância de Serviço de Sistema do SQL Server Analysis Services será usado. A criação de um nome personalizado para o serviço é opcional. Você poderá atribuir um nome ao serviço para oferecer suporte a cenários de teste ou se tiver uma ferramenta ou um script personalizado que provisione a instância em uma etapa posterior.  
   
   
+

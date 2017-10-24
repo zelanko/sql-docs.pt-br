@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 157b0683dc9d68e4fb00dce0d4a468fa5f622179
@@ -43,3 +44,4 @@ Especifica opções para abrir um [registro](../../../ado/reference/ado-api/reco
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Método Open (Registro do ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)
+

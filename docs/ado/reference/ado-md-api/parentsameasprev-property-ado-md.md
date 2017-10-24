@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cecbb86b26acea2e6674d10a2f8d0af1325d9e77
@@ -41,3 +42,4 @@ Indica se o pai nessa posição [membro](../../../ado/reference/ado-md-api/membe
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade DrilledDown (ADO MD)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)
+

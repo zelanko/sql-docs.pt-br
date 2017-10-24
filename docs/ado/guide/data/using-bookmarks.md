@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
@@ -53,3 +54,4 @@ End If
  O [suporta](../../../ado/reference/ado-api/supports-method.md) método é abordado em mais detalhes posteriormente.  
   
  Exceto no caso de clonado **conjuntos de registros**, indicadores são exclusivos para o **registros** no qual eles foram criados, mesmo se o mesmo comando é usado. Isso significa que você não pode usar um **indicador** obtidas de um **registros** para mover para o mesmo registro em um segundo **registros** aberta com o mesmo comando.
+

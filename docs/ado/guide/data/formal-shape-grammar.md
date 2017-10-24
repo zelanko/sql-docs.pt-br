@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ae47b751e9e62d84188927186f186c6c9d344ce0
@@ -79,3 +80,4 @@ Esta é a gramática formal para a criação de qualquer comando de forma:
  [Comandos de forma em geral](../../../ado/guide/data/shape-commands-in-general.md)   
  [Cláusula COMPUTE de forma](../../../ado/guide/data/shape-compute-clause.md)   
  [Funções do Visual Basic for Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+

@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0403fbd8d7136f008a2ec3bd2ee3071f40ce2cf2
@@ -46,3 +47,4 @@ Indica a data em que o objeto foi criado.
 ## <a name="see-also"></a>Consulte também  
  [DateCreated e DateModified propriedades exemplo (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [Propriedade DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)
+

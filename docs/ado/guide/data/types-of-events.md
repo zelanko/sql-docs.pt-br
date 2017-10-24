@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 502c77b55eb0e3a60497fa10bf9fe8c8a412dc4d
@@ -46,3 +47,4 @@ Há dois tipos básicos de eventos. "Será eventos," que é chamado antes do in�
  [Instanciação de evento ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Parâmetros de evento](../../../ado/guide/data/event-parameters.md)   
  [Como os manipuladores de eventos funcionam em conjunto](../../../ado/guide/data/how-event-handlers-work-together.md)
+

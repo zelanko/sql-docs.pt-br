@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb09cdefcb35afdc86f7e296d4a809329a7e4e4b
@@ -47,3 +48,4 @@ Indica o nome do relacionado [o objeto de coluna (ADOX)](../../../ado/reference/
 ## <a name="see-also"></a>Consulte também  
  [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+

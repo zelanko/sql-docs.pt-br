@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 86a1f884f237596895dce6671d3dc42fb6461b1e
@@ -42,3 +43,4 @@ Especifica o formato ao recuperar um [registros](../../../ado/reference/ado-api/
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Método GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)
+

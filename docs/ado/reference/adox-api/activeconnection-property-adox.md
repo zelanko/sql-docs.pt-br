@@ -25,6 +25,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b827ec332b89767a030e1925320345a2b78baee
@@ -57,3 +58,4 @@ Indica o ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md)
  [Coleção de modos de exibição, o exemplo da propriedade CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Exemplo de método (VB) de atualização de modos de exibição](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Método Create (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+

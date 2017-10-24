@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dc684d2c38347251c1f7af843a105f13989e5f8a
@@ -41,3 +42,4 @@ Especifica o comportamento do [registro](../../../ado/reference/ado-api/record-o
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Método MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+
