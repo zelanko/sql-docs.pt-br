@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 9871d26467a300119c742d398ff88f87825d930c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (Banco de Dados SSISDB)
@@ -28,28 +28,28 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
-deploy_project [ @folder_name = ] folder_name   
-      , [ @project_name = ] project_name   
-      , [ @project_stream = ] projectstream   
+```sql  
+catalog.deploy_project [@folder_name =] folder_name   
+      , [@project_name =] project_name   
+      , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
- O nome da pasta onde o projeto será implantado. O *nome_da_pasta* é **nvarchar (128)**.  
+ [@folder_name =] *nome_da_pasta*  
+ O nome da pasta onde o projeto é implantado. O *nome_da_pasta* é **nvarchar (128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  O nome do projeto novo ou atualizado na pasta. O *project_name* é **nvarchar (128)**.  
   
- [ @projectstream =] *projectstream*  
+ [@projectstream =] *projectstream*  
  O conteúdo binário de um arquivo de implantação de projeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (extensão .ispac).  
   
  Você pode usar uma instrução SELECT com a função OPENROWSET e o provedor de conjuntos de linhas BULK para recuperar o conteúdo binário do arquivo. Para obter um exemplo, consulte [implantar Integration Services (SSIS) projetos e pacotes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Para obter mais informações sobre OPENROWSET, consulte [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
   
  O *projectstream* é **varbinary (max)**  
   
- [ @operation_id =] *operation_id*  
+ [@operation_id =] *operation_id*  
  Retorna o identificador exclusivo da operação de implantação. O *operation_id* é **bigint**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  

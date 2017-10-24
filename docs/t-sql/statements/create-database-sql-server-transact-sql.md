@@ -39,11 +39,12 @@ caps.latest.revision: 212
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e80db92abd988b86b1224f07c92ecb2b20bb883
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: de8574d6d4f2322c63743828b7b8a03d4e6fa576
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
@@ -535,9 +536,9 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Criando um banco de dados que especifica os arquivos de dados e de log de transações  
- O exemplo a seguir cria o banco de dados `Sales`. Como a palavra-chave PRIMARY não é usada, o primeiro arquivo (`Sales`_`dat`) torna-se o arquivo primário. Como nem MB nem KB é especificado no parâmetro SIZE do arquivo `Sales`\_`dat` , ele usa MB e é alocado em megabytes. O backup do banco de dados `Sales`\_`log` é alocado em megabytes porque o sufixo `MB` é explicitamente declarado no parâmetro `SIZE` .  
+ O exemplo a seguir cria o banco de dados `Sales`. Como a palavra-chave PRIMARY não é usado, o primeiro arquivo (`Sales_dat`) se torna o arquivo primário. Como nem MB nem KB é especificado no parâmetro SIZE do arquivo `Sales_dat` , ele usa MB e é alocado em megabytes. O backup do banco de dados `Sales_log` é alocado em megabytes porque o sufixo `MB` é explicitamente declarado no parâmetro `SIZE` .  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -559,7 +560,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. Criando um banco de dados especificando vários arquivos de dados e de log de transações  
  O exemplo a seguir cria o banco de dados `Archive` que tem três arquivos de dados de `100-MB` e dois arquivos de log de transações de `100-MB`. O arquivo primário é o primeiro arquivo da lista e é especificado explicitamente com a palavra-chave `PRIMARY`. Os arquivos de log de transações são especificados em seguida às palavras-chave `LOG ON`. Observe as extensões usadas para os arquivos na opção `FILENAME`: `.mdf` é usado para arquivos de dados primários, `.ndf` para arquivos de dados secundários e `.ldf` para arquivos de log de transações. Este exemplo coloca o banco de dados na unidade `D:` e não com o banco de dados `master`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -597,7 +598,7 @@ GO
 ### <a name="d-creating-a-database-that-has-filegroups"></a>D. Criando um banco de dados que tem grupos de arquivos  
  O exemplo a seguir cria o banco de dados `Sales` que tem os seguintes grupos de arquivos:  
   
--   O grupo de arquivos primário com os arquivos `Spri1`_`dat` e `Spri2` \_ `dat`. Os incrementos de FILEGROWTH desses arquivos são especificados como `15%`.  
+-   O grupo de arquivos primário com os arquivos `Spri1_dat` e `Spri2_dat`. Os incrementos de FILEGROWTH desses arquivos são especificados como `15%`.  
   
 -   Um grupo de arquivos denominado `SalesGroup1` com os arquivos `SGrp1Fi1` e `SGrp1Fi2`.  
   
@@ -605,7 +606,7 @@ GO
   
  Este exemplo coloca os dados e os arquivos de log em discos diferentes para melhorar o desempenho.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -654,7 +655,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. Anexando um banco de dados  
  O exemplo a seguir desanexa o banco de dados `Archive` criado no exemplo D e o anexa usando a cláusula `FOR ATTACH`. `Archive` foi definido para ter vários dados e arquivos de log. No entanto, como o local dos arquivos não foi alterado desde sua criação, apenas o arquivo primário precisa ser especificado na cláusula `FOR ATTACH`. A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], todos os arquivos de texto completo que fazem parte do banco de dados que está sendo anexado serão anexados com o banco de dados.  
   
-```  
+```tsql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -666,11 +667,11 @@ GO
 ```  
   
 ### <a name="f-creating-a-database-snapshot"></a>F. Criando um instantâneo do banco de dados  
- O exemplo a seguir cria o instantâneo do banco de dados `sales`_`snapshot0600`. Como um instantâneo do banco de dados é somente leitura, um arquivo de log não pode ser especificado. Em conformidade com a sintaxe, todo arquivo do banco de dados de origem é especificado e grupos de arquivos não são especificados.  
+ O exemplo a seguir cria o instantâneo de banco de dados `sales_snapshot0600`. Como um instantâneo do banco de dados é somente leitura, um arquivo de log não pode ser especificado. Em conformidade com a sintaxe, todo arquivo do banco de dados de origem é especificado e grupos de arquivos não são especificados.  
   
  O banco de dados de origem deste exemplo é o banco de dados `Sales` criado no exemplo D.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -687,7 +688,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Criando um banco de dados e especificando um nome e opções de agrupamento  
  O exemplo a seguir cria o banco de dados `MyOptionsTest`. Um nome de agrupamento é especificado e as opções `TRUSTYWORTHY` e `DB_CHAINING` são definidas como `ON`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -708,7 +709,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Anexando um catálogo de texto completo que foi movido  
  O exemplo a seguir anexa o catálogo de texto completo `AdvWksFtCat` juntamente com os arquivos de dados e de log do `AdventureWorks2012`. Neste exemplo, o catálogo de texto completo é movido de seu local padrão para um novo local `c:\myFTCatalogs`. Os arquivos de dados e de log permanecem em seus locais padrão.  
   
-```  
+```tsql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -733,7 +734,7 @@ GO
   
 -   `FileStreamResumes` contém dados FILESTREAM. Ele contém um contêiner de dados FILESTREAM, `FSResumes`, localizado em `C:\MyFSfolder\Resumes`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d70cf0645f00dc8a5296588548edb29b56380034
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: d5f7a249e43619e0730da0a30fd5597788441bb8
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Instalar o SQL Server e criar um banco de dados no Red Hat
@@ -38,7 +38,7 @@ Para outros requisitos de sistema, consulte [requisitos de sistema do SQL Server
 Para configurar o SQL Server em RHEL, execute os seguintes comandos em um terminal para instalar o **mssql server** pacote:
 
 > [!IMPORTANT]
-> Se você instalou anteriormente um CTP ou a versão RC do SQL Server 2017, remova primeiro o repositório antigo antes de registrar um dos repositórios GA. Para obter mais informações, consulte [alterar os repositórios do repositório de visualização no repositório de GA](sql-server-linux-change-repo.md)
+> Se você instalou anteriormente um CTP ou a versão RC do SQL Server 2017, remova primeiro o repositório antigo antes de registrar um dos repositórios GA. Para obter mais informações, consulte [alterar os repositórios do repositório de visualização no repositório de GA](sql-server-linux-change-repo.md).
 
 1. Baixe o arquivo de configuração do Microsoft SQL Server Red Hat repositório:
 

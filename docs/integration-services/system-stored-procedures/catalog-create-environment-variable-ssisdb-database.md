@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 62aa7f67d7c7b33ac61d63b10fe45d604029500b
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (Banco de Dados SSISDB)
@@ -28,36 +28,36 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
-create_environment_variable [ @folder_name = ] folder_name  
-    , [ @environment_name = ] environment_name  
-    , [ @variable_name = ] variable_name  
-    , [ @data_type = ] data_type  
-    , [ @sensitive = ] sensitive  
-    , [ @value = ] value  
-    , [ @description = ] description  
+```sql  
+catalog.create_environment_variable [@folder_name =] folder_name  
+    , [@environment_name =] environment_name  
+    , [@variable_name =] variable_name  
+    , [@data_type =] data_type  
+    , [@sensitive =] sensitive  
+    , [@value =] value  
+    , [@description =] description  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
+ [@folder_name =] *nome_da_pasta*  
  O nome da pasta que contém o ambiente. O *nome_da_pasta* é **nvarchar (128)**.  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  O nome do ambiente. O *environment_name* é **nvarchar (128)**.  
   
- [ @variable_name =] *variable_name*  
+ [@variable_name =] *variable_name*  
  O nome da variável de ambiente. O *variable_name* é **nvarchar (128)**.  
   
- [ @data_type =] *data_type*  
- O tipo de dados da variável. Suporte para dados de variável de ambiente tipos incluem **booliano**, **bytes**, **DateTime**, **duplo**, **Int16**, **Int32**, **Int64**, **único**, **cadeia de caracteres**, **UInt32**e ** UInt64**. Os tipos de dados da variável de ambiente sem suporte incluem **Char**, **DBNull**, **objeto**, e **Sbyte**. O tipo de dados de *data_type* parâmetro é **nvarchar (128)**.  
+ [@data_type =] *data_type*  
+ O tipo de dados da variável. Suporte para dados de variável de ambiente tipos incluem **booliano**, **bytes**, **DateTime**, **duplo**, **Int16**, **Int32**, **Int64**, **único**, **cadeia de caracteres**, **UInt32**e  **UInt64**. Os tipos de dados da variável de ambiente sem suporte incluem **Char**, **DBNull**, **objeto**, e **Sbyte**. O tipo de dados de *data_type* parâmetro é **nvarchar (128)**.  
   
- [ @sensitive =] *confidenciais*  
+ [@sensitive =] *confidenciais*  
  Indica se a variável contém um valor confidencial ou não. Use um valor de `1` para indicar que o valor da variável de ambiente é confidencial ou um valor de `0` para indicar que não é. Um valor confidencial é criptografado quando é armazenado. Um valor que não é confidencial é armazenado em texto não criptografado. *Confidenciais* é **bit**.  
   
- [ @value =] *valor*  
+ [@value =] *valor*  
  O valor da variável de ambiente. O *valor* é **sql_variant**.  
   
- [ @description =] *descrição*  
+ [@description =] *descrição*  
  A descrição da variável do ambiente. O *valor* é **nvarchar (1024)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
@@ -92,7 +92,7 @@ create_environment_variable [ @folder_name = ] folder_name
 > [!TIP]  
 >  Considere o uso de **Int16** tipo de dados na [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em vez do suporte **Sbyte** tipo de dados.  
   
- O valor passado para esse procedimento armazenado com o *valor* parâmetro será convertido de um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tipo de dados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados de acordo com a tabela a seguir:  
+ O valor passado para esse procedimento armazenado com o *valor* parâmetro é convertido de um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tipo de dados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados de acordo com a tabela a seguir:  
   
 |Tipo de dados do Integration Services|Tipo de dados do SQL Server|  
 |------------------------------------|--------------------------|  
@@ -105,7 +105,7 @@ create_environment_variable [ @folder_name = ] folder_name
 |**Int64**|**bigint**|  
 |**Single**|Numérico exato: **decimal**, **numérico**; Numérico aproximado: **float**, **real**|  
 |**Cadeia de caracteres**|**varchar**, **nvarchar**, **char**|  
-|**UInt32**|**int** (Este é o mapeamento disponível mais próximo para **Uint32**.)|  
-|**UInt64**|**bigint** (Este é o mapeamento disponível mais próximo para **Uint64**.)|  
+|**UInt32**|**int** (**int** é o mapeamento disponível mais próximo para **Uint32**.)|  
+|**UInt64**|**bigint** (**int** é o mapeamento disponível mais próximo para **Uint64**.)|  
   
   

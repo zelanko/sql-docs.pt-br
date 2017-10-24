@@ -1,7 +1,7 @@
 ---
 title: 'Etapa 4: Criar recursos de dados usando o T-SQL | Microsoft Docs'
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,15 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e429c4ee6874538af52784f5dbe841cb0a420b7d
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>Etapa 4: Criar recursos de dados usando o T-SQL
 
 Depois de exploração de dados, coletar algumas informações dos dados e estiver pronto para migrar para *engenharia de recurso*. Esse processo de criação de recursos dos dados brutos pode ser uma etapa crítica na modelagem de análise avançada.
+
+Este artigo faz parte de um tutorial, [análise Python no banco de dados para desenvolvedores em SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 Nesta etapa, você aprenderá a criar recursos de dados brutos usando uma função [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você chamará essa função por meio de um procedimento armazenado para criar uma tabela que contém os valores do recurso.
 
@@ -121,14 +123,11 @@ A próxima etapa, você aprenderá como usar esses recursos de dados para criar 
 
 ## <a name="next-step"></a>Próxima etapa
 
-[Etapa 5: Treinar e salvar um modelo usando o T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Etapa 5: Treinar e salvar um modelo de Python usando o T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Etapa anterior
 
 [Etapa 3: Explorar e visualizar os dados](sqldev-py3-explore-and-visualize-the-data.md)
 
-## <a name="see-also"></a>Consulte também
-
-[Serviços de aprendizado de máquina com Python](../python/sql-server-python-services.md)
 
 

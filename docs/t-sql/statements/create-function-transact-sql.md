@@ -39,11 +39,12 @@ caps.latest.revision: 162
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80708ece5b84d5e8477e2c6cc8ab5c0618bdc2a5
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c74e3a3322dcc2268fa8e386fda5d55f59be98c5
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -774,7 +775,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-clr-function"></a>D. Criando uma função CLR  
- O exemplo cria a função CLR `len`_`s`. Antes que a função seja criada, o assembly `SurrogateStringFunction.dll` é registrado no banco de dados local.  
+ O exemplo cria a função CLR `len_s`. Antes que a função seja criada, o assembly `SurrogateStringFunction.dll` é registrado no banco de dados local.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

@@ -1,7 +1,7 @@
 ---
 title: 'Etapa 3: Explorar e visualizar os dados | Microsoft Docs'
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,60 +20,76 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dfb80fcd3241b22f0ac72c2cf4cd8a18d1add857
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 31fa666c98948dc18f7aad988de795809594d2dd
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-3-explore-and-visualize-the-data"></a>Etapa 3: Explorar e visualizar os dados
 
-Em geral, o desenvolvimento de uma solução de ciência de dados inclui intensiva exploração e visualização de dados. Nesta etapa, você irá explorar os dados de exemplo e gerar alguns gráficos. Posteriormente, você aprenderá como serializar objetos gráficos em Python e, em seguida, desserializar esses objetos e fazer gráficos.
+Este artigo faz parte de um tutorial, [análise Python no banco de dados para desenvolvedores em SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-> [!NOTE]
-> Este passo a passo demonstra apenas a tarefa de classificação binária; Você está bem-vindo ao tentar criar modelos separados para outras tarefas de aprendizado de máquina dois, regressão e classificação multiclasse.
+Nesta etapa, você pode explora os dados de exemplo e gerar alguns gráficos. Posteriormente, você aprenderá a serializar objetos gráficos em Python, desserializar os objetos e fazer gráficos.
 
-## <a name="review-the-data"></a>Examinar os dados
+## <a name="review-the-data"></a>Revise os dados
 
-No conjunto de dados original, os identificadores de táxi e os registros de corrida eram fornecidos em arquivos separados. No entanto, para facilitar o uso dos dados de exemplo, os dois conjuntos de dados originais foram unidos nas colunas _medallion_, _hack_license_e _pickup_datetime_.  Também foram obtidas amostras dos registros para que fosse obtido apenas 1% do número original de registros. O conjunto de dados resultante com redução da resolução tem 1.703.957 linhas e 23 colunas.
+Primeiro, reserve um minuto para procurar o esquema de dados, como fizemos algumas alterações para tornar mais fácil de usar os dados NYC táxi
+
++ O conjunto de dados original usado arquivos separados para os identificadores de táxi e registros de viagem. Podemos ingressou dois conjuntos de dados originais nas colunas _medallion_, _hack_license_, e _pickup_datetime_.  
++ O conjunto de dados original estendidos muitos arquivos e era muito grande. Fornecemos reduzida para obter apenas 1% do número original de registros. A tabela de dados atual tem 1,703,957 linhas e colunas de 23.
 
 **Identificadores de táxi**
 
-- A coluna _medallion_ representa o número de ID exclusivo do táxi.
-- A coluna _hack_license_ contém o número de licença do motorista do táxi (anônimo).
+O _medallion_ coluna representa o número de identificação exclusivo do táxi.
+
+O _hack_license_ coluna contém o número de licença do driver táxi (anônimos).
 
 **Registros de corrida e tarifa**
 
-- Cada registro de corrida inclui os locais de embarque e desembarque de passageiros, a hora e a distância da corrida.
-- Cada registro de tarifa inclui informações de pagamento, como a forma de pagamento, o valor total do pagamento e o valor da gorjeta.
-- As três últimas colunas podem ser usadas para várias tarefas de aprendizado de máquina.  A coluna _tip_amount_ contém valores numéricos contínuos e pode ser usada como a coluna **label** para a análise de regressão. A coluna _tipped_ tem apenas valores sim/não e é usada para classificação binária. A coluna _tip_class_ tem vários **rótulos de classe** e, portanto, pode ser usada como o rótulo para tarefas de classificação de várias classes.
-- Os valores usados para as colunas de rótulo se baseiam na coluna _tip_amount_ , usando estas regras de negócio:
-  
-    |Nome de coluna derivada|Regra|
-    |-|-|
-     |tipped|Se tip_amount > 0, tipped = 1; caso contrário, tipped = 0|
-    |tip_class|Classe 0: tip_amount = $0<br /><br />Classe 1: tip_amount > US$ 0 e tip_amount <= US$ 5<br /><br />Classe 2: tip_amount > US$ 5 e tip_amount <= US$ 10<br /><br />Classe 3: tip_amount > US$ 10 e tip_amount <= US$ 20<br /><br />Classe 4: tip_amount > $20|
+Cada registro de corrida inclui os locais de embarque e desembarque de passageiros, a hora e a distância da corrida.
+
+Cada registro de tarifa inclui informações de pagamento, como a forma de pagamento, o valor total do pagamento e o valor da gorjeta.
+
+As três últimas colunas podem ser usadas para várias tarefas de aprendizado de máquina.  A coluna _tip_amount_ contém valores numéricos contínuos e pode ser usada como a coluna **label** para a análise de regressão. A coluna _tipped_ tem apenas valores sim/não e é usada para classificação binária. A coluna _tip_class_ tem vários **rótulos de classe** e, portanto, pode ser usada como o rótulo para tarefas de classificação de várias classes.
+
+Os valores usados para as colunas de rótulo se baseiam no `tip_amount` coluna, usando essas regras de negócio:
+
++ Coluna de rótulo `tipped` tem valores possíveis 0 e 1
+
+    Se `tip_amount` > 0, `tipped` = 1; caso contrário, `tipped` = 0
+
++ Coluna de rótulo `tip_class` tem classe possíveis valores 0-4
+
+    Classe 0: `tip_amount` = $0
+
+    Classe 1: `tip_amount` > $0 e `tip_amount` < = US $5
+    
+    Classe 2: `tip_amount` > US $5 e `tip_amount` < = US $10
+    
+    Classe 3: `tip_amount` > $10 e `tip_amount` < = US $20
+    
+    Classe 4: `tip_amount` > US $20
 
 ## <a name="create-plots-using-python-in-t-sql"></a>Criar gráficos usando Python no T-SQL
 
-Como visualização é uma ferramenta poderosa para entender a distribuição dos dados e exceções, o Python fornece muitos pacotes para visualização de dados. O **matplotlib** módulo é uma biblioteca popular que inclui muitas funções para a criação de histogramas, gráficos de dispersão, gráficos de caixa e outros gráficos de exploração de dados.
+Em geral, o desenvolvimento de uma solução de ciência de dados inclui intensiva exploração e visualização de dados. Como visualização é uma ferramenta poderosa para entender a distribuição dos dados e exceções, o Python fornece muitos pacotes para visualização de dados. O **matplotlib** módulo é uma das bibliotecas mais populares para visualização e inclui muitas funções para a criação de histogramas, gráficos de dispersão, gráficos de caixa e outros gráficos de exploração de dados.
 
-Nesta seção, você aprenderá como trabalhar com gráficos usando procedimentos armazenados. Armazenar o `plot` Python de objeto como um **varbinary** dados de tipo e salvar os gráficos gerados no servidor.
+Nesta seção, você aprenderá como trabalhar com gráficos usando procedimentos armazenados. Em vez de abrir a imagem no servidor, você armazena o objeto de Python `plot` como **varbinary** dados e, em seguida, gravar que para um arquivo que pode ser compartilhado ou exibidos em outro lugar.
 
-### <a name="storing-plots-as-varbinary-data-type"></a>Armazenando plotagens como o tipo de dados varbinary
+### <a name="create-a-plot-as-varbinary-data"></a>Criar um gráfico como dados varbinary
 
-O **revoscalepy** módulo incluído com os serviços de aprendizado de máquina do SQL Server 2017 contém bibliotecas análogas a bibliotecas de R no pacote RevoScaleR. Neste exemplo, você usará o equivalente a Python `rxHistogram` para plotar um histograma com base em dados de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. Para facilitar, você irá colocá-los em um procedimento armazenado, _PlotHistogram_.
+O **revoscalepy** módulo incluído com os serviços de aprendizado de máquina do SQL Server 2017 oferece suporte a recursos semelhantes do **RevoScaleR** pacote r.  Este exemplo usa o equivalente a Python `rxHistogram` para plotar um histograma com base em dados de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. 
 
 O procedimento armazenado retorna um Python serializado `figure` objeto como um fluxo de **varbinary** dados. Não é possível exibir os dados binários diretamente, mas você pode usar o código Python no cliente para desserializar e exibir os dados e, em seguida, salve o arquivo de imagem em um computador cliente.
 
-### <a name="create-the-stored-procedure-plotspython"></a>Criar o procedimento armazenado Plots_Python
+1. Criar o procedimento armazenado _SerializePlots_, se o script do PowerShell já não fez isso.
 
-1.  Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra uma nova **consulta** janela.
-
-2.  Selecione o banco de dados para o passo a passo e crie o procedimento usando essa instrução. Lembre-se de modificar o código para usar o nome de tabela correto, se necessário.
+    - A variável `@query` define o texto da consulta `SELECT tipped FROM nyctaxi_sample`, que é passado para o bloco de código Python como o argumento para a variável de entrada de script, `@input_data_1`.
+    - O script de Python é bastante simple: **matplotlib** `figure` objetos são usados para fazer o gráfico de histograma e dispersão, e esses objetos, em seguida, são serializados usando o `pickle` biblioteca.
+    - O objeto de gráfico do Python é serializado como um **pandas** DataFrame de saída.
   
     ```SQL
-    
     CREATE PROCEDURE [dbo].[SerializePlots]
     AS
     BEGIN
@@ -120,78 +136,70 @@ O procedimento armazenado retorna um Python serializado `figure` objeto como um 
 
     OutputDataSet = plot0.append(plot1, ignore_index=True).append(plot2, ignore_index=True).append(plot3, ignore_index=True)
     ',
-                                     @input_data_1 = @query
-      WITH RESULT SETS ((plot varbinary(max)))
+    @input_data_1 = @query
+    WITH RESULT SETS ((plot varbinary(max)))
     END
-
     GO
-  
     ```
-**Observações:**
 
-- A variável `@query` define o texto da consulta (`'SELECT tipped FROM nyctaxi_sample'`), que é passado para o bloco de código Python como o argumento para a variável de entrada de script, `@input_data_1`.
-- O script de Python é bastante simple: **matplotlib** `figure` objetos são usados para fazer o gráfico de histograma e dispersão, e esses objetos, em seguida, são serializados usando o `pickle` biblioteca.
-- O objeto de gráfico do Python é serializado como um Python **pandas** DataFrame de saída.
+2. Agora execute o procedimento armazenado sem argumentos para gerar um gráfico de dados codificado como a consulta de entrada.
 
-### <a name="output-varbinary-data-to-viewable-graphics-file"></a>Dados varbinary de saída para arquivo gráfico visível
-
-1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], execute a seguinte instrução:
-  
     ```
     EXEC [dbo].[SerializePlots]
     ```
+
+3. Os resultados devem ser algo assim:
   
-    **Resultados**
-  
-    *plotagem*
-    *0xFFD8FFE000104A4649... * 
-     *0xFFD8FFE000104A4649... * 
-     *0xFFD8FFE000104A4649... * 
-     *0xFFD8FFE000104A4649...*
+    ```
+    plot
+    0xFFD8FFE000104A4649...
+    0xFFD8FFE000104A4649...
+    0xFFD8FFE000104A4649...
+    0xFFD8FFE000104A4649...
+    ```
 
   
-2.  No computador cliente, execute o código Python a seguir, substituindo o nome do servidor, nome do banco de dados e as credenciais conforme apropriado.
+4. Em um cliente do Python, agora você pode se conectar à instância do SQL Server que gerou os objetos de plotagem binário e exibir os gráficos. 
+
+    Para fazer isso, execute o código Python a seguir, substituindo o nome do servidor, nome do banco de dados e as credenciais conforme apropriado. Verifique se que a versão do Python é o mesmo no cliente e o servidor. Também, certifique-se de que as bibliotecas de Python no cliente (como matplotlib) são da versão igual ou superior em relação as bibliotecas instaladas no servidor.
   
-    **Para autenticação do SQL server:**
+    **Usando a autenticação do SQL Server:**
     
-        ```python
-        import pyodbc
-        import pickle
-        import os
-        cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSOWRD}')
-        cursor = cnxn.cursor()
-        cursor.execute("EXECUTE [dbo].[SerializePlots]")
-        tables = cursor.fetchall()
-        for i in range(0, len(tables)):
-            fig = pickle.loads(tables[i][0])
-            fig.savefig(str(i)+'.png')
-        print("The plots are saved in directory: ",os.getcwd())
-        ```  
-    **Para autenticação do Windows:**
+    ```python
+    import pyodbc
+    import pickle
+    import os
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
+    cursor = cnxn.cursor()
+    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    tables = cursor.fetchall()
+    for i in range(0, len(tables)):
+        fig = pickle.loads(tables[i][0])
+        fig.savefig(str(i)+'.png')
+    print("The plots are saved in directory: ",os.getcwd())
+    ```
 
-        ```python
-        import pyodbc
-        import pickle
-        import os
-        cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
-        cursor = cnxn.cursor()
-        cursor.execute("EXECUTE [dbo].[SerializePlots]")
-        tables = cursor.fetchall()
-        for i in range(0, len(tables)):
-            fig = pickle.loads(tables[i][0])
-            fig.savefig(str(i)+'.png')
-        print("The plots are saved in directory: ",os.getcwd())
-        ```
+    **Usando a autenticação do Windows:**
 
-    > [!NOTE]
-    > Verifique se que a versão do Python é o mesmo no cliente e o servidor. Além disso, certifique-se de que as bibliotecas do Python que você está usando no seu cliente (como matplotlib) são da versão igual ou superior em relação as bibliotecas instaladas no servidor.
+    ```python
+    import pyodbc
+    import pickle
+    import os
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cursor = cnxn.cursor()
+    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    tables = cursor.fetchall()
+    for i in range(0, len(tables)):
+        fig = pickle.loads(tables[i][0])
+        fig.savefig(str(i)+'.png')
+    print("The plots are saved in directory: ",os.getcwd())
+    ```
 
-
-3.  Se a conexão for bem-sucedida, você verá os resultados abaixo
+5.  Se a conexão for bem-sucedida, você verá uma mensagem semelhante ao seguinte:
   
     *Os gráficos são salvos no diretório: xxxx*
   
-4.  O arquivo de saída será criado no diretório de trabalho de Python. Para exibir o gráfico, basta abra o diretório de trabalho do Python. A imagem a seguir mostra uma plotagem de exemplo salva no computador cliente.
+6.  O arquivo de saída é criado no diretório de trabalho de Python. Para exibir o gráfico, localize a pasta de trabalho do Python e abra o arquivo. A imagem a seguir mostra um gráfico salvo no computador cliente.
   
     ![Dica de quantidade de passagens vs quantidade](media/sqldev-python-sample-plot.png "quantidade de passagens dica quantidade vs") 
 
@@ -203,7 +211,4 @@ O procedimento armazenado retorna um Python serializado `figure` objeto como um 
 
 [Etapa 2: Importar dados para o SQL Server usando o PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
 
-## <a name="see-also"></a>Consulte também
-
-[Serviços de aprendizado de máquina com Python](../python/sql-server-python-services.md)
 

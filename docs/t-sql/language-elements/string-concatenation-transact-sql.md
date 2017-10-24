@@ -24,11 +24,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66f482d424c6be56d89e8ec5b99cff30b2ddab0b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1fd13b0b05dcb3b15d37d5a642a734b99ad004e5
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concatenação de cadeias de caracteres) (Transact-SQL)
@@ -158,18 +159,7 @@ GO
  ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-string-concatenation"></a>E. Usando a concatenação de cadeias de caracteres  
- O exemplo a seguir cria uma única coluna sob o título de coluna `Name` das colunas de vários caracteres, com o sobrenome do contato seguido por uma vírgula, um único espaço e, em seguida, o nome do contato. O conjunto de resultados está em ordem alfabética crescente pelo sobrenome e depois pelo nome.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT (LastName + ', ' + FirstName) AS Name  
-FROM DimEmployee  
-ORDER BY LastName ASC, FirstName ASC;  
-```  
-  
-### <a name="f-using-multiple-string-concatenation"></a>F. Usando concatenação de várias cadeias de caracteres  
+### <a name="e-using-multiple-string-concatenation"></a>E. Usando concatenação de várias cadeias de caracteres  
  O exemplo a seguir concatena várias cadeias de caracteres para formar uma cadeia de caracteres longa para exibir o último nome e a primeira inicial dos vice-presidentes dentro de um banco de dados de exemplo. Uma vírgula é adicionada depois do sobrenome e um ponto depois da primeira inicial.  
   
 ```  

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 8e4f84fe50051d1d09c5057a04840cbf19c4d1b0
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 30187dcf31421be045bb54e9824336e5d258f555
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado SLES para SQL Server
@@ -44,7 +44,7 @@ A primeira etapa é configurar o sistema operacional em nós de cluster. Para es
     ```
 
     > [!NOTE]
-    > No momento da instalação, uma chave mestre do servidor é gerado para a instância do SQL Server e colocado no var/opt/mssql/segredos/chave do computador. No Linux, o SQL Server sempre é executado como uma conta local chamada mssql. Como é uma conta local, sua identidade não é compartilhada entre nós. Portanto, é necessário copiar a chave de criptografia do nó principal para cada nó secundário para que cada conta mssql local pode acessá-lo para descriptografar a chave mestra do servidor.
+    > No momento da instalação, uma chave mestre do servidor é gerado para a instância do SQL Server e colocado no `/var/opt/mssql/secrets/machine-key`. No Linux, o SQL Server sempre é executado como uma conta local chamada mssql. Como é uma conta local, sua identidade não é compartilhada entre nós. Portanto, é necessário copiar a chave de criptografia do nó principal para cada nó secundário para que cada conta mssql local pode acessá-lo para descriptografar a chave mestra do servidor.
 4. No nó primário, crie um logon do SQL server para Pacemaker e conceder a permissão de logon para executar `sp_server_diagnostics`. Pacemaker usará essa conta para verificar qual nó está executando o SQL Server.
 
     ```bash

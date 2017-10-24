@@ -15,14 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b765b02717c0eef59fda5dfa12cb64a1b9197587
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conectar a uma fonte de dados de arquivo simples (Assistente de exportação e importação do SQL Server)
-Este tópico mostra como se conectar a um **arquivo simples** da fonte de dados (arquivo de texto) do **escolher uma fonte de dados** ou **escolha um destino** página de exportação e importação do SQL Server Assistente. Para arquivos simples, essas duas páginas do Assistente para apresentam conjuntos diferentes de opções, este tópico descreve a origem de arquivo simples e o destino separadamente.
+Este tópico mostra como se conectar a um **arquivo simples** da fonte de dados (arquivo de texto) do **escolher uma fonte de dados** ou **escolha um destino** página de exportação e importação do SQL Server Assistente. Para arquivos simples, essas duas páginas do Assistente para apresentam conjuntos diferentes de opções, este tópico descreve a origem de arquivo simples e o destino de arquivo simples separadamente.
+
+## <a name="an-alternative-for-simple-text-import"></a>Uma alternativa para importação de texto simples
+Se você precisa importar um arquivo de texto no SQL Server, e todas as opções de configuração disponíveis no Assistente de importação e exportação não é necessário, considere o uso de **Importar Assistente de arquivo simples** no SQL Server Management Studio (SSMS). Para saber mais, veja os tópicos a seguir:
+- [Novidades do SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [Apresentamos os novo Assistente Importar Arquivo Simples no SQL Server Management Studio 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ## <a name="connect-to-a-flat-file-source"></a>Conectar a uma fonte de arquivo simples
  
@@ -202,10 +207,10 @@ Na captura de tela, observe que o **id** inicialmente, a coluna que contém núm
   
 |Propriedade|Description|  
 |--------------|-----------------|  
-|**Nome**|Forneça um nome de coluna descritivo. Se você não digitar um nome, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criará um nome automaticamente, no formato Coluna 0, Coluna 1 e assim por diante.|
+|**Nome**|Forneça um nome de coluna descritivo. Se você não digitar um nome, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria automaticamente um nome no formato de coluna 0, coluna 1 e assim por diante.|
 |**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}**. As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.<br /><br /> **{CR}**. As colunas são delimitadas por um retorno de carro.<br /><br /> **{LF}**. As colunas são delimitadas por uma alimentação de linha.<br /><br /> **Porto e vírgula {;}**. As colunas são delimitadas por um ponto-e-vírgula.<br /><br /> **Dois pontos {:}**. As colunas são delimitadas por dois-pontos.<br /><br /> **Vírgula {,}**. As colunas são delimitadas por uma vírgula.<br /><br /> **Tabulação {t}**. As colunas são delimitadas por uma tabulação.<br /><br /> **Barra vertical {&#124;}**. As colunas são delimitadas por uma barra vertical.|
 |**ColumnType**|Denota se a coluna é delimitada, de largura fixa ou com imperfeição à direita. Esta propriedade é somente leitura. Arquivos irregulares à direita são arquivos em que toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.|  
-|**InputColumnWidth**|Especifica um valor a ser armazenado como contagem de bytes; no caso de arquivos Unicode, isso será exibido como contagem de caracteres. Este valor é ignorado nas colunas delimitadas.<br /><br /> **Observação** No modelo de objeto, o nome desta propriedade é ColumnWidth.|
+|**InputColumnWidth**|Especifique um valor a ser armazenado como uma contagem de bytes. para arquivos Unicode, esse valor é uma contagem de caracteres. Este valor é ignorado nas colunas delimitadas.<br /><br /> **Observação** No modelo de objeto, o nome desta propriedade é ColumnWidth.|
 |**DataPrecision**|Especifica a precisão de dados numéricos. A precisão se refere ao número de dígitos.|
 |**DataScale**|Especifica a escala de dados numéricos. A escala se refere ao número de casas decimais.|
 |**DataType**|Seleciona na lista de tipos de dados disponíveis.<br/>Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
@@ -229,7 +234,7 @@ Na captura de tela, observe que o **id** inicialmente, a coluna que contém núm
  
 Clique em **Sugerir tipos** para exibir a caixa de diálogo **Sugerir tipos de coluna**. 
 
-![Sugerir conexões de arquivo simples](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![Caixa de diálogo tipos de sugerir de conexão de arquivo simples](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 Depois de escolher opções de **sugerir tipos de coluna** caixa de diálogo e clique em **Okey**, o assistente pode alterar os tipos de dados de algumas das colunas.
 
@@ -293,7 +298,7 @@ Para um destino de arquivo simples, há apenas uma única página de opções, c
  Especifique o qualificador de texto, se houver, usado pelo arquivo. Por exemplo, você pode especificar que os campos de texto fiquem entre aspas. (Essa propriedade se aplica somente para arquivos delimitados por.) 
   
 > [!NOTE] 
-> Depois de selecionar um qualificador de texto, você não pode selecionar o **nenhum** opção. Digite **None** para anular a seleção do qualificador de texto.  
+> Depois de selecionar um qualificador de texto, você não pode selecionar novamente o **nenhum** opção. Digite **None** para anular a seleção do qualificador de texto.  
 
 ## <a name="see-also"></a>Consulte também
 [Escolha uma fonte de dados](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

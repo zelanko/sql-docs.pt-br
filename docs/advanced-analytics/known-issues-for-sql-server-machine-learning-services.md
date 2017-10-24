@@ -2,7 +2,7 @@
 title: "Problemas conhecidos de serviços de aprendizado de máquina | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/19/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,11 +15,12 @@ caps.latest.revision: 53
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2d21756a05e9e51379faa194ec331517e510988d
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 63ad249e32f259eca850d5b872d940faa313750c
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conhecidos nos serviços de aprendizado de máquina
@@ -167,6 +168,19 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 Como alternativa, você pode reescrever a consulta SQL para usar CAST ou converter e apresentar os dados em R usando o tipo de dados correto. Em geral, desempenho é melhor quando você trabalha com dados usando SQL em vez de alteração de dados no código de R.
 
 **Aplica-se a:** SQL Server 2016 R Services
+
+### <a name="limits-on-size-of-serialized-models"></a>Limites de tamanho de modelos serializados
+
+Quando você salvar um modelo em uma tabela do SQL Server, você deve serializar o modelo e salvá-lo em um formato binário. Teoricamente, o tamanho máximo de um modelo que pode ser armazenado com esse método é 2 GB, que é o tamanho máximo de colunas varbinary no SQL Server.
+
+Se você precisar usar modelos mais amplos, soluções alternativas a seguir estão disponíveis:
+
++ Use o [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) função em base R para reduzir o tamanho do modelo antes de passá-lo para o SQL Server. Essa opção é recomendada quando o modelo estiver próximo ao limite de 2 GB.
++ Para modelos maiores, em vez de usar uma coluna varbinary para armazenar os modelos, você pode usar o [FileTable](..\relational-databases\blob\filetables-sql-server.md) recurso fornecido no SQL Server.
+
+    Para usar FileTables, você deve adicionar uma exceção de firewall, porque os dados armazenados em FileTables são gerenciados pelo driver do sistema de arquivos Filestream no SQL Server e as regras de firewall padrão bloqueiam o acesso de arquivo de rede. Para obter mais informações, consulte [habilitar pré-requisitos para FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md). 
+
+    Depois que você tiver habilitado a FileTable gravar o modelo, que obter um caminho de SQL usando a API de FileTable e, em seguida, gravar o modelo para o local de seu código R. Quando você precisar ler o modelo, você obtém o caminho do SQL e, em seguida, chame o modelo usando o caminho do seu script R. Para obter mais informações, consulte [wth acessar FileTables APIs de arquivo de entrada e saída](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
 ### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>Evitar limpar espaços de trabalho quando você executar o código R em um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contexto de computação
 

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: a15f88d8bc7d7684e8e8d0014bb24a082c5b0be2
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Instalar o SQL Server e criar um banco de dados no SUSE Linux Enterprise Server
@@ -31,6 +31,9 @@ Você deve ter um computador do SLES v12 SP2 com **pelo menos 3,25 GB** de memó
 
 Para instalar o SUSE Linux Enterprise Server na sua própria máquina, vá para [https://www.suse.com/products/server](https://www.suse.com/products/server). Você também pode criar máquinas virtuais SLES no Azure. Consulte [criar e gerenciar máquinas virtuais Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e usar `--image SLES` na chamada para `az vm create`.
 
+> [!NOTE]
+> Neste momento, o [subsistema do Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) para Windows 10 não é suportado como um destino de instalação.
+
 Para outros requisitos de sistema, consulte [requisitos de sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
 
 ## <a id="install"></a>Instalar o SQL Server
@@ -38,7 +41,7 @@ Para outros requisitos de sistema, consulte [requisitos de sistema do SQL Server
 Para configurar o SQL Server em SLES, execute os seguintes comandos em um terminal para instalar o **mssql server** pacote:
 
 > [!IMPORTANT]
-> Se você instalou anteriormente um CTP ou a versão RC do SQL Server 2017, remova primeiro o repositório antigo antes de registrar um dos repositórios GA. Para obter mais informações, consulte [alterar os repositórios do repositório de visualização no repositório de GA](sql-server-linux-change-repo.md)
+> Se você instalou anteriormente um CTP ou a versão RC do SQL Server 2017, remova primeiro o repositório antigo antes de registrar um dos repositórios GA. Para obter mais informações, consulte [alterar os repositórios do repositório de visualização no repositório de GA](sql-server-linux-change-repo.md).
 
 1. Baixe o arquivo de configuração do Microsoft SQL Server SLES repositório:
 

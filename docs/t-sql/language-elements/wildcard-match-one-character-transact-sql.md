@@ -28,17 +28,18 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e47fdb9e12a632323971558d2e894fb7b181498e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (Curinga – corresponde a um caractere) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Use o caractere de sublinhado `_` para corresponder a qualquer caractere único em uma operação de comparação de cadeia de caracteres que envolva correspondência de padrões, como `LIKE` e `PATINDEX`.  
+Use o caractere de sublinhado _ para corresponder qualquer caractere único em uma operação de comparação de cadeia de caracteres que envolva correspondência de padrões, como `LIKE` e `PATINDEX`.  
   
 ## <a name="examples"></a>Exemplos  
 
@@ -62,10 +63,10 @@ Você pode ter bancos de dados adicionais que atendem aos critérios.
 Você pode usar vários sublinhados para representar vários caracteres. Alterando o `LIKE` critérios para incluir dois sublinhados `'m__%` inclui o banco de dados mestre no resultado.
 
 ### <a name="b-more-complex-example"></a>B: exemplo mais complexo
- O exemplo a seguir usa o operador `_` para localizar todas as pessoas na tabela `Person` que tenham um nome com três letras e que termine com `an`.  
+ O exemplo a seguir usa o operador de _ para localizar todas as pessoas a `Person` tabela, que têm um nome três letras que termina em `an`.  
   
 ```tsql  
--- Uses AdventureWorks  
+-- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
 FROM Person.Person  
@@ -104,6 +105,5 @@ db_securityadmin
   [% (Curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; (Curinga – caracteres a serem correspondidos)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; (Curinga - caracteres não correspondência)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
-  
   
 

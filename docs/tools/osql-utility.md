@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64781fa0b670cc854f5f8a5ff687c8ab481ce922
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="osql-utility"></a>Utilitário osql
@@ -122,7 +123,7 @@ C:\>osql
  Permite ao usuário definir a largura da tela de saída. O padrão é 80 caracteres. Quando uma linha de saída alcança sua largura de tela máxima, ela é quebrada em várias linhas.  
   
  **-a** *packet_size*  
- Permite solicitar um pacote de tamanho diferente. Os valores válidos para *packet_size* são 512 a 65.535. O valor padrão **osql** é o padrão do servidor. Um tamanho de pacote maior pode aumentar o desempenho na execução de scripts maiores, em que a quantidade de instruções SQL entre comandos GO é substancial. Testes da [!INCLUDE[msCoName](../includes/msconame-md.md)] indicam que 8192 geralmente é a configuração mais rápida para operações de cópia em massa. Um tamanho de pacote maior pode ser solicitado, mas o **osql** assumirá como padrão o padrão do servidor se a solicitação não puder ser atendida.  
+ Permite solicitar um pacote de tamanho diferente. Os valores válidos para *packet_size* são 512 a 65.535. O valor padrão **osql** é o padrão do servidor. Um tamanho de pacote maior pode aumentar o desempenho na execução de scripts maiores, em que a quantidade de instruções SQL entre comandos GO é substancial. [!INCLUDE[msCoName](../includes/msconame-md.md)] indicam que 8192 geralmente é a configuração mais rápida para operações de cópia em massa. Um tamanho de pacote maior pode ser solicitado, mas o **osql** assumirá como padrão o padrão do servidor se a solicitação não puder ser atendida.  
   
  **-e**  
  Duplica a entrada.  
@@ -173,7 +174,7 @@ osql -E -q "select name, object_id from %table%"
  Imprime estatísticas de desempenho.  
   
  **-b**  
- Especifica que o **osql** é encerrado e retorna um valor DOS ERRORLEVEL em caso de erro. O valor retornado à variável DOS ERRORLEVEL será 1 quando a mensagem de erro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiver um nível de severidade de 11 ou superior, caso contrário, o valor retornado será 0. [!INCLUDE[msCoName](../includes/msconame-md.md)]Arquivos de lote do MS-DOS podem testar o valor DOS ERRORLEVEL e tratar o erro adequadamente.  
+ Especifica que o **osql** é encerrado e retorna um valor DOS ERRORLEVEL em caso de erro. O valor retornado à variável DOS ERRORLEVEL será 1 quando a mensagem de erro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiver um nível de severidade de 11 ou superior, caso contrário, o valor retornado será 0. [!INCLUDE[msCoName](../includes/msconame-md.md)] Arquivos em lote do MS-DOS podem testar o valor de DOS ERRORLEVEL e tratar o erro adequadamente.  
   
  **-u**  
  Especificar que *output_file* será armazenado em formato Unicode, independentemente do formato de *input_file*.  
@@ -193,7 +194,7 @@ osql -E -q "select name, object_id from %table%"
  Também define o valor DOS ERRORLEVEL padrão como -1.  
   
 > [!NOTE]  
->  O  **-n** , **- O** e **-D** opções não são mais suportadas pelo **osql**.  
+>  O utilitário **-n**, **-O** e **-D** já não têm suporte do **osql**.  
   
 ## <a name="remarks"></a>Comentários  
  O utilitário **osql** é iniciado diretamente do sistema operacional com as opções que diferenciam maiúsculas de minúsculas listadas aqui. Depois que o **osql**é iniciado, ele aceita instruções SQL e as envia interativamente ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os resultados são formatados e exibidos na tela (**stdout**). Use QUIT ou EXIT para sair do **osql**.  
@@ -339,9 +340,9 @@ GO
  Essa instrução produz um resultado de `10.3496`, que indica que o valor é armazenado com todas as casas decimais intactas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Comentário &#40; MDX &#41;](../mdx/comment-mdx.md)   
+ [Comentário &#40;MDX&#41;](../mdx/comment-mdx.md)   
  [– &#40; Comentário &#41; &#40; MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
- [CAST e CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST e CONVERT &#40; Transact-SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40; Transact-SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

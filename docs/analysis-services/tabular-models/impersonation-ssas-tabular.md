@@ -1,7 +1,7 @@
 ---
-title: "Representação (SSAS Tabular) | Microsoft Docs"
+title: "Representação em modelos de tabela do Analysis Services | Microsoft Docs"
 ms.custom: 
-ms.date: 03/04/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,90 +17,81 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1bb694fef39accedea28b1c53576a7ebb161cc51
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: aef09b5327408701f15e484bbcea1cab9d82622b
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/21/2017
 
 ---
-# <a name="impersonation-ssas-tabular"></a>Representação (SSAS tabular)
-  Este tópico fornece a autores de modelos tabulares uma compreensão de como as credenciais de logon são usados pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (atualizar) dados.  
+# <a name="impersonation"></a>Representação 
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  Este tópico fornece a autores de modelo de tabela uma compreensão de como as credenciais de logon são usadas pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (Atualizar) dados.  
+
+##  <a name="bkmk_conf_imp_info"></a>Configurando a representação  
+ Onde e o contexto existe um modelo determina como as informações de representação são configuradas. Ao criar um novo projeto de modelo, a representação está configurada no SQL Server Data Tools (SSDT) quando você se conectar a uma fonte de dados para importar dados. Depois que um modelo é implantado, representação pode ser configurada na propriedade de cadeia de caracteres de conexão de banco de dados de modelo usando o SQL Server Management Studio (SSMS). Para modelos de tabela no Azure Analysis Services, você pode usar o SSMS ou o **exibir como: Script** modo no designer e baseada em navegador para editar o arquivo Model.bim em JSON.
   
- Este artigo inclui as seções a seguir:  
+##  <a name="bkmk_how_imper"></a>Como a representação é usada  
+ *Representação* é a capacidade de um aplicativo de servidor, como o Analysis Services, de assumir a identidade de um aplicativo cliente. Analysis Services é executado usando uma conta de serviço, no entanto, quando o servidor estabelece uma conexão a uma fonte de dados, ele usa representação para que as verificações de acesso para importação de dados e o processamento pode ser executado.  
   
--   [Benefícios](#bkmk_how_imper)  
+ As credenciais usadas para representação são diferentes das credenciais do qual com que você fez logon. As credenciais são usadas para operações de cliente específicas ao criar um modelo de usuário conectado.  
   
--   [Opções](#bkmk_imp_info_options)  
-  
--   [Segurança](#bkmk_impers_sec)  
-  
--   [Representação ao importar um modelo](#bkmk_imp_newmodel)  
-  
--   [Configurando a representação](#bkmk_conf_imp_info)  
-  
-##  <a name="bkmk_how_imper"></a> Benefícios  
- *Representação* é a capacidade de um aplicativo de servidor, como o Analysis Services, de assumir a identidade de um aplicativo cliente. O Analysis Services é executado com uma conta de serviço, no entanto, quando o servidor estabelece uma conexão com uma fonte de dados, ele usa representação de forma que verificações de acesso para a importação e processamento de dados possam ser executadas.  
-  
- As credenciais usadas para representação são diferentes das credenciais do usuário que está conectado no momento. As credenciais do usuário conectado são usadas para operações no cliente ao criar um modelo.  
-  
- É importante compreender como as credenciais de representação são especificadas e protegidas e também a diferença entre contextos nos quais as credenciais do usuário conectado no momento e outras credenciais são usadas.  
+ É importante compreender como as credenciais de representação são especificadas e protegidas, bem como a diferença entre contextos nos quais ambas as suas conectado no são usadas as credenciais do usuário e outras credenciais de representação são usadas.  
   
  **Compreendendo as credenciais do lado do servidor**  
-  
- No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], as credenciais são especificadas para cada fonte de dados por meio da página **Informações sobre Representação** no Assistente de Importação de Tabela ou por meio da edição de uma conexão de fonte de dados existente na caixa de diálogo **Conexões Existentes** .  
-  
- Quando os dados são importados ou processados, as credenciais especificadas na página **Informações sobre Representação** são usadas para conectar-se à fonte de dados e buscar os dados. Essa é uma operação do *servidor* que é executado no contexto de um aplicativo cliente porque o servidor do Analysis Services que hospeda o banco de dados de espaço de trabalho conecta-se à fonte de dados e busca os dados.  
+ 
+Quando dados são importados ou processados, as credenciais de representação são usadas para se conectar à fonte de dados e buscar os dados. Este é um *do lado do servidor* operação sendo executada no contexto de um aplicativo cliente porque o servidor do Analysis Services que hospeda o banco de dados do espaço de trabalho conecta-se à fonte de dados e busca os dados.  
   
  Ao implantar um modelo no servidor do Analysis Services, se o banco de dados de espaço de trabalho estiver na memória quando o modelo for implantado, as credenciais serão passadas para o servidor do Analysis Services para o qual o modelo é implantado. Em nenhum momento as credenciais de usuário armazenados em disco.  
   
- Quando um modelo implantado processa dados de uma fonte de dados, as credenciais de representação, persistidas no banco de dados na memória, são usadas para a conexão à fonte de dados e a busca de dados. Como esse processo é tratado pelo servidor do Analysis Services que gerencia o banco de dados modelo, essa é mais uma vez uma operação do servidor.  
+ Quando um modelo implantado processa dados de uma fonte de dados, as credenciais de representação, persistidas no banco de dados na memória são usadas para se conectar à fonte de dados e buscar os dados. Como esse processo é tratado pelo servidor do Analysis Services que gerencia o banco de dados de modelo, isso novamente é uma operação do servidor.  
   
- **Compreendendo as credenciais do cliente**  
+ **Compreendendo as credenciais de cliente**  
   
- Ao criar um novo modelo ou ao adicionar uma fonte de dados a um modelo existente, você usa o Assistente de Importação de Tabela para conectar-se a uma fonte de dados e selecionar tabelas e exibições a serem importadas no modelo. No Assistente de Importação de Tabela, na página **Selecionar Tabelas e Exibições** , é possível usar o recurso **Visualizar e Filtrar** para exibir um exemplo (limitado a 50 linhas) dos dados que serão importados. Você também pode especificar filtros para excluir dados que não precisam ser incluídos no modelo.  
+ Quando criar um novo modelo ou adicionar uma fonte de dados a um modelo existente, você se conectar a uma fonte de dados e selecionar tabelas e exibições a serem importados para o modelo. Os Assistente de importação de tabela ou obter Data\Query Designer visualizar e filtrar recursos, verá um exemplo dos dados que você importar. Você também pode especificar filtros para excluir dados que não precisam ser incluídos no modelo.  
   
- De maneira semelhante, para modelos existentes que já foram criados, você pode usar a caixa de diálogo **Editar Propriedades da Tabela** para visualizar e filtrar dados importados em uma tabela. Para visualizar e filtrar recursos aqui, use a mesma funcionalidade do recurso **Visualizar e Filtrar** na página **Selecionar Tabelas e Exibições** do Assistente de Importação de Tabela.  
+ Da mesma forma, para modelos existentes que já foram criados, use o **propriedades da tabela** caixa de diálogo para visualizar e filtrar dados importados em uma tabela.  
   
- O recurso **Visualizar e Filtrar** e as caixas de diálogo **Propriedades da Tabela** e **Gerenciador de Partições** são uma operação do *cliente* ; isto é, o que é feito durante essa operação é diferente de como a fonte de dados é conectada e os dados são buscados da fonte de dados; uma operação do servidor. As credenciais usadas para visualizar e filtrar dados são as credenciais do usuário que está conectado no momento. As operações do cliente sempre usam as credenciais do Windows do usuário atual para conectar-se à fonte de dados.  
+ Os recursos de visualização e filtro, **propriedades da tabela**, e **Gerenciador de partições** caixas de diálogo são um processo de- *cliente* operação; ou seja, o que é feito durante esta operação são diferentes de como a fonte de dados está conectado ao e dados são buscados da fonte de dados; uma operação do servidor. As credenciais usadas para visualizar e filtrar dados são as credenciais do usuário que está conectado no momento. Em efeito, suas credenciais. 
   
- Essa separação de credenciais usadas durante operações do servidor e do cliente pode levar a uma incompatibilidade no que o usuário vê ao usar o recurso **Visualizar e Filtrar** ou a caixa de diálogo **Propriedades da Tabela** (operações do cliente) e os dados que serão buscados durante uma importação ou processamento (uma operações do servidor). Se as credenciais do usuário conectado no momento e as credenciais de representação especificadas forem diferentes, os dados vistos no recurso **Visualizar e Filtrar** ou na caixa de diálogo **Propriedades da Tabela** e os dados buscados durante uma importação ou processamento poderão ser diferentes dependendo das credenciais requeridas pela fonte de dados.  
+ A separação de credenciais usadas durante do lado do servidor e as operações do cliente podem levar a uma incompatibilidade no que você vê e quais dados são buscados durante uma importação ou processamento (uma operação do servidor). Se as credenciais você efetuou logon com e as credenciais de representação especificadas forem diferentes, os dados que você vê nas visualizar e filtrar recursos ou o **propriedades da tabela** caixa de diálogo e os dados buscados durante uma importação ou processo pode ser diferente, dependendo das credenciais requeridas pela fonte de dados.  
   
 > [!IMPORTANT]  
->  Ao criar um modelo, verifique se as credenciais do usuário conectado no momento e as credenciais especificadas para representação têm direitos suficientes para buscar os dados da fonte de dados.  
+>  Ao criar um modelo, verifique se as credenciais de com que logon e as credenciais especificadas para representação têm direitos suficientes para buscar os dados da fonte de dados.  
   
 ##  <a name="bkmk_imp_info_options"></a> Opções  
- Ao configurar a representação, ou ao editar propriedades para uma conexão à fonte de dados existente no Analysis Services, você pode especificar um das opções a seguir:  
+ Ao configurar a representação, ou ao editar as propriedades de uma conexão de fonte de dados existente, especifique uma das seguintes opções:  
   
-|Opção|ImpersonationMode*|Description|  
-|------------|-------------------------|-----------------|  
-|**Nome de usuário e senha específicos do Windows***\*|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
-|**Conta de Serviço**|ImpersonateServiceAccount|Esta opção especifica que o modelo usa as credenciais de segurança associadas à instância de serviço do Analysis Services que gerencia o modelo.|  
-  
- *O ImpersonationMode especifica o valor para a propriedade [DataSourceImpersonationInfo Element &#40;ASSL&#41;](../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md) na fonte de dados.  
-  
- \*\*Ao usar essa opção, se o banco de dados do espaço de trabalho for removido da memória, devido a uma reinicialização ou à propriedade **Retenção do Espaço de Trabalho** estar definida para **Descarregar da Memória** ou **Excluir do Espaço de Trabalho**, e o projeto modelo for fechado, na sessão subsequente, se você tentar processar os dados da tabela, será solicitado que digite as credenciais para cada fonte de dados. De maneira semelhante, se um banco de dados modelo implantado for removido da memória, as credenciais para cada fonte de dados serão solicitadas a você.  
+**Modelos de tabela 1400 e superior**
+ 
+|Opção|Description|  
+|------------|-----------------|  
+|**Representar a conta**|Especifica o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**.|  
+|**Representar o usuário atual**|Especifica os dados devem ser acessados da fonte de dados usando a identidade do usuário que enviou a solicitação. Este modo aplica-se somente ao modo consulta direta.|  
+|**Representar a identidade**|Especifica um nome de usuário para acessar a fonte de dados, mas não precisa especificar a senha da conta. Esse modo se aplica somente quando a delegação Kerberos está habilitada e especifica que a autenticação S4U deve ser usada.|  
+|**Representar a conta de serviço**|Especifica o modelo usa as credenciais de segurança associadas com a instância do serviço Analysis Services que gerencia o modelo.|  
+|**Representar a conta autônoma**|Especifica que o mecanismo do Analysis Services deve usar uma conta autônoma pré-configurado para acessar os dados.|  
+
+
+**Modelos de tabela 1200**
+ 
+|Opção|Description|  
+|------------|-----------------|  
+|**Senha e nome de usuário específico do Windows**|Esta opção especifica o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
+|**Conta de Serviço**|Esta opção especifica que o modelo usa as credenciais de segurança associadas à instância de serviço do Analysis Services que gerencia o modelo.|  
   
 ##  <a name="bkmk_impers_sec"></a> Segurança  
- As credenciais usadas com representação são persistidas na memória pelo mecanismo analítico na memória xVelocity (VertiPaq) associado ao servidor do Analysis Services que gerencia o banco de dados de espaço de trabalho ou um modelo implantado.  Em nenhum momento as credenciais são gravadas em disco. Se o banco de dados de espaço de trabalho não estiver na memória quando o modelo for implantado, o usuário será solicitado a digitar as credenciais usadas para conectar-se à fonte de dados e buscar dados.  
+ As credenciais usadas com representação são persistidas na memória pelo mecanismo de VertiPaq™. As credenciais não são gravadas no disco. Se o banco de dados do espaço de trabalho não estiver na memória quando o modelo é implantado, o usuário é solicitado a inserir as credenciais usadas para conexão com as fonte de dados e buscar dados.  
   
 > [!NOTE]  
->  É recomendável especificar uma conta de usuário do Windows e uma senha para credenciais de representação. Uma conta de usuário do Windows pode ser configurada para usar privilégios mínimos necessários conectar-se e ler dados da fonte de dados.  
+>  É recomendável especificar uma conta de usuário do Windows e uma senha para credenciais de representação. Uma conta de usuário do Windows pode ser configurada para usar privilégios mínimos necessários para conectar e ler os dados da fonte de dados.  
   
-##  <a name="bkmk_imp_newmodel"></a> Representação ao importar um modelo  
- Ao contrários dos modelos tabulares, que podem usar vários modos de representação diferentes para dar suporte à coleta de dados fora do processo, o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usa apenas um modo, o ImpersonateCurrentUser. Como o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sempre é executado no processo, ele se conecta às fontes de dados usando as credenciais do usuário conectado atualmente. Em modelos tabulares, as credenciais do usuário conectado no momento são usadas apenas com o recurso **Visualizar e Filtrar** no Assistente de Importação de Tabela e ao exibir as **Propriedades da Tabela**. As credenciais de representação usadas ao importar ou processar dados no banco de dados de espaço de trabalho ou ao importar ou processar dados em um modelo implantado.  
-  
- Ao criar um novo modelo importando uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] existente, por padrão, o designer do modelo configurará a representação para usar a conta de serviço (ImpersonateServiceAccount). É recomendável alterar as credenciais de representação nos modelos importados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para uma conta de usuário do Windows. Depois da pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ter sido importada e o novo modelo criado no designer de modelo, você poderá alterar as credenciais usando a caixa de diálogo **Conexões Existentes** .  
-  
- Ao criar um novo modelo com a importação de um modelo existente em um servidor do Analysis Services, as credenciais de representação são passadas do banco de dados modelo existente para o novo banco de dados de espaço de trabalho modelo. Se necessário, você pode alterar as credenciais no novo modelo com o uso da caixa de diálogo **Conexões Existentes** .  
-  
-##  <a name="bkmk_conf_imp_info"></a> Configurando a representação  
- O local e o contexto onde um modelo existe determinará como as informações de representação serão configuradas. Para modelos que estão sendo criados no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode configurar informações de representação na página **Informações sobre Representação** no Assistente de Importação de Tabela ou por meio da edição de uma conexão de fonte de dados na caixa de diálogo **Conexões Existentes** . Para exibir conexões existentes, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no menu **Model** , clique em **Conexões Existentes**.  
-  
- Para modelos implantados em um servidor do Analysis Services, as informações de representação podem ser configuradas no SSMS, em **Propriedades da Conexão** > **Informações sobre representação**.  
+
   
 ## <a name="see-also"></a>Consulte também  
- [Modo DirectQuery &#40;SSAS de tabela&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Fontes de dados &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Fontes de dados](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
+ [Implantação de solução de modelo de tabela](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

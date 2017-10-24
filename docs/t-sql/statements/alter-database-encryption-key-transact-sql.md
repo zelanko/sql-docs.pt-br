@@ -24,11 +24,12 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 006862850eebb2db1d3f256ca5556016cdb02ab2
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c0ea8313662a84b71f665ac2402733aa15eaac7a
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
@@ -90,17 +91,6 @@ ALTER DATABASE ENCRYPTION KEY
  Requer a permissão CONTROL no banco de dados e a permissão VIEW DEFINITION na chave assimétrica ou no certificado usado para criptografar a chave de criptografia do banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir altera a chave de criptografia de banco de dados para usar o algoritmo `AES_256`.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-ALTER DATABASE ENCRYPTION KEY  
-REGENERATE WITH ALGORITHM = AES_256;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir altera a chave de criptografia de banco de dados para usar o algoritmo `AES_256`.  
   
 ```  

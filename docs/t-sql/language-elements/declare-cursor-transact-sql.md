@@ -28,11 +28,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c433b6c78ce1ce62c9d64d7d6dfd7f8ddbe0ff27
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b0b48a95c9eee3cf2ca77d532deb716c874523b7
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -179,7 +180,9 @@ Você não pode usar cursores ou gatilhos em uma tabela com um índice columnsto
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-simple-cursor-and-syntax"></a>A. Usando a sintaxe e o cursor simples  
- O conjunto de resultados gerado na abertura deste cursor inclui todas as linhas e todas as colunas na tabela. Este cursor pode ser atualizado e todas as atualizações e exclusões são representadas em buscas feitas no cursor. `FETCH``NEXT` é a única busca disponível porque a opção `SCROLL` não foi especificada.  
+
+O conjunto de resultados gerado na abertura deste cursor inclui todas as linhas e todas as colunas na tabela. Este cursor pode ser atualizado e todas as atualizações e exclusões são representadas em buscas feitas no cursor. `FETCH NEXT` é a única busca disponível porque a opção `SCROLL` não foi especificada.  
+
   
 ```  
 DECLARE vend_cursor CURSOR  
@@ -261,3 +264,4 @@ DEALLOCATE vendor_cursor;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

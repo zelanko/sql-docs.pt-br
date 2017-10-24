@@ -28,11 +28,12 @@ caps.latest.revision: 78
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 770b21498e0159c1ac30eb4ea8a192b6597b4ebe
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 901067b9bd9c85887b66ea8d32999cf439873952
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -204,7 +205,7 @@ GO
 ```  
   
 ### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Usando OBJECT_ID para obter a ID de tabela e sys.indexes para obter a ID de índice  
-O exemplo a seguir usa `OBJECT`_`ID` e `sys.indexes` exibição para obter a ID da tabela e a ID de índice do catálogo a `AK_Product_Name` índice da `Production.Product` tabela o [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados.
+O exemplo a seguir usa `OBJECT_ID` e `sys.indexes` exibição para obter a ID da tabela e a ID de índice do catálogo a `AK_Product_Name` índice da `Production.Product` tabela o [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados.
   
 ```sql  
 USE AdventureWorks2012;  

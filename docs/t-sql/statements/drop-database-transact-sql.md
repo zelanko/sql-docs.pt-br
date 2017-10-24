@@ -29,11 +29,12 @@ caps.latest.revision: 83
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6e1a96bb64c8cb6a81311f422d370e36d9489ca4
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
@@ -82,7 +83,7 @@ DROP DATABASE database_name [;]
 >  Descartar um banco de dados com FILE_SNAPSHOT backups associados a ele terá êxito, mas os arquivos de banco de dados que tenham instantâneos associados não serão excluídos para evitar a anulação os backups que faz referência a esses arquivos de banco de dados. O arquivo será truncado, mas não serão fisicamente excluído para manter os backups FILE_SNAPSHOT intactos. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- O descarte de um instantâneo de banco de dados o exclui de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exclui os arquivos físicos esparsos do Sistema de Arquivos NTFS utilizados pelo instantâneo. Para obter informações sobre como usar arquivos esparsos por instantâneos do banco de dados, consulte [instantâneos de banco de dados & #40; SQL Server & #41; ](../../relational-databases/databases/database-snapshots-sql-server.md). O cancelamento de um instantâneo do banco de dados limpa o cache de plano para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
+ O descarte de um instantâneo de banco de dados o exclui de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exclui os arquivos físicos esparsos do Sistema de Arquivos NTFS utilizados pelo instantâneo. Para obter informações sobre como usar arquivos esparsos por instantâneos do banco de dados, consulte [instantâneos de banco de dados &#40; SQL Server &#41; ](../../relational-databases/databases/database-snapshots-sql-server.md). O cancelamento de um instantâneo do banco de dados limpa o cache de plano para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
   
 ## <a name="interoperability"></a>Interoperabilidade  
   
@@ -148,7 +149,7 @@ DROP DATABASE Sales, NewSales;
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- O exemplo a seguir remove um instantâneo do banco de dados denominado `sales`_`snapshot0600`, sem afetar o banco de dados de origem.  
+ O exemplo a seguir remove um instantâneo do banco de dados denominado `sales_snapshot0600`, sem afetar o banco de dados de origem.  
   
 ```  
 DROP DATABASE sales_snapshot0600;  

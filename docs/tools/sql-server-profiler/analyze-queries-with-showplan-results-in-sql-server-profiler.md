@@ -18,11 +18,12 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03913120309e861eab5bb89523467e8736e5b50b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analisar consultas com resultados do Plano de Execução no SQL Server Profiler
@@ -52,6 +53,7 @@ ms.lasthandoff: 08/02/2017
 |**Showplan XML Statistics Profile**|Exibe o plano de consulta com detalhes completos do tempo de execução em formato XML. Por exemplo, essa classe de evento captura o número de linhas que passam em cada operador da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que está sendo executada. Para obter mais informações, consulte [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Categoria de evento Performance](../../relational-databases/event-classes/performance-event-category.md)  
+ [Categoria de evento de desempenho](../../relational-databases/event-classes/performance-event-category.md)  
   
   
+

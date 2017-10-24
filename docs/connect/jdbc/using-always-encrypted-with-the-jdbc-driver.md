@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Use o Always Encrypted com o Driver JDBC
@@ -268,34 +268,12 @@ Todos esses provedores de repositório de chaves são descritos em mais detalhes
 ### <a name="using-azure-key-vault-provider"></a>Usando o Provedor do Cofre de Chaves do Azure
 O Cofre de Chaves do Azure é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se seus aplicativos estiverem hospedados no Azure). O Microsoft JDBC Driver para SQL Server inclui um provedor interno, SQLServerColumnEncryptionAzureKeyVaultProvider, para aplicativos que têm chaves armazenadas no cofre de chaves do Azure. O nome deste provedor é AZURE_KEY_VAULT. Para usar o provedor de armazenamento de Cofre de chaves do Azure, um desenvolvedor de aplicativos precisa criar o cofre e as chaves no Azure e configurar o aplicativo para acessar as chaves. Para obter mais informações sobre como configurar o Cofre de chaves e criar a chave mestra de coluna consulte [Cofre de chaves do Azure – passo a passo para obter mais informações sobre como configurar o Cofre de chaves](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) e [Criando chaves mestras de coluna no cofre de chaves do Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-Para usar o Cofre de chaves do Azure, os aplicativos cliente precisam instanciar o SQLServerColumnEncryptionAzureKeyVaultProvider e registrá-lo com o driver. A autenticação de representantes do driver JDBC para o aplicativo por meio de uma interface chamado SQLServerKeyVaultAuthenticationCallback que tem um método para recuperar um token de acesso do Cofre de chaves. Para instanciar o provedor de armazenamento de Cofre de chaves do Azure, o desenvolvedor do aplicativo deve fornecer uma implementação para o único método chamado **getAccessToken** que recupera o token de acesso para a chave armazenada no cofre de chaves do Azure.  
-  
-Aqui está um exemplo de inicialização SQLServerKeyVaultAuthenticationCallback e SQLServerColumnEncryptionAzureKeyVaultProvider:  
+Para usar o Cofre de chaves do Azure, os aplicativos cliente precisam instanciar o SQLServerColumnEncryptionAzureKeyVaultProvider e registrá-lo com o driver.
+
+Aqui está um exemplo de inicialização SQLServerColumnEncryptionAzureKeyVaultProvider:  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 Depois que o aplicativo cria uma instância de SQLServerColumnEncryptionAzureKeyVaultProvider, o aplicativo precisa registrar a instância no Microsoft JDBC Driver para SQL Server usando o Método registercolumnencryptionkeystoreproviders (). É altamente recomendável, a instância está registrada usando o nome de pesquisa padrão, AZURE_KEY_VAULT, que pode ser obtida chamando a API SQLServerColumnEncryptionAzureKeyVaultProvider.getName(). Usando o nome padrão, permitirá que você use ferramentas, como o SQL Server Management Studio ou o PowerShell, para provisionar e gerenciar chaves Always Encrypted (ferramentas de usam o nome padrão para gerar o objeto de metadados para a chave mestra de coluna). O exemplo abaixo mostra o registro do provedor de Cofre de chaves do Azure. Para obter mais detalhes sobre o método registercolumnencryptionkeystoreproviders (), consulte [sempre criptografados referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md). 
@@ -653,3 +631,4 @@ Observação: Tenha cuidado ao especificar AllowEncryptedValueModifications, poi
  [Always Encrypted (mecanismo de banco de dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+

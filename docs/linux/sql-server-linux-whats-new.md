@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: f76985a8721e154269b36b0bdcb40a83f6136cb3
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novidades do SQL Server 2017 no Linux
@@ -137,6 +137,7 @@ No modo de compatibilidade 140:
 
 [Aprimoramentos do Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) nesta versão do CTP1.1:
 - Clonagem de CLR, Filestream/Filetable, objetos na memória e o repositório de consultas de banco de dados.
+  - **Atualizar 18/10/2017**: em mais testes, Filestream não tem suporte na versão GA do SQL Server 2017 no Linux  
 - **CRIAR** ou **ALTER** operadores para objetos de programação.
 - Novo **dica USE** opção para fornecer dicas para o processador de consultas de consulta. Saiba mais aqui: [dicas de consulta](../t-sql/queries/hints-transact-sql-query.md).
 - Conta de serviço do SQL agora pode identificar programaticamente habilitar bloquear páginas na memória e a inicialização instantânea de arquivo permissões.

@@ -28,11 +28,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a1a9f471fd7db7bfbb7a64c856495decff692c40
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 285803fe112cc0370b8af6049f48846c7ba55cab
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
@@ -96,7 +97,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
  Requer associação à função public.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa os operadores de comparação Igual a (`=`) e Diferente de (`<>`) para fazer comparações com valores `NULL` e não nulos em uma tabela. O exemplo também mostra que `IS NULL` não é afetado pela configuração `SET ANSI`_`NULLS`.  
+ O exemplo a seguir usa os operadores de comparação Igual a (`=`) e Diferente de (`<>`) para fazer comparações com valores `NULL` e não nulos em uma tabela. O exemplo também mostra que `IS NULL` não é afetada pelo `SET ANSI_NULLS` configuração.  
   
 ```  
 -- Create table t1 and insert values.  
@@ -178,3 +179,4 @@ DROP TABLE dbo.t1;
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   
+

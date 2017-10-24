@@ -15,50 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c27cff7ad828ab5c19183febd2ad562d5c9b925
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (Banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Define o valor de um parâmetro no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Associa o valor a uma variável de ambiente ou atribui um valor literal que será usado por padrão se nenhum outro valor for atribuído.  
+  Define o valor de um parâmetro no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Associa o valor a uma variável de ambiente ou atribui um valor literal que será usado por padrão quando nenhum outro valor for atribuído.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
-set_object_parameter_value [ @object_type = ] object_type   
-    , [ @folder_name = ] folder_name   
-    , [ @project_name = ] project_name   
-    , [ @parameter_name = ] parameter _name   
-    , [ @parameter_value = ] parameter_value   
- [  , [ @object_name = ] object_name ]  
- [  , [ @value_type = ] value_type ]  
+```sql  
+catalog.set_object_parameter_value [@object_type =] object_type   
+    , [@folder_name =] folder_name   
+    , [@project_name =] project_name   
+    , [@parameter_name =] parameter _name   
+    , [@parameter_value =] parameter_value   
+ [  , [@object_name =] object_name ]  
+ [  , [@value_type =] value_type ]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @object_type =] *object_type*  
+ [@object_type =] *object_type*  
  O tipo de parâmetro. Use o valor `20` para indicar um parâmetro de projeto ou o valor `30` para indicar um parâmetro de pacote. O *object_type* é **smallInt**.  
   
- [ @folder_name =] *nome_da_pasta*  
+ [@folder_name =] *nome_da_pasta*  
  O nome da pasta que contém o parâmetro. O *nome_da_pasta* é **nvarchar (128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  O nome do projeto que contém o parâmetro. O *project_name* é **nvarchar (128)**.  
   
- [ @parameter_name =] *parameter_name*  
+ [@parameter_name =] *parameter_name*  
  O nome do parâmetro. O *parameter_name* é **nvarchar (128)**.  
   
- [ @parameter_value =] *parameter_value*  
+ [@parameter_value =] *parameter_value*  
  O valor do parâmetro. O *parameter_value* é **sql_variant**.  
   
- [ @object_name =] *object_name*  
+ [@object_name =] *object_name*  
  O nome do pacote. Esse argumento será exigido quando o parâmetro for um parâmetro de pacote. O *object_name* é **nvarchar (260)**.  
   
- [ @value_type =] *value_type*  
- O tipo de valor do parâmetro. Use o caractere `V` para indicar que *parameter_value* é um valor literal que será usado por padrão, nenhum outro valor for atribuído antes da execução. Use o caractere `R` para indicar que *parameter_value* é um valor referenciado e foi definido como o nome de uma variável de ambiente. Esse argumento é opcional, o caractere `V` é usado por padrão. O *value_type* é **char (1)**.  
+ [@value_type =] *value_type*  
+ O tipo de valor do parâmetro. Use o caractere `V` para indicar que *parameter_value* é um valor literal que será usado por padrão quando nenhum outro valor for atribuído antes da execução. Use o caractere `R` para indicar que *parameter_value* é um valor referenciado e foi definido como o nome de uma variável de ambiente. Esse argumento é opcional, o caractere `V` é usado por padrão. O *value_type* é **char (1)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  

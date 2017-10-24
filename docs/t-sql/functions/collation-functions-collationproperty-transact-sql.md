@@ -22,11 +22,12 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94cbf96a25a84af1eddce9d94555be9c558c3470
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 166a85e5fe33a95cd8a36f221c2a774e4a0a9fb2
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funções de agrupamento - COLLATIONPROPERTY (Transact-SQL)
@@ -51,10 +52,10 @@ COLLATIONPROPERTY( collation_name , property )
   
 |Nome da propriedade|Description|  
 |---|---|
-|**CodePage**|Página de código de não Unicode do agrupamento.|  
-|**LCID**|Windows LCID do agrupamento.|  
-|**ComparisonStyle**|Estilo de comparação do agrupamento do Windows. Retorna 0 para todos os agrupamentos binários.|  
-|**Versão**|A versão do agrupamento, extraída do campo de versão da identificação do agrupamento. Retorna 2, 1 ou 0.<br /><br /> Agrupamentos com "100" no nome) retornam 2.<br /><br /> Agrupamentos com "90" no nome) retorne 1.<br /><br /> Todos os outros agrupamentos retornam 0.|  
+|**CodePage**|Página de código de não Unicode do agrupamento. Consulte [Mapeando tabelas do Apêndice G DBCS/Unicode](https://msdn.microsoft.com/en-us/library/cc194886.aspx) e [páginas de código do Apêndice H](https://msdn.microsoft.com/en-us/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.|  
+|**LCID**|Windows LCID do agrupamento. Consulte [estrutura LCID](https://msdn.microsoft.com/en-us/library/cc233968.aspx) para converter esses valores (você precisará converter `VARBINARY` primeiro).|  
+|**ComparisonStyle**|Estilo de comparação do agrupamento do Windows. Retorna 0 para todos os agrupamentos binários (ambos `_BIN` e `_BIN2`), bem como quando todas as propriedades são confidenciais. Valores de máscara de bits:<br /><br /> Ignorar maiusculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072|  
+|**Versão**|A versão do agrupamento, extraída do campo de versão da identificação do agrupamento. Retorna um valor inteiro entre 0 e 3.<br /><br /> Agrupamentos com "140" no nome de retorno 3.<br /><br /> Agrupamentos com "100" no nome retornam 2.<br /><br /> Agrupamentos com "90" no nome retornam 1.<br /><br /> Todos os outros agrupamentos retornam 0.|  
   
 ## <a name="return-types"></a>Tipos de retorno
 **sql_variant**

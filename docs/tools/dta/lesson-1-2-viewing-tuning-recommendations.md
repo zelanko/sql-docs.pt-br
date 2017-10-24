@@ -18,11 +18,12 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f23e4034bdfe2cb41161313ae577342ba3f3eda9
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Lição 1-2 - exibindo recomendações de ajuste
@@ -32,9 +33,9 @@ Esta tarefa usa a sessão de ajuste criada no [Tuning a Workload](../../tools/dt
   
 1.  Iniciar o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Consulte [Iniciando o Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md). Verifique se você está conectado à mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada na prática [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
-2.  Clique duas vezes em **MySession** no painel **Monitor de Sessão** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Orientador de otimização carrega as informações da sessão da sessão de ajuste anterior e exibe o **recomendações** guia. Observe que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não fez **Recomendações de Partição** porque você aceitou todas as opções de ajuste padrão e **Nenhum particionamento** foi selecionado na guia **Opções de Ajuste** .  
+2.  Clique duas vezes em **MySession** no painel **Monitor de Sessão** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] carrega a informações da sessão de ajuste anterior e exibe a guia **Recomendações** . Observe que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não fez **Recomendações de Partição** porque você aceitou todas as opções de ajuste padrão e **Nenhum particionamento** foi selecionado na guia **Opções de Ajuste** .  
   
-3.  Na guia **Recomendações** , use a barra de rolagem na parte inferior da página da guia para exibir todas as colunas de **Recomendações de Índice** . Cada linha representa um objeto de banco de dados (índices ou exibições indexadas) que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomenda que sejam descartadas ou criadas. Role a tela até a coluna mais à direita e clique em **Definição**. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Orientador de otimização exibe um **visualização de Script SQL** janela onde você pode exibir o [!INCLUDE[tsql](../../includes/tsql-md.md)] script que cria ou descarta o objeto de banco de dados nessa linha. Clique em **Fechar** para fechar a janela de visualização.  
+3.  Na guia **Recomendações** , use a barra de rolagem na parte inferior da página da guia para exibir todas as colunas de **Recomendações de Índice** . Cada linha representa um objeto de banco de dados (índices ou exibições indexadas) que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomenda que sejam descartadas ou criadas. Role a tela até a coluna mais à direita e clique em **Definição**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibe uma janela **Visualização de Script SQL** , na qual você pode exibir o script [!INCLUDE[tsql](../../includes/tsql-md.md)] que cria ou descarta o objeto de banco de dados nessa linha. Clique em **Fechar** para fechar a janela de visualização.  
   
     Se você estiver tendo dificuldades em localizar uma **Definição** que contenha um link, clique para desmarcar a caixa de seleção **Mostrar objetos existentes** na parte inferior da página da guia, o que diminuirá o número de linhas exibidas. Quando você desmarca essa caixa de seleção, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] mostra só os objetos para os quais gerou uma recomendação. Marque a caixa de seleção **Mostrar objetos existentes** para exibir todos os objetos do banco de dados que existem atualmente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Use a barra de rolagem à direita da página da guia para exibir todos os objetos.  
   

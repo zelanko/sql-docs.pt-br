@@ -23,11 +23,12 @@ caps.latest.revision: 56
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cbd10b32ee6b2d88a97222c3a970452a4a628b83
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 2f793612ff0fa46e2fd72f6a51e48eae30602fdf
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
@@ -82,7 +83,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Um usuário só pode exibir metadados de protegíveis de sua propriedade ou para os quais recebeu permissão. Isso significa que as funções internas emissoras de metadados, como INDEXPROPERTY, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna os valores para o **IsClustered**, **IndexDepth**, e **IndexFillFactor** propriedades para o `PK`_`Employee` \_ `BusinessEntityID` índice da `Employee` tabela o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
+ O exemplo a seguir retorna os valores para o **IsClustered**, **IndexDepth**, e **IndexFillFactor** propriedades para o `PK_Employee_BusinessEntityID` índice do `Employee`tabela o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
   
 ```  
 SELECT   

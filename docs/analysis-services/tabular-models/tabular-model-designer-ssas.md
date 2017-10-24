@@ -1,6 +1,6 @@
 ---
-title: O Designer de modelo tabular (SSAS) | Microsoft Docs
-ms.date: 03/14/2017
+title: Designer de modelo tabular | Microsoft Docs
+ms.date: 10/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 7450b51aac58dc148dd1ef37e90ad20aff50883c
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>Designer de Modelos Tabulares (SSAS)
@@ -32,13 +32,11 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
   
  Além dos novos modelos e ferramentas para criar soluções profissionais multidimensionais de modelo tabular, o ambiente de desenvolvimento do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] fornece recursos de desenvolvimento, depuração e ciclo de vida de projeto que garantem a criação das mais avançadas soluções de BI para sua organização. Para obter mais informações sobre o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consulte o [Guia de Introdução ao Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a> Modelos de projeto  
+##  <a name="bkmk_proj_temp"></a>Modelos de projeto  
  Quando você instala o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], os seguintes modelos de projeto de modelo de tabela são adicionados aos tipos de projeto de Business intelligence:  
   
  **Projeto tabular do Analysis Services**  
- Este modelo pode ser usado para criar um novo projeto de modelo de tabela em branco. Níveis de compatibilidade são especificados quando você cria o projeto. Escolha o padrão, **SQL Server 2016 RTM (1200)**, para usar todos os recursos internos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+ Este modelo pode ser usado para criar um novo projeto de modelo de tabela em branco. Níveis de compatibilidade são especificados quando você cria o projeto.
   
  **Importar do servidor (tabular)**  
  Este modelo de projeto pode ser usado para criar um novo projeto de modelo de tabela por meio da extração de metadados de um modelo de tabela existente no Analysis Services.  
@@ -57,12 +55,12 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
  **Exibição de dados**  
  A exibição de dados exibe tabelas em um formato de grade, tabular. Você também pode definir medidas usando a grade de medida, que pode ser mostrada para cada tabela somente na Exibição de Dados.  
   
- **Exibição de Diagrama**  
+ **Exibição de diagrama**  
  A exibição de diagrama exibe tabelas, com relações entre elas, em um formato gráfico. Colunas, medidas, hierarquias e KPIs podem ser filtrados e você pode optar por exibir o modelo usando uma perspectiva definida.  
   
  A maioria das tarefas de criação de modelos podem ser executadas em qualquer exibição.  
   
-### <a name="view-code-window"></a>Janela de exibição de código  
+### <a name="view-code-window"></a>Exibir a janela de código  
  Você pode exibir o código por trás de um arquivo Model.bim clicando com o botão direito do mouse para selecionar **Exibir Código** no arquivo do Gerenciador de Soluções. Para modelos de tabela no nível de compatibilidade 1200 e posterior, a definição do modelo é expressa em JSON.  
   
  Observe que você precisará de uma versão completa do Visual Studio que forneça o editor de JSON. Você poderá baixar e instalar o [Visual Studio Community Edition gratuito](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) se não precisar dos recursos adicionais das edições comerciais.  
@@ -128,8 +126,8 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
 ### <a name="toolbar"></a>Barra de Ferramentas  
  A barra de ferramentas de Analysis Services fornece acesso rápido e fácil aos comandos de criação de modelo mais frequentemente usados.  
   
-##  <a name="bkmk_vsint"></a> Integração com o Visual Studio  
- **Controle do código-fonte**  
+##  <a name="bkmk_vsint"></a>Integração do Visual Studio  
+ **Controle de origem**  
  Os projetos do Analysis Services são integrados com o plug-in de controle do código-fonte selecionado. Se você configurou o Visual Studio para usar o controle do código-fonte, poderá usar check in/check out no Gerenciador de Soluções. Para configurar o uso do Team Foundation Server, consulte [Configurar o Visual Studio com o controle de versão do Team Foundation](http://msdn.microsoft.com/library/ms253064.aspx). Muitos plug-ins de controle do código-fonte de terceiros também têm suporte.  
   
  **Fontes**  
@@ -143,3 +141,4 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
  [Propriedades &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
+

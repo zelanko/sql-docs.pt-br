@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b4dbd030c457bfb90ac4ec7fae886de28f96854
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (Banco de Dados SSISDB)
@@ -31,9 +31,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
-validate_package [ @folder_name = ] folder_name  
+```sql
+catalog.validate_package [ @folder_name = ] folder_name  
     , [ @project_name = ] project_name  
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
@@ -59,7 +58,7 @@ validate_package [ @folder_name = ] folder_name
  Indica se o tempo de execução de 32 bits deve ser usado para executar o pacote em um sistema operacional de 64 bits. Use o valor de `1` para executar o pacote com o tempo de execução de 32 bits ao executar em um sistema operacional de 64 bits. Use o valor `0` para executar o pacote com o tempo de execução de 64 bits ao executar em um sistema operacional de 64 bits. Esse parâmetro é opcional. O *use32bitruntime* é **bit**.  
   
  [ @environment_scope =] *environment_scope*  
- Indica as referências de ambiente que são consideradas pela validação. Quando o valor for `A`, todas as referências de ambiente associadas ao projeto serão incluídas na validação. Quando o valor for `S`, apenas uma única referência de ambiente será incluída. Quando o valor for `D`, nenhuma referência de ambiente será incluída e cada parâmetro deverá ter um valor padrão literal a fim de ser aprovado na validação. Esse parâmetro é opcional, o caractere `D` será usado por padrão. O *environment_scope* é **char (1)**.  
+ Indica as referências de ambiente que são consideradas pela validação. Quando o valor for `A`, todas as referências de ambiente associadas ao projeto serão incluídas na validação. Quando o valor for `S`, apenas uma única referência de ambiente será incluída. Quando o valor for `D`, nenhuma referência de ambiente será incluída e cada parâmetro deverá ter um valor padrão literal a fim de ser aprovado na validação. Esse parâmetro é opcional. O caractere `D` é usado por padrão. O *environment_scope* é **char (1)**.  
   
  [ @reference_id =] *reference_id*  
  A ID exclusiva da referência do ambiente. Esse parâmetro é necessário somente quando uma única referência de ambiente é incluída na validação, quando *environment_scope* é `S`. O *reference_id* é **bigint**.  
@@ -97,6 +96,6 @@ validate_package [ @folder_name = ] folder_name
 -   As variáveis são referenciadas nos parâmetros de pacote, mas nenhum ambiente referenciado foi incluído na validação  
   
 ## <a name="remarks"></a>Comentários  
- A validação ajuda a identificar problemas que impedirão a execução bem-sucedida do pacote. Use o [Catalog. validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) ou [Catalog. Operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) exibições para monitorar o status de validação.  
+ A validação ajuda a identificar problemas que podem impedir que o pacote seja executado com êxito. Use o [Catalog. validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) ou [Catalog. Operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) exibições para monitorar o status de validação.  
   
   

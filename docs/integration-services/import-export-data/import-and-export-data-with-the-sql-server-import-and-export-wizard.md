@@ -1,7 +1,7 @@
 ---
 title: "Importar e exportar dados com o Assistente de exportação e importação do SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 6cd388215de02072522011b149a9cecc3239b64c
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importar e exportar dados com o Assistente de Importação e Exportação do SQL Server
@@ -45,25 +45,25 @@ Se você deseja executar o assistente, mas não tem o [!INCLUDE[msCoName](../../
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>O que acontece quando executar o Assistente?
 -    **Consulte a lista de etapas.** Para obter uma descrição das etapas no assistente, consulte [as etapas no Assistente para exportação e do SQL Server Import](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Também é uma página separada da documentação de cada página do assistente.  
-    \-ou\-
--   **Veja um exemplo simples.** Para obter uma visão rápida em várias telas que você ver em uma sessão típica, dar uma olhada neste exemplo de ponta a ponta simples em uma única página - [começar com esse exemplo simples de Assistente de importação e exportação](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
+    \- ou \-
+-   **Veja um exemplo.** Para uma visão geral de várias telas Consulte em uma sessão típica, dê uma olhada nesse exemplo simples em uma única página - [começar com esse exemplo simples de Assistente de importação e exportação](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
 ##  <a name="wizardSources"></a>Quais fontes e destinos posso usar?  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard podem copiar dados de e para as fontes de dados listadas na tabela a seguir. Para se conectar a algumas das fontes de dados, você precisará baixar e instalar arquivos adicionais.
  
 | Fonte de dados | É necessário baixar outros arquivos? |
 |-------------|-----------------------------------------|
-|**Bancos de dados corporativos**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 e outros.|SQL Server ou SQL Server Data Tools (SSDT) instala os arquivos que você precisa se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mas SSDT não instala todos os arquivos que você precisa se conectar a outros bancos de dados corporativos, como Oracle ou IBM DB2.<br/><br/>Para se conectar a um banco de dados da empresa, você geralmente precisa ter duas coisas:<br/><br/>1. **Software cliente**. Se você já tiver o software cliente instalado para o seu sistema de banco de dados corporativo, normalmente você terá o que precisa para realizar uma conexão. Se você não tiver instalado o software cliente, pergunte ao administrador de banco de dados como instalar uma cópia licenciada.<br/><br/>2. **Drivers ou provedores de**. Microsoft instala drivers e fornecedores para se conectar ao Oracle. Para se conectar ao DB2 da IBM, obter o provedor OLE DB do Microsoft® para DB2 v 5.0 para Microsoft SQL Server a partir de [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|
-|**Arquivos de texto** (arquivos simples)|Não é necessário ter arquivos adicionais.|
+|**Bancos de dados corporativos**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 e outros.|SQL Server ou SQL Server Data Tools (SSDT) instala os arquivos que você precisa se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mas SSDT não instala todos os arquivos que você precisa se conectar a outros bancos de dados corporativos, como Oracle ou IBM DB2.<br/><br/>Para se conectar a um banco de dados da empresa, você geralmente precisa ter duas coisas:<br/><br/>1. **Software cliente**. Se você já tiver o software cliente instalado para o seu sistema de banco de dados corporativo, normalmente você terá o que precisa para realizar uma conexão. Se você não tiver instalado o software cliente, pergunte ao administrador de banco de dados como instalar uma cópia licenciada.<br/><br/>2. **Drivers ou provedores de**. Microsoft instala drivers e fornecedores para se conectar ao Oracle. Para se conectar ao DB2 da IBM, obter o provedor OLE DB do Microsoft® para DB2 v 5.0 para Microsoft SQL Server a partir de [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Para obter mais informações, consulte [conectar-se a uma fonte de dados do SQL Server](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) ou [conectar-se a uma fonte de dados Oracle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
+|**Arquivos de texto** (arquivos simples)|Não é necessário ter arquivos adicionais.<br/><br/>Para obter mais informações, consulte [conectar a uma fonte de dados de arquivo simples](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).|
 |**Arquivos do Microsoft Excel e do Microsoft Access**|O Microsoft Office não instala todos os arquivos que você precisa para se conectar a arquivos de Excel e Access como fontes de dados. Obter o seguinte download - [redistribuível de 2016 do mecanismo de banco de dados Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Para obter mais informações, consulte [conectar-se a uma fonte de dados do Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) ou [conectar-se a uma fonte de dados do Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
 |**Fontes de dados do Azure**<br/>Atualmente apenas o Armazenamento de blobs do Azure.|SQL Server Data Tools não instale os arquivos que você precisa para se conectar ao armazenamento de BLOBs do Azure como uma fonte de dados. Baixe o seguinte download – [Feature Pack do Microsoft SQL Server 2016 Integration Services para o Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Para obter mais informações, consulte [conectar ao armazenamento do Azure Blog](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|
-|**Bancos de dados de software livre**<br/>PostgreSQL, MySql e outros.|Você precisa baixar arquivos adicionais para se conectar a essas fontes de dados.<br/><br/>-Para **PostgreSQL**, consulte [conectar-se a uma fonte de dados PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>-Para **MySql**, consulte [conectar-se a uma fonte de dados MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
+|**Bancos de dados de software livre**<br/>PostgreSQL, MySql e outros.|Para se conectar a essas fontes de dados, você precisa fazer o download de arquivos adicionais.<br/><br/>-Para **PostgreSQL**, consulte [conectar-se a uma fonte de dados PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>-Para **MySql**, consulte [conectar-se a uma fonte de dados MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
 |**Qualquer outra fonte de dados para o qual um provedor ou driver está disponível**|Normalmente, é necessário baixar arquivos adicionais para se conectar aos seguintes tipos de fontes de dados.<br/><br/>- Qualquer fonte para a qual um **Driver ODBC** está disponível. Para obter mais informações, consulte [conectar a uma fonte de dados ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).<br/>- Qualquer fonte para a qual um **Provedor de Dados .NET Framework** está disponível.<br/>- Qualquer fonte para a qual um **Provedor OLE DB** está disponível.<br/><br/>Componentes de terceiros que fornecem recursos de origem e destino para outras fontes de dados, às vezes, são comercializados como produtos complementares para SQL Server Integration Services (SSIS).|
 
 ## <a name="how-do-i-connect-to-my-data"></a>Como se conectar aos meus dados?
-Para obter informações sobre como se conectar a uma fonte de dados usadas com frequência, consulte uma das seguintes páginas.
+Para obter informações sobre como se conectar a uma fonte de dados usadas com frequência, consulte uma das seguintes páginas:
 -   [Conectar ao SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
--   [Conecte-se ao Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
+-   [Conectar-se ao Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [Conecte-se a arquivos simples (arquivos de texto)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Conecte-se para o Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Conecte-se para acesso](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Etapa 1: Baixar os dados de exemplo | Microsoft Docs'
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,44 +20,53 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 147860e9af8cce86d1a7ccbd3e53f20d240fcd49
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: b2ac1eeb53ba9f9a0dcbf86ee772db9c8b2d3553
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-1-download-the-sample-data"></a>Etapa 1: Baixar os dados de exemplo
 
-Nesta etapa, você baixará o conjunto de dados de exemplo e os scripts. Os dados e os arquivos de script são compartilhados no GitHub, mas o script do PowerShell baixará os arquivos de dados e de script em um diretório local de sua escolha.
+Este artigo faz parte de um tutorial, [análise Python no banco de dados para desenvolvedores em SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-## <a name="download-the-data-and-scripts"></a>Baixar os dados e os scripts
+Os dados e os scripts para este tutorial são compartilhados no Github. Nesta etapa, você pode usar um script do PowerShell para baixar os arquivos de dados e o script para um diretório local de sua escolha.
+
+## <a name="run-the-script"></a>Execute o script
 
 1. Abra um console de comando do Windows PowerShell.
 
     Use a opção **executar como administrador**, se os privilégios administrativos são necessários para criar o diretório de destino ou para gravar arquivos de destino especificado.
 
-2. Execute os comandos do PowerShell a seguir, alterando o valor do parâmetro *DestDir* para um diretório local.  O padrão que usamos aqui é **TempPythonSQL**.
+2. Execute os comandos do PowerShell a seguir, alterando o valor do parâmetro *DestDir* para um diretório local.  O padrão que usamos aqui é `C:\temp\pysql`.
 
-    ```
+    ```ps
     $source = 'https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/PythonSQL/Download_Scripts_SQL_Walkthrough.ps1'
     $ps1_dest = "$pwd\Download_Scripts_SQL_Walkthrough.ps1"
     $wc = New-Object System.Net.WebClient
     $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\tempPythonSQL'
+    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\temp\pysql'
     ```
     
     Se a pasta especificada em *DestDir* não existir, ela será criada pelo script do PowerShell.
     
-    Se você receber um erro, você pode definir temporariamente a política de execução de scripts do PowerShell para **irrestrito** somente para este passo a passo, usando o **Bypass** argumento e as alterações atuais de escopo sessão. A execução desse comando não resulta em uma alteração de configuração.
+    Se você receber um erro, a política de execução de scripts do PowerShell para definir temporariamente **irrestrito** para este passo a passo, usando o **Bypass** argumento e o escopo de alterações para a sessão atual. A execução desse comando não resulta em uma alteração de configuração.
     
-    `Set\-ExecutionPolicy Bypass \-Scope Process`
-
-3. Dependendo da conexão com a Internet, o download poderá demorar um pouco. Quando todos os arquivos forem baixados, o script do PowerShell será aberto na pasta especificada por  *DestDir*. No prompt de comando do PowerShell, execute o comando a seguir e examine os arquivos baixados.
-
+    ```ps
+    Set-ExecutionPolicy Bypass -Scope Process
     ```
+
+3. Dependendo de sua conexão de internet, o download pode levar algum tempo. 
+
+## <a name="view-the-results"></a>Exibir os resultados
+
+Quando todos os arquivos forem baixados, o script do PowerShell será aberto na pasta especificada por  *DestDir*. 
+
++ No prompt de comando do PowerShell, execute o seguinte comando para listar os arquivos que foram baixados.
+
+    ```ps
     ls
     ```
-**Resultados:**
 
 ![lista de arquivos baixados pelo script do PowerShell](media/sqldev-python-filelist.png "lista de arquivos baixados pelo script do PowerShell")
 

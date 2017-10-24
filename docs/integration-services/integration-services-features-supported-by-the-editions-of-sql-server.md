@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Recursos de serviços de integração com suporte nas edições do SQL Server
@@ -29,7 +29,7 @@ Para recursos com suporte pelas edições Evaluation e Developer, consulte os re
 Para informações sobre novidades e as notas de versão mais recentes, consulte os seguintes artigos:
 -   [Notas de versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 -   [Novidades do Integration Services no SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [O que há de novo no Integration Services no SQL Server de 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
+-   [Novidades do Integration Services no SQL Server 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
 **Experimente o SQL Server 2016!**    
 
@@ -70,8 +70,8 @@ A edição Evaluation do SQL Server está disponível por um período de avalia�
   
 |Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Destino Oracle de alto desempenho attunity|Sim|||||  
-|Destino Teradata de alto desempenho attunity|Sim|||||  
+|Origem do Oracle de alto desempenho e de destino attunity|Sim|||||  
+|Fonte Teradata de alto desempenho e de destino attunity|Sim|||||  
 |Origem e destino do SAP BW|Sim|||||  
 |Destino de treinamento do modelo de mineração de dados|Sim|||||  
 |Destino de processamento de dimensão|Sim|||||  
@@ -81,7 +81,6 @@ A edição Evaluation do SQL Server está disponível por um período de avalia�
   
 |Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Pesquisas de persistentes (alto desempenho)|Sim|||||  
 |Componentes do Change Data Capture attunity <sup>1</sup>|Sim|||||  
 |Transformação de consulta de mineração de dados|Sim|||||  
 |Transformações de pesquisa difusa e agrupamento difuso|Sim|||||  

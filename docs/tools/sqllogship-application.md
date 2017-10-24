@@ -16,11 +16,12 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ee9ecbf0af08791636b9ef8920d0f9de0e14f27
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 4c712a94883ce48c321a8ccc15b766b709da7648
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
@@ -83,7 +84,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
 |Opção|Acesso ao diretório|Permissões|  
 |------------|----------------------|-----------------|  
-|**-backup**|Requer o acesso leitura/gravação ao diretório de backup.|Requer as mesmas permissões da instrução BACKUP. Para obter mais informações, consulte [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md).|  
+|**-backup**|Requer o acesso leitura/gravação ao diretório de backup.|Requer as mesmas permissões da instrução BACKUP. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md).|  
 |**-copy**|Requer o acesso leitura ao diretório de backup e o acesso gravação ao diretório copiar|Exige as mesmas permissões do procedimento armazenado [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) .|  
 |**-restore**|Requer o acesso leitura/gravação ao diretório copiar.|Requer as mesmas permissões da instrução RESTORE. Para obter mais informações, veja [RESTORE &#40;Transact-SQL&#41;](../t-sql/statements/restore-statements-transact-sql.md).|  
   
@@ -100,3 +101,4 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  [sp_start_job &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   
+

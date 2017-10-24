@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>N. Usando uma cláusula FROM simples  
- O exemplo a seguir recupera o `SalesTerritoryID` e `SalesTerritoryRegion` colunas para o `DimSalesTerritory` tabela.  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>O. Usando a sintaxe de junção interna  
+### <a name="n-using-the-inner-join-syntax"></a>N. Usando a sintaxe de junção interna  
  O exemplo a seguir retorna o `SalesOrderNumber`, `ProductKey`, e `EnglishProductName` colunas para o `FactInternetSales` e `DimProduct` tabelas onde a chave de junção, `ProductKey`, faz a correspondência em ambas as tabelas. O `SalesOrderNumber` e `EnglishProductName` colunas cada existem em uma das tabelas, portanto, não é necessário especificar o alias de tabela com essas colunas, conforme é mostrado; esses aliases são incluídos para facilitar a leitura. A palavra **AS** antes de um alias de nome não é obrigatório mas é recomendado para facilitar a leitura e estar de acordo com o padrão ANSI.  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>P. Usando a sintaxe LEFT OUTER JOIN e RIGHT OUTER JOIN  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Usando a sintaxe LEFT OUTER JOIN e RIGHT OUTER JOIN  
  A exemplo a seguir adiciona o `FactInternetSales` e `DimProduct` tabelas no `ProductKey` colunas. A sintaxe de junção externa esquerda preserva as linhas não correspondentes da esquerda (`FactInternetSales`) tabela. Como o `FactInternetSales` tabela não contém nenhum `ProductKey` valores que não correspondem a `DimProduct` tabela, esta consulta retorna as mesmas linhas como o primeiro exemplo de junção interna acima.  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>Q. Usando a sintaxe de junção externa completa  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. Usando a sintaxe de junção externa completa  
  O exemplo a seguir demonstra uma junção externa completa, que retorna todas as linhas de ambas as tabelas unidas, mas retorna NULL para valores que não coincidem da outra tabela.  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>R. Usando a sintaxe CROSS JOIN  
+### <a name="q-using-the-cross-join-syntax"></a>Q. Usando a sintaxe CROSS JOIN  
  O exemplo a seguir retorna o produto cruzado do `FactInternetSales` e `DimSalesTerritory` tabelas. Uma lista de todas as combinações possíveis de `SalesOrderNumber` e `SalesTerritoryKey` são retornados. Observe a ausência de `ON` cláusula da consulta de junção cruzada.  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>S. Usando uma tabela derivada  
+### <a name="r-using-a-derived-table"></a>R. Usando uma tabela derivada  
  O exemplo a seguir usa uma tabela derivada (um `SELECT` instrução após a `FROM` cláusula) para retornar o `CustomerKey` e `LastName` colunas de todos os clientes a `DimCustomer` de tabela com `BirthDate` valores posterior a 1º de janeiro de 1970 e o sobrenome 'Smith'.  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>T. REDUZIR o exemplo de dica de junção  
+### <a name="s-reduce-join-hint-example"></a>S. REDUZIR o exemplo de dica de junção  
  O exemplo a seguir usa o `REDUCE` dica de junção para alterar o processamento da tabela derivada dentro da consulta. Ao usar o `REDUCE` dica de junção nesta consulta, o `fis.ProductKey` é projetada, replicados e diferenciadas e, em seguida, associado ao `DimProduct` durante a ordem aleatória de `DimProduct` em `ProductKey`. A tabela derivada resultante é distribuída em `fis.ProductKey`.  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>U. Exemplo de dica de junção REPLICAR  
+### <a name="t-replicate-join-hint-example"></a>T. Exemplo de dica de junção REPLICAR  
  O exemplo a seguir mostra a mesma consulta no exemplo anterior, exceto que um `REPLICATE` dica de junção é usada em vez do `REDUCE` dica de junção. Usar o `REPLICATE` dica faz com que os valores no `ProductKey` coluna (junção) do `FactInternetSales` tabela devem ser replicadas para todos os nós. O `DimProduct` tabela é unida à versão replicada desses valores.  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>V. Usando a dica REDISTRIBUTE para garantir uma movimentação de ordem aleatória para uma junção incompatível de distribuição  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. Usando a dica REDISTRIBUTE para garantir uma movimentação de ordem aleatória para uma junção incompatível de distribuição  
  A consulta a seguir usa a dica de consulta redistribuir em uma junção incompatível de distribuição. Isso garante que o otimizador de consulta usará uma movimentação de ordem aleatória no plano de consulta. Isso também garante que o plano de consulta não usará uma movimentação de transmissão que move uma tabela distribuída em uma tabela replicada.  
   
  No exemplo a seguir, a dica REDISTRIBUTE força uma movimentação de ordem aleatória na tabela FactInternetSales porque ProductKey é a coluna de distribuição de DimProduct e não é a coluna de distribuição para FactInternetSales.  
