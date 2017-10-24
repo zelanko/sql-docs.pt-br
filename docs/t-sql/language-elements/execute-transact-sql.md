@@ -34,11 +34,12 @@ caps.latest.revision: 104
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eee6b205e9e33a8aa5879eddf56ecc60104798a1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 67a2880a573a1b0ff0f1e9a56216ebe8c60ddaf5
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="execute-transact-sql"></a>EXECUTE-o Transact-SQL
@@ -281,7 +282,7 @@ Execute a character string
  '*nome*'  
  É um usuário ou nome de logon válido. *nome* deve ser um membro da função de servidor fixa sysadmin ou existir como uma entidade no [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivamente.  
   
- *nome* não pode ser uma conta interna, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT authority\localsystem..  
+ *nome* não pode ser uma conta interna, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT authority\localsystem.  
   
  Para obter mais informações, consulte [especificando um nome de logon ou usuário](#_user) mais adiante neste tópico.  
   
@@ -526,7 +527,7 @@ GO
 ```  
   
 ### <a name="h-using-execute-with-recompile"></a>H. Usando EXECUTE WITH RECOMPILE  
- O exemplo a seguir executa o `Proc`_`Test` \_ `Defaults` procedimento armazenado e força um novo plano de consulta a ser compilado, usados e descartadas após a execução do módulo.  
+ O exemplo a seguir executa o `Proc_Test_Defaults` procedimento armazenado e força um novo plano de consulta a ser compilado, usados e descartadas após a execução do módulo.  
   
 ```  
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  
