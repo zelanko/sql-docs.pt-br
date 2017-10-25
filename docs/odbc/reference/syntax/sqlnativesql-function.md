@@ -66,10 +66,10 @@ SQLRETURN SQLNativeSql(
  Se *OutStatementText* for NULL, *TextLength2Ptr* ainda retornará o número total de caracteres (excluindo o caractere null de terminação para dados de caractere) disponível no buffer de retorno apontada pelo *OutStatementText*.  
   
  *BufferLength*  
- [Entrada] Número de caracteres a \* *OutStatementText* buffer. Se o valor retornado em * \*InStatementText* é uma cadeia de caracteres Unicode (ao chamar **SQLNativeSqlW**), o *BufferLength* argumento deve ser um número par.  
+ [Entrada] Número de caracteres a \* *OutStatementText* buffer. Se o valor retornado em  *\*InStatementText* é uma cadeia de caracteres Unicode (ao chamar **SQLNativeSqlW**), o *BufferLength* argumento deve ser um número par.  
   
  *TextLength2Ptr*  
- [Saída] Ponteiro para um buffer no qual retornar o número total de caracteres (exceto null de terminação) disponíveis para retornar em \* *OutStatementText*. Se o número de caracteres disponíveis para retornar for maior que ou igual a *BufferLength*, o convertido a cadeia de caracteres SQL em \* *OutStatementText* será truncado para * BufferLength* menos o comprimento de um caractere null de terminação.  
+ [Saída] Ponteiro para um buffer no qual retornar o número total de caracteres (exceto null de terminação) disponíveis para retornar em \* *OutStatementText*. Se o número de caracteres disponíveis para retornar for maior que ou igual a *BufferLength*, o convertido a cadeia de caracteres SQL em \* *OutStatementText* será truncado para  *BufferLength* menos o comprimento de um caractere null de terminação.  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -85,7 +85,7 @@ SQLRETURN SQLNativeSql(
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
 |22007|Formato de datetime inválido|**InStatementText* continha uma cláusula de escape com um valor de data, hora ou carimbo de hora inválido.|  
 |24000|Estado de cursor inválido|O cursor referenciado na instrução foi posicionado antes do início do conjunto de resultados ou após o final do conjunto de resultados. Esse erro não pode ser retornado por um driver com uma implementação de cursor nativa do DBMS.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no * \*MessageText* buffer descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no  *\*MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
 |HY009|Uso inválido de ponteiro nulo|(DM) **InStatementText* foi um ponteiro nulo.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o *identificador da conexão* e ainda estava em execução quando esta função foi chamada.|  

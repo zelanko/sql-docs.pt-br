@@ -73,7 +73,7 @@ Use o SQL Server Management Studio para estabelecer uma conexão para o catálog
   
 5.  Depois que o processo de implantação estiver concluído, o **resultados** página será aberta. Essa página exibe o êxito ou a falha de cada ação.
     -   Se a ação falhou, clique em **falha** no **resultados** coluna para exibir uma explicação do erro.
-    -   Opcionalmente, clique em **Salvar relatório... ** para salvar os resultados em um arquivo XML.
+    -   Opcionalmente, clique em **Salvar relatório...**  para salvar os resultados em um arquivo XML.
     -   Clique em **fechar** para sair do assistente.
 
 ## <a name="next-steps"></a>Próximas etapas

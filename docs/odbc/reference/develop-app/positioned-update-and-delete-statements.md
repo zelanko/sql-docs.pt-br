@@ -43,9 +43,9 @@ Aplicativos podem atualizar ou excluir a linha atual em um conjunto de resultado
   
  **ATUALIZAÇÃO** *nome de tabela*  
   
- **DEFINIR** *identificador de coluna* ** = ** {*expressão* &#124; **Nulo**}  
+ **DEFINIR** *identificador de coluna*  **=**  {*expressão* &#124; **Nulo**}  
   
- [**,** *identificador de coluna* ** = ** {*expressão* &#124; **Nulo**}]...  
+ [**,** *identificador de coluna*  **=**  {*expressão* &#124; **Nulo**}]...  
   
  **WHERE CURRENT OF** *nome de cursor*  
   

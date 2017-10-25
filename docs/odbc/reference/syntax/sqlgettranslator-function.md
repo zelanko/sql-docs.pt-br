@@ -81,7 +81,7 @@ BOOL SQLGetTranslator(
  A função retorna TRUE se for bem-sucedido e FALSO se ele falhar ou se o usuário cancelar a caixa de diálogo.  
   
 ## <a name="diagnostics"></a>diagnóstico  
- Quando **SQLGetTranslator** retorna FALSE, um tipo de * \*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista o * \*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+ Quando **SQLGetTranslator** retorna FALSE, um tipo de  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista o  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Description|  
 |---------------------|-----------|-----------------|  
