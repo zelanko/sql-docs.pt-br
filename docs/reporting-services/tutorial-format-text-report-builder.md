@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Formatar texto (construtor de relatórios) | Microsoft Docs"
+title: "Tutorial: Formatar texto (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,7 +16,7 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
 ms.contentlocale: pt-br
@@ -66,7 +66,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
 4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > A expressão `<servername>`, por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Este tutorial não precisa de dados específicos. ele só precisa de uma conexão para um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para o próximo procedimento, “Para criar uma fonte de dados”. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > A expressão `<servername>`, por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Este tutorial não precisa de dados específicos. Ele só precisa de uma conexão com um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para o próximo procedimento, “Para criar uma fonte de dados”. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -261,7 +261,7 @@ Nesta seção, você gira um texto na tabela das seções anteriores.
 
     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  Na guia **Início**, na seção **Parágrafo**, selecione **Meio** e **Centro** para localizar o texto no centro da célula vertical e horizontalmente.  
+6.  Na guia **Início** > seção **Parágrafo**, selecione **Meio** e **Centro** para localizar o texto no centro da célula vertical e horizontalmente.  
   
 8.  Clique em Executar (**!**).  
   
@@ -364,10 +364,10 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Há várias maneiras de formatar um texto no Construtor de Relatórios. [Tutorial: Criando um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
+Há várias maneiras de formatar um texto no Construtor de Relatórios. O [Tutorial: Criação de um relatório de forma livre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
 
-[Tutoriais do construtor de relatórios ](../reporting-services/report-builder-tutorials.md)  
- [formatando itens de relatório](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[Tutoriais do Construtor de Relatórios ](../reporting-services/report-builder-tutorials.md) 
+[Formatação de Itens de Relatório](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
