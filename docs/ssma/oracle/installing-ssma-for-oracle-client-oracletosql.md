@@ -64,7 +64,7 @@ Depois de baixar a versão mais recente, você deve extrair os arquivos de insta
   
 **Para instalar o cliente do SSMA**  
   
-1.  Clique duas vezes o SSMA para Oracle * n *. Install.exe, onde * n * é o número de compilação.  
+1.  Clique duas vezes o SSMA para Oracle  *n* . Install.exe, onde  *n*  é o número de compilação.  
   
 2.  Na página de boas-vinda, clique em **próximo**.  
   

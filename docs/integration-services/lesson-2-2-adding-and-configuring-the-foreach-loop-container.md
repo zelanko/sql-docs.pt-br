@@ -79,7 +79,7 @@ Após essas modificações no pacote, quando ele for executado, o contêiner Loo
   
 1.  Clique em **Mapeamentos de Variáveis**.  
   
-2.  Sobre o **mapeamentos de variáveis** página, o **variável** coluna, clique na célula vazia e selecione ** \<nova variável... >**.  
+2.  Sobre o **mapeamentos de variáveis** página, o **variável** coluna, clique na célula vazia e selecione  **\<nova variável... >**.  
   
 3.  Na caixa de diálogo **Adicionar Variável** , em **Nome**, digite **varFileName**.  
   
