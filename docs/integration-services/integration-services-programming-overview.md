@@ -64,9 +64,9 @@ ms.lasthandoff: 09/26/2017
 >  As interfaces de programação de aplicativo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são incompatíveis com as linguagens de scripts baseadas em COM, como VBScript.  
   
 ## <a name="locating-assemblies"></a>Localizando assemblies  
- No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], os assemblies do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] foram atualizados para o .NET 4.0. Há um cache de assembly global separado para o .NET 4, localizado em * \<drive >*: \windows\microsoft.net\assembly.. Você pode localizar todos os assemblies do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nesse caminho, normalmente na pasta GAC_MSIL.  
+ No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], os assemblies do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] foram atualizados para o .NET 4.0. Há um cache de assembly global separado para o .NET 4, localizado em  *\<drive >*: \windows\microsoft.net\assembly. Você pode localizar todos os assemblies do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nesse caminho, normalmente na pasta GAC_MSIL.  
   
- Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o núcleo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] arquivos. dll de extensibilidade também estão localizados em * \<drive >*: \Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
+ Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o núcleo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] arquivos. dll de extensibilidade também estão localizados em  *\<drive >*: \Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Assemblies comumente usados  
  A tabela a seguir lista os assemblies usados com frequência durante a programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] através do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
