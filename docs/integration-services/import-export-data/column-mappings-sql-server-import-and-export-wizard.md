@@ -56,9 +56,9 @@ Clique em **Editar SQL** para abrir a caixa de diálogo **Instrução Criar Tabe
 ### <a name="sometimes-these-options-are-disabled"></a>Às vezes, essas opções serão desabilitadas
 O **criar tabela/arquivo de destino** opção e o **Editar SQL** botão são automaticamente habilitados ou desabilitados automaticamente.
 
--   **Habilitado.** Se você tiver especificado um **novo** tabela de destino no **selecionar tabelas de origem e exibições** página, o **criar tabela de destino** opção é selecionada automaticamente e o ** Editar SQL** botão é habilitado.
+-   **Habilitado.** Se você tiver especificado um **novo** tabela de destino no **selecionar tabelas de origem e exibições** página, o **criar tabela de destino** opção é selecionada automaticamente e o  **Editar SQL** botão é habilitado.
 
--   **Desabilitado.** Se você tiver selecionado um **existente** tabela de destino no **selecionar tabelas de origem e exibições** página, o **criar tabela de destino** opção e o **Editar SQL ** botão estiver desabilitado. Se você quiser criar uma nova tabela de destino, volte para o **selecionar tabelas de origem e exibições** página e digite o nome de um **novo** tabela o **destino** coluna.  
+-   **Desabilitado.** Se você tiver selecionado um **existente** tabela de destino no **selecionar tabelas de origem e exibições** página, o **criar tabela de destino** opção e o **Editar SQL**  botão estiver desabilitado. Se você quiser criar uma nova tabela de destino, volte para o **selecionar tabelas de origem e exibições** página e digite o nome de um **novo** tabela o **destino** coluna.  
 
 ## <a name="what-about-existing-data-in-the-destination"></a>O que os dados existentes no destino?
 ![Página de mapeamentos de coluna, seção de opções](../../integration-services/import-export-data/media/column-mappings-page-options-section.png)

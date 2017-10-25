@@ -39,11 +39,11 @@ Esta seção fornece as etapas para adicionar uma nova fonte usando o Assistente
   
 3.  Selecione o tipo do destino na lista **Tipos**.  
   
-4.  Selecione um Gerenciador de conexão existente no **gerenciadores de Conexão** lista ou selecione ** \<Novo >** para criar uma nova conexão Gerenciador.  
+4.  Selecione um Gerenciador de conexão existente no **gerenciadores de Conexão** lista ou selecione  **\<Novo >** para criar uma nova conexão Gerenciador.  
   
 5.  Se você selecionar um gerenciador de conexões existente, clique em **OK** para fechar a caixa de diálogo **Adicionar Novo Destino**. Você deve ver o destino e os gerenciadores de conexões adicionados ao fluxo de dados.  
   
-6.  Se você clicar em ** \<Novo >** para criar uma nova conexão Gerenciador, você verá um **Gerenciador de Conexão** caixa de diálogo que permite que você especifique parâmetros para a conexão. Depois de concluir a criação do novo gerenciador de conexões, você verá o destino e o gerenciador de conexões no Designer SSIS.  
+6.  Se você clicar em  **\<Novo >** para criar uma nova conexão Gerenciador, você verá um **Gerenciador de Conexão** caixa de diálogo que permite que você especifique parâmetros para a conexão. Depois de concluir a criação do novo gerenciador de conexões, você verá o destino e o gerenciador de conexões no Designer SSIS.  
 
 ## <a name="add-new-source-dialog-box"></a>Adicionar caixa de diálogo nova origem
 A tabela a seguir lista as opções disponíveis no **adicionar nova fonte** caixa de diálogo.  
@@ -51,7 +51,7 @@ A tabela a seguir lista as opções disponíveis no **adicionar nova fonte** cai
 |Opção|Description|  
 |------------|-----------------|  
 |Types|Selecione o tipo de origem ao qual você deseja conectar-se.|  
-|Gerenciadores de conexões|Selecione um Gerenciador de conexão existente ou clique em ** \<Novo >** para criar uma nova conexão Gerenciador.|  
+|Gerenciadores de conexões|Selecione um Gerenciador de conexão existente ou clique em  **\<Novo >** para criar uma nova conexão Gerenciador.|  
 |Mostrar somente itens instalados|Especifique se apenas origens instaladas devem ser exibidas.|  
 |OK|Clique para salvar suas alterações e abrir uma caixa de diálogo subsequente para configurar opções adicionais.| 
   

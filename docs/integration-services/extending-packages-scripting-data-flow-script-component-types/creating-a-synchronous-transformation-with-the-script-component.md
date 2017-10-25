@@ -77,7 +77,7 @@ ms.lasthandoff: 09/26/2017
 ### <a name="adding-variables"></a>Adicionando variáveis  
  Se você quiser usar variáveis existentes em seu script, você pode adicioná-las a **ReadOnlyVariables** e **ReadWriteVariables** campos de propriedade o **Script** página das **Editor de transformação scripts**.  
   
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências (**... **) ao lado de **ReadOnlyVariables** e **ReadWriteVariables** campos de propriedade e, em seguida, selecione as variáveis no **selecionar variáveis** caixa de diálogo.  
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências (**...** ) ao lado de **ReadOnlyVariables** e **ReadWriteVariables** campos de propriedade e, em seguida, selecione as variáveis no **selecionar variáveis** caixa de diálogo.  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [usando variáveis no componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -142,7 +142,7 @@ else
  Estes exemplos demonstram o código personalizado que é necessário o **ScriptMain** classe para criar um componente de transformação síncrono.  
   
 > [!NOTE]  
->  Esses exemplos usam o **Person. address** tabela o **AdventureWorks** banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e ** Cidade nvarchar (30)** colunas, por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
+>  Esses exemplos usam o **Person. address** tabela o **AdventureWorks** banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e  **Cidade nvarchar (30)** colunas, por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
   
 ### <a name="single-output-synchronous-transformation-example"></a>Exemplo de transformação síncrona de saída única  
  Este exemplo demonstra um componente de transformação síncrono com uma única saída. Essa transformação passa o **AddressID** coluna e converte o **Cidade** coluna em maiusculas.  
@@ -151,7 +151,7 @@ else
   
 1.  Adicione um novo componente Script à superfície de designer Fluxo de Dados e configure-o como uma transformação.  
   
-2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados do **Person. address** analítico o **AdventureWorks** banco de dados de exemplo que contém o **AddressID** e **cidade ** colunas.  
+2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados do **Person. address** analítico o **AdventureWorks** banco de dados de exemplo que contém o **AddressID** e **cidade**  colunas.  
   
 3.  Abra o **Editor de transformação scripts**. Sobre o **colunas de entrada** página, selecione o **AddressID** e **City** colunas. Marca o **City** coluna como leitura/gravação.  
   
@@ -203,7 +203,7 @@ public class ScriptMain:
   
 1.  Adicione um novo componente Script à superfície de designer Fluxo de Dados e configure-o como uma transformação.  
   
-2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados a partir de **Person. address** tabela do **AdventureWorks** banco de dados de exemplo que contém pelo menos o **AddressID** e ** Cidade** colunas.  
+2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados a partir de **Person. address** tabela do **AdventureWorks** banco de dados de exemplo que contém pelo menos o **AddressID** e  **Cidade** colunas.  
   
 3.  Abra o **Editor de transformação scripts**. Sobre o **colunas de entrada** página, selecione o **AddressID** e **City** colunas. Marca o **City** coluna como leitura/gravação.  
   

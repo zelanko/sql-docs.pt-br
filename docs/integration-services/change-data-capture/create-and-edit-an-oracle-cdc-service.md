@@ -60,7 +60,7 @@ ms.lasthandoff: 09/26/2017
   
      Você pode usar uma conta do Windows local ou de domínio para a conta de serviço. Neste caso, você deve inserir a **Senha** para essa conta. Esta conta pode ser para o host local ou uma conta de domínio. Atualize a senha quando ela for alterada usando os Serviços Locais no Painel de Controle do Windows.  
   
- **Nome do servidor**: selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância se conectar (por exemplo, ** \\ \\< nome_do_computador >\\< nome_da_instância >**). Por padrão, é exibida a instância de servidor usada na última conexão.  
+ **Nome do servidor**: selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância se conectar (por exemplo,  **\\ \\< nome_do_computador >\\< nome_da_instância >**). Por padrão, é exibida a instância de servidor usada na última conexão.  
   
  **Autenticação**  
  Selecione uma destas opções:  

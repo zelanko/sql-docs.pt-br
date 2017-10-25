@@ -93,7 +93,7 @@ ms.lasthandoff: 09/26/2017
   
          -ou-  
   
-    -   Clique no botão de reticências (**... **) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o **ExcelFile** variável.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o **ExcelFile** variável.  
   
 3.  Clique em **ReadWriteVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 09/26/2017
   
          -ou-  
   
-    -   Clique no botão de reticências (**... **) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o **ExcelFileExists** variável.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o **ExcelFileExists** variável.  
   
 4.  Clique em **Editar Script** para abrir o editor de script.  
   
@@ -163,7 +163,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Clique no botão de reticências (**... **) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o **ExcelTable** e **ExcelFile** variáveis.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o **ExcelTable** e **ExcelFile** variáveis.  
   
 3.  Clique em **ReadWriteVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
@@ -171,7 +171,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Clique no botão de reticências (**... **) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o **ExcelTableExists** variável.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o **ExcelTableExists** variável.  
   
 4.  Clique em **Editar Script** para abrir o editor de script.  
   
@@ -270,7 +270,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Clique no botão de reticências (**... **) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione a variável ExcelFolder.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione a variável ExcelFolder.  
   
 3.  Clique em **ReadWriteVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
@@ -278,7 +278,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Clique no botão de reticências (**... **) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione a variável ExcelFiles.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione a variável ExcelFiles.  
   
 4.  Clique em **Editar Script** para abrir o editor de script.  
   
@@ -345,7 +345,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Clique no botão de reticências (**... **) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione a variável ExcelFile.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione a variável ExcelFile.  
   
 3.  Clique em **ReadWriteVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
@@ -353,7 +353,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Clique no botão de reticências (**... **) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione a ExcelTablesvariable.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione a ExcelTablesvariable.  
   
 4.  Clique em **Editar Script** para abrir o editor de script.  
   
@@ -458,7 +458,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Clique no botão de reticências (**... **) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione as variáveis.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione as variáveis.  
   
 5.  Clique em **Editar Script** para abrir o editor de script.  
   

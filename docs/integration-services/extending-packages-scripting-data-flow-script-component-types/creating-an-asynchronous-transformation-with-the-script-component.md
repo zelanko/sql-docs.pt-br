@@ -74,9 +74,9 @@ ms.lasthandoff: 09/26/2017
  Para obter mais informações sobre o **entradas e saídas** página do **Editor de transformação scripts**, consulte [Editor de transformação scripts &#40; entradas e saídas de página &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Adicionando variáveis  
- Se houver qualquer variáveis cujos valores você deseja usar em seu script, você pode adicioná-los nos campos de propriedade ReadOnlyVariables e ReadWriteVariables no **Script** página de **Editor de transformação scripts **.  
+ Se houver qualquer variáveis cujos valores você deseja usar em seu script, você pode adicioná-los nos campos de propriedade ReadOnlyVariables e ReadWriteVariables no **Script** página de **Editor de transformação scripts** .  
   
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências (**... **) ao lado de **ReadOnlyVariables** e **ReadWriteVariables** campos de propriedade e, em seguida, selecione as variáveis no **selecionar variáveis** caixa de diálogo.  
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências (**...** ) ao lado de **ReadOnlyVariables** e **ReadWriteVariables** campos de propriedade e, em seguida, selecione as variáveis no **selecionar variáveis** caixa de diálogo.  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [usando variáveis no componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 09/26/2017
  Este exemplo demonstra o código personalizado que é necessário na classe ScriptMain para criar um componente de transformação assíncrono.  
   
 > [!NOTE]  
->  Esses exemplos usam o **Person. address** tabela o **AdventureWorks** banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e ** Cidade nvarchar (30)** colunas, por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
+>  Esses exemplos usam o **Person. address** tabela o **AdventureWorks** banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e  **Cidade nvarchar (30)** colunas, por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
   
  Esse exemplo demonstra um componente de transformação assíncrono com duas saídas. Essa transformação passa o **AddressID** e **City** colunas para uma saída, enquanto ele conta o número de endereços localizados em uma cidade específica (Redmond, Washington, Estados Unidos) e, em seguida, as saídas de valor resultante para uma segunda saída.  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  Adicione um novo componente Script à superfície de designer Fluxo de Dados e configure-o como uma transformação.  
   
-2.  Conecte a saída de uma origem ou de outra transformação para o novo componente de transformação no designer. Essa saída deve fornecer dados a partir de **Person. address** tabela do **AdventureWorks** banco de dados de exemplo que contém pelo menos o **AddressID** e ** Cidade** colunas.  
+2.  Conecte a saída de uma origem ou de outra transformação para o novo componente de transformação no designer. Essa saída deve fornecer dados a partir de **Person. address** tabela do **AdventureWorks** banco de dados de exemplo que contém pelo menos o **AddressID** e  **Cidade** colunas.  
   
 3.  Abra o **Editor de transformação scripts**. Sobre o **colunas de entrada** página, selecione o **AddressID** e **City** colunas.  
   

@@ -168,7 +168,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Abra o Visual Studio e crie um projeto de serviço Web na linguagem de programação de sua preferência. O código de exemplo usa o nome LaunchSSISPackageService para o projeto.  
   
-2.  Adicione uma referência a **manageddts** e adicione um **Imports** ou **usando** instrução ao arquivo de código para o ** Runtime** namespace.  
+2.  Adicione uma referência a **manageddts** e adicione um **Imports** ou **usando** instrução ao arquivo de código para o  **Runtime** namespace.  
   
 3.  Cole o código de exemplo para o método LaunchPackage do serviço Web na classe. (O exemplo mostra os conteúdos inteiros da janela de código).  
   

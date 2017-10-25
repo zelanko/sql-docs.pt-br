@@ -26,8 +26,8 @@ ms.lasthandoff: 09/26/2017
   
 ##  <a name="wizardMapping"></a> Como o assistente mapeia tipos de dados entre a origem e o destino?
 O assistente usa arquivos de mapeamento que são instalados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para mapear os tipos de dados de um sistema ou versão de um banco de dados para outro. Por exemplo, é possível mapear do tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tipos de dados Oracle. Por padrão, os arquivos de mapeamento em formato XML são instalados nas seguintes pastas.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\* * (para 64 bits)
--   **C:\Program arquivos (x86) \Microsoft SQL Server\130\DTSMappingFiles\* * (para 32 bits).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**  (para 64 bits)
+-   **C:\Program arquivos (x86) \Microsoft SQL Server\130\DTSMappingFiles\**  (para 32 bits).  
   
  Se editar um arquivo de mapeamento existente ou adicionar um novo arquivo de mapeamento à pasta, você deverá fechar e reabrir o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para carregar os arquivos novos ou alterados.  
  

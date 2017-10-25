@@ -24,7 +24,7 @@ ms.lasthandoff: 09/26/2017
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Faz com que a execução de um pacote seja pausada e crie um arquivo de despejo. O arquivo é armazenado no * \<drive >*: pasta \Program Files\Microsoft Server\130\Shared\ErrorDumps SQL.  
+  Faz com que a execução de um pacote seja pausada e crie um arquivo de despejo. O arquivo é armazenado no  *\<drive >*: pasta \Program Files\Microsoft Server\130\Shared\ErrorDumps SQL.  
   
 ## <a name="syntax"></a>Sintaxe  
   

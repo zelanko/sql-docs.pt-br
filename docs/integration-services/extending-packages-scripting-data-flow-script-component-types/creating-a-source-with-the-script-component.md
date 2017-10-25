@@ -77,7 +77,7 @@ ms.lasthandoff: 09/26/2017
 ### <a name="adding-variables"></a>Adicionando variáveis  
  Se houver qualquer variáveis cujos valores você deseja usar em seu script, você pode adicioná-las a **ReadOnlyVariables** e **ReadWriteVariables** campos de propriedade de **Script** página do **Editor de transformação scripts**.  
   
- Ao inserir diversas variáveis nos campos de propriedade, separe os nomes delas por vírgulas. Você também pode inserir diversas variáveis clicando no botão de reticências (**... **) ao lado de **ReadOnlyVariables** e **ReadWriteVariables** campos de propriedade e selecionar as variáveis no **selecionar variáveis** caixa de diálogo .  
+ Ao inserir diversas variáveis nos campos de propriedade, separe os nomes delas por vírgulas. Você também pode inserir diversas variáveis clicando no botão de reticências (**...** ) ao lado de **ReadOnlyVariables** e **ReadWriteVariables** campos de propriedade e selecionar as variáveis no **selecionar variáveis** caixa de diálogo .  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [usando variáveis no componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/26/2017
  Os exemplos a seguir demonstram o código personalizado que é necessário o **ScriptMain** classe para criar um componente de origem.  
   
 > [!NOTE]  
->  Esses exemplos usam o **Person. address** tabela o **AdventureWorks** banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e ** Cidade nvarchar (30)** colunas, por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
+>  Esses exemplos usam o **Person. address** tabela o **AdventureWorks** banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e  **Cidade nvarchar (30)** colunas, por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
   
 ### <a name="adonet-source-example"></a>Exemplo de origem do ADO.NET  
  Este exemplo demonstra um componente de origem que usa um existente [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexão para carregar dados de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela no fluxo de dados.  
@@ -140,7 +140,7 @@ ms.lasthandoff: 09/26/2017
   
 5.  Sobre o **Script** , clique em **Editar Script** e insira o script seguinte. Em seguida, feche o ambiente de desenvolvimento de script e o **Editor de transformação scripts**.  
   
-6.  Criar e configurar um componente de destino, como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino ou o componente de destino de exemplo demonstrado em [criando um destino com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), que espera o ** AddressID** e **City** colunas. Depois, conecte o componente de origem ao destino. (Você pode conectar uma origem diretamente a um destino, sem transformações.) Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] do **AdventureWorks** banco de dados:  
+6.  Criar e configurar um componente de destino, como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino ou o componente de destino de exemplo demonstrado em [criando um destino com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), que espera o  **AddressID** e **City** colunas. Depois, conecte o componente de origem ao destino. (Você pode conectar uma origem diretamente a um destino, sem transformações.) Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] do **AdventureWorks** banco de dados:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
