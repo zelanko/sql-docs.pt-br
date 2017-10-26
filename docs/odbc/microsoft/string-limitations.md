@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e6f9d8add08f80b59adaa42f02bc1da006356081
@@ -32,3 +33,4 @@ O comprimento máximo de uma cadeia de caracteres de instrução SQL é 65.000 c
  O caractere de pipe (&#124;) não pode ser usado em uma cadeia de caracteres, se o caractere é colocado entre aspas back ou não.  
   
  Para interoperabilidade máxima, aplicativos devem passar cadeias de caracteres nos parâmetros, em vez de passagem de cadeias de caracteres entre aspas.
+

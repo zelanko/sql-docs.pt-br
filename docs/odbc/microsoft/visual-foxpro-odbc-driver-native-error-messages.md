@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49c71ee77178b71ed67fbdddf955af1f14643199
@@ -337,3 +338,4 @@ As tabelas a seguir listam as mensagens de erro nativas para o Driver de ODBC do
 |988|Valor de moeda está fora do intervalo.|  
 |990|Cancelar.|  
 |999|Função não está implementada.|
+

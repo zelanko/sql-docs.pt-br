@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bc56b9045ae3f9a53b410ef0546d539e3c25ee8
@@ -89,3 +90,4 @@ BOOL SQLInstallDriverManager(
 |Remoção de um driver|[No SQLRemoveDriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|  
 |Removendo o Gerenciador de Driver|[No SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|  
 |Removendo um conversor|[No SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ Além dos dados, **SQLFetch** e **SQLFetchScroll** pode retornar uma matriz que 
 |SQL_ROW_DELETED|A linha foi excluída desde a última busca.|  
 |SQL_ROW_ADDED|A linha foi inserida por **SQLBulkOperations**. Se a linha será buscada novamente ou é atualizada por **SQLSetPos**, seu status é SQL_ROW_SUCCESS.<br /><br /> Esse valor não está definido por **SQLFetch** ou **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|O conjunto de linhas sobrepostos final do conjunto de resultados, e nenhuma linha foi retornada que correspondeu a esse elemento da matriz de status de linha.|
+

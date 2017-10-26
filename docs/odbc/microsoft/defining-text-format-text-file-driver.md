@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
@@ -48,3 +49,4 @@ Quando o driver de texto é usado, você pode usar o **definir formato de texto*
 |**Linhas de varredura**|O número de linhas que o programa de instalação ou o driver examinará quando definir as colunas e tipos de dados de coluna com base em dados existentes.<br /><br /> Você pode inserir um número de 1 a 32767 para o número de linhas a serem examinadas. O padrão é 25 se o formato do item selecionado no **tabelas** lista não foi definida anteriormente por essa caixa de diálogo. (Um número fora do limite retornará um erro.)|  
 |**Tabelas**|Contém uma lista de todos os arquivos no diretório selecionado no **texto instalação** caixa de diálogo que corresponde à lista de extensões especificadas.<br /><br /> Quando \<padrão > está selecionada, e um dos seguintes for verdadeiro, os valores dos atributos na tabela de **tabelas** grupo são gravados no Schema (sem outras entradas no Schema são tocadas):<br /><br /> -Não há nenhum Schema no diretório especificado.<br />-O arquivo Schema existe, mas não há uma seção Schema para um dos arquivos de texto (com a extensão especificada) no diretório.<br />-A seção de um arquivo de texto existe no Schema, mas o corpo está vazio.<br /><br /> Quando \<padrão > estiver selecionada, o **colunas** grupo está desabilitado.|  
 |**Largura**|A largura da coluna pode ser alterada para colunas CHAR ou LONGCHAR. A largura padrão é 1 se o formato do item selecionado no **tabelas** lista não foi definida anteriormente por essa caixa de diálogo.<br /><br /> Para outros tipos de dados, o controle de largura é desabilitado e nenhum valor é exibido.|
+

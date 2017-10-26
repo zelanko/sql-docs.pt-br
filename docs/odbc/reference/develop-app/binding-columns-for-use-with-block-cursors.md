@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fe8c88946d6602f77bc39ac03b280fcca99cb8de
@@ -43,3 +44,4 @@ Como cursores em bloco retornam várias linhas, os aplicativos que utilizam deve
 -   [Associação de coluna](../../../odbc/reference/develop-app/column-wise-binding.md)  
   
 -   [Associação de linha](../../../odbc/reference/develop-app/row-wise-binding.md)
+

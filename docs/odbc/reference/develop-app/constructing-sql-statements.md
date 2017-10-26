@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55171e2c543aaf6759c1360d2fd3bf79ebb5d988
@@ -31,3 +32,4 @@ Instruções SQL podem ser construídas em uma destas três maneiras: embutido d
 -   [Instruções SQL construídas em tempo de execução](../../../odbc/reference/develop-app/sql-statements-constructed-at-run-time.md)  
   
 -   [Instruções SQL inseridas pelo usuário](../../../odbc/reference/develop-app/sql-statements-entered-by-the-user.md)
+

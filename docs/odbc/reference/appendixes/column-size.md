@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 13a50475602b7f71a7da33ebaaecb4c09eeaf534
@@ -71,3 +72,4 @@ O tamanho da coluna (ou parâmetro) dos tipos de dados numérico é definido com
 |Todos os tipos numéricos|PRECISION|  
 |Todos os tipos de data/hora e intervalo|LENGTH|  
 |SQL_BIT|LENGTH|
+

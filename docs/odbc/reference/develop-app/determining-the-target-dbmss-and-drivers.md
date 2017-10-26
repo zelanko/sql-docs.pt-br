@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
@@ -36,3 +37,4 @@ A próxima questão a considerar é, o que são o alvo DBMSs para o aplicativo e
  Bancos de dados do servidor, como Oracle, DB2 e do SQL Server fornecem suporte de transação completa, o suportam a muitos usuários simultâneos e tem SQL Avançado. Eles são muito mais caros e tem uma base instalada menor. Por outro lado, os preços de software tendem a ser mais alto, um pouco a compensação de um mercado potencial menor.  
   
  Assim, destino DBMSs às vezes pode ser escolhido com base nos recursos necessários pelo aplicativo e o mercado-alvo do aplicativo. Por exemplo, um sistema de entrada de ordem de grandes empresas pode não ter como destino bancos de dados de área de trabalho porque eles não têm suporte de transação adequado. Um sistema semelhante desenvolvido para pequenas empresas pode excluir a maioria dos bancos de dados do servidor com base em custo. E os desenvolvedores de aplicativos genéricos podem direcionar ambos mas evite usar os recursos avançados encontrados em bancos de dados do servidor.
+

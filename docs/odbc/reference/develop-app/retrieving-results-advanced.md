@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 85ee85c9bb44f32d33cee622c60c677f22b0ba7c
@@ -44,3 +45,4 @@ Um aplicativo pode especificar que um deslocamento é adicionado ao associados a
 -   [A biblioteca de cursores ODBC](../../../odbc/reference/develop-app/the-odbc-cursor-library.md)  
   
 -   [Vários resultados](../../../odbc/reference/develop-app/multiple-results.md)
+

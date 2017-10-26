@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78146d51e6e98e4b21c074838bd4c3dc0aba01d
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  Este tópico fornece informações específicas de Driver do arquivo de texto. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Essa função oferece suporte a SQL_COMMIT, mas não SQL_ROLLBACK.
+

@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ A primeira tarefa para qualquer aplicativo ODBC é carregar o Gerenciador de Dri
  Quando **SQLFreeHandle** é chamado, as versões de driver a estrutura usada para armazenar informações sobre o ambiente. Observe que **SQLFreeHandle** não pode ser chamado para um identificador de ambiente até depois que todos os identificadores de conexão esse identificador de ambiente foram liberados.  
   
  Para obter mais informações sobre o identificador de ambiente, consulte [trata do ambiente](../../../odbc/reference/develop-app/environment-handles.md).
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b36bd3b9743c8cdd351ac3c7ed6e2f0afafd7d7e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Fecha o Driver de ODBC do Visual FoxPro e libera toda a memória associada com o driver.  
   
  Para obter mais informações, consulte [SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md) no *referência do programador de ODBC*.
+

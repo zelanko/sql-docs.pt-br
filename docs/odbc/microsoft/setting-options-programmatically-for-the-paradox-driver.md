@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c353ec7cca4744a4189891a4123eaf6263b8fd51
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |Selecione o diretório|Exibe uma caixa de diálogo onde você pode selecionar um diretório que contém os arquivos que você deseja acessar.<br /><br /> Quando a definição de um diretório de origem de dados especifica o diretório onde o mais comumente usados arquivos estão localizados. O driver ODBC usa esse diretório como o diretório padrão. Copie outros arquivos nesse diretório, se eles são usados com frequência. Como alternativa, você pode qualificar nomes de arquivo em uma instrução SELECT com o nome do diretório:<br /><br /> SELECIONE \* DE C:\MYDIR\EMP<br /><br /> Ou, você pode especificar um novo diretório padrão usando o **SQLSetConnectOption** função com a opção SQL_CURRENT_QUALIFIER.|Para definir essa opção dinamicamente, use o **DEFAULTDIR** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Selecione o diretório de rede|O caminho completo do diretório que contém um banco de dados de bloqueio do Paradox, porque ele contém o arquivo Pdoxusrs.net (no Paradox 4.* x*) ou o arquivo Paradox.net (no Paradox 5.* x*). Se o diretório não contiver um desses arquivos, o driver do Paradox criará um. Para obter informações sobre esses arquivos, consulte a documentação do Paradox.<br /><br /> Antes de selecionar um diretório de rede, você deve inserir seu nome de usuário no Paradox o **nome de usuário** caixa de texto. Clique em **Selecionar pasta de rede** para selecionar um diretório de rede.|Para definir essa opção dinamicamente, use o **PARADOXNETPATH** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Nome do Usuário|O nome de usuário do Paradox. Esse é o nome exibido para outros usuários de arquivos do Paradox quando um bloqueio é encontrado.|Para definir essa opção dinamicamente, use o **PARADOXUSERNAME** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|
+

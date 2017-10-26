@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
@@ -48,3 +49,4 @@ A existência de ambos **SQLFetchScroll** e **SQLExtendedFetch** representa o pr
   
 > [!NOTE]  
 >  ODBC 3. *x* aplicativos não devem usar **SQLExtendedFetch** ou o atributo da instrução SQL_ROWSET_SIZE. Em vez disso, eles devem usar **SQLFetchScroll** e o atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE. ODBC 3. *x* aplicativos não devem usar **SQLSetPos** com um *operação* de SQL_ADD, mas deve usar **SQLBulkOperations** com um *Operação* de SQL_ADD.
+

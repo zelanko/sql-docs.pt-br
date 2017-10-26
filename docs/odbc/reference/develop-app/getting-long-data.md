@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
@@ -89,3 +90,4 @@ SQLCloseCursor(hstmt);
  Alguns drivers não impor essas restrições. Aplicativos interoperáveis ou devem pressupor que eles existem ou determinam quais restrições não são impostas chamando **SQLGetInfo** com a opção SQL_GETDATA_EXTENSIONS.  
   
  Se o aplicativo não precisar de todos os dados em um caractere ou uma coluna de dados binários, ele pode reduzir o tráfego de rede em drivers baseados em DBMS, definindo o atributo da instrução SQL_ATTR_MAX_LENGTH antes de executar a instrução. Isso restringe o número de bytes de dados que serão retornados para qualquer caractere ou uma coluna binária. Por exemplo, suponha que uma coluna contiver documentos de texto longo. Um aplicativo que navega a tabela que contém esta coluna pode ter que exibir apenas a primeira página de cada documento. Embora esse atributo de instrução pode ser simulado no driver, não há nenhum motivo para fazer isso. Em particular, se um aplicativo deseja truncar caracteres ou dados binários, ele deve associar um buffer pequeno para a coluna com **SQLBindCol** e deixar que o driver truncar os dados.
+

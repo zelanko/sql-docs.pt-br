@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c52cadf60268dd7272377ad70ace6010381f1c38
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 -   [Revogando e concedendo direitos ao usar procedimentos armazenados](../../odbc/microsoft/revoking-and-granting-rights-when-using-stored-procedures.md)  
   
 -   [Retornando os parâmetros de matriz de procedimentos armazenados](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)
+

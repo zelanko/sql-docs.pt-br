@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c38b613ed4c2e6efb5737118030905ab9de60b1
@@ -31,3 +32,4 @@ Na maioria das situações, os programadores de aplicativos saber se as instruç
  O aplicativo pode chamar **SQLNumResultCols** a qualquer momento após a instrução estiver preparada ou executada. No entanto, pois algumas fontes de dados não podem descrever facilmente os conjuntos de resultados que serão criados por instruções preparadas, desempenho será afetado se **SQLNumResultCols** é chamado depois que uma instrução é preparada, mas antes de ser executado.  
   
  Algumas fontes de dados também dão suporte a determinar o número de linhas que uma instrução SQL retorna um conjunto de resultados. Para fazer isso, o aplicativo chama **SQLRowCount**. Exatamente o que a contagem de linhas representa é indicada pela configuração da opção SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 ou SQL_STATIC_CURSOR_ATTRIBUTES2 (dependendo do tipo de cursor) retornado por uma chamada para **SQLGetInfo**. Esse bitmask indica para cada tipo de cursor se a contagem de linhas retornada é exato, aproximado, ou não está disponível em todos os. Se contagens de linhas para estática ou cursores controlados por conjuntos de chaves são afetados pelas alterações feitas por meio de **SQLBulkOperations** ou **SQLSetPos**, ou por atualização posicionada ou instruções delete, depende de outros bits retornou os mesmos argumentos de opção listados anteriormente. Para obter mais informações, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.
+

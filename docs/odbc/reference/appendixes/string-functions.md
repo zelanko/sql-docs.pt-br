@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
@@ -63,3 +64,4 @@ A tabela a seguir lista as funções de manipulação de cadeia de caracteres. U
 |**ESPAÇO (** *contagem* **)** (ODBC 2.0)|Retorna uma cadeia de caracteres que consiste em *contagem* espaços.|  
 |**SUBSTRING (** *string_exp*, *iniciar*, comprimento**)** (ODBC 1.0)|Retorna uma cadeia de caracteres que é derivada de *string_exp*, começando na posição do caractere especificada por *iniciar* para *comprimento* caracteres.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|Retorna uma cadeia de caracteres igual de *string_exp*, com todos os caracteres convertidos em letras maiusculas de minúsculas.|
+

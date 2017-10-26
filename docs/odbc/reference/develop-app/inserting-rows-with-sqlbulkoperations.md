@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ Inserindo dados com **SQLBulkOperations** é semelhante à atualização de dado
 3.  Chamadas **SQLBulkOperations** com o *operação* argumento definido como SQL_ADD.  
   
  Depois de **SQLBulkOperations** retorna, a linha atual é alterada. Se a coluna de indicador (coluna 0) é associada, **SQLBulkOperations** retorna os indicadores das linhas inseridas no buffer de linhas associados a essa coluna.
+

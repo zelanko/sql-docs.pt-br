@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 42da1bad914342a2f2973a63dc35f6e53f8b6c93
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Em seguida, o aplicativo aloca um identificador de conexão com **SQLAllocHandle** e conecta-se à fonte de dados com **SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**. Para obter mais informações, consulte [alocar um identificador de Conexão](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md) e [estabelecer uma Conexão](../../../odbc/reference/develop-app/establishing-a-connection.md).  
   
  Em seguida, o aplicativo define os atributos de conexão, como confirmar manualmente transações. Para obter mais informações, consulte [atributos de Conexão](../../../odbc/reference/develop-app/connection-attributes.md).
+

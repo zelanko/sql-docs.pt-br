@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d158cf38e5755e0e443d6cb47e4053bd05d45287
@@ -53,3 +54,4 @@ Para acessar dados do Visual FoxPro do seu aplicativo, você deve ter uma fonte 
      O novo nome de fonte de dados é exibido na lista de fontes de dados do usuário na guia DSN de usuário da caixa de diálogo Administrador de fonte de dados ODBC.  
   
 6.  Clique em Okey para salvar a nova fonte de dados e fechar a caixa de diálogo Administrador de fonte de dados ODBC.
+

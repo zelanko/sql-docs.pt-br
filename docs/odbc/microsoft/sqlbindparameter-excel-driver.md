@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 013f19579815dfcac2fcfe78cbbe41919bff9c15
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  Este tópico fornece informações específicas de Driver do Excel. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Quando o driver do Microsoft Excel é usado, a execução de uma instrução INSERT que usa um parâmetro para inserir um valor nulo em uma coluna SQL_CHAR retornará SQL_SUCCESS_WITH_INFO com SQLSTATE 01004, "Dados truncados".
+

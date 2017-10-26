@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e85e57206c6bf963e3b97039224d37f512961f86
@@ -39,3 +40,4 @@ O identificador para o tipo de dados ODBC C binário é:
 |SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Comprimento dos dados de caracteres < = comprimento de caracteres da coluna<br /><br /> Comprimento dos dados de caracteres > comprimento de caracteres da coluna|n/d<br /><br /> 22001|  
 |SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER<br /><br /> SQL_BIGINT<br /><br /> SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE<br /><br /> SQL_BIT SQL_TYPE_DATE<br /><br /> SQL_TYPE_TIME<br /><br /> SQL_TYPE_TIMESTAMP|Comprimento em bytes de dados = comprimento de dados SQL<br /><br /> Comprimento em bytes de comprimento de dados do SQL de <> de dados|n/d<br /><br /> 22003|  
 |SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|Comprimento de dados < = comprimento da coluna<br /><br /> Comprimento de dados > tamanho da coluna|n/d<br /><br /> 22001|
+

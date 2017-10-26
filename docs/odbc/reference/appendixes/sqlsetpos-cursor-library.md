@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b195ca1dbb138b21fcf107150832288df8317196
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  A biblioteca de cursores não oferece suporte as operações de SQL_UPDATE e SQL_DELETE em uma chamada para **SQLSetPos**. O implementa biblioteca de cursor posicionados de uma instrução update ou delete SQL criando um pesquisada instrução update ou delete com uma cláusula WHERE que enumera os valores armazenados no cache para cada coluna associada. Para obter mais informações, consulte [processamento posicionado instruções Update e excluir](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md).  
   
  Se o driver não dá suporte a Cursores estáticos, um aplicativo que trabalhar com a biblioteca de cursores deve chamar **SQLSetPos** somente em um conjunto de linhas buscado por **SQLExtendedFetch** ou **SQLFetchScroll **, não pelo **SQLFetch**. A biblioteca de cursores implementa **SQLExtendedFetch** e **SQLFetchScroll** fazendo chamadas repetidas de **SQLFetch** (com um tamanho de conjunto de linhas de 1) no driver. A biblioteca de cursores passa chamadas para **SQLFetch**, no outro lado, por meio do driver. Se **SQLSetPos** é chamado em um conjunto de linhas de várias linhas buscado por **SQLFetch** quando o driver não dá suporte a Cursores estáticos, a chamada falhará porque **SQLSetPos** não funciona com cursores de somente avanço. Isso ocorrerá mesmo se um aplicativo tiver sido chamado com êxito **SQLSetStmtAttr** para definir SQL_ATTR_CURSOR_TYPE para SQL_CURSOR_STATIC, que oferece suporte a biblioteca de cursores mesmo se o driver não dá suporte a Cursores estáticos.
+

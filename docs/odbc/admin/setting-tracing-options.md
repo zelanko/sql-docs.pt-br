@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
@@ -68,3 +69,4 @@ O **rastreamento** guia o **administrador de fonte de dados ODBC** caixa de diá
 >  Suporte para Visual Studio Analyzer foi removido a partir do Windows 8 (Visual Studio Analyzer foi incluído somente nas versões anteriores do Visual Studio.). Para obter uma alternativa mecanismo de solução de problemas, use o rastreamento BID.  
   
  Rastreamento do Visual Studio® Analyzer fornece desempenho e informações de depuração sobre a camada de ODBC. Todos os eventos de saída serão disparados na interface de nível superior para apresentar uma imagem como precisas possível sobre tempo gasto em componentes ODBC. Rastreamento do Visual Studio Analyzer requer qualquer fonte de eventos para registrar quando a fonte é configurada. Para obter mais informações sobre esse tipo de rastreamento, consulte a documentação do Visual Studio.
+

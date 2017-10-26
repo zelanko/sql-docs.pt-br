@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1bcedc8266132bf617fe35e78d3a73de10f7876
@@ -36,3 +37,4 @@ Para garantir a compatibilidade com aplicativos existentes de ANSI, os tipos de 
  Quando um aplicativo usando um banco de dados Jet 3.5 por meio de Drivers de banco de dados do Microsoft ODBC Desktop é atualizado para a versão 4.0, podem ocorrer degradação no desempenho e um maior tamanho de conjunto de trabalho. Isso ocorre porque quando uma versão 3. *x* banco de dados é aberto usando a versão 4.0 do driver novo, ele carrega o Jet 4.0. Quando o Jet 4.0 abre o banco de dados e vê que o banco de dados é um 3. *x* versão, ele carrega um driver de ISAM instalável é equivalente ao carregar o mecanismo Jet 3.5. Para remover a penalidade de desempenho e tamanho, o Jet 3. *x* banco de dados deve ser compactado em um banco de dados de formato do Jet 4.0. Isso eliminar carregar dois mecanismos de Jet e minimizar o caminho de código para os dados.  
   
  Além disso, o mecanismo Jet 4.0 é um mecanismo de Unicode. Todas as cadeias de caracteres são armazenadas e manipuladas em Unicode. Quando um aplicativo ANSI acessa um Jet 3. *x* banco de dados por meio do mecanismo Jet 4.0, os dados é convertido de ANSI em Unicode e de volta para ANSI. Se o banco de dados é atualizado para o formato da versão 4.0, as cadeias de caracteres são convertidas para Unicode, remover um nível de conversão de cadeia de caracteres, bem como minimizar o caminho de código para os dados por meio de apenas um mecanismo Jet.
+

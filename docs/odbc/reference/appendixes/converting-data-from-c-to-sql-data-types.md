@@ -24,6 +24,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8f3f8c3c62c7a4d4c6765d52c48d592ff92a21e
@@ -82,3 +83,4 @@ Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recuper
 -   [C to SQL: intervalos de tempo-dia](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
 -   [Exemplos de conversão de dados C to SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
+

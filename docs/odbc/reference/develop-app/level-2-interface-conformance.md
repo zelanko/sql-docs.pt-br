@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
@@ -41,3 +42,4 @@ O nível de conformidade de interface de nível 2 inclui a funcionalidade de con
 |209|Defina o atributo de instrução SQL_ATTR_CONCURRENCY como pelo menos um valor diferente de SQL_CONCUR_READ_ONLY.|  
 |210|A capacidade de solicitação de logon de tempo limite e consultas SQL (SQL_ATTR_LOGIN_TIMEOUT e SQL_ATTR_QUERY_TIMEOUT).|  
 |211|A capacidade de alterar o nível de isolamento padrão; a capacidade de executar as transações com o "serializável" nível de isolamento.|
+

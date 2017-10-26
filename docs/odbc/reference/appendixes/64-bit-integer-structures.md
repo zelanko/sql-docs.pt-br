@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b267e536535d0df75e1f7c048baa31099c97a704
@@ -41,3 +42,4 @@ SQLINTEGER sdwHighWord;
 ```  
   
  Essas estruturas devem ser alinhadas a um limite de 8 bytes, como um inteiro de 64 bits é alinhado com o limite de 8 bytes.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 >  A biblioteca de cursores não atualiza o cache para uma coluna se **StrLen_or_IndPtr* no conjunto de linhas correspondente buffer é o resultado da macro SQL_LEN_DATA_AT_EXEC ou SQL_DATA_AT_EXEC.  
   
  Quando atualiza uma coluna, uma fonte em branco preenche caracteres de comprimento fixo de dados e dados binários de comprimento fixo de zero preenche conforme necessário. Por exemplo, uma fonte de dados armazena "Smith" em uma coluna char (10) como "Smith". A biblioteca de cursores não dados não o preenchimento de espaço em branco ou o preenchimento de zero nos buffers de linhas quando ele copia esses dados para seu cache depois de executar uma instrução update posicionadas. Portanto, se um aplicativo requer que os valores no cache da biblioteca de cursor são convertidas em branco ou sem preenchimento, ele deverá painel de espaço em branco ou painel de zero os valores nos buffers de linhas antes de executar uma instrução update posicionadas.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
@@ -44,3 +45,4 @@ Lembre-se de que aplicativos não chamar funções de driver diretamente. Em vez
  O Gerenciador de Driver bloqueará o identificador de ambiente (*henv*) antes de chamar um driver **SQLAllocHandle** e **SQLFreeHandle** quando *HandleType* é definido como **SQL_HANDLE_DBC**.  
   
  Quando o aplicativo chama **SQLDisconnect**, as chamadas de Gerenciador de Driver **SQLDisconnect** no driver. No entanto, ele deixa o driver carregado no caso do aplicativo se reconecta ao driver. Quando o aplicativo chama **SQLFreeHandle** com a opção SQL_HANDLE_DBC, chama o Gerenciador de Driver **SQLFreeHandle** no driver. Se o driver não for usado por qualquer outra conexão, em seguida, chama o Gerenciador de Driver **SQLFreeHandle** no driver com o SQL_HANDLE_ENV opção e descarrega o driver.
+

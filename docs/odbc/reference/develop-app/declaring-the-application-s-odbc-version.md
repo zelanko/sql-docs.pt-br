@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ Antes de um aplicativo aloca uma conexão, ele deve definir o atributo de ambien
   
 > [!IMPORTANT]  
 >  Aplicativos que seguem o ODBC 3. *x* especificação deve usar o código condicional para evitar o uso de funcionalidade nova para ODBC 3.* x* ao trabalhar com ODBC 2.* x* drivers. ODBC 2. *x* drivers não oferecem suporte a funcionalidade nova para ODBC 3.* x* apenas porque o aplicativo declara que ele segue o ODBC 3.* x* especificação. Além disso, o ODBC 3. *x* drivers não dão suporte à funcionalidade nova para ODBC 3.* x* apenas porque o aplicativo declara que ele segue o ODBC 2.* x* especificação.
+

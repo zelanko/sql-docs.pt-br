@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: af884148535018c19a2a7375f3bfc90d73aa5f78
@@ -59,3 +60,4 @@ A tabela a seguir descreve as funções de numérica ODBC com suporte do Visual 
  ENERGIA *(numeric_exp, integer_exp)*  
   
  Truncar *(numeric_exp, integer_exp)*
+

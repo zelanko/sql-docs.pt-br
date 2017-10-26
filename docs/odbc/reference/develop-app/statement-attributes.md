@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
@@ -39,3 +40,4 @@ Atributos de instrução são características da instrução. Por exemplo, se u
 >  Nenhum dos atributos de instrução introduzidos no ODBC 3. *x* (exceto SQL_ATTR_METADATA_ID) podem ser definidas no nível de conexão.  
   
  Para obter mais informações, consulte o [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) descrição da função.
+

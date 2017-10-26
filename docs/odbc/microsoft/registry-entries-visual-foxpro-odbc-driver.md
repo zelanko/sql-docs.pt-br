@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
@@ -61,3 +62,4 @@ Quando você instala o Driver de ODBC do Visual FoxPro, o programa de instalaç�
  Você não deve acessar essas informações diretamente. qualquer administração do registro é tratada pelo administrador de ODBC quando você adicionar, modificar ou excluir uma fonte de dados.  
   
  Você pode usar algumas dessas palavras-chave e valores como parâmetros de [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) função da API do ODBC.
+

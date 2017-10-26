@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
@@ -57,3 +58,4 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   Envia a instrução e valores de parâmetro convertido para a fonte de dados para execução.  
   
     -   Retorna erros. Esses incluem sequenciamento ou diagnóstico de estado como SQLSTATE 24000 (estado de cursor inválido), erros sintáticos como SQLSTATE 42000 (sintaxe ou violação de acesso) e erros semânticos como SQLSTATE 42S02 (Base a tabela ou exibição não encontrado).
+

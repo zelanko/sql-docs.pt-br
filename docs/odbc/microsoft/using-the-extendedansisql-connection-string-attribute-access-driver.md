@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3bf1cde51834a804a182b3ea2a4d9f82f68aa474
@@ -39,3 +40,4 @@ Jet 4.0 tem vários recursos novos que não são habilitados por padrão em Driv
 -   [Detecção de truncamento de dados habilitada usando ExtendedAnsiSQL](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
   
 -   [Jet 4.0 usa a lista de palavras reservadas do SQL-92 quando ExtendedAnsiSQL definido](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)
+

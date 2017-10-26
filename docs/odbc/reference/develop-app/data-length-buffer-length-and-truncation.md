@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
@@ -37,3 +38,4 @@ O *comprimento dos dados* é o comprimento de bytes dos dados como ele deve ser 
  Por exemplo, suponha que um aplicativo aloca 50 bytes para um buffer de dados binários. Se o driver tem 10 bytes de dados binários a serem retornados, ele retorna 10 bytes no buffer. O comprimento de bytes dos dados é 10 e o comprimento de bytes do buffer é 50. Se o driver tem 60 bytes de dados binários a serem retornados, truncará os dados para 50 bytes, retorna os bytes no buffer e retorna SQL_SUCCESS_WITH_INFO. O comprimento de bytes dos dados é 60 (comprimento antes de truncamento) e o comprimento de bytes do buffer ainda é 50.  
   
  Um registro de diagnóstico é criado para cada coluna que será truncada. Porque o tempo necessário para o driver a criar esses registros e para o aplicativo para processá-las, o truncamento pode prejudicar o desempenho. Normalmente, um aplicativo pode evitar esse problema ao alocar buffers grandes o suficiente, embora isso talvez não seja possível ao trabalhar com dados long. Quando ocorrer o truncamento de dados, o aplicativo pode, às vezes, aloque um buffer maior e buscar novamente os dados. Isso não é verdadeiro em todos os casos. Se ocorrer um truncamento durante a obtenção de dados com chamadas para **SQLGetData**, o aplicativo não precisa chamar **SQLGetData** para dados que já foi retornados; para obter mais informações, consulte [obtendo Dados Long](../../../odbc/reference/develop-app/getting-long-data.md).
+

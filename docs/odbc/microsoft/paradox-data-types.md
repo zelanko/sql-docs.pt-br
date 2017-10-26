@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
@@ -65,3 +66,4 @@ O driver ODBC Paradox mapeia tipos de dados do Paradox para tipos de dados SQL O
 |timestamp|Quando um valor é inserido em uma coluna de carimbo de hora pelo driver Paradox e subsequentemente recuperado da coluna, o valor recuperado pode diferir do que o valor inserido por até 1 segundo em razão do arredondamento.|  
   
  Mais limitações nos tipos de dados podem ser encontradas no [limitações do tipo de dados](../../odbc/microsoft/data-type-limitations.md).
+

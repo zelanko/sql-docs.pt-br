@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 89e9fe2cdaf8511023120e984eb6366491c0288a
@@ -29,3 +30,4 @@ As seções a seguir abordam intervalo e tipos de dados numéricos.
 -   [Literais numéricos](../../../odbc/reference/appendixes/numeric-literals.md)  
   
 -   [Substituindo a precisão e a escala padrão para tipos de dados numéricos](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2141d765b3f32b5a4c884d72e660e78e1ddcf31
@@ -36,3 +37,4 @@ Esta seção contém os tópicos a seguir.
 -   [Valores retornados SQLGetInfo para Access](../../odbc/microsoft/sqlgetinfo-returned-values-for-access.md)  
   
 -   [Outros detalhes de programação do driver do Access](../../odbc/microsoft/other-access-driver-programming-details.md)
+

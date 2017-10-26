@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f1ec5ce31b9e837bde3d582f61eba7a0589e5267
@@ -31,3 +32,4 @@ Esta seção descreve a sintaxe de conversão de API de DLL, que consiste em dua
 -   [Função SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)  
   
 -   [Função SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)
+

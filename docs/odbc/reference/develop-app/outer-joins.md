@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
@@ -50,3 +51,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  Para determinar os tipos de junções externas que dão suporte a uma fonte de dados e o driver, um aplicativo chama **SQLGetInfo** com o SQL_OJ_CAPABILITIES flag. Os tipos de junções externas que podem ter suporte são esquerdos, direita, completo ou junções externas; aninhadas junções externas no qual os nomes de coluna no **ON** cláusula não tem a mesma ordem que seus nomes de tabela do respectivos no **OUTER JOIN** cláusula; junções internas em conjunto com junções externas; e junções externas usando qualquer operador de comparação ODBC. Se o tipo de informação SQL_OJ_CAPABILITIES retorna 0, não há suporte para nenhuma cláusula de junção externa.
+

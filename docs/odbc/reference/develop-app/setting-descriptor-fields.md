@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4e63f722842846815fd96bed7293388c4f86c75
@@ -31,3 +32,4 @@ Para modificar os campos de um descritor de, um aplicativo pode chamar **SQLSetD
  Ao definir campos individualmente, o aplicativo deve seguir a sequência definida no [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Definir alguns campos faz com que o driver definir outros campos. Isso garante que o descritor sempre está pronto para ser usado quando o aplicativo especificou um tipo de dados. Quando o aplicativo define o campo SQL_DESC_TYPE, o driver verifica que outros campos que especificam o tipo são válidos e consistentes.  
   
  Se uma chamada de função que seria definir um campo de descritor falhar, o conteúdo do campo de descritor é indefinido após a chamada de função com falha.
+

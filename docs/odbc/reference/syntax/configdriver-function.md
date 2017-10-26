@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
@@ -102,3 +103,4 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>Mensagens  
  Uma rotina de instalação do driver pode enviar uma mensagem de texto para um aplicativo como uma cadeia de caracteres terminada em nulo no *lpszMsg* buffer. A mensagem será truncada para *cbMsgMax* menos o caractere null de terminação pelo **ConfigDriver** função se ele for maior que ou igual a *cbMsgMax* caracteres.
+

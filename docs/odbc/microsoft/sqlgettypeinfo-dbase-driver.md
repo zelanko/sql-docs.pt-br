@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b843871d680fd91c6628cf6ba3fb71b25d20baf
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  O nome do tipo (TYPE_NAME) retornado na tabela produzida pela **SQLGetTypeInfo** será o nome mais comumente usado pela fonte de dados.  
   
  SQL_ALL_EXCEPT_LIKE será retornado na coluna PESQUISÁVEL por Byte, contador, Double, tipos de dados único, longa e curta. (O recurso LIKE pode ser obtido ao converter o valor para um caractere usando as funções de conversão canônica ODBC, em seguida, executar a comparação.)
+

@@ -27,6 +27,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 99b1b3dc2eabd38aea148ad5ba946d7dd0da857d
@@ -50,3 +51,4 @@ Um *descritor* é uma coleção de metadados que descrevem os parâmetros de uma
  A maioria das operações em ODBC podem ser executadas sem o uso explícito de descritores pelo aplicativo. No entanto, os descritores de fornecem um atalho prático para algumas operações. Por exemplo, suponha que um aplicativo que deseja inserir dados de dois conjuntos diferentes de buffers. Para usar o primeiro conjunto de buffers, poderia chamar repetidamente **SQLBindParameter** para associá-las para os parâmetros em uma **inserir** instrução e, em seguida, execute a instrução. Para usar o segundo conjunto de buffers, ele deve repetir esse processo. Como alternativa, ele pode configurar associações para o primeiro conjunto de buffers em um descritor e o segundo conjunto de buffers no descritor do outro. Para alternar entre os conjuntos de associações, o aplicativo poderia simplesmente chamar **SQLSetStmtAttr** e associar o descritor correto com a instrução como APD.  
   
  Para obter mais informações sobre descritores, consulte [tipos de descritores](../../../odbc/reference/develop-app/types-of-descriptors.md).
+

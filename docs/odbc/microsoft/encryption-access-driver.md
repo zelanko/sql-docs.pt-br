@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 991f555cb1cc1428b182b306e60c82703a33745d
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 (Este controle está disponível apenas quando versão 4. *x* formato está selecionado.)  
   
  Com o lançamento da versão do mecanismo de banco de dados do Microsoft Jet 4.0, a criptografia de banco de dados é permitida durante a criação de bancos de dados do Access. Consulte o *referência do programador de mecanismo do banco de dados Jet* para obter informações adicionais.
+

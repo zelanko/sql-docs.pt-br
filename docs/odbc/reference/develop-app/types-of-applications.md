@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
@@ -84,3 +85,4 @@ Aplicativos ODBC podem ser classificados da seguinte maneira:
     -   Usa os novos recursos em uma versão posterior do ODBC somente dentro do código condicional.  
   
     -   Limitou condicional código para tratar alterações de comportamento ou foi registrado para ser uma versão anterior do aplicativo de ODBC.
+

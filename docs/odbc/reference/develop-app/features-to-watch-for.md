@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 89e348d084f150bdcb2d74f4d4dd561816fc351f
@@ -45,3 +46,4 @@ Esta seção descreve uma série de recursos que os desenvolvedores de aplicativ
 -   [Gramática SQL ODBC](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
   
 -   [Processamento em lotes](../../../odbc/reference/develop-app/batch-processing.md)
+

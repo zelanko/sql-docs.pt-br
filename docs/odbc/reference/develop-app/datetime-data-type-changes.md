@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
@@ -64,3 +65,4 @@ Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp 
  [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
  [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3.* x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.
+

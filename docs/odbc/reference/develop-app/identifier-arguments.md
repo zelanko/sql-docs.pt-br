@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
@@ -40,3 +41,4 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Identificadores entre aspas são usados para distinguir um nome de coluna true de uma coluna pseudo o mesmo nome, como ROWID no Oracle. Se for passado "ROWID" em um argumento de uma função de catálogo, a função funcionarão com a coluna pseudo ROWID se ele existir. Se a coluna pseudo não existir, a função funciona apenas com a coluna "ROWID". Se ROWID é passado um argumento de uma função de catálogo, a função funciona apenas com a coluna ROWID.  
   
  Para obter mais informações sobre os identificadores entre aspas, consulte [identificadores entre aspas](../../../odbc/reference/develop-app/quoted-identifiers.md).
+

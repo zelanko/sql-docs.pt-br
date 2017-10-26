@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 00469dcf77ae81f5d02765026fe0c1f7194da5d1
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. A Microsoft recomenda o uso da funcionalidade de cursor do driver.  
   
  Se um aplicativo trabalhando com um ODBC 2*. x* driver faz chamadas para o ODBC 3.* x* biblioteca de cursores, o aplicativo pode ser capaz de usar o ODBC 3.* x* recursos que não são suportados pelo ODBC 2*. x* driver. Um gravador de aplicativos deve ser cuidadoso como esses recursos são usados, no entanto. Uso de ODBC 3. *x* biblioteca de cursores não faz um ODBC 2*. x* driver em um ODBC 3.* x* driver.
+

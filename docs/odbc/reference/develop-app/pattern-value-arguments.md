@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
@@ -51,3 +52,4 @@ Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLT
 >  ODBC 2. *x* drivers não oferecem suporte a padrões de pesquisa a *CatalogName* argumento **SQLTables**. ODBC 3*. x* drivers aceitam os padrões de pesquisa esse argumento se o atributo de ambiente sql_attr ODBC_VERSION é definido como SQL_OV_ODBC3; não aceitar os padrões de pesquisa esse argumento se ele for definido como SQL_OV_ODBC2.  
   
  Transmitindo um ponteiro nulo para um argumento de padrão de pesquisa não restringe a pesquisa para o argumento; ou seja, um ponteiro nulo e o padrão de pesquisa % (caracteres) são equivalentes. No entanto, um comprimento zero Pesquisar padrão — ou seja, um ponteiro válido para uma cadeia de caracteres de comprimento zero — corresponde apenas a cadeia de caracteres vazia ("").
+

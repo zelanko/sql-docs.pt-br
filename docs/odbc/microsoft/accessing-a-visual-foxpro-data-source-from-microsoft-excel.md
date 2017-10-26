@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
@@ -52,3 +53,4 @@ Se você tiver o Microsoft Query instalado, você pode criar uma fonte de dados 
 8.  Clique em uso.  
   
  Agora você pode adicionar tabelas à consulta aberta. Para obter mais informações sobre como criar uma consulta, consulte [importar dados para o Microsoft Excel de um banco de dados do Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).
+

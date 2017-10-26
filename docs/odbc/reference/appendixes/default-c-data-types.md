@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 83040ffdab8b9715fc8caeb024bec6a9fc05d4d4
@@ -38,3 +39,4 @@ Se um aplicativo especifica SQL_C_DEFAULT em **SQLBindCol**, **SQLGetData**, ou 
      Porque SQL_C_DEFAULT é fornecido apenas como uma conveniência de programação, o aplicativo não perderá qualquer funcionalidade quando ela especifica o tipo de dados C real.  
   
  Uma tabela que mostra o tipo de dados C padrão para cada tipo de dados SQL está incluída no [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md), mais adiante neste apêndice.
+

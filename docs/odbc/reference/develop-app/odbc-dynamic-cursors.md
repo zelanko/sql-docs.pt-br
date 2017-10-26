@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
@@ -47,3 +48,4 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  Essa instrução cria um segundo conjunto de resultados, o primeiro conjunto de linhas do que é o próximo conjunto de linhas no conjunto de resultados original — nesse caso, o conjunto de linhas na tabela Customers. O cursor retorna este conjunto de linhas para o aplicativo.  
   
  É interessante observar que um cursor dinâmico implementado dessa maneira cria vários conjuntos de resultados, que permite que ele detectar alterações ao conjunto de resultados original. O aplicativo nunca aprende da existência desses conjuntos de resultados auxiliar; ele simplesmente aparece como se o cursor é capaz de detectar alterações ao conjunto de resultados original.
+

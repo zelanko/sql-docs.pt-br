@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ Ao atualizar uma linha pelo indicador, **SQLBulkOperations** faz com que a fonte
 6.  Chamadas **SQLBulkOperations** com o *operação* argumento definido como SQL_UPDATE_BY_BOOKMARK.  
   
  Para cada linha que é enviada para a fonte de dados como uma atualização, os buffers do aplicativo devem ter dados de linha válido. Se os buffers do aplicativo foram preenchidos pela busca, se uma matriz de status de linha foi mantida, e se o valor de status de uma linha for SQL_ROW_DELETED, SQL_ROW_ERROR ou SQL_ROW_NOROW, os dados inválidos inadvertidamente foi enviados para a fonte de dados.
+

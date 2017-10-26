@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1e5cabca53c503e2cd0c12147248b11da84ed157
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Se a biblioteca de cursores é usada com um ODBC 2. *x* driver, uma ligação de deslocamento (conforme definido pelo atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR) não é usado quando **SQLFetch** é chamado.  
   
  Quando a biblioteca de cursores é carregada, um aplicativo não é possível chamar **SQLFetch** para buscar colunas de indicador. A biblioteca de cursores passará a chamada para **SQLFetch** por meio do driver, mas a função chamadas para habilitar os indicadores e associar a coluna de indicador são interceptadas pela biblioteca de cursores.
+

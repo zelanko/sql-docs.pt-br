@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8291060e9a055b8ae4d17e3d782726a04415149c
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="base-address-of-drivers"></a>Endereço base de Drivers
 Cada um dos Drivers de banco de dados do ODBC Desktop foi vinculada com um endereço base do 0x04c0000.
+

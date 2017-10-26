@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6397e547f46c68c29a70739ccaff2be8edd51416
@@ -40,3 +41,4 @@ Há uma instância do contador para cada banco de dados.
 
 ## <a name="see-also"></a>Consulte também  
 [Monitorar o uso de recursos (Monitor do Sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+

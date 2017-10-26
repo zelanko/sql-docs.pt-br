@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
@@ -36,3 +37,4 @@ Não há suporte para a instrução CREATE INDEX para os drivers de texto ou do 
  Quando o driver dBASE é usado, o índice criado por uma instrução CREATE UNIQUE INDEX é na verdade não exclusivo, e podem ser inseridos valores duplicados na coluna indexada. Apenas um registro de um conjunto de valores de chave idênticos pode ser adicionado ao índice.  
   
  Quando o driver do Paradox é usado, um índice exclusivo deve ser definido em um subconjunto de contíguo de colunas em uma tabela, incluindo a primeira coluna. Uma tabela não pode ser atualizada pelo driver Paradox se um índice exclusivo não está definido na tabela ou quando o driver do Paradox é usado sem a implementação do BDE.
+

@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ce549be1e3222f41615e5935418cf3e02e767a4
@@ -46,3 +47,4 @@ Quando o campo SQL_DESC_TYPE de um descartar é definido como um tipo datetime o
  Se o aplicativo chama **SQLGetData** para retornar dados em um datetime ou intervalo de tipo C, serão usadas a precisão à esquerda do intervalo padrão e a precisão de segundos de intervalo. Se o padrão não for aceitável, o aplicativo deve chamar **SQLSetDescField** para definir o campo de descrição, ou **SQLSetDescRec** definir SQL_DESC_PRECISION. A chamada para **SQLGetData** devem ter um *TargetType* de SQL_ARD_TYPE para usar os valores nos campos de descritor.  
   
  Quando **SQLPutData** é chamado, o intervalo que levam segundos precisão e o intervalo de precisão são lidas dos campos de registro do descritor que correspondem ao parâmetro de dados em execução ou coluna, que são campos APD para chamadas para **SQLExecute** ou **SQLExecDirect**, ou descartar campos para chamadas para **SQLBulkOperations** ou **SQLSetPos**.
+

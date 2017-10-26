@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6959849e5a8ca32539eeab6c532a2d15cedaaca2
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 Esta ilustração mostra como cada uma das configurações anteriores pode aparecer em uma única rede.  
   
  ![Várias configurações em uma única rede](../../odbc/reference/media/pr08.gif "pr08")
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
@@ -63,3 +64,4 @@ A tabela a seguir descreve as funções numéricas que estão incluídas no conj
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Retorna a raiz quadrada de *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Retorna a tangente de *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
 |**Truncar (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retorna *numeric_exp* truncado para *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* será truncado para &#124;* integer_exp*&#124; casas à esquerda da vírgula decimal.|
+

@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
@@ -54,3 +55,4 @@ Alguns drivers ODBC não estritamente de acordo com a arquitetura descrita anter
  Uma vantagem dessa arquitetura é a configuração e manutenção de software eficiente. Drivers só precisam ser atualizados em um só lugar: no servidor. Usando fontes de dados do sistema, fontes de dados podem ser definidas no servidor para uso por todos os clientes. As fontes de dados não precisam ser definidas no cliente. Pooling de Conexão pode ser usado para simplificar o processo pelo qual os clientes se conectam a fontes de dados.  
   
  O driver no cliente geralmente é um driver muito pequeno que transfere a chamada de Gerenciador de Driver ao servidor. Seu espaço pode ser significativamente menor do que os drivers ODBC totalmente funcionais no servidor. Nessa arquitetura, os recursos de cliente podem ser liberados se o servidor tiver mais poder de computação. Além disso, a eficiência e a segurança de todo o sistema podem ser aprimorados Instalando servidores de backup e executar o balanceamento de carga para otimizar o uso do servidor.
+

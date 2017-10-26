@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07e868f5798e759a9b84e9c28d2c1fa82bb34c4f
@@ -46,3 +47,4 @@ Aplicativos modernos em tela, o usuário rola para trás e frente os dados. Para
 -   [Rolagem relativa e absoluta](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
   
 -   [Indicadores](../../../odbc/reference/develop-app/bookmarks-odbc.md)
+

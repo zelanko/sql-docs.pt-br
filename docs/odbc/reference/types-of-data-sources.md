@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 77d2aff43a35245724fdc5f165b8e9f3361ee3a0
@@ -31,3 +32,4 @@ Há dois tipos de fontes de dados: fontes de dados e fontes de dados de arquivos
 -   [Fontes de dados do computador](../../odbc/reference/machine-data-sources.md)  
   
 -   [Fontes de dados do arquivo](../../odbc/reference/file-data-sources.md)
+

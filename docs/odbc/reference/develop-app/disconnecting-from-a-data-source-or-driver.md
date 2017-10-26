@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a08f5de9829ee006c51ef6a2e795b44967c43a99
@@ -34,3 +35,4 @@ Quando um aplicativo tiver terminado de usar uma fonte de dados, ele chama **SQL
  Após a desconexão, o aplicativo pode chamar **SQLFreeHandle** para liberar a conexão. Depois de liberar a conexão, é um erro de programação de aplicativo para usar o identificador da conexão em uma chamada para uma função ODBC; Esse procedimento tem consequências indefinidas, mas provavelmente fatais. Quando **SQLFreeHandle** é chamado, as versões de driver a estrutura usada para armazenar informações sobre a conexão.  
   
  O aplicativo também pode reutilizar a conexão, para se conectar a uma fonte de dados diferente ou reconectar-se à mesma fonte de dados. A decisão de permanecer conectado, em vez de desconectar e reconectar posteriormente, requer que o gravador de aplicativos considerar os custos relativos de cada opção. tanto a conexão com uma fonte de dados e permanecer conectado podem ser relativamente caros, dependendo da mídia de conexão. Fazer um equilíbrio correto, o aplicativo também deve fazer suposições sobre a probabilidade e o intervalo de outras operações na mesma fonte de dados.
+

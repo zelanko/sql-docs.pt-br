@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b899cda97d68801d03e1b5cc9655df0eaeaf8ad
@@ -31,3 +32,4 @@ Aplicativos personalizados normalmente executam uma tarefa específica para algu
  Portanto, o aplicativo personalizado requer interoperabilidade de pouca ou nenhuma. O desenvolvedor do aplicativo pode escolher um único driver para cada DBMS e o código diretamente esses drivers. O aplicativo com segurança pode conter código específico do driver para explorar os recursos desses drivers e pode até mesmo fazer chamadas para a API de banco de dados nativo para usar a funcionalidade não tem suporte pelo ODBC.  
   
  A preocupação principal de interoperabilidade da maioria dos aplicativos personalizada é se o destino DBMSs será alterado no futuro. Nesse caso, esse processo pode ser simplificado, escrevendo código mais interoperável começar com. No entanto, essa alteração de DBMSs é rara e geralmente envolve uma grande quantidade de trabalho. Por isso, os desenvolvedores de aplicativos personalizados raramente optar por aumentar interoperabilidade às custas da funcionalidade; eles normalmente escolher recodificar essa funcionalidade quando alteram DBMSs.
+

@@ -1,7 +1,7 @@
 ---
 title: "Tabela temporária e variável de tabela mais rápidas usando a otimização de memória | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: 2c44f6288c4e58caa45748e6e832465f43145b83
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabela temporária e variável de tabela mais rápidas usando a otimização de memória
@@ -65,6 +66,8 @@ OLTP in-memory fornece os seguintes objetos que podem ser usados para tabelas te
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Cenário: substituir tabela tempdb global &#x23;&#x23;  
   
+Substituir uma tabela temporária global por uma tabela com otimização memória SCHEMA_ONLY é bastante simples. A maior alteração é criar a tabela no momento da implantação, não em tempo de execução. A criação de tabelas com otimização de memória demora mais do que a criação de tabelas tradicionais, devido a otimizações de tempo de compilação. Criar e descartar as tabelas com otimização de memória como parte da carga de trabalho online afetaria o desempenho da carga de trabalho, bem como o desempenho de restauração em secundários do AlwaysOn e recuperação de banco de dados.
+
 Suponha que você tenha a seguinte tabela temporária global.  
   
   
@@ -102,13 +105,15 @@ A conversão de temporário global para SCHEMA_ONLY é o seguinte:
   
   
 1. Crie a tabela **dbo.soGlobalB** uma vez, como faria com qualquer tabela no disco tradicional.  
-2. No Transact-SQL, remova a criação da tabela **&#x23;&#x23;tempGlobalB**.  
+2. No Transact-SQL, remova a criação da tabela **&#x23;&#x23;tempGlobalB**.  É importante criar a tabela com otimização de memória no momento da implantação, não em um tempo de execução, para evitar a sobrecarga de compilação que acompanha a criação da tabela.
 3. No seu T-SQL, substitua todos os menções de **&#x23;&#x23;tempGlobalB** com **dbo.soGlobalB**.  
   
   
 ## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. Cenário: substituir a tabela tempdb de sessão &#x23;  
   
 As preparações para substituir uma tabela temporária de sessão envolvem mais T-SQL que para o cenário anterior da tabela temporária global. Felizmente o T-SQL extra não significa a necessidade de mais esforço para realizar a conversão.  
+
+Assim como no cenário de tabela temporária global, a maior alteração é criar a tabela no momento da implantação, não no tempo de execução, para evitar a sobrecarga de compilação.
   
 Suponha que você tem a seguinte tabela temporária de sessão.  
   
@@ -184,7 +189,7 @@ Em terceiro lugar, seu código geral T-SQL:
 1. Altere todas as referências à tabela temporária em suas instruções Transact-SQL para a nova tabela com otimização de memória:
     - _Antiga:_ &#x23;tempSessionC  
     - _Nova:_ dbo.soSessionC  
-2. Substitua as instruções `CREATE TABLE #tempSessionC` no seu código com `DELETE FROM dbo.soSessionC`, para garantir que uma sessão não seja exposta ao conteúdo da tabela inserido por uma sessão anterior com o mesmo session_id
+2. Substitua as instruções `CREATE TABLE #tempSessionC` no seu código com `DELETE FROM dbo.soSessionC`, para garantir que uma sessão não seja exposta ao conteúdo da tabela inserido por uma sessão anterior com o mesmo session_id. É importante criar a tabela com otimização de memória no momento da implantação, não em um tempo de execução, para evitar a sobrecarga de compilação que acompanha a criação da tabela.
 3. Remova as instruções `DROP TABLE #tempSessionC` do seu código. Opcionalmente, você pode inserir uma instrução `DELETE FROM dbo.soSessionC` caso o tamanho de memória seja um problema potencial
   
   

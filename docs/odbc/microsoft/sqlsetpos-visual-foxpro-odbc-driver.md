@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d255f3c1eac9b46548f10c5c4ef3bf2bc31cafbe
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Define a posição do cursor em um conjunto de linhas. Você pode usar **SQLSetPos** com [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) para recuperar linhas de colunas desassociadas depois posicionando o cursor para uma linha específica no conjunto de linhas.  
   
  Para obter mais informações, consulte [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) no *referência do programador de ODBC*.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4090e609063b74fdcbef694c400272ee6af090c5
@@ -35,3 +36,4 @@ Para confirmar ou reverter uma transação em modo de confirmação manual, um a
  Se um aplicativo passa o identificador de ambiente para **SQLEndTran** mas não passe um identificador de conexão, o Gerenciador de Driver conceitualmente chama **SQLEndTran** com o identificador de ambiente para cada driver que tem uma ou mais conexões ativas no ambiente. O driver, em seguida, confirma as transações em cada conexão no ambiente. No entanto, é importante observar que o driver e o Gerenciador de Driver realiza uma confirmação de duas fases nas conexões no ambiente; Isso é apenas uma conveniência programação simultaneamente chamar **SQLEndTran** para todas as conexões no ambiente.  
   
  (Um *2PC* geralmente é usado para confirmar transações que são distribuídas entre várias fontes de dados. Em sua primeira fase, as fontes de dados são sondadas quanto se elas podem ser confirmadas sua parte da transação. Na segunda fase, a transação é realmente confirmada em todas as fontes de dados. Se as fontes de dados de resposta na primeira etapa que eles não é possível confirmar a transação, a segunda fase não ocorrerá.)
+

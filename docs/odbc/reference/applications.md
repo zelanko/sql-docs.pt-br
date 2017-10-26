@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
@@ -59,3 +60,4 @@ Um *aplicativo* é um programa que chama a API de ODBC para acessar dados. Embor
 -   Desconectando da fonte de dados.  
   
  Como a maioria dos dados para o trabalho de acesso é feito com o SQL, a tarefa primária para as quais aplicativos usam o ODBC é enviar instruções SQL e recuperar os resultados (se houver) gerados por essas instruções. Outras tarefas para que os aplicativos usam ODBC incluem determinar e ajustando a recursos de driver e navegando o catálogo de banco de dados.
+

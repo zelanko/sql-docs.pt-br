@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  Se o aplicativo em si implementa simultaneidade otimista, ela define o atributo de instrução SQL_ATTR_CONCURRENCY como SQL_CONCUR_READ_ONLY para ler uma linha. Se ele irá comparar versões de linha e não sabe qual é a coluna de versão de linha, ele chama **SQLSpecialColumns** com a opção SQL_ROWVER para determinar o nome dessa coluna.  
   
  O aplicativo atualiza ou exclui a linha, aumentando a simultaneidade SQL_CONCUR_LOCK (para obter acesso de gravação para a linha) e executar um **atualização** ou **excluir** instrução com um **onde ** cláusula que especifica a versão ou os valores de linha tinha quando o aplicativo lê-lo. Se a linha foi alterada desde então, a instrução falhará. Se o **onde** cláusula não identifica exclusivamente a linha, a instrução também pode atualizar ou excluir outras linhas; versões de linha sempre identificam linhas, mas valores de linha identificam exclusivamente linhas somente se elas incluem a chave primária.
+

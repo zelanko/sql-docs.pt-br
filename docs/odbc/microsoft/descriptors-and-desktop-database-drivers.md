@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 67f656acd349419d7fc3d1c264985beeb36298ce
@@ -75,3 +76,4 @@ Um descritor é uma estrutura de dados que contém informações sobre os dados 
 |SQL_DESC_UNNAMED|Tem suporte|  
 |SQL_DESC_UNSIGNED|Tem suporte|  
 |SQL_DESC_UPDATABLE|Tem suporte|
+

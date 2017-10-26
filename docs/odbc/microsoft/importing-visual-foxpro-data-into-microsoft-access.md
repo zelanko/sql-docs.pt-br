@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bdf35fb9c9b7b4688aa7f5bf4173b2a6a9eefb5
@@ -45,3 +46,4 @@ Você pode importar dados armazenados em um banco de dados do Visual FoxPro para
  Agora você pode usar o Microsoft Access para manipular os dados nas tabelas do Visual FoxPro importados. Os dados que você importar são um instantâneo dos dados armazenados no Visual FoxPro; as alterações feitas nos dados importados não são enviadas para a fonte de dados do Visual FoxPro.  
   
  Se você quiser que as alterações feitas no Microsoft Access para alterar os dados na fonte de dados do Visual FoxPro, consulte [consultar e atualizar Visual FoxPro dados do Microsoft Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md).
+

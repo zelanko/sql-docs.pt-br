@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1513b2c9576d994ea7eb505c4928fd609e9498c
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. A Microsoft recomenda o uso da funcionalidade de cursor do driver.  
   
  A biblioteca de cursores não dá suporte a lotes de instruções SQL, incluindo instruções SQL para o qual o atributo da instrução SQL_ATTR_PARAMSET_SIZE for maior que 1. Se um aplicativo envia um lote de instruções SQL para a biblioteca de cursores, os resultados serão indefinidos.
+

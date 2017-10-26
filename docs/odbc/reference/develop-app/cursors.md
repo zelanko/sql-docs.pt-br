@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
@@ -42,3 +43,4 @@ Um aplicativo busca dados com um *cursor*. Um cursor é diferente de um conjunto
   
 > [!IMPORTANT]  
 >  Confirmar ou reverter uma transação, ou explicitamente chamando **SQLEndTran** ou ao operar no modo de confirmação automática, faz com que algumas fontes de dados fechar todos os cursores em todas as instruções em uma conexão. Para obter mais informações, consulte os atributos SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.
+

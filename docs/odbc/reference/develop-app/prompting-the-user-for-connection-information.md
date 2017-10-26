@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  Depois que o usuário seleciona uma fonte de dados, o Gerenciador de Driver constrói uma cadeia de caracteres de conexão especificando essa fonte de dados e passa para o driver. O driver pode pedir ao usuário informações adicionais necessárias.  
   
  As condições sob as quais o driver solicita ao usuário são controladas pelo *DriverCompletion* sinalizador; há opções para sempre solicitar, solicitar se necessário ou nunca perguntar. Para obter uma descrição completa desse sinalizador, consulte o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrição da função.
+

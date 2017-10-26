@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ Os valores de *adiada campos* não são usadas quando eles são definidos, mas o
 -   Se o campo SQL_DESC_OCTET_LENGTH_PTR de um APD tem um valor nulo e o parâmetro é uma cadeia de caracteres, o driver pressupõe que a cadeia de caracteres é terminada em nulo. Parâmetros de saída dinâmica, um valor nulo no campo impede que o driver retornando informações de comprimento. (Se o campo SQL_DESC_TYPE não indicar um parâmetro de cadeia de caracteres, o campo SQL_DESC_OCTET_LENGTH_PTR é ignorado.)  
   
  O aplicativo não deve ser desalocada ou descarte variáveis usadas para campos adiados entre a hora em que associa-os com os campos e a hora em que o driver lê ou grava.
+

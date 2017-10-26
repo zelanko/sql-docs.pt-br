@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
@@ -37,3 +38,4 @@ Muitos erros de concepção sobre ODBC existem no mundo da computação. Para o 
  É importante entender que o ODBC foi projetado para expõe os recursos de banco de dados, não suplemento-los. Assim, gravadores de aplicativo não devem esperar que usando o ODBC repentinamente transformará um banco de dados simple em um mecanismo de banco de dados relacional totalmente em destaque. Nem gravadores de driver devem implementar a funcionalidade não encontrada no banco de dados subjacente. Uma exceção a isso é que os desenvolvedores que escrevem drivers que acessem diretamente os dados de arquivo (como dados em um arquivo Xbase) são necessárias para gravar um mecanismo de banco de dados que oferece suporte a pelo menos mínimo de funcionalidade SQL. Outra exceção é que o componente ODBC do SDK do Windows, anteriormente incluída no Microsoft Data Access Components (MDAC) SDK, fornece uma biblioteca de cursor que simula cursores roláveis para drivers que implementam um determinado nível de funcionalidade.  
   
  Aplicativos que usam ODBC são responsáveis por qualquer funcionalidade do banco de dados. Por exemplo, o ODBC não é um mecanismo de junção heterogêneo, nem é um processador de transação distribuída. No entanto, porque ele é independente de DBMS, ele pode ser usado para criar essas ferramentas de banco de dados.
+

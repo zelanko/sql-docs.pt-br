@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a717f552c6c0f7aafc5968ebe8ffce5aaa14bd8
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Retorna o nome, tipo, precisão, escala e nulidade da coluna de resultados fornecido.  
   
  Para obter mais informações, consulte [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) no *referência do programador de ODBC*.
+

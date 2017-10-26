@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bb17b0ab5da8770c4622c7359c16de6876688c17
@@ -84,3 +85,4 @@ RETCODE SQLInstallerError(
  Para recuperar vários erros de uma chamada de função, um aplicativo chama **SQLInstallerError** várias vezes.  
   
  Quando não houver nenhuma informação adicional, **SQLInstallerError** retorna SQL_NO_DATA, o *pfErrorCode* argumento será indefinido, o *pcbErrorMsg* argumento for igual a 0, e o *lpszErrorMsg* argumento contém um único caractere null de terminação (a menos que o *cbErrorMsgMax* argumento for igual a 0).
+

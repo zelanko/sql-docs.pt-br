@@ -1,7 +1,7 @@
 ---
 title: Pool de recursos do Resource Governor | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2016
+ms.date: 10/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.translationtype: HT
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: e016d57148d09109f894269007d613774c4e8263
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de recursos do Administrador de Recursos
@@ -53,11 +53,19 @@ ms.lasthandoff: 06/22/2017
   
      Essas configurações são as operações de E/S mínima e máxima por segundo (IOPS) por volume de disco para um pool de recursos. Você pode usar essas configurações para controlar as E/S físicas emitidas para threads de usuário para um determinado pool de recursos. Por exemplo, o departamento de Vendas produz vários relatórios de fim de mês em lotes grandes. As consultas nesses lotes podem gerar E/Ss que podem saturar o volume de disco e afetar o desempenho de outras cargas de trabalho de prioridade mais alta no banco de dados. Para isolar essa carga de trabalho, o MIN_IOPS_PER_VOLUME é definido como 20 e o MAX_IOPS_PER_VOLUME é definido como 100 para o pool de recursos do departamento de Vendas, que controla o nível de E/S que pode emitido para a carga de trabalho.  
   
- Ao configurar CPU ou Memória, a soma dos valores MIN de todos os pools não pode ultrapassar 100% dos recursos do servidor. Além disso, ao configurar CPU ou memória, os valores MAX e CAP podem ser definidos em qualquer lugar no intervalo entre MIN e 100 por cento inclusive.  
+Ao configurar CPU ou Memória, a soma dos valores MIN de todos os pools não pode ultrapassar 100% dos recursos do servidor. Além disso, ao configurar CPU ou memória, os valores MAX e CAP podem ser definidos em qualquer lugar no intervalo entre MIN e 100 por cento inclusive.  
   
- Se um pool tiver um MIN diferente de zero definido, o valor MAX efetivo de outros pools será reajustado. O mínimo do valor MAX configurado de um pool e a soma dos valores MIN de outros pools é subtraído de 100%.  
+Se um pool tiver um MIN diferente de zero definido, o valor MAX efetivo de outros pools será reajustado. O mínimo do valor MAX configurado de um pool e a soma dos valores MIN de outros pools é subtraído de 100%.  
   
- A tabela a seguir ilustra alguns dos conceitos anteriores. A tabela mostra as configurações para o pool interno, para o pool padrão e para dois pools definidos pelo usuário. As fórmulas a seguir são usadas para calcular o % MAX efetivo e o % compartilhado.  
+A tabela a seguir ilustra alguns dos conceitos anteriores. A tabela mostra as configurações para o pool interno, para o pool padrão e para dois pools definidos pelo usuário. 
+  
+|Nome do pool|Configuração de % MIN|Configuração de % MAX|% MAX efetivo calculado|% compartilhado calculado|Comentário|  
+|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
+|internal|0|100|100|0|O % MAX efetivo e o % compartilhado não são aplicáveis ao pool interno.|  
+|padrão|0|100|30|30|O valor MAX efetivo é calculado como: min(100,100-(20+50)) = 30. O % compartilhado calculado é o MAX efetivo - MIN = 30.|  
+|Pool 1|20|100|50|30|O valor MAX efetivo é calculado como: min(100,100-50) = 50. O % compartilhado calculado é o MAX efetivo - MIN = 30.|  
+|Pool 2|50|70|70|20|O valor MAX efetivo é calculado como: min(70,100-20) = 70. O % compartilhado calculado é o MAX efetivo - MIN = 20.|  
+As fórmulas a seguir são usadas para calcular o MAX% efetivo e o percentual compartilhado na tabela acima:  
   
 -   Min(X,Y) significa o menor valor de X e Y.  
   
@@ -68,15 +76,8 @@ ms.lasthandoff: 06/22/2017
 -   % MAX efetivo = min(X,Y).  
   
 -   % compartilhado = % MAX efetivo - % MIN.  
-  
-|Nome do pool|Configuração de % MIN|Configuração de % MAX|% MAX efetivo calculado|% compartilhado calculado|Comentário|  
-|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|internal|0|100|100|0|O % MAX efetivo e o % compartilhado não são aplicáveis ao pool interno.|  
-|padrão|0|100|30|30|O valor MAX efetivo é calculado como: min(100,100-(20+50)) = 30. O % compartilhado calculado é o MAX efetivo - MIN = 30.|  
-|Pool 1|20|100|50|30|O valor MAX efetivo é calculado como: min(100,100-50) = 50. O % compartilhado calculado é o MAX efetivo - MIN = 30.|  
-|Pool 2|50|70|70|20|O valor MAX efetivo é calculado como: min(70,100-20) = 70. O % compartilhado calculado é o MAX efetivo - MIN = 20.|  
-  
- Usando a tabela anterior como exemplo, podemos ilustrar mais tarde os ajustes que são feitos quando outro pool é criado. Esse é o Pool 3 e tem o valor 5 de configuração de % MIN.  
+
+Usando a tabela anterior como exemplo, podemos ilustrar mais tarde os ajustes que são feitos quando outro pool é criado. Esse é o Pool 3 e tem o valor 5 de configuração de % MIN.  
   
 |Nome do pool|Configuração de % MIN|Configuração de % MAX|% MAX efetivo calculado|% compartilhado calculado|Comentário|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
@@ -94,29 +95,29 @@ ms.lasthandoff: 06/22/2017
   
 -   Todos os pools têm mínimo com valor zero. Todos os pools disputam os recursos disponíveis e seus tamanhos finais baseiam-se no consumo de recurso em cada pool. Outros fatores, como políticas, desempenham uma função na formação do tamanho final do pool.  
   
- O Administrador de Recursos define previamente dois pools de recursos, o interno e o padrão. Você pode adicionar outros pools.  
+O Administrador de Recursos define previamente dois pools de recursos, o interno e o padrão. Você pode adicionar outros pools.  
   
- **Pool interno**  
+**Pool interno**  
   
- O pool interno representa os recursos consumidos pelo próprio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esse pool sempre contém apenas o grupo interno, e o pool não pode ser alterado de forma nenhuma. O consumo de recursos pelo pool interno não é restrito. Todas as cargas de trabalho no pool são consideradas críticas para a função do servidor e o Administrador de Recursos permite que o pool interno pressione os outros pools, mesmo se isso significar violação dos limites definidos para os outros pools.  
+O pool interno representa os recursos consumidos pelo próprio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esse pool sempre contém apenas o grupo interno, e o pool não pode ser alterado de forma nenhuma. O consumo de recursos pelo pool interno não é restrito. Todas as cargas de trabalho no pool são consideradas críticas para a função do servidor e o Administrador de Recursos permite que o pool interno pressione os outros pools, mesmo se isso significar violação dos limites definidos para os outros pools.  
   
 > [!NOTE]  
 >  O uso de recursos do pool interno e do grupo interno não é subtraído do uso de recursos total. As porcentagens são calculadas com base nos recursos totais disponíveis.  
   
- **Pool padrão**  
+**Pool padrão**  
   
- O pool padrão é o primeiro pool definido previamente pelo usuário. Antes de qualquer configuração, o pool padrão só contém o grupo padrão. O pool padrão não pode ser criado ou descartado, mas pode ser alterado. O pool padrão pode conter grupos definidos pelo usuário além do grupo padrão. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , há um pool de recursos padrão para operações de rotina do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um pool de recursos externos padrão para processos externos, como a execução de scripts R.  
+O pool padrão é o primeiro pool definido previamente pelo usuário. Antes de qualquer configuração, o pool padrão só contém o grupo padrão. O pool padrão não pode ser criado ou descartado, mas pode ser alterado. O pool padrão pode conter grupos definidos pelo usuário além do grupo padrão. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , há um pool de recursos padrão para operações de rotina do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um pool de recursos externos padrão para processos externos, como a execução de scripts R.  
   
 > [!NOTE]  
 >  O grupo padrão pode ser alterado, mas não pode ser se movido do pool padrão.  
   
- **Pool externo**  
+**Pool externo**  
   
- Os usuários podem definir um pool externo para definir recursos para os processos externos. Para Serviços de R, isso controla especificamente o `rterm.exe`, `BxlServer.exe` e outros processos gerados por eles.  
+Os usuários podem definir um pool externo para definir recursos para os processos externos. Para Serviços de R, isso controla especificamente o `rterm.exe`, `BxlServer.exe` e outros processos gerados por eles.  
   
- **Pools de recursos definidos pelo usuário**  
+**Pools de recursos definidos pelo usuário**  
   
- Os pools de recursos definidos pelo usuário são aqueles que você cria para cargas de trabalho específicas em seu ambiente. O Administrador de Recursos fornece instruções DDL para criar, alterar e descartar pools de recursos.  
+Os pools de recursos definidos pelo usuário são aqueles que você cria para cargas de trabalho específicas em seu ambiente. O Administrador de Recursos fornece instruções DDL para criar, alterar e descartar pools de recursos.  
   
 ## <a name="resource-pool-tasks"></a>Tarefas do pool de recursos  
   

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c2ed3fb1d6a68737a894663e1b5c841d6cb1041
@@ -48,3 +49,4 @@ O tipo de dados C de um buffer é especificado pelo aplicativo. Com uma única v
     ```  
   
  O driver usa o tipo de dados C para interpretar os dados no buffer.
+

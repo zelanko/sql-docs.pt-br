@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
@@ -51,3 +52,4 @@ Depois que o nível básico de interoperabilidade for conhecido, os recursos de 
 -   **Suporte a várias consultas apenas se o driver.** Depois de se conectar a um driver, o aplicativo verifica o número de instruções ativas. O aplicativo permite que o usuário iniciar uma nova instrução quando uma já está ativa somente se o driver dá suporte a várias instruções ativas. O aplicativo tem maior funcionalidade e interoperabilidade, mas é mais difícil de implementar.  
   
 -   **Sempre dá suporte a várias consultas e emulá-los quando necessário.** Depois de se conectar a um driver, o aplicativo verifica o número de instruções ativas. O aplicativo sempre permite que o usuário iniciar uma nova instrução quando um já está ativo. Se o driver oferece suporte a apenas uma instrução ativa, o aplicativo abre uma conexão adicional para esse driver e executa a nova instrução em que a conexão. O aplicativo tem total funcionalidade e interoperabilidade alta, mas é mais difícil de implementar.
+

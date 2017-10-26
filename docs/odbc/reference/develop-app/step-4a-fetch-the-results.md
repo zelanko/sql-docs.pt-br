@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
@@ -38,3 +39,4 @@ A próxima etapa é obter os resultados, conforme mostrado na ilustração a seg
  Para obter uma descrição completa de recuperar os resultados, consulte [recuperar resultados (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md) e [recuperar resultados (Avançado)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
   
  O aplicativo agora retorna a "Etapa 3: criar e executar uma instrução SQL" para executar outra instrução na mesma transação; ou vai para a "Etapa 5: a transação de confirmação" confirmar ou reverter a transação.
+

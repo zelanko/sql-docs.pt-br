@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
@@ -33,3 +34,4 @@ Historicamente, empresas usaram um DBMS único. Todo o acesso de banco de dados 
  Um problema semelhante que fornecedores de software independentes (ISVs). Geralmente, fornecedores de software de banco de dados para minicomputadores e mainframes de gravação foram forçados a escrever uma versão de um aplicativo para cada DBMS ou escrever código específico do DBMS para cada DBMS que desejem acessar. Fornecedores de software para computadores pessoais de gravação precisavam criar rotinas de acesso a dados para cada DBMS diferente com o qual eles querem trabalhar. Geralmente, isso significa que uma grande quantidade de recursos foram gastos escrevendo e mantendo rotinas em vez de aplicativos de acesso a dados e aplicativos geralmente foram vendidos não a qualidade mas se eles podem acessar os dados em um determinado DBMS.  
   
  O que os dois conjuntos de desenvolvedores necessário foi uma maneira de acessar dados em diferentes DBMSs. O grupo de mainframe e minicomputador precisava de uma forma para mesclar dados de DBMSs diferentes em um único aplicativo, enquanto o grupo de computador pessoal necessário essa capacidade, bem como uma maneira de gravar um único aplicativo que foi independente de qualquer um DBMS. Em resumo, ambos os grupos necessários forma interoperável para acessar dados. eles necessária conectividade aberta de banco de dados.
+

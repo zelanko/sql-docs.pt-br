@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d36c443cb6bc4a189006a3d63e90deead3f11e66
@@ -30,3 +31,4 @@ Testando aplicativos interoperáveis na melhor das hipóteses é um demorado na 
  Aplicativos altamente interoperáveis não podem ser testados praticamente em todos os drivers. É o melhor que a maioria dos desenvolvedores de aplicativo pode fazer para testá-las completamente contra um pequeno número de drivers e cursorily vários outros. Drivers testados devem incluir os drivers mais populares para os mais populares DBMSs no mercado do aplicativo; Se o mercado abrange todos os DBMSs, drivers de desktop e servidor DBMSs devem ser testados.  
   
  Um dos problemas em testes de aplicativos de ODBC é o número de componentes envolvidos: o aplicativo em si, o Gerenciador de Driver, o driver, o DBMS e possivelmente o software de rede ou gateways. Aplicativos podem tornar mais fácil rastrear erros postando as mensagens de erro retornadas pelas funções ODBC por meio de **SQLGetDiagField** e **SQLGetDiagRec**. Essas mensagens de identificam o fabricante e o componente nas quais ocorrem erros. Para obter mais informações, consulte [diagnóstico](../../../odbc/reference/develop-app/diagnostics.md).
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
@@ -62,3 +63,4 @@ As regras a seguir controlam a manipulação de diagnóstica no **SQLGetDiagRec*
  Para um componente ODBC que não seja o Gerenciador de Driver:  
   
 -   Configure o SQLSTATE com base no erro nativo. Para drivers baseados em arquivo e os drivers baseados em DBMS que não usam um gateway, o driver deve definir o SQLSTATE. Para drivers baseados em DBMS que usam um gateway, o driver ou um gateway que ofereça suporte a ODBC pode definir o SQLSTATE.
+

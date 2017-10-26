@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
@@ -52,3 +53,4 @@ A tabela a seguir mostra como os tipos de dados de texto são mapeados para tipo
 |LONGCHAR|Limita o teórico na largura de uma coluna LONGCHAR no comprimento fixo ou tabela delimitada 65500K. ISAM do texto é mais provável oferecer suporte confiável até aproximadamente 32 K.|  
   
  Mais limitações nos tipos de dados podem ser encontradas no [limitações do tipo de dados](../../odbc/microsoft/data-type-limitations.md).
+

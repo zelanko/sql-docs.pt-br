@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
@@ -52,3 +53,4 @@ SQLSTATEs fornecem informações detalhadas sobre a causa de um aviso ou erro. S
  SQLSTATE HYC00 (recurso opcional não implementado) é particularmente importante porque ele é o único modo no qual um aplicativo pode determinar se um driver oferece suporte a um determinado atributo de instrução ou a conexão.  
   
  Para obter uma lista completa de SQLSTATEs e quais funções retornarão-los, consulte [códigos de erro de ODBC do apêndice a:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Para obter uma explicação detalhada sobre as condições sob as quais cada função pode retornar um SQLSTATE específico, consulte essa função.
+

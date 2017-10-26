@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b424acc8e42f94c23e793a8b811b0c2347a313a1
@@ -49,3 +50,4 @@ O identificador para a hora em que o tipo de dados SQL ODBC é:
  [d] este é o tamanho do tipo de dados C correspondente.  
   
  Quando dados SQL time são convertidos em dados de caractere C, a cadeia de caracteres resultante é a "*hh*:*mm*:*ss*" formato. Esse formato não é afetado pela configuração de país Windows®.
+

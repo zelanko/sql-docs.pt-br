@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ba39caca1a4ad37437f35918545ed54a5dd2266
@@ -70,3 +71,4 @@ _C_TYPE_TIMESTAMP|Valor de dados é uma opção válida *valor de carimbo de hor
  [g] os campos de data da estrutura de carimbo de hora são definidos como a data atual.  
   
  Quando dados de SQL de caractere são convertidos em numérico, data, hora, timestamp ou dados de intervalo C, espaços à direita e são ignorados.
+

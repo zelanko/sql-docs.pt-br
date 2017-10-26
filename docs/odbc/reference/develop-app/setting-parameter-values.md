@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
@@ -56,3 +57,4 @@ Para definir o valor de um parâmetro, o aplicativo simplesmente define o valor 
  [d] drivers sempre devem verificar esse valor para ver se ele é um valor especial, como SQL_NULL_DATA.  
   
  O que faz um driver com um valor de parâmetro em tempo de execução é dependente do driver. Se necessário, o driver converte o valor do comprimento C de byte e tipo de dados da variável de associado para o tipo de dados SQL, precisão e escala do parâmetro. Na maioria dos casos, o driver envia o valor para a fonte de dados. Em alguns casos, ele formata o valor como texto e o insere na instrução SQL antes de enviar a instrução para a fonte de dados.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d1c70c82196907fc0bd9747a8ece089d4e4ab514
@@ -32,3 +33,4 @@ Descritores explicitamente alocados podem ser liberada seja explicitamente, cham
  Descritores implicitamente alocados podem ser liberados apenas chamando **SQLDisconnect**, que descarta todas as instruções ou descritores de abrir a conexão, ou chamando **SQLFreeHandle** com um * HandleType* sql_handle_stmt para liberar um identificador de instrução e todos os descritores de alocado implicitamente associados à instrução. Um descritor alocado implicitamente não pode ser liberado chamando **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DESC.  
   
  Mesmo quando liberado, um descritor alocado implicitamente permanece válido, e **SQLGetDescField** pode ser chamado em seus campos.
+

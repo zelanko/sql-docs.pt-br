@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d21d1a9a9565ad2c0accbebb716d0b24f18f854d
@@ -37,3 +38,4 @@ Quando um aplicativo chama **SQLColAttributes** por meio de um ODBC 3*. x* drive
  Um ODBC 3*. x* driver deve oferecer suporte a todos os o ODBC 3*. x* *FieldIdentifiers* listados para **SQLColAttribute**.  
   
  Um ODBC 3*. x* driver deve oferecer suporte a SQL_COLUMN_PRECISION e SQL_DESC_PRECISION, SQL_COLUMN_SCALE e SQL_DESC_SCALE e SQL_COLUMN_LENGTH e SQL_DESC_LENGTH. Esses valores são diferentes porque a precisão, escala e comprimento são definidos de forma diferente em ODBC 3*. x* que estavam no ODBC 2.* x*. Para obter mais informações, consulte [tamanho da coluna, dígitos decimais, transferir o comprimento do octeto e tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) no Apêndice d: os tipos de dados.
+

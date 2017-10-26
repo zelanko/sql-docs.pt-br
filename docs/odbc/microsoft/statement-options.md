@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|Retorna um inteiro de 32 bits que especifica a posição da linha atual no conjunto de resultados. Obter. não é possível definir.|  
 |SQL_ROWSET_SIZE|Não pode ter mais de 4.294.967.296 linhas; No entanto, você deve ter memória virtual insuficiente no seu computador a sua solicitação.|  
 |SQL_USE_BOOKMARKS|Oferece suporte à configuração SQL_USE_BOOKMARKS para SQL_UB_ON e expõe os indicadores de comprimento fixo.|
+

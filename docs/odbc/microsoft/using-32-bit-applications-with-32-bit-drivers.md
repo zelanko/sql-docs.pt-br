@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e37da481e8068edb966b8f8ace4f129989cce990
@@ -48,3 +49,4 @@ Você pode executar aplicativos de 32 bits com drivers de 32 bits. Os aplicativo
 |Odbcad32.exe|programa de administrador ODBC de 32 bits|  
 |Odbcinst.hlp|Arquivo de Ajuda do instalador|  
 |Msvcrt40.|Biblioteca de tempo de execução do C|
+

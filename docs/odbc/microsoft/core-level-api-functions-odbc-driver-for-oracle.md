@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|Associa um nome de cursor com um identificador de instrução ativa, *hstmt*.|  
 |**SQLSetParam**|Substituído por SQLBindParameter no ODBC 2. *x*.|  
 |**SQLTransact**|Solicita uma operação de confirmação ou reversão de todas as operações ativas em todos os identificadores de instrução (hstmts) associados a uma conexão, ou para todas as conexões associadas com o identificador de ambiente, *henv*. Se uma confirmação falhar no modo manual, a transação permanecerá ativa; Você pode escolher reverter a transação ou repita a operação de confirmação. Se uma operação de confirmação falhar no modo de transação automática, a transação é revertida automaticamente. a transação não pode estar inativa.|
+

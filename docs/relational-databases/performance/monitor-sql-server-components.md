@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/03/2017
      A reprodução de eventos permite estabelecer uma cópia de teste do ambiente de banco de dados do qual os dados foram capturados e repetir os eventos capturados conforme ocorreram originalmente no sistema real. Esse recurso está disponível somente com o Distributed Replay Utility ou o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. É possível reproduzir os eventos na mesma velocidade em que ocorreram originalmente, o mais rápido possível (para estressar o sistema) ou, mais provavelmente, uma etapa por vez (para analisar o sistema após a ocorrência de cada evento). Analisando os eventos exatos em um ambiente de teste, é possível prevenir danos ao sistema de produção. Para obter mais informações, veja [Reproduzir rastreamentos](../../tools/sql-server-profiler/replay-traces.md).  
   
   
+

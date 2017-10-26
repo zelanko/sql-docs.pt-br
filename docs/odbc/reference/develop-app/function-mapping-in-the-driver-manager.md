@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
@@ -53,3 +54,4 @@ O Gerenciador de driver dá suporte a dois pontos de entrada para as funções q
  O Gerenciador de Driver está habilitado para Unicode internamente. Como resultado, o desempenho ideal é obtido por um aplicativo Unicode trabalhando com um driver de Unicode, porque o Gerenciador de Driver simplesmente passa funções Unicode por meio do driver. Quando um aplicativo ANSI está funcionando com um driver de ANSI, o Gerenciador de Driver deve converter cadeias de caracteres de ANSI em Unicode durante o processamento de algumas funções, tais como **SQLDriverConnect**. Depois de processar a função, o Gerenciador de Driver deve converter a cadeia de caracteres de Unicode novamente em ANSI antes de enviar a função para o driver de ANSI.  
   
  Um aplicativo não deve modificar ou ler seus buffers de parâmetro associado quando o driver retorna SQL_NEED_DATA ou SQL_STILL_EXECUTING. O Gerenciador de Driver deixa os buffers associados ao ANSI até que o driver retorna SQL_SUCCESS, SQL_SUCCESS_WITH_INFO ou SQL_ERROR. Um aplicativo multithread não deve ter acesso a quaisquer valores de parâmetro associados que outro thread está executando uma instrução SQL no. O Gerenciador de Driver converte os dados de Unicode em ANSI "no local", e o outro thread poderá ver dados ANSI nesses buffers enquanto o driver ainda está processando a instrução SQL. Aplicativos que associam os dados de Unicode para um driver de ANSI não devem associar duas colunas diferentes para o mesmo endereço.
+

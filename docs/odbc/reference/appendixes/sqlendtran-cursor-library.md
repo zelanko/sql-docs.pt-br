@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   Para fontes de dados que fechar cursores em limites de transação, a biblioteca de cursores fecha os cursores e exclui os caches para todas as instruções sobre a conexão.  
   
 -   Para fontes de dados que excluir instruções preparadas em limites de transação, o aplicativo deve reprepare todas as instruções preparadas na conexão antes de executar novamente a eles.
+

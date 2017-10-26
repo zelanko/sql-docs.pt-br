@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
@@ -57,3 +58,4 @@ Para usar matrizes de parâmetros, o aplicativo chama **SQLSetStmtAttr** com um 
 -   Porque o driver não interpreta o valor de *ParameterValuePtr* argumento de **SQLBindParameter** para parâmetros de dados em execução, se o aplicativo fornece um ponteiro para uma matriz, ** SQLParamData** não extrair e retornar um elemento dessa matriz para o aplicativo. Em vez disso, ele retorna que o valor escalar o aplicativo tinha fornecido. Isso significa que o valor retornado por **SQLParamData** é não é suficiente para especificar o parâmetro para o qual o aplicativo deve enviar dados; o aplicativo também deve considerar o número da linha atual.  
   
      Quando apenas alguns dos elementos de uma matriz de parâmetros são parâmetros de dados em execução, o aplicativo deve passar o endereço de uma matriz em *ParameterValuePtr* que contém elementos para todos os parâmetros. Esta matriz é interpretada normalmente para os parâmetros que não são parâmetros de dados em execução. Para os parâmetros de dados em execução, o valor que **SQLParamData** fornece para o aplicativo, que normalmente poderia ser usado para identificar os dados que o driver está solicitando esta vez, sempre é o endereço da matriz.
+

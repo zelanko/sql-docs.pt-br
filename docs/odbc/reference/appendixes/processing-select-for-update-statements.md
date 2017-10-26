@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ada17f95371246e3b43e1e9482ab9595f85a8db1
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Para interoperabilidade máxima, aplicativos devem gerar conjuntos de resultados serão atualizados com uma instrução update posicionadas executando um **Selecione para atualizar** instrução. Embora a biblioteca de cursores não exige isso, ele é necessário para a maioria das fontes de dados que oferecem suporte a instruções update posicionadas.  
   
  A biblioteca de cursores ignora as colunas a **para atualização** cláusula de um **SELECT FOR UPDATE** instrução; remove essa cláusula antes de passar a instrução para o driver. Na biblioteca de cursor, o atributo de instrução SQL_ATTR_CONCURRENCY, junto com as restrições mencionadas na seção anterior, controla se as colunas em um resultado de conjunto pode ser atualizada.
+
