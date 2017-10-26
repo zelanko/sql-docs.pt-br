@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retornar dados de um procedimento armazenado
@@ -111,7 +111,7 @@ GO
     >  O estado fechado só tem importância no momento do retorno. Por exemplo, é válido fechar um cursor durante o procedimento, reabrindo-o no procedimento posteriormente, e retornar o conjunto de resultados desse cursor para o lote, procedimento ou gatilho de chamada.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Exemplos de parâmetros de saída de cursor  
- No exemplo a seguir, é criado um procedimento que especifica um parâmetro de saída, `@currency`_`cursor` , usando o tipo de dados **cursor** . O procedimento é chamado em um lote.  
+ No exemplo a seguir, é criado um procedimento que especifica um parâmetro de saída, `@currency_cursor`, usando o tipo de dados **cursor**. O procedimento é chamado em um lote.  
   
  Primeiro, crie o procedimento que declara e, então, abra um cursor na tabela Moeda.  
   

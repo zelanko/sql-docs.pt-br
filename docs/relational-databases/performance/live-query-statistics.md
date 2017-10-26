@@ -20,19 +20,18 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7dbc7ae9097c4bd8e6083a9d392b6ae8fc562f4b
+ms.workload: On Demand
+ms.translationtype: HT
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: 32ce19a31e38ce457ae8b3ea37fa863a74a8902b
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="live-query-statistics"></a>Estatísticas de Consulta ao Vivo
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece a capacidade de exibir o plano de execução ao vivo de uma consulta ativa. Esse plano de consulta ao vivo fornece visões em tempo real sobre o processo de execução da consulta, conforme os controles são transmitidos de um operador de plano de consulta para outro. O plano de consulta ao vivo exibe o progresso geral da consulta e as estatísticas de tempo de execução do nível de operador, como o número de linhas produzido, tempo decorrido, progresso do operador, etc. Como esses dados estão disponíveis em tempo real sem a necessidade de aguardar a conclusão da consulta, essas estatísticas de execução são extremamente úteis para depurar problemas de desempenho de consulta. Este recurso está disponível do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] em diante; no entanto, ele pode funcionar com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 > [!WARNING]  
 >  Este recurso é usado principalmente para a solução de problemas. O uso desse recurso pode diminuir moderadamente o desempenho geral da consulta. Esse recurso pode ser usado com o [Depurador Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
@@ -68,7 +67,7 @@ Até o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], há duas outras maneir
 
 Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 em diante, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui uma versão leve da infraestrutura do perfil de estatísticas. Há duas maneiras de habilitar a infraestrutura de estatísticas leve que pode ser usada para exibir as estatísticas de consultas dinâmicas em outras sessões (por exemplo, no Monitor de Atividade):
 
--   Usando o sinalizador de rastreamento global 7412.  
+-   Use o sinalizador de rastreamento global 7412.  
   
  ou  
   
