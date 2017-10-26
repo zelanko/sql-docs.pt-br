@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
@@ -57,3 +58,4 @@ Parâmetros em chamadas de procedimento podem ser de entrada, entradam/saídam o
  Depois que a instrução foi executada, drivers de armazenam os valores retornados de entrada/saída e os parâmetros de saída nas variáveis associadas a esses parâmetros. Esses retornados valores não há garantia de ser definida até depois que todos os resultados retornados pelo procedimento foram buscados e **SQLMoreResults** retornou SQL_NO_DATA. Se a execução da instrução resulta em um erro, o conteúdo do buffer de parâmetro de entrada/saída ou buffers de parâmetro de saída é indefinido.  
   
  Um aplicativo chama **SQLProcedure** para determinar se um procedimento tem um valor de retorno. Ele chama **SQLProcedureColumns** para determinar o tipo (valor de retorno, entrado, entrada/saída ou saído) de cada parâmetro de procedimento.
+

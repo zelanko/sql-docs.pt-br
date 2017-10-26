@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9460f4f4bbc522fc421b7e40b261fe17a8410a09
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Quando um aplicativo chama **SQLRowCount** com a instrução associada a uma atualização posicionada ou uma instrução delete, a biblioteca de cursores retorna o número de linhas afetadas pela instrução.  
   
  Quando um aplicativo chama **SQLRowCount** após um **selecione** instrução, a biblioteca de cursores retorna -1.
+

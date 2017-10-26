@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ As regras nesta seção se aplicam para conversões que envolvem literais numér
          (2) o driver Arredonda a cadeia de caracteres em Y para uma escala apropriada (que pode ser zero também) e grava o resultado em CT.  
   
          (3) o driver não trunca nem Arredonda, mas apenas copia os primeiros caracteres de longo prazo de Y CT.
+

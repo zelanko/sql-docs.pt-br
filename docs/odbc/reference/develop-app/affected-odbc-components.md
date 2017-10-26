@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a316cf7760534530b5663782532ada9fd6990662
@@ -40,3 +41,4 @@ Compatibilidade com versões anteriores descreve como os aplicativos, o Gerencia
   
 > [!NOTE]  
 >  Um aplicativo compatível com os padrões — por exemplo, um aplicativo que tenha sido gravado de acordo com os padrões de Open Group ou ISO CLI — é garantido para trabalhar com um ODBC 3*. x* driver por meio de ODBC 3*. x*Gerenciador de driver. Presume-se que a funcionalidade que o aplicativo está usando está disponível no driver. Presume-se também que o aplicativo compatível com os padrões foi compilado com o ODBC 3*. x* arquivos de cabeçalho.
+

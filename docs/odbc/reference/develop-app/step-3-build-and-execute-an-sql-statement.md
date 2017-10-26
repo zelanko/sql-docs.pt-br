@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
@@ -42,3 +43,4 @@ A terceira etapa é criar e executar uma instrução SQL, conforme mostrado na i
 |**Selecione** ou função de catálogo|[Etapa 4a: Buscar os resultados](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**ATUALIZAÇÃO**, **excluir**, ou **inserir**|[Etapa 4b: Buscar a contagem de linhas](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |Todas as outras instruções SQL|Etapa 3: Criar e executar uma instrução SQL (Este tópico) ou [etapa 5: confirmar a transação](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+

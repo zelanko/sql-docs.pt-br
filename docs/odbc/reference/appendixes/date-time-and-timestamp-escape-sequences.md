@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0476415619db3591fd9c26d22bc615b6d90f6c2e
@@ -58,3 +59,4 @@ timestamp-separator ::=
   
 ## <a name="remarks"></a>Comentários  
  As sequências de escape literal de data, hora e carimbo de hora são suportadas se os tipos de dados de data, hora e carimbo de hora são suportados pela fonte de dados. Um aplicativo deve chamar **SQLGetTypeInfo** para determinar se esses tipos de dados têm suporte.
+

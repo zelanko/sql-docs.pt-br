@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 040e68738c189ce4711cb94e0d7c5dad258f3994
@@ -43,3 +44,4 @@ Um aplicativo pode ser conectado a qualquer número de drivers e fontes de dados
 -   [Desconectando de uma fonte de dados ou de um driver](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
 -   [Função do Gerenciador de Driver no processo de Conexão](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+

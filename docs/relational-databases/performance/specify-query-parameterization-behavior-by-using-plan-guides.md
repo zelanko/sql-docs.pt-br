@@ -23,6 +23,7 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 416a4e54d2b5ff881102b42e136a088e00e2d324
@@ -88,3 +89,4 @@ EXEC sp_create_plan_guide
 >  Guias de plano TEMPLATE correspondem a instruções de consultas enviadas em lotes que só consistem em uma única instrução. Instruções existentes em lotes com várias instruções não são qualificadas para correspondência com guias de plano TEMPLATE.  
   
   
+

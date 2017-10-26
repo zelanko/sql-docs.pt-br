@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|N/A|Opção de conversão.|  
 |TxnCap|2|""|N/A|Compatível com a transação. Se for 0, o driver informa que não dá suporte a transações. Se for 1, o driver informa que ele seja capaz de realizar transações.|  
 |UID|30|""|N/A|Nome de usuário.|
+

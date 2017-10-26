@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eefb9897492d0b6550b2f3ee80b07119e184b43
@@ -39,3 +40,4 @@ Uma cadeia de caracteres de conexão contém informações usadas para estabelec
 -   **SQLBrowseConnect**, que conclui a cadeia de caracteres de conexão iterativamente com a fonte de dados.  
   
  **SQLConnect** não usa uma cadeia de caracteres de conexão; usando **SQLConnect** é análogo ao se conectar usando uma cadeia de caracteres de conexão com exatamente três pares de palavra-chave/valor (para o nome da fonte de dados e, opcionalmente, o usuário ID e senha) .
+

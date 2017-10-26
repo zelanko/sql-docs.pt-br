@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1aded6b8187fd2e6c05e61662edc3dce8e1b7b04
@@ -61,3 +62,4 @@ Você pode usar dados do Visual FoxPro em um Microsoft Word para documentos do W
 14. No auxiliar de mala direta, a mesclagem de dados com o documento, clique em Mesclar.  
   
 15. Na caixa de diálogo mesclagem, selecione as opções que você deseja e, em seguida, clique em Mesclar.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 57dcc53769c9b5ba80f5c949436f0b3eb2ce08b1
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
  Em Oracle8, o tamanho máximo de uma coluna VARCHAR aumentou de 2000 a 4000 bytes. O software de cliente Oracle 7.3.x tem uma forma de vincular um valor de parâmetro maior que 2.000 bytes. Portanto, se você criar uma tabela com uma coluna VARCHAR do maior do que 2.000 bytes, não será possível executar com parâmetros inserções, atualizações, exclusões e consultas em relação a ela com dados que excedem o limite de bytes de 2000 do software cliente. Tanto o Driver ODBC do Oracle e o provedor OLE DB para Oracle usar consultas, atualizações, exclusões e inserções com parâmetros, eles reportará ORA-01026 erros nesse caso. Dados que esteja dentro dos limites impostos pelo software cliente Oracle funcionará. Para evitar esse limite de bytes de 2000, você deve atualizar o software cliente para Oracle8 (8.0.4.1.1c ou superior).
+

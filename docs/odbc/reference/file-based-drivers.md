@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
@@ -33,3 +34,4 @@ Drivers baseados em arquivo são usadas com fontes de dados como dBASE que não 
  A ilustração a seguir mostra duas configurações diferentes de drivers baseados em arquivo, um no qual os dados residem localmente e o outro no qual ele reside em um servidor de arquivos de rede.  
   
  ![Duas configurações de arquivo &#45; drivers com base](../../odbc/reference/media/pr06.gif "pr06")
+

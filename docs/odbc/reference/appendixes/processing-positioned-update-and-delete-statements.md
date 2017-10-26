@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   Se o driver oferece suporte a apenas uma instrução ativa, buscas de biblioteca de cursor o restante do resultado definido e refetches, em seguida, o conjunto de linhas atual de seu cache antes de executar um posicionadas instrução update ou delete. Se o aplicativo chama uma função que retorna metadados em um conjunto de resultados (por exemplo, **SQLNumResultCols** ou **SQLDescribeCol**), a biblioteca de cursores retornará um erro.  
   
 -   Se uma atualização posicionada ou uma instrução delete for executada em uma coluna de uma tabela que inclui uma coluna de carimbo de hora que é atualizada automaticamente sempre que uma atualização é executada, todas as demais atualização posicionada ou instruções delete irá falhar se a coluna de carimbo de hora associado. Isso ocorre porque pesquisado update ou delete instrução que cria a biblioteca de cursores não identifica com precisão a linha a ser atualizada. O valor na instrução pesquisada para a coluna de carimbo de hora não corresponderá o valor atualizado automaticamente da coluna de carimbo de hora.
+

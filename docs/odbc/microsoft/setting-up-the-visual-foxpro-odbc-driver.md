@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
@@ -39,3 +40,4 @@ Para obter informações sobre como baixar e instalar o driver ODBC do Visual Fo
 -   Remova todos os componentes instalados anteriormente.  
   
  Depois de instalar o driver em seu sistema, o programa de instalação reconhece os componentes de driver instalado e apresenta as caixas de diálogo adicionais que permitem que você altere a configuração do driver.
+

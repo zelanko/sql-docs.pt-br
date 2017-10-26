@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d1ecc435a6b62d75527292ab8dc098e8cb121627
@@ -30,3 +31,4 @@ Quando o aplicativo define o campo SQL_DESC_DATA_PTR de um registro de descritor
  Se o descritor é um APD, cada registro associado constitui um parâmetro associado. Para parâmetros de entrada, o aplicativo deve associar um parâmetro para cada marcador de parâmetro dinâmico na instrução SQL antes de executar a instrução. Parâmetros de saída, o aplicativo não precisa associar o parâmetro.  
   
  Se o descritor é um descartar, que descreve uma linha de dados do banco de dados, cada registro associado constitui uma coluna associada.
+

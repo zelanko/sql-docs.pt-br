@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
@@ -51,3 +52,4 @@ Os exemplos a seguir ilustram como o driver converte dados de C para dados do SQ
  [c] o os números na lista são armazenados nos campos da estrutura de SQL_DATE_STRUCT.  
   
  [d] o os números na lista são armazenados nos campos da estrutura de SQL_TIMESTAMP_STRUCT.
+

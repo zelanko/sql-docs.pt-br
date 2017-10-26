@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 -   **Adicionar, modificar ou excluir fontes de dados silenciosamente.** O programa chamar administração **SQLConfigDataSource** na DLL do instalador e passa-uma janela nula manipular, o nome de uma fonte de dados para adicionar, modificar ou excluir e uma lista de valores para o registro. As chamadas DLL do instalador **ConfigDSN** na configuração do driver DLL, na verdade, adicionar, modificar ou excluir a fonte de dados.  
   
 -   **Adicionar, modificar ou excluir uma fonte de dados padrão.** A fonte de dados padrão é o mesmo que qualquer outra fonte de dados, exceto que o seu nome é o padrão. Ele é adicionado, modificado ou excluído da mesma maneira como qualquer outra fonte de dados.
+

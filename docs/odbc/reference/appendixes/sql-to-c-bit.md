@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5432e5f4a47dde5b3ad64059a8f2eb1de9ba1691
@@ -44,3 +45,4 @@ O identificador para o tipo de dados SQL ODBC bits é:
  [b] este é o tamanho do tipo de dados C correspondente.  
   
  Quando os bits de dados do SQL são convertidos em dados de caractere C, os valores possíveis são "0" e "1".
+

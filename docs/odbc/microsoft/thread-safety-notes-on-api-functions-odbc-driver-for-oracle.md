@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc4a28976342768f5c7b2d1cfe8a1d3be6544306
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  O Microsoft ODBC Driver for Oracle é thread-safe; No entanto, a Oracle não permite várias instruções simultâneas em uma única conexão. O driver impõe essa restrição. Em outras palavras, em aplicativos multissegmentados, embora qualquer thread pode chamar o Driver ODBC do Oracle a qualquer momento, o driver de blocos de qualquer outro segmento do driver na mesma conexão até que o thread original deixa o driver.  
   
  O driver não bloqueia se houver duas instruções de duas conexões diferentes. No entanto, se houver uma conexão única com duas instruções, há potencial de bloqueio.
+

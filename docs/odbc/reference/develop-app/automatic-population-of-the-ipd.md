@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d637ddfebc0563ed2591740498d519f91e34321e
@@ -35,3 +36,4 @@ Alguns drivers são capazes de definir os campos do IPD depois que uma consulta 
  Quando a população automática é suportada e habilitada, o driver preenche os campos do IPD depois que uma instrução SQL que contém os marcadores de parâmetro foi preparada por uma chamada para **SQLPrepare**. Um aplicativo pode recuperar essas informações chamando **SQLGetDescField** ou **SQLGetDescRec**, ou **SQLDescribeParam**. O aplicativo pode usar as informações para associar o buffer de aplicativo mais apropriado para um parâmetro ou especificar uma conversão de dados para ele.  
   
  Preenchimento automático do IPD pode produzir uma penalidade de desempenho. Um aplicativo pode desativá-lo, redefinindo o atributo da instrução SQL_ATTR_ENABLE_AUTO_IPD para SQL_FALSE (o valor padrão).
+

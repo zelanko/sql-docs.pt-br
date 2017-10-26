@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06e496e3999904a019f481374598a9a774729ab3
@@ -31,3 +32,4 @@ O aplicativo e a fonte de dados geralmente armazenam dados em conjuntos de carac
  A opção de conversão é um valor que pode ser interpretado apenas por uma DLL de conversão específica. Por exemplo, se a conversão DLL converte entre diferentes páginas de código, a opção pode fornecer os números das páginas de código usadas pelo aplicativo e a fonte de dados. Não há nenhum requisito para uma DLL de conversão para usar uma opção de conversão.  
   
  Depois de uma tradução que dll foi especificado, o driver carrega e chamá-lo para converter todos os dados que fluem entre o aplicativo e a fonte de dados. Isso inclui todas as instruções SQL e parâmetros de caracteres que está sendo enviados para a fonte de dados e todos os resultados de caractere, os metadados de caractere, como nomes de coluna e mensagens de erro são recuperados da fonte de dados. Dados de Conexão não são traduzidos, porque a DLL de conversão não é carregado após o aplicativo conectou-se à fonte de dados.
+

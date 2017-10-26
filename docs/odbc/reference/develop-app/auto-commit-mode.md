@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9b6d354657578f7188481a2e7ff7566f725c80
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Se o DBMS subjacente não oferece suporte a transações de modo de confirmação automática, o driver pode emulá-los ao confirmar manualmente cada instrução SQL, conforme ele é executado.  
   
  Se um lote de instruções SQL é executado em modo de confirmação automática, é específico da fonte de dados quando as instruções no lote são confirmadas. Elas podem ser confirmadas à medida que eles são executados, ou como um todo depois que todo o lote foi executado. Algumas fontes de dados podem oferecer suporte a ambos os comportamentos e podem fornecer uma maneira de selecionar um ou os outros. Em particular, se ocorrer um erro no meio do lote, ele é específico da fonte de dados se as instruções executadas já estão confirmadas ou revertidas. Dessa forma, aplicativos interoperáveis que usam lotes e exigem a ser confirmada ou revertida como um todo devem executar lotes apenas no modo de confirmação manual.
+

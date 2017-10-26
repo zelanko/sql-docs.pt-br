@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
@@ -93,3 +94,4 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  Para determinar se um driver suporta as sequências de escape ODBC para literais de intervalo, um aplicativo chama **SQLGetTypeInfo**. Se a fonte de dados oferece suporte a um tipo de dados de intervalo de data e hora, ele também deve oferecer suporte a sequência de escape correspondente.  
   
  Fontes de dados também podem dar suporte as literais datetime definidos na especificação do ANSI SQL-92, que são diferentes das sequências de escape ODBC para literais de intervalo de data e hora. Para determinar se uma fonte de dados oferece suporte as literais de ANSI, um aplicativo chama **SQLGetInfo** com a opção SQL_ANSI_SQL_DATETIME_LITERALS.
+

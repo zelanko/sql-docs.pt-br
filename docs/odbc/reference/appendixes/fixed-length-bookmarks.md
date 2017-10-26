@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 279b6a3c1f8eb2f1eea5bba35ee10f0a6643fb49
@@ -32,3 +33,4 @@ Se um ODBC 3*. x* driver deve funcionar com um ODBC 2.* x* aplicativo que usa in
 -   SQL_UB_ON como um valor para a opção de instrução SQL_USE_BOOKMARKS. (SQL_UB_ON foi preterido no ODBC 3*. x*.)  
   
 -   A opção de instrução SQL_GET_BOOKMARK.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
@@ -54,3 +55,4 @@ Um descritor é usado para descrever um dos seguintes:
  Um descritor pode executar diferentes funções. Instruções diferentes podem compartilhar qualquer descritor que o aplicativo aloca explicitamente. Um descritor de linha em uma instrução pode servir como um descritor de parâmetro em outra instrução.  
   
  Sempre é conhecido se um determinado descritor é um descritor de aplicativo ou um descritor de implementação, mesmo se o descritor ainda não foi usado em uma operação de banco de dados. Para os descritores de que a implementação aloca implicitamente, a implementação registra a linha predefinida em relação ao identificador de instrução. Nenhum descritor que o aplicativo aloca chamando **SQLAllocHandle** é um descritor de aplicativo.
+

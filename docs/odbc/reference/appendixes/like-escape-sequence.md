@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678f2f8f720823ef5658ba7ee1e1391bbebc1c50
@@ -46,3 +47,4 @@ ODBC usa sequências de escape para a cláusula LIKE. A sintaxe dessa sequência
  *Terminador de esc ODBC* :: =}  
   
  Para determinar se o driver suporta o escape LIKE sequência, um aplicativo pode chamar **SQLGetInfo** com o tipo de informação SQL_LIKE_ESCAPE_CLAUSE.
+

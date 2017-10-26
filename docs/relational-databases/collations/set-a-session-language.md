@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 21c986a0f7e0341826697bb50eb26fb93a1031df
@@ -59,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  Para ADO.NET, use o parâmetro **Idioma Atual** do objeto **ConnectionString** . Para obter mais informações, consulte a documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access Components (MDAC).  
   
   
+

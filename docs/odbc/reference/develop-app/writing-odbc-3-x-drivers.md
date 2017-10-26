@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um apl
  [5] em determinadas circunstâncias, drivers talvez seja necessário dar suporte a essa função. Para obter mais informações, consulte a página de referência desta função.  
   
  [6], o driver pode escolher para dar suporte a **SQLGetFunctions** se o conjunto de funções que o driver dá suporte varia de uma conexão para a conexão.
+

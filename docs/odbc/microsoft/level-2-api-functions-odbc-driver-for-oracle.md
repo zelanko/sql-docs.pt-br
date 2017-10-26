@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Retorna uma lista de procedimentos na fonte de dados. Para procedimentos de pacotes, a coluna de nome de procedimento está em *packagename.procedurename* formato.<br /><br /> Como o Oracle não fornece uma forma de distinguir empacotados procedimentos de funções empacotadas, o driver retorna SQL_PT_UNKNOWN para a coluna PROCEDURE_TYPE.|  
 |**SQLSetPos**|Define a posição do cursor em um conjunto de linhas. Você pode usar **SQLSetPos** com **SQLGetData** para recuperar linhas de colunas desassociadas depois posicionando o cursor para uma linha específica no conjunto de linhas. Linhas adicionadas ao conjunto de resultados usando *fOption* SQL_ADD são adicionados após a última linha no conjunto de resultados.|  
 |**SQLSetScrollOptions**|Define as opções que controlam o comportamento de cursores associado com um identificador de instrução, hstmt. Para obter detalhes, consulte [combinações de simultaneidade e o tipo de Cursor](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
@@ -72,3 +73,4 @@ Os identificadores para os tipos de dados ODBC C numéricos são:
  [b] para o caso de "n / a", um driver pode opcionalmente retornar SQL_SUCCESS_WITH_INFO e 01S07 quando há um truncamento fracionário.  
   
  O driver ignora o valor de comprimento/indicador ao converter dados de tipos de dados numéricos do C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados numérico do C. O valor de comprimento/indicador é passado a *StrLen_or_Ind* argumento **SQLPutData** e no buffer especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**. O buffer de dados é especificado com o *DataPtr* argumento na **SQLPutData** e *ParameterValuePtr* argumento **SQLBindParameter**.
+

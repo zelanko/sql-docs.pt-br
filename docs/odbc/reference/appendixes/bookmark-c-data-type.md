@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1013d3307b1fea0d5460c2dce1caf10556804233
@@ -39,3 +40,4 @@ O tipo de dados C de indicador permite que um aplicativo recupere um indicador. 
 |-----------------------|--------------------|------------|  
 |SQL_C_BOOKMARK<br />(Preterido)|INDICADOR|int longo não assinado|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|
+

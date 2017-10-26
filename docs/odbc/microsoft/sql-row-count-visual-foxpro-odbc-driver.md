@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 21d250dab0dd2407cebdbb0626b914867e35288d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Retorna o número de linhas afetadas pela última [atualização](../../odbc/microsoft/update-sql-command.md), [inserir](../../odbc/microsoft/insert-sql-command.md), ou [excluir](../../odbc/microsoft/delete-sql-command.md) instrução.  
   
  Para obter mais informações, consulte [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md) no *referência do programador de ODBC*.
+

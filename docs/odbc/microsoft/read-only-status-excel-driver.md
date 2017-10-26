@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 641c6b6324ccb0f12cb5b28bd25b06dc0fcc5029
@@ -30,3 +31,4 @@ Quando o driver do Microsoft Excel é usado, as tabelas de origem de dados abert
  Quando um aplicativo executa um comando Salvar como em dados do Microsoft Excel através do driver do Microsoft Excel, o aplicativo deve criar uma nova tabela e insira os dados sejam salvos na nova tabela. Inserções resultam em um acrescentar à tabela. Nenhuma outra operação pode ser executada na tabela até que ele é fechado e reaberto. Quando a tabela for fechada, nenhuma inserção subsequente pode ser executada porque a tabela, em seguida, é uma tabela somente leitura.  
   
  É possível atualizar os valores ao usar o driver do Microsoft Excel, mas uma linha não pode ser excluída de uma tabela com base em uma planilha do Microsoft Excel, para que as atualizações são considerados não oferecerá suporte para o driver do Microsoft Excel.
+

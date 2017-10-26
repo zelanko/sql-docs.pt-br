@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3b509830bbba4405269a766e95ce7fa585ff7a4
@@ -36,3 +37,4 @@ Você pode usar o Driver ODBC do Microsoft Visual FoxPro para acessar dados do V
 |Usar o Microsoft Access|[Consultar e atualizar dados do Visual FoxPro do Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)<br /><br /> [Importando dados do Visual FoxPro para Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)|  
 |Usar o Microsoft Excel|[Acessando uma fonte dados do Visual FoxPro do Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)<br /><br /> [Importando dados para o Microsoft Excel de um banco de dados do Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)|  
 |Usar o Microsoft Word|[Criando rótulos de correspondência no Microsoft Word usando dados do Visual FoxPro](../../odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md)|
+

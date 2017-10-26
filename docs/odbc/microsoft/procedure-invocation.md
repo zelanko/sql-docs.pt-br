@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd42836285c29e36e6bb64ebe594df570876ff6e
@@ -30,3 +31,4 @@ Quando o driver do Microsoft Access for usado, os procedimentos podem ser chamad
  Se um nome de procedimento inclui um traço, o nome deve ser delimitado por aspas back (').  
   
  Uma consulta parametrizada pode ser chamada usando a instrução anterior.
+

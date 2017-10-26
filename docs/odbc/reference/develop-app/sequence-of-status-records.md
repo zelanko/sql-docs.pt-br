@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
@@ -35,3 +36,4 @@ Se dois ou mais registros de status são retornados, o Gerenciador de Driver e o
 -   **Avisos** registros de Status que descreve os avisos (classe 01) têm a classificação mais baixa. Se dois ou mais registros descrevem a mesma condição de aviso, aviso SQLSTATEs definidas pela especificação de CLI do grupo aberto outrank SQLSTATEs definidas pelo ODBC e definidos pelo driver.  
   
  Se houver dois ou mais registros com classificação mais alta, não está definido qual for o primeiro registro. A ordem de todos os outros registros é indefinida. Em particular, porque podem aparecer antes de erros, aplicativos devem verificar todos os registros de status quando uma função retorna um valor diferente de SQL_SUCCESS.
+

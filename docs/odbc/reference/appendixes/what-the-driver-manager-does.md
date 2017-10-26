@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
@@ -42,3 +43,4 @@ A tabela a seguir resume como o ODBC 3*. x* Gerenciador de Driver mapeia chamada
 |**SQLFetchScroll**|Retorna o conjunto de linhas especificado. A seguir estão os detalhes de implementação:<br /><br /> -Quando um aplicativo chama **SQLFetchScroll** em um ODBC 2.* x* driver, o ODBC 3*. x* Gerenciador de Driver mapeia para **SQLExtendedFetch**. Ele usa o valor armazenado em cache do atributo de instrução SQL_ATTR_ROW_STATUS_PTR para o *RowStatusArray* argumento e o valor armazenado em cache do atributo SQL_ATTR_ROWS_FETCHED_PTR de instrução para o *RowCountPtr* argumento. Se o *FetchOrientation* argumento **SQLFetchScroll** é SQL_FETCH_BOOKMARK, ele usa o valor armazenado em cache do atributo de instrução SQL_ATTR_FETCH_BOOKMARK_PTR para o *FetchOffset * argumento e retorna um erro se o *FetchOffset* argumento de **SQLFetchScroll** é não em 0.<br />-Quando um aplicativo chama isso em um ODBC 3*. x* driver, o ODBC 3*. x* Gerenciador de Driver passará a chamada para o driver.|  
 |**SQLSetPos**|Executa várias operações posicionadas. O ODBC 3*. x* Gerenciador de Driver passa chamadas para **SQLSetPos** para o driver, independentemente da versão do driver.|  
 |**SQLSetScrollOptions**|Quando o Gerenciador de Driver mapeia **SQLSetScrollOptions** para um aplicativo trabalhando com um ODBC 3*. x* driver não oferece suporte a **SQLSetScrollOptions**, o Driver Manager define a opção de instrução SQL_ROWSET_SIZE, não o atributo SQL_ATTR_ROW_ARRAY_SIZE instrução para o *RowsetSize* argumento **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** não pode ser usado por um aplicativo ao buscar várias linhas por uma chamada para **SQLFetch** ou **SQLFetchScroll**. Ele pode ser usado somente quando a busca de várias linhas por uma chamada para **SQLExtendedFetch**.|
+

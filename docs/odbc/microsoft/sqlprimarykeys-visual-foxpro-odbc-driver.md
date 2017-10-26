@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8906d8672c44eaf6a2e8cc6fbfc63189a4dcbda2
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   Funciona apenas para fontes de dados que são [bancos de dados](../../odbc/microsoft/visual-foxpro-terminology.md). O driver retorna "Driver não dá suporte a essa função" o erro se a fonte de dados é um diretório de [tabelas livres](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
  Para obter mais informações, consulte [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) no *referência do programador de ODBC*.
+

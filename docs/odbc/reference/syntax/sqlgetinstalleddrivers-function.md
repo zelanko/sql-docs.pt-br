@@ -23,6 +23,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d2cd00f7306c7c9b6d60ff71d051b4709d7b3889
@@ -78,3 +79,4 @@ BOOL SQLGetInstalledDrivers(
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
 |Retornando atributos e descrições de driver|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|
+

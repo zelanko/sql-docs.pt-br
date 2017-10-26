@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9439904b0f715c1c35b54106113021753abd669b
@@ -33,3 +34,4 @@ Esta seção contém tópicos que abordam como desenvolver um driver ODBC.
 -   [Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)  
   
 -   [Notificação de conclusão da função assíncrona](../../../odbc/reference/develop-driver/notification-of-asynchronous-function-completion.md)
+

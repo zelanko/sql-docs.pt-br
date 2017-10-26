@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f3fa7491ea354cc616d6b58de17e6fa82c785a3a
@@ -48,3 +49,4 @@ A tabela a seguir lista funções de manipulação de cadeia de caracteres ODBC 
 |ESPAÇO *(contagem)*||  
 |Subcadeia de caracteres *(string_exp, início, comprimento)*|SUBSTR *(string_exp, início, comprimento)*|  
 |UCASE *(string_exp)*|SUPERIOR *(string_exp)*|
+

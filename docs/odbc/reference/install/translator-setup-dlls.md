@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dc2fa42c2535d794dcf93160bf79b71d8c226640
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  A instalação do tradutor DLL contém o **ConfigTranslator** função, que retorna a opção padrão para um conversor. Se necessário, ele solicita ao usuário essas informações. Para obter uma descrição completa dessa função, consulte [referência de API de DLL de instalação](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
   
  A instalação do tradutor DLL é gravado pelo desenvolvedor do conversor. Ele pode fazer parte do tradutor DLL ou uma DLL separada.
+

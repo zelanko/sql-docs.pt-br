@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1bc2426cdceebcd3537815e9bb1238eba160729f
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |Banco de dados do sistema|O caminho completo do banco de dados Microsoft Access sistema a ser usado com o banco de dados do Microsoft Access que você deseja acessar.<br /><br /> Clique o **banco de dados do sistema** para selecionar o banco de dados do sistema a ser usado. O driver ODBC Microsoft Access solicita ao usuário um nome e uma senha. O nome padrão é Admin e a senha padrão do Microsoft Access para o usuário administrador é uma cadeia de caracteres vazia.<br /><br /> Para aumentar a segurança de seu banco de dados do Microsoft Access, crie um novo usuário para substituir o usuário administrador e excluir o usuário administrador ou alterar os objetos aos quais o usuário administrador tem acesso.|Para definir essa opção dinamicamente, use o **SYSTEMDB** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Threads|O número de threads de plano de fundo para o mecanismo de usar. Para o driver do Microsoft Access, esse valor padrão é 3, mas pode ser alterado. O usuário pode desejar aumentar o número de threads se houver uma grande quantidade de atividade no banco de dados.<br /><br /> Essa opção é incluída no **definir opções avançadas** caixa de diálogo para o driver do Microsoft Access.|Para definir essa opção dinamicamente, use o **THREADS** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |UserCommitSync|Determina se o driver do Microsoft Access executará um transações explícitas definidas pelo usuário assincronamente. Esse valor é definido inicialmente como "Sim", que significa que o driver do Microsoft Access aguardará confirmações em uma transação definida pelo usuário para ser concluída.<br /><br /> Definir essa opção como False pode ter consequências imprevisíveis em um ambiente multiusuário.|Para definir essa opção dinamicamente, use o **USERCOMMITSYNC** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
@@ -50,3 +51,4 @@ O comprimento de octetos de transferência de uma coluna é o número máximo de
 |SQL_GUID|16 (o tamanho da estrutura de GUID).|  
   
  [a] se o driver não pode determinar o comprimento de coluna ou parâmetro para tipos de variáveis, ela retornará SQL_NO_TOTAL.
+

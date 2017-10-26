@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd82106bf81b5885f74adf6c1759883110ea913
@@ -46,3 +47,4 @@ Você pode importar dados do Visual FoxPro em sua planilha do Microsoft Excel se
 5.  Selecione campos para a sua consulta arrastando-os da tabela para a inferior metade do designer.  
   
 6.  Feche o Microsoft Query. Os dados que você selecionou são importados em sua planilha do Microsoft Excel.
+

@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
@@ -45,3 +46,4 @@ O Driver ODBC do Microsoft Visual FoxPro dá suporte a:
   
 ## <a name="sort-order"></a>ordem de classificação  
  Ordens de classificação incorporam as regras de classificação de diferentes *localidade*s, permitindo que você classifique os dados nesses idiomas corretamente. No Visual FoxPro, a ordem de classificação atual determina os resultados das comparações de expressão de caractere e a ordem na qual os registros aparecem no indexados ou classificados tabelas.
+

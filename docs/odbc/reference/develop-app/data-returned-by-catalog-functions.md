@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
@@ -42,3 +43,4 @@ SELECT "Customer Name" FROM "Accounts Payable"
  As funções de catálogo são com base em um modelo de autorização do tipo SQL na qual uma conexão é feita com base em um nome de usuário e senha, e apenas os dados para o qual o usuário tem um privilégio são retornados. Proteção por senha de arquivos individuais, que não se ajustem a esse modelo, é definido pelo driver.  
   
  Os conjuntos de resultados retornados pelas funções de catálogo quase nunca são atualizáveis e aplicativos não devem esperar poder alterar a estrutura do banco de dados, alterando os dados nesses conjuntos de resultados.
+

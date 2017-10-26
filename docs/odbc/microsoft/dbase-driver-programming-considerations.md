@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ddcc26d47c640562b66fc321c6cd8424e955412a
@@ -39,3 +40,4 @@ Esta seção contém os tópicos a seguir.
   
 > [!NOTE]  
 >  Acessar arquivos do dBASE ISAM por meio de Drivers de banco de dados do ODBC Desktop requer a instalação do BDE.
+

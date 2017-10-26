@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 464ba066af26c84c35f178b1a008d2e10a852119
@@ -66,3 +67,4 @@ Drivers ODBC podem ser classificados da seguinte maneira:
   
 > [!NOTE]  
 >  drivers ODBC de 16 bits não funcionarão diretamente com o ODBC 3. *x* Gerenciador de Driver. No entanto, é possível para os drivers de 16 bits trabalhar com o Gerenciador de Driver ODBC 2.0, que é subsequentemente conversões até a 3. *x* Gerenciador de Driver.
+

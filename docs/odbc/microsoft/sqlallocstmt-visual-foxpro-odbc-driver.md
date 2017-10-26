@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a80ef1756ca2d106b7a786609fb3bbce9b9539e4
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Aloca memória para um identificador de instrução e associa o identificador de instrução com a conexão especificada por *hdbc*. O Gerenciador de Driver passa essa chamada para o driver, que aloca a memória para o *hstmt* estrutura.  
   
  Para obter mais informações, consulte [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md) no *referência do programador de ODBC*.
+

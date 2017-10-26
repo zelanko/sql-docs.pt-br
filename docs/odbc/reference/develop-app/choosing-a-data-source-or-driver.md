@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
@@ -46,3 +47,4 @@ A fonte de dados ou driver usado por um aplicativo às vezes é embutido no apli
 -   **Acessando um DBMS específico em uma única vez.** Por exemplo, uma planilha que recupera dados chamando funções ODBC pode conter o **DRIVER** palavra-chave para identificar um driver específico. Como o nome do driver é significativo para todos os usuários que têm esse driver, a planilha pode ser passada entre os usuários. Se a planilha contiver um nome de fonte de dados, cada usuário teria que criar a mesma fonte de dados para usar a planilha.  
   
 -   **O sistema para todos os bancos de dados acessíveis para um determinado driver de navegação.** Para obter mais informações, consulte [conectando com SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md), mais adiante nesta seção.
+

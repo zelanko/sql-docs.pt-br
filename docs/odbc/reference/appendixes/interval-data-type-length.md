@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e642685b670fa872c1a34d2d10fed815e5a6fa7e
@@ -37,3 +38,4 @@ As regras a seguir são usadas para determinar o comprimento de um tipo de dados
 -   Um mais a precisão de segundos explícita ou implícita. Se a precisão de segundos não for especificada, o valor padrão é 6.  
   
  Valores de comprimento de coluna específica para cada tipo de dados de intervalo estão contidos no [tamanho da coluna](../../../odbc/reference/appendixes/column-size.md).
+

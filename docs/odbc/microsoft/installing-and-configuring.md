@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ef53f3e39116353e1b9f9a033c872b41e8225edf
@@ -42,3 +43,4 @@ Para baixar o Driver de ODBC do Visual FoxPro, consulte [o site de download do V
 -   [Caixa de diálogo da instalação do Visual FoxPro do ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
  Para baixar o driver, consulte [o site de download do Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318).
+

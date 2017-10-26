@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e64c33ea666d3df06b220a8c31f67e3606df7ffa
@@ -60,3 +61,4 @@ Esta seção contém informações sobre como desenvolver aplicativos que usam a
   
 ## <a name="see-also"></a>Consulte também  
  [Referência do programador ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)
+

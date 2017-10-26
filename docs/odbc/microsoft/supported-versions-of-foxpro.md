@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 425821e0de310c28f18796cb74308600cd91476f
@@ -43,3 +44,4 @@ Você pode usar o Microsoft® Visual FoxPro® ODBC Driver para acessar dados arm
  Para obter mais informações sobre como se conectar a uma fonte de dados, consulte [adicionando uma fonte de dados Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
  Para baixar o driver, consulte [o site de download do Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318).
+

@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
@@ -46,3 +47,4 @@ Antes de discutir as técnicas para usar o SQL por meio de programação, é nec
 5.  O DBMS executa a instrução, executando o plano de acesso.  
   
  As etapas usadas para processar uma instrução SQL variam na quantidade precisam de acesso de banco de dados e a quantidade de tempo. A análise de uma instrução SQL não requer acesso ao banco de dados e pode ser feito rapidamente. Otimização, por outro lado, é um muito intensivo de CPU processar e requer acesso ao catálogo do sistema. Para uma consulta complexa, várias tabelas, o otimizador pode explorar milhares de diferentes maneiras de executar a mesma consulta. No entanto, o custo da execução da consulta ineficiente geralmente é tão alto que o tempo gasto na otimização mais de é recuperado em tempo de execução de consulta maior. Isso é ainda mais significativo se o mesmo plano otimizado de acesso pode ser usado repetidamente para realizar consultas repetitivas.
+

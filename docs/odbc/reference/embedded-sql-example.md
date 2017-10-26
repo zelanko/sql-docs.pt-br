@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
@@ -77,3 +78,4 @@ bad_number:
 -   **Tratamento de erros** o DBMS relata erros de tempo de execução do programa de aplicativos por meio de uma área de comunicações do SQL, ou SQLCA. No exemplo de código anterior, a primeira instrução SQL inserida é incluir SQLCA. Isso informa o pré-compilador para incluir a estrutura SQLCA no programa. Isso é necessário sempre que o programa processará os erros retornados pelo DBMS. WHENEVER... Instrução GOTO informa o pré-compilador para gerar o código de tratamento de erros que ramificações para um rótulo específico quando um erro ocorre.  
   
 -   **Singleton selecione** a instrução usada para retornar os dados é uma instrução SELECT singleton; ou seja, ele retorna somente uma única linha de dados. Portanto, o exemplo de código não declarar ou usar cursores.
+

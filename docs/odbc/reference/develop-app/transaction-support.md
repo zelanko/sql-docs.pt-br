@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4b7b0b2282d287f012272e9d34a4fbf3e23f7e0
@@ -31,3 +32,4 @@ O grau de suporte para transações é definido pelo driver. ODBC foi projetado 
  Se o driver não oferece suporte a transações, mas o aplicativo tem a capacidade de (usando uma API que não sejam ODBC) para bloquear e desbloquear dados, aplicativos podem obter suporte a transações, bloqueando e desbloqueando registros e tabelas conforme necessário. Para implementar o exemplo de transferência de conta, o aplicativo seria bloquear os registros de ambas as contas, copie os valores atuais, débito a primeira conta, a segunda conta de crédito e desbloquear os registros. Se todas as etapas de falharam, o aplicativo deve redefinir as contas usando as cópias.  
   
  Fontes de dados mesmo que oferecem suporte a transações podem não ser capazes de dar suporte a mais de uma transação de cada vez dentro de um ambiente específico. Aplicativos chamam **SQLGetInfo** com a opção SQL_MULTIPLE_ACTIVE_TXN para determinar se uma fonte de dados pode dar suporte a transações ativas simultâneas em mais de uma conexão no mesmo ambiente. Como há uma transação por conexão, isso só é interessante para aplicativos que têm várias conexões com a mesma fonte de dados.
+

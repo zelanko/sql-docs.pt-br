@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9d3585f6e1be7a3f9451231004979321202d7852
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="arithmetic-errors"></a>Erros de aritmética
 O driver ODBC avalia a cláusula WHERE em uma instrução SELECT como ele busca cada linha. Se uma linha contiver um valor que causa um erro aritmético, como o estouro de divisão por zero ou numérico, o driver retorna todas as linhas, mas retorna erros para colunas com erros de aritmética. Ao inserir ou atualizar, no entanto, o driver ODBC para inserir ou atualizar dados quando o primeiro erro aritmético é encontrado.
+

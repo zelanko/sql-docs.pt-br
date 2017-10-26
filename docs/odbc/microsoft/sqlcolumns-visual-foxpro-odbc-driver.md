@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82bcebce57cc6034ad629256c1b8ce27038d6ae0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Para uma tabela, cria um conjunto de resultados que é a lista de coluna para a tabela ou tabelas especificadas.  
   
  Para obter mais informações, consulte [SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md) no *referência do programador de ODBC*.
+

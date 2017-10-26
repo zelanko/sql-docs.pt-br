@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
@@ -42,3 +43,4 @@ Um *instrução* é mais fácil pensar como uma instrução SQL, como **selecion
  Identificadores de instrução são usados na maioria das funções ODBC. Em especial, eles são usados nas funções para associar parâmetros e colunas do conjunto de resultados (**SQLBindParameter** e **SQLBindCol**), preparar e executar instruções (**SQLPrepare** **SQLExecute**, e **SQLExecDirect**), recuperar metadados (**SQLColAttribute** e **SQLDescribeCol**), busca resultados (**SQLFetch**) e recuperar o diagnóstico (**SQLGetDiagField** e **SQLGetDiagRec**). Eles também são usados em funções de catálogo (**SQLColumns**, **SQLTables**, e assim por diante) e um número de outras funções.  
   
  Identificadores de instrução são alocados com **SQLAllocHandle** e liberadas com **SQLFreeHandle**.
+

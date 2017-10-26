@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 331e3aee3a4a60cbfa1a1308b71da80bf9772f23
@@ -38,3 +39,4 @@ As tarefas específicas realizadas por drivers incluem:
 -   Enviar dados para e recuperar dados da fonte de dados, incluindo conversão de tipos de dados conforme especificado pelo aplicativo.  
   
 -   Mapeando erros específicos de DBMS para SQLSTATEs do ODBC.
+

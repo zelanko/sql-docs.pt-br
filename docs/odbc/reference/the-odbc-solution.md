@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
@@ -60,3 +61,4 @@ A pergunta, em seguida, é como o ODBC padronizar o acesso de banco de dados? H�
      Para que um aplicativo pode determinar quais recursos de um driver e suporte de DBMS, ODBC fornece duas funções (**SQLGetInfo** e **SQLGetFunctions**) que retornam informações gerais sobre o driver e DBMS recursos e uma lista de funções, o driver dá suporte. O ODBC também define API e SQL níveis de conformidade de gramática, que especificam intervalos amplo de recursos com suporte pelo driver. Para obter mais informações, consulte [níveis de conformidade](../../odbc/reference/develop-app/conformance-levels.md).  
   
      É importante lembrar-se de que o ODBC define uma interface comum para todos os recursos que ele expõe. Por isso, aplicativos contêm recursos específicos código, não código de DBMS específico e podem usar todos os drivers que expõem esses recursos. Uma vantagem disso é que aplicativos não precisam ser atualizados quando os recursos suportados por um DBMS são aprimorados; em vez disso, quando um driver atualizado está instalado, o aplicativo usa automaticamente os recursos porque seu código é recursos específicos, e não específicas do driver ou específicos de DBMS.
+

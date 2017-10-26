@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5f6ed33a938a990d45d544595b10ebd3a418fd41
@@ -32,3 +33,4 @@ Um *procedimento* é um objeto executável armazenado na fonte de dados. Em gera
 -   [Quando usar procedimentos](../../../odbc/reference/develop-app/when-to-use-procedures.md)  
   
 -   [Executando procedimentos](../../../odbc/reference/develop-app/executing-procedures.md)
+

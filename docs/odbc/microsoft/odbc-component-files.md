@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6eb418fd3c116745ada1034ae8526a7455b1343
@@ -31,3 +32,4 @@ Os arquivos de Driver de ODBC são exigidos por cada componente do ODBC Desktop 
  Alguns arquivos são exigidos por mais de um componente. Esses arquivos devem ser redistribuídos se você pretende redistribuir quaisquer dos Drivers ODBC de banco de dados de área de trabalho com seus aplicativos comerciais.  
   
  Esses arquivos são instalados no diretório \Windows\System para o Windows 95 ou posterior, ou no diretório \Windows\System32 para Windows NT 3.51 ou posterior e Windows 2000. Se os arquivos ODBC foram instalados anteriormente em um diretório diferente, certifique-se de que você use o diretório de arquivos \Windows\System (ou System32) mais recente.
+

@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ccc0e89f3e60b8a9ecc3def91c983bd9d9083c11
@@ -33,3 +34,4 @@ Os itens a seguir se aplicam somente ao ODBC em execução em sistemas operacion
 -   [Objetos de CString passando para funções de ODBC](../../../odbc/reference/develop-app/cstring-class.md)  
   
 -   [Criando e encerrando threads](../../../odbc/reference/develop-app/creating-and-terminating-threads.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82062fe767847023cd1aa6614173b292b0bff378
@@ -30,3 +31,4 @@ Um aplicativo especifica o arquivo de rastreamento, definindo o **TraceFile** pa
  O arquivo de rastreamento fornece um log de cada chamada de função ODBC com os tipos de dados e valores de todos os argumentos. Registra todas as entrada de funções e registra em log todas as funções retornadas com códigos de retorno e estados de erro.  
   
  Em ODBC 3*. x*, parâmetros para funções de conexão não são fornecidos para a DLL de rastreamento.
+

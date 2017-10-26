@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff70e2bf919735de40acec8b7386efd6d66b3ffe
@@ -30,3 +31,4 @@ Quando o driver do Microsoft Access, dBASE ou Paradox é usado, a sintaxe da ins
  Quando o driver do Paradox for usado, a instrução DROP INDEX exclui arquivos de índice secundário Paradox.  
   
  Não há suporte para a instrução DROP INDEX para os drivers de texto ou do Microsoft Excel.
+

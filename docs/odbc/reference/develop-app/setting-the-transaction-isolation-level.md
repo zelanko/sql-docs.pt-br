@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
@@ -37,3 +38,4 @@ Para definir o nível de isolamento da transação, um aplicativo usa o atributo
 -   Quando a velocidade é mais crítica que a precisão e a quaisquer erros têm probabilidade de ser pequeno. Por exemplo, suponha que uma empresa faz vendas pequenas muitas e que as vendas grandes são raras. Uma transação que calcula o valor total de todas as vendas pode usar o nível de isolamento Read Uncommitted com segurança. Embora a transação incluiria pedidos que estão sendo aberto ou fechado e posteriormente revertida, esses geralmente seriam Cancelar uns aos outros e a transação é muito mais rápida porque cada vez que ele encontra esse uma ordem não está bloqueado.  
   
  Para obter mais informações, consulte [simultaneidade otimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).
+

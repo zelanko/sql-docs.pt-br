@@ -29,6 +29,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
@@ -72,3 +73,4 @@ Um intervalo é definido como a diferença entre duas datas e horas. Intervalos 
 -   [Literais de intervalo](../../../odbc/reference/appendixes/interval-literals.md)  
   
 -   [Substituindo precisão inicial e de segundos padrão para tipos de dados de intervalo](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
@@ -51,3 +52,4 @@ Os problemas de alinhamento em um aplicativo ODBC geralmente não são diferente
  ![Associação pelo maior limite de alinhamento](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Embora essa solução deixa intervalos maiores, o código para implementá-lo é relativamente simples e rápida. Na maioria dos casos, isso desloca a penalidade paga na memória não utilizada. Para obter um exemplo que usa esse método, consulte [SQLBindCol usando](../../../odbc/reference/develop-app/using-sqlbindcol.md).
+

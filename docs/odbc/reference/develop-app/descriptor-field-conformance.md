@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
@@ -80,3 +81,4 @@ A tabela a seguir indica o nível de conformidade de cada campo de cabeçalho do
  [1] suporte para esses campos de registro é necessário somente se o driver oferece suporte a tipos de dados aplicável.  
   
  [2] para o acordo de nível de núcleo, o driver deve oferecer suporte a SQL_PARAM_INPUT. Para conformidade de interface de nível 2, o driver também deve suportar SQL_PARAM_INPUT_OUTPUT e SQL_PARAM_OUTPUT.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3673b168743e169ba7dd4a711ae5aa7224224201
@@ -42,3 +43,4 @@ O administrador de fonte de dados do Microsoft® ODBC gerencia o banco de dados 
 -   [Configurando opções de pool de conexões ODBC](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
   
 -   [Exibindo drivers](../../odbc/admin/viewing-drivers.md)
+

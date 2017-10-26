@@ -29,6 +29,7 @@ caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b7236d0073d38537724d54534729a2f380b892dd
@@ -93,3 +94,4 @@ ms.lasthandoff: 06/22/2017
 |Lista os objetos e contadores que o Monitor do Sistema usa para monitorar a atividade de OLTP na memória.|[Contadores de desempenho XTP &#40;OLTP in-memory&#41; do SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)|  
   
   
+

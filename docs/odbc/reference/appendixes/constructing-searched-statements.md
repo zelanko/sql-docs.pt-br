@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 -   **Especifique os buffers de tamanho não nulo para dados binários de C.** A biblioteca de cursores aloca buffers de tamanho em suas que apenas de cache do *StrLen_or_IndPtr* argumento **SQLBindCol** não for nulo. Quando o *TargetType* argumento é SQL_C_BINARY, a biblioteca de cursores requer o comprimento dos dados binários para construir um **onde** cláusula dos dados. Se não houver nenhum buffer de comprimento de uma coluna SQL_C_BINARY e o aplicativo chama **SQLGetData** ou tenta executar uma atualização posicionada ou exclusão da instrução, o retornará de biblioteca de cursor SQL_ERROR e SQLSTATE SL014 (um posicionadas solicitação foi emitida e nem todos os campos de contagem de coluna foram armazenados em buffer).  
   
 -   **Especifique os buffers de tamanho não nulo para colunas anuláveis.** A biblioteca de cursores aloca buffers de tamanho em suas que apenas de cache do *StrLen_or_IndPtr* argumento **SQLBindCol** não for nulo. Como SQL_NULL_DATA são armazenados no buffer de comprimento, a biblioteca de cursores pressupõe que qualquer coluna para que nenhum comprimento foi especificado o buffer é não anulável. Se nenhuma coluna de comprimento é especificada para uma coluna permite valor nula, a biblioteca de cursores constrói um **onde** cláusula que usa o valor de dados para a coluna. Essa cláusula não identificar corretamente a linha.
+

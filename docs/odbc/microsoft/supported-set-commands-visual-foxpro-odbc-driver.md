@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db557f215db12f95c2dd0a44a8448a138dac3856
@@ -51,3 +52,4 @@ O aplicativo pode enviar a seguir do Visual FoxPro **definir** comandos para uma
  [REPROCESSAMENTO DE CONJUNTO](../../odbc/microsoft/set-reprocess-command.md)  
   
  [CONJUNTO EXCLUSIVO](../../odbc/microsoft/set-unique-command.md)
+

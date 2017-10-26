@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a494595625d264159fbb39db03818d50ed97876
@@ -32,3 +33,4 @@ Três tipos de alterações são feitos em ODBC 3. *x* (e qualquer versão do OD
 |Novos recursos|Esses são recursos que são novos para o ODBC 3. *x*, como associação fora de linha ou de descritores. Eles são implementados somente quando o aplicativo e o driver, bem como o Gerenciador de Driver são da versão 3*. x*, portanto, não há nenhuma tentativa para fazer essas compatível com versões anteriores.|  
 |Recursos duplicados|Esses são recursos que existem no ODBC 2*. x* e o ODBC 3.* x* , mas são implementadas de maneiras diferentes em cada um. As funções **SQLAllocHandle** e **SQLAllocStmt** são um exemplo. Problemas de compatibilidade com versões anteriores para esses e outros recursos duplicados geralmente são manipulados pelo mapeamentos no Gerenciador de Driver.|  
 |Alterações de comportamento|Estes são os recursos que são tratados de maneira diferente no ODBC 2*. x* e o ODBC 3.* x*. Uma data e hora **#define** é um exemplo. Esses recursos são manipulados pelo ODBC 3. *x* driver com base em uma configuração de atributo do ambiente. (Consulte [alterações de comportamento](../../../odbc/reference/develop-app/behavioral-changes.md) para obter mais informações.)|
+

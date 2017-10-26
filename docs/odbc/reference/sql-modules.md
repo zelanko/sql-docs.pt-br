@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f37ab932ef230d29a5db23aec920230de0443e37
@@ -33,3 +34,4 @@ A segunda técnica para enviar instruções SQL para o DBMS é por meio de módu
  Um módulo pode ser pensado como uma biblioteca de objeto que está vinculada ao código do aplicativo. No entanto, exatamente como os procedimentos e o restante do aplicativo são vinculados são dependentes de implementação. Por exemplo, os procedimentos podem ser compilados em código de objeto e vinculados diretamente para o código do aplicativo, pode ser compilados e armazenados no DBMS e chamadas para acessar os identificadores de plano colocados no código do aplicativo ou eles podem ser interpretados em tempo de execução.  
   
  A principal vantagem dos módulos é que eles corretamente separam instruções SQL de linguagem de programação. Em teoria, deve ser possível alterar um sem alterar o outro e simplesmente vincular novamente-los.
+

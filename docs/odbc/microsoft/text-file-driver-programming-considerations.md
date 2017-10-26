@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ad131a8e2b0ea198f8e9623885a1d3b31812b89c
@@ -36,3 +37,4 @@ Esta seção contém os seguintes tópicos:
 -   [Valores retornados SQLGetInfo para Arquivos de texto](../../odbc/microsoft/sqlgetinfo-returned-values-for-text-files.md)  
   
 -   [Outros detalhes de programação de drivers de Arquivo de texto](../../odbc/microsoft/other-text-file-driver-programming-details.md)
+

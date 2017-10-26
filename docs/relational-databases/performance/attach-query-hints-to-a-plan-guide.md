@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
@@ -33,3 +34,4 @@ ms.lasthandoff: 06/22/2017
  Além disso, é possível especificar as dicas de tabela INDEX, FORCESCAN e FORCESEEK como dicas de consulta. Quando especificadas como dicas de consulta, elas se comportam da mesma forma que uma tabela embutida ou dica de exibição. A dica INDEX força o otimizador de consulta a usar somente os índices especificados para acessar os dados na tabela ou exibição referenciada na consulta. A dica FORCESEEK força o otimizador a usar somente uma operação de busca de índice para acessar os dados na tabela ou exibição referenciada. Essas dicas fornecem funcionalidade de guia de plano adicional e permitem uma maior influência em relação à otimização de consultas que usam o guia de plano.  
   
   
+

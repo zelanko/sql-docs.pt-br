@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd02d1193e7a74612ae25d3cee47b104877bee51
@@ -36,3 +37,4 @@ Os aplicativos ODBC e o driver se enquadram em um número de categorias, além d
 -   [Tipos de drivers](../../../odbc/reference/develop-app/types-of-drivers.md)  
   
 -   [Matriz de compatibilidade](../../../odbc/reference/develop-app/compatibility-matrix.md)
+

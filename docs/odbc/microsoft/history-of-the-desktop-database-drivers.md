@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
@@ -38,3 +39,4 @@ A tabela a seguir mostra o histórico de versões de Drivers de banco de dados d
   
 > [!NOTE]  
 >  Os drivers version3.5 foram projetados para trabalhar com ODBC2. *x*. Embora elas também funcionam com ODBC 3.0, eles não dão suporte a todos os recursos de ODBC 3.0. Para obter mais informações sobre como esses drivers funcionam com ODBC 3.0, consulte [compatibilidade com versões anteriores e a conformidade com padrões](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
+

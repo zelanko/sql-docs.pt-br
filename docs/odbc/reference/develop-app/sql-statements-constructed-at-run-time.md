@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
@@ -77,3 +78,4 @@ int main() {
  Aplicativos que construa instruções SQL em tempo de execução podem fornecer grande flexibilidade para o usuário. Como pode ser visto no exemplo anterior, que não oferecia suporte até mesmo operações comuns como **onde** cláusulas, **ORDER BY** cláusulas ou junções, construindo instruções SQL em tempo de execução é muito mais complexo que codificar instruções. Além disso, esses aplicativos de teste é problemático porque eles podem construir um número arbitrário de instruções SQL.  
   
  Uma desvantagem potencial de construindo instruções SQL em tempo de execução é que leva mais tempo para construir uma instrução de usar uma instrução codificada. Felizmente, raramente é uma preocupação. Esses aplicativos tendem a ser com uso intensivo de interface do usuário e a hora em que o aplicativo gasta construindo instruções SQL geralmente é pequena em comparação com o tempo que o usuário passa inserindo critérios.
+

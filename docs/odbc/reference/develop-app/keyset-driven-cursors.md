@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
@@ -38,3 +39,4 @@ Um cursor controlado por fica entre static e um cursor dinâmico em sua capacida
  Cursores controlados por conjuntos de chaves geralmente são implementados por meio da criação de uma tabela temporária que contém as chaves para cada linha no conjunto de resultados. Porque o cursor também deve determinar se linhas foram atualizadas, esta tabela normalmente contém uma coluna com informações de controle de versão de linha.  
   
  Para rolar sobre o conjunto de resultados original, o cursor controlado por abre um cursor estático sobre a tabela temporária. Para recuperar uma linha no conjunto de resultados original, o cursor primeiro recupera a chave apropriada da tabela temporária e, em seguida, recupera os valores atuais para a linha. Se forem usados cursores em bloco, o cursor deve recuperar várias linhas e chaves.
+

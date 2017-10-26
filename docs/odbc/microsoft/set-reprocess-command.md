@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>Comentários  
  A primeira tentativa de bloquear um arquivo ou registro nem sempre é bem-sucedida. Frequentemente, um registro ou o arquivo está bloqueado por outro usuário na rede. Definir REPROCESSAR determina se do Visual FoxPro faz tentativas adicionais para bloquear o registro ou o arquivo quando a tentativa inicial for bem-sucedida. Você pode especificar quantas vezes tentativas adicionais são feitas ou quanto tempo as tentativas são feitas. Uma rotina de erro ON afeta como malsucedido bloqueio tentativas são tratadas.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 63ce89349141934c2e4d5cfd5a8507b7d28e2650
@@ -35,3 +36,4 @@ ms.lasthandoff: 06/22/2017
 |[Classe de evento User-Configurable](../../relational-databases/event-classes/user-configurable-event-class.md)|Usado para monitorar eventos definidos pelo usuário que não podem ser monitorados pelos eventos fornecidos pelo sistema em outras categorias de evento.|  
   
   
+

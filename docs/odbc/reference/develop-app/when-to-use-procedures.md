@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
@@ -50,3 +51,4 @@ Há inúmeras vantagens de usar os procedimentos, todos com base no fato de que 
  A segunda desvantagem é que muitas DBMSs não dão suporte a procedimentos. Novamente, isso é provavelmente um problema para aplicativos verticais projetado para ser executado com um número de DBMSs. Para determinar se há suporte para procedimentos, um aplicativo chama **SQLGetInfo** com a opção SQL_PROCEDURES.  
   
  A desvantagem de terceira, que é aplicável principalmente a ambientes de desenvolvimento de aplicativos, é que o ODBC não define uma gramática padrão para a criação de procedimentos. Ou seja, embora os aplicativos podem chamar procedimentos interoperably, eles não é possível criá-los interoperably.
+

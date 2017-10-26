@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9ac53209063a1204b57e7183501b5901dc8ea248
@@ -33,3 +34,4 @@ A próxima etapa é confirmar a transação, conforme mostrado na ilustração a
  A quinta etapa é chamar **SQLEndTran** para confirmar ou reverter a transação. O aplicativo executa essa etapa somente se definido o modo de confirmação de transação de confirmação manual; Se o modo de confirmação de transação é confirmação automática, que é o padrão, a transação é confirmada automaticamente quando a instrução é executada. Para obter mais informações, consulte [transações](../../../odbc/reference/develop-app/transactions-odbc.md).  
   
  Para executar uma instrução em uma nova transação, o aplicativo retorna para a etapa 3. Para se desconectar da fonte de dados, o aplicativo continua a etapa 6.
+

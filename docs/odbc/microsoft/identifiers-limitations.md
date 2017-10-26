@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ec32697030d2ad4ede765879f83956692ed49914
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 Se um identificador contiver um espaço ou um símbolo especial, o identificador deve ser colocado entre aspas voltar. Um nome válido é uma cadeia de caracteres de não mais do que 64 caracteres, dos quais o primeiro caractere não deve ser um espaço. Os nomes válidos não podem incluir caracteres de controle ou os seguintes caracteres especiais: ' &#124; # * ? [ ] . ! $ .  
   
  Não use palavras reservadas listadas na gramática SQL no Apêndice C do *referência do programador de ODBC* (ou a forma abreviada dessas palavras reservadas) como identificadores (ou seja, nomes tabela ou coluna), a menos que envolvem a palavra em aspas (').
+

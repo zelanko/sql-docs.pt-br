@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03bf019ac788e5879667db83855c91ad0a3aa0ad
@@ -33,3 +34,4 @@ Os Drivers de banco de dados de área de trabalho de ODBC são usados com o meca
 |Arquivos usados por cada Driver de banco de dados de área de trabalho|Arquivos de Driver ODBC|  
 |Arquivos do Microsoft Jet usados por cada Driver de banco de dados de área de trabalho|Arquivos do Microsoft Jet|  
 |Arquivos de driver IISAM que fornecem acesso a dados entre o Microsoft Jet e o outro DBMS|Arquivos de Driver ISAM instalável|
+

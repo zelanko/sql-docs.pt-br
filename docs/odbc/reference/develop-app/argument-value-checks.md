@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
@@ -39,3 +40,4 @@ O Gerenciador de Driver verifica os seguintes tipos de argumentos. Salvo indica�
 -   Números de coluna e o parâmetro devem ser maior que 0 ou maior que ou igual a 0, dependendo da função. O driver deve verificar o limite superior desses valores de argumento com base no conjunto de resultados atual ou instrução SQL.  
   
 -   Argumentos de comprimento/indicador e argumentos de comprimento de buffer de dados devem conter valores apropriados. Por exemplo, o argumento que especifica o comprimento de um nome de tabela em **SQLColumns** (*NameLength3*) deve ser SQL_NTS ou um valor maior que 0; *BufferLength* na **SQLDescribeCol** deve ser maior que ou igual a 0. O driver também precisará verificar esses argumentos. Por exemplo, ele pode verificar que *NameLength3* é menor ou igual ao comprimento máximo de um nome de tabela na fonte de dados.
+

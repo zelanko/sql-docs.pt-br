@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
@@ -56,3 +57,4 @@ A seguir ODBC 2. *x* funções foram duplicadas pelo ODBC 3.* x* funções. Como
   
 > [!NOTE]  
 >  A função **SQLBindParam** é um caso especial. **SQLBindParam** funcionalidade duplicados. Isso não é um ODBC 2*. x* função, mas uma função que está presente nos padrões ISO e Open Group. A funcionalidade fornecida por essa função é completamente incluída do **SQLBindParameter**. Como resultado, o Gerenciador de Driver mapeia uma chamada para **SQLBindParam** para **SQLBindParameter** quando o driver subjacente é um ODBC 3.* x* driver. No entanto, quando o driver subjacente é um ODBC 2*. x* driver, o Gerenciador de Driver não executa esse mapeamento.
+

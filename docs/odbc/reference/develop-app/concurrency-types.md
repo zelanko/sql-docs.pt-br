@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 737fadc881109457051cf30bfce9b493bd164f1c
@@ -37,3 +38,4 @@ Para resolver o problema de redução de simultaneidade em cursores, ODBC expõe
 -   **Simultaneidade otimista usando versões de linha e simultaneidade otimista usando valores** o cursor usa a simultaneidade otimista: atualizar ou excluir linhas apenas se eles não foram alterados desde a última foram lidas. Para detectar alterações, ele compara valores ou versões de linha. Não há nenhuma garantia de que o cursor será capaz de atualizar ou excluir uma linha, mas a simultaneidade é muito maior do que quando o bloqueio é usado. Para obter mais informações, consulte a seção a seguir, [simultaneidade otimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
  Um aplicativo especifica o tipo de simultaneidade que deseja que o cursor a ser usado com o atributo de instrução SQL_ATTR_CONCURRENCY. Para determinar quais tipos têm suporte, ele chama **SQLGetInfo** com a opção SQL_SCROLL_CONCURRENCY.
+

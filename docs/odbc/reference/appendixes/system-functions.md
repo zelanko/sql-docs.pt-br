@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1537c769de2c0f421ed533ea73d75a1578a10559
@@ -38,3 +39,4 @@ A tabela a seguir lista as funções do sistema que são incluídas no conjunto 
 |**(BANCO DE DADOS)** (ODBC 1.0)|Retorna o nome do banco de dados correspondente ao identificador de conexão. (O nome do banco de dados também está disponível por meio da chamada **SQLGetConnectOption** com a opção de conexão SQL_CURRENT_QUALIFIER.)|  
 |**IFNULL (** *exp*,*valor***)** (ODBC 1.0)|Se *exp* for nulo, *valor* é retornado. Se *exp* não for null, *exp* é retornado. O tipo de dados ou tipos de *valor* devem ser compatíveis com o tipo de dados *exp*.|  
 |**(USUÁRIO)** (ODBC 1.0)|Retorna o nome de usuário no DBMS. (O nome de usuário também está disponível por meio de **SQLGetInfo** especificando o tipo de informações: SQL_USER_NAME.) Isso pode ser diferente do nome de logon.|
+

@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd540c727f1e8a77dbb6d8201715c213ff688909
@@ -34,3 +35,4 @@ O Driver de ODBC do Visual FoxPro é thread-safe. Acesso aos identificadores de 
  O driver usa um thread separado para buscar dados quando você usa a busca progressivo. Para usar buscando progressivo para uma fonte de dados, selecione o **buscar dados no plano de fundo** caixa de seleção de [caixa de diálogo a instalação do Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) ou use a palavra-chave de atributo BackgroundFetch na sua conexão cadeia de caracteres. Evite usar busca em segundo plano quando você chama o driver de aplicativos multithread. Para obter informações sobre palavras-chave atributo de cadeia de caracteres de conexão, consulte [usando cadeias de caracteres de Conexão](../../odbc/microsoft/using-connection-strings.md).  
   
  Para obter mais informações sobre threads e **SQLCancel**, consulte [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) no *referência do programador de ODBC*.
+

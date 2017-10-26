@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
@@ -34,3 +35,4 @@ Idealmente, as transações devem ser *serializável*. As transações são cons
  Então por que é serialização desejável? Em outras palavras, por que é importante que parece uma transação for concluída antes do início da próxima transação? Considere o seguinte problema. Um vendedor está inserindo pedidos ao mesmo tempo que envia um administrador de cobranças. Suponha que o vendedor entra em uma ordem de empresa X, mas não confirmada. o vendedor ainda está se comunicando com o representante da empresa X. O administrador solicita uma lista de todos os pedidos e descobre a ordem para a empresa X e envia uma fatura. Agora o representante da empresa X decide que deseja alterar a ordem para que o vendedor altera antes de confirmar a transação. Empresa X obtém uma fatura incorreta.  
   
  Se do vendedor e do administrador de transações fossem serializáveis, esse problema nunca ter ocorrido. A transação do vendedor deve terminar antes do início de transação do auxiliar, caso em que o administrador será ter enviado o bill correto ou transação do auxiliar deve terminar antes do início de transação do vendedor, caso em que o administrador não terá enviado uma fatura para a empresa X em todos os.
+

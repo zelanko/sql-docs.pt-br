@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
@@ -48,3 +49,4 @@ A maioria das opções de rolagem no **SQLFetchScroll** posicionar o cursor em r
  O número de linhas no cursor, que é o tamanho do resultado definido, está disponível como o campo SQL_DIAG_CURSOR_ROW_COUNT do cabeçalho de diagnóstico. O valor neste campo é definido somente depois **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResult** foi chamado. Esta contagem pode ser uma contagem aproximada ou uma contagem exata, dependendo dos recursos do driver. O suporte do driver pode ser determinado chamando **SQLGetInfo** com os tipos de informações de atributos de cursor e verificando se o bit SQL_CA2_CRC_APPROXIMATE ou SQL_CA2_CRC_EXACT é retornado para o tipo de cursor.  
   
  Uma contagem de linhas exato nunca é suportada para um cursor dinâmico. Para outros tipos de cursores, o driver pode suportar o contagens de linhas exato ou aproximado, mas não ambos. Se o driver dá suporte nem exato ou aproximado contagens de linha de um tipo de cursor específico, o campo SQL_DIAG_CURSOR_ROW_COUNT contém o número de linhas que foram buscadas até o momento. Independentemente do que o driver dá suporte a, **SQLFetchScroll** com um *operação* de SQL_FETCH_LAST fará com que o campo SQL_DIAG_CURSOR_ROW_COUNT conter o número exato de linhas.
+

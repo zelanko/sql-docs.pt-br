@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3daf4c19908bd1d39749c589016e3f0c1704fbd5
@@ -36,3 +37,4 @@ As seções a seguir resumem as funções usadas por aplicativos habilitados par
 -   [Resumo de funções de DLL da conversão](../../../odbc/reference/syntax/translation-dll-function-summary.md)  
   
 -   [Resumo da Interface do provedor de serviços do ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-summary.md)
+

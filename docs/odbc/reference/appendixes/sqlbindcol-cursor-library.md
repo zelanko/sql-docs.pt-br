@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  A biblioteca de cursores dá suporte à chamada **SQLBindCol** para associar a coluna de indicador.  
   
  Ao trabalhar com um ODBC 2. *x* driver, a biblioteca de cursores retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres) quando **SQLBindCol** é chamado para definir o tamanho do buffer para uma coluna de indicador para um valor não é igual a 4. Ao trabalhar com um ODBC 3*. x* driver, a biblioteca de cursores permite que o buffer qualquer tamanho.
+

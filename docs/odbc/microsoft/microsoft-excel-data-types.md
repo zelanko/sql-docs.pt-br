@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
@@ -53,3 +54,4 @@ A tabela a seguir mostra como os tipos de dados de driver do Microsoft Excel sã
 |TEXT|Quando as linhas de uma coluna contiverem mais de um tipo de dados do Microsoft Excel, o driver ODBC Microsoft Excel atribuirá o tipo de dados SQL_VARCHAR à coluna. Há uma exceção a isso: se a coluna contiver apenas duas ou três dos tipos de dados de data e hora (data, hora e data e hora), o driver ODBC Microsoft Excel atribuirá o tipo de dados SQL_TIMESTAMP à coluna.<br /><br /> Criação de uma coluna de texto de zero ou comprimento especificado, na verdade, retorna uma coluna de 255 bytes.<br /><br /> Um literal de cadeia de caracteres pode conter qualquer caractere ANSI (decimal de 1 a 255). Use duas aspas simples consecutivas (") para representar uma aspa simples (').<br /><br /> Inserindo um valor nulo em uma coluna com um tipo de dados que não sejam SQL_VARCHAR fará com que o tipo de dados da coluna para alterar para SQL_VARCHAR.|  
   
  Mais limitações nos tipos de dados podem ser encontradas no [limitações do tipo de dados](../../odbc/microsoft/data-type-limitations.md).
+

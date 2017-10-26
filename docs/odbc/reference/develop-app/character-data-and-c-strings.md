@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
@@ -45,3 +46,4 @@ Parâmetros de entrada que fazem referência aos dados de caractere de comprimen
  Embora aplicativos e drivers normalmente usarem cadeias de caracteres C (matrizes de caracteres terminada em nulo) para armazenar dados de caracteres, não há nenhum requisito para fazer isso. Em C, os dados de caracteres também podem ser tratados como uma matriz de caracteres (sem null de terminação) e seu tamanho de byte transmitido separadamente no buffer de comprimento/indicador.  
   
  Como os dados de caractere podem ser mantidos em uma matriz de não-terminada em nulo e seu tamanho de byte transmitido separadamente, é possível inserir caracteres nulos nos dados de caractere. No entanto, nesse caso, o comportamento de funções ODBC é indefinido e é específico do driver se um driver lida com isso corretamente. Dessa forma, aplicativos interoperáveis sempre devem lidar com dados de caracteres que podem conter caracteres nulos inseridos como dados binários.
+

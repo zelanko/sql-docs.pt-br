@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 725d16d6326d5fb99ce8d923bd35c64351b3e6cb
@@ -154,3 +155,4 @@ Este tópico discute os valores de SQLSTATE para ODBC 3. *x*. Para obter mais in
 |IM013|Erro de arquivo de rastreamento|Todas as funções ODBC.|  
 |IM014|Nome inválido de DSN de arquivo|**SQLDriverConnect**|  
 |IM015|Fonte de dados de arquivo corrompido|**SQLDriverConnect**|
+

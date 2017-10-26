@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
@@ -36,3 +37,4 @@ Se um driver deve ser um driver de Unicode ou um driver de ANSI depende completa
   
 > [!NOTE]  
 >  Ao determinar o tipo de driver, o Gerenciador de Driver chamará **SQLSetConnectAttr** e definir o atributo SQL_ATTR_ANSI_APP em tempo de conexão. Se o aplicativo está usando APIs ANSI, SQL_ATTR_ANSI_APP será definido como SQL_AA_TRUE e se ele estiver usando o Unicode, ele será definido como um valor de SQL_AA_FALSE. Este atributo é usado para que o driver pode apresentar um comportamento diferente com base no tipo de aplicativo. O atributo não pode ser definido diretamente pelo aplicativo e não é suportado por **SQLGetConnectAttr**. Se um driver apresentar o mesmo comportamento para aplicativos ANSI e Unicode, ele deverá retornar SQL_ERROR para este atributo. Se o driver retornará SQL_SUCCESS, o Gerenciador de Driver separará ANSI e Unicode conexões quando o Pooling de Conexão é usado.
+

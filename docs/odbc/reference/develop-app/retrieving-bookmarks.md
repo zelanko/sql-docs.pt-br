@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7233ad9ab2915c174d545cb08d4abcdeedb99d7b
@@ -35,3 +36,4 @@ Se o aplicativo usar indicadores, ele deve definir o atributo de instrução de 
 -   Chamar **SQLSetPos** para posicionar uma linha no conjunto de linhas e, em seguida, chamar **SQLGetData** para a coluna 0. Se um driver dá suporte a indicadores, ele sempre deve oferecer suporte a capacidade de chamar **SQLGetData** para a coluna 0, mesmo se ele não permite que aplicativos chamar **SQLGetData** para outras colunas antes do último limite coluna.  
   
 -   Chamar **SQLBulkOperations** com o *operação* argumento definido como SQL_ADD e a coluna 0 associado. O cursor insere a linha e retorna o indicador da linha no buffer associado.
+

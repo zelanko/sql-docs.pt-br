@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
@@ -37,3 +38,4 @@ Algumas funções ODBC acessem implícita descritores. Autores de aplicativos po
  **SQLSetDescRec** e **SQLGetDescRec** concisa funções, com uma chamada, definir ou obter vários campos de descritor que afetam o tipo de dados e armazenamento de dados de coluna ou parâmetro. **SQLSetDescRec** é uma maneira eficiente para alterar a associação de dados de coluna ou parâmetro em uma única etapa.  
   
  **SQLSetStmtAttr** e **SQLGetStmtAttr** servem como funções concisas em alguns casos. (Consulte [campos de descritor](../../../odbc/reference/develop-app/descriptor-fields.md).)
+

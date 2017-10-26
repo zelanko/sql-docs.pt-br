@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c99c74a1a294d7d43774fe9d53d169eece98d3ad
@@ -44,3 +45,4 @@ Você pode recompilar um aplicativo como um aplicativo de Unicode em uma das dua
  Uma função pode ser chamada em uma das três maneiras: como uma chamada de função somente Unicode (com o *W* sufixo), como uma chamada de função somente ANSI (com o *um* sufixo), ou como a chamada de função ODBC com nenhum sufixo. Os argumentos para as três formas de uma função são idênticos. Apenas as funções com SQLCHAR \* argumentos ou argumentos SQLPOINTER que apontam para cadeias de caracteres requerem formas de ANSI e Unicode. Para funções com argumentos que podem ser declarados como um tipo de caractere, como **SQLBindCol** ou **SQLGetData** (que não possuem formulários ANSI e Unicode), o argumento pode ser declarado como o tipo de Unicode o ANSI de tipo ou, no caso de um C tipo de argumento, a macro SQL_C_TCHAR. Para obter mais informações, consulte [dados Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
   
  Um aplicativo pode ser escrito como um aplicativo de Unicode, mesmo se nenhum driver de Unicode está disponível para trabalhar com. O Gerenciador de Driver mapeará os tipos de funções e os dados Unicode em ANSI. Há algumas restrições para o Unicode para mapeamentos de ANSI que podem ser executadas. A existência de um driver de Unicode para o aplicativo de Unicode para trabalhar com resultará em um melhor desempenho e removerá as restrições inerentes o Unicode para mapeamentos de ANSI.
+

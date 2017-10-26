@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Fontes de dados de usuário e sistema são coletivamente conhecidos como *máquina* fontes de dados porque eles são locais para um computador.  
   
  Cada uma dessas fontes de dados tem uma guia no **administrador de fonte de dados ODBC** caixa de diálogo. Para obter mais informações sobre as fontes de dados disponíveis, veja [Fontes de Dados](../../odbc/reference/data-sources.md).
+

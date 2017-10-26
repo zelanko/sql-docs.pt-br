@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8ffdb2fa548b03ee38c0f817675cb88ab4acf67
@@ -30,3 +31,4 @@ Não há suporte para a instrução DELETE para o driver do Microsoft Excel ou t
  O driver dBASE não oferece suporte a uma tabela para remover valores "excluído" de remessa.  
   
  Para o driver Paradox excluir uma linha de uma tabela, a tabela deve ter um índice exclusivo (chave primária do Paradox).
+

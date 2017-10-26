@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dab3cacffff383170a6403065c555f5ef105f672
@@ -49,3 +50,4 @@ Microsoft Visual FoxPro é um ambiente poderoso e orientada a objeto para o dese
 |Consulte uma lista de software e hardware com suporte|[Requisitos do sistema](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
  Para obter informações sobre como baixar e instalar o driver ODBC do Visual FoxPro, consulte [Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318) nos Downloads do MSDN.
+

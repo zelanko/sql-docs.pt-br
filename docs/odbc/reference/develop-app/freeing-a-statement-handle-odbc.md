@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b33d262c846d9ef8a41bf9440802664ac7d4b75f
@@ -33,3 +34,4 @@ Como mencionado anteriormente, é mais eficiente reutilizar instruções que to 
  Quando **SQLFreeHandle** é chamado, as versões de driver a estrutura usada para armazenar informações sobre a instrução.  
   
  **SQLDisconnect** libera automaticamente todas as instruções em uma conexão.
+

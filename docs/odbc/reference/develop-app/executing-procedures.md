@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
@@ -40,3 +41,4 @@ ODBC define uma sequência de escape padrão para a execução de procedimentos.
     -   Chama o procedimento na fonte de dados e envia os valores de parâmetro convertido. Como o driver chama o procedimento é específico do driver. Por exemplo, ele pode modificar a instrução SQL para usar a gramática SQL da fonte de dados e enviar essa instrução para execução ou ele pode chamar o procedimento diretamente, usando um mecanismo de chamada de procedimento remoto (RPC) que é definido no protocolo de fluxo de dados do DBMS.  
   
     -   Retorna os valores dos parâmetros de saída ou qualquer entrada/saída ou o valor de retorno do procedimento, supondo que o procedimento for bem-sucedido. Esses valores podem não estar disponíveis até após o processamento de todos os outros resultados (conjuntos de resultados e contagens de linhas) gerados pelo procedimento. Se o procedimento falhar, o driver retorna erros.
+

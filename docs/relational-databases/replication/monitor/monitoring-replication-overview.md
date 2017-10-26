@@ -17,6 +17,7 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2dc65ac3d6356ff9c2a69d0a30a8c5a1ecc76782
@@ -93,3 +94,4 @@ ms.lasthandoff: 06/22/2017
  Descreve como exibir informações e executar tarefas para os agentes associados com uma assinatura usando o Replication Monitor.  
   
   
+
