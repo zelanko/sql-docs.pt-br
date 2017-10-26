@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e536bbaee8f9dd934f24504e8c1226c9db7db9de
@@ -68,3 +69,4 @@ Pooling=No
 [Como se conectar usando a Autenticação do Windows](../../connect/php/how-to-connect-using-windows-authentication.md)  
 [Como se conectar usando a Autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   
+

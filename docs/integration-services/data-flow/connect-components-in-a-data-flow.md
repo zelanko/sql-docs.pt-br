@@ -17,6 +17,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
@@ -58,3 +59,4 @@ Você constrói o fluxo de dados em um pacote na superfície de design da guia *
  [Depurando o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md) [fluxo de dados](../../integration-services/data-flow/data-flow.md)  
   
   
+

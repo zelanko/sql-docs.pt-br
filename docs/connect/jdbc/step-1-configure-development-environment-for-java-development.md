@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6811fe90d64374769e858787a879231140a4e925
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 * Identificar qual versão do driver JDBC que você pretende usar, com base em seu ambiente, conforme mostrado aqui: [requisitos do sistema para o Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
 * Baixe e instale o Driver JDBC aplicável aqui: [baixar o Microsoft JDBC Driver para SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
 * Definir caminho de classe com base na versão do driver, conforme mostrado aqui: [usando o Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md)
+

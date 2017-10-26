@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  O banco de dados Inventory tem uma tabela ProductsInventory que tem as colunas ProductID e StockOnHand. Uma tabela Shipments com as colunas ProductID, CustomerID e Quantity rastreia o envio de produtos para os clientes. A tabela ProductInventory deve ser atualizada diariamente com base nas informações da tabela Shipments. Uma única instrução MERGE pode reduzir o inventário na tabela ProductInventory com base nas remessas feitas. Se o inventário de um produto for reduzido a 0, a instrução MERGE também poderá excluir a linha desse produto da tabela ProductInventory.  
   
   
+

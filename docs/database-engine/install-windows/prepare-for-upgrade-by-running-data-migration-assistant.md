@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 467de616546f5efcb819ef4381014c903bded87e
@@ -29,3 +30,4 @@ ms.lasthandoff: 08/02/2017
  Baixe e instale o Assistente de migração de dados [aqui](http://go.microsoft.com/fwlink/?LinkID=613421). Essa ferramenta não está incluída na mídia de instalação do [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] .  
 
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6e3c99d8f8ee8621925f49e301a4ea95c8b00383
@@ -71,3 +72,4 @@ ms.lasthandoff: 09/09/2017
  Para obter informações detalhadas sobre a criação de perfil de dados durante a atividade de limpeza, consulte [Estatísticas do criador de perfil](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler) em [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
   
+

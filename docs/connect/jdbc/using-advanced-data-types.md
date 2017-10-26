@@ -14,6 +14,7 @@ caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b74ed587d91e351f91db2e3ef2a45c41edf37918
@@ -164,3 +165,4 @@ rs.updateRow();
  [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
+

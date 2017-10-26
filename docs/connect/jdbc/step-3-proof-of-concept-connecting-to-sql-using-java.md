@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a56f74ecd59fbe11c60bfef48a5750f18fd52b72
@@ -188,3 +189,4 @@ Neste exemplo, executar uma instrução INSERT, passar parâmetros e recuperar o
   
 ## <a name="additional-samples"></a>Exemplos adicionais  
 [Aplicativos de exemplo do JDBC Driver](../../connect/jdbc/sample-jdbc-driver-applications.md)
+

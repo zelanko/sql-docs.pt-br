@@ -16,6 +16,7 @@ caps.latest.revision: 51
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/09/2017
  A funcionalidade Data Quality Services foi integrada ao MDS (Master Data Services) para que você possa eliminar a duplicação nos dados de origem e nos dados mestre nos fluxos de trabalho do MDS dentro do Suplemento Master Data Services do Microsoft SQL Server 2014 para Microsoft Excel. Para executar correspondência, carregue os dados gerenciados por MDS em uma planilha do Excel, combine-os com dados não gerenciados por MDS e, em seguida, execute a correspondência dentro do Excel. Os componentes do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] devem ser instalados com o MDS. Para obter mais informações, consulte  [Data Quality Matching in the MDS Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
   
+
