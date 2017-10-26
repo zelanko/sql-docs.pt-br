@@ -14,6 +14,7 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 27b51025180a1c9a2463c49401589ab459e7ecaf
@@ -141,3 +142,4 @@ Se você estiver usando o Microsoft JDBC Driver 4.2 (ou inferior) para o SQL Ser
  [Configurando as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md)  
   
   
+

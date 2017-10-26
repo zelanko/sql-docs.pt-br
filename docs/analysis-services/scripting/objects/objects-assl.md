@@ -21,6 +21,7 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 749c363a814590705b61d0821f1fee44ea93d488
@@ -116,3 +117,4 @@ ms.lasthandoff: 09/01/2017
  [Hierarquia de elementos XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   
+

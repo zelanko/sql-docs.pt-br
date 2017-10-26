@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/27/2017
 |Novos mapeamentos de tipo de dados agora têm suporte nos métodos PreparedStatement.setObject() e PreparedStatement.setNull().|1. Novo Java para mapeamento de tipo JDBC<br /><br /> (a) java.math.BigInteger para JDBC BIGINT<br /><br /> (b) java.util.Date e java.util.Calendar para JDBC TIMESTAMP<br /><br /> 2. Conversões de novo tipo de dados:<br /><br /> (a) java.math.BigInteger CHAR, VARCHAR, LONGVARCHAR e BIGINT<br /><br /> (b) java.util.Date e java.util.Calendar para CHAR, VARCHAR, LONGVARCHAR, DATE, TIME e TIMESTAMP<br /><br /> Para obter mais detalhes, consulte a especificação do JDBC 4.1.|  
   
   
+

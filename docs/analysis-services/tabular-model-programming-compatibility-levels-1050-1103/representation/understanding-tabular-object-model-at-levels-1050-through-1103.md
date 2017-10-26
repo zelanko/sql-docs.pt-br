@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 719e2f265c532236dae15a3e955f8c3e64af9e0b
@@ -94,3 +95,4 @@ ms.lasthandoff: 09/01/2017
 >  Perspectivas não são um mecanismo de segurança; objetos fora da perspectiva ainda podem ser acessados pelo usuário através de outras interfaces.  
   
   
+

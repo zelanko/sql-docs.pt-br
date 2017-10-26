@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b4579aa9873c23ad3490763ce5c5900dcc8158aa
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  Para **RelationshipEndVisualizationProperties** elementos, o **SortPropertiesPosition** elemento contém a posição do elemento de propriedades de classificação em uma coleção de detalhes. O valor padrão indica que não há propriedades de classificação a serem usadas.  
   
   
+

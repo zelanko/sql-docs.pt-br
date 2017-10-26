@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bc0a2fd4178189a072a9b194e502ae1c58de3f92
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/01/2017
  Depois que você criar um conjunto de campo padrão, pode influenciar ainda mais a experiência de design de relatório especificando rótulos padrão, imagens padrão, comportamento de grupo padrão, ou se as linhas que contêm o mesmo valor são agrupadas em uma linha ou listadas individualmente. Para obter mais informações, consulte [Configurar propriedades de comportamento de tabela para relatórios de Power View &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
   
   
+

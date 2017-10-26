@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2fa62e16d603bb9adfff2410d14d376f358273be
@@ -78,3 +79,4 @@ newDatasource.Update();
  Para compreender melhor como usar o AMO para criar e manipular representações de conexão, consulte o código-fonte do exemplo Tabular AMO 2012; verifique especificamente o seguinte arquivo de origem: Database.cs. O exemplo está disponível no Codeplex. O código de exemplo é fornecido apenas como um suporte aos conceitos lógicos explicados aqui e não deve ser usado em um ambiente de produção.  
   
   
+

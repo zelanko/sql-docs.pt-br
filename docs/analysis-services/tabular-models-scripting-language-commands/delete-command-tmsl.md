@@ -15,6 +15,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d6a4f8029d0d0cfb2ef9076347a791a04e03a540
@@ -157,3 +158,4 @@ Ele exclui o objeto especificado e todos os objetos filho e coleções. Se o obj
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
+

@@ -15,6 +15,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ca3adb3a174338a193e7fd96865d295dc1844b03
@@ -193,3 +194,4 @@ ms.lasthandoff: 09/01/2017
  [Configurar o acesso HTTP ao Analysis Services no IIS &#40;(Serviços de Informações da Internet)&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   
+

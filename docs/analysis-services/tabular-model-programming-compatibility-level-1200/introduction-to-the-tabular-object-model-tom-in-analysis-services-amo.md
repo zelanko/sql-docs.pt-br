@@ -15,6 +15,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
@@ -72,3 +73,4 @@ A decisão de usar um ou outro ficará às especificações de seus requisitos. 
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
 [O Analysis Services PowerShell](../../analysis-services/powershell/analysis-services-powershell-reference.md)
   
+

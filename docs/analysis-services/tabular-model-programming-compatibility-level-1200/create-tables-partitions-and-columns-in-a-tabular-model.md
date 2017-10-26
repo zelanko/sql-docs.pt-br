@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 42d7a07de0c82921f08fd091f72aef125ebe053e
@@ -262,3 +263,4 @@ Quando você salvar as alterações para o servidor, o servidor retornará a lis
 
 Revise as classes usadas para tratamento de exceções em TOM: [manipulação de erros em TOM](../../analysis-services/tabular-model-programming-compatibility-level-1200/handling-errors-in-the-tom-api-analysis-services-amo-tom.md)
   
+

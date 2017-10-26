@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
@@ -123,3 +124,4 @@ Referenciar o namespace principal em seu código é desnecessária; as classes d
 Redistribuição do AMO e TOM é por meio de **sql_as_amo.msi** pacote de instalação. Se você estiver criando um programa de instalação para um aplicativo cliente que chama em AMO ou TOM, adicione **sql_as_amo.msi** para o executável. Esse é o mecanismo de com suporte somente para as bibliotecas de cliente AMO e o TOM de redistribuição.  
   
 O pacote é independente e fornece todos os assemblies necessários para chamar o AMO e TOM em seu código. Outros pacotes, como SQL_AS_OLEDB.msi ou SQL_AS_ADOMD.msi, não serão especificamente necessários para cenários de programação de TOM.
+
