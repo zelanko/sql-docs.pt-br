@@ -31,7 +31,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40options-transact-sql"></a>& #x 40; & #x 40; opções (Transact-SQL)
+# <a name="x40x40options-transact-sql"></a>&#x40;&#x40;opções (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre as opções SET atuais.  
@@ -50,11 +50,11 @@ ms.lasthandoff: 09/19/2017
 ## <a name="remarks"></a>Comentários  
  As opções podem vir do uso do **definido** comando ou o **opções de usuário de sp_configure** valor. Valores de sessão configurados com o **definir** comando substituir o **sp_configure** opções. Muitas ferramentas (tal como [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) configuram automaticamente as opções do conjunto. Cada usuário tem uma @@OPTIONS função que representa a configuração.  
   
- Você pode alterar as opções de idioma e de processamento de consulta para uma sessão de usuário específico usando a instrução SET. **@@OPTIONS ** só pode detectar as opções que são definidas como ON ou OFF.  
+ Você pode alterar as opções de idioma e de processamento de consulta para uma sessão de usuário específico usando a instrução SET. **@@OPTIONS**  só pode detectar as opções que são definidas como ON ou OFF.  
   
- O **@@OPTIONS ** função retorna um bitmap das opções, convertidas em uma base 10 inteiro (decimal). As configurações de bits são armazenadas nas localizações descritas em uma tabela no tópico [configurar as opções de usuário a opção de configuração de servidor](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
+ O **@@OPTIONS**  função retorna um bitmap das opções, convertidas em uma base 10 inteiro (decimal). As configurações de bits são armazenadas nas localizações descritas em uma tabela no tópico [configurar as opções de usuário a opção de configuração de servidor](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
   
- Para decodificar o **@@OPTIONS ** valor, converta o inteiro retornado por **@@OPTIONS ** binário e, em seguida, examine os valores na tabela no [configurar as opções de usuário do servidor Opção de configuração](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Por exemplo, se `SELECT @@OPTIONS;` retorna o valor `5496`, use a Calculadora do programador do Windows (**calc.exe**) para converter decimal `5496` em binário. O resultado é `1010101111000`. Os caracteres mais à direita (binário 1, 2 e 4) são 0, indicando que os primeiros três itens na tabela são desativados. Consultando a tabela, verá que eles são **DISABLE_DEF_CNST_CHK** e **IMPLICIT_TRANSACTIONS**, e **CURSOR_CLOSE_ON_COMMIT**. O próximo item (**ANSI_WARNINGS** no `1000` posição) está em. Continuar trabalhando esquerda Embora o mapa de bits e para baixo na lista de opções. Quando as opções mais à esquerda são 0, elas serão truncadas pela conversão de tipo. O bitmap `1010101111000` é na verdade `001010101111000` para representar todas as 15 opções.  
+ Para decodificar o **@@OPTIONS**  valor, converta o inteiro retornado por **@@OPTIONS**  binário e, em seguida, examine os valores na tabela no [configurar as opções de usuário do servidor Opção de configuração](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Por exemplo, se `SELECT @@OPTIONS;` retorna o valor `5496`, use a Calculadora do programador do Windows (**calc.exe**) para converter decimal `5496` em binário. O resultado é `1010101111000`. Os caracteres mais à direita (binário 1, 2 e 4) são 0, indicando que os primeiros três itens na tabela são desativados. Consultando a tabela, verá que eles são **DISABLE_DEF_CNST_CHK** e **IMPLICIT_TRANSACTIONS**, e **CURSOR_CLOSE_ON_COMMIT**. O próximo item (**ANSI_WARNINGS** no `1000` posição) está em. Continuar trabalhando esquerda Embora o mapa de bits e para baixo na lista de opções. Quando as opções mais à esquerda são 0, elas serão truncadas pela conversão de tipo. O bitmap `1010101111000` é na verdade `001010101111000` para representar todas as 15 opções.  
   
 ## <a name="examples"></a>Exemplos  
   

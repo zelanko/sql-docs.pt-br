@@ -70,7 +70,7 @@ Se seu ambiente usar a delegação restrita de Kerberos, o serviço do SharePoin
 
     * Selecione **Adicionar** para adicionar um serviço para delegação.
 
-    * Selecione **usuários ou computadores... *** e insira a conta que hospeda o serviço. Por exemplo, se um SQL Server está em execução em uma conta denominada *sqlservice*, digite `sqlservice`. 
+    * Selecione **usuários ou computadores...** * e insira a conta que hospeda o serviço. Por exemplo, se um SQL Server está em execução em uma conta denominada *sqlservice*, digite `sqlservice`. 
 
     * Selecione a lista de serviços. Isso mostrará os SPNs que estão disponíveis nessa conta. Se você não vir o serviço listado nessa conta, ele pode estar ausente ou colocado em uma conta diferente. Você pode usar o utilitário SetSPN para ajustar os SPNs.
 
