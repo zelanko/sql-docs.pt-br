@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c351e2be7d1faf77542b68079b4f413e554e54f1
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 |[Importar do PowerPivot &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|Este tópico descreve como criar um novo projeto de modelo de tabela extraindo os metadados e dados de um arquivo do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel (.xlsx).|  
   
   
+

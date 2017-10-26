@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ed09bbccf5bb5aa399fbab0c9e6a58c7f58c7ecd
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  Para **RelationshipEndVisualizationProperties** elementos, o **IsDefaultImage** elemento indica que a imagem padrão para esta entidade pode ser obtida navegando até o fim deste relação. O valor padrão de **false** indica que não há nenhuma imagem padrão a ser obtida.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Fornece descrições e etapas de configuração para um modelo padrão e propriedades de implantação. As propriedades padrão se aplicam a novos projetos de modelo tabular. Depois que um novo projeto é criado, estas propriedades ainda podem ser alteradas para um projeto de modelo específico dependendo dos seus requisitos.|  
   
   
+

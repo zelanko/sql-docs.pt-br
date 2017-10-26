@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  É importante observar que normalmente o identificador de idioma e a ordem de agrupamento no banco de dados de origem têm pouco ou nenhum efeito sobre a forma como valores são armazenados na coluna de modelo de tabela. A exceção será se o banco de dados de origem transformar ou filtrar os valores solicitados.  
   
   
+
