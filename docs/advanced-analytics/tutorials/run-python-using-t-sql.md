@@ -57,7 +57,7 @@ GO
 
 O código a seguir carrega o executável do Python, passa os dados de entrada e para cada linha de dados de entrada, atualiza o nome do dia na tabela com um número que representa o índice de dia da semana.
 
-Anote o parâmetro * @RowsPerRead *. Esse parâmetro especifica o número de linhas que são passados para o tempo de execução do Python do SQL Server.
+Anote o parâmetro  *@RowsPerRead* . Esse parâmetro especifica o número de linhas que são passados para o tempo de execução do Python do SQL Server.
 
 A biblioteca de análise de dados de Python, conhecido como **pandas**, é necessário para passar dados para o SQL Server e está incluído por padrão, com serviços de aprendizado de máquina.
 
@@ -177,7 +177,7 @@ ParamCharN=OUTPUT
 
     O GUID é o nome de uma pasta temporária é criada durante a execução do script para armazenar os artefatos de dados e de script. Essas pastas temporárias são protegidas pelo SQL Server e são limpos pelo objeto de trabalho do Windows depois que o script foi encerrado.
 
-+ A seção que contém a mensagem "Hello World" imprime duas vezes. Isso acontece porque o valor de * @RowsPerRead * foi definido como 5 e há 10 linhas na tabela; portanto, duas chamadas para Python são necessários para processar todas as linhas na tabela.
++ A seção que contém a mensagem "Hello World" imprime duas vezes. Isso acontece porque o valor de  *@RowsPerRead*  foi definido como 5 e há 10 linhas na tabela; portanto, duas chamadas para Python são necessários para processar todas as linhas na tabela.
 
     A execução de produção, é recomendável fazer experiências com valores diferentes para determinar o número máximo de linhas que devem ser passados em cada lote. O número ideal de linhas é dependente de dados e é afetado pelo número de colunas no conjunto de dados e o tipo de dados que estão sendo transmitidos.
 

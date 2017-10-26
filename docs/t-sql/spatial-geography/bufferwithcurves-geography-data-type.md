@@ -146,7 +146,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Métodos estendidos em instâncias de Geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [BufferWithCurves & #40; tipo de dados geometry & #41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+ [BufferWithCurves &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   
 

@@ -84,7 +84,7 @@ SELECT SIN(45.175643);
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções matemáticas & #40; Transact-SQL & #41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [Funções matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 
