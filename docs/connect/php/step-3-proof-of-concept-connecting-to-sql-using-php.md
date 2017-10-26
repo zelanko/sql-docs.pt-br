@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: f1ea7333aa847916f45d648c582f07de0774eda6
@@ -170,3 +171,4 @@ Este exemplo de código demonstra o uso de transações em que você:
   
 [Aplicativo de exemplo (driver SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
 [Aplicativo de exemplo (driver PDO_SQLSRV)](../../connect/php/example-application-pdo-sqlsrv-driver.md)
+

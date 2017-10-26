@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: db156f59fe1e77bd3abb50be85ecca1f693a0b73
@@ -39,3 +40,4 @@ ms.lasthandoff: 08/03/2017
 5.  Insira as informações necessárias no assistente New Instance para criar a nova instância. Para obter informações sobre as informações necessárias para este assistente, consulte [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
   
   
+

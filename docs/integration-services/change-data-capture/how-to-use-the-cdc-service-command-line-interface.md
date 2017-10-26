@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9b1f69b32824d88f2e5be131dde2043414c2f9e8
@@ -33,3 +34,4 @@ ms.lasthandoff: 08/03/2017
 3.  Digite o comando que você precisa realizar uma das tarefas possíveis.  
   
   
+

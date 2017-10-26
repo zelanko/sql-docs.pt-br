@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  Exporte o domínio para um arquivo .dqs. Este comando exibe a caixa de diálogo **Exportar para Arquivo de Dados** . Para disponibilizar este comando, clique no menu **Exportar** da barra de menus, na parte superior da página, ou clique com o botão direito do mouse no painel de lista de domínios. Para obter mais informações, consulte [Exportar um domínio para um arquivo .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
   
   
+

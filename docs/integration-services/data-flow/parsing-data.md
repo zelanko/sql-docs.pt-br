@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
@@ -206,3 +207,4 @@ A análise padrão é um conjunto de rotinas de análise com diferenciação de 
   
  Ela oferece suporte para a conversão de tipo de dados de dados internacionais e pode ser usada caso o formato de dados não seja suportado pela análise rápida. Para obter mais informações sobre a API de conversão de tipo de dados de Automação, consulte "APIs de conversão de tipos de sados" na [Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
+

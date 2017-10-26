@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d722d1eed21162d5e076f5dfdfc3a2f18787f42e
@@ -112,3 +113,4 @@ Observe que o Mac OS X já tem Ruby pré-instalado, como o sistema operacional t
 ```  
 > gem install tiny_tds  
 ```
+

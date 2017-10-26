@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9b7406edf9f7234db739730473772d77c42399ec
@@ -55,3 +56,4 @@ A tabela a seguir lista as opções disponíveis no **adicionar nova fonte** cai
 |Mostrar somente itens instalados|Especifique se apenas origens instaladas devem ser exibidas.|  
 |OK|Clique para salvar suas alterações e abrir uma caixa de diálogo subsequente para configurar opções adicionais.| 
   
+

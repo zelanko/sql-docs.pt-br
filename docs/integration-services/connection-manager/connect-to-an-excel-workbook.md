@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
 ms.openlocfilehash: f8fb1db80ac1b750950a3401516b54af5ee29686
@@ -63,3 +64,4 @@ Se você tiver uma assinatura do Office 365, certifique-se de que você baixe o 
  [Conectar-se a um banco de dados do Access](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   
+
