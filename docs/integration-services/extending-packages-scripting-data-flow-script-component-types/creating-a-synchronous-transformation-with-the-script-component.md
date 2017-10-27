@@ -161,7 +161,7 @@ else
   
 6.  Criar e configurar um componente de destino que espera o **AddressID** e **City** colunas, como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino ou o componente de destino de exemplo demonstrado em [Criando um destino com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Então, conecte a saída da transformação ao componente de destino. Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] do **AdventureWorks** banco de dados:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -215,7 +215,7 @@ public class ScriptMain:
   
 7.  Criar e configurar os dois componentes de destino que esperam o **AddressID** e **City** colunas, como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino, um destino de arquivo simples ou o componente de destino de exemplo demonstrada [criando um destino com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Em seguida, conecte cada uma das saídas da transformação a um dos componentes de destino. Você pode criar tabelas de destino executando um [!INCLUDE[tsql](../../includes/tsql-md.md)] comando semelhante ao seguinte (com nomes de tabela exclusivo) no **AdventureWorks** banco de dados:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2](  
         [AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL  

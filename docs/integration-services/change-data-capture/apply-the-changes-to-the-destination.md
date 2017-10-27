@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
      Por exemplo, uma instrução UPDATE para uma tabela Cliente poderia ter a sintaxe seguinte:  
   
-    ```  
+    ```sql
     update CDCSample.Customer  
     set TerritoryID  = ?,  
         CustomerType  = ?,  
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/03/2017
   
      Por exemplo, uma instrução DELETE para uma tabela Cliente poderia ter a sintaxe seguinte:  
   
-    ```  
+    ```sql
     delete from Customer where CustomerID = ?  
   
     ```  

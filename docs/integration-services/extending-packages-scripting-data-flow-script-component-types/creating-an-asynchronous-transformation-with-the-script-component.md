@@ -132,7 +132,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  Criar e configurar um componente de destino para a primeira saída que espera o **AddressID** e **City** colunas, como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino ou o componente de destino de exemplo demonstrada [criando um destino com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md),. Em seguida, conecte-se a primeira saída da transformação, **MyAddressOutput**, para o componente de destino. Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] do **AdventureWorks** banco de dados:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
