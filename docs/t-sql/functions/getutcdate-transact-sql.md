@@ -135,7 +135,7 @@ GETUTCDATE()             01:25:01.6930000
   
 ## <a name="see-also"></a>Consulte também  
  [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [FUSO horário &AMP; #40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [FUSO horário &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 
