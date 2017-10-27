@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 5f8342550dc105fb6d3544e1d8bd65fcd660ff64
@@ -91,3 +92,4 @@ ms.lasthandoff: 10/06/2017
  [Fontes de dados suportadas pelo Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

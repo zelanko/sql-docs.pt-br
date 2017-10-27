@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
@@ -146,3 +147,4 @@ INSERT INTO T values(1,'<Product />')
 -   Você não deseja que as verificações de tabela se tornem mais lentas por causa da presença da coluna XML na tabela. Isso usará espaço se for armazenado dentro da linha ou fora da linha.  
   
   
+

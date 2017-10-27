@@ -22,7 +22,8 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3f91523a9cf7555e8d42fc546fff450827ab3f41
 ms.contentlocale: pt-br
@@ -55,13 +56,13 @@ ms.lasthandoff: 08/09/2017
   
 -   Utilize parâmetros para relacionar relatórios principais a relatórios detalhados, a sub-relatórios e a relatórios vinculados. Ao criar um conjunto de relatórios, geralmente você pode criar cada relatório para responder a determinadas questões. Cada relatório pode fornecer uma exibição diferente ou um nível diferente de detalhes das informações relacionadas. Para fornecer um conjunto de relatórios inter-relacionados, crie parâmetros para os dados relacionados nos relatórios de destino.  
   
-     Para obter mais informações, consulte [relatórios detalhados &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Sub-relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md), e [criar um relatório vinculado](../../reporting-services/reports/create-a-linked-report.md).  
+     Para obter mais informações, consulte [Relatórios Detalhados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md), e [criar um relatório vinculado](../../reporting-services/reports/create-a-linked-report.md).  
   
 -   Personalize conjuntos de parâmetros para vários usuários. Crie dois relatórios vinculados com base em um relatório de vendas no servidor de relatório. Um relatório vinculado usa valores de parâmetro predefinidos para vendedores e o outro usa valores de parâmetro predefinidos para gerentes de vendas. Os dois relatórios usam a mesma definição de relatório.  
   
  **Variar apresentação do relatório**  
   
--   Enviar comandos a um servidor de relatório por meio de uma solicitação de URL, para personalizar a renderização de um relatório. Para obter mais informações, consulte [acesso à URL &#40; SSRS &#41; ](../../reporting-services/url-access-ssrs.md) e [passar um parâmetro de relatório em uma URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
+-   Enviar comandos a um servidor de relatório por meio de uma solicitação de URL, para personalizar a renderização de um relatório. Para obter mais informações, consulte [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) e [Transmitir um parâmetro de relatório em uma URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
 -   Permita que os usuários especifiquem valores para ajudar a personalizar a aparência de um relatório. Por exemplo, forneça um parâmetro booliano para indicar se é para expandir ou recolher todos os grupos de linhas aninhados em uma tabela.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Exibir o relatório com parâmetros](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "exibir o relatório com parâmetros")  
   
-1.  **Painel de parâmetros** A barra de ferramentas do visualizador de relatórios exibe um aviso e valor padrão para cada parâmetro. Você pode personalizar o layout dos parâmetros no painel de parâmetros. Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+1.  **Painel de parâmetros** A barra de ferramentas do visualizador de relatórios exibe um aviso e valor padrão para cada parâmetro. Você pode personalizar o layout dos parâmetros no painel de parâmetros. Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
 2.  **@SalesDateparâmetro** o parâmetro @SalesDate é o tipo de dados **DateTime**. O prompt Selecionar uma data é exibido ao lado da caixa de texto. Para modificar a data, digite uma nova data na caixa de texto ou use o controle de calendário.  
   
@@ -123,10 +124,10 @@ ms.lasthandoff: 08/09/2017
   
  Adicione uma parte de relatório que contenha referências a um parâmetro ou a um conjunto de dados compartilhado que contém variáveis.  
   
- As partes de relatório são armazenadas no servidor de relatório e disponibilizadas para uso em relatórios de outras pessoas. As partes de relatório que são parâmetros não podem ser gerenciados de um servidor de relatório. Você pode procurar parâmetros na Galeria de Partes de Relatório e, depois de adicioná-los, configurá-los em seu relatório. Para obter mais informações, consulte [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ As partes de relatório são armazenadas no servidor de relatório e disponibilizadas para uso em relatórios de outras pessoas. As partes de relatório que são parâmetros não podem ser gerenciados de um servidor de relatório. Você pode procurar parâmetros na Galeria de Partes de Relatório e, depois de adicioná-los, configurá-los em seu relatório. Para obter mais informações, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Parâmetros podem ser publicados como uma parte de relatório separada para regiões de dados que têm conjuntos de dados dependentes com parâmetros. Embora parâmetros sejam listados como parte de um relatório, você não pode acrescentar um parâmetro de parte de relatório diretamente a um relatório. Em vez disso, adicione a parte de relatório, e quaisquer parâmetros de relatório necessários serão gerados automaticamente de consultas de conjunto de dados contidas ou referenciadas pela parte de relatório. Para obter mais informações sobre partes de relatório, consulte [partes de relatório &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) e [partes no Designer de relatórios &#40; SSRS &#41; ](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+>  Parâmetros podem ser publicados como uma parte de relatório separada para regiões de dados que têm conjuntos de dados dependentes com parâmetros. Embora parâmetros sejam listados como parte de um relatório, você não pode acrescentar um parâmetro de parte de relatório diretamente a um relatório. Em vez disso, adicione a parte de relatório, e quaisquer parâmetros de relatório necessários serão gerados automaticamente de consultas de conjunto de dados contidas ou referenciadas pela parte de relatório. Para obter mais informações sobre partes de relatórios, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) e [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ### <a name="parameter-values"></a>Valores dos parâmetros  
  As seguintes opções servem para seleção de valores de parâmetro em um relatório.  
@@ -164,7 +165,7 @@ ms.lasthandoff: 08/09/2017
   
  Use o designer de consulta para a fonte de dados para criar uma consulta parametrizada.  
   
--   Em consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] , diferentes fontes de dados dão suporte a diferentes sintaxes para parâmetros. O suporte abrange parâmetros que são identificados na consulta por posição ou por nome. Para obter mais informações, consulte Tópicos para tipos de fonte de dados externos específicos em [conjuntos de dados de relatório &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md). No designer de consulta relacional, você deve selecionar a opção de parâmetro para um filtro para poder criar uma consulta parametrizada. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas Relacionais &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
+-   Em consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] , diferentes fontes de dados dão suporte a diferentes sintaxes para parâmetros. O suporte abrange parâmetros que são identificados na consulta por posição ou por nome. Para obter mais informações, consulte os tópicos sobre tipos de fontes de dados externos específicos em [Conjuntos de Dados de Relatórios &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). No designer de consulta relacional, você deve selecionar a opção de parâmetro para um filtro para poder criar uma consulta parametrizada. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas Relacionais &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
 -   Para consultas baseadas em uma fonte de dados multidimensional como o Microsoft SQL Server Analysis Services, SAP NetWeaver BI ou Hyperion Essbase, você poderá especificar se um parâmetro será criado com base em um filtro que você definir no criador de consultas. Para obter mais informações, consulte o tópico sobre o designer de consultas em [Designers de Consultas &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) que corresponda à extensão de dados.  
   
@@ -183,7 +184,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Assinaturas de relatório.** Você pode especificar valores de parâmetro para filtrar dados e entregar relatórios por meio de assinaturas. Para obter mais informações, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
--   **Acesso à URL.** Você pode especificar valores de parâmetro em uma URL para um relatório. Também é possível executar relatórios e especificar valores de parâmetros usando o acesso à URL. Para obter mais informações, consulte [acesso à URL &#40; SSRS &#41; ](../../reporting-services/url-access-ssrs.md).  
+-   **Acesso à URL.** Você pode especificar valores de parâmetro em uma URL para um relatório. Também é possível executar relatórios e especificar valores de parâmetros usando o acesso à URL. Para obter mais informações, consulte [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
   
  As propriedades de parâmetros para um relatório publicado são geralmente preservadas se você publicar novamente a definição do relatório. Se a definição do relatório for publicada novamente como o mesmo relatório, e os nomes e tipos de dados dos parâmetros continuarem os mesmos, as configurações de propriedades serão retidas. Se você adicionar ou excluir parâmetros da definição do relatório, ou alterar o tipo de dados ou o nome de um parâmetro existente, poderá ser necessário alterar as propriedades dos parâmetros no relatório publicado.  
   

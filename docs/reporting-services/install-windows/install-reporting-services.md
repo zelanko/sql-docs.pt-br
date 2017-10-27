@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
 ms.openlocfilehash: 5ce83ff18d6908441a3eaaf05599068ec5876308
@@ -138,3 +139,4 @@ Com o servidor de relatório instalado, começar a criar relatórios e implante-
 Para criar relatórios usando o SQL Server Data Tools, [baixar o SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

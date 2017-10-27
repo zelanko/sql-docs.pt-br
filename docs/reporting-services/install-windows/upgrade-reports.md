@@ -24,6 +24,7 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
@@ -154,3 +155,4 @@ ms.lasthandoff: 09/27/2017
 [Atualizar um banco de dados do servidor de relatório](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

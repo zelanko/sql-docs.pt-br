@@ -22,7 +22,8 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 74e70cd67affe64f31076f362f36e813f3357f82
 ms.contentlocale: pt-br
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/09/2017
  [Relatório inserido conjuntos de dados e conjuntos de dados compartilhados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+

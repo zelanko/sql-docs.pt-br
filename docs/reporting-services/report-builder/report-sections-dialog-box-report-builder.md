@@ -17,7 +17,8 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 77323d7f01b54345cce6354b800808b88e6ab21e
 ms.contentlocale: pt-br
@@ -34,6 +35,7 @@ ms.lasthandoff: 08/09/2017
  Clique em **OK** para continuar.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda do construtor de relatórios para caixas de diálogo, painéis e assistentes](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   
+

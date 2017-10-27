@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
@@ -131,3 +132,4 @@ Para usar um SAN, o certificado SSL deve estar registrado no servidor, assinado 
  [Configurar as URLs do servidor de relatório](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

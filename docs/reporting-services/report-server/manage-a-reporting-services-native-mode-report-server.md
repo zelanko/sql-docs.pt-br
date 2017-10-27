@@ -19,7 +19,8 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aadfbe555fa1334f9101f799e60cccdcca7e68fd
 ms.contentlocale: pt-br
@@ -75,3 +76,4 @@ ms.lasthandoff: 08/09/2017
  [Configuração e administração de um servidor de relatório &#40; Reporting Services no modo do SharePoint &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   
+

@@ -15,7 +15,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
 ms.contentlocale: pt-br
@@ -82,7 +83,7 @@ Os campos de data são essenciais para muitos relatórios móveis. Portanto, ass
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-Depois de ter convertido as células, você precisa formatá-los como datas selecionando-os, ou a coluna inteira > **contexto** menu > **Formatar células** > **data** do **categoria** lista. Você também pode usar o assistente de texto para colunas do Excel para converter células de texto em datas corretamente formatadas.  
+Depois de converter as células, é preciso formatá-las como datas selecionando-as ou a coluna inteira > menu **Contexto** > **Formatar Células** > **Data** na lista **Categoria**. Você também pode usar o assistente de texto para colunas do Excel para converter células de texto em datas corretamente formatadas.  
   
 ## <a name="unsupported"></a>Sem suporte  
   

@@ -14,7 +14,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
 ms.contentlocale: pt-br
@@ -249,3 +250,4 @@ Você também pode **Baixar** ou **Remover** o pacote. A remoção do pacote red
     }  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 32279a0b5ded6db08e5d3156474e0c646e15b969
 ms.contentlocale: pt-br
@@ -182,3 +183,4 @@ WHERE EmployeeID = (@EmpID)
  [Expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
+

@@ -19,7 +19,8 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
 ms.contentlocale: pt-br
@@ -51,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
  Se você não estiver familiarizado com arquivos .odc, pode usar as instruções a seguir para criá-los e exportá-los. Um modo simples para criar um arquivo .odc para uma fonte de dados OLE DB é usar o Excel 2007 e o Assistente para Conexão de Dados. Observe que o assistente não cria uma fonte de dados; você deverá ter uma fonte de dados externa já definida.  
   
- Um arquivo .odc existente deve ser usado apenas se for totalmente compatível com o relatório e com as consultas. Se você encontrar erros que exijam modificações significativas no relatório ou no arquivo .odc, deverá criar um novo arquivo .rsds para o relatório. Para obter mais informações sobre como criar uma fonte de dados compartilhada que usa um arquivo. rsds, consulte [&#40; de criar e gerenciar fontes de dados compartilhadas O Reporting Services no SharePoint integrado modo &#41; ](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Um arquivo .odc existente deve ser usado apenas se for totalmente compatível com o relatório e com as consultas. Se você encontrar erros que exijam modificações significativas no relatório ou no arquivo .odc, deverá criar um novo arquivo .rsds para o relatório. Para obter mais informações sobre como criar uma fonte de dados compartilhada que usa um arquivo .rsds, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>Para criar e exportar um arquivo .odc  
   
@@ -109,3 +110,4 @@ ms.lasthandoff: 08/09/2017
  [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   
+

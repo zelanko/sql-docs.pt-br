@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a37ed5efe7c365c601deb95d9fe761d227e7021e
@@ -56,3 +57,4 @@ Os itens listados são específicos para a web part do Visualizador de relatóri
 ## <a name="next-steps"></a>Próximas etapas
 
 Para começar a usar a web part do Visualizador de relatórios atualizada, consulte [implantar a web part do Visualizador de relatórios em um site do SharePoint](deploy-report-viewer-web-part.md).
+

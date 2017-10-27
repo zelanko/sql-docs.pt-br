@@ -14,14 +14,15 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
 ms.contentlocale: pt-br
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Adicionar navegadores para relatórios móveis do Reporting Services
 Em [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], adicione os *navegadores* para filtrar os dados nas visualizações por hora ou por seleção. 
 
 Navegadores são semelhantes às segmentações no Power BI e Tabelas Dinâmicas do Excel, mas os navegadores também têm algumas características exclusivas.

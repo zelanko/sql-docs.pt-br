@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d4ca3cc183fb405fc9379f29012a92e39b7ad95b
 ms.contentlocale: pt-br
@@ -31,7 +32,7 @@ O gráfico possui dois tipos de eixo: primário e secundário. O eixo secundári
   
  Em situações em que existam mais de duas séries a serem comparadas, considere uma abordagem diferente para comparação e exibição de várias séries em um gráfico. Para obter mais informações, consulte [várias séries em um gráfico de](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- Um exemplo deste gráfico está disponível como um relatório de exemplo. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [Relatórios de exemplo do Construtor de Relatórios e do Designer de Relatórios](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Um exemplo deste gráfico está disponível como um relatório de exemplo. Para obter mais informações sobre como baixar esse relatório de exemplo e outros, consulte [relatórios de exemplo do construtor de relatórios e Designer de relatórios](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,3 +49,4 @@ O gráfico possui dois tipos de eixo: primário e secundário. O eixo secundári
 [Especifique um intervalo do eixo](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

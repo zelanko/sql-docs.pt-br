@@ -17,7 +17,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
 ms.contentlocale: pt-br
@@ -59,7 +60,7 @@ O suplemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoV
   
  Para baixar e instalar o suplemento, consulte o Centro de Download da [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
--   **Suplemento do SP1:**  [Suplemento Microsoft® SQL Server® 2012 SP1 Reporting Services para Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **SP1 add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
   
 -   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
@@ -73,3 +74,4 @@ A versão do SQL Server 2016, o suplemento pode ser instalado como parte do Assi
 [Não é possível navegar em páginas do SharePoint em zonas não padrão depois de desinstalar o suplemento Reporting Services](http://support.microsoft.com/kb/2009212)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

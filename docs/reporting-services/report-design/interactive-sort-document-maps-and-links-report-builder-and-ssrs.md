@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
 ms.contentlocale: pt-br
@@ -42,19 +43,20 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Classificação interativa &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [Classificação interativa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  Explica como adicionar botões de classificação interativos a cabeçalhos de coluna.  
   
- [Criar um mapa do documento &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [Criar um mapa de documentos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  Explica como adicionar um índice para oferecer suporte à navegação em um relatório grande.  
   
- [Adicionar um indicador a um relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Adicionar um indicador a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Explica como adicionar marcadores para criar links dentro de um relatório.  
   
- [Adicionar um hiperlink a uma URL &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Adicionar um hiperlink a uma URL &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Explica como adicionar um link de seu relatório a uma URL  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
+

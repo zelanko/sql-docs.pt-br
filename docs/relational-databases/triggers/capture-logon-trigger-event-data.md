@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 790a086c90eeeeb606a86056f239853d805cb091
@@ -62,3 +63,4 @@ ms.lasthandoff: 06/22/2017
  Será `1` se a conexão for reutilizada por meio de pool de conexões. Caso contrário, o valor é `0`.  
   
   
+

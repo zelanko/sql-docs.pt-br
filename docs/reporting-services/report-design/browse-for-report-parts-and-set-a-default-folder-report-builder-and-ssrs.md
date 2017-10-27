@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
 ms.contentlocale: pt-br
@@ -75,3 +76,4 @@ O modo mais fácil de criar um relatório paginado do [!INCLUDE[ssRSnoversion](.
  [Publicar e republicar partes de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
@@ -68,3 +69,4 @@ WHERE  xCol.exist('/book/title/text()[contains(.,"custom")]') =1;
  A integração CLR no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] expande as possibilidades de decomposição de dados XML em tabelas ou promoção de propriedades e consultar dados XML usando classes gerenciadas no namespace System.Xml. Para obter mais informações, veja [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md).  
   
   
+

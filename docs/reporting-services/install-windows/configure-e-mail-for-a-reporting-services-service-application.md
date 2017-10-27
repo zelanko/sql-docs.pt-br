@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: d7fb8e7ae95ef5606b42db3b0622a90a4bdd7990
@@ -93,3 +94,4 @@ O alerta de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
   
   
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

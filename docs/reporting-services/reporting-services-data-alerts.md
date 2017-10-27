@@ -15,7 +15,8 @@ caps.latest.revision: 33
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: pt-br
@@ -328,3 +329,4 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 [Gerenciador de usuários do SharePoint de alertas de dados](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

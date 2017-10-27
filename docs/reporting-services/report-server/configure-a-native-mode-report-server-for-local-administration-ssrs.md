@@ -22,7 +22,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
 ms.contentlocale: pt-br
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS)
-  A implantação de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um dos seguintes sistemas operacionais exigirá mais etapas de configuração se você desejar administrar localmente a instância do servidor de relatório. Este tópico explica como configurar o servidor de relatório para administração local. Se você ainda não instalou ou configurou o servidor de relatório, consulte [instalar o SQL Server 2016 do Assistente de instalação &#40; Instalação &#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gerenciar um servidor de relatório do Reporting Services modo nativo](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+  A implantação de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um dos seguintes sistemas operacionais exigirá mais etapas de configuração se você desejar administrar localmente a instância do servidor de relatório. Este tópico explica como configurar o servidor de relatório para administração local. Se você ainda não tiver instalado ou configurado o servidor de relatório, consulte [Instalar o SQL Server 2016 por meio do Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [Gerenciar um servidor de relatório de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Clique em **Permitir** para continuar.  
   
-3.  No endereço da URL, insira a URL do Gerenciador de Relatórios. Para obter instruções, consulte [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+3.  No endereço da URL, insira a URL do Gerenciador de Relatórios. Para obter instruções, consulte [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) em Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Clique em **Ferramentas**.  
   
@@ -190,3 +191,4 @@ ms.lasthandoff: 08/09/2017
  [Gerenciar um servidor de relatório de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
+

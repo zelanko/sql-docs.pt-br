@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a28d250be3c4fe43b16825bf033e86836a036db0
@@ -133,3 +134,4 @@ Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
  [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

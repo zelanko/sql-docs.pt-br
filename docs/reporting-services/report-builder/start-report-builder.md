@@ -20,7 +20,8 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
 ms.contentlocale: pt-br
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="start-report-builder"></a>Iniciar o Construtor de Relatórios
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] é um ambiente de criação de relatórios autônomo. Com ele, você pode criar relatórios paginados e publicá-los no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado em modo nativo ou integrado do SharePoint.  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]é um relatório autônomo ambiente de criação. Com ele, você pode criar relatórios paginados e publicá-los no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado em modo nativo ou integrado do SharePoint.  
   
  A primeira vez que iniciar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo integrado do SharePoint, você será solicitado a baixá-lo do Centro de Download da Microsoft. 
  
@@ -73,6 +74,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Próximas etapas
 
 [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
-[Definir opções padrão para o Construtor de Relatórios](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
+[Definir opções padrão para o construtor de relatórios](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

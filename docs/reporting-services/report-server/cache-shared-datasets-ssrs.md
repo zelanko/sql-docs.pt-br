@@ -15,11 +15,12 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 98ebdbf63808c31b1e1fc5b9b2bcde91ebe2e33d
-ms.openlocfilehash: 8d7bb0e524b90ac621570da5c2653db6e0a4cb6a
+ms.workload: Inactive
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Conjuntos de dados compartilhado em cache (SSRS)
@@ -75,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Você deve ter as permissões ReadPolicy e UpdatePolicy no conjunto de dados compartilhado.  
   
- Os planos de atualização do cache se aplicam a conjuntos de dados compartilhados e relatórios. Para obter mais informações, consulte [opções de atualização de Cache &#40; Gerenciador de relatórios &#41; ](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Os planos de atualização do cache se aplicam a conjuntos de dados compartilhados e relatórios. Para obter mais informações, consulte [Opções de atualização de cache &#40;Gerenciador de relatórios&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Condições que provocam a expiração do cache  
  As condições a seguir podem fazer com que um cache de conjunto de dados compartilhado se torne inválido.  
@@ -104,3 +105,4 @@ ms.lasthandoff: 08/09/2017
  [Gerenciar conjuntos de dados compartilhados](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   
+

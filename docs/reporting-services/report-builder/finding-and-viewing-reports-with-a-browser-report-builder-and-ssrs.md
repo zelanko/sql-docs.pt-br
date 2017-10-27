@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
 ms.contentlocale: pt-br
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  Se você não souber o endereço da Web de um relatório, poderá abrir o endereço da Web do servidor de relatórios e procurar a hierarquia da pasta do servidor de relatórios para selecionar o relatório que deseja exibir. O diagrama a seguir ilustra uma hierarquia de pasta como ela é exibida em uma janela do navegador.  
   
- ![Pastas em um navegador](../../reporting-services/report-builder/media/rs-browserfolder.GIF "pastas em um navegador")  
+ ![Pastas em um navegador](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
 Pastas em um navegador  
   
 > [!NOTE]  
@@ -54,7 +55,7 @@ Pastas em um navegador
 -   Uma extensão de nome de arquivo indica um recurso. A extensão do nome do arquivo identifica o tipo MIME do recurso. Por exemplo, .jpg indica uma imagem em formato JPEG.  
   
 ## <a name="typing-the-url-address-of-a-report"></a>Digitando o endereço URL de um relatório  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao acesso de URL a itens específicos em um servidor de relatórios. A URL deve incluir um caminho totalmente qualificado para o relatório e comandos para renderizar o relatório. Se o relatório incluir parâmetros, você também terá que especificar qualquer valor exigido para abrir o relatório. Se estiver digitando uma URL para um relatório que inclui espaços no caminho, valores de parâmetro ou uma extensão de renderização, deverá incorporar os caracteres codificados da URL na URL para obter os resultados esperados. O exemplo a seguir ilustra uma URL de relatório que inclui a codificação para espaços no nome do caminho, parâmetros e uma extensão de renderização:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao acesso de URL a itens específicos em um servidor de relatório. A URL deve incluir um caminho totalmente qualificado para o relatório e comandos para renderizar o relatório. Se o relatório incluir parâmetros, você também terá que especificar qualquer valor exigido para abrir o relatório. Se estiver digitando uma URL para um relatório que inclui espaços no caminho, valores de parâmetro ou uma extensão de renderização, deverá incorporar os caracteres codificados da URL na URL para obter os resultados esperados. O exemplo a seguir ilustra uma URL de relatório que inclui a codificação para espaços no nome do caminho, parâmetros e uma extensão de renderização:  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
@@ -63,3 +64,4 @@ Pastas em um navegador
  Para obter mais informações sobre como acessar um relatório usando uma URL, incluindo informações sobre como a URL é construída, consulte “Acesso à URL” na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
   
+

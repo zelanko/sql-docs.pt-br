@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
 ms.contentlocale: pt-br
@@ -71,3 +72,4 @@ ms.lasthandoff: 08/09/2017
  [Adicionar uma média móvel a um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   
+

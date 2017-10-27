@@ -16,7 +16,8 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
 ms.contentlocale: pt-br
@@ -91,3 +92,4 @@ Você pode instalar e executar o SQL Server Reporting Services (SSRS) e serviço
 [Instalar o servidor de relatório de modo nativo do Reporting Services](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

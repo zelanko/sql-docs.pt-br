@@ -38,7 +38,7 @@ ms.lasthandoff: 08/03/2017
   
  Corresponder um valor ordinal a sua operação correspondente não é tão fácil quanto usar um mnemônico da operação. Por exemplo, 'D' pode representar facilmente uma operação de exclusão e 'I' representar uma operação de inserção. A consulta de exemplo criada no tópico, [Criando a função para recuperar os dados de alteração](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md), faz essa conversão de um valor ordinal para um valor de cadeia de caracteres amigável que retorna uma nova coluna. O seguinte segmento de código mostra esta conversão:  
   
-```  
+```sql
 select   
     ...  
     case __$operation  

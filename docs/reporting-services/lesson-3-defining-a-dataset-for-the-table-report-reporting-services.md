@@ -16,7 +16,8 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
 ms.contentlocale: pt-br
@@ -76,7 +77,7 @@ Use o designer de consultas no Designer de Relatórios para criar o conjunto de 
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
 ## <a name="next-task"></a>Próxima tarefa  
-Você especificou uma consulta que recupera dados para o relatório com êxito. A seguir, você criará o layout de relatório. Consulte [lição 4: adicionando uma tabela para o relatório &#40; Reporting Services &#41; ](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+Você especificou uma consulta que recupera dados para o relatório com êxito. A seguir, você criará o layout de relatório. Consulte [Lição 4: Adicionando uma tabela ao relatório &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
 [Ferramentas de Design da Consulta &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)  

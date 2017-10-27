@@ -14,7 +14,8 @@ caps.latest.revision: 3
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a4da31bb1ed09024c6278193e8011b5c7981922
 ms.contentlocale: pt-br
@@ -46,3 +47,4 @@ A solução para isso é adicionar um membro calculado quando você estiver cria
 
 -  [Dados para relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
 -  [Preparar dados para relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
+

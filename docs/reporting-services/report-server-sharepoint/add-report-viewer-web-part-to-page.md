@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
@@ -82,3 +83,4 @@ Para configurar a web part para apontar para o relatório específico, faça o s
 * Se você não vir o relatório web part do visualizador, para adicionar a uma página, verifique se você tem [implantado a web part do Visualizador de relatórios](deploy-report-viewer-web-part.md).
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

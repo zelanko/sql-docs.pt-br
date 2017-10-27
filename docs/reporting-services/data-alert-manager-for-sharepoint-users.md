@@ -18,7 +18,8 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
 ms.contentlocale: pt-br
@@ -96,3 +97,4 @@ Quando um site do SharePoint é habilitado para alertas de dados, duas páginas 
 [Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

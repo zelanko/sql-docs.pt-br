@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
 ms.openlocfilehash: 7faf4e41db0b37dddbdc28b33b3abf621ecad24b
@@ -129,3 +130,4 @@ Cada instância do servidor de relatório requer uma conexão com o banco de dad
 [Configurar a conta de serviço do servidor de relatório](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+
