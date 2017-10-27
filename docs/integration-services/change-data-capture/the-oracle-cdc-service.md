@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
  Ao usar o console de Designer Oracle CDC, as alterações são automaticamente detectadas. Ao atualizar a configuração do Oracle CDC usando SQL diretamente, o procedimento a seguir deve ser chamado para que o Serviço Oracle CDC perceba a alteração de configuração:  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -66,7 +66,7 @@ GO
   
  A senha de mineração de logs é armazenada criptografada por meio de uma chave assimétrica com o nome fixo `xdbcdc_asym_key` que é criado automaticamente com o comando a seguir:  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  

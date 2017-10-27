@@ -51,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  Criar uma tabela de destino executando o seguinte comando Transact-SQL no **AdventureWorks** banco de dados:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

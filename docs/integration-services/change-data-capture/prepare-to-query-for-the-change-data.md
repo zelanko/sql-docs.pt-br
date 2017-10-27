@@ -76,7 +76,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Se você estiver programando em C#, digite as seguintes linhas de código:  
   
-        ```  
+        ```csharp 
         int dataReady;  
         System.DateTime extractStartTime;  
         System.DateTime extractEndTime;  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Se você estiver programando em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], digite as seguintes linhas de código:  
   
-        ```  
+        ```vb  
         Dim dataReady As Integer  
         Dim extractStartTime As Date  
         Dim extractEndTime As Date  
@@ -150,7 +150,7 @@ ms.lasthandoff: 08/03/2017
   
     4.  Para **SQLStatement**, digite a seguinte instrução SQL:  
   
-        ```  
+        ```sql
         declare @ExtractStartTime datetime,  
         @ExtractEndTime datetime,   
         @DataReady int  

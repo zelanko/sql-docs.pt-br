@@ -67,7 +67,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Se você usar Microsoft Visual Basic para escrever o aplicativo, defina a propriedade **My.Application.CommandLineArgs** . O exemplo a seguir define a propriedade **My.Application.CommandLineArgs** para recuperar dois argumentos:  
   
-    ```  
+    ```vb  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  

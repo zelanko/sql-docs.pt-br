@@ -80,13 +80,12 @@ ms.lasthandoff: 08/03/2017
   
  O exemplo a seguir exibe o número de linhas enviadas entre componentes de um pacote.  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, source_component_name, destination_component_name, rows_sent  
 from catalog.execution_data_statistics  
 where execution_id = 132  
-order by source_component_name, destination_component_name  
-  
+order by source_component_name, destination_component_name   
 ```  
   
  O exemplo a seguir calcula o número de linhas por milissegundo enviadas por cada componente para uma execução específica. Os valores calculados são:  
@@ -110,7 +109,6 @@ where execution_id = 132
 group by source_component_name, destination_component_name  
 having (datediff(ms,min(created_time),max(created_time))) > 0  
 order by source_component_name desc  
-  
 ```  
 
 ## <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurar uma saída de erro em um componente de fluxo de dados
@@ -230,13 +228,11 @@ order by source_component_name desc
   
  Veja um script SQL de exemplo que executa as etapas descritas no cenário anterior:  
   
-```  
-  
+```sql
 Declare @execid bigint  
 EXEC [SSISDB].[catalog].[create_execution] @folder_name=N'ETL Folder', @project_name=N'ETL Project', @package_name=N'Package.dtsx', @execution_id=@execid OUTPUT  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt'  
 EXEC [SSISDB].[catalog].[start_execution] @execid  
-  
 ```  
   
  O nome da pasta, o nome do projeto, os parâmetros do nome do pacote do procedimento armazenado create_execution correspondem à pasta, ao projeto e aos nomes de pacote no catálogo do Integration Services. Você pode obter os nomes de pasta, projeto e pacote para usar na chamada de create_execution do SQL Server Management Studio como mostra a imagem a seguir. Se você não vir o seu projeto SSIS agora, isso significará que ainda poderá não ter implantado o projeto no servidor SSIS. Clique com o botão direito do mouse no projeto SSIS no Visual Studio e clique em Implantar para implantar o projeto no servidor SSIS esperado.  
@@ -260,18 +256,16 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
 ### <a name="removing-a-data-tap"></a>Removendo um toque de dados  
  Você pode remover um toque de dados antes de iniciar a execução usando o procedimento armazenado [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md) . Esse procedimento armazenado utiliza a ID do toque de dados como um parâmetro, que você pode obter como uma saída do procedimento armazenado add_data_tap.  
   
-```  
-  
+```sql
 DECLARE @tap_id bigint  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt' @data_tap_id=@tap_id OUTPUT  
 EXEC [SSISDB].[catalog].remove_data_tap @tap_id  
-  
 ```  
   
 ### <a name="listing-all-data-taps"></a>Listando todos os toques de dados  
  Você também pode listar todos os toques de dados usando a exibição de catalog.execution_data_taps. O exemplo a seguir extrai toques de dados para uma instância de execução da especificação (ID: 54).  
   
-```  
+```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
 ```  
   
