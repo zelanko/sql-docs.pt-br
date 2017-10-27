@@ -18,7 +18,8 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: db9a6cef14a145c8546a0f47a71bf83a358d483c
 ms.contentlocale: pt-br
@@ -196,9 +197,10 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Controlando quebras de página, títulos, colunas e linhas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+[Controlando quebras de páginas, títulos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
 [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
 [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
 [Salvando relatórios &#40; Construtor de relatórios &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

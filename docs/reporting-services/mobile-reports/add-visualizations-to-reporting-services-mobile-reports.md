@@ -14,7 +14,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
 ms.contentlocale: pt-br
@@ -44,7 +45,7 @@ Cada métrica ou valor individual exibido em um gráfico é conhecido como uma s
 ### <a name="change-aggregation"></a>Agregação de alteração 
 Para campos numéricos em gráficos, a agregação padrão é soma. Você pode alterá-lo para média, contagem, mínimo, máximo, primeiro ou último.
 
-* Selecione o **dados** guia e, em **propriedades de dados**, selecione **opções** ao lado do campo numérico > selecione uma agregação diferente.
+* Selecione a guia **Dados** e, em **Propriedades de dados**, selecione **Opções** ao lado do campo numérico > selecione uma agregação diferente.
 
 ### <a name="set-or-clear-filters"></a>Definir ou limpar filtros
 
@@ -66,13 +67,13 @@ O gráfico de tempo é o gráfico mais básico do [!INCLUDE[SS_MobileReptPub_Sho
 
 2. Por padrão, ele é um gráfico de barras empilhadas. É possível alterar isso em **Visualização da série**.
 
-3. Se o gráfico precisa de dados que não esteja no relatório, selecione o **dados** guia > **adicionar dados** para [obter dados do Excel ou um conjunto de dados](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
+3. Se o gráfico precisar de dados que ainda não estão no relatório, selecione a guia **Dados** > **Adicionar dados** para [obter dados do Excel ou um conjunto de dados compartilhados](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
-3. No painel **Propriedades de dados** , a **Série Principal** é **SimulatedTable**. Clique a seta na caixa > selecione a tabela.
+3. No painel **Propriedades de dados**, a **Série Principal** é **SimulatedTable**. Clique a seta na caixa > selecione a tabela.
 
-5. Se você definir **estrutura de dados** para **por colunas** (no **Layout** guia > **propriedades visuais** painel), aqui no **propriedades de dados** painel, você pode selecionar várias colunas de valores numéricos.
+5. Se você definir **Estrutura de dados** como **Por colunas** (na guia **Layout** > painel **Propriedades visuais**), aqui no painel **Propriedades de dados**, você poderá selecionar várias colunas de valores numéricos.
 
-   Se você definir **Estrutura de dados** como **Por linhas**, aqui no painel **Propriedades de dados** , você poderá selecionar um **Campo de Nome da Série** e uma coluna de valores numéricos.
+   Se você definir **Estrutura de dados** como **Por linhas**, aqui no painel **Propriedades de dados**, você poderá selecionar um **Campo de Nome da Série** e uma coluna de valores numéricos.
    
 Leia mais sobre [como agrupar dados por colunas ou linhas](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   

@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
 ms.contentlocale: pt-br
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
   É possível mover os bancos de dados do servidor de relatório usados em uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para uma instância que está em outro computador. Os bancos de dados reportserver e reportservertempdb devem ser movidos ou copiados juntos. Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requer os dois bancos de dados; o banco de dados reportservertempdb deve ser relacionado por nome ao banco de dados reportserver primário que está sendo movido.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
  A movimentação de um banco de dados não afeta as operações agendadas que estão definidas atualmente para itens de servidor de relatório.  
   
@@ -226,7 +227,7 @@ GO
 ## <a name="next-steps"></a>Próximas etapas
 
 [Criar o RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
-[Iniciar e parar o serviço do servidor de relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[Iniciar e parar o serviço Servidor de Relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
 [Configurar uma Conexão de banco de dados do servidor de relatório](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Configurar a conta de execução autônoma](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
 [Gerenciador de configuração do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
@@ -235,3 +236,4 @@ GO
 [Banco de dados de servidor de relatório](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

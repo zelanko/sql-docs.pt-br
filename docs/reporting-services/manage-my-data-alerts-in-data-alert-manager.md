@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
@@ -83,3 +84,4 @@ Os usuários do SharePoint podem exibir uma lista dos alertas de dados que criar
 [Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

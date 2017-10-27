@@ -22,7 +22,8 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
 ms.contentlocale: pt-br
@@ -122,3 +123,4 @@ Mais sobre a [Documentação do Desenvolvedor do Reporting Services](../reportin
 * [Relatórios do Power BI no Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

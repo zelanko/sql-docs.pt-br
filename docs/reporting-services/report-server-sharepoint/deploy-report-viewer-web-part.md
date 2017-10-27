@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
@@ -154,3 +155,4 @@ Os idiomas a seguir têm suporte com a web part:
 Após a implantação da web part do Visualizador de relatórios e para ativar, você pode adicionar a web part a uma página do SharePoint. Para obter mais informações, consulte [web part do Visualizador de relatórios de adicionar a uma página do SharePoint](add-report-viewer-web-part-to-page.md).
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

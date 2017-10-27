@@ -23,6 +23,7 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 8b6d83cb8261483890c376121b23f1ffca9f6bbf
@@ -292,3 +293,4 @@ Depois de migrar o servidor de relatório com êxito para uma nova instância, �
 [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 Ainda tem dúvidas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

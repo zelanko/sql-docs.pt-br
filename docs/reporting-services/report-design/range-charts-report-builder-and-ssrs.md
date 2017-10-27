@@ -15,7 +15,8 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1cdcf1877134ea93ec52b3c7fb70dbfeda536a93
 ms.contentlocale: pt-br
@@ -62,3 +63,4 @@ ms.lasthandoff: 08/09/2017
  [Formatando um gráfico de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
+

@@ -14,7 +14,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
 ms.contentlocale: pt-br
@@ -76,3 +77,4 @@ Na primeira vez que você criar um relatório móvel, você pode instalar o SQL 
 -   [Formatar um relatório móvel do Reporting Services para telefone ou tablet](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
+

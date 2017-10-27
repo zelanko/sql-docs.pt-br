@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f4a345f97fc3b414f6d804b127b625faa8e1204
 ms.contentlocale: pt-br
@@ -44,3 +45,4 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversio
  [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

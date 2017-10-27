@@ -19,6 +19,7 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
@@ -70,3 +71,4 @@ Há dois componentes principais do [!INCLUDE[ssRSnoversion](../../includes/ssrsn
  [Gerenciador de alertas de dados para os administradores de alerta](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

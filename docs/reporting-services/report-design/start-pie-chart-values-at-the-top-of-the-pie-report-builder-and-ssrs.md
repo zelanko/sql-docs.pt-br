@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8a12864064849ffc3bb0fa6937833ffee57e0df5
 ms.contentlocale: pt-br
@@ -52,3 +53,4 @@ Em vez disso, pode ser útil deixar o primeiro valor iniciar na parte superior.
  [Gráficos de pizza &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   
+

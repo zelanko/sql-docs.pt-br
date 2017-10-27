@@ -17,6 +17,7 @@ f1_keywords:
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
@@ -162,3 +163,4 @@ Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas 
 [Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

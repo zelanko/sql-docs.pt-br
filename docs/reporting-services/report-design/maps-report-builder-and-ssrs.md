@@ -22,7 +22,8 @@ caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 64fd4ab25d7328a649e6629d16c88538c6bee6e6
 ms.contentlocale: pt-br
@@ -260,3 +261,4 @@ ms.lasthandoff: 08/09/2017
  [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
+

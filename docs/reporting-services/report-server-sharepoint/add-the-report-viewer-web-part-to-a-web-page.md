@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 26080938c9849d6021f30d970ab2262f405df00c
@@ -64,3 +65,4 @@ Para adicionar uma web part a uma página da web, você deve ter a permissão Ad
  [Personalizar a web part do Visualizador de relatórios](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
  [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+

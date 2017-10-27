@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
 ms.contentlocale: pt-br
@@ -68,6 +69,7 @@ ms.lasthandoff: 08/09/2017
 >  Ao remover um cabeçalho ou rodapé de página, você o exclui do relatório. Quaisquer itens adicionados anteriormente ao cabeçalho ou rodapé de página não voltarão a ser exibidos, se você adicionar o cabeçalho ou rodapé novamente mais tarde.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
+

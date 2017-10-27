@@ -19,7 +19,8 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
 ms.contentlocale: pt-br
@@ -39,7 +40,7 @@ O banco de dados do servidor de relatório fornece armazenamento para uma ou mai
 
  A seguinte lista identifica as condições nas quais um banco de dados do servidor de relatório é atualizado:  
   
--   A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza uma única instância de um servidor de relatório. O esquema de banco de dados do servidor de relatório é atualizado automaticamente após a inicialização do serviço, e o servidor de relatório determina que a versão do esquema de banco de dados não corresponde à do servidor.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza uma única instância de um servidor de relatório. O esquema de banco de dados do servidor de relatório é atualizado automaticamente após a inicialização do serviço, e o servidor de relatório determina que a versão do esquema de banco de dados não corresponde à do servidor.  
   
      Durante a inicialização do serviço, o servidor de relatório verifica se a versão do esquema de banco de dados corresponde à versão do servidor. Se a versão do esquema de banco de dados for mais antiga, ela será atualizada automaticamente para a versão de esquema exigida pelo servidor de relatório. A atualização automática é especialmente útil se você restaurou ou anexou um banco de dados de servidor de relatório mais antigo. Uma mensagem é inserida no arquivo de log de rastreamento do servidor de relatório, indicando que a versão do esquema de banco de dados foi atualizada.  
   
@@ -81,3 +82,4 @@ O banco de dados do servidor de relatório fornece armazenamento para uma ou mai
 [Migrar uma instalação do Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

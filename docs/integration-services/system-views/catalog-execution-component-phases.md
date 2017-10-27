@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 > [!WARNING]  
 >  A exibição catalog.execution_component_phases oferece essas informações quando o nível de log da execução do pacote está definido como desempenho ou detalhado. Para saber mais, veja [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, subcomponent_name, execution_path,  
     SUM(DATEDIFF(ms,start_time,end_time)) as active_time,  

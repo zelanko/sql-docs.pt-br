@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
 ms.contentlocale: pt-br
@@ -31,13 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  Você pode atualizar os valores e os estados de indicadores. Para obter mais informações, consulte os tópicos a seguir:  
   
--   [Alterar ícones de indicador e conjuntos de indicadores &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Alterar os ícones de indicadores e os conjuntos de indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Definir e configurar unidades de medida &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Definir e configurar unidades de medida &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Definir o escopo de sincronização &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Definir o escopo da sincronização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
- Como um indicador é posicionado dentro do painel de medidores, você precisa selecionar o indicador, em vez do painel, quando deseja configurar o indicador usando a caixa de diálogo **Propriedades de Indicadores** ou o painel **Propriedades**. A imagem a seguir mostra um indicador selecionado em seu painel de medidores.  
+ Como um indicador é posicionado dentro do painel de medidores, você precisa selecionar o indicador, em vez do painel, quando deseja configurar o indicador usando a caixa de diálogo **Propriedades de Indicadores** ou o painel **Propriedades** . A imagem a seguir mostra um indicador selecionado em seu painel de medidores.  
   
  ![rs_GaugePanelWithIndicator](../../reporting-services/report-design/media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>Para adicionar um indicador a uma tabela ou matriz  
   
-1.  Abra um relatório existente ou crie um novo relatório que contenha uma tabela e matriz com os dados a serem exibidos. Para obter mais informações, consulte [tabelas &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) ou [matrizes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
+1.  Abra um relatório existente ou crie um novo relatório que contenha uma tabela e matriz com os dados a serem exibidos. Para obter mais informações, consulte [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) ou [Matrizes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
 2.  Insira uma coluna em sua tabela ou matriz. Para obter mais informações, consulte [Inserir ou excluir uma coluna &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
@@ -76,6 +77,7 @@ ms.lasthandoff: 08/09/2017
 2.  Clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Indicadores &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
+

@@ -14,7 +14,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
 ms.contentlocale: pt-br
@@ -62,7 +63,7 @@ Para exibir os dados reais no seu mapa, você precisa definir valores para pelo 
   
 1. Selecione a guia **Dados** no canto superior esquerdo.  
   
-2. Selecione **Adicionar Dados**e, em seguida, **Excel Local** ou **Servidor SSRS**.  
+2. Selecione **adicionar dados**, então **Excel Local** ou **servidor SSRS**.  
   
    > **Dica**: verifique se os [dados estão em um formato que funciona para relatórios móveis](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   

@@ -14,7 +14,8 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
 ms.contentlocale: pt-br
@@ -26,9 +27,9 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-a-folder"></a>Para criar uma pasta  
   
-1.  Iniciar o [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  No portal da Web, selecione **Pasta** no menu suspenso **Novo** . Ou, para criar uma pasta na pasta já existente, navegue até essa pasta e selecione **Pasta** no menu suspenso **Novo** .  
+2.  No portal da Web, selecione **Pasta** no menu suspenso **Novo**. Ou, para criar uma pasta na pasta já existente, navegue até essa pasta e selecione **Pasta** no menu suspenso **Novo** .  
   
      A caixa de diálogo **Criar uma nova pasta** é aberta.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 6.  Clique em **Aplicar** para salvar as alterações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

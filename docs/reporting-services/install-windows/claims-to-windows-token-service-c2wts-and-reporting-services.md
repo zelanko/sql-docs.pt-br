@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ Se seu ambiente usar a delegação restrita de Kerberos, o serviço do SharePoin
 4. Inicie o Claims to Windows Token Service pela Administração Central do SharePoint no **gerenciar serviços no servidor** página. O serviço deverá ser iniciado no servidor que estará executando a ação. Por exemplo, se você tiver um servidor que é um WFE e outro servidor que é um servidor de aplicativos que tem o serviço compartilhado do SQL Server Reporting Services em execução, você só precisam iniciar o C2WTS no servidor de aplicativos. C2WTS só é necessário em um servidor WFE, se você estiver executando a web part do Visualizador de relatórios.
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

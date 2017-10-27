@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d64ebc0ee2345088419e44ab819c0d94d26274a8
 ms.contentlocale: pt-br
@@ -44,3 +45,4 @@ ms.lasthandoff: 08/09/2017
  [Adicionar minigráficos e barras de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   
+

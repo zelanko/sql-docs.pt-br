@@ -16,7 +16,8 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: pt-br
@@ -64,7 +65,7 @@ Esta lição supõe que você está usando [!INCLUDE[ssManStudioFull_md](../incl
     GO  
     ```  
   
-7.  Clique em **! Executar** na barra de ferramentas.  
+7.  Clique em **! Execute**  na barra de ferramentas.  
   
 8.  Use uma instrução SELECT para verificar se há três linhas de dados. Por exemplo: `select * from OrderInfo`  
   
@@ -80,3 +81,4 @@ Esta lição supõe que você está usando [!INCLUDE[ssManStudioFull_md](../incl
 [Criar um relatório de tabela básico](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

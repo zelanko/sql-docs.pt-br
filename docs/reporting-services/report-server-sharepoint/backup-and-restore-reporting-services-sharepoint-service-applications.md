@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: b6dcd64d6f9662ae592474053e6cc9bbce53a83e
@@ -167,3 +168,4 @@ Para fazer backup do aplicativo de serviço, conclua as seguintes etapas:
 6.  Selecione **Okey**
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

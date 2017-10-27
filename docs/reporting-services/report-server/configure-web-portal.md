@@ -16,7 +16,8 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: pt-br
@@ -66,7 +67,7 @@ Quando você configura as URLs no [!INCLUDE[ssRSnoversion](../../includes/ssrsno
 
 #### <a name="to-configure-a-static-report-server-url"></a>Para configurar uma URL estática do servidor de relatório
 
-1. Abra o arquivo **RSReportServer.config** em um editor de texto. Por padrão, ele está localizado em \Program Files\Microsoft msrs12 SQL. \< *instancename*> services\reportserver.  
+1. Abra o arquivo **RSReportServer.config** em um editor de texto. Por padrão, ele está localizado em \Program Files\Microsoft msrs12 SQL. \< *instancename*> services\reportserver..  
 
 2. Localize **ReportServerURL**.
 
@@ -100,9 +101,10 @@ Você pode criar um pacote de marca personalizada para alterar as cores usadas n
 [Suporte a navegador do Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 [configurar uma URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[Ativar e desativar recursos do Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
-[Gerenciar um servidor de relatórios de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Ativar ou desativar o relatório recursos de serviços](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
+[Gerenciar um servidor de relatório de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configurar um servidor de relatório do modo nativo para administração Local](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
  Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

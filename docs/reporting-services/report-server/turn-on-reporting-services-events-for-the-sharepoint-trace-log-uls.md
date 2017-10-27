@@ -15,6 +15,7 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
@@ -162,3 +163,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
  Para obter mais informações e as etapas para configurar o log de diagnóstico em um servidor SharePoint na Administração Central do SharePoint 2010, consulte [Configurar definições do log de diagnóstico (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

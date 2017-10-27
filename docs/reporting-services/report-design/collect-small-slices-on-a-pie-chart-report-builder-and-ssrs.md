@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e25526de7b4ae194d0aa510c12a9a995208c035a
 ms.contentlocale: pt-br
@@ -87,8 +88,9 @@ Gráficos de pizza com muitas fatias pode parecer clusterizados. Saiba como cole
   
 ## <a name="see-also"></a>Consulte também  
 * [Tutorial: Adicionar um gráfico de pizza ao relatório (construtor de relatórios)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
-*  [Gráficos de pizza &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+*  [Gráficos de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [Exibir rótulos de pontos de dados fora de um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
 *  [Exibir valores de porcentagem em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)     
   
+

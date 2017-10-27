@@ -14,7 +14,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
 ms.contentlocale: pt-br
@@ -89,3 +90,4 @@ ms.lasthandoff: 08/09/2017
 [Adicionar o SharePoint Server a um farm no SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

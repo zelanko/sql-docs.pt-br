@@ -15,7 +15,8 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfa852d24647ae9553ec05167dc8eba58dfd3f73
 ms.contentlocale: pt-br
@@ -46,15 +47,15 @@ ms.lasthandoff: 08/09/2017
   
 -   **Conjuntos de Dados** Os conjuntos de dados podem ser publicados e gerenciados independentemente dos relatórios ou fontes de dados compartilhadas dos quais dependem. Você ou o proprietário do banco de dados pode fornecer consultas otimizadas para uso por autores de relatório. Quando você altera a consulta, todos os relatórios que usam o de conjunto de dados compartilhado usam a consulta atualizada. Você pode habilitar o cache de conjunto de dados para melhorar o desempenho. Você pode agendar cache de consulta par um momento específico ou usar uma agenda compartilhada.  
   
--   **Dados usados por partes de relatório** As partes de relatório podem incluir dados dos quais elas dependem. Para obter mais informações sobre partes de relatório, consulte [partes de relatório no Designer de relatórios &#40; SSRS &#41; ](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+-   **Dados usados por partes de relatório** As partes de relatório podem incluir dados dos quais elas dependem. Para obter mais informações sobre partes de relatório, consulte [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 -   **Dados de filtro** Os dados de relatório podem ser filtrados na consulta ou no relatório. Você pode usar conjuntos de dados e variáveis de consulta para criar parâmetros em cascata e fornecer aos usuários a capacidade de refinar escolhas de milhares de seleções para um número mais fácil de gerenciar. Você pode filtrar dados em uma tabela ou gráfico com base em valores de parâmetros ou outros valores que você especifica.  
   
--   **Parâmetros** Os comandos de consulta de conjunto de dados que incluem variáveis de consulta criam parâmetros de relatório correspondentes. Também é possível criar parâmetros manualmente. Quando você exibe um relatório, a barra de ferramentas de relatório exibe os parâmetros. Os usuários podem selecionar valores para controlar os dados ou a aparência do relatório. Para personalizar dados de relatório para audiências específicas, você pode criar conjuntos de parâmetros de relatório com diferentes valores padrão vinculados à mesma definição de relatório ou usar o campo interno **UserID** . Para obter mais informações, consulte [parâmetros de relatório &#40; Construtor de relatórios e Designer de relatórios &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) e [coleções internas em expressões &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+-   **Parâmetros** Os comandos de consulta de conjunto de dados que incluem variáveis de consulta criam parâmetros de relatório correspondentes. Também é possível criar parâmetros manualmente. Quando você exibe um relatório, a barra de ferramentas de relatório exibe os parâmetros. Os usuários podem selecionar valores para controlar os dados ou a aparência do relatório. Para personalizar dados de relatório para audiências específicas, você pode criar conjuntos de parâmetros de relatório com diferentes valores padrão vinculados à mesma definição de relatório ou usar o campo interno **UserID**. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) e [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
 -   **Alertas de dados** Depois de um relatório ser publicado, você pode criar alertas baseados nos dados do relatório e receber mensagens de email quando regras especificadas por você são atendidas.  
   
--   **Agrupar e agregar dados** Os dados de relatório podem ser agrupados e agregados na consulta ou no relatório. Se você agregar valores na consulta, poderá continuar a combinar valores no relatório dentro das restrições do que é significativo.  Para obter mais informações, consulte [filtro, grupo e classificar dados &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) e [agregar função &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
+-   **Agrupar e agregar dados** Os dados de relatório podem ser agrupados e agregados na consulta ou no relatório. Se você agregar valores na consulta, poderá continuar a combinar valores no relatório dentro das restrições do que é significativo.  Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) e [Função Aggregate &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
 -   **Classificar dados** Os dados de relatório podem ser classificados na consulta ou no relatório. Em tabelas, você também pode adicionar um botão de classificação interativo para permitir que o usuário controle a ordem de classificação.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 08/09/2017
   
 -   As fontes de dados que você pode usar dependem de quais extensões de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estão instaladas. O suporte para fontes de dados pode diferir por ferramenta de criação de cliente, por versão do servidor de relatório e por plataforma de servidor de relatório. Para obter mais informações, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
--   As credenciais de fonte de dados variam de acordo com o tipo de fonte de dados e de se você está exibindo relatórios em seu cliente ou servidor de relatório ou site do SharePoint. Para obter mais informações, consulte [definir permissões para itens do servidor de relatório em um Site do SharePoint &#40; O Reporting Services no SharePoint integrado modo &#41; ](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Especificar credenciais e informações de Conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)e informações de credenciais específicas para cada ferramenta do [Reporting Services ferramentas](../../reporting-services/tools/reporting-services-tools.md).  
+-   As credenciais de fonte de dados variam de acordo com o tipo de fonte de dados e de se você está exibindo relatórios em seu cliente ou servidor de relatório ou site do SharePoint. Para obter mais informações, consulte [Definir permissões para itens do Servidor de Relatório em um site do SharePoint &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e informações de credenciais específicas a cada ferramenta em [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  A tarefas relacionadas à criação de conexões de dados, à adição de dados de origens externas, conjuntos de dados e consultas.  
@@ -95,3 +96,4 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
+

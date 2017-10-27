@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
 ms.contentlocale: pt-br
@@ -138,3 +139,4 @@ ms.lasthandoff: 08/09/2017
  [Layout de página e renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
+

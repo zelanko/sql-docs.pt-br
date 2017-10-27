@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
 ms.contentlocale: pt-br
@@ -46,17 +47,17 @@ ms.lasthandoff: 08/09/2017
   
 6.  Clique no medidor. O painel **Dados do Medidor** é exibido.  
   
-7.  Na área **Valores**, na caixa de listagem **(Não Especificado)**, clique no campo cujos valores você deseja exibir no medidor. Se desejar, arraste o campo a ser usado a partir do conjunto de dados de relatório.  
+7.  Na área **Valores** , na caixa de listagem **(Não Especificado)** , clique no campo cujos valores você deseja exibir no medidor. Se desejar, arraste o campo a ser usado a partir do conjunto de dados de relatório.  
   
-8.  Clique com o botão direito do mouse no medidor, clique em **Adicionar Indicador** e em **Filho**. A caixa de diálogo **Selecionar Estilo de Indicador** é aberta.  
+8.  Clique com o botão direito do mouse no medidor, clique em **Adicionar Indicador**e em **Filho**. A caixa de diálogo **Selecionar Estilo de Indicador** é aberta.  
   
-9. Na caixa de diálogo **Selecionar Estilo de Indicador**, no painel esquerdo, clique no tipo de indicador desejado e no conjunto de indicadores.  
+9. Na caixa de diálogo **Selecionar Estilo de Indicador** , no painel esquerdo, clique no tipo de indicador desejado e no conjunto de indicadores.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 11. Clique no indicador. O painel **Dados do Medidor** é exibido.  
   
-12. Na área **Valores**, na caixa de listagem **(Não Especificado)**, clique no campo cujos valores você deseja exibir como indicador. Se desejar, arraste o campo a ser usado a partir do conjunto de dados de relatório.  
+12. Na área **Valores** , na caixa de listagem **(Não Especificado)** , clique no campo cujos valores você deseja exibir como indicador. Se desejar, arraste o campo a ser usado a partir do conjunto de dados de relatório.  
   
      O campo pode ser o mesmo ou um campo diferente daquele usado no medidor.  
   
@@ -76,17 +77,17 @@ ms.lasthandoff: 08/09/2017
   
 6.  Clique no medidor. O painel **Dados do Medidor** é exibido.  
   
-7.  Na área **Valores**, na caixa de listagem **(Não Especificado)**, clique no campo cujos valores você deseja exibir no medidor. Se desejar, arraste o campo a ser usado a partir do conjunto de dados de relatório.  
+7.  Na área **Valores** , na caixa de listagem **(Não Especificado)** , clique no campo cujos valores você deseja exibir no medidor. Se desejar, arraste o campo a ser usado a partir do conjunto de dados de relatório.  
   
-8.  Clique com o botão direito do mouse no medidor, clique em **Adicionar Indicador** e em **Adjacente**. A caixa de diálogo **Selecionar Estilo de Indicador** é aberta.  
+8.  Clique com o botão direito do mouse no medidor, clique em **Adicionar Indicador**e em **Adjacente**. A caixa de diálogo **Selecionar Estilo de Indicador** é aberta.  
   
-9. Na caixa de diálogo **Selecionar Estilo de Indicador**, no painel esquerdo, clique no tipo de indicador desejado e no conjunto de indicadores.  
+9. Na caixa de diálogo **Selecionar Estilo de Indicador** , no painel esquerdo, clique no tipo de indicador desejado e no conjunto de indicadores.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 11. Clique no indicador. O painel **Dados do Medidor** é exibido.  
   
-12. Na área **Valores**, na caixa de listagem **(Não Especificado)**, clique no campo cujos valores você deseja exibir como indicador. Se desejar, arraste o campo a ser usado a partir do conjunto de dados de relatório.  
+12. Na área **Valores** , na caixa de listagem **(Não Especificado)** , clique no campo cujos valores você deseja exibir como indicador. Se desejar, arraste o campo a ser usado a partir do conjunto de dados de relatório.  
   
      O campo pode ser o mesmo ou um campo diferente daquele usado no medidor.  
   
@@ -98,13 +99,14 @@ ms.lasthandoff: 08/09/2017
   
 15. Arraste cada rótulo para um local perto do medidor ou do indicador.  
   
-16. Clique com o botão direito do mouse no rótulo ao lado do medidor, clique em **Propriedades do Rótulo** e digite o texto desejado na caixa **Texto**.  
+16. Clique com o botão direito do mouse no rótulo ao lado do medidor, clique em **Propriedades do Rótulo**e digite o texto desejado na caixa **Texto** .  
   
-17. Clique com o botão direito do mouse no rótulo ao lado do indicador, clique em **Propriedades do Rótulo** e digite o texto desejado na caixa **Texto**.  
+17. Clique com o botão direito do mouse no rótulo ao lado do indicador, clique em **Propriedades do Rótulo**e digite o texto desejado na caixa **Texto** .  
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Indicadores &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
+

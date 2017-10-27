@@ -21,7 +21,8 @@ caps.latest.revision: 43
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1bf8106435899a97572c5972721bdf3190d031a6
 ms.contentlocale: pt-br
@@ -51,3 +52,4 @@ ms.lasthandoff: 08/09/2017
  [Caixa de diálogo de propriedades do relatório, referências](http://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
   
   
+
