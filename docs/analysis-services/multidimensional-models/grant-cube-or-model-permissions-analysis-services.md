@@ -100,7 +100,7 @@ ms.lasthandoff: 09/01/2017
   
 2.  No SSMS, navegue até a pasta **Funções** e clique com o botão direito do mouse em uma função existente.  
   
-3.  Selecione **Script de Função como arquivo** | **CRIAR PARA** | ****.  
+3.  Selecione **Script de Função como arquivo** | **CRIAR PARA** | **arquivo**.  
   
 4.  Salve o arquivo com uma extensão .xmla. Para testar o script, exclua a função atual, abra o arquivo no SSMS e pressione F5 para executar o script.  
   
