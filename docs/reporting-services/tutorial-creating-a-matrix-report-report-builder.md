@@ -16,7 +16,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
 ms.contentlocale: pt-br
@@ -57,7 +58,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40; Construtor de relatórios &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -162,7 +163,7 @@ Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo
   
 2.  Pressione a tecla Ctrl e, em seguida, selecione as nove células que contenham `[Sum(Sales)]`.  
   
-3.  Sobre o **início** guia > **número** > **moeda**. As células são alteradas para mostrar a moeda formatada.  
+3.  Na guia **Início** > **Número** > **Moeda**. As células são alteradas para mostrar a moeda formatada.  
   
     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
     
@@ -170,7 +171,7 @@ Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo
   
 4.  Clique na célula que contém `[SalesDate]`.  
   
-5.  No **número** grupo > **data**.  
+5.  No grupo **Número** > **Data**.  
   
     A célula exibe a data de exemplo **[1/31/2000]**. Se uma data de exemplo não estiver visível, clique em **Estilos de Espaço Reservado** no grupo **Números** e clique em **Valores de Exemplo**.  
   
@@ -268,7 +269,7 @@ A área de canto está no canto superior esquerdo da matriz. Dependendo do núme
   
 5.  Clique com o botão direito do mouse na nova célula mesclada e clique em **Propriedades da Caixa de Texto**.  
   
-6.  Sobre o **borda** guia > **predefinições** > **nenhum**.
+6.  Na guia **Borda** > **Predefinições** > **Nenhuma**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -283,9 +284,9 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Selecione a caixa de texto na parte superior do corpo do relatório que contém **Clique para adicionar título**e pressione a tecla Delete.  
+2.  Selecione a caixa de texto na parte superior do corpo do relatório que contém **Clique para adicionar título** e pressione a tecla Delete.  
   
-3.  Sobre o **inserir** guia > **cabeçalho** > **Adicionar cabeçalho**.  
+3.  Na guia **Inserir** > **Cabeçalho** > **Adicionar Cabeçalho**.  
   
     Um cabeçalho é adicionado à parte superior do corpo do relatório.  
   
@@ -335,7 +336,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 ## <a name="RotateTextBox"></a>9. (Opcional) Girar caixa de texto em 270 graus  
 Um relatório com matrizes pode se expandir horizontal e verticalmente quando executado. Girando-se caixas de texto verticalmente, ou em 270 graus, é possível economizar espaço horizontal. Em seguida, o relatório renderizado é estreitado e, se exportado para um formato como o Microsoft Word, será mais provável o ajuste em uma página impressa.  
   
-Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima para baixo). Para obter mais informações, consulte [caixas de texto &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima para baixo). Para obter mais informações, consulte [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>Para girar caixa de texto em 270 graus  
   
@@ -353,7 +354,7 @@ Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima pa
   
 4.  Verificar se a propriedade CanGrow está definida como **True**.  
   
-5.  Na guia **Início** > seção **Parágrafo**, selecione **Meio** e **Centro** para localizar o texto no centro da célula vertical e horizontalmente.  
+5.  Na guia **Início**, na seção **Parágrafo**, selecione **Meio** e **Centro** para localizar o texto no centro da célula vertical e horizontalmente.  
  
 6. Redimensione a coluna Territory para ter 1,27 centímetro de largura e exclua o título da coluna.  
 6.  Clique em **Executar** para visualizar o relatório.  

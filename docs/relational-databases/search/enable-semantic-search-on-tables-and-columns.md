@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
@@ -285,3 +286,4 @@ GO
  É possível habilitar a indexação semântica em um tipo de coluna não Unicode com um LCID para um idioma que tenha apenas palavras Unicode, como o LCID 1049 para russo. Neste caso, nenhum resultado será retornado dos índices semânticos nesta coluna.  
   
   
+

@@ -23,7 +23,8 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
 ms.contentlocale: pt-br
@@ -49,7 +50,7 @@ public class MSReportServer_ConfigurationSetting
  Qualquer membro público estático (**Compartilhado** no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) desse tipo é seguro para operações com vários threads. Não há garantia de que qualquer membro da instância seja seguro para threads.  
   
 ## <a name="example"></a>Exemplo  
- Para executar o código a seguir, adicione o nome do servidor no lugar de cada \< *servername*>. Atualize o caminho para que indique o local da instalação, caso não seja o padrão. O exemplo de código a seguir se repete através de cada propriedade na classe *MSReportServer_ConfigurationSetting*, imprimindo o nome de cada propriedade e seu valor no console.  
+ Para executar o código a seguir, adicione o nome do servidor no lugar de cada \< *servername*>. Atualize o caminho para que indique o local da instalação, caso não seja o padrão. O exemplo de código a seguir se repete através de cada propriedade na classe *MSReportServer_ConfigurationSetting* , imprimindo o nome de cada propriedade e seu valor no console.  
   
 ```vb  
 Imports System  
@@ -174,11 +175,12 @@ class Class1
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
- **Plataforma:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
+

@@ -16,7 +16,8 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
 ms.contentlocale: pt-br
@@ -36,7 +37,7 @@ A ilustração seguinte mostra o gráfico de coluna que você criará, com uma m
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -68,7 +69,7 @@ Nesta seção, você aprende a usar o Assistente de Gráfico para criar um conju
     > [!NOTE]  
     > A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
+6.  Na página **Crie uma consulta**, clique em **Editar como Texto**.  
   
 7.  Cole a seguinte consulta no painel de consulta:  
   
@@ -127,9 +128,9 @@ Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensio
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Clique com botão direito do eixo horizontal > **propriedades do Eixo Horizontal**.  
+2.  Clique com o botão direito do mouse no eixo horizontal > **Propriedades do Eixo Horizontal**.  
   
-3.  Na guia **Número** , em **Categoria**, selecione **Data**.  
+3.  Na guia **Número**, em **Categoria**, selecione **Data**.  
   
 5.  Na caixa **Tipo** , selecione **31 de janeiro de 2000**.  
   
@@ -149,9 +150,9 @@ A data é exibida no formato selecionado. O gráfico ainda não rotula cada cate
   
 2.  Clique com o botão direito do mouse no título do eixo horizontal e clique em **Mostrar Título do Eixo** para remover o título. Como o eixo horizontal exibe datas, o título não é necessário.  
   
-3.  Clique com botão direito do eixo horizontal > **propriedades do Eixo Horizontal**.  
+3.  Clique com o botão direito do mouse no eixo horizontal > **Propriedades do Eixo Horizontal**.  
   
-5.  Na guia **Rótulos** , em **Alterar as opções de ajuste automático do rótulo do eixo**, selecione **Desabilitar ajuste automático**.  
+5.  Na guia **Rótulos**, em **Alterar as opções de ajuste automático do rótulo do eixo**, selecione **Desabilitar ajuste automático**.  
   
 7.  Em **Ângulo de rotação do rótulo**, selecione **-90**.  
   
@@ -172,7 +173,7 @@ A legenda é criada automaticamente de categoria e dados de série. Você pode m
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Clique com botão direito a legenda no gráfico > **propriedades da legenda**.  
+2.  Clique com o botão direito do mouse na legenda, no gráfico, > **Propriedades da Legenda**.  
   
 3.  Em **Layout e Posição**, selecione uma posição diferente. Por exemplo, selecione a opção intermediária inferior.  
   
@@ -180,7 +181,7 @@ A legenda é criada automaticamente de categoria e dados de série. Você pode m
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Opcional) Como há somente uma categoria neste tutorial, o gráfico não precisa de uma legenda. Para removê-lo, clique com botão direito na legenda > **Excluir legenda**.  
+5.  (Opcional) Como há somente uma categoria neste tutorial, o gráfico não precisa de uma legenda. Para removê-la, clique com o botão direito do mouse na legenda > **Excluir Legenda**.  
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
@@ -199,21 +200,21 @@ Por padrão, o eixo vertical exibe valores em um formato geral que é dimensiona
   
 2. Clique nos rótulos do eixo vertical no lado esquerdo do gráfico para selecioná-los.  
   
-3.  No **início** guia > **número** de grupo, clique no **moeda** botão. Os rótulos do eixo são alterados para mostrar o formato da moeda.  
+3.  Na guia **Início**, no grupo **Número**, clique no botão **Moeda**. Os rótulos do eixo são alterados para mostrar o formato da moeda.  
   
 4.  Clique no botão **Diminuir Decimal** duas vezes, para mostrar o número arredondado para o valor mais próximo.  
   
-5.  Clique com botão direito do eixo vertical > **propriedades do Eixo Vertical**.  
+5.  Clique com o botão direito do mouse no eixo vertical > **Propriedades do Eixo Vertical**.  
   
-6.  Na guia **Número** , observe que a opção **Moeda** já está selecionada na caixa **Categoria** e **Casas decimais** já é **0** (zero).  
+6.  Na guia **Número**, observe que a opção **Moeda** já está selecionada na caixa **Categoria** e **Casas decimais** já é **0** (zero).  
   
 7.  Marque **Mostrar Valores em**. **Milhares** já está selecionado.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Clique com botão direito do eixo vertical > **Mostrar título do eixo**. 
+9. Clique com o botão direito do mouse no eixo vertical > **Mostrar Título do Eixo**. 
 
-10. Clique no título do eixo vertical > **propriedades do título do eixo**.  
+10. Clique com o botão direito do mouse no título do eixo vertical > **Propriedades do Título do Eixo**.  
   
 10. Substitua o texto no campo **Texto do título** por **Total de Vendas (em Milhares)**. Também é possível especificar várias opções relacionadas ao modo como o título é formatado.  
   
@@ -283,7 +284,7 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
   
 4.  Selecione **Gráfico de Vendas** e, na guia **Início**, > seção **Fonte** > **Negrito**.  
   
-5.  Selecione **janeiro a dezembro de 2015**e na **início** guia > **fonte** seção > Definir tamanho da fonte **10**.  
+5.  Selecione **Janeiro a dezembro de 2015** e, na guia **Início**, > seção **Fonte** > defina o tamanho da fonte como **10**.  
   
 6.  (Opcional) Talvez seja necessário aumentar a altura da caixa de texto **Título** para acomodar as duas linhas de texto. Mova para baixo as setas com duas pontas ao clicar no meio da borda inferior. Além disso, talvez seja necessário arrastar a parte superior do gráfico para que não haja sobreposição do título.  
   
@@ -306,7 +307,7 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
 4.  Clique em **Salvar**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-Você concluiu com êxito o tutorial Adicionando um gráfico de colunas ao seu relatório. Para saber mais sobre gráficos, consulte [gráficos &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [minigráficos e barras de dados &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Você concluiu com êxito o tutorial Adicionando um gráfico de colunas ao seu relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
 -    [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 

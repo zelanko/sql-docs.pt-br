@@ -19,6 +19,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9ae1001b60f61120999ef61b7385464ca7af0fc5
@@ -42,3 +43,4 @@ ms.lasthandoff: 06/22/2017
  Se o que você digitou possui mais de uma possível associação, invoque o Complete Word para exibir uma lista das possíveis associações, as quais você pode usar para encontrar o termo e inseri-lo em seu código.  
   
   
+

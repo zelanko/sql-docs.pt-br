@@ -23,6 +23,7 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: murato
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
 ms.openlocfilehash: 5f5a567fba47be944dcf02f2facd2253d7852e88
@@ -68,3 +69,4 @@ Você também pode usar o Assistente de migração para orientar você durante e
 ## <a name="see-also"></a>Consulte também  
 [Introdução ao Assistente de migração do SQL Server para Access](http://msdn.microsoft.com/462a731f-08f1-44e1-9eeb-4deac6d2f6c5)  
 [Preparar bancos de dados do Access para a migração](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 7595c51bf8cc0ec07a464a65c992c2f3a56b15c2
@@ -177,3 +178,4 @@ A versão de novembro de 2006 do SSMA para Access contém as seguintes alteraç�
   
 ## <a name="july-2006"></a>Julho de 2006  
 A versão de julho de 2006 do SSMA para Access foi a versão inicial.
+

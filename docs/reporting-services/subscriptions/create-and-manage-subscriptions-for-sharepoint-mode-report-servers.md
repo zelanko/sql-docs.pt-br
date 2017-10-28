@@ -19,7 +19,8 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
 ms.contentlocale: pt-br
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  Quando você cria uma assinatura, pode selecionar um formato de arquivo de saída. Nem todo relatório funciona bem em qualquer formato. Antes de selecionar o formato de uma assinatura, abra o relatório e exporte-o em formatos diferentes para verificar se ele é exibido como esperado.  
   
- Os usuários precisam da permissão de lista **Editar Itens** no SharePoint se quiserem criar assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ Os usuários precisam da permissão de lista **Editar Itens** no SharePoint se quiserem criar assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  Uma assinatura que entrega um relatório a uma biblioteca ou uma pasta compartilhada cria um novo arquivo estático baseado no relatório original, mas que não é uma definição de relatório verdadeira executada na Web Part do Visualizador de Relatórios. Se o relatório original tiver recursos interativos (por exemplo, links de detalhamento) ou conteúdo dinâmico, esses recursos não ficarão disponíveis no arquivo estático entregue no local de destino. Se você selecionar uma “página da Web”, poderá preservar alguma interatividade, mais, como o documento não é um arquivo .rdl executado no Visualizador de Relatórios, clicar em um relatório criará novas páginas na sessão do navegador que devem ser percorridas para voltar ao site.  
@@ -169,3 +170,4 @@ ms.lasthandoff: 08/09/2017
  [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
+

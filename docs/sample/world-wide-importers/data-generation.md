@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
@@ -84,3 +85,4 @@ O procedimento `Application.Configuration_PopulateLargeSaleTable` pode ser usado
 Aproximadamente o número necessário de linhas é inserido no `Fact.Sale` tabela no ano de 2012. O procedimento limita artificialmente o número de linhas por dia para 50000. Isso pode ser alterado, mas há evitar overinflations accidential da tabela.
 
 Além disso, o procedimento se aplica a indexação de columnstore clusterizado, se não tiver sido aplicada já.
+
