@@ -83,7 +83,7 @@ ms.lasthandoff: 09/12/2017
   
 1.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**, clique com o botão direito do mouse em **Protocolos de** *\<server instance>* e, depois, selecione **Propriedades**.  
   
-2.  Na caixa de diálogo **Propriedades** de **Protocolos de ** *\<instance name>*, na guia **Certificado**, selecione o certificado desejado na lista suspensa da caixa **Certificado** e, depois, clique em **OK**.  
+2.  Na caixa de diálogo **Propriedades** de **Protocolos de**  *\<instance name>*, na guia **Certificado**, selecione o certificado desejado na lista suspensa da caixa **Certificado** e, depois, clique em **OK**.  
   
 3.  Na guia **Sinalizadores** , na caixa **ForceEncryption** , selecione **Sim**e clique em **OK** para fechar a caixa de diálogo.  
   
