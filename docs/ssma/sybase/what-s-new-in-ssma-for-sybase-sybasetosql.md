@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
@@ -207,3 +208,4 @@ A versão de julho de 2006 do SSMA for Sybase foi a versão inicial.
   
 ## <a name="see-also"></a>Consulte também  
 [Guia de Introdução com o SSMA para Sybase &#40; SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+

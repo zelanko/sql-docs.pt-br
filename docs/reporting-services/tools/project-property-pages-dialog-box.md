@@ -19,7 +19,8 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
 ms.contentlocale: pt-br
@@ -92,7 +93,8 @@ ms.lasthandoff: 08/09/2017
 
 [Publicar Relatórios](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [Publicar um relatório em uma biblioteca do SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[Definir propriedades de implantação &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
-[Ajuda de F1 do Designer de relatórios](../../reporting-services/tools/report-designer-f1-help.md)  
+[Definir propriedades de implantação &#40; Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Ajuda F1 do Designer de Relatórios](../../reporting-services/tools/report-designer-f1-help.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

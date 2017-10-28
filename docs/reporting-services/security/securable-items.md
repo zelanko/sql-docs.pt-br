@@ -20,6 +20,7 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
@@ -71,3 +72,4 @@ ms.lasthandoff: 08/09/2017
  [Modificar ou excluir uma atribuição de função &#40; Gerenciador de relatórios &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   
+

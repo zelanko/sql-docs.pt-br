@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
 ms.openlocfilehash: aafb1156f2036e09fa4f610380a5a1d24a5dbdad
@@ -119,3 +120,4 @@ O **exibição** menu fornece comandos para alternar a visibilidade do painel de
 ## <a name="see-also"></a>Consulte também  
 [Migrando SAP ASE bancos de dados para o SQL Server - banco de dados SQL do Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Referência de Interface do usuário &#40; SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+

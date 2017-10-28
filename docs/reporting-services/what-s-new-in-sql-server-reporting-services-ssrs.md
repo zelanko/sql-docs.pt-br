@@ -12,6 +12,7 @@ ms.topic: get-started-article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
 ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
@@ -198,3 +199,4 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Servidor de Relatório do Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

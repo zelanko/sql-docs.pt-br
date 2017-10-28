@@ -16,7 +16,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
 ms.contentlocale: pt-br
@@ -38,7 +39,7 @@ A ilustração a seguir mostra o gráfico de barras que você criará, com as ve
   
  
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para instruções passo a passo sobre como navegar até um servidor de relatório, crie um conjunto de dados e escolha uma fonte de dados, consulte o primeiro tutorial nesta série: [Tutorial: Criando um relatório de tabela básico &#40; Construtor de relatórios &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, criar um conjunto de dados e escolher uma fonte de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 15 minutos.  
   
@@ -70,7 +71,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
     > [!NOTE]  
     > A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
+6.  Na página **Crie uma consulta**, clique em **Editar como Texto**.  
   
 7.  Cole a seguinte consulta no painel de consulta:  
   
@@ -97,7 +98,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
 ## <a name="ChartType"></a>2. Criar um gráfico de barras  
  
-1.  Na página **Escolher um tipo de gráfico** , o gráfico de colunas é o tipo de gráfico padrão.  
+1.  Na página **Escolher um tipo de gráfico**, o gráfico de colunas é o tipo de gráfico padrão.  
   
 2.  Clique em **Barra**e em **Avançar**.  
   
@@ -220,7 +221,7 @@ Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensio
   
 2.  Clique no eixo horizontal ao longo da parte inferior do gráfico para selecioná-lo.  
   
-3.  Sobre o **início** guia > **número** grupo > **moeda**. Os rótulos do eixo horizontal são alterados para moeda.  
+3.  Na guia **Início** > grupo **Número** > **Moeda**. Os rótulos do eixo horizontal são alterados para moeda.  
   
 3.  (Opcional) Remova os dígitos decimais. Próximo ao botão **Moeda** , clique no botão **Diminuir Decimal** duas vezes.  
   

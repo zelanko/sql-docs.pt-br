@@ -17,7 +17,8 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8f8eac1d05b8bdd034879cb2eba1c4fc867fce66
 ms.contentlocale: pt-br
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/09/2017
  [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
+

@@ -25,6 +25,7 @@ caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ebec450636a6a0342421da7dff862481bb1da55a
@@ -188,3 +189,4 @@ Baixar o [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
 [Tutoriais de Reporting Services](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

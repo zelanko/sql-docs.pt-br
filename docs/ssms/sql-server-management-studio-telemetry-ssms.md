@@ -14,6 +14,7 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
@@ -41,3 +42,4 @@ Para optar por realizar ou não a coleta de dados de uso para SSMS, consulte: [C
 ## <a name="see-also"></a>Consulte também
 
 [Auditoria Local da coleta de comentários sobre o uso do SQL Server](http://msdn.microsoft.com/library/mt743085.aspx)
+

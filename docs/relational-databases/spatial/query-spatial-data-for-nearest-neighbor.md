@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8cac116f89d0cf1fde83a00dfd42c02e1fc5e2f0
@@ -21,14 +22,12 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 06/22/2017
 
 ---
-# Consultar dados espaciais de vizinho mais próximo
-<a id="query-spatial-data-for-nearest-neighbor" class="xliff"></a>
+# <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar dados espaciais de vizinho mais próximo
   Uma consulta comum usada com dados espaciais é a consulta de Vizinho Mais Próximo. As consultas de Vizinho Mais Próximo são usadas para localizar os objetos espaciais mais próximos a um objeto espacial específico. Por exemplo, um localizador de lojas para um site geralmente deve localizar os locais de loja mais próximos ao local de um cliente.  
   
  Uma consulta de Vizinho Mais Próximo pode ser escrita em uma variedade de formatos de consulta válidos, mas, para que a consulta de Vizinho Mais Próximo use um índice espacial, a sintaxe a seguir deve ser usada.  
   
-## Sintaxe
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 SELECT TOP ( number )  
@@ -56,8 +55,7 @@ SELECT TOP ( number )
   
 ```  
   
-## Consulta de Vizinho Mais Próximo e índices espaciais
-<a id="nearest-neighbor-query-and-spatial-indexes" class="xliff"></a>  
+## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Consulta de Vizinho Mais Próximo e índices espaciais  
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as cláusulas **TOP** e **ORDER BY** são usadas para realizar uma consulta de Vizinho Mais Próximo em colunas de dados espaciais. A cláusula **ORDER BY** contém uma chamada ao método `STDistance()` para o tipo de dados de coluna espacial. A cláusula **TOP** indica o número de objetos a ser retornado para a consulta.  
   
  Os requisitos a seguir devem ser satisfeitos para uma consulta de Vizinho Mais Próximo para usar um índice espacial:  
@@ -81,8 +79,7 @@ SELECT TOP ( number )
   
  É recomendado que os novos mosaicos de índice espaciais sejam usados para índices usados em consultas de Vizinhos Mais Próximos. Para obter mais informações sobre mosaicos de índice espacial, veja [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-## Exemplo
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra para uma consulta de Vizinho Mais Próximo que pode usar um índice espacial. O exemplo usa a tabela `Person.Address` no banco de dados `AdventureWorks2012` .  
   
 ```tsql  
@@ -97,8 +94,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  Crie um índice espacial na coluna SpatialLocation para ver como uma consulta de Vizinho Mais Próximo usa um índice espacial. Para obter mais informações sobre como criar índices espaciais, consulte [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
   
-## Exemplo
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra para uma consulta de Vizinho Mais Próximo que não pode usar um índice espacial.  
   
 ```tsql  
@@ -112,8 +108,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  A consulta não tem uma cláusula **WHERE** que usa `STDistance()` em uma forma especificada na seção de sintaxe; portanto, a consulta não pode usar um índice espacial.  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
