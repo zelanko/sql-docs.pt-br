@@ -65,7 +65,7 @@ ms.lasthandoff: 09/09/2017
 3.  Em **Mapeamentos**, selecione um campo na fonte de dados para **Coluna de Origem**e selecione o domínio correspondente. Repita para todos os domínios que você usa no processo de correspondência. Cada domínio que é definido na política de comparação deve ser mapeado para a coluna de origem apropriada. A página Mapa exibe os domínios que foram definidos na política de comparação e as regras na política de comparação no painel da direita.  
   
     > [!NOTE]  
-    >  Você poderá mapear sua fonte de dados para um domínio DQS somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre tipos de dados que oferecem suporte no DQS, consulte [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Você poderá mapear sua fonte de dados para um domínio DQS somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre tipos de dados que oferecem suporte no DQS, consulte [O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 4.  Clique no controle **mais (+)** para adicionar uma linha à tabela Mapeamentos ou no controle **menos (–)** para remover uma linha.  
   
