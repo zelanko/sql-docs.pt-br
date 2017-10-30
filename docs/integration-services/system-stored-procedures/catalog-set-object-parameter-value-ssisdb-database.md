@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
@@ -99,3 +100,4 @@ catalog.set_object_parameter_value [@object_type =] object_type
 -   O valor `30` podem ser usadas para *object_type* para denotar um parâmetro de pacote. Nesse caso, um valor para *object_name* é usado para denotar o pacote correspondente. Se *object_name* não for especificado, o procedimento armazenado retorna um erro e será encerrado.  
   
   
+

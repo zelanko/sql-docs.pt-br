@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 76a41be8ac6066a4f163b5049a758302d43d5219
@@ -64,3 +65,4 @@ catalog.stop_operation [ @operation_id = ] operation_id
  Somente um usuário deve parar uma operação por vez no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se vários usuários tentarem parar a operação, o procedimento armazenado retornará com êxito (o valor `0`) na primeira tentativa, mas nas tentativas subsequentes, será gerado um erro.  
   
   
+

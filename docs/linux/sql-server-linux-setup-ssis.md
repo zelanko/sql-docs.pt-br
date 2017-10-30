@@ -9,6 +9,7 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
 ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
@@ -130,3 +131,4 @@ dtexec /F <package name> /DE <protection password>
 ## <a name="next-steps"></a>Próximas etapas
 
 Para obter mais informações sobre como usar o SSIS para extrair, transformar e carregar dados no Linux, consulte [extrair, transformar e carregar dados para o SQL Server no Linux com o SSIS](sql-server-linux-migrate-ssis.md).
+

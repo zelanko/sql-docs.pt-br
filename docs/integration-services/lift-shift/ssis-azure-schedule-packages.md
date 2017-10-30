@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
@@ -227,3 +228,4 @@ Para obter mais informações sobre o código nesse script, consulte [implantar 
 Para obter mais informações sobre o SQL Server Agent, consulte [trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).
 
 Para obter mais informações sobre trabalhos Elásticos no banco de dados SQL, consulte [Gerenciando bancos de dados de nuvem expansíveis](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+

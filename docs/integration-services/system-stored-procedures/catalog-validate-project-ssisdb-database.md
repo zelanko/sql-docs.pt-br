@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 83439015694f4235af4a67e994e916651ec63cc1
@@ -98,3 +99,4 @@ catalog.validate_project [ @folder_name = ] folder_name
  A validação completa confirma se todas as variáveis de ambiente referenciadas são encontradas nos ambientes referenciados incluídos na validação. Os resultados da validação completa listam referências de ambiente que não são válidas e variáveis de ambiente referenciadas que não poderiam ser encontradas em nenhum dos ambientes referenciados que foram incluídos na validação.  
   
   
+
