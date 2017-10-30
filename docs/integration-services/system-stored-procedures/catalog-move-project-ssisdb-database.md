@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5b091ccea1f733ebbf6e52308d17c7bdb7449cbe
@@ -77,3 +78,4 @@ catalog.move_project [ @source_folder = ] source_folder
 >  Um projeto pode ter referências de ambiente relativas ou absolutas. As referências relativas fazem referência ao ambiente pelo nome. Essas referências requerem que o ambiente resida na mesma pasta do projeto. As referências absolutas fazem referência ao ambiente por nome e pasta. Essas referências fazem referência a ambientes que residam em uma pasta diferente da pasta do projeto.  
   
   
+

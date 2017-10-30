@@ -17,6 +17,7 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/03/2017
  Os scripts Tarefa Script e Componente de Script que fazem referência explicitamente ao ADODB.dll podem não ser atualizados ou executados em computadores sem o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] instalado. Para atualizar esses scripts Tarefa Script ou Componente Script, é recomendável remover a dependência do ADODB.dll.  O Ado.Net é a alternativa indicada para código gerenciado, como scripts VB e C#.  
   
   
+

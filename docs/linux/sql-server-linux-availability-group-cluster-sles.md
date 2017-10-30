@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 50a2633790b9878a8be2a9a3c417fc877a37633d
@@ -307,3 +308,4 @@ Para obter detalhes adicionais, consulte:
 ## <a name="next-steps"></a>Próximas etapas
 
 [Operar o grupo de disponibilidade de alta disponibilidade](sql-server-linux-availability-group-failover-ha.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
@@ -135,3 +136,4 @@ Para os clientes que chegaram à conclusão de que as vantagens dessa configura�
 -   No **Administrador de Cluster**, selecione o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , clique com o botão direito do mouse e selecione **Colocar Online** no menu pop-up. Agora, o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está online como um recurso de cluster.  
   
   
+

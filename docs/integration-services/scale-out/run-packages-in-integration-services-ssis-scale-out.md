@@ -15,6 +15,7 @@ ms.author: haoqian
 manager: jhubbard
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
@@ -117,3 +118,4 @@ Para alternar o modo de execução padrão para o modo de não - expansão, bast
 
 ## <a name="run-package-in-sql-agent-job"></a>Executar o pacote no trabalho do SQL agent
 No trabalho do Sql agent, você pode optar por executar um pacote SSIS como uma etapa do trabalho. Para executar o pacote de expansão, você pode aproveitar o modo de execução padrão acima. Depois de configurar o modo de execução de padrão de "Expansão", pacotes em trabalhos do Sql agent serão executados em expansão.
+

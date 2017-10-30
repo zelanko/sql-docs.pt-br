@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40e31b9697c453f6a9d60dfcc8d9302dfefe0ac4
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/26/2017
 >  Quando você tem permissão para executar uma operação no servidor, também tem permissão para exibir informações sobre a operação. A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
   
   
+

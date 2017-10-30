@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
 ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
@@ -87,3 +88,4 @@ A edição Evaluation do SQL Server está disponível por um período de avalia�
 |Extração de termos e transformações de pesquisa de termo|Sim|||||  
 
 <sup>1</sup> componentes o Change Data Capture da attunity exigem Enterprise edition. O serviço Change Data Capture e o Change Data Capture Designer, no entanto, não requerem Enterprise edition. Você pode usar o Designer e o serviço em um computador em que o SSIS não está instalado.
+
