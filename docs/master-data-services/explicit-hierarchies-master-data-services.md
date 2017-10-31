@@ -15,15 +15,14 @@ helpviewer_keywords:
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: ca0d83ac41efca3c9a0c1a71f87e9176bfd34553
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4680ca90441beb57266656b85461697f95eb19d
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Hierarquias explícitas (Master Data Services)
@@ -81,7 +80,7 @@ ms.lasthandoff: 09/07/2017
   
  Para resumir esses membros folha a pontos de consolidação específicos, você pode criar membros consolidados na entidade Produto. Insira os membros consolidados em níveis na árvore hierárquica em que você deseja resumir os membros folha. Não há nenhuma limitação em relação a onde você insere seus membros consolidados; no entanto, cada membro (folha ou consolidado) só pode ser usado uma vez.  
   
- ![Exemplo de hierarquia explícita de Mountain Bike](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Exemplo de hierarquia explícita de Mountain Bike")  
+ ![Exemplo de hierarquia explícita Mountain Bike](../master-data-services/media/mds-conc-explicit-hierarchy.gif "exemplo de hierarquia explícita Mountain Bike")  
   
  Membros consolidados podem ser usados para agrupar membros em qualquer nível, e membros folha e membros consolidados são classificados na ordem que você determinar.  
   
@@ -89,16 +88,16 @@ ms.lasthandoff: 09/07/2017
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Criar uma nova hierarquia.|[Criar uma hierarquia explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Alterar o nome de uma hierarquia explícita existente.|[Alterar o nome de uma hierarquia explícita &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|Excluir uma hierarquia explícita existente.|[Excluir uma hierarquia explícita &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|Criar uma nova hierarquia.|[Criar uma hierarquia explícita &#40; Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Alterar o nome de uma hierarquia explícita existente.|[Alterar o nome de uma hierarquia explícita &#40; Master Data Services &#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Excluir uma hierarquia explícita existente.|[Excluir uma hierarquia explícita &#40; Master Data Services &#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Hierarquias derivadas &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [Coleções de &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   
 
