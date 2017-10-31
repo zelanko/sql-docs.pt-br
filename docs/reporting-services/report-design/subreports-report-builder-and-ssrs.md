@@ -15,8 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
 ms.contentlocale: pt-br
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  O sub-relatório pode ser colocado no corpo principal do relatório ou em uma região de dados. Se o sub-relatório for posicionado em uma região de dados, ele será repetido em cada instância do grupo ou da linha na região de dados. Para passar um valor a partir de um grupo ou uma linha para o sub-relatório, na propriedade de valor do sub-relatório, use uma expressão de campo para o campo que contém o valor que deseja passar para o parâmetro de sub-relatório.  
   
- Para obter mais informações sobre como trabalhar com sub-relatórios, consulte [Adicionar um sub-relatório e parâmetros &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre como trabalhar com sub-relatórios, consulte [adicionar um sub-relatório e parâmetros &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>Especificando nomes e locais de sub-relatório  
  É possível criar um relatório principal para especificar um sub-relatório em outra pasta no mesmo servidor de relatório.  
@@ -61,7 +60,6 @@ ms.lasthandoff: 08/09/2017
  No Construtor de Relatórios, para visualizar um sub-relatório em um relatório principal, os dois relatórios devem estar localizados no mesmo servidor de relatório ou você deve especificar um caminho completo para o sub-relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
-

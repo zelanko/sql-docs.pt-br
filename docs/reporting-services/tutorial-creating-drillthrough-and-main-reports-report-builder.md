@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: pt-br
@@ -60,7 +59,7 @@ Na caixa de diálogo Introdução, crie um relatório de matriz por meio do **As
 3.  No painel direito, verifique se a opção **Assistente de Tabela ou Matriz** está selecionada.  
   
 ## <a name="DConnection"></a>1a. Especificar uma conexão de dados  
-Uma conexão de dados contém as informações necessárias para estabelecer conexões com uma fonte de dados externa, como um cubo do Analysis Services ou um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para especificar uma conexão de dados, você pode usar uma fonte de dados compartilhada do servidor de relatório ou criar uma fonte de dados inserida que será usada somente neste relatório. Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre como usar uma fonte de dados compartilhada, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Uma conexão de dados contém as informações necessárias para estabelecer conexões com uma fonte de dados externa, como um cubo do Analysis Services ou um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para especificar uma conexão de dados, você pode usar uma fonte de dados compartilhada do servidor de relatório ou criar uma fonte de dados inserida que será usada somente neste relatório. Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre como usar uma fonte de dados compartilhada, consulte [maneiras alternativa para obter uma Conexão de dados &#40; Construtor de relatórios &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
   
@@ -91,7 +90,7 @@ Uma conexão de dados contém as informações necessárias para estabelecer con
 10. Clique em **Tipo de credenciais**.  
   
     > [!NOTE]  
-    > Dependendo de como as permissões estão configuradas na fonte de dados, poderá ser necessário alterar as opções de autenticação padrão. Para obter mais informações, consulte [Segurança &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder/security-report-builder.md).  
+    > Dependendo de como as permissões estão configuradas na fonte de dados, poderá ser necessário alterar as opções de autenticação padrão. Para obter mais informações, consulte [Security &#40;Report Builder&#41;](../reporting-services/report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -115,7 +114,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
     > [!TIP]  
-    > Se você não desejar compilar a consulta MDX manualmente, clique no ![alternar para modo de Design](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") ícone, alterne o designer de consulta para o modo de consulta, cole o MDX concluído para o designer de consulta e, em seguida, vá para a etapa 6 em [para criar o conjunto de dados](#DSkip).  
+    > Se você não desejar compilar a consulta MDX manualmente, clique no ![alternar para modo de Design](../reporting-services/media/rsqdicon-designmode.gif "alternar para modo de Design") ícone, alterne o designer de consulta para o modo de consulta, cole o MDX concluído para o designer de consulta e, em seguida, vá para a etapa 6 em [para criar o conjunto de dados](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -345,7 +344,7 @@ Por padrão, os parâmetros estão visíveis, o que não é apropriado para este
 7.  Clique em **Salvar**.  
   
 ## <a name="MMatrixAndDataset"></a>1. Criar um novo relatório no Assistente de Tabela ou Matriz  
-Na caixa de diálogo **Introdução**, crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**.  
+Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**.  
   
 #### <a name="to-create-the-main-report"></a>Para criar o relatório principal  
   
@@ -406,7 +405,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
     > [!TIP]  
-    > Se você não desejar compilar a consulta MDX manualmente, clique no ![alternar para modo de Design](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") ícone, alterne o designer de consulta para o modo de consulta, cole o MDX concluído para o designer de consulta e, em seguida, vá para a etapa 5 em [para criar o conjunto de dados](#MSkip).  
+    > Se você não desejar compilar a consulta MDX manualmente, clique no ![alternar para modo de Design](../reporting-services/media/rsqdicon-designmode.gif "alternar para modo de Design") ícone, alterne o designer de consulta para o modo de consulta, cole o MDX concluído para o designer de consulta e, em seguida, vá para a etapa 5 em [para criar o conjunto de dados](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
