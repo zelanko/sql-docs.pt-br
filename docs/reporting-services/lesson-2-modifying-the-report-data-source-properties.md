@@ -16,8 +16,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
 ms.contentlocale: pt-br
@@ -114,7 +113,7 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
   
 ## <a name="bkmk_redeploy"></a>Implantar o relatório novamente  
   
-1.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção “Para publicar o relatório no Servidor de Relatório (opcional)” da [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usados no tutorial de tabela, consulte a seção ' Para publicar o relatório no servidor de relatório (opcional)' de [lição 6: Adicionar agrupamento e totais &#40; Reporting Services &#41; ](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Na barra de ferramentas, clique em **Compilar** e, em seguida, em **Implantar tutorial**.  
   
