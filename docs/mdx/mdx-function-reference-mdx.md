@@ -137,7 +137,7 @@ ms.lasthandoff: 08/02/2017
 |[RollupChildren &#40; MDX &#41;](../mdx/rollupchildren-mdx.md)|Retorna um valor gerado pelo acúmulo dos valores dos filhos de um membro especificado usando o operador unário especificado.|  
 |[StdDev &#40; MDX &#41;](../mdx/stddev-mdx.md)|Alias de [Stdev &#40; MDX &#41; ](../mdx/stdev-mdx.md).|  
 |[StddevP &#40; MDX &#41;](../mdx/stddevp-mdx.md)|Alias de [StdevP &#40; MDX &#41; ](../mdx/stdevp-mdx.md).|  
-|[StDev &#40; MDX &#41;](../mdx/stdev-mdx.md)|Retorna o desvio padrão de exemplo de uma expressão numérica, avaliado em relação a um conjunto, usando a fórmula de população não polarizada..|  
+|[StDev &#40; MDX &#41;](../mdx/stdev-mdx.md)|Retorna o desvio padrão de exemplo de uma expressão numérica, avaliado em relação a um conjunto, usando a fórmula de população não polarizada.|  
 |[StdevP &#40; MDX &#41;](../mdx/stdevp-mdx.md)|Retorna o desvio padrão de população de uma expressão numérica avaliada sobre um conjunto, usando a fórmula de população polarizada.|  
 |[StrToValue &#40; MDX &#41;](../mdx/strtovalue-mdx.md)|Retorna o valor especificado por uma cadeia de caracteres formatada para MDX.|  
 |[Soma &#40; MDX &#41;](../mdx/sum-mdx.md)|Retorna a soma de uma expressão numérica avaliada em um conjunto.|  
