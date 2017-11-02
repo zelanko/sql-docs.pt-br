@@ -76,7 +76,7 @@ ms.lasthandoff: 09/09/2017
     2.  Repita a etapa anterior para cada mapeamento. Para alterar o número de linhas na tabela, clique em **Adicionar um mapeamento de coluna**ou selecione uma linha e clique em **Remover o mapeamento de coluna selecionado**. Se você clicar em **Remover o mapeamento de coluna selecionado** quando uma linha populada estiver selecionada, a linha selecionada será excluída mesmo que exista uma linha não populada.  
   
         > [!NOTE]  
-        >  Você poderá mapear sua fonte de dados para um domínio DQS para realizar descoberta de conhecimento somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre os tipos de dados com suporte, consulte [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Você poderá mapear sua fonte de dados para um domínio DQS para realizar descoberta de conhecimento somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre os tipos de dados com suporte, consulte [O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Clique em **Exibir/selecionar domínios compostos** para exibir os domínios compostos que foram definidos. Se nenhum domínio composto foi definido, o controle não estará disponível.  
   
