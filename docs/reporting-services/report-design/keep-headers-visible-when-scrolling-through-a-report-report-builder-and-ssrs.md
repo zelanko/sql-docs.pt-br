@@ -15,8 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
 ms.contentlocale: pt-br
@@ -83,4 +82,3 @@ ms.lasthandoff: 08/09/2017
  [Painel de agrupamento &#40; Construtor de relatórios &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
   
   
-
