@@ -20,10 +20,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: eb1f09f1a23a6e24077357c36a0dbc136a86473f
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 63fd65591432fecc75ec5af5dd7cde2954ef4930
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Sobre reservas e registro de URL (Gerenciador de configurações do SSRS)
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 |SQL Server Express|Portal da Web|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Autenticação e identidade de serviço para URLs do Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Especificam a conta de serviço do serviço servidor de relatório. A conta com a qual o serviço é executado é usada para todas as URLs criadas para os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] executados na mesma instância. A identidade de serviço da instância do servidor de relatório é armazenada no arquivo RSReportServer.config.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] especificam a conta de serviço do Servidor de Relatório. A conta com a qual o serviço é executado é usada para todas as URLs criadas para os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] executados na mesma instância. A identidade de serviço da instância do servidor de relatório é armazenada no arquivo RSReportServer.config.  
   
  A conta de serviço não tem valor padrão. Entretanto, é necessário especificar uma conta de serviço durante a instalação em **URLReservation** no arquivo RSReportServer.config, mesmo que você instale o servidor no modo somente arquivos. Os valores válidos para a conta de serviço incluem uma conta de usuário de domínio, **LocalSystem**ou **NetworkService**.  
   
@@ -109,11 +109,11 @@ ms.lasthandoff: 08/09/2017
   
  O `http://localhost` URL é interpretada como `http://127.0.0.1`. Se você tiver delimitado a reserva de URL para um nome de computador ou endereço IP único, não poderá usar localhost, a menos que crie uma reserva adicional para 127.0.0.1 no computador local. Da mesma forma, se localhost ou 127.0.0.1 for desabilitado no computador, você não poderá usar essa URL.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] e posterior incluem novos recursos de segurança que minimizam o risco da execução acidental de programas com privilégios elevados. Etapas adicionais são necessárias para habilitar a administração local nesses sistemas operacionais. Para obter mais informações, veja [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] e posterior incluem novos recursos de segurança que minimizam o risco da execução acidental de programas com privilégios elevados. Etapas adicionais são necessárias para habilitar a administração local nesses sistemas operacionais. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar uma URL &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Sintaxe de reserva de URL &#40; Gerenciador de configurações do SSRS &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Sintaxe de reserva de URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
 

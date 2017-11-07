@@ -50,7 +50,7 @@ Exiba um relatório, do SQL Server Reporting Services ou o servidor de relatóri
 
     ![Inserir uma web part na faixa de opções do office.](media/sharepoint-insert-web-part.png)
 
-4. Em **categorias**, selecione * * SQL Server Reporting Services (modo nativo). Em **partes**, selecione **Visualizador de relatórios**. Em seguida, selecione **adicionar**.
+4. Em **categorias**, selecione **SQL Server Reporting Services (modo nativo). Em **partes**, selecione **Visualizador de relatórios**. Em seguida, selecione **adicionar**.
 
     ![Adicione a web part do Visualizador de relatórios.](media/sharepoint-report-viewer-web-part.png)
 
