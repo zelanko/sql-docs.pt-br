@@ -4,7 +4,7 @@ description: "Trechos de código de exibição de conteúdo atualizado recenteme
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: kfile
 editor: 
 ms.service: na
 ms.topic: updart-autogen
