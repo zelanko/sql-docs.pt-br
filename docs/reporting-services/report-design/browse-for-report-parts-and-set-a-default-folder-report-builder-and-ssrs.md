@@ -17,10 +17,10 @@ ms.author: maggies
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 0495d013be21d73c0ea5ae67c4a810c75db4298e
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Procurar partes de relatório e definir uma pasta padrão (Construtor de Relatórios e SSRS)
@@ -28,7 +28,7 @@ O modo mais fácil de criar um relatório paginado do [!INCLUDE[ssRSnoversion](.
   
  Você pode definir uma pasta padrão para publicar partes de relatório no servidor de relatório ou no site do SharePoint integrado a um servidor de relatório.  
   
- Para obter mais informações, consulte [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ Para obter mais informações, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ## <a name="to-browse-for-report-parts"></a>Para procurar partes de relatório  
   
@@ -70,10 +70,10 @@ O modo mais fácil de criar um relatório paginado do [!INCLUDE[ssRSnoversion](.
   
 ## <a name="see-also"></a>Consulte também  
  [Verificar ou desativar atualizações (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
- [Partes de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Partes de relatório e conjuntos de dados no construtor de relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Solução de problemas de partes de relatório (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Publicar e republicar partes de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [Publicar e republicar partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   
 
