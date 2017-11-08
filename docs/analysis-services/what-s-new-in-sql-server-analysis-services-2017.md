@@ -1,6 +1,6 @@
 ---
 title: Novidades no SQL Server de 2017 Analysis Services | Microsoft Docs
-ms.date: 10/03/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -10,13 +10,13 @@ ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
+ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
+ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
 ms.contentlocale: pt-br
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Novidades no SQL Server de 2017 Analysis Services
@@ -47,9 +47,9 @@ Para atualizar um modelo tabular existente no SSDT, no Gerenciador de soluções
 É importante ter em mente, depois de atualizar um modelo existente para 1400, você não pode fazer o downgrade. Certifique-se de manter um backup de seu banco de dados de modelo de 1200.
 
 ## <a name="modern-get-data-experience"></a>Experiência moderna do recurso Obter Dados
-Quando se trata de ingestão de dados de fontes de dados em seus modelos de tabela, o SQL Server Data Tools (SSDT) apresenta a moderna **obter dados** experiência para modelos no nível de compatibilidade de 1400. Esse novo recurso se baseia em uma funcionalidade semelhante no Power BI Desktop e Microsoft Excel 2016. A experiência de obter dados moderna fornece recursos de mashup de dados e transformação de dados grandes usando o construtor de consultas de obter dados e expressões de M.
+Quando se trata de importação de dados de fontes de dados em seus modelos de tabela, o SQL Server Data Tools (SSDT) apresenta a moderna **obter dados** experiência para modelos no nível de compatibilidade de 1400. Esse novo recurso se baseia em uma funcionalidade semelhante no Power BI Desktop e Microsoft Excel 2016. A experiência de obter dados moderna fornece recursos de mashup de dados e transformação de dados grandes usando o construtor de consultas de obter dados e expressões de M.
 
-Obter dados modernos experiência de suporte fornecido para uma ampla gama de fonte de dados adicional. Atualizações futuras dará suporte a fontes de dados adicionais.
+A experiência de obter dados moderna fornece suporte para uma ampla variedade de fontes de dados. No futuro, atualizações inclui suporte para até mesmo mais.
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
