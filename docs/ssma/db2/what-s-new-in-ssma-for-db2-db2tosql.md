@@ -1,5 +1,5 @@
 ---
-title: O que &#39; s do SSMA para DB2 (DB2ToSQL) | Microsoft Docs
+title: Novidades do SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/30/2017
@@ -19,13 +19,13 @@ ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 8246a40f5fd59ae4d8a28f1e0315ea1a015e8e7d
+ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
+ms.openlocfilehash: 8ff312fceaee24d32f23ff8135bcc18e09601ddf
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 11/08/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-db2-db2tosql"></a>O que &#39; s do SSMA para DB2 (DB2ToSQL)
+# <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novidades do SSMA para DB2 (DB2ToSQL)
 Este tópico lista SSMA para DB2 alterações em cada versão.  
 
 ## <a name="ssma-v76"></a>O SSMA v7.6
