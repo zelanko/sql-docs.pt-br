@@ -1,8 +1,9 @@
 ---
 title: "Recuperação de desastres do SQL Server no Linux | Microsoft Docs"
 description: 
-author: mihaelab
+author: allanhirt
 ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
