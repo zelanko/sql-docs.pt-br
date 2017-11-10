@@ -25,7 +25,8 @@ caps.latest.revision: 96
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d3fc9080d28a3b187478fc02f64bd7b38a99b178
 ms.contentlocale: pt-br
@@ -125,7 +126,7 @@ ms.lasthandoff: 08/09/2017
 |Fonte de dados OLE DB genérica|OLEDB|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Qualquer fonte de dados que ofereça suporte a OLE DB.<br /><br /> Consulte a documentação da fonte de dados para obter suporte à plataforma.|S|N/A|Qualquer fonte de dados que ofereça suporte a OLE DB. Consulte a [Observação](#OLEDBStandard).|S|N/A|  
 |Fonte de dados ODBC genérica|[ODBC](#ODBCGeneric)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Qualquer fonte de dados que ofereça suporte a ODBC.<br /><br /> Consulte a documentação da fonte de dados para obter suporte à plataforma.|S|N/A|Qualquer fonte de dados que ofereça suporte a ODBC. Consulte a [Observação](#ODBCGeneric).|S|S|  
   
- Para obter informações sobre como usar fontes de dados externas, consulte [Adicionar dados de fontes de dados externas 40; SSRS &41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
+ Para obter informações sobre como usar fontes de dados externas, consulte [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
  Muitos provedores de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] padrão são disponibilizados por terceiros. Para obter mais informações, pesquise os sites ou os fóruns dos terceiros.  
   
