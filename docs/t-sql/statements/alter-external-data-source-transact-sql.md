@@ -1,7 +1,7 @@
 ---
 title: ALTERAR a fonte de dados externa (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 11/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -31,7 +31,7 @@ ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTERAR a fonte de dados externa (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Modifica uma fonte de dados externa usada para criar uma tabela externa. Fonte de dados externa pode ser o armazenamento de BLOBs do Azure ou Hadoop (WASB).  
   
