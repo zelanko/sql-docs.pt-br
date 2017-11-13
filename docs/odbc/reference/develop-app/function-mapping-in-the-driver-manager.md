@@ -31,7 +31,7 @@ O Gerenciador de driver dá suporte a dois pontos de entrada para as funções q
   
  O arquivo de cabeçalho ODBC também oferece suporte às funções decoradas com um *A,* (**SQLDriverConnectA**) para a conveniência de aplicativos do ANSI/Unicode mistos. Chamadas feitas para o **um** funções são, na verdade, as chamadas para o ponto de entrada não decorado (**SQLDriverConnect**.)  
   
- Se o aplicativo é compilado com o Unicode **#define**, o arquivo de cabeçalho ODBC mapeará chamadas de função não decorados (**SQLDriverConnect**) para a versão Unicode (**SQLDriverConnectW **.)  
+ Se o aplicativo é compilado com o Unicode **#define**, o arquivo de cabeçalho ODBC mapeará chamadas de função não decorados (**SQLDriverConnect**) para a versão Unicode (**SQLDriverConnectW** .)  
   
  O Gerenciador de Driver reconhece um driver como um driver de Unicode se **SQLConnectW** é suportado pelo driver.  
   

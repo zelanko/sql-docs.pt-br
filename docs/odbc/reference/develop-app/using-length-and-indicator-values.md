@@ -57,7 +57,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  Os seguintes tamanhos são válidos como valores de comprimento/indicador:  
   
--   *n*, onde * n * > 0.  
+-   *n*, onde  *n*  > 0.  
   
 -   0.  
   

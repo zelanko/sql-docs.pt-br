@@ -54,5 +54,5 @@ _C_TYPE_TIMESTAMP|A parte fracionária de segundos de carimbo de hora não será
   
  [f] este é o tamanho do tipo de dados C correspondente.  
   
- Quando dados SQL de carimbo de hora são convertidos em dados de caractere C, a cadeia de caracteres resultante é a "*aaaa*-*mm*-*dd* *hh *:*mm*:*ss*[.* f... *] "formato, onde pode ser usado até nove dígitos para segundos fracionários. Esse formato não é afetado pela configuração de país Windows®. (Com exceção do ponto decimal e frações de segundo, o formato inteiro deve ser usado, independentemente da precisão do tipo de dados timestamp SQL.)
+ Quando dados SQL de carimbo de hora são convertidos em dados de caractere C, a cadeia de caracteres resultante é a "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[. *f...* ] "formato, onde pode ser usado até nove dígitos para segundos fracionários. Esse formato não é afetado pela configuração de país Windows®. (Com exceção do ponto decimal e frações de segundo, o formato inteiro deve ser usado, independentemente da precisão do tipo de dados timestamp SQL.)
 

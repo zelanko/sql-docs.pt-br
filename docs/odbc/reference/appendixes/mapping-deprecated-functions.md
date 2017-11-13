@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="mapping-deprecated-functions"></a>Mapeamento de funções de preteridas
-Esta seção descreve como preteridas funções são mapeados por ODBC 3*. x* Gerenciador de Driver para garantir a compatibilidade com versões anteriores do ODBC 3*. x* drivers que são usados com o ODBC 2.* x* aplicativos. O Gerenciador de Driver executa esse mapeamento, independentemente da versão do aplicativo. Como cada ODBC 2. *x* funções na lista a seguir é mapeado para o ODBC 3 correspondente*. x* função quando chamado em um ODBC 3*. x* driver, o ODBC 3*. x*driver não precisa implementar o ODBC 2. *x* funções.  
+Esta seção descreve como preteridas funções são mapeados por ODBC 3*. x* Gerenciador de Driver para garantir a compatibilidade com versões anteriores do ODBC 3*. x* drivers que são usados com o ODBC 2. *x* aplicativos. O Gerenciador de Driver executa esse mapeamento, independentemente da versão do aplicativo. Como cada ODBC 2. *x* funções na lista a seguir é mapeado para o ODBC 3 correspondente*. x* função quando chamado em um ODBC 3*. x* driver, o ODBC 3*. x*driver não precisa implementar o ODBC 2. *x* funções.  
   
  O mapeamento da lista é disparado quando o driver é um ODBC 3*. x* driver e o driver não oferece suporte para a função que está sendo mapeada.  
   

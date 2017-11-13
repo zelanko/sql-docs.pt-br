@@ -72,7 +72,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  As classes de evento herdam **IUnknown**, portanto, você também deve implementar o **QueryInterface**, **AddRef**, e **versão** métodos. Também é implementam destruidores e construtores de classe. Escolha as ferramentas do Visual C++ com o qual você está mais à vontade simplificar a essa parte da tarefa.  
   
- Verifique conhecido que seus manipuladores de eventos estão disponíveis por meio **QueryInterface** no [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos para o ** IConnectionPointContainer** e **IConnectionPoint** interfaces. Em seguida, emita **IConnectionPoint::** para cada classe.  
+ Verifique conhecido que seus manipuladores de eventos estão disponíveis por meio **QueryInterface** no [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos para o  **IConnectionPointContainer** e **IConnectionPoint** interfaces. Em seguida, emita **IConnectionPoint::** para cada classe.  
   
  Por exemplo, suponha que você estiver usando uma função booliana retorna **True** se ele informa com êxito um **registros** do objeto que você tem manipuladores de eventos disponíveis.  
   

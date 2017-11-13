@@ -70,7 +70,7 @@ O Gerenciador de Driver ODBC 3.5 (ou superior) oferece suporte a versões ANSI e
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  Preterido funções têm suporte de mapeamento de Unicode para ANSI porque o ODBC 3*. x* Gerenciador de Driver dá suporte a recompilação ODBC 2.* x* aplicativos com o UNICODE **#define**.  
+>  Preterido funções têm suporte de mapeamento de Unicode para ANSI porque o ODBC 3*. x* Gerenciador de Driver dá suporte a recompilação ODBC 2. *x* aplicativos com o UNICODE **#define**.  
   
  Esta seção contém os tópicos a seguir.  
   

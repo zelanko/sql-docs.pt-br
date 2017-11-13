@@ -50,7 +50,7 @@ Permite que você atentamente as modificações de controle para uma tabela base
   
  Um erro de tempo de execução resulta se uma tabela base exclusiva não pode ser encontrada.  
   
- Essas propriedades dinâmicas são acrescentadas ao **registros** objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção quando o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está definida como ** adUseClient**.  
+ Essas propriedades dinâmicas são acrescentadas ao **registros** objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção quando o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está definida como  **adUseClient**.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

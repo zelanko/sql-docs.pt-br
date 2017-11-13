@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
 Indica as permissões disponíveis para modificar dados em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [registro](../../../ado/reference/ado-api/record-object-ado.md), ou [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
   
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
- Define ou retorna um [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valor. O valor padrão para um **Conexão** é **adModeUnknown**. O valor padrão para um **registro** objeto **adModeRead**. O valor padrão para um **fluxo** associado a uma fonte subjacente (aberta com uma URL como a origem ou o padrão **fluxo** de um **registro**) é ** adModeRead**. O valor padrão para um **fluxo** não associados a uma subjacente (instanciada na memória) de origem é **adModeUnknown**.  
+ Define ou retorna um [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valor. O valor padrão para um **Conexão** é **adModeUnknown**. O valor padrão para um **registro** objeto **adModeRead**. O valor padrão para um **fluxo** associado a uma fonte subjacente (aberta com uma URL como a origem ou o padrão **fluxo** de um **registro**) é  **adModeRead**. O valor padrão para um **fluxo** não associados a uma subjacente (instanciada na memória) de origem é **adModeUnknown**.  
   
 ## <a name="remarks"></a>Comentários  
  Use o **modo** propriedade para definir ou retornar as permissões de acesso em uso pelo provedor sobre a conexão atual. Você pode definir o **modo** propriedade apenas quando o **Conexão** objeto está fechado.  

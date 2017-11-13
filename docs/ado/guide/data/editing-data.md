@@ -48,7 +48,7 @@ Ter explicamos como usar o ADO para se conectar a uma fonte de dados, executar u
 'EndEditIntro  
 ```  
   
- A alteração importante para o código envolve a configuração de **CursorLocation** propriedade do **Conexão** objeto igual a **adUseClient** no * GetNewConnection* função (mostrada no exemplo a seguir), que indica o uso de um cursor do cliente. Para obter mais informações sobre as diferenças entre os cursores do lado do cliente e do servidor, consulte [Noções básicas sobre cursores e bloqueios](../../../ado/guide/data/understanding-cursors-and-locks.md).  
+ A alteração importante para o código envolve a configuração de **CursorLocation** propriedade do **Conexão** objeto igual a **adUseClient** no  *GetNewConnection* função (mostrada no exemplo a seguir), que indica o uso de um cursor do cliente. Para obter mais informações sobre as diferenças entre os cursores do lado do cliente e do servidor, consulte [Noções básicas sobre cursores e bloqueios](../../../ado/guide/data/understanding-cursors-and-locks.md).  
   
  O **CursorLocation** da propriedade **adUseClient** configuração move o local do cursor da fonte de dados (o SQL Server, neste caso) para o local do código de cliente (a estação de trabalho da área de trabalho). Essa configuração força o ADO para invocar o mecanismo de Cursor do cliente para OLE DB no cliente para criar e gerenciar o cursor.  
   

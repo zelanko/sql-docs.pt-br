@@ -59,7 +59,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="b"></a>B  
  **alteração de comportamento**  
- Uma alteração em determinada funcionalidade do ODBC 3*. x* comportamento para ODBC 2.* x* comportamento, ou vice-versa. Causada pela alteração do atributo de ambiente SQL_ATTR_ODBC_VERSION.  
+ Uma alteração em determinada funcionalidade do ODBC 3*. x* comportamento para ODBC 2. *x* comportamento, ou vice-versa. Causada pela alteração do atributo de ambiente SQL_ATTR_ODBC_VERSION.  
   
  **Objeto binário grande (BLOB)**  
  Quaisquer dados binários durante um determinado número de bytes, como 255. Geralmente é muito mais. Geralmente, esses dados são enviados e recuperados da fonte de dados em partes. Também conhecido como *dados long*.  

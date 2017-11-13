@@ -41,24 +41,24 @@ Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas os tip
   
 |Identificador de tipo SQL [1]|Típica de dados do SQL<br /><br /> tipo [2]|Descrição do tipo típico|  
 |------------------------------|------------------------------------|------------------------------|  
-|SQL_CHAR|CHAR (*n*)|Cadeia de caracteres de comprimento de cadeia de caracteres fixa * n *.|  
-|SQL_VARCHAR|VARCHAR (*n*)|Cadeia de caracteres de comprimento variável com um comprimento máximo da cadeia de caracteres * n *.|  
+|SQL_CHAR|CHAR (*n*)|Cadeia de caracteres de comprimento de cadeia de caracteres fixa  *n* .|  
+|SQL_VARCHAR|VARCHAR (*n*)|Cadeia de caracteres de comprimento variável com um comprimento máximo da cadeia de caracteres  *n* .|  
 |SQL_LONGVARCHAR|LONG VARCHAR|Dados de caracteres de comprimento variável. Comprimento máximo é – dependente da fonte de dados. [9]|  
 |SQL_WCHAR|WCHAR (*n*)|Cadeia de caracteres Unicode de comprimento de cadeia de caracteres fixa*n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Cadeia de caracteres de comprimento variável Unicode com um comprimento máximo da cadeia de caracteres*n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Dados de caractere de comprimento variável Unicode. Comprimento máximo é de – dependente da fonte de dados|  
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|Assinado, valor numérico exato com precisão de pelo menos *p* e escala *s.* (A precisão máxima é definido pelo driver.) (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMÉRICO (*p*,*s*)|Conectado, o valor numérico exato com precisão *p* e escala *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
-|SQL_SMALLINT|SMALLINT|Valor numérico com precisão 5 exato e escala de 0 (assinado: – 32.768 < = * n * < = 32.767, não assinado: 0 < = * n * < = 65.535) [3].|  
-_INTEGER|INTEGER|Valor numérico com precisão 10 exato e escala de 0 (assinado: – 2 [31] < = * n * < = 2 [31] – 1, não assinado: 0 < = * n * < = 2 [32] – 1) [3].|  
+|SQL_SMALLINT|SMALLINT|Valor numérico com precisão 5 exato e escala de 0 (assinado: – 32.768 < =  *n*  < = 32.767, não assinado: 0 < =  *n*  < = 65.535) [3].|  
+_INTEGER|INTEGER|Valor numérico com precisão 10 exato e escala de 0 (assinado: – 2 [31] < =  *n*  < = 2 [31] – 1, não assinado: 0 < =  *n*  < = 2 [32] – 1) [3].|  
 |SQL_REAL|REAL|Conectado, o valor numérico aproximado com uma precisão de binária 24 (zero ou valor absoluto 10 [–38] para 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Assinado, valor numérico aproximado com uma precisão de binária de pelo menos *p*. (A precisão máxima é definido pelo driver.) [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|Conectado, o valor numérico aproximado com uma precisão de binária 53 (zero ou valor absoluto 10 [–308] para 10[308]).|  
 |SQL_BIT|BIT|Dados binários de bit único. [8]|  
-|SQL_TINYINT|TINYINT|Valor numérico com precisão 3 exato e escala de 0 (assinado: –128 < = * n * < = 127, não assinado: 0 < = * n * < = 255) [3].|  
-_BIGINT|bigint|Exato de valor numérico com precisão 19 (se conectado) ou 20 (se não assinado) e a escala de 0 (assinado: – 2 [63] < = * n * < = 2 63 – 1, não assinado: 0 < = * n * < = 2 [64] – 1) [3], [9].|  
-|SQL_BINARY|BINÁRIO (*n*)|Dados binários de comprimento fixo * n *. [ 9]|  
-|SQL_VARBINARY|VARBINARY (*n*)|Dados binários de comprimento máximo de comprimento variável * n *. O máximo é definido pelo usuário. [9]|  
+|SQL_TINYINT|TINYINT|Valor numérico com precisão 3 exato e escala de 0 (assinado: –128 < =  *n*  < = 127, não assinado: 0 < =  *n*  < = 255) [3].|  
+_BIGINT|bigint|Exato de valor numérico com precisão 19 (se conectado) ou 20 (se não assinado) e a escala de 0 (assinado: – 2 [63] < =  *n*  < = 2 63 – 1, não assinado: 0 < =  *n*  < = 2 [64] – 1) [3], [9].|  
+|SQL_BINARY|BINÁRIO (*n*)|Dados binários de comprimento fixo  *n* . [ 9]|  
+|SQL_VARBINARY|VARBINARY (*n*)|Dados binários de comprimento máximo de comprimento variável  *n* . O máximo é definido pelo usuário. [9]|  
 |SQL_LONGVARBINARY|VARBINARY LONGO|Dados binários de comprimento variável. Comprimento máximo é – dependente da fonte de dados. [9]|  
 |SQL_TYPE_DATE [6]|DATE|Ano, mês e dia campos, em conformidade com as regras do calendário gregoriano. (Consulte [restrições do calendário gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), mais adiante neste apêndice.)|  
 |SQL_TYPE_TIME [6]|TEMPO (*p*)|Hora, minuto e segundo campos, com os valores válidos para horas de 00 a 23, os valores válidos para minutos de 00 a 59 e os valores válidos para segundos de 00 a 61. Precisão *p* indica a precisão de segundos.|  
@@ -86,11 +86,11 @@ _INTERVAL_MINUTE_TO_SECOND [7]|MINUTOS de intervalo (*p*) para o segundo (*p*)|N
   
  [3] um aplicativo usa **SQLGetTypeInfo** ou **SQLColAttribute** para determinar se um determinado tipo de dados ou uma coluna específica em um conjunto de resultados é não assinada.  
   
- [4] tipos de dados SQL_DECIMAL e SQL_NUMERIC diferem apenas em sua precisão. A precisão de um DECIMAL (*p*,*s*) é uma implementação definida precisão decimal é menor do que *p*, enquanto que a precisão de um NUMÉRICO (*p *,*s*) é exatamente igual ao *p*.  
+ [4] tipos de dados SQL_DECIMAL e SQL_NUMERIC diferem apenas em sua precisão. A precisão de um DECIMAL (*p*,*s*) é uma implementação definida precisão decimal é menor do que *p*, enquanto que a precisão de um NUMÉRICO (*p* ,*s*) é exatamente igual ao *p*.  
   
  [5] dependendo da implementação, a precisão de SQL_FLOAT pode ser 24 ou 53: se for 24, o tipo de dados SQL_FLOAT é o mesmo que SQL_REAL; Se for 53, o tipo de dados SQL_FLOAT é o mesmo que SQL_DOUBLE.  
   
- [6] em ODBC 3*. x*, os tipos de dados de data, hora e carimbo de hora do SQL são SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP, respectivamente; no ODBC 2.* x*, os tipos de dados são SQL_DATE, SQL_TIME e SQL_TIMESTAMP.  
+ [6] em ODBC 3*. x*, os tipos de dados de data, hora e carimbo de hora do SQL são SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP, respectivamente; no ODBC 2. *x*, os tipos de dados são SQL_DATE, SQL_TIME e SQL_TIMESTAMP.  
   
  [7] para obter mais informações sobre os tipos de dados SQL do intervalo, consulte o [tipos de dados de intervalo](../../../odbc/reference/appendixes/interval-data-types.md) seção mais adiante neste apêndice.  
   

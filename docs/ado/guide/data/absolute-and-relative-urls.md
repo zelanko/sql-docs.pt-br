@@ -57,15 +57,15 @@ Uma URL especifica o local de um destino armazenado em um computador local ou em
   
  Com o ADO 2.7 ou posterior, uma URL absoluta também pode definir um contexto. Por exemplo, quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto é aberto com uma URL absoluta, um **Conexão** objeto é implicitamente criado para representar o recurso especificado pela URL.  
   
- Uma URL absoluta que define o contexto pode ser especificada no *ActiveConnection* parâmetro o **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Uma URL absoluta também pode ser especificada como o valor da "URL**=**" palavra-chave no **Conexão** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método * ConnectionString* parâmetro e o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parâmetro.  
+ Uma URL absoluta que define o contexto pode ser especificada no *ActiveConnection* parâmetro o **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Uma URL absoluta também pode ser especificada como o valor da "URL**=**" palavra-chave no **Conexão** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método  *ConnectionString* parâmetro e o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parâmetro.  
   
- Contexto também pode ser definido abrindo um **registro** ou **registros** objeto que representa um diretório, porque esses objetos já tem um implicitamente ou explicitamente declarado **Conexão ** objeto que especifica o contexto.  
+ Contexto também pode ser definido abrindo um **registro** ou **registros** objeto que representa um diretório, porque esses objetos já tem um implicitamente ou explicitamente declarado **Conexão**  objeto que especifica o contexto.  
   
 ## <a name="scoped-operations"></a>No escopo de operações  
  O contexto também define o escopo — ou seja, o diretório e seus subdiretórios que podem participar em operações subsequentes. O **registro** objeto tem vários métodos com escopo definido que operam em um diretório e seus subdiretórios. Esses métodos incluem [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), e [ExcluirRegistro](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
   
 ## <a name="relative-urls-as-command-text"></a>URLs relativas como texto de comando  
- Você pode especificar um comando a ser executado na fonte de dados digitando uma cadeia de caracteres de *CommandText* parâmetro do **Conexão** do objeto [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método e o * Origem* parâmetro o **Recordset** do objeto [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método.  
+ Você pode especificar um comando a ser executado na fonte de dados digitando uma cadeia de caracteres de *CommandText* parâmetro do **Conexão** do objeto [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método e o  *Origem* parâmetro o **Recordset** do objeto [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método.  
   
  Uma URL relativa pode ser especificada no *CommandText* ou *fonte* parâmetro. A URL relativa não representa, na verdade, um comando, como um comando SQL; ele simplesmente especifica os parâmetros. O contexto da conexão ativa deve ser uma URL absoluta e o *opção* parâmetro deve ser definido como **adCmdTableDirect**.  
   

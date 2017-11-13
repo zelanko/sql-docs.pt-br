@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  Um aplicativo pode chamar **SQLBindCol** para reassociar resultado conjunto de colunas depois que ela é chamada de **SQLExtendedFetch**, **SQLFetch**, ou **SQLFetchScroll**, contanto que o tipo de dados C, tamanho da coluna e casas decimais da coluna associada permanecem os mesmos. O aplicativo não precisa fechar o cursor para reassociar colunas para endereços diferentes.  
   
- A biblioteca de cursores dá suporte à configuração do atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR para usar os deslocamentos de ligação. (**SQLBindCol** não precisa ser chamado para essa nova associação ocorra.) Se a biblioteca de cursores é usada com um ODBC 3*. x* driver, o deslocamento de ligação não é usado quando **SQLFetch** é chamado. O deslocamento de ligação é usado se **SQLFetch** é chamado quando a biblioteca de cursores é usada com um ODBC 2.* x* driver porque **SQLFetch** , em seguida, é mapeado para **SQLExtendedFetch**.  
+ A biblioteca de cursores dá suporte à configuração do atributo de instrução SQL_ATTR_ROW_BIND_OFFSET_PTR para usar os deslocamentos de ligação. (**SQLBindCol** não precisa ser chamado para essa nova associação ocorra.) Se a biblioteca de cursores é usada com um ODBC 3*. x* driver, o deslocamento de ligação não é usado quando **SQLFetch** é chamado. O deslocamento de ligação é usado se **SQLFetch** é chamado quando a biblioteca de cursores é usada com um ODBC 2. *x* driver porque **SQLFetch** , em seguida, é mapeado para **SQLExtendedFetch**.  
   
  A biblioteca de cursores dá suporte à chamada **SQLBindCol** para associar a coluna de indicador.  
   

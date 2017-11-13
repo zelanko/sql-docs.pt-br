@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="stayinsync-property-example-vc"></a>Exemplo de propriedade StayInSync (VC + +)
 Este exemplo demonstra como o [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriedade facilita acessar linhas em hierárquico [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- O loop externo exibe o nome e sobrenome de cada autor, estado e identificação. O acrescentados **registros** para cada linha é recuperada do [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleta e atribuído automaticamente aos **rstTitleAuthor** pela **StayInSync ** propriedade sempre que o pai **registros** move para uma nova linha. O loop interno exibe quatro campos de cada linha no conjunto de registros acrescentado.  
+ O loop externo exibe o nome e sobrenome de cada autor, estado e identificação. O acrescentados **registros** para cada linha é recuperada do [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleta e atribuído automaticamente aos **rstTitleAuthor** pela **StayInSync**  propriedade sempre que o pai **registros** move para uma nova linha. O loop interno exibe quatro campos de cada linha no conjunto de registros acrescentado.  
   
 ```  
 // BeginStayInSyncCpp.cpp  

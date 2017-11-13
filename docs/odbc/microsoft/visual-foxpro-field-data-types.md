@@ -33,12 +33,12 @@ A tabela a seguir lista os valores para o *FieldType* argumento em ALTER TABLE e
 |B|-|d|Double|  
 |C|N|-|Campo de caracteres de largura*n*|  
 |D|-|-|Data|  
-|F|N|d|Flutuante campo numérico da largura * n * com *d* casas decimais|  
+|F|N|d|Flutuante campo numérico da largura  *n*  com *d* casas decimais|  
 |G|-|-|Geral|  
 |I|-|-|Integer|  
 |L|-|-|Logical|  
 |M|-|-|Memorando|  
-|N|N|d|Um campo numérico da largura * n * com *d* casas decimais|  
+|N|N|d|Um campo numérico da largura  *n*  com *d* casas decimais|  
 |T|-|-|DateTime|  
 |S|-|-|Moeda|
 

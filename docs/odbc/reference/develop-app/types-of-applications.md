@@ -41,10 +41,10 @@ Aplicativos ODBC podem ser classificados da seguinte maneira:
     -   Não foi recompilado com cabeçalhos de ODBC 3.5.  
   
 -   **Puro ODBC 2.**  
-     ***x* aplicativo recompilado** um puro ODBC 2.* x* aplicativo foi recompilado usando os arquivos de cabeçalho ODBC 3.5, definindo ODBCVER = 0x0250.  
+     ***x* aplicativo recompilado** um puro ODBC 2. *x* aplicativo foi recompilado usando os arquivos de cabeçalho ODBC 3.5, definindo ODBCVER = 0x0250.  
   
 -   **Puro ODBC 2.**  
-     ***x* aplicativo Unicode** um puro ODBC 2.* x* recompilado aplicativo que é compatível com Unicode e usa o tipo de dados SQL_WCHAR.  
+     ***x* aplicativo Unicode** um puro ODBC 2. *x* recompilado aplicativo que é compatível com Unicode e usa o tipo de dados SQL_WCHAR.  
   
 -   **Puro Open Group e ISO**–**aplicativos ODBC compatíveis com** aplicativo A 32 bits que:  
   

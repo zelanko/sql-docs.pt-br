@@ -36,7 +36,7 @@ Lembre-se de que aplicativos não chamar funções de driver diretamente. Em vez
   
 -   Se nenhum driver foi carregado na conexão, o Gerenciador de Driver verifica se o driver especificado é carregado em outra conexão no mesmo ambiente. Se não, o Gerenciador de Driver carrega o driver na conexão e chama **SQLAllocHandle** no driver com a opção SQL_HANDLE_ENV.  
   
-     Em seguida, chama o Gerenciador de Driver **SQLAllocHandle** no driver com a opção SQL_HANDLE_DBC, ou não foi carregado apenas. Se o aplicativo definir quaisquer atributos de conexão, o Gerenciador de Driver chamará **SQLSetConnectAttr** no driver; se ocorrer um erro, função de conexão do Gerenciador de Driver retornará SQLSTATE IM006 (do Driver ** SQLSetConnectAttr** falha). Por fim, o Gerenciador de Driver chama a função de conexão no driver.  
+     Em seguida, chama o Gerenciador de Driver **SQLAllocHandle** no driver com a opção SQL_HANDLE_DBC, ou não foi carregado apenas. Se o aplicativo definir quaisquer atributos de conexão, o Gerenciador de Driver chamará **SQLSetConnectAttr** no driver; se ocorrer um erro, função de conexão do Gerenciador de Driver retornará SQLSTATE IM006 (do Driver  **SQLSetConnectAttr** falha). Por fim, o Gerenciador de Driver chama a função de conexão no driver.  
   
 -   Se o driver especificado é carregado na conexão, o Gerenciador de Driver chama a função de conexão no driver. Nesse caso, o driver deve garantir que todos os atributos de conexão a conexão mantenham suas configurações atuais.  
   

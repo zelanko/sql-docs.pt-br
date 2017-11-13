@@ -41,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **SQLGetData** não pode ser chamado para cursores de somente avanço.  
   
--   **SQLGetData** pode ser chamado apenas quando as seguintes condições forem atendidas: um **selecione** instrução gerou o conjunto de resultados; o **selecione** instrução não continha uma junção, um ** União** cláusula, ou um **GROUP BY** cláusula; e as colunas que é usado um alias ou uma expressão na lista de seleção não foram vinculados com **SQLBindCol**.  
+-   **SQLGetData** pode ser chamado apenas quando as seguintes condições forem atendidas: um **selecione** instrução gerou o conjunto de resultados; o **selecione** instrução não continha uma junção, um  **União** cláusula, ou um **GROUP BY** cláusula; e as colunas que é usado um alias ou uma expressão na lista de seleção não foram vinculados com **SQLBindCol**.  
   
 -   Se o driver oferece suporte a apenas uma instrução ativa, a biblioteca de cursores busca o restante do conjunto de resultados antes de executar o **selecione** instrução e chamar **SQLGetData**.
 

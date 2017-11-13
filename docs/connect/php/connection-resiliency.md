@@ -28,7 +28,7 @@ Resiliência de Conexão é implementada com duas conexão palavras-chave que po
 |**ConnectRetryCount**| Número inteiro entre 0 e 255 (inclusive)|1|O número máximo de tentativas de restabelecer uma conexão interrompida antes de desistir. Por padrão, um único tenta restabelecer uma conexão quando quebrado. Um valor de 0 significa que nenhum reconexão será tentada.|
 |**ConnectRetryInterval**| Número inteiro entre 1 e 60 (inclusivo)|1| O tempo, em segundos, entre as tentativas de restabelecer uma conexão. O aplicativo tentará reconectar-se imediatamente ao detectar uma conexão interrompida e, em seguida, aguardará **ConnectRetryInterval** segundos antes de tentar novamente. Esta palavra-chave será ignorado se **ConnectRetryCount** é igual a 0.
 
-Se o produto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** é maior do que **LoginTimeout**, em seguida, o cliente deixará de tentar se conectar de uma vez ** LoginTimeout** for atingido; caso contrário, ele continuará a tentar se reconectar até **ConnectRetryCount** for atingido.
+Se o produto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** é maior do que **LoginTimeout**, em seguida, o cliente deixará de tentar se conectar de uma vez  **LoginTimeout** for atingido; caso contrário, ele continuará a tentar se reconectar até **ConnectRetryCount** for atingido.
 
 #### <a name="remarks"></a>Comentários
 

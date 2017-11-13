@@ -34,7 +34,7 @@ Como é o caso com parâmetros em instruções SQL, os dados longos podem ser en
 > [!NOTE]  
 >  Um aplicativo pode enviar qualquer tipo de dados em tempo de execução com **SQLPutData**, embora apenas caracteres e dados binários podem ser enviados em partes. No entanto, se os dados são pequenos o suficiente para caber em um único buffer, há geralmente não há motivo para usar **SQLPutData**. É muito mais fácil associar o buffer e permitir que o driver recupera os dados do buffer.  
   
- Como as colunas de dados long normalmente não são associadas, o aplicativo deve associar a coluna antes de chamar **SQLBulkOperations** ou **SQLSetPos** e desvincule-depois de chamar **SQLBulkOperations ** ou **SQLSetPos**. A coluna deve ser vinculada porque **SQLBulkOperations** ou **SQLSetPos** funciona apenas em colunas associadas e deve ser desligado para que **SQLGetData** pode ser usado para recuperar dados de uma coluna.  
+ Como as colunas de dados long normalmente não são associadas, o aplicativo deve associar a coluna antes de chamar **SQLBulkOperations** ou **SQLSetPos** e desvincule-depois de chamar **SQLBulkOperations**  ou **SQLSetPos**. A coluna deve ser vinculada porque **SQLBulkOperations** ou **SQLSetPos** funciona apenas em colunas associadas e deve ser desligado para que **SQLGetData** pode ser usado para recuperar dados de uma coluna.  
   
  Para enviar dados em tempo de execução, o aplicativo faz o seguinte:  
   

@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="working-with-multidimensional-data"></a>Trabalhando com dados multidimensionais
 Um *conjunto de células* é o resultado de uma consulta em dados multidimensionais. Ele consiste em uma coleção de eixos, geralmente não mais do que quatro eixos e geralmente apenas dois ou três. Um *eixo* é uma coleção de membros de uma ou mais dimensões, que é usada para localizar ou filtrar valores específicos em um cubo.  
   
- Um *posição* é um ponto em um eixo. Para um eixo consiste em uma única dimensão, essas posições são um subconjunto dos membros de dimensão. Se um eixo consiste em mais de uma dimensão, cada posição é uma entidade composta, que tem * n * partes onde * n * é o número de dimensões orientados ao longo do eixo. Cada parte da posição é um membro de uma dimensão constituinte.  
+ Um *posição* é um ponto em um eixo. Para um eixo consiste em uma única dimensão, essas posições são um subconjunto dos membros de dimensão. Se um eixo consiste em mais de uma dimensão, cada posição é uma entidade composta, que tem  *n*  partes onde  *n*  é o número de dimensões orientados ao longo do eixo. Cada parte da posição é um membro de uma dimensão constituinte.  
   
  Por exemplo, se as dimensões de Geografia e de produto de um cubo que contém dados de vendas são orientadas ao longo do eixo x de um conjunto de células, uma posição ao longo desse eixo pode conter os membros "EUA" e "Computadores". Neste exemplo, determinar uma posição no eixo requer que os membros de cada dimensão são orientados ao longo do eixo.  
   

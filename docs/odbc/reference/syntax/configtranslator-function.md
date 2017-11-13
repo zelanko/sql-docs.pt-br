@@ -58,7 +58,7 @@ BOOL ConfigTranslator(
  A função retorna TRUE se for bem-sucedida, FALSO se ele falhar.  
   
 ## <a name="diagnostics"></a>diagnóstico  
- Quando **ConfigTranslator** retorna FALSE, um tipo de * \*pfErrorCode* valor é postado para o buffer de erro de instalador por uma chamada para **SQLPostInstallerError**e pode ser obtida chamando **SQLInstallerError**. A seguinte tabela lista o * \*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+ Quando **ConfigTranslator** retorna FALSE, um tipo de  *\*pfErrorCode* valor é postado para o buffer de erro de instalador por uma chamada para **SQLPostInstallerError**e pode ser obtida chamando **SQLInstallerError**. A seguinte tabela lista o  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Description|  
 |---------------------|-----------|-----------------|  

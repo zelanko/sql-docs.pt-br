@@ -46,7 +46,7 @@ Os tópicos nesta seção descrevem cada função ODBC em ordem alfabética. Cad
   
 -   Referências a funções relacionadas  
   
- O nível de conformidade padrão CLI pode ser um dos seguintes: 92 ISO, Open Group, ODBC ou preterido. Uma função marcada como em conformidade com ISO 92 também aparece no Open Group versão 1, como Open Group é um superconjunto puro de ISO 92. Uma função marcada como compatível com o Open grupo também aparece no ODBC 3. *x*, pois o ODBC 3.* x* é um superconjunto puro do Open Group versão 1. Uma função marcada como compatível com ODBC aparece em nenhum padrão. Uma função marcada como preteridos foi preterida no ODBC 3. *x*.  
+ O nível de conformidade padrão CLI pode ser um dos seguintes: 92 ISO, Open Group, ODBC ou preterido. Uma função marcada como em conformidade com ISO 92 também aparece no Open Group versão 1, como Open Group é um superconjunto puro de ISO 92. Uma função marcada como compatível com o Open grupo também aparece no ODBC 3. *x*, pois o ODBC 3. *x* é um superconjunto puro do Open Group versão 1. Uma função marcada como compatível com ODBC aparece em nenhum padrão. Uma função marcada como preteridos foi preterida no ODBC 3. *x*.  
   
  Tratamento de informações de diagnóstico é descrito no [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrição da função. O texto associado ao valores SQLSTATE é incluído para fornecer uma descrição da condição, mas não se destina a prescrever um texto específico.  
   

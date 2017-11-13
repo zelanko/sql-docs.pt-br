@@ -37,7 +37,7 @@ ODBC de acordo com as seguintes especificações e padrões que lidam com a Inte
   
  Como resultado, esse alinhamento forem verdadeiras:  
   
--   Um aplicativo escrito às especificações ISO CLI do Open Group e funcionará com um ODBC 3. *x* driver ou um driver compatível com os padrões quando ele é compilado com o ODBC 3.* x* arquivos de cabeçalho e vinculado com o ODBC 3.* x* bibliotecas, e quando ele obtém acesso do driver por meio de ODBC 3.* x* Gerenciador de Driver.  
+-   Um aplicativo escrito às especificações ISO CLI do Open Group e funcionará com um ODBC 3. *x* driver ou um driver compatível com os padrões quando ele é compilado com o ODBC 3. *x* arquivos de cabeçalho e vinculado com o ODBC 3. *x* bibliotecas, e quando ele obtém acesso do driver por meio de ODBC 3. *x* Gerenciador de Driver.  
   
 -   Um driver criado às especificações do Open Group e ISO CLI funcionará com um ODBC 3*. x* aplicativo ou um aplicativo compatível com os padrões quando ele é compilado com o ODBC 3*. x* arquivos de cabeçalho e vinculado com o ODBC 3*. x* bibliotecas, e quando o aplicativo obtém acesso do driver por meio de ODBC 3*. x* Gerenciador de Driver. (Para obter mais informações, consulte [compatível com os padrões de aplicativos e Drivers](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   

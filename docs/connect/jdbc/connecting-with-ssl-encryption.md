@@ -25,7 +25,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="connecting-with-ssl-encryption"></a>Conectando-se com criptografia SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Os exemplos neste tópico descrevem como usar propriedades de cadeia de conexão que permitem aos aplicativos usar criptografia de Protocolo SSL (Secure Sockets Layer) em um aplicativo Java. Para obter mais informações sobre esses conexão nova cadeia de caracteres propriedades como **criptografar**, **trustServerCertificate**, **trustStore**, ** trustStorePassword**, e **hostNameInCertificate**, consulte [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md).  
+  Os exemplos neste tópico descrevem como usar propriedades de cadeia de conexão que permitem aos aplicativos usar criptografia de Protocolo SSL (Secure Sockets Layer) em um aplicativo Java. Para obter mais informações sobre esses conexão nova cadeia de caracteres propriedades como **criptografar**, **trustServerCertificate**, **trustStore**,  **trustStorePassword**, e **hostNameInCertificate**, consulte [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md).  
   
  Quando o **criptografar** está definida como **true** e **trustServerCertificate** está definida como **true**, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] não validará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] certificado SSL. Isso é geralmente necessário para permitir conexões em ambientes de teste, como onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instância tem apenas um certificado autoassinado.  
   

@@ -61,7 +61,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
  Se o comando não se destina para retornar resultados (por exemplo, uma consulta de atualização do SQL) o provedor retorna **nada** desde que a opção **adExecuteNoRecords** for especificado; caso contrário, Execute retorna um fechado **registros**. Alguns idiomas de aplicativo permitem que você ignorar esse valor de retorno se nenhum **registros** é desejado.  
   
- **Executar** gera um erro se o usuário Especifica um valor para **CommandStream** quando o **CommandType** é **adCmdStoredProc**, ** adCmdTable**, ou **adCmdTableDirect**.  
+ **Executar** gera um erro se o usuário Especifica um valor para **CommandStream** quando o **CommandType** é **adCmdStoredProc**,  **adCmdTable**, ou **adCmdTableDirect**.  
   
  Se a consulta tiver parâmetros, os valores atuais para o **comando** os parâmetros do objeto são usados a menos que você substitua esses recursos com valores de parâmetro passados com o **Execute** chamar. Você pode substituir um subconjunto dos parâmetros omitindo novos valores para alguns dos parâmetros ao chamar o **Execute** método. A ordem em que você especificar os parâmetros é a mesma ordem em que o método passa. Por exemplo, se houvesse parâmetros quatro (ou mais) e desejar passar os novos valores para apenas os primeiro e o quarto parâmetros, você passaria `Array(var1,,,var4)` como o *parâmetros* argumento.  
   

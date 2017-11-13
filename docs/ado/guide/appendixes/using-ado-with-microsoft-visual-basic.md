@@ -35,7 +35,7 @@ Configurando um projeto de ADO e escrever código ADO assemelha-se você usar o 
 
 #### <a name="to-reference-ado-from-microsoft-visual-basic"></a>A referência ADO do Microsoft Visual Basic
 
-1.  No Visual Basic, do **projeto** menu, selecione **referências... **.
+1.  No Visual Basic, do **projeto** menu, selecione **referências...** .
 
 2.  Selecione **Microsoft ActiveX Data Objects x. x biblioteca** da lista. Verifique se pelo menos as bibliotecas a seguir também são selecionadas:
 
@@ -55,7 +55,7 @@ Configurando um projeto de ADO e escrever código ADO assemelha-se você usar o 
 
 1.  No Microsoft Access, selecione ou crie um módulo a partir de **módulos** guia o **banco de dados** janela.
 
-2.  Sobre o **ferramentas** menu, selecione **referências... **.
+2.  Sobre o **ferramentas** menu, selecione **referências...** .
 
 3.  Selecione **Microsoft ActiveX Data Objects x. x biblioteca** da lista. Verifique se pelo menos as bibliotecas a seguir também são selecionadas:
 

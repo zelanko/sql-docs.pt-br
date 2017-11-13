@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="scalar-function-calls"></a>Chamadas de função escalar
 Funções escalares retornam um valor para cada linha. Por exemplo, a função escalar do valor absoluto considera uma coluna numérica como um argumento e retorna o valor absoluto de cada valor na coluna. É a sequência de escape para chamar uma função escalar  
   
- **{fn***função escalar* **}  **  
+ **{fn***função escalar* **}**   
   
  onde *função escalar* é uma das funções listadas no [funções escalares do apêndice e:](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Para obter mais informações sobre a sequência de escape de função escalar, consulte [sequência de Escape de função escalar](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) na gramática do apêndice c: SQL.  
   

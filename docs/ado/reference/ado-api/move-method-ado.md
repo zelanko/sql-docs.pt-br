@@ -50,9 +50,9 @@ recordset.Move NumRecords, Start
   
  Se o *NumRecords* argumento for maior que zero, a posição do registro atual avança (até o fim do **registros**). Se *NumRecords* é menor que zero, a posição atual do registro recua (no início do **registros**).  
   
- Se o **mover** chamada moverá a posição atual do registro para um ponto antes do primeiro registro, o ADO define o registro atual para a posição antes do primeiro registro no conjunto de registros ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) é **True **). Tentativa de mover para trás quando o **BOF** propriedade já está **True** gera um erro.  
+ Se o **mover** chamada moverá a posição atual do registro para um ponto antes do primeiro registro, o ADO define o registro atual para a posição antes do primeiro registro no conjunto de registros ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) é **True** ). Tentativa de mover para trás quando o **BOF** propriedade já está **True** gera um erro.  
   
- Se o **mover** chamada moverá a posição atual do registro para um ponto após o último registro, o ADO define o registro atual para a posição após o último registro no conjunto de registros ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) é **True **). Tentativa de mover quando encaminhar o **EOF** propriedade já está **True** gera um erro.  
+ Se o **mover** chamada moverá a posição atual do registro para um ponto após o último registro, o ADO define o registro atual para a posição após o último registro no conjunto de registros ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) é **True** ). Tentativa de mover quando encaminhar o **EOF** propriedade já está **True** gera um erro.  
   
  Chamando o **mover** método de vazio **registros** objeto gera um erro.  
   

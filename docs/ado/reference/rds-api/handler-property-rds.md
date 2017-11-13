@@ -54,7 +54,7 @@ DataControl.Handler = String
   
  O nome do manipulador padrão é **MSDFMAP. Manipulador**, e seu parâmetro padrão é um arquivo de personalização chamado **MSDFMAP. INI**. Use essa propriedade para invocar os arquivos de personalização alternativo criados pelo administrador do servidor.  
   
- A alternativa à configuração o **manipulador** é de propriedade para especificar um manipulador e parâmetros no [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade; ou seja, "**manipulador =** * handlerName, parameter1, parameter2,...; *".  
+ A alternativa à configuração o **manipulador** é de propriedade para especificar um manipulador e parâmetros no [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade; ou seja, "**manipulador =**  *handlerName, parameter1, parameter2,...;* ".  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

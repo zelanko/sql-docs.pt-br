@@ -50,7 +50,7 @@ Este tópico descreve como usar o driver SQLSRV para especificar a direção do 
     > [!NOTE]  
     > Variáveis que são inicializadas ou atualizadas para **null**, **DateTime**ou tipos de fluxo não podem ser usadas como parâmetros de saída.  
   
-3.  Use suas variáveis PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros que correspondam, em sequência, aos espaços reservados do parâmetro na cadeia de caracteres Transact-SQL. Especifique a direção de cada parâmetro na matriz. A direção de cada parâmetro é determinada em uma das duas maneiras: por padrão (para parâmetros de entrada) ou usando **SQLSRV_PARAM _\* ** constantes (para parâmetros de saída e bidirecional). Por exemplo, o código a seguir especifica o parâmetro *$employeeId* como um parâmetro de entrada e o parâmetro *$usedVacationHours* como um parâmetro bidirecional:  
+3.  Use suas variáveis PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros que correspondam, em sequência, aos espaços reservados do parâmetro na cadeia de caracteres Transact-SQL. Especifique a direção de cada parâmetro na matriz. A direção de cada parâmetro é determinada em uma das duas maneiras: por padrão (para parâmetros de entrada) ou usando **SQLSRV_PARAM _\***  constantes (para parâmetros de saída e bidirecional). Por exemplo, o código a seguir especifica o parâmetro *$employeeId* como um parâmetro de entrada e o parâmetro *$usedVacationHours* como um parâmetro bidirecional:  
   
     ```  
     $params = array(  

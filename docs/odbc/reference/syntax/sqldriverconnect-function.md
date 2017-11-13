@@ -87,7 +87,7 @@ SQLRETURN SQLDriverConnect(
  [Entrada] Comprimento do **OutConnectionString* buffer, em caracteres.  
   
  *StringLength2Ptr*  
- [Saída] Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo o caractere null de terminação) disponíveis para retornar em \* *OutConnectionString*. Se o número de caracteres disponíveis para retornar for maior que ou igual a *BufferLength*, a concluir a cadeia de caracteres de conexão em \* *OutConnectionString* será truncado para * BufferLength* menos o comprimento de um caractere null de terminação.  
+ [Saída] Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo o caractere null de terminação) disponíveis para retornar em \* *OutConnectionString*. Se o número de caracteres disponíveis para retornar for maior que ou igual a *BufferLength*, a concluir a cadeia de caracteres de conexão em \* *OutConnectionString* será truncado para  *BufferLength* menos o comprimento de um caractere null de terminação.  
   
  *DriverCompletion*  
  [Entrada] Sinalizador que indica se o Gerenciador de Driver ou o driver deve solicitar mais informações de conexão:  
@@ -108,14 +108,14 @@ SQLRETURN SQLDriverConnect(
 |01004|Dados de cadeia de caracteres truncados à direita|O buffer \* *OutConnectionString* não era grande o suficiente para retornar a cadeia de caracteres de conexão inteira, para que a cadeia de caracteres de conexão foi truncada. O comprimento da cadeia de caracteres de conexão completo é retornado em **StringLength2Ptr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01S00|Atributo de cadeia de caracteres de conexão inválido|Uma palavra-chave de atributo inválido foi especificada na cadeia de conexão (*InConnectionString*), mas o driver não foi capaz de se conectar à fonte de dados mesmo assim. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01S02|Valor de opção alterado|O driver não oferecia suporte para o valor especificado apontado para o *ValuePtr* argumento **SQLSetConnectAttr** e substituído, um valor semelhante. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
-|01S08|Erro ao salvar DSN de arquivo|A cadeia de caracteres em * \*InConnectionString* continha um **FILEDSN** palavra-chave, mas o arquivo. DSN não foi salvo. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
-|01S09|Palavra-chave inválida|(DM) a cadeia de caracteres em * \*InConnectionString* continha um **SAVEFILE** palavra-chave, mas não um **DRIVER** ou um **FILEDSN** palavra-chave. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
+|01S08|Erro ao salvar DSN de arquivo|A cadeia de caracteres em  *\*InConnectionString* continha um **FILEDSN** palavra-chave, mas o arquivo. DSN não foi salvo. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
+|01S09|Palavra-chave inválida|(DM) a cadeia de caracteres em  *\*InConnectionString* continha um **SAVEFILE** palavra-chave, mas não um **DRIVER** ou um **FILEDSN** palavra-chave. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |08001|Não é possível estabelecer a conexão do cliente|O driver não pôde estabelecer uma conexão com a fonte de dados.|  
 |08002|Nome da Conexão em uso|(DM) especificado *identificador da conexão* já foi usado para estabelecer uma conexão com uma fonte de dados e a conexão foi aberta.|  
 |08004|O servidor recusou a conexão|A fonte de dados rejeitados o estabelecimento da conexão por motivos de implementação definida.|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver estava tentando conectar-se antes do **SQLDriverConnect** processamento de função foi concluída.|  
 |28000|Especificação de autorização inválida|O identificador de usuário ou a cadeia de caracteres de autorização ou ambos, conforme especificado na cadeia de conexão (*InConnectionString*), violou as restrições definidas pela fonte de dados.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no * \*szMessageText* buffer descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no  *\*szMessageText* buffer descreve o erro e sua causa.|  
 |HY000|Erro geral: dsn de arquivo inválido|(DM) a cadeia de caracteres em **InConnectionString* continha uma palavra-chave FILEDSN, mas o nome do arquivo. DSN não foi encontrado.|  
 |HY000|Erro geral: não é possível criar buffer de arquivo|(DM) a cadeia de caracteres em **InConnectionString* continha uma palavra-chave FILEDSN, mas o arquivo. DSN estava ilegível.|  
 |HY001|Erro de alocação de memória|O Gerenciador de Driver não pôde alocar a memória necessária para dar suporte a execução ou conclusão do **SQLDriverConnect** função.<br /><br /> O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
@@ -139,7 +139,7 @@ SQLRETURN SQLDriverConnect(
 |IM009|Não é possível carregar a DLL de conversão|O driver não pôde carregar a DLL que foi especificada para a fonte de dados ou para a conexão de conversão.|  
 |IM010|Nome de fonte de dados muito longo|O valor de atributo para a palavra-chave DSN de (DM) foi mais de SQL_MAX_DSN_LENGTH caracteres.|  
 |IM011|Nome do driver muito longo|Valor de atributo (DM) para o **DRIVER** palavra-chave tinha mais de 255 caracteres.|  
-|IM012|Erro de sintaxe da palavra-chave de DRIVER|Par de valor de palavra-chave (DM) para o **DRIVER** palavra-chave continha um erro de sintaxe.<br /><br /> (DM) a cadeia de caracteres em * \*InConnectionString* continha um **FILEDSN** palavra-chave, mas o arquivo. DSN não continha um **DRIVER** palavra-chave ou um ** DSN** palavra-chave.|  
+|IM012|Erro de sintaxe da palavra-chave de DRIVER|Par de valor de palavra-chave (DM) para o **DRIVER** palavra-chave continha um erro de sintaxe.<br /><br /> (DM) a cadeia de caracteres em  *\*InConnectionString* continha um **FILEDSN** palavra-chave, mas o arquivo. DSN não continha um **DRIVER** palavra-chave ou um  **DSN** palavra-chave.|  
 |IM014|O DSN especificado contém uma incompatibilidade de arquitetura entre o Driver e o aplicativo|Aplicativo de 32 bits (DM) usa um DSN que se conectar a um driver de 64 bits. ou vice-versa.|  
 |IM015|Falha SQLDriverConnect do driver em SQL_HANDLE_DBC_INFO_HANDLE|Se um driver retornará SQL_ERROR, o Gerenciador de Driver retornará SQL_ERROR para o aplicativo e a conexão falhará.<br /><br /> Para obter mais informações sobre SQL_HANDLE_DBC_INFO_TOKEN, consulte [desenvolvendo o reconhecimento do Pool de Conexão em um Driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|Sondagem está desabilitada no modo de notificação assíncrona|Sempre que o modelo de notificação é usado, a sondagem está desabilitada.|  

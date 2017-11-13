@@ -58,10 +58,10 @@ A tabela a seguir descreve as funções numéricas que estão incluídas no conj
 |**POWER (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retorna o valor de *numeric_exp* à potência de *integer_exp*.|  
 |**RADIANOS (** *numeric_exp* **)** (ODBC 2.0)|Retorna o número de radianos convertido de *numeric_exp* graus.|  
 |**RAND (**[*integer_exp*]**)** (ODBC 1.0)|Retorna um valor de ponto flutuante aleatório usando *integer_exp* como o valor de semente opcional.|  
-|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retorna *numeric_exp* arredondado para *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* é arredondado para &#124;* integer_exp*&#124; casas à esquerda da vírgula decimal.|  
+|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retorna *numeric_exp* arredondado para *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* é arredondado para &#124; *integer_exp*&#124; casas à esquerda da vírgula decimal.|  
 |**SINAL (** *numeric_exp* **)** (ODBC 1.0)|Retorna um indicador de sinal do *numeric_exp*. Se *numeric_exp* é menor que zero, -1 será retornado. Se *numeric_exp* é igual a zero, 0 é retornado. Se *numeric_exp* é maior que zero, 1 é retornado.|  
 |**SIN (** *float_exp* **)** (ODBC 1.0)|Retorna o seno de *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Retorna a raiz quadrada de *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Retorna a tangente de *float_exp*, onde *float_exp* é um ângulo expressado em radianos.|  
-|**Truncar (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retorna *numeric_exp* truncado para *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* será truncado para &#124;* integer_exp*&#124; casas à esquerda da vírgula decimal.|
+|**Truncar (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retorna *numeric_exp* truncado para *integer_exp* casas à direita da vírgula decimal. Se *integer_exp* for negativo, *numeric_exp* será truncado para &#124; *integer_exp*&#124; casas à esquerda da vírgula decimal.|
 

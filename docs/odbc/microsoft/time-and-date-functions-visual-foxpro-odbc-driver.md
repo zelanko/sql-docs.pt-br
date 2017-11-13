@@ -65,7 +65,7 @@ A tabela a seguir lista funções de data e hora ODBC com suporte do Visual FoxP
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- Nessa sintaxe, **d** indica que *valor* é uma data no *aaaa-mm-dd* formato e **ts** indica que *valor * é um carimbo de hora a *aaaa-mm-dd hh*[.* f... *] formato. A sintaxe abreviada para dados de data e o carimbo de hora é o seguinte:  
+ Nessa sintaxe, **d** indica que *valor* é uma data no *aaaa-mm-dd* formato e **ts** indica que *valor*  é um carimbo de hora a *aaaa-mm-dd hh*[. *f...* ] formato. A sintaxe abreviada para dados de data e o carimbo de hora é o seguinte:  
   
 ```  
 {d 'value'}  

@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="fixed-length-bookmarks"></a>Indicadores de comprimento fixo
-Se um ODBC 3*. x* driver deve funcionar com um ODBC 2.* x* aplicativo que usa indicadores de comprimento fixo, o driver devem oferecer suporte a seguir:  
+Se um ODBC 3*. x* driver deve funcionar com um ODBC 2. *x* aplicativo que usa indicadores de comprimento fixo, o driver devem oferecer suporte a seguir:  
   
 -   SQL_UB_ON como um valor para a opção de instrução SQL_USE_BOOKMARKS. (SQL_UB_ON foi preterido no ODBC 3*. x*.)  
   

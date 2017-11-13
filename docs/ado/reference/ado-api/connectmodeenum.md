@@ -28,13 +28,13 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Especifica as permissões disponíveis para modificar dados em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), abrindo um [registro](../../../ado/reference/ado-api/record-object-ado.md), ou especificar valores para o [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade o ** Registro** e [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
+Especifica as permissões disponíveis para modificar dados em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), abrindo um [registro](../../../ado/reference/ado-api/record-object-ado.md), ou especificar valores para o [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade o  **Registro** e [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
   
 |Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Indica as permissões somente leitura.|  
 |**adModeReadWrite**|3|Indica as permissões de leitura/gravação.|  
-|**adModeRecursive**|0x400000|Usado em conjunto com outras * \*ShareDeny\* * valores (**adModeShareDenyNone**, **adModeShareDenyWrite**, ou **adModeShareDenyRead**) para propagar as restrições de compartilhamento para todos os registros de subtipo do atual **registro**. Ela não terá efeito se a **registro** não tem nenhum filho. Um erro de tempo de execução será gerado se ele é usado com **adModeShareDenyNone** somente. No entanto, ele pode ser usado com **adModeShareDenyNone** quando combinado com outros valores. Por exemplo, você pode usar "**adModeRead** ou **adModeShareDenyNone** ou **adModeRecursive**".|  
+|**adModeRecursive**|0x400000|Usado em conjunto com outras  *\*ShareDeny\**  valores (**adModeShareDenyNone**, **adModeShareDenyWrite**, ou **adModeShareDenyRead**) para propagar as restrições de compartilhamento para todos os registros de subtipo do atual **registro**. Ela não terá efeito se a **registro** não tem nenhum filho. Um erro de tempo de execução será gerado se ele é usado com **adModeShareDenyNone** somente. No entanto, ele pode ser usado com **adModeShareDenyNone** quando combinado com outros valores. Por exemplo, você pode usar "**adModeRead** ou **adModeShareDenyNone** ou **adModeRecursive**".|  
 |**adModeShareDenyNone**|16|Permite que outros usuários abrir uma conexão com as permissões. O acesso à leitura/gravação não pode ser negado a outras pessoas.|  
 |**adModeShareDenyRead**|4|Impede que outras pessoas abram uma conexão com permissões de leitura.|  
 |**adModeShareDenyWrite**|8|Impede que outras pessoas abram uma conexão com permissões de gravação.|  

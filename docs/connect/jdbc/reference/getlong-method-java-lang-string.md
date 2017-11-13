@@ -53,7 +53,7 @@ public long getLong(java.lang.String sCol)
 ## <a name="remarks"></a>Comentários  
  Esse método getLong é especificado pelo método getLong na interface do CallableStatement.  
   
- Esse método tem suporte somente em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de dados que podem retornar com segurança um valor inteiro como **bigint**, **int**, **smallint**, **tinyint **, e **bit**. Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
+ Esse método tem suporte somente em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de dados que podem retornar com segurança um valor inteiro como **bigint**, **int**, **smallint**, **tinyint** , e **bit**. Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Método getLong &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   

@@ -56,7 +56,7 @@ O tamanho da coluna (ou parâmetro) dos tipos de dados numérico é definido com
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, onde *p* é o intervalo de precisão principal. [ d]|  
 |SQL_GUID|36 (o número de caracteres a *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato)|  
   
- [a] para o ODBC 1.0 em um aplicativo que chama **SQLSetParam** em um driver de ODBC 2.0 e para uma aplicativo ODBC 2.0 que chama **SQLBindParameter** em um driver de ODBC 1.0, quando \* * StrLen_or_IndPtr* é SQL_DATA_AT_EXEC para um tipo SQL_LONGVARCHAR ou SQL_LONGVARBINARY, *ColumnSize* deve ser definida como o comprimento total dos dados a serem enviados, não a precisão conforme definido nesta tabela.  
+ [a] para o ODBC 1.0 em um aplicativo que chama **SQLSetParam** em um driver de ODBC 2.0 e para uma aplicativo ODBC 2.0 que chama **SQLBindParameter** em um driver de ODBC 1.0, quando \*  *StrLen_or_IndPtr* é SQL_DATA_AT_EXEC para um tipo SQL_LONGVARCHAR ou SQL_LONGVARBINARY, *ColumnSize* deve ser definida como o comprimento total dos dados a serem enviados, não a precisão conforme definido nesta tabela.  
   
  [b] se o driver não pode determinar o comprimento de coluna ou parâmetro de um tipo de variável, retornará SQL_NO_TOTAL.  
   

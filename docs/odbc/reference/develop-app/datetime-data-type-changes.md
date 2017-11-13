@@ -32,9 +32,9 @@ ms.lasthandoff: 09/09/2017
 # <a name="datetime-data-type-changes"></a>Alterações de tipo de dados datetime
 Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp foram alterados de SQL_DATE, SQL_TIME e SQL_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 9, 10 e 11) para SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 91, 92 e 93), respectivamente. Os identificadores de tipo C correspondentes foram alterados desde SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME e SQL_C_TYPE_TIMESTAMP, respectivamente.  
   
- O tamanho de coluna e retornados para os tipos de dados de data/hora do SQL em ODBC 3 casas decimais. *x* tem o mesmo que a precisão e escala retornado para eles no ODBC 2.* x*. Esses valores são diferentes dos valores nos campos de descritor SQL_DESC_PRECISION e SQL_DESC_SCALE. (Para obter mais informações, consulte [tamanho da coluna, dígitos decimais, transferir o comprimento do octeto e tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).)  
+ O tamanho de coluna e retornados para os tipos de dados de data/hora do SQL em ODBC 3 casas decimais. *x* tem o mesmo que a precisão e escala retornado para eles no ODBC 2. *x*. Esses valores são diferentes dos valores nos campos de descritor SQL_DESC_PRECISION e SQL_DESC_SCALE. (Para obter mais informações, consulte [tamanho da coluna, dígitos decimais, transferir o comprimento do octeto e tamanho de exibição](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).)  
   
- Essas alterações afetam **SQLDescribeCol**, **SQLDescribeParam**, e **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, e **SQLGetData**; e **SQLColumns**, **SQLGetTypeInfo **, **SQLProcedureColumns**, **SQLStatistics**, e **SQLSpecialColumns**.  
+ Essas alterações afetam **SQLDescribeCol**, **SQLDescribeParam**, e **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, e **SQLGetData**; e **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, e **SQLSpecialColumns**.  
   
  A tabela a seguir mostra como o ODBC 3*. x* executa o Gerenciador de Driver mapeamento de data, hora e carimbo de hora C de tipos de dados inserido no *TargetType* argumentos de **SQLBindCol**e **SQLGetData** ou o *ValueType* argumento de **SQLBindParameter**.  
   
@@ -47,11 +47,11 @@ Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp 
 |SQL_C_TIMESTAMP (11)|Nenhum mapeamento|SQL_C_TYPE_TIMESTAMP (93)|Nenhum mapeamento [1]|SQL_C_TYPE_TIMESTAMP (93)|  
 |SQL_C_TYPE_TIMESTAMP (93)|Erro (do DM)|Erro (do DM)|SQL_C_TIMESTAMP (11)|Nenhum mapeamento [2]|  
   
- [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
+ [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
- [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3.* x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
+ [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
- A tabela a seguir mostra como o ODBC 3*. x* executa o Gerenciador de Driver mapeamento dos data, hora e carimbo de hora SQL tipos de dados inserido no *ParameterType* argumento de **SQLBindParameter ** ou o *DataType* argumento de **SQLGetTypeInfo**.  
+ A tabela a seguir mostra como o ODBC 3*. x* executa o Gerenciador de Driver mapeamento dos data, hora e carimbo de hora SQL tipos de dados inserido no *ParameterType* argumento de **SQLBindParameter**  ou o *DataType* argumento de **SQLGetTypeInfo**.  
   
 |Tipo de dados<br /><br /> código inserido|2.*x* aplicativo<br /><br /> 2.*x* driver|2.*x* aplicativo<br /><br /> 3.*x* driver|3.*x* aplicativo<br /><br /> 2.*x* driver|3.*x* aplicativo<br /><br /> 3.*x* driver|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -62,7 +62,7 @@ Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp 
 |SQL_TIMESTAMP (11)|Nenhum mapeamento|SQL_TYPE_TIMESTAMP (93)|Nenhum mapeamento [1]|SQL_TYPE_TIMESTAMP (93)|  
 |SQL_TYPE_TIMESTAMP (93)|Erro (do DM)|Erro (do DM)|SQL_TIMESTAMP (11)|Nenhum mapeamento [2]|  
   
- [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
+ [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
- [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3.* x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.
+ [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.
 

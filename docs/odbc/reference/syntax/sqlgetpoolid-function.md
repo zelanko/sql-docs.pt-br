@@ -53,7 +53,7 @@ SQLRETURN  SQLGetPoolID (
  Quando **SQLGetPoolID** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, o Gerenciador de Driver usará uma **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN e um **tratar** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Comentários  
- **SQLGetPoolID** é usada para obter a ID do pool dada um conjunto de informações de conexão (de **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, e ** SQLSetConnectInfo**). Esse pool de ID é usada para identificar um conjunto de conexões que podem ser usadas intercambiavelmente (possivelmente exigir uma reinicialização adicional). A ID do pool usará para identificar o pool de conexão para esse grupo de conexões.  
+ **SQLGetPoolID** é usada para obter a ID do pool dada um conjunto de informações de conexão (de **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, e  **SQLSetConnectInfo**). Esse pool de ID é usada para identificar um conjunto de conexões que podem ser usadas intercambiavelmente (possivelmente exigir uma reinicialização adicional). A ID do pool usará para identificar o pool de conexão para esse grupo de conexões.  
   
  Sempre que um driver retornará SQL_ERROR ou SQL_INVALID_HANDLE, o Gerenciador de Driver retorna o erro para o aplicativo (em [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) ou [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   

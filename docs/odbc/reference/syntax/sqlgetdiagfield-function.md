@@ -80,10 +80,10 @@ SQLRETURN SQLGetDiagField(
  *DiagInfoPtr*  
  [Saída] Ponteiro para um buffer no qual retornar as informações de diagnóstico. O tipo de dados depende do valor de *DiagIdentifier*. Se *DiagInfoPtr* é do tipo integer, os aplicativos devem usar um buffer de SQLULEN e inicializar o valor para 0 antes de chamar essa função, como alguns drivers só pode gravar o inferior 32 bits ou 16 bits de um buffer e deixe de ordem superior bits inalterados.  
   
- Se *DiagInfoPtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (excluindo o caractere null de terminação para dados de caractere) disponíveis para retornar o buffer apontado pelo * DiagInfoPtr*.  
+ Se *DiagInfoPtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (excluindo o caractere null de terminação para dados de caractere) disponíveis para retornar o buffer apontado pelo  *DiagInfoPtr*.  
   
  *BufferLength*  
- [Entrada] Se *DiagIdentifier* é um diagnóstico definidas pelo ODBC e *DiagInfoPtr* aponta para uma cadeia de caracteres ou um buffer binário, este argumento deve ser o comprimento de \* *DiagInfoPtr *. Se *DiagIdentifier* é um campo definido pelo ODBC e \* *DiagInfoPtr* é um inteiro, *BufferLength* será ignorado. Se o valor em * \*DiagInfoPtr* é uma cadeia de caracteres Unicode (ao chamar **SQLGetDiagFieldW**), o *BufferLength* argumento deve ser um número par.  
+ [Entrada] Se *DiagIdentifier* é um diagnóstico definidas pelo ODBC e *DiagInfoPtr* aponta para uma cadeia de caracteres ou um buffer binário, este argumento deve ser o comprimento de \* *DiagInfoPtr* . Se *DiagIdentifier* é um campo definido pelo ODBC e \* *DiagInfoPtr* é um inteiro, *BufferLength* será ignorado. Se o valor em  *\*DiagInfoPtr* é uma cadeia de caracteres Unicode (ao chamar **SQLGetDiagFieldW**), o *BufferLength* argumento deve ser um número par.  
   
  Se *DiagIdentifier* é um campo definido pelo driver, o aplicativo indica a natureza do campo para o Gerenciador de Driver, definindo o *BufferLength* argumento. *BufferLength* pode ter os seguintes valores:  
   
@@ -93,7 +93,7 @@ SQLRETURN SQLGetDiagField(
   
 -   Se *DiagInfoPtr* é um ponteiro para um valor diferente de uma cadeia de caracteres ou cadeia de caracteres binária, *BufferLength* devem ter o valor SQL_IS_POINTER.  
   
--   Se * \*DiagInfoPtr* contém um tipo de dados de comprimento fixo, *BufferLength* é SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, conforme apropriado.  
+-   Se  *\*DiagInfoPtr* contém um tipo de dados de comprimento fixo, *BufferLength* é SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, conforme apropriado.  
   
  *StringLengthPtr*  
  [Saída] Ponteiro para um buffer no qual retornar o número total de bytes (excluindo o número de bytes necessários para o caractere null de terminação) disponíveis para retornar em \* *DiagInfoPtr*, para dados de caracteres. Se o número de bytes disponíveis para retornar é maior que ou igual a *BufferLength*, o texto em \* *DiagInfoPtr* será truncado para *BufferLength* menos o comprimento de um caractere null de terminação.  
@@ -129,7 +129,7 @@ SQLRETURN SQLGetDiagField(
   
 1.  Para obter informações de aviso ou erro específico quando uma chamada de função retornou SQL_ERROR ou SQL_SUCCESS_WITH_INFO (ou SQL_NEED_DATA para o **SQLBrowseConnect** função).  
   
-2.  Para determinar o número de linhas na fonte de dados que foram afetadas quando executadas operações update, delete ou insert com uma chamada para **SQLExecute**, **SQLExecDirect**, ** SQLBulkOperations**, ou **SQLSetPos** (no campo de cabeçalho SQL_DIAG_ROW_COUNT), ou para determinar o número de linhas que existem no cursor aberto atual, se o driver pode fornecer essas informações (da Campo de cabeçalho SQL_DIAG_CURSOR_ROW_COUNT).  
+2.  Para determinar o número de linhas na fonte de dados que foram afetadas quando executadas operações update, delete ou insert com uma chamada para **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, ou **SQLSetPos** (no campo de cabeçalho SQL_DIAG_ROW_COUNT), ou para determinar o número de linhas que existem no cursor aberto atual, se o driver pode fornecer essas informações (da Campo de cabeçalho SQL_DIAG_CURSOR_ROW_COUNT).  
   
 3.  Para determinar qual função foi executada por uma chamada para **SQLExecDirect** ou **SQLExecute** (dos campos de cabeçalho SQL_DIAG_DYNAMIC_FUNCTION e SQL_DIAG_DYNAMIC_FUNCTION_CODE).  
   
@@ -238,7 +238,7 @@ n-definição *|"CRIAR DOMÍNIO"|SQL_DIAG_CREATE_DOMAIN|
 -   Para todos os registros que pertencem às linhas específicas, os registros são classificados pelo valor no campo SQL_DIAG_ROW_NUMBER. Todos os erros e avisos da primeira linha afetados são listados e, em seguida, todos os erros e avisos da próxima linha afetada e assim por diante.  
   
 > [!NOTE]  
->  O ODBC 3*. x* Gerenciador de Driver não solicitar registros de status na fila de diagnóstico se SQLSTATE 01S01 (erro na linha) é retornado por um ODBC 2*. x* driver ou se SQLSTATE 01S01 (linha) será retornado pelo ODBC 3*. x* driver quando **SQLExtendedFetch** é chamado ou **SQLSetPos** é chamado em um cursor que tenha sido posicionado com **SQLExtendedFetch **.  
+>  O ODBC 3*. x* Gerenciador de Driver não solicitar registros de status na fila de diagnóstico se SQLSTATE 01S01 (erro na linha) é retornado por um ODBC 2*. x* driver ou se SQLSTATE 01S01 (linha) será retornado pelo ODBC 3*. x* driver quando **SQLExtendedFetch** é chamado ou **SQLSetPos** é chamado em um cursor que tenha sido posicionado com **SQLExtendedFetch** .  
   
  Em cada linha, ou para todos os registros que não correspondem a uma linha ou para o qual o número de linhas é desconhecido, ou para todos os registros com um número de linhas igual a SQL_NO_ROW_NUMBER, o primeiro registro listado é determinado por meio de um conjunto de regras de classificação. Após o primeiro registro, a ordem dos outros registros que afeta uma linha é indefinida. Um aplicativo não pode assumir que os erros precedem avisos após o primeiro registro. Examine a estrutura de dados de diagnóstico completo para obter informações completas sobre uma chamada bem-sucedida para uma função de aplicativos.  
   

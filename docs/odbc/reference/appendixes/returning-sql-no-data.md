@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="returning-sqlnodata"></a>Retornando SQL_NO_DATA
-Quando um ODBC 2. *x* aplicativo trabalha com um ODBC 3*. x* driver chama **SQLExecDirect**, **SQLExecute**, ou **SQLParamData**, e uma atualização pesquisada ou uma instrução delete foi executada, mas não afetou linhas na fonte de dados, o ODBC 3*. x* driver deve retornar SQL_SUCCESS. Quando um ODBC 3*. x* aplicativo trabalhando com um ODBC 3*. x* driver chama **SQLExecDirect**, **SQLExecute**, ou ** SQLParamData** com o mesmo resultado, o ODBC 3*. x* driver deve retornar SQL_NO_DATA.  
+Quando um ODBC 2. *x* aplicativo trabalha com um ODBC 3*. x* driver chama **SQLExecDirect**, **SQLExecute**, ou **SQLParamData**, e uma atualização pesquisada ou uma instrução delete foi executada, mas não afetou linhas na fonte de dados, o ODBC 3*. x* driver deve retornar SQL_SUCCESS. Quando um ODBC 3*. x* aplicativo trabalhando com um ODBC 3*. x* driver chama **SQLExecDirect**, **SQLExecute**, ou  **SQLParamData** com o mesmo resultado, o ODBC 3*. x* driver deve retornar SQL_NO_DATA.  
   
  Se um pesquisada instrução update ou delete em um lote de instruções não afeta as linhas na fonte de dados, **SQLMoreResults** retorna SQL_SUCCESS. Ele não pode retornar SQL_NO_DATA, pois isso significaria que não há mais nenhum resultado, não que há é um resultado de uma atualização/exclusão pesquisada que não afetou linhas.
 

@@ -60,9 +60,9 @@ SQLRETURN SQLCloseCursor(
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem de informação específica do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |24000|Estado de cursor inválido|Nenhum cursor foi aberto o *StatementHandle*. (Isto é retornado somente por um ODBC 3. *x* driver.)|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no * \*MessageText* buffer descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no  *\*MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
-|HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para um identificador de conexão associado a *StatementHandle* e ainda estava em execução quando esta função foi chamada.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o *StatementHandle* e ainda estava em execução quando esta função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o * StatementHandle* e retorna SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todas as colunas ou parâmetros de dados em execução.|  
+|HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para um identificador de conexão associado a *StatementHandle* e ainda estava em execução quando esta função foi chamada.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o *StatementHandle* e ainda estava em execução quando esta função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o  *StatementHandle* e retorna SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todas as colunas ou parâmetros de dados em execução.|  
 |HY013|Erro de gerenciamento de memória|Não foi possível processar a chamada de função porque os objetos de memória subjacente não podem ser acessados, possivelmente devido a condições de memória insuficiente.|  
 |HY117|Conexão está suspenso devido ao estado de transação desconhecido. Somente Desconecte e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tempo limite de Conexão expirou|O período de tempo limite de conexão expirou antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -72,7 +72,7 @@ SQLRETURN SQLCloseCursor(
  **SQLCloseCursor** retornará SQLSTATE 24000 (estado de cursor inválido) se nenhum cursor é aberto. Chamando **SQLCloseCursor** é equivalente a chamar **SQLFreeStmt** com a opção SQL_CLOSE, com a exceção que **SQLFreeStmt** com SQL_CLOSE não tem nenhum efeito o aplicativo se nenhum cursor é aberto na instrução, enquanto **SQLCloseCursor** retorna SQLSTATE 24000 (estado de cursor inválido).  
   
 > [!NOTE]  
->  Se um ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver chama **SQLCloseCursor** quando nenhum cursor é aberto, o SQLSTATE 24000 (estado de cursor inválido) não é retornado porque o Gerenciador de Driver mapeia **SQLCloseCursor** para **SQLFreeStmt** com SQL_CLOSE.  
+>  Se um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver chama **SQLCloseCursor** quando nenhum cursor é aberto, o SQLSTATE 24000 (estado de cursor inválido) não é retornado porque o Gerenciador de Driver mapeia **SQLCloseCursor** para **SQLFreeStmt** com SQL_CLOSE.  
   
  Para obter mais informações, consulte [fechar o Cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   

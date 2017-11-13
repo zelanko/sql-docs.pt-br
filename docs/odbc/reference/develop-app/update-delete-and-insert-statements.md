@@ -33,11 +33,11 @@ Aplicativos baseados em SQL fazem alterações em tabelas, executando o **atuali
   
  A sintaxe das instruções a seguir é:  
   
- **ATUALIZAÇÃO***nome de tabela  *  
+ **ATUALIZAÇÃO***nome de tabela*   
   
- **DEFINIR** *identificador de coluna* ** = ** {*expressão* &#124; **Nulo**}  
+ **DEFINIR** *identificador de coluna*  **=**  {*expressão* &#124; **Nulo**}  
   
- [**,** *identificador de coluna* ** = ** {*expressão* &#124; **Nulo**}]...  
+ [**,** *identificador de coluna*  **=**  {*expressão* &#124; **Nulo**}]...  
   
  [**Onde** *critério de pesquisa*]  
   

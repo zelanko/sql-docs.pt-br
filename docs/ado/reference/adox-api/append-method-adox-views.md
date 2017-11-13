@@ -51,7 +51,7 @@ Views.Append Name, Command
  Se o texto do comando que especifica o usuário representa um procedimento em vez de um modo de exibição, o comportamento depende do provedor. **Acrescentar** falhará se o provedor não oferece suporte a comandos persistentes.  
   
 > [!NOTE]
->  Ao usar o provedor OLE DB para Microsoft Jet, o **exibições** coleção **Append** método permitirá que você especifique um **procedimento** em vez de **exibição ** no *comando* parâmetro. O **procedimento** será adicionado à fonte de dados e será adicionado ao **exibições** coleção. Após o **Append**, se o **procedimentos** e **exibições** coleções são atualizadas, o **procedimento** não será o **Exibições** coleta e aparecerão no **procedimentos** coleção.  
+>  Ao usar o provedor OLE DB para Microsoft Jet, o **exibições** coleção **Append** método permitirá que você especifique um **procedimento** em vez de **exibição**  no *comando* parâmetro. O **procedimento** será adicionado à fonte de dados e será adicionado ao **exibições** coleção. Após o **Append**, se o **procedimentos** e **exibições** coleções são atualizadas, o **procedimento** não será o **Exibições** coleta e aparecerão no **procedimentos** coleção.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  

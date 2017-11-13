@@ -46,7 +46,7 @@ Indica o progresso de uma [DataControl](../../../ado/reference/rds-api/datacontr
 ## <a name="remarks"></a>Comentários  
  Use o [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) evento para monitorar as alterações no **estado de prontidão é** propriedade durante uma operação de consulta assíncrona. Isso é mais eficiente do que verificar periodicamente o valor da propriedade.  
   
- Se ocorrer um erro durante uma operação assíncrona, o **estado de prontidão é** alteração na propriedade **adcReadyStateComplete**, o [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade muda de **adStateExecuting** para **adStateClosed**e o **registros** objeto [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade permanece *nada *.  
+ Se ocorrer um erro durante uma operação assíncrona, o **estado de prontidão é** alteração na propriedade **adcReadyStateComplete**, o [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade muda de **adStateExecuting** para **adStateClosed**e o **registros** objeto [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade permanece *nada* .  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

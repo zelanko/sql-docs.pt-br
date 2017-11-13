@@ -62,7 +62,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
  Esse método não anexa automaticamente o **parâmetro** o objeto para o **parâmetros** coleção de um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Isso permite que você defina propriedades adicionais, cujo valores ADO será validado quando você acrescentar o **parâmetro** objeto à coleção.  
   
- Se você especificar um tipo de dados de comprimento variável no *tipo* argumento, você deve passar um *tamanho* argumento ou um conjunto de [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md) propriedade do **parâmetro ** objeto antes de acrescentá-lo para o **parâmetros** coleção; caso contrário, ocorrerá um erro.  
+ Se você especificar um tipo de dados de comprimento variável no *tipo* argumento, você deve passar um *tamanho* argumento ou um conjunto de [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md) propriedade do **parâmetro**  objeto antes de acrescentá-lo para o **parâmetros** coleção; caso contrário, ocorrerá um erro.  
   
  Se você especificar um tipo de dados numéricos (**adNumeric** ou **adDecimal**) no *tipo* argumento, em seguida, você também deve definir o [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [Precisão](../../../ado/reference/ado-api/precision-property-ado.md) propriedades.  
   

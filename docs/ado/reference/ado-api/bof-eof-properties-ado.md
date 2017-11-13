@@ -38,7 +38,7 @@ ms.lasthandoff: 09/09/2017
  O **BOF** e **EOF** propriedades retorno **booliano** valores.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **BOF** e **EOF** propriedades para determinar se um **registros** objeto contiver registros ou se você tiver feito além dos limites de um **conjunto de registros ** quando você move de registro para registro do objeto.  
+ Use o **BOF** e **EOF** propriedades para determinar se um **registros** objeto contiver registros ou se você tiver feito além dos limites de um **conjunto de registros**  quando você move de registro para registro do objeto.  
   
  O **BOF** propriedade retorna **True** (-1) se a posição do registro atual é anterior ao primeiro registro e **False** (0) se a posição atual do registro está em ou depois do primeiro Registro.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
   
  Se o **BOF** ou **EOF** é de propriedade **True**, há um registro atual.  
   
- Se você abrir um **registros** objeto que não contenha registros, o **BOF** e **EOF** propriedades são definidas como **True** (consulte a [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriedade para obter mais informações sobre esse estado de um **registros**). Quando você abre um **registros** objeto que contém pelo menos um registro, o primeiro registro é o registro atual e o **BOF** e **EOF** propriedades são **False **.  
+ Se você abrir um **registros** objeto que não contenha registros, o **BOF** e **EOF** propriedades são definidas como **True** (consulte a [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriedade para obter mais informações sobre esse estado de um **registros**). Quando você abre um **registros** objeto que contém pelo menos um registro, o primeiro registro é o registro atual e o **BOF** e **EOF** propriedades são **False** .  
   
  Se você excluir o último registro restante no **registros** objeto, o **BOF** e **EOF** propriedades podem permanecer **False** até que você tentativa de reposicionar o registro atual.  
   

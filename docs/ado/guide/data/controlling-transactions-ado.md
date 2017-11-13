@@ -25,7 +25,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="controlling-transactions-ado"></a>Controlando transações (ADO)
-ADO dá suporte ao processamento dentro de uma conexão com a Ajuda de transações de **BeginTrans**, **CommitTrans**, e **RollbackTrans** métodos em um ** Conexão** objeto. A ideia geral de implementação de processamento de transações em ADO é ilustrada no seguinte trecho de código simples.  
+ADO dá suporte ao processamento dentro de uma conexão com a Ajuda de transações de **BeginTrans**, **CommitTrans**, e **RollbackTrans** métodos em um  **Conexão** objeto. A ideia geral de implementação de processamento de transações em ADO é ilustrada no seguinte trecho de código simples.  
   
 ```  
 Const DS = "MySqlServer"  

@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  Quando a biblioteca de cursores é usada, chamadas para **SQLFetchScroll** não podem ser misturadas a chamadas para o **SQLFetch** ou **SQLExtendedFetch**.  
   
- Quando a biblioteca de cursores é usada, chamadas para **SQLFetchScroll** são com suporte tanto para o ODBC 2.* x* e para o ODBC 3.* x* drivers.  
+ Quando a biblioteca de cursores é usada, chamadas para **SQLFetchScroll** são com suporte tanto para o ODBC 2. *x* e para o ODBC 3. *x* drivers.  
   
 ## <a name="rowset-buffers"></a>Buffers de conjunto de linhas  
  A biblioteca de cursores otimiza a transferência de dados do driver para o buffer de linhas fornecido pelo aplicativo se:  

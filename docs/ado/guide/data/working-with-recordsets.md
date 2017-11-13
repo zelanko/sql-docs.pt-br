@@ -78,7 +78,7 @@ O **registros** objeto possui recursos internos que permitem a você reorganizar
 ## <a name="filtering-the-results"></a>Filtrar os resultados  
  O **localizar** método limita sua pesquisa para o conteúdo de um campo. O **busca** método requer que você tem um índice e tem também outras limitações. Se você deve pesquisar em vários campos que não são a base de um índice ou se o provedor não oferece suporte a índices, você pode limitar seus resultados usando o **filtro** propriedade o **registros** objeto.  
   
- Use o **filtro** propriedade seletivamente retire registros em um **registros** objeto. Filtradas **registros** torna-se o cursor atual, o que significa que os registros que não atendem a **filtro** critérios não estão disponíveis no **registros** até que o **Filtro** é removido. Outras propriedades que retornam valores com base no cursor atual são afetadas, como **AbsolutePosition**, **AbsolutePage**, **RecordCount**, e ** PageCount**. Isso é porque a definição de **filtro** propriedade com um valor específico moverá o registro atual para o primeiro registro que satisfaz o novo valor.  
+ Use o **filtro** propriedade seletivamente retire registros em um **registros** objeto. Filtradas **registros** torna-se o cursor atual, o que significa que os registros que não atendem a **filtro** critérios não estão disponíveis no **registros** até que o **Filtro** é removido. Outras propriedades que retornam valores com base no cursor atual são afetadas, como **AbsolutePosition**, **AbsolutePage**, **RecordCount**, e  **PageCount**. Isso é porque a definição de **filtro** propriedade com um valor específico moverá o registro atual para o primeiro registro que satisfaz o novo valor.  
   
  O **filtro** propriedade aceita um argumento variant. Esse valor representa um dos três métodos para usar o **filtro** propriedade: uma cadeia de caracteres de critérios, uma **FilterGroupEnum** constante ou uma matriz de indicadores. Para obter mais informações, consulte filtragem com uma cadeia de caracteres de critérios de filtragem com uma constante e filtragem com indicadores, posteriormente neste tópico.  
   
@@ -92,7 +92,7 @@ O **registros** objeto possui recursos internos que permitem a você reorganizar
   
 -   *FieldName* deve ser um nome de campo válido do **registros**. Se o nome do campo contiver espaços, você deve colocar o nome entre colchetes.  
   
--   *Operador* deve ser um dos seguintes: ** \< **, ** > **, ** \< = **, ** >= ** , ** <> **, ** = **, ou **como**.  
+-   *Operador* deve ser um dos seguintes:  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , ou **como**.  
   
 -   *Valor* é o valor com o qual você irá comparar os valores de campo (por exemplo, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Use aspas simples (') com cadeias de caracteres e sinais numéricos (`#`) com datas. Para números, você pode usar a notação científica, cifrões e pontos decimais. Se *operador* é **como**, *valor* pode usar caracteres curinga. Somente o asterisco (\*) e sinal de porcentagem (%) curinga são permitidos caracteres e devem ser o último caractere na cadeia de caracteres. *Valor* não pode ser nulo.  
   

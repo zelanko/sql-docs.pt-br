@@ -53,7 +53,7 @@ Stream.CopyTo DestStream, NumChars
   
  Se houver caracteres ou bytes no fluxo de destino, todo o conteúdo além do ponto em que a cópia termina permanecem e não é truncado. **Posição** torna-se o byte imediatamente após o último byte copiado. Se você deseja truncar esses bytes, chame [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
- **CopyTo** deve ser usado para copiar dados para um destino **fluxo** o mesmo tipo da fonte de **fluxo** (seus **tipo** as configurações de propriedade são ambos **adTypeText** ou ambos **adTypeBinary**). Para texto **fluxo** objetos, você pode alterar o [Charset](../../../ado/reference/ado-api/charset-property-ado.md) configuração da propriedade de destino **fluxo** para converter de um conjunto para outro. Além disso, o texto **fluxo** objetos podem ser copiados com êxito em binário **fluxo** objetos, mas binário **fluxo** objetos não podem ser copiados em texto **fluxo ** objetos.  
+ **CopyTo** deve ser usado para copiar dados para um destino **fluxo** o mesmo tipo da fonte de **fluxo** (seus **tipo** as configurações de propriedade são ambos **adTypeText** ou ambos **adTypeBinary**). Para texto **fluxo** objetos, você pode alterar o [Charset](../../../ado/reference/ado-api/charset-property-ado.md) configuração da propriedade de destino **fluxo** para converter de um conjunto para outro. Além disso, o texto **fluxo** objetos podem ser copiados com êxito em binário **fluxo** objetos, mas binário **fluxo** objetos não podem ser copiados em texto **fluxo**  objetos.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

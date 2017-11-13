@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 6.  Chamadas **SQLFetch** ou **SQLFetchScroll** uma ou mais vezes para percorrer o conjunto de resultados.  
   
- O aplicativo pode alterar valores de dados em buffers do conjunto de linhas. Para atualizar os buffers de conjunto de linhas com dados de cache da biblioteca de cursor, um aplicativo chama **SQLFetchScroll** com o *FetchOrientation* argumento definido como SQL_FETCH_RELATIVE e * FetchOffset* argumento definido como 0.  
+ O aplicativo pode alterar valores de dados em buffers do conjunto de linhas. Para atualizar os buffers de conjunto de linhas com dados de cache da biblioteca de cursor, um aplicativo chama **SQLFetchScroll** com o *FetchOrientation* argumento definido como SQL_FETCH_RELATIVE e  *FetchOffset* argumento definido como 0.  
   
  Para recuperar dados de uma coluna não associada, o aplicativo chama **SQLSetPos** para posicionar o cursor na linha desejada. Depois, ele chama **SQLGetData** para recuperar os dados.  
   

@@ -38,13 +38,13 @@ Este tópico lista os novos recursos introduzidos por cada versão do ADO MD, AD
  *Acesso de unidade de disco rígido não é permitido fora de uma zona confiável.*
 No domínio cruzado script envolvendo sites não confiáveis, as operações a seguir estão desabilitadas: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, e **Recordset.Open**, usado em conjunto com o **adCmdFile** sinalizador ou com o Microsoft OLE DB provedor de persistência (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *e* **Stream.LoadFromFile***operar somente arquivos físicos.        *
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *e* **Stream.LoadFromFile***operar somente arquivos físicos.* 
 Esses métodos agora verificar o ponto de identificadores de arquivo para arquivos físicos apenas.
 
- **Recordset.ActiveCommand***retorna um erro quando chamado a partir de uma página HTML/ASP.  *
+ **Recordset.ActiveCommand***retorna um erro quando chamado a partir de uma página HTML/ASP.* 
 Isso impede que o **comando** objeto sejam mal utilizadas.
 
- *O número de***conjuntos de registros***retornado por uma instrução***forma***comando possui um limite superior.        *
+ *O número de***conjuntos de registros***retornado por uma instrução***forma***comando possui um limite superior.* 
 Um comando de forma aninhada agora retorna um máximo de 512 **conjuntos de registros**. Isso significa que um **forma** comando não pode ser aninhado em qualquer profundidade. Em vez disso, a profundidade máxima de nível é 512, se cada comando resulta em uma única (filho) **registros**. Se, em qualquer nível, um **forma** comando retorna várias **conjuntos de registros**, o nível máximo de profundidade será menor que 512.
 
 ## <a name="ado-27"></a>ADO 2.7

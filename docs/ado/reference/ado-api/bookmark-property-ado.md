@@ -40,7 +40,7 @@ Indica um marcador que identifica exclusivamente o registro atual em um [registr
   
  O usuário pode não ser capaz de exibir o valor do indicador. Além disso, os usuários não devem ter indicadores para ser diretamente comparáveis??? dois indicadores que se referem ao mesmo registro podem ter valores diferentes.  
   
- Se você usar o [Clone](../../../ado/reference/ado-api/clone-method-ado.md) método para criar uma cópia de um **registros** objeto, o **indicador** as configurações de propriedade para o original e a duplicata **conjunto de registros ** objetos são idênticos e podem ser usados alternadamente. No entanto, você não pode usar indicadores de diferentes **registros** objetos alternadamente, mesmo se elas foram criadas da mesma fonte ou do comando.  
+ Se você usar o [Clone](../../../ado/reference/ado-api/clone-method-ado.md) método para criar uma cópia de um **registros** objeto, o **indicador** as configurações de propriedade para o original e a duplicata **conjunto de registros**  objetos são idênticos e podem ser usados alternadamente. No entanto, você não pode usar indicadores de diferentes **registros** objetos alternadamente, mesmo se elas foram criadas da mesma fonte ou do comando.  
   
 > [!NOTE]
 >  **Uso do serviço de dados remoto** quando usado em um cliente **registros** objeto, o **indicador** propriedade sempre está disponível.  

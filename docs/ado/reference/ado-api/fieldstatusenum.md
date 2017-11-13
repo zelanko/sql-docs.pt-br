@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Especifica o [status](../../../ado/reference/ado-api/status-property-ado-field.md) de um [campo objeto](../../../ado/reference/ado-api/field-object.md).  
   
- O **adFieldPending\* ** valores indicam a operação que causou o status a ser definido e pode ser combinada com outros valores de status.  
+ O **adFieldPending\***  valores indicam a operação que causou o status a ser definido e pode ser combinada com outros valores de status.  
   
 |Constante|Valor|Description|  
 |--------------|-----------|-----------------|  

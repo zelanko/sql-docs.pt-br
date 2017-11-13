@@ -79,7 +79,7 @@ SQLRETURN  SQLRateConnection(
   
  Se o Gerenciador de Driver reutilizado uma conexão cuja pontuação é estritamente menor que 100 (incluindo 99), o Gerenciador de Driver chamará SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) para redefinir a conexão volta para o estado solicitado pelo aplicativo. O driver não deve redefinir a conexão na chamada de função.  
   
- Se *fRequiredTransactionEnlistment* é TRUE, reutilizando *hCandidateConnection* precisa de uma inscrição adicional (*ID de transação* ! = NULL) ou unenlistment (* ID de transação* = = NULL). Isso indica o custo de reutilizar uma conexão e se o driver deve inscrever / inscrição a conexão se ela for reutilizar a conexão. Se *fRequireTransactionEnlistment* é FALSE, o driver deve ignorar o valor de *ID de transação*.  
+ Se *fRequiredTransactionEnlistment* é TRUE, reutilizando *hCandidateConnection* precisa de uma inscrição adicional (*ID de transação* ! = NULL) ou unenlistment ( *ID de transação* = = NULL). Isso indica o custo de reutilizar uma conexão e se o driver deve inscrever / inscrição a conexão se ela for reutilizar a conexão. Se *fRequireTransactionEnlistment* é FALSE, o driver deve ignorar o valor de *ID de transação*.  
   
  O Gerenciador de Driver garante que o pai HENV tratar de *hRequest* e *hCandidateConnection* são os mesmos. O Gerenciador de Driver garante que a ID do pool associado *hRequest* e *hCandidateConnection* são os mesmos.  
   

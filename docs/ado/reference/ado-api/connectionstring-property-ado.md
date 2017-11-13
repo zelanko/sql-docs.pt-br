@@ -48,7 +48,7 @@ Indica as informações usadas para estabelecer uma conexão com uma fonte de da
   
  Depois de definir o **ConnectionString** propriedade e abra o [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto, o provedor pode alterar o conteúdo da propriedade, por exemplo, mapeando os nomes de argumento definido ADO para seu equivalentes para o provedor específico.  
   
- O **ConnectionString** propriedade herda automaticamente o valor usado para o *ConnectionString* argumento do [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método, portanto você pode substituir o atual ** ConnectionString** propriedade durante o **abrir** chamada de método.  
+ O **ConnectionString** propriedade herda automaticamente o valor usado para o *ConnectionString* argumento do [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método, portanto você pode substituir o atual  **ConnectionString** propriedade durante o **abrir** chamada de método.  
   
  Porque o *nome de arquivo* argumento faz com que o ADO para carregar o provedor associado, você não pode passar ambos o *provedor* e *nome de arquivo* argumentos.  
   

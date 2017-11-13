@@ -47,7 +47,7 @@ Indica para qual ADO [Conexão](../../../ado/reference/ado-api/connection-object
  Um erro ocorrerá se você tentar alterar o **ActiveConnection** propriedade um abra **conjunto de células** objeto.  
   
 > [!NOTE]
->  No Visual Basic, lembre-se de usar o **definir** palavra-chave ao definir o **ActiveConnection** propriedade para um **Conexão** objeto. Se você omitir o **definir** palavra-chave, você realmente definirá o **ActiveConnection** propriedade igual ao **Conexão** propriedade padrão do objeto ** ConnectionString**. O código funcionará; No entanto, você criará uma conexão adicional para a fonte de dados, que pode ter implicações de desempenho negativo.  
+>  No Visual Basic, lembre-se de usar o **definir** palavra-chave ao definir o **ActiveConnection** propriedade para um **Conexão** objeto. Se você omitir o **definir** palavra-chave, você realmente definirá o **ActiveConnection** propriedade igual ao **Conexão** propriedade padrão do objeto  **ConnectionString**. O código funcionará; No entanto, você criará uma conexão adicional para a fonte de dados, que pode ter implicações de desempenho negativo.  
   
  Ao usar o provedor de dados MSOLAP, defina a fonte de dados em uma cadeia de conexão para um nome de servidor e defina o catálogo inicial para o nome de um catálogo da fonte de dados. Para se conectar a um arquivo de cubo que está desconectado de um servidor, defina o local para o caminho completo para o. Arquivos CUB. Em ambos os casos, defina o provedor para o nome do provedor. Por exemplo, a cadeia de caracteres a seguir usa o provedor MSOLAP para conectar-se a um catálogo denominado Bobs repositório de vídeo em um servidor chamado **Servername**:  
   

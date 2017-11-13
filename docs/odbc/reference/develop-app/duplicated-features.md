@@ -29,9 +29,9 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="duplicated-features"></a>Recursos duplicados
-A seguir ODBC 2. *x* funções foram duplicadas pelo ODBC 3.* x* funções. Como resultado, o ODBC 2. *x* funções são substituídas no ODBC 3.* x*. O ODBC 3. *x* funções são referidas como funções de substituição.  
+A seguir ODBC 2. *x* funções foram duplicadas pelo ODBC 3. *x* funções. Como resultado, o ODBC 2. *x* funções são substituídas no ODBC 3. *x*. O ODBC 3. *x* funções são referidas como funções de substituição.  
   
- Quando um aplicativo usa um preterido ODBC 2. *x* função e o driver subjacente é um ODBC 3.* x* driver, o Gerenciador de Driver mapeia a chamada de função para a função de substituição correspondente. A única exceção a essa regra é **SQLExtendedFetch**. (Consulte a nota de rodapé no final da tabela a seguir). Para obter mais informações sobre esses mapeamentos, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+ Quando um aplicativo usa um preterido ODBC 2. *x* função e o driver subjacente é um ODBC 3. *x* driver, o Gerenciador de Driver mapeia a chamada de função para a função de substituição correspondente. A única exceção a essa regra é **SQLExtendedFetch**. (Consulte a nota de rodapé no final da tabela a seguir). Para obter mais informações sobre esses mapeamentos, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   
  Quando um aplicativo usa uma função de substituição e o driver subjacente é um ODBC 2. *x* driver, o Gerenciador de Driver mapeia a chamada de função para a função preterida correspondente.  
   
@@ -53,8 +53,8 @@ A seguir ODBC 2. *x* funções foram duplicadas pelo ODBC 3.* x* funções. Como
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] a função **SQLExtendedFetch** funcionalidade duplicados; **SQLFetchScroll** fornece a mesma funcionalidade em ODBC 3.* x*. No entanto, o Gerenciador de Driver não mapear **SQLExtendedFetch** para **SQLFetchScroll** partindo contra um ODBC 3.* x* driver. Para obter mais informações, consulte [que o Gerenciador de Driver faz](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores. O Gerenciador de Driver mapeia **SQLFetchScroll** para **SQLExtendedFetch** partindo contra um ODBC 2.* x* driver.  
+ [1] a função **SQLExtendedFetch** funcionalidade duplicados; **SQLFetchScroll** fornece a mesma funcionalidade em ODBC 3. *x*. No entanto, o Gerenciador de Driver não mapear **SQLExtendedFetch** para **SQLFetchScroll** partindo contra um ODBC 3. *x* driver. Para obter mais informações, consulte [que o Gerenciador de Driver faz](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores. O Gerenciador de Driver mapeia **SQLFetchScroll** para **SQLExtendedFetch** partindo contra um ODBC 2. *x* driver.  
   
 > [!NOTE]  
->  A função **SQLBindParam** é um caso especial. **SQLBindParam** funcionalidade duplicados. Isso não é um ODBC 2*. x* função, mas uma função que está presente nos padrões ISO e Open Group. A funcionalidade fornecida por essa função é completamente incluída do **SQLBindParameter**. Como resultado, o Gerenciador de Driver mapeia uma chamada para **SQLBindParam** para **SQLBindParameter** quando o driver subjacente é um ODBC 3.* x* driver. No entanto, quando o driver subjacente é um ODBC 2*. x* driver, o Gerenciador de Driver não executa esse mapeamento.
+>  A função **SQLBindParam** é um caso especial. **SQLBindParam** funcionalidade duplicados. Isso não é um ODBC 2*. x* função, mas uma função que está presente nos padrões ISO e Open Group. A funcionalidade fornecida por essa função é completamente incluída do **SQLBindParameter**. Como resultado, o Gerenciador de Driver mapeia uma chamada para **SQLBindParam** para **SQLBindParameter** quando o driver subjacente é um ODBC 3. *x* driver. No entanto, quando o driver subjacente é um ODBC 2*. x* driver, o Gerenciador de Driver não executa esse mapeamento.
 

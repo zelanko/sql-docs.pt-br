@@ -43,7 +43,7 @@ Todos os drivers ODBC devem exibir pelo menos nível de núcleo conformidade de 
   
 -   Gerenciar nomes de cursor e cursores chamando **SQLCloseCursor**, **SQLGetCursorName**, e **SQLSetCursorName**.  
   
--   Acessar a descrição (metadados) de conjuntos de resultados chamando **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, e **SQLRowCount **. (Uso dessas funções na coluna número 0 para recuperar metadados de indicador é recurso 204 em [nível 2 Interface conformidade](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Acessar a descrição (metadados) de conjuntos de resultados chamando **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, e **SQLRowCount** . (Uso dessas funções na coluna número 0 para recuperar metadados de indicador é recurso 204 em [nível 2 Interface conformidade](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
 -   O dicionário de dados de consulta ao chamar as funções de catálogo **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, e **SQLTables**.  
   

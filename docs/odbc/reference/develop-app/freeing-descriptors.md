@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="freeing-descriptors"></a>Descritores de liberação
 Descritores explicitamente alocados podem ser liberada seja explicitamente, chamando **SQLFreeHandle** com *HandleType* de SQL_HANDLE_DESC ou implicitamente, quando o identificador de conexão é liberado. Quando um descritor alocado explicitamente é liberado, todos os identificadores de instrução para o qual o descritor livre aplicado automaticamente reverter para os descritores de alocado implicitamente para eles.  
   
- Descritores implicitamente alocados podem ser liberados apenas chamando **SQLDisconnect**, que descarta todas as instruções ou descritores de abrir a conexão, ou chamando **SQLFreeHandle** com um * HandleType* sql_handle_stmt para liberar um identificador de instrução e todos os descritores de alocado implicitamente associados à instrução. Um descritor alocado implicitamente não pode ser liberado chamando **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DESC.  
+ Descritores implicitamente alocados podem ser liberados apenas chamando **SQLDisconnect**, que descarta todas as instruções ou descritores de abrir a conexão, ou chamando **SQLFreeHandle** com um  *HandleType* sql_handle_stmt para liberar um identificador de instrução e todos os descritores de alocado implicitamente associados à instrução. Um descritor alocado implicitamente não pode ser liberado chamando **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DESC.  
   
  Mesmo quando liberado, um descritor alocado implicitamente permanece válido, e **SQLGetDescField** pode ser chamado em seus campos.
 

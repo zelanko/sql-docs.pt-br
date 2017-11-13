@@ -35,7 +35,7 @@ Indica o nome de um objeto.
  Define ou retorna um **cadeia de caracteres** valor que indica o nome de um objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **nome** propriedade para atribuir um nome ou recuperar o nome de um **comando**, **propriedade**, **campo**, ou **parâmetro ** objeto.  
+ Use o **nome** propriedade para atribuir um nome ou recuperar o nome de um **comando**, **propriedade**, **campo**, ou **parâmetro**  objeto.  
   
  O valor é leitura/gravação em um **comando** objeto e somente leitura em uma **propriedade** objeto.  
   

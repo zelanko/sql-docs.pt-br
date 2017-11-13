@@ -51,7 +51,7 @@ SET COLLATE TO cSequenceName
 |UNIQWT|Peso exclusivo|  
   
 > [!NOTE]  
->  Quando você especificar a opção espanhol, *ch* é uma única letra que classifica entre *c* e *d*, e *ll* classifica entre * l* e *m*.  
+>  Quando você especificar a opção espanhol, *ch* é uma única letra que classifica entre *c* e *d*, e *ll* classifica entre  *l* e *m*.  
   
  Se você especificar uma opção de sequência de agrupamento como uma cadeia de caracteres literal, certifique-se de incluir a opção entre aspas:  
   

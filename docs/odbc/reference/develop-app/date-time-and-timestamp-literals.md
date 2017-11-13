@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="date-time-and-timestamp-literals"></a>Data, hora e literais de carimbo de hora
 A sequência de escape para literais de data, hora e carimbo de hora é  
   
- **{***-tipo* **'** *valor* **'}  **  
+ **{***-tipo* **'** *valor* **'}**   
   
  onde *tipo literal* é um dos valores listados na tabela a seguir.  
   
@@ -35,7 +35,7 @@ A sequência de escape para literais de data, hora e carimbo de hora é
 |---------------------|-------------|-----------------------|  
 |**d**|Data|*aaaa*-*mm*-*dd*|  
 |**t**|Hora *|*hh*:*mm*:*ss*[1]|  
-|**TS**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss* [. *f... *] [1]|  
+|**TS**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss* [. *f...* ] [1]|  
   
  [1] o número de dígitos à direita da vírgula decimal em um intervalo de tempo ou carimbo de hora literal que contém um componente de segundos é dependente de precisão de segundos, como contido no campo de descritor SQL_DESC_PRECISION. (Para obter mais informações, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

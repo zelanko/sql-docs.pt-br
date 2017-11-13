@@ -56,7 +56,7 @@ Este tópico lista as opções que são permitidas na matriz associativa (ao usa
 
 1. O `ConnectionPooling` atributo não pode ser usado para habilitar/desabilitar o pooling de conexão no Linux e Mac. Consulte [(Drivers da Microsoft para PHP para SQL Server) do pool de Conexão](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
 
-2. Todas as consultas executadas em que a conexão estabelecida são feitas no banco de dados que é especificado pelo *banco de dados* atributo. No entanto, se o usuário tem as permissões apropriadas, os dados em outros bancos de dados podem ser acessados usando um nome totalmente qualificado. Por exemplo, se o *mestre* banco de dados é definido com o *banco de dados* atributo de conexão, ainda é possível executar uma consulta Transact-SQL que acessa o * AdventureWorks.HumanResources.Employee* tabela usando o nome totalmente qualificado.  
+2. Todas as consultas executadas em que a conexão estabelecida são feitas no banco de dados que é especificado pelo *banco de dados* atributo. No entanto, se o usuário tem as permissões apropriadas, os dados em outros bancos de dados podem ser acessados usando um nome totalmente qualificado. Por exemplo, se o *mestre* banco de dados é definido com o *banco de dados* atributo de conexão, ainda é possível executar uma consulta Transact-SQL que acessa o  *AdventureWorks.HumanResources.Employee* tabela usando o nome totalmente qualificado.  
 
 3. A habilitação de *Encryption* pode afetar o desempenho de alguns aplicativos devido à sobrecarga de computação necessária para criptografar os dados.  
 
