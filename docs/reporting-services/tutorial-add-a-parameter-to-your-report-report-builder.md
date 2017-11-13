@@ -16,8 +16,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Active
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
 ms.contentlocale: pt-br
@@ -32,7 +31,7 @@ Neste tutorial, você adiciona um parâmetro a um relatório paginado do [!INCLU
 Os parâmetros de relatório são criados automaticamente para cada parâmetro de consulta incluído em uma consulta de conjunto de dados. O tipo de dados do parâmetro determina como ele aparece na barra de ferramentas de exibição de relatório. 
    
 > [!NOTE]  
-> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo estimado para concluir este tutorial: 25 minutos.  
   

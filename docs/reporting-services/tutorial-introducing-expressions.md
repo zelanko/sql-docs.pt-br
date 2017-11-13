@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Apresentando expressões | Microsoft Docs"
+title: "Tutorial: Apresentação de expressões | Microsoft Docs"
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
 ms.contentlocale: pt-br
@@ -184,7 +183,7 @@ Nesta seção, use a função **Left** e o operador **Concatenate** (**&**) em u
   
 8.  Digite **, 1)**  
   
-    Essa expressão extrai um caractere do valor **FirstName**, contando a partir da esquerda.  
+    Essa expressão extrai um caractere do valor **FirstName** , contando a partir da esquerda.  
   
 9. Digite **&". "&**  
 
@@ -207,7 +206,7 @@ Nesta seção, você formata a coluna **Last Purchase** , que contém datas, e a
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Selecione a célula de dados na coluna **Last Purchase** e, na guia **Início** > seção **Número**, selecione **Data**.  
+2.  Selecione a célula de dados na coluna **Última Compra** e, na guia **Início** > seção **Número**, selecione **Data**.  
 
     ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
@@ -268,7 +267,7 @@ Para manter a cor que você aplicou à célula da tabela quando fez o relatório
   
 2.  Na caixa de diálogo **Propriedades do Retângulo** > guia **Preencher**, clique no botão de expressão **fx** ao lado de **Cor de Preenchimento**.  
   
-3.  Na caixa de diálogo **Expressão**, expanda **Funções Comuns** e clique em **Fluxo do Programa**.  
+3.  Na caixa de diálogo **Expressão** , expanda **Funções Comuns** e clique em **Fluxo do Programa**.  
   
 4.  Na lista **Item** , clique duas vezes em **Mudar**.  
   
@@ -327,7 +326,7 @@ Nesta seção, você cria o conjunto de dados CountryRegion e usa a função **L
   
 2.  No painel Dados do Relatório, clique em **Novo** e em **Conjunto de Dados**.  
   
-3.  Em * * Propriedades do conjunto de dados, clique em **usar um conjunto de dados inserido em meu relatório**.  
+3.  Em **Propriedades do Conjunto de Dados, clique em **Usar um conjunto de dados inserido em meu relatório**.  
   
 4.  Na lista **Fonte de dados** , selecione ExpressionsDataSource.  
   
@@ -405,7 +404,7 @@ Nesta seção, você adiciona uma coluna e usa a função **Now** ou a variável
   
 5.  Na caixa de diálogo **Expressão**, expanda **Funções Comuns** e clique em **Data e Hora**.  
   
-6.  Na lista **Item**, clique duas vezes em **DateDiff**.  
+6.  Na lista **Item** , clique duas vezes em **DateDiff**.  
   
 7.  Imediatamente após `DateDiff(`, digite **"d",** (incluindo as aspas "" e a vírgula). 
   
@@ -493,7 +492,7 @@ Configurar o indicador e seus estados envolve várias etapas. Se desejar, você 
   
 24. Expanda **Funções Comuns** novamente e clique em **Agregação**e, na lista **Item** , clique duas vezes em **Méd**.  
   
-26. Na lista **Categoria**, clique em **Campos (Expressões)** e, na lista **Valores**, clique duas vezes em **YTDPurchase** novamente.  
+26. Na lista **Categoria** , clique em **Campos (Expressões)**e, na lista **Valores** , clique duas vezes em **YTDPurchase**novamente.  
   
 28. Imediatamente após `Fields!YTDPurchase.Value`, digite **, "Expressões")) < 0**  
   
