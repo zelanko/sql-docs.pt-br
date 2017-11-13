@@ -1,5 +1,5 @@
 ---
-title: "Condições de regras de negócios (Master Data Services) | Microsoft Docs"
+title: "Condições de regra de negócio (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,15 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 2690cc49bb989c02cd361010d3c3317534349cd2
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47b8ae7924ae590156479209b2ae0ba639d07ec
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Condições de regras de negócio (Master Data Services)
@@ -57,9 +56,8 @@ ms.lasthandoff: 09/07/2017
 >  Quando uma regra de negócios contém uma condição que compara dois valores, e a regra é aplicada a um membro para o qual ambos os valores são NULL, esse membro falhará a validação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ações de regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
- [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [Ações de regra de negócio &#40; Master Data Services &#41;](../master-data-services/business-rule-actions-master-data-services.md)   
+ [Regras de negócio &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Criar e publicar uma regra de negócio &#40; Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   
-
