@@ -1,0 +1,6 @@
+# [Comunicação com o SQL Server (ODBC)](communicating-with-sql-server-odbc.md)
+# [Alocando um identificador de Conexão](allocating-a-connection-handle.md)
+# [Alocar um identificador de ambiente](allocating-an-environment-handle.md)
+# [Conectando a uma fonte de dados (ODBC)](connecting-to-a-data-source-odbc.md)
+# [Desconectando de uma fonte de dados](disconnecting-from-a-data-source.md)
+# [Fontes de dados do SQL Server Native Client ODBC](sql-server-native-client-odbc-data-sources.md)
