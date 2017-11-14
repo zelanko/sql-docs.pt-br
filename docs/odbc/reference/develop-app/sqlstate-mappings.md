@@ -27,13 +27,13 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlstate-mappings"></a>Mapeamentos de SQLSTATE
-Este tópico discute os valores de SQLSTATE para ODBC 2. *x* e ODBC 3.* x*. Para obter mais informações sobre ODBC 3. *x* valores SQLSTATE, consulte [códigos de erro de ODBC do apêndice a:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+Este tópico discute os valores de SQLSTATE para ODBC 2. *x* e ODBC 3. *x*. Para obter mais informações sobre ODBC 3. *x* valores SQLSTATE, consulte [códigos de erro de ODBC do apêndice a:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
  Em ODBC 3. *x*HYxxx SQLSTATEs são retornados em vez de S1xxx e SQLSTATEs 42Sxx são retornados em vez de S00XX. Isso foi feito para alinhar com os padrões ISO e Open Group. Em muitos casos, o mapeamento não é um porque os padrões tem redefinido a interpretação de vários SQLSTATEs.  
   
- Quando um ODBC 2. *x* aplicativo é atualizado para um ODBC 3.* x* aplicativo, o aplicativo deve ser alterada para esperar o ODBC 3.* x* SQLSTATEs, em vez de ODBC 2.* x* SQLSTATEs. A tabela a seguir lista o ODBC 3. *x* SQLSTATEs que cada ODBC 2.* x* SQLSTATE é mapeado para.  
+ Quando um ODBC 2. *x* aplicativo é atualizado para um ODBC 3. *x* aplicativo, o aplicativo deve ser alterada para esperar o ODBC 3. *x* SQLSTATEs, em vez de ODBC 2. *x* SQLSTATEs. A tabela a seguir lista o ODBC 3. *x* SQLSTATEs que cada ODBC 2. *x* SQLSTATE é mapeado para.  
   
- Quando o atributo de ambiente SQL_ATTR_ODBC_VERSION é definido como SQL_OV_ODBC2, o driver envia o ODBC 2. *x* SQLSTATEs, em vez de ODBC 3.* x* SQLSTATEs quando **SQLGetDiagField** ou **SQLGetDiagRec** é chamado. Um mapeamento específico pode ser determinado observando o ODBC 2*. x* SQLSTATE na coluna 1 da tabela a seguir que corresponde ao ODBC 3.* x* SQLSTATE na coluna 2.  
+ Quando o atributo de ambiente SQL_ATTR_ODBC_VERSION é definido como SQL_OV_ODBC2, o driver envia o ODBC 2. *x* SQLSTATEs, em vez de ODBC 3. *x* SQLSTATEs quando **SQLGetDiagField** ou **SQLGetDiagRec** é chamado. Um mapeamento específico pode ser determinado observando o ODBC 2*. x* SQLSTATE na coluna 1 da tabela a seguir que corresponde ao ODBC 3. *x* SQLSTATE na coluna 2.  
   
 |ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Comentários|  
 |-------------------------|-------------------------|--------------|  
@@ -54,7 +54,7 @@ Este tópico discute os valores de SQLSTATE para ODBC 2. *x* e ODBC 3.* x*. Para
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC 2. *x* S1002 SQLSTATE é mapeado para o ODBC 3.* x* SQLSTATE 07009 se a função subjacente é **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch **, **SQLFetchScroll**, ou **SQLGetData**.|  
+|S1002|07009|ODBC 2. *x* S1002 SQLSTATE é mapeado para o ODBC 3. *x* SQLSTATE 07009 se a função subjacente é **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch** , **SQLFetchScroll**, ou **SQLGetData**.|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
@@ -67,7 +67,7 @@ Este tópico discute os valores de SQLSTATE para ODBC 2. *x* e ODBC 3.* x*. Para
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC 3. *x* SQLSTATE 07009 é mapeado para o ODBC 2.* x* SQLSTATE S1093 se a função subjacente é **SQLBindParameter** ou **SQLDescribeParam**.|  
+|S1093|07009|ODBC 3. *x* SQLSTATE 07009 é mapeado para o ODBC 2. *x* SQLSTATE S1093 se a função subjacente é **SQLBindParameter** ou **SQLDescribeParam**.|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -87,5 +87,5 @@ Este tópico discute os valores de SQLSTATE para ODBC 2. *x* e ODBC 3.* x*. Para
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC 3. *x* SQLSTATE 07008 é mapeado para o ODBC 2.* x* SQLSTATE S1000.
+>  ODBC 3. *x* SQLSTATE 07008 é mapeado para o ODBC 2. *x* SQLSTATE S1000.
 

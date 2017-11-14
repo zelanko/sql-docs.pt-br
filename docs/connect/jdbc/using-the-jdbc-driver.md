@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  Sua escolha também determinará os recursos disponíveis. Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="setting-the-classpath"></a>Definindo o classpath  
- O JDBC driver não faz parte do Java SDK. Se você quiser usá-lo, você deve definir o classpath para incluir o **sqljdbc.jar** arquivo, **sqljdbc4.jar** arquivo, o **sqljdbc41.jar** arquivo, ou o ** sqljdbc42.jar** arquivo. Se usar o JDBC Driver 6.2, definir o classpath para incluir o **mssql-jdbc-6.2.1.jre7.jar** ou **mssql-jdbc-6.2.1.jre8.jar**. Se o classpath não tiver uma entrada, seu aplicativo lançará a exceção comum "Classe não encontrada".  
+ O JDBC driver não faz parte do Java SDK. Se você quiser usá-lo, você deve definir o classpath para incluir o **sqljdbc.jar** arquivo, **sqljdbc4.jar** arquivo, o **sqljdbc41.jar** arquivo, ou o  **sqljdbc42.jar** arquivo. Se usar o JDBC Driver 6.2, definir o classpath para incluir o **mssql-jdbc-6.2.1.jre7.jar** ou **mssql-jdbc-6.2.1.jre8.jar**. Se o classpath não tiver uma entrada, seu aplicativo lançará a exceção comum "Classe não encontrada".  
   
 ### <a name="for-microsoft-jdbc-driver-62"></a>Para o Microsoft JDBC Driver 6.2
  O **mssql-jdbc-6.2.1.jre7.jar** ou **mssql-jdbc-6.2.1.jre8.jar** arquivos são instalados no seguinte local:  

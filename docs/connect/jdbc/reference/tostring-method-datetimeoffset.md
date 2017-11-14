@@ -38,7 +38,7 @@ public String toString()
  Uma representação de cadeia de caracteres da **DateTimeOffset** objeto.  
   
 ## <a name="remarks"></a>Comentários  
- A cadeia de caracteres tem o formato *aaaa*-*MM*-*DD**hh*:*mm*: *ss*[.* FFFFFFF*] [+ |-]*hh*:*mm*.  
+ A cadeia de caracteres tem o formato *aaaa*-*MM*-*DD**hh*:*mm*: *ss*[. *FFFFFFF*] [+ |-]*hh*:*mm*.  
   
  Os segundos fracionados da cadeia de caracteres retornada são preenchidas com zeros até obter a precisão declarada. Por exemplo, um **datetimeoffset(6)** com um valor de "2010-03-10 12:34:56.78 -08:00" será formatado por DateTimeOffset como "2010-03-10 12:34:56.780000 -08:00".  
   

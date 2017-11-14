@@ -70,7 +70,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>diagnóstico  
- Mesmo que [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), exceto que o Gerenciador de Driver usará uma **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN e um **tratar** de *hDbcInfoToken *.  
+ Mesmo que [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), exceto que o Gerenciador de Driver usará uma **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN e um **tratar** de *hDbcInfoToken* .  
   
 ## <a name="remarks"></a>Comentários  
  **SQLSetConnectAttrForDbcInfo** é o mesmo que **SQLSetConnectAttr**, mas ela define o atributo no token de informações de conexão, em vez de no identificador da conexão. Por exemplo, se **SQLSetConnectAttr** não reconhece um atributo **SQLSetConnectAttrForDbcInfo** também deve retornar SQL_ERROR para esse atributo.  

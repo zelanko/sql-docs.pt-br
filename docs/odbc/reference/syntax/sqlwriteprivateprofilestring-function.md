@@ -66,7 +66,7 @@ BOOL SQLWritePrivateProfileString(
  A função retorna TRUE se for bem-sucedida, FALSO se ele falhar.  
   
 ## <a name="diagnostics"></a>diagnóstico  
- Quando **SQLWritePrivateProfileString** retorna FALSE, um tipo de * \*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista o * \*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+ Quando **SQLWritePrivateProfileString** retorna FALSE, um tipo de  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista o  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Description|  
 |---------------------|-----------|-----------------|  

@@ -36,7 +36,7 @@ Tipos de dados de data e a data e hora e os campos à direita dos tipos de dados
   
 -   O valor do campo minuto deve estar entre 0 e 59, inclusive.  
   
--   Para o campo de segundos à direita dos tipos de dados de intervalo, o valor do campo de segundos deve estar entre 0 e 59.9 (*n*), inclusive, onde * n * é o número de dígitos a precisão de frações de segundo.  
+-   Para o campo de segundos à direita dos tipos de dados de intervalo, o valor do campo de segundos deve estar entre 0 e 59.9 (*n*), inclusive, onde  *n*  é o número de dígitos a precisão de frações de segundo.  
   
--   Para o campo de segundos à direita dos tipos de dados de data e hora, o valor do campo de segundos deve estar entre 0 e 61.9 (*n*), inclusive, onde * n * Especifica o número de "9" dígitos e o valor de * n * é a precisão de frações de segundo. (O intervalo de segundos permite até dois segundos intercalares para manter a sincronização de tempo de sidereal).
+-   Para o campo de segundos à direita dos tipos de dados de data e hora, o valor do campo de segundos deve estar entre 0 e 61.9 (*n*), inclusive, onde  *n*  Especifica o número de "9" dígitos e o valor de  *n*  é a precisão de frações de segundo. (O intervalo de segundos permite até dois segundos intercalares para manter a sincronização de tempo de sidereal).
 

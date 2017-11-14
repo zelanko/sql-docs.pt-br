@@ -52,7 +52,7 @@ Use o código do Visual Studio para estabelecer uma conexão para o catálogo do
 
 4. Siga os prompts para especificar as propriedades de conexão para o novo perfil de conexão. Depois de especificar cada valor, pressione **ENTER** para continuar. 
 
-   | Configuração       | Valor sugerido | Obter mais informações |
+   | Configuração       | Valor sugerido | Obter mais informações |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome do servidor** | O nome totalmente qualificado do servidor | Se você estiver se conectando a um servidor de banco de dados SQL, o nome é neste formato: `<server_name>.database.windows.net`. |
    | **Nome do banco de dados** | **SSISDB** | O nome do banco de dados ao qual se conectar. |

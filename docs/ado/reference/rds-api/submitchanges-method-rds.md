@@ -52,7 +52,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  Uma variável de objeto que representa um **registros** objeto.  
   
 ## <a name="remarks"></a>Comentários  
- O [conectar](../../../ado/reference/rds-api/connect-property-rds.md), [servidor](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) propriedades devem ser definidas antes de usar o **SubmitChanges** método com o ** RDS. DataControl** objeto.  
+ O [conectar](../../../ado/reference/rds-api/connect-property-rds.md), [servidor](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) propriedades devem ser definidas antes de usar o **SubmitChanges** método com o  **RDS. DataControl** objeto.  
   
  Se você chamar o [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) método depois de ter chamado **SubmitChanges** para o mesmo **registros** objeto, o **CancelUpdate** chamada falhar porque as alterações já foram confirmadas.  
   

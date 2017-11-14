@@ -1,12 +1,15 @@
 ---
 title: Dados persistentes | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -66,7 +69,7 @@ Destination, PersistFormat
   
  Quando um **Recordset** são mantidas com o **CursorLocation** propriedade definida como **adUseServer**, a capacidade de atualização para o **Recordset**é limitado. Normalmente, somente tabela única atualizações, inserções e exclusões são permitidas (dependentes da funcionalidade de provedor). O [Resync](../../../ado/reference/ado-api/resync-method.md) método também está disponível nessa configuração.  
   
- Porque o *destino* parâmetro pode aceitar qualquer objeto que dá suporte a OLE DB **IStream** interface, você pode salvar uma **registros** diretamente para o ASP ** Resposta** objeto.  
+ Porque o *destino* parâmetro pode aceitar qualquer objeto que dá suporte a OLE DB **IStream** interface, você pode salvar uma **registros** diretamente para o ASP  **Resposta** objeto.  
   
  No exemplo a seguir, o **salvar** e **abrir** métodos são usados para manter um **registros** e abri-lo posteriormente:  
   

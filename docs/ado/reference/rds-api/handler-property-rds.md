@@ -1,12 +1,15 @@
 ---
 title: Propriedade de manipulador (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -54,7 +57,7 @@ DataControl.Handler = String
   
  O nome do manipulador padrão é **MSDFMAP. Manipulador**, e seu parâmetro padrão é um arquivo de personalização chamado **MSDFMAP. INI**. Use essa propriedade para invocar os arquivos de personalização alternativo criados pelo administrador do servidor.  
   
- A alternativa à configuração o **manipulador** é de propriedade para especificar um manipulador e parâmetros no [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade; ou seja, "**manipulador =** * handlerName, parameter1, parameter2,...; *".  
+ A alternativa à configuração o **manipulador** é de propriedade para especificar um manipulador e parâmetros no [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade; ou seja, "**manipulador =**  *handlerName, parameter1, parameter2,...;* ".  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -1,12 +1,15 @@
 ---
 title: "Métodos de ADO | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/09/2017
 |[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gerencia o processamento dentro de transações um **Conexão** do objeto da seguinte maneira:<br /><br /> **BeginTrans** — inicia uma nova transação.<br /><br /> **CommitTrans** — salva as alterações e termina a transação atual. Ele também pode iniciar uma nova transação.<br /><br /> **RollbackTrans** — cancela as alterações e termina a transação atual. Ele também pode iniciar uma nova transação.|  
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela a execução de um pendente, chamada de método assíncrono.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela uma atualização em lotes pendentes.|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela as alterações que foram feitas para a linha atual ou nova de um **registros** objeto, ou o **campos** coleção de um **registro** objeto antes de chamar o ** Atualização** método.|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela as alterações que foram feitas para a linha atual ou nova de um **registros** objeto, ou o **campos** coleção de um **registro** objeto antes de chamar o  **Atualização** método.|  
 |[Liberada](../../../ado/reference/ado-api/clear-method-ado.md)|Remove todos os **erro** objetos do **erros** coleção.|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Cria uma duplicata **registros** objeto a partir de um existente **registros** objeto. Opcionalmente, especifica que o clone ser somente leitura.|  
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Fecha um objeto e todos os objetos dependentes.|  

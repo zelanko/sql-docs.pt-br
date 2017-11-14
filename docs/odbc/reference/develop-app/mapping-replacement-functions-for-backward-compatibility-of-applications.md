@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapeamento de funções de substituição para compatibilidade com versões anteriores de aplicativos
-Um ODBC 3*. x* aplicativo trabalhar com o ODBC 3*. x* Gerenciador de Driver funcionam em um ODBC 2.* x* driver, desde que nenhum recurso novo é usado. Ambos duplicada funcionalidades e alterações de comportamento, no entanto, afetar a maneira que o ODBC 3. *x* aplicativo funciona em um ODBC 2.* x* driver. Ao trabalhar com um ODBC 2. *x* driver, o Gerenciador de Driver mapeia os seguintes ODBC 3.* x* funções, que a substituição de um ou mais ODBC 2.* x* funções, em correspondente ODBC 2.* x* funções.  
+Um ODBC 3*. x* aplicativo trabalhar com o ODBC 3*. x* Gerenciador de Driver funcionam em um ODBC 2. *x* driver, desde que nenhum recurso novo é usado. Ambos duplicada funcionalidades e alterações de comportamento, no entanto, afetar a maneira que o ODBC 3. *x* aplicativo funciona em um ODBC 2. *x* driver. Ao trabalhar com um ODBC 2. *x* driver, o Gerenciador de Driver mapeia os seguintes ODBC 3. *x* funções, que a substituição de um ou mais ODBC 2. *x* funções, em correspondente ODBC 2. *x* funções.  
   
 |ODBC 3. *x* função|ODBC 2. *x* função|  
 |-------------------------|-------------------------|  
@@ -223,7 +223,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
   
  resultará na seguinte sequência de etapas:  
   
-1.  Se *atributo* não é um atributo de conexão ou instrução definidos pelo driver e não é um atributo definido no ODBC 2.* x*, o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido). Nenhuma regra adicional nesta seção se aplicam.  
+1.  Se *atributo* não é um atributo de conexão ou instrução definidos pelo driver e não é um atributo definido no ODBC 2. *x*, o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido). Nenhuma regra adicional nesta seção se aplicam.  
   
 2.  Se *atributo* é igual a SQL_ATTR_AUTO_IPD ou SQL_ATTR_METADATA_ID, o Gerenciador de Driver de retorna SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido).  
   
@@ -249,7 +249,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
  resultará na seguinte sequência de etapas:  
   
-1.  Se *atributo* não é um atributo de conexão ou instrução definidos pelo driver e não é um atributo definido no ODBC 2.* x*, o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido). Nenhuma regra adicional nesta seção se aplicam.  
+1.  Se *atributo* não é um atributo de conexão ou instrução definidos pelo driver e não é um atributo definido no ODBC 2. *x*, o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido). Nenhuma regra adicional nesta seção se aplicam.  
   
 2.  Se *atributo* é um dos seguintes:  
   
@@ -285,7 +285,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
 3.  O Gerenciador de Driver executa verificações para ver se SQLSTATE HY010 (erro de sequência de função) precisa ser gerado. Se assim, o Gerenciador de Driver retornará SQL_ERROR e SQLSTATE HY010 (erro de sequência de função). Nenhuma regra adicional desta seção se aplicam.  
   
-4.  Se *atributo* é igual a SQL_ATTR_ROWS_FETCHED_PTR, o retorna o Gerenciador de Driver, um ponteiro para a variável interna do Gerenciador de Driver *galinha*, que ele tenha usado ou usar em uma chamada para ** SQLExtendedFetch**. Nenhuma regra adicional desta seção se aplicam.  
+4.  Se *atributo* é igual a SQL_ATTR_ROWS_FETCHED_PTR, o retorna o Gerenciador de Driver, um ponteiro para a variável interna do Gerenciador de Driver *galinha*, que ele tenha usado ou usar em uma chamada para  **SQLExtendedFetch**. Nenhuma regra adicional desta seção se aplicam.  
   
 5.  Se *atributo* é igual a SQL_DESC_FETCH_BOOKMARK_PTR, o Gerenciador de Driver retorna o ponteiro apropriado que ele tinha armazenado em cache durante uma chamada para **SQLSetStmtAttr**.  
   
@@ -308,7 +308,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
   
  resultará na seguinte sequência de etapas:  
   
-1.  Se *atributo* não é um atributo de conexão ou instrução definidos pelo driver e não é um atributo definido no ODBC 2.* x*, o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido). Nenhuma regra adicional nesta seção se aplicam.  
+1.  Se *atributo* não é um atributo de conexão ou instrução definidos pelo driver e não é um atributo definido no ODBC 2. *x*, o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido). Nenhuma regra adicional nesta seção se aplicam.  
   
 2.  Se *atributo* é igual a SQL_ATTR_AUTO_IPD, o Gerenciador de Driver de retorna SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido).  
   
@@ -334,7 +334,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
  resultará na seguinte sequência de etapas:  
   
-1.  Se *atributo* não é um atributo de conexão ou instrução definidos pelo driver e não é um atributo definido no ODBC 2.* x*, o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido). Nenhuma regra adicional nesta seção se aplicam.  
+1.  Se *atributo* não é um atributo de conexão ou instrução definidos pelo driver e não é um atributo definido no ODBC 2. *x*, o Gerenciador de Driver retornará SQL_ERROR com SQLSTATE HY092 (identificador de atributo/opção inválido). Nenhuma regra adicional nesta seção se aplicam.  
   
 2.  Se *atributo* é um dos seguintes:  
   
@@ -386,7 +386,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
      onde *hstmt*, *fOption*, e *vParam* será definida como os valores de *StatementHandle*, *atributo*, e *ValuePtr*, respectivamente. O *StringLength* argumento será ignorado.  
   
-     Se um ODBC 2. *x* driver dá suporte a opções de instrução específicos do driver de cadeia de caracteres, um ODBC 3.* x* aplicativo deve chamar **SQLSetStmtOption** para definir essas opções.  
+     Se um ODBC 2. *x* driver dá suporte a opções de instrução específicos do driver de cadeia de caracteres, um ODBC 3. *x* aplicativo deve chamar **SQLSetStmtOption** para definir essas opções.  
   
 ## <a name="mappings-for-handling-parameter-arrays"></a>Mapeamentos para lidar com matrizes de parâmetros  
  Quando o aplicativo chama:  
@@ -408,18 +408,18 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>Tratamento de erros  
  Em ODBC 3. *x*, chamar **SQLFetch** ou **SQLFetchScroll** preenche SQL_DESC_ARRAY_STATUS_PTR do IRD, e o campo SQL_DIAG_ROW_NUMBER de um determinado registro de diagnóstico contém o número da linha no conjunto de linhas que pertence a este registro para. Usando isso, o aplicativo pode correlacionar uma mensagem de erro com uma posição de linha especificada.  
   
- ODBC 2. *x* driver será capaz de fornecer essa funcionalidade. No entanto, ele fornecerá demarcação de erro com SQLSTATE 01S01 (erro na linha). ODBC 3. *x* aplicativo que está usando **SQLFetch** ou **SQLFetchScroll** ao indo em relação a um ODBC 2.* x* driver precisa estar ciente desse fato. Observe também que esse aplicativo poderá chamar **SQLGetDiagField** se o campo SQL_DIAG_ROW_NUMBER mesmo assim. ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver poderá chamar **SQLGetDiagField** somente com um *DiagIdentifier* argumento de SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE ou SQL_DIAG_ SQLSTATE. O ODBC 3*. x* Gerenciador de Driver mantém a estrutura de dados de diagnóstico ao trabalhar com um ODBC 2.* x* driver, mas o ODBC 2.* x* driver retornará apenas esses quatro campos.  
+ ODBC 2. *x* driver será capaz de fornecer essa funcionalidade. No entanto, ele fornecerá demarcação de erro com SQLSTATE 01S01 (erro na linha). ODBC 3. *x* aplicativo que está usando **SQLFetch** ou **SQLFetchScroll** ao indo em relação a um ODBC 2. *x* driver precisa estar ciente desse fato. Observe também que esse aplicativo poderá chamar **SQLGetDiagField** se o campo SQL_DIAG_ROW_NUMBER mesmo assim. ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver poderá chamar **SQLGetDiagField** somente com um *DiagIdentifier* argumento de SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE ou SQL_DIAG_ SQLSTATE. O ODBC 3*. x* Gerenciador de Driver mantém a estrutura de dados de diagnóstico ao trabalhar com um ODBC 2. *x* driver, mas o ODBC 2. *x* driver retornará apenas esses quatro campos.  
   
- Quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 2.* x* driver, se uma operação pode causar vários erros a serem retornadas pelo Gerenciador de Driver, erros diferentes podem ser retornados pelo ODBC 3*. x* o Gerenciador de Driver de ODBC 2.* x* Gerenciador de Driver.  
+ Quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 2. *x* driver, se uma operação pode causar vários erros a serem retornadas pelo Gerenciador de Driver, erros diferentes podem ser retornados pelo ODBC 3*. x* o Gerenciador de Driver de ODBC 2. *x* Gerenciador de Driver.  
   
 ## <a name="mappings-for-bookmark-operations"></a>Mapeamentos para operações de indicador  
- O ODBC 3*. x* Gerenciador de Driver executa os seguintes mapeamentos quando um ODBC 3.* x* aplicativo trabalhando com um ODBC 2.* x* driver executa operações de indicador.  
+ O ODBC 3*. x* Gerenciador de Driver executa os seguintes mapeamentos quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver executa operações de indicador.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver chama **SQLBindCol** para associar a coluna 0 com *fCType* igual a SQL_C_VARBOOKMARK, o ODBC 3*. x* Gerenciador de Driver verifica Se o *BufferLength* argumento é menor que 4 ou maior que 4 e nesse caso, retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres). Se o *BufferLength* argumento for igual a 4, chama o Gerenciador de Driver **SQLBindCol** no driver, depois de substituir *fCType* com SQL_C_BOOKMARK.  
+ Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver chama **SQLBindCol** para associar a coluna 0 com *fCType* igual a SQL_C_VARBOOKMARK, o ODBC 3*. x* Gerenciador de Driver verifica Se o *BufferLength* argumento é menor que 4 ou maior que 4 e nesse caso, retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres). Se o *BufferLength* argumento for igual a 4, chama o Gerenciador de Driver **SQLBindCol** no driver, depois de substituir *fCType* com SQL_C_BOOKMARK.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver chama **SQLColAttribute** com o *ColumnNumber* argumento definido como 0, o Gerenciador de Driver retorna o *FieldIdentifier* valores listados na tabela a seguir.  
+ Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver chama **SQLColAttribute** com o *ColumnNumber* argumento definido como 0, o Gerenciador de Driver retorna o *FieldIdentifier* valores listados na tabela a seguir.  
   
 |*FieldIdentifier*|Valor|  
 |-----------------------|-----------|  
@@ -451,7 +451,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver chama **SQLDescribeCol** com o *ColumnNumber* argumento definido como 0, o Gerenciador de Driver retorna os valores listados na tabela a seguir.  
+ Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver chama **SQLDescribeCol** com o *ColumnNumber* argumento definido como 0, o Gerenciador de Driver retorna os valores listados na tabela a seguir.  
   
 |Buffer|Valor|  
 |------------|-----------|  
@@ -463,7 +463,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |* NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver faz a chamada a seguir para **SQLGetData** para recuperar um indicador:  
+ Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver faz a chamada a seguir para **SQLGetData** para recuperar um indicador:  
   
 ```  
 SQLGetData(StatementHandle, 0, SQL_C_VARBOOKMARK, TargetValuePtr, BufferLength, StrLen_or_IndPtr)  
@@ -477,10 +477,10 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  onde *hstmt* e *pvParam* são definidos para os valores em *StatementHandle* e *TargetValuePtr*, respectivamente. O indicador é retornado no buffer apontado pelo *pvParam* (*TargetValuePtr*) argumento. O valor no buffer apontado pelo *StrLen_or_IndPtr* argumentos na chamada para **SQLGetData** é definido como 4.  
   
- Esse mapeamento é necessário levar em conta o caso em que **SQLFetch** foi chamado antes da chamada para **SQLGetData** e ODBC 2.* x* não oferecia suporte ao driver **SQLExtendedFetch**. Nesse caso, **SQLFetch** deve ser passado para o ODBC 2.* x* driver, no qual recuperação indicador caso não tem suporte.  
+ Esse mapeamento é necessário levar em conta o caso em que **SQLFetch** foi chamado antes da chamada para **SQLGetData** e ODBC 2. *x* não oferecia suporte ao driver **SQLExtendedFetch**. Nesse caso, **SQLFetch** deve ser passado para o ODBC 2. *x* driver, no qual recuperação indicador caso não tem suporte.  
   
- **SQLGetData** não pode ser chamado várias vezes em um ODBC 2.* x* driver para recuperar um indicador em partes, por isso a chamada **SQLGetData** com o *BufferLength* argumento definido como um valor menor que 4 e o *ColumnNumber*argumento definido como 0 retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres). **SQLGetData** no entanto, pode ser chamado várias vezes para recuperar o mesmo indicador.  
+ **SQLGetData** não pode ser chamado várias vezes em um ODBC 2. *x* driver para recuperar um indicador em partes, por isso a chamada **SQLGetData** com o *BufferLength* argumento definido como um valor menor que 4 e o *ColumnNumber*argumento definido como 0 retornará SQLSTATE HY090 (comprimento inválido de buffer ou cadeia de caracteres). **SQLGetData** no entanto, pode ser chamado várias vezes para recuperar o mesmo indicador.  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
- Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2.* x* driver chama **SQLSetStmtAttr** para definir o atributo SQL_ATTR_USE_BOOKMARKS para SQL_UB_VARIABLE, o Gerenciador de Driver define o atributo como SQL_UB_ON no subjacente ODBC 2.* x* driver.
+ Quando um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver chama **SQLSetStmtAttr** para definir o atributo SQL_ATTR_USE_BOOKMARKS para SQL_UB_VARIABLE, o Gerenciador de Driver define o atributo como SQL_UB_ON no subjacente ODBC 2. *x* driver.
 

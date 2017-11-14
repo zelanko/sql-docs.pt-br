@@ -1,12 +1,15 @@
 ---
 title: Propriedade StayInSync | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -38,7 +41,7 @@ Indica, em um hierárquica [Recordset](../../../ado/reference/ado-api/recordset-
  Define ou retorna um **booliano** valor. O valor padrão é **True**. Se **True**, o capítulo será atualizado se o pai **registros** alterações de objeto linha posição; se **False**, o capítulo continuará a fazer referência a dados no capítulo anterior mesmo que o pai **registros** objeto alterado posição da linha.  
   
 ## <a name="remarks"></a>Comentários  
- Essa propriedade se aplica a conjuntos de registros hierárquicos, como aqueles com suporte a [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)e deve ser definido no pai **registros** antes do filho ** Conjunto de registros** é recuperado. Essa propriedade simplifica a navegação hierárquicos conjuntos de registros.  
+ Essa propriedade se aplica a conjuntos de registros hierárquicos, como aqueles com suporte a [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)e deve ser definido no pai **registros** antes do filho  **Conjunto de registros** é recuperado. Essa propriedade simplifica a navegação hierárquicos conjuntos de registros.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

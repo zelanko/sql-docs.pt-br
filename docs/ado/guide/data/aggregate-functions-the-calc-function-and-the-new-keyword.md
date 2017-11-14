@@ -1,12 +1,15 @@
 ---
 title: "Agregar funções, a função de CÁLCULO e a nova palavra-chave | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,13 +37,13 @@ Modelagem de dados oferece suporte a funções a seguir. O nome atribuído o cap
   
 |Funções de agregação|Description|  
 |-------------------------|-----------------|  
-|SUM (*capítulo alias*.* nome da coluna*)|Calcula a soma de todos os valores na coluna especificada.|  
-|AVG (*capítulo alias*.* nome da coluna*)|Calcula a média de todos os valores na coluna especificada.|  
-|MAX (*capítulo alias*.* nome da coluna*)|Calcula o valor máximo na coluna especificada.|  
-|MIN (*capítulo alias*.* nome da coluna*)|Calcula o valor mínimo na coluna especificada.|  
-|CONTAGEM (*capítulo alias*[.* nome da coluna*])|Conta o número de linhas em que o alias especificado. Se uma coluna for especificada, somente as linhas para o qual essa coluna é Null não são incluídas na contagem.|  
-|STDEV (*capítulo alias*.* nome da coluna*)|Calcula o desvio padrão da coluna especificada.|  
-|QUALQUER (*capítulo alias*.* nome da coluna*)|Um valor da coluna especificada. QUALQUER tem um valor previsível somente quando o valor da coluna é o mesmo para todas as linhas do capítulo.<br /><br /> **Observação** se a coluna não contiver o mesmo valor para todas as linhas do capítulo, o comando de forma arbitrariamente retorna um dos valores como o valor de qualquer função.|  
+|SUM (*capítulo alias*. *nome da coluna*)|Calcula a soma de todos os valores na coluna especificada.|  
+|AVG (*capítulo alias*. *nome da coluna*)|Calcula a média de todos os valores na coluna especificada.|  
+|MAX (*capítulo alias*. *nome da coluna*)|Calcula o valor máximo na coluna especificada.|  
+|MIN (*capítulo alias*. *nome da coluna*)|Calcula o valor mínimo na coluna especificada.|  
+|CONTAGEM (*capítulo alias*[. *nome da coluna*])|Conta o número de linhas em que o alias especificado. Se uma coluna for especificada, somente as linhas para o qual essa coluna é Null não são incluídas na contagem.|  
+|STDEV (*capítulo alias*. *nome da coluna*)|Calcula o desvio padrão da coluna especificada.|  
+|QUALQUER (*capítulo alias*. *nome da coluna*)|Um valor da coluna especificada. QUALQUER tem um valor previsível somente quando o valor da coluna é o mesmo para todas as linhas do capítulo.<br /><br /> **Observação** se a coluna não contiver o mesmo valor para todas as linhas do capítulo, o comando de forma arbitrariamente retorna um dos valores como o valor de qualquer função.|  
   
 |expressão calculada|Description|  
 |---------------------------|-----------------|  

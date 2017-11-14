@@ -29,15 +29,15 @@ ms.lasthandoff: 09/09/2017
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipos de dados específica do driver, tipos de descritor, tipos de informação, tipos de diagnóstico e atributos
 Drivers podem alocar valores específicos de driver para o seguinte:  
   
--   **Indicadores de tipo de dados do SQL** são usados em *ParameterType* na **SQLBindParameter** e no *DataType* em **SQLGetTypeInfo** e retornado por **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, ** SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
+-   **Indicadores de tipo de dados do SQL** são usados em *ParameterType* na **SQLBindParameter** e no *DataType* em **SQLGetTypeInfo** e retornado por **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
   
--   **Campos de descritor** são usados em *FieldIdentifier* na **SQLColAttribute**, **SQLGetDescField**, e **SQLSetDescField **.  
+-   **Campos de descritor** são usados em *FieldIdentifier* na **SQLColAttribute**, **SQLGetDescField**, e **SQLSetDescField** .  
   
 -   **Campos de diagnóstico** são usados em *DiagIdentifier* na **SQLGetDiagField** e **SQLGetDiagRec**.  
   
 -   **Tipos de informações** são usados em *informação* na **SQLGetInfo**.  
   
--   **Atributos de instrução e Conexão** são usados em *atributo* na **SQLGetConnectAttr**, **SQLGetStmtAttr**, ** SQLSetConnectAttr**, e **SQLSetStmtAttr**.  
+-   **Atributos de instrução e Conexão** são usados em *atributo* na **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, e **SQLSetStmtAttr**.  
   
  Para cada um desses itens, há dois conjuntos de valores: valores reservados para uso pelo ODBC e os valores reservados para uso pelos drivers. Antes de implementar valores específicos do driver, um gravador de driver deve solicitar um valor para cada tipo específico de driver, o campo ou o atributo do Open Group. Para novos desenvolvimentos do driver, use o intervalo descrito na tabela a seguir. O Gerenciador de Driver do ODBC 3.8 não irá gerar um erro se for usado um valor desconhecido que não está no intervalo descrito abaixo. No entanto, em versões posteriores do Gerenciador de Driver poderá gerar um erro se valores desconhecidos são recebidos que não estão no intervalo.  
   

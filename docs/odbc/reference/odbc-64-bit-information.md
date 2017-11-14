@@ -27,11 +27,11 @@ Começando com o Windows Server 2003, sistemas operacionais da Microsoft têm su
   
  Há vários pontos para ter em mente ao programar para um processador de 64 bits:  
   
--   Embora o tamanho de um ponteiro foi alterada de 4 bytes para 8 bytes, inteiros e longos são ainda valores de 4 bytes. Os tipos de **INT64** e **UINT64** tiverem sido definidas para inteiros de 8 bytes. Os novos tipos ODBC **SQLLEN** e **SQLULEN** são definidos no arquivo de cabeçalho ODBC como **INT64** e **UINT64** quando **Win64 ** foi definido.  
+-   Embora o tamanho de um ponteiro foi alterada de 4 bytes para 8 bytes, inteiros e longos são ainda valores de 4 bytes. Os tipos de **INT64** e **UINT64** tiverem sido definidas para inteiros de 8 bytes. Os novos tipos ODBC **SQLLEN** e **SQLULEN** são definidos no arquivo de cabeçalho ODBC como **INT64** e **UINT64** quando **Win64**  foi definido.  
   
 -   Várias funções em ODBC são declaradas como colocar um parâmetro de ponteiro. No ODBC de 32 bits, os parâmetros definidos como ponteiros foram usados para passar um valor inteiro ou um ponteiro para um buffer dependendo do contexto da chamada. Isso foi, obviamente, possível devido ao fato de que os ponteiros e inteiros tinham o mesmo tamanho. No Windows de 64 bits, isso não for o caso.  
   
--   Algumas funções ODBC que foram definidas anteriormente com **sqlinteger que contém** e **SQLUINTEGER** parâmetros foram alterados quando apropriado para usar o novo **SQLLEN** e ** SQLULEN** definições de tipo. Essas alterações são listadas na próxima seção, alterações de declaração de função.  
+-   Algumas funções ODBC que foram definidas anteriormente com **sqlinteger que contém** e **SQLUINTEGER** parâmetros foram alterados quando apropriado para usar o novo **SQLLEN** e  **SQLULEN** definições de tipo. Essas alterações são listadas na próxima seção, alterações de declaração de função.  
   
 -   Alguns dos campos de descritor que podem ser definidos por meio de vários **SQLSet** e **SQLGet** funções foram alteradas para acomodar os valores de 64 bits, enquanto outras são valores de 32 bits ainda. Certifique-se de que você use a variável de tamanho apropriada ao definir e recuperar esses campos. Especificações do descritor de quais campos foram alterados são listadas em alterações de declaração de função.  
   

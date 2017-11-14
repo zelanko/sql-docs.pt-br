@@ -1,12 +1,15 @@
 ---
 title: Nome de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -35,7 +38,7 @@ Indica o nome de um objeto.
  Define ou retorna um **cadeia de caracteres** valor que indica o nome de um objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Use o **nome** propriedade para atribuir um nome ou recuperar o nome de um **comando**, **propriedade**, **campo**, ou **parâmetro ** objeto.  
+ Use o **nome** propriedade para atribuir um nome ou recuperar o nome de um **comando**, **propriedade**, **campo**, ou **parâmetro**  objeto.  
   
  O valor é leitura/gravação em um **comando** objeto e somente leitura em uma **propriedade** objeto.  
   

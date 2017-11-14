@@ -1,12 +1,15 @@
 ---
 title: Propriedade (registro de ADO) de origem | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -41,7 +44,7 @@ Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/re
 ## <a name="remarks"></a>Comentários  
  O **fonte** propriedade retorna o *fonte* argumento do **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Ele pode conter uma cadeia de caracteres de URL absoluta ou relativa. Uma URL absoluta que pode ser usada sem configuração o [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade abrir diretamente o **registro** objeto. Implícita **Conexão** objeto é criado nesse caso.  
   
- O **fonte** propriedade também pode conter uma referência a uma já aberto **registros**, que abre um **registro** objeto que representa a linha atual o ** Conjunto de registros**.  
+ O **fonte** propriedade também pode conter uma referência a uma já aberto **registros**, que abre um **registro** objeto que representa a linha atual o  **Conjunto de registros**.  
   
  O **fonte** propriedade também pode conter uma referência a um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que retorna uma única linha de dados do provedor.  
   

@@ -36,10 +36,10 @@ ms.lasthandoff: 09/09/2017
  Versão introduzidas: Conformidade de padrões 1.0 ODBC: Deprecated  
   
  **Resumo**  
- Em ODBC 3. *x*, o ODBC 2.* x* função **SQLAllocStmt** foi substituído pelo **SQLAllocHandle**. Para obter mais informações, consulte [função SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
+ Em ODBC 3. *x*, o ODBC 2. *x* função **SQLAllocStmt** foi substituído pelo **SQLAllocHandle**. Para obter mais informações, consulte [função SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 3.* x* driver, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+>  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 3. *x* driver, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

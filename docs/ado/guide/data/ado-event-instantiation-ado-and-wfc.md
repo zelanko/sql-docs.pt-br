@@ -1,12 +1,15 @@
 ---
 title: "Instanciação de evento do ADO: ADO e WFC | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
@@ -36,7 +39,7 @@ ADO para Windows Foundation Classes (ADO/WFC) desenvolve o modelo de evento do A
     }  
     ```  
   
-2.  Defina um objeto de manipulador para representar o manipulador de eventos. O objeto do manipulador deve ser do tipo de dados **ConnectEventHandler** para um evento do tipo **ConnectionEvent**, tipo de dados ou **RecordsetEventHandler** para um evento do tipo ** RecordsetEvent**. Por exemplo, código a seguir para sua **ConnectComplete** manipulador de eventos:  
+2.  Defina um objeto de manipulador para representar o manipulador de eventos. O objeto do manipulador deve ser do tipo de dados **ConnectEventHandler** para um evento do tipo **ConnectionEvent**, tipo de dados ou **RecordsetEventHandler** para um evento do tipo  **RecordsetEvent**. Por exemplo, código a seguir para sua **ConnectComplete** manipulador de eventos:  
   
     ```  
     ConnectionEventHandler handler =   

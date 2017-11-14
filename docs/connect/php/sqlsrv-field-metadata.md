@@ -53,7 +53,7 @@ Uma **matriz** de matrizes ou **false**. A matriz consiste em uma matriz para ca
 |Tamanho|Número de caracteres de campos do tipo character (char(n), varchar(n), nchar(n), nvarchar(n), XML). Número de bytes para campos do tipo binary (binary(n), varbinary(n), UDT). **NULL** para outros tipos de dados do SQL Server.|  
 |Precisão|A precisão dos tipos de precisão variável (real, numeric, decimal, datetime2, datetimeoffset e time). **NULL** para outros tipos de dados do SQL Server.|  
 |Escala|A escala dos tipos de escala variável (numeric, decimal, datetime2, datetimeoffset e time). **NULL** para outros tipos de dados do SQL Server.|  
-|Anulável|Um valor enumerado que indica se a coluna é anulável (**SQLSRV_NULLABLE_YES**), a coluna não é anulável (**SQLSRV_NULLABLE_NO**), ou se não se sabe se a coluna é anulável (** SQLSRV_NULLABLE_UNKNOWN**).|  
+|Anulável|Um valor enumerado que indica se a coluna é anulável (**SQLSRV_NULLABLE_YES**), a coluna não é anulável (**SQLSRV_NULLABLE_NO**), ou se não se sabe se a coluna é anulável ( **SQLSRV_NULLABLE_UNKNOWN**).|  
   
 A tabela a seguir fornece mais informações sobre as chaves para cada submatriz (consulte a documentação do SQL Server para obter mais informações sobre esses tipos):  
   

@@ -33,7 +33,7 @@ Algumas funções ODBC acessem implícita descritores. Autores de aplicativos po
   
  As funções concisas **SQLBindCol** e **SQLBindParameter** associar uma coluna ou parâmetro definindo os campos de descritor que correspondem aos seus argumentos. Cada uma dessas funções executa tarefas mais do que simplesmente definindo descritores. **SQLBindCol** e **SQLBindParameter** fornecem uma especificação completa da associação de uma coluna de dados ou o parâmetro dinâmico. Um aplicativo pode, no entanto, alterar detalhes individuais de uma associação chamando **SQLSetDescField** ou **SQLSetDescRec** e completamente pode associar uma coluna ou parâmetro, fazendo uma série de chamadas adequadas para Essas funções.  
   
- As funções concisas **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, e ** SQLNumResultCols** recuperar valores nos campos de descritor.  
+ As funções concisas **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, e  **SQLNumResultCols** recuperar valores nos campos de descritor.  
   
  **SQLSetDescRec** e **SQLGetDescRec** concisa funções, com uma chamada, definir ou obter vários campos de descritor que afetam o tipo de dados e armazenamento de dados de coluna ou parâmetro. **SQLSetDescRec** é uma maneira eficiente para alterar a associação de dados de coluna ou parâmetro em uma única etapa.  
   

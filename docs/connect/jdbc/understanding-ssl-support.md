@@ -79,7 +79,7 @@ ms.lasthandoff: 09/09/2017
   
 -   O certificado não expirou.  
   
--   O nome comum (CN) no assunto ou um nome DNS no assunto alternativo SAN (nome) do certificado corresponde exatamente a **serverName** valor especificado na cadeia de conexão ou, se especificado, o ** hostNameInCertificate** o valor da propriedade.  
+-   O nome comum (CN) no assunto ou um nome DNS no assunto alternativo SAN (nome) do certificado corresponde exatamente a **serverName** valor especificado na cadeia de conexão ou, se especificado, o  **hostNameInCertificate** o valor da propriedade.  
   
 -   Um nome DNS pode incluir caracteres curinga. Mas o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] não oferece suporte a correspondência de curingas. Ou seja, abc.com não corresponderá a *.com, mas \*.com corresponderá \*. com.  
   

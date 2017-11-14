@@ -1,12 +1,15 @@
 ---
 title: "Método AddNew (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -51,15 +54,15 @@ recordset.AddNew FieldList, Values
 ## <a name="remarks"></a>Comentários  
  Use o **AddNew** método para criar e inicializar um novo registro. Use o [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método com **adAddNew** (uma [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valor) para verificar se você pode adicionar registros a atual **registros**objeto.  
   
- Depois de chamar o **AddNew** método, o novo registro se tornará o registro atual e permanece atual depois de chamar o [atualização](../../../ado/reference/ado-api/update-method.md) método. Desde que o novo registro é anexado ao **registros**, uma chamada para **MoveNext** após a atualização moverá após o término do **registros**, tornando **EOF ** True. Se o **registros** objeto não oferece suporte a indicadores, você não poderá acessar o novo registro depois que você vai para outro registro. Dependendo de seu tipo de cursor, talvez seja necessário chamar o [Requery](../../../ado/reference/ado-api/requery-method.md) método para disponibilizar o novo registro.  
+ Depois de chamar o **AddNew** método, o novo registro se tornará o registro atual e permanece atual depois de chamar o [atualização](../../../ado/reference/ado-api/update-method.md) método. Desde que o novo registro é anexado ao **registros**, uma chamada para **MoveNext** após a atualização moverá após o término do **registros**, tornando **EOF**  True. Se o **registros** objeto não oferece suporte a indicadores, você não poderá acessar o novo registro depois que você vai para outro registro. Dependendo de seu tipo de cursor, talvez seja necessário chamar o [Requery](../../../ado/reference/ado-api/requery-method.md) método para disponibilizar o novo registro.  
   
  Se você chamar **AddNew** ao editar o registro atual ou ao adicionar um novo registro, o ADO chama o **atualização** método para salvar quaisquer alterações e, em seguida, cria o novo registro.  
   
  O comportamento do **AddNew** método depende do modo de atualização do **Recordset** objeto e se você passa o *Fieldlist* e *valores*argumentos.  
   
- Em *modo de atualização imediata* (no qual o provedor grava as alterações à fonte de dados subjacente quando você chamar o **atualizar** método), chamar o **AddNew** método sem conjuntos de argumentos de [EditMode](../../../ado/reference/ado-api/editmode-property.md) propriedade **adEditAdd** (uma [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) valor). O provedor armazena em cache localmente as alterações de valor de campo. Chamando o **atualização** método posta o novo registro no banco de dados e redefine o **EditMode** propriedade **adEditNone** (uma **EditModeEnum**valor). Se você passar o *Fieldlist* e *valores* argumentos, o ADO envia imediatamente o novo registro no banco de dados (sem **atualização** chamada é necessária); o **EditMode ** não altera o valor da propriedade (**adEditNone**).  
+ Em *modo de atualização imediata* (no qual o provedor grava as alterações à fonte de dados subjacente quando você chamar o **atualizar** método), chamar o **AddNew** método sem conjuntos de argumentos de [EditMode](../../../ado/reference/ado-api/editmode-property.md) propriedade **adEditAdd** (uma [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) valor). O provedor armazena em cache localmente as alterações de valor de campo. Chamando o **atualização** método posta o novo registro no banco de dados e redefine o **EditMode** propriedade **adEditNone** (uma **EditModeEnum**valor). Se você passar o *Fieldlist* e *valores* argumentos, o ADO envia imediatamente o novo registro no banco de dados (sem **atualização** chamada é necessária); o **EditMode**  não altera o valor da propriedade (**adEditNone**).  
   
- Em *o modo de atualização em lotes* (no qual o provedor armazena em cache várias alterações e grava a fonte de dados somente quando você chamar o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método), chamar o **AddNew** método sem conjuntos de argumentos de **EditMode** propriedade **adEditAdd**. O provedor armazena em cache localmente as alterações de valor de campo. Chamando o **atualização** método adiciona o novo registro para o atual **registros**, mas o provedor não postar as alterações no banco de dados subjacente ou redefinir o **EditMode** para **adEditNone**, até que você chame o **UpdateBatch** método. Se você passar o *lista de campos* e *valores* argumentos, ADO envia o novo registro para o provedor de armazenamento em um cache e configura o **EditMode** para **adEditAdd **; você precisa chamar o **UpdateBatch** método para lançar o novo registro no banco de dados subjacente.  
+ Em *o modo de atualização em lotes* (no qual o provedor armazena em cache várias alterações e grava a fonte de dados somente quando você chamar o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método), chamar o **AddNew** método sem conjuntos de argumentos de **EditMode** propriedade **adEditAdd**. O provedor armazena em cache localmente as alterações de valor de campo. Chamando o **atualização** método adiciona o novo registro para o atual **registros**, mas o provedor não postar as alterações no banco de dados subjacente ou redefinir o **EditMode** para **adEditNone**, até que você chame o **UpdateBatch** método. Se você passar o *lista de campos* e *valores* argumentos, ADO envia o novo registro para o provedor de armazenamento em um cache e configura o **EditMode** para **adEditAdd** ; você precisa chamar o **UpdateBatch** método para lançar o novo registro no banco de dados subjacente.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o método AddNew com a lista de campos e a lista de valores incluídos para ver como incluir a lista de campos e a lista de valores como matrizes.  

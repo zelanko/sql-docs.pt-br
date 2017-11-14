@@ -1,12 +1,15 @@
 ---
 title: "Método CancelUpdate (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -44,7 +47,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
  Se você estiver adicionando uma nova linha ao chamar o **CancelUpdate** método, a linha atual se tornará a linha atual antes do [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) chamar.  
   
- Se você estiver no modo de edição e desejar mover fora do registro atual (por exemplo, usando o [mover](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), ou [fechar](../../../ado/reference/ado-api/close-method-ado.md) métodos), você pode usar ** CancelUpdate** para cancelar todas as alterações pendentes. Talvez seja necessário fazer isso se a atualização não pode ser lançada com êxito para a fonte de dados. Por exemplo, uma tentativa excluir falhar devido a violações de integridade referencial deixará o **registros** no modo de edição após uma chamada para [excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
+ Se você estiver no modo de edição e desejar mover fora do registro atual (por exemplo, usando o [mover](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), ou [fechar](../../../ado/reference/ado-api/close-method-ado.md) métodos), você pode usar  **CancelUpdate** para cancelar todas as alterações pendentes. Talvez seja necessário fazer isso se a atualização não pode ser lançada com êxito para a fonte de dados. Por exemplo, uma tentativa excluir falhar devido a violações de integridade referencial deixará o **registros** no modo de edição após uma chamada para [excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
   
 ## <a name="record"></a>Record  
  O **CancelUpdate** método cancela pendentes inserções ou exclusões de [campo](../../../ado/reference/ado-api/field-object.md) objetos e cancela as atualizações de campos existentes pendentes e restaurá-las aos seus valores originais. O [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriedade de todos os campos de **campos** coleção é definida como **adFieldOK**.  

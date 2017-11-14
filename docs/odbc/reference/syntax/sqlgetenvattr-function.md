@@ -60,13 +60,13 @@ SQLRETURN SQLGetEnvAttr(
  *ValuePtr*  
  [Saída] Ponteiro para um buffer no qual retornar o valor atual do atributo especificado por *atributo*.  
   
- Se *ValuePtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (excluindo o caractere null de terminação para dados de caractere) disponíveis para retornar o buffer apontado pelo * ValuePtr*.  
+ Se *ValuePtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (excluindo o caractere null de terminação para dados de caractere) disponíveis para retornar o buffer apontado pelo  *ValuePtr*.  
   
  *BufferLength*  
- [Entrada] Se *ValuePtr* aponta para uma cadeia de caracteres, esse argumento deve ser o comprimento de \* *ValuePtr*. Se \* *ValuePtr* é um inteiro, *BufferLength* será ignorado. Se * \*ValuePtr* é uma cadeia de caracteres Unicode (ao chamar **SQLGetEnvAttrW**), o *BufferLength* argumento deve ser um número par. Se o valor do atributo não é uma cadeia de caracteres, *BufferLength* é usado.  
+ [Entrada] Se *ValuePtr* aponta para uma cadeia de caracteres, esse argumento deve ser o comprimento de \* *ValuePtr*. Se \* *ValuePtr* é um inteiro, *BufferLength* será ignorado. Se  *\*ValuePtr* é uma cadeia de caracteres Unicode (ao chamar **SQLGetEnvAttrW**), o *BufferLength* argumento deve ser um número par. Se o valor do atributo não é uma cadeia de caracteres, *BufferLength* é usado.  
   
  *StringLengthPtr*  
- [Saída] Um ponteiro para um buffer no qual retornar o número total de bytes (excluindo o caractere null de terminação) disponíveis para retornar em * \*ValuePtr*. Se *ValuePtr* é um ponteiro nulo, nenhum comprimento é retornado. Se o valor do atributo é uma cadeia de caracteres e o número de bytes disponíveis para retornar é maior que ou igual a *BufferLength*, os dados em \* *ValuePtr* será truncado para * BufferLength* menos o comprimento de um caractere null de terminação e é terminada em nulo pelo driver.  
+ [Saída] Um ponteiro para um buffer no qual retornar o número total de bytes (excluindo o caractere null de terminação) disponíveis para retornar em  *\*ValuePtr*. Se *ValuePtr* é um ponteiro nulo, nenhum comprimento é retornado. Se o valor do atributo é uma cadeia de caracteres e o número de bytes disponíveis para retornar é maior que ou igual a *BufferLength*, os dados em \* *ValuePtr* será truncado para  *BufferLength* menos o comprimento de um caractere null de terminação e é terminada em nulo pelo driver.  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -78,7 +78,7 @@ SQLRETURN SQLGetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem de informação específica do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres truncados à direita|Os dados retornados em \* *ValuePtr* foi truncado para ser *BufferLength* menos o caractere null de terminação. O comprimento do valor completo da cadeia de caracteres é retornado em **StringLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no * \*MessageText* buffer descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no  *\*MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
 |HY010|Erro de sequência de função|(DM) **SQL_ATTR_ODBC_VERSION** ainda não foi definido por meio de **SQLSetEnvAttr**. Você não precisa definir **SQL_ATTR_ODBC_VERSION** explicitamente se você estiver usando **SQLAllocHandleStd**.|  
 |HY013|Erro de gerenciamento de memória|Não foi possível processar a chamada de função porque os objetos de memória subjacente não podem ser acessados, possivelmente devido a condições de memória insuficiente.|  

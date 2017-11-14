@@ -58,7 +58,7 @@ BOOL SQLCreateDataSource(
  **SQLCreateDataSource** retorna TRUE se a fonte de dados é criada. Caso contrário, retornará FALSE.  
   
 ## <a name="diagnostics"></a>diagnóstico  
- Quando **SQLCreateDataSource** retorna FALSE, um tipo de * \*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista o * \*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+ Quando **SQLCreateDataSource** retorna FALSE, um tipo de  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista o  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Description|  
 |---------------------|-----------|-----------------|  
@@ -102,7 +102,7 @@ BOOL SQLCreateDataSource(
   
  ![Criar caixa de diálogo Nova fonte de dados: analise](../../../odbc/reference/syntax/media/ch23d.gif "CH23D")  
   
- Se **concluir** é clicado e **fonte de dados de arquivo** foi selecionado como o tipo de fonte de dados e se o **verificar esta conexão** opção for TRUE, ** SQLDriverConnect** é chamado com o **SAVEFILE** e **DRIVER** palavras-chave. O *DriverCompletion* argumento é definido como SQL_DRIVER_COMPLETE. O nome do arquivo para o **SAVEFILE** palavra-chave é o nome que foi inserido ou escolhido e o nome do driver para o **DRIVER** palavra-chave é o nome que foi escolhido. Se uma cadeia de caracteres de conexão específicos de driver foi especificada na página do Assistente avançado, essa cadeia de caracteres é anexada após o **DRIVER** palavra-chave.  
+ Se **concluir** é clicado e **fonte de dados de arquivo** foi selecionado como o tipo de fonte de dados e se o **verificar esta conexão** opção for TRUE,  **SQLDriverConnect** é chamado com o **SAVEFILE** e **DRIVER** palavras-chave. O *DriverCompletion* argumento é definido como SQL_DRIVER_COMPLETE. O nome do arquivo para o **SAVEFILE** palavra-chave é o nome que foi inserido ou escolhido e o nome do driver para o **DRIVER** palavra-chave é o nome que foi escolhido. Se uma cadeia de caracteres de conexão específicos de driver foi especificada na página do Assistente avançado, essa cadeia de caracteres é anexada após o **DRIVER** palavra-chave.  
   
  Se **SQLDriverConnect** retorna SQL_SUCCESS, o Gerenciador de Driver criou o DSN de arquivo. **SQLCreateDataSource** retorna TRUE. Se **SQLDriverConnect** não retorna SQL_SUCCESS, uma mensagem de aviso caixa indica que não foi possível estabelecer uma conexão à fonte de dados. Um DSN com informações de conexão mínima ainda pode ser criado. Esta caixa de mensagem permite que o usuário cancelar ou continuar com a criação de DSN de arquivo.  
   
@@ -110,7 +110,7 @@ BOOL SQLCreateDataSource(
   
  Se **fonte de dados de arquivo** foi selecionado como o tipo de fonte de dados e o **verificar esta conexão** opção é FALSE, um DSN de arquivo é criado com o **DRIVER** palavra-chave e especificado pelo usuário cadeia de conexão (se houver) da página de assistente avançado. Se a criação do arquivo foi bem-sucedida, será retornado verdadeiro para **SQLCreateDataSource**. Se a criação do arquivo não foi bem-sucedida, uma caixa de mensagem de erro notifica o usuário com o erro foi retornado do sistema operacional. É retornado falso para **SQLCreateDataSource** com um código de erro de ODBC_ERROR_CREATE_DSN_FAILED. Para obter mais informações sobre fontes de dados de arquivo, consulte [conectar fontes de dados de arquivo usando](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), ou consulte [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Se **usuário** ou **fonte de dados do sistema** foi selecionado como o tipo de fonte de dados, **ConfigDSN** na configuração do driver biblioteca é chamada com o ODBC_ADD_DSN * Frequentes*. Para obter mais informações, consulte [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ Se **usuário** ou **fonte de dados do sistema** foi selecionado como o tipo de fonte de dados, **ConfigDSN** na configuração do driver biblioteca é chamada com o ODBC_ADD_DSN  *Frequentes*. Para obter mais informações, consulte [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   

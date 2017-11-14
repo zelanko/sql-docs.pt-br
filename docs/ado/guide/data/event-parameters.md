@@ -1,12 +1,15 @@
 ---
 title: "Parâmetros de evento | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -56,7 +59,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Se você determinar seu evento será que a operação deve continuar, deixe o *Status* parâmetro inalterado. Como o parâmetro de status de entrada não foi definido para **adStatusCantDeny**, no entanto, você pode cancelar a operação pendente alterando *Status* para **adStatusCancel**. Quando você fizer isso, o evento Complete associado à operação tem seu *Status* parâmetro definido como **adStatusErrorsOccurred**. O **erro** objeto passado para o evento Complete conterá o valor **adErrOperationCancelled**.  
   
- Se você não deseja processar um evento, você pode definir *Status* para **adStatusUnwantedEvent** e seu aplicativo deixarão de receber a notificação de evento. No entanto, lembre-se de que alguns eventos podem ser gerados por mais de um motivo. Nesse caso, você deve especificar **adStatusUnwantedEvent** para cada motivo possíveis. Por exemplo, para parar de receber notificações de pendente **RecordChange** eventos, você deve definir o *Status* parâmetro **adStatusUnwantedEvent** para ** adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, e **adRsnFirstChange** conforme elas ocorrem.  
+ Se você não deseja processar um evento, você pode definir *Status* para **adStatusUnwantedEvent** e seu aplicativo deixarão de receber a notificação de evento. No entanto, lembre-se de que alguns eventos podem ser gerados por mais de um motivo. Nesse caso, você deve especificar **adStatusUnwantedEvent** para cada motivo possíveis. Por exemplo, para parar de receber notificações de pendente **RecordChange** eventos, você deve definir o *Status* parâmetro **adStatusUnwantedEvent** para  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, e **adRsnFirstChange** conforme elas ocorrem.  
   
 |Valor|Description|  
 |-----------|-----------------|  
@@ -64,7 +67,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|Solicite o cancelamento da operação que está prestes a ocorrer.|  
   
 ## <a name="error-parameter"></a>Erro de parâmetro  
- O *erro* parâmetro é uma referência a um ADO [erro](../../../ado/reference/ado-api/error-object.md) objeto. Quando o *Status* parâmetro está definido como **adStatusErrorsOccurred**, o **erro** objeto contém os detalhes sobre por que a operação falhou. Se o evento será associado a um evento Complete cancelou a operação, definindo a *Status* parâmetro **adStatusCancel**, o objeto de erro é sempre definido como ** adErrOperationCancelled**.  
+ O *erro* parâmetro é uma referência a um ADO [erro](../../../ado/reference/ado-api/error-object.md) objeto. Quando o *Status* parâmetro está definido como **adStatusErrorsOccurred**, o **erro** objeto contém os detalhes sobre por que a operação falhou. Se o evento será associado a um evento Complete cancelou a operação, definindo a *Status* parâmetro **adStatusCancel**, o objeto de erro é sempre definido como  **adErrOperationCancelled**.  
   
 ## <a name="object-parameter"></a>Parâmetro de objeto  
  Cada evento recebe um ou mais objetos que representam os objetos que estão envolvidos na operação. Por exemplo, o **ExecuteComplete** evento recebe um **comando** objeto, um **registros** objeto e um **Conexão** objeto.  

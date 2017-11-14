@@ -1,12 +1,15 @@
 ---
 title: "Método (ADO) append | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -88,7 +91,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  Um campo existente não pode ser criado e anexado ao **campos** coleção atribuindo um valor para o objeto de campo como se ele já existe na coleção. A atribuição irá disparar a criação automática e anexando do **campo** objeto e, em seguida, a atribuição serão concluída.  
   
- Depois de anexar um **campo** para o **campos** coleção de um **registro** de objeto, chame o **atualização** método do **campos ** coleção para salvar a alteração.  
+ Depois de anexar um **campo** para o **campos** coleção de um **registro** de objeto, chame o **atualização** método do **campos**  coleção para salvar a alteração.  
   
 ## <a name="applies-to"></a>Aplica-se a  
   

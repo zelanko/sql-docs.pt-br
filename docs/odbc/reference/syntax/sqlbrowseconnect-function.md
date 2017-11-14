@@ -70,7 +70,7 @@ SQLRETURN SQLBrowseConnect(
  [Entrada] Comprimento em caracteres, do **OutConnectionString* buffer.  
   
  *StringLength2Ptr*  
- [Saída] O número total de caracteres (exceto null de terminação) disponíveis para retornar em \* *OutConnectionString*. Se o número de caracteres disponíveis para retornar for maior que ou igual a *BufferLength*, a cadeia de caracteres de conexão em \* *OutConnectionString* será truncado para * BufferLength* menos o comprimento de um caractere null de terminação.  
+ [Saída] O número total de caracteres (exceto null de terminação) disponíveis para retornar em \* *OutConnectionString*. Se o número de caracteres disponíveis para retornar for maior que ou igual a *BufferLength*, a cadeia de caracteres de conexão em \* *OutConnectionString* será truncado para  *BufferLength* menos o comprimento de um caractere null de terminação.  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_STILL_EXECUTING.  
@@ -89,7 +89,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|O servidor recusou a conexão|A fonte de dados rejeitados o estabelecimento da conexão por motivos de implementação definida.|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver estava tentando conectar-se antes do processamento da função foi concluída.|  
 |28000|Especificação de autorização inválida|O identificador de usuário ou a cadeia de caracteres de autorização ou ambos, como especificado em Procurar solicitar a cadeia de caracteres de conexão (*InConnectionString*), violou as restrições definidas pela fonte de dados.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no * \*MessageText* buffer descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no  *\*MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O Gerenciador de Driver (DM) não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.<br /><br /> O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
 |HY008|Operação cancelada|Uma operação assíncrona foi cancelada chamando [SQLCancelHandle função](../../../odbc/reference/syntax/sqlcancelhandle-function.md). Em seguida, a função original foi chamada novamente no *identificador da conexão*.<br /><br /> Uma operação foi cancelada chamando **SQLCancelHandle** no *identificador da conexão* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona (não la) foi chamada para o *identificador da conexão* e ainda estava em execução quando esta função foi chamada.|  

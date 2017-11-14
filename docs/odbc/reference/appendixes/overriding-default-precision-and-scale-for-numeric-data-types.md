@@ -35,5 +35,5 @@ Quando o campo SQL_DESC_TYPE em um descartar é definido como SQL_C_NUMERIC, cha
   
  Se o aplicativo chama **SQLGetData** para retornar dados em uma estrutura SQL_C_NUMERIC, os campos SQL_DESC_SCALE e SQL_DESC_PRECISION padrão são usados. Se os padrões não são aceitáveis, o aplicativo deve chamar **SQLSetDescRec** ou **SQLSetDescField** para definir os campos e, em seguida, chamar **SQLGetData** com um *TargetType* de SQL_ARD_TYPE para usar os valores nos campos de descritor.  
   
- Quando **SQLPutData** é chamado, a chamada usa os campos SQL_DESC_SCALE e SQL_DESC_PRECISION de registro do descritor que corresponde ao parâmetro de dados em execução ou coluna, que são os campos APD para chamadas para ** SQLExecute** ou **SQLExecDirect**, ou descartar campos para chamadas para **SQLBulkOperations** ou **SQLSetPos**.
+ Quando **SQLPutData** é chamado, a chamada usa os campos SQL_DESC_SCALE e SQL_DESC_PRECISION de registro do descritor que corresponde ao parâmetro de dados em execução ou coluna, que são os campos APD para chamadas para  **SQLExecute** ou **SQLExecDirect**, ou descartar campos para chamadas para **SQLBulkOperations** ou **SQLSetPos**.
 

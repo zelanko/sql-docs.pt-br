@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  Em ODBC 3. *x*, a função ODBC 2.0 **SQLGetStmtOption** foi substituído pelo **SQLGetStmtAttr**. Para obter mais informações, consulte [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 3.* x* driver, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+>  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 3. *x* driver, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

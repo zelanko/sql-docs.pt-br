@@ -32,7 +32,7 @@ ms.lasthandoff: 09/09/2017
   
  ODBC API conformidade: Nível de núcleo  
   
- Retorna informações de erro ou de status sobre o último erro. O driver mantém uma pilha ou a lista de erros que podem ser retornadas para o *hstmt*, *hdbc*, e *henv* argumentos, dependendo de como a chamada para **SQLError ** é feita. A fila de erros é liberada após cada instrução.  
+ Retorna informações de erro ou de status sobre o último erro. O driver mantém uma pilha ou a lista de erros que podem ser retornadas para o *hstmt*, *hdbc*, e *henv* argumentos, dependendo de como a chamada para **SQLError**  é feita. A fila de erros é liberada após cada instrução.  
   
  A tabela a seguir descreve o **SQLError** argumentos e valores de retorno usados pelo driver.  
   

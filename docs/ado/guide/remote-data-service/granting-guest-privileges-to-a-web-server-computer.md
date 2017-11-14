@@ -1,12 +1,15 @@
 ---
 title: "Conceder privilégios de convidado para um computador do servidor Web | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -40,7 +43,7 @@ A conta do servidor Web anônima (IUSR _*ComputerName*) deve ser adicionado ao l
   
 4.  No **propriedades convidados** caixa de diálogo, clique em **adicionar**.  
   
-5.  Se a conta do servidor Web anônima não aparecerá na lista de **selecionar usuários ou grupos** caixa de diálogo, digite seu nome (IUSR _*ComputerName*) na caixa em branco inferior e clique **adicionar **.  
+5.  Se a conta do servidor Web anônima não aparecerá na lista de **selecionar usuários ou grupos** caixa de diálogo, digite seu nome (IUSR _*ComputerName*) na caixa em branco inferior e clique **adicionar** .  
   
 6.  Clique em **OK**.
 

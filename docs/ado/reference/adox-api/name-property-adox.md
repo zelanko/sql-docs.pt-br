@@ -1,12 +1,15 @@
 ---
 title: Nome de propriedade (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -64,7 +67,7 @@ Indica o nome do objeto.
   
  O **nome** propriedade é leitura/gravação em [coluna](../../../ado/reference/adox-api/column-object-adox.md), [grupo](../../../ado/reference/adox-api/group-object-adox.md), [chave](../../../ado/reference/adox-api/key-object-adox.md), [índice](../../../ado/reference/adox-api/index-object-adox.md), [ Tabela](../../../ado/reference/adox-api/table-object-adox.md), e [usuário](../../../ado/reference/adox-api/user-object-adox.md) objetos. O **nome** propriedade é somente leitura no [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md), [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md), e [exibição](../../../ado/reference/adox-api/view-object-adox.md) objetos.  
   
- Para objetos de leitura/gravação (**coluna**, **grupo**, **chave**, **índice**, **tabela** e ** Usuário** objetos), o valor padrão é uma cadeia de caracteres vazia ("").  
+ Para objetos de leitura/gravação (**coluna**, **grupo**, **chave**, **índice**, **tabela** e  **Usuário** objetos), o valor padrão é uma cadeia de caracteres vazia ("").  
   
 > [!NOTE]
 >  Para chaves, essa propriedade é somente leitura no **chave** já está anexados a uma coleção de objetos. Para tabelas, essa propriedade é somente leitura para **tabela** já está anexados a uma coleção de objetos.  

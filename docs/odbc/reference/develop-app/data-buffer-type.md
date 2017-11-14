@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="data-buffer-type"></a>Tipo de Buffer de dados
 O tipo de dados C de um buffer é especificado pelo aplicativo. Com uma única variável, isso ocorre quando o aplicativo aloca a variável. Com memória genérica — ou seja, memória aponta para um ponteiro de tipo void – isso ocorre quando o aplicativo converte a memória para um determinado tipo. O driver detecta esse tipo de duas maneiras:  
   
--   **Argumento de tipo de buffer de dados.** Buffers usados para transferir dados do conjunto de resultados e os valores de parâmetro, como o buffer associado *TargetValuePtr* na **SQLBindCol**, geralmente têm um argumento de tipo associado, como o * TargetType* argumento **SQLBindCol**. Este argumento, o aplicativo passa o identificador de tipo de C que corresponde ao tipo de buffer. Por exemplo, na seguinte chamada para **SQLBindCol**, o valor de SQL_C_TYPE_DATE informa o driver de *data* buffer é um SQL_DATE_STRUCT:  
+-   **Argumento de tipo de buffer de dados.** Buffers usados para transferir dados do conjunto de resultados e os valores de parâmetro, como o buffer associado *TargetValuePtr* na **SQLBindCol**, geralmente têm um argumento de tipo associado, como o  *TargetType* argumento **SQLBindCol**. Este argumento, o aplicativo passa o identificador de tipo de C que corresponde ao tipo de buffer. Por exemplo, na seguinte chamada para **SQLBindCol**, o valor de SQL_C_TYPE_DATE informa o driver de *data* buffer é um SQL_DATE_STRUCT:  
   
     ```  
     SQL_DATE_STRUCT Date;  

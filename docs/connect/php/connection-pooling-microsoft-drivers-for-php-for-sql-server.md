@@ -41,7 +41,7 @@ Para obter mais informações sobre o pool de conexão, consulte [Driver Manager
   
 ## <a name="enablingdisabling-connection-pooling"></a>Pooling de conexão habilitando/desabilitando
 ### <a name="windows"></a>Windows
-Você pode forçar o driver a criar uma nova conexão (em vez de procurar uma conexão equivalente no pool de conexão), definindo o valor da *ConnectionPooling* atributo na cadeia de conexão para **false ** (ou 0).  
+Você pode forçar o driver a criar uma nova conexão (em vez de procurar uma conexão equivalente no pool de conexão), definindo o valor da *ConnectionPooling* atributo na cadeia de conexão para **false**  (ou 0).  
   
 Se o *ConnectionPooling* atributo for omitido da cadeia de conexão ou se ele é definido como **true** (ou 1), o driver criará uma nova conexão somente se não existir uma conexão equivalente do pool de conexão.  
   

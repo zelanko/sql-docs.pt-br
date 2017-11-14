@@ -1,5 +1,5 @@
 ---
-title: "Alterar os ícones de indicador e conjuntos de indicadores (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Alterar os ícones de indicadores e os conjuntos de indicadores (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e9b0deb3a240607b3df2612622803d62749f521
 ms.contentlocale: pt-br
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
      Se preferir, clique no botão **Expressão** (*fx*) para editar uma expressão que define o valor da opção **Cor** .  
   
-     Se você clicou em **Mais Cores**, a caixa de diálogo **Selecionar Cor** é aberta, na qual é possível escolher de uma ampla gama de cores. Para obter mais informações sobre suas opções, consulte [Caixa de diálogo Selecionar Cor &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Clique em **OK** para fechar a caixa de diálogo **Selecionar Cor**.  
+     Se você clicou em **Mais Cores**, a caixa de diálogo **Selecionar Cor** é aberta, na qual é possível escolher de uma ampla gama de cores. Para obter mais informações sobre suas opções, consulte [Caixa de diálogo Selecionar Cor &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Clique em **OK** para fechar a caixa de diálogo **Selecionar Cor** .  
   
 4.  Clique em **OK**.  
   
@@ -100,4 +99,3 @@ ms.lasthandoff: 08/09/2017
  [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

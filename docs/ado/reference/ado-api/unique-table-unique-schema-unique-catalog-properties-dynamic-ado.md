@@ -1,12 +1,15 @@
 ---
 title: "Controle de alterações na tabela de Base do conjunto de registros (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -50,7 +53,7 @@ Permite que você atentamente as modificações de controle para uma tabela base
   
  Um erro de tempo de execução resulta se uma tabela base exclusiva não pode ser encontrada.  
   
- Essas propriedades dinâmicas são acrescentadas ao **registros** objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção quando o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está definida como ** adUseClient**.  
+ Essas propriedades dinâmicas são acrescentadas ao **registros** objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção quando o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está definida como  **adUseClient**.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

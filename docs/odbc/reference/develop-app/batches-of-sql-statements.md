@@ -53,7 +53,7 @@ Um lote de instruções SQL é um grupo de duas ou mais instruções SQL ou uma 
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     O **CREATE PROCEDURE** instrução em si não é um lote de instruções SQL. No entanto, o procedimento cria é um lote de instruções SQL. Nenhum ponto e vírgula separe os dois **selecione** instruções porque o **CREATE PROCEDURE** instrução é específica ao SQL Server e do SQL Server não requer um ponto e vírgula para separar várias instruções em um ** CREATE PROCEDURE** instrução.  
+     O **CREATE PROCEDURE** instrução em si não é um lote de instruções SQL. No entanto, o procedimento cria é um lote de instruções SQL. Nenhum ponto e vírgula separe os dois **selecione** instruções porque o **CREATE PROCEDURE** instrução é específica ao SQL Server e do SQL Server não requer um ponto e vírgula para separar várias instruções em um  **CREATE PROCEDURE** instrução.  
   
 -   **Matrizes de parâmetros** matrizes de parâmetros podem ser usados com uma instrução SQL parametrizada como uma maneira eficiente para executar operações em massa. Por exemplo, as matrizes de parâmetros podem ser usados com os seguintes **inserir** instrução inserir várias linhas na tabela de linhas durante a execução de uma única instrução SQL:  
   

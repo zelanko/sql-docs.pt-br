@@ -1,12 +1,15 @@
 ---
 title: Valor de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -40,7 +43,7 @@ Indica o valor atribuído a um [campo](../../../ado/reference/ado-api/field-obje
  ADO permite definir e retornar dados binários longos com o **valor** propriedade.  
   
 > [!NOTE]
->  Para **parâmetro** objetos, leituras ADO a **valor** propriedade apenas uma vez do provedor. Se um comando contém um **parâmetro** cujo **valor** propriedade está vazia e você criar um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do comando, certifique-se de que você feche o ** Conjunto de registros** antes de recuperar o **valor** propriedade. Caso contrário, para alguns provedores, o **valor** propriedade pode estar vazia e não contêm o valor correto.  
+>  Para **parâmetro** objetos, leituras ADO a **valor** propriedade apenas uma vez do provedor. Se um comando contém um **parâmetro** cujo **valor** propriedade está vazia e você criar um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do comando, certifique-se de que você feche o  **Conjunto de registros** antes de recuperar o **valor** propriedade. Caso contrário, para alguns provedores, o **valor** propriedade pode estar vazia e não contêm o valor correto.  
 >   
 >  Para o novo **campo** objetos que foram acrescentados ao [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto, o **valor** propriedade deve ser definida antes de qualquer outro **campo** propriedades podem ser especificadas. Primeiro, um valor específico para o **valor** propriedade deve ser atribuída e [atualização](../../../ado/reference/ado-api/update-method.md) no **campos** coleção chamada. Em seguida, outras propriedades, como [tipo](../../../ado/reference/ado-api/type-property-ado.md) ou [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) pode ser acessado.  
   

@@ -45,7 +45,7 @@ O identificador para o tipo de dados ODBC C de carimbo de hora é:
   
  Para obter informações sobre quais valores são válidos em uma estrutura SQL_C_TIMESTAMP, consulte [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md), anteriormente neste apêndice.  
   
- Quando dados de carimbo de hora C são convertidos em dados de SQL de caractere, os dados de caracteres resultante estão no "*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[.* f... *] "formato.  
+ Quando dados de carimbo de hora C são convertidos em dados de SQL de caractere, os dados de caracteres resultante estão no "*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[. *f...* ] "formato.  
   
  O driver ignora o valor de comprimento/indicador ao converter dados do tipo de dados timestamp C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados timestamp C. O valor de comprimento/indicador é passado a *StrLen_or_Ind* argumento **SQLPutData** e no buffer especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**. O buffer de dados é especificado com o *DataPtr* argumento na **SQLPutData** e *ParameterValuePtr* argumento **SQLBindParameter**.
 

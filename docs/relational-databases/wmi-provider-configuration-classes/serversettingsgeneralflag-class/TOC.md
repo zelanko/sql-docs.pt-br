@@ -1,0 +1,5 @@
+# [Propriedade FlagName (classe ServerSettingsGeneralFlag)](flagname-property-serversettingsgeneralflag-class.md)
+# [Propriedade FlagValue (classe ServerSettingsGeneralFlag)](flagvalue-property-serversettingsgeneralflag-class.md)
+# [Propriedade InstanceName (classe ServerSettingsGeneralFlag)](instancename-property-serversettingsgeneralflag-class.md)
+# [Classe ServerSettingsGeneralFlag](serversettingsgeneralflag-class.md)
+# [Método SetValue (classe ServerSettingsGeneralFlag)](setvalue-method-serversettingsgeneralflag-class.md)

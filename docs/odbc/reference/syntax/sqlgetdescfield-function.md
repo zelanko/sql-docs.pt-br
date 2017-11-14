@@ -66,20 +66,20 @@ SQLRETURN SQLGetDescField(
   
  Se *ValuePtr* é do tipo inteiro, os aplicativos devem usar um buffer de SQLULEN e inicializar o valor para 0 antes de chamar essa função como alguns drivers somente pode gravar o inferior 32 bits ou 16 bits de um buffer e deixe o bit de ordem superior inalterado.  
   
- Se *ValuePtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (excluindo o caractere null de terminação para dados de caractere) disponíveis para retornar o buffer apontado pelo * ValuePtr*.  
+ Se *ValuePtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (excluindo o caractere null de terminação para dados de caractere) disponíveis para retornar o buffer apontado pelo  *ValuePtr*.  
   
  *BufferLength*  
- [Entrada] Se *FieldIdentifier* é um campo definido pelo ODBC e *ValuePtr* aponta para uma cadeia de caracteres ou um buffer binário, este argumento deve ser o comprimento de \* *ValuePtr*. Se *FieldIdentifier* é um campo definido pelo ODBC e \* *ValuePtr* é um inteiro, *BufferLength* será ignorado. Se o valor em * \*ValuePtr* é de um tipo de dados Unicode (ao chamar **SQLGetDescFieldW**), o *BufferLength* argumento deve ser um número par.  
+ [Entrada] Se *FieldIdentifier* é um campo definido pelo ODBC e *ValuePtr* aponta para uma cadeia de caracteres ou um buffer binário, este argumento deve ser o comprimento de \* *ValuePtr*. Se *FieldIdentifier* é um campo definido pelo ODBC e \* *ValuePtr* é um inteiro, *BufferLength* será ignorado. Se o valor em  *\*ValuePtr* é de um tipo de dados Unicode (ao chamar **SQLGetDescFieldW**), o *BufferLength* argumento deve ser um número par.  
   
  Se *FieldIdentifier* é um campo definido pelo driver, o aplicativo indica a natureza do campo para o Gerenciador de Driver, definindo o *BufferLength* argumento. *BufferLength* pode ter os seguintes valores:  
   
--   Se * \*ValuePtr* é um ponteiro para uma cadeia de caracteres, em seguida, *BufferLength* é o comprimento da cadeia de caracteres ou SQL_NTS.  
+-   Se  *\*ValuePtr* é um ponteiro para uma cadeia de caracteres, em seguida, *BufferLength* é o comprimento da cadeia de caracteres ou SQL_NTS.  
   
--   Se * \*ValuePtr* é um ponteiro para um buffer de binário, em seguida, o aplicativo coloca o resultado da SQL_LEN_BINARY_ATTR (*comprimento*) macro em *BufferLength*. Isso coloca um valor negativo em *BufferLength*.  
+-   Se  *\*ValuePtr* é um ponteiro para um buffer de binário, em seguida, o aplicativo coloca o resultado da SQL_LEN_BINARY_ATTR (*comprimento*) macro em *BufferLength*. Isso coloca um valor negativo em *BufferLength*.  
   
--   Se * \*ValuePtr* é um ponteiro para um valor diferente de uma cadeia de caracteres ou cadeia de caracteres binária, em seguida, *BufferLength* devem ter o valor SQL_IS_POINTER.  
+-   Se  *\*ValuePtr* é um ponteiro para um valor diferente de uma cadeia de caracteres ou cadeia de caracteres binária, em seguida, *BufferLength* devem ter o valor SQL_IS_POINTER.  
   
--   Se * \*ValuePtr* é contém um tipo de dados de comprimento fixo, em seguida, *BufferLength* é SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, conforme apropriado.  
+-   Se  *\*ValuePtr* é contém um tipo de dados de comprimento fixo, em seguida, *BufferLength* é SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, conforme apropriado.  
   
  *StringLengthPtr*  
  [Saída] Ponteiro para o buffer no qual retornar o número total de bytes (excluindo o número de bytes necessários para o caractere null de terminação) disponíveis para retornar em **ValuePtr*.  
@@ -100,13 +100,13 @@ SQLRETURN SQLGetDescField(
 |01004|Dados de cadeia de caracteres truncados à direita|O buffer \* *ValuePtr* não era grande o suficiente para retornar o campo do descritor inteira, para que o campo foi truncado. O comprimento do campo de descritor completo é retornado em **StringLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |07009|Índice do descritor inválido|(DM) a *RecNumber* argumento era igual a 0, o atributo da instrução SQL_ATTR_USE_BOOKMARK foi SQL_UB_OFF e o *DescriptorHandle* argumento era um identificador de IRD. (Esse erro pode ser retornado para um descritor alocado explicitamente somente se o descritor está associado um identificador de instrução.)<br /><br /> O *FieldIdentifier* argumento era um campo de registro, o *RecNumber* argumento era 0 e o *DescriptorHandle* argumento era um identificador de IPD.<br /><br /> O *RecNumber* argumento era menor do que 0.|  
 |08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no * \*MessageText* buffer descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no  *\*MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
 |HY007|Instrução associada não está preparada|*DescriptorHandle* foi associado um *StatementHandle* como um IRD e a instrução associada identificador tinha não foi preparado ou executado.|  
-|HY010|Erro de sequência de função|(DM) *DescriptorHandle* foi associado um *StatementHandle* para que uma função de execução assíncrona (não esse um) foi chamada e ainda estava em execução quando esta função foi chamada.<br /><br /> (DM) *DescriptorHandle* foi associado um *StatementHandle* para o qual **SQLExecute**, **SQLExecDirect**, ** SQLBulkOperations**, ou **SQLSetPos** foi chamado e retornou SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todas as colunas ou parâmetros de dados em execução.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *DescriptorHandle*. Essa função assíncrona ainda estava em execução quando o **SQLGetDescField** função foi chamada.|  
+|HY010|Erro de sequência de função|(DM) *DescriptorHandle* foi associado um *StatementHandle* para que uma função de execução assíncrona (não esse um) foi chamada e ainda estava em execução quando esta função foi chamada.<br /><br /> (DM) *DescriptorHandle* foi associado um *StatementHandle* para o qual **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, ou **SQLSetPos** foi chamado e retornou SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todas as colunas ou parâmetros de dados em execução.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *DescriptorHandle*. Essa função assíncrona ainda estava em execução quando o **SQLGetDescField** função foi chamada.|  
 |HY013|Erro de gerenciamento de memória|Não foi possível processar a chamada de função porque os objetos de memória subjacente não podem ser acessados, possivelmente devido a condições de memória insuficiente.|  
 |HY021|Informações do descritor inconsistentes|Os campos SQL_DESC_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE não formam um tipo válido do ODBC SQL, um tipo SQL específicos de driver válido (para IPDs) ou um tipo válido do ODBC C (para APDs ou ARDs).|  
-|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM) * \*ValuePtr* era uma cadeia de caracteres, e *BufferLength* foi menor que zero.|  
+|HY090|Comprimento de buffer ou cadeia de caracteres inválido|(DM)  *\*ValuePtr* era uma cadeia de caracteres, e *BufferLength* foi menor que zero.|  
 |HY091|Identificador de campo de descritor inválido|*FieldIdentifier* não um campo definido pelo ODBC e não era um valor definido pela implementação.<br /><br /> *FieldIdentifier* foi indefinido para o *DescriptorHandle*.|  
 |HY117|Conexão está suspenso devido ao estado de transação desconhecido. Somente Desconecte e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tempo limite de Conexão expirou|O período de tempo limite de conexão expirou antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  

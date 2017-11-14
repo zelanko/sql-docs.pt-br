@@ -1,12 +1,15 @@
 ---
 title: Propriedade CommandType (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -39,7 +42,7 @@ Indica o tipo de um [comando](../../../ado/reference/ado-api/command-object-ado.
 ## <a name="remarks"></a>Comentários  
  Use o **CommandType** propriedade para otimizar a avaliação do [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade.  
   
- Se o **CommandType** o valor da propriedade é definido como o valor padrão, **adCmdUnknown**, você pode enfrentar desempenho reduzido porque ADO deve fazer chamadas para o provedor para determinar se o ** CommandText** propriedade é um nome de tabela, um procedimento armazenado ou uma instrução SQL. Se você souber o tipo de comando que você está usando, configurando o **CommandType** propriedade instrui o ADO para ir diretamente para o código relevante. Se o **CommandType** propriedade não corresponde ao tipo de comando no **CommandText** propriedade, um erro ocorre quando você chama o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método.  
+ Se o **CommandType** o valor da propriedade é definido como o valor padrão, **adCmdUnknown**, você pode enfrentar desempenho reduzido porque ADO deve fazer chamadas para o provedor para determinar se o  **CommandText** propriedade é um nome de tabela, um procedimento armazenado ou uma instrução SQL. Se você souber o tipo de comando que você está usando, configurando o **CommandType** propriedade instrui o ADO para ir diretamente para o código relevante. Se o **CommandType** propriedade não corresponde ao tipo de comando no **CommandText** propriedade, um erro ocorre quando você chama o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

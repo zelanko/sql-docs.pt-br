@@ -1,12 +1,15 @@
 ---
 title: "Noções básicas sobre o arquivo de personalização | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -67,7 +70,7 @@ identifier
   
 -   Um **userlist** seção será usada se o **userlist** seção correspondências de identificador um **conectar** identificador de seção. Se houver uma correspondência, o conteúdo do **userlist** seção são aplicadas para a conexão controlado pelo **conectar** seção.  
   
--   Se a cadeia de caracteres em uma cadeia de conexão ou o comando não coincide com o identificador em qualquer **conectar** ou **sql** cabeçalho da seção e não há nenhum **conectar** ou **sql ** seção cabeçalho com um parâmetro padrão, em seguida, a cadeia de caracteres do cliente é usada sem modificação.  
+-   Se a cadeia de caracteres em uma cadeia de conexão ou o comando não coincide com o identificador em qualquer **conectar** ou **sql** cabeçalho da seção e não há nenhum **conectar** ou **sql**  seção cabeçalho com um parâmetro padrão, em seguida, a cadeia de caracteres do cliente é usada sem modificação.  
   
 -   O **logs** seção é usada sempre que o **DataFactory** está em operação.  
   

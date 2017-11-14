@@ -61,7 +61,7 @@ SQLRETURN SQLCancel(
 |SQLSTATE|Erro|Description|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem de informação específica do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) no argumento * \*MessageText* buffer descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) no argumento  *\*MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando o **SQLCancel** função foi chamada.<br /><br /> (DM) cancelar a operação falhou porque uma operação assíncrona está em andamento em um identificador de conexão que está associado com *StatementHandle*.|  
 |HY013|Erro de gerenciamento de memória|Não foi possível processar a chamada de função porque os objetos de memória subjacente não podem ser acessados, possivelmente devido a condições de memória insuficiente.|  
@@ -81,7 +81,7 @@ SQLRETURN SQLCancel(
   
  No ODBC 2. *x*, se um aplicativo chama **SQLCancel** quando nenhum processamentos estiver sendo feito na instrução, **SQLCancel** tem o mesmo efeito que **SQLFreeStmt** com a opção SQL_CLOSE. Esse comportamento é definido apenas para fins de integridade e os aplicativos devem chamar **SQLFreeStmt** ou **SQLCloseCursor** para fechar cursores.  
   
- Quando **SQLCancel** é chamado para cancelar uma função em execução assíncrona em uma instrução ou uma função em uma instrução que necessidades data, lançados pela função de cancelamento de registros de diagnóstico é limpas, e **SQLCancel ** envia seus próprios registros de diagnósticos; quando **SQLCancel** é chamado para cancelar uma função em execução em uma instrução em outro thread, no entanto, ele não limpa o diagnóstico registros do que está sendo cancelada não função e não Poste seus próprios registros de diagnósticos.  
+ Quando **SQLCancel** é chamado para cancelar uma função em execução assíncrona em uma instrução ou uma função em uma instrução que necessidades data, lançados pela função de cancelamento de registros de diagnóstico é limpas, e **SQLCancel**  envia seus próprios registros de diagnósticos; quando **SQLCancel** é chamado para cancelar uma função em execução em uma instrução em outro thread, no entanto, ele não limpa o diagnóstico registros do que está sendo cancelada não função e não Poste seus próprios registros de diagnósticos.  
   
 ## <a name="canceling-asynchronous-processing"></a>Cancelando o processamento assíncrono  
  Depois que um aplicativo chama uma função de forma assíncrona, ele chama a função repetidamente para determinar se ele concluiu o processamento. Se a função ainda está processando, ele retornará SQL_STILL_EXECUTING. Se a função concluiu o processamento, ele retornará um código diferente.  

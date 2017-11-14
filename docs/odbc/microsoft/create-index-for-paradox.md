@@ -50,11 +50,11 @@ A sintaxe da instrução CREATE INDEX para o driver ODBC Paradox é:
   
 -   O *nome do índice* argumento para um índice primário deve ser igual ao nome de base da tabela, conforme exigido pelo Paradox.  
   
- Se a palavra-chave **UNIQUE** for omitido, o driver ODBC Paradox criará um índice não exclusivo. Isso consiste em dois arquivos de índice secundário Paradox denominados *nome de tabela*. X* nn * e *nome de tabela*. Y*nn*, onde * nn * é o número da coluna na tabela. Índices não exclusivos estão sujeitas às seguintes restrições:  
+ Se a palavra-chave **UNIQUE** for omitido, o driver ODBC Paradox criará um índice não exclusivo. Isso consiste em dois arquivos de índice secundário Paradox denominados *nome de tabela*. X *nn*  e *nome de tabela*. Y*nn*, onde  *nn*  é o número da coluna na tabela. Índices não exclusivos estão sujeitas às seguintes restrições:  
   
 -   Antes de um índice não exclusivo pode ser criado para uma tabela, um índice primário deve existir para essa tabela.  
   
--   Para o Paradox 3. *x*, o *nome do índice* argumento para qualquer índice que não seja um índice primário (exclusivo ou não exclusivo) deve ser o mesmo que o nome da coluna. Para o Paradox 4. *x* e 5.* x*, o nome de um índice pode ser, mas não precisa ser o mesmo que o nome da coluna.  
+-   Para o Paradox 3. *x*, o *nome do índice* argumento para qualquer índice que não seja um índice primário (exclusivo ou não exclusivo) deve ser o mesmo que o nome da coluna. Para o Paradox 4. *x* e 5. *x*, o nome de um índice pode ser, mas não precisa ser o mesmo que o nome da coluna.  
   
 -   Somente uma coluna pode ser especificada para um índice não exclusivo.  
   

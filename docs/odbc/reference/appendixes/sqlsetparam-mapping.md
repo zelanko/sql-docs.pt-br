@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlsetparam-mapping"></a>Mapeamento de SQLSetParam
-**SQLSetParam** continua a ser mapeada na parte superior do **SQLBindParameter** como ODBC 2.* x*. Mesmo que ele é conceitualmente semelhante a **SQLBindParam**, o Gerenciador de Driver não mapear **SQLSetParam** para **SQLBindParam**. Isso ocorre porque determinado existente ODBC 2. *x* drivers usam o valor especial de *BufferLength* (SQL_SETPARAM_VALUE_MAX) que o Gerenciador de Driver gera quando ele mapeia **SQLSetParam** na parte superior do ** SQLBindParameter** para determinar quando ele é chamado por 1.* x* aplicativo ODBC.  
+**SQLSetParam** continua a ser mapeada na parte superior do **SQLBindParameter** como ODBC 2. *x*. Mesmo que ele é conceitualmente semelhante a **SQLBindParam**, o Gerenciador de Driver não mapear **SQLSetParam** para **SQLBindParam**. Isso ocorre porque determinado existente ODBC 2. *x* drivers usam o valor especial de *BufferLength* (SQL_SETPARAM_VALUE_MAX) que o Gerenciador de Driver gera quando ele mapeia **SQLSetParam** na parte superior do  **SQLBindParameter** para determinar quando ele é chamado por 1. *x* aplicativo ODBC.  
   
  Uma chamada para  
   

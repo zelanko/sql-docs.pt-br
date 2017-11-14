@@ -1,12 +1,15 @@
 ---
 title: "Microsoft Data Shaping Service para OLE DB (provedor de serviços de ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,7 +46,7 @@ ms.lasthandoff: 09/09/2017
 
 |Nome de propriedade dinâmica|Description|
 |---------------------------|-----------------|
-|**Nomes de reformatação exclusivo**|Indica se **registros** objetos com valores duplicados para seus **nome remodelar** propriedades são permitidas. Se essa propriedade dinâmica é **True** e um novo **registros** é criado com o mesmo nome especificado pelo usuário a reformatação existente **registros**, em seguida, o novo ** Conjunto de registros** reformatação nome de objeto é modificado para torná-lo exclusivo. Se essa propriedade for **False** e um novo **registros** é criado com o mesmo nome especificado pelo usuário a reformatação existente **Recordset**, ambos **conjunto de registros ** objetos terão o mesmo nome de reformatação. Portanto, nenhuma **registros** pode ser reformatado desde que ambos os conjuntos de registros existem.<br /><br /> O valor padrão da propriedade é **False**.|
+|**Nomes de reformatação exclusivo**|Indica se **registros** objetos com valores duplicados para seus **nome remodelar** propriedades são permitidas. Se essa propriedade dinâmica é **True** e um novo **registros** é criado com o mesmo nome especificado pelo usuário a reformatação existente **registros**, em seguida, o novo  **Conjunto de registros** reformatação nome de objeto é modificado para torná-lo exclusivo. Se essa propriedade for **False** e um novo **registros** é criado com o mesmo nome especificado pelo usuário a reformatação existente **Recordset**, ambos **conjunto de registros**  objetos terão o mesmo nome de reformatação. Portanto, nenhuma **registros** pode ser reformatado desde que ambos os conjuntos de registros existem.<br /><br /> O valor padrão da propriedade é **False**.|
 |**Provedor de dados**|Indica o nome do provedor que fornece linhas a ser formatado. Esse valor pode ser nenhum se não for usado um provedor para fornecer linhas.|
 
  Você também pode definir propriedades dinâmicas graváveis especificando seus nomes como palavras-chave na cadeia de conexão. Por exemplo, no Microsoft Visual Basic, defina o **provedor de dados** propriedade dinâmica para "MSDASQL" especificando:

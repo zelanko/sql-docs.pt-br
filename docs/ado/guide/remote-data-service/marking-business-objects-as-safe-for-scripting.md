@@ -1,12 +1,15 @@
 ---
 title: Marcar objetos comerciais como seguros para script | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -48,7 +51,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  Na última etapa, o Assistente de instalação do aplicativo cria um arquivo. htm e um arquivo. cab. Você pode copiar esses dois arquivos para o computador de destino e duas vezes no arquivo. htm para carregar a página e registrar corretamente o servidor.  
   
- Porque o objeto comercial será instalado no diretório Windows\System32\Occache por padrão, mova-o para a pasta Windows\System32 e altere o **HKEY_CLASSES_ROOT\CLSID\\ ** \< *MyActiveXGUID*>\\**InprocServer32** chave do registro para coincidir com o caminho correto.
+ Porque o objeto comercial será instalado no diretório Windows\System32\Occache por padrão, mova-o para a pasta Windows\System32 e altere o **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** chave do registro para coincidir com o caminho correto.
 
 
 

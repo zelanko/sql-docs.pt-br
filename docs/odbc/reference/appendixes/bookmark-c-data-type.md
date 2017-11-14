@@ -34,7 +34,7 @@ O tipo de dados C de indicador permite que um aplicativo recupere um indicador. 
  A tabela a seguir lista o valor de *CType* para o tipo de dados de indicador C, o tipo de dados ODBC C que implementa o tipo de dados do indicador C e a definição de dados de tipo de SQL. H.  
   
 > [!NOTE]  
->  O tipo de dados SQL_C_BOOKMARK foi preterido. ODBC 3*. x* aplicativos não devem usar SQL_C_BOOKMARK. ODBC 3*. x* drivers precisam oferecer suporte a SQL_C_BOOKMARK apenas se desejar trabalhar com ODBC 2.* x* aplicativos que o utilizam. O Gerenciador de Driver SQL_C_VARBOOKMARK é mapeado para SQL_C_BOOKMARK quando um aplicativo funciona com um ODBC 2. *x* driver.  
+>  O tipo de dados SQL_C_BOOKMARK foi preterido. ODBC 3*. x* aplicativos não devem usar SQL_C_BOOKMARK. ODBC 3*. x* drivers precisam oferecer suporte a SQL_C_BOOKMARK apenas se desejar trabalhar com ODBC 2. *x* aplicativos que o utilizam. O Gerenciador de Driver SQL_C_VARBOOKMARK é mapeado para SQL_C_BOOKMARK quando um aplicativo funciona com um ODBC 2. *x* driver.  
   
 |Identificador de tipo C|Typedef ODBC C|Tipo de C|  
 |-----------------------|--------------------|------------|  

@@ -1,12 +1,15 @@
 ---
 title: Propriedade ExecuteOptions (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -47,7 +50,7 @@ Indica se a execução assíncrona está habilitada.
   
  Se você tentar chamar [redefinir](../../../ado/reference/rds-api/reset-method-rds.md), [atualizar](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), ou [registros](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) enquanto outra operação assíncrona que pode alterar o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto **registros** está em execução, ocorrerá um erro.  
   
- Se ocorrer um erro durante uma operação assíncrona, o **RDS. DataControl** do objeto [estado de prontidão é](../../../ado/reference/rds-api/readystate-property-rds.md) valor muda de **adcReadyStateLoaded** para **adcReadyStateComplete**e o ** Conjunto de registros** o valor da propriedade permanece *nada*.  
+ Se ocorrer um erro durante uma operação assíncrona, o **RDS. DataControl** do objeto [estado de prontidão é](../../../ado/reference/rds-api/readystate-property-rds.md) valor muda de **adcReadyStateLoaded** para **adcReadyStateComplete**e o  **Conjunto de registros** o valor da propriedade permanece *nada*.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -1,12 +1,15 @@
 ---
 title: "As configurações de cliente necessárias | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Definir o [CursorLocation Property (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade **adUseClient**.  
   
--   Especifique o nome do manipulador a ser usado no [DataControl objeto (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto **manipulador** propriedade, ou o [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) cadeia de conexão do objeto "** Manipulador**= "palavra-chave. (Você não pode definir o manipulador de **Conexão** cadeia de conexão do objeto.)  
+-   Especifique o nome do manipulador a ser usado no [DataControl objeto (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto **manipulador** propriedade, ou o [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) cadeia de conexão do objeto " **Manipulador**= "palavra-chave. (Você não pode definir o manipulador de **Conexão** cadeia de conexão do objeto.)  
   
  RDS fornece um manipulador padrão no servidor chamado **MSDFMAP. Manipulador de**. (O arquivo de personalização padrão é denominado MSDFMAP. INI).  
   
@@ -71,7 +74,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Especifique o [manipulador de propriedade (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propriedade ou palavra-chave; o [provedor Property (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriedade ou palavra-chave; e o *CustomerById* e * CustomerDatabase* identificadores. Abra o **registros** objeto  
+ Especifique o [manipulador de propriedade (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propriedade ou palavra-chave; o [provedor Property (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriedade ou palavra-chave; e o *CustomerById* e  *CustomerDatabase* identificadores. Abra o **registros** objeto  
   
  RS. Abra "CustomerById(4)", "manipulador = MSDFMAP. Manipulador;"& _  
   

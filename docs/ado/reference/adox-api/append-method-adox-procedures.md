@@ -1,12 +1,15 @@
 ---
 title: "Método (ADOX procedimentos) append | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -51,7 +54,7 @@ Procedures.Append Name, Command
  Se o texto do comando que especifica o usuário representa uma exibição em vez de um procedimento, o comportamento depende do provedor que está sendo usado. **Acrescentar** falhará se o provedor não oferece suporte a comandos persistentes.  
   
 > [!NOTE]
->  Ao usar o provedor OLE DB para Microsoft Jet, o **procedimentos** coleção **Append** método permitirá que você especifique um **exibição** em vez de ** Procedimento** no *comando* parâmetro. O **exibição** será adicionado à fonte de dados e será adicionado para o **procedimentos** coleção. Após o **Append**, se o **procedimentos** e **exibições** coleções são atualizadas, o **exibição** não será o **Procedimentos** coleta e aparecerão no **exibições** coleção.  
+>  Ao usar o provedor OLE DB para Microsoft Jet, o **procedimentos** coleção **Append** método permitirá que você especifique um **exibição** em vez de  **Procedimento** no *comando* parâmetro. O **exibição** será adicionado à fonte de dados e será adicionado para o **procedimentos** coleção. Após o **Append**, se o **procedimentos** e **exibições** coleções são atualizadas, o **exibição** não será o **Procedimentos** coleta e aparecerão no **exibições** coleção.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  

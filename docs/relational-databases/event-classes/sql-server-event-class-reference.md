@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-event-class-reference"></a>Referência de classe de evento do SQL Server
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you record events as they occur in an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Os eventos registrados são instâncias das classes de evento na definição de rastreamento. No [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], as classes de evento e suas categorias estão disponíveis na guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Arquivo de Rastreamento** .  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite registrar eventos à medida que eles ocorrem em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Os eventos registrados são instâncias das classes de evento na definição de rastreamento. No [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], as classes de evento e suas categorias estão disponíveis na guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Arquivo de Rastreamento** .  
   
  A tabela a seguir descreve as categorias de evento e lista suas classes de evento associadas.  
   

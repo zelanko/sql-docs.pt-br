@@ -1,12 +1,15 @@
 ---
 title: Provedor Microsoft OLE DB para o Microsoft Active Directory Service | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -90,7 +93,7 @@ objectClass='user' AND objectCategory='Person'"
 ## <a name="recordset-behavior"></a>Comportamento do conjunto de registros  
  As tabelas a seguir listam os recursos disponíveis em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto aberto usando esse provedor. O tipo de cursor estático (**adOpenStatic**) está disponível.  
   
- Para obter mais informações sobre **registros** comportamento para a sua configuração de provedor, execute o [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método e enumerar o [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção do ** Conjunto de registros** para determinar se as propriedades dinâmicas específicos do provedor estão presentes.  
+ Para obter mais informações sobre **registros** comportamento para a sua configuração de provedor, execute o [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método e enumerar o [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção do  **Conjunto de registros** para determinar se as propriedades dinâmicas específicos do provedor estão presentes.  
   
  **Disponibilidade de propriedades de conjunto de registros ADO padrão:**  
   

@@ -1,12 +1,15 @@
 ---
 title: "A coleção de parâmetros (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -39,7 +42,7 @@ Contém todos os [parâmetro](../../../ado/reference/ado-api/parameter-object.md
   
  Se você não tiver definido sua própria **parâmetro** objetos e você acessar o **parâmetros** coleção antes de chamar o **atualizar** , ADO será automaticamente da chamada do método as método e popular a coleção para você.  
   
- Você pode minimizar as chamadas ao provedor para melhorar o desempenho se você souber que as propriedades dos parâmetros associados com o procedimento armazenado ou consulta parametrizada que você deseja chamar. Use o [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) método para criar **parâmetro** objetos com as configurações de propriedade apropriado e use o [Append](../../../ado/reference/ado-api/append-method-ado.md) método para adicioná-los para o ** Parâmetros** coleção. Isso permite definir e retornar valores de parâmetro sem a necessidade de chamar o provedor para obter as informações de parâmetro. Se você estiver escrevendo um provedor que não fornece informações de parâmetro, você deve preencher manualmente o **parâmetros** coleção usando esse método para ser capaz de usar parâmetros. Use o [excluir](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) método para remover **parâmetro** de objetos a partir de **parâmetros** coleção, se necessário.  
+ Você pode minimizar as chamadas ao provedor para melhorar o desempenho se você souber que as propriedades dos parâmetros associados com o procedimento armazenado ou consulta parametrizada que você deseja chamar. Use o [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) método para criar **parâmetro** objetos com as configurações de propriedade apropriado e use o [Append](../../../ado/reference/ado-api/append-method-ado.md) método para adicioná-los para o  **Parâmetros** coleção. Isso permite definir e retornar valores de parâmetro sem a necessidade de chamar o provedor para obter as informações de parâmetro. Se você estiver escrevendo um provedor que não fornece informações de parâmetro, você deve preencher manualmente o **parâmetros** coleção usando esse método para ser capaz de usar parâmetros. Use o [excluir](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) método para remover **parâmetro** de objetos a partir de **parâmetros** coleção, se necessário.  
   
  Os objetos no **parâmetros** coleção de um **registros** vá fora do escopo (portanto fique indisponível) quando o **Recordset** está fechado.  
   

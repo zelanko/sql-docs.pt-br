@@ -1,12 +1,15 @@
 ---
 title: "Abra o método (Conexão ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -57,7 +60,7 @@ connection.Open ConnectionString, UserID, Password, Options
   
  Use opcional *ConnectionString* argumento para especificar uma cadeia de conexão que contém uma série de *argumento* *= valor* instruções separadas por ponto e vírgula, ou um recursos de arquivo ou diretório identificado por uma URL. O **ConnectionString** propriedade herda automaticamente o valor usado para o *ConnectionString* argumento. Portanto, você pode definir o **ConnectionString** propriedade o **Conexão** objeto antes de abri-lo ou usar o *ConnectionString* argumento para definir ou substituir os parâmetros de conexão atual durante a **abrir** chamada de método.  
   
- Se você passar o usuário e senha informações ambos o *ConnectionString* argumento e na opcional *UserID* e *senha* argumentos, o *UserID * e *senha* argumentos substituirão os valores especificados na *ConnectionString*.  
+ Se você passar o usuário e senha informações ambos o *ConnectionString* argumento e na opcional *UserID* e *senha* argumentos, o *UserID*  e *senha* argumentos substituirão os valores especificados na *ConnectionString*.  
   
  Quando você ter concluído suas operações em aberto **Conexão**, use o [fechar](../../../ado/reference/ado-api/close-method-ado.md) associados de método para liberar quaisquer recursos do sistema. Fechar um objeto não o remove da memória; Você pode alterar suas configurações de propriedade e usar o **abrir** método para abri-lo novamente mais tarde. Para eliminar completamente um objeto da memória, defina a variável de objeto para *nada*.  
   

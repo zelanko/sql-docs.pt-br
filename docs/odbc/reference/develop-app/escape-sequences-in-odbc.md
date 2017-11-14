@@ -51,7 +51,7 @@ Um número de recursos de idioma, como junções externas e chamadas de função
  A sequência de escape é reconhecida e analisada por drivers, substitua as sequências de escape a gramática de DBMS específico. Para obter mais informações sobre a sintaxe de sequência de escape, consulte [sequências de Escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) na gramática do apêndice c: SQL.  
   
 > [!NOTE]  
->  No ODBC 2. *x*, essa era a sintaxe padrão da sequência de escape: **– (\*fornecedor (***nome do fornecedor***), product (** *nome do produto***)***extensão* ** \*) –**  
+>  No ODBC 2. *x*, essa era a sintaxe padrão da sequência de escape: **– (\*fornecedor (***nome do fornecedor***), product (** *nome do produto***)***extensão*  **\*) –**  
 >   
 >  Além dessa sintaxe, uma sintaxe abreviada foi definida no formato: **{***extensão***}**  
 >   

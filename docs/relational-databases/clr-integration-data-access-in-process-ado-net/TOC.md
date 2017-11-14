@@ -1,0 +1,5 @@
+# [Extensões específicas do SQL Server no processo para o ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)
+# [Objeto SqlContext](sqlcontext-object.md)
+# [Objeto SqlDataRecord](sqldatarecord-object.md)
+# [Objeto SqlPipe](sqlpipe-object.md)
+# [Objeto SqlTriggerContext](sqltriggercontext-object.md)

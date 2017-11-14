@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 Quando o driver de texto é usado, o formato do arquivo de texto é determinado por meio de um arquivo de informações de esquema. O arquivo de informações de esquema é sempre chamado Schema e sempre é mantido no mesmo diretório como a fonte de dados de texto. O arquivo de informações de esquema fornece IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo Schema.ini é sempre necessário para acessar dados de comprimento fixo. Você deve usar um arquivo Schema quando sua tabela de texto contém a data e hora, moeda, ou dados decimais ou sempre que quiser mais controle sobre a manipulação de dados na tabela.  
   
 > [!NOTE]  
->  O texto ISAM obterá valores iniciais do registro, não de Schema. O mesmo formato de arquivo padrão se aplica a todas as novas tabelas de dados de texto. Todos os arquivos que foram criados pela instrução CREATE TABLE herdam os mesmos valores de formato padrão, que são definidos, selecionando valores de formato de arquivo no **definir formato de texto** caixa de diálogo com \<padrão > escolhido no ** Tabelas** lista. Se os valores do registro são diferentes dos valores no Schema, os valores do registro serão substituídos pelos valores de Schema.  
+>  O texto ISAM obterá valores iniciais do registro, não de Schema. O mesmo formato de arquivo padrão se aplica a todas as novas tabelas de dados de texto. Todos os arquivos que foram criados pela instrução CREATE TABLE herdam os mesmos valores de formato padrão, que são definidos, selecionando valores de formato de arquivo no **definir formato de texto** caixa de diálogo com \<padrão > escolhido no  **Tabelas** lista. Se os valores do registro são diferentes dos valores no Schema, os valores do registro serão substituídos pelos valores de Schema.  
   
 ## <a name="understanding-schemaini-files"></a>Noções básicas sobre arquivos de Schema  
  Arquivos Schema fornecem informações de esquema sobre os registros em um arquivo de texto. Cada entrada Schema Especifica um dos cinco características da tabela:  
@@ -91,7 +91,7 @@ Col1=CustomerNumber Text Width 10
 Col2=CustomerName Text Width 30  
 ```  
   
- A sintaxe de **Col** * n * é:  
+ A sintaxe de **Col**  *n*  é:  
   
 ```  
   
@@ -99,7 +99,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A tabela a seguir descreve cada parte do **Col** * n * entrada.  
+ A tabela a seguir descreve cada parte do **Col**  *n*  entrada.  
   
 |Parâmetro|Description|  
 |---------------|-----------------|  

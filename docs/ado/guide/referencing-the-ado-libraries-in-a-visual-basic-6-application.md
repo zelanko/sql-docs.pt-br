@@ -3,9 +3,12 @@ title: "Fazer referência às bibliotecas do ADO em um aplicativo Visual Basic 6
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
 dev_langs:
@@ -34,7 +37,7 @@ Para importar as bibliotecas do ADO para um aplicativo do Microsoft Visual Basic
   
 1.  Criar um novo ou abrir um projeto existente do Visual Basic.  
   
-2.  Clique o **projeto** item de menu e selecione **referências... ** do painel do menu suspenso.  
+2.  Clique o **projeto** item de menu e selecione **referências...**  do painel do menu suspenso.  
   
 3.  De **referências disponíveis**, marque a caixa de **Microsoft ActiveX Data Objects *n.n* biblioteca**, onde ***n.n*** representa a versão mais recente número de versão. O **local** abaixo do campo deve identificar sua escolha como *$installDir\msado15.dll*, onde *$installDir* representa o caminho do diretório no qual a biblioteca do ADO foi instalado.  
   

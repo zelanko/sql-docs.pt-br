@@ -1,12 +1,15 @@
 ---
 title: "Cenário RDS | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/09/2017
   
  Este cenário pressupõe que você saiba como usar marcas de layout HTML básico, técnicas de associação de dados use DHTML e programa com controles ActiveX.  
   
- Se você tiver instalado o SDK, o código-fonte completo para o aplicativo de exemplo do catálogo de endereços pode ser encontrado no diretório do SDK em samples\dataaccess\rds\AddressBook\AddressBook.asp. Para exibir o cenário de catálogo de endereços, digite no Internet Explorer 4.0 ou posterior, * *http://*webserver*/RDS/AddressBook/AddressBook.asp** onde *webserver* é o nome dada a seu computador Windows NT 4.0 ou Windows 2000 Web do servidor que está executando serviços de informações da Internet (IIS) e ASP.  
+ Se você tiver instalado o SDK, o código-fonte completo para o aplicativo de exemplo do catálogo de endereços pode ser encontrado no diretório do SDK em samples\dataaccess\rds\AddressBook\AddressBook.asp. Para exibir o cenário de catálogo de endereços, digite no Internet Explorer 4.0 ou posterior,  **http://*webserver*/RDS/AddressBook/AddressBook.asp** onde *webserver* é o nome dada a seu computador Windows NT 4.0 ou Windows 2000 Web do servidor que está executando serviços de informações da Internet (IIS) e ASP.  
   
 ## <a name="introduction-to-address-book"></a>Introdução ao catálogo de endereços  
  O aplicativo de exemplo do catálogo de endereços fornece um catálogo de endereços online simples que você pode usar para publicar uma pasta de pesquisa em uma intranet. O catálogo de endereços foi projetado para que um usuário pode inserir uma cadeia de caracteres de pesquisa em um ou mais campos para solicitar informações sobre funcionários. Para mostrar os recursos básicos do serviço de dados remoto, o aplicativo de exemplo é intencionalmente mantido pequeno, com um número mínimo de objetos e campos de pesquisa.  

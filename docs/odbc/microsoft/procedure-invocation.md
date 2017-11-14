@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="procedure-invocation"></a>Invocação de procedimento
-Quando o driver do Microsoft Access for usado, os procedimentos podem ser chamados do driver usando o **SQLExecDirect** ou **SQLPrepare** função com a seguinte sintaxe: {CALL *nome do procedimento * [(*parâmetro*[,*parâmetro*]...)]}. Observe que as expressões não têm suporte como parâmetros para um procedimento chamado.  
+Quando o driver do Microsoft Access for usado, os procedimentos podem ser chamados do driver usando o **SQLExecDirect** ou **SQLPrepare** função com a seguinte sintaxe: {CALL *nome do procedimento*  [(*parâmetro*[,*parâmetro*]...)]}. Observe que as expressões não têm suporte como parâmetros para um procedimento chamado.  
   
  Se um nome de procedimento inclui um traço, o nome deve ser delimitado por aspas back (').  
   

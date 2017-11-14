@@ -1,12 +1,15 @@
 ---
 title: "Exemplo de propriedades de precisão (VC + +) e NumericScale | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Exemplo de propriedades de precisão (VC + +) e NumericScale
-Este exemplo usa o [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [precisão](../../../ado/reference/ado-api/precision-property-ado.md) propriedades para exibir a escala numérica e a precisão dos campos no ***descontos*** analítico o *** Pubs*** banco de dados.  
+Este exemplo usa o [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [precisão](../../../ado/reference/ado-api/precision-property-ado.md) propriedades para exibir a escala numérica e a precisão dos campos no ***descontos*** analítico o  ***Pubs*** banco de dados.  
   
 ```  
 // BeginNumericScaleCpp.cpp  

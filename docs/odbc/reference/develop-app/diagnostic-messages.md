@@ -37,11 +37,11 @@ Uma mensagem de diagnóstico é retornada com cada SQLSTATE. O SQLSTATE mesmo ge
   
  Se a fonte de um erro ou aviso é um componente em si, a mensagem de diagnóstica deve explicar isso. Portanto, o texto de mensagens tem dois formatos diferentes. Para erros e avisos que não ocorram em uma fonte de dados, a mensagem de diagnóstica deve usar este formato:  
   
- **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **]** * texto fornecido pelo componente*  
+ **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **]**  *texto fornecido pelo componente*  
   
  Para erros e avisos que ocorrem em uma fonte de dados, a mensagem de diagnóstica deve usar este formato:  
   
- **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **] [** * Identificador da fonte de dados* **]** *dados--fornecido-texto de origem*  
+ **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **] [**  *Identificador da fonte de dados* **]** *dados--fornecido-texto de origem*  
   
  A tabela a seguir mostra o significado de cada elemento.  
   

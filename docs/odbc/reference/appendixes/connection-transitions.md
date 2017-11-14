@@ -58,7 +58,7 @@ Conexões ODBC tem os seguintes estados.
   
  [4] essa linha mostra transições quando *HandleType* foi SQL_HANDLE_DESC.  
   
- [5] chamada **SQLAllocHandle** com *OutputHandlePtr* apontando para um identificador válido substitui esse identificador sem levar em consideração para o identificador de ofthat anterior do conteúdo e pode causar problemas para drivers ODBC. É incorretova programação de aplicativo de ODBC para chamar **SQLAllocHandle** duas vezes com a mesma variável de aplicativo definida para * \*OutputHandlePtr* sem chamar ** SQLFreeHandle** para liberar o identificador antes realocando-lo. Substituindo o ODBC identificadores dessa forma podem levar a um comportamento inconsistente ou erros por parte de drivers ODBC.  
+ [5] chamada **SQLAllocHandle** com *OutputHandlePtr* apontando para um identificador válido substitui esse identificador sem levar em consideração para o identificador de ofthat anterior do conteúdo e pode causar problemas para drivers ODBC. É incorretova programação de aplicativo de ODBC para chamar **SQLAllocHandle** duas vezes com a mesma variável de aplicativo definida para  *\*OutputHandlePtr* sem chamar  **SQLFreeHandle** para liberar o identificador antes realocando-lo. Substituindo o ODBC identificadores dessa forma podem levar a um comportamento inconsistente ou erros por parte de drivers ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

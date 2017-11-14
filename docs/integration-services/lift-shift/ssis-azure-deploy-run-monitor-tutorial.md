@@ -36,7 +36,7 @@ Use o SQL Server Management Studio para se conectar ao catálogo do SSIS no seu 
 
 2. **Conectar ao servidor**. No **conectar ao servidor** caixa de diálogo, digite as seguintes informações:
 
-   | Configuração       | Valor sugerido | Description | 
+   | Configuração       | Valor sugerido | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Mecanismo de Banco de Dados | Esse valor é necessário. |
    | **Nome do servidor** | O nome totalmente qualificado do servidor | O nome deve estar neste formato: **mysqldbserver.database.windows.net**. Se você precisar o nome do servidor, consulte [conectar-se ao banco de dados de catálogo do SSISDB no Azure](ssis-azure-connect-to-catalog-database.md). |
@@ -112,7 +112,7 @@ Get-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Na
 ### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>Obter o status de tempo de execução de integração do Azure SSIS
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntimeStatus -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzureRmDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ## <a name="next-steps"></a>Próximas etapas

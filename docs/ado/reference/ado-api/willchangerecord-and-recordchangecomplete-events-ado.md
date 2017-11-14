@@ -1,12 +1,15 @@
 ---
 title: WillChangeRecord e RecordChangeComplete eventos (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -58,7 +61,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  Quando **RecordChangeComplete** é chamado, esse parâmetro é definido como **adStatusOK** se a operação que causou o evento foi bem-sucedida, ou para **adStatusErrorsOccurred** se a operação falhou.  
   
- Antes de **WillChangeRecord** retorna, defina este parâmetro como **adStatusCancel** a solicitação de cancelamento da operação que causou este evento ou definir esse parâmetro como ** adStatusUnwantedEvent** para impedir que as notificações subsequentes.  
+ Antes de **WillChangeRecord** retorna, defina este parâmetro como **adStatusCancel** a solicitação de cancelamento da operação que causou este evento ou definir esse parâmetro como  **adStatusUnwantedEvent** para impedir que as notificações subsequentes.  
   
  Antes de **RecordChangeComplete** retorna, defina este parâmetro como **adStatusUnwantedEvent** para impedir que as notificações subsequentes.  
   

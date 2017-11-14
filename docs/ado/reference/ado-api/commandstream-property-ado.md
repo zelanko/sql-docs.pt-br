@@ -1,12 +1,15 @@
 ---
 title: A propriedade CommandStream (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -40,7 +43,7 @@ Indica o fluxo usado como entrada para uma [comando](../../../ado/reference/ado-
   
  O fluxo de entrada não está disponível para outros objetos de ADO que retornam a origem de um **comando**. Por exemplo, se o [fonte](../../../ado/reference/ado-api/source-property-ado-recordset.md) de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) é definido como um **comando** objeto que tem um fluxo como entrada, **Recordset.Source** continua a retornar o **CommandText** propriedade, que contém uma cadeia de caracteres vazia (""), em vez do conteúdo de fluxo do **CommandStream** propriedade.  
   
- Ao usar um fluxo de comando (conforme especificado por **CommandStream**), válido apenas [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valores para o [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) são de propriedade ** adCmdText** e **adCmdUnknown**. Qualquer outro valor causará um erro.  
+ Ao usar um fluxo de comando (conforme especificado por **CommandStream**), válido apenas [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valores para o [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) são de propriedade  **adCmdText** e **adCmdUnknown**. Qualquer outro valor causará um erro.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

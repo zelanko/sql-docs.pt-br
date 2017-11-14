@@ -1,12 +1,15 @@
 ---
 title: "Comandos com os comandos de computação parametrizados | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,7 +35,7 @@ Uma forma com parâmetros típica comando APPEND possui uma cláusula que cria u
   
  A cláusula que cria o filho **registros** pode agora ser um número arbitrário de forma aninhada comandos de computação, em que o comando mais aninhado contém a consulta parametrizada. Resultante em forma de **registros** possui vários níveis, em que o pai ocupa o nível superior, o filho ocupa o nível mais baixo e um número arbitrário de **registros**s geradas pelo comandos de computação de forma ocupam os níveis intermediários.  
   
- O uso típico para esse recurso é chamar a função de agregação e as habilidades de agrupamento de shapeCOMPUTE comandos para criar intervenção **registros** objetos analíticos informações sobre o filho **conjunto de registros **. Além disso, porque este é um comando de forma com parâmetros, cada vez que uma coluna de capítulo do pai é acessada, um novo filho **registros** podem ser recuperadas. Como os níveis intermediários são derivados de filho, eles também serão computada novamente.  
+ O uso típico para esse recurso é chamar a função de agregação e as habilidades de agrupamento de shapeCOMPUTE comandos para criar intervenção **registros** objetos analíticos informações sobre o filho **conjunto de registros** . Além disso, porque este é um comando de forma com parâmetros, cada vez que uma coluna de capítulo do pai é acessada, um novo filho **registros** podem ser recuperadas. Como os níveis intermediários são derivados de filho, eles também serão computada novamente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de data shaping](../../../ado/guide/data/data-shaping-example.md)

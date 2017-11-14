@@ -1,12 +1,15 @@
 ---
 title: "ADO para o índice da sintaxe do Visual C++ COM | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO para índice de sintaxe do Visual C++ para COM
 Esse índice é uma referência cruzada para a referência de linguagem do ADO com base no Microsoft Visual C++.  
   
- Se você usar o **#import** diretiva em seu aplicativo, um arquivo de cabeçalho será gerado que permite que você use uma sintaxe semelhante para o Microsoft Visual Basic. Nomes de propriedades do formulário **get _***PropertyName* e **Put _***PropertyName* podem ser tratados como se eles foram declarados simplesmente como * PropertyName*. Uma propriedade pode ser tratada como um membro de dados em vez de uma função.  
+ Se você usar o **#import** diretiva em seu aplicativo, um arquivo de cabeçalho será gerado que permite que você use uma sintaxe semelhante para o Microsoft Visual Basic. Nomes de propriedades do formulário **get _***PropertyName* e **Put _***PropertyName* podem ser tratados como se eles foram declarados simplesmente como  *PropertyName*. Uma propriedade pode ser tratada como um membro de dados em vez de uma função.  
   
  Todos os métodos, propriedades e eventos são funções que retornam um **HRESULT**, que você pode testar para determinar se a função é executada com êxito.  
   

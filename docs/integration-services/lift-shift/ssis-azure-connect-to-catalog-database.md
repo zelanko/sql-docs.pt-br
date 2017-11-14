@@ -40,7 +40,7 @@ Antes de começar, verifique se que você tem a versão mais recente do SQL Serv
 
 2. **Conectar ao servidor**. No **conectar ao servidor** caixa de diálogo, digite as seguintes informações:
 
-   | Configuração       | Valor sugerido | Description | 
+   | Configuração       | Valor sugerido | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Mecanismo de Banco de Dados | Esse valor é necessário. |
    | **Nome do servidor** | O nome totalmente qualificado do servidor | O nome deve estar neste formato: **mysqldbserver.database.windows.net**. |

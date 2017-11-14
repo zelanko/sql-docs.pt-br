@@ -33,5 +33,5 @@ ms.lasthandoff: 09/09/2017
  Se o driver dá suporte a essa função, a biblioteca de cursores chama **SQLNativeSql** no driver e a transmite a instrução SQL. Para uma atualização posicionada, posicionada delete, e **Selecione para atualizar** instruções, a biblioteca de cursores modifica a instrução antes de passar para o driver.  
   
 > [!NOTE]  
->  A biblioteca de cursores incorretamente retornará SQLSTATE 34000 (nome de cursor inválido) se o nome do cursor é inválido em uma atualização posicionada ou uma instrução delete que é passada a *InStatementText* argumento de **SQLNativeSql **. **SQLNativeSql** não se destina a retornar erros de sintaxe, que são retornados somente após a preparação da instrução ou a execução.
+>  A biblioteca de cursores incorretamente retornará SQLSTATE 34000 (nome de cursor inválido) se o nome do cursor é inválido em uma atualização posicionada ou uma instrução delete que é passada a *InStatementText* argumento de **SQLNativeSql** . **SQLNativeSql** não se destina a retornar erros de sintaxe, que são retornados somente após a preparação da instrução ou a execução.
 

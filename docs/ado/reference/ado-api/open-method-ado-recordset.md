@@ -1,12 +1,15 @@
 ---
 title: "Abra o método (conjunto de registros ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -84,7 +87,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Se você passar um **comando** objeto o *fonte* argumento e também passar um *ActiveConnection* argumento, um erro ocorre. O **ActiveConnection** propriedade o **comando** objeto já deve ser definido como uma opção válida **Conexão** cadeia de caracteres de conexão ou objeto.  
   
- Se você passar algo diferente de um **comando** objeto o *fonte* argumento, você pode usar o *opções* argumento para otimizar a avaliação do *fonte * argumento. Se o *opções* argumento não estiver definido, você pode enfrentar desempenho reduzido porque ADO deve fazer chamadas para o provedor para determinar se o argumento é uma instrução SQL, um procedimento armazenado, uma URL ou um nome de tabela. Se você souber o que *fonte* tipo você está usando, definindo o *opções* argumento instrui o ADO para ir diretamente para o código relevante. Se o *opções* argumento não coincide com o *fonte* digitar, ocorrerá um erro.  
+ Se você passar algo diferente de um **comando** objeto o *fonte* argumento, você pode usar o *opções* argumento para otimizar a avaliação do *fonte*  argumento. Se o *opções* argumento não estiver definido, você pode enfrentar desempenho reduzido porque ADO deve fazer chamadas para o provedor para determinar se o argumento é uma instrução SQL, um procedimento armazenado, uma URL ou um nome de tabela. Se você souber o que *fonte* tipo você está usando, definindo o *opções* argumento instrui o ADO para ir diretamente para o código relevante. Se o *opções* argumento não coincide com o *fonte* digitar, ocorrerá um erro.  
   
  Se você passar um **fluxo** objeto o *fonte* argumento, você não deve transmitir informações para os outros argumentos. Isso irá gerar um erro. O **ActiveConnection** informações não são mantidos quando um **Recordset** é aberto a partir um **fluxo**.  
   
@@ -94,7 +97,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Quando você ter concluído suas operações em aberto **registros** de objeto, use o [fechar](../../../ado/reference/ado-api/close-method-ado.md) associados de método para liberar quaisquer recursos do sistema. Fechar um objeto não o remove da memória; Você pode alterar suas configurações de propriedade e usar o **abrir** método para abri-lo novamente mais tarde. Para eliminar completamente um objeto da memória, defina a variável de objeto para *nada*.  
   
- Antes do **ActiveConnection** estiver definida, chame **abrir** com nenhuma operandos para criar uma instância de um **registros** criado acrescentando campos para o ** Conjunto de registros** [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção.  
+ Antes do **ActiveConnection** estiver definida, chame **abrir** com nenhuma operandos para criar uma instância de um **registros** criado acrescentando campos para o  **Conjunto de registros** [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção.  
   
  Se você tiver configurado o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade **adUseClient**, você pode recuperar linhas de forma assíncrona em uma das duas maneiras. O método recomendado é definir *opções* para **adAsyncFetch**. Como alternativa, você pode usar a propriedade dinâmica "Processamento de conjunto de linhas assíncrono" no [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção, mas eventos recuperados relacionados podem ser perdidas se você não definir a *opções* parâmetro **adAsyncFetch**.  
   

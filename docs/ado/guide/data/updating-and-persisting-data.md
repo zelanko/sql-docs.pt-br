@@ -1,12 +1,15 @@
 ---
 title: "Atualização e persistir dados | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="updating-and-persisting-data"></a>Atualizar e manter dados
-Os capítulos anteriores discutimos como usar o ADO para acessar dados em uma fonte de dados, como mover-se nos dados e até mesmo como editar os dados. É claro que, se for o objetivo do seu aplicativo permitir que os usuários façam alterações aos dados, você precisará entender como salvar as alterações. Ou você pode persistir o **registros** muda para um arquivo usando o **salvar** método, ou você pode enviar as alterações de volta para a fonte de dados para armazenamento usando o **atualização** ou ** UpdateBatch** métodos.  
+Os capítulos anteriores discutimos como usar o ADO para acessar dados em uma fonte de dados, como mover-se nos dados e até mesmo como editar os dados. É claro que, se for o objetivo do seu aplicativo permitir que os usuários façam alterações aos dados, você precisará entender como salvar as alterações. Ou você pode persistir o **registros** muda para um arquivo usando o **salvar** método, ou você pode enviar as alterações de volta para a fonte de dados para armazenamento usando o **atualização** ou  **UpdateBatch** métodos.  
   
  Nos capítulos anteriores, você alterou os dados em várias linhas do **registros**. ADO dá suporte a dois Noções básicas relacionadas para a adição, exclusão e modificação de linhas de dados.  
   

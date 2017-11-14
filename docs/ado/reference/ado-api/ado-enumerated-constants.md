@@ -1,12 +1,15 @@
 ---
 title: Constantes enumeradas do ADO | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -37,7 +40,7 @@ Para ajudar na depuração, as enumerações de ADO listam um valor para cada co
 |[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)|Especifica um indicador que indica onde a operação deve ser iniciada.|  
 |[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)|Especifica como um argumento de comando deve ser interpretado.|  
 |[CompareEnum](../../../ado/reference/ado-api/compareenum.md)|Especifica a posição relativa de dois registros representados por seus indicadores.|  
-|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Especifica as permissões disponíveis para modificar dados em um **Conexão**, abrindo um **registro**, ou especificar valores para o **modo** propriedade o ** Registro** e **fluxo** objetos.|  
+|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Especifica as permissões disponíveis para modificar dados em um **Conexão**, abrindo um **registro**, ou especificar valores para o **modo** propriedade o  **Registro** e **fluxo** objetos.|  
 |[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)|Especifica se o **abrir** método de um **Conexão** objeto deve retornar depois (de forma síncrona) ou antes (de forma assíncrona) a conexão é estabelecida.|  
 |[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)|Especifica se deve ser exibida uma caixa de diálogo para solicitar parâmetros ausentes ao abrir uma conexão a uma fonte de dados ODBC.|  
 |[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)|Especifica o comportamento do **CopyRecord** método.|  

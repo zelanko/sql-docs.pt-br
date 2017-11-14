@@ -48,7 +48,7 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
  Se seu aplicativo interage com os dados cuja regras, valores padrão, gatilhos ou procedimentos armazenados chamam outros comandos do Visual FoxPro ou funções, o driver gerará um erro. Consulte [funções e não há suporte para comandos do Visual FoxPro](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) para obter uma lista de comandos e funções não têm suportadas pelo driver.  
   
 > [!TIP]  
->  Se você quiser inserir código condicional em suas regras, gatilhos ou procedimentos armazenados que determina os comandos a serem executados quando chamados pelo driver, você pode usar o **(versão)** função. O **(versão)** função retorna "Driver de ODBC do Visual FoxPro * \<versão >*" quando chamado pelo driver.  
+>  Se você quiser inserir código condicional em suas regras, gatilhos ou procedimentos armazenados que determina os comandos a serem executados quando chamados pelo driver, você pode usar o **(versão)** função. O **(versão)** função retorna "Driver de ODBC do Visual FoxPro  *\<versão >*" quando chamado pelo driver.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Comandos do Visual FoxPro e funções com suporte em procedimentos armazenados, disparadores, valores padrão e regras  
   

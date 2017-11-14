@@ -52,7 +52,7 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- Nos três casos anteriores, o *identificador da conexão* argumento é definido como o valor em *hdbc*, o *atributo* argumento é definido como o valor em *fOption *e o *ValuePtr* argumento é definido como o mesmo valor como *pvParam*.  
+ Nos três casos anteriores, o *identificador da conexão* argumento é definido como o valor em *hdbc*, o *atributo* argumento é definido como o valor em *fOption* e o *ValuePtr* argumento é definido como o mesmo valor como *pvParam*.  
   
  Para obter opções de conexão de cadeia de caracteres definidas pelo ODBC, o Gerenciador de Driver define o *BufferLength* argumentos na chamada para **SQLGetConnectAttr** para o tamanho máximo predefinido (SQL_MAX_OPTION_STRING_LENGTH); para uma opção de conexão não-String, *BufferLength* é definido como 0.  
   

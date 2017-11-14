@@ -61,7 +61,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     |SQL_CONCUR_ROWVER|SQL_CA2_ROWVER_CONCURRENCY|  
     |SQL_CONCUR_VALUES|SQL_CA2_VALUES_CONCURRENCY|  
   
-     Se o *simultaneidade* argumento não é um dos valores na tabela anterior, a chamada para **SQLSetScrollOptions** retorna SQLSTATE S1108 (opção de simultaneidade fora do intervalo) e nenhuma das etapas a seguir são executada. Se o bit apropriado (como indicado na tabela anterior) não está definido na **InfoValuePtr* para um dos valores correspondentes para o *simultaneidade* argumento, a chamada para ** SQLSetScrollOptions** retorna SQLSTATE S1C00 (o Driver não funciona), e nenhuma das etapas a seguir são executadas.  
+     Se o *simultaneidade* argumento não é um dos valores na tabela anterior, a chamada para **SQLSetScrollOptions** retorna SQLSTATE S1108 (opção de simultaneidade fora do intervalo) e nenhuma das etapas a seguir são executada. Se o bit apropriado (como indicado na tabela anterior) não está definido na **InfoValuePtr* para um dos valores correspondentes para o *simultaneidade* argumento, a chamada para  **SQLSetScrollOptions** retorna SQLSTATE S1C00 (o Driver não funciona), e nenhuma das etapas a seguir são executadas.  
   
 -   Uma chamada para  
   
@@ -69,7 +69,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     com * \*ValuePtr* definido como um dos valores na tabela a seguir, de acordo com o valor da *KeysetSize* argumento **SQLSetScrollOptions**.  
+     com  *\*ValuePtr* definido como um dos valores na tabela a seguir, de acordo com o valor da *KeysetSize* argumento **SQLSetScrollOptions**.  
   
     |*KeysetSize* argumento|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -85,7 +85,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     com * \*ValuePtr* definido como o *simultaneidade* argumento **SQLSetScrollOptions**.  
+     com  *\*ValuePtr* definido como o *simultaneidade* argumento **SQLSetScrollOptions**.  
   
 -   Se o *KeysetSize* argumentos na chamada para **SQLSetScrollOptions** for positivo, uma chamada para  
   
@@ -93,7 +93,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     com * \*ValuePtr* definido como o *KeysetSize* argumento **SQLSetScrollOptions**.  
+     com  *\*ValuePtr* definido como o *KeysetSize* argumento **SQLSetScrollOptions**.  
   
 -   Uma chamada para  
   
@@ -101,7 +101,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     com * \*ValuePtr* definido como o *RowsetSize* argumento **SQLSetScrollOptions**.  
+     com  *\*ValuePtr* definido como o *RowsetSize* argumento **SQLSetScrollOptions**.  
   
     > [!NOTE]  
     >  Quando o Gerenciador de Driver mapeia **SQLSetScrollOptions** para um aplicativo trabalhando com um ODBC 3*. x* driver não oferece suporte a **SQLSetScrollOptions**, o Driver Manager define a opção de instrução SQL_ROWSET_SIZE, não o atributo SQL_ATTR_ROW_ARRAY_SIZE instrução para o *RowsetSize* argumento **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** não pode ser usado por um aplicativo ao buscar várias linhas por uma chamada para **SQLFetch** ou **SQLFetchScroll**. Ele pode ser usado somente quando a busca de várias linhas por uma chamada para **SQLExtendedFetch**.

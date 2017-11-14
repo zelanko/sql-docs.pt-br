@@ -243,7 +243,7 @@ O controle do Visualizador de relatórios agora é enviado como um pacote do NuG
 
     ![ssRS-remove-antigo-rvcontrol-caixa de ferramentas](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Clique com botão direito em qualquer lugar na caixa de ferramentas e, em seguida, selecione **escolher itens... **.
+3. Clique com botão direito em qualquer lugar na caixa de ferramentas e, em seguida, selecione **escolher itens...** .
 
     ![ssRS-caixa de ferramentas-escolha-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

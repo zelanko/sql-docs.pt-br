@@ -36,7 +36,7 @@ Use o SQL Server Management Studio para estabelecer uma conexão para o catálog
 
 2. No **conectar ao servidor** caixa de diálogo, digite as seguintes informações:
 
-   | Configuração       | Valor sugerido | Obter mais informações | 
+   | Configuração       | Valor sugerido | Obter mais informações | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Mecanismo de banco de dados | Esse valor é necessário. |
    | **Nome do servidor** | O nome totalmente qualificado do servidor | Se você estiver se conectando a um servidor de banco de dados SQL, o nome é neste formato: `<server_name>.database.windows.net`. |

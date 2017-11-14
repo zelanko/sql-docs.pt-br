@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="writing-odbc-3x-drivers"></a>Drivers do gravação ODBC 3. x
-A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um aplicativo ODBC e o mapeamento executada pelo Gerenciador de Driver quando as funções são chamadas em relação a um ODBC 3.* x* driver.  
+A tabela a seguir mostra o suporte de função em um ODBC 3. *x* driver e um aplicativo ODBC e o mapeamento executada pelo Gerenciador de Driver quando as funções são chamadas em relação a um ODBC 3. *x* driver.  
   
 |Função|Tem suporte<br /><br /> por um<br /><br /> ODBC 3. *x*<br /><br /> driver?|Tem suporte<br /><br /> por um<br /><br /> ODBC 3. *x*<br /><br /> aplicativo?|Mapeado/com suporte<br /><br /> Por que o ODBC 3. *x*<br /><br /> Gerenciador de driver para<br /><br /> um ODBC 3. *x* driver?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  

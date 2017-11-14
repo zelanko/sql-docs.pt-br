@@ -36,10 +36,10 @@ ms.lasthandoff: 09/09/2017
  Versão introduzidas: Conformidade de padrões 1.0 ODBC: Deprecated  
   
  **Resumo**  
- A função ODBC 2.0 **para SQLParamOptions** foi substituído no ODBC 3.* x* por chamadas para [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ A função ODBC 2.0 **para SQLParamOptions** foi substituído no ODBC 3. *x* por chamadas para [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 3.* x* driver, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
+>  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 3. *x* driver, consulte [mapeamento preterido funções](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice g: Driver diretrizes para compatibilidade com versões anteriores.  
   
 ## <a name="remarks"></a>Comentários  
  Consulte [informações de ODBC de 64 bits](../../../odbc/reference/odbc-64-bit-information.md), se o aplicativo será executado em um sistema operacional de 64 bits.  

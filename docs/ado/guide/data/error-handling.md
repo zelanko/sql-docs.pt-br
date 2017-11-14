@@ -1,12 +1,15 @@
 ---
 title: Tratamento de erro | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -42,7 +45,7 @@ ADO usa vários métodos diferentes para notificar um aplicativo de erros que oc
   
 -   Problemas que ocorrem durante o processamento em lote de atualizações ou outras operações em massa que envolvem um **registros** pode ser indicado pelo **Status** propriedade do **registros**. Por exemplo, permissões insuficientes ou violações de restrição de esquema podem ser especificadas por **RecordStatusEnum** valores.  
   
--   Problemas que ocorrem que envolvem uma determinada **campo** no registro atual também são indicadas pelo **Status** propriedade de cada **campo** no **campos ** coleção do **registro** ou **registros**. Por exemplo, as atualizações que não podem ser concluídas ou tipos de dados incompatíveis podem ser especificados por **FieldStatusEnum** valores.  
+-   Problemas que ocorrem que envolvem uma determinada **campo** no registro atual também são indicadas pelo **Status** propriedade de cada **campo** no **campos**  coleção do **registro** ou **registros**. Por exemplo, as atualizações que não podem ser concluídas ou tipos de dados incompatíveis podem ser especificados por **FieldStatusEnum** valores.  
   
  Esta seção contém os tópicos a seguir.  
   

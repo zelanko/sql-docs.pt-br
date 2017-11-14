@@ -1,12 +1,15 @@
 ---
 title: Registros e campos fornecidos pelo provedor | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="records-and-provider-supplied-fields"></a>Registros e campos fornecidos pelo provedor
 Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto está aberto, sua origem pode ser a linha atual de uma abertas [registros](../../../ado/reference/ado-api/recordset-object-ado.md), uma URL absoluta ou uma URL relativa em conjunto com um aberto [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
   
- Se o **registro** é aberto a partir um **registros**, o **registro** objeto [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção conterá todos os campos do ** Conjunto de registros**, além de todos os campos adicionados pelo provedor subjacente.  
+ Se o **registro** é aberto a partir um **registros**, o **registro** objeto [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção conterá todos os campos do  **Conjunto de registros**, além de todos os campos adicionados pelo provedor subjacente.  
   
  O provedor pode inserir campos adicionais que servem como suplementares características do **registro**. Como resultado, um **registro** pode ter campos exclusivos não no **Recordset** como um todo ou em qualquer **registro** derivado de outra linha do **registros**.  
   

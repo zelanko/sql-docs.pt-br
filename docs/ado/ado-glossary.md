@@ -1,12 +1,15 @@
 ---
 title: "Glossário do ADO | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ado
 ms.technology:
 - drivers
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -45,7 +48,7 @@ Este tópico define condições relevantes para ADO.
 ## <a name="b"></a>B
  associação de mapeamento de entrada um entre um campo em uma tabela e uma variável. Nas extensões do Visual C++ de ADO, **registros** campos são mapeados para variáveis de C/C++.
 
- valor numérico de bitmask um deve ser uma comparação de valor de bit a bit com outros valores numéricos, normalmente para opções de sinalizador no parâmetro ou valores de retorno. Normalmente essa comparação é feita com operadores lógicos, como **e** e **ou** no Visual Basic, ** & ** e **&#124;** em C++.
+ valor numérico de bitmask um deve ser uma comparação de valor de bit a bit com outros valores numéricos, normalmente para opções de sinalizador no parâmetro ou valores de retorno. Normalmente essa comparação é feita com operadores lógicos, como **e** e **ou** no Visual Basic,  **&**  e **&#124;** em C++.
 
  Por exemplo, o ADO **FieldAttributeEnum** valores podem ser usados como bitmasks para determinar os atributos de um campo. Suponha que você desejava determinar se um campo foi atualizável. Você pode testar isso com a seguinte expressão no Visual Basic:`Field.Attributes AND adFldUpdatable`
 
@@ -62,7 +65,7 @@ Este tópico define condições relevantes para ADO.
 
  referência de capítulo um a um intervalo de linhas de uma fonte de dados. No ADO, um capítulo normalmente é uma referência a outro **registros**.
 
- Colunas de capítulo possibilitam definir um *pai-filho* relação onde a *pai* é o **registros** que contém a coluna de capítulo e * filho* é o **registros** representado pelo capítulo.
+ Colunas de capítulo possibilitam definir um *pai-filho* relação onde a *pai* é o **registros** que contém a coluna de capítulo e  *filho* é o **registros** representado pelo capítulo.
 
  alias de capítulo um alias que se refere à coluna anexado ao pai.
 
@@ -166,7 +169,7 @@ Este tópico define condições relevantes para ADO.
 
  otimista de bloqueio de um tipo de proteção no qual a página de dados que contém um ou mais registros, inclusive o registro que está sendo editado, está disponível para outros usuários somente enquanto o registro está sendo atualizada pelo **atualização** método, mas está disponível antes e após a chamada a **atualização**.
 
- Bloqueio otimista é usado quando o **registros** objeto é aberto com o **LockType** parâmetro ou a propriedade definida como **adLockOptimistic** ou ** adLockBatchOptimistic**. Consulte também pessimista.
+ Bloqueio otimista é usado quando o **registros** objeto é aberto com o **LockType** parâmetro ou a propriedade definida como **adLockOptimistic** ou  **adLockBatchOptimistic**. Consulte também pessimista.
 
  o local numérico de um item em uma ordem de valor ordinal. Em uma coleção de ADO, o valor ordinal do primeiro item é zero (0). O próximo item é um (1) e assim por diante.
 

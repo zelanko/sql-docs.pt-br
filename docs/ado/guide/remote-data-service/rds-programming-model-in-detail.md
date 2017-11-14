@@ -1,12 +1,15 @@
 ---
 title: "Modelo de programação de RDS em detalhes | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -52,7 +55,7 @@ Estes são os principais elementos do modelo de programação de RDS:
   
  O modelo de objeto do RDS incorpora essa funcionalidade com o [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
   
- Além disso, esse objeto tem um método para criar um vazio **registros** objeto que você pode preencher programaticamente ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) e o outro método para converter um **conjunto de registros ** objeto em uma cadeia de caracteres de texto para criar uma página da Web ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
+ Além disso, esse objeto tem um método para criar um vazio **registros** objeto que você pode preencher programaticamente ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) e o outro método para converter um **conjunto de registros**  objeto em uma cadeia de caracteres de texto para criar uma página da Web ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
   
  Com o ADO, você pode substituir alguns a conexão padrão e o comportamento do comando do **RDSServer.DataFactory** com um **DataFactory** manipulador e um arquivo de personalização que contém a conexão, comando, e parâmetros de segurança.  
   
@@ -63,7 +66,7 @@ Estes são os principais elementos do modelo de programação de RDS:
   
  O modelo de objeto do RDS incorpora essa funcionalidade com o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
- O **RDS. DataControl** tem dois aspectos. Um aspecto referem-se à fonte de dados. Se você definir o comando e informações de conexão usando o **conectar** e **SQL** propriedades do **RDS. DataControl**, ele usará automaticamente o **RDS. DataSpace** para criar uma referência para o padrão **RDSServer.DataFactory** objeto. Em seguida, o **RDSServer.DataFactory** usará o **conectar** valor da propriedade para se conectar à fonte de dados, use o **SQL** valor da propriedade para obter um ** Conjunto de registros** da fonte de dados e retornar o **registros** o objeto para o **RDS. DataControl**.  
+ O **RDS. DataControl** tem dois aspectos. Um aspecto referem-se à fonte de dados. Se você definir o comando e informações de conexão usando o **conectar** e **SQL** propriedades do **RDS. DataControl**, ele usará automaticamente o **RDS. DataSpace** para criar uma referência para o padrão **RDSServer.DataFactory** objeto. Em seguida, o **RDSServer.DataFactory** usará o **conectar** valor da propriedade para se conectar à fonte de dados, use o **SQL** valor da propriedade para obter um  **Conjunto de registros** da fonte de dados e retornar o **registros** o objeto para o **RDS. DataControl**.  
   
  O segundo aspecto referente à exibição da retornado **registros** informações em um controle visual. Você pode associar um controle visual com o **RDS. DataControl** (em um processo chamado associação) e obter acesso a informações associada **registros** objeto, exibindo os resultados da consulta em uma página da Web no Microsoft® Internet Explorer. Cada **RDS. DataControl** objeto associa um **registros** objeto, que representa os resultados de uma única consulta, para um ou mais controles visual (por exemplo, uma caixa de texto, caixa de combinação, controle de grade e assim por diante). Pode haver mais de um **RDS. DataControl** objeto em cada página. Cada **RDS. DataControl** objeto pode ser conectado a uma fonte de dados diferentes e contêm os resultados de uma consulta separada.  
   
@@ -73,7 +76,7 @@ Estes são os principais elementos do modelo de programação de RDS:
  RDS dá suporte a dois dos seus próprios eventos, que são independentes do modelo de evento do ADO. O [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) evento é chamado sempre que o **RDS. DataControl** [estado de prontidão é](../../../ado/reference/rds-api/readystate-property-rds.md) alterações de propriedade, notificando você quando uma operação assíncrona for concluída com êxito, encerrada ou ocorreu um erro. O [onError](../../../ado/reference/rds-api/onerror-event-rds.md) evento é chamado sempre que ocorrer um erro, mesmo se o erro ocorrer durante uma operação assíncrona.  
   
 > [!NOTE]
->  O Microsoft Internet Explorer fornece dois eventos adicionais ao RDS: **onDataSetChanged**, que indica que o **registros** é funcional, mas ainda recuperar linhas, e ** onDataSetComplete**, que indica que o **registros** concluir a recuperação de linhas.  
+>  O Microsoft Internet Explorer fornece dois eventos adicionais ao RDS: **onDataSetChanged**, que indica que o **registros** é funcional, mas ainda recuperar linhas, e  **onDataSetComplete**, que indica que o **registros** concluir a recuperação de linhas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelo de programação de RDS com objetos](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   

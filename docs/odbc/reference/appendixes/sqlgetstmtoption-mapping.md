@@ -52,11 +52,11 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- Nos três casos anteriores, o *StatementHandle* argumento é definido como o valor em *hstmt*, o *atributo* argumento é definido como o valor em *fOption *e o *ValuePtr* argumento é definido como o mesmo valor como *pvParam*.  
+ Nos três casos anteriores, o *StatementHandle* argumento é definido como o valor em *hstmt*, o *atributo* argumento é definido como o valor em *fOption* e o *ValuePtr* argumento é definido como o mesmo valor como *pvParam*.  
   
  Para obter opções de conexão de cadeia de caracteres definidas pelo ODBC, o Gerenciador de Driver define o *BufferLength* argumentos na chamada para **SQLGetConnectAttr** para o tamanho máximo predefinido (SQL_MAX_OPTION_STRING_LENGTH); para uma opção de conexão não-String, *BufferLength* é definido como 0.  
   
- A opção de instrução SQL_GET_BOOKMARK foi preterida no ODBC 3*. x*. Para um ODBC 3*. x* driver para trabalhar com ODBC 2.* x* aplicativos que usam SQL_GET_BOOKMARK, deverá dar suporte a SQL_GET_BOOKMARK. Para um ODBC 3*. x* driver para trabalhar com ODBC 2.* x* aplicativos, deverá dar suporte a configuração SQL_USE_BOOKMARKS para SQL_UB_ON e deve expor indicadores de comprimento fixo. Se um ODBC 3*. x* driver dá suporte a indicadores de comprimento variável apenas, indicadores de não-comprimento fixo, ele deve retornar SQLSTATE HYC00 (recurso opcional não implementado) se um ODBC 2.* x* aplicativo tenta configurar SQL_USE_BOOKMARKS SQL_UB_ON.  
+ A opção de instrução SQL_GET_BOOKMARK foi preterida no ODBC 3*. x*. Para um ODBC 3*. x* driver para trabalhar com ODBC 2. *x* aplicativos que usam SQL_GET_BOOKMARK, deverá dar suporte a SQL_GET_BOOKMARK. Para um ODBC 3*. x* driver para trabalhar com ODBC 2. *x* aplicativos, deverá dar suporte a configuração SQL_USE_BOOKMARKS para SQL_UB_ON e deve expor indicadores de comprimento fixo. Se um ODBC 3*. x* driver dá suporte a indicadores de comprimento variável apenas, indicadores de não-comprimento fixo, ele deve retornar SQLSTATE HYC00 (recurso opcional não implementado) se um ODBC 2. *x* aplicativo tenta configurar SQL_USE_BOOKMARKS SQL_UB_ON.  
   
  Para um ODBC 3*. x* driver, o Gerenciador de Driver não verifica para ver se *opção* é entre SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX ou é maior do que SQL_CONNECT_OPT_DRVR_START. O driver deve verificar isso.
 
