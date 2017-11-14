@@ -1,0 +1,6 @@
+# [Funções CLR definidas pelo usuário](clr-user-defined-functions.md)
+# [Funções CLR com valor escalar](clr-scalar-valued-functions.md)
+# [Funções CLR com valor de tabela](clr-table-valued-functions.md)
+# [Agregação definida pelo usuário CLR - invocar funções](clr-user-defined-aggregate-invoking-functions.md)
+# [Agregações definidas pelo usuário CLR - requisitos](clr-user-defined-aggregates-requirements.md)
+# [Agregações CLR definidas pelo usuário](clr-user-defined-aggregates.md)
