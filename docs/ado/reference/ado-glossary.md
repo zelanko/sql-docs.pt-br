@@ -3,9 +3,12 @@ title: "Glossário do ADO | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
@@ -296,3 +299,4 @@ Este tópico define condições relevantes para ADO.
   
  Servidor Web  
  Um computador que fornece serviços da Web e páginas para usuários de Internet e intranet.
+
