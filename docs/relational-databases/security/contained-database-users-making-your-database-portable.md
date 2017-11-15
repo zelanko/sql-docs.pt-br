@@ -5,24 +5,23 @@ ms.date: 08/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f6310afe6f8909a560fac0b7762c7aa94e3a1f3
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 410ea9f28ad1a4ec7f48024a6716e5588379af5b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuários de bancos de dados independentes - Tornando seu banco de dados portátil
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="contained-database-user-model"></a>Modelo de usuário de banco de dados independente  
  O logon no banco de dados mestre não está presente no modelo de usuário de banco de dados independente. Em vez disso, o processo de autenticação ocorre no banco de dados do usuário e o usuário no banco de dados não tem um logon associado no banco de dados mestre. O modelo de usuário de banco de dados independente dá suporte à autenticação do Windows e à autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (e pode ser usada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Para se conectar como um usuário de banco de dados independente, a cadeia de conexão sempre deve conter um parâmetro para o banco de dados do usuário para que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] saiba qual banco de dados é responsável por gerenciar o processo de autenticação. A atividade do usuário de banco de dados independente está limitada ao banco de dados responsável pela autenticação. Portanto, ao se conectar como um usuário de banco de dados independente, a conta de usuário do banco de dados deve ser criada independentemente em cada banco de dados de que o usuário precisará. Para alterar os bancos de dados, os usuários [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devem criar uma nova conexão. Os usuários de bancos de dados independentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão alterar bancos de dados se um usuário idêntico estiver presente em outro banco de dados.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] support Azure Active Directory identities as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] dá suporte a usuários de bancos de dados independentes por meio da autenticação do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , ao contrário do [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Para obter mais informações, veja [Conectar-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Ao usar a autenticação do Azure Active Directory, pode-se estabelecer conexões do SSMS por meio da Autenticação Universal do Active Directory.  Os administradores podem configurar a Autenticação Universal para exigir a Autenticação Multifator, que verifica a identidade usando uma chamada telefônica, mensagem de texto, cartão inteligente com PIN ou notificação de aplicativo móvel. Para obter mais informações, consulte [Suporte ao SSMS para MFA do Azure AD com o banco de dados SQL e o SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] dão suporte a identidades do Azure Active Directory como usuários de banco de dados independente. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] dá suporte a usuários de bancos de dados independentes por meio da autenticação do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , ao contrário do [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Para obter mais informações, veja [Conectar-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Ao usar a autenticação do Azure Active Directory, pode-se estabelecer conexões do SSMS por meio da Autenticação Universal do Active Directory.  Os administradores podem configurar a Autenticação Universal para exigir a Autenticação Multifator, que verifica a identidade usando uma chamada telefônica, mensagem de texto, cartão inteligente com PIN ou notificação de aplicativo móvel. Para obter mais informações, consulte [Suporte ao SSMS para MFA do Azure AD com o banco de dados SQL e o SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
  Para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], como o nome de banco de dados sempre é obrigatório na cadeia de conexão, nenhuma alteração é necessária à cadeia de conexão ao mudar do modelo tradicional para o modelo de usuário de banco de dados independente. Para conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o nome do banco de dados deve ser adicionado à cadeia de conexão se não ainda estiver presente.  
   
@@ -98,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [Conectar-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   
   
-

@@ -5,26 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.job.categories.f1
-helpviewer_keywords:
-- Job Categories dialog box
+f1_keywords: sql13.ag.job.categories.f1
+helpviewer_keywords: Job Categories dialog box
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d13d885423f24a28fd70085f207d0ecc7546e2dd
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5526919659f7d5d36943c1fd8619f9c1f5262f52
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="job-categories---manage-job-categories"></a>Categorias de trabalho – Gerenciar categorias de trabalho
 Use a caixa de diálogo **Categorias de Trabalho** para adicionar ou excluir categorias de trabalho. Categorias de trabalho internas não podem ser excluídas.  
@@ -42,7 +38,7 @@ Abre a caixa de diálogo **Propriedades** para a categoria selecionada, para lis
 **Adicionar**  
 Abre a caixa de diálogo **Nova Categoria de Trabalho** , para adicionar uma nova categoria de trabalho  
   
-**Delete (excluir) (excluir)**  
+**Delete (excluir)**  
 Remove a categoria de trabalho selecionada. Habilitada somente para categorias de trabalho definidas pelo usuário.  
   
 **Atualizar**  
@@ -52,4 +48,3 @@ Consulta o servidor para obter as informações atuais.
   
 1.  No **Pesquisador de Objetos**, expanda **SQL Server Agent**, clique com o botão direito do mouse em **Trabalhos**e, então, clique em **Gerenciar Categorias de Trabalho**.  
   
-

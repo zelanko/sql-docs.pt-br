@@ -5,35 +5,34 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee981bee7832202a85186216a21f6f3129dfdc0a
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a6f1ac20142830ba91edc3835879bead8549f797
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Trabalhar com caminhos do SQL Server PowerShell
   Depois de navegar para um nó em um caminho de provedor do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , pode executar trabalho ou recuperar informações usando os métodos e as propriedades do objeto de gerenciamento do [!INCLUDE[ssDE](../../includes/ssde-md.md)] associado com o nó.  
   
 1.  [Antes de começar](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  **Para trabalhar em um nó de caminho:**  [Listando métodos e propriedades](#ListPropMeth), [Usando métodos e propriedades](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Depois de navegar até um nó em um caminho do provedor do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , você poderá executar dois tipos de ações:  
   
 -   Você pode executar os cmdlets do Windows PowerShell que funcionam em nós, como **Rename-Item**.  
   
--   Você pode chamar os métodos do modelo de objeto de gerenciamento associado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como SMO. Por exemplo, se você navegar até o nó Bancos de Dados em um caminho, poderá usar os métodos e as propriedades da classe <xref:Microsoft.SqlServer.Management.Smo.Database>.  
+-   Você pode chamar os métodos do modelo de objeto de gerenciamento associado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como SMO. Por exemplo, se você navegar até o nó Banco de Dados em um caminho, poderá usar os métodos e as propriedades da classe <xref:Microsoft.SqlServer.Management.Smo.Database> .  
   
  O provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usado para gerenciar os objetos em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ele não é usado para trabalhar com dados em bancos de dados. Se você navegou até uma tabela ou exibição, não é possível usar o provedor para selecionar, inserir, atualizar ou excluir dados. Use o cmdlet **Invoke-Sqlcmd** para consultar ou alterar dados em tabelas e exibições do ambiente do Windows PowerShell. Para obter mais informações, veja [Cmdlet Invoke-Sqlcmd](../../powershell/invoke-sqlcmd-cmdlet.md).  
   

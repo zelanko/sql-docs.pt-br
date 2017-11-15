@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], renaming
 - renaming solutions
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4e69d3aca72c47890163d12658346ccaaaf02d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 950ee0f9e231b6776b644edf613bbd52f28a7142
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rename-solutions-and-project-items"></a>Renomear soluções e itens de projeto
 Você pode renomear uma solução e seus itens de projeto no Gerenciador de Soluções.  
@@ -44,4 +42,3 @@ Você pode renomear uma solução e seus itens de projeto no Gerenciador de Solu
 ## <a name="see-also"></a>Consulte também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
   
-

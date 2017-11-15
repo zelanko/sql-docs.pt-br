@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
 - VS.ToolboxPages.Maintenance_Tasks
-helpviewer_keywords:
-- Customize Toolbox dialog box
+helpviewer_keywords: Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9002551a59ec21f0572906f256577e7157503414
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d3b661fc344ca48b1cb1d44a40cec9f9731cafec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Escolher itens da caixa de ferramenta (página Tarefas de Manutenção)
 Esta guia da caixa de diálogo **Personalizar Caixa de Ferramentas** exibe uma lista de todos os componentes de tarefas de manutenção registrados em seu computador e permite alterar os que são exibidos na caixa de ferramentas. Você pode abrir a caixa de diálogo **Personalizar Caixa de Ferramentas** no menu **Ferramentas** . Para ordenar a lista de componentes, selecione qualquer título de coluna.  
@@ -51,4 +48,3 @@ A linguagem do componente.
 **Versão**  
 A versão do componente.  
   
-

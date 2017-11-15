@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: bb97a542834adce9221b55f54c4bf5657586f187
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: d0e126678e921a47135ada143b1dba53a467df7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 Release Notes
 Este documento de Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. Este documento de Notas de versão está disponível somente online, não em mídia de instalação, e é atualizado periodicamente.  
@@ -54,7 +53,7 @@ Use a tabela a seguir para determinar qual arquivo baixar e instalar. Verifique 
   
 |Se a versão instalada atual for...|E você quiser...|Baixar e instalar...|  
 |-------------------------------------------|----------------------|---------------------------|  
-|**Instalações de 32 bits:**|||  
+|**Instalações de&32; bits:**|||  
 |Uma versão de 32 bits de qualquer edição do SQL Server 2012|Atualizar para a versão de 32 bits do SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Uma versão de 32 Bits do SQL Server 2012 RTM Express|Atualizar para a versão de 32 bits do SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Uma versão de 32 bits de somente ferramentas do cliente e de gerenciamento para SQL Server 2012 (incluindo SQL Server 2012 Management Studio)|Atualizar as ferramentas do cliente e de gerenciamento para a versão de 32 bits do SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -65,7 +64,7 @@ Use a tabela a seguir para determinar qual arquivo baixar e instalar. Verifique 
 |Nenhuma instalação de 32 bits do SQL Server 2012 Management Studio|Instalar a versão de 32 bits do SQL Server 2012 Management Studio incluindo SP1|SQLManagementStudio_x86_ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Nenhuma versão de 32 Bits do SQL Server 2012 RTM Express|Instalar a versão de 32 bits do SQL Server 2012 Express incluindo SP1|SQLEXPR32_x86_ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Uma instalação de 32 bits do **SQL Server 2008** ou do **SQL Server 2008 R2**|**Atualização in-loco** para a versão de 32 bits do SQL Server 2012 com SP1|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x86-ENU.box [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|**Instalações de 64 bits:**|||  
+|**Instalações de&64; bits:**|||  
 |Uma versão de 64 bits de qualquer edição do SQL Server 2012|Atualizar para a versão de 64 bits do SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Uma versão de 64 Bits do SQL Server 2012 RTM Express|Atualizar para a versão de 64 bits do SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Uma versão de 64 bits com somente o cliente e as ferramentas de gerenciamento para SQL Server 2012 SQL (incluindo SQL Server 2012 Management Studio)|Atualizar o cliente e as ferramentas de gerenciamento para a versão de 64 bits do SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -205,4 +204,3 @@ Para obter uma lista completa de bugs e problemas conhecidos corrigidos neste se
 [Como determinar a versão e a edição do SQL Server](http://support.microsoft.com/kb/321185)  
 [Recursos com suporte nas edições do SQL Server 2014](http://msdn.microsoft.com/en-us/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
   
-

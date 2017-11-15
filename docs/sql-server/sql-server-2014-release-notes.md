@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 100
+caps.latest.revision: "100"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d6d229c14056f9157bd219ba6cbb7590eb14a7b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 3c507363ad05be7410ae69fc6d5f6748ad1738cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 Este documento Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
@@ -430,4 +429,3 @@ Culture=neutral, PublicKeyToken=89845dcd8080cc91
 ![Ícone de seta usado com o link Voltar ao início](../sql-server/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Início](#top)  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

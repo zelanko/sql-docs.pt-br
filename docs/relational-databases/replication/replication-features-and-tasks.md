@@ -5,8 +5,7 @@ ms.date: 07/11/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - replication [SQL Server], development
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bf60a2e249063cee1669fd4f87a41818847372a
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1b4ef422b369e65855321be32b171522337441e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-features-and-tasks"></a>Recursos e tarefas de replicação
   Encontra informações que qualquer profissional (designer, desenvolvedor, analista ou administrador) precisa para projetar e implementar soluções de replicação.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Configurar a replicação para grupos de disponibilidade Sempre Ativo &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
--   [Mantendo um banco de dados de publicação Sempre ativo &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
+-   [Mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
 -   [Replicação, controle de alterações, captura de dados de alteração e grupos de disponibilidade Sempre ativos &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
@@ -67,4 +66,3 @@ ms.lasthandoff: 06/22/2017
  [Referência técnica &#40;Replicação&#41;](../../relational-databases/replication/technical-reference-replication.md)  
   
   
-

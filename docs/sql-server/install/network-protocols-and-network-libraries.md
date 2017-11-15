@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,28 +20,28 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aac8ea2ddd6582529952398f3896f548d8117078
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 657134dd5c6c7fe7c4ee81050c570dc14e9d23d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="network-protocols-and-network-libraries"></a>Protocolos de rede e bibliotecas de rede
+# Protocolos de rede e bibliotecas de rede
   Um servidor pode escutar ou monitorar vários protocolos de rede ao mesmo tempo. Entretanto, cada protocolo deve ser configurado. Se um protocolo específico não for configurado, o servidor não poderá escutar naquele protocolo. Após a instalação, você pode alterar as configurações de protocolo usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
-## <a name="default-sql-server-network-configuration"></a>Configuração de rede padrão do SQL Server  
+## Configuração de rede padrão do SQL Server  
  Uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurada para a porta TCP/IP 1433 e para o pipe nomeado \\\\.\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são configuradas para portas dinâmicas TCP, com um número de porta atribuído pelo sistema operacional.  
   
  Se não for possível usar endereços de porta dinâmicos (por exemplo, quando as conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisam passar por um servidor de firewall configurado para passar por endereços de porta específicos). Selecione um número de porta não atribuído. As atribuições de número da porta são gerenciadas pela IANA (Internet Assigned Numbers Authority) e são listadas em [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
   
  Para aumentar a segurança, a conectividade de rede não é habilitada completamente quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado. Para habilitar, desabilitar e configurar protocolos de rede depois que a Instalação for concluída, use a Área de Configuração de Rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
-## <a name="server-message-block-protocol"></a>Protocolo SMB  
+## Protocolo SMB  
  Os servidores na rede de perímetro devem ter todos os protocolos desnecessários desabilitados, incluindo o SMB. Os servidores Web e DNS (Sistema de Nome de Domínio) não requerem SMB. Este protocolo deve ser desabilitado para contra-atacar a ameaça de enumeração de usuário.  
   
 > [!WARNING]  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 > -   Especificar um compartilhamento de arquivos SMB como o diretório de dados durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Criar um arquivo de banco de dados em um compartilhamento de arquivos SMB  
   
-#### <a name="to-disable-smb"></a>Para desabilitar o SMB  
+#### Para desabilitar o SMB  
   
 1.  No menu **Iniciar** , aponte para **Configurações**e clique em **Conexões Discadas e de Rede**.  
   
@@ -66,11 +65,11 @@ ms.lasthandoff: 06/22/2017
   
 5.  Siga as etapas de desinstalação.  
   
-#### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>Para desabilitar o SMB em servidores acessíveis pela Internet  
+#### Para desabilitar o SMB em servidores acessíveis pela Internet  
   
 -   Nas propriedades da Conexão Local, use a caixa de diálogo **Transmission Control Protocol/Internet Protocol (TCP/IP) properties (Propriedades de protocolo TCP/IP)** para remover **Compartilhamento arquivos/impressoras p/ redes Microsoft** e **Cliente para Redes Microsoft**.  
   
-## <a name="endpoints"></a>Pontos de extremidade  
+## Pontos de extremidade  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apresenta um novo conceito para conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; a conexão é representada na extremidade do servidor por um [!INCLUDE[tsql](../../includes/tsql-md.md)]*ponto de extremidade*. As permissões podem ser concedidas, revogadas e negadas para pontos de extremidade [!INCLUDE[tsql](../../includes/tsql-md.md)] . Por padrão, todos os usuários têm permissões para acessar um ponto de extremidade, a menos que as permissões sejam negadas ou revogadas por um membro do grupo sysadmin ou pelo proprietário do ponto de extremidade. A sintaxe de GRANT, REVOKE e DENY ENDPOINT usa um ID de ponto de extremidade que o administrador deve obter da exibição de catálogo do ponto de extremidade.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria pontos de extremidade [!INCLUDE[tsql](../../includes/tsql-md.md)] para todos os protocolos de rede com suporte, bem como para a conexão de administrador dedicada.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Configuração de rede do servidor](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também  
  [Configuração da Área de Superfície](../../relational-databases/security/surface-area-configuration.md)   
  [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  

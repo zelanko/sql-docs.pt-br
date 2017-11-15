@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f057c7af427ba69ff5b6253ae0d3c7e33ce435aa
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: fbffc3ea565ac6ccebcb13a4b5977f825908b541
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Criar um novo diagrama de banco de dados (Visual Database Tools)
 Você pode utilizar o Pesquisador de Objetos para criar novos diagramas de banco de dados. Os diagramas de banco de dados exibem graficamente a estrutura do banco de dados. Com os diagramas de banco de dados você pode criar e alterar tabelas, colunas, relações e chaves. Além disso, pode alterar índices e restrições.  
@@ -46,4 +44,3 @@ Você pode continuar a adicionar ou excluir tabelas, modificar as tabelas existe
 [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Compreender a propriedade do diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   
-

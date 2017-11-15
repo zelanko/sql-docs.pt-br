@@ -1,13 +1,11 @@
 ---
 title: "Solução de problemas de cluster de failover | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 10/21/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: cd7bcdf3515d6c8f88ef870494c4f6f8b5545fb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="failover-cluster-troubleshooting"></a>Diagnóstico e solução de problemas do cluster de failover
   Este tópico contém informações sobre os seguintes problemas:  
@@ -97,7 +95,7 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
   
  **Resolução 1**: verifique nos logs de eventos se existem sinais de problemas de rede, como falhas de adaptador ou problemas de DNS. Verifique se você consegue executar ping no controlador de domínio.  
   
- **Problema 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não são idênticas em todos os nós do cluster ou o nó não reinicia um serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que foi migrado de um nó com problema.  
+ **Problema 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não são idênticas em todos os nós do cluster, ou o nó não reinicia um serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] migrado de um nó com falha.  
   
  **Resolução 2:** altere as senhas das contas de serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager. Se você não fizer isso e alterar as senhas de contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um nó, também deverá alterar as senhas em todos os outros nós. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager faz isso automaticamente.  
   
@@ -127,7 +125,7 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
   
  **Resolução 2:** use NBTSTAT para localizar o nome duplicado e corrigir o problema.  
   
- **Problema 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não está se conectando usando Pipes Nomeados.  
+ **Problema 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não está se conectando usando os Pipes Nomeados.  
   
  **Resolução 3:** para se conectar usando Pipes Nomeados, crie um alias usando o SQL Server Configuration Manager para se conectar ao computador apropriado. Por exemplo, se você tiver um cluster com dois nós (**Nó A** e **Nó B**) e uma instância do cluster de failover (**Virtsql**) com uma instância padrão, poderá se conectar ao servidor que está com o recurso de Nome de Rede offline seguindo estas etapas:  
   
@@ -195,4 +193,3 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
  [Características de execução de procedimentos armazenados estendidos](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
   
   
-

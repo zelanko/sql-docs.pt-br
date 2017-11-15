@@ -4,8 +4,7 @@ ms.date: 08/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb839fc8929f20c0ac7ca72dc90f364382bc33d0
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 01c9732a26e3e5e717de05a16e4c65b06c9cd358
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-full-text-search"></a>Iniciar a pesquisa de texto completo
 Por padrão, os bancos de dados do SQL Server são habilitados para texto completo. No entanto, antes de executar consultas de texto completo, é necessário criar um catálogo de texto completo e criar um índice de texto completo em tabelas ou exibições indexadas nas quais você deseja pesquisar.
@@ -129,4 +127,3 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
 
 ## <a name="next-steps"></a>Próximas etapas
 Depois de configurar a pesquisa de texto completo do SQL Server, você estará pronto para executar consultas de texto completo. Para mais informações, veja [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md).
-

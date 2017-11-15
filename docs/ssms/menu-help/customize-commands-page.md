@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.vs.customizecom.f1
 - vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e85facb982aa8d7bea852051bbe4e9b37811c4c5
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: adcb678da9ce46a261aa288085339e820137d616
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
 Esta caixa de diálogo permite adicionar e remover comandos em barras de ferramentas e menus, além de alterar as imagens usadas nos botões das barras de ferramentas ou nos comandos de menu. Você pode acessar a página **Comandos** clicando em **Personalizar** no menu **Ferramentas** e, em seguida, em **Comandos**.  
@@ -47,4 +45,3 @@ Exibe a página **Teclado** da caixa de diálogo **Opções** para que você pos
 ## <a name="see-also"></a>Consulte também  
 [Personalizar menus e teclas de atalho](../../ssms/customize-menus-and-shortcut-keys.md)  
   
-
