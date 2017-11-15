@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - printing query results
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 7ba40459f019675c3975b31155cbd7f3cfbfa45e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>Imprimir resultados da consulta (Visual Database Tools)
 Para imprimir os resultados de sua consulta, você pode copiar o conteúdo do [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) em outro programa do Windows, como um programa de processamento de texto, depois formatar e imprimi-lo.  
@@ -47,4 +45,3 @@ O Designer de Consulta e Exibição coloca os resultados da consulta na Área de
 ## <a name="see-also"></a>Consulte também  
 [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-
