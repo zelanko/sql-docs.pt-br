@@ -1,1 +1,0 @@
-<Token>**ESTE TÓPICO APLICA-SE A:**![sim](media/yes.png)SQL Server no Windows (começando com o 2017) ![sim](media/yes.png)SQL Server no Linux![não](media/no.png)Banco de Dados SQL do Azure![não](media/no.png)SQL Data Warehouse do Azure ![não](media/no.png)Parallel Data Warehouse </Token>
