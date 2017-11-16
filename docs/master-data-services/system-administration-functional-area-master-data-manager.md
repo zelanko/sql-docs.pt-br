@@ -5,22 +5,20 @@ ms.date: 04/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 344f8611a3abd60f93f265deef7e857d3306e897
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: db2ce55d178cd7de3e179e3ae1543d8a9f3460b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Área funcional Administração do Sistema (Master Data Manager)
   Na área funcional Administração do Sistema, os administradores podem criar um modelo e todos os seus objetos. Eles também podem criar regras de negócio e criar e implantar pacotes modelo. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/07/2017
  [Aplicativo Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   
-

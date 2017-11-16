@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL:StmtStarting event class
+helpviewer_keywords: SQL:StmtStarting event class
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30ff970e6dddcde5e23d0aaaf8848d9a18f87db1
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 47fd548d6e8c35e040e729b532dcd14ed461294f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlstmtstarting-event-class"></a>Classe de evento SQL:StmtStarting
   A classe de evento do SQL:StmtStarting indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] foi iniciada.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 |NestLevel|**int**|Nível de aninhamento do procedimento armazenado se a instrução SQL foi executada em um procedimento armazenado.|29|Sim|  
 |NTDomainName|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
-|Deslocamento|**Int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Deslocamento|**int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  

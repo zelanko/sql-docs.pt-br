@@ -5,25 +5,23 @@ ms.date: 09/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-transaction-log
+ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 70f830b3e94781733cf18ea638912e5813ffeb90
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="control-transaction-durability"></a>Controlar a durabilidade da transação
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -94,7 +92,7 @@ ms.lasthandoff: 06/22/2017
     
 ## <a name="how-to-control-transaction-durability"></a>Como controlar a durabilidade da transação    
     
-###  <a name="bkmk_DbControl"></a> Database level control    
+###  <a name="bkmk_DbControl"></a> Controle de nível de banco de dados    
  Você, o DBA, pode controlar se os usuários podem usar a durabilidade da transação atrasada em um banco de dados com a instrução a seguir. Você deve definir a configuração de durabilidade atrasada com ALTER DATABASE.    
     
 ```tsql    
@@ -110,7 +108,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORÇADO**    
  Com essa configuração, cada transação que é confirmada no banco de dados é durável atrasada. Independentemente de a transação especificar completamente durável (DELAYED_DURABILITY = OFF) ou não fizer nenhuma especificação, a transação será durável atrasada. Essa configuração é útil quando a durabilidade da transação atrasada é útil para um banco de dados e você não quer alterar o código do aplicativo.    
     
-###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
+###  <a name="CompiledProcControl"></a> Controle no nível do bloco atômico – procedimentos armazenados e compilados nativamente    
  O código a seguir fica dentro do bloco atômico.    
     
 ```tsql    
@@ -145,7 +143,7 @@ END
 |**DELAYED_DURABILITY = OFF**|O bloco atômico inicia uma nova transação completamente durável.|O bloco atômico cria um ponto de salvamento na transação existente e, em seguida, inicia a nova transação.|    
 |**DELAYED_DURABILITY = ON**|O bloco atômico inicia uma nova transação durável atrasada.|O bloco atômico cria um ponto de salvamento na transação existente e, em seguida, inicia a nova transação.|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> Controle de nível COMMIT –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  A sintaxe de COMMIT é estendida para que você possa forçar a durabilidade da transação atrasada. Se DELAYED_DURABILITY for DISABLED ou FORCED no nível de banco de dados (veja acima) essa opção COMMIT será ignorada.    
     
 ```tsql    
@@ -201,7 +199,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **backup de log**    
  Somente as transações que se tornaram duráveis são incluídas no backup.    
     
-##  <a name="bkmk_DataLoss"></a> When can I lose data?    
+##  <a name="bkmk_DataLoss"></a> Onde posso perder os dados?    
  Se você implementar durabilidade atrasada em qualquer de suas tabelas, você deve compreender que certas circunstâncias podem levar à perda de dados. Se você não puder tolerar perda de dados, não use a durabilidade atrasada em suas tabelas.    
     
 ### <a name="catastrophic-events"></a>Eventos catastróficos    
@@ -214,4 +212,3 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  [Transações com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
-

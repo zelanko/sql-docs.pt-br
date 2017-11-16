@@ -5,8 +5,7 @@ ms.date: 03/04/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - temporary stored procedures [SQL Server]
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-caps.latest.revision: 66
+caps.latest.revision: "66"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 003196d8c30ca45c54750587c03c8d7d6e5a358d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
   O banco de dados do sistema **tempdb** é um recurso global disponível a todos os usuários conectados a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é usado para manter o seguinte:  
@@ -159,4 +157,3 @@ O valor padrão para o número de arquivos de dados baseia-se nas diretrizes ger
  [Trabalhando com tempdb no SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
   
   
-

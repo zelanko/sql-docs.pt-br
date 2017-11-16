@@ -5,21 +5,20 @@ ms.date: 01/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: ce5cac87f5b7e22f3f7ce0099abd7b210843ca7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Índices columnstore – data warehouse
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -142,12 +141,11 @@ END TRAN
  Use o SI (isolamento de instantâneo) para garantir a consistência transacional, e os RCSI (isolamentos de instantâneo de leitura confirmada) para garantir a consistência no nível da instrução para consultas em índices columnstore. Isso permite que as consultas sejam executadas sem bloquear os gravadores de dados. Esse comportamento de não bloqueio também reduz consideravelmente a probabilidade de deadlocks para transações complexas. Para saber mais, confira [Isolamento de instantâneo no SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) no MSDN.  
   
 ## <a name="see-also"></a>Consulte também  
- Guia de índices Columnstore   
- Carregamento de dados dos índices columnstore   
+ Guia de Índices columnstore   
+ Carregamento de dados dos Índices columnstore   
  Resumo de recursos com versão dos índices columnstore   
  [Desempenho de consultas de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

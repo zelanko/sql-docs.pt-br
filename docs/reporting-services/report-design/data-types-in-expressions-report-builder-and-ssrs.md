@@ -1,5 +1,5 @@
 ---
-title: "Tipos de dados em expressões (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Tipos de dados em expressões (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: efd0b42180aa54a60c572c6c149aa53bd9ee852c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
   Os tipos de dados representam tipos diferentes de dados de forma que eles possam ser armazenados e processados com eficiência. Tipos de dados comuns incluem texto (também conhecido como cadeias de caracteres) com e sem casas decimais, datas e horas e imagens. Os valores em um relatório devem ser um tipo de dados RDL. Você pode formatar um valor de acordo com sua preferência ao exibi-lo em um relatório. Por exemplo, um campo que representa moeda pode ser armazenado na definição de relatório como um número de ponto flutuante, mas pode ser exibido em uma variedade de formatos, dependendo da propriedade de formato escolhida.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Crie um campo calculado com base em um campo de conjunto de dados de relatório existente, escrevendo uma expressão que converta todos os dados em uma coluna de conjunto de resultados em uma nova coluna com um tipo de dados diferente. Por exemplo, a expressão seguir converte o campo Ano de um valor inteiro para um valor de cadeia: `=CStr(Fields!Year.Value)`. Para saber mais, confira [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Verifique se a extensão de processamento de dados que você está usando inclui metadados para recuperar dados pré-formatados. Por exemplo, uma consulta MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui a propriedade estendida FORMATTED_VALUE para valores de cubo que já foram formatados ao processar o cubo. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Verifique se a extensão de processamento de dados que você está usando inclui metadados para recuperar dados pré-formatados. Por exemplo, uma consulta MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui a propriedade estendida FORMATTED_VALUE para valores de cubo que já foram formatados ao processar o cubo. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Entendendo os tipos de dados de parâmetro  
  Os parâmetros de relatório devem ser um dos cinco tipos de dados: Boolean, DateTime, Integer, Float ou Text (também conhecido como String). Quando sua consulta de conjunto de dados inclui parâmetros de consulta, os parâmetros de relatório são criados automaticamente e vinculados a parâmetros de consulta. O tipo de dados padrão para um parâmetro de relatório é String. Para alterar o tipo de dados padrão de um parâmetro de relatório, selecione o valor correto da lista suspensa **Tipo de dados** na página **Geral** da caixa de diálogo **Propriedades do Parâmetro de Relatórios** .  
@@ -101,9 +100,9 @@ ms.lasthandoff: 08/09/2017
  Quando você se conecta a uma fonte de dados com um provedor de dados que não fornece suporte à conversão para todos os tipos de dados dessa fonte de dados, o tipo de dados padrão para tipos de dados não suportados é String. Os exemplos a seguir fornecem soluções para tipos de dados específicos retornados como uma cadeia.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>Concatenando um tipo de dados String e um DateTimeOffset CLR  
- Para a maioria dos tipos de dados, o CLR fornece conversões padrão para que você possa concatenar valores que são de tipos de dados diferentes em uma cadeia, usando o operador &. Por exemplo, a expressão a seguir concatena o texto "A data e hora são:" com um campo de conjunto de dados StartDate, que é um valor <xref:System.DateTime>: `="The date and time are: " & Fields!StartDate.Value`.  
+ Para a maioria dos tipos de dados, o CLR fornece conversões padrão para que você possa concatenar valores que são de tipos de dados diferentes em uma cadeia, usando o operador &. Por exemplo, a expressão a seguir concatena o texto "A data e hora são:" com um campo de conjunto de dados StartDate, que é um valor <xref:System.DateTime> : `="The date and time are: " & Fields!StartDate.Value`.  
   
- Para alguns tipos de dados, talvez você precise incluir a função ToString. Por exemplo, a expressão a seguir mostra o mesmo exemplo usando o tipo de dados CLR <xref:System.DateTimeOffset>, que incluem a data, a hora e um fuso horário deslocamento relativo ao fuso horário UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
+ Para alguns tipos de dados, talvez você precise incluir a função ToString. Por exemplo, a expressão a seguir mostra o mesmo exemplo usando o tipo de dados CLR <xref:System.DateTimeOffset>, que inclui a data, a hora e o deslocamento de fuso horário relativo ao fuso horário UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
   
 ### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>Convertendo um tipo de dados String em um tipo de dados DateTime CLR  
  Se uma extensão de processamento de dados não oferecer suporte a todos os tipos de dados definidos em uma fonte de dados, os dados poderão ser recuperados como texto. Por exemplo, um valor de tipo de dados **datetimeoffset(7)** pode ser recuperado como um tipo de dados String. Em Perth, Austrália, o valor da cadeia para 1º de julho de 2008, às 6:05:07,9999999 AM. seria semelhante a:  
@@ -146,10 +145,9 @@ ms.lasthandoff: 08/09/2017
   
  Para obter mais informações sobre tipos de dados do banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) e [Tipos e funções de dados de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) em [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- Para obter mais informações sobre tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Tipos de dados no Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) em [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Para obter mais emformações sobre tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consulte [Tipos de dados no Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) em [SQL Server Books Onleme](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   
-

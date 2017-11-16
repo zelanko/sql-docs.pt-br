@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8de57644d66112352b48a88a5ce80bb15bc24dd6
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0e46255c7b91546ff00dadd04c5bc7d214831b2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-properties-subscription-options"></a>Propriedades da Publicação, Opções de Assinatura
   A página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação** permite visualizar e definir propriedades de nível de publicação associadas a assinaturas. As propriedades são agrupadas nas categorias seguintes:  
@@ -52,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="schema-replication"></a>Replicação de esquema  
  **Replicar alterações de esquema**  
-Somente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se as alterações de esquema (como adicionar uma coluna a uma tabela ou alterar tipos de dados de uma coluna) devem ou não ser replicadas para objetos publicados. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
+ Somente[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se as alterações de esquema (como adicionar uma coluna a uma tabela ou alterar tipos de dados de uma coluna) devem ou não ser replicadas para objetos publicados. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Opções para publicações transacionais e de instantâneo  
   
@@ -64,10 +62,10 @@ Somente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2
  Determina se são criados arquivos de instantâneo cada vez que o Agente de Instantâneo é executado (requer **Agente de Distribuição Independente**). Essa opção é somente leitura; ela será definida como **Verdadeiro** se você selecionar **Criar um instantâneo imediatamente e mantê-lo disponível para inicializar assinaturas** na página **Agente de Instantâneo** do Assistente para Nova Publicação (o padrão). Para obter mais informações, consulte [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-snapshot.md) (Criar e aplicar o instantâneo).  
   
  **Permitir inicialização com base nos arquivos de backup**  
-Somente o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se deve haver permissão para que os arquivos de backup sejam usados para inicializar assinaturas. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+ Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se deve haver permissão para que os arquivos de backup sejam usados para inicializar assinaturas. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Permitir Assinantes não SQL Server**  
-Somente o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação oferece suporte a Assinantes não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Definir essa opção como **Verdadeiro** define outras propriedades de publicação para dar suporte a Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se houver assinaturas, essa opção será somente leitura; ela não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata**, **Permitir assinaturas de atualização enfileirada**ou **Permitir assinaturas ponto a ponto** forem definidas como **Verdadeiro**. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação oferece suporte a Assinantes não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Definir essa opção como **Verdadeiro** define outras propriedades de publicação para dar suporte a Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se houver assinaturas, essa opção será somente leitura; ela não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata**, **Permitir assinaturas de atualização enfileirada**ou **Permitir assinaturas ponto a ponto** forem definidas como **Verdadeiro**. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformação de dados  
  **Permitir transformações de dados**  
@@ -116,7 +114,7 @@ Somente o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versõ
  Determina quais funções usar ao validar que um Assinante tem a partição correta de dados. Separe valores múltiplos por vírgulas. Para obter mais informações, consulte [Validate Partition Information for a Merge Subscriber](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md) (Validar informações de partição para um assinante de mesclagem).  
   
  **Pré-calcular partições**  
-Somente o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a sincronização deve ser otimizada calculando com antecedência quais linhas de dados pertencem a quais partições. Essa configuração assumira **Verdadeiro** como padrão, se a publicação atender aos critérios de partições pré-calculadas. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
+ Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a sincronização deve ser otimizada calculando com antecedência quais linhas de dados pertencem a quais partições. Essa configuração assumira **Verdadeiro** como padrão, se a publicação atender aos critérios de partições pré-calculadas. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
  **Otimizar sincronização**  
  Determina se o processamento de mesclagem deve ser otimizado armazenando metadados adicional em cada Assinante. Essa otimização foi substituída por partições pré-computadas; a opção **Otimizar sincronização** só será relevante se **Pré- calcular partições** for definida como **Falso**. Para obter mais informações, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CursorPrepare event class
+helpviewer_keywords: CursorPrepare event class
 ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 92c50db79b48036f846096222b66d71a2609d1e6
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 978867c63089538ad4d02c92058fa147560e7ee3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cursorprepare-event-class"></a>classe de evento CursorPrepare
   A classe de evento **CursorPrepare** descreve os eventos de preparação do cursor que acontecem nos cursores da API (interface de programação de aplicativos). Os eventos de preparação do cursor ocorrem quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila uma instrução SELECT associada a um cursor em um plano de execução, mas não cria o cursor.  

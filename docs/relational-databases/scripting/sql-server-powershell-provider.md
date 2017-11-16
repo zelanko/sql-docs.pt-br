@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - PowerShell [SQL Server], SMO
 - SQL Server Management Objects, PowerShell
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fe5587212030b01ec03aa357e3bf4ff7f6ac0e73
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b88611b6d25c2908a679b84f73ccad5b12cfbe
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-powershell-provider"></a>Provedor do SQL Server PowerShell
   O provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o Windows PowerShell expõe a hierarquia de objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em caminhos semelhantes aos caminhos do sistema de arquivos. Você pode usar os caminhos para localizar um objeto e usar os métodos dos modelos SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) para executar ações nos objetos.  
@@ -81,4 +79,3 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
-

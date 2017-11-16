@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Add DB User event class
+helpviewer_keywords: Audit Add DB User event class
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a0d088340be4c057b03b2e8d2c04a1fb2922f59
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0c7de35de5031e404f7ac4a2ea580988bec1d981
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-add-db-user-event-class"></a>Classe de evento Audit Add DB User
   A classe de evento **Audit Add DB User** ocorre sempre que um logon é adicionado ou removido como um usuário de banco de dados para um banco de dados. Essa classe de evento é usada para os procedimentos armazenados **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**e **sp_dropuser** .  
@@ -54,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 |**SessionLoginName**|**Nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
-|**Êxito**|**Int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 indica êxito em uma verificação de permissões e o valor 0 indica falha nessa verificação.|23|Sim|  
+|**Êxito**|**int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 indica êxito em uma verificação de permissões e o valor 0 indica falha nessa verificação.|23|Sim|  
 |**TargetLoginName**|**nvarchar**|Nome do logon que está tendo seu acesso de banco de dados modificado.|42|Sim|  
 |**TargetLoginSid**|**image**|Para ações direcionadas a um logon (por exemplo, adição de um novo logon), o SID (número de ID de segurança) do logon de destino.|43|Sim|  
 |**TargetUserName**|**nvarchar**|Nome do usuário do banco de dados que está sendo adicionado.|39|Sim|  

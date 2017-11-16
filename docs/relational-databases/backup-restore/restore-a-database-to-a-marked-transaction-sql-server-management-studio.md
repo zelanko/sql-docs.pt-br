@@ -5,27 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.restoretlog.markedtransaction.f1
+f1_keywords: sql13.swb.restoretlog.markedtransaction.f1
 helpviewer_keywords:
 - database restores [SQL Server], marked transactions
 - restoring databases [SQL Server], marked transactions
 - marked transactions [SQL Server], restoring
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 48529229420d7c2dafad334f3104e01add1a6746
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7753a99c8e02a66b95509fd8124976a484490c48
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurar um banco de dados para uma transação marcada (SQL Server Management Studio)
   Quando um banco de dados está no estado de restauração, é possível usar a caixa de diálogo **Restaurar Log de Transações** para restaurar o banco de dados para uma transação marcada nos backups de log disponíveis.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 06/22/2017
     |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
     |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
     |**LSN**|Número de sequência de log da transação marcada.|  
-    |**Banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  
+    |**Backup de banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  
     |**Nome do Usuário**|Nome do usuário do banco de dados que confirmou a transação marcada.|  
   
 ## <a name="see-also"></a>Consulte também  

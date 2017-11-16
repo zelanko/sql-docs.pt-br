@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,19 +13,18 @@ f1_keywords:
 - sql13.swb.editorxml.f1
 - vs.xmleditor
 - sql13.swb.xmleditor.f1
-helpviewer_keywords:
-- XML Designer [SQL Server Management Studio]
+helpviewer_keywords: XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b241ee1d04df5845899810d5f4e839e9f6d22860
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: bc3cfd22e1bff42f4ea4730337d01da0c2d5f6a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
   Fornece um conjunto de ferramentas visuais para trabalhar com Esquemas XML, conjuntos de dados ADO.NET e documentos XML. O XML Designer oferece suporte para a linguagem de definição de esquema XML (XSD) definida pelo World Wide Web Consortium (WC3). O designer não oferece suporte para DTDs (definições de tipo de documento) ou outras linguagens de esquema XML, como XDR (XML-Data Reduced).  
@@ -99,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 -   Gerar um esquema XML a partir de um documento XML  
   
 ## <a name="xml-view"></a>Exibição XML  
- A exibição XML fornece um editor para edição de XML bruto e, ainda, codificação IntelliSense e de cores. A conclusão de instrução está disponível ao se trabalhar em arquivos .xsd e arquivos .xml que tenham um esquema associado. Digite < para iniciar uma marca e você terá uma lista de elementos válidos naquele local. Depois de digitar o nome do elemento e pressionar SPACEBAR, você terá uma lista de atributos para os quais os elementos oferecem suporte.   
+ A exibição XML fornece um editor para edição de XML bruto e, ainda, codificação IntelliSense e de cores. A conclusão de instrução está disponível ao se trabalhar em arquivos .xsd e arquivos .xml que tenham um esquema associado. Digite < para iniciar uma marca e você terá uma lista de elementos válidos naquele local. Depois de digitar o nome do elemento e pressionar SPACEBAR, você terá uma lista de atributos para os quais os elementos oferecem suporte.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense não estão disponíveis na barra de ferramentas. Quando estiver no Editor de XML, clique em **IntelliSense** no menu **Editar**para acessar as opções.  
@@ -111,4 +109,3 @@ ms.lasthandoff: 06/22/2017
  [Salvar um plano de execução em formato XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
-

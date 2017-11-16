@@ -1,5 +1,5 @@
 ---
-title: "Tipo de Conexão de lista do SharePoint (SSRS) | Microsoft Docs"
+title: "Tipo de conexão da lista do SharePoint (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 00525d6020ece647a6a7dbd7630e20422aa94223
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-Para incluir dados de uma lista do Microsoft SharePoint no relatório, você deve adicionar ou criar um conjunto de dados baseado em uma fonte de dados de relatório do tipo Lista do Microsoft SharePoint. Esse é um tipo de fonte de dados interna baseado na extensão de dados Lista do SharePoint do Microsoft SQL Server Reporting Services. Use esse tipo de fonte de dados para se conectar e recuperar dados de lista do SharePoint 2013 e posterior.
+Para incluir dados de uma lista do Microsoft SharePoint no relatório, você deve adicionar ou criar um conjunto de dados baseado em uma fonte de dados de relatório do tipo Lista do Microsoft SharePoint. Esse é um tipo de fonte de dados interna baseado na extensão de dados Lista do SharePoint do Microsoft SQL Server Reporting Services. Use esse tipo de fonte de dados para se conectar e recuperar dados da lista do SharePoint 2013 e posterior.
 
 Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
@@ -72,10 +71,10 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
 
  Para uma tecnologia do SharePoint configurada para funcionar com um servidor de relatório no modo Windows Integrado, essa opção se aplica tanto ao usuário do Windows atual quanto ao usuário do SharePoint atual.
  
- Para uma tecnologia do SharePoint configurada para funcionar sem um servidor de relatório (modo local), não há suporte a essa opção. Para obter mais informações sobre o modo local, consulte [Relatórios em modo Local versus Modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+ Para uma tecnologia do SharePoint configurada para funcionar sem um servidor de relatório (modo local), não há suporte a essa opção. Para obter mais informações sobre o modo local, consulte [Modo Local versus Modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **Não são necessárias credenciais (Não use credenciais):**  
- Para usar essa opção, a conta de execução autônoma deve ser configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Para usar essa opção, a conta de execução autônoma deve ser configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Para obter informações sobre o suporte à autenticação de declarações na pilha Microsoft BI, consulte [Usando a autenticação de declarações na pilha Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
@@ -96,7 +95,7 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
   
 -   **Oculto** Se o campo é mostrado na exibição de lista do SharePoint.  
   
- Não há suporte para a seleção de campos de várias listas. Você pode criar um conjunto de dados para cada lista e selecionar os campos de cada conjunto de dados. Se as listas tiverem um campo comum, você poderá usar a função Lookup em uma região de dados tablix que está vinculada a um conjunto de dados para recuperar um valor do outro conjunto de dados que não está vinculado à região de dados. Para obter mais informações, consulte [Função Lookup &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
+ Não há suporte para a seleção de campos de várias listas. Você pode criar um conjunto de dados para cada lista e selecionar os campos de cada conjunto de dados. Se as listas tiverem um campo comum, você poderá usar a função Lookup em uma região de dados tablix que está vinculada a um conjunto de dados para recuperar um valor do outro conjunto de dados que não está vinculado à região de dados. Para obter mais informações, consulte [Função de pesquisa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
 -   **Campos Selecionados**  Exibe os campos selecionados por você. Os nomes de campos nesse painel são nomes amigáveis especificados por um usuário do SharePoint. Quando fecha o designer de consulta, você visualiza esses nomes na coleção de campos do conjunto de dados no painel de dados do relatório. A relação entre nomes exclusivos e nomes amigáveis está disponível na página [Caixa de diálogo Propriedades do conjunto de dados, Campos &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
   
@@ -114,7 +113,7 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
   
 -   **Resultados da Consulta**  Exibe linhas de exemplo que são retornadas quando a consulta é executada. Se os valores da lista do SharePoint forem alterados com frequência no site do SharePoint, os valores que você visualiza no painel de resultados da consulta poderão ser diferentes dos valores exibidos no relatório.  
   
- Para obter mais informações, consulte [Designer de consulta de lista do SharePoint &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md).  
+ Para obter mais informações, consulte [Designer de consultas da lista do SharePoint &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md).  
   
 ### <a name="query-text"></a>Texto da consulta  
  Para exibir a consulta gerada pelo designer de consulta gráfica, alterne para o designer de consulta baseado em texto. Nessa exibição, você pode visualizar o XML criado pelo designer de consulta gráfica. O XML inclui elementos para o nome da lista, a coleção de campos e o filtro.  
@@ -195,5 +194,4 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
 [Filtrar, agrupar e classificar dados](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 9532 (Database Engine error)
+helpviewer_keywords: 9532 (Database Engine error)
 ms.assetid: ab95cce8-4f97-4aea-a746-a73eea7c9aab
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8c88ac3f700fa2f91a868f7a7fb1590d4119d0cc
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d746a185e3bb99828f65bda13be12280a23415c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver9532"></a>MSSQLSERVER_9532
   
@@ -43,4 +40,3 @@ Um conjunto de colunas é uma representação em XML sem-tipo que combina alguma
 ## <a name="user-action"></a>Ação do usuário  
 Como não foi possível converter implicitamente o valor fornecido, talvez seja uma entrada inválida. Corrija o erro e tente novamente. Se o valor estiver correto, modifique a instrução para usar as colunas individuais em vez do conjunto de colunas. Isso permitirá que você converta o valor explicitamente no tipo de dados correto.  
   
-

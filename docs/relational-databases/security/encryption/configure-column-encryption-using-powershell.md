@@ -5,22 +5,20 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- powershell
+ms.technology: powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ac535e20c2782c81b34e33e2f1ba1afe325e821
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Configurar a criptografia de coluna usando o PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +54,7 @@ Use a abordagem online:
 
 ## <a name="security-considerations"></a>Considerações sobre segurança
 
-O cmdlet **Set-SqlColumnEncryption** , usado para configurar a criptografia para colunas de banco de dados, gerencia chaves Always Encrypted e os dados armazenados em colunas de banco de dados. Portanto, é importante que você execute o cmdlet em um computador seguro. Se o seu banco de dados estive no SQL Server, execute os cmdlets de um computador diferente daquele que hospeda a instância do SQL Server. Como o objetivo principal do Always Encrypted é garantir que os dados confidenciais criptografados estejam seguros mesmo se o sistema do banco de dados for comprometido, a execução de um script do PowerShell que processa chaves e/ou dados confidenciais no computador do SQL Server pode reduzir ou anular os benefícios do recurso.
+O cmdlet **Set-SqlColumnEncryption** , usado para configurar a criptografia para colunas de banco de dados, gerencia chaves Always Encrypted e os dados armazenados em colunas de banco de dados. Portanto, é importante que você execute o cmdlet em um computador seguro. Se seu banco de dados estive no SQL Server, execute os cmdlets de um computador diferente daquele que hospeda a instância do SQL Server. Como o objetivo principal do Always Encrypted é garantir que os dados confidenciais criptografados estejam seguros mesmo se o sistema do banco de dados for comprometido, a execução de um script do PowerShell que processa chaves e/ou dados confidenciais no computador do SQL Server pode reduzir ou anular os benefícios do recurso.
 
 Tarefa  |Artigo  |Acessa chaves de texto não criptografado/repositório de chaves  |Acessar banco de dados   
 ---|---|---|---
@@ -156,7 +154,6 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>Recursos adicionais
 - [Configurar Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (mecanismo de banco de dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-
 
 
 

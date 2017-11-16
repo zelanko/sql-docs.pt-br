@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 33027 (Database Engine error)
+helpviewer_keywords: 33027 (Database Engine error)
 ms.assetid: bfdc626e-7958-4511-987d-3b687824e8af
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8d7e546f593d1a54c2787da74cfe34502598a0b3
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5a80585e89feccfe23af6f33576e6acf8fa8e635
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver33027"></a>MSSQLSERVER_33027
   
@@ -43,4 +40,3 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pôde usar o pr
 ## <a name="user-action"></a>Ação do usuário  
 Verifique se o arquivo está presente e se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem permissão para acessar o local. Verifique o log de erros à procura de mais mensagens relacionadas. Caso contrário, contate o provedor criptográfico para obter mais informações.  
   
-

@@ -4,8 +4,7 @@ ms.date: 09/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c46ed7578abfaacec840270f45a132cc438a82c
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 32668cefd46bd343b9207f43b285e1c47e963b4d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
  Um *ponto de verificação* cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.  
@@ -68,7 +66,7 @@ Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa
 |target_recovery_time|'recovery interval'|Tipo de ponto de verificação usado|  
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|pontos de verificação automáticos cujo intervalo de recuperação de destino é 1 minuto.|  
-|0|>0|Pontos de verificação automáticos, cujo intervalo de recuperação de destino é especificado pela configuração definida pelo usuário na opção **sp_configurerecovery interval**.|  
+|0|>0|Pontos de verificação automáticos, cujo intervalo de recuperação de destino é especificado pela configuração definida pelo usuário na opção **sp_configurerecovery interval** .|  
 |>0|Não aplicável.|Pontos de verificação indiretos cuja hora de recuperação de destino é determinada pela configuração de TARGET_RECOVERY_TIME, expressa em segundos.|  
   
 ##  <a name="AutomaticChkpt"></a> Pontos de verificação automáticos  
@@ -149,4 +147,3 @@ A opção de configuração do intervalo de recuperação usa o número de trans
  -   [Arquitetura física do log de transações](http://technet.microsoft.com/library/ms179355.aspx) (dos [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Manuais Online, mas ainda aplicável)  
   
   
-

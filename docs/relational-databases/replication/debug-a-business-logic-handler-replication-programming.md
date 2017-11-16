@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6a681d03ae06573a4837ff6b545475980633e3ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar um manipulador de lógica de negócios (Programação de replicação)
   Use um manipulador de lógica de negócios para invocar a lógica de negócios personalizada quando uma assinatura de mesclagem for sincronizada. Para obter mais informações, consulte [Executar lógica de negócios durante a sincronizações de mesclagem](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
@@ -42,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Crie um projeto RMO (Replication Management Objects) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, que iniciará o Agente de Mesclagem em sincronia, programaticamente. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-4.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados em um manipulador de lógica de negócios, consulte o tópico dos métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
+4.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados no manipulador de lógica de negócios, consulte o tópico dos métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
 5.  Crie o manipulador de lógica de negócios no modo de depuração e implante o assembly e o arquivo de símbolo de depuração (.pdb) no local registrado na Etapa 1.  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados em um manipulador de lógica de negócios, consulte o tópico dos métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
+3.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados no manipulador de lógica de negócios, consulte o tópico dos métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
 4.  Crie o manipulador de lógica de negócios no modo de depuração e implante o assembly e o arquivo de símbolo de depuração (.pdb) no local registrado na Etapa 1.  
   
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   
-

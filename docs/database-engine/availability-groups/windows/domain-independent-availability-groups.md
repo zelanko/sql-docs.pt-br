@@ -5,26 +5,22 @@ ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Availability Groups [SQL Server], domain independent
+helpviewer_keywords: Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 568798a19fac1a40d16d95e4f93e95968630ee0e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="domain-independent-availability-groups"></a>Grupos de disponibilidade independentes de domínio
 
 Os AGs (Grupos de Disponibilidade) AlwaysOn exigem um WSFC (cluster de failover do Windows Server) subjacente. A implantação de um WSFC por meio do Windows Server 2012 R2 sempre exigiu que os servidores que fazem parte de um WSFC, também conhecidos como nós, sejam ingressados no mesmo domínio. Para obter mais informações sobre o AD DS (Active Directory Domain Services), consulte [aqui](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
@@ -158,4 +154,3 @@ GO
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
 [4]: ./media/diag-successful-dns-suffix.png
-

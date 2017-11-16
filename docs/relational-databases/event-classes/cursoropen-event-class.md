@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CursorOpen event class
+helpviewer_keywords: CursorOpen event class
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2d8ca6138796d4ff88dbd3540b734e81526a7b4f
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ef99bb8938a8a565d98fe624567a08502a2d2f0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cursoropen-event-class"></a>Classe de evento CursorOpen
   A classe de evento **CursorOpen** descreve eventos de cursor aberto que ocorrem em cursores da API (interface de programação de aplicativos). Os eventos de cursor aberto ocorrem quando o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] define a instrução SQL a ser associada ao cursor e às opções de cursor e, então, popula o cursor.  

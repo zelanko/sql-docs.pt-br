@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Schema Object Take Ownership event class
+helpviewer_keywords: Audit Schema Object Take Ownership event class
 ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38d6673f3211c353c503d53f239e890bbfdf08c9
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3eb6eca99cfcfd182ac71a942136bca3586ac052
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Classe de evento Audit Schema Object Take Ownership
   A classe de evento **Audit Schema Object Take Ownership** ocorre quando as permissões para alterar o proprietário do objeto de esquema (como uma tabela, um procedimento ou funções) são verificadas. Isso acontece quando a instrução ALTER AUTHORIZATION é usada para atribuir um proprietário a um objeto.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ObjectName**|**nvarchar**|Nome do objeto que está sendo referenciado.|34|Sim|  
-|**ObjectType**|**Int**|Valor que representa o tipo do objeto envolvido no evento. O valor retornado para essa coluna é uma combinação do valor correspondente na coluna **tipo** da exibição de catálogo **sys.objects** e dos valores listados em [Coluna de evento de rastreamento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sim|  
+|**ObjectType**|**int**|Valor que representa o tipo do objeto envolvido no evento. O valor retornado para essa coluna é uma combinação do valor correspondente na coluna **tipo** da exibição de catálogo **sys.objects** e dos valores listados em [Coluna de evento de rastreamento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sim|  
 |**OwnerName**|**nvarchar**|Nome de usuário de banco de dados do proprietário do objeto.|37|Sim|  
 |**ParentName**|**nvarchar**|Nome do esquema que contém o objeto.|59|Sim|  
 |**RequestID**|**int**|ID da solicitação que contém a instrução.|49|Sim|  
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
-|**Êxito**|**Int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 indica êxito em uma verificação de permissões e o valor 0 indica falha nessa verificação.|23|Sim|  
+|**Êxito**|**int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 indica êxito em uma verificação de permissões e o valor 0 indica falha nessa verificação.|23|Sim|  
 |**TargetUserName**|**nvarchar**|Para ações direcionadas a um usuário do banco de dados (por exemplo, concessão de permissão a um usuário), o nome desse usuário.|39|Sim|  
 |**TextData**|**ntext**|Valor do texto dependente da classe de evento capturada no rastreamento.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  

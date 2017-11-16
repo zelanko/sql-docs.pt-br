@@ -5,20 +5,18 @@ ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 3541efebe50e19ce56e528dc575084c2c5bb1d07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: ab792aed71ab2e7837da9cf0073d4ff191ce5184
-ms.openlocfilehash: ce462c238c81a4a9fc82869a856ac13e9f112aee
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importar dados do Excel para o SQL Server ou Banco de Dados SQL do Azure
 Há várias maneiras de importar dados de arquivos do Excel para o SQL Server ou para o Banco de Dados SQL do Azure. Este artigo resume cada uma dessas opções e fornece links para instruções mais detalhadas.
@@ -209,4 +207,3 @@ Para aprender a copiar dados com o Azure Data Factory, veja os tópicos a seguir
 ## <a name="next-steps"></a>Próximas etapas
 
 Para saber mais sobre a solução que lhe interessa, siga os links fornecidos para obter mais informações.
-

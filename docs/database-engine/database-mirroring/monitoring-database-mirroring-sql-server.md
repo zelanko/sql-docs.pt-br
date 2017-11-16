@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: 78
+caps.latest.revision: "78"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 873b3fe6f7bcfa321f9a6b05473b57b9fb2030cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 882ea4b4fd7c2954ec3586e78db5c22aa0418e54
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitorando o espelhamento de banco de dados (SQL Server)
   Esta seção apresenta o Monitor de Espelhamento de Banco de Dados e os procedimentos armazenados do sistema **sp_dbmmonitor** , explica como funciona o monitoramento de espelhamento de banco de dados (incluindo o **Trabalho de Monitor de Espelhamento de Banco de Dados)**e resume as informações sobre as sessões de espelhamento de banco de dados que podem ser monitoradas. Além disso, esta seção apresenta como definir limites de avisos para um conjunto de eventos de espelhamento de banco de dados predefinido e como configurar alertas em qualquer evento de espelhamento de banco de dados.  
@@ -339,4 +337,3 @@ ms.lasthandoff: 08/02/2017
  [Provedor WMI para conceitos de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   
-

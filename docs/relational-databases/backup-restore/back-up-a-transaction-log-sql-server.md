@@ -5,8 +5,7 @@ ms.date: 02/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - backing up transaction logs [SQL Server], SQL Server Management Studio
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 1f0ce928c44b24abbc4344f9a3e5e2e9ca49e903
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 41831fe1852600666f5f3cf370cbab675e723cca
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Fazer backup de um log de transações (SQL Server)
   Este tópico descreve como fazer backup de um log de transações no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
@@ -186,4 +184,3 @@ GO
  [Backups completos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
   
   
-

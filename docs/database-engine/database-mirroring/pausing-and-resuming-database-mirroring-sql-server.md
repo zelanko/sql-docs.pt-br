@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], resuming
 - pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 285a9cf5c006787b371411c1eb2e1bd5c07ff050
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce0495d6bc7b670cade489806e27aa651a89239e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Pausando e retomando o espelhamento de banco de dados (SQL Server)
   O proprietário de banco de dados pode pausar e depois retomar uma sessão de espelhamento de banco de dados a qualquer hora. Pausar preserva o estado de sessão enquanto suspende o espelhamento. Durante o afunilamento, pausar pode ser útil para melhorar o desempenho no servidor principal.  
@@ -78,4 +76,3 @@ ms.lasthandoff: 08/02/2017
  [Removendo o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
   
   
-

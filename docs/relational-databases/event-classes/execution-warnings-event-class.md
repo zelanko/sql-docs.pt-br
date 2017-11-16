@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Execution Warnings event class
+helpviewer_keywords: Execution Warnings event class
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29117ed6015875dd09b515e78ac6cb23e5a4f22f
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="execution-warnings-event-class"></a>classe de evento Execution Warnings
   A classe de evento Execution Warnings indica que ocorreram avisos de concessão de memória durante a execução de uma instrução ou um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa classe de evento pode ser monitorada para determinar se as consultas tiveram que esperar por memória por um segundo ou mais antes de continuar ou se a tentativa inicial de obter memória falhou. As informações sobre períodos de espera de consulta podem ajudar a revelar problemas de contenção no sistema que podem afetar o desempenho.  
@@ -59,4 +56,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

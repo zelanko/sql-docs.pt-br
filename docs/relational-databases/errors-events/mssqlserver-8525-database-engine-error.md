@@ -5,26 +5,22 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "8525"
-helpviewer_keywords:
-- 8525 (Database Engine error)
+f1_keywords: "8525"
+helpviewer_keywords: 8525 (Database Engine error)
 ms.assetid: 297867c1-691e-4d6b-a3be-a7575015ecfa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3b465c4e4c7a7484413f93aa2bb547e9685297bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 91bca9f8deaa9af2caa9f17f6db307eee4cbe86f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver8525"></a>MSSQLSERVER_8525
   
@@ -57,4 +53,3 @@ O estado do erro 1 é usado quando o aplicativo executa uma operação que cria 
 ## <a name="user-action"></a>Ação do usuário  
 Depois de um aplicativo inscrever-se em uma transação distribuída, o aplicativo deve ser removido explicitamente da transação distribuída ou deve ser inscrito em outra transação distribuída. Isto irá removê-lo implicitamente de uma transação inscrita anterior. Para a sintaxe exata para remoção ou inscrição em uma transação distribuída, consulte o manual de programação de interface do aplicativo.  
   
-

@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 12302 (Database Engine error)
+helpviewer_keywords: 12302 (Database Engine error)
 ms.assetid: c1ab574c-c277-4ba7-ab82-f0d09f54a5d0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: edf0e2328819b7fd45ccfa270b157652a9824bbc
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f311b0188d7ff5a62b300c12712678a3cc1e7710
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver12302"></a>MSSQLSERVER_12302
   
@@ -41,6 +38,5 @@ ms.lasthandoff: 06/22/2017
 Não atualizar as colunas que fazem parte da restrição de chave primária.  
   
 ## <a name="see-also"></a>Consulte também  
-[OLTP na memória &#40;Otimização na memória&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+[OLTP in-memory &#40;Otimização na memória&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
-

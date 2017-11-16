@@ -5,8 +5,7 @@ ms.date: 02/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: e2e028fb7c3c1849bd65495725bcf9edf66c0a81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
   O Replication Agente de Distribuição é um executável que move o instantâneo (para replicação de instantâneo e replicação transacional) e as transações mantidas nas tabelas do banco de dados de distribuição (para replicação transacional) para as tabelas de destino nos Assinantes.  
@@ -275,7 +274,7 @@ distrib [-?]
  Especifica o tipo de assinatura para distribuição. Um valor **0** indica uma assinatura push, um valor **1** indica uma assinatura pull e um valor **2** indica uma assinatura anônima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Especifica o intervalo da transação para registro de histórico. Se o número de transações confirmadas depois da última instância de registro de histórico for maior do que essa opção, uma mensagem de histórico será registrada. O padrão é 100. Um valor **0** indica **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
+ Especifica o intervalo da transação para registro de histórico. Se o número de transações confirmadas depois da última instância de registro de histórico for maior do que essa opção, uma mensagem de histórico será registrada. O padrão é 100. Um valor **0** indica **TransactionsPerHistory**. Veja o parâmetro **–MessageInterval**anterior.  
   
  **-UseDTS**  
  Deve ser especificado como um parâmetro para uma publicação que permite transformação de dados.  
@@ -303,4 +302,3 @@ distrib [-?]
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

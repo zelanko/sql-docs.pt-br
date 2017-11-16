@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar o SQL Server com o armazenamento de compartilhamento de arquivo SMB
 A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os bancos de dados do sistema (Mestre, Modelo, MSDB e TempDB) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos SMB (protocolo SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -86,7 +84,7 @@ A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os bancos de dado
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Considerações sobre o sistema operacional (protocolo SMB vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Sistemas operacionais Windows diferentes têm versões de protocolo SMB diferentes e a versão do protocolo SMB é transparente para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode localizar os benefícios das versões diferentes do protocolo SMB com relação ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-|Sistema operacional|Versão do protocolo SMB2|Benefícios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Sistema operacional|versão do protocolo SMB2|Benefícios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Desempenho aprimorado em relação a versões de SMB anteriores.<br /><br /> Durabilidade, que ajuda a recuperar de pequenos problemas de rede temporários.|  
 |[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluindo o Server Core|2.1|Suporte para MTU grande, que beneficia transferências de dados grandes, como backup e restauração de SQL. Este recurso deve ser habilitado pelo usuário. Para obter mais detalhes sobre como habilitar essa funcionalidade, veja [Novidades no SMB](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Melhorias de desempenho significativas, especificamente para cargas de trabalho de estilo OLTP do SQL. Estas melhorias de desempenho exigem a aplicação de um hotfix. Para obter mais informações sobre o hotfix, confira [este link](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320).|  

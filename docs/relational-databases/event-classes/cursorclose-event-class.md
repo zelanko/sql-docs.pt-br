@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CursorClose event class
+helpviewer_keywords: CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b76e4b9cf7734011725d519ecb961fa15619bb2
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7fa3d628acdf6665c102b0315d1fc532e02fd6d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cursorclose-event-class"></a>classe de evento CursorClose
   Eventos de fechamento de cursor ocorrem quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] fecha e anula a alocação de um cursor. A classe de evento **CursorClose** descreve eventos de fechamento de cursor que ocorrem em cursores da API (interface de programação de aplicativos). Esta classe de evento ocorre quando uma instrução de cursor [!INCLUDE[tsql](../../includes/tsql-md.md)] por ODBC, OLE DB ou DB-Library está fechada.  
@@ -59,4 +56,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

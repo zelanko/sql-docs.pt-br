@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: 1f13a80130626df2fe09ff37d566395d23e3b952
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/12/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar o SQL Server com o SysPrep
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser acessadas por meio da Central de Instalação. A página **Avançado** da **Central de Instalação** tem duas opções: **Preparação de imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Conclusão de imagem de uma instância autônoma preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. As seções [Preparar](#prepare) e [Concluir](#complete) descrevem o processo de instalação em detalhes. Para obter mais informações, consulte [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
@@ -312,4 +310,3 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
  [Como funciona o Windows SysPrepWork](http://go.microsoft.com/fwlink/?LinkId=143547)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Server Operation event class
+helpviewer_keywords: Audit Server Operation event class
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 06ef5ac90c85f1e245efe743ae166228697a5bcf
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 5d6f626646d1cd43aaebaf6a2657170ea9361016
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-server-operation-event-class"></a>Classe de evento Audit Server Operation
   A classe de evento **Audit Server Operation** ocorre quando operações de Auditoria de Segurança, como configurações de alteração, recursos, acesso externo ou autorização, são usadas.  
@@ -43,14 +41,14 @@ ms.lasthandoff: 06/22/2017
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ObjectName**|**nvarchar**|Nome do objeto que está sendo referenciado.|34|Sim|  
-|**ObjectType**|**Int**|Valor que representa o tipo do objeto envolvido no evento. Esse valor corresponde à coluna do tipo na exibição de catálogo **sys.objects** . Para obter valores, consulte [Coluna de evento de rastreamento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sim|  
+|**ObjectType**|**int**|Valor que representa o tipo do objeto envolvido no evento. Esse valor corresponde à coluna do tipo na exibição de catálogo **sys.objects** . Para obter valores, consulte [Coluna de evento de rastreamento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sim|  
 |**OwnerName**|**nvarchar**|Nome de usuário de banco de dados do proprietário do objeto.|37|Sim|  
 |**RequestID**|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
-|**Êxito**|**Int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 significa êxito em uma verificação de permissões e o valor 0 significa falha nessa verificação.|23|Sim|  
+|**Êxito**|**int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 significa êxito em uma verificação de permissões e o valor 0 significa falha nessa verificação.|23|Sim|  
 |**TextData**|**ntext**|Valor do texto dependente da classe de evento capturada no rastreamento.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**XactSequence**|**bigint**|Token usado para descrever a transação atual.|50|Sim|  

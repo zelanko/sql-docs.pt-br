@@ -5,22 +5,20 @@ ms.date: 08/04/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 583c1cb2213ba744ddda0f4bc2fc76cf0c504994
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-an-encrypted-backup"></a>Criar um backup criptografado
   Este tópico descreve as etapas necessárias para criar um backup criptografado usando Transact-SQL.  Para obter um exemplo de como usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Criar um backup completo de banco de dados (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
@@ -135,4 +133,3 @@ ms.lasthandoff: 06/22/2017
     ```  
   
   
-

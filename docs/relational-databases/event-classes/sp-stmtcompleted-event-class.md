@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:StmtCompleted event class
+helpviewer_keywords: SP:StmtCompleted event class
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0ff9f91227c08c932e33afb97c47a2019e1cd0f0
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dd823a1bb566458d1c158ab6cfc121808e0c6ae3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spstmtcompleted-event-class"></a>classe de evento SP:StmtCompleted
   A classe de evento SP:StmtCompleted indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi concluída.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 |ObjectID|**int**|ID de objeto atribuída pelo sistema.|22|Sim|  
 |ObjectName|**nvarchar**|Nome do objeto que está sendo referenciado.|34|Sim|  
 |ObjectType|**int**|Valor que representa o tipo do objeto envolvido no evento. Esse valor corresponde à coluna do tipo na exibição do catálogo sys.objects. Para obter valores, consulte [Coluna de evento de rastreamento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sim|  
-|Deslocamento|**Int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Deslocamento|**int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |Reads|**bigint**|Número de leituras lógicas do disco executadas pelo servidor em nome do evento.|16|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |RowCounts|**bigint**|Número de linhas afetadas por um evento.|48|Sim|  

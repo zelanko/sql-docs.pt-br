@@ -5,25 +5,23 @@ ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 08c5ebad818f4a3f3c29396e6a60b84d36c86c00
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
-ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
   Assim como as funções em linguagens de programação, as funções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário são rotinas que aceitam parâmetros, executam uma ação, como um cálculo complexo, e retornam o resultado dessa ação como um valor. O valor de retorno pode ser um único valor escalar ou um conjunto de resultados.  
@@ -95,10 +93,10 @@ Os tipos de instruções que são válidos em uma função incluem:
 |GET_TRANSMISSION_STATUS|@@PACK_RECEIVED|  
 |GETDATE|@@PACK_SENT|  
 |GETUTCDATE|@@PACKET_ERRORS|  
-|@@CONNECTIONS|@@TIMETICKS|  
-|@@CPU_BUSY|@@TOTAL_ERRORS|  
-|@@DBTS|@@TOTAL_READ|  
-|@@IDLE|@@TOTAL_WRITE|  
+|@@CONNECTIONS |@@TIMETICKS |  
+|@@CPU_BUSY |@@TOTAL_ERRORS |  
+|@@DBTS |@@TOTAL_READ |  
+|@@IDLE |@@TOTAL_WRITE |  
 |@@IO_BUSY||  
   
  As funções não determinísticas internas a seguir **não** podem ser usadas nas funções Transact-SQL definidas pelo usuário.  
@@ -141,4 +139,3 @@ Os tipos de instruções que são válidos em uma função incluem:
 |Descreve como exibir a definição de uma função definida pelo usuário.|[Exibir funções definidas pelo usuário](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-

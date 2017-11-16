@@ -1,29 +1,25 @@
 ---
 title: "Lição 3: Backup de banco de dados em uma URL | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ec613fcc50ceb8cf712ad4a51b543a686cdb9cfd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-database-backup-to-url"></a>Lição 3: Backup de banco de dados em URL
 Nesta lição, você aprenderá a fazer backup do banco de dados AdventureWorks2014 da instância local do SQL Server 2016 no contêiner do Azure criado na [Lição 1: Criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
@@ -62,4 +58,3 @@ Para fazer backup de um banco de dados no armazenamento de Blobs, siga estas eta
   
 [Lição 4: Restaurar o banco de dados na máquina virtual por meio da URL](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
-

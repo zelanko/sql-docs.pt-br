@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-dml
+ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7b04d0977ceaa1bde5eddf5246be56822517e84
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 4b9d0889e9e42fc76e1293fe011edbb118be055c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
   As instruções de gatilho DML usam duas tabelas especiais: a tabela excluída e as tabelas inseridas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. É possível usar essas tabelas temporárias, residentes na memória, para testar os efeitos de algumas modificações de dados e para definir critérios para ações de gatilhos DML. Você não pode modificar diretamente os dados nas tabelas nem executar operações DDL (linguagem de definição de dados) nas tabelas, como CREATE INDEX.  
@@ -61,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  O exemplo a seguir cria um gatilho DML. Esse gatilho realiza uma verificação para ter certeza de que a avaliação de crédito do fornecedor é satisfatória quando for efetuar uma tentativa para inserir uma nova ordem de compra na tabela `PurchaseOrderHeader` . Para obter a avaliação de crédito do fornecedor correspondente à ordem de compra que acaba de ser inserida, a tabela `Vendor` deve ser referenciada e associada a uma tabela inserida. Se a classificação de crédito for muito baixa, uma mensagem será exibida e a inserção não será executada. Observe que este exemplo não permite modificações de dados de multilinha. Para obter mais informações, veja [Criar gatilhos DML para tratar várias linhas de dados](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
- [!code-sql[TriggerDDL #CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
+ [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
 ## <a name="using-the-inserted-and-deleted-tables-in-instead-of-triggers"></a>Usando as tabelas inseridas e excluídas em gatilhos INSTEAD OF  
  As tabelas inseridas e excluídas passadas para os gatilhos INSTEAD OF definidos nas tabelas seguem as mesmas regras das tabelas inseridas e excluídas passadas para os gatilhos AFTER. O formato das tabelas inseridas e excluídas é o mesmo do formato da tabela na qual o gatilho INSTEAD OF está definido. Cada coluna das tabelas inseridas e excluídas é mapeada diretamente para uma coluna na tabela base.  

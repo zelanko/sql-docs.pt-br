@@ -7,8 +7,7 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/12/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
   As instâncias do Analysis Services podem ser atualizadas para uma versão do SQL Server do mesmo modo de servidor para aproveitar os recursos introduzidos na versão atual, conforme descrito em [Novidades do Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
@@ -95,4 +93,3 @@ ms.lasthandoff: 09/12/2017
  [Atualizar Power Pivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
   
   
-

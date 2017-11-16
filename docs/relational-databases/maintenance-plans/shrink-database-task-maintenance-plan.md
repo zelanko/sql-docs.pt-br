@@ -5,28 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - Shrink Database Task
 - Shrink Database(s) Task
 - sql13.swb.maint.shrink.f1
-helpviewer_keywords:
-- Shrink Database Task dialog box
+helpviewer_keywords: Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e067169014c05c90b04d9f757fcae397cb1834b
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2dc6184a59756901c55bc15177914e9e08767da2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Tarefa reduzir banco de dados (Plano de Manutenção)
   Use a caixa de diálogo da **Tarefa Reduzir Banco de Dados** para criar uma tarefa que tenta reduzir o tamanho dos bancos de dados selecionados. Use as opções abaixo para determinar a quantidade de espaço não usado que permanecerá no banco de dados depois de ele ser reduzido (quanto maior a porcentagem, menos o banco de dados poderá ser reduzido). O valor é baseado na porcentagem dos dados reais no banco de dados. Por exemplo, se você reduzir um banco de dados de 100 MB contendo 60 MB de dados e 40 MB de espaço livre, com uma porcentagem de espaço livre de 50%, você ficará com 60 MB de dados e 30 MB de espaço livre (pois 50% de 60 MB são 30 MB). Somente o espaço em excesso no banco de dados é eliminado. Os valores válidos são de 0 a 100.  
@@ -108,4 +105,3 @@ ms.lasthandoff: 06/22/2017
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
   
   
-

@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.logbackup.f1
 - sql13.swb.maint.backup.f1
-helpviewer_keywords:
-- Back Up Database Task dialog box
+helpviewer_keywords: Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 190b77647ebce66f7cf7af006f3b817605969bae
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5cd325a83874a12581143e7bf634c3b7348c28ce
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Opções da tarefa Fazer Backup do Banco de Dados no plano de manutenção
   Use a caixa de diálogo **Tarefa Fazer Backup de Banco de Dados** para adicionar uma tarefa de backup ao plano de manutenção. O backup do banco de dados é importante no caso de falha do sistema ou hardware (ou erros do usuário) que levem o banco de dados a ser danificado de alguma forma, exigindo assim que uma cópia de backup seja restaurada. Essa tarefa lhe permite executar arquivos completos, diferenciais, e grupos de arquivos e backups de log de transações.  
@@ -142,4 +139,3 @@ ms.lasthandoff: 06/22/2017
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
   
-

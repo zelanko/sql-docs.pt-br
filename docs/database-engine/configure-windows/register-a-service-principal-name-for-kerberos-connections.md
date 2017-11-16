@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ec8294a92b9c6bb3da761b84a2bae702bd85dfdd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b8ceebad6ec1dfaf4427864b97cd8c2076e1a2f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
   Para usar a autenticação Kerberos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é preciso satisfazer estas duas condições:  
@@ -186,4 +184,3 @@ WHERE session_id = @@SPID;
  [Gerenciar problemas de autenticação Kerberos em um ambiente do Reporting Services](http://technet.microsoft.com/library/ff679930.aspx)  
   
   
-

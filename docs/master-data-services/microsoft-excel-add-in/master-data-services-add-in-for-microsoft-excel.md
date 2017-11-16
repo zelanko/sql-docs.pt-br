@@ -1,27 +1,24 @@
 ---
 title: Suplemento Master Data Services para Microsoft Excel | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: db24fe315bbb87b2ae730eca497038763e28d63a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Suplemento do Master Data Services para Microsoft Excel
   Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], você pode carregar listas filtradas de dados do MDS no Excel, em que pode trabalhar com elas da mesma maneira como trabalharia com outros dados. Quando você terminar, poderá publicar os dados no MDS novamente, onde serão armazenados centralmente. A segurança determina quais dados você pode exibir e atualizar.  
@@ -89,4 +86,3 @@ ms.lasthandoff: 09/07/2017
 -   [Segurança &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
   
   
-

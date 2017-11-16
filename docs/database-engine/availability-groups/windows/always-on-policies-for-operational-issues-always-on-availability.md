@@ -5,25 +5,23 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4b63d41f4500f3cd43f42a90e0c31d31bc9cff24
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c8256ee37c22d96961c78b5c5a057c0e60b81269
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Políticas AlwaysOn para problemas operacionais – disponibilidade AlwaysOn
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -68,20 +66,20 @@ ms.lasthandoff: 08/02/2017
   
 |Nome de política|Problema|Categoria**\***|Faceta|  
 |-----------------|-----------|--------------------|-----------|  
-|Estado do cluster WSFC|[O serviço de cluster WSFC está offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Crítico|Instância do SQL Server|  
-|Estado Online do Grupo de Disponibilidade|[O grupo de disponibilidade está offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Crítico|grupo de disponibilidade|  
-|Prontidão para Failover Automático do Grupo de Disponibilidade|[O grupo de disponibilidade não está pronto para o failover automático](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md).|Crítico|grupo de disponibilidade|  
-|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[Algumas réplicas de disponibilidade não estão sincronizando dados](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md).|Aviso|grupo de disponibilidade|  
-|Estado de sincronização de dados de réplicas síncronas|[Algumas réplicas síncronas não estão sincronizadas](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md).|Aviso|grupo de disponibilidade|  
-|Estado da Função das Réplica de Disponibilidade|[Algumas réplicas de disponibilidade não têm uma função íntegra](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Aviso|grupo de disponibilidade|  
-|Estado da conexão em réplicas de disponibilidade|[Algumas réplicas de disponibilidade estão desconectadas](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md).|Aviso|grupo de disponibilidade|  
-|Estado da função da réplica de disponibilidade|[A réplica de disponibilidade não tem uma função íntegra](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Crítico|réplica de disponibilidade|  
-|Estado da Conexão da Réplica de Disponibilidade|[A réplica de disponibilidade está desconectada](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Crítico|réplica de disponibilidade|  
+|Estado do cluster WSFC|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Crítico|Instância do SQL Server|  
+|Estado Online do Grupo de Disponibilidade|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Crítico|grupo de disponibilidade|  
+|Prontidão para Failover Automático do Grupo de Disponibilidade|[Availability group is not ready for automatic failover](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md).|Crítico|grupo de disponibilidade|  
+|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[Some availability replicas are not synchronizing data](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md).|Aviso|grupo de disponibilidade|  
+|Estado de sincronização de dados de réplicas síncronas|[Some synchronous replicas are not synchronized](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md).|Aviso|grupo de disponibilidade|  
+|Estado da Função das Réplica de Disponibilidade|[Some availability replicas do not have a healthy role](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Aviso|grupo de disponibilidade|  
+|Estado da conexão em réplicas de disponibilidade|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md).|Aviso|grupo de disponibilidade|  
+|Estado da função da réplica de disponibilidade|[Availability replica does not have a healthy role](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Crítico|réplica de disponibilidade|  
+|Estado da Conexão da Réplica de Disponibilidade|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Crítico|réplica de disponibilidade|  
 |Estado da junção da réplica de disponibilidade|[A réplica de disponibilidade não está unida](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Aviso|réplica de disponibilidade|  
-|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[O estado de sincronização de dados de algum banco de dados de disponibilidade não está íntegro](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Aviso|réplica de disponibilidade|  
-|Estado de Suspensão do Banco de Dados de Disponibilidade|[Banco de dados de disponibilidade está suspenso](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Aviso|banco de dados de disponibilidade|  
-|Estado de junção do banco de dados de disponibilidade|[O banco de dados secundário não está unido](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Aviso|banco de dados de disponibilidade|  
-|Estado de Sincronização dos Dados do Banco de Dados de Disponibilidade|[O estado de sincronização de dados do banco de dados de disponibilidade não está íntegro](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Aviso|banco de dados de disponibilidade|  
+|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Aviso|réplica de disponibilidade|  
+|Estado de Suspensão do Banco de Dados de Disponibilidade|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Aviso|banco de dados de disponibilidade|  
+|Estado de junção do banco de dados de disponibilidade|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Aviso|banco de dados de disponibilidade|  
+|Estado de Sincronização dos Dados do Banco de Dados de Disponibilidade|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Aviso|banco de dados de disponibilidade|  
   
 > [!IMPORTANT]  
 >  **\*** Para as políticas AlwaysOn, os nomes das categorias são usados como IDs. A alteração do nome de uma categoria AlwaysOn interrompe sua funcionalidade de avaliação de integridade. Portanto, não modifique os nomes das categorias AlwaysOn.  
@@ -137,4 +135,3 @@ ms.lasthandoff: 08/02/2017
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

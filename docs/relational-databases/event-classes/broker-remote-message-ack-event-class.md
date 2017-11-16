@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Broker:Remote Message Ack event class
+helpviewer_keywords: Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 747d421d4a9e6a86295ce843aa6c2b943bf006cf
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1a0733f3ec4a8b13a698bf07251f109fcd346392
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Agente: Classe de evento Remote Message Ack
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Remote Message Ack** quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia ou recebe uma confirmação de mensagem.  
@@ -57,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   
   
-
