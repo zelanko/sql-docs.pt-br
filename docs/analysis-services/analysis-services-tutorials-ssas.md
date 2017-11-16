@@ -1,9 +1,13 @@
 ---
 title: Tutoriais (SSAS) do Analysis Services | Microsoft Docs
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
