@@ -1,13 +1,11 @@
 ---
 title: "Alta disponibilidade e recuperação de desastres para Master Data Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -16,16 +14,12 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fe2bcae7a0f5694cf744df9c7d44b6fd2253c4b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f5cebe2ba32765cc5f4bddc974ee62b3ed3b8915
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
-
-
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
 
 **Resumo:** este artigo descreve uma solução para Master Data Service (MDS) hospedado em uma configuração do grupo de disponibilidade AlwaysOn. Esse artigo descreve como instalar e configurar o SQL 2016 Master Data Services em um grupo de disponibilidade (AG) AlwaysOn do SQL 2016. O objetivo principal dessa solução é melhorar a alta disponibilidade e recuperação de desastres de dados de back-end do MDS hospedados em um banco de dados SQL Server.
@@ -408,5 +402,4 @@ Neste white paper, vimos como definir e configurar o banco de dados de back-end 
 Este white paper foi útil? Envie seus comentários clicando **Comentários** na parte superior do artigo. 
 
 Seus comentários nos ajudarão a melhorar a qualidade dos white papers que lançamos. 
-
 

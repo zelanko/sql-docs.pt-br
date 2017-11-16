@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Best Practices [Database Engine]
+helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 803292602dc33187714db393cf120522cd856654
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a79f93ed8d10cb3e92ddc021982fe8f7797d75be
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>Erro de entrada e saída durante falha de página de hardware
   Esta regra verifica o log de eventos do sistema para o EventId 51. Este erro é causado por um erro durante uma falha de página de hardware.  
@@ -33,4 +30,3 @@ ms.lasthandoff: 06/22/2017
 -   [Artigo 305547 da Base de Dados de Conhecimento Microsoft](http://go.microsoft.com/fwlink/?linkid=117748)  
   
   
-

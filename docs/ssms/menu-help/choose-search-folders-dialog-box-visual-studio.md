@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.lookin
+f1_keywords: vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12c0849728ab63ccc806e0ca2de2d8b98fd7c110
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Caixa de diálogo Escolher Pastas de Pesquisa (Visual Studio)
 Permite agrupar, salvar e revisar seus próprios conjuntos nomeados de pastas de pesquisa e especificar a ordem na qual eles serão pesquisados. Para exibir essa caixa de diálogo, selecione o botão **Procurar (...)** , ao lado da lista suspensa **Examinar** , na janela Localizar em Arquivos ou Substituir em Arquivos, Localizar e Substituir.  
@@ -45,15 +42,15 @@ Remova o conjunto de pastas selecionado do campo **Conjunto de pastas** e do cam
 Selecione uma unidade ou pasta desta lista suspensa para preencher a **Lista de pastas**.  
   
 **Lista de pastas**  
-Lista as unidades e pastas disponíveis dentro do volume selecionado na lista suspensa **Pastas disponíveis** . Clique duas vezes para expandir qualquer unidade ou pasta listada. Selecione uma pasta ou mantenha pressionada as teclas SHIFT ou CONTROL, para selecionar várias pastas. Clique em **Add (>)** para incluir pastas selecionadas na lista **Pastas selecionadas** .  
+Lista as unidades e pastas disponíveis dentro do volume selecionado na lista suspensa **Pastas disponíveis** . Clique duas vezes para expandir qualquer unidade ou pasta listada. Selecione uma pasta ou mantenha pressionada as teclas SHIFT ou CONTROL, para selecionar várias pastas. Clique em **Adicionar (>)** para incluir pastas selecionadas na lista **Pastas selecionadas** .  
   
 **Pai**  
 Mova a seleção na **Lista de pastas** para um nível acima na hierarquia de pastas.  
   
-**Adicionar (&gt;)**  
+**Adicionar (>)**  
 Adicione pastas selecionadas na **Lista de pastas** à lista **Pasta selecionada** .  
   
-**Remover (&lt;)**  
+**Remover (<)**  
 Remova as pastas selecionadas da lista **Pastas selecionadas** .  
   
 **Pastas selecionadas**  
@@ -62,4 +59,3 @@ Lista pastas adicionadas da **Lista de pastas**. Essas pastas serão incluídas 
 **Aplicar**  
 Salve o conjunto de pastas de pesquisa presente na lista **Pastas selecionadas** como um conjunto de pastas nomeado. Esse conjunto de pastas poderá, então, ser escolhido no campo **Examinar** , em todas as guias da janela **Localizar e Substituir** . Fecha a caixa de diálogo Escolher Pastas de Pesquisa.  
   
-

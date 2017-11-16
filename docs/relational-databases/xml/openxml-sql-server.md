@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 47cd6e281772125ee7d424425fb6185623c0afc8
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: e181c623bfaa6c19c2567c6a1e904b5314e327ae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 06/22/2017
  Para gravar consultas em relação a um documento XML usando OPENXML, você deve primeiro chamar **sp_xml_preparedocument**. Isso analisa o documento XML e retorna um identificador ao documento analisado pronto para consumo. O documento analisado é uma representação da árvore DOM (Document Object Model) de vários nós no documento XML. O identificador do documento é passado para OPENXML. Em seguida, o OPENXML fornece uma exibição do conjunto de linhas do documento, baseado nos parâmetros passados para ele.  
   
 > [!NOTE]  
-> O **sp_xml_preparedocument** usa uma versão atualizada pelo SQL do analisador MSXML, Msxmlsql.dll. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.  
+>  O**sp_xml_preparedocument** usa uma versão atualizada pelo SQL do analisador MSXML, Msxmlsql.dll. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.  
   
  A representação interna de um documento XML deve ser removida da memória chamando o procedimento armazenado do sistema **sp_xml_removedocument** para liberar a memória.  
   

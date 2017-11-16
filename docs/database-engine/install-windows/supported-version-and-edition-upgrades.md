@@ -5,8 +5,7 @@ ms.date: 06/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
+caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7ca4efe4610487f96b0092cac9a9c070dd3eebb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6d832a7928f8f39b810cfd87a29a10c8c503dad9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Atualizações de versão e edição com suporte
   Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="unsupported-scenarios"></a>Cenários com suporte  
   
--   Não há suporte a instâncias de várias versões do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] . Os números de versão dos componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devem ser os mesmos em uma instância do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
+-   Não há suporte a instâncias de várias versões do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]. Os números de versão dos componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devem ser os mesmos em uma instância do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
 -   O SQL Server 2016 está disponível apenas para plataformas de 64 bits. A atualização de plataforma cruzada não é suportada. Não é possível atualizar uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nativa de 64 bits usando a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No entanto, será possível fazer backup de bancos de dados ou desanexá-los de uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, em seguida, restaurá-los ou anexá-los a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de 64 bits), se os bancos de dados não forem publicados na replicação. Você deverá recriar logons e outros objetos de usuário nos bancos de dados do sistema master, msdb e model.  
   
@@ -124,7 +122,7 @@ O SQL Server 2016 dá suporte à atualização das seguintes versões do SQL Ser
   
 -   Instalando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] no mesmo computador (lado a lado).  
   
--   Usando uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] como um membro da topologia de replicação que envolve uma instância do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] .  
+-   Usando uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] como um membro da topologia de replicação que envolve uma instância do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
 -   Configurando o espelhamento de banco de dados entre as instâncias do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] e do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
@@ -165,7 +163,7 @@ O SQL Server 2016 dá suporte à atualização das seguintes versões do SQL Ser
   
  \* Também se aplica ao [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Tools e ao [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Advanced Services.  
   
- ** A alteração da edição de um cluster de failover do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] é limitada. Os cenários a seguir não têm suporte para clusters de failover do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] :  
+ ** A alteração da edição de um cluster de failover do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] é limitada. Os cenários a seguir não têm suporte para clusters de failover do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]:  
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise para [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer, Standard ou Evaluation.  
   
@@ -184,4 +182,3 @@ O SQL Server 2016 dá suporte à atualização das seguintes versões do SQL Ser
  [Atualizar para o SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   
-

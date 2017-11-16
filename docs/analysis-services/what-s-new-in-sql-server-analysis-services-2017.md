@@ -1,9 +1,13 @@
 ---
 title: Novidades no SQL Server de 2017 Analysis Services | Microsoft Docs
 ms.date: 10/27/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - analysis-services
 ms.topic: article

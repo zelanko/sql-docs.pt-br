@@ -5,25 +5,23 @@ ms.date: 05/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide
 - guide, list
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: f854bc49f1543782f0e92067635c77cf53d0cdd2
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 013fcd76c379762803be7ef0910c26327c68e5fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-guides"></a>Guias do SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,4 +37,3 @@ Os guias a seguir estão disponíveis. Eles abordam conceitos gerais e se aplica
 [Guia de controle de versão de linha e bloqueio de transações do SQL Server](https://msdn.microsoft.com/library/jj856598)  
 [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
 [Guia de arquitetura de thread e tarefa](../relational-databases/thread-and-task-architecture-guide.md)
-

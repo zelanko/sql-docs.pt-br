@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1462 (Database Engine error)
+helpviewer_keywords: 1462 (Database Engine error)
 ms.assetid: 680e9c1c-a9d6-4765-b601-956d0a83324c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 354280b813e73ec3090ae3c5ce5459eb008191d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0d3af95b7118a843710f208158d1ad7aa2ce614b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver1462"></a>MSSQLSERVER_1462
   
@@ -49,4 +46,3 @@ Procure a causa desse erro no log de erros do [!INCLUDE[ssNoVersion](../../inclu
 ## <a name="see-also"></a>Consulte também  
 [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-

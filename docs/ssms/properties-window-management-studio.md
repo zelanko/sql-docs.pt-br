@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3210a4c6a69d85eded77017c044f33c9a83dd397
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d07665d3efb0e44d7d8314bc9be01276dbebb6e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="properties-window-management-studio"></a>Janela de Propriedades (Management Studio)
 Use essa janela para exibir as propriedades dos elementos selecionados. Você também pode usar a janela Propriedades para exibir o arquivo, o projeto e as propriedades da solução. A janela Propriedades está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  
@@ -45,4 +43,3 @@ A janela Propriedades exibe tipos diferentes de campos de edição, dependendo d
 ## <a name="see-also"></a>Consulte também  
 [Elementos gerais da interface de usuário](../ssms/general-user-interface-elements.md)  
   
-

@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aeb2660571f6eff735bf9936be3d4243fb797149
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
 Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
@@ -67,7 +65,7 @@ Navega na árvore até a próxima pasta mais alta na exibição em árvore.
 **Pesquisar na Web**  
 Esse botão não está disponível.  
   
-**Delete (excluir) (excluir)**  
+**Delete (excluir)**  
 Exclui os arquivos ou pastas selecionadas do armazenamento.  
   
 **Nova Pasta**  
@@ -85,7 +83,7 @@ Exibe arquivos e pastas como ícones grandes.
 **Ícones**  
 Exibe arquivos e pastas como ícones pequenos.  
   
-**Listaa**  
+**Lista**  
 Exibe arquivos e pastas em formato de lista.  
   
 **Detalhes**  
@@ -97,10 +95,9 @@ Esse comando não está disponível.
 ## <a name="tools"></a>Ferramentas  
 Selecione uma ferramenta para aplicar ao item selecionado no painel de conteúdo.  
   
-**Delete (excluir) (excluir)**  
+**Delete (excluir)**  
 Exclui o arquivo ou pasta selecionado do armazenamento.  
   
 **Mapear Unidade de Rede**  
 Abre a caixa de diálogo **Mapear Unidade de Rede** .  
   
-

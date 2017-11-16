@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b0133e07a063589deeae9cf1d1cb9e05fe480437
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="application-level-partitioning"></a>Particionamento de nível de aplicativo
   Esse aplicativo processa ordens. Há muito processamento em ordens recentes. Não há muito processamento em ordens antigas. As ordens recentes estão em uma tabela com otimização de memória. As ordens antigas estão em uma tabela baseada em disco. Todas as ordens depois do *hotDate* estão na tabela com otimização de memória. Todas as ordens antes do *hotDate* estão na tabela baseada em disco. Suponha uma carga de trabalho OLTP extrema com várias transações simultâneas. Essa regra de negócio (ordens recentes em uma tabela com otimização de memória) deve ser imposta mesmo que várias transações simultâneas estejam tentando alterar o *hotDate*.  
@@ -223,4 +221,3 @@ select * from cold order by orderDate desc
  [Exemplos de código de OLTP na memória](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   
-

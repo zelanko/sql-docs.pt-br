@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 24de34165adfa89075f6e1b10646f68f30d87706
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 2cf28fa3c0dec8010e1e021150deb11869583164
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Área funcional Permissões de Usuário e de Grupo (Master Data Manager)
   Na área funcional Permissões de Usuário e de Grupo, os administradores podem conceder permissão a áreas funcionais, a atributos (na guia Modelos) e a membros (na guia Membros da Hierarquia). Permissões sobrepostas são resolvidas para determinar uma permissão de usuário para cada valor de atributo individual.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/07/2017
  [Aplicativo Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   
-

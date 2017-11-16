@@ -5,21 +5,19 @@ ms.date: 10/04/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- xevents
+ms.technology: xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 643d3b6f21d5ff42c1117df009f4e08e83793898
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Exibição avançada de dados de destino dos Eventos Estendidos no SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -144,7 +142,7 @@ Os dados de destino são exibidos em um painel com guias no SSMS. Isso é mostra
 
 
 > [!NOTE] 
-> A opção **Exibir Dados de Destino** exibe os *dados acumulados de vários arquivos .XEL* de determinada sessão de evento. Cada ciclo **Iniciar**-**Interromper** cria um arquivo com um inteiro derivado de tempo posteriormente inserido em seu nome, mas cada arquivo compartilha o mesmo nome raiz.
+> A opção**Exibir Dados de Destino** exibe os *dados acumulados de vários arquivos .XEL* de determinada sessão de evento. Cada ciclo **Iniciar**-**Interromper** cria um arquivo com um inteiro derivado de tempo posteriormente inserido em seu nome, mas cada arquivo compartilha o mesmo nome raiz.
 
 
 
@@ -288,7 +286,7 @@ Agrupar linhas por valores correspondentes em determinada coluna é a primeira e
 #### <a name="d41-grouping"></a>D.4.1 Agrupamento
 
 
-Na barra de ferramentas de eventos estendidos, o botão **Agrupamento** inicia uma caixa de diálogo que pode ser usada para agrupar os dados exibidos por determinada coluna. A próxima captura de tela mostra uma caixa de diálogo usada para agrupar pela coluna *name*.
+Na barra de ferramentas de eventos estendidos, o botão **Agrupamento** inicia uma caixa de diálogo que pode ser usada para agrupar os dados exibidos por determinada coluna. A próxima captura de tela mostra uma caixa de diálogo usada para agrupar pela coluna *name* .
 
 ![Barra de ferramentas > botão Agrupamento e a caixa de diálogo Agrupamento](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
@@ -318,6 +316,5 @@ O evento **query_post_execution_showplan** permite ver o plano de consulta real 
 
 
 ![Plano de Consulta, com a lista de propriedades de um nó](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
-
 
 

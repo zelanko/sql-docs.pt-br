@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.operator.notifications.f1
+f1_keywords: sql13.ag.operator.notifications.f1
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a8d182c3e434bfc05831922f0a214b58efbecd48
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d96fbe6d79ff099c552ea95c764dfebd69f45489
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>Propriedades do operador – Novo operador (página Notificações)
 Use esta página para definir os alertas e trabalhos que notificam o operador.  
@@ -54,4 +51,3 @@ Notifique este operador pelo **net send**.
 ## <a name="see-also"></a>Consulte também  
 [Operadores](../../ssms/agent/operators.md)  
   
-

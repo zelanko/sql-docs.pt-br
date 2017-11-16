@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.articleproperties.f1
-helpviewer_keywords:
-- Article Properties dialog box
+f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
+helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d485cf7aface5f33fd4bd30f8c4a3d36707b2d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
   A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
@@ -43,13 +40,13 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="options-for-all-publications"></a>Opções para todas as publicações.  
  **Copiar esquemas de particionamento de tabela** e **Copiar esquemas de particionamento de índice**  
-O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou os particionamentos de tabela e índice, que não têm relação com as ofertas de replicação de particionamento por meio de filtros de linha e coluna. As opções **Copiar esquemas de particionamento de tabela** e **Copiar esquemas de particionamento de índice** especificam se os esquemas de participação devem ser copiados no Assinante. Para obter mais informações sobre particionamento, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ O[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou os particionamentos de tabela e índice, que não têm relação com as ofertas de replicação de particionamento por meio de filtros de linha e coluna. As opções **Copiar esquemas de particionamento de tabela** e **Copiar esquemas de particionamento de índice** especificam se os esquemas de participação devem ser copiados no Assinante. Para obter mais informações sobre particionamento, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Converter tipos de dados**  
  Determina se tipos de dados definidos pelo usuário devem ou não ser convertidos em tipos de dados base ao criar objetos no Assinante. Os tipos de dados definidos pelo usuário incluem os tipos CLR introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Especifique um valor **True** se você for replicar esses tipos de dados para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; isso assegura que eles possam ser tratados apropriadamente no Assinante.  
   
  **Criar esquemas no Assinante**  
-O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou esquemas, que são definidos usando a instrução CREATE SCHEMA. Um esquema é o proprietário de um objeto; é usado em um nome de várias partes, como \<Database>.\<Schema>.\<Object>. Se houver objetos no banco de dados de propriedade de esquemas diferentes de DBO, a replicação pode criar esses esquemas no Assinante para que os objetos publicados sejam criados.  
+ O[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou esquemas, que são definidos usando a instrução CREATE SCHEMA. Um esquema é o proprietário de um objeto; é usado em um nome de várias partes, como \<Database>.\<Schema>.\<Object>. Se houver objetos no banco de dados de propriedade de esquemas diferentes de DBO, a replicação pode criar esses esquemas no Assinante para que os objetos publicados sejam criados.  
   
  Se você replicar dados para versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -70,7 +67,7 @@ O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou esque
   
 -   Para artigos em publicações Oracle: por padrão, o proprietário é especificado como **dbo**.  
   
--   Para os artigos em publicações que usam instantâneos do modo de caracteres (que são usados para não Assinantes[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)] ): por padrão, o proprietário é deixado em branco. O proprietário assume o padrão do proprietário associado à conta usada pelo Agente de Distribuição ou Agente de Mesclagem para se conectar ao Assinante.  
+-   Para artigos em publicações que usam instantâneos de modo de caracteres (que são usados para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)] ): por padrão o proprietário é deixado em branco. O proprietário assume o padrão do proprietário associado à conta usada pelo Agente de Distribuição ou Agente de Mesclagem para se conectar ao Assinante.  
   
  Essa opção não pode ser alterada para artigos em publicações habilitadas para replicação transacional ponto a ponto.  
   

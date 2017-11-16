@@ -5,25 +5,23 @@ ms.date: 02/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 33ea706474d71f9424aa724f18f2febd69ae62d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,5 +155,4 @@ Ambos os problemas são relacionados ao serviço de Navegador do SQL Server, que
     1. No computador cliente, usando o SQL Server Configuration Manager, no painel esquerdo, expanda **Configuração** *version* **Configuration**, and then select **Client Protocols**.
     2. No painel direito, verifique se TCP/IP está habilitado. Se o TCP/IP estiver desabilitado, clique com o botão direito do mouse em **TCP/IP** e depois clique em **Habilitar**.
     3. Verifique se a ordem de protocolo de TCP/IP é um número menor do que os protocolos de pipes nomeados (ou VIA em versões anteriores). Em geral, você deve deixar a memória compartilhada como a ordem 1 e TCP/IP como a ordem 2. A memória compartilhada só é usada quando o cliente e o SQL Server estão em execução no mesmo computador. Todos os protocolos habilitados são testados em ordem até obter êxito, exceto que a memória compartilhada é ignorada quando a conexão não está no mesmo computador. 
-
 

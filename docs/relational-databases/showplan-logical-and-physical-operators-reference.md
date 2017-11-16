@@ -5,8 +5,7 @@ ms.date: 10/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -135,17 +134,16 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 12177becd4b5d228cd65562b4da36708c61e70da
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referência de operadores físicos e lógicos de plano de execução
   Os operadores descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executa uma consulta ou uma instrução DML (Linguagem de Manipulação de Dados). O otimizador de consultas usa os operadores para criar um plano de consulta a fim de criar o resultado especificado na consulta ou para executar a operação especificada na instrução DML. O plano de consulta é uma árvore que consiste em operadores físicos. Você pode exibir o plano de consulta usando as instruções SET SHOWPLAN, as opções de plano de execução gráfica no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou as classes de evento do Plano de Execução do SQL Server Profiler.  
@@ -184,7 +182,7 @@ ms.lasthandoff: 10/13/2017
 ## <a name="operator-descriptions"></a>Descrições dos operadores  
  Esta seção contém descrições dos operadores lógicos e físicos.  
   
-|Ícone do plano de execução gráfica|Operador de plano de execução|Descrição|  
+|Ícone do plano de execução gráfica|Operador de plano de execução|Description|  
 |-----------------------------------|-----------------------|-----------------|  
 |![Ícone do operador de Junção Adaptável](../relational-databases/media/AdaptiveJoin.gif "Ícone do operador de Junção Adaptável")|**Junção Adaptável**|O operador de **Junção Adaptável** habilita que as opções de método de junção hash ou de junção de loop aninhado sejam adiadas até após a verificação da primeira entrada. | 
 |Nenhuma|**Agregado**|O operador **Aggregate** calcula uma expressão que contém MIN, MAX, SUM, COUNT ou AVG. O operador **Aggregate** pode ser um operador lógico ou um operador físico.|  
@@ -288,7 +286,7 @@ ms.lasthandoff: 10/13/2017
 |![Ícone do operador Spool de tabela](../relational-databases/media/table-spool-32x.gif "Ícone do operador Spool de tabela")|**Table Spool**|O operador **Table Spool** examina a entrada e coloca uma cópia de cada linha em uma tabela de spool oculta que é armazenada no banco de dados [tempdb](../relational-databases/databases/tempdb-database.md) e existe durante o tempo de vida da consulta. Se for feito o retrocesso do operador (por exemplo, por um operador **Nested Loops** ) sem que haja necessidade de reassociação, serão usados os dados em spool em vez de um novo exame da entrada. **Table Spool** é um operador físico.|  
 |![Ícone do operador Atualização de tabela](../relational-databases/media/table-update-32x.gif "Ícone do operador Atualização de tabela")|**Table Update**|O operador físico **Table Update** atualiza linhas de entrada na tabela especificada na coluna **Argument** do plano de execução de consulta. O predicado SET: () determina o valor de cada coluna atualizada. Esses valores podem ser consultados na cláusula SET ou em outro lugar dentro desse operador assim como em outro lugar dessa consulta.|  
 |![Ícone do operador Função com valor de tabela](../relational-databases/media/table-valued-function-32x.gif "Ícone do operador Função com valor de tabela")|**Table-valued Function**|O operador **Table-valued Function** avalia uma função com valor de tabela ( [!INCLUDE[tsql](../includes/tsql-md.md)] ou CLR) e armazena as linhas resultantes no banco de dados [tempdb](../relational-databases/databases/tempdb-database.md) . Quando os iteradores pai solicitam as linhas, **Table-valued Function** retorna as linhas de **tempdb**.<br /><br /> As consultas com chamadas às funções com valor de tabela geram planos de consulta com o iterador de **Table-valued Function** . **Table-valued Function** pode ser avaliada com valores de parâmetros diferentes:<br /><br /> -<br />                    O**Leitor de XML da Função com valor de tabela** insere um BLOB XML como parâmetro e processa um conjunto de linhas representando os nós XML na ordem dos documentos XML. Outros parâmetros de entrada podem restringir os nós XML retornados a um subconjunto de documentos XML.<br /><br /> -**Leitor de XML da Função com valor de tabela com filtro XPath** é um tipo especial de **Função com valor de tabela do Leitor de XML** que restringe a saída a nós XML que atendem a uma expressão XPath.<br /><br /> **Table-valued Function** é um operador lógico e físico.|  
-|![Ícone do operador Superior](../relational-databases/media/top-32x.gif "Ícone do operador Superior")|**Top**|O operador **Top** verifica a entrada, retornando só o primeiro número ou porcentagem de linhas especificado, possivelmente com base em uma ordem de classificação. A coluna **Argument** pode conter uma lista das colunas cujas associações estão sendo verificadas. Em planos de atualização, o operador **Top** é usado para aplicar os limites de contagem de linhas. **Top** é um operador lógico e físico. **Top** é um operador lógico e físico.|  
+|![Ícone do operador Superior](../relational-databases/media/top-32x.gif "Ícone do operador Superior")|**Top**|O operador **Top** verifica a entrada, retornando só o primeiro número ou porcentagem de linhas especificado, possivelmente com base em uma ordem de classificação. A coluna **Argument** pode conter uma lista das colunas cujas associações estão sendo verificadas. Em planos de atualização, o operador **Top** é usado para aplicar os limites de contagem de linhas. **Top** é um operador lógico e físico.|  
 |Nenhuma|**Top N Sort**|**Top N Sort** é semelhante ao iterador **Classificar** , com exceção de que somente as primeiras *N* linhas são necessárias e não todo o conjunto de resultados. Para valores pequenos de *N*, o mecanismo de execução de consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta executar toda a operação de classificação na memória. Para valores grandes de *N*, o mecanismo de execução de consultas recorre a um método de classificação mais genérico para o qual *N* não é um parâmetro.|  
 |![Ícone do operador estendido (UDX)](../relational-databases/media/udx-32x.gif "Ícone do operador estendido (UDX)")|**UDX**|Operadores estendidos (UDX) implementam uma de muitas operações XQuery e XPATH no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Todos os operadores UDX são classificados como operadores lógicos e físicos.<br /><br /> O operador estendido (UDX) **FOR XML** é usado para serializar o conjunto relacional de linhas e insere em representação XML em uma única coluna BLOB, e em uma única linha de saída. É um operador de agregação XML sensível à ordenação.<br /><br /> O operador estendido (UDX) **XML SERIALIZER** é um operador de agregação XML sensível à ordenação. Ele insere linhas que representam nós XML ou escalares de XQuery em ordem de documento XML e produz um XML BLOB serializado em uma única coluna XML em uma única linha de saída.<br /><br /> O operador estendido (UDX) **XML FRAGMENT SERIALIZER** é um tipo especial de **XML SERIALIZER** que é usado para processar linhas de entrada que representam fragmentos de XML que são inseridos na extensão de modificação de dados de inserção de XQuery.<br /><br /> O operador estendido (UDX) **XQUERY STRING** avalia o valor da cadeia de caracteres XQuery das linhas de entrada que representam nós de XML. É um operador de agregação de cadeia sensível à ordenação. Produz uma linha com colunas que representam o escalar de XQuery que contém o valor de cadeia de caracteres da entrada.<br /><br /> O operador estendido (UDX) **XQUERY LIST DECOMPOSER** é um operador de decomposição de lista do XQuery. Para cada linha de entrada que representa um nó de XML ele produz uma ou mais linhas, cada uma representando o escalar de Xquery, que contém um valor de elemento de lista caso a entrada seja do tipo lista de XSD.<br /><br /> O operador estendido (UDX) **XQUERY DATA** avalia a função XQuery fn:data() na entrada que representa os nós XML. É um operador de agregação de cadeia sensível à ordenação. Ele produz uma linha com colunas que representam o escalar de XQuery que contém o resultado de **fn:data()**.<br /><br /> O operador estendido **XQUERY CONTAINS** avalia a função XQuery fn:contains() na entrada que representa os nós XML. É um operador de agregação de cadeia sensível à ordenação. Ele produz uma linha com colunas que representam o escalar de XQuery que contém o resultado de **fn:contains()**.<br /><br /> O operador estendido **UPDATE XML NODE** atualiza o nó XML na extensão de modificação de dados de substituição XQuery no método **modify()** no tipo XML.|  
 |Nenhuma|**Union**|O operador **Union** verifica várias entradas, gerando a saída de cada linha examinada e removendo duplicatas. **Union** é um operador lógico.|  
@@ -297,4 +295,3 @@ ms.lasthandoff: 10/13/2017
 |![Ícone do operador Spool de tabela](../relational-databases/media/table-spool-32x.gif "Ícone do operador Spool de tabela")|**Window Spool**|O operador **Window Spool** expande cada linha no conjunto de linhas que representa a janela associada a ele. Em uma consulta, a cláusula OVER define a janela em um conjunto de resultados de consulta e uma função de janela, e depois computa um valor para cada linha na janela. **Window Spool** é um operador lógico e físico.|  
   
   
-

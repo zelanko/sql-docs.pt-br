@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.Help.Online
+f1_keywords: VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 06e55fc194e5ff0a70bc2f62705bb8914041a2ad
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4e48c89f058af257e0f375e4493d3066804a7e73
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---help---online-page"></a>Opções (Ambiente – Ajuda – página Online)
-A caixa de diálogo **Opções** permite especificar as fontes de Ajuda a serem usadas para as pesquisas do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], incluindo a ajuda de F1. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** , selecione **Ajuda**e, então, clique em **Online**. Se a página **Online** não aparecer na lista, marque a caixa de seleção **Exibir todas as configurações** , na caixa de diálogo **Opções** .  
+A caixa de diálogo **Opções** permite especificar as fontes de Ajuda a serem usadas para as pesquisas do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , incluindo a ajuda de F1. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** , selecione **Ajuda**e, então, clique em **Online**. Se a página **Online** não aparecer na lista, marque a caixa de seleção **Exibir todas as configurações** , na caixa de diálogo **Opções** .  
   
 **Ao carregar o conteúdo da Ajuda**  
 Define a ordem em que as fontes de Ajuda são usadas para ajuda de F1 e especifica quais fontes de Ajuda serão usadas.  
@@ -54,4 +51,3 @@ Exibe uma descrição breve para cada provedor selecionado na lista **Comunidade
 **Ler política de privacidade**  
 Exibe a política de privacidade [!INCLUDE[msCoName](../../includes/msconame_md.md)] para uso online.  
   
-

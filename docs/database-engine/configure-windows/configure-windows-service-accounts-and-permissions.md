@@ -5,8 +5,7 @@ ms.date: 08/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -50,17 +49,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
+caps.latest.revision: "207"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b93f57717cea30367f212020d73684a3fe55b796
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 2fa9ca92039b8e26aecd78ca0f6c1bdc03f36d71
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 
@@ -88,11 +86,11 @@ ms.lasthandoff: 08/29/2017
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent** : executa trabalhos, monitora o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dispara alertas e habilita a automação de algumas tarefas administrativas. O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent está presente, mas desabilitado em instâncias do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. O arquivo executável é \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe.  
   
--   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  – Fornece funcionalidade de mineração de dados e OLAP (processamento analítico online) para aplicativos de business intelligence. O arquivo executável é \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.  
+-   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  : fornece funcionalidade de mineração de dados e OLAP (processamento analítico online) para aplicativos de business intelligence. O arquivo executável é \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  – Gerencia, executa, cria, agenda e entrega relatórios. O arquivo executável é \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  : gerencia, executa, cria, agenda e entrega relatórios. O arquivo executável é \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  – Fornece suporte de gerenciamento para o armazenamento e a execução de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O caminho do executável é \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  : fornece suporte de gerenciamento para o armazenamento e a execução de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O caminho do executável é \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe  
   
 -   **Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: o serviço de resolução de nomes que especifica informações de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para computadores cliente. O caminho do executável é c:\Arquivos de Programas (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe  
   
@@ -104,7 +102,7 @@ ms.lasthandoff: 08/29/2017
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** : um ou mais computadores cliente do Distributed Replay Client que funcionam junto com um Distributed Replay Controller para simular cargas de trabalho simultâneas em relação a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  – Um serviço confiável que hospeda executáveis externos fornecidos pela Microsoft, como o tempo de execução de R instalado como parte do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Processos de satélite podem ser iniciados pelo processo do Launchpad, mas serão controlados por recursos, com base na configuração da instância individual. O serviço Launchpad é executado em sua própria conta de usuário, e cada processo de satélite para um tempo de execução registrado específico herdará a conta de usuário do Launchpad. Processos de satélite são criados e destruídos sob demanda durante o tempo de execução.  
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  : um serviço confiável que hospeda executáveis externos fornecidos pela Microsoft, como o tempo de execução de R instalado como parte do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Processos de satélite podem ser iniciados pelo processo do Launchpad, mas serão controlados por recursos, com base na configuração da instância individual. O serviço Launchpad é executado em sua própria conta de usuário, e cada processo de satélite para um tempo de execução registrado específico herdará a conta de usuário do Launchpad. Processos de satélite são criados e destruídos sob demanda durante o tempo de execução.  
   
  - **Mecanismo PolyBase do SQL Server** – fornece funcionalidades de consulta distribuída para fontes de dados externas.
  
@@ -645,4 +643,3 @@ As contas de serviço gerenciado, as contas de serviço gerenciado de grupo e as
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Implementar a segurança dinâmica usando filtros de linha | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: 
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -194,3 +197,4 @@ Nesta tarefa, você usará o analisar no recurso do Excel no SSDT para testar a 
 [Função USERNAME (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)  
 [Função LOOKUPVALUE (DAX)](http://msdn.microsoft.com/en-us/73a51c4d-131c-4c33-a139-b1342d10caab)  
 [Função CUSTOMDATA (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+

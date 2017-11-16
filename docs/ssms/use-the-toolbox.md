@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f63a3a6b06e0b76e603e1cce094e5fb17ae32db
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3190646ab3eb434e2b7ad17aa6ca3914857c6690
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-toolbox"></a>Usar a Caixa de Ferramentas
 Você pode selecionar e arrastar itens, texto e controles da Caixa de Ferramentas sobre formulários, páginas e designers, e arrastar itens dessas fontes para a Caixa de Ferramentas para uso posterior. Por exemplo, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] você pode arrastar uma tarefa para um Plano de Manutenção.  
@@ -49,4 +48,3 @@ Os itens da Caixa de Ferramentas são agrupados em seções denominadas guias. A
 ## <a name="see-also"></a>Consulte também  
 [Elementos gerais da interface de usuário](../ssms/general-user-interface-elements.md)  
   
-

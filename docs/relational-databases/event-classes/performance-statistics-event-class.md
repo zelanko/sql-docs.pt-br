@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Performance Statistics event class
+helpviewer_keywords: Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 94f6ab1826086a7c835b7a5a371f92b362727cff
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c1822de581220e2544ab14622b8a5784cc9cabc7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-statistics-event-class"></a>classe de evento Performance Statistics
   A classe de evento Performance Statistics pode ser usada para monitorar o desempenho de consultas, procedimentos armazenados e gatilhos que são executados. Cada uma das seis subclasses de evento indica um evento no tempo de vida de consultas, procedimentos armazenados e gatilhos no sistema. Usando a combinação dessas subclasses de evento e as exibições de gerenciamento dinâmico sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associadas, você pode reconstituir o histórico de desempenho de qualquer consulta, procedimento armazenado ou gatilho específico.  
@@ -57,10 +55,10 @@ ms.lasthandoff: 06/22/2017
 |DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
-|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Foram compiladas consultas dentro de um procedimento armazenado.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento para procedimentos armazenados.<br /><br /> Para procedimentos armazenados com o número de consultas *n* :<br /><br /> *n* número de tipo 1|21|Sim|  
+|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Foram compiladas consultas dentro de um procedimento armazenado.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento para procedimentos armazenados.<br /><br /> Para procedimentos armazenados com o número de consultas *n* número de consultas:<br /><br /> *n* número de tipo 1|21|Sim|  
 |IntegerData2|**Int**|Término da instrução do procedimento armazenado.<br /><br /> -1 para o término do procedimento armazenado.|55|Sim|  
 |ObjectID|**int**|ID de objeto atribuída pelo sistema.|22|Sim|  
-|Deslocamento|**Int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Deslocamento|**int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |SqlHandle|**image**|Identificador SQL que pode ser usado para obter o texto SQL do procedimento armazenado usando a exibição de gerenciamento dinâmico dm_exec_sql_text.|63|Sim|  
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
@@ -104,10 +102,10 @@ ms.lasthandoff: 06/22/2017
 |DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
-|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 3 = Uma consulta armazenada em cache foi destruída e os dados históricos do desempenho associados ao plano serão destruídos.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento.<br /><br /> Para lotes ad hoc com *n* número de consultas:<br /><br /> 1 de tipo 3 quando a consulta é liberada do cache<br /><br /> Para procedimentos armazenados com o número de consultas *n* :<br /><br /> 1 de tipo 3 quando a consulta é liberada do cache.|21|Sim|  
+|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 3 = Uma consulta armazenada em cache foi destruída e os dados históricos do desempenho associados ao plano serão destruídos.<br /><br /> Os seguintes tipos de EventSubClass são gerados no rastreamento.<br /><br /> Para lotes ad hoc com *n* número de consultas:<br /><br /> 1 de tipo 3 quando a consulta é liberada do cache<br /><br /> Para procedimentos armazenados com o número de consultas *n* número de consultas:<br /><br /> 1 de tipo 3 quando a consulta é liberada do cache.|21|Sim|  
 |IntegerData2|**Int**|Fim da instrução no procedimento armazenado ou lote.<br /><br /> -1 para o final do procedimento armazenado ou lote.|55|Sim|  
 |ObjectID|**Int**|NULL|22|Sim|  
-|Deslocamento|**Int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.<br /><br /> 0 para o início do procedimento armazenado ou lote.|61|Sim|  
+|Deslocamento|**int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.<br /><br /> 0 para o início do procedimento armazenado ou lote.|61|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |SqlHandle|**image**|Identificador SQL que pode ser usado para obter o texto SQL do procedimento armazenado ou do lote usando a exibição de gerenciamento dinâmico dm_exec_sql_text.|63|Sim|  
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
@@ -162,4 +160,3 @@ ms.lasthandoff: 06/22/2017
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
-

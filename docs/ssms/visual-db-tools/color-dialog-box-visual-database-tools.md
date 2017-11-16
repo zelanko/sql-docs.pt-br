@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptions.FontsAndColors.ColorPicker
+f1_keywords: VS.ToolsOptions.FontsAndColors.ColorPicker
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 70ef9472487b447e87b29cb1af4b4d80cb2b7693
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b81457423c340118548bcc22b66504469ad5fa4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Caixa de diálogo Cores (Visual Database Tools)
 A **Caixa de diálogo Cores** retorna o valor RGB da cor selecionada pelo usuário. O usuário pode selecionar um conjunto de cores básicas determinado pelo driver de vídeo ou um conjunto de cores personalizadas. Selecionar em Cores básicas ou criar cores personalizadas. Defina as cores clicando na matriz de cores, digitando nas caixas **Matiz**, **Saturação**, **Luminosidade**, **Vermelho**, **Verde**e **Azul** .  
@@ -49,10 +46,10 @@ Exibe a cor atualmente selecionada.
 **Matiz**  
 Valor de matiz da cor selecionada.  
   
-**Saturaçãouração**  
+**Saturação**  
 Valor de saturação da cor selecionada.  
   
-**Luminosidadeinosidade**  
+**Luminosidade**  
 Luminosidade (claro ou escuro) da cor selecionada.  
   
 **Vermelho**  
@@ -67,4 +64,3 @@ Valor numérico do componente azul, que varia de 0 até 255.
 **Adicionar às Cores Personalizadas**  
 Clique para adicionar a cor à área de Cores personalizadas.  
   
-
