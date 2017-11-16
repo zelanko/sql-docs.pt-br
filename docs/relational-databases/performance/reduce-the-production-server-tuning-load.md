@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7cc75ed2f7ab28f5ad1498f9a6dfa8d6ad8b770
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 860458ebec0954d872b31bceb4443450bf96ad21
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzir a carga de ajuste do servidor de produção
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização usa o otimizador de consulta para analisar uma carga de trabalho e fazer recomendações de ajuste. Executar essa análise no servidor de produção aumenta a carga do servidor e pode prejudicar o desempenho do servidor durante a sessão de ajuste. É possível diminuir o impacto na carga do servidor durante uma sessão de ajuste usando um servidor de teste além do servidor de produção.  

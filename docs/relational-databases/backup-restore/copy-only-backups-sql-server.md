@@ -5,8 +5,7 @@ ms.date: 08/10/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9a63e882e79ec725cca126e80369a70bbc4bc774
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: ec3b4cc56f043354a0d64e21159bf64019048482
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="copy-only-backups-sql-server"></a>Backups somente cópia (SQL Server)
   Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Geralmente, um backup altera o banco de dados e afeta a forma de restauração dos backups posteriores. Contudo, ocasionalmente, é útil fazer um backup para uma finalidade especial sem afetar o backup global e os procedimentos de restauração do banco de dados. Backups de cópia servem para essa finalidade.  
@@ -108,4 +107,3 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [Backup-SqlDatabase](https://technet.microsoft.com/library/mt683378.aspx)
 
   
-

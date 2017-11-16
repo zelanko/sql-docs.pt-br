@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.utility.remove.f1
+f1_keywords: sql13.swb.utility.remove.f1
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0deccd96e577ceb352ba108e5799cc3e849f08c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 69772155d05edc06294747f46ed2a4db37089703
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Remover uma instância do SQL Server do Utilitário do SQL Server
   Use as etapas a seguir para remover uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este procedimento remove a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da exibição de lista do UCP e a coleta de dados do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é interrompida. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é desinstalada.  

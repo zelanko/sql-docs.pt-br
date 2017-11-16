@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e408a414ec070cdef39b69bf535ceb0d45f73435
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9d409de5e77c8cb684cb74d821bb9b7d6a45eef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
   Anteriormente, o conteúdo das propriedades de documento não podia ser diferenciado do conteúdo do corpo do documento. Essa limitação restringia as consultas de texto completo a pesquisas genéricas em documentos inteiros. No entanto, agora você pode configurar um índice de texto completo para dar suporte à pesquisa com escopo de propriedade, como Author e Title, para tipos de documento com suporte em uma coluna de dados binários **varbinary**, **varbinary(max)** (incluindo **FILESTREAM**) ou **image** . Esse formulário de pesquisa é conhecido como *pesquisa de propriedade*.  

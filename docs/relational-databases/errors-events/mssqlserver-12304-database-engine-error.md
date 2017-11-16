@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 12304 (Database Engine error)
+helpviewer_keywords: 12304 (Database Engine error)
 ms.assetid: a2c252c2-e815-4ac8-a101-7af5b32e3233
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 900d97ae3bfb1766884f0201044a9fd4fc255860
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7fc3019b148e9ac0ca278b69f55d2e2c67b33ac0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver12304"></a>MSSQLSERVER_12304
   
@@ -41,6 +38,5 @@ ms.lasthandoff: 06/22/2017
 Não use um tipo de tabela com otimização de memória que usa a propriedade de identidade com qualquer uma de suas colunas.  
   
 ## <a name="see-also"></a>Consulte também  
-[OLTP na memória &#40;Otimização na memória&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+[OLTP in-memory &#40;Otimização na memória&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
-

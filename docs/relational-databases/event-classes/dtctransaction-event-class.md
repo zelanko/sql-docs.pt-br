@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DTCTransaction event class
+helpviewer_keywords: DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7832dce3ed058f5ddd599fd19abd9703b20ff06
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1141977cd68380ba94848a510a21ccf540bf8889
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dtctransaction-event-class"></a>classe de evento DTCTransaction
   Use a classe de evento **DTCTransaction** para monitorar o estado de transações do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] coordenado pelo MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Isso inclui transações que envolvem dois ou mais bancos de dados na mesma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou transações distribuídas que envolvem duas ou mais instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

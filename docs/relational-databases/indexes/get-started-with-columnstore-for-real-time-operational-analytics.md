@@ -1,26 +1,24 @@
 ---
 title: "Introdução ao Columnstore para análise operacional em tempo real | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a67a7a405fc46996a1db1f3abdee5d948d080f63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introdução ao Columnstore para análise operacional em tempo real
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -231,4 +229,3 @@ ORDER BY created_time DESC
  [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

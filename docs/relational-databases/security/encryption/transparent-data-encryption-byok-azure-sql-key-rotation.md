@@ -10,20 +10,18 @@ editor:
 ms.assetid: 
 ms.service: sql-database
 ms.custom: quick start create, mvc
-ms.workload: data-management
+ms.workload: Inactive
 ms.tgt_pltfrm: portal
 ms.devlang: na
 ms.topic: hero-article
 ms.date: 08/07/2017
 ms.author: ryzhang26
+ms.openlocfilehash: c0751b8bfca5bbcae4a4802fecb3cf06e8182d05
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 2789dad4e4a68e96cd957b0aecfb9115588d4fa6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
-
---- 
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
+---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>Girar o Protetor de TDE (Transparent Data Encryption) usando o PowerShell 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -115,4 +113,3 @@ A opção usa os cmdlets [Add-AzureKeyVaultKey](/powershell/module/azurerm.keyva
 - No caso de um risco de segurança, saiba como remover um Protetor de TDE potencialmente comprometido: [Remover uma chave potencialmente comprometida](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) 
 
 - Introdução ao suporte para Bring Your Own Key para a TDE: [Ativar a TDE usando sua própria chave do Key Vault usando o PowerShell](transparent-data-encryption-byok-azure-sql-configure.md)
-

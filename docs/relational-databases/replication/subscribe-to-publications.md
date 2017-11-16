@@ -5,12 +5,10 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.conc.subtopubs.f1
+f1_keywords: sql13.rep.conc.subtopubs.f1
 helpviewer_keywords:
 - subscriptions [SQL Server replication], about subscriptions
 - pull subscriptions [SQL Server replication]
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], subscribing
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8c662e63ac48ad1ae3b64fdc8de428bc5090abba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 640c90e4f58c0dc09a732eb26a03808be2097999
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscribe-to-publications"></a>Assinar publicações
   Uma assinatura é uma solicitação para se obter uma cópia dos dados e objetos do banco de dados em uma publicação. Uma assinatura define qual publicação será recebida, e onde e quando será recebida. Ao planejar assinaturas, considere onde o processamento de agente deverá acontecer. O tipo de assinatura selecionado controla onde o agente é executado. Com uma assinatura push, o Agente de Mesclagem ou o Agente de Distribuição são executados no Distribuidor, enquanto que, com uma assinatura pull, os agentes são executados nos Assinantes. Após a criação de uma assinatura, ela não pode ser alterada de um tipo para outro.  
@@ -99,4 +96,3 @@ ms.lasthandoff: 07/31/2017
  [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   
-

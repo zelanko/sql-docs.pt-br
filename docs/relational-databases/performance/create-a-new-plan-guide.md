@@ -5,27 +5,24 @@ ms.date: 08/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.designer.newplanguide.f1
+f1_keywords: sql13.swb.designer.newplanguide.f1
 helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0cc530e59007070fba228c06a4f8f2983faa3f3
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ea94e6214729ba4bf5c5e39c25cdd8119d261a3e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-new-plan-guide"></a>Criar um novo guia de plano
 Guias de plano influenciam a otimização de consulta, anexando a elas dicas de consulta ou um plano de consulta fixo. No guia de plano, você especifica a instrução que deseja otimizar e uma cláusula OPTION que contém as dicas de consulta que deseja usar. ou um plano de consulta específico que você deseja usar para otimizar a consulta. Quando a consulta é executada, o otimizador de consultas faz a correspondência da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] com o guia de plano, anexando a cláusula OPTION à consulta em tempo de execução ou usando o plano de consulta especificado.  
@@ -106,4 +103,3 @@ Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, 
  Para obter mais informações, consulte [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md).  
   
   
-

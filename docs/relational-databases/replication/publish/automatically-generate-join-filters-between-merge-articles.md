@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - automatic join filter generation
 - join filters
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 076775dfba28cf3857c8ae056c8c46d44a0ce630
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3edfe8750d04d517a0ce476da6332b083d133c95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Gerar automaticamente filtros de junção entre artigos de mesclagem
   Gere automaticamente um conjunto de filtros de junção na página **Filtrar Linhas da Tabela** no Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação – \<Publicação>**. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  

@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-data-quality-services"></a>Atualizar o Data Quality Services
 Este tópico fornece informações sobre como fazer upgrade da instalação existente do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] DQS (Data Quality Services). Como parte do upgrade do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, você também deverá fazer upgrade do esquema de bancos de dados do DQS.  

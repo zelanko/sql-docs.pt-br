@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>Assinantes do IBM DB2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      A maioria das opções na cadeia de caracteres é específica para o servidor DB2 que você está configurando, mas as opções `Process Binary as Character` e `Derive Parameters` devem sempre ser definidas como `False`. Um valor é necessário para a opção `Initial Catalog` para identificar o banco de dados de assinatura. A cadeia de conexão será inserida no Assistente para Nova Assinatura quando você criar a assinatura.  
   
-3.  Crie um instantâneo ou uma publicação transacional, habilite-o para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, crie uma assinatura push para o Assinante. Para obter mais informações, consulte [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Crie um instantâneo ou uma publicação transacional, habilite-o para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, crie uma assinatura push para o Assinante. Para obter mais informações, consulte [Criar uma assinatura para um Assinante não SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 4.  Opcionalmente, especifique um script de criação personalizado para um ou mais artigos. Quando uma tabela é publicada, um script `CREATE TABLE` é criado para ela. Para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o script é criado no dialeto [!INCLUDE[tsql](../../../includes/tsql-md.md)] e, depois, é convertido para um dialeto SQL mais genérico pelo Agente de Distribuição antes de ser aplicado ao Assinante. Para especificar um script de criação personalizado, modifique o script [!INCLUDE[tsql](../../../includes/tsql-md.md)] existente ou crie um script completo que usa o dialeto SQL DB2; se for criado um script DB2, use a diretiva **bypass_translation** para que o Agente de Distribuição aplique o script no Assinante sem conversão.  
   
@@ -149,7 +148,7 @@ ms.lasthandoff: 06/22/2017
 |**varchar(max)**|VARCHAR(0)*|  
 |**xml**|VARCHAR(0)*|  
   
-* *Confira a próxima seção para mais informações sobre mapeamentos para VARCHAR(0).  
+* Confira a próxima seção para mais informações sobre mapeamentos para VARCHAR(0).  
   
 ### <a name="data-type-mapping-considerations"></a>Considerações sobre mapeamento de tipo de dados  
  Considere os seguintes problemas de mapeamento de tipo de dados ao replicar para Assinantes DB2:  
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [Assinar Publicações](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

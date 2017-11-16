@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ff0a3a8086a9bd54aedcc8e10ef5254a28ada307
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9b6d919300b8ebecd844beec0ba21f01a8757151
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Espelhamento e replicação de banco de dados (SQL Server)
   O espelhamento do banco de dados pode ser usado junto com a replicação para aprimorar a disponibilidade ao banco de dados de publicação. O espelhamento do banco de dados compreende duas cópias de um único banco de dados que geralmente reside em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados principal. As atualizações realizadas pelos clientes no banco de dados principal são aplicadas à outra cópia do banco de dados, conhecida como banco de dados espelho. O espelhamento envolve a aplicação do log de transações de cada inserção, atualização ou exclusão efetuada no banco de dados principal, para o banco de dados espelho.  
@@ -170,4 +168,3 @@ ms.lasthandoff: 08/02/2017
  [Replicação e envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   
-

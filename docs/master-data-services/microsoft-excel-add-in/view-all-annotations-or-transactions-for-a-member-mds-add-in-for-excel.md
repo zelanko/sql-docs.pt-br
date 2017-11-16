@@ -1,27 +1,24 @@
 ---
 title: "Exibir todas as anotações ou transações de um membro (Suplemento MDS para Excel) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6edf89d656af33d0304198c89059947eac6a0c06
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 84b4772712d6b921614470cff72a6d33f3b1df0e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Exibir todas as anotações ou transações de um membro (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], exiba anotações (comentários) e transações de linhas de dados (membros) quando quiser verificar as atualizações dos dados com o passar do tempo.  
@@ -45,4 +42,3 @@ ms.lasthandoff: 09/07/2017
  [Visão geral: Importando dados do Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   
-

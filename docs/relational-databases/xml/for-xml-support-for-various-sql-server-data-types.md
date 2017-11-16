@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, data type support
 - data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ef7a1e703ffb9d874f81c5540e1da7810ea5e2e6
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7bd68e023944367ebd6f169b37f6b8f2eac5adfc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Suporte a FOR XML para vários tipos de dados SQL Server
   Os tópicos desta seção descrevem o suporte a FOR XML para tipos de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -38,4 +36,3 @@ ms.lasthandoff: 06/22/2017
 |[Suporte de FOR XML para o tipo de dados timestamp](../../relational-databases/xml/for-xml-support-for-the-timestamp-data-type.md)|Descreve como o FOR XML funciona com o tipo de dados **timestamp** .|  
   
   
-

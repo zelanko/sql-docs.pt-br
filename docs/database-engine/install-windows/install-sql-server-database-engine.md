@@ -7,23 +7,20 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Database Engine [SQL Server], installing
+helpviewer_keywords: Database Engine [SQL Server], installing
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: 1beac734329cbe2f63a608a4b9482eab74a33b63
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar o Mecanismo de Banco de Dados do SQL Server
 O componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é o principal serviço para armazenamento, processamento e proteção de dados. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos mais exigentes aplicativos de consumo de dados em sua empresa.  
@@ -74,4 +71,3 @@ Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Ba
  [Fazer Upgrade do SQL Server Usando o Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   
-

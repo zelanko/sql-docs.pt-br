@@ -5,26 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- HierarchyID
+applies_to: SQL Server 2016
+helpviewer_keywords: HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4569fb3f5bc56d04624756eb3fccba8da1d4ad2f
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 49f9580f99974d4453a7633c6640f8b5ca418e35
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>Lição 1-2 – Populando uma tabela com os dados hierárquicos existentes
 Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo** . Essa tarefa tem as seguintes etapas:  
@@ -174,4 +170,3 @@ A próxima tarefa criará índices para oferecer suporte à estrutura hierárqui
   
   
   
-

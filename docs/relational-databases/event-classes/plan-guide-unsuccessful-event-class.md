@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Plan Guide Unsuccessful event class
+helpviewer_keywords: Plan Guide Unsuccessful event class
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94ccb2d809fe5da7d793ffae753b42765ff0fe1a
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 686cf924c8359d5cfaeeeafee7429e9afee8ae6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>classe de evento Plan Guide Unsuccessful
   A classe de evento Plan Guide Unsuccessful indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pôde produzir um plano de execução para uma consulta ou lote que continha uma guia de plano. Em vez disso, o plano foi compilado sem usar a guia de plano. O evento dispara quando as seguintes condições forem verdadeiras:  

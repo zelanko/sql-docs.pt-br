@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.history.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66744654fac383f2390109a01f8d4cb7b502bf7a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 80fac6d5c466240ceb40fc7b6c4725fc94b252fd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties-history-page"></a>Propriedades do Servidor (página Histórico)
   Use essa página [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] em [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] para definir um valor padrão para o número de cópias do histórico de relatório a serem retidas. O valor padrão fornece uma configuração inicial que estabelece limites de histórico de relatório para todos os relatórios. Você pode variar essas configurações para relatórios individuais.  
@@ -48,9 +46,8 @@ ms.lasthandoff: 08/09/2017
  Se, posteriormente, você limitar o histórico de relatório, quando o histórico existente exceder o limite especificado, o servidor de relatório reduzirá o histórico existente ao novo limite. Os instantâneos de relatórios mais antigos são excluídos primeiro. Se o histórico de relatórios estiver vazio ou abaixo do limite, novos instantâneos de relatório serão adicionados. Quando o limite é alcançado, o instantâneo mais antigo é excluído e um novo instantâneo de relatório é adicionado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir propriedades do servidor de relatório &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Conectar a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Servidor de relatório na Ajuda de F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
-

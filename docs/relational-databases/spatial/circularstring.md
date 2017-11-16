@@ -5,21 +5,20 @@ ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb267b6567f73400cae4767d26ce5cef8804da3d
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a866d003f23cfbeea4b56478e607825266b06709
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="circularstring"></a>CircularString
   Um **CircularString** é uma coleção de zero ou mais segmentos de arco circulares contínuos. Um segmento de arco circular é um segmento curvado definido por três pontos em um plano bidimensional; o primeiro ponto não pode ser igual ao terceiro ponto. Se todos os três pontos de um segmento de arco circular forem colineares, o segmento de arco será tratado como um segmento de linha.  
@@ -179,4 +178,3 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
  [LineString](../../relational-databases/spatial/linestring.md)  
   
   
-

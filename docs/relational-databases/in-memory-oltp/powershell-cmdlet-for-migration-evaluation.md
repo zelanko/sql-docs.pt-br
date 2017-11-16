@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b49962bfce3474269b4d9a91dee74212b0d02234
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 618784e57397aaff751a602ddabab4687e3f229e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Cmdlet do PowerShell para Avaliação da Migração
   O cmdlet Save-SqlMigrationReport é uma ferramenta que avalia a adequação da migração de vários objetos em um banco de dados do SQL Server. Atualmente, ele é limitado pela avaliação da adequação da migração para o OLTP na Memória. O cmdlet pode ser executado em um ambiente do Windows PowerShell com privilégios elevados e no sqlps.  
@@ -47,4 +45,3 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
  Na pasta especificada no parâmetro - FolderPath, haverá dois nomes de pasta: Tables e Stored Procedures. Se o objeto de destino for uma tabela, o relatório estará na pasta Tables. Caso contrário, ele estará na pasta Stored Procedures.  
   
   
-

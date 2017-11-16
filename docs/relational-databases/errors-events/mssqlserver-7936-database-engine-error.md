@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 7936 (Database Engine error)
+helpviewer_keywords: 7936 (Database Engine error)
 ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 169b57dbc22e0519dd6b46e2e25d7fe2a284d4b1
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d8a98d9119331ac178987051cf6e55e4883a0620
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver7936"></a>MSSQLSERVER_7936
   
@@ -55,4 +52,3 @@ Se o problema não estiver relacionado ao hardware e se houver um backup limpo c
 ### <a name="run-dbcc-checkdb"></a>Executar DBCC CHECKDB  
 Não aplicável. Não é possível corrigir esse erro automaticamente. Se você não conseguir restaurar o banco de dados com base em um backup, contate o CSS (Suporte e Atendimento ao Cliente) [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-

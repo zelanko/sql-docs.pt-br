@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deprecation [SQL Server], events announced stage
 - Deprecation Announcement event class
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f937e252123265ac28d215a751fc6419b5fe8dcc
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2ab108ddb69d1de2859d80ba0c158d11c9ddb991
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecation-announcement-event-class"></a>classe de evento Deprecation Announcement
   A classe de evento **Deprecation Announcement** ocorre quando você usa um recurso que será removido de uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não será removido da próxima versão principal. Para que seus aplicativos tenham tempo de vida mais longo, evite usar recursos que provocam a classe de evento **Deprecation Announcement** ou a **Deprecation Final Support** .  
@@ -46,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |NTUserName|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |ObjectID|**int**|Número de identificação do recurso substituído.|22|Sim|  
 |ObjectName|**nvarchar**|Nome do recurso preterido.|34|Sim|  
-|Deslocamento|**Int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Deslocamento|**int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, **SessionLoginName**  mostrará o Logon1 e **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  

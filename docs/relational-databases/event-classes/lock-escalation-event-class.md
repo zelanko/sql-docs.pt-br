@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Escalation event class
 - lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3210940a28a25e89e4e69dbcb044503be2ae20d1
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e0ca48d2444fd6ec57cb85ec0aea6d698d9f02dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lockescalation-event-class"></a>Classe de evento Lock:Escalation
   A classe de evento **Lock:Escalation** indica que um bloqueio mais refinado foi convertido em um bloqueio mais rústico; por exemplo, um bloqueio de linha que é convertido em um bloqueio de objeto. A classe de evento do escalonamento é ID de evento 60.  

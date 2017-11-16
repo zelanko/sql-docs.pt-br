@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.profiles.perfprofileagentname.f1
-helpviewer_keywords:
-- Agent Profile dialog box
+f1_keywords: sql13.rep.profiles.perfprofileagentname.f1
+helpviewer_keywords: Agent Profile dialog box
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16dd8b8f48927c74afc929f62e13339c23df9b05
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dd232ce058fcde9304259a791de8e1b686a51ace
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="agent-profiles-single-agent"></a>Perfis de Agente (agente único)
   Use a caixa de diálogo **Perfis de Agente** para gerenciar perfis para um agente. Perfis de agente fornecem um modo conveniente para gerenciar parâmetros em tempo de execução para cada agente. Cada agente tem um perfil padrão e alguns agentes têm perfis adicionais predefinidos. Por exemplo, o Merge Agent tem um perfil de "vínculo lento" projetado para baixas conexões de largura de banda. Perfis predefinidos são suficientes para a maioria dos aplicativos, mas você também pode criar perfis definidos pelo usuário, que permite personalizar o comportamento do agente.  

@@ -5,25 +5,23 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d1b594d608fc266567c0a5c86a24f8130c3b6c4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Objeto Métodos de Acesso
   O objeto **Access Methods** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar como são acessados os dados lógicos dentro do banco de dados. O acesso físico às páginas do banco de dados no disco é monitorado usando os contadores do **Gerenciador de Buffer** . Monitorar os métodos usados para acessar os dados armazenados no banco de dados pode ajudá-lo a determinar se o desempenho da consulta pode ser melhorado, adicionando ou modificando índices, adicionando ou movendo partições, adicionando arquivos ou grupos de arquivo, desfragmentando índices ou regravando consultas. Os contadores dos **Métodos de Acesso** também podem ser usados para monitorar a quantidade de dados, índices e espaço livre dentro do banco de dados, indicando assim o volume e a fragmentação de dados para cada instância do servidor. A fragmentação excessiva do índice pode prejudicar o desempenho.  
@@ -99,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

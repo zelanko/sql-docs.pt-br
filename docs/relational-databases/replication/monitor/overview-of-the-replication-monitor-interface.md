@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 58dd67c03b3df116914c4f03cbb336136b251e3f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Visão geral da interface do Replication Monitor
   O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor apresenta uma exibição voltada para o Publicador ou para o Distribuidor de todas as atividades de replicação em um formato de dois painéis. Você adiciona um Publicador ao monitor no painel esquerdo e, no painel direito, o monitor exibe informações sobre o Publicador, suas publicações, as assinaturas para essas publicações e os diversos agentes de replicação. Além de apresentar informações sobre a topologia de replicação, o Replication Monitor permite que você execute várias tarefas, como iniciar e interromper agentes e validar dados.  
@@ -197,7 +195,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>Exibindo informações e executando tarefas relacionadas a assinaturas  
  O Replication Monitor exibe informações sobre assinaturas em várias guias diferentes. Clique duas vezes em uma assinatura no Replication Monitor para acessar essas guias em uma janela de detalhes. Todas as guias são úteis para responder a pergunta "Por que um agente não está em execução?" As mensagens de erro disponíveis fornecem informações detalhadas sobre o motivo de o agente não estar em execução e fornece um ponto inicial para solução de problemas com agentes associados a uma assinatura.  
   
--   **All Subscriptions tab** and **Subscription Watch List tab.**  
+-   **Guia Todas as Assinaturas** e **guia Lista de Observação da Assinatura**  
   
      Essas guias foram descritas anteriormente neste tópico.  
   
@@ -242,4 +240,3 @@ ms.lasthandoff: 06/22/2017
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

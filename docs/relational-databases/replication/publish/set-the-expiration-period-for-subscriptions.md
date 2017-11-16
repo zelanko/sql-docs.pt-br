@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - retention periods [SQL Server replication]
 - deactivating subscriptions
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95b1733f7b2953f8fc5088c6d0b2a5bbdca3d754
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 92dd01ed14cb2f26f30cdcc2ac19ad8a44f80051
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Definir o período de validade da assinatura
   Este tópico descreve como definir o período de validade para assinaturas no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. O período de validade das assinaturas determina o período de tempo antes de uma assinatura expirar e ser removida. Para obter mais informações, consulte [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  

@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6c92fb00d46a873612f0741317549ee804bca739
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f4a3c46eaad9fcdb330210d18ed8b2a56e178043
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)
   Este tópico descreve como usar o **Assistente de Novo Grupo de Disponibilidade** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para criar e configurar um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
@@ -215,4 +213,3 @@ Como alternativa ao uso do Assistente de Novo Grupo de Disponibilidade, você po
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-

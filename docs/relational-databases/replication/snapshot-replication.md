@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshot replication [SQL Server], about snapshot replication
 - snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 927b6cb09af9a41a8326033cc36f949b3e29bb68
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="snapshot-replication"></a>Replicação de instantâneo
   A replicação de instantâneo distribui os dados exatamente como eles aparecem em um momento específico e não monitora as atualizações dos dados. Quando a sincronização ocorre, todo o instantâneo é gerado e enviado aos Assinantes.  
@@ -109,4 +107,3 @@ ms.lasthandoff: 06/22/2017
 3.  Se um novo instantâneo estiver disponível, o Agente de Mesclagem aplicará ao banco de dados de assinatura os arquivos de instantâneo do local especificado em **sysmergeschemachange**.  
   
   
-

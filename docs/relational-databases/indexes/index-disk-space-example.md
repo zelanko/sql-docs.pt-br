@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbc1a254df5ff696cb99c9090aae37da70e8fbbf
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 34ea623f3e64833c73f23a5be78fd3cf9ef9722b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="index-disk-space-example"></a>Exemplo de espaço em disco de índice
-  Sempre que um índice é criado, recriado, ou cancelado, o espaço em disco tanto para a antiga (fonte) quanto para a nova (destino) estrutura é necessário em seus arquivos e grupos de arquivos apropriados. A estrutura antiga não é desalocada até que a transação de criação do índice seja confirmada. Pode igualmente ser necessário espaço temporário em disco adicional, para classificação de operações. Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
+  Sempre que um índice é criado, recriado, ou cancelado, o espaço em disco tanto para a velha (fonte) quanto para a nova (destino) estrutura é necessário em seus arquivos e grupos de arquivos apropriados. A estrutura antiga não é desalocada até que a transação de criação do índice seja confirmada. Pode igualmente ser necessário espaço temporário em disco adicional, para classificação de operações. Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  Neste exemplo, os requisitos de espaço em disco para criar um índice clusterizado são determinados.  
   
@@ -129,4 +127,3 @@ ms.lasthandoff: 06/22/2017
  [Espaço em disco de log de transações para operações de índice](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   
   
-

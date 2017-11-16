@@ -1,30 +1,27 @@
 ---
 title: "Expressões de caminho JSON (SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, path expressions
 - path expressions (JSON)
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 24bd97b912507021544b7c4227e409b1d400ea66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 07c873941669f7a36ff9b93651a938ecae2662b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressões de demarcador JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -114,7 +111,7 @@ FROM OPENJSON(@json,'$.person.info')
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure, publicadas por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   
@@ -122,4 +119,3 @@ Para ver várias soluções específicas, casos de uso e recomendações, consul
  [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)  
   
   
-

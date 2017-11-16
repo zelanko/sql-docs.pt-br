@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- contained database, collations
+helpviewer_keywords: contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 777ff52e5670d97b6dfe3813d8e05dfcccf00103
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4a064d177390a6e9037f02cb7ab4c05364122273
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="contained-database-collations"></a>Agrupamentos de banco de dados contidos
   Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, distinção de acentos e o idioma base em uso. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha do agrupamento dos dados. Para obter uma discussão mais detalhada sobre os agrupamentos, consulte [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
@@ -287,4 +284,3 @@ GO
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)  
   
   
-

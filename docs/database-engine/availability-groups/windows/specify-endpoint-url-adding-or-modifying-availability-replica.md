@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 43bfc29045efc22d72becb20dbd4d4441c97baa2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 054fea6b1eabbac7db7659e818c6033a6e9acc53
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Especificar a URL de ponto de extremidade – adicionando ou modificando uma réplica de disponibilidade
   Para hospedar uma réplica de disponibilidade para um grupo de disponibilidade, uma instância de servidor deve ter um ponto de extremidade de espelhamento de banco de dados. A instância de servidor usa este ponto de extremidade para escutar mensagens de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de réplicas de disponibilidade hospedadas por outras instâncias de servidor. Para definir uma réplica de disponibilidade para um grupo de disponibilidade, você deve especificar a URL de ponto de extremidade da instância de servidor que hospedará a réplica. A *URL de ponto de extremidade* identifica o protocolo de transporte do ponto de extremidade de espelhamento de banco de dados — TCP, o endereço do sistema da instância de servidor e o número de porta associado ao ponto de extremidade.  
@@ -163,4 +161,3 @@ ms.lasthandoff: 08/02/2017
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   
   
-

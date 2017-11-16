@@ -10,19 +10,17 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Secure Sockets Layer (SSL)
+helpviewer_keywords: Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4f973faa65ed34695804de0815331f562b7a24f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexões SSL em um servidor de relatórios de modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] O modo Nativo usa o serviço HTTP SSL (protocolo SSL) para estabelecer conexões criptografadas com um servidor de relatório. Se você tiver um arquivo de certificado (.cer) instalado em um repositório de certificados local no computador do servidor de relatório, poderá associá-lo a uma reserva de URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para dar suporte a conexões do servidor de relatório por meio de um canal criptografado.  

@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9bd32bd87a5cc458e1054555b8616db78957e27f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b4c2b33ef0dcdee0ac79340760790ba8938b431
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="buffer-pool-extension"></a>Extensão do pool de buffers
   Introduzida no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a extensão do pool de buffers fornece a integração consistente de uma extensão de memória RAM não volátil (isto é, unidade de estado sólido) com o pool de buffers do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para melhorar significativamente a taxa de transferência de E/S. A extensão do pool de buffers não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -110,4 +108,3 @@ ms.lasthandoff: 08/02/2017
 |Monitorar a extensão do pool de buffers|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Contadores de desempenho](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
   
   
-

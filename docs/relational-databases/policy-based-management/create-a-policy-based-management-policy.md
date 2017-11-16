@@ -5,23 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Policy-Based Management, creating policies
+helpviewer_keywords: Policy-Based Management, creating policies
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28d614d27647f0466abd5a6715244b6334ec56be
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b3dc0ccf72ed30ddadca4521783d3f9882484a02
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-policy-based-management-policy"></a>Criar uma política do Gerenciamento Baseado em Políticas
   Este tópico descreve como criar uma Política de Gerenciamento Baseado em Políticas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -69,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
 11. Para limitar a política a um subconjunto dos tipos de destino, na caixa **Restrição de servidor** , selecione a partir das condições de limitação ou crie uma nova condição.  
   
-     Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo **Criar Nova Política** , consulte [Caixas de diálogo Criar Nova Política ou Abrir política, Página geral](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ou [Caixas de diálogo Criar Nova Política ou Abrir Política, página Descrição](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
+     Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo **Criar Nova Política** , consulte [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ou [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 12. Quando terminar, clique em **OK**.  
   

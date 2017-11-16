@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - restoring transaction logs [SQL Server], restoring backups
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 93c6c392eeabbfaddf29be7f97b1e1e3b67e7fe7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar um backup de log de transações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +140,7 @@ ms.lasthandoff: 06/22/2017
         |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
         |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
         |**LSN**|Número de sequência de log da transação marcada.|  
-        |**Banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  
+        |**Backup de banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  
         |**Nome do Usuário**|Nome do usuário do banco de dados que confirmou a transação marcada.|  
   
 8.  Para exibir ou selecionar as opções avançadas, clique em **Opções** no painel **Selecionar uma página** .  

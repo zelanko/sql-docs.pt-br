@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1105 (Database Engine error)
+helpviewer_keywords: 1105 (Database Engine error)
 ms.assetid: e7f4ad02-8c7f-4bb9-9781-2c86253f2138
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6351998ecebd4a63c6fff509cb535f6107247513
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4a76361f4aa307eeece1e57b8e2b0c9b51c07df0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver1105"></a>MSSQLSERVER_1105
   
@@ -54,4 +51,3 @@ As seguintes ações podem criar espaço disponível no grupo de arquivos:
 > [!NOTE]  
 > Quando um índice está localizado em vários arquivos, **ALTER INDEX REORGANIZE** pode retornar um erro 1105 quando um desses arquivos estiver cheio. O processo de reorganização é bloqueado quando o processo tenta mover as linhas para o arquivo cheio. Para resolver essa limitação, execute um **ALTER INDEX REBUILD** em vez de **ALTER INDEX REORGANIZE** ou aumente o limite de aumento de arquivo de todos os arquivos que estão cheios.  
   
-

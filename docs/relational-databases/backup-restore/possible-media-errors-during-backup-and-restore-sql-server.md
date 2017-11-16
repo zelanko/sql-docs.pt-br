@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - NO_CHECKSUM option
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 750aa24dcfae82a4e44a32de345299a964df0de8
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 39ab370ba08f99d15e43ad88429e1cb72946562b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erros de mídia possíveis durante backup e restauração (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá a você a opção de recuperar um banco de dados apesar dos erros detectados. Um novo mecanismo de detecção de erros importante é a criação opcional de uma soma de verificação do backup que pode ser criada por uma operação de backup e validada por uma operação de restauração. Você pode controlar se uma operação verifica os erros e se a operação é interrompida ou continua ao encontrar um erro. Se um backup contiver uma soma de verificação de backup, as instruções RESTORE e RESTORE VERIFYONLY poderão verificar os erros.  

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Acquired event class
+helpviewer_keywords: Acquired event class
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4aa4b166949b268fedf910fd4c9a7692e339d380
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f96b334e4c722b456bad9a043d753b18cca5495b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lockacquired-event-class"></a>Classe de evento Lock:Acquired
   A classe de evento Lock:Acquired indica que foi obtida a aquisição de um bloqueio em um recurso, como página de dados.  

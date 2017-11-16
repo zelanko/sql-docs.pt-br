@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Showplan Text event class
+helpviewer_keywords: Showplan Text event class
 ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ce7e9173acacb0d140be3297c641ee19fd096ed
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: aec356e361b78a2ca35b646ee0514081b4ada6b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="showplan-text-event-class"></a>classe de evento Showplan Text
   A classe de evento Showplan Text ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. As informações incluídas são um subconjunto das informações disponíveis nas classes de evento Showplan All, Showplan XML Statistics Profile ou Showplan XML.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 76660f46a6ff92e80dcf80d23ac1276ed55037bd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
 
@@ -402,4 +400,3 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  [Backups de bancos de dados completos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)  
   
   
-

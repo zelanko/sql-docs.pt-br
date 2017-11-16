@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Availability Groups [SQL Server], take offline
+helpviewer_keywords: Availability Groups [SQL Server], take offline
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7ba7f16e9aac20a2c1878ce7c2562d3f71fb8c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1aa3279aaba12034c58c2b0afdfc4a1016c4fd0d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Colocar um grupo de disponibilidade offline (SQL Server)
   Este tópico descreve como passar um grupo de disponibilidade AlwaysOn do estado ONLINE para o estado OFFLINE usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)] no [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] e em versões posteriores. Não há perda de dados para bancos de dados de confirmação síncrona, pois, se alguma réplica de confirmação síncrona não é sincronizada, a operação OFFLINE gera um erro e deixa o grupo de disponibilidade ONLINE. Quando o grupo de disponibilidade permanece online, isso protege bancos de dados de confirmação síncrona não sincronizados contra possível perda de dados. Depois que um grupo de disponibilidade se torna offline, seus bancos de dados ficam indisponíveis para os clientes e você não pode recolocar o grupo de disponibilidade online. Portanto, coloque um grupo de disponibilidade offline somente para migrar os recursos do grupo de disponibilidade de um cluster WSFC para outro.  
@@ -102,4 +99,3 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
-

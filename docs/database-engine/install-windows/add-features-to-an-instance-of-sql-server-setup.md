@@ -7,8 +7,7 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - SQL Server, features
 - adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: eb201c27f255ac57c667c3a727c2b4c1551f37fe
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/12/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Adicionar recursos a uma instância do SQL Server (Instalação)
   Este tópico contém um procedimento passo a passo para adicionar recursos a uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alguns componentes ou serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são específicos de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles também são conhecidos como capazes de reconhecimento de instância. Eles compartilham a mesma versão que a instância que os hospeda e são usados exclusivamente para aquela instância. Você pode adicionar os componentes que reconhecem a instância a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], junto com os componentes compartilhados se eles ainda não estiverem instalados. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
@@ -158,4 +156,3 @@ ms.lasthandoff: 09/12/2017
  [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- OLEDB DataRead event class
+helpviewer_keywords: OLEDB DataRead event class
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c36eeb6ff13c3bcaa5364375e3a19f90921e8ab3
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 475009bfb14dfdca4cd7ab9eed1decfa8b747e3c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oledb-dataread-event-class"></a>classe de evento OLEDB DataRead
   A classe de evento OLEDB DataRead ocorre quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chama um provedor OLE DB para consultas distribuídas e procedimentos armazenados remotos. Inclua essa classe de evento em rastreamentos que monitoram quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz uma chamada de solicitação de dados ao provedor OLE DB.  

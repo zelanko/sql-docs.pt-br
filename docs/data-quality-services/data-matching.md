@@ -5,22 +5,20 @@ ms.date: 10/01/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f6902b25f18905ce55dbd30e12917a4af858c139
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-matching"></a>Correspondência de dados
   O processo de correspondência de dados do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ajuda você a reduzir a duplicação de dados e a aprimorar a exatidão dos dados em uma fonte de dados. A correspondência analisa o grau de duplicação em todos os registros de uma única fonte de dados, retornando probabilidades ponderadas de uma correspondência entre cada conjunto de registros comparados. Você pode decidir então quais registros são correspondências e executar a ação apropriada nos dados de origem.  
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/09/2017
 |Executar a correspondência em um projeto de qualidade de dados|[Executar um projeto de correspondência](../data-quality-services/run-a-matching-project.md)|  
   
   
-

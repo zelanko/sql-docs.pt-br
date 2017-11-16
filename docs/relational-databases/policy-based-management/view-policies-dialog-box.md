@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.managepolicies.general.f1
+f1_keywords: sql13.swb.dmf.managepolicies.general.f1
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e92832844968d82686efdcc696294c9ce8ff75f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 30be8d926fda1b299338ba2bb66839712c0305aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-policies-dialog-box"></a>Caixa de diálogo Exibir Políticas
   Use esta caixa de diálogo para exibir as políticas efetivas para esse destino. Esta caixa de diálogo mostra as políticas relevantes, bem como suas categorias e informações.  
@@ -56,4 +53,3 @@ ms.lasthandoff: 06/22/2017
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

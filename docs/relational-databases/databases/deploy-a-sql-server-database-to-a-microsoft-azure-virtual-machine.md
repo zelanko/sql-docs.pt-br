@@ -4,8 +4,7 @@ ms.date: 07/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - Deploy a SQL Server database to Azure
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f2595d826f1922e497e9774d67afc7e6741d15bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
-ms.openlocfilehash: d571407c52dd11d7fec6a8077f1eb5a2837c013d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure
   Use o assistente para **Implantar um Banco de Dados em uma VM do Microsoft Azure** para implantar um banco de dados de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma VM (Máquina Virtual) do Microsoft Azure. O assistente usa uma operação completa de backup do banco de dados para copiar sempre o esquema completo do banco de dados e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
@@ -299,4 +297,3 @@ Especifique ou confirme o nome de um novo banco de dados. Se o nome do banco de 
  [Preparando-se para migrar para o SQL Server em Máquinas Virtuais do Microsoft Azure](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
-

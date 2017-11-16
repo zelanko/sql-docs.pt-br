@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c31b1ebaa449c650edfcac6e045770652d7989be
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-sql-server-components"></a>Monitorar componentes do SQL Server
   Monitorar é importante porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece serviço em um ambiente dinâmico. Os dados mudam no aplicativo. O tipo de acesso de que os usuários precisam muda. O modo de conexão dos usuários muda. Os tipos de aplicativos que acessam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem até mudar, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerencia automaticamente os recursos em nível de sistema, como a memória e o espaço em disco, a fim de minimizar a necessidade de ajustes manuais abrangentes em nível de sistema. O monitoramento permite aos administradores identificar tendências de desempenho para determinar se são necessárias alterações.  
@@ -142,4 +140,3 @@ ms.lasthandoff: 08/03/2017
      A reprodução de eventos permite estabelecer uma cópia de teste do ambiente de banco de dados do qual os dados foram capturados e repetir os eventos capturados conforme ocorreram originalmente no sistema real. Esse recurso está disponível somente com o Distributed Replay Utility ou o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. É possível reproduzir os eventos na mesma velocidade em que ocorreram originalmente, o mais rápido possível (para estressar o sistema) ou, mais provavelmente, uma etapa por vez (para analisar o sistema após a ocorrência de cada evento). Analisando os eventos exatos em um ambiente de teste, é possível prevenir danos ao sistema de produção. Para obter mais informações, veja [Reproduzir rastreamentos](../../tools/sql-server-profiler/replay-traces.md).  
   
   
-

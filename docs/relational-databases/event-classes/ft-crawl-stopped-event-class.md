@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Crawl Stopped event class
+helpviewer_keywords: Crawl Stopped event class
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 46a5cacd714274edb441a64a92b441e964bb9303
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 20752d17adc177a4c0dd706a2290c16c78fcf76d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ftcrawl-stopped-event-class"></a>Classe de evento FT:Crawl Stopped
   A classe de evento **:Crawl Stopped** indica que um rastreamento de texto completo (população) parou. A interrupção pode se dever à conclusão bem sucedida do rastreamento ou a um erro fatal.  
@@ -45,4 +42,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

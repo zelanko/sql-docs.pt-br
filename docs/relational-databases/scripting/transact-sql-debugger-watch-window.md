@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.debug.watch
-helpviewer_keywords:
-- Watch Window [Transact-SQL]
+f1_keywords: vs.debug.watch
+helpviewer_keywords: Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9b0722b0bd77b33ddb170bb1c2f510f28b74dd82
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0fd2fb6a5e923661dbcb4a406abe25c230ff506a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Depurador do Transact-SQL – janela Inspeção
   A janela **Inspecionar** exibe informações sobre as expressões que você selecionou. Pode haver até quatro janelas Inspecionar: **Inspecionar 1**, **Inspecionar 2, Inspecionar 3**e **Inspecionar 4**. As expressões são avaliadas dentro do escopo do quadro de pilha de chamadas atual selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para inspecionar variáveis e expressões.  

@@ -1,27 +1,24 @@
 ---
 title: "Implementando uma expressão CASE em um procedimento armazenado compilado nativamente | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed46412ee2d9867d2f7ce5af251faf0ad110538a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementando uma expressão CASE em um procedimento armazenado compilado nativamente
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
@@ -110,4 +107,3 @@ GO
  [Construções do Transact-SQL sem suporte pelo OLTP na memória](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
-

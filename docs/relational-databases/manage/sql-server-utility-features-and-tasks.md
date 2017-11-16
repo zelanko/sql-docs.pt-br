@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - UCP
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8176e89f8acfd39b8075dde8d470189d14dfe843
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c099214c37d6f3a2d8f1198e6f172f1a11d1b64e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do utilitário do SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisam gerenciar seu ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um todo. Isso é abordado nesta versão por meio do conceito de gerenciamento de aplicativo e multisservidor do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -66,4 +64,3 @@ ms.lasthandoff: 06/22/2017
 |Links para tópicos da Ajuda F1 do UtilityExplorer.|[Ajuda de F1 do Gerenciador do Utilitário](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   
   
-

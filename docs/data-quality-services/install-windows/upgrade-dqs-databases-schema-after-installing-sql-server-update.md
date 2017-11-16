@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1670269d5420fa40123b6483e0a31cee978f65a6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85fb184a0c084c0cd13467161c49506a2a56c2ec
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Atualize o esquema de bancos de dados DQS depois de instalar a atualização do SQL Server
   Depois que instalar uma atualização do SQL Server (patch, hotfix ou atualização cumulativa) em uma instância do DQS previamente configurada, você poderá ter de atualizar o esquema de bancos de dados do DQS executando o arquivo DQSInstaller.exe com o parâmetro de linha de comando **upgrade** . Caso contrário, você poderá receber o erro a seguir ao tentar se conectar ao Servidor do Data Quality usando seu Cliente do Data Quality:  
@@ -72,4 +70,3 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  [Atualizar assemblies SQLCLR após atualizar o .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   
   
-

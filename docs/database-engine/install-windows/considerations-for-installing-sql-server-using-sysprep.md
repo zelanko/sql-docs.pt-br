@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: f10952679464999ae78fbb00432d3a8b8a7dc5ef
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerações para instalação do SQL Server usando SysPrep
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O SysPrep permite preparar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador e concluir a configuração posteriormente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O SysPrep envolve um processo de duas etapas para obter uma instância autônoma configurada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As etapas incluem o seguinte:  
@@ -69,7 +67,7 @@ SysPrep no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a t
   
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é instalado automaticamente e concluído ao término da etapa de preparação de imagem.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O navegador e o Gravador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são automaticamente preparados quando você prepara uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles são concluídos quando você conclui a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando a etapa Concluir Imagem.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Gravador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são automaticamente preparados quando você prepara uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles são concluídos quando você conclui a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando a etapa Concluir Imagem.  
   
 Para obter mais informações sobre as edições com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   

@@ -5,8 +5,7 @@ ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0a9aeecbec7487e9d750fabb7e2374366f41678a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
-ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funções determinísticas e não determinísticas
   As funções determinísticas sempre retornam o mesmo resultado quando são chamadas com o uso de um conjunto específico de valores de entrada e quando recebem o mesmo estado do banco de dados. As funções não determinísticas podem retornar resultados diferentes cada vez que são chamadas com um conjunto específico de valores de entrada, mesmo que o estado do banco de dados que elas acessam permaneça o mesmo. Por exemplo, a função AVG sempre retorna o mesmo resultado, dadas as qualificações declaradas acima, mas a função GETDATE, que retorna o valor datetime atual, sempre retorna um resultado diferente.  
@@ -73,19 +71,19 @@ ms.lasthandoff: 10/17/2017
   
 |||  
 |-|-|  
-|@@CONNECTIONS |GETDATE|  
-|@@CPU_BUSY |GETUTCDATE|  
-|@@DBTS |GET_TRANSMISSION_STATUS|  
-|@@IDLE |LAG|  
-|@@IO_BUSY |LAST_VALUE|  
-|@@MAX_CONNECTIONS |LEAD|  
-|@@PACK_RECEIVED |MIN_ACTIVE_ROWVERSION|  
-|@@PACK_SENT |NEWID|  
-|@@PACKET_ERRORS |NEWSEQUENTIALID|  
-|@@TIMETICKS |NEXT VALUE FOR|  
-|@@TOTAL_ERRORS |NTILE|  
-|@@TOTAL_READ |PARSENAME|  
-|@@TOTAL_WRITE |PERCENTILE_CONT|  
+|@@CONNECTIONS|GETDATE|  
+|@@CPU_BUSY|GETUTCDATE|  
+|@@DBTS|GET_TRANSMISSION_STATUS|  
+|@@IDLE|LAG|  
+|@@IO_BUSY|LAST_VALUE|  
+|@@MAX_CONNECTIONS|LEAD|  
+|@@PACK_RECEIVED|MIN_ACTIVE_ROWVERSION|  
+|@@PACK_SENT|NEWID|  
+|@@PACKET_ERRORS|NEWSEQUENTIALID|  
+|@@TIMETICKS|NEXT VALUE FOR|  
+|@@TOTAL_ERRORS|NTILE|  
+|@@TOTAL_READ|PARSENAME|  
+|@@TOTAL_WRITE|PERCENTILE_CONT|  
 |AT TIME ZONE|PERCENTILE_DISC|
 |CUME_DIST|PERCENT_RANK|  
 |CURRENT_TIMESTAMP|RAND|  
@@ -103,4 +101,3 @@ ms.lasthandoff: 10/17/2017
  Semelhante a invocações de um procedimento armazenado ou em lotes, o procedimento armazenado estendido é executado no contexto da conta de segurança do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sob a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado. O proprietário do procedimento armazenado estendido deve considerar as permissões do contexto de segurança, ao conceder permissões a outros usuários para executar o procedimento.  
   
   
-

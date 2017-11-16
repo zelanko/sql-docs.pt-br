@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.addreplicawizard.enterpasswords.f1
+f1_keywords: sql13.swb.addreplicawizard.enterpasswords.f1
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56e26d95c0a9ba246240a22972937e913952a389
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0e89f1cedff6ee8b3a18e78ce08d5090331a5694
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enter-passwords-page-add-replica-wizard"></a>Página Inserir Senhas (Assistente para Adicionar Réplica)
   Este tópico da ajuda descreve as opções da página **Inserir Senhas** . Este tópico aplica-se ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -57,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
-

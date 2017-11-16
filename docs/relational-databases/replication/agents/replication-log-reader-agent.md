@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3107bcd2f7490c9583c0c8e9355ecc9ff9e20bd7
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1d78b8bd802b407d6bc4dc75a63ed06a9e00c7ab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-log-reader-agent"></a>Replication Agente de Leitor de Log
   O Replication Agente de Leitor de Log é um executável que monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição.  
@@ -85,7 +84,7 @@ logread [-?]
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de linha de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar os valores de argumentos que contêm caracteres arbitrários.  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-DistributorLogin** *distributor_login*  
  É o nome de logon do Distribuidor.  

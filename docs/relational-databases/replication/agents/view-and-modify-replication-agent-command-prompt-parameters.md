@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- agents [SQL Server replication], command prompt parameters
+helpviewer_keywords: agents [SQL Server replication], command prompt parameters
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1e9dafe794470f2b0307459e774e01a1ef07d784
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 48cb96ad801a18822010c2e7ab5d34f30b9c2b31
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Exibir e modificar parâmetros do prompt de comando de agentes de replicação
   Agentes de replicação são executáveis que aceitam parâmetros de linha de comando. Por padrão, os agentes seguem as etapas de trabalho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agente, assim sendo, esses parâmetros podem ser exibidos e modificados usando a caixa de diálogo **Propriedades do trabalho – \<Trabalho>**. Essa caixa de diálogo está disponível na pasta **Trabalhos** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
@@ -103,4 +101,3 @@ ms.lasthandoff: 06/22/2017
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   
-

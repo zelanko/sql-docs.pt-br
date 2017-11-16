@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d6aa55fc191d595ce8e5f8896c0cd981d1919163
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 2709d8389e92b9688e18fba0a055263fa67e33e7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Gerar automaticamente valores de atributo diferentes de código (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], gera automaticamente valores para os valores de atributo da entidade quando você deseja atribuir um inteiro automaticamente como o valor sempre que as regras de negócio são aplicadas.  
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/07/2017
  [Validação &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
   
-

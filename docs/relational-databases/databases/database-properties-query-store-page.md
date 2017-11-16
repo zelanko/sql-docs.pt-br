@@ -5,23 +5,21 @@ ms.date: 11/09/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.querystore.f1
+f1_keywords: sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89d782e0fa62c2b4b4332e9818b93f87f797710f
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1049e37ab25fc7b76856a94c9c3ac091ab4403d2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-properties-query-store-page"></a>Propriedades do banco de dados (página Repositório de Consultas)
   Acesse esta página do banco de dados principal e use-a para configurar e modificar as propriedades do repositório de consultas do banco de dados. Essas opções também podem ser configuradas usando as opções [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Para obter informações sobre repositório de consultas, veja [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
@@ -75,4 +73,3 @@ ms.lasthandoff: 06/22/2017
  [Exibições de catálogo do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
-

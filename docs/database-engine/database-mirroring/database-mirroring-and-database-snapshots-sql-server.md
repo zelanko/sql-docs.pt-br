@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c2f343a2399b6d486d735e175a7c2685b159a18b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 32381132f193eae0c3ecae20247d36dcefb8f658
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Espelhamento de banco de dados e instantâneos de banco de dados (SQL Server)
   Você pode tirar proveito de um banco de dados espelho que você está mantendo para fins de disponibilidade para descarregar relatórios. Para usar um banco de dados espelho para relatórios, você pode criar um instantâneo do banco de dados no banco de dados espelho e direcionar as solicitações de conexão de clientes para o instantâneo mais recente. Um instantâneo do banco de dados é um instantâneo consistente de transações, estático e somente leitura de seu banco de dados de origem tal como ele estava no momento da criação do instantâneo. Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no estado de espelhamento sincronizado.  
@@ -88,4 +86,3 @@ ms.lasthandoff: 08/02/2017
  [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   
-

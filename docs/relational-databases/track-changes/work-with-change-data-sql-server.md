@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d46d8364dafb218035e3e9c7d828833f9c604375
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5352e093cf531e4bbacdfb284966b8c9739abf4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabalhar com dados de alterações (SQL Server)
   Os dados de alteração ficam disponíveis para consumidores de Change Data Capture através das TVFs (funções com valor de tabela). Todas as consultas dessas funções exigem dois parâmetros para definir o intervalo de LSNs (números de sequência de log) qualificados para serem considerados no desenvolvimento do conjunto de dados retornado. Tanto o valor superior quanto o valor inferior do LSN indica que o limite do intervalo é considerado ao ser incluído no intervalo.  
@@ -123,7 +121,7 @@ ms.lasthandoff: 08/03/2017
   
  Embora as TVFs da consulta gerada falhem se for indicado um valor nulo para o valor @from_lsn ou @to_lsn, as funções de wrapper de data e hora usam nulo para permitir que esses wrappers retornem todas as alterações atuais. Ou seja, se nulo for passado como o ponto de extremidade inferior da janela de consulta para o wrapper de data e hora, o ponto de extremidade inferior do intervalo de validade da instância de captura será usado na instrução SELECT subjacente aplicada à TVF da consulta. De maneira semelhante, se nulo for passado como o ponto de extremidade superior da janela de consulta, o ponto de extremidade superior do intervalo de validade da instância de captura será usado para fazer uma seleção na TVF da consulta.  
   
- O conjunto de resultados retornado por uma função de wrapper inclui todas as colunas solicitadas seguidas por uma coluna de operação, gravada como um ou dois caracteres que identificam a operação associada à linha. Caso sinalizadores de atualização tenham sido solicitados, serão exibidos como colunas de bit após o código da operação, na ordem especificada no parâmetro @update_flag_list . Para obter informações sobre as opções de chamada para personalizar os wrappers de data e hora gerados, consulte [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
+ O conjunto de resultados retornado por uma função de wrapper inclui todas as colunas solicitadas seguidas por uma coluna de operação, gravada como um ou dois caracteres que identificam a operação associada à linha. Caso sinalizadores de atualização tenham sido solicitados, serão exibidos como colunas de bit após o código da operação, na ordem especificada no parâmetro @update_flag_list. Para obter informações sobre as opções de chamada para personalizar os wrappers de data e hora gerados, consulte [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
  O modelo Instanciar uma TVF de Wrapper com Sinalizador de Atualização mostra como personalizar uma função de wrapper gerada para acrescentar um sinalizador de atualização de uma coluna especificada ao conjunto de resultados retornado por uma consulta de alterações delta. O modelo Criar uma Instância de TVFs de Wrapper CDC para Esquema mostra como instanciar os Wrappers de Data e Hora das TVFs de Consulta para todas as instâncias de captura criadas para as tabelas de origem em um dado esquema de banco de dados.  
   
@@ -139,4 +137,3 @@ ms.lasthandoff: 08/03/2017
  [Administrar e monitorar a captura de dados de alteração &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 06/06/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 116b8352b27400cf9d57d01e4d1c0a0f8a3a89d0
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 69f9e085f5eb6acb749c64a7fb370deabb975e6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
   Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)ou [resource](../../relational-databases/databases/resource-database.md) , ou para modificar o agrupamento em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -114,9 +112,9 @@ ms.lasthandoff: 06/22/2017
     |[ /SQLCOLLATION=*CollationName* ]|Especifica um novo agrupamento no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, o agrupamento atual do servidor é usado.<br /><br /> **\*\* Importante \*\***A alteração do agrupamento no nível do servidor não altera o agrupamento de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão o novo agrupamento.<br /><br /> Para obter mais informações, veja [Definir ou alterar o agrupamento do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NúmeroDeArquivos ]|Especifica o número de arquivos de dados tempdb. Esse valor pode ser aumentado para até 8 ou o número de núcleos, o que for maior.<br /><br /> Valor padrão: 8 ou o número de núcleos, o que for menor.|  
     |[ /SQLTEMPDBFILESIZE=TamanhoDoArquivoEmMB ]|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 8|  
-    |[ /SQLTEMPDBFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1024 MB.<br /><br /> Valor padrão: 64|  
+    |[ /SQLTEMPDBFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 64|  
     |[ /SQLTEMPDBLOGFILESIZE=TamanhoDoArquivoEmMB ]|Especifica o tamanho inicial do arquivo de log tempdb em MB. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 8.<br /><br /> Intervalo permitido: Mín. = 8, Máx. = 1024.|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o tamanho do incremento de aumento do arquivo de log tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1024 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 8, Máx. = 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o tamanho do incremento de aumento do arquivo de log tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 64<br /><br /> Intervalo permitido: Mín. = 8, Máx. = 1024.|  
     |[ /SQLTEMPDBDIR=Diretórios ]|Especifica os diretórios para arquivos de dados tempdb. Ao especificar mais de um diretório, separe os diretórios com um espaço em branco. Se vários diretórios forem especificados, os arquivos de dados tempdb serão espalhados pelos diretórios de modo round robin.<br /><br /> Valor padrão: diretório de dados do sistema|  
     |[/SQLTEMPDBLOGDIR = Diretório]|Especifica o diretório para o arquivo de log tempdb.<br /><br /> Valor padrão: diretório de dados do sistema|  
   
@@ -207,4 +205,3 @@ ms.lasthandoff: 06/22/2017
  [Bancos de dados do sistema](../../relational-databases/databases/system-databases.md)  
   
   
-

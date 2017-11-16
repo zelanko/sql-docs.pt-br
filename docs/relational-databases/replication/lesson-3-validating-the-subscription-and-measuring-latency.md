@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- replication [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: replication [SQL Server], tutorials
 ms.assetid: 147f7b93-1804-4e0b-9e17-57a51d035b2a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93f602d096806a79f049d6c602ad92c6b16f9e26
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7f7c1bf454cc4b195e18b9260dd14ebbb7c954da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>Lição 3: Validando a assinatura e medindo a latência
 Nesta lição, você usará tokens de rastreadores para verificar se as alterações estão sendo replicadas para o Assinante e para determinar: a latência, o tempo decorrido entre o momento em que a alteração é feita no Publicador, e o momento em que ela aparece no Assinante. Esta lição exige que você tenha concluído a lição anterior, [Lição 2: Criando uma assinatura na publicação transacional](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
@@ -53,4 +49,3 @@ Isso encerra o tutorial Replicando Dados entre Servidores Conectados Continuamen
   
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- timestamp data type
+helpviewer_keywords: timestamp data type
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 906c841b4c199aa226ad8d36c2b1c0c949c76c30
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f5c40d3f480861e98ef0cdf3f40a6ff22a739de6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Suporte de FOR XML para o tipo de dados timestamp
   Na transformação FOR XML, valores de tipo **timestamp** são tratados como dados **varbinary(8)** e sempre serão codificados na base 64. O esquema XSD ou XDR, se solicitado, reflete esse tipo.  
@@ -62,4 +59,3 @@ go
  [Suporte a FOR XML para vários tipos de dados SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   
-

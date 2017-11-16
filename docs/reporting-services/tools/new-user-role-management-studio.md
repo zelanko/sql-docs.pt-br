@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.newrole.f1
+f1_keywords: sql13.swb.reportserver.newrole.f1
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d4c239e87379ead3b826e4db3c85006b364392a6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4a763b291ffa0edfd25007c4db74c02789215305
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-user-role-management-studio"></a>Nova função do usuário (Management Studio)
   Use essa página para criar uma definição de função de nível de item. Uma definição de função de nível é uma coleção nomeada de tarefas que enumera as tarefas que um usuário pode executar em relação a pastas, relatórios, modelos, recursos e fontes de dados compartilhadas. Um exemplo de uma definição de função de nível de item é uma função de navegador predefinida que identifica os tipos de ações que um usuário final de relatório pode necessitar para navegar pelas pastas e exibir relatórios.  
@@ -51,8 +49,7 @@ ms.lasthandoff: 08/09/2017
  Exibe uma descrição de tarefa que enumera as operações ou permissões às quais a tarefa dá suporte.  
   
 ## <a name="see-also"></a>Consulte também  
- [Servidor de relatório na Ajuda de F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Definições de função](../../reporting-services/security/role-definitions.md)  
   
   
-

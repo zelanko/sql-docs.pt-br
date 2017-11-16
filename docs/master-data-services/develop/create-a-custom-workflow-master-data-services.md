@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c6011525ab0b33a19ddd392a46a2b02a20dbefe9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 290f862bc9e0295d940a832e07415831bab060bb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
   O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócio para criar soluções de fluxo de trabalho básicas, como atualizar automaticamente e validar dados e obter o envio de notificações por email, com base nas condições especificadas. Quando você requer processamento mais complexo do que o oferecido pelas ações de fluxo de trabalho internas, use um fluxo de trabalho personalizado. Um fluxo de trabalho personalizado é um assembly .NET que você cria. Quando seu assembly de fluxo de trabalho é chamado, seu código pode executar qualquer ação que sua situação exija. Por exemplo, se seu fluxo de trabalho exigir o processamento de eventos complexos, como aprovações em várias camadas ou árvores de decisão complicadas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para iniciar um fluxo de trabalho personalizado que analisa os dados e determina para onde enviá-lo para aprovação.  
@@ -160,4 +157,3 @@ ms.lasthandoff: 09/07/2017
  [Descrição XML do fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   
   
-

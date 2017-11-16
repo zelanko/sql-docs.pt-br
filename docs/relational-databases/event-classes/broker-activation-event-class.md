@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Broker:Activation event class
+helpviewer_keywords: Broker:Activation event class
 ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cb8daa2f1a9388cb5f57fb3bd90f8ef959795a2
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7b892b300f7dad25205b3803a547148d5302aa5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="brokeractivation-event-class"></a>classe de evento Broker:Activation
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Activation** quando um monitor de fila inicia um procedimento armazenado de ativação, envia uma notificação QUEUE_ACTIVATION ou quando um procedimento armazenado de ativação iniciado por um monitor de fila é encerrado.  
@@ -49,4 +46,3 @@ ms.lasthandoff: 06/22/2017
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   
   
-

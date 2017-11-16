@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FILESTREAM [SQL Server], moving a FILESTREAM-enabled database
+helpviewer_keywords: FILESTREAM [SQL Server], moving a FILESTREAM-enabled database
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7af3800a6e604289944a340cee7f469654c495e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: da4c83bd18be20a29200e7186a8160edee9142ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="move-a-filestream-enabled-database"></a>Mover um banco de dados habilitado para FILESTREAM
   Este tópico mostra como mover um banco de dados habilitado para FILESTREAM.  
@@ -70,4 +67,3 @@ ms.lasthandoff: 06/22/2017
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   
-

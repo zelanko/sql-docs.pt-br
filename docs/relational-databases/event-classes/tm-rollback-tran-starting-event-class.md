@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- 'TM: Rollback Tran Starting event class'
+helpviewer_keywords: 'TM: Rollback Tran Starting event class'
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e521bff958548ec3991b7fc3000a4767a57748d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1dbcebdc0320932306f3b79d129df9180e69dd15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>classe de evento TM: Rollback Tran Starting
   A classe de evento TM: Rollback Tran Startingindica que uma solicitação de ROLLBACK TRANSACTION está iniciando. O cliente envia a solicitação pela interface de administração de transações. A coluna EventSubClass indica se uma transação nova será iniciada depois que a transação atual for revertida.  

@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fc7c67f47d535a639f1862cc1bc8be92855f6567
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed95df5cd7c02d5c8c6789dbbcf416a40c279460
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Replicação e envio de logs (SQL Server)
   O envio de logs envolve duas cópias de um único banco de dados que, normalmente, residem em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados primário. As atualizações feitas pelos clientes no banco de dados primário são propagadas por meio do envio de logs para a outra cópia do banco de dados, conhecida como banco de dados secundário. O envio de logs envolve a aplicação de um log de transações de todas as inserções, atualizações ou exclusões feitas no banco de dados primário para o banco de dados secundário.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="log-shipping-with-transactional-replication"></a>Envio de logs com replicação transacional  
  Para replicação transacional, o comportamento do envio de logs depende da opção **sincronizar com backup** . Essa opção pode ser definida no banco de dados de publicação e no banco de dados de distribuição; no envio de logs para o Publicador, apenas a configuração no banco de dados de publicação é relevante.  
   
- Definir essa opção no banco de dados de publicação assegura que as transações não serão entregues ao banco de dados de distribuição até ser realizado o backup do banco de dados de publicação. O último backup do banco de dados de publicação poderá então ser restaurado no servidor secundário sem qualquer possibilidade do banco de dados de distribuição possuir transações que o banco de dados de publicação restaurado não possua. Essa opção garante que se ocorrer failover do Publicador para o servidor secundário, será mantida a consistência entre o Publicador, o Distribuidor e os Assinantes. A latência e a taxa de transferência serão afetadas porque as transações não poderão ser entregues ao banco de dados de distribuição até que tenha sido feito backup no Publicador. É recomendável definir essa opção no banco de dados de publicação caso o seu aplicativo possa tolerar essa latência. Se a opção **sincronizar com backup** ainda não estiver definida, os Assinantes poderão receber alterações que não estão mais incluídas no banco de dados recuperado no servidor secundário. Para obter mais informações, consulte [Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
+ Definir essa opção no banco de dados de publicação assegura que as transações não serão entregues ao banco de dados de distribuição até ser realizado o backup do banco de dados de publicação. O último backup do banco de dados de publicação poderá então ser restaurado no servidor secundário sem qualquer possibilidade do banco de dados de distribuição possuir transações que o banco de dados de publicação restaurado não possua. Essa opção garante que se ocorrer failover do Publicador para o servidor secundário, será mantida a consistência entre o Publicador, o Distribuidor e os Assinantes. A latência e a taxa de transferência serão afetadas porque as transações não poderão ser entregues ao banco de dados de distribuição até que tenha sido feito backup no Publicador. É recomendável definir essa opção no banco de dados de publicação caso o seu aplicativo possa tolerar essa latência. Se a opção **sincronizar com backup** ainda não estiver definida, os Assinantes poderão receber alterações que não estão mais incluídas no banco de dados recuperado no servidor secundário. Para obter mais informações, consulte [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
  **Para configurar a replicação transacional e o envio de logs com a opção sincronizar com backup**  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/02/2017
  [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 01/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +15,16 @@ f1_keywords:
 - sql13.swb.availabilitygroupproperties.permission.f1
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d591578ed239e7c6b0279ea923fc18b558d4f252
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="permissions-or-securables-page"></a>Página Permissões ou Protegíveis
   Use a página **Permissões** ou a página **Protegíveis** para exibir ou definir as permissões para protegíveis. Essa página pode ser aberta de muitos locais. O conteúdo da página pode ser ligeiramente alterado, dependendo de como a página é aberta e do que contém. A grade na parte superior da página pode estar populada quando a página é aberta ou pode estar vazia. Para adicionar itens à grade superior, clique em **Pesquisar**. Na grade superior, selecione um item e, depois, defina as permissões apropriadas na guia **Explícita** . Para exibir as permissões adicionadas, use a guia **Efetiva** .  
@@ -79,4 +78,3 @@ ms.lasthandoff: 06/22/2017
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

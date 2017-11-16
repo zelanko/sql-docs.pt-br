@@ -5,8 +5,7 @@ ms.date: 08/13/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], quantity needed for restore sequence
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9c7e27701daa09282a92955bb48b6cedaf1732cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Aplicar backups de log de transações (SQL Server)
   O tópico só é relevante para o modelo de recuperação completa ou modelo de recuperação bulk-logged.  
@@ -111,4 +109,3 @@ ms.lasthandoff: 06/22/2017
  [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
-

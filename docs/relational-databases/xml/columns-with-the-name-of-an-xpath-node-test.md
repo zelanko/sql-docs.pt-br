@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - names [SQL Server], columns with
 - XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41bc7b31ff9f5185dcdfde4a90bbfe631fbef089
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5b01a1c71071d5a415da777db3fb9294aa9a6afe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Colunas com o nome de um teste de nó XPath
   Se o nome da coluna for um dos testes de nó XPath, o conteúdo será mapeado conforme mostrado na tabela a seguir. Quando o nome de coluna é um teste de nó XPath, o conteúdo é mapeado para o nó correspondente. Se o tipo da coluna SQL for **xml**, um erro será retornado.  
@@ -94,4 +92,3 @@ FOR XML PATH;
  [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   
-

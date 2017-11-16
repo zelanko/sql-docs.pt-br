@@ -1,30 +1,26 @@
 ---
 title: Fazer upgrade do SQL Server | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/17/2017
 ms.prod:
 - sql-server-2016
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- upgrading SQL Server
+helpviewer_keywords: upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 101a7a8e9094b6d676de8acfcb3cca4702e930d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-sql-server"></a>Atualizar o SQL Server
  Você pode fazer upgrade de instâncias do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ss2016](../../includes/sssql15-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], revise os tópicos a seguir sobre o processo de atualização e as notas da versão.  
@@ -62,4 +58,3 @@ Esta seção contém os seguintes tópicos:
  [Compatibilidade com versões anteriores_excluída](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   
-

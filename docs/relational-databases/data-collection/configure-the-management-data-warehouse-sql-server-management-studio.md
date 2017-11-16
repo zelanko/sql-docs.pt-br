@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Configure Management Data Warehouse Wizard
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4165c8b8e8e11b281a31e04a3b0fd402146d4e71
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
   Este tópico descreve como configurar o data warehouse de gerenciamento para oferecer suporte de armazenamento de dados em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o coletor de dados. Essas instâncias podem estar no mesmo servidor ou em servidores diferentes. Este tópico também fornece descrições da interface do usuário para a caixa de diálogo [Assistente para Configurar Data Warehouse de Gerenciamento](#Wizard) . Para obter informações sobre como configurar um coletor de dados, consulte [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
@@ -145,4 +143,3 @@ ms.lasthandoff: 08/18/2017
  [Gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md)  
   
   
-

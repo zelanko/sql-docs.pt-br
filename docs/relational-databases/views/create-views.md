@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-views
+ms.technology: dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- views [SQL Server], creating
+helpviewer_keywords: views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f8cf0bdceabcdb5959572ca45406d5c53833c3f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1e68151f449f8ad639c69df20c083f899f94c525
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-views"></a>Criar exibições
   Você pode criar exibições no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Uma exibição pode ser usada para as finalidades a seguir:  
@@ -110,4 +107,3 @@ ms.lasthandoff: 06/22/2017
  Para obter mais informações, veja [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
   
-

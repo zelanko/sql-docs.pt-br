@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-statistics
+ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 161543d02f49763db010021f817302635367c001
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-statistics"></a>Criar estatísticas
   Você pode criar estatísticas de otimização de consulta em uma ou mais colunas de uma tabela ou exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade; em alguns casos, é necessário criar estatísticas adicionais.  
@@ -182,4 +180,3 @@ ms.lasthandoff: 06/22/2017
  Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
   
-

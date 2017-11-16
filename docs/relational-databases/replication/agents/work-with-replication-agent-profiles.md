@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], profiles
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 6bb8f0adad4b35ec6fd2ca66bd6733d1cee92a65
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabalhar com perfis do agente de replicação
   Este tópico descreve como trabalhar com perfis do Agente de Replicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). O comportamento de cada agente de replicação é controlado por um conjunto de parâmetros que podem ser definidos através dos perfis de agente. Cada agente tem um perfil padrão, e alguns têm perfis adicionais predefinidos; em um determinado momento, apenas um perfil está ativo para um agente.  

@@ -15,20 +15,19 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: On Demand
+ms.openlocfilehash: 2cf2c877207a3dfaf5c3c6ff3aa2cca0da2d9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 07/31/2017
 -   Índices não clusterizados não exclusivos podem ser criados online, quando a tabela contiver tipos de dados LOB, mas nenhuma dessas colunas são usadas na definição de índice seja como colunas-chaves ou colunas não chave.  
   
 -   Os índices em tabelas temporárias locais, não podem ser criados, recriados ou soltos offline. Esta restrição não se aplica a índices em tabelas temporárias globais.
-- Índices podem ser retomados de onde pararam após uma falha inesperada, failover de banco de dados ou um comando **PAUSE**. Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017 e o Banco de Dados SQL do Azure.
+- Índices podem ser retomados de onde pararam após uma falha inesperada, failover de banco de dados ou um comando **PAUSE**. Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  As operações de índice online não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte pelas edições](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -95,12 +94,12 @@ Para obter mais informações, consulte [Disk Space Requirements for Index DDL O
 ## <a name="resumable-index-rebuild-considerations"></a>Considerações de recompilação de índice retomáveis
 
 > [!NOTE]
-> Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). Este recurso está em visualização pública para o SQL Server 2017 e o Banco de Dados SQL do Azure.
+> Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). 
 >
 
 As diretrizes a seguir se aplicam ao executar a recompilação de índice online retomável:
 -   Gerenciamento, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de recompilação de índice várias vezes para adequar-se às janelas de manutenção.
-- Recuperação de falhas de recompilação de índice (tais como failovers de banco de dados ou falta de espaço em disco).
+- Recuperação de falhas de recompilação de índice (tais como failovers de banco de dados ou ficar sem espaço em disco).
 - Quando uma operação de índice está em pausa, tanto o índice original quanto um recém-criado exigem espaço em disco e precisam ser atualizados durante as operações de DML.
 
 - Habilita o truncamento de logs durante uma operação de recompilação de índice (esta operação não pode ser realizada para uma operação de índice online regular).
@@ -111,7 +110,7 @@ As diretrizes a seguir se aplicam ao executar a recompilação de índice online
 >
 
 Em geral, não há nenhuma diferença de desempenho entre a recompilação de índice online retomável e não retomável. Quando você atualiza um índice retomável enquanto uma operação de recompilação de índice está em pausa:
-- Para cargas de trabalho primariamente de leitura, o impacto no desempenho é insignificante. 
+- Para cargas de trabalho primariamente de leitura, o impacto no desempenho é irrisório. 
 - Para cargas de trabalho com atualização intensa, você pode observar certa degradação da taxa de transferência (nossos testes mostram menos de 10% de degradação).
 
 Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a recompilação de índice online retomável e não retomável.
@@ -126,4 +125,3 @@ Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a 
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

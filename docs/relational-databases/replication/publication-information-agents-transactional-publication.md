@@ -5,23 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1
+f1_keywords: sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a1e666793719f1a277fffe23d02d4a6630585f61
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8273a2ba2a2fa472aa30c7a57635d6e419a0cffa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-information-agents-transactional-publication"></a>Informações da Publicação, Agentes (publicação transacional)
   A guia **Agentes** exibe informações resumidas sobre os agentes para a publicação selecionada. Informações sobre o Snapshot Agent e Log Reader Agent são exibida para todas as publicações transacionais. Informações sobre o Queue Reader Agent são exibidas para essas publicações transacionais que estão habilitadas para assinaturas de atualização enfileirada.  

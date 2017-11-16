@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457cf9fb3c207a89467b96e0f1744f9371edb9a4
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cfc290578e784712d372008aae777fee9d08b0d7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipos e colunas de dados XML (SQL Server)
   Este tópico discute as vantagens e as limitações do tipo de dados **xml** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e o ajuda a escolher como armazenar dados XML.  
@@ -183,4 +181,3 @@ ms.lasthandoff: 06/22/2017
  [Exemplos de importação e exportação em massa de documentos XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   
-

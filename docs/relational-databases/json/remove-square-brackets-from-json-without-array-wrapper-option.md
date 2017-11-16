@@ -1,34 +1,30 @@
 ---
 title: "Remover os colchetes da opção do JSON – WITHOUT_ARRAY_WRAPPER | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- WITHOUT_ARRAY_WRAPPER
+helpviewer_keywords: WITHOUT_ARRAY_WRAPPER
 ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8460e46cea839d74d18156090af5d46eb94be1f2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bf0d7645df22c9a7540650e3c7f2ca2d0db8e1cc
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>Remover os colchetes da opção do JSON – WITHOUT_ARRAY_WRAPPER
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Para remover, por padrão, os colchetes que envolvem a saída JSON da cláusula **FOR JSON** , especifique a opção **WITHOUT_ARRAY_WRAPPER** . Use essa opção com um resultado de linha única para gerar um único objeto JSON como saída em vez de uma matriz com um único elemento.
+Para remover, por padrão, os colchetes que envolvem a saída JSON da cláusula **FOR JSON** , especifique a opção **WITHOUT_ARRAY_WRAPPER** . Use essa opção para gerar um resultado de linha única para um único objeto JSON como saída em vez de uma matriz com um único elemento.
 
 Se você usar essa opção com um resultado de várias linhas, a saída resultante não será um JSON válido devido aos vários elementos e aos colchetes ausentes.  
   
@@ -111,10 +107,9 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure, publicadas por Jovan Popovic, gerente de programas da Microsoft.
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.
   
 ## <a name="see-also"></a>Consulte também  
  [Cláusula FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
   
   
-

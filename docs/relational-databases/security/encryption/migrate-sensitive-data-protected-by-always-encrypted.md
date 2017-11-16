@@ -1,29 +1,25 @@
 ---
 title: Migrar dados confidenciais protegidos pelo Always Encrypted | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/04/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Always Encrypted, bulk import
+helpviewer_keywords: Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
+ms.openlocfilehash: 31b0ac0972a888037ca4554fe27c1f399e7f6140
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 20eb76a9e2cc89015167b5199f1a6f8dd5baec16
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migrar dados confidenciais protegidos pelo Always Encrypted
  <a name="to-load-encrypted-data-without-performing-metadata-checks-on-the-server-during-bulk-copy-operations-create-the-user-with-the-allowencryptedvaluemodifications-option-this-option-is-intended-to-be-used-by-legacy-tools-from-versions-of-includessnoversionincludesssnoversion-mdmd-older-than-includesssql15includessssql15-mdmd-such-as-bcpexe-or-by-using-third-party-extract-transform-load-etl-work-flows-that-cannot-use-always-encrypted-this-allows-a-user-to-securely-move-encrypted-data-from-one-set-of-tables-containing-encrypted-columns-to-another-set-of-tables-with-encrypted-columns-in-the-same-or-a-different-database"></a>Para carregar dados criptografados sem realizar verificações de metadados no servidor durante operações de cópia em massa, crie o usuário com a opção **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Essa opção destina-se a ser usada por ferramentas herdadas de versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (como bcp.exe) ou ao usar fluxos de trabalho ETL (extrair, transformar, carregar) de terceiros que não podem usar o Always Encrypted. Isso permite que um usuário mova dados criptografados com segurança de um conjunto de tabelas, contendo colunas criptografadas, para outro conjunto de tabelas com colunas criptografadas (para o mesmo ou para outro banco de dados).  
@@ -80,4 +76,3 @@ ms.lasthandoff: 09/27/2017
  - [Always Encrypted &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
  - [Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-

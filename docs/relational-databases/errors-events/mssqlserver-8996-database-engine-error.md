@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 8996 (Database Engine error)
+helpviewer_keywords: 8996 (Database Engine error)
 ms.assetid: 4e655cdc-945a-4a18-95dd-75f050563d26
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3f8f2a5ac850f459ad1ab8ee20ea686bbe3591fb
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e18fa3f00cbc73d7a7610a51e8195c9b9e71f025
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver8996"></a>MSSQLSERVER_8996
   
@@ -55,4 +52,3 @@ Se o problema não estiver relacionado ao hardware e se houver um backup limpo c
 ### <a name="run-dbcc-checkdb"></a>Executar DBCC CHECKDB  
 Não aplicável. Esse erro não pode ser reparado. Se você não conseguir restaurar o banco de dados com base em um backup, contate o CSS (Suporte e Atendimento ao Cliente) [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-

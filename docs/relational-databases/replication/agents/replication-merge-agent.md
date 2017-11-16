@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8d07eaf421703fb57b9682780027f4e909583dd
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 347348a43528881c76615fd348ba94130210ce93
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   O Agente de Mesclagem de Replicação é um executável utilitário que aplica o instantâneo inicial contido nas tabelas do banco de dados aos Assinantes. Ele também mescla as alterações incrementais de dados que ocorreram no Publicador depois que o instantâneo inicial foi criado e reconcilia conflitos de acordo com as regras que você configura ou usando um resolvedor personalizado que você cria.  
@@ -143,7 +142,7 @@ replmerg [-?]
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de prompt de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar valores de argumentos que contêm caracteres arbitrários.  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Para distribuição (push) do Distribuidor, o nome assumirá o padrão do nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador local.  
+ É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica *server_name***\\***instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Para distribuição (push) do Distribuidor, o nome assumirá o padrão do nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador local.  
   
  **-DistributorLogin** *distributor_login*  
  É o nome de logon do Distribuidor.  
@@ -400,4 +399,3 @@ replmerg [-?]
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

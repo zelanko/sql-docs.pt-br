@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.processor.f1
+f1_keywords: sql13.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0c1167bdaae2b4fa569467217035ecdafcf0759
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b7667d7be2910280587e548eb2548e3224221d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---processors-page"></a>Propriedades do servidor – página Processadores
   Use esta página para exibir ou modificar suas opções de processador. As configurações de afinidade do processador só são habilitadas quando há mais de um processador instalado.  
@@ -59,4 +56,3 @@ ms.lasthandoff: 08/02/2017
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   
-

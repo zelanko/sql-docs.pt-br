@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
+caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 4fdcc353e4dc1d29a2411b5ec846f2d8e415a849
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Upgrades de versão e edição com suporte do SQL Server 2017
   É possível fazer upgrade do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
@@ -108,13 +106,13 @@ O [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] dá suporte ao upgrade 
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Express |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Express <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Business Intelligence|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Evaluation|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise <br/><br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Web <br/> <br/> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer|
-|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] versão Release Candidate* |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise |  
+|[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] versão release candidate* |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise |  
 |[!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)] Developer |[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise | 
 
  \* O suporte da Microsoft para atualização do software versão Release Candidate destina-se especificamente aos clientes que participaram do TAP (Technology Adoption Program). 
 
    
-###  <a name="SupportFor2005"></a> Suporte do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Suporte para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  Esta seção aborda o suporte do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], você poderá fazer o seguinte:  
   
 -   Anexar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (arquivos mdf/ldf) à instância do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] do mecanismo de banco de dados.  
@@ -147,7 +145,7 @@ Os cenários não especificados na lista anterior não são suportados, incluind
   
 - Suporte para componentes personalizados do Integration Services de terceiros do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , como executar e atualizar.  
   
-## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>Upgrade de edição do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
+## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Edition  
 A tabela a seguir lista os cenários de atualização de edição com suporte no [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
 Para obter instruções passo a passo sobre como fazer um upgrade de edição, consulte [Fazer upgrade para outra edição do SQL Server &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
@@ -189,4 +187,3 @@ Para obter instruções passo a passo sobre como fazer um upgrade de edição, c
  [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   
-

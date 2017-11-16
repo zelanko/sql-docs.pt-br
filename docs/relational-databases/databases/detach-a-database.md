@@ -5,26 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.detachdatabase.f1
+f1_keywords: sql13.swb.detachdatabase.f1
 helpviewer_keywords:
 - database detaching [SQL Server]
 - detaching databases [SQL Server]
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d22af54732f9e9042a7aea3dd830be712b80fdd8
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 43d77bd5ef84e8f1a327c9fb2528872f31b35f95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="detach-a-database"></a>Desanexar um banco de dados
   Este tópico descreve como desanexar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os arquivos desanexados permanecem e podem ser anexados novamente com o uso de CREATE DATABASE com a opção FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Os arquivos podem ser movidos para outro servidor, onde podem ser anexados.  

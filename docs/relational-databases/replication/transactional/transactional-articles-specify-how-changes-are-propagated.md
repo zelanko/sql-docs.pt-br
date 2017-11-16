@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactional replication, propagation methods
+helpviewer_keywords: transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 27553553b3bf900a1a7207711520a2355c997941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Artigos transacionais – Especificar como as alterações são propagadas
   A replicação transacional permite que você especifique como as alterações de dados são propagadas do Publicador aos Assinantes. Para cada tabela publicada, você pode especificar uma das quatro maneiras em que cada operação (INSERT, UPDATE ou DELETE) deverá ser propagada ao Assinante:  
@@ -37,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
  Por padrão, a replicação transacional propaga alterações aos Assinantes por um conjunto de procedimentos armazenados instalados em cada Assinante. Quando ocorre uma inserção, atualização ou exclusão em uma tabela no Publicador, a operação é convertida em uma chamada para um procedimento armazenado no Assinante. O procedimento armazenado aceita parâmetros que mapeiam para as colunas da tabela, permitindo que essas colunas sejam alteradas no Assinante.  
   
- Para definir o método de propagação de alterações de dados para artigos transacionais, consulte [Definir o método de propagação de alterações de dados para artigos transacionais](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
+ Para definir o método de propagação de alterações de dados para artigos transacionais, consulte [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
   
 ## <a name="default-and-custom-stored-procedures"></a>Procedimentos armazenados padrão e personalizados  
  Os três procedimentos que a replicação cria por padrão para cada artigo de tabela são:  
@@ -222,4 +219,3 @@ go
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   
-

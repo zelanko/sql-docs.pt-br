@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - states [SQL Server], database mirroring
 - database mirroring [SQL Server], states
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ce5bb7c3b9b215c583d125114fde8d18ebe24577
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d1b428ba4fd0196c3b279b905475bc4bad06cd85
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>Exibir o estado de um banco de dados espelho (SQL Server Management Studio)
   Durante uma sessão de espelhamento de banco de dados, você pode exibir o estado na página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** .  
@@ -51,4 +49,3 @@ ms.lasthandoff: 08/02/2017
  [Estados de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   
-

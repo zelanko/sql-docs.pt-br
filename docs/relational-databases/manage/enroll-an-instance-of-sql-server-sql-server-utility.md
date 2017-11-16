@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,20 +16,18 @@ f1_keywords:
 - sql13.SWB.makemanaged.Summary.F1
 - sql13.SWB.makemanaged.progress.F1
 - sql13.SWB.makemanaged.validation.F1
-helpviewer_keywords:
-- Enroll instance
+helpviewer_keywords: Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 510cda640de67fa7aa5c9e32f8e2cd820e533f68
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c5bb6279f7fd96f30aa3f19628e2edc5edb5cc53
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
   Inscreva uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para monitorar o desempenho e a configuração como uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O UCP (ponto de controle de utilitário) coleta informações de configuração e de desempenho de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada 15 minutos. Estas informações são armazenadas no UMDW (data warehouse de gerenciamento do utilitário) no UCP; o nome de arquivo UMDW é sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são comparados a políticas para ajudar a identificar afunilamentos no uso de recursos e oportunidades de consolidação.  
@@ -205,4 +202,3 @@ ms.lasthandoff: 08/03/2017
  [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

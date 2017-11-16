@@ -1,30 +1,27 @@
 ---
 title: "Criar e publicar uma regra de negócios (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ae4f0da3a153e02d4445b8f1e97443f56b583c92
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c74bf4d6520ca399be34da8369f6f62b2eb3d3ec
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Criar e publicar uma regra de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma regra de negócio para garantir a exatidão de seus dados mestres. Depois de ser criada, uma regra deve ser publicada para poder ser aplicada aos dados.  
@@ -128,4 +125,3 @@ ms.lasthandoff: 09/07/2017
  [Adicionar várias condições a uma regra de negócios &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   
-

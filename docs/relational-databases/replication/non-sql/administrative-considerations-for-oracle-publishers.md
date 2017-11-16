@@ -5,24 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], administrative considerations
 - administering replication, Oracle publishing
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 058c10375ed15b5375f814199a57d032c5291018
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 80e61dbe67613d0ca7fecb6d39746812203a5d11
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Considerações administrativas sobre Oracle Publishers
   Após configurar um Editor Oracle e ativar os mecanismos de rastreamento de alterações de replicação, os administradores do sistema de banco de dados Oracle ainda podem usar os utilitários de banco de dados padrão Oracle e realizar tarefas típicas de administração de sistemas. Porém, você deve estar ciente quanto aos efeitos que a execução de certas tarefas administrativas pode ter nos dados publicados.  

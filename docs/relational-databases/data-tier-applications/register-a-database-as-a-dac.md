@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,24 +19,23 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
   Use o **Assistente para Registrar o Aplicativo da Camada de Dados** ou um script do Windows PowerShell para compilar uma definição do DAC (aplicativo da camada de dados) que descreva os objetos em um banco de dados existente e registre a definição do DAC no banco de dados do sistema **msdb** (**master** no [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Para atualizar um DAC, usando o:**  [Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de registro cria uma definição do DAC que define os objetos no banco de dados. A combinação da definição do DAC e do banco de dados forma uma instância do DAC. Se você registrar um banco de dados como um DAC em uma instância gerenciada do Mecanismo de Banco de Dados, o DAC registrado será incorporado ao Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o Ponto de Controle do Utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 06/22/2017
  [Usando o Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Validando objetos  
- **Checking**  *SchemaName* **.** *ObjectName* **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. *SchemaName***.***ObjectName* identifica qual objeto está sendo verificado no momento.  
+ **Verificando**  *SchemaName* **.** *ObjectName* **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. *SchemaName***.***ObjectName* identifica qual objeto está sendo verificado no momento.  
   
  **< Anterior** - Retorna para a página **Definir propriedades** para alterar suas entradas.  
   
@@ -185,4 +183,3 @@ $registerunit.Register()
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

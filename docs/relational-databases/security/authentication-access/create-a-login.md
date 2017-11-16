@@ -5,8 +5,7 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: fa1d1c3cc20155dd5f53c1e62bc15a96c7f3758c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,10 +150,10 @@ ms.lasthandoff: 06/22/2017
  **Esquema Padrão**  
  Especifica o esquema padrão do usuário. Quando um usuário é criado pela primeira vez, seu esquema padrão é **dbo**. É possível especificar um esquema padrão que ainda não existe. Você não pode especificar um esquema padrão para um usuário mapeado para um grupo do Windows, um certificado ou uma chave assimétrica.  
   
- **Guest account enabled for:**  *database_name*  
+ **Conta Convidado habilitada para:**  *database_name*  
  Atributo somente leitura que indica se a conta de Convidado está habilitada no banco de dados selecionado. Use a página **Status** da caixa de diálogo **Propriedades de Logon** da conta Convidado para habilitar ou desabilitar a conta Convidado.  
   
- **Database role membership for:**  *database_name*  
+ **Associação à função de banco de dados para:**  *database_name*  
  Selecione as funções para o usuário no banco de dados especificado. Todos os usuários são membros da função **pública** em todo banco de dados e não podem ser removidos. Para obter mais informações sobre as funções de banco de dados, veja [Funções no nível de banco de dados](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Protegíveis  
@@ -279,4 +278,3 @@ ms.lasthandoff: 06/22/2017
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

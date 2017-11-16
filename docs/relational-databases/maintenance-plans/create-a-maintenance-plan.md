@@ -5,24 +5,21 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- maintenance plans [SQL Server], creating
+helpviewer_keywords: maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: adab1fc3a3a009a4a6fe74ddbe9ee97f8c128bdf
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a1a70635f7c2918de6dd2a9f2c3f1c85a26ab569
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-maintenance-plan"></a>Criar um plano de manutenção
   Este tópico descreve como criar um plano de manutenção de servidor único ou vários servidores no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], Há duas formas de criar esses planos de manutenção: por meio do Assistente de Plano de Manutenção ou da superfície de design. O Assistente é melhor para criar planos de manutenção básicos, enquanto que criar planos usando a superfície de design permite utilizar fluxo de trabalho aprimorado.  
@@ -156,4 +153,3 @@ A [Opção Agent XPs de configuração do servidor](../../database-engine/config
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   
-

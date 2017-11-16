@@ -5,8 +5,7 @@ ms.date: 08/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - backing up [SQL Server], backup compression
 - backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08936c44013d5494c72500f3230a1c90da1e4325
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 817ca0481f0629aac260c79a2ada21a33e54772c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="backup-compression-sql-server"></a>Compactação de backup (SQL Server)
   Este tópico descreve a compactação dos backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo restrições, compensação de desempenho de backups compactados, a configuração da compactação de backup e a taxa de compactação.  Há suporte para a compactação de backup nas edições Enterprise, Standard e Developer do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  Todas as edições do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior podem restaurar um backup compactado. 
@@ -115,4 +114,3 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
  [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
-

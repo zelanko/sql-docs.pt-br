@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 53864aece4894c0aa72bf886f087ef76d5b4f9c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML aninhadas
   O tipo de dados **xml** e a diretiva [TYPE em consultas FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permitem que o XML retornado por consultas FOR XML seja processado no servidor e no cliente.  
@@ -134,4 +132,3 @@ FOR XML AUTO, TYPE;
  Mostra como usar consultas FOR XML aninhadas para controlar a estrutura de um documento XML criado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
-

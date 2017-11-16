@@ -1,27 +1,24 @@
 ---
 title: "Instalação e configuração do Master Data Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 51f41c33e4fc71a626a4182c0be21c958936a7da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalação e configuração do Master Data Services
   Este artigo aborda a instalação do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em um computador com Windows Server 2012 R2, configuração do site e banco de dados do MDS e implantação dos dados e modelos de exemplo. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) permite que sua organização gerencie uma versão confiável dos dados.   
@@ -294,4 +291,3 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
  [Novidades no MDS &#40;Master Data Services&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
   
   
-

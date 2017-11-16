@@ -5,22 +5,20 @@ ms.date: 10/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de5d4d788520c9fd8addc98c19be11cf2361456d
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 91c22016bea09269c1c9be14d8895e9319cd9de8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Habilitar o backup gerenciado do SQL Server no Microsoft Azure
   Este tópico descreve como habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as configurações padrão nos níveis de instância e de banco de dados. Também descreve como habilitar as notificações por email e como monitorar a atividade de backup.  
@@ -113,7 +111,7 @@ ms.lasthandoff: 06/22/2017
   
      Você verá que os eventos de canal Admin, Operacional e Analítico estão habilitados por padrão e não podem ser desabilitados. Isso deve ser suficiente para monitorar os eventos que requerem intervenção manual.  Você pode habilitar os eventos de depuração, mas os canais de depuração incluem eventos informativos e de depuração que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa para detectar problemas e resolvê-los.  
   
-6.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention. As etapas a seguir descrevem o processo para habilitar e configurar notificações por email:  
+6.  **Habilitar e configurar a notificação do status de integridade:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] tem um procedimento armazenado que cria um trabalho de agente para enviar notificações por email sobre erros ou avisos que possam exigir atenção. As etapas a seguir descrevem o processo para habilitar e configurar notificações por email:  
   
     1.  Configure o Database Mail se ele ainda não estiver habilitado na instância. Para obter mais informações, consulte [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -183,4 +181,3 @@ ms.lasthandoff: 06/22/2017
  [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
-

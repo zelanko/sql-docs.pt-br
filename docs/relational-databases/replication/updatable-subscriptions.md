@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newsubwizard.updatablesubscriptions.f1
+f1_keywords: sql13.rep.newsubwizard.updatablesubscriptions.f1
 ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d9a0e7625d424dea66291cc8b9707d1bd660820
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 39c50eaf0f95b7508d70000ec598120016420897
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="updatable-subscriptions"></a>Assinaturas Atualizáveis
   Com a replicação transacional, os dados replicados devem ser tratados como somente leitura; no entanto, podem ser modificados em um Assinante do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando assinaturas atualizáveis. Se for necessário modificar dados no Assinante, escolha um das opções a seguir, dependendo de seus requisitos.  

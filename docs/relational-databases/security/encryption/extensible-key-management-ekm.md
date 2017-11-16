@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
+ms.openlocfilehash: 33c468cb6c8f2a8437e9922203afb14ae513f2c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 632fec019b757d782e7bd54f6854e815ccd2afcf
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extensible-key-management-ekm"></a>Gerenciamento extensível de chaves (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece funcionalidades de criptografia de dados com o *EKM* (Gerenciador Extensível de Chaves), usando o provedor *Microsoft Cryptographic API* (MSCAPI) para criptografia e geração de chave. As chaves de criptografia de dados e a criptografia da chave são criadas em contêineres chaves e devem ser exportadas por um provedor antes de serem armazenadas no banco de dados. Essa abordagem habilita o gerenciamento de chave, que inclui uma hierarquia de chave de criptografia e backup da chave, para ser tratado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -174,4 +172,3 @@ DECRYPTION BY EKM_AKey1
  [Criar chaves simétricas idênticas em dois servidores](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-

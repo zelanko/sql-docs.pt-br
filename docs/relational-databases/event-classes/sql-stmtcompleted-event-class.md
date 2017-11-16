@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL:StmtCompleted event class
+helpviewer_keywords: SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 99a9d763386ecea12b12e9ddd6d597f00ff6b172
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7e748f3fa3ec93660084f2bed127a832ca70832a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlstmtcompleted-event-class"></a>Classe de evento SQL:StmtCompleted
   A classe de evento SQL:StmtCompleted indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] foi concluída.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 |NestLevel|**int**|O nível de aninhamento do procedimento armazenado se a instrução tiver sido executada em um procedimento armazenado.|29|Sim|  
 |NTDomainName|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
-|Deslocamento|**Int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Deslocamento|**int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |Reads|**bigint**|Número de leituras de página emitidas pela instrução SQL.|16|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |RowCounts|**bigint**|Número de linhas afetadas por um evento.|48|Sim|  

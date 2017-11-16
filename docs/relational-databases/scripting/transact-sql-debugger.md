@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
+helpviewer_keywords: Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5409025fee4cb80a8f7b64e8946f058635e7551
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger"></a>Depurador do Transact-SQL
   O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] ajuda a localizar erros em códigos [!INCLUDE[tsql](../../includes/tsql-md.md)] investigando o comportamento do código em tempo real. Depois de definir a janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para modo de depuração, você pode pausar a execução em linhas específicas do código e inspecionar informações e dados que são usados por essas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou retornadas por elas.  
@@ -74,4 +71,3 @@ ms.lasthandoff: 06/22/2017
  [Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 377a35a86cf6db66711f65bb8a8f5e3ca7da28ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c7b4dae208e71cb7773fa1ca21227193e3c448e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring---allow-network-access---windows-authentication"></a>Espelhamento de Banco de Dados – permitir o acesso à rede – Autenticação do Windows
   O uso da Autenticação do Windows para conectar os pontos de extremidade de espelhamento de banco de dados de duas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a configuração manual de contas de logon sob as seguintes condições:  
@@ -64,4 +62,3 @@ GO
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   
-

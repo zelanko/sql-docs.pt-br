@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - updatable subscriptions, enabling
 - subscriptions [SQL Server replication], updatable
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 743b3c1ff32b12d3d531cac043dddb6822eb3664
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: e989a795ff6179bdab183a2c7814f099b0448f38
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Habilitar atualização de assinaturas para publicações transacionais
   Este tópico descreve como habilitar as assinaturas de atualização para publicações transacionais no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -116,4 +114,3 @@ ms.lasthandoff: 09/27/2017
  [Usar sqlcmd com variáveis de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91512853c317e905feaf4c799516191458264c8e
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: db1551eacf3c57127442774ff93c260a275e99a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Formas canônicas e restrições de padrões
   A faceta de padrão XSD permite restringir o espaço léxico de tipos simples. Quando uma restrição de padrão é colocada em um tipo para o qual há mais de uma representação léxica possível, alguns valores podem provocar comportamento inesperado na validação.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 06/22/2017
  [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   
-

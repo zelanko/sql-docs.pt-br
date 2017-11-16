@@ -1,27 +1,24 @@
 ---
 title: "Gerar automaticamente valores de atributo de código (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f75fbf0f8ab630615d52ae217566d6b6a8790520
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 02d1b2ab9e23d4bc0ff7a5e3c11b16ef6d26859f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>Gerar automaticamente valores de atributo de código (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], gera automaticamente valores para o atributo Code de uma entidade quando você deseja atribuir um inteiro automaticamente ao valor de código toda vez que um novo membro é criado.  
@@ -54,4 +51,3 @@ ms.lasthandoff: 09/07/2017
  [Gerar automaticamente valores de atributo diferentes de código &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
   
   
-

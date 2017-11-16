@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 933d557bed780358dd9ac24edc244a734a03e7bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 92b34f32f94e24e98c331f726cd15fe96361784c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar um endereço de rede do servidor (Espelhamento de banco de dados)
   A configuração de uma sessão de espelhamento de banco de dados requer um endereço de rede de servidor para cada uma das instâncias de servidor. O endereço de rede de servidor de uma instância de servidor deve identificar a instância de forma inequívoca fornecendo um endereço de sistema e número de porta na qual a instância está escutando.  
@@ -142,4 +140,3 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   
-

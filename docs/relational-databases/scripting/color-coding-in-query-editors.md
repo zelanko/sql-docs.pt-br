@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
 - color coding [Query Editor]
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ade5a74e7b4ee2222ada550de92d6967314770e8
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b4e760bcc0aabeadae6b95ac71d81086d915c661
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="color-coding-in-query-editors"></a>Codificação por cores no Editor de Consultas
   É atribuída uma categoria ao texto inserido nos editores de códigos; cada categoria é identificada por uma cor. As cores ajudam você a localizar rapidamente o texto no código. Por exemplo, os comentários se destacam em verde-escuro. A tabela a seguir lista as cores mais comuns. Você pode exibir a lista completa de cores e suas categorias, e configurar um esquema de cores personalizado usando o menu **Ferramentas**, **Opções** . Para obter mais informações sobre como alterar as cores padrão, veja [Alterar cor, tamanho e estilo da fonte](../../relational-databases/scripting/change-font-color-size-and-style.md).  
@@ -48,4 +46,3 @@ ms.lasthandoff: 06/22/2017
  Alguns tipos de editores não exibem a barra de status ou não oferecem suporte a várias cores.  
   
   
-

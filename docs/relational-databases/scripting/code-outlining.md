@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], outlining code
 - Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 65a303f3cc995daacc29260c6a7ab176414f773f
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ff78745f8bede935b07a5affcfd5bf1f5f1e6e21
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="code-outlining"></a>Estruturação do código
   Você pode usar o recurso de estrutura de tópicos nos editores de consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ocultar código, de forma seletiva, ao editar consultas. Isso permite exibir com mais facilidade o código em que você está trabalhando, principalmente em arquivos de consulta grandes.  
@@ -89,4 +87,3 @@ GO
  Você pode clicar no sinal de menos na linha `SELECT *` para recolher somente essa instrução `SELECT` . Para recolher todo o bloco `BEGIN - END` , clique no sinal de menos na linha `BEGIN` . Para recolher todo o lote para o comando `GO` , clique no sinal de menos na linha `CREATE PROCEDURE` . Não é possível recolher as linhas `SELECT GETDATE()` ou `SELECT @@VERSION` individualmente, pois elas são instruções de linha única e não têm regiões de estrutura de tópicos.  
   
   
-

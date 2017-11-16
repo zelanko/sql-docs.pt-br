@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7f82c1bfe30401d60de557c79ad7fd95be78496c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="limit-search-results-with-rank"></a>Limite resultados de pesquisa com RANK
   As funções [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) retornam uma coluna denominada RANK que contém valores ordinais de 0 a 1000 (valores de classificação). Esses valores são usados para classificar as linhas retornadas de acordo com o grau de correspondência com os critérios de seleção. Os valores de classificação indicam apenas uma ordem relativa de relevância das linhas no conjunto de resultados, sendo que um valor inferior indica menor relevância. Os valores reais não são importantes e geralmente são diferentes em cada execução da consulta.  
@@ -212,4 +210,3 @@ qtf is the frequency of the term in the query.
  [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md)  
   
   
-

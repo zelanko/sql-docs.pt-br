@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Logout event class
+helpviewer_keywords: Audit Logout event class
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a67ebb1844a5fa5a4cabdf38501c8d4c3214c17
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8434d544c02f720277db5526ccc5854cf3d9dc68
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-logout-event-class"></a>Classe de evento Audit Logout
   A classe de evento **Audit Logout** indica que um usuário se desconectou (fez logoff) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os eventos nesta classe são disparados por novas conexões ou por conexões reutilizadas de um pool de conexões.  
@@ -53,7 +50,7 @@ ms.lasthandoff: 06/22/2017
 |**SessionLoginName**|**Nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
-|**Êxito**|**Int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 indica êxito em uma verificação de permissões e o valor 0 indica falha nessa verificação.|23|Sim|  
+|**Êxito**|**int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 indica êxito em uma verificação de permissões e o valor 0 indica falha nessa verificação.|23|Sim|  
 |**Writes**|**bigint**|Número de E/Ss de gravação lógicas emitidas pelo usuário durante a conexão.|17|Sim|  
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
   
@@ -61,4 +58,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

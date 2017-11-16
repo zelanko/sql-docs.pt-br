@@ -5,8 +5,7 @@ ms.date: 03/04/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8a4023cf2ac4d0176d421a262f13b9a4603fcc5a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="model-database"></a>Banco de dados modelo
   O banco de dados **modelo** é usado como modelo para todos os bancos de dados criados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** é criado toda vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, o banco de dados **modelo** deve sempre existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo o conteúdo do banco de dados **modelo** , incluindo as opções, é copiado para o novo banco de dados. Algumas configurações do **modelo** também são usadas para criar um novo **tempdb** durante a inicialização, de modo que um banco de dados **modelo** sempre deve existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -127,4 +125,3 @@ ms.lasthandoff: 08/03/2017
  [Mover arquivos de banco de dados](../../relational-databases/databases/move-database-files.md)  
   
   
-

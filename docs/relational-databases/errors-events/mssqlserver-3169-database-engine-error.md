@@ -5,26 +5,22 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "3169"
-helpviewer_keywords:
-- 3169 (Database Engine error)
+f1_keywords: "3169"
+helpviewer_keywords: 3169 (Database Engine error)
 ms.assetid: 7d4dbed6-bb94-4908-bc03-2040a9cf63bc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9638b59b34c8b110a5dca72a274d923a02119cbf
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0ceb8613d406c47c140165d0d67d2326e912a9d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver3169"></a>MSSQLSERVER_3169
   
@@ -47,4 +43,3 @@ Por exemplo, esse erro pode ser causado pelo uso do formato vardecimalstorage em
 ## <a name="user-action"></a>Ação do usuário  
 Determine a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo executada no servidor de origem. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse no servidor e, em seguida, clique em **Propriedades** ou digite **SELECT @@VERSION** em uma janela de consulta. Abra o banco de dados usando a versão original do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Investigue os recursos habilitados no banco de dados original na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Modifique essas configurações para funcionarem com a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual o banco de dados será restaurado.  
   
-

@@ -5,23 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.publicationinfo.warningsandagents.tran.f1
+f1_keywords: sql13.rep.monitor.publicationinfo.warningsandagents.tran.f1
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 94f7f4e75a06fdf924053b7077ce4aa28545d2ff
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 4910b1edc36f3f6e486ec1c22430201c85167807
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>Informações da publicação, avisos (publicação transacional)
   A guia **Avisos** está disponível para Distribuidores que estão executando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A guia **Avisos** permite executar as seguintes tarefas para a publicação selecionada:  
@@ -84,6 +82,6 @@ ms.lasthandoff: 06/22/2017
  [Exibir informações e executar tarefas para uma publicação &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
  [Monitorar o desempenho com o Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)   
  [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Definir limites e avisos no Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

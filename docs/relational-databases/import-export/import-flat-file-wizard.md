@@ -5,22 +5,19 @@ ms.date: 09/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: douglasl
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.importflatfile.f1
+f1_keywords: sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b19a4d0d4c2e15081b6a890aea4a4f2a9226e9bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3180456162da02ecef897fd340663500792d4785
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistente Importar Arquivo Simples para SQL
 > Para obter conteúdo relacionado ao Assistente de Importação e de Exportação, consulte [Assistente de Importação e Exportação do SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
@@ -94,5 +91,4 @@ Saiba mais sobre o assistente.
 - **Saiba mais sobre como importar outras fontes.** Se desejar importar outros itens que não sejam arquivos simples, consulte [Assistente de Importação e Exportação do SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 - **Saiba mais sobre como conectar-se a fontes de arquivos simples.** Se desejar obter mais informações sobre como conectar-se a fontes de arquivos simples, consulte [Conectar a uma fonte de dados de arquivo simples](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
 - **Saiba mais sobre o PROSE.** Se desejar uma visão geral da estrutura inteligente usada por esse assistente, consulte [PROSE SDK](https://microsoft.github.io/prose/).
-
 

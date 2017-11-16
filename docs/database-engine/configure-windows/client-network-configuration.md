@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 86acaf42c34d0d3e190f80fd6d5cdd234300e944
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0cbddc4384df93a3a1987c12d3fbd2664d57e3b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="client-network-configuration"></a>Configuração de rede de cliente
   O software cliente permite que computadores cliente se conectam a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma rede. Um "cliente" é um aplicativo front-end que usa os serviços fornecidos por um servidor como o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. O computador que hospeda esse aplicativo é denominado *computador cliente*.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Clientes DB-Library  
   
-     Esses aplicativos incluem o utilitário de prompt de comando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** command prompt utility and clients written to DB-Library. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o suporte a aplicativos cliente que usam a DB-Library é limitado a recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
+     Esses aplicativos incluem o utilitário de prompt de comando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** command prompt utility and clients written to DB-Library. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for client applications using DB-Library is limited to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 features.  
   
 > [!NOTE]  
 >  Embora o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ainda ofereça suporte a conexões de aplicativos existentes que usam DB-Library e APIs do SQL, não inclui os arquivos ou a documentação necessária para programar trabalho em aplicativos que usam essas APIs. Uma versão futura do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] descartará suporte para conexões do DB-Library ou aplicativos do Embedded SQL. Não use DB-Library ou Embedded SQL para desenvolver novos aplicativos. Remova qualquer dependência no DB-Library ou no Embedded SQL ao modificar aplicativos existentes. Em vez destas APIs, use o namespace SQLClient ou uma API como OLE DB ou ODBC. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não inclui a DLL DB-Library necessária para executar estes aplicativos. Para executar o DB-Library ou os aplicativos SQL inserindos, é necessário ter disponível o DB-Library DLL do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 ou [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
@@ -85,4 +83,3 @@ ms.lasthandoff: 08/02/2017
  [Gerenciar os serviços do Mecanismo de Banco de Dados](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   
-

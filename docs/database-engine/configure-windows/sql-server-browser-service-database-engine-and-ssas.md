@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 283dca7666370d5c56455e55ff73b5869ab17f83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1eecac5f652f34e40ebca25e0e2e9c437bd7de98
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Serviço SQL Server Browser (Mecanismo de Banco de Dados e SSAS)
   O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser contribui para as seguintes ações:  
@@ -136,4 +134,3 @@ ms.lasthandoff: 08/02/2017
  [Protocolos de rede e bibliotecas de rede](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   
-

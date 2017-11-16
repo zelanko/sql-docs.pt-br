@@ -16,17 +16,16 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 555497ecba823a6c13babbbfd1958bf293bd1f9b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
   No[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve especificar o servidor de relatório e opcionalmente as pastas para os relatórios e fontes de dados compartilhados, de forma a poder publicar os itens no projeto do Servidor de Relatório para um servidor de relatório. As propriedades e os valores que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] precisa para compilar, visualizar e implantar relatórios são armazenados em configurações de projeto do Servidor de Relatório. Você pode criar vários conjuntos nomeados para essas propriedades de projetos, para que você possa alternar de maneira conveniente entre os conjuntos de propriedades. Cada conjunto de propriedades é uma configuração. Por exemplo, você pode ter uma configuração para publicar relatórios em um servidor de teste e uma configuração diferente para publicar relatórios para um servidor de produção.  
@@ -95,4 +94,3 @@ ms.lasthandoff: 08/09/2017
  [Publicar relatórios em um servidor de relatórios](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   
   
-

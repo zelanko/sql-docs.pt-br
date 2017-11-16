@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:StmtStarting event class
+helpviewer_keywords: SP:StmtStarting event class
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 214ce5d5b71539655e07632068645b53a2b1a8a0
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0efed22bb49732465e2b55376e07bdef4bc2d3fb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spstmtstarting-event-class"></a>Classe de evento SP: StmtStarting
   A classe de evento SP:StmtStarting indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi iniciada.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 06/22/2017
 |ObjectID|**int**|ID de objeto atribuída pelo sistema.|22|Sim|  
 |ObjectName|**nvarchar**|Nome do objeto que está sendo referenciado.|34|Sim|  
 |ObjectType|**int**|Valor que representa o tipo do objeto envolvido no evento. Esse valor corresponde à coluna do tipo na exibição do catálogo sys.objects. Para obter valores, consulte [Coluna de evento de rastreamento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sim|  
-|Deslocamento|**Int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
+|Deslocamento|**int**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  

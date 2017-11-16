@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2dc65ac3d6356ff9c2a69d0a30a8c5a1ecc76782
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 47eb736bd150252f9081184ba589b8033b750c7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-replication-overview"></a>Visão geral da replicação do monitoramento
   O Replication Monitor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma ferramenta gráfica que permite monitorar a integridade geral de uma topologia de replicação. O Replication Monitor fornece informações detalhadas sobre o status e o desempenho das publicações e das assinaturas, permitindo responder a perguntas comuns tais como:  
@@ -94,4 +92,3 @@ ms.lasthandoff: 06/22/2017
  Descreve como exibir informações e executar tarefas para os agentes associados com uma assinatura usando o Replication Monitor.  
   
   
-

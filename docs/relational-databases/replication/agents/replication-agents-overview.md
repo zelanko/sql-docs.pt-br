@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - Snapshot Agent, about Snapshot Agent
 - Snapshot Agent
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69ac22bf8ba870bda84059f6f536079d3e0cec38
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4dc785f8c2d465be373708df45cd0252420cce70
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-agents-overview"></a>Visão geral dos agentes de replicação.
   A replicação usa um número de programas autônomos, chamados agentes, para executar as tarefas associadas ao rastreamento de alterações e dados de distribuição. Por padrão, os agentes de replicação são executados como tarefas programadas sob o Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ficar executando para os trabalhos a executar. Os agentes de replicação também podem ser executados a partir da linha de comando e por aplicativos que usam RMO (Replication Management Objects). Os agentes de replicação podem ser administrados a partir do Monitor de Replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  

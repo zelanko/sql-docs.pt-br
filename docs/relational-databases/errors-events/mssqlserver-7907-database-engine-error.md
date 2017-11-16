@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 7907 (Database Engine error)
+helpviewer_keywords: 7907 (Database Engine error)
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b6941bbd42b5e77aef0e0db57b8b8f82140d87b4
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 315f7a4eb7f67aa3065e935afc4c7c7482757bf3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver7907"></a>MSSQLSERVER_7907
   
@@ -55,4 +52,3 @@ Se o problema não estiver relacionado ao hardware e se houver um backup limpo c
 ### <a name="run-dbcc-checkdb"></a>Executar DBCC CHECKDB  
 Não aplicável. Esse erro não pode ser reparado. Se você não conseguir restaurar o banco de dados com base em um backup, contate o CSS (Suporte e Atendimento ao Cliente) [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-

@@ -1,30 +1,27 @@
 ---
 title: "Excluir uma exibição de assinatura (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
 - subscription views [Master Data Services], deleting
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4807b92da9c4bbccabd02828dd399cc471aa24dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c20248b853839aab73fb1fcb098531579ebf0d99
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Excluir uma exibição de assinatura (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma exibição de assinatura quando ela não for mais necessária. A exclusão de uma exibição de assinatura no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] remove a exibição do banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Você também pode editar uma exibição de assinatura.  
@@ -53,4 +50,3 @@ ms.lasthandoff: 09/07/2017
  [Visão geral: Exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   
-

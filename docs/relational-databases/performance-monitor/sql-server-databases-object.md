@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a54b7a036e38d1a34649bf25f9e0b4cb670bf71d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
   O objeto **SQLServer:Databases** no SQL Server fornece contadores para monitorar a taxa de transferência de operações de cópia em massa, backup e restauração, e atividades de log de transações. Ele monitora as transações e o log de transações para determinar quanta atividade de usuário está ocorrendo no banco de dados e o quanto o log de transações está ficando completo. A quantidade de atividade de usuário pode determinar o desempenho do banco de dados e pode afetar o tamanho de log, o bloqueio e a replicação. O monitoramento da atividade de log de baixo nível para medir a atividade de usuário e uso de recursos pode ajudá-lo a identificar gargalos no desempenho.  

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- staging process [Master Data Services], error messages
+helpviewer_keywords: staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8328c57fe3d4ad81262fd49e42b0305d7edd1d26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a870a044e3687e4d75b3a48ea44ed11119b3b5e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
   Quando o processo de preparo é concluído, todos os registros processados nas tabelas de preparo têm um valor na coluna ErrorCode. Esses valores são listados na tabela a seguir.  
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/07/2017
  [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   
-

@@ -1,27 +1,24 @@
 ---
 title: "Histórico de revisão de membro (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a12932424995fc6d5e6a47c48504997241043688
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 665a5978f516520c397bdbfe01be84ab93df028c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="member-revision-history-master-data-services"></a>Histórico de revisão de membro (Master Data Services)
   Um histórico de revisão de membro será registrado cada vez que um membro for alterado, se o tipo de log de transação da entidade for membro.  
@@ -78,4 +75,3 @@ ms.lasthandoff: 09/07/2017
  [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   
   
-

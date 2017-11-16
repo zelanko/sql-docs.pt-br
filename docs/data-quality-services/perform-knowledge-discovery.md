@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,17 +14,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e69395604574832a56c1b1e778b756b9dca0f200
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-knowledge-discovery"></a>Executar a descoberta da base de dados de conhecimento
   Este tópico descreve como criar uma base de dados de conhecimento através da descoberta da base de dados de conhecimento. No processo de descoberta, o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analisa os dados em uma fonte de dados de exemplo através de um processo assistido por computador e adiciona o conhecimento obtido na base de dados de conhecimento. Esse conhecimento pode ser modificado e aprimorado na etapa **Gerenciar Valores de Domínio** da atividade de descoberta da base de dados de conhecimento ou na atividade de gerenciamento de domínio.  
@@ -71,12 +69,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  Na tabela **Mapeamentos** , mapeie cada coluna de origem na qual deseja executar a descoberta de dados de conhecimento para um domínio da base de dados de conhecimento, da seguinte maneira:  
   
-    1.  Crie um mapeamento selecionando uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia e, em seguida, selecionando um domínio na lista suspensa da coluna **Domínio** na mesma linha, caso exista um domínio. Se não existir nenhum domínio, clique em **Criar um domínio** ou **Criar um domínio composto** para criar um domínio. Para obter mais informações, consulte [Criar uma regra de domínio](../data-quality-services/create-a-domain-rule.md) ou [Criar um domínio composto](../data-quality-services/create-a-composite-domain.md).  
+    1.  Crie um mapeamento selecionando uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia e, em seguida, selecionando um domínio na lista suspensa da coluna **Domínio** na mesma linha, caso exista um domínio. Se não existir nenhum domínio, clique em **Criar um domínio** ou **Criar um domínio composto** para criar um domínio. Para obter mais informações, consulte [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) ou [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
     2.  Repita a etapa anterior para cada mapeamento. Para alterar o número de linhas na tabela, clique em **Adicionar um mapeamento de coluna**ou selecione uma linha e clique em **Remover o mapeamento de coluna selecionado**. Se você clicar em **Remover o mapeamento de coluna selecionado** quando uma linha populada estiver selecionada, a linha selecionada será excluída mesmo que exista uma linha não populada.  
   
         > [!NOTE]  
-        >  Você poderá mapear sua fonte de dados para um domínio DQS para realizar descoberta de conhecimento somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre os tipos de dados com suporte, consulte [O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Você poderá mapear sua fonte de dados para um domínio DQS para realizar descoberta de conhecimento somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Para obter mais informações sobre os tipos de dados com suporte, consulte [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Clique em **Exibir/selecionar domínios compostos** para exibir os domínios compostos que foram definidos. Se nenhum domínio composto foi definido, o controle não estará disponível.  
   
@@ -291,7 +289,6 @@ ms.lasthandoff: 09/09/2017
   
 -   Há um nível baixo de valores válidos no campo; você deve verificar o mapeamento e a relevância das regras de domínio para o conteúdo do campo.  
   
- Para obter mais informações sobre a criação de perfil, consulte [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Para obter mais informações sobre a criação de perfil, consulte [Perfil de dados e notificações no DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
-

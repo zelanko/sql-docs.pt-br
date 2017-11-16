@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication conflict viewer [SQL Server]
 - interactive resolver [SQL Server replication]
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4b87401fd52619d599f0d318af2b8ded48957c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6ca832d1e5cb5be685746e46b021e4bad3bba316
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Visualizador de Conflitos de Replicação da Microsoft e Resolvedor Interativo
   Esta seção inclui informações sobre o Visualizador de Conflitos de Replicação para replicação de mesclagem e transacional e o Resolvedor Interativo para replicação de mesclagem:  

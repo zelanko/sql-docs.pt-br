@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- 'TM: Promote Tran Completed event class'
+helpviewer_keywords: 'TM: Promote Tran Completed event class'
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 093fa3cb4a4d121ed04ff9ab088bb05ea77102e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6fee51b178ec257fd6be4e200a4c35dee75fcdb1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>classe de evento TM: Promote Tran Completed
   A classe de evento TM: Promote Tran Completed indica que foi concluída uma solicitação PROMOTE TRANSACTION. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  

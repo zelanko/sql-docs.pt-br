@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- replication [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9b63fa28f53724adce16bedda14e11cd3a750b8
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2e059fe3079b262febc08ba39112cc41e4999d6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lição 2: Preparando a pasta do instantâneo
 Nesta lição, você aprenderá a configurar a pasta do instantâneo, usada para criar e armazenar o instantâneo de publicação.  
@@ -65,4 +61,3 @@ Você configurou com êxito o compartilhamento da pasta de instantâneo. A segui
   
   
   
-
