@@ -1,7 +1,7 @@
 ---
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Reduz o tamanho dos dados especificados ou do arquivo de log do banco de dados atual ou esvazia um arquivo movendo os dados do arquivo especificado para outros arquivos no mesmo grupo de arquivos, o que permite que o arquivo seja removido do banco de dados. Você pode reduzir um arquivo a um tamanho menor que o tamanho especificado no momento de sua criação. Isso redefine o tamanho mínimo de arquivo para o valor novo.
   

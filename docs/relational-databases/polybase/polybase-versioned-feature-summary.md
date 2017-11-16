@@ -3,25 +3,29 @@ title: "Resumo de recursos com controle de versão do PolyBase | Microsoft Docs"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d6f0d0b4acbbcf7f1c8dc15f0fe4b64e9b1efbd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumo de recursos com controle de versão do PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
 Resumo dos recursos do PolyBase disponíveis para produtos e serviços do SQL Server.  
   
@@ -61,3 +65,4 @@ Agregação parcial significa que uma agregação final deve ocorrer depois que 
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
+

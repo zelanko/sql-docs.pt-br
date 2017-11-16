@@ -2,26 +2,33 @@
 title: MSSQLSERVER_17053 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 17053 (Database Engine error)
+helpviewer_keywords:
+- 17053 (Database Engine error)
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 09a09ba19aa51777d06f9392c04617f27298693b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 17c4615ade7b6276713d36dac920cc3a2e341dcb
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver17053"></a>MSSQLSERVER_17053
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
@@ -40,3 +47,4 @@ Ocorreu um erro genérico do sistema operacional.  Não desmarque a informação
 ## <a name="user-action"></a>Ação do usuário  
 Normalmente, isso ocorre com algum outro erro e pode ser usado para ajudar a diagnosticar essa falha. Os exemplos podem incluir falhas em leituras ou gravações de dados ou em arquivos de log, operações de leitura/gravação no Registro ou outras falhas inesperadas da Win32API.  
   
+

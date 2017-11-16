@@ -2,26 +2,31 @@
 title: Backup gerenciado do SQL Server no Microsoft Azure | Microsoft Docs
 ms.custom: 
 ms.date: 10/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd210025eb75eceedfbeb31bc485ef0f8b4d37e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/24/2017
+
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gerenciado do SQL Server no Microsoft Azure
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gerencia e automatiza os backups do SQL Server no Armazenamento de Blobs do Microsoft Azure. Você pode permitir que o SQL Server determine a agenda de backup com base na carga de trabalho de transação do banco de dados. Ou pode usar as opções avançadas para definir uma agenda. As configurações de retenção determinam por quanto tempo os backups são armazenados no Armazenamento de Blobs do Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] oferece suporte para restauração pontual durante o período de retenção especificado.  
   
@@ -138,3 +143,4 @@ ms.lasthandoff: 11/09/2017
 - [Fazer backup dos bancos de dados do SQL Server e restaurá-los](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   
   
+

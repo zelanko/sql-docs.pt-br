@@ -2,26 +2,31 @@
 title: "Configuração do PolyBase | Microsoft Docs"
 ms.custom: 
 ms.date: 09/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80ff73c1-2861-438b-a13f-309155f3d6e1
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a750d1dbc4adb1dbd09fb718dd05a81661381a8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 95a149c4a59de88373206f1b90419c0b7359bb90
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/13/2017
+
 ---
 # <a name="polybase-configuration"></a>Configuração do PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use os procedimentos a seguir para configurar o PolyBase.  
   
@@ -225,3 +230,4 @@ Observe que quando PolyBase se autentica em um cluster protegido por Kerberos, p
  [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
+
