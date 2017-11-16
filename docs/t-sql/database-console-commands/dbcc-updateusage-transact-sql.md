@@ -1,7 +1,7 @@
 ---
 title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Relata e corrige inexatidões de contagem de páginas e linhas nas exibições do catálogo. Essas inexatidões podem provocar relatórios de uso incorreto de espaço retornados pelo procedimento armazenado do sistema sp_spaceused.
   

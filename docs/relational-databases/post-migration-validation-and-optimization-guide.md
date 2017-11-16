@@ -2,29 +2,34 @@
 title: "Validação pós-migração e guia de otimização | Microsoft Docs"
 ms.custom: 
 ms.date: 5/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - post-migration validation and optimization
 - guide, post-migration validation and optimization
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: 
 ms.workload: Inactive
-ms.openlocfilehash: 9a886b8b2b617f3c507f98c3c2dbd495bf2d86a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/03/2017
+
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 A etapa pós-migração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é crucial para reconciliar a precisão e a integridade dos dados, bem como descobrir problemas de desempenho com a carga de trabalho.
 
@@ -168,3 +173,4 @@ Funções com valor de tabela retornam um tipo de dados de tabela que pode ser u
 [Variáveis de tabela e estimativas de linha — Parte 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
 [Variáveis de tabela e estimativas de linha — Parte 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
 [Reutilização e armazenamento em cache do plano de execução](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
+

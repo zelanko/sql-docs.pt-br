@@ -2,26 +2,31 @@
 title: "Bancos de dados relacionais do Microsoft SQL – orientação | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0ad6c0a663d8204152ec457e24dad3435a5d47bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: c527b6a7feafc3647535dc498fa9eab213876594
+ms.openlocfilehash: f5113541de0deb1ba42519da8e0ec5fff33dfe4d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Orientação sobre o uso dos bancos de dados relacionais do Microsoft SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Esta seção contém os recursos e as tarefas associadas aos bancos de dados, objetos de banco de dados, tipos de dados e os mecanismos do Microsoft SQL usados para trabalhar com dados ou gerenciá-los. Essas informações são comuns a maioria das versões do [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. Tópicos individuais podem indicar que alguns recursos são limitados a algumas plataformas. Para obter informações sobre uma plataforma específica, consulte os seguintes links: 
   
@@ -33,3 +38,4 @@ ms.lasthandoff: 11/09/2017
 
   
   
+

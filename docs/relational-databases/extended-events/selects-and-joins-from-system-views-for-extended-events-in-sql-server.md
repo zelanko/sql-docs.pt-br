@@ -2,28 +2,32 @@
 title: "SELECTs e JOINs de exibições do sistema de Eventos Estendidos no SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f74637bd0e696ae4fd17d54f3826181e5d2ecf29
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Seleções e junções em exibições do sistema dos Eventos Estendidos no SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Este artigo explica os dois conjuntos de exibições do sistema relacionados a eventos estendidos no Microsoft SQL Server e no serviço de nuvem do Banco de Dados SQL do Azure. O artigo ilustra:
@@ -118,31 +122,31 @@ A documentação de referência sobre as exibições de catálogo para eventos e
 
 No SSMS, no seu **Pesquisador de Objetos**, é possível iniciar a caixa de diálogo **Nova Sessão** expandindo **Gerenciamento** > **Eventos Estendidos**e clicando com o botão direito do mouse em **Sessões** > **Nova Sessão**.
 
-Na caixa de diálogo grande **Nova Sessão** , em sua primeira seção chamada **Geral**, vemos que a opção foi selecionada para **Iniciar a sessão de evento na inicialização do servidor**.
+Na caixa de diálogo grande **Nova Sessão**, em sua primeira seção chamada **Geral**, vemos que a opção foi selecionada para **Iniciar a sessão de evento na inicialização do servidor**.
 
 ![Nova Sessão > Geral, Iniciar a sessão de evento na inicialização do servidor.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-Em seguida, na seção **Eventos** , vemos que o evento **lock_deadlock** foi selecionado. Para esse evento, vemos que três **Ações** foram selecionadas. Isso significa que o botão **Configurar** foi clicado, que fica cinza após ser clicado.
+Em seguida, na seção **Eventos**, vemos que o evento **lock_deadlock** foi selecionado. Para esse evento, vemos que três **Ações** foram selecionadas. Isso significa que o botão **Configurar** foi clicado, que fica cinza após ser clicado.
 
 ![Nova Sessão > Eventos, Campos Globais (Ações)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-Em seguida, ainda na seção **Eventos** > **Configurar** , vemos que [**resource_type** foi definido como **PAGE**](#resource_type_dmv_actual_row). Isso significa que os dados de eventos não serão enviados do mecanismo de evento para a página de destino se o valor de **resource_type** for algo diferente de **PAGE**.
+Em seguida, ainda na seção **Eventos** > **Configurar**, vemos que [**resource_type** foi definido como **PAGE**](#resource_type_dmv_actual_row). Isso significa que os dados de eventos não serão enviados do mecanismo de evento para a página de destino se o valor de **resource_type** for algo diferente de **PAGE**.
 
 Vemos filtros de predicado adicionais para o nome do banco de dados e para um contador.
 
 ![Nova Sessão > Eventos > Configurar > Campos de Predicado de Filtro (Ações)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-Em seguida, na seção **Armazenamento de Dados** , vemos que **event_file** foi selecionado como destino. Além disso, vemos que a opção **Habilitar substituição de arquivo** foi selecionada.
+Em seguida, na seção **Armazenamento de Dados**, vemos que **event_file** foi selecionado como destino. Além disso, vemos que a opção **Habilitar substituição de arquivo** foi selecionada.
 
 ![Nova Sessão > Armazenamento de Dados, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
-Por fim, na seção **Avançado** , vemos que o valor de **Latência Máxima de Expedição** foi reduzido para 4 segundos.
+Por fim, na seção **Avançado**, vemos que o valor de **Latência Máxima de Expedição** foi reduzido para 4 segundos.
 
 ![Nova Sessão > Avançado, Latência máxima de expedição](../../relational-databases/extended-events/media/xevents-ssms-ac125-latency4.png)
 
@@ -920,5 +924,6 @@ Aqui está o conteúdo da primeira célula XML, do conjunto de linhas retornado 
   </action>
 </event>
 ```
+
 
 

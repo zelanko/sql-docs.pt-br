@@ -3,28 +3,33 @@ title: Guia de arquitetura de thread e tarefa | Microsoft Docs
 ms.custom: 
 ms.date: 10/26/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6f2ded3d40a1f17980507fdf92d05e3517f0bc54
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Threads são um recurso do sistema operacional que permite a separação da lógica de aplicativo em vários caminhos de execução simultâneos. Esse recurso é útil quando aplicativos complexos têm muitas tarefas que podem ser executadas ao mesmo tempo. 
 
@@ -99,7 +104,7 @@ Além disso, considere ajustar a configuração de servidor **MAXDOP (grau máxi
 * Para servidores que tenham o NUMA configurado, o grau máximo de paralelismo não deve exceder o número de CPUs atribuídas a cada nó NUMA. Isso ocorre porque é mais provável que a consulta use memória local de 1 nó NUMA, o que pode melhorar o tempo de acesso à memória.  
 * Para os servidores que têm o hyperthreading habilitado e foram fabricados até 2009 (antes da melhoria do recurso de hyperthreading), o valor de MAXDOP não deve exceder o número de processadores físicos, em vez de processadores lógicos.
 
-Para obter mais informações sobre o grau máximo da opção de paralelismo, veja [Configurar a opção grau máximo de paralelismo da configuração de servidor](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Para obter mais informações sobre o grau máximo da opção de paralelismo, veja [Configurar a opção de configuração de servidor grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Configurar o número máximo de threads de trabalho
 
@@ -128,5 +133,6 @@ A tabela a seguir lista os componentes do SQL Server e indica se eles podem usar
 |SQL Server Agent   |Sqlagent.exe   |Não |  
 |SQL Server Management Studio   |Ssms.exe   |Não |  
 |instalação do SQL Server   |Setup.exe  |Não |  
+
 
 

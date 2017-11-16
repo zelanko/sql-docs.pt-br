@@ -2,26 +2,31 @@
 title: "Lição 1: Conectando ao Mecanismo de Banco de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 157aabe87bbfb678cb7a115a0875ad27234e0b99
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a005345fe51f1b1b1479f854c636464b728429f7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Lição 1: conectar-se ao Mecanismo de Banco de Dados](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
 
@@ -133,4 +138,5 @@ ms.lasthandoff: 11/09/2017
  -[Lição 2: Conectando-se de outro computador](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   
   
+
 

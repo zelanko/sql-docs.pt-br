@@ -2,26 +2,33 @@
 title: MSSQLSERVER_2576 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 2576 (Database Engine error)
+helpviewer_keywords:
+- 2576 (Database Engine error)
 ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 0cf4979d79f22608259a5e71a88db8786cf8f0e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b96de1b2a8056f4b88ba6df9259607e0d94aa427
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver2576"></a>MSSQLSERVER_2576
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
@@ -63,3 +70,4 @@ REPAIR tentará recompilar a cadeia IAM que envolve a página *P_ID2*. A reconst
 > [!CAUTION]  
 > Essa correção pode causar perda de dados.  
   
+
