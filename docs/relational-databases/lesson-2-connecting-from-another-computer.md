@@ -5,23 +5,21 @@ ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1e72554b59c7ecf738235d4c5d74f35915116b4b
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 3e860fc71d2f9e5efcf68324040d267d9de6fce9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: Conectando de outro computador
 Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
@@ -145,5 +143,4 @@ Isso conclui esse breve tutorial em conectividade básica.
 ## <a name="return-to-tutorials-portal"></a>Retorne ao portal Tutoriais  
 [Tutorial: introdução ao Mecanismo de Banco de Dados](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
-
 
