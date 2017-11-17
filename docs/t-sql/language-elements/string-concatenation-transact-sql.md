@@ -3,8 +3,11 @@ title: "+ (Concatenação de cadeia de caracteres) (Transact-SQL) | Microsoft Do
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concatenação de cadeias de caracteres) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Um operador em uma expressão de cadeia de caracteres que concatena duas ou mais cadeias de caracteres ou cadeias de caracteres binárias, colunas ou uma combinação de cadeias de caracteres e nomes de colunas em uma expressão (um operador de cadeia de caracteres).  Por exemplo `SELECT 'book'+'case';` retorna `bookcase`.
   

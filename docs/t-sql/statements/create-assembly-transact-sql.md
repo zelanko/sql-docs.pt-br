@@ -3,8 +3,11 @@ title: CRIAR o ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 8/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria um módulo de aplicativo gerenciado que contém metadados de classe e código gerenciado como um objeto em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao fazer referência a esse módulo, funções CLR (Common Language Runtime), procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário podem ser criados no banco de dados.  
   

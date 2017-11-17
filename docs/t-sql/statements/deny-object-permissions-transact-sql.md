@@ -3,8 +3,11 @@ title: "Negar permissões de objeto (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="deny-object-permissions-transact-sql"></a>Permissões de objeto DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Nega permissões em um membro da classe OBJECT de protegíveis. Esses são membros da classe OBJECT: tabelas, exibições, funções com valor de tabela, procedimentos armazenados, procedimentos armazenados estendidos, funções escalares, funções de agregação, filas de serviço e sinônimos.  
 

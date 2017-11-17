@@ -3,8 +3,11 @@ title: "Quais são as funções de banco de dados do Microsoft SQL? | Microsoft 
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quais são as funções de banco de dados SQL?
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
 Saiba mais sobre as categorias de funções internas que você pode usar com bancos de dados SQL. Você pode usar as funções internas ou criar suas próprias funções definidas pelo usuário.
   

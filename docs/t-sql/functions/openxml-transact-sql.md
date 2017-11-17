@@ -3,8 +3,11 @@ title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   OPENXML fornece uma exibição de conjunto de linhas em um documento XML. Como OPENXML é um provedor de conjunto de linhas, OPENROWSET pode ser usado em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nas quais os provedores de conjunto de linhas, como uma tabela, exibição ou a função OPENROWSET, podem aparecer.  
   

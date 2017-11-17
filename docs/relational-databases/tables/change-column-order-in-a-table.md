@@ -2,29 +2,34 @@
 title: Alterar a ordem das colunas em uma tabela| Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - columns [SQL Server], change order in a table
 - column order, change
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 21230fae3505719bd2b6f763391ed1687bba8fe8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9ab22cf6c60bd7d89ff70eba15ca65c731a1fb1
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="change-column-order-in-a-table"></a>Alterar ordem de colunas em uma tabela
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Você pode alterar a ordem das colunas no Designer de Tabela do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -55,3 +60,4 @@ ms.lasthandoff: 11/09/2017
  Esta tarefa não pode ser executada usando instruções Transact-SQL.  
   
 ###  <a name="TsqlExample"></a>  
+

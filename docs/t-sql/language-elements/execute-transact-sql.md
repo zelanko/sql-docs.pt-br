@@ -3,8 +3,11 @@ title: EXECUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="execute-transact-sql"></a>EXECUTE-o Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Executa uma cadeia de caracteres de comando ou de cadeia de caracteres dentro de um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote ou um dos seguintes módulos: sistema armazenados procedimento, o procedimento armazenado definido pelo usuário, o procedimento armazenado CLR, função definida pelo usuário de valor escalar ou procedimento armazenado estendido. A instrução EXECUTE pode ser usada para enviar comandos de passagem aos servidores vinculados. Além disso, o contexto no qual uma cadeia de caracteres ou comando é executado pode ser definido explicitamente. É possível definir metadados para o conjunto de resultados usando as opções do WITH RESULT SETS.
   

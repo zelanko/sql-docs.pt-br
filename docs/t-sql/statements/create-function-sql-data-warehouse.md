@@ -3,8 +3,11 @@ title: "Criar função (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-function-sql-data-warehouse"></a>Criar função (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Cria uma função definida pelo usuário no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Uma função definida pelo usuário é um [!INCLUDE[tsql](../../includes/tsql-md.md)] rotina que aceita parâmetros, executa uma ação, como um cálculo complexo e retorna o resultado dessa ação como um valor. O valor de retorno deve ser um valor escalar (único). Use essa instrução para criar uma rotina reutilizável que possa ser usada destas maneiras:  
   

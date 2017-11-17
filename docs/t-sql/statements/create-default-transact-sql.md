@@ -3,8 +3,11 @@ title: "Criar padrão (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria um objeto chamado padrão. Quando associado a uma coluna ou um tipo de dados de alias, um padrão especifica um valor a ser inserido na coluna á qual o objeto está associado (ou em todas as colunas, no caso de um tipo de dados de alias), quando nenhum valor é fornecido explicitamente durante uma inserção.  
   

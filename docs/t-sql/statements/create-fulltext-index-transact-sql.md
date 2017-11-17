@@ -3,8 +3,11 @@ title: "CRIAR um índice de texto completo (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria um índice de texto completo em uma tabela ou em uma exibição indexada de um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Somente um índice de texto completo é permitido por tabela ou exibição indexada, e cada índice de texto completo se aplica a uma única tabela ou exibição indexada. O índice de texto completo pode conter até 1024 colunas.  
   

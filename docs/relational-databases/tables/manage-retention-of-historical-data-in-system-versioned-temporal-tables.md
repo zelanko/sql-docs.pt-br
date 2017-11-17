@@ -1,27 +1,32 @@
 ---
 title: "Gerenciar a retenção de dados históricos em tabelas temporais com controle de versão do sistema | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 96ca811479e59cc444e6ad0ddef19ab3bd7ec3f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Com tabelas temporais com versão do sistema, a tabela de histórico pode aumentar o tamanho do banco de dados mais do que tabelas regulares, especialmente nas seguintes condições:  
   
@@ -508,3 +513,4 @@ Confira [Gerenciar dados históricos em tabelas temporais com a política de ret
  [Funções e exibições de metadados de tabela temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

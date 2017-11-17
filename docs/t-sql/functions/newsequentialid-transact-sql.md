@@ -3,8 +3,11 @@ title: NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria um GUID que é maior que qualquer GUID anteriormente gerado por esta função em um computador especificado desde o início do Windows. Após o reinício do Windows, o GUID poderá ser iniciado novamente a partir de um intervalo inferior, mas ainda será globalmente exclusivo. Quando uma coluna de GUID é usada como um identificador de linha, usar NEWSEQUENTIALID pode ser mais rápido do que usar a função NEWID. Isso ocorre porque a função NEWID provoca atividade aleatória e usa menos páginas de dados do cache. O uso de NEWSEQUENTIALID também ajuda a preencher completamente as páginas de dados e índice.  
   
