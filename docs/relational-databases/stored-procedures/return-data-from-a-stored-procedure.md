@@ -2,29 +2,34 @@
 title: Retornar dados de um procedimento armazenado | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 14cd1a02c2c4c45fb26de19ed5141143e8587eb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
+ms.contentlocale: pt-br
+ms.lasthandoff: 10/24/2017
+
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retornar dados de um procedimento armazenado
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Retornar dados de um procedimento armazenado](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
   Há duas formas de retornar conjuntos de resultados ou dados de um procedimento para um programa de chamada: parâmetros de saída e códigos de retorno. Este tópico fornece informações sobre as duas abordagens.  
@@ -268,3 +273,4 @@ GO
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   
+

@@ -2,13 +2,18 @@
 title: "Conceitos dos executáveis do agente de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
 - programming [SQL Server replication], agents
@@ -16,23 +21,24 @@ helpviewer_keywords:
 - agents [SQL Server replication], executables
 - command prompt [SQL Server replication]
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 297a1a4070e82ce17c648308902b20648d4fbf9b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 096156484b2378713485e1177eb9b0cfd6faa5d8
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="replication-agent-executables-concepts"></a>Conceitos dos executáveis do Replication Agent
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Os agentes de replicação podem ser controlados programaticamente das seguintes formas:  
   
--   Usando as interfaces de programação do agente gerenciado no namespace <xref:Microsoft.SqlServer.Replication>.  
+-   Usando as interfaces de programação do agente gerenciado no Namespace <xref:Microsoft.SqlServer.Replication>.  
   
 -   Invocando arquivos executáveis do agente no prompt de comando usando um conjunto de parâmetros fornecido.  
   
@@ -116,3 +122,4 @@ REM -- The following command must be supplied without line breaks.
 ```  
   
   
+

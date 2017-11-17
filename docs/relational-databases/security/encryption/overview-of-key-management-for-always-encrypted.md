@@ -2,26 +2,31 @@
 title: "Visão geral do gerenciamento de chaves do Always Encrypted | Microsoft Docs"
 ms.custom: 
 ms.date: 07/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-security
+ms.suite: sql
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 313e9c416f29321c38c47b80002b9ca219e36cf8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usa dois tipos de chaves de criptografia para proteger seus dados, uma chave para criptografar os dados e outra para criptografar a chave que criptografa os dados. A chave de criptografia de coluna criptografa os dados, a chave mestra de coluna criptografa a chave de criptografia de coluna. Este artigo fornece uma visão geral detalhada para gerenciar essas chaves de criptografia.
@@ -110,6 +115,7 @@ Para garantir que Always Encrypted seja eficaz na prevenção desses tipos de at
 - [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Tutorial do assistente do Always Encrypted (Cofre de Chaves do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Tutorial do assistente do Always Encrypted (Repositório de Certificados do Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+
 
 
 
