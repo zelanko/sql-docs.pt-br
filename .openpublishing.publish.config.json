@@ -17,7 +17,9 @@
       "version": 0
     }
   ],
-  "notification_subscribers": [],
+  "notification_subscribers": [
+    "CnE_Content_Brno@moravia.com"
+  ],
   "branches_to_filter": [
     "live-oldev",
     "live"
@@ -46,7 +48,8 @@
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
+      "branch": "master",
+      "branch_mapping": {}
     },
     {
       "path_to_root": "_repo.en-us",
