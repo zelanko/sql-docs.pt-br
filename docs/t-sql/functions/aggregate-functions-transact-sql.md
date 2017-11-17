@@ -3,8 +3,11 @@ title: "Agregar funções (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="aggregate-functions-transact-sql"></a>Funções de agregação (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 As funções de agregação executam um cálculo em um conjunto de valores e retornam um único valor. Com exceção de COUNT, as funções de agregação ignoram valores nulos. As funções de agregação normalmente são usadas com a cláusula GROUP BY da instrução SELECT.
   

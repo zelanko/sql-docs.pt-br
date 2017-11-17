@@ -3,8 +3,11 @@ title: "Funções escalares ODBC (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -64,7 +67,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funções escalares ODBC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Você pode usar [funções escalares ODBC](http://go.microsoft.com/fwlink/?LinkID=88579) no [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. Essas instruções são interpretadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elas podem ser usadas em procedimentos armazenados e em funções definidas pelo usuário. Elas incluem funções de cadeia de caracteres, numéricas, de tempo, de data, de intervalo e de sistema.  
   

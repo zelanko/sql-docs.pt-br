@@ -3,8 +3,11 @@ title: SUPERIOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Limita as linhas retornadas em um conjunto de resultados de consulta a um número ou percentual de linhas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando TOP é usado em conjunto com a cláusula ORDER BY, o conjunto de resultados é limitado ao primeiro *N* número de linhas ordenadas; caso contrário, retorna o primeiro *N* número de linhas em uma ordem indefinida. Use esta cláusula para especificar o número de linhas retornado de uma instrução SELECT ou afetado por uma instrução INSERT, UPDATE, MERGE ou DELETE.  
   

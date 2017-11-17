@@ -3,8 +3,11 @@ title: Tabela dicas (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) - tabela
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Dicas de tabela substituem o comportamento padrão do otimizador de consulta para a duração da instrução DML (linguagem) de manipulação de dados especificando um método de bloqueio, um ou mais índices, uma operação de processamento de consulta como uma busca de índice ou de exame de tabela ou outras opções. As dicas da tabela são especificadas na cláusula FROM da instrução DML e afetam apenas a tabela ou exibição referenciada nessa cláusula.  
   

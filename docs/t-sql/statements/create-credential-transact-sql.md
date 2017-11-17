@@ -3,8 +3,11 @@ title: Criar CREDENCIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria uma credencial de nível de servidor. Uma credencial é um registro que contém as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. A maioria das credenciais inclui um usuário e uma senha do Windows. Por exemplo, salvar um backup de banco de dados em algum local pode exigir SQL Server para fornecer credenciais especiais para acessar o local. Para obter mais informações, consulte [credenciais (mecanismo de banco de dados)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   

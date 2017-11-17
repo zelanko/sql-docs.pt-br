@@ -3,8 +3,11 @@ title: RAISERROR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR-Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gera uma mensagem de erro e inicia o processamento de erros da sessão. RAISERROR pode referenciar uma mensagem definida pelo usuário armazenada na exibição do catálogo sys. messages, ou criar uma mensagem dinamicamente. A mensagem é retornada como uma mensagem de erro de servidor ao aplicativo de chamada ou a um bloco CATCH de uma construção TRY...CATCH. Novos aplicativos devem usar [gerar](../../t-sql/language-elements/throw-transact-sql.md) em vez disso.  
   

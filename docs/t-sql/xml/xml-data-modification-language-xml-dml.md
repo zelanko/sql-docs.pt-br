@@ -3,8 +3,11 @@ title: "Linguagem de modificação de dados XML (XML DML) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Linguagem de modificação de dados XML (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   A linguagem de Modificação de Dados XML (XML DML) é uma extensão da linguagem XQuery. Como definido por W3C, a linguagem XQuery é desprovida da parte de Manipulação de Dados (DML). A XML DML apresentada neste tópico, e também a linguagem XQuery, fornece uma consulta totalmente funcional e linguagem de modificação de dados que você pode usar em relação a **xml** tipo de dados.  
   

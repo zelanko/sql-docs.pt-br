@@ -3,8 +3,11 @@ title: ELSE (IF... ELSE) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Impõe condições na execução de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução (*sql_statement*) seguir o *Boolean_expression*será executada se a *Boolean_expression* for avaliada como TRUE. A palavra-chave ELSE opcional é uma alternativa [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução é executada quando *Boolean_expression* é avaliada como FALSE ou NULL.  
   

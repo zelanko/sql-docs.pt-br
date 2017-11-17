@@ -3,8 +3,11 @@ title: "Conversão (mecanismo de banco de dados) de tipo de dados | Microsoft Do
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversão de tipo de dados (mecanismo de banco de dados)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Os tipos de dados podem ser convertidos nos seguintes cenários:
 -   Quando os dados de um objeto são movidos, comparados ou combinados com dados de outro objeto, eles podem ser convertidos de um tipo de dados de um objeto em um tipo de dados de outro objeto.  

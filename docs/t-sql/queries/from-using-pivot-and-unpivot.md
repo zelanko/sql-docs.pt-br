@@ -3,8 +3,11 @@ title: Usando PIVOT e UNPIVOT | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="from---using-pivot-and-unpivot"></a>DE - usando PIVOT e UNPIVOT
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Você pode usar o `PIVOT` e `UNPIVOT` operadores relacionais para alterar uma expressão com valor de tabela em outra tabela. `PIVOT`gira uma expressão com valor de tabela ao transformar os valores exclusivos de uma coluna na expressão em várias colunas na saída e executa agregações onde forem necessárias em quaisquer valores de coluna remanescentes desejados na saída final. `UNPIVOT`executa a operação oposta a PIVOT, girando colunas de uma expressão com valor de tabela em valores de coluna.  
   

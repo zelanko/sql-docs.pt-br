@@ -3,8 +3,11 @@ title: "Métodos de Geografia agregados estáticos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="static-aggregate-geography-methods"></a>Métodos de geografia agregados estáticos
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte aos métodos de agregação a seguir como extensões para os métodos de geografia estática do OGC (Open Geospatial Consortium).  
   

@@ -3,8 +3,11 @@ title: "Tipo de dados precedência (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="data-type-precedence-transact-sql"></a>Precedência de tipo de dados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Quando um operador combinar duas expressões com tipos de dados diferentes, as regras de precedência do tipo de dados especificam que o mesmo, com a precedência mais baixa, será convertido para o tipo de dado de maior precedência. Se a conversão não for uma conversão implícita com suporte, um erro será retornado. Quando ambas as expressões de operando tiverem o mesmo tipo de dados, o resultado da operação terá aquele tipo de dados.
   

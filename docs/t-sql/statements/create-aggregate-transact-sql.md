@@ -3,8 +3,11 @@ title: "Criar agregação (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria uma função de agregação definida pelo usuário, cuja implementação está definida em uma classe de um assembly no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] associe a função de agregação à sua implementação, o assembly do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contém a implementação deverá primeiramente ser carregado em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o uso de uma instrução CREATE ASSEMBLY.  
   

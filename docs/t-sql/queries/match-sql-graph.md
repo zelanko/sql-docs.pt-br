@@ -2,9 +2,12 @@
 title: "CORRESPONDÊNCIA (gráfico SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,9 +33,8 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="match-transact-sql"></a>CORRESPONDÊNCIA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   Especifica um critério de pesquisa para um gráfico. CORRESPONDÊNCIA pode ser usada apenas com as tabelas de nó e borda gráfico, na instrução SELECT como parte da cláusula WHERE. 
   
