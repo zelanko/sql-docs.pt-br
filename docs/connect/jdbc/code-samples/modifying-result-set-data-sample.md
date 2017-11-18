@@ -3,8 +3,11 @@ title: "Resultado de modificação do conjunto de dados de exemplo | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -129,3 +132,4 @@ public class updateRS {
  [Trabalhando com conjuntos de resultados](../../../connect/jdbc/working-with-result-sets.md)  
   
   
+
