@@ -3,8 +3,11 @@ title: 'Etapa 1: Configurar o ambiente de desenvolvimento para desenvolvimento A
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ado-net
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

@@ -3,8 +3,11 @@ title: "Método (SQLServerConnection) setAutoCommit | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,27 +30,27 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/09/2017
 
 ---
-# setAutoCommit método (SQLServerConnection)
+# <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit método (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Define o modo de confirmação automática para este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto para o estado especificado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 public void setAutoCommit(boolean value)  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *value*  
   
  **True** para habilitar o modo de confirmação automática para a conexão, **false** para desabilitá-lo.  
   
-## Exceções  
+## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Esse método setAutoCommit é especificado pelo método setAutoCommit na interface Java.SQL.  
   
  Se uma conexão estiver no modo de confirmação automática, todas as suas instruções SQL serão executadas e confirmadas como transações individuais. Caso contrário, suas instruções SQL são agrupadas em transações que são terminadas por uma chamada para o [confirmação](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) método ou o [reversão](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) método. Por padrão, as novas conexões estão no modo de confirmação automática.  
@@ -59,7 +62,7 @@ public void setAutoCommit(boolean value)
 > [!NOTE]  
 >  Se esse método for chamado durante uma transação, esta será confirmada.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

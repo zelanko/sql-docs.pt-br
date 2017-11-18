@@ -3,9 +3,12 @@ title: "Bibliotecas de Conexão para bancos de dados do Microsoft SQL | Microsof
 description: "Fornece links de download para os módulos que permitem a conexão ao Microsoft SQL Server e banco de dados SQL Azure, de uma variedade de linguagens de programação do cliente."
 author: MightyPen
 ms.service: 
-ms.prod: sql-server
+ms.component: connect
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: develop apps
+ms.custom: 
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017

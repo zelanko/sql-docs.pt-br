@@ -3,8 +3,11 @@ title: "(Drivers da Microsoft para PHP para SQL Server) do pool de Conexão | Mi
 ms.custom: 
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
