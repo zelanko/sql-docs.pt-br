@@ -2,26 +2,31 @@
 title: Restaurar bancos de dados habilitados para Stretch (Stretch Database) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97cbd56ea25072856220db88996bccd6aba2c26b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 179935cc6a15d076737d12b4fa6fac28f354db3c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/01/2017
+
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurar bancos de dados habilitados para Stretch (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Restaure um banco de dados de backup, quando necessário, para se recuperar de muitos tipos de falhas, erros e desastres.
   
@@ -90,3 +95,4 @@ Para restaurar um banco de dados do Azure excluído no ponto em que ele foi excl
  
  [portal do Azure]: https://portal.azure.com/
  
+

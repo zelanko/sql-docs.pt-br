@@ -6,17 +6,24 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 0b7f3946674d16066526f52684c2e98de8a5c8c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurar o SQL Server para enviar comentários à Microsoft
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## <a name="summary"></a>Resumo
 Por padrão, o Microsoft SQL Server coleta informações sobre como os clientes estão usando o aplicativo. Especificamente, o SQL Server coleta informações sobre a experiência de instalação, uso e desempenho. Essas informações ajudam a Microsoft a melhorar o produto para melhor atender às necessidades do cliente. Por exemplo, a Microsoft coleta informações sobre quais tipos de códigos de erro os clientes costumam encontrar, para que possamos corrigir erros relacionados, melhorar nossa documentação sobre como usar o SQL Server e determinar se os recursos devem ser adicionados ao produto para melhor atender aos clientes.
@@ -164,3 +171,4 @@ Durante a instalação, o Analysis Services do SQL Server 2016 adiciona uma cont
 Você pode configurar seu serviço para não enviar dados de uso, conforme descrito na seção "Conjunto de sub-chaves do registro no servidor". No entanto, isso não removerá a conta de serviço. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

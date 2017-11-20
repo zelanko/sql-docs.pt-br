@@ -2,9 +2,12 @@
 title: SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -40,7 +43,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Usa um modelo de mineração para predizer os estados de colunas em uma fonte de dados externa. O **PREDICTION JOIN** instrução corresponde a cada caso da consulta de fonte para o modelo.  
   

@@ -2,24 +2,30 @@
 title: "Gerenciador de dependências de entidade | Microsoft Docs"
 ms.custom: 
 ms.date: 04/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: master data services
+keywords:
+- master data services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0039c7699b14dbe0d29582c447c9c4d122f674c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c365750c4c7519e27b9be74da30c4028491fe37e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="entity-dependencies-explorer"></a>Gerenciador de dependências de entidade
   
@@ -46,4 +52,5 @@ A exibição é totalmente editável, assim como na página Gerenciador de Hiera
   
   
   
+
 

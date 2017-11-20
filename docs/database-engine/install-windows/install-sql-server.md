@@ -1,13 +1,15 @@
 ---
 title: Instalar o SQL Server | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,18 +17,19 @@ helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-caps.latest.revision: "59"
+caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: eab4b7f0ac099d615df1eda831adf04dfd29a7f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: eab4b7f0ac099d615df1eda831adf04dfd29a7f6
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
+
 ---
 # <a name="install-sql-server"></a>Instalar o SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Instalar o SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx).
 
  A partir do [!INCLUDE[sssql15](../../includes/sssql15-md.md)], o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] só está disponível como um aplicativo de 64 bits. Aqui estão os detalhes importantes sobre como obter o SQL Server e como instalá-lo.
@@ -99,3 +102,4 @@ ms.lasthandoff: 11/09/2017
  [Soluções de alta disponibilidade &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
   
+
