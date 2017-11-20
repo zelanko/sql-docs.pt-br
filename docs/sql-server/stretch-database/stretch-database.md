@@ -1,28 +1,34 @@
 ---
 title: Stretch Database | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/27/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Stretch Database
+helpviewer_keywords:
+- Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f4b92e22ff418924950871820b2c43640821bd0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dab64f6d7c2067eea1c2e5249fc3a7089eda6bc
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   O Stretch Database migra seus dados frios de forma transparente e segura para a nuvem do Microsoft Azure.  
   
@@ -41,7 +47,7 @@ ms.lasthandoff: 11/09/2017
  Reduza a necessidade de manutenção e armazenamento no local dos seus dados. Os backups de seus dados no local são executados mais rápido e são concluídos dentro da janela de manutenção. Os backups para a parte da nuvem de seus dados são executados automaticamente. Suas necessidades de armazenamento no local são reduzidas significativamente. O armazenamento do Azure pode ser 80% mais barato do que adicionar ao SSD local.  
   
  **Mantém seus dados seguros mesmo durante a migração**  
- Fique tranquilo para ampliar seus aplicativos mais importantes com segurança para a nuvem. O Always Encrypted do SQL Server fornece a criptografia para seus dados em movimentação. A Segurança em Nível de Linha e outros recursos de segurança avançados do SQL Server também funcionam com o Stretch Database para proteger seus dados.  
+ Fique tranquilo para ampliar seus aplicativos mais importantes com segurança para a nuvem. O Sempre Criptografado do SQL Server fornece a criptografia para seus dados em movimentação. A Segurança em Nível de Linha e outros recursos de segurança avançados do SQL Server também funcionam com o Stretch Database para proteger seus dados.  
   
 ## <a name="what-does-stretch-database-do"></a>O que faz o Stretch Database?  
  Depois de habilitar o Stretch Database para uma instância do SQL Server, um banco de dados e, pelo menos, uma tabela, ele começa silenciosamente a migrar os dados frios para o Azure.  
@@ -82,3 +88,4 @@ ms.lasthandoff: 11/09/2017
  **Identifique bancos de dados e tabelas que são candidatos a Stretch Database.** Baixe o SQL Server 2016 Upgrade Advisor e execute o Stretch Database Advisor para identificar bancos de dados e tabelas que são candidatos ao Stretch Database. O Supervisor do Stretch Database também identifica problemas de bloqueio. Para obter mais informações, veja [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
   
+

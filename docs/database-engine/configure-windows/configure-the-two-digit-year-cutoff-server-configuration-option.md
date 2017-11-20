@@ -2,29 +2,34 @@
 title: "Configurar a opção de configuração de servidor two digit year cutoff | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - two digit year cutoff option
 - four-digit years [SQL Server]
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a8281fee9bd9043d23ba95d71ced27d373864a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89f836cc68e58573e4e05da71f1081542406cd49
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Configurar a opção two digit year cutoff de configuração de servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **two digit year cutoff** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **two digit year cutoff** especifica um número inteiro de 1753 até 9999 que representa o ano de corte para interpretar anos com dois dígitos como anos com quatro dígitos. O tempo padrão abrangido para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é 1950-2049, que representa um ano de corte de 2049. Isso significa que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta um ano de dois dígitos de 49 como 2049, um ano de dois dígitos 50 como 1950 e um ano de dois dígitos 99 como 1999. Para manter a compatibilidade com versões anteriores, deixe a configuração no valor padrão.  
   
@@ -102,3 +107,4 @@ GO
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
   
   
+

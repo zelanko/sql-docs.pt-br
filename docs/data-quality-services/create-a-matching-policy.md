@@ -2,10 +2,14 @@
 title: "Criar uma política de conciliação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,16 +17,17 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a1f1379effcdfe728dae0f3a74f1a014876b9d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fe1c8b25d8309d3984c70c31f5949a9724599a3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-matching-policy"></a>Criar uma política de correspondência
   Este tópico descreve como criar uma política correspondente em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você se prepara para o processo de correspondência no DQS executando a atividade Política de Correspondência dos dados de exemplo. Nesta atividade, você cria e testa uma ou mais regras de correspondência na política e depois publica a base de dados de conhecimento para tornar as regras de correspondência publicamente disponíveis para uso. Pode haver apenas uma política de correspondência em uma base de dados de conhecimento, mas essa política pode conter várias regras de correspondência.  
@@ -56,7 +61,7 @@ ms.lasthandoff: 11/09/2017
   
  A criação de uma regra de correspondência é um processo iterativo porque talvez você precise alterar os pesos relativos dos domínios na regra ou a similaridade ou a propriedade de pré-requisito para um domínio ou a pontuação de correspondência mínima ou ainda a pontuação de correspondência mínima para a regra, para alcançar os resultados necessários. Talvez você também ache que precisa criar várias regras, sendo que cada uma será executada para criar a pontuação correspondente. Pode ser difícil obter o resultado necessário com uma regra apenas. Várias regras fornecerão exibições diferentes de uma correspondência necessária. Com várias regras, você poderá incluir menos domínios em cada regra, usar pesos mais altos para cada domínio e obter resultados melhores. Se os dados estiverem menos precisos e menos completos, talvez sejam necessárias mais regras para localizar as correspondências exigidas. Se os dados estiverem mais precisos e completos, você precisará de menos regras.  
   
- A criação de perfil fornece ideias sobre a integridade e a exclusividade. Considere a integridade e a exclusividade em tandem. Use os dados de integridade e exclusividade para determinar qual peso atribuir a um campo no processo de correspondência. Se houver um nível alto de exclusividade em um campo, o uso de um campo em uma política de correspondência poderá diminuir os resultados de correspondência, de modo que talvez você queira definir o peso desse campo para um valor relativamente pequeno. Se houver um nível baixo de exclusividade para uma coluna, porém baixa integridade, talvez você não queira incluir um domínio para essa coluna. Com um nível baixo de exclusividade, porém um nível alto de integridade, talvez você queira incluir o domínio. Algumas colunas, como gênero, podem ter um nível de exclusividade baixo naturalmente. Para obter mais informações, consulte [Profiler and Results Tabs](#Tabs).  
+ A criação de perfil fornece ideias sobre a integridade e a exclusividade. Considere a integridade e a exclusividade em tandem. Use os dados de integridade e exclusividade para determinar qual peso atribuir a um campo no processo de correspondência. Se houver um nível alto de exclusividade em um campo, o uso de um campo em uma política de correspondência poderá diminuir os resultados de correspondência, de modo que talvez você queira definir o peso desse campo para um valor relativamente pequeno. Se houver um nível baixo de exclusividade para uma coluna, porém baixa integridade, talvez você não queira incluir um domínio para essa coluna. Com um nível baixo de exclusividade, porém um nível alto de integridade, talvez você queira incluir o domínio. Algumas colunas, como gênero, podem ter um nível de exclusividade baixo naturalmente. Para obter mais informações, consulte [Guias Criador de Perfil e Resultados](#Tabs).  
   
 ##  <a name="Starting"></a> Primeira etapa: iniciando uma política de correspondência  
  Execute a atividade de política de correspondência na área de gerenciamento da base de dados de conhecimento do aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -135,7 +140,7 @@ ms.lasthandoff: 11/09/2017
   
     -   Se você clicar duas vezes em um registro na tabela de resultados correspondente, o DQS exibirá um pop-up **Detalhes da Pontuação de Correspondência** que exibe o registro dinâmico e o registro de origem (e os valores em todos os campos), a pontuação entre eles e uma busca detalhada da correspondência de registro. A busca detalhada exibe os valores em cada campo do registro dinâmico e no registro de origem para que você possa compará-los e mostra a pontuação de correspondência com a qual cada campo contribui para a pontuação de correspondência geral para os dois registros.  
   
-14. Exiba as estatísticas nas guias **Criador de perfil** e **Resultados de Correspondência** para assegurar que você esteja obtendo os resultados necessários. Para obter mais informações, consulte [Profiler and Results Tabs](#Tabs).  
+14. Exiba as estatísticas nas guias **Criador de perfil** e **Resultados de Correspondência** para assegurar que você esteja obtendo os resultados necessários. Para obter mais informações, consulte [Guias Criador de Perfil e Resultados](#Tabs).  
   
 15. Se for necessário alterar a regra, altere-a no Editor de Regra e clique em **Reiniciar**.  
   
@@ -167,7 +172,7 @@ ms.lasthandoff: 11/09/2017
   
     -   Se você clicar duas vezes em um registro na tabela de resultados correspondente, o DQS exibirá um pop-up **Detalhes da Pontuação de Correspondência** que exibe o registro dinâmico e o registro de origem (e os valores em todos os campos), a pontuação entre eles e uma busca detalhada da correspondência de registro. A busca detalhada exibe os valores em cada campo do registro dinâmico e no registro de origem para que você possa compará-los e mostra a pontuação de correspondência com a qual cada campo contribui para a pontuação de correspondência geral para os dois registros.  
   
-5.  Exiba as estatísticas nas guias **Criador de perfil** e **Resultados de Correspondência** para assegurar que você esteja obtendo os resultados necessários. Clique na guia **Regras de Correspondência** para visualizar quais são as configurações de domínio para cada regra. Para obter mais informações, consulte [Profiler and Results Tabs](#Tabs).  
+5.  Exiba as estatísticas nas guias **Criador de perfil** e **Resultados de Correspondência** para assegurar que você esteja obtendo os resultados necessários. Clique na guia **Regras de Correspondência** para visualizar quais são as configurações de domínio para cada regra. Para obter mais informações, consulte [Guias Criador de Perfil e Resultados](#Tabs).  
   
 6.  Se você não estiver satisfeito com os resultados de todas as regras, clique em **Voltar** para retornar à página **Política de Correspondência** , modifique uma ou mais regras conforme o necessário, volte à página **Resultados de Correspondência** e clique em **Reiniciar**.  
   
@@ -192,7 +197,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="FollowUp"></a> Acompanhamento: após a criação de uma Política de Correspondência  
  Depois de criar uma política de correspondência, você pode executar um projeto de correspondência a partir da base de dados de conhecimento que contém a política de correspondência. Para obter mais informações, consulte [Executar um projeto de correspondência](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="Tabs"></a> Profiler and Results Tabs  
+##  <a name="Tabs"></a> Guias Criador de Perfil e Resultados  
  As guias Criador de perfil e Resultados contêm estatísticas para as páginas Política de Correspondência e Resultados de Correspondência.  
   
 ###  <a name="Profiler"></a> Guia Criador de perfil  
@@ -257,3 +262,4 @@ ms.lasthandoff: 11/09/2017
 -   O maior número de duplicatas em um cluster  
   
   
+

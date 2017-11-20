@@ -2,26 +2,31 @@
 title: "Definir configurações avançadas para arquivos de log do DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: caa4e77d52515aa9052dd8db3603db38942988b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5182c032b4a0c21358631df64f43dc16cdbd9ecf
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Definir configurações avançadas para arquivos de log do DQS
   Este tópico descreve como definir configurações avançadas para os arquivos de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , como definir o limite de tamanho de arquivo de rolagem dos arquivos de log, definir o padrão de carimbo de data/hora dos eventos etc.  
@@ -128,3 +133,4 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
  [Configurar níveis de severidade para arquivos de log do DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   
+

@@ -2,9 +2,12 @@
 title: "Barra de estrela (comentário) (DMX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="slash-star-comment-dmx"></a>Estrela de barra (comentário) (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Indica uma cadeia de caracteres de texto que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não deve executar. O servidor não avalia o texto entre os caracteres de comentário / * e \*/. É possível aninhar comentários em uma instrução DMX (Data Mining Extensions), incluí-los no final de uma linha de código ou inseri-los em uma linha separada.  
   

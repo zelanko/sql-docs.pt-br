@@ -2,26 +2,31 @@
 title: "Criar uma regra de domínio cruzado | Microsoft Docs"
 ms.custom: 
 ms.date: 11/22/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47e0c67dbc3aba62ac5f052dfabaceebd308c730
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73b05f76f59141094279a8b4231b88e9d9ba6999
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-cross-domain-rule"></a>Criar uma regra de domínio cruzado
   Este tópico descreve como criar uma regra de domínio cruzado para um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma regra de domínio cruzado testa a relação entre valores de domínios únicos que são incluídos em um domínio composto. A regra de domínio cruzado deve se repetir em um domínio composto para que os valores do domínio sejam considerados precisos e em conformidade com os requisitos comerciais. Uma regra de domínio cruzado é usada para validar, corrigir e unificar valores de domínio.  
@@ -48,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Criar uma base de dados de conhecimento](../data-quality-services/create-a-knowledge-base.md) ou [Abrir uma base de dados de conhecimento](../data-quality-services/open-a-knowledge-base.md).  
+2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) ou [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  O gerenciamento de domínio é executado em uma página do cliente Data Quality Services que contém cinco guias para operações de gerenciamento de domínio separadas. Não se trata de um processo controlado por assistente; qualquer operação de gerenciamento pode ser executada separadamente.  
@@ -101,3 +106,4 @@ ms.lasthandoff: 11/09/2017
  Após criar uma regra de domínio cruzado, você poderá executar outras tarefas de gerenciamento de domínio no domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
   
+

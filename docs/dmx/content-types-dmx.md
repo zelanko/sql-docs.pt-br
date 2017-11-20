@@ -2,9 +2,12 @@
 title: "Tipos (DMX) de conteúdo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="content-types-dmx"></a>Tipos de conteúdo (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Os algoritmos de mineração de dados requerem informações que vão além do tipo de dados para funcional corretamente, como tipo de conteúdo. O tipo de conteúdo ajuda o algoritmo a determinar como trabalhar com os dados na coluna.  
   

@@ -2,24 +2,30 @@
 title: "Criar classes proxy do serviço Web do Master Data Manager | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: develop
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d25fe8610e4518f3c2537ed50e523b468a908a0d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ba3b315cc62ce64da9212ef3d00b60ec1a303e33
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Criar classes proxy do serviço Web do Master Data Manager
   O serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] permite a você fazer uso programático dos recursos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de qualquer computador que possa acessar seu site do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Antes de começar a gravar código para acessar o serviço Web, você deve gerar classes proxy. A classe proxy principal que você usa para executar operações de serviço Web é a classe <xref:Microsoft.MasterDataServices.ServiceClient>, que implementa a interface <xref:Microsoft.MasterDataServices.IService>.  
@@ -66,3 +72,4 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
  [Operações de serviço Web categorizadas &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   
+

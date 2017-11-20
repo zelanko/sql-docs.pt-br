@@ -2,23 +2,28 @@
 title: Limpeza de dados | Microsoft Docs
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0c17b3a503a1ab2f7149c9b5a1ad425e57b2aae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-cleansing"></a>Limpeza de Dados
   Limpeza de dados é o processo de analisar a qualidade de dados em uma fonte de dados, aprovando/rejeitando as sugestões manualmente pelo sistema e fazer alterações assim aos dados. A limpeza de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) inclui um processo auxiliado por computador que analisa a conformidade dos dados em relação ao conhecimento de uma base de dados de conhecimento, e um processo interativo que permite que o administrador de dados examine e modifique resultados de processo auxiliado por computador para garantir que a limpeza de dados seja executada exatamente como desejado.  
@@ -57,9 +62,9 @@ ms.lasthandoff: 11/09/2017
   
  O processo auxiliado por computador exibe informações de qualidade dos dados no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] que serão usadas no processo de limpeza interativo. Além da aderência às regras de erro de sintaxe, o DQS também usa dados de referência e algoritmos avançados para categorizar dados com o uso do *nível de confiança*. O nível de confiança indica a extensão de certeza do DQS para a correção ou sugestão. O nível de confiança é baseado nos valores de limite a seguir:  
   
--   Um valor de3 *limite da correção automática* acima do qual o DQS irá sugerir e fazer uma alteração, a menos que o administrador de dados a rejeite. Você pode especificar o valor de limite de correção automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configurar valores de limite para limpeza e correspondência](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Um valor de3 *limite da correção automática* acima do qual o DQS irá sugerir e fazer uma alteração, a menos que o administrador de dados a rejeite. Você pode especificar o valor de limite de correção automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   Um valor de *limite de sugestão automática* abaixo do limite de correção automática, acima do qual o DQS irá sugerir e fazer uma alteração caso o administrador de dados a aprove. Você pode especificar o valor de limite de sugestão automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configurar valores de limite para limpeza e correspondência](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Um valor de *limite de sugestão automática* abaixo do limite de correção automática, acima do qual o DQS irá sugerir e fazer uma alteração caso o administrador de dados a aprove. Você pode especificar o valor de limite de sugestão automática na guia **Configurações Gerais** na tela **Configuração** . Para obter mais informações, consulte [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
  Qualquer valor com um nível de confiança debaixo do valor de limite de sugestão automática é deixado como está pelo DQS, a menos que o administrador de dados especifique uma alteração.  
   
@@ -111,3 +116,4 @@ ms.lasthandoff: 11/09/2017
  [Correspondência de dados](../data-quality-services/data-matching.md)  
   
   
+

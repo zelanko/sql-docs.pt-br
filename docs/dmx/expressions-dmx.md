@@ -2,9 +2,12 @@
 title: "Expressões (DMX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="expressions-dmx"></a>Expressões [DMX]
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Em extensões DMX (Data Mining), uma expressão é uma combinação de identificadores, valores e operadores que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode avaliar para obter um resultado.  
   

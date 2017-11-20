@@ -1,11 +1,15 @@
 ---
 title: "Selecionar linhas para migrar usando uma função de filtro (Stretch Database) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/27/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 290d0a17271d7099904eb7f4f50ffd8280fe2264
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selecionar linhas para migrar usando uma função de filtro (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Se você armazenar dados inertes em uma tabela separada, será possível configurar o Stretch Database para migrar a tabela inteira. Por outro lado, se sua tabela contiver dados dinâmicos e inertes, você poderá especificar um predicado de filtro para selecionar as linhas a serem migradas. O predicado de filtro é uma função com valor de tabela embutida. Este tópico descreve como escrever uma função com valor de tabela embutida para selecionar linhas a serem migradas.  
   
@@ -618,3 +623,4 @@ Uma conta com privilégios de db_owner comprometida pode fazer o seguinte.
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
+

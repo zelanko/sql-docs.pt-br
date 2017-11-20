@@ -2,24 +2,30 @@
 title: "Criar um domínio vinculado | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dqs.kb.linkeddomain.f1
+f1_keywords:
+- sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68a7e937e1c1f0f753779f267cf1fffa16fc3b8d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-linked-domain"></a>Criar um domínio vinculado
   Este tópico descreve como criar um domínio vinculado em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio vinculado é criado a partir de outro domínio já existente e herda todos os valores, regras e propriedades do domínio ao qual é vinculado, com a exceção do nome e da descrição. Você pode gerenciar um conjunto de domínios vinculados como um. Ao vincular um domínio ao outro, você cria um domínio que herda seu conteúdo de outro domínio.  
@@ -49,7 +55,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Criar uma base de dados de conhecimento](../data-quality-services/create-a-knowledge-base.md) ou [Abrir uma base de dados de conhecimento](../data-quality-services/open-a-knowledge-base.md).  
+2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) ou [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
 3.  Na **Lista de domínios** da página **Gerenciamento de Domínio** , clique com o botão direito do mouse no domínio que você deseja vincular a um novo domínio e clique em **Criar Domínio Vinculado**.  
   
@@ -82,7 +88,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Você pode alterar o nome e a descrição de um domínio vinculado.  
   
--   Para alterar as propriedades do domínio para as propriedades **Tipo de Dados**, **Usar Valores Principais**ou **Formatar Saída para** , selecione o domínio que deseja vincular e altere essas configurações na guia **Propriedades do Domínio** desse domínio. Não é possível alterar essas configurações nas propriedades do domínio vinculado. Para obter mais informações, consulte [Criar um domínio](../data-quality-services/create-a-domain.md).  
+-   Para alterar as propriedades do domínio para as propriedades **Tipo de Dados**, **Usar Valores Principais**ou **Formatar Saída para** , selecione o domínio que deseja vincular e altere essas configurações na guia **Propriedades do Domínio** desse domínio. Não é possível alterar essas configurações nas propriedades do domínio vinculado. Para obter mais informações, consulte [Create a Domain](../data-quality-services/create-a-domain.md).  
   
 -   As configurações nas guias **Dados de Referência**, **Regras do Domínio**, **Valores do Domínio**e **Relações Baseadas em Termo** da página Gerenciamento de Domínio podem ser alteradas para o domínio vinculado ou para o domínio para onde foi feita a vinculação, e as alterações serão herdadas pelo outro domínio.  
   
@@ -101,3 +107,4 @@ ms.lasthandoff: 11/09/2017
 -   Quando você clicar duas vezes em um domínio vinculado em qualquer uma das guias Gerenciamento de Domínio, o domínio estará aberto para edição com uma indicação na cadeia de caracteres de nome que é um domínio vinculado.  
   
   
+

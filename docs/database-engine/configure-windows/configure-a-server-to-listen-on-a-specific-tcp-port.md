@@ -2,10 +2,14 @@
 title: "Configurar um servidor para escutar em uma porta TCP específica | Microsoft Docs"
 ms.custom: 
 ms.date: 04/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 857ffa080413910678e1d75332ed67f401e23de9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dc24dcc363329d4a0b11ce3a202069c95d717fe1
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar um servidor para escutar em uma porta TCP específica
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para escutar em uma porta fixa específica usando o SQL Server Configuration Manager. Se habilitada, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escutará na porta TCP 1433. As instâncias nomeadas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssEW](../../includes/ssew-md.md)] são configuradas para [portas dinâmicas](https://msdn.microsoft.com/library/dd981060). Isso significa que elas selecionam uma porta disponível quando o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado. Ao conectar-se a uma instância nomeada através de um firewall, configure o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para escutar em uma porta específica, para que a porta adequada possa ser aberta no firewall.  
 
@@ -76,3 +81,4 @@ Após configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par
  [Serviço Navegador do SQL Server](../../tools/configuration-manager/sql-server-browser-service.md)  
   
   
+

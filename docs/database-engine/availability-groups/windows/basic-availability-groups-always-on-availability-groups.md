@@ -2,27 +2,30 @@
 title: "Grupos de disponibilidade básicos (Grupos de Disponibilidade AlwaysOn) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/27/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/28/2017
+
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Grupos de disponibilidade básicos (Grupos de Disponibilidade AlwaysOn)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Grupos de disponibilidade AlwaysOn da camada BASIC fornecem uma solução de alta disponibilidade para o SQL Server 2016 e o SQL Server 2017 Standard Edition. Um grupo de disponibilidade básica oferece suporte a um ambiente de failover para um único banco de dados. Ele é criado e gerenciado de forma muito semelhante aos [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) tradicionais (avançados) com Enterprise Edition. As diferenças e limitações dos grupos de disponibilidade básica são resumidas neste documento.  
   
@@ -64,3 +67,4 @@ ms.lasthandoff: 11/09/2017
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

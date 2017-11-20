@@ -2,27 +2,33 @@
 title: Monitorar as atividades do DQS | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dqs.administration.activitymonitoring.f1
+f1_keywords:
+- sql13.dqs.administration.activitymonitoring.f1
 helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fa0262edc8b299407ca046bd7f6104143c2d616
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46c5abb9edd4e854609a1854ab6d6d8d6622b4fe
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="monitor-dqs-activities"></a>Monitorar atividade do DQS
   Este tópico descreve como monitorar as seguintes atividades de modo centralizado no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): descoberta de conhecimento, gerenciamento de domínio, política de correspondência, limpeza de dados, correspondência de dados e limpeza do SSIS.  
@@ -161,3 +167,4 @@ ms.lasthandoff: 11/09/2017
 3.  Uma mensagem é exibida para confirmar sua ação. Clique em **Sim**.  
   
   
+

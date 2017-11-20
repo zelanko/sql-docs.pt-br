@@ -1,24 +1,29 @@
 ---
 title: "Aplicar e atualizar um conjunto de alterações (Master Data Services) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 321f721569112755eb0bddd0718a4be6396bc544
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: b4bd8b096d103c9f029e0295bbb14e9a1f6ab003
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>Aplicar e atualizar um conjunto de alterações (Master Data Services)
   Um conjunto de alterações é uma coleção de alterações pendentes nos dados mestre. Você pode aplicar o conjunto de alterações localmente para exibir, adicionar, atualizar e excluir as alterações pendentes no conjunto de alterações.  
@@ -57,3 +62,4 @@ ms.lasthandoff: 11/09/2017
  [Aprovar ou rejeitar um conjunto de alterações &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   
+

@@ -2,9 +2,12 @@
 title: dm_execution_performance_counters (banco de dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Funções - dm_execution_performance_counters
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Retorna a estatística de desempenho para uma execução que está em execução no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   

@@ -2,10 +2,14 @@
 title: "Configurar a opção de configuração de servidor max degree of parallelism | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: 'sql-server-2016 '
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - max degree of parallelism option
 - MaxDop
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eb71ead942d2f0110fd5d7450d1b1b2b3c4047b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 285a6643daa5be75a2d41214de823098713ec6e7
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurar a opção de configuração de servidor max degree of parallelism
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **max degree of parallelism (MAXDOP)** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executada em um computador com mais de um microprocessador ou CPU, ele detecta o melhor grau de paralelismo, ou seja, o número de processadores utilizados para executar uma única instrução, para cada execução paralela de plano. Você pode usar a opção **max degree of parallelism** para limitar o número de processadores a serem usados na execução de plano paralela. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera os planos de execução paralela para consultas, operações DDL (linguagem de definição de dados), inserção paralela, alteração online de coluna, coleta de estatísticas paralela e população de cursor estático e controlado por conjunto de chaves.
 
@@ -117,3 +122,4 @@ GO
  [Recomendações e diretrizes para a opção de configuração “max degree of parallelism” no SQL Server](http://support.microsoft.com/help/2806535)
   
   
+

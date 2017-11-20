@@ -2,10 +2,14 @@
 title: "Configurar a opção de configuração de servidor user options | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f50c084a5f546a27f3152ed55ea4796225193ed4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a801f77059d2aa6bacd89901c63f80dcc91bf84a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurar as opções de configuração de servidor user connections
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **user options** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **user options** especifica padrões globais para todos os usuários. Uma lista de opções de processamento de consulta padrão é definida para a duração da sessão de trabalho de um usuário. A opção **user options** permite alterar os valores padrão das opções SET (se as configurações padrão do servidor não forem apropriadas).  
   
@@ -120,3 +125,4 @@ GO
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
+

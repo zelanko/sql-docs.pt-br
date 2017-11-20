@@ -2,26 +2,31 @@
 title: "Criar uma regra de domínio | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: edc83accaccc4eeee09c73ca8535a758fd9cd98e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
   Este tópico descreve como criar uma regra de domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma regra de domínio é uma condição usada para validar, corrigir e padronizar valores de domínio. A regra de domínio deve se repetir em um domínio para que os valores de domínio sejam considerados precisos e em conformidade com os requisitos comerciais. As regras de domínio podem incluir regras de validação usadas para validar valores de domínio, mas não são usadas para corrigir dados em um projeto de qualidade de dados. As regras também incluem regras de padronização que são aplicadas com base nos dados válidos e usadas na correção de dados.  
@@ -40,12 +45,12 @@ ms.lasthandoff: 11/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Criar uma base de dados de conhecimento](../data-quality-services/create-a-knowledge-base.md) ou [Abrir uma base de dados de conhecimento](../data-quality-services/open-a-knowledge-base.md).  
+2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) ou [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  O gerenciamento de domínio é executado em uma página do cliente Data Quality Services que contém cinco guias para operações de gerenciamento de domínio separadas. Não se trata de um processo controlado por assistente; qualquer operação de gerenciamento pode ser executada separadamente.  
   
-3.  Na **Lista de domínios** na página **Gerenciamento de Domínio** , selecione o domínio para o qual você deseja criar uma regra de domínio ou crie um novo domínio. Se você precisar criar um novo domínio, consulte [Criar um Domínio](../data-quality-services/create-a-domain.md).  
+3.  Na **Lista de domínios** na página **Gerenciamento de Domínio** , selecione o domínio para o qual você deseja criar uma regra de domínio ou crie um novo domínio. Se você precisar criar um novo domínio, consulte [Create a Domain](../data-quality-services/create-a-domain.md).  
   
 4.  Clique na guia **Regras do Domínio** .  
   
@@ -135,3 +140,4 @@ ms.lasthandoff: 11/09/2017
 |O valor não corresponde a uma expressão regular|Somente os valores que não correspondem à expressão regular no operando serão válidos.|Operando de exemplo: [1-5] + (a cadeia de caracteres não deve conter apenas dígitos numéricos de 1 a 5)<br /><br /> Valores válidos: 456, ABC<br /><br /> Valor inválido: 123, 123456, 14352|  
   
   
+

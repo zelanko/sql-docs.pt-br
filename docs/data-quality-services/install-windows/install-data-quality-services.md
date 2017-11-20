@@ -2,24 +2,27 @@
 title: Instalar o Data Quality Services | Microsoft Docs
 ms.custom: 
 ms.date: 09/11/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
+
 ---
 # <a name="install-data-quality-services"></a>Instalar o Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contém os dois componentes a seguir: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** e **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
@@ -103,9 +106,9 @@ ms.lasthandoff: 11/09/2017
   
     -   **dqs_kb_operator**  
   
-     Por padrão, se sua conta de usuário for um membro da função de servidor fixa sysadmin, você poderá fazer logon no [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando o [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] mesmo que nenhuma das funções de DQS seja concedida à sua conta de usuário. Para obter mais informações sobre as três funções DQS, consulte [DQS Security](../../data-quality-services/dqs-security.md).  
+     Por padrão, se sua conta de usuário for um membro da função de servidor fixa sysadmin, você poderá fazer logon no [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando o [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] mesmo que nenhuma das funções de DQS seja concedida à sua conta de usuário. Para obter mais informações sobre as três funções DQS, consulte [Segurança DQS](../../data-quality-services/dqs-security.md).  
   
-     Para obter mais informações, consulte [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
+     Para obter mais informações, consulte [Conceder funções DQS a usuários](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
     > [!NOTE]  
     >  As três funções DQS não estão disponíveis para os bancos de dados DQS_PROJECTS e DQS_STAGING_DATA.  
@@ -127,3 +130,4 @@ ms.lasthandoff: 11/09/2017
  [Solução de problemas de instalação e de configuração no DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   
+

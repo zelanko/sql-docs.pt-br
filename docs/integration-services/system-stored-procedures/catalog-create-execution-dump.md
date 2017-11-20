@@ -2,9 +2,12 @@
 title: create_execution_dump | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Faz com que a execução de um pacote seja pausada e crie um arquivo de despejo. O arquivo é armazenado no  *\<drive >*: pasta \Program Files\Microsoft Server\130\Shared\ErrorDumps SQL.  
   

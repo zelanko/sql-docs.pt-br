@@ -2,10 +2,14 @@
 title: "Opção de configuração de servidor remote admin connections | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - remote admin connections option
 - dedicated administrator connections [SQL Server]
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ad17a98021cf012a1d83b3b087dbd7f0760a41c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9cfa41a838ebb89777b44464ec2b2a48b256c3f9
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>Opção de configuração de servidor remote admin connections
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma DAC (conexão de administrador dedicada). A DAC permite que um administrador acesse um servidor em execução para desempenhar funções de diagnóstico ou executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , ou para solucionar problemas no servidor, mesmo quando o servidor está bloqueado ou está sendo executado em um estado anormal e não está respondendo a uma conexão com o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por padrão, a DAC só está disponível a partir de um cliente no servidor. Para permitir que os aplicativos cliente de computadores remotos utilizem a DAC, use a opção remote admin connections sp_configure.  
   
@@ -54,3 +59,4 @@ GO
  [Conexão de diagnóstico para administradores de banco de dados](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   
   
+

@@ -2,12 +2,14 @@
 title: "Exibir e ler arquivos de log da Instalação do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 09/08/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +21,20 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-caps.latest.revision: "54"
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: a11f6a1f0169cabe904cb179bbe7871fbfe63e11
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: a11f6a1f0169cabe904cb179bbe7871fbfe63e11
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
+
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Exibir e ler arquivos de log da Instalação do SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 Cada execução da Instalação cria arquivos de log com uma nova pasta de log com carimbo de data/hora em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\. O formato de nome da pasta com carimbo de data/hora é AAAAMMDD_hhmmss. Quando a Instalação é executada em um modo autônomo, os logs são criados em % temp%\sqlsetup*.log. Todos os arquivos da pasta de logs são arquivados no arquivo Log\*.cab em sua respectiva pasta de log.  
   
  Uma solicitação de Instalação típica passa por três fases de execução:  
@@ -176,3 +181,4 @@ Cada execução da Instalação cria arquivos de log com uma nova pasta de log c
  [Instalar o SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   
+

@@ -2,10 +2,14 @@
 title: "Instâncias do cluster de failover do AlwaysOn (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/18/2017
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9ba9300c5bfa55b5f9968453874b29e6d8c4b179
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a5de42512c1b7f5372e96f53b6332145fb99a3d8
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instâncias do cluster de failover do AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Como parte da oferta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn, as Instâncias de Cluster de Failover do AlwaysOn aproveitam a funcionalidade WSFC (Windows Server Failover Clustering) para fornecer alta disponibilidade local por meio de redundância na instância de nível de servidor, uma FCI ( *instância de cluster de failover* ). Uma FCI é uma instância única do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que é instalada em nós de WSFC (Windows Server Failover Clustering) e, possivelmente, em várias sub-redes. Na rede, uma FCI aparece ser uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sendo executada em um único computador, mas proporciona failover de um nó do WSFC para outro se o nó atual se tornar indisponível.  
   
@@ -164,3 +169,4 @@ ms.lasthandoff: 11/09/2017
 |Descreve as distinções em conceitos entre nós em uma FCI e réplicas dentro de um grupo de disponibilidade e considerações para usar uma FCI para hospedar uma réplica para um grupo de disponibilidade.|[Clustering de failover e Grupos de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   
+

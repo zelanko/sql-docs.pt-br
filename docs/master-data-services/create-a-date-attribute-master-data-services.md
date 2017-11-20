@@ -1,27 +1,32 @@
 ---
 title: Criar um atributo de data (Master Data Services) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de1f38923dbfc127405a9e6950548410d625ad69
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e53df9230c69a001fffca1c3b1a53cf3c69b625e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Criar um atributo de data (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de data quando desejar que os usuários insiram uma data como um valor de atributo.  
@@ -96,3 +101,4 @@ ms.lasthandoff: 11/09/2017
  [Criar um atributo de arquivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   
+

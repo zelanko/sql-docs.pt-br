@@ -2,10 +2,14 @@
 title: "Usuários e grupos (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +18,17 @@ helpviewer_keywords:
 - users [Master Data Services], about users
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50539aba8f6bb6b4a207d3c03a3a1bf6df6a7b62
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e7ce67245871cff2682bec6e314a21fdca31a954
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="users-and-groups-master-data-services"></a>Usuários e grupos (Master Data Services)
   Para acessar o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , o usuário deve ter uma conta de domínio do Windows ou uma conta no computador servidor em que o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está instalado. Para conceder acesso ao [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , você pode:  
@@ -51,3 +56,4 @@ ms.lasthandoff: 11/09/2017
  [Testar permissões de um usuário &#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   
+

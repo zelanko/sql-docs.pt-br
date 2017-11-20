@@ -2,26 +2,33 @@
 title: "Estabelecer a sessão de espelhamento de banco de dados – Autenticação do Windows | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: database mirroring [SQL Server], sessions
+helpviewer_keywords:
+- database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 202008475411ea64775bb6632036c68fb25fb66b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 104c736aa623fa6aa3c55c204559759eb9885800
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Estabelecer a sessão de espelhamento de banco de dados – Autenticação do Windows
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
@@ -93,3 +100,4 @@ ms.lasthandoff: 11/09/2017
  [Adicionar ou substituir uma testemunha de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   
+

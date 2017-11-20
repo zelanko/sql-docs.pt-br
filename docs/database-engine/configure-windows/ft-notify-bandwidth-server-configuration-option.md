@@ -2,31 +2,37 @@
 title: "Opção de configuração de servidor ft notify bandwidth | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ft notify bandwidth opion
 - small memory buffers
 - memory [SQL Server], buffers
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35962c4a1dfc4713b7051b39b10683bf7b8bd5fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b02d56b6c9874a1d92524280f2f22ef9c7b190b4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>Opção ft notify bandwidth de configuração de servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use a opção **ft notify bandwidth** para especificar o tamanho a que pode crescer o pool de buffers de memória pequenos. Buffers de memória pequenos têm 64 KB (quilobytes). O valor do parâmetro *max* especifica o número máximo de buffers que o gerenciador de memória de texto completo deve manter em um pool de buffers pequenos. Se o valor de **max** for zero, não haverá limite máximo ao número de buffers no pool de buffers pequenos.  
   
@@ -43,3 +49,4 @@ ms.lasthandoff: 11/09/2017
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

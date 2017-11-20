@@ -2,23 +2,28 @@
 title: "Usar o verificador ortográfico do DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a01e31bf6965cb1d7ac6bbcf183e1ce0c98fc38e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="use-the-dqs-speller"></a>Usar o verificador ortográfico DQS
   O verificador ortográfico do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) verifica a sintaxe, a ortografia e a estrutura de frase de valores da cadeia de caracteres em um domínio. O verificador ortográfico é um recurso autônomo, do lado do cliente, sem integração com mecanismos do lado do servidor e sem implicações em fluxos ou status atuais. O verificador ortográfico identifica esses valores da cadeia de caracteres que considera serem erros potenciais e, então, marca-os com um sublinhado vermelho no mesmo local no qual você faz outras alterações manuais em valores de domínio. Esses locais incluem:  
@@ -76,3 +81,4 @@ ms.lasthandoff: 11/09/2017
  O DQS fornecerá sugestões para valores nas colunas **Valor** e **Corrigir para** da tabela **Valor** . Quando você seleciona uma sugestão na coluna **Valor** , o tipo de valor é definido como **Erro**e a sugestão é copiada para a coluna **Corrigir para** , como se ela tivesse sido inserida manualmente. Caso exista uma correção, ela se tornará uma sugestão. Na página **Gerenciar e Exibir resultados** da atividade de **Limpeza** , quando você seleciona uma sugestão na coluna **Corrigir para** , o DQS substitui o valor selecionado no momento pela seleção, e o valor selecionado no momento se torna uma sugestão. Na página **Gerenciar e Exibir resultados** da atividade de **Limpeza** , não há sugestões no nível de registro (a grade inferior).  
   
   
+

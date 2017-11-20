@@ -2,23 +2,28 @@
 title: Data Quality Services | Microsoft Docs
 ms.custom: 
 ms.date: 10/12/2013
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: "67"
+caps.latest.revision: 67
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b0b7ff2c3d35f8110a39271b034edff762d27339
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b168499c8d7707dbd7798ef7aa8111aa0ff0a9a9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   O DQS ([!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)]) é um produto de qualidade de dados orientado por conhecimento. O DQS permite criar uma base de dados de conhecimento e usá-la para executar uma variedade de tarefas críticas de qualidade de dados, inclusive correção, enriquecimento, padronização e eliminação de duplicação de seus dados. O DQS permite executar limpeza de dados usando serviços de dados de referência baseados em nuvem fornecidos por provedores de dados de referência. O DQS também proporciona a análise integrada a suas tarefas de qualidade de dados, permitindo analisar a integridade de seus dados.  
@@ -53,3 +58,4 @@ ms.lasthandoff: 11/09/2017
  [Central de Recursos do SQL Server](http://go.microsoft.com/fwlink/?linkID=219676)  
   
   
+

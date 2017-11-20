@@ -2,10 +2,14 @@
 title: "Pré-requisitos, restrições e recomendações – Grupos de Disponibilidade AlwaysOn | Microsoft Docs"
 ms.custom: 
 ms.date: 05/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-caps.latest.revision: "151"
+caps.latest.revision: 151
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cb6063a824bd6410811b587cbc174fb8a8092fb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5186cc2ea4ed54335c537fc3c0094c38b2c4a80f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações – Grupos de Disponibilidade AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve considerações sobre a implantação do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluindo pré-requisitos, restrições e recomendações para computadores host, clusters WSFC (Cluster de Failover do Windows Server), instâncias de servidor e grupos de disponibilidade. Para cada um desses componentes, são indicadas considerações sobre segurança e as permissões exigidas, se houver.  
   
@@ -404,4 +409,5 @@ ms.lasthandoff: 11/09/2017
     
   
 --------------------------------------------------  
+
 

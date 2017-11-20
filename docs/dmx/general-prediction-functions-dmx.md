@@ -2,9 +2,12 @@
 title: "Funções de previsão gerais (DMX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="general-prediction-functions-dmx"></a>Funções de previsão gerais (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Você pode usar o **selecione** instrução em extensões DMX (Data Mining) para criar tipos diferentes de consultas. Uma consulta pode ser usada para retornar informações sobre o próprio modelo de mineração, fazer novas previsões ou alterar o modelo treinando-o com novos dados. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Fornece uma variedade de funções especializadas que controlam o tipo de informação que é retornado em uma consulta. Adicionando essas funções a uma consulta DMX, você pode recuperar estatísticas ou colunas de dados adicionais. No entanto, cada tipo de consulta e cada tipo modelo suporta apenas algumas funções.  
   

@@ -2,23 +2,28 @@
 title: Recursos e tarefas do Master Data Services | Microsoft Docs
 ms.custom: 
 ms.date: 04/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5aec5001ed00120c8e55e280787fd35ee65ff50f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: afc9e1fc978556d7a454319cdfc661115f373925
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="master-data-services-features-and-tasks"></a>Recursos e tarefas do Master Data Services
   Aprenda a usar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para gerenciar os dados mestre de sua organização. Aprenda a criar e manipular objetos de modelo que são contêineres de dados. Aprenda a organizar e manter os próprios dados mestre. Aprenda a importar e exportar dados mestre, bem como compartilhar modelos entre ambientes de teste e produção. Por fim, saiba como desenvolver aplicativos personalizados que acessam o serviço Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -74,3 +79,4 @@ ms.lasthandoff: 11/09/2017
 -   [Documentação do desenvolvedor do Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)  
   
   
+

@@ -4,29 +4,32 @@ description: "Use a propagação automática para inicializar as réplicas secun
 services: data-lake-analytics
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Propagação automática para réplicas secundárias
-
-[!INCLUDE [tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 No SQL Server 2012 e 2014, a única maneira de inicializar uma réplica secundária em um grupo de disponibilidade do SQL Server Always On é usar o backup, a cópia e a restauração. O SQL Server 2016 introduz um novo recurso para inicializar uma réplica secundária – a *propagação automática*. A propagação automática usa o transporte de fluxo de log para transmitir o backup usando a VDI para a réplica secundária de cada banco de dados do grupo de disponibilidade, usando os pontos de extremidade configurados. Esse novo recurso pode ser usado durante a criação inicial de um grupo de disponibilidade ou quando um banco de dados é adicionado a um. A propagação automática é encontrada em todas as edições do SQL Server que dão suporte a grupos de disponibilidade AlwaysOn e pode ser usada com grupos de disponibilidade tradicionais e [grupos de disponibilidade distribuídos](distributed-availability-groups.md).
 
@@ -277,3 +280,4 @@ A tabela a seguir lista os eventos estendidos relacionados à propagação autom
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png
 [2]: ./media/auto-seed-sql-server-log.png
+

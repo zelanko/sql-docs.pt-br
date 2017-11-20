@@ -2,10 +2,14 @@
 title: "Sobrepondo permissões de modelo e membro (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +17,17 @@ helpviewer_keywords:
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d2706148e82bd6513972300c96e7fecaa56296a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: d5c748f2dc89e7b7217408971d70bd95a42af3a2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Sobrepondo permissões de modelo e membro (Serviços de Dados Mestre)
   A permissão atribuída a um membro pode sobrepor a permissão atribuída a um objeto de modelo. Quando ocorrem sobreposições, a permissão mais restritiva tem efeito.  
@@ -79,3 +84,4 @@ ms.lasthandoff: 11/09/2017
  [Sobrepondo permissões de usuário e grupo &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   
+
