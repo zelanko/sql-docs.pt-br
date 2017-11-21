@@ -28,6 +28,8 @@
 ## [Conectar-se ao catálogo do SSIS no Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Agendar a execução do pacote no Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Conectar-se a fontes de dados com a autenticação do Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [Conectar aos arquivos e compartilhamentos de arquivo](lift-shift/ssis-azure-files-file-shares.md)
+
 # [Instalar ou atualizar](../integration-services/install-windows/install-integration-services.md)
 
 # [Ferramentas de desenvolvimento e gerenciamento](integration-services-ssis-development-and-management-tools.md)
@@ -169,3 +171,13 @@
 #### [Lição 3-1: copiar o pacote de implantação](lesson-3-1-copying-the-deployment-bundle.md)
 #### [Lição 3-2 – executar o Assistente de Instalação de Pacotes](lesson-3-2-running-the-package-installation-wizard.md)
 #### [Lição 3-3 – testar os pacotes implantados](lesson-3-3-testing-the-deployed-packages.md)
+
+# Recursos
+## Siga o blog
+### [Blog da equipe do SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## Obter ajuda
+### [Fórum do SSIS no MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Marca do SSIS no Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## Faça comentários
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [Obter os documentos em seu computador](../sql-server/sql-server-help-installation.md)
