@@ -153,12 +153,11 @@
 ### [Opções de configuração avançadas para serviços do Machine Learning](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Considerações sobre segurança para o tempo de execução de R no SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modificar o pool de contas de usuário para os serviços de Machine Learning do SQL Server](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Configurar e gerenciar extensões de aprendizado de máquina](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [Implantar e consumir modelos usando serviços Web](operationalization-with-mrsdeploy.md)
 ### [Gerenciando e monitorando soluções de aprendizado de máquina](r/managing-and-monitoring-r-solutions.md)
 ### [Governança de recursos para serviços do Machine Learning](r/resource-governance-for-r-services.md)
-### [Criar um pool de recursos para o R](r/how-to-create-a-resource-pool-for-r.md)
+### [Criar um pool de recursos para o aprendizado de máquina](r/how-to-create-a-resource-pool-for-r.md)
 ### [Eventos estendidos para serviços do Machine Learning](r/extended-events-for-sql-server-r-services.md)
 
 ### [DMVs para serviços do Machine Learning](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +179,7 @@
 ### [Adicionar o R a uma máquina virtual do Azure existente](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Usar o sqlBindR.exe para atualizar uma instância](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Instalar o R Server da linha de comando](r/install-microsoft-r-server-from-the-command-line.md)
-### [Provisionar a máquina virtual de ciência de dados](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Provisionar uma máquina virtual de ciência de dados empresariais](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Configurar as ferramentas de ciência de dados](r/setup-or-configure-r-tools.md)
 ### [Configurar um cliente de ciência de dados](r/set-up-a-data-science-client.md)
 
