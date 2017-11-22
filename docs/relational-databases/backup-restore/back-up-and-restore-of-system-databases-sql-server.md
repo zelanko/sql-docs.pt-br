@@ -2,9 +2,12 @@
 title: Fazer backup e restaurar bancos de dados do sistema (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5b395a8d3a828b107d9b3ba2f1c41e449a8b7a67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2732f2074bb144c5ae0357ef23127e6eba454bc1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Fazer backup e restaurar bancos de dados do sistema (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém um conjunto de bancos de dados em nível de sistema,*bancos de dados do sistema*, essenciais para a operação de uma instância do servidor. Deve ser feito backup de vários bancos de dados do sistema após cada atualização significativa. Os bancos de dados do sistema que você sempre deve fazer backup incluem **msdb**, **mestre**e **modelo**. Se qualquer banco de dados usar replicação na instância de servidor, haverá um banco de dados do sistema de **distribuição** do qual também deverá ser feito backup. Os backups desses bancos de dados do sistema permitem que você restaure e recupere o sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no caso de falha do sistema, como a perda de um disco rígido.  
   
