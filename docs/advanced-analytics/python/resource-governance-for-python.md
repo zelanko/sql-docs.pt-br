@@ -5,20 +5,18 @@ ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1fff94725d1e564b4fe9eb286ea6bf1e390a3179
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4f83d62804803b2b9f3f028c48a7ec23d3f8d910
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resource-governance-for-python"></a>Governança de recursos para Python
 
@@ -85,5 +83,4 @@ No caso de fuga scripts, você pode desabilitar todos a execução do script. Ap
 ## <a name="see-also"></a>Consulte também
 
 [Pool de recursos do Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
-
 

@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 5c6929a0320610942f644beca551f5142788edc4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ff37155ef68e6942ffb3a256e54404a5d81bc5ef
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Aviso legal (SSMA para Oracle)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  
@@ -48,4 +46,3 @@ Os clientes não devem usar APIs não documentadas, incluindo, dentre outras, pr
   
 As atualizações de servidor e de banco de dados para versões futuras do SQL Server não estão garantidas para aplicativos e bancos de dados que aproveitem e usem pontos de entrada não documentados. O uso de recursos e funcionalidades do SQL Server deve ser limitado àqueles que estão incluídos na documentação do Microsoft SQL Server. Se um recurso não está descrito na documentação do Microsoft SQL Server, ele não tem suporte do SQL Server.  
   
-

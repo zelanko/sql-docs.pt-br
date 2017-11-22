@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>Arquitetura de Drivers de banco de dados de área de trabalho
 Esses drivers são projetados para uso no Microsoft Windows 95 ou posterior, ou Windows NT 4.0 e Windows 2000. Aplicativos de 32 bits só têm suporte no Windows 95 ou posterior; aplicativos de 16 bits e 32 bits têm suporte no Windows NT 4.0 e Windows 2000.  
@@ -58,4 +56,3 @@ Esses drivers são projetados para uso no Microsoft Windows 95 ou posterior, ou 
  Odbcjt32.dll implementa funções ODBC sobre a API do Microsoft Jet. No entanto, há nenhum mapeamento direto entre funções de ODBC e Microsoft Jet. Muitos fatores, como os modelos de cursor e o mapeamento de SQL, impedir que uma correlação direta das funções.  
   
  O driver ODBC reside entre o Microsoft Jet e o Gerenciador de Driver ODBC. Algumas funções ODBC chamadas por um aplicativo são tratadas pelo Gerenciador de Driver e não são passadas para o driver. Essas funções, o Microsoft Jet nunca vê a função chamada porque ela não tem uma conexão direta para o Gerenciador de Driver.
-

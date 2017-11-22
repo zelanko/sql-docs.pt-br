@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b43ae9cdb1a8ed61dc1ef8546b4c560bac403a33
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6cad1bfd63ffafd32d0621f6142717cd7175ccd0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Enviar as atualizações: método UpdateBatch
 O código a seguir abre um conjunto de registros em modo de lote, definindo a propriedade LockType adLockBatchOptimistic e CursorLocation para adUseClient. Adiciona dois novos registros e altera o valor de um campo em um registro existente, salvar os valores originais e, em seguida, chama UpdateBatch para enviar que as alterações de volta para a fonte de dados.  
@@ -64,4 +62,3 @@ O código a seguir abre um conjunto de registros em modo de lote, definindo a pr
   
 ## <a name="see-also"></a>Consulte também  
  [Modo de lote](../../../ado/guide/data/batch-mode.md)
-

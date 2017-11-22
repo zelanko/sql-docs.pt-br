@@ -8,8 +8,7 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 215
+caps.latest.revision: "215"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ea0efb1cf326d03a2b45ff6a6f2566c93afc500b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Objetos de banco de dados|Capacidade de retornar conjuntos de resultados de gatilhos|Nenhuma|Retornando resultados de gatilho|12|  
 |Criptografia|A criptografia que usa o RC4 ou RC4_128 foi substituída e está programada para ser removida na próxima versão. A descriptografia do RC4 e RC4_128 não será substituída.|Usar outro algoritmo de criptografia, como AES.|Algoritmo de criptografia substituído|253|  
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Substitua servidores remotos usando servidores vinculados. sp_addserver só pode ser usado com a opção local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Servidores remotos|@@remserver |Substitua servidores remotos usando servidores vinculados.|Nenhuma|Nenhuma|  
+|Servidores remotos|@@remserver|Substitua servidores remotos usando servidores vinculados.|Nenhuma|Nenhuma|  
 |Servidores remotos|SET REMOTE_PROC_TRANSACTIONS|Substitua servidores remotos usando servidores vinculados.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Opções Set|**SET ROWCOUNT** para as instruções **INSERT**, **UPDATE**e **DELETE**|Palavra-chave TOP|SET ROWCOUNT|109|  
 |Dicas de tabela|Dica de tabela HOLDLOCK sem parênteses.|Use HOLDLOCK com parênteses.|Dica de tabela HOLDLOCK sem parênteses|167|  
@@ -159,7 +157,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL como um nome de coluna em instruções DML.|Use $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL como um nome de coluna em instruções DML.|Use $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de #, ## como tabela temporária e nomes de procedimento armazenado temporários.|Use pelo menos um caractere adicional.|'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de @, @@ ou @@ como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)] .|Não use @, @@ ou nomes que comecem com @@ como identificadores.|' @ ' e nomes que começam com ' @@ ' como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de @, @@ ou @@ como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)] .|Não use @, @@ ou nomes que comecem com @@ como identificadores.|'@' e nomes que começam com '@@' como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso da palavra-chave DEFAULT como valor padrão.|Não use a palavra DEFAULT como um valor padrão.|A palavra-chave DEFAULT como um valor padrão|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de um espaço como um separador entre dicas de tabela.|Use uma vírgula para separar dicas de tabela.|Várias dicas de tabela sem vírgula|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (*) no modo de compatibilidade 90|Use COUNT_BIG (*).|Lista de seleção de exibição indexada sem COUNT_BIG (*)|2|  
@@ -178,5 +176,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
-
 

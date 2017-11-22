@@ -5,22 +5,20 @@ ms.date: 07/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6d7cba7c74eaef9e627b75972d3b6dd34ee5a6f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Instalação autônoma dos serviços de aprendizado de máquina do Python (no banco de dados)
 
@@ -74,4 +72,3 @@ A exemplo a seguir mostra o **mínimo** necessários recursos a serem especifica
 3.  Reinicie o serviço do SQL Server para a instância reconfigurado. Isso reiniciará automaticamente relacionado [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] serviço também.
 
 3. Etapas adicionais poderão ser necessárias se você tiver uma configuração de segurança personalizada ou for usar o SQL Server para dar suporte a contextos de computação remota. Para obter mais informações, consulte [Solucionando problemas de instalação de aprendizado de máquina](../machine-learning-troubleshooting-faq.md).
-

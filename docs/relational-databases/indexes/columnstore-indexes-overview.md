@@ -1,10 +1,13 @@
 ---
 title: "Índices columnstore – visão geral| Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8c7238da1e8c0ad3fa46805c73f57bc2ae8e4c1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ee09bc377beed53a4af3a43111deeec03830e98
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnstore-indexes---overview"></a>Índices columnstore – visão geral
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   O *índice columnstore* é o padrão para armazenar e consultar grandes tabelas de fatos de repositório de dados. Ele usa armazenamento de dados baseado em coluna e processamento de consultas para alcançar um **desempenho de consulta até 10 vezes melhor** no data warehouse em relação ao armazenamento tradicional orientado por linha e até **10 vezes mais compactação de dados** em relação ao tamanho dos dados descompactados. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], os índices columnstore permitem a análise operacional, a capacidade de executar análises de alto desempenho em tempo real em uma carga de trabalho transacional.  
   

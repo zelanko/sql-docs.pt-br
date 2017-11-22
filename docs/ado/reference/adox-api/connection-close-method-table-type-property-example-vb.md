@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f31253851c76e9f41fa14a8f6a150b67704280d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95ea01c8cfb495ce104e60cbb3e24110fac98116
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Método Close da Conexão, exemplo de propriedade de tipo de tabela (VB)
 Definindo o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriedade **nada** deve fechar a conexão para o catálogo. Coleções associadas estará vazias. Todos os objetos que foram criados a partir de objetos de esquema no catálogo serão órfão. As propriedades desses objetos que tiverem sido armazenados em cache ainda estará disponíveis, mas uma tentativa de ler as propriedades que requer uma chamada para o provedor irá falhar.  
@@ -88,4 +85,3 @@ Attribute VB_Name = "Connection"
  [Objeto de tabela (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Coleção de tabelas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Propriedade Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
-

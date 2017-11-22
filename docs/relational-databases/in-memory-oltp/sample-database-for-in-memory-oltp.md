@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5e8a9a30e4221c0c425c45d46b1e3bdddda9a66e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Utilização de memória e espaço em disco na amostra](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Para exibir os scripts de exemplo e a carga de trabalho, descompacte o arquivo SQLServer2016CTP3Samples.zip para uma pasta local. Consulte o arquivo In-Memory OLTP\readme.txt para obter instruções sobre como executar a carga de trabalho.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> Descrição das tabelas e procedimentos de exemplo  
  O exemplo cria novas tabelas para produtos e pedidos de vendas, com base em tabelas existentes no AdventureWorks. O esquema das novas tabelas é semelhante às tabelas existentes, com algumas diferenças, conforme explicado a seguir.  
   
  As novas tabelas com otimização de memória têm o sufixo '_inmem'. O exemplo também inclui as tabelas correspondentes que têm o sufixo '_ondisk' – essas tabelas podem ser usadas para fazer uma comparação um-para-um entre o desempenho de tabelas com otimização de memória e tabelas baseadas em disco em seu sistema.  
@@ -154,7 +152,7 @@ ms.lasthandoff: 06/22/2017
   
 -   *Colunas computadas* - as colunas computadas SalesOrderNumber e TotalDue são omitidas, pois o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não oferece suporte a colunas computadas em tabelas com otimização de memória. A nova exibição Sales.vSalesOrderHeader_extended_inmem reflete as colunas SalesOrderNumber e TotalDue. Por disso, você pode usar essa exibição se essas colunas são necessárias.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.
 
   
@@ -437,7 +435,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Recomendamos uma redefinição após cada demonstração executada. Como essa carga de trabalho é somente de inserção, cada execução consumirá mais memória e, portanto, uma redefinição é necessária para evitar ficar sem memória. A quantidade de memória consumida após uma execução é discutida na seção [Utilização de memória após executar a carga de trabalho](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
+###  <a name="Troubleshootingslow-runningtests"></a> Solução de problemas em testes com execução lenta  
  Os resultados de testes variam de acordo com o hardware, e também com o nível de simultaneidade usado na execução do teste. Alguns itens a serem pesquisados se os resultados não forem os esperados:  
   
 -   Número de transações simultâneas: ao executar a carga de trabalho em um único thread, o ganho de desempenho com OLTP in-memory provavelmente será menor que duas vezes. A contenção de trava se torna um grande problema apenas se há um nível alto de simultaneidade.  
@@ -453,7 +451,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Utilização de memória e espaço em disco na amostra  
  A seguir, descrevemos o que esperar em termos de utilização da memória e do espaço em disco para o banco de dados de exemplo. Também mostramos os resultados observados em um servidor de teste com 16 núcleos lógicos.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Memory utilization for the memory-optimized tables  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Utilização de memória para as tabelas com otimização de memória  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilização geral do banco de dados  
  A consulta a seguir pode ser usada para obter a utilização total de memória para OLTP in-memory no sistema.  
@@ -506,7 +504,7 @@ WHERE t.type='U'
   
  O que chama a atenção aqui é o tamanho da memória alocada para índices, comparado ao tamanho dos dados da tabela. Isso ocorre porque os índices de hash no exemplo são dimensionados previamente para um tamanho maior de dados. Observe que os índices de hash têm um tamanho fixo e, assim, seu tamanho não aumentará conforme o tamanho dos dados na tabela.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Memory utilization after running the workload  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> Utilização de memória após executar a carga de trabalho  
  Após a inserção de 10 milhões de pedidos de vendas, qualquer utilização de memória superior terá a seguinte aparência:  
   
 ```  
@@ -776,8 +774,7 @@ ORDER BY state, file_type
  Nesse caso, há dois pares de arquivos de ponto de verificação no estado 'em construção', o que significa que vários pares de arquivos foram movidos para o estado 'em construção', provavelmente devido ao nível alto de simultaneidade na carga de trabalho. Vários threads simultâneos exigiam um novo par de arquivos ao mesmo tempo e, portanto, moviam um par de 'criados previamente' para 'em construção'.  
   
 ## <a name="see-also"></a>Consulte também  
- [OLTP na memória &#40;Otimização na memória&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP in-memory &#40;Otimização na memória&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-
 

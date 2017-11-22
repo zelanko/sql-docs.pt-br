@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Internet Explorer errors [ADO]
 - errors [ADO], Internet Explorer
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b68dac1402ee576985e2480a4212c00082eccd3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ccad15115dd12e80327b5d73c005efe41b46102
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Códigos de erro do Internet Explorer para o serviço de dados remotos
 A tabela a seguir lista os códigos de erro do Microsoft® Internet Explorer relacionados ao uso do serviço de dados remoto. A conversão decimal positiva de dois bytes de baixa, a conversão decimal negativa do código de erro completa e os valores hexadecimais são mostrados.
@@ -39,4 +37,3 @@ A tabela a seguir lista os códigos de erro do Microsoft® Internet Explorer rel
 |**IDS_WinInet_ InvalidServerResponse**|8430-2146819858 0x800A20EE|Erro de cliente da Internet: Resposta do servidor inválida.|
 |**IDS_WinInet_ SSLPostLimitation**|8196-2146820092 0x800A2004|Erro de cliente da Internet: Erro SSL (limitação para carregar dados de possivelmente 32 K).|
 |**IDS_WinInet_Timeout**|8194-2146820094 0x800A2002|Erro de cliente da Internet: Tempo limite da solicitação.|
-

@@ -1,8 +1,7 @@
 ---
 title: Propriedade de servidor (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,22 +9,19 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- RDS::IBindMgr21::Server
-helpviewer_keywords:
-- Server property [RDS]
+f1_keywords: RDS::IBindMgr21::Server
+helpviewer_keywords: Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1e1475b73658e9cbf5b1b1ebc393d2cf60bb6e5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05ff98ce99d444a9b5dfc1aac035920a29482d7c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-property-rds"></a>Propriedade de servidor (RDS)
 Indica o protocolo de comunicação e o nome de serviços de informações da Internet (IIS).  
@@ -132,6 +128,5 @@ DataControl.Server=""
  [Conecte-se a propriedade (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [Propriedade SQL](../../../ado/reference/rds-api/sql-property.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 
