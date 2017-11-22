@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Setting project options,configuration options
+helpviewer_keywords: Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4b5c32983e341aa831de0a1752c744fa29252528
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 005889e4a4fc813819f6133d7a5a7b2a5223b861
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-project-options-mysqltosql"></a>Definindo opções de projeto (MySQLToSQL)
 Para cada projeto SSMA, você pode definir opções de nível de projeto. Essas opções especificam como os objetos são convertidos, como os dados são migrados e como os tipos de dados de origem são mapeados para tipos de dados de destino.  Antes de converter os objetos no SQL Server ou SQL Azure ou migrar dados para o SQL Server ou SQL Azure, verifique se as opções de configuração apropriadas para o projeto.  
@@ -47,7 +44,7 @@ O SSMA tem cinco conjuntos de configurações de projeto:
   
 As configurações de projeto podem ser configuradas de quatro maneiras:  
   
--   Padrão  
+-   Default  
   
 -   Otimistas  
   
@@ -112,4 +109,3 @@ A próxima etapa da migração depende de suas necessidades de projeto:
 ## <a name="see-also"></a>Consulte também  
 [Mapeamento de tipos de dados do SQL Server &#40; e MySQL MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
-

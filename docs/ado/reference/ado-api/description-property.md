@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Error::Description
 - Error::GetDescription
 - Error::get_Description
-helpviewer_keywords:
-- Description property
+helpviewer_keywords: Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc23f481c709c0901eb6a2020b51629a16f659eb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5fe6e991baea65a345a6e3a070165dfa568982c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="description-property"></a>Propriedade Description
 Descreve um [erro](../../../ado/reference/ado-api/error-object.md) objeto.  
@@ -52,4 +49,3 @@ Descreve um [erro](../../../ado/reference/ado-api/error-object.md) objeto.
  [Propriedades HelpContext e HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Propriedade de número (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Propriedade Source (Erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)
-
