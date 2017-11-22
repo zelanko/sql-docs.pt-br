@@ -2,9 +2,12 @@
 title: "Usuários de banco de dados independentes – transformando seu banco de dados em portátil | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 caps.latest.revision: "33"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 410ea9f28ad1a4ec7f48024a6716e5588379af5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9bd08b3188bc8b7a968753c01d09dba3ecf49a7e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuários de bancos de dados independentes - Tornando seu banco de dados portátil
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Use usuários de banco de dados independentes para autenticar conexões [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no nível do banco de dados. Um banco de dados independente é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (e o banco de dados mestre) que hospeda o banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a usuários de bancos de dados independentes para autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows. Ao usar [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combine usuários do banco de dados com regras de firewall de nível de banco de dados. Este tópico revisa as diferenças e os benefícios de usar o modelo de banco de dados independente em comparação com o modelo de logon/usuário tradicional e Windows ou as regras de firewall em nível de servidor. Cenários específicos, lógica de negócios do aplicativo ou a capacidade de gerenciamento ainda podem exigir o uso do modelo tradicional de logon/usuário e regras de firewall em nível de servidor.  
   

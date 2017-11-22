@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.kb.importprojectvalues.f1
+f1_keywords: sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7d6ab6c2be3f6a05ea04d93b68c75505e9482aec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ccbaa61727e3d3ef85c0de713bbb596cede7797a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de projeto de limpeza para um domínio
   No [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), você pode importar conhecimento de qualidade de dados coletado durante o processo de limpeza em um projeto de limpeza de qualidade de dados ou um pacote do Integration Services que contém o componente de limpeza DQS em um domínio. Isto assegura que o conhecimento confiável não seja perdido, e que a base de dados de conhecimento seja aprimorada continuamente.  
@@ -123,4 +120,3 @@ ms.lasthandoff: 09/09/2017
  [Transformação Limpeza DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   
-

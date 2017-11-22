@@ -8,8 +8,7 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - functional area permissions [Master Data Services]
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 506bd9415733f02d54875ecb936e750a877e0e32
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 34aa40c2c999709c871fe7b1e283c5d6e30ab1b4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permissões de área funcional (Master Data Services)
   É possível atribuir permissão a cada uma das áreas funcionais da interface do usuário do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Estas são as áreas funcionais:  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/07/2017
  [Como as permissões são determinadas &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ac8fc262775d11c08cb2e30a750549fe3b0ec96b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: afc9e1fc978556d7a454319cdfc661115f373925
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="master-data-services-features-and-tasks"></a>Recursos e tarefas do Master Data Services
   Aprenda a usar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para gerenciar os dados mestre de sua organização. Aprenda a criar e manipular objetos de modelo que são contêineres de dados. Aprenda a organizar e manter os próprios dados mestre. Aprenda a importar e exportar dados mestre, bem como compartilhar modelos entre ambientes de teste e produção. Por fim, saiba como desenvolver aplicativos personalizados que acessam o serviço Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -79,4 +77,3 @@ ms.lasthandoff: 09/07/2017
 -   [Documentação do desenvolvedor do Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)  
   
   
-

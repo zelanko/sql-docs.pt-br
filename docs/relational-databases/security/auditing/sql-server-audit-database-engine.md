@@ -2,9 +2,12 @@
 title: Auditoria do SQL Server (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: 
 ms.date: 11/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21ccd95afcf7054c063c2e6be2b4707cc6cbfb2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   A*auditoria* de uma instância do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou de um banco de dados individual envolve o controle e o registro em log dos eventos que ocorrem no [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite criar auditorias de servidor, que podem conter especificações de auditoria de servidor para eventos no nível de servidor, além de especificações de auditoria de banco de dados para eventos no nível de banco de dados. Os eventos auditados podem ser gravados nos logs de eventos ou nos arquivos de auditoria.  
   

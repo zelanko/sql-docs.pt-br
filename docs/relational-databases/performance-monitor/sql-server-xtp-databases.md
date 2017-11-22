@@ -8,24 +8,21 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Server 2016 XTP Databases
+helpviewer_keywords: SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 226256c110ae18881ec980d95e6979bb1b5b9ece
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-xtp-databases"></a>Bancos de dados XTP do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,4 +72,3 @@ Esta tabela descreve os contadores **Bancos de dados XTP do SQL Server** .
 
 ## <a name="see-also"></a>Consulte também  
 [Contadores de desempenho XTP &#40;OLTP in-memory&#41; do SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
-

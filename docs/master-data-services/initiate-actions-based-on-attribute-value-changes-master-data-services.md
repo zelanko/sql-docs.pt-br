@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], tracking attribute changes
 - change tracking groups [Master Data Services], initiating actions
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6093015d9ac63d5d2ceb9055f26638cae6d818ab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 4745861bfded49fe43eb2b17ab1dcca596491abd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Iniciar ações com base em alterações no valor do atributo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma regra de negócio para iniciar ações com base em alterações para atribuir valores. Por exemplo, quando uma valor de atributo específico for alterado, você pode querer alterar um valor, enviar uma notificação ou iniciar um fluxo de trabalho externo.  
@@ -100,4 +98,3 @@ ms.lasthandoff: 09/07/2017
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   
-

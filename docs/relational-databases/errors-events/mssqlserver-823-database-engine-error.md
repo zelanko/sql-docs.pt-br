@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 823 (Database Engine error)
+helpviewer_keywords: 823 (Database Engine error)
 ms.assetid: 0d9fce3c-3772-46ce-a7a3-4f4988dc6cae
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9e44f9347c238f4522bcb1161d6b75ed2bb990b3
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 453ab7e66fe46fb00660d2f5220907703bc096a6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver---database-engine-error"></a>MSSQLSERVER – erro do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,4 +44,3 @@ Falha de solicitação de leitura ou gravação do Windows. O código de erro re
 ## <a name="user-action"></a>Ação do usuário  
 Verifique se há mais informações no log de eventos do sistema. Entre em contato com o fabricante de hardware ou o Atendimento ao Cliente e o Suporte da Microsoft para determinar a causa e ação corretiva. Depois que o erro de hardware for corrigido, restaure todos os bancos de dados e execute o DBCC CHECKDB.  
   
-

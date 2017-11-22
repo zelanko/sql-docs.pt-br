@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 024a323e253a4e1146ea5ce8fff816a612a1df93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e3c99d8f8ee8621925f49e301a4ea95c8b00383
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpar dados em um domínio composto
   Este tópico fornece informações sobre como limpar domínios compostos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em dois ou mais domínios únicos, e é mapeado para um campo de dados que consiste em vários termos relacionados. Os domínios individuais em um domínio composto devem ter uma área comum de conhecimento. Para obter informações detalhadas sobre domínios compostos, consulte [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/09/2017
  Para obter informações detalhadas sobre a criação de perfil de dados durante a atividade de limpeza, consulte [Estatísticas do criador de perfil](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler) em [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
   
-

@@ -8,27 +8,24 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "O que são dados mestres?"
+keywords: "O que são dados mestres?"
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: beb17b82f5dc7ce522403d7d32a71e52a497bd2e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="master-data-services-overview-mds"></a>Visão geral do MDS (Master Data Services)
   Este tópico descreve os principais recursos de organização e gerenciamento de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
@@ -82,5 +79,4 @@ ms.lasthandoff: 09/07/2017
  Quando estiver pronto, você poderá implantar o seu modelo, com ou sem os respectivos dados, no ambiente de produção. Para obter mais informações, consulte [Implantando modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  
   
   
-
 

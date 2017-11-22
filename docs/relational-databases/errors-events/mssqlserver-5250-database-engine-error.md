@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 5250 (Database Engine error)
+helpviewer_keywords: 5250 (Database Engine error)
 ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 66d75099cb8f5f0e4d720900617e7258941a78f8
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3e3c03ddbc1cfd0a740abf384aa316ecb0b4dc64
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver5250"></a>MSSQLSERVER_5250
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,4 +56,3 @@ Se o problema não estiver relacionado ao hardware e se houver um backup limpo c
 ### <a name="run-dbcc-checkdb"></a>Executar DBCC CHECKDB  
 Não aplicável. Esse erro não pode ser reparado. Se você não conseguir restaurar o banco de dados com base em um backup, contate o CSS (Suporte e Atendimento ao Cliente) [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-

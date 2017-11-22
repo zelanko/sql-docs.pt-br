@@ -2,9 +2,12 @@
 title: "Práticas recomendadas de segurança com bancos de dados independentes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fda4715f323f4183fdbc601f47cbf8c24b7a6623
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Práticas recomendadas de segurança com bancos de dados independentes
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Bancos de dados independentes têm algumas ameaças exclusivas que devem ser entendidas e mitigadas pelos administradores do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . A maioria das ameaças está relacionada ao processo de autenticação **USER WITH PASSWORD** que move o limite de autenticação do nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o nível do banco de dados.  
   

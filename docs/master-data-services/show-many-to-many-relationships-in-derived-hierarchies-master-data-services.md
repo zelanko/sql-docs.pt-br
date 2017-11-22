@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ec18dcf8fd78dbee82bf74adcf4e492dca604049
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e50d65ddecb9a22c852c9ed8543db4931df6dfb9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
   As DHs (Hierarquias Derivadas) exibem relações um para muitos e, agora, também podem mostrar relações muitos para muitos.  
@@ -111,4 +109,3 @@ Para obter instruções sobre como implantar o modelo de exemplo Cliente e outro
  [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: a095d9f3e7839a2f3cfa14a2bf49790776f0cd1b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/31/2017
   
  As funções de servidor fixas são fornecidas para conveniência e compatibilidade com versões anteriores. Atribua mais permissões específicas sempre que possível.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece nove funções de servidor fixas. As permissões concedidas às funções de servidor fixas (exceto **públicas**) não podem ser alteradas. A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], você pode criar funções de servidor definidas pelo usuário e adicionar permissões do nível de servidor às funções de servidor definidas pelo usuário.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece nove funções de servidor fixas. A permissões que são concedidas às funções de servidor fixas (exceto **público**) não podem ser alteradas. A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], você pode criar funções de servidor definidas pelo usuário e adicionar permissões do nível de servidor às funções de servidor definidas pelo usuário.  
   
  Você pode adicionar entidades de segurança no nível do servidor (logons do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , contas do Windows e grupos do Windows) em funções de nível de servidor. Cada membro de uma função de servidor fixa pode adicionar outros logons a essa mesma função. Os membros de funções de servidor definidas pelo usuário não podem acrescentar outras entidades de segurança de servidor à função.  
 >  [!NOTE]
@@ -63,7 +61,7 @@ ms.lasthandoff: 07/31/2017
 |**bulkadmin**|Os membros da função de servidor fixa **bulkadmin** podem executar a instrução `BULK INSERT`.|  
 |**diskadmin**|A função de servidor fixa **diskadmin** é usada para gerenciar arquivos em disco.|  
 |**dbcreator**|Os membros da função de servidor fixa **dbcreator** podem criar, alterar, remover e restaurar qualquer banco de dados.|  
-|**público**|Todo logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertence à função de servidor **pública**. Quando permissões específicas não são concedidas ou são negadas a uma entidade de servidor em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto. Somente atribua permissões públicas em qualquer objeto quando você quiser que ele esteja disponível para todos os usuários. Não é possível alterar associação em public.<br /><br /> **Observação:** **pública** é implementada de maneira diferente de outras funções. Além disso, é possível conceder, negar ou revogar permissões das funções de servidor fixas públicas.|  
+|**público**|Todo logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertence à função de servidor **pública**. Quando permissões específicas não são concedidas ou são negadas a uma entidade de servidor em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto. Somente atribua permissões públicas em qualquer objeto quando você quiser que ele esteja disponível para todos os usuários. Não é possível alterar associação em public.<br /><br /> **Observação:** **pública** é implementada de maneira diferente de outras funções e permissões podem ser concedidas, negadas ou revogadas das funções de servidor fixas públicas.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Permissões de funções de servidor fixas  
  Cada função de servidor fixa tem certas permissões atribuídas a ela. A imagem a seguir mostra as permissões atribuídas às funções de servidor.   
@@ -109,4 +107,3 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [Criar uma função de servidor](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
   
   
-
