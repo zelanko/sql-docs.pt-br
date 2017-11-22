@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 16596d3ffa943f382e6c3a9ec2aa9c2e2e14432f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93b97bce2562604a01c564a376bd093abb9b1b7c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros e campos fornecidos pelo provedor
 Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto está aberto, sua origem pode ser a linha atual de uma abertas [registros](../../../ado/reference/ado-api/recordset-object-ado.md), uma URL absoluta ou uma URL relativa em conjunto com um aberto [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
@@ -87,4 +85,3 @@ Quando um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
 ## <a name="see-also"></a>Consulte também  
  [Objeto de registro (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ed8e041cef62cb1782d0f00a90fe5c09986c7d81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-standard-action"></a>Adicionar uma ação padrão
   Você adiciona uma ação a um banco de dados usando a exibição Ações no Designer de Cubo. Essa exibição pode ser acessada pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois de você criar uma ação, ela ficará disponível a usuários depois que você reprocessar o cubo pertinente. Para obter mais informações, consulte [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
@@ -91,4 +90,3 @@ ms.lasthandoff: 09/01/2017
     -   Na lista suspensa **A legenda é MDX** , especifique se a legenda é MDX. Este campo indica para o servidor se deve avaliar o conteúdo de **Legenda** como uma expressão MDX.  
   
   
-

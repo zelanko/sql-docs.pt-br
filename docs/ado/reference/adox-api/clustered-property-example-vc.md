@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Clustered property [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d758932fa2686c5428e1f15917a7d1e33d59883b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ae5a8c271f819622aabed1d8809e5f6e5579eff
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clustered-property-example-vc"></a>Exemplo de propriedade Clustered (VC + +)
 Este exemplo demonstra o [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) propriedade de um [índice](../../../ado/reference/adox-api/index-object-adox.md). Observe que bancos de dados Microsoft Jet não dá suporte a índices clusterizados, portanto, este exemplo retornará **False** para o **Clustered** propriedade de todos os índices no *Northwind* banco de dados.  
@@ -98,4 +94,3 @@ void ClusteredX() {
 ## <a name="see-also"></a>Consulte também  
  [Propriedade Clustered (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
-

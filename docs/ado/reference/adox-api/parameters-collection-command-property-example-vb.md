@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Command property [ADOX], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Command property [ADOX], Visual Basic example
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e67502c8caf02081f3bb8009934a1fb1eb0043e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b927cf4ae288fce370f20d122c93ba72d79d454d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Coleção de parâmetros, o exemplo de comando de propriedade (VB)
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade com o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto para recuperar informações de parâmetro para o procedimento.  
@@ -89,4 +85,3 @@ End Sub
  [Propriedade de comando (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Objeto de procedimento (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
-

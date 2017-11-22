@@ -24,17 +24,16 @@ helpviewer_keywords:
 - user access rights [Analysis Services]
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cf85cd6bb5c32e9c8151fa87aa41fcefb7033f3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizando o acesso a objetos e operações (Analysis Services)
   O acesso do usuário não administrativo a objetos como cubos, dimensões e modelos de mineração em um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é concedido por meio de associação em uma ou mais funções de banco de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores criam essas funções de banco de dados, concedem permissões de leitura ou leitura/gravação em objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e atribuem usuários e grupos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cada função.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Metodologias de autenticação com suporte no Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   
-

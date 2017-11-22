@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e8ecc3c51619c7f1ebbe5b109f0710500184a27
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Verificador de consistência do banco de dados (DBCC) para o Analysis Services
   O DBCC fornece validação de banco de dados sob demanda para bancos de dados Multidimensionais e Tabulares em uma instância do Analysis Services. Você pode executar o DBCC em uma janela de consulta MDX ou XMLA no SSMS (SQL Server Management Studio) e rastrear a saída do DBCC no SQL Server Profiler ou nas sessões do xEvent no SSMS.  
@@ -314,4 +313,3 @@ Execution complete
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   
-

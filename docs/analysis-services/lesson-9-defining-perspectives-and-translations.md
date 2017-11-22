@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c90f6400335180d551afac8241f820af97ce1113
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 47562691980f0679f7c03525b41db4ac8aa901d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lição 9: Definindo perspectivas e traduções
 Nesta lição, você aprenderá a definir perspectivas e traduções. Você pode definir perspectivas para reduzir a complexidade aparente de um cubo e definir traduções que permitam que os usuários exibam os metadados do cubo no idioma que preferirem.  
@@ -55,4 +52,3 @@ Nesta tarefa, você definirá e navegará por traduções de metadados específi
   
   
   
-

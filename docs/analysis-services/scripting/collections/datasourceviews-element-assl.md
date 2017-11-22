@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataSourceViews Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataSourceViews Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DataSourceViews
-helpviewer_keywords:
-- DataSourceViews element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DataSourceViews
+helpviewer_keywords: DataSourceViews element
 ms.assetid: f708ceac-8eeb-45ee-a2bb-919126898c80
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 30d3bb940824bfb507960f0e0407c7cabbbd6829
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9a4fd53c76b13cda313d04e213c0e69a8ed8795
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasourceviews-element-assl"></a>Elemento DataSourceViews (ASSL)
   Contém a coleção de [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) elementos associados a um [banco de dados](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Coleções de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

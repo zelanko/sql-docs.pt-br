@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Member::Children
 - Children
-helpviewer_keywords:
-- Children property [ADO MD]
+helpviewer_keywords: Children property [ADO MD]
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bf9b0ca151408a1f1e66a7a77f98ea824f6b468f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c851f06ecd3cec67769f761cb2aea400c5b06d9e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="children-property-ado-md"></a>Propriedade Children (ADO MD)
 Retorna um [membros](../../../ado/reference/ado-md-api/members-collection-ado-md.md) coleção para a qual atual [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) é o pai na hierarquia.  
@@ -45,4 +42,3 @@ Retorna um [membros](../../../ado/reference/ado-md-api/members-collection-ado-md
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade ChildCount (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)
-

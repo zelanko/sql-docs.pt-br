@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 59113cc41bf1e7805b033ff0af68ee2c1accda3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f32eb86f0d4b18ac576df77a28885c7f2053d962
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="remote-processing-analysis-services"></a>Processamento remoto (Analysis Services)
   Você pode executar processamento em um controle remoto agendado ou autônomo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância, em que a solicitação de processamento origina-se de um computador, mas é executada em outro computador na mesma rede.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
 -   No servidor remoto, a opção **Permitir conexões remotas a este computador** deve estar habilitada e a conta de emitir a solicitação de processamento deve estar listada como um usuário permitido.  
   
--   Regras de Firewall do Windows devem ser configuradas para permitir conexões de entrada para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Verifique se você pode se conectar à instância remota [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consulte [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Regras de Firewall do Windows devem ser configuradas para permitir conexões de entrada para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Verifique se você pode se conectar à instância remota [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Resolva quaisquer erros de processamento local existentes antes de tentar o processamento remoto. Verifique que quando a solicitação de processamento for local, os dados possam ser recuperados com êxito da fonte de dados relacional externa. Consulte [Definir opções de representação &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md) para obter instruções sobre como especificar as credenciais usadas para recuperar os dados.  
   
@@ -108,4 +107,3 @@ ms.lasthandoff: 09/01/2017
  [Processamento de objetos &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   
-

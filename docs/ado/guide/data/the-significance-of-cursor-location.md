@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>A importância da posição do Cursor
 Cada cursor usa recursos temporários para armazenar seus dados. Esses recursos podem ser a memória, um arquivo de paginação de disco, os arquivos de disco temporário ou armazenamento temporário até mesmo no banco de dados. O cursor é chamado um *cliente* cursor quando esses recursos estão localizados no computador cliente. O cursor é chamado um *do lado do servidor* cursor quando esses recursos estão localizados no servidor.  
@@ -46,4 +44,3 @@ Cada cursor usa recursos temporários para armazenar seus dados. Esses recursos 
  No entanto, é importante ressaltar que é um cursor do lado do servidor — pelo menos temporariamente — consuma recursos do servidor preciosos para cada cliente ativo. Você deve planejar adequadamente para garantir que o hardware de servidor é capaz de gerenciar todos os cursores do lado do servidor solicitados por clientes ativos. Além disso, um cursor do lado do servidor pode ser lento porque ele fornece acesso somente de única linha, nenhum cursor de lote está disponível.  
   
  Cursores do lado do servidor são úteis quando a inserção, atualização ou exclusão de registros. Com cursores do lado do servidor, você pode ter várias instruções ativas na mesma conexão.
-
