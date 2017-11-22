@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-incremental-generation"></a>Entendendo a geração com incremento
   Após a geração de esquema inicial, você pode alterar as definições do cubo e das dimensões usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e, em seguida, executar novamente o Assistente de Geração de Esquema. O assistente atualiza o esquema do banco de dados da área de assunto e da exibição da fonte de dados associada para refletir as mudanças, mantendo, na medida do possível, os dados que já existem nas tabelas que serão geradas novamente. Se você alterou as tabelas depois da geração inicial, o Assistente de Geração de Esquema preservará essas alterações sempre que possível usando as seguintes regras:  
@@ -98,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Assistente de Geração de Esquema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   
-

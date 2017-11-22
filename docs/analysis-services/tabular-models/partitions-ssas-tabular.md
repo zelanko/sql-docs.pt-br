@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ceaff43e4f0f5d2b1901c98b026d37af9ba89383
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 729c24cf80e99f6f0e2596c51bfbc8bdf2490d0d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions"></a>Partições
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições criadas usando a caixa de diálogo partições no SSDT durante a criação do modelo aplicam-se ao banco de dados de espaço de trabalho modelo. Quando o modelo é implantado, as partições definidas para o banco de dados de espaço de trabalho modelo são duplicadas no banco de dados modelo implantado. Além disso, você pode criar e gerenciar partições para um banco de dados modelo implantado usando a caixa de diálogo partições no SSMS.  As informações fornecidas neste tópico descrevem partições criadas durante a criação do modelo usando a caixa de diálogo Gerenciador de partições no SSDT. Para obter informações sobre como criar e gerenciar partições para um modelo implantado, consulte [criar e gerenciar partições de modelo de tabela](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -57,7 +56,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Dados de processo](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
+ [Processar dados](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   
-

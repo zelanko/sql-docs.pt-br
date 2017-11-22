@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], columns
 - columns [data mining], excluding
 ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2538a1340fbdaef28902d73b56c40b2b5ddf0a5c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a12584791ec8ea21a1338c09dbc0e5f7ef8f7a62
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>Excluir uma coluna de um modelo de mineração
   Ao criar um novo modelo de mineração, talvez você não queira usar todas as colunas existentes na estrutura de mineração em que o modelo é baseado. Por exemplo, talvez você tenha adicionado uma coluna de nome de cliente para detalhamento, mas não deseje usá-la para modelagem. Ou você pode decidir criar várias cópias de uma coluna com discretizações diferentes e usar apenas uma das cópias em cada modelo, ignorando as demais. Você também pode adicionar seletivamente colunas de entrada em vários modelos diferentes para ver como a variável adicionada afeta a coluna de saída.  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

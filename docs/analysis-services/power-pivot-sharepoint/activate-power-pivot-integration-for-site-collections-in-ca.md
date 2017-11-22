@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9958979cc8e0c966ca12c531667d9e05e7dd91f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e4c3c7403a6fefb42c15f8b4ba71af403195a057
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>Ativar a integração do Power Pivot para coleções de sites no Canadá
   Ativar a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] integração de recursos para coleções de sites específicas será necessário se você usou a opção de instalação Farm Existente para instalar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint do SQL Server. Se você instalou o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usando a opção Novo Servidor, poderá ignorar esta tarefa porque a Instalação do SQL Server já ativou a integração do recurso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para a coleção-raiz de sites quando configurou sua implantação.  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [Instalação do Power Pivot para SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   
-

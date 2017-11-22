@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a14f483af32bdef3383020b48e858e6b26280809
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6bd590943c8922087164bd4759faaf7e39af720b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implantar soluções modelo com o Utilitário de Implantação
   O utilitário **Microsoft.AnalysisServices.Deployment** permite iniciar o mecanismo de implantação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando. Como arquivo de entrada, o utilitário usa os arquivos de saída XML gerados pela construção de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Os arquivos de entrada são facilmente modificáveis para personalizar a implantação de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O script de implantação gerado pode ser executado imediatamente ou pode ser salvo para implantação posterior.  
@@ -99,4 +98,3 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
  [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

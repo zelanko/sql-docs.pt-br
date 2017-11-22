@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AlgorithmParameters Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AlgorithmParameters Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AlgorithmParameters
-helpviewer_keywords:
-- AlgorithmParameters element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AlgorithmParameters
+helpviewer_keywords: AlgorithmParameters element
 ms.assetid: 240cbb60-7fa3-46ef-b5be-cd14c9ec10de
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1470ce42b2dada9d96c61e34716800b71fb63f26
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4865e23f02c681586f9025737dd2acc21ccd93bf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="algorithmparameters-element-assl"></a>Elemento AlgorithmParameters (ASSL)
   Contém a coleção de parâmetros para o algoritmo usado por um [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) elemento.  
@@ -81,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Coleções de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

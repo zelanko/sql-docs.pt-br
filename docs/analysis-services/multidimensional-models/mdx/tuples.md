@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4720db7c001c17a99016e9d81b32ee46d990e06f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bdd0f236112d8c08e1bdc6356ac381d10d6b29b6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tuples"></a>Tuplas
   Uma tupla identifica exclusivamente uma fatia de dados de um cubo. A tupla é formada por uma combinação de membros de dimensão, contanto que não haja dois ou mais membros pertencentes à mesma hierarquia.  
@@ -82,4 +81,3 @@ FROM [Adventure Works]
  [Trabalhando com membros, tuplas e conjuntos de &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   
-

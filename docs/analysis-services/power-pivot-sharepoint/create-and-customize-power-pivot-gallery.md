@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Criar e personalizar a galeria do Power Pivot
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é um tipo especial de biblioteca de documentos do SharePoint que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -159,8 +158,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Consulte também  
  [Solução de problemas de instalação do Power Pivot para SharePoint](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
  [Usar a Galeria Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
- [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Criar um local confiável para sites do PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Excluir Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
-

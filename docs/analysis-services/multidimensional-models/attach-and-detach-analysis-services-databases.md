@@ -23,17 +23,16 @@ helpviewer_keywords:
 - databases [Analysis Services], attach
 - databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f7cc88be76e8ad64d81465543ab4f463c98687e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f4c193def48b92245c1e2f2955262d3fb0850957
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anexar e desanexar bancos de dados do Analysis Services
   Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deseja colocar o banco de dados offline em determinado período e colocá-lo online novamente na mesma instância do servidor ou em uma instância diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto. Para todos estes e outros casos, os comandos **Attach** e **Detach** permitem que o DBA do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] coloque o banco de dados offline e o coloque online novamente com o mínimo de esforço.  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   
   
-

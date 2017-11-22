@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Assembly Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Assembly Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Assembly data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d3c8d9ad46dd000a6a2ff6a6e89b656028771fdc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98d9240e9f0c8ff2ab4a655676beba08af24265d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="assembly-data-type-assl"></a>Tipo de dados Assembly (ASSL)
   Define um tipo de dados primitivo abstrato que representa um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly ou uma biblioteca de vínculo dinâmico (DLL) COM associado com um [servidor](../../../analysis-services/scripting/objects/server-element-assl.md) ou [banco de dados](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.  
@@ -77,9 +72,8 @@ ms.lasthandoff: 09/01/2017
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.Assembly>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Server & #40; ASSL & #41;](../../../analysis-services/scripting/objects/server-element-assl.md)   
- [Elemento de banco de dados & #40; ASSL & #41;](../../../analysis-services/scripting/objects/database-element-assl.md)   
- [Tipos de dados XML de linguagem de script & #40; do Analysis Services ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Elemento Server &#40; ASSL &#41;](../../../analysis-services/scripting/objects/server-element-assl.md)   
+ [Elemento de banco de dados &#40; ASSL &#41;](../../../analysis-services/scripting/objects/database-element-assl.md)   
+ [Tipos de dados XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

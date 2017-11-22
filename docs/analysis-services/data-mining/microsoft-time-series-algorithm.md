@@ -23,17 +23,16 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 48758d40983835289854223aa45399379f57341f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93df14efa013e5f8768db94184aaf2f4203a62ef
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
   O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) fornece algoritmos múltiplos que são otimizados para previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
@@ -169,4 +168,3 @@ ms.lasthandoff: 09/01/2017
  [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Procedure
-helpviewer_keywords:
-- Procedure object [ADOX]
+f1_keywords: Procedure
+helpviewer_keywords: Procedure object [ADOX]
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20e94b736a73378d5cabc189d56928e6ab0ed8d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 225a864f43c9da7d67de58482f632b914822bd1b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="procedure-object-adox"></a>Objeto de procedimento (ADOX)
 Representa um procedimento armazenado. Quando usado em conjunto com o ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto, o **procedimento** objeto pode ser usado para adicionar, excluir ou modificar procedimentos armazenados.  
@@ -54,4 +50,3 @@ Representa um procedimento armazenado. Quando usado em conjunto com o ADO [coman
  [Procedimentos de acrescentar o exemplo de método (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Procedimentos de exemplo de método (VB)-excluir](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
-

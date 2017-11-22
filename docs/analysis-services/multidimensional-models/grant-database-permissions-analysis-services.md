@@ -18,17 +18,16 @@ helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ae21903694c80a5f919374e4e367dc82b4cec09e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c58a338f700785bb338703c72e3b435a7aa22b94
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Conceder permissões de banco de dados (Analysis Services)
   Se você estiver acessando a administração de banco de dados do Analysis Services com experiência em bancos de dados relacionais, a primeira coisa que você precisa entender é que, em termos de acesso a dados, o banco de dados não é o principal objeto protegível no Analysis Services.  
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [Conceder permissões de processo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   
-

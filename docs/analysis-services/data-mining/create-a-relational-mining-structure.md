@@ -20,17 +20,16 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-relational-mining-structure"></a>Criar uma estrutura de mineração relacional
   A maioria dos modelos de mineração de dados são baseados em fontes de dados relacionais. As vantagens de criar um modelo de mineração de dados relacional são que você pode montar dados ad hoc, além de treinar e atualizar um modelo sem a complexidade de criar um cubo.  
@@ -141,4 +140,3 @@ ms.lasthandoff: 09/01/2017
  [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

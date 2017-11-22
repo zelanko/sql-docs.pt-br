@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - rowsets [Analysis Services], XML for Analysis
 - XML for Analysis, schema rowsets
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d0f3527abc7fcd12757b4fdc4abd02d97c79d2ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0c44abd2ba4be59a86b46a9b0ff74196c570e5e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
   O provedor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) inclui conjuntos de linhas de esquema que retornam metadados sobre estado de servidor, atividade e objetos. Recuperar metadados será necessário se você estiver desenvolvendo um aplicativo cliente que se conecta a um modelo do Analysis Services cujas características e estrutura sejam variáveis.  
@@ -86,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [Recuperando metadados de uma fonte de dados analíticos](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
-

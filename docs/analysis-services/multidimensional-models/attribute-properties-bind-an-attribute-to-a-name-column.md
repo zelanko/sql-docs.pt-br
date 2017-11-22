@@ -19,17 +19,16 @@ helpviewer_keywords:
 - name columns [Analysis Services]
 - attributes [Analysis Services], binding
 ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2866844f0004bc37c7bead147a88dbf009199495
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 16b5b9f2bcb04c11adae59f9b50f4611c157d604
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Propriedades de atributo - associar um atributo a uma coluna de nome
   Este procedimento descreve como associar um atributo manualmente a uma coluna de nome, usando o painel **Atributos** no Designer de Dimensão e usando a caixa de diálogo **Associação de Objetos** .  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 5.  Na lista **Coluna de origem** , selecione a coluna à qual o atributo será associado e clique em **OK**.  
   
   
-

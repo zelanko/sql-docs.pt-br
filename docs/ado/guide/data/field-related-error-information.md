@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - field-related errors [ADO]
 - errors [ADO], field-related
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d37d91f2b35cf211044f2ac1f2bf8705bbc1ef16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3a7609b4c4a0d67f1bade86c2e6ec3bb66b07553
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="field-related-error-information"></a>Informações de erro relacionada ao campo
 Se o erro está relacionado diretamente a um campo — por exemplo, se os dados estão ausentes ou se ele é do tipo errado para o campo — você pode recuperar mais informações sobre a causa do problema examinando o **campo** do objeto **Status**  propriedade. Essa propriedade foi aprimorada para fornecer informações específicas sobre o problema. Assim, por exemplo, quando uma chamada para **UpdateBatch** falhar, a causa do problema pode ser determinada examinando o **Status** propriedade o **campos** em cada uma da afetados registros. A propriedade conterá um dos valores a **FieldStatusEnum** constante. A tabela a seguir inclui os valores que são de interesse específico quando ocorre um erro.  
@@ -40,4 +38,3 @@ Se o erro está relacionado diretamente a um campo — por exemplo, se os dados 
 |**adFieldIntegrityViolation**|10|Indica que o campo não pode ser modificado porque é uma entidade calculada ou derivada.|  
 |**adFieldIsNull**|3|Indica que o provedor retornou um valor nulo.|  
 |**adFieldOutOfSpace**|22|Indica que o provedor não é possível obter o espaço de armazenamento suficiente para concluir a movimentação ou a operação de cópia.|
-

@@ -19,12 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 097c3ab1c0827b9dd64bdb13a3c88a33cb0411e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a904cc21ff035388a15b9f985b81ec006aead7e6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-samples"></a>Exemplos do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 09/01/2017
   Use as informações aqui para localizar bancos de dados de exemplo e projetos para ajudá-lo a conhecer e testar suas soluções do Analysis Services.
   
 
-## <a name="samples-on-github"></a>Amostras no GitHub
+## <a name="samples-on-github"></a>Exemplos no GitHub
 
 [Repositório do Git para o Analysis Services](https://github.com/Microsoft/Analysis-Services) inclui exemplos de código e projetos da comunidade.
 
@@ -51,4 +50,3 @@ Uma nova coleção de dados de exemplo Wide World Importers, foi introduzida par
 
   
   
-

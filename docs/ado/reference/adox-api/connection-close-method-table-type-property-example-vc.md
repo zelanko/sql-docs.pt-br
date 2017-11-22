@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Type property [ADOX], VC++ example
 - Close method [ADOX], VC++ example
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22ca4649d8cab1b34bdfdcf064091c8faea9033a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4744c7855635b389d850e3077e3169a427761048
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Método Close da Conexão, exemplo de propriedade do tipo de tabela (VC + +)
 Definindo o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriedade **nada** deve "Fechar" do catálogo. Coleções associadas estará vazias. Todos os objetos que foram criados a partir de objetos de esquema no catálogo serão órfão. As propriedades desses objetos que tiverem sido armazenados em cache ainda estará disponíveis, mas falhará ao tentar ler as propriedades que requerem uma chamada para o provedor.  
@@ -152,4 +149,3 @@ void CloseConnectionX() {
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: multidimensional-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dimensions [Analysis Services], browsing
 - browsing dimensions [Analysis Services]
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 12705a8050d395925dd5345802b9c6b11d9925b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4427b3ed725f091a1e01fa13ba8d6dbbb50e344d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Dimensões de banco de dados - procurar dados de dimensão no Designer de dimensão
   Você pode procurar dados em uma dimensão usando a exibição **Navegador** do Designer de Dimensão, acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensões em modelos multidimensionais](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
-

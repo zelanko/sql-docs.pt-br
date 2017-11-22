@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: fb3d67744b5616a031beee8ec3f329ed02f73c48
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c36c15a75929b0c758ab32fdf952c1e0aa034508
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lição 5-2-definir uma relação de fatos
 Algumas vezes, os usuários desejam dimensionar medidas por itens de dados que estão na tabela de fatos ou consultar a tabela de fatos em busca de informações relacionadas específicas, como, por exemplo, números de faturas ou de ordens de compra relacionados a determinados fatos de vendas. Ao definir uma dimensão com base em um item da tabela de fatos, a dimensão será chamada *dimensão de fatos*. As dimensões de fatos também são conhecidas como dimensões de degeneração. Elas são úteis para agrupar em conjunto as linhas de tabelas de fatos relacionadas, como, por exemplo, todas as linhas que estiverem relacionadas a um determinado número de fatura. Embora seja possível colocar essas informações em uma tabela de dimensões separada no banco de dados relacional, criar uma tabela de dimensões separada para essas informações não fornecerá benefício algum, pois a tabela de dimensões tende a aumentar na mesma proporção que a tabela de fatos, duplicando dados e tornando maior sua complexidade.  
@@ -136,4 +133,3 @@ Nas tarefas deste tópico, você adiciona uma nova dimensão de cubo com base na
   
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6b535c1eba06e7f023ef9a1f7b00476e7be39eb4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4763973d0ea4bf905b1c38ace337667c92186e3a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-data-access"></a>Acesso a dados de modelo de tabela
   Os bancos de dados modelo de tabela no Analysis Services podem ser acessados pela maioria dos mesmos clientes, interfaces e idiomas que você usa para recuperar dados ou metadados de um modelo multidimensional. Para obter mais informações, consulte [Acesso a dados de modelo multidimensional &#40;Analysis Services – dados multidimensionais 41](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -140,4 +139,3 @@ Você pode conectar-se a um modelo de banco de dados de tabela do Analysis Servi
  [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

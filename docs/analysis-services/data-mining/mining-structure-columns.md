@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 11ccfc309d772d3b26a5a0e72a77c094e2624282
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0bf7ffc6f8531385ef9100b3c104db887c2fb565
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-structure-columns"></a>Colunas da estrutura de mineração
   Você define as colunas em uma estrutura de mineração quando cria a estrutura de mineração, escolhendo colunas de dados externos e especificando como os dados serão usados na modelagem. Portanto, colunas de estrutura de mineração são mais do que cópias de dados de uma fonte de dados: elas definem como os dados da fonte serão usados pelo modelo de mineração. Você pode atribuir propriedades que determinam como os dados são discretizados, propriedades que descrevem como os valores de dados são distribuídos  
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ad436f2cfa5da5381ad683a1fc804468c5a40d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelas aninhadas (Analysis Services - Mineração de Dados)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os dados devem ser alimentados com um algoritmo de mineração de dados como uma série de casos contidos em uma tabela de casos. No entanto, nem todos os casos podem ser descritos por uma única linha de dados. Por exemplo, um caso pode ser derivado de duas tabelas: uma contendo informações sobre o cliente e outra as compras do cliente. Um único cliente na tabela de informações de clientes pode ter vários itens na tabela de compras do cliente, o que dificulta a descrição dos dados em uma única linha. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um método exclusivo para tratar desses casos, com o uso de *tabelas aninhadas*. O conceito de uma tabela aninhada é demonstrado na ilustração a seguir.  
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   
-
