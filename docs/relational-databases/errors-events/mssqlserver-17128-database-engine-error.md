@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17128 (Database Engine error)
+helpviewer_keywords: 17128 (Database Engine error)
 ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4cb960b5da644f114fee64ead0e122915000ba9
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 10284d4192b05ff7fac278e5a02e33384982517f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,4 +44,3 @@ Ocorreu uma falha nas alocações ou reservas de memória iniciais do pool de bu
 ## <a name="user-action"></a>Ação do usuário  
 Isso geralmente ocorre ao iniciar o SQL Server em um computador extremamente pequeno – bem menor que os requisitos mínimos de sistema.  
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5d89fd1ad109ab0017b49dd9993aa3cafec85d15
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 2d618b486f61f2e25a221517eb0efdaed70f582d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-json-data"></a>Indexar dados JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +37,7 @@ No SQL Server 2016, o JSON não é um tipo de dados interno e o SQL Server não 
 Ao armazenar dados JSON no SQL Server, normalmente é útil filtrar ou classificar resultados de consulta pelas *propriedades* dos documentos JSON.  
 
 ### <a name="example"></a>Exemplo 
-Neste exemplo, suponha que a tabela `SalesOrderHeader` do AdventureWorks tem uma coluna `Info` que contém várias informações em formato JSON sobre pedidos de venda. Por exemplo, ela contém informações sobre cliente, vendedor, endereços de envio e de cobrança e assim por diante. Você deseja usar os valores da coluna `Info` para filtrar os pedidos de venda para um cliente.
+Neste exemplo, suponha que a tabela `SalesOrderHeader` do AdventureWorks tem uma coluna `Info` que contém várias informações em formato JSON sobre pedidos de venda. Por exemplo, ele contém informações sobre o cliente, vendedor, endereços de envio e de cobrança e assim por diante. Você deseja usar os valores da coluna `Info` para filtrar os pedidos de venda para um cliente.
 
 ### <a name="query-to-optimize"></a>Consulta para otimizar
 Veja um exemplo do tipo de consulta que você deseja otimizar usando um índice.  
@@ -72,14 +70,14 @@ A coluna computada não é persistente. Ela é computada apenas quando o índice
   
 É importante criar a coluna computada com a mesma expressão que você planeja usar em suas consultas – neste exemplo, a expressão é `JSON_VALUE(Info, '$.Customer.Name')`.  
   
-Não é preciso reescrever as consultas. Se você usar expressões com a função `JSON_VALUE`, como mostrado na consulta de exemplo acima, o SQL Server observará que há um equivalente da coluna computada com a mesma expressão e aplicará um índice, se possível.
+Não é preciso reescrever as consultas. Se você usar expressões com a função `JSON_VALUE`, como mostrado na consulta de exemplo acima, o SQL Server observa que há um equivalente da coluna computada com a mesma expressão e aplica um índice, se possível.
 
 ### <a name="execution-plan-for-this-example"></a>Plano de execução para este exemplo
 Este é o plano de execução para a consulta no exemplo.  
   
 ![Plano de execução](../../relational-databases/json/media/jsonindexblog1.png "Plano de execução")  
   
-Em vez de uma verificação completa, o SQL Server usa uma busca de índice no índice não clusterizado e localiza as linhas que atendem às condições especificadas. Em seguida, ele usa uma pesquisa de chave na tabela `SalesOrderHeader` para buscar outras colunas referenciadas na consulta – neste exemplo, `SalesOrderNumber` e `OrderDate`.  
+Em vez de uma verificação completa, o SQL Server usa uma busca de índice no índice não clusterizado e localiza as linhas que atendem às condições especificadas. Em seguida, ele usa uma pesquisa de chave na tabela `SalesOrderHeader` para buscar outras colunas referenciadas na consulta — neste exemplo, `SalesOrderNumber` e `OrderDate`.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Otimizar ainda mais o índice com colunas incluídas
 Você pode evitar essa pesquisa adicional na tabela se adicionar as colunas necessárias ao índice. É possível adicionar essas colunas como colunas incluídas padrão, conforme mostrado no exemplo a seguir, que expande o exemplo `CREATE INDEX` mostrado acima.  
@@ -93,7 +91,7 @@ INCLUDE(SalesOrderNumber,OrderDate)
 Nesse caso, o SQL Server não precisa ler dados adicionais da tabela `SalesOrderHeader`, pois tudo que ele precisa está incluído no índice JSON não clusterizado. Essa é uma boa maneira de combinar dados JSON e de colunas em consultas e criar índices otimizados para sua carga de trabalho.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>Os índices JSON são índices com reconhecimento de agrupamento  
-Um recurso importante dos índices sobre dados JSON é que os índices têm reconhecimento de agrupamento. O resultado da função `JSON_VALUE` usada ao criar uma coluna computada é um valor de texto que herda seu agrupamento da expressão de entrada. Portanto, os valores no índice são ordenados usando as regras de agrupamento definidas nas colunas de origem.  
+Um recurso importante do índices sobre dados JSON é que os índices têm reconhecimento de agrupamento. O resultado da função `JSON_VALUE` usada ao criar uma coluna computada é um valor de texto que herda seu agrupamento da expressão de entrada. Portanto, os valores no índice são ordenados usando as regras de agrupamento definidas nas colunas de origem.  
   
 Para demonstrar isso, o exemplo a seguir cria uma tabela de agrupamento simples com uma chave primária e conteúdo JSON.  
   
@@ -149,12 +147,11 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Embora a consulta tenha uma cláusula `ORDER BY`, o plano de execução não usa um operador Sort. O índice JSON já é ordenado de acordo com a regras do Sérvio Cirílico. Portanto, o SQL Server pode usar o índice não clusterizado nos quais os resultados já estão classificados.  
   
- No entanto, se alterarmos o agrupamento da expressão `ORDER BY` (por exemplo, se colocarmos `COLLATE French_100_CI_AS_SC` após a função `JSON_VALUE`), obteremos um plano de execução de consulta diferente.  
+ No entanto, se alterarmos o agrupamento da expressão `ORDER BY` (por exemplo, se colocarmos `COLLATE French_100_CI_AS_SC` após a função `JSON_VALUE`), obtemos um plano de execução de consulta diferente.  
   
  ![Plano de execução](../../relational-databases/json/media/jsonindexblog3.png "Plano de execução")  
   
  Como a ordem dos valores no índice não segue as regras de agrupamento do Francês, o SQL Server não pode usar o índice para ordenar os resultados. Portanto, ele adiciona um operador Sor que classifica os resultados usando as regras de agrupamento do Francês.  
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Saiba mais sobre o suporte interno a JSON no SQL Server  
-Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure, publicadas por Jovan Popovic, gerente de programas da Microsoft.
-
+Para ver várias soluções específicas, casos de uso e recomendações, consulte as [postagens no blog sobre o suporte interno a JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) no SQL Server e no Banco de Dados SQL do Azure por Jovan Popovic, gerente de programas da Microsoft.

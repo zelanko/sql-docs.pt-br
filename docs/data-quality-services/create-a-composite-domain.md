@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cd7202378a76fb0de0552685343fc681f39ea4bb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-a-composite-domain"></a>Criar um domínio composto
   Este tópico descreve como criar um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em um ou mais domínios únicos que se aplicam a um campo de dados único. Para obter mais informações sobre domínios de composição, consulte [Gerenciando um domínio de composição](../data-quality-services/managing-a-composite-domain.md).  
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Verifique se a coluna de origem contém o domínio composto endereçado por dois domínios únicos existentes. Se não existir nenhum domínio único correspondente, clique no ícone **Criar um Domínio** .  
   
-6.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Verifique se a coluna de origem contém as partes do domínio composto que são endereçadas por dois domínios únicos existentes. Se não existir nenhum domínio único correspondente, clique no ícone **Criar um Domínio** para criá-los. Para obter mais informações, consulte [Create a Domain](../data-quality-services/create-a-domain.md).  
+6.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Verifique se a coluna de origem contém as partes do domínio composto que são endereçadas por dois domínios únicos existentes. Se não existir nenhum domínio único correspondente, clique no ícone **Criar um Domínio** para criá-los. Para obter mais informações, consulte [Criar um domínio](../data-quality-services/create-a-domain.md).  
   
 7.  Clique no ícone **Criar um Domínio Composto** .  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  Selecione **Gerenciamento de Domínio** como a atividade e clique em **Criar** para criar a nova base de dados de conhecimento ou em **Abrir** para abrir uma base de dados de conhecimento existente.  
   
-3.  Verifique se existem dois ou mais domínios únicos necessários para o domínio composto. Se não existirem, clique no ícone **Criar um Domínio** e crie-os. Para obter mais informações, consulte [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  Verifique se existem dois ou mais domínios únicos necessários para o domínio composto. Se não existirem, clique no ícone **Criar um Domínio** e crie-os. Para obter mais informações, consulte [Criar um domínio](../data-quality-services/create-a-domain.md).  
   
 4.  Na página **Gerenciamento de Domínio** , clique no ícone **Criar um Domínio Composto** acima da lista de domínios.  
   
@@ -110,4 +108,3 @@ ms.lasthandoff: 09/09/2017
  Quando você está usando a análise baseada em conhecimento e há menos valores na fonte de dados do que domínios no domínio composto, o DQS coloca um valor nulo no domínio ausente. Quando há mais valores na fonte de dados do que domínios no domínio composto, o DQS adicionará os dados extras a uma das colunas. Se dois ou mais domínios contiverem os mesmos valores, a fonte de dados será analisada como o primeiro domínio correspondente.  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5d39865f0c5bf683e83cea2f85fb365f0fc9da2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Benefícios do custo: pague apenas pelo serviço utilizado. Pode ser tão econômico quanto uma opção de arquivamento externo e de backup. Consulte a seção [Considerações sobre cobrança do Microsoft Azure](#Billing) para obter mais informações e links.  
   
-##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
+##  <a name="Billing"></a> Considerações sobre cobrança do Microsoft Azure:  
  Compreender os custos de armazenamento do Microsoft Azure habilita você a fazer uma previsão do custo da criação e do armazenamento de backups no Microsoft Azure.  
   
  A [calculadora de preços do Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=277060) pode ajudar a estimar os custos.  
@@ -80,4 +78,3 @@ ms.lasthandoff: 06/22/2017
 [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
-

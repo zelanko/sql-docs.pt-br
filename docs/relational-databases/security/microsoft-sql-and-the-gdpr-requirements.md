@@ -11,16 +11,15 @@ ms.suite: sql
 ms.technology: sql-security
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: barbkess
 ms.author: ronitr
 manager: craigg
+ms.openlocfilehash: a98e19f8bea8b8a1d1679cee6bb7a86215c48450
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: d533818e9498237316dabc08fc538caa2ac31c63
-ms.openlocfilehash: f236ff85204ba08e8c02d5e680a4de43f021b9aa
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Guia para aprimorar a privacidade e atender aos requisitos de GDPR com a plataforma Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,4 +41,3 @@ As tecnologias da Microsoft baseadas em SQL oferecem vários recursos de seguran
 **Aplica-se a:** SQL Server (todas as versões), Banco de Dados SQL do Azure, SQL Data Warehouse do Azure, Analytics Platform System 
   
 Para ler o documento, baixe o [Guia para aprimorar a privacidade e atender aos requisitos de GDPR com a plataforma Microsoft SQL](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf).   
-
