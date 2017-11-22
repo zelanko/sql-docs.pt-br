@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 27db4b8c5ee5ca748ab02f03b10c9bfd6455b105
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96053eaff28d6c9c7954786c65e53ade429aa92c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-browser-service"></a>Serviço Navegador do SQL Server
-  O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O browser contribui para as seguintes ações:  
+  O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser contribui para as seguintes ações:  
   
 -   Navegando em uma lista de servidores disponíveis  
   
@@ -39,9 +37,9 @@ ms.lasthandoff: 08/02/2017
   
 -   Conectando-se aos pontos de extremidade da conexão de administrador dedicada (DAC)  
   
- Para cada instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssAS](../../includes/ssas-md.md)], o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlbrowser) fornece o nome da instância e o número da versão. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é instalado com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para cada instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssAS](../../includes/ssas-md.md)], o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlbrowser) fornece o nome da instância e o número da versão. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser é instalado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser pode ser configurado durante a instalação ou usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Configuration Manager. Por padrão, o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado automaticamente:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser pode ser configurado durante a instalação ou por meio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Por padrão, o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado automaticamente:  
   
 -   Quando uma instalação é atualizada.  
   
@@ -52,14 +50,14 @@ ms.lasthandoff: 08/02/2017
 -   Quando uma instância nomeada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]é instalada.  
   
 ## <a name="background"></a>Plano de fundo  
- Antes do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], somente uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia ser instalada em um computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ouviu as solicitações de entrada na porta 1433, atribuídas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo oficial Internet atribuídos Numbers Authority (IANA). Apenas uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar uma porta; por isso, quando o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] introduziu suporte para várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o protocolo SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) foi desenvolvido para escutar na porta UDP 1434. Esse serviço de escuta respondia a solicitações de clientes com o nome das instâncias instaladas e as portas ou pipes nomeados utilizados pela instância. Para resolver as limitações de sistema do SSRP, o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um substituto para o SSRP.  
+ Antes do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], somente uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia ser instalada em um computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ouviu as solicitações de entrada na porta 1433, atribuídas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela IANA (Internet Assigned Numbers Authority) oficial. Apenas uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar uma porta; por isso, quando o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] introduziu suporte para várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o protocolo SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) foi desenvolvido para escutar na porta UDP 1434. Esse serviço de escuta respondia a solicitações de clientes com o nome das instâncias instaladas e as portas ou pipes nomeados utilizados pela instância. Para resolver as limitações de sistema do SSRP, o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um substituto para o SSRP.  
   
 ## <a name="how-sql-server-browser-works"></a>Como funciona o SQL Server Browser  
  Quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for iniciada, se o protocolo TCP/IP estiver habilitado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será atribuída uma porta TCP/IP ao servidor. Se o protocolo Pipes Nomeados estiver habilitado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escutará um determinado pipe nomeado. Essa porta, ou "pipe", será utilizado por aquela instância específica para trocar dados com os aplicativos clientes. Durante a instalação, a porta 1433 no TCP e o pipe `\sql\query` são atribuídos à instância padrão, mas esses podem ser alterados posteriormente pelo administrador de servidor usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Devido a apenas uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poder usar uma porta ou um pipe, diferentes números de porta e nomes de pipe são atribuídos a instâncias nomeadas, inclusive o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Por padrão, quando habilitado, ambas as instâncias nomeadas e o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] são configurados para usar portas dinâmicas, ou seja, será atribuída uma porta disponível quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for iniciado. Se você desejar, pode-se atribuir uma porta específica a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao se conectar, os clientes podem determinar uma porta específica, mas se a porta for atribuída dinamicamente, o número da porta poderá ser alterado a qualquer momento em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for reinicializado. Portanto, o número correto da porta será desconhecido para o cliente.  
   
- Na inicialização, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado e reivindica a porta UDP 1434. O Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lê o Registro, identifica todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existentes no computador e anota as portas e os pipes nomeados utilizados. Quando um servidor tiver dois ou mais cartões de rede, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará para a primeira porta habilitada que encontrar do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao IPv6 e ao IPv4.  
+ Na inicialização, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado e reivindica a porta UDP 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser lê o Registro, identifica todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador e anota as portas e os pipes nomeados utilizados. Quando um servidor tiver dois ou mais cartões de rede, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará para a primeira porta habilitada que encontrar do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser dá suporte ao IPv6 e IPv4.  
   
- Quando clientes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitam recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a biblioteca de rede do cliente envia uma mensagem UDP para o servidor utilizando a porta 1434. O Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] responde com a porta TCP/IP ou o pipe nomeado da instância solicitada. Em seguida, a biblioteca de rede no aplicativo cliente completa a conexão, enviando uma solicitação ao servidor utilizando a porta ou o pipe nomeado da instância desejada.  
+ Quando clientes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitam recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a biblioteca de rede do cliente envia uma mensagem UDP para o servidor utilizando a porta 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser responde com a porta TCP/IP ou o pipe nomeado da instância solicitada. Em seguida, a biblioteca de rede no aplicativo cliente completa a conexão, enviando uma solicitação ao servidor utilizando a porta ou o pipe nomeado da instância desejada.  
   
  Para obter informações sobre como iniciar e interromper o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 08/02/2017
 -   A porta que você escolhe para cada instância pode ser utilizada por outro serviço ou aplicativo no servidor, tornando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indisponível.  
   
 ## <a name="clustering"></a>Clustering  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Navegador não é um recurso de cluster e não oferece suporte a failover de um nó de cluster para outro. Portanto, no caso de um cluster, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser instalado e ativado para cada nó do cluster. Em clusters, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta em IP_ANY.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser não é um recurso clusterizado e não dá suporte ao failover de um nó de cluster para outro. Portanto, no caso de um cluster, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser instalado e ativado para cada nó do cluster. Em clusters, o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta em IP_ANY.  
   
 > [!NOTE]  
 >  Quando escutar em IP_ANY e habilitar a escuta em IPs específicos, o usuário deverá configurar a mesma porta do TCP em cada IP, pois o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna ao primeiro par de IP/porta que ele encontrar.  
@@ -97,7 +95,7 @@ ms.lasthandoff: 08/02/2017
   
  O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será desinstalado quando a última instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for removida.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Navegador pode ser iniciado no prompt de comando para solução de problemas, usando o **- c** alternar:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser pode ser iniciado no prompt de comando para a solução de problemas por meio da opção **-c** :  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
@@ -106,7 +104,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="security"></a>Segurança  
   
 ### <a name="account-privileges"></a>Privilégios da conta  
- O Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta em uma porta UDP e aceita as solicitações não autenticadas usando SSRP ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Navegador deve ser executado no contexto de segurança de um usuário com privilégios baixos para minimizar exposição a um ataque mal-intencionado. A conta de logon pode ser alterada com o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os direitos mínimos do usuário para o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são os seguintes:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser escuta em uma porta UDP e aceita as solicitações não autenticadas usando o protocolo SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser deve ser executado no contexto de segurança de um usuário com privilégios baixos para minimizar exposição a um ataque mal-intencionado. A conta de logon pode ser alterada com o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os direitos mínimos do usuário para o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são os seguintes:  
   
 -   Negar acesso a este computador pela rede  
   
@@ -139,4 +137,3 @@ ms.lasthandoff: 08/02/2017
  [Protocolos de rede e bibliotecas de rede](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   
-

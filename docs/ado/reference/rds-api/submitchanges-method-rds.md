@@ -1,8 +1,7 @@
 ---
 title: "Método SubmitChanges (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- SubmitChanges method [ADO]
+helpviewer_keywords: SubmitChanges method [ADO]
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2d7015e1a668697a12c373904c0bd71e22108449
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce476afad98f812c7622d55ee9bfe80ce919ae9b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
 Envia as alterações de localmente em cache e atualizáveis pendentes [registros](../../../ado/reference/ado-api/recordset-object-ado.md) à fonte de dados especificado no [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propriedade ou o [URL](../../../ado/reference/rds-api/url-property-rds.md) propriedade.  
@@ -73,7 +70,6 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  [Botões de comando do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Método CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Método Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
-
 
 
 

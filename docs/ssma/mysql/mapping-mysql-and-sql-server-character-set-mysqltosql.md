@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1145e4168e41f2014b95e7315a17dd00d764c386
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapeamento de caracteres do SQL Server e MySQL definido (MySQLToSQL)
 Conjunto de caracteres (Charset) pode ser especificado para tipos de dados MySQL, expressões e literais.  
@@ -143,4 +141,3 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
 > -   No mapeamento de conjunto de caracteres entre o banco de dados MySQL e o banco de dados de destino no banco de dados, categorias e níveis de nó de objeto, os valores padrão para um determinado conjunto de caracteres em cada nível diferente de raiz para a coluna **tipo de dados de destino** deve ser 'herdada'.  
 > -   Na grade, o valor **herdadas** é o sufixo com o '(CHAR/VARCHAR)' ou '(NCHAR/NVARCHAR)' dependendo de qual valor foi herdado do pai, esse conjunto de caracteres específico.  
   
-

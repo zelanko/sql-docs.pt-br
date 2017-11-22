@@ -5,21 +5,18 @@ ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
 ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/21/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="native-scoring"></a>Nativo de pontuação
 
 Este tópico descreve os recursos do SQL Server 2017 que fornecem a pontuação em modelos de aprendizado de máquina em tempo quase real.
@@ -119,4 +116,3 @@ Não há suporte para os seguintes tipos de modelo:
 + Modelos PMML
 + Modelos criados usando outras bibliotecas de R de CRAN ou outros repositórios
 + Modelos que contêm qualquer outra transformação de R
-

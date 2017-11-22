@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 81a3c4860c3916753435e2b5c608628650bae255
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40e18de9f96f69472fc3fb7b8720a0abdb27d2fb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Projeto Settings(Synchronization) (OracleToSQL)
 A página de sincronização do **configurações de projeto** caixa de diálogo contém configurações que personalizam o SSMA carrega e atualizações de banco de dados objetos, como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -103,4 +101,3 @@ Especifica a configuração padrão na caixa de diálogo de sincronização quan
   
 -   Se você selecionar **ignorar**, SSMA não executará qualquer ação de atualização.  
   
-

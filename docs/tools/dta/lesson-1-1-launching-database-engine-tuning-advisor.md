@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - tuning databases [SQL Server]
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 427cfbba4191f70541e47d3082c34fa185d92598
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bf2e8cae039c323c9eb8ebd03a0370d171b789f0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Lição 1-1-Iniciando o orientador de otimização do mecanismo de banco de dados
 Para começar, abra a GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados. Ao usá-lo pela primeira vez, um membro da função de servidor fixa **sysadmin** deve iniciar o Orientador de Otimização do Mecanismo de Banco de Dados para inicializar o aplicativo. Após a inicialização, os membros da função de banco de dados fixa **db_owner** podem usar o Orientador de Otimização do Mecanismo de Banco de Dados para ajustar seus bancos de dados. Para obter mais informações sobre como inicializar o Orientador de Otimização do Mecanismo de Banco de Dados, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -50,11 +47,10 @@ Dois painéis principais são exibidos na GUI do Orientador de Otimização do M
 -   O painel direito contém as guias **Geral** e **Opções de Ajuste** . É aí que você pode definir sua sessão de Otimização do Mecanismo de Banco de Dados. Na guia **Geral** , você digita o nome de sua sessão de ajuste, especifica o arquivo de carga de trabalho ou tabela a ser usada e seleciona os bancos de dados e tabelas que deseja ajustar nesta sessão. A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um ou mais bancos de dados a serem ajustados. O Orientador de Otimização do Mecanismo de Banco de Dados utiliza arquivos de rastreamento, tabelas de rastreamento, scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] ou arquivos XML como entrada de carga de trabalho ao ajustar bancos de dados. Na guia **Opções de Ajuste** , você pode selecionar as estruturas de design de banco de dados físicas (índices ou exibições indexadas) e a estratégia de particionamento que deseja que o Orientador de Otimização do Mecanismo de Banco de Dados considere durante a análise. Nessa guia, você pode especificar também o tempo máximo que o Orientador de Otimização do Mecanismo de Banco de Dados leva para ajustar uma carga de trabalho. Por padrão, o Orientador de Otimização do Mecanismo de Banco de Dados ajustará uma carga de trabalho durante uma hora.  
   
 > [!NOTE]  
-> Orientador de otimização do mecanismo de banco de dados pode adotar arquivos XML como entrada quando um [!INCLUDE[tsql](../../includes/tsql-md.md)] script é importado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas. Para obter mais informações, consulte a seção sobre como iniciar o Orientador de Otimização do Mecanismo de Banco de Dados no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+> O Orientador de Otimização do Mecanismo de Banco de Dados pode usar arquivos XML como entrada quando um script [!INCLUDE[tsql](../../includes/tsql-md.md)] é importado do Editor de Consultas do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Para obter mais informações, consulte a seção sobre como iniciar o Orientador de Otimização do Mecanismo de Banco de Dados no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Layout e opções da ferramenta de configuração](../../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)  
+[Definindo o layout e opções de ferramentas](../../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)  
   
   
   
-

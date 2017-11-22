@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3871ac3aa30e788841b0fef27d4134640aac5ad4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8bc9bde868aa615c2e78ace576394a9d1f782e3e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Mapeamento de origem e bancos de dados de destino (AccessToSQL)
 Quando você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, é necessário especificar um banco de dados de destino para migração. Se você tiver vários bancos de dados do Access mapeá-los a vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bancos de dados (ou esquemas) ou para vários esquemas no banco de dados do SQL Azure conectado.  
@@ -81,4 +79,3 @@ A próxima etapa no processo de migração é [converter objetos de banco de dad
 ## <a name="see-also"></a>Consulte também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 051a60047bc6d8485d6bd82f6f661962e8deb192
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6edfe4c2058b840f8757c49a0b3f2df80122553c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Novos recursos de interface gráfica do usuário do SSMA para Oracle (OracleToSQL)
 Este capítulo descreve novos recursos da Interface de usuário do SSMA.  
@@ -129,4 +127,3 @@ Você pode executar a pesquisa de texto rápida usando os seguintes recursos:
 ### <a name="advanced-search"></a>Pesquisa avançada  
 Para abrir a caixa de diálogo de pesquisa avançada, no menu Editar ponto localizar, em seguida, clique em pesquisa avançada. Na caixa de diálogo, você poderá encontrar qualquer objeto usando o padrão. Na parte superior da caixa de diálogo, você pode escolher categorias de objeto e de área de pesquisa.  
   
-

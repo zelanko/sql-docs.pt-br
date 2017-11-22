@@ -5,22 +5,20 @@ ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2fb02e5c71ae74afb4dd48e6a02e36a1c7dce9b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 346dd5d2153a9a318e7bc68d73283278b3a13512
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Visão geral da arquitetura de R no SQL Server
 
@@ -58,9 +56,8 @@ Dados são mantidos dentro do limite de conformidade com a imposição da segura
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Componentes que dão suporte a integração do R](new-components-in-sql-server-to-support-r.md)
+[Componentes que dão suporte à integração de R](new-components-in-sql-server-to-support-r.md)
 
 [Interoperabilidade de R](r-interoperability-in-sql-server.md)
 
 [Visão geral de segurança](security-overview-sql-server-r.md)
-
