@@ -8,8 +8,7 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Invoke-PolicyEvaluation
 - PowerShell [SQL Server], Invoke-PolicyEvaluation
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5adc3571b07e3613514525f286241add73af1a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b06de61335e318438f4e75e694de7c0eb3521bc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
   O**Invoke-PolicyEvaluation** é um cmdlet do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que relata se um conjunto de objetos SQL Server de destino é compatível com as condições especificadas em uma ou mais políticas do Gerenciamento Baseado em Políticas.  
@@ -92,7 +90,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>Especificando o conjunto de destino  
  Use três parâmetros para especificar o conjunto de objetos de destino:  
   
--   O**-TargetServerName** especifica a instância do SQL Server que contém os objetos de destino. Você pode especificar as informações em uma cadeia de caracteres que use o formato definido para a propriedade ConnectionString da classe <xref:System.Data.SqlClient.SqlConnection>. Você pode usar a classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar uma cadeia de conexão formatada corretamente. Você também pode criar um objeto <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> e passá-lo para **-TargetServer**. Se você fornecer uma cadeia de caracteres que tenha apenas o nome do servidor, **Invoke-PolicyEvaluation** usará a Autenticação do Windows para se conectar ao servidor.  
+-   O**-TargetServerName** especifica a instância do SQL Server que contém os objetos de destino. Você pode especificar as informações em uma cadeia de caracteres que use o formato definido para a propriedade ConnectionString da classe <xref:System.Data.SqlClient.SqlConnection> . Você pode usar a classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar uma cadeia de conexão formatada corretamente. Você pode criar também um objeto <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> e transmiti-lo para **-TargetServer**. Se você fornecer uma cadeia de caracteres que tenha apenas o nome do servidor, **Invoke-PolicyEvaluation** usará a Autenticação do Windows para se conectar ao servidor.  
   
 -   O**-TargetObjects** utiliza um objeto ou uma matriz de objetos que representam os objetos SQL Server no conjunto de destino. Por exemplo, você pode criar uma matriz de objetos da classe <xref:Microsoft.SqlServer.Management.Smo.Database> para transmitir para **-TargetObjects**.  
   
@@ -148,4 +146,3 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
  [Usar cmdlets do Mecanismo de Banco de Dados](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
   
   
-

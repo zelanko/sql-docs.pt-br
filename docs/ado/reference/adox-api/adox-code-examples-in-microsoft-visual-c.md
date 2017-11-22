@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- ADOX code examples, Visual C++
+dev_langs: C++
+helpviewer_keywords: ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dcf0e1bd104d8ecb986bb5e854f17de3d8779fd7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cae03e9ba39212f0a8052089befd3874b08d0267
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Exemplos de código ADOX no Microsoft Visual C++
 Estes tópicos fornecem código de exemplo para ajudá-lo a entender como usar ADOX. Todos os exemplos de código são gravados usando o Microsoft Visual C++.  
@@ -88,4 +84,3 @@ Estes tópicos fornecem código de exemplo para ajudá-lo a entender como usar A
 ## <a name="collections"></a>Coleções  
   
 -   [Exemplos da propriedade Command, coleção Parameters (VC++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)
-

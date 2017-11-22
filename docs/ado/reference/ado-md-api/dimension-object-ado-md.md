@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Dimension
-helpviewer_keywords:
-- Dimension object [ADO MD]
+f1_keywords: Dimension
+helpviewer_keywords: Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b8b166484928abbeba70934d5b597c7e27d41f1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad282fee080d57546335029eceff5475fe6aecc1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimension-object-ado-md"></a>Objeto de dimensão (ADO MD)
 Representa uma das dimensões de um cubo multidimensional, que contém uma ou mais hierarquias de membros.  
@@ -49,7 +45,7 @@ Representa uma das dimensões de um cubo multidimensional, que contém uma ou ma
 |Nome|Description|  
 |----------|-----------------|  
 |CatalogName|O nome do catálogo ao qual pertence este cubo.|  
-|Nome do cubo|O nome do cubo.|  
+|CubeName|O nome do cubo.|  
 |DefaultHierarchy|O nome exclusivo da hierarquia padrão.|  
 |Description|Uma descrição significativa do cubo.|  
 |DimensionCaption|Um rótulo ou legenda associada à dimensão.|  
@@ -71,4 +67,3 @@ Representa uma das dimensões de um cubo multidimensional, que contém uma ou ma
  [Coleção de dimensões (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Coleção hierarquias (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

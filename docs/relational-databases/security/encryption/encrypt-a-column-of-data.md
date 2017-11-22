@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 24b6bdbb36bafdcc0fcd7899a93d652a99b9c4c2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
-ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 07/31/2017
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
 
-Para usar os exemplos a seguir, você precisa ter uma chave mestra de banco de dados. Se o seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie uma executando a seguinte instrução e fornecendo sua senha:   
+Para usar os exemplos a seguir, você precisa ter uma chave mestra de banco de dados. Se seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie uma executando a instrução a seguir e fornecendo sua senha:   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
@@ -193,4 +191,3 @@ Sempre faça backup da chave mestra do seu banco de dados. Para obter mais infor
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- permissions [SQL Server], getting started
+helpviewer_keywords: permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ff03a1d00fc6cd1972ecb1d5915882287f372a5f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -169,7 +166,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 [![Permissões do Mecanismo de Banco de Dados](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
  
- Para conferir um gráfico mostrando as relações entre as entidades de segurança [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o servidor e os objetos de banco de dados, consulte [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
+ Para conferir um gráfico mostrando as relações entre as entidades [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o servidor e objetos de banco de dados, consulte [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>Permissões versus Funções fixas de banco de dados e de servidor  
  As permissões das funções fixas de servidor e de banco de dados são semelhantes, mas não são exatamente as mesmas que as permissões granulares. Por exemplo, membros da função de servidor fixa `sysadmin` têm todas as permissões na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], assim como os logons com a permissão `CONTROL SERVER` . Mas a concessão da permissão `CONTROL SERVER` não torna um logon membro da função de servidor fixa sysadmin e a adição de um logon à função de servidor fixa `sysadmin` não concede explicitamente ao logon a permissão `CONTROL SERVER`. Às vezes, um procedimento armazenado verificará as permissões consultando a função fixa e não verificando a permissão granular. Por exemplo, desanexar um banco de dados exige a associação à função de banco de dados fixa `db_owner` . A permissão `CONTROL DATABASE` equivalente não é suficiente. Esses dois sistemas operam em paralelo, mas raramente interagem entre si. A Microsoft recomenda, sempre que possível, o uso do sistema de permissão granular mais recente em vez das funções fixas.
@@ -250,4 +247,3 @@ JOIN sys.database_principals AS dRole
  [Determinando permissões eficientes do Mecanismo de Banco de Dados](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
-

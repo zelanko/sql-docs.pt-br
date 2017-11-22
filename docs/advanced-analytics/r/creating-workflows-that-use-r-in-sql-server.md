@@ -1,27 +1,24 @@
 ---
 title: Criando fluxos de trabalho de BI com R | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 177242eadd1883e4f6c9de0893dc805c4312c36f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98baa7b40a232f21c5be51dff3806217cd73139b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-bi-workflows-with-r"></a>Criando fluxos de trabalho de BI com R
 
@@ -95,4 +92,3 @@ Este projeto CodePlex fornece o código para ajudar você a criar um item de rel
 
 > [!NOTE]
 > Para este exemplo, o código que oferece suporte ao dispositivo de gráficos de R para o Reporting Services deve ser instalado no servidor do Reporting Services, bem como no Visual Studio. Também são necessárias a compilação e a configuração manuais.
-

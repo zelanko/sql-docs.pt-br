@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - drivers [ODBC], about ODBC drivers
 - ODBC drivers [ODBC]
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 40499191233e8b3eb32f6a255c0dfe6e47864681
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc420275f9d88108e22beae1264ad61050cca2c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Drivers ODBC fornecidos pela Microsoft
 *Drivers* bibliotecas que implementam as funções da API do ODBC. Cada driver é específico para um sistema de gerenciamento de banco de dados (DBMS). Na maioria dos casos, os drivers de exponham os recursos do DBMS subjacente; eles não são necessários para implementar recursos não suportados pelo DBMS. Executar tarefas específicas de drivers e podem ser classificados em duas categorias: baseados em DBMS e arquivo. Para obter mais informações sobre a arquitetura do driver e drivers, consulte [Drivers](../../odbc/reference/drivers.md).  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 -   [Driver ODBC para Oracle](../../odbc/microsoft/odbc-driver-for-oracle.md)  
   
 -   [Driver ODBC do Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md)
-

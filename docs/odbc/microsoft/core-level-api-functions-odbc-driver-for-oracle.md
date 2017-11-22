@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7dd288a2b2c95f19c2e2a472bc5875971c9df312
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funções de API de nível de núcleo (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -45,7 +43,7 @@ ms.lasthandoff: 09/09/2017
 |**SQLCancel**|Cancela o processamento em um identificador de instrução, hstmt. Em alguns casos, o Oracle não permite o cancelamento de uma instrução em execução. Isso significa que uma instrução em execução continuará até que o Oracle conclui o processo, em que os resultados das instruções são cancelados pelo Driver ODBC para Oracle.|  
 |**SQLColAttributes**|Retorna informações de descritor para uma coluna em um conjunto de resultados. Informações do descritor são retornadas como uma cadeia de caracteres, um valor de descritor dependente de 32 bits ou um valor inteiro.|  
 |**SQLConnect**|Conecta-se a uma fonte de dados. Para usar a autenticação de sistema operacional do Oracle, especifique "/" como o *szUID* parâmetro e "" como o *szAuthStr* parâmetro.|  
-|**SQLDescribeCol**|Retorna o nome, tipo, precisão, escala e nulidade da coluna de resultados fornecido. **Observação:****SQLDescribeCol** reporta colunas calculadas como SQL_VARCHAR.  |  
+|**SQLDescribeCol**|Retorna o nome, tipo, precisão, escala e nulidade da coluna de resultados fornecido. **Observação:****SQLDescribeCol** reporta colunas calculadas como SQL_VARCHAR.|  
 |**SQLDisconnect**|Fecha uma conexão. Se o pool de conexão está habilitado para um ambiente compartilhado, e um aplicativo chama **SQLDisconnect** em uma conexão nesse ambiente, a conexão é retornado para o pool de conexão e ainda está disponível para outros componentes usando o mesmo ambiente compartilhado.|  
 |**SQLError**|Retorna informações de erro ou de status sobre o último erro. O driver mantém uma pilha ou a lista de erros que podem ser retornadas para o *hstmt*, *hdbc*, e *henv* argumentos, dependendo de como a chamada para **SQLError**  é feita. A fila de erros é liberada após cada instrução. Geralmente recupera uma mensagem de erro do Oracle e está vazia.|  
 |**SQLExecDirect**|Executa uma instrução SQL não preparada, novo. O driver usa os valores atuais das variáveis de marcador de parâmetro, se houver quaisquer parâmetros na instrução. Se sua tabela, exibição ou nomes de campo contiverem espaços, coloque os nomes de aspas em marcas. Por exemplo, se seu banco de dados contém uma tabela chamada *My Table* e o campo *Meu campo*, coloque cada elemento do identificador da seguinte forma:<br /><br /> Selecione \`minha tabela\`. \`Meu Field1\`, \`Minha tabela\`.\` Meu Field2\` FROM \`minha tabela '|  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|Associa um nome de cursor com um identificador de instrução ativa, *hstmt*.|  
 |**SQLSetParam**|Substituído por SQLBindParameter no ODBC 2. *x*.|  
 |**SQLTransact**|Solicita uma operação de confirmação ou reversão de todas as operações ativas em todos os identificadores de instrução (hstmts) associados a uma conexão, ou para todas as conexões associadas com o identificador de ambiente, *henv*. Se uma confirmação falhar no modo manual, a transação permanecerá ativa; Você pode escolher reverter a transação ou repita a operação de confirmação. Se uma operação de confirmação falhar no modo de transação automática, a transação é revertida automaticamente. a transação não pode estar inativa.|
-

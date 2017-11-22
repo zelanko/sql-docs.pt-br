@@ -1,8 +1,7 @@
 ---
 title: Propriedade SQL | Microsoft Docs
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- SQL property [RDS]
+helpviewer_keywords: SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1c6dfe09bf48ca48a9df29d066ef100403f7703
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b16ac51bae59fbb4435f094da6e0ac0e40053e89
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-property"></a>Propriedade SQL
 Indica a cadeia de caracteres de consulta usada para recuperar o [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -62,6 +59,5 @@ Run time: DataControl.SQL = "QueryString"
  [Método Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Atualizar o método (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 

@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Domains
+helpviewer_keywords: Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bfe4bfd1accf4291a2e8a6cc5974c81bc669f46d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="introduction-to-data-quality-services"></a>Introdução ao Data Quality Services
   A solução de qualidade de dados fornecida pelo [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite que um administrador de dados ou profissional de TI mantenha a qualidade de seus dados e assegure que os dados sejam adequados para uso comercial. O DQS é uma solução controlada por conhecimento que fornece maneiras assistidas por computador e interativas para gerenciar a integridade e a qualidade de suas fontes de dados. O DQS permite descobrir, compilar e gerenciar conhecimento sobre seus dados. Você pode usar esse conhecimento para executar a limpeza, a correspondência e a criação de perfil de dados. Você também pode aproveitar os serviços baseados em nuvem de provedores de dados de referência em um projeto de qualidade de dados do DQS.  
@@ -94,4 +91,3 @@ ms.lasthandoff: 09/09/2017
  A funcionalidade Data Quality Services foi integrada ao MDS (Master Data Services) para que você possa eliminar a duplicação nos dados de origem e nos dados mestre nos fluxos de trabalho do MDS dentro do Suplemento Master Data Services do Microsoft SQL Server 2014 para Microsoft Excel. Para executar correspondência, carregue os dados gerenciados por MDS em uma planilha do Excel, combine-os com dados não gerenciados por MDS e, em seguida, execute a correspondência dentro do Excel. Os componentes do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] devem ser instalados com o MDS. Para obter mais informações, consulte  [Correspondência de qualidade de dados no Suplemento do MDS para Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
   
-

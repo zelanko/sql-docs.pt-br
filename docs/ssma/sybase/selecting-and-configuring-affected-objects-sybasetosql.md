@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Affected Objects
+helpviewer_keywords: Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97bb6a73aa744a6471a48ba16fc3ee9b52dea67e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e5f4fcb5af81da2b78520542e2b57bd66bc4fd1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selecionando e configurando aos objetos afetados (SybaseToSQL)
 Nesta página, você pode selecionar tabelas e chaves estrangeiras, alterações em que devem ser comparadas ao SSMA verifica os resultados da execução para os objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
@@ -48,7 +45,7 @@ Na guia da tabela contém a exibição de grade da tabela selecionada. A grade c
   
 -   Regra  
   
--   Padrão  
+-   Default  
   
 -   Identidade  
   
@@ -57,7 +54,7 @@ Na guia da tabela contém a exibição de grade da tabela selecionada. A grade c
 ## <a name="sql"></a>Sql  
 Guia do SQL contém a tabela"criar" SQL da tabela selecionada.  
   
-## <a name="data"></a>Dados  
+## <a name="data"></a>data  
 Guia de dados exibe dados presentes na tabela selecionada.  
   
 ## <a name="properties"></a>Propriedades  
@@ -130,4 +127,3 @@ Você pode editar essas instruções SELECT para fornecer verificação personal
 [Executar casos de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

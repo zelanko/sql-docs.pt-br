@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Parent
 - Member::Parent
-helpviewer_keywords:
-- Parent property [ADO MD]
+helpviewer_keywords: Parent property [ADO MD]
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f07be3b319d11a42567f98dc9223716eeb78de85
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: baee402a130847f732583db8de376c120acb1bfb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parent-property-ado-md"></a>Propriedade pai (ADO MD)
 Indica o membro que é o pai do atual [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) em uma hierarquia.  
@@ -45,4 +42,3 @@ Indica o membro que é o pai do atual [membro](../../../ado/reference/ado-md-api
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade Children (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)
-

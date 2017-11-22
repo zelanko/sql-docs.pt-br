@@ -8,25 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,5 +158,4 @@ Ambos os problemas são relacionados ao serviço de Navegador do SQL Server, que
     1. No computador cliente, usando o SQL Server Configuration Manager, no painel esquerdo, expanda **Configuração** *version* **Configuration**, and then select **Client Protocols**.
     2. No painel direito, verifique se TCP/IP está habilitado. Se o TCP/IP estiver desabilitado, clique com o botão direito do mouse em **TCP/IP** e depois clique em **Habilitar**.
     3. Verifique se a ordem de protocolo de TCP/IP é um número menor do que os protocolos de pipes nomeados (ou VIA em versões anteriores). Em geral, você deve deixar a memória compartilhada como a ordem 1 e TCP/IP como a ordem 2. A memória compartilhada só é usada quando o cliente e o SQL Server estão em execução no mesmo computador. Todos os protocolos habilitados são testados em ordem até obter êxito, exceto que a memória compartilhada é ignorada quando a conexão não está no mesmo computador. 
-
 
