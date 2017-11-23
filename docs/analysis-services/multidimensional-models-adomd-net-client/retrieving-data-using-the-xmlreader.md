@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - XmlReader object
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bb85566c9ed1533e35e2f108dd61f50dc20a5a23
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: fae89c067dd0f13768fc6136bf6259f9645adeff
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Recuperando dados usando o XmlReader
   O **XmlReader** parte da classe a **System. XML** namespace para a biblioteca de classes do Microsoft .NET Framework, é semelhante ao <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> classe em que o **XmlReader**classe também rápida, fornece acesso de não armazenado em cache, somente encaminhamento aos dados. Se não há necessidade de uma exibição na memória, análise de dados usando o <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objeto, o **XmlReader** objeto é perfeito para recuperar dados XML, especialmente para grandes quantidades de dados. Porque **XmlReader** fluxos de dados, **XmlReader** não precisa recuperar e armazenar em cache todos os dados antes de exibi-los ao chamador, como seria o caso se um <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objeto fosse usado para converter o Resposta do XML for Analysis em uma representação do modelo de objeto analítico.  
@@ -63,4 +61,3 @@ ms.lasthandoff: 10/24/2017
  [Recuperando dados usando o AdomdDataReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader.md)  
   
   
-

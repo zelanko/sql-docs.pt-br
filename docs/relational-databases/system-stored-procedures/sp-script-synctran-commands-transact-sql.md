@@ -1,0 +1,72 @@
+---
+title: sp_script_synctran_commands (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: replication
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+applies_to: SQL Server
+f1_keywords:
+- sp_script_synctran_commands
+- sp_script_synctran_commands_TSQL
+helpviewer_keywords: sp_script_synctran_commands
+ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
+caps.latest.revision: "27"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 0897995f56614edcef86b9b7bb63c168d774108c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Gera um script que contém o **sp_addsynctrigger** chamadas para serem aplicadas nos assinantes para assinaturas atualizáveis. Há um **sp_addsynctrigger** chamada para cada artigo na publicação. O script gerado também contém o **sp_addqueued_artinfo** chamadas que cria o **MSsubsciption_articles** tabela que é necessário para processar publicações enfileiradas. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
+  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+  
+sp_script_synctran_commands [@publication = ] 'publication'  
+    [ , [@article = ] 'article']  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ [  **@publication**  =] **'***publicação***'**  
+ É o nome da publicação para a qual gerar um script. *publicação* é **sysname**, sem padrão.  
+  
+ [  **@article**  =] **'***artigo***'**  
+ É o nome do artigo para o qual gerar um script. *artigo* é **sysname**, com um padrão de **todos os**, que especifica todos os artigos são incluídos no script.  
+  
+## <a name="return-code-values"></a>Valores do código de retorno  
+ **0** (êxito) ou **1** (falha)  
+  
+## <a name="results-set"></a>Conjunto de resultados  
+ **sp_script_synctran_commands** retorna um conjunto de resultados que consiste em um único **nvarchar (4000)** coluna. O conjunto de resultados forma os scripts completos necessários para criar as o **sp_addsynctrigger** e **sp_addqueued_artinfo** chamadas a ser aplicado no assinante.  
+  
+## <a name="remarks"></a>Comentários  
+ **sp_script_synctran_commands** é usado em replicação de instantâneo e transacional.  
+  
+ **sp_addqueued_artinfo** é usado para assinaturas atualizáveis enfileiradas.  
+  
+## <a name="permissions"></a>Permissões  
+ Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_script_synctran_commands**.  
+  
+## <a name="see-also"></a>Consulte também  
+ [sp_addsynctriggers &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [sp_addqueued_artinfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

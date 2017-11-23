@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e2145a720c1fd9cfedeafe123ac24e7e5ac77173
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a8464fb7ff4e971c1d67d270ffa021d0dca1910
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="structured-query-language-sql"></a>SQL (Structured Query Language)
 Um DBMS típico permite aos usuários armazenar, acessar e modificar dados de uma maneira organizada e eficiente. Originalmente, os usuários de DBMSs foram programadores. Acessar os dados armazenados, é necessário escrever um programa em uma linguagem de programação como COBOL. Enquanto esses programas foram escritos com frequência para apresentar uma interface amigável para um usuário sem conhecimento técnico, o acesso aos dados em si necessário os serviços de um programador experiente. Casual acesso aos dados não era prático.  
@@ -60,4 +58,3 @@ Um DBMS típico permite aos usuários armazenar, acessar e modificar dados de um
 -   [Módulos SQL](../../odbc/reference/sql-modules.md)  
   
 -   [Interfaces de nível de chamada](../../odbc/reference/call-level-interfaces.md)
-

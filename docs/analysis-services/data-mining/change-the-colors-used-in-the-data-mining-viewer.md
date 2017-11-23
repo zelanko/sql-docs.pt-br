@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
+f1_keywords: VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b20e6017b116f716309627caa50e1821a7e7d981
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 325bc785030aa4606d91e40dfa30cb51ee4b03af
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Alterar as cores usadas no Visualizador de Mineração de Dados
   Você pode alterar as cores usadas nos visualizadores de mineração de dados para exibir séries de dados, nós ou clusters. Isso pode ser feito pela definição de opções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Depois de alterar as configurações, a seleções de cores se aplicarão a todos os modelos exibidos pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; no entanto, será preciso fechar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e reabrir o modelo no visualizador para ver as novas cores.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/01/2017
     >  Se você usar uma cor personalizada, ela será representada por um ícone de cor e por seus valores RGB. Se você usar uma cor do Sistema ou uma cor da Web, ela será representada por um ícone de cor e por seu nome.  
   
   
-

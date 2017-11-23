@@ -5,27 +5,24 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 3c5b5145-fa57-455a-b153-0400fc062dc0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8c9190157b005158bb2ca8b9aeb7addbdbf1e69f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ce5688abd8dee584c515fa691ac86c5799c53298
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>Lição 2: Importar dados para o SQL Server usando o PowerShell
 
@@ -98,4 +95,3 @@ Entre os arquivos baixados, você deverá ver um script do PowerShell que você 
 ## <a name="previous-lesson"></a>Lição anterior
 
 [Lição 1: Baixar os dados de exemplo](../tutorials/sqldev-download-the-sample-data.md)
-

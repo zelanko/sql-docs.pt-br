@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7b297cef8904e71629d644171082ba93efb28b8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e40f966299af98ae6b5379da7ea2605c70aa7c77
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-power-pivot-gallery"></a>Excluir Galeria do Power Pivot
   Excluir uma Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] também exclui todos os seus itens, inclusive o histórico de atualização de dados para pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , que são configuradas para atualização de dados agendada.  
@@ -63,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [Galeria do Power Pivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  
   
   
-

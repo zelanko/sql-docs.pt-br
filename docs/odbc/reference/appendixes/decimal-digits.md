@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC], decimal digits
 - SQL data types [ODBC], column characteristics
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bb5222837dab705701e4a137c00f3b10867ae2a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="decimal-digits"></a>Dígitos decimais
 O *dígitos decimais* de dados decimais e numéricos tipos é definido como o número máximo de dígitos à direita da vírgula decimal, ou a escala dos dados. Para parâmetros ou colunas de número de ponto flutuantes aproximadas, a escala é indefinida porque o número de dígitos à direita da vírgula decimal não é fixo. Para datetime ou intervalo de dados que contém um componente de segundos, os dígitos decimais é definido como o número de dígitos à direita da vírgula decimal no componente de segundos de dados.  
@@ -37,7 +35,7 @@ O *dígitos decimais* de dados decimais e numéricos tipos é definido como o n�
   
  Os dígitos decimais definidos para cada tipo de dados SQL conciso é mostrado na tabela a seguir.  
   
-|Tipo SQL|Dígitos decimais|  
+|Tipo SQL|dígitos decimais|  
 |--------------|--------------------|  
 |Todos os caracteres e tipos binários [a]|n/d|  
 |SQL_DECIMAL<br />SQL_NUMERIC|O número definido de dígitos à direita da vírgula decimal. Por exemplo, a escala de uma coluna definida como NUMERIC(10,3) é 3. Isso pode ser um número negativo para dar suporte ao armazenamento de números muito grandes sem usar a notação exponencial; Por exemplo, "12000" podem ser armazenadas como "12" com uma escala de – 3.|  
@@ -60,4 +58,3 @@ O *dígitos decimais* de dados decimais e numéricos tipos é definido como o n�
 |Todos os tipos de data e hora|PRECISION|  
 |Todos os tipos de intervalo com um componente de segundos|PRECISION|  
 |Todos os tipos de intervalo com nenhum componente de segundos|n/d|
-

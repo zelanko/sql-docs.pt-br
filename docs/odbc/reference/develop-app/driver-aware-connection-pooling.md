@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 390d9801346f904e77647c1784d810672b45b6cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf5c6405d4492a4cf559c3a62f53f69eb8a3fdeb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-aware-connection-pooling"></a>Pool de conexões com reconhecimento de driver
 Pooling de conexão com reconhecimento de driver é um novo recurso do Gerenciador de Driver no Windows 8. Pooling de conexão com reconhecimento de driver permite que os autores de driver personalizar o comportamento no seu driver ODBC de pooling de conexão.  
@@ -47,4 +45,3 @@ Pooling de conexão com reconhecimento de driver é um novo recurso do Gerenciad
   
 ## <a name="see-also"></a>Consulte também  
  [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
-

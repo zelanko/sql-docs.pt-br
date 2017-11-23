@@ -14,22 +14,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.datasourceproperties.f1
-helpviewer_keywords:
-- Data Source Properties dialog box
+f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
+helpviewer_keywords: Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d406f4743c47ded117bf93a62bb4eefadb093058
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Definir propriedades da fonte de dados (SSAS multidimensional)
   No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um objeto de fonte de dados especifica uma conexão com um data warehouse externo ou um banco de dados relacional que fornece dados a um modelo multidimensional. As propriedades na fonte de dados determinam a cadeia de conexão, um intervalo de tempo limite, o número máximo de conexões e o nível de isolamento da transação.  
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   
-
