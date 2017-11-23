@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 648fca1de8f4c98bce4e778a2d4d26fb44246267
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>Registrar uma instância do Analysis Services em um grupo de servidores
   Se houver um grande número de instâncias de servidor do Analysis Services, você poderá criar grupos de servidores no Management Studio para facilitar a administração de servidor. O propósito de um grupo de servidores é fornecer proximidade entre um grupo de servidores relacionados dentro do espaço de trabalho administrativo. Por exemplo, vamos supor que você receba a tarefa de gerenciar dez instâncias separadas do Analysis Services. Agrupá-los por modo de servidor, critérios de tempo de atividade ou por departamento ou região permitiria a você exibir e se conectar a instâncias que compartilham as mesmas características com mais facilidade. Também é possível adicionar informações descritivas que ajudam você a se lembrar de como o servidor é usado.  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 3.  Clique com o botão direito do mouse no grupo de servidores e selecione Novo Registro de Servidor. Insira o nome de rede de um servidor local ou remoto, incluindo o nome de instância se o servidor foi instalado como uma instância nomeada. Opcionalmente, você pode fornecer um nome de servidor registrado que aparece em Servidores Registrados. Esse nome é usado apenas em Servidores Registrados. Você não pode usá-lo para renomear um servidor, nem em uma cadeia de conexão. Um nome de servidor registrado pode ser mais descritivo do que o nome de servidor real ou pode incluir outras características de identificação que o ajudem a distinguir esse servidor dos demais.  
   
   
-

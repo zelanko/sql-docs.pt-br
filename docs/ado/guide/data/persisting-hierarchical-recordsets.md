@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - persisting hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4780fb2fe34b4d742365079eed06885146cbc0a7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c4a4fc782bfa6c6130a1acbd45ab1aa2ae3fcd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Conjuntos de registros hierárquicos persistentes
 Você pode salvar um hierárquica **registros** para um arquivo no formato ADTG ou XML, chamando o [salvar](../../../ado/reference/ado-api/save-method.md) método. No entanto, duas limitações se aplicam ao salvar hierárquica **registros**s em formato XML: não é possível salvar em XML se o hierárquica **registros** contém as atualizações pendentes, e não é possível salvar um com parâmetros hierárquica **registros**.  
@@ -38,4 +36,3 @@ Você pode salvar um hierárquica **registros** para um arquivo no formato ADTG 
  [Exemplo de modelagem de dados](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)
-

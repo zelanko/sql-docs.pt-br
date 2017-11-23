@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, technologies
+helpviewer_keywords: ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c17d4b1877ce350e261e0bf671b8fd661409f47d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6d6bbb214c4b5cf5f5ca05621eaada997da3893
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="products-and-technologies-table"></a>Produtos e tecnologias de tabela
 A tabela a seguir lista os produtos Microsoft, ferramentas e tecnologias abordadas no guia do programador do ADO. Ele fornece links, sempre que possível, para tópicos relevantes no guia.
@@ -50,4 +48,3 @@ A tabela a seguir lista os produtos Microsoft, ferramentas e tecnologias abordad
 |Visual Studio|[Apêndice D: Exemplos de ADO](../../ado/guide/appendixes/appendix-d-ado-samples.md)|
 |Windows 2000|[Requisitos de sistema para o aplicativo de catálogo de endereços](../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)<br /><br /> [Concedendo privilégios de convidado para um computador do servidor Web](../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)<br /><br /> [Registrando um objeto de negócios personalizado](../../ado/guide/remote-data-service/registering-a-custom-business-object.md)<br /><br /> [Protegendo aplicativos RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> [Configurando o RDS no Windows 2000](../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)|
 |XML|[Persistência de registros em formato XML](../../ado/guide/data/persisting-records-in-xml-format.md)<br /><br /> [Registros e fluxos](../../ado/guide/data/records-and-streams.md)<br /><br /> [Fluxos de comando](../../ado/guide/data/command-streams.md)<br /><br /> [Recuperando conjuntos de resultados em fluxos](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
-

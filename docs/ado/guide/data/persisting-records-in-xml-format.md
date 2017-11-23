@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 719d6d0575f90f3460de6e8b1285b6a59cf7f791
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a45c434bdcf551e97eb97f85997ab73c883b599c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persisting-records-in-xml-format"></a>Manter registros em formato XML
 Como o formato ADTG, **registros** persistência em formato XML é implementada com o Microsoft OLE DB provedor de persistência. Este provedor gera um conjunto de linhas de somente avanço, somente leitura de um arquivo XML salvo ou um fluxo que contém as informações de esquema geradas pelo ADO. Da mesma forma, pode levar um ADO **registros**, gerar o XML e salvá-lo em um arquivo ou qualquer objeto que implementa o COM **IStream** interface. (Na verdade, um arquivo é apenas um exemplo de um objeto que oferece suporte a **IStream**.) Para versões 2.5 e superior, ADO baseia-se no Microsoft XML Parser (MSXML) ao carregar o XML para o **registros**; portanto MSXML é necessária.  
@@ -97,4 +95,3 @@ rs.Save "btitles.sav", adPersistXML
 -   [Considerações sobre segurança XML](../../../ado/guide/data/xml-security-considerations.md)  
   
 -   [Cenário de persistência do conjunto de registros XML](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
-

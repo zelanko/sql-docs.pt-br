@@ -26,17 +26,16 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 90ce08e6cf57aa2ca49aea8834b96a69aa69362e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modeling-flags-data-mining"></a>Sinalizadores de modelagem (Mineração de Dados)
   Use sinalizadores de modelagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fornecer informações adicionais para um algoritmo de mineração de dados sobre os dados definidos em uma tabela de casos. O algoritmo pode usar essas informações para criar um modelo de mineração de dados mais preciso.  
@@ -123,4 +122,3 @@ WHERE MODEL_NAME = '<model name>'
 |Saiba sobre como gerenciar modelos e estruturas e definir propriedades de uso|[Movendo objetos de mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   
-

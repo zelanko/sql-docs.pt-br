@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0f6a9725743ecd274e9ecf70c5a72e6a347b6101
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 066094ccec0f2db38f503ebfacfa016f25c5380b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Trabalhando com o SSMA para Sybase Console (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA (Migration Assistant), versão para Sybase Adaptive Server Enterprise (ASE), agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script de entrada para o aplicativo para executar os comandos de formulário. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -34,7 +32,7 @@ Os tópicos abordados nesta seção incluem:
   
 |||  
 |-|-|  
-|**Tópicos**|**Descrição**|  
+|**Tópicos**|**Description**|  
 |[Guia de Introdução com o SSMA para Sybase Console &#40; SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|Explica o procedimento para executar o aplicativo de console.|  
 |[Opções de linha de comando no Console do SSMA &#40; SybaseToSQL &#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Descreve as opções de linha de comando e os parâmetros para operar o aplicativo de console SSMA.|  
 |[Criando arquivos de Script &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|Explica como criar um arquivo de script.|  
@@ -49,4 +47,3 @@ Os tópicos abordados nesta seção incluem:
 ## <a name="see-also"></a>Consulte também  
 [Introdução ao SSMA for Sybase Console(SybaseToSQL)](http://msdn.microsoft.com/en-us/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   
-

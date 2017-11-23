@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- log file space in RDS [ADO]
+helpviewer_keywords: log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddb41dbe5a2d76bb26d1830d1b659dbd99ca1c21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae88338987beece602691060d79ec44bad93309e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimizar o uso de espaço de arquivo de Log
 Um arquivo de log pode preencher rapidamente (interrupção, portanto, o servidor) se houver um grande volume de atividade em um banco de dados do SQL Server. Você pode definir o arquivo de log para **Truncate no ponto de verificação** significativamente estender a vida útil do arquivo de log para um banco de dados.  
@@ -55,6 +52,5 @@ Um arquivo de log pode preencher rapidamente (interrupção, portanto, o servido
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 

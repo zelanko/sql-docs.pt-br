@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ac1ca3e4cd6e9047f6a3f47e8067efc6143ba5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00a768c70b1945bc573aaca6c48841e665780081
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectando e solucionando conflitos
 Se você estiver lidando com o conjunto de registros no modo imediato, há muito menos chance de problemas de simultaneidade ocorra. Por outro lado, se seu aplicativo usa a atualização do modo de lote, pode haver uma boa chance de que um usuário será alterado um registro antes de salvar as alterações feitas por outro usuário editando o mesmo registro. Nesse caso, você desejará seu aplicativo para lidar com o conflito. Pode ser seu desejo que a última pessoa a enviar uma atualização para o servidor "vence". Ou talvez você queira permitir que o usuário mais recente para decidir qual atualização deve ter precedência, fornecendo-lhe uma opção entre os dois valores conflitantes.  
@@ -125,4 +123,3 @@ Se você estiver lidando com o conjunto de registros no modo imediato, há muito
   
 ## <a name="see-also"></a>Consulte também  
  [Modo de lote](../../../ado/guide/data/batch-mode.md)
-

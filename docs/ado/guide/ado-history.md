@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, what's new
+helpviewer_keywords: ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 594152a9dd7e6d4fdb4d00668692239d09bdf373
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ace4237c41b4a92b62e958970ebb49dcf2156d0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-features-for-each-release"></a>Recursos do ADO para cada versão.
 Este tópico lista os novos recursos introduzidos por cada versão do ADO MD, ADO e ADOX.
@@ -51,17 +49,17 @@ Um comando de forma aninhada agora retorna um máximo de 512 **conjuntos de regi
  *suporte a plataformas de 64 bits* ADO 2.7 introduz suporte para processadores de 64 bits.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***método* começando com o ADO 2.6, objetos do ADO MD podem ser recuperados usando nomes exclusivos, conforme especificado pelo [propriedade UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   Os nomes de objetos pai não precisam ser conhecidos e coleções pai não precisam ser preenchidos para recuperar um objeto de esquema. Consulte [GetSchemaObject método (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***método* começando com o ADO 2.6, objetos do ADO MD podem ser recuperados usando nomes exclusivos, conforme especificado pelo [propriedade UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Os nomes de objetos pai não precisam ser conhecidos e coleções pai não precisam ser preenchidos para recuperar um objeto de esquema. Consulte [GetSchemaObject método (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Comando fluxos* o **comando** objeto dá suporte a comandos no formato de fluxo como uma alternativa ao uso de **CommandText** propriedade. O [propriedade CommandStream (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) pode ser usado para especificar modelos XML ou diagramas de atualização como o **comando** de entrada com o Microsoft OLE DB Provider para SQL Server.
 
- **Dialeto***propriedade* [dialeto](../../ado/reference/ado-api/dialect-property.md) é uma nova propriedade que define a sintaxe e geral de regras que o provedor usa para analisar a cadeia de caracteres ou fluxo.  
+ **Dialeto***propriedade* [dialeto](../../ado/reference/ado-api/dialect-property.md) é uma nova propriedade que define a sintaxe e geral de regras que o provedor usa para analisar a cadeia de caracteres ou fluxo.
 
- **Command.Execute***método* o [executar o método](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **comando** objeto foi aprimorado para usar fluxos de entrada e saída.  
+ **Command.Execute***método* o [executar o método](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **comando** objeto foi aprimorado para usar fluxos de entrada e saída.
 
  *Campo statusvalues* se o usuário encontra um erro DB_E_ERRORSOCCURRED ao modificar um **campo** de um **registros**, ADO preencherá o **Field.Status**propriedade com as informações de status apropriado para que o usuário tenha mais informações sobre o que deu errado. Consulte [a propriedade de Status (campo ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***propriedade* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) é uma nova propriedade do **comando** chamado de objeto que indica que o provedor deve usar parâmetros.  
+ **NamedParameters***propriedade* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) é uma nova propriedade do **comando** chamado de objeto que indica que o provedor deve usar parâmetros.
 
  *Conjuntos de resultados em fluxos* ADO pode retornar conjuntos de resultados de uma fonte de dados em um **fluxo**, em vez de **registros** objeto. Usando a versão mais recente do Microsoft OLE DB Provider para SQL Server, você pode obter resultados XML do provedor executando uma consulta de "Para XML". Um **fluxo** que recebe o conjunto de resultados pode ser aberto com um comando "Para XML" como a origem. Consulte [recuperar conjuntos de resultados em fluxos](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
@@ -75,4 +73,3 @@ Um comando de forma aninhada agora retorna um máximo de 512 **conjuntos de regi
  *Associação de URL* ADO 2.5 apresenta o uso de uma URL, como uma alternativa para uma conexão comando e cadeia de caracteres de texto, para nomear objetos do repositório de dados. Uma URL pode ser usada com a existente **Conexão** e **registros** objetos, bem como com o novo **registro** e **fluxo** objetos.
 
  *Provedores de dados com suporte a associação de URL* ADO 2.5 dá suporte a provedores OLE DB que reconhecem os esquemas de URL. Isso inclui o provedor OLE DB para publicação de Internet, que acessa o sistema de arquivos do Windows 2000 e reconhece o esquema HTTP existente.
-

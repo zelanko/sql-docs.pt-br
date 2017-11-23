@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1886ed3e58bf61f97b3bc14424e8f507c541ee5b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6368462f13811ab9903212512acc55a7c3c48f1a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Propriedades do SQL Server Agent (guia Fazer Logon)
   Use a guia **Fazer Logon** da caixa de diálogo **Propriedades do SQL Server Agent** para especificar a conta usada pelo serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e para iniciar e parar o serviço. A alteração da senha de uma conta entra em vigor imediatamente sem a reinicialização do serviço.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 08/02/2017
  Especifique uma conta Sistema Local que não requeira uma senha. Porém, essa conta pode restringir a interação do serviço com outros servidores, dependendo dos privilégios concedidos a ela.  
   
  **Esta conta**  
- Especifique um local ou conta de usuário do domínio que utilize Autenticação do Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)]recomenda usar uma conta de usuário de domínio com direitos mínimos para serviços. Para obter informações sobre como selecionar uma conta, pesquise "Configurando as contas de serviço do Windows" nos Manuais Online.  
+ Especifique um local ou conta de usuário do domínio que utilize Autenticação do Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda usar uma conta de usuário do domínio com direitos mínimos para serviços. Para obter informações sobre como selecionar uma conta, pesquise "Configurando as contas de serviço do Windows" nos Manuais Online.  
   
  **Nome da Conta**  
  Especifique o nome da conta local ou de usuário de domínio.  
@@ -57,4 +55,3 @@ ms.lasthandoff: 08/02/2017
  Retomar um serviço pausado.  
   
   
-

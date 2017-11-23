@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- SortOrder property [ADOX]
+dev_langs: VB
+helpviewer_keywords: SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f11956a6030b825c37f6600b2f8b40c47dc0ce20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 285f0e386e20bb7edee9a4a472875abac4d44b7b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sortorder-property-example-vb"></a>Exemplo de propriedade SortOrder (VB)
 Este exemplo demonstra o [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md) que foi acrescentado para o [colunas](../../../ado/reference/adox-api/columns-collection-adox.md) coleção de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código acrescenta um índice em ordem crescente para a coluna de país de **funcionários** tabela, em seguida, exibe os registros. Em seguida, o código acrescenta um índice decrescente para a coluna de país de **funcionários** tabela e exibe os registros novamente. A diferença entre crescente e decrescente índices é mostrada.  
@@ -149,4 +145,3 @@ End Sub
  [Coleção de colunas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Objeto de índice (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Propriedade SortOrder (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
-

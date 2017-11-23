@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Hierarchy
-helpviewer_keywords:
-- Hierarchy object [ADO MD]
+f1_keywords: Hierarchy
+helpviewer_keywords: Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e02aefb90af923cea7bfd6d33b8b1e97415c6ae8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46bb03c91b2305f0453676891d87676e784b03fa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchy-object-ado-md"></a>Objeto de hierarquia (ADO MD)
 Representa uma forma em que os membros de um [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) podem ser agregados ou "acumulados". Uma dimensão pode ser agregada a uma ou mais hierarquias.  
@@ -50,7 +46,7 @@ Representa uma forma em que os membros de um [dimensão](../../../ado/reference/
 |----------|-----------------|  
 |AllMember|O membro no nível mais alto do rollup na hierarquia.|  
 |CatalogName|O nome do catálogo ao qual pertence este cubo.|  
-|Nome do cubo|O nome do cubo.|  
+|CubeName|O nome do cubo.|  
 |DefaultMember|O nome exclusivo do membro padrão para essa hierarquia.|  
 |Description|Uma descrição significativa da hierarquia.|  
 |DimensionType|O tipo de dimensão à qual pertence essa hierarquia.|  
@@ -72,4 +68,3 @@ Representa uma forma em que os membros de um [dimensão](../../../ado/reference/
  [Coleção hierarquias (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Coleção de níveis (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

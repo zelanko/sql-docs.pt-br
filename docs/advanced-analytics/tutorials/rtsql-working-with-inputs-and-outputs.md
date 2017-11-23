@@ -5,25 +5,23 @@ ms.date: 07/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: cb651d6541bbba7be03b74265ffae5dccdbdf9c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Trabalhando com entradas e saídas (R no início rápido do SQL)
 
@@ -145,4 +143,3 @@ EXECUTE sp_execute_external_script
 Você examinará alguns dos problemas que podem ser encontrados ao passar dados entre R e SQL Server, como conversões implícitas e diferenças em dados tabulares entre R e SQL.
 
 [Tipo de dados SQL e R e objetos de dados](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
-

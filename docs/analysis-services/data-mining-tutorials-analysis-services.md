@@ -8,26 +8,22 @@ ms.service:
 ms.component: data-mining
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- data mining [Analysis Services], designing
+applies_to: SQL Server 2016
+helpviewer_keywords: data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d97b1f305fe41cc1bf67113cdad38fbe14f7f15a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Tutoriais de Mineração de Dados (Analysis Services)
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facilita a criação de soluções de mineração de dados usando os assistentes e as visualizações integradas. Especialmente se você não está familiarizado com o aprendizado de máquina, as ferramentas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] são uma maneira fácil de projetar, treinar e explorar modelos de mineração de dados. Os dados nos modelos podem ser armazenados em um cubo, banco de dados relacional ou em qualquer outra fonte com suporte no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Depois de criar um modelo, você pode colocá-lo em produção acessando o modelo para criar previsões usando vários clientes de previsão, incluindo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e ASP.NET.  
@@ -50,5 +46,4 @@ ms.lasthandoff: 09/01/2017
   
   
   
-
 

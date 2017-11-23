@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a1cfde267a31b3e11f1c869ac96b652b9db5af16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-bookmarks"></a>Usando indicadores
 Geralmente é útil retornar diretamente a um registro específico após ter movido **registros** sem a necessidade de percorrer cada registro e comparar valores. Por exemplo, se você tentar procurar um registro usando o **localizar** método, mas a pesquisa não retornou nenhum registro, são colocados automaticamente em ambas as extremidades do **registros**. Se o provedor oferece suporte a eles, indicadores podem ser usados para marcar o local antes de usar o **localizar** método para que você possa retornar para seu local. Um indicador é um **Variant** tipo de valor que identifica exclusivamente um registro em um **registros** objeto.  
@@ -57,4 +55,3 @@ End If
  O [suporta](../../../ado/reference/ado-api/supports-method.md) método é abordado em mais detalhes posteriormente.  
   
  Exceto no caso de clonado **conjuntos de registros**, indicadores são exclusivos para o **registros** no qual eles foram criados, mesmo se o mesmo comando é usado. Isso significa que você não pode usar um **indicador** obtidas de um **registros** para mover para o mesmo registro em um segundo **registros** aberta com o mesmo comando.
-

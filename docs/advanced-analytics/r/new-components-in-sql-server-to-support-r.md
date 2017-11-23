@@ -5,22 +5,20 @@ ms.date: 04/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3a6387f16e567c09c233cfd2c4de71d567f2ce7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e2bff53d3e324999c7cdca743d6e7b2ff9f85780
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Componentes do SQL Server para dar suporte a R
 
@@ -136,4 +134,3 @@ Ao conectar-se de um cliente de ciência de dados remotos que dá suporte ao Mic
 [Visão geral de segurança](security-overview-sql-server-r.md)
 
 [Considerações sobre segurança](security-considerations-for-the-r-runtime-in-sql-server.md)
-

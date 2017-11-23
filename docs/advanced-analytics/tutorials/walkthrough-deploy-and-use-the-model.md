@@ -5,26 +5,22 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Implantar o modelo de R e usá-lo no SQL
 
@@ -72,7 +68,7 @@ Um procedimento armazenado para a pontuação do lote foi criado quando você in
 
     + Você pode usar uma instrução SELECT para chamar o modelo armazenado em uma tabela SQL. O modelo é recuperado da tabela de **varbinary (max)** dados armazenados na variável SQL  _@lmodel2_ e passado como o parâmetro *mod* para o sistema armazenado procedimento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Os dados usados como entradas para a pontuação é definida como uma consulta SQL e armazenada como uma cadeia de caracteres na variável SQL  _@input_ . Os dados são recuperados do banco de dados, são armazenados em um quadro de dados chamado *InputDataSet*, que é apenas o nome padrão para dados de entrada para o [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimento; você pode definir outro nome de variável, se necessário, usando o parâmetro  _@input \_dados\_1\_nome_.
+    + Os dados usados como entradas para a pontuação é definida como uma consulta SQL e armazenada como uma cadeia de caracteres na variável SQL  _@input_ . Os dados são recuperados do banco de dados, são armazenados em um quadro de dados chamado *InputDataSet*, que é apenas o nome padrão para dados de entrada para o [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimento; você pode definir outro nome de variável, se necessário, usando o parâmetro   *_@input_data_1_name_*  .
 
     + Para gerar as pontuações, o procedimento armazenado chama a função `rxPredict` da biblioteca **RevoScaleR** .
 
@@ -229,4 +225,3 @@ Também é recomendável que você conheça alguns desses exemplos adicionais e 
 [Tutoriais do SQL Server R](sql-server-r-tutorials.md)
 
 [Como criar um procedimento armazenado usando sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

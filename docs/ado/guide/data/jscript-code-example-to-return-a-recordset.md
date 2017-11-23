@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
-helpviewer_keywords:
-- Recordset [ADO]
+dev_langs: JScript
+helpviewer_keywords: Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f69cc6f994aa9caa79733a2b32fb11111e03ff29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>Exemplo de código JScript para retornar um conjunto de registros
 ## <a name="jscript-code-rsjs"></a>Código JScript (rs.js)  
@@ -94,4 +90,3 @@ function alert(str)
 2.  Abra um prompt de comando e o cd para o diretório onde você salvou o arquivo JScript (rs.js).  
   
 3.  Tipo `CScript rs.js` do prompt de comando.
-

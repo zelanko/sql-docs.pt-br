@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c95c8bdcf9c4c6d93fc94f8393909cdc758c7c87
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ef1c85f55928c266fb88f1639d5ccd53450fe59
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-db-providers-ado"></a>Provedores OLE DB (ADO)
 OLE DB define um conjunto de interfaces para fornecer aplicativos acesso padronizado aos dados armazenados em fontes diferentes de informações. Essa abordagem permite que uma fonte de dados compartilhar seus dados por meio de interfaces que oferecem suporte a quantidade de funcionalidade DBMS apropriada para a fonte de dados. Por design, a arquitetura de alto desempenho do OLE DB é baseada em seu uso de um modelo de serviços flexível baseado em componente. Em vez de um número prescrito de camadas intermediárias entre o aplicativo e os dados, OLE DB requer apenas que vários componentes que são necessários para realizar uma tarefa específica.  
@@ -52,4 +50,3 @@ OLE DB define um conjunto de interfaces para fornecer aplicativos acesso padroni
 -   [Provedores de Dados](../../../ado/guide/data/data-providers.md)  
   
 -   [Provedores de serviços e componentes](../../../ado/guide/data/service-providers-and-components.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f05ca08a88951de138f094fbcac1dd9a31bfdfb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 462f8ea10fc0d4c489de40ddcf0174cb2a82435b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="examining-data"></a>Examinando dados
 O [Obtendo dados](../../../ado/guide/data/getting-data.md) seção explicou como recuperar dados de uma fonte de dados como um ou mais **registros** objetos. Esta seção aborda **Recordset** mais detalhadamente, incluindo como navegar por meio de **Recordset** e exibir seus dados.  
@@ -46,4 +44,3 @@ O [Obtendo dados](../../../ado/guide/data/getting-data.md) seção explicou como
 -   [Conjunto de registros de exemplo para examinar dados](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
   
 -   [Limites de um conjunto de registros](../../../ado/guide/data/boundaries-of-a-recordset.md)
-

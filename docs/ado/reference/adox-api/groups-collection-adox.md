@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Groups
 - User::Groups
 - Catalog::Groups
-helpviewer_keywords:
-- Groups collection [ADOX]
+helpviewer_keywords: Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2edcde5ebd3bcc21f105a6b1f6a6d2fce495350a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3dfb8a9e2f75fb11caf64b06e34016474d7b9fa7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="groups-collection-adox"></a>Coleção de grupos (ADOX)
 Contém todos os armazenados [grupo](../../../ado/reference/adox-api/group-object-adox.md) objetos de um catálogo ou usuário.  
@@ -62,4 +59,3 @@ Contém todos os armazenados [grupo](../../../ado/reference/adox-api/group-objec
 ## <a name="see-also"></a>Consulte também  
  [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)
-

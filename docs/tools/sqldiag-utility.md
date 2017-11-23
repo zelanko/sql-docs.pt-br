@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,17 +28,16 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1dbfd36d6761c539176165653bd2e3484c07d5c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 766c1292435eb11dcff94f7353d49478f554c6a7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqldiag-utility"></a>Utilitário SQLdiag
   O utilitário **SQLdiag** é um utilitário de coleta de diagnósticos para fins gerais que pode ser executado como um aplicativo do console ou um serviço. É possível usar o **SQLdiag** para coletar logs e arquivos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e de outros tipos de servidores, e usá-lo para monitorar os servidores ao longo do tempo ou para solucionar problemas específicos com seus servidores. O**SQLdiag** foi criado para agilizar e simplificar a coleta de informações de diagnóstico para os Serviços de Atendimento ao Cliente da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -53,11 +51,11 @@ ms.lasthandoff: 08/02/2017
   
 -   Logs de evento do Windows  
   
--   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]rastreamentos  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] rastreamentos  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]informações de bloqueio  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bloqueio de informações  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]informações de configuração  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] informações de configuração  
   
  É possível especificar quais tipos de informações você deseja que o **SQLdiag** colete editando o arquivo de configuração SQLDiag.xml, descrito em uma seção a seguir.  
   
@@ -235,7 +233,7 @@ sqldiag
  **SQLDIAG START /A** *SQLdiag_application_name*  
   
 ## <a name="security-requirements"></a>Requisitos de segurança  
- A não ser que o **SQLdiag** seja executado no modo genérico (especificando o argumento de linha de comando **/G** ), o usuário que está executando o **SQLdiag** deverá ser membro do grupo **Administradores** do Windows e membro da função de servidor fixa [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** . Por padrão, o **SQLdiag** conecta-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a Autenticação do Windows, mas também tem suporte para a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ A não ser que o **SQLdiag** seja executado no modo genérico (especificando o argumento de linha de comando **/G** ), o usuário que está executando o **SQLdiag** deverá ser membro do grupo **Administradores** do Windows e membro da função de servidor fixa [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. Por padrão, o **SQLdiag** conecta-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a Autenticação do Windows, mas também tem suporte para a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="performance-considerations"></a>Considerações sobre desempenho  
  Os efeitos no desempenho da execução do **SQLdiag** dependem do tipo de dados de diagnóstico que você configurou para coletar. Por exemplo, se você configurou o **SQLdiag** para coletar informações de rastreamento do [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , quanto maior o número de classes de evento que você escolher para rastreamento, mais o desempenho do servidor será afetado.  
@@ -374,4 +372,3 @@ SQLDIAG START /A Instance1
  [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

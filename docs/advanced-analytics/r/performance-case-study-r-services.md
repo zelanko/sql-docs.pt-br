@@ -1,26 +1,24 @@
 ---
 title: "Desempenho de serviços de R - resultados e recursos | Microsoft Docs"
 ms.custom: 
-ms.date: 07/15/2017
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f14e3d744a6d65891f6162bf63e69d682d08a971
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Desempenho de serviços de R: resultados e recursos
 
@@ -31,7 +29,7 @@ Dois estudos de caso tinha metas diferentes:
 + O primeiro estudo de caso, pela equipe de desenvolvimento de R Services procurado medir o impacto de técnicas de otimização específicas
 + O segundo estudo de caso, por uma equipe de cientista de dados, experiência com vários métodos para determinar as melhor otimizações para um cenário específico de pontuação de alto volume.
 
-Este tópico lista os resultados detalhados do primeiro estudo de caso. Para o segundo estudo de caso, um resumo descreve as descobertas gerais. No final deste tópico, você encontrará links para todos os recursos usados pelos autores originais e dados de exemplo e scripts.
+Este tópico lista os resultados detalhados do primeiro estudo de caso. Para o segundo estudo de caso, um resumo descreve as descobertas gerais. No final deste tópico são links para todos os recursos usados pelos autores originais e dados de exemplo e scripts.
 
 ## <a name="performance-case-study-airline-dataset"></a>Estudo de caso de desempenho: aérea de conjunto de dados
 
@@ -280,13 +278,13 @@ Os resultados mostram o tempo para salvar o modelo e o tempo necessário para ca
 
 Carregar um modelo treinado de uma tabela é claramente uma maneira mais rápida para fazer a previsão. É recomendável que você evite criar o modelo e executar todos no mesmo script de pontuação.
 
-## <a name="case-study-optimization-for-resume-matching-task"></a>Estudo de caso: otimização para retomar a tarefa de correspondência
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Estudo de caso: otimização para a tarefa continuar correspondente
 
-O modelo de correspondência de retomada foi desenvolvido pelo cientista de dados do Microsoft Ke Huang para testar o desempenho do código R no SQL Server e habilitar os cientistas de dados dar suporte a soluções escalonáveis e de nível corporativo.
+O modelo de correspondência de retomada foi desenvolvido pelo cientista de dados do Microsoft Ke Huang para testar o desempenho do código R no SQL Server e, ao fazer caso dados ajuda cientistas criar escalonáveis, soluções de nível corporativo.
 
 ### <a name="methods"></a>Métodos
 
-Pacotes de RevoScaleR e MicrosoftML foram usados para treinar um modelo de previsão em uma solução R complexo que envolvem grandes conjuntos de dados. Consultas SQL e código R foram idênticos. Todos os testes foram realizados em uma única VM do Azure com o SQL Server instalado. O autor, em seguida, em comparação com pontuação vezes com e sem essas otimizações fornecidas pelo SQL Server:
+Pacotes de RevoScaleR e MicrosoftML foram usados para treinar um modelo de previsão em uma solução R complexo que envolvem grandes conjuntos de dados. Consultas SQL e código R foram idênticos em todos os testes. Testes foram realizados em uma única VM do Azure com o SQL Server instalado. O autor, em seguida, em comparação com pontuação vezes com e sem otimizações a seguir fornecidas pelo SQL Server:
 
 - Tabelas na memória
 - Soft-NUMA
@@ -328,12 +326,9 @@ A configuração que tiveram o melhor desempenho da correspondência de retomar 
 
 -   Memória máxima para uso por sessões de R = 70%
 
-Para o modelo de correspondência para continuar, use script externo foi intensamente e não nenhum outro banco de dados serviços de mecanismo de execução. Portanto, os recursos alocados para scripts externos foi aumentado para 70%, que foi a melhor configuração para o desempenho do script.
+Para o modelo de correspondência para continuar, use script externo foi intensamente e não nenhum outro banco de dados serviços de mecanismo de execução. Portanto, os recursos alocados para scripts externos foram aumentados para 70%, que foi a melhor configuração para o desempenho do script.
 
-Essa configuração foi acessou experimentando valores diferentes. Se você usar outro hardware ou uma solução diferente, a configuração ideal pode ser diferente.
-
-> [!IMPORTANT]
-> Teste para encontrar a melhor configuração para seu caso!
+Essa configuração foi acessou experimentando valores diferentes. Se você usar outro hardware ou uma solução diferente, a configuração ideal pode ser diferente. Sempre teste para encontrar a melhor configuração para seu caso!
 
 Na solução otimizada, 1.1 milhões de linhas de dados (com 100 recursos) de pontuação em menos de 8,5 segundos em um computador de 20 núcleos. Otimizações melhorou significativamente o desempenho em termos de tempo de pontuação.
 
@@ -342,6 +337,16 @@ Os resultados também sugeridos que o **número de recursos** tinha um impacto s
 É recomendável que você leia este artigo de blog e o tutorial que acompanha uma discussão detalhada.
 
 -   [Dicas de otimização e truques para aprendizado de máquina no SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+Muitos usuários observou que há uma pequena pausa conforme o tempo de execução de R (ou Python) é carregado pela primeira vez. Por esse motivo, conforme descrito nesses testes, o tempo para a primeira execução é geralmente medido mas descartado posteriormente. Armazenamento em cache subsequente pode resultar em diferenças de desempenho importantes entre o primeiro e segundo é executado. Também há alguma sobrecarga quando dados são movidos entre o SQL Server e o tempo de execução externo, especialmente se os dados são passados pela rede, em vez de carregar diretamente do SQL Server.
+
+Por esses motivos, não há nenhuma solução para reduzir o tempo de carregamento inicial, como o impacto no desempenho significativamente varia dependendo da tarefa. Por exemplo, o cache é executado para uma linha de pontuação em lotes; Portanto, operações sucessivas de pontuação são muito mais rápidas e o modelo, nem o tempo de execução de R é recarregado. Você também pode usar [pontuação nativo](../sql-native-scoring.md) para evitar o carregamento de tempo de execução de R inteiramente.
+
+Para treinar modelos grandes ou pontuação em lotes grandes, a sobrecarga poderá ser mínima em comparação com os ganhos de evitando a movimentação de dados ou de transmissão e processamento paralelo. Consulte esses blogs recentes e exemplos para obter diretrizes de desempenho adicionais:
+
++ [Classificação de empréstimo usando o SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [Experiências de clientes iniciais ao R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [Usando o R para detectar fraudes em 1 milhão de transações por segundo](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Recursos
 
@@ -407,4 +412,3 @@ A seguir estão links para informações, ferramentas e scripts usados no desenv
 [Ajuste de desempenho para R - R otimização de código e dados](r-and-data-optimization-r-services.md)
 
 [Ajuste de desempenho - resultados de estudo de caso](performance-case-study-r-services.md)
-

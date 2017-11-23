@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 085b89aa994ddd7b94353ab2a4e075d837298643
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 7812e5ad1b6566a3ef477800d8098b23abacdd6a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Criando o servidor de arquivos de conexão (AccessToSQL)
 Informações do servidor podem ser especificado na seção de servidores do arquivo de script. Informações do servidor também podem ser especificadas em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente em arquivos de conexão do servidor e o script, a definição de servidor no arquivo de script é considerada.  
@@ -78,4 +76,3 @@ A próxima etapa no operando o console é [executando o Console SSMA &#40; Acces
 ## <a name="see-also"></a>Consulte também  
 [Executar o Console do SSMA (acesso)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
-

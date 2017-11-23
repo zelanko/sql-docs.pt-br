@@ -5,22 +5,20 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: af4b8bd5-6b76-45d0-b0e8-271bfb34d454
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: bc43439ce58746dec968f0fe67c6e7bd6b669d60
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fb6a4882b77cf77200da4fbdd98bd304047bd52a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="analysis-services-language-reference"></a>Referência de Linguagem do Analysis Services
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +29,7 @@ ms.lasthandoff: 08/02/2017
   
  [Extensões de mineração de dados &#40; DMX &#41; Referência](../dmx/data-mining-extensions-dmx-reference.md)  
   
- [Funções do VBA no MDX e DAX](../mdx/vba-functions-in-mdx-and-dax.md)  
+ [Funções VBA no MDX e no DAX](../mdx/vba-functions-in-mdx-and-dax.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência do PowerShell para PowerPivot para SharePoint](../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)   
@@ -39,7 +37,6 @@ ms.lasthandoff: 08/02/2017
  [Mineração de dados armazenados procedimentos &#40; Analysis Services – mineração de dados &#41;](../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   
-
 
 
 

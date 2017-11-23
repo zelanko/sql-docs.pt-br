@@ -8,22 +8,20 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 82a302c5d7ef97038ae7d15e8478a9551189e416
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 017d6c078c2370dcc8eb62e22e03323cc3c315f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-features-and-tasks"></a>Recursos e tarefas do Analysis Services
   A documentação básica do Analysis Services é organizada por tipo de modelo e modo de servidor de forma que você possa se concentrar apenas nas ferramentas, nas tarefas e nos recursos que estão disponíveis no modo instalado. As tarefas de administração de servidor que abrangem vários modos podem ser localizadas no Gerenciamento de Instância.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/01/2017
  [Novidades do Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
   
   
-

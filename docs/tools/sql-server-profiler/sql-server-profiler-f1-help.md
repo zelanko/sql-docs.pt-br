@@ -5,8 +5,7 @@ ms.date: 07/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,17 +40,16 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c48b3eca23a83669e33c7d31ddb7495176944813
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6075e08d0fd6d5a62c9de00b5f34576459b0ffdc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Caixas de diálogo do SQL Server Profiler
 O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. Estes são os comandos e configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -216,8 +214,8 @@ Para exibir essa janela, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprof
 |---|---
 |**Servidor de repetição**|Exibe a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectar para a repetição.  
 |**Alterar...**|Inicia a caixa de diálogo **Conectar ao Servidor** para conectar a outro servidor.  
-|**Salvar no arquivo** |Salva os resultados da repetição para um arquivo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Exibe a caixa de diálogo de arquivo padrão, onde você pode especificar o local para salvar o arquivo.  
-|**Salvar na tabela**|Salva os resultados da repetição em uma tabela. O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe a caixa de diálogo de seleção da tabela, permitindo que se especifique o local para salvar a tabela.  
+|**Salvar no arquivo** |Salva os resultados da repetição para um arquivo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe o diálogo de arquivo padrão, permitindo que se especifique o local para salvar o arquivo.  
+|**Salvar na tabela**|Salva os resultados da repetição em uma tabela. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe a caixa de diálogo de seleção da tabela, permitindo que se especifique o local para salvar a tabela.  
 |**Número de threads de repetição**|Especifica o número de threads de repetição a usar simultaneamente. Um número maior consome mais recursos durante a repetição, porém esta será mais rápida e simultânea.  
 |**Repetir eventos na ordem em que foram rastreados**|Repete os eventos sequencialmente. Use esta opção se você estiver repetindo um rastreamento para depuração.  
 |**Repetir eventos usando vários threads** |Repete os eventos simultaneamente. Essa opção é mais rápida que repetir eventos sequencialmente, mas desabilita a depuração. Os eventos são ordenados dentro de seus identificadores de processo de sistema (SPID).  
@@ -239,10 +237,10 @@ Para exibir essa janela, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprof
 |**Intervalo de espera do monitor de processos bloqueados (s)**|Configura a frequência com que o monitor de processos bloqueados procura processos bloqueados ou em bloqueio.  
 ## <a name="find-dialog-box"></a>Caixa de diálogo Localizar
 Use a caixa de diálogo **Localizar** para pesquisar um rastreamento para caracteres ou palavras específicos. Para cancelar uma pesquisa em andamento, pressione ESC.  
- Para abrir essa caixa de diálogo no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], no menu **Editar**, clique em **Localizar**.  
+ Para abrir essa caixa de diálogo no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], no menu **Editar** , clique em **Localizar**.  
 |Item|Description
 |---|---
-|**Find what**|Insira o texto que deseja pesquisar. A pesquisa corresponde a qualquer cadeia de caracteres que contenha a cadeia especificada. Por exemplo, a pesquisa por "Concluído" corresponde a "SQL:LoteConcluído". Caracteres curinga (*, ?, etc.) não têm suporte.  
+|**Localizar**|Insira o texto que deseja pesquisar. A pesquisa corresponde a qualquer cadeia de caracteres que contenha a cadeia especificada. Por exemplo, a pesquisa por "Concluído" corresponde a "SQL:LoteConcluído". Caracteres curinga (*, ?, etc.) não têm suporte.  
 |**Pesquisar na coluna**|Clique em uma coluna de dados para pesquisar ou em  **\<todas as colunas >** para pesquisar todas as colunas de dados no rastreamento.  
 |**Diferenciar maiúsculas de minúsculas**|Localiza texto que tem maiúsculas e minúsculas iguais às da caixa **Localizar** . Desmarque essa caixa de seleção para localizar exemplos no rastreamento que tenham caracteres de texto tanto com letras maiúsculas como com minúsculas.  
 |**Coincidir palavra inteira**|Restringe a pesquisa a palavras inteiras. Desmarque a caixa de seleção **Coincidir palavra inteira** para pesquisar caracteres em uma palavra.  
@@ -270,7 +268,7 @@ Use a caixa de diálogo **Editar Filtro** para criar e modificar filtros da colu
  >Para colunas de dados do tipo cadeia de caracteres, os critérios de filtro exibirão um valor de cadeia de caracteres LIKE ou NOT LIKE.  
 
 ## <a name="select-template-name"></a>Selecionar Nome do Modelo
-Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo de rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existente para exportar para um arquivo no sistema operacional. Você também pode usar essa caixa de diálogo para selecionar ou digitar um nome diferente a fim de salvar um modelo de rastreamento ao editar um modelo de rastreamento existente. Para acessar essa caixa de diálogo ao exportar um modelo, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], aponte para **Modelos** e clique em **Exportar Modelo**. Para acessar essa caixa de diálogo ao mudar o nome de um modelo, no menu **Arquivo** , aponte para **Modelos**, aponte para **Editar Modelo**e, então, clique em **Salvar Como**.  
+Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo de rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existente para exportar para um arquivo no sistema operacional. Você também pode usar essa caixa de diálogo para selecionar ou digitar um nome diferente a fim de salvar um modelo de rastreamento ao editar um modelo de rastreamento existente. Para acessar essa caixa de diálogo ao exportar um modelo, no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Export Template**. Para acessar essa caixa de diálogo ao mudar o nome de um modelo, no menu **Arquivo** , aponte para **Modelos**, aponte para **Editar Modelo**e, então, clique em **Salvar Como**.  
 |Item|Description
 |---|---
 |**Tipo de servidor**|Selecione o tipo de servidor do qual você quer escolher um modelo. Essa opção só está disponível quando você estiver exportando um modelo.  
@@ -281,4 +279,3 @@ Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo 
 [Monitoramento de desempenho e atividade de servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-

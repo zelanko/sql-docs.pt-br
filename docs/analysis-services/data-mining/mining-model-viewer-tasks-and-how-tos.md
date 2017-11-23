@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], how-to topics
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae59c83e386be1eb222a24cd3ef7a9c9b070444f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10136119c29d785b78eec49a5e909ab1254df436
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tarefas e instruções do visualizador do modelo de mineração
   O Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém várias ferramentas que você pode utilizar para explorar modelos de mineração. Os tópicos a seguir fornecem instruções passo a passo sobre como concluir tarefas específicas do uso da guia **Visualizador do Modelo de Mineração** no designer.  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   
   
-

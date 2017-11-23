@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DataFactory customization in RDS [ADO]
+helpviewer_keywords: DataFactory customization in RDS [ADO]
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53054c25f273acc4e5c91e8641dfe50d94b5d115
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 044e738c69113740290843f14f0b2c14500307e1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datafactory-customization"></a>Personalização do DataFactory
 Remote Data Service (RDS) fornece uma maneira de realizar facilmente o acesso a dados em um sistema cliente/servidor de três camadas. Um controle de dados do cliente especifica parâmetros de cadeia de caracteres de conexão e comando para executar uma consulta em uma fonte de dados remota ou a cadeia de caracteres de conexão e [registros](../../../ado/reference/ado-api/recordset-object-ado.md) parâmetros para executar uma atualização do objeto.  
@@ -56,6 +53,5 @@ Remote Data Service (RDS) fornece uma maneira de realizar facilmente o acesso a 
 -   [Configurações necessárias de cliente](../../../ado/guide/remote-data-service/required-client-settings.md)  
   
 -   [Escrevendo seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

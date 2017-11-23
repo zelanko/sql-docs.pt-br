@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Table element [DTA]
+dev_langs: XML
+helpviewer_keywords: Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ff0277eb9d6b161f473802263a66124c078d6bf8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8786081dfd306de3fdfcf3d407854e49061548a2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-element-for-schema-dta"></a>Elemento de tabela para esquema (DTA)
   Especifica a tabela para ajuste.  
@@ -56,8 +52,8 @@ ms.lasthandoff: 08/02/2017
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento Schema para Database &#40; DTA &#41;](../../tools/dta/schema-element-for-database-dta.md)|  
-|**Elementos filho**|[Elemento Name para Table &#40; DTA &#41;](../../tools/dta/name-element-for-table-dta.md)|  
+|**Elemento pai**|[Elemento Schema para Database &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|**Elementos filho**|[Elemento Name para Table &#40;DTA&#41;](../../tools/dta/name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>Comentários  
  Se você não especificar um elemento **Table** , o Orientador de Otimização do Mecanismo de Banco de Dados assumirá que todas as tabelas no banco de dados especificado podem ser ajustadas.  
@@ -69,4 +65,3 @@ ms.lasthandoff: 08/02/2017
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

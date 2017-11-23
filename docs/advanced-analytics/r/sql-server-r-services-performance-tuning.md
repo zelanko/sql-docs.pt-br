@@ -5,22 +5,20 @@ ms.date: 07/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 536d493ba199ff4cdc808c5463cb260926f106f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Ajuste de desempenho de R no SQL Server
 
@@ -92,7 +90,7 @@ Configuração e ajuste de desempenho requer a criação de uma base sólida, no
 
 + [Ajuste de desempenho de R no SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
 
-    Fornece orientação para configurar o hardware que [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] está instalado e para configurar a instância do SQL Server para oferecer melhor suporte a scripts externos. Isso é especialmente útil para **os administradores de banco de dados**.
+    Fornece orientação para configurar o hardware que [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] está instalado e para configurar a instância do SQL Server para oferecer melhor suporte a scripts externos. Isso é especialmente útil para **os administradores de banco de dados**.
 
 + [Ajuste de desempenho de R no SQL Server - código e dados de otimização](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +102,3 @@ Configuração e ajuste de desempenho requer a criação de uma base sólida, no
 + [Ajuste de desempenho de R no SQL Server - métodos e resultados](..\r\performance-case-study-r-services.md)
 
     Resume os dados que foram usado dois estudos de caso, como o desempenho foi testado e como as otimizações afetados resultados.
-

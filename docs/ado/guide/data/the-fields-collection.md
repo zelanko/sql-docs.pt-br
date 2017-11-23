@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ecfc7532761897cddf868dcb617c6eeb5f32bccb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2c5d81985322b03892d17875959086078defd819
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-fields-collection"></a>A coleção de campos
 O **campos** coleção é uma das coleções intrínsecas do ADO. Uma coleção é um conjunto ordenado de itens que podem ser referenciados como uma unidade. Para obter mais informações sobre coleções de ADO, consulte [o modelo de objeto ADO](../../../ado/guide/data/ado-objects-and-collections.md).  
@@ -123,4 +121,3 @@ objField = objRecordset.Fields(0)
   
 ## <a name="see-also"></a>Consulte também  
  [Fabricando conjuntos de registros hierárquicos](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)
-

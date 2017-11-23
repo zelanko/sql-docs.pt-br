@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Command15::Execute
 - Command15::raw_Execute
-helpviewer_keywords:
-- Execute method [ADO]
+helpviewer_keywords: Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d8a16c395a01e20765dd1aaa569889b4b041cb9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 651123d3112ca58c028412bd025325f303f0d637
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execute-method-ado-command"></a>Executar método (comando ADO)
 Executa a consulta, a instrução SQL ou o procedimento armazenado especificado no [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriedade o [o objeto de comando](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -88,4 +85,3 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)   
  [Executar método (Conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Evento ExecuteComplete (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)
-
