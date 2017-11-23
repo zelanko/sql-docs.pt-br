@@ -14,24 +14,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HoldoutMaxPercent
-helpviewer_keywords:
-- HoldoutMaxPercent element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HoldoutMaxPercent
+helpviewer_keywords: HoldoutMaxPercent element
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4edfc8e9942dbbfd8408949ed03ee3de366c32dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1d032bc80b0b96b693c2abee89a87a4747eb234e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="holdoutmaxpercent-element"></a>Elemento HoldoutMaxPercent
   Especifica o percentual máximo de casos na fonte de dados que será usado para a partição de controle que contém o conjunto de teste de um [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elemento. Os casos restantes serão usados para treinar. Um valor de 0 indica que não existe nenhum limite para o número de casos que podem ser exibidos como conjunto de testes.  
@@ -81,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Elemento HoldoutActualSize](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)  
   
   
-

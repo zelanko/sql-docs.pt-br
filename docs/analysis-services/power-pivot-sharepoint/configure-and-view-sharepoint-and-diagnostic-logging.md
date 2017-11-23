@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 2ca4cda21f2cb76f2f46e13be5f87765a73d665d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5e94ef1aeee4d633353964a6398bd12b89ef86cf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar e exibir o log de diagnóstico e SharePoint
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são registrados em arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -140,4 +139,3 @@ ms.lasthandoff: 09/01/2017
  [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

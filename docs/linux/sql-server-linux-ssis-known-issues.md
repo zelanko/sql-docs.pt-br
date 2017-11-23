@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 70b13a0deae8f12715488d81b44fb660f76decd0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eec45efe8fb49afefab418130d05d7a2b82bddd3
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitações e problemas conhecidos do SSIS no Linux
 
@@ -130,5 +129,4 @@ O provedor de log do SQL Server oferece suporte somente a autenticação do SQL;
 Os provedores de log do SSIS para arquivos de texto, arquivos XML e SQL Server Profiler gravar sua saída em um arquivo que você especificar. As seguintes considerações se aplicam ao caminho do arquivo:
 -   Se você não fornecer um caminho, o provedor de log grava no diretório atual do host. Se o usuário atual não tem permissão para gravar no diretório atual do host, o provedor de log gera um erro.
 -   Você não pode usar uma variável de ambiente em um caminho de arquivo. Se você especificar uma variável de ambiente, o texto literal que você especificar será exibida no caminho do arquivo. Por exemplo, se você especificar `%TMP%/log.txt`, o provedor de log anexa o texto literal `/%TMP%/log.txt` para o diretório de host atual.
-
 

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>Referência das regras de integridade (Power Pivot para SharePoint)
   Este tópico de referência descreve as regras de integridade do SharePoint que são adicionadas por uma instalação do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint. Estas regras são usadas para relatar problemas com integridade de servidor, disponibilidade ou configuração de um aplicativo de serviço [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ou sua instância associada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -65,4 +64,3 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: ADOMD.NET não está instalado em um WFE autônomo que está configurado para administração central|Não|Não|SharePoint 2013<br /><br /> SharePoint 2010|O ADOMD.NET é uma biblioteca de cliente do Analysis Services que dá suporte a conexões com um banco de dados do Analysis Services. Em uma implantação do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint, o ADOMD.NET fornece acesso aos relatórios internos no painel de gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] na Administração Central. Os relatórios internos são, na verdade, pastas de trabalho do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que contêm dados inseridos do Analysis Services. O painel de gerenciamento usa o ADOMD.NET para enviar uma solicitação de conexão para o servidor que carrega dados contidos na pasta de trabalho.<br /><br /> Em topologias que incluem a Administração Central que é executada em um servidor Web front-end autônomo, você deve instalar o ADOMD.NET manualmente se quiser exibir estes relatórios no painel de gerenciamento. Para obter mais informações, confira [Instalar o ADOMD.NET em servidores Web front-end executando a Administração Central](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
   
-

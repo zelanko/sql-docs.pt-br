@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 93d3fa89e2e918082f327848a55c6dbd60376984
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3bd82e42daf591e1572536ed0541961f0c41842
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementando os Drivers de banco de dados de área de trabalho
 Instruções e Observações técnicas sobre como implementar e configurar os Drivers de banco de dados de área de trabalho do Microsoft ODBC podem ser encontradas na Ajuda online do administrador de fonte de dados ODBC. Esse arquivo pode ser acessado durante rotinas de instalação do driver do [administrador de fonte de dados do Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
@@ -57,4 +55,3 @@ Instruções e Observações técnicas sobre como implementar e configurar os Dr
 -   [Compatibilidade de driver de banco de dados de área de trabalho](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   
 -   [Problemas de desempenho do driver de banco de dados de área de trabalho](../../odbc/microsoft/desktop-database-driver-performance-issues.md)
-

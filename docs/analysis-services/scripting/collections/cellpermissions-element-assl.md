@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CellPermissions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CellPermissions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CellPermissions
-helpviewer_keywords:
-- CellPermissions element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CellPermissions
+helpviewer_keywords: CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 04b97d86aa822ca18222c061532a96357ef265d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7b370d77708b4948bfccfc53853cc2b1aee7ba21
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cellpermissions-element-assl"></a>Elemento CellPermissions (ASSL)
   Contém a coleção de permissões para células no associado [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento.  
@@ -78,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Coleções de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

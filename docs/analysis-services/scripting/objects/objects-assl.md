@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, objects
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 678eabca49558ed4ff9a933433a97f5ed308dcb3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 749c363a814590705b61d0821f1fee44ea93d488
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objects-assl"></a>Objetos (ASSL)
   Esta seção de referência contém informações de sintaxe e uso de cada elemento que age como um objeto no esquema ASSL (Analysis Services Scripting Language).  
@@ -120,4 +118,3 @@ ms.lasthandoff: 09/01/2017
  [Hierarquia de elementos XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   
-

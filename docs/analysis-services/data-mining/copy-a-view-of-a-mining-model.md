@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], clipboards
 - copying mining models to clipboard
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 77e2e0228532d7a0ef9c379200ef063fc84b8430
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 353d9d48d8dc8fd6ca596935d96c01522467cdde
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>Copiar uma exibição de um modelo de mineração
   O **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa um visualizador separado para cada tipo de modelo de mineração. Muitos dos visualizadores têm componentes a partir dos quais você pode copiar o conteúdo para a Área de Transferência e de lá colar o conteúdo em um documento ou no software de manipulação de imagens. Os componentes a seguir tornam essa funcionalidade disponível:  
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

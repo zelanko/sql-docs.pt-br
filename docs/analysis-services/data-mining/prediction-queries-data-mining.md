@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   O objetivo de um projeto de mineração de dados típico é usar o modelo de mineração para fazer previsões. Por exemplo, você pode querer prever a quantidade de tempo de inatividade esperado para um determinado cluster de servidores ou gerar uma pontuação que indica a probabilidade de os segmentos de clientes responderem a uma campanha publicitária. Para fazer todas estas coisas, você cria uma consulta de previsão.  
@@ -161,4 +160,3 @@ FROM
  [Consultas de definição de dados &#40;Data Mining&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   
-

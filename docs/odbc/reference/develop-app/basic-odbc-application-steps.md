@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC]
 - application process [ODBC], about application process
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d3d35ee438d57be1fac0959645d7c04743c4b873
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fbafffd1922dabbb49bec1cae59d6bce099bd5d7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="basic-odbc-application-steps"></a>Etapas de aplicativo básico do ODBC
 Esta seção descreve o fluxo geral de aplicativos de ODBC. É improvável que qualquer aplicativo chama todas essas funções exatamente nessa ordem. No entanto, a maioria dos aplicativos usa algumas variações dessas etapas. As etapas básicas de aplicativo são mostradas na ilustração a seguir.  
@@ -48,4 +46,3 @@ Esta seção descreve o fluxo geral de aplicativos de ODBC. É improvável que q
 -   [Etapa 5: Confirmar a transação](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   
 -   [Etapa 6: Desconectar da fonte de dados](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)
-

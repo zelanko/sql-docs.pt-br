@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4ad9dd40bb7f7f8da0820d9ccbefafed9079650b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee0b59c9035d6801bbe7a87d8589e7c337c6c9c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistente de Mineração de Dados (Analysis Services - Mineração de dados)
   O Assistente de Data Mining no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é iniciado toda vez que você adiciona uma nova estrutura de mineração a um projeto de mineração de dados. O assistente ajuda a escolher uma fonte de dados e configurar uma exibição da fonte de dados que define os dados a serem usados para análise e, em seguida, ajuda a criar um modelo inicial.  
@@ -130,4 +129,3 @@ ms.lasthandoff: 09/01/2017
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [Analysis Services], OLE DB for OLAP
 - OLE DB for OLAP schema rowsets
 - schema rowsets [OLE DB for OLAP]
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f06af3341034ccc9ddebe1ac6a130be705bdd0cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 655e40afe2808b5f26216923d54e474054170a54
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>Conjuntos de linhas de esquema OLE DB para OLAP
   O provedor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) dá suporte aos conjuntos de linhas de esquema OLE DB para OLAP a seguir.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |[Conjunto de linhas MDSCHEMA_KPIS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-kpis-rowset.md)|Descreve os KPIs (indicadores chave de desempenho) dentro de um banco de dados.|  
 |[Conjunto de linhas MDSCHEMA_LEVELS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-levels-rowset.md)|Descreve cada nível dentro de uma hierarquia específica.|  
 |[Conjunto de linhas MDSCHEMA_MEASUREGROUP_DIMENSIONS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|Enumera as dimensões de grupos de medidas.|  
-|[Conjunto de linhas mdschema_measuresgroups](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|Descreve os grupos de medidas dentro de um banco de dados.|  
+|[Conjunto de linhas MDSCHEMA_MEASURESGROUPS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|Descreve os grupos de medidas dentro de um banco de dados.|  
 |[Conjunto de linhas MDSCHEMA_MEASURES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|Descreve cada medida dentro de um cubo.|  
 |[Conjunto de linhas MDSCHEMA_MEMBERS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Descreve os membros dentro de um banco de dados.|  
 |[Conjunto de linhas MDSCHEMA_PROPERTIES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Descreve as propriedades de membros dentro de um banco de dados.|  
@@ -66,7 +64,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Conjunto de linhas DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)   
- [Conjuntos de linhas do esquema do Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Conjuntos de linhas de esquema do Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

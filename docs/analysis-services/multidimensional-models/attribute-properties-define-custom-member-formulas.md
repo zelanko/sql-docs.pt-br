@@ -20,17 +20,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], custom rollup formulas
 - custom member formulas [Analysis Services]
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f2d802623b470077ba46326c7650e30013d07534
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bfc7acae6efb9227cc2afa844faab5b718a02251
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>Propriedades de atributo - definir fórmulas de membro personalizado
   É possível definir uma expressão multidimensional (MDX), chamada fórmula de membro personalizado, para fornecer os valores aos membros de um atributo especificado. Uma coluna em uma tabela da exibição da fonte de dados fornece, para cada membro de um atributo, a expressão usada para fornecer o valor para esse membro.  
@@ -86,4 +85,3 @@ Time.[Quarter 3] * 1.5
  [Definir fórmulas de membro personalizado para os atributos em uma dimensão](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   
-

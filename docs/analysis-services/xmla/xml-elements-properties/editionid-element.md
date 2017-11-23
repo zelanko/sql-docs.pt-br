@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: f2d1cc7f-8ab5-4b73-a128-ce58d9bb7f96
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fc0e945c284cf0263f6822cb79d0d9d81dab2c3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eae31fcba772453a53d2c9a8e3df1c903a01c5ed
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="editionid-element"></a>Elemento EditionId
   Contém o código de identificador de edição numérica do pai [Server Element (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md) elemento.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Elemento de servidor (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md)|  
+|Elementos pai|[Elemento Server (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md)|  
 |Elementos filho|Nenhuma|  
   
 ## <a name="remarks"></a>Comentários  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

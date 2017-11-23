@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProductName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProductName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ProductName
-helpviewer_keywords:
-- ProductName element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ProductName
+helpviewer_keywords: ProductName element
 ms.assetid: f8129bb2-55c9-44e1-8857-82dc01c04a7f
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8d94d8ee62503a0f00fd3d1a6316334e81d7c37d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0cad2a68b23da684ea86e51497426d4b0224da5f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="productname-element-assl"></a>Elemento ProductName (ASSL)
   Contém o nome de produto somente leitura da instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que está associado com um [Server](../../../analysis-services/scripting/objects/server-element-assl.md) elemento.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

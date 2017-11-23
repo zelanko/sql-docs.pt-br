@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Query method [ADO]
+helpviewer_keywords: Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 32233e74eece2de258223599a682c8fb27d46fe6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 53647d80b2e6110e5af084e6a3f983381ced1690
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-method-rds"></a>Método Query (RDS)
 Usa uma cadeia de caracteres de consulta SQL válida para retornar um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -62,6 +59,5 @@ Set Recordset = DataFactory.Query(Connection, Query)
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo do método CreateObject, do método Query e objeto DataFactory (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
-
 
 

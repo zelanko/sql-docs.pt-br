@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ready-only cube view
 - OLAP objects [Analysis Services], perspectives
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - visibility [Analysis Services]
 - storage [Analysis Services], perspectives
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a892a571a70b3f5bff5fb16496c2fee5d18f151
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 798a8d872b52c21d794e3d1f21cf52e133d56277
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectives"></a>Perspectivas
   Uma perspectiva é uma definição que permite os usuários visualizem um cubo de um modo mais simples. Uma perspectiva é um subconjunto dos recursos de um cubo. Uma perspectiva permite que os administradores criem exibições do cubo, ajudando outros usuários a se concentrarem nos dados mais relevantes. Uma perspectiva contém subconjuntos de todos os objetos de um cubo. Uma perspectiva não pode incluir elementos que não estão definidos no cubo pai.  
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  As perspectivas não se destinam a serem usadas como um mecanismo de segurança, mas como uma ferramenta para fornecer uma melhor experiência ao usuário com os aplicativos de business intelligence. Toda a segurança de uma determinada perspectiva é herdada do cubo subjacente. Por exemplo, as perspectivas não podem fornecer acesso a objetos em um cubo ao qual o usuário ainda não tem acesso. A segurança do cubo deve ser resolvida antes que o acesso a objetos no cubo possa ser fornecido por meio de uma perspectiva.  
   
   
-

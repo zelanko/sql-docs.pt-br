@@ -19,17 +19,16 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a255b5449ec7abc9ff8d78ce376a8f456053ceff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definir relações lógicas em uma exibição da fonte de dados (Analysis Services)
   O Assistente de Exibição da Fonte de Dados e o Designer de Exibição da Fonte de Dados definem relações entre as tabelas adicionadas a uma DSV (exibição da fonte de dados) com base nas relações do banco de dados subjacente ou nos critérios de correspondência de nomes que você especificar.  
@@ -98,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

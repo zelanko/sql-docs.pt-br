@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Data Source View Wizard
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c73c6b68b7fb9f108b96732a7e30bb48f8404ba8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3aae9714c37d9bd4272add2829d4cdef8f2d9c9d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definindo uma exibição da fonte de dados (Analysis Services)
   Uma exibição de fonte de dados, contém o modelo lógico do esquema usado pelos objetos do banco de dados multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — ou seja, cubos, dimensões e estruturas de mineração de dados. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
@@ -152,4 +151,3 @@ ms.lasthandoff: 09/01/2017
  [Atualizar o esquema em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   
-

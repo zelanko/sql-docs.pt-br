@@ -13,29 +13,25 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Analysis Services Scripting Language XML Data Types
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Analysis Services Scripting Language XML Data Types
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, data types
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8b15c0ffee8bc0217ec119d6d66ef446f7897c0e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 63371810e2a7c41fab2935dfeb94a03b9250385a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Tipos de dados XML de linguagem script (ASSL) do Analysis Services
   Esta seção de referência contém informações de sintaxe e uso de cada elemento que age como um tipo no esquema ASSL (Analysis Services Scripting Language).  
@@ -139,4 +135,3 @@ ms.lasthandoff: 09/01/2017
  [Hierarquia de elementos XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   
-

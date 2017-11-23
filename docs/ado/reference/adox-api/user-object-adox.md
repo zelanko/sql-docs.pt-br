@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- User
-helpviewer_keywords:
-- User object [ADOX]
+f1_keywords: User
+helpviewer_keywords: User object [ADOX]
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a34d35adf84e32738733184430160613ef8eca45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3565b06fa33ddf0990b89724639d9538da37e9b6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-object-adox"></a>Objeto de usuário (ADOX)
 Representa uma conta de usuário que tenha permissões de acesso dentro de um banco de dados protegido.  
@@ -58,4 +54,3 @@ Representa uma conta de usuário que tenha permissões de acesso dentro de um ba
  [Exemplo de métodos de SetPermissions (VB) e GetPermissions](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Coleção de grupos (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Coleção Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-

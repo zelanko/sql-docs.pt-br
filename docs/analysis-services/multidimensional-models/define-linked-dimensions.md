@@ -18,17 +18,16 @@ helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 261ba3bea0256789df5f6ad72cff553c6ed253f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d7830d5075da8ab4b741ecb31bbdefb3acdf6cb9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensões vinculadas
   Uma dimensão vinculada baseia-se uma dimensão criada e armazenada em outro banco de dados do Analysis Services na mesma versão e no mesmo nível de compatibilidade. Usando uma dimensão vinculada, você pode criar, armazenar e manter uma dimensão em um banco de dados, ao mesmo tempo disponibilizando-o para usuários de vários bancos de dados. Para usuários, uma dimensão vinculada aparece como qualquer outra dimensão.  
@@ -91,4 +90,3 @@ ms.lasthandoff: 09/01/2017
  [Relações de dimensão](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   
-

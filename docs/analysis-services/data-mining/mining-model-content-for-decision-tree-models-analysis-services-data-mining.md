@@ -18,17 +18,16 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e44543e26d7e1ba9ec190334babe6e2c8a992281
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: da90bcdea225f4a27fdd28339bdeb127943ea15a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). É importante lembrar que o algoritmo Árvores de Decisão da Microsoft é um híbrido que pode criar modelos com funções muito diferentes: uma árvore de decisão pode representar associações, regras ou até mesmo regressão linear. A estrutura da árvore é basicamente a mesma, mas o modo como as informações serão interpretadas dependerá do objetivo para o qual você criou o modelo.  
@@ -309,4 +308,3 @@ ms.lasthandoff: 09/01/2017
  [Algoritmo Árvores de Decisão da Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   
-

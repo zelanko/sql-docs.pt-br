@@ -26,17 +26,16 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Processando opções e configurações (Analysis Services)
   Ao processar objetos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode selecionar uma opção de processamento para controlar o tipo de processamento que ocorre para cada objeto. Os tipos de processamento variam de um objeto para outro e por alterações ocorridas no objeto desde que ele foi processado pela última vez. Se você habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para selecionar automaticamente um método de processamento, ele usará o método que retornar o objeto a um estado inteiramente processado no menor tempo.  
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

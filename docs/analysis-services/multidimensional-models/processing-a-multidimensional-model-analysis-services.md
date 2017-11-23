@@ -26,17 +26,16 @@ helpviewer_keywords:
 - project mode [Analysis Services]
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0813f6d0947927d93a44519c5cbe8eeeb6a5719c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb063d1667fc3cd3824f2577784278fa46308960
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Processando um modelo multidimensional (Analysis Services)
   O processamento é a etapa ou uma série de etapas nas quais o Analysis Services carrega dados de uma fonte de dados relacional para um modelo multidimensional. Para objetos que usam o armazenamento MOLAP, os dados são salvos em disco na pasta do arquivo de banco de dados. No armazenamento ROLAP, o processamento ocorre sob demanda, em resposta a uma consulta MDX sobre um objeto. Para objetos que usam armazenamento ROLAP, o processamento refere-se à atualização do cache antes de retornar os resultados da consulta.  
@@ -93,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [Objetos de banco de dados &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

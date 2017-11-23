@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-errors"></a>Erros do provedor
 Quando ocorre um erro de provedor, um erro de tempo de execução de -2147467259 é retornado. Quando você receber esse erro, verifique o **erros** coleção de ativo **Conexão** objeto, que contém um ou mais erros que descreve o que ocorreu.  
@@ -87,4 +85,3 @@ End Function
  O **erro** objeto também é usado quando ocorrem erros relacionados a eventos. Você pode determinar se ocorreu um erro no processo que disparou um evento de ADO, verificando o **erro** objeto passado como um parâmetro de evento.  
   
  Se a operação que faz com que um evento seja concluída com êxito, o *adStatus* parâmetro do manipulador de eventos será definido como *adStatusOK*. Por outro lado, se a operação que gerou o evento foi bem-sucedida, o *adStatus* parâmetro está definido como *adStatusErrorsOccurred*. Nesse caso, o *pError* parâmetro conterá um **erro** objeto que descreve o erro.
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: server-properties
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: HeidiSteen
 ms.author: heidist
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a48b3f89da00437cec8781e1ea35b6ea87f0c300
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 225c4aea79b880fd85f118d89bae1339e370aa40
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dax-properties"></a>Propriedades do DAX
    A seção DAX de msmdsrv.ini contém as configurações usadas para controlar certos comportamentos de consulta em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], como o limite superior no número de linhas retornadas em um conjunto de resultados de consulta DAX. 
@@ -56,4 +54,3 @@ MaxIntermediateRowsetSize | 1.000.000 | Número máximo de linhas retornadas em 
 PredicateCheckSpoolCardinalityThreshold| 5000 | Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da Microsoft.
 
 Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md). 
-

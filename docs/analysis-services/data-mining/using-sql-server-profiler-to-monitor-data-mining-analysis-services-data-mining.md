@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], Analysis Services
+helpviewer_keywords: Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f3a8a59a9bea7f2e11d4ec3d68d5ad2dcd28ec6a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96b5485ebddba8823f262ba6a2229018d82a72fd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Usando o SQL Server Profiler para monitorar a mineração de dados (Analysis Services - Mineração de dados)
   Se tiver as permissões necessárias, você poderá usar o SQL Server Profiler para monitorar as atividades de mineração de dados emitidas como solicitações enviadas a uma instância do SQL Server Analysis Services. A atividade de mineração de dados pode incluir o processamento de modelos ou estruturas, consultas de previsão ou consultas de conteúdo ou a criação de novos modelos ou estruturas.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [Monitorar o Analysis Services com Eventos Estendidos do SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   
-

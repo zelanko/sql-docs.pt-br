@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,20 +19,18 @@ f1_keywords:
 - _Record::put_Source
 - _Record::putref_Source
 - _Record::get_Source
-helpviewer_keywords:
-- Source property [ADO Record]
+helpviewer_keywords: Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2e379bb3e2fce7899125c208251c8a04da1ea95
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 524845f59338a483df89586847157e6d9eaa598c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-property-ado-record"></a>Propriedade Source (ADO registro)
 Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -61,4 +58,3 @@ Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/re
 ## <a name="see-also"></a>Consulte também  
  [Propriedade Source (erro de ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Propriedade Source (Conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-

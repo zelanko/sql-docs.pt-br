@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8df428eef937514ff96276bc0ebea1964ffb8773
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Use o assistente de geração de esquema (Analysis Services)
   O Assistente de Geração de Esquema requer uma quantidade limitada de informações durante a fase de geração. A maioria das informações que o Assistente de Geração de Esquema requer para gerar esquemas relacionais é extraída dos cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e dimensões que você já criou no projeto. Além disso, você pode personalizar como o esquema de banco de dados de área de assunto é gerado e como são nomeados objetos no esquema.  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  É possível definir as convenções de nomenclatura que o Assistente de Geração de Esquema usará ao gerar determinados objetos no banco de dados da área de assunto na página **Especificar Convenções de Nomenclatura** do assistente. Para obter mais informações sobre as opções disponíveis na página **Especificar Convenções de Nomenclatura**, consulte [Especificar Convenções de Nomenclatura &#40;Assistente de Geração de Esquema&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b).  
   
   
-

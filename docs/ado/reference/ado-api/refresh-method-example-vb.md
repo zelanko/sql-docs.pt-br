@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Refresh method [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Refresh method [ADO], Visual Basic example
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b087750a23197e3e6b2b752a9180e7977c96132e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0cd079125e15e3e49d9c055d4d7619cc48140da
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="refresh-method-example-vb"></a>Atualizar exemplo de método (VB)
 Este exemplo demonstra como usar o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método para atualizar o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção para um procedimento armazenado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
@@ -132,4 +128,3 @@ End Sub
  [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Coleção de parâmetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-

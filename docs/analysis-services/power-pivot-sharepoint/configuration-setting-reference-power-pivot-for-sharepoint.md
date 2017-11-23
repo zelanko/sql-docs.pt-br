@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4f3b5a6b1a90d22889c4cd935abaf94f5172cfd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Referência de parâmetro de configuração (Power Pivot para SharePoint)
   Este tópico fornece documentação de referência para os parâmetros de configuração usados por aplicativos de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm do SharePoint. Se você estiver usando script do PowerShell para configurar um servidor ou se desejar procurar informações para uma configuração específica, as informações deste tópico fornecerão descrições detalhadas.  
@@ -110,4 +109,3 @@ ms.lasthandoff: 09/01/2017
  [Painel de Gerenciamento Power Pivot e dados de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
   
-

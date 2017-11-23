@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AggregationDesign Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AggregationDesign Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AggregationDesign
-helpviewer_keywords:
-- AggregationDesign element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AggregationDesign
+helpviewer_keywords: AggregationDesign element
 ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 81d1fbd4f314b713e0177af58ef27b3caed4f28a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 37820498904def60b0bdbd35afddeccf461cdb34
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregationdesign-element-assl"></a>Elemento AggregationDesign (ASSL)
   Define um conjunto de definições de agregação que podem ser compartilhadas entre várias partições de um banco de dados.  
@@ -83,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

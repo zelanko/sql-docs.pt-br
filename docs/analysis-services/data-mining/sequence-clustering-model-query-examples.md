@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   Quando você cria uma consulta referente a um modelo de mineração de dados, pode criar uma consulta de conteúdo, que fornece detalhes sobre as informações armazenadas no modelo ou pode criar uma consulta de previsão, que usa os padrões no modelo para fazer previsões com base nos novos dados fornecidos. Para um modelo de clusterização de sequência, as consultas de conteúdo geralmente fornecem mais detalhes sobre os clusters encontrados ou as transições dentro desses clusters. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
@@ -287,4 +286,3 @@ AS t
  [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   
-

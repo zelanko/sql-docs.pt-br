@@ -13,26 +13,24 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7435de185c6a8cb54d9fc55ea53d9c8d66214033
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dae8eace8a062bb296e172ce5d547eaf7768fa42
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-programming"></a>Programação de modelo multidimensional
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece várias APIs que você pode usar para programar em uma instância do Analysis Services e os bancos de dados multidimensionais que ele disponibiliza. Esta seção descreve as abordagens disponíveis para desenvolvedores que querem criar aplicativos personalizados usando soluções multidimensionais do Analysis Services. Você pode usar estas informações para escolher a interface de programação que melhor atende aos requisitos de um projeto específico. Os projetos de desenvolvimento do Analysis Services podem se basear em código gerenciado ou não gerenciado, executado em uma plataforma Windows ou em outras plataformas que ofereçam suporte ao acesso HTTP.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Noções básicas sobre a arquitetura Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
+ [Noções básicas sobre a arquitetura do Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
  [Desenvolvendo com ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Programação de mineração de dados](../../analysis-services/data-mining-programming.md)  
   
   
-

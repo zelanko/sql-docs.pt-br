@@ -21,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4dff2bccc2c56f35152c2959ee4b9699eaf9821b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e74a79b18f526878981d21e36134ff82d5c862b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tarefas de teste e validação e guias práticos (mineração de dados)
   Você pode usar a guia **Gráfico de Precisão de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para comparar a precisão previsível dos modelos de mineração em sua estrutura de mineração.  
@@ -67,4 +66,3 @@ ms.lasthandoff: 09/01/2017
 -   [Usando dados de uma tabela aninhada como entrada para um gráfico de precisão](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   
   
-

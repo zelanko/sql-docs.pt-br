@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Attributes property [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 69ec8dcfecac32da4d963198298cf94f58edba1c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 555f4545d7d54ce5b7ee37b19aa049461f00c969
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-property-example-vc"></a>Exemplo da propriedade Attributes (VC + +)
 Este exemplo demonstra o [atributos](../../../ado/reference/adox-api/attributes-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md). Definindo-a como **adColNullable** permite que o usuário defina o valor de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) para uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro de onde os dados não são conhecidos e um registro de onde os dados não se aplica.  
@@ -213,4 +209,3 @@ int main() {
 ## <a name="see-also"></a>Consulte também  
  [Propriedade Attributes (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-

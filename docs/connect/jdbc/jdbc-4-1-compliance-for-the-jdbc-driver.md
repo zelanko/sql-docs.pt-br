@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a66318e837094f3558cceba29755dff913f3cb3a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Conformidade do JDBC 4.1 com o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/27/2017
 |Novos mapeamentos de tipo de dados agora têm suporte nos métodos PreparedStatement.setObject() e PreparedStatement.setNull().|1. Novo Java para mapeamento de tipo JDBC<br /><br /> (a) java.math.BigInteger para JDBC BIGINT<br /><br /> (b) java.util.Date e java.util.Calendar para JDBC TIMESTAMP<br /><br /> 2. Conversões de novo tipo de dados:<br /><br /> (a) java.math.BigInteger CHAR, VARCHAR, LONGVARCHAR e BIGINT<br /><br /> (b) java.util.Date e java.util.Calendar para CHAR, VARCHAR, LONGVARCHAR, DATE, TIME e TIMESTAMP<br /><br /> Para obter mais detalhes, consulte a especificação do JDBC 4.1.|  
   
   
-

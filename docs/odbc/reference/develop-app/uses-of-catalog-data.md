@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], using catalog data
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c77be1b431a7f7e2cf8c040df7ceb9a9feaf321a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="uses-of-catalog-data"></a>Usos de dados do catálogo
 Aplicativos usam dados de catálogo em uma variedade de maneiras. Aqui estão alguns usos comuns:  
@@ -41,4 +39,3 @@ Aplicativos usam dados de catálogo em uma variedade de maneiras. Aqui estão al
      Também podem usar esses ambientes **SQLTables** e **SQLColumns** para criar listas das quais o programador pode fazer seleções. Também podem usar esses ambientes **SQLPrimaryKeys** e **SQLForeignKeys** para determinar automaticamente e mostrar relações entre as tabelas selecionadas e usar **SQLStatistics** para determinar e realçar campos indexados para o programador possa criar consultas eficientes.  
   
 -   **Construindo cursores.** Um aplicativo, o driver ou o middleware que fornece um mecanismo de cursor rolável use **SQLSpecialColumns** para determinar qual coluna ou colunas que identificam exclusivamente uma linha. O programa foi possível construir um *keyset* que contém os valores dessas colunas para cada linha que foi buscada. Quando o aplicativo rola para a linha, ele seria usar esses valores para buscar os dados mais recentes para a linha. Para obter mais informações sobre cursores roláveis e conjuntos de chaves, consulte [cursores roláveis](../../../odbc/reference/develop-app/scrollable-cursors.md).
-

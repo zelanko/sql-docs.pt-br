@@ -26,17 +26,16 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96b296189200416c2c5234597cf8f4e45618b6d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculations-in-multidimensional-models"></a>Cálculos em modelos multidimensionais
   Use a guia **Cálculos** do Designer de Cubo para criar membros calculados, conjuntos nomeados e outros cálculos de expressões multidimensionais (MDX).  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  Para excluir um cálculo existente, na guia **Cálculos** do painel **Organizador de Script** , selecione o cálculo que será excluído e, em seguida, clique em **Excluir** no menu **Editar** ou clique no ícone **Editar** da barra de ferramentas. Você também pode clicar com o botão direito do mouse no cálculo no painel **Organizador de Script** e selecionar **Excluir** no menu de atalho.  
   
   
-

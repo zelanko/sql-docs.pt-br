@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- custom member properties [MDX]
+helpviewer_keywords: custom member properties [MDX]
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eaeb79931b4c9c57088ada093148047a26b614d2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 12bc5ca42588d81e99490a4ed836c5e71dac49e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-member-properties---user-defined-member-properties"></a>Propriedades de membro MDX - propriedades do membro definidas pelo usuário
   É possível adicionar propriedades do membro definidas pelo usuário a um nível nomeado específico de uma dimensão como relações de atributo. Não é possível adicionar propriedades do membro definidas pelo usuário ao nível **(Tudo)** de uma hierarquia ou à própria hierarquia.  
@@ -81,4 +79,3 @@ FROM [Adventure Works]
  [Propriedades &#40; MDX &#41;](../../../mdx/properties-mdx.md)  
   
   
-

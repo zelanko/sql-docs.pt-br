@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - calculations [Analysis Services]
 - OLAP objects [Analysis Services], calculations
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - calculations [Analysis Services], about calculations
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0771e03eaa12e37cce685309fa776fe7f7c31443
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6fa38369b12c07a47a2501bc906535b0263db2e5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculations"></a>Cálculos
   Um cálculo é uma expressão MDX (Multidimensional Expressions) ou um script que é usado para definir um membro calculado, um conjunto nomeado ou uma tarefa no escopo em um cubo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os cálculos permitem a adição de objetos que são definidos não pelos dados do cubo, mas pelas expressões que fazem referência a outras partes do cubo, a outros cubos, ou mesmo a informações fora do banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os cálculos permitem a extensão das capacidades de um cubo, adicionando flexibilidade e poder a aplicativos de inteligência comercial. Para obter mais informações sobre cálculos de script, consulte [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Para obter mais informações sobre problemas de desempenho relacionadas a cálculos e consultas MDX, consulte o [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Cálculos em modelos multidimensionais](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

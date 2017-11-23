@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - quantitative dimensions [Analysis Services]
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - customers dimensions [Analysis Services]
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5fa77532b4c674c4b5035cf6b591b973008ae6e5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimension-properties---types"></a>Propriedades de dimensão do banco de dados - tipos
   O **tipo** configuração da propriedade fornece informações sobre o conteúdo de uma dimensão para aplicativos cliente e servidor. Em alguns casos, o **tipo** configuração somente fornece orientação para aplicativos cliente e é opcional. Em outros casos, como **contas** ou **tempo** dimensões, o **tipo** configurações de propriedade para a dimensão e seus atributos determinam comportamentos específicos baseados em servidor e pode ser necessário para implementar determinados comportamentos no cubo. Por exemplo, o **tipo** propriedade de uma dimensão pode ser definida como **contas** para indicar a aplicativos cliente que a dimensão padrão contém atributos de conta. Para obter mais informações sobre o tempo, a conta e a dimensão de moeda, consulte [criar uma dimensão de tipo de data](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [criar uma conta de Finanças de dimensão de tipo de pai-filho](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), e [criar uma moeda tipo de dimensão](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -76,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
-

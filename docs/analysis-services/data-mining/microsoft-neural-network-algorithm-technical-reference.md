@@ -32,17 +32,16 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 46dc639d30a60ef8f332c340e3ffd685c8f4f72f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   A Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa uma rede *multicamadas Perceptron* , também denominada *rede Regra-Delta com Algoritmo Backpropagation*, composta de até três camadas de neurônios ou *perceptrons*. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
@@ -212,7 +211,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Conteúdo do modelo de mineração para modelos de rede Neural &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Exemplos de consulta de modelos de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   
-

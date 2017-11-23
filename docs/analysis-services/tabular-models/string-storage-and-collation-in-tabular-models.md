@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 421606292e30977064f96bf5e77efca396b90032
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Armazenamento de cadeia e agrupamento em modelos de tabela
   Cadeias de caracteres (valores de texto) são armazenadas em um formato altamente compactado em modelos de tabela; por causa desta compactação, você pode obter resultados inesperados ao recuperar cadeias de caracteres inteiras ou parciais. Além disso, como a localidade e o agrupamento são herdados hierarquicamente do objeto pai mais próximo, se o idioma da cadeia de caracteres não for definido explicitamente, a localidade e o agrupamento do pai poderão afetar como cada cadeia de caracteres é armazenada e se ela é exclusiva ou combinada com cadeias de caracteres semelhantes, conforme definido pelo agrupamento pai.  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  É importante observar que normalmente o identificador de idioma e a ordem de agrupamento no banco de dados de origem têm pouco ou nenhum efeito sobre a forma como valores são armazenados na coluna de modelo de tabela. A exceção será se o banco de dados de origem transformar ou filtrar os valores solicitados.  
   
   
-

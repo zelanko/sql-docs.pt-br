@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.deploystatus.f1
+f1_keywords: sql13.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8fb6f353bfe4cb3d116da7fa9cab5edaad3d4f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: adb50d35f60359d6bd1e18cacff6e80722665d59
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Implantar das Ferramentas de Dados do SQL Server
   Use as tarefas neste tópico para implantar uma solução de modelo de tabela usando o comando implantar no SSDT.  
@@ -74,7 +72,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Implantação de solução de modelo de tabela](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)   
- [Configurar propriedades de implantação e modelagem de dados padrão](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+ [Configurar propriedades padrão de implantação e modelagem de dados](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
   
   
-

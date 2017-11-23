@@ -14,8 +14,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
+f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
 - dimensions [Analysis Services], security
 - AllowedSet property
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - VisualTotals property
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 42ea70f08c2f051970898fa4e3e9498f7f8c1627
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acesso personalizado a dados da dimensão (Analysis Services)
   Após habilitar o acesso de leitura a um cubo, você pode definir permissões adicionais que permitem ou negam explicitamente o acesso a membros de dimensão (incluindo as medidas contidas na dimensão de medidas que contém todas as medidas usadas em um cubo). Por exemplo, considerando várias categorias de revendedores, você pode querer definir as permissões para excluir dados de um tipo de negócio específico. A ilustração a seguir mostra o antes e o depois da negação de acesso ao tipo de negócio Depósito na dimensão do Revendedor.  
@@ -145,4 +143,3 @@ ms.lasthandoff: 09/27/2017
  [Conceder permissões em um objeto de fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   
-

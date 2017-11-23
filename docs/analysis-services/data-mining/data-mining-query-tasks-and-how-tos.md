@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], how-to topics
+helpviewer_keywords: mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ffbdae6e1ffbd491d1191df8543e8b3f831921d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91ae26748640ae6fbcafe12ae1545fadc2adbde6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tarefas e instruções de consulta de mineração de dados
   A capacidade de criar consultas será essencial se você for utilizar seus modelos de mineração de dados. Esta seção contém links para exemplos sobre como criar consultas em um modelo de mineração de dados usando as ferramentas fornecidas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se precisar de mais informações sobre a definição de uma consulta de mineração de dados ou sobre os diferentes tipos de consultas que você pode criar, consulte [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md).  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Procedimentos armazenados da mineração de dados &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   
-

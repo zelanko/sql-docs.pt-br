@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_Open
 - _Stream::Open
-helpviewer_keywords:
-- Open method [ADO]
+helpviewer_keywords: Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2da6a07f58ab3cceb9ca9d661703603146c3e5f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dba50c39ff8c31154e52f8575a93acdf829df442
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-method-ado-stream"></a>Método Open (fluxo de ADO)
 Abre uma [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto para manipular fluxos de dados binários ou de texto.  
@@ -75,4 +72,3 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
  [Método SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataSourceID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataSourceID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.datasourceid
 - urn:schemas-microsoft-com:xml-analysis#DataSourceID
 - http://schemas.microsoft.com/analysisservices/2003/engine#DataSourceID
-helpviewer_keywords:
-- DataSourceID element
+helpviewer_keywords: DataSourceID element
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fc7845f5cbd36d3e8696a7ad24ed834975de87e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eb3374f4a2bc9da44263ed65a4247903671e03dd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasourceid-element-xmla"></a>Elemento DataSourceID (XMLA)
   Identifica uma fonte de dados usada por um [local](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) elemento durante uma [Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), ou [sincronizar](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando.  
@@ -79,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -24,17 +24,16 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cd37cd530af23d04f98866eebcaaad824a66f150
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b43b6b6144931dea129aeb82531fdbc5204121d0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="time-series-model-query-examples"></a>Exemplos de consulta de um modelo de série temporal
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes de padrões descobertos em análises, ou uma consulta de previsão, que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de série temporal pode fornecer detalhes adicionais sobre as estrutura periódicas encontradas, enquanto uma consulta de previsão pode informar as previsões para as próximas 5-10 frações de tempo. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
@@ -240,4 +239,3 @@ AND NODE_TYPE = 15
  [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   
-

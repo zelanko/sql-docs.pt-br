@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Command
-helpviewer_keywords:
-- Command object [ADO]
+f1_keywords: Command
+helpviewer_keywords: Command object [ADO]
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2f4aab59ac3a5296d4dcd75927b632f7a6915d46
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 863c922dce68f5e3108136baf90ebc5a3d0b697a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-object-ado"></a>Objeto de comando (ADO)
 Define um comando específico que você pretende executar em relação a uma fonte de dados.  
@@ -89,4 +85,3 @@ objCmd(0)
  [Coleção de parâmetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)
-

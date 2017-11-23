@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- RecordOpenOptionsEnum
-helpviewer_keywords:
-- RecordOpenOptionsEnum enumeration [ADO]
+f1_keywords: RecordOpenOptionsEnum
+helpviewer_keywords: RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4b94b5bf6c47fa824e7ff5f542d749b509376376
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 157b0683dc9d68e4fb00dce0d4a468fa5f622179
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Especifica opções para abrir um [registro](../../../ado/reference/ado-api/record-object-ado.md). Esses valores podem ser combinados usando ou.  
@@ -47,4 +43,3 @@ Especifica opções para abrir um [registro](../../../ado/reference/ado-api/reco
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Método Open (Registro do ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)
-

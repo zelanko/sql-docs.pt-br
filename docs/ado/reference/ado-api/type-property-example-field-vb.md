@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Type property [field] [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d52947b4401e7344af7b3edceea65b0b483a06ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7499b482e01272d0307de4d5daf6f785946b525
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-example-field-vb"></a>Exemplo de propriedade de tipo (campo) (VB)
 Este exemplo demonstra o [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade exibindo o nome da constante que corresponde ao valor da [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade de todos os a [campo](../../../ado/reference/ado-api/field-object.md) objetos do ***Funcionários*** tabela. A função FieldType é necessária executar este procedimento.  
@@ -116,4 +112,3 @@ Attribute VB_Name = "TypeField"
 ## <a name="see-also"></a>Consulte também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Propriedade Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-

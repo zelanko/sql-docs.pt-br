@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - restores [AMO]
 - AMO, backup and restore
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d201ea38ed360b35b5b19daf945cc11ffe45f849
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aca3ce3e5c98db0c60ca2ae03d7de15283b28f6b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-other-classes-and-methods"></a>Outras classes e métodos AMO
   Esta seção contém classes comuns que não são específicas ao OLAP ou à mineração de dados e que são úteis para administrar ou gerenciar objetos em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Essas classes abordam recursos como procedimentos armazenados, rastreamento, exceções e backup e restauração.  
@@ -185,4 +183,3 @@ ms.lasthandoff: 09/01/2017
  [Objetos de banco de dados &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

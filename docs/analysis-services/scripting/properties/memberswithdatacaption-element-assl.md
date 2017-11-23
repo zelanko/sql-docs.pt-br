@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MembersWithDataCaption Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MembersWithDataCaption Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MembersWithDataCaption
-helpviewer_keywords:
-- MembersWithDataCaption element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MembersWithDataCaption
+helpviewer_keywords: MembersWithDataCaption element
 ms.assetid: a5d59efd-5d67-485b-a360-67d54a1fe394
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 07e44daf6556a357e9d84b997ecb4a476b85f5aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f254c1fb3c747a64e3e8e5df50bf30d532678d09
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="memberswithdatacaption-element-assl"></a>Elemento MembersWithDataCaption (ASSL)
   Fornece uma cadeia de caracteres de modelo usada para criar legendas para os membros de dados gerados pelo sistema.  
@@ -77,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

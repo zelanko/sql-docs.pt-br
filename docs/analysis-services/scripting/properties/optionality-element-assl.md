@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Optionality Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Optionality Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Optionality element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Optionality element
 ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ee38c1d1c95d0425ea73e6016b626b802d04c7d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8649ff45c9c6982361098d2643f7d4bc00cdf663
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optionality-element-assl"></a>Elemento Optionality (ASSL)
   Indica as opções dos membros de um [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) elemento.  
@@ -79,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

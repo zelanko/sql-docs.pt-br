@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Action Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Action Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Action data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Action data type
 ms.assetid: 8c4d2ff7-17e1-4e74-bec7-637e0b191acf
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 73003aafb063182adf165cd75b43c2191c818b78
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6dc68139ddfbce5151cb3750aaca1ffd54d37041
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="action-data-type-assl"></a>Tipo de dados da ação (ASSL)
   Define um tipo de dados primitivo abstrato que representa uma ação em um [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento ou um [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.  
@@ -86,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [Tipos de dados XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

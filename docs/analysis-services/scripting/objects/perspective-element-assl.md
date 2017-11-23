@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Perspective Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Perspective Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Perspective
-helpviewer_keywords:
-- Perspective element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Perspective
+helpviewer_keywords: Perspective element
 ms.assetid: 0442334c-8b00-4451-ad81-02e58c735e8f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 28368ffe071ae5139c4ea5245a0d9bea9222b7dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8d11ad3d42057ac3d90eb821dd12a6988dd157e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspective-element-assl"></a>Elemento Perspective (ASSL)
   Define os detalhes de uma perspectiva de um [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento.  
@@ -87,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Handler property [ADO]
+helpviewer_keywords: Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 15fa49306bf566b27f0d5e688a16050c9656032c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 25ac7c676fbab1e8b5899a3502fab2199b0afd22
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handler-property-rds"></a>Propriedade de manipulador (RDS)
 Indica o nome de um programa de personalização do lado do servidor (manipulador) que estende a funcionalidade do [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)e os parâmetros usados pelo *manipulador*.  
@@ -66,6 +63,5 @@ DataControl.Handler = String
  [Exemplo da propriedade manipulador (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [Personalização do DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

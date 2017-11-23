@@ -20,17 +20,16 @@ helpviewer_keywords:
 - custom member properties [MDX]
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2b5133c23454a8281e028a848403e18f5d89eae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa1200dd746dcb1ffc7ae7372b0d85a3d60d49f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipulação de dados MDX - função RollupChildren
   A função MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md) acumula os filhos de um membro, aplicando um operador unário diferente a cada um deles, e retorna o valor desse rollup como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
@@ -86,4 +85,3 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  [Manipulando dados &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

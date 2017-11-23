@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProactiveCachingQueryBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProactiveCachingQueryBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ProactiveCachingQueryBinding data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ProactiveCachingQueryBinding data type
 ms.assetid: c1b06e50-9e68-40db-bdab-fc2cb3a8ff64
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cd4c81b77bb08d8918f842400e68b2324cc99979
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 84af272d23fe57fa652ac8602b224dc9b4f26fa4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="proactivecachingquerybinding-data-type-assl"></a>Tipo de dados ProactiveCachingQueryBinding (ASSL)
   Define um tipo de dados derivado que representa informações para o [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) elemento sobre as alterações da fonte de dados em tabelas e visualizações, identificadas por meio da execução de consultas especificadas que requerem a recriação do cache.  
@@ -77,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Tipos de dados XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

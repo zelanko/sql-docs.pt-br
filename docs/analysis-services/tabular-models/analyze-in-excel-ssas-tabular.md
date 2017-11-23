@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 937b51884cd5a4b4bc06d990c65a5247822c85c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6450a75762b35816055efce444513c87e24eb3c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analyze-in-excel"></a>Analisar no Excel
   O recurso analisar no Excel, no SSDT, fornece uma maneira de analisar projetos de modelo rapidamente durante o desenvolvimento de autores de modelo de tabela. O recurso Analisar no Excel abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de espaço de trabalho modelo e automaticamente adiciona uma Tabela Dinâmica à planilha. Os objetos de banco de dados de espaço de trabalho (tabelas, colunas e medidas) são incluídos como campos na Lista de campos da Tabela Dinâmica. Os objetos e os dados podem então ser exibidos dentro do contexto do usuário efetivo ou função e perspectiva.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
 |**Tópico**|**Description**|  
 |---------------|---------------------|  
-|[Analisar um modelo Tabular no Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|Esse tópico descreve como usar o recurso Analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão da fonte de dados para o banco de dados de espaço de trabalho modelo e adicionar uma Tabela Dinâmica à planilha.|  
+|[Analisar um modelo de tabela no Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|Esse tópico descreve como usar o recurso Analisar no Excel no designer de modelo para abrir o Excel, criar uma conexão da fonte de dados para o banco de dados de espaço de trabalho modelo e adicionar uma Tabela Dinâmica à planilha.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Analisar um modelo Tabular no Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

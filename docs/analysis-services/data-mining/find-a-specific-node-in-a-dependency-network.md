@@ -18,17 +18,16 @@ helpviewer_keywords:
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b0dd066ca0c9e9e8189e7b211866f0971f3df92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab11f0f2b60a67656bc5c529a17b0251fe2c9487
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Localizar um nó específico em uma rede de dependência
   Uma rede de dependência em um modelo de mineração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode conter muitos nós, dificultando a localização dos dados de seu interesse. Para resolver esse problema, você pode usar a caixa de diálogo **Localizar Nó** na guia **Rede de Dependências** do Designer de Mineração de Dados para procurar um nó específico.  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

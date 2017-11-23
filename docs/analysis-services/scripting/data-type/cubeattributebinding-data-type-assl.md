@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CubeAttributeBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CubeAttributeBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CubeAttributeBinding
-helpviewer_keywords:
-- CubeAttributeBinding data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: CubeAttributeBinding
+helpviewer_keywords: CubeAttributeBinding data type
 ms.assetid: 04e3d619-1de8-4fc8-a089-9a44ac0f930c
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4496205dca5947ec164162f68be2d3143b3ff024
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fdf785e1a7e59dec690c664f8b726f2c636399b3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubeattributebinding-data-type-assl"></a>Tipo de dados CubeAttributeBinding (ASSL)
   Define um tipo de dados derivado que representa a associação de um atributo em uma dimensão de cubo a uma ação ou coluna de estrutura de mineração.  
@@ -80,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Tipos de dados XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

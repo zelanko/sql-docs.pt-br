@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - AdomdCommand object
 - commands [ADOMD.NET]
 - ADOMD.NET, commands
 ms.assetid: 1a958e5f-fc18-480b-9706-fc44e3b1d534
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 450d3553509ee3358711705bbc3f5e8a10874820
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: fb114c28985fa0891b7b174c146b1a50730c7866
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>Executando comandos em uma fonte de dados analíticos
   Depois de estabelecer uma conexão com uma fonte de dados analíticos, você poderá usar um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> para executar comandos nessa fonte de dados e retornar resultados dela. Esses comandos podem recuperar dados usando MDX (Multidimensional Expressions), DMX (Data Mining Extensions) ou até mesmo uma sintaxe limitada de SQL. Além disso, você poderá usar comandos ASSL (Analysis Services Scripting Language) para modificar o banco de dados subjacente.  
@@ -60,4 +58,3 @@ ms.lasthandoff: 10/24/2017
  [!code-cs[Adomd.NetClient#ExecuteXMLAProcessCommand](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/executing-commands-again_1.cs)]  
   
   
-

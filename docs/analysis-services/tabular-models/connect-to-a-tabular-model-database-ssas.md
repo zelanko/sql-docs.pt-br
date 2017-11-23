@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 69878a319fb5b061e712bcf96e094356b558553e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85963e947dbed1fc2d1574a537d0e42f61fbba35
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a um banco de dados de modelo de tabela (SSAS)
   Após criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisará definir permissões que o disponibilizem para aplicativos cliente. Este tópico explica como conceder permissões e como conectar-se a um banco de dados de aplicativos cliente.  
@@ -127,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
-

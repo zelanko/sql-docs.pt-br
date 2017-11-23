@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, properties
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ff1e43f8fd1242b8ac314b49268ec8c86e7cb907
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fee88a17655823ed00bbcb864dabcf1980663724
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="properties-assl"></a>Properties (ASSL)
   Esta seção de referência contém informações de sintaxe e uso de cada elemento que age como uma propriedade de objeto no esquema ASSL (Analysis Services Scripting Language).  
@@ -293,4 +291,3 @@ ms.lasthandoff: 09/01/2017
  [Hierarquia de elementos XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   
-

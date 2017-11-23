@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30fab0ce534bc76456f6876c1432feeb3de2de03
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Adicionar modelos de mineração a uma estrutura (Analysis Services - Mineração de dados)
   Uma estrutura de mineração é destinada a dar suporte a diversos modelos de mineração. Portanto, após a finalização do assistente, você poderá abrir a estrutura e adicionar novos modelos de mineração. Cada vez que você cria um modelo, pode usar um algoritmo diferente, alterar os parâmetros ou aplicar filtros para usar com um subconjunto diferente dos dados.  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
-

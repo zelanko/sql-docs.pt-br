@@ -20,17 +20,16 @@ helpviewer_keywords:
 - classification algorithms [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b5a187447c2e2c222996fd59b5b673a8a68974e3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 074a93f83cd89449898f0fe66e3680b8dfd95b21
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algoritmo Naïve Bayes da Microsoft
   O algoritmo Naïve Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de classificação baseado no teorema de Bayes e pode ser usado em modelagem de previsão e exploratória. O nome naïve no nome Naïve Bayes foi atribuído pelo fato de o algoritmo usar técnicas Bayesianas, mas não considerar dependências que possam existir. Portanto, suas suposições são consideradas ingênuas.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Referência técnica do algoritmo Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   
-

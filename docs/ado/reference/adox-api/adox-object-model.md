@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADOX, object model
+helpviewer_keywords: ADOX, object model
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4363ba002ec8b07346d2567985bd10d8cf2ebb9b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 092afd2b651b14b1a7fe34c934ff729b8b88ae6d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-object-model"></a>Modelo de objeto ADOX
 O diagrama a seguir ilustra como os objetos são representados e ADOX relacionados. Para obter mais informações sobre um objeto específico ou uma coleção, consulte o tópico de referência específica, ou [ADOX objetos](../../../ado/reference/adox-api/adox-objects.md) e [ADOX coleções](../../../ado/reference/adox-api/adox-collections.md).  
@@ -43,4 +40,3 @@ O diagrama a seguir ilustra como os objetos são representados e ADOX relacionad
  [Objetos ADOX](../../../ado/reference/adox-api/adox-objects.md)   
  [Propriedades ADOX](../../../ado/reference/adox-api/adox-properties.md)   
  [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

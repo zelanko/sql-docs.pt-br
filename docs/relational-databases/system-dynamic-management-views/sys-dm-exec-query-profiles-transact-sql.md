@@ -1,0 +1,137 @@
+---
+title: sys.DM exec_query_profiles (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/16/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: dmv's
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- dm_exec_query_profiles_TSQL
+- sys.dm_exec_query_profiles_TSQL
+- dm_exec_query_profiles
+- sys.dm_exec_query_profiles
+dev_langs: TSQL
+helpviewer_keywords: sys.dm_exec_query_profiles dynamic management view
+ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
+caps.latest.revision: "19"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 13b3c49133a4e1c26ab879fb0e51e9832de62e97
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+
+  Monitora o progresso da consulta em tempo real, enquanto a consulta está em execução. Por exemplo, use este DMV para determinar que parte da consulta está executando lentamente. Adicione esse DMV com outros DMVs de sistema usando as colunas identificadas no campo de descrição. Ou, adicione esse DMV com outros contadores de desempenho (como o Monitor de Desempenho, xperf) usando colunas de carimbo de data/hora.  
+  
+## <a name="table-returned"></a>Tabela retornada  
+ Os contadores retornados são por operador por thread. Os resultados são dinâmicos e não correspondem aos resultados das opções existentes, tal como SET STATISTICS XML ON, que só cria saída quando a consulta é concluída.  
+  
+|Nome da coluna|Tipo de dados|Description|  
+|-----------------|---------------|-----------------|  
+|session_id|**smallint**|Identifica a sessão na qual esta consulta é executada. Referencia dm_exec_sessions.session_id.|  
+|request_id|**int**|Identifica a solicitação de destino. Referencia dm_exec_sessions.request_id.|  
+|sql_handle|**varbinary(64)**|Identifica a consulta de destino. Referencia dm_exec_query_stats.sql_handle.|  
+|plan_handle|**varbinary(64)**|Identificar a consulta de destino. Referencia dm_exec_query_stats.plan_handle.|  
+|physical_operator_name|**nvarchar(256)**|Nome do operador físico.|  
+|node_id|**int**|Identifica um nó do operador na árvore de consulta.|  
+|thread_id|**int**|Distingue os threads (para uma consulta paralela) que pertencem ao mesmo nó do operador de consulta.|  
+|task_address|**varbinary (8)**|Identifica a tarefa do sistema operacional SQL que esse thread está usando. Referencia dm_os_tasks.task_address.|  
+|row_count|**bigint**|Número de linhas retornadas pelo operador até o momento.|  
+|rewind_count|**bigint**|Número de retrocessos até o momento.|  
+|rebind_count|**bigint**|Número de reassociações até o momento.|  
+|end_of_scan_count|**bigint**|Número de término de exames até o momento.|  
+|estimate_row_count|**bigint**|Número estimado de linhas. Pode ser útil comparar estimated_row_count com o row_count real.|  
+|first_active_time|**bigint**|A hora, em milissegundos, em que operador foi chamado primeiro.|  
+|last_active_time|**bigint**|A hora, em milissegundos, em que operador foi chamado por último.|  
+|open_time|**bigint**|Carimbo de data/hora quando aberto (em milissegundos).|  
+|first_row_time|**bigint**|Carimbo de data/hora quando a primeira linha foi aberta (em milissegundos).|  
+|last_row_time|**bigint**|Carimbo de data/hora quando a última linha foi aberta (em milissegundos).|  
+|close_time|**bigint**|Carimbo de data/hora quando fechado (em milissegundos).|  
+|elapsed_time_ms|**bigint**|Tempo total decorrido (em milissegundos) usado por operações do nó de destino até o momento.|  
+|cpu_time_ms|**bigint**|Tempo total de CPU (em milissegundos) usado por operações do nó de destino até o momento.|  
+|database_id|**smallint**|ID do banco de dados que contém o objeto no qual as leituras e gravações estão sendo realizadas.|  
+|object_id|**int**|O identificador do objeto no qual as leituras e gravações estão sendo realizadas. Referências sys.objects.object_id.|  
+|index_id|**int**|O índice (se houver) no qual o conjunto de linhas é aberto.|  
+|scan_count|**bigint**|Número de verificações de tabela/índice até o momento.|  
+|logical_read_count|**bigint**|Número de leituras lógicas até o momento.|  
+|physical_read_count|**bigint**|Número de leituras físicas até o momento.|  
+|read_ahead_count|**bigint**|Número de read-aheads até o momento.|  
+|write_page_count|**bigint**|Número de gravações de página até o momento devido ao derramamento.|  
+|lob_logical_read_count|**bigint**|Número de leituras lógicas LOB até o momento.|  
+|lob_physical_read_count|**bigint**|Número de leituras físicas LOB até o momento.|  
+|lob_read_ahead_count|**bigint**|Número de read-aheads LOB até o momento.|  
+|segment_read_count|**int**|Número de read-aheads de segmento até o momento.|  
+|segment_skip_count|**int**|Número de segmentos ignorados até o momento.| 
+|actual_read_row_count|**bigint**|Número de linhas lidas por um operador antes da aplicação de predicado residual.| 
+|estimated_read_row_count|**bigint**|**Aplica-se a:** começando com [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de linhas estimado para ser lido por um operador antes da aplicação de predicado residual.|  
+  
+## <a name="general-remarks"></a>Comentários gerais  
+ Se o nó do plano de consulta não tiver nenhuma E/S, todos os contadores relacionados com E/S serão definidos como NULL.  
+  
+ Os contadores relacionados com E/S relatados por este DMV são mais granulares do que os relatados por SET STATISTICS IO nas seguintes duas formas:  
+  
+-   SET STATISTICS IO agrupa os contadores para todas as E/S para uma determinada tabela. Com este DMV, você terá contadores separados para cada nó no plano de consulta que realiza E/S para a tabela.  
+  
+-   Se houver uma varredura paralela, este DMV relata os contadores para cada um das threads paralelas que trabalham na varredura.
+ 
+ Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, as estatísticas de execução de consulta padrão infraestrutura de criação de perfil existe lado a lado com uma estatística de execução de consulta leve infraestrutura de criação de perfil. A nova consulta execução estatísticas perfil infraestrutura drasticamente reduz a sobrecarga de desempenho da coleta de estatísticas de execução de consulta por operador, como o número real de linhas. Este recurso pode ser habilitado usando global inicialização [7412 do sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ou é ativado automaticamente quando o evento estendido query_thread_profile é usado.
+
+>[!NOTE]
+> Não há suporte para CPU e tempo sob a infraestrutura de criação de perfil de estatísticas de execução de consulta simples para reduzir o impacto de desempenho.
+
+ Definir STATISTICS XML ON e SET STATISTICS PROFILE ON sempre usar as estatísticas de execução de consulta herdados infraestrutura de criação de perfil.
+  
+## <a name="permissions"></a>Permissões  
+ Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a permissão VIEW SERVER STATE no servidor.  
+  
+ Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium requer a permissão VIEW DATABASE STATE no banco de dados. Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic requer o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] conta de administrador.  
+  
+## <a name="examples"></a>Exemplos  
+ Etapa 1: O logon a uma sessão na qual você planeja executar a consulta que você analisará com Sys.DM exec_query_profiles. Para configurar a consulta para criação de perfil usar SET STATISTICS PROFILE. Execute a consulta nessa mesma sessão.  
+  
+```  
+--Configure query for profiling with sys.dm_exec_query_profiles  
+SET STATISTICS PROFILE ON;  
+GO  
+
+--Or enable query profiling globally under SQL Server 2016 SP1 or above  
+DBCC TRACEON (7412, -1);  
+GO 
+  
+--Next, run your query in this session, or in any other session if query profiling has been enabled globally 
+```  
+  
+ Etapa 2: Faça logon uma segunda sessão diferente da sessão na qual sua consulta está em execução.  
+  
+ A instrução a seguir resume os progressos realizado pela consulta atualmente em execução na sessão 54. Para fazer isso, ela calcula o número total de linhas de saída de todos as threads para cada nó e o compara com o número estimado de linhas de saída para esse nó.  
+  
+```  
+--Run this in a different session than the session in which your query is running. 
+--Note that you may need to change session id 54 below with the session id you want to monitor.
+SELECT node_id,physical_operator_name, SUM(row_count) row_count, 
+  SUM(estimate_row_count) AS estimate_row_count, 
+  CAST(SUM(row_count)*100 AS float)/SUM(estimate_row_count)  
+FROM sys.dm_exec_query_profiles   
+WHERE session_id=54
+GROUP BY node_id,physical_operator_name  
+ORDER BY node_id;  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40; relacionadas à execução Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+  
+  
+

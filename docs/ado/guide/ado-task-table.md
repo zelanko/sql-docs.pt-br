@@ -15,17 +15,16 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 23ba1090608287b5ce397a160cc103c0b06f8932
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f6c8bb37a6fcf52d6fbdcaba02e21cd7013ae18
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-programming-task-table"></a>Tabela de tarefas de programação de ADO
 A tabela a seguir lista as tarefas de programação contidas no *guia do programador do ADO* e fornece referências para cada tarefa. Essas referências podem ser descrições ou exemplos de código no qual você pode encontrar informações sobre o recurso de ADO que executa a tarefa.
@@ -54,4 +53,3 @@ A tabela a seguir lista as tarefas de programação contidas no *guia do program
 |Usando XML para consultas ou entrada de comando|[Fluxos de comando](../../ado/guide/data/command-streams.md)|
 |Retornando dados XML de um provedor|[Recuperando conjuntos de resultados em fluxos](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
 |Publicação para o IIS|[Usando o ADO para publicação na Internet](../../ado/guide/data/using-ado-for-internet-publishing.md)|
-

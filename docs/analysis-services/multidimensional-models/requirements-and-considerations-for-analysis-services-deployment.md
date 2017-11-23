@@ -26,17 +26,16 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos e considerações sobre a implantação do Analysis Services
   O desempenho e disponibilidade de uma solução dependem de muitos fatores, inclusive os recursos do hardware subjacente, a topologia de sua implantação de servidor, as características de sua solução (por exemplo, tendo partições distribuídas por vários servidores ou usando armazenamento de ROLAP que requer acesso direto ao mecanismo relacional), acordos de nível de serviço e a complexidade de seu modelo de dados.  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/01/2017
 -   Se o desempenho da consulta é ruim, mas não é possível aumentar os recursos de processador e memória no servidor local, implante um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em dois ou mais servidores de produção. Em seguida, use o Balanceamento de Carga de Rede (NLB) para combinar os servidores em um único cluster. Em um cluster NLB, as consultas são distribuídas automaticamente entre todos os servidores do cluster NLB.  
   
   
-

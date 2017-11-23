@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c7fe8e5ad97a1955160bf2f8f953c85971f66b09
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculated-columns"></a>Colunas calculadas
   Colunas calculadas, em modelos tabulares, permitem que você adicionar novos dados a seu modelo. Em vez de colar ou importar valores para a coluna, você cria uma fórmula DAX que define os valores do nível de linha da coluna. A coluna calculada pode então ser usada em um relatório, Tabela Dinâmica ou Gráfico Dinâmico como você faria com qualquer outra coluna.  
@@ -88,4 +87,3 @@ ms.lasthandoff: 10/04/2017
  [Cálculos](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
-

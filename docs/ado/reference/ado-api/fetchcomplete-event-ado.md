@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords:
-- FetchComplete event [ADO]
+helpviewer_keywords: FetchComplete event [ADO]
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1754cb26eb381e056ba818958593cda40722c7c8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 466c87d4a849da070f67a80b44bc43c7581c7f41
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fetchcomplete-event-ado"></a>Evento FetchComplete (ADO)
 O **FetchComplete** eventos é chamado depois que todos os registros em uma operação assíncrona demorada foram recuperados para o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -59,4 +56,3 @@ FetchComplete pError, adStatus, pRecordset
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-

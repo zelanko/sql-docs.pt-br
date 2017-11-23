@@ -1,0 +1,212 @@
+---
+title: bcp_control | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: native-client-odbc-extensions-bulk-copy-functions
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: reference
+apiname: bcp_control
+apilocation: sqlncli11.dll
+apitype: DLLExport
+helpviewer_keywords: bcp_control function
+ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
+caps.latest.revision: "60"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
+---
+# <a name="bcpcontrol"></a>bcp_control
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+
+  Altera as configurações padrão de vários parâmetros de controle para uma cópia em massa entre um arquivo e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+  
+RETCODE bcp_control (  
+        HDBC hdbc,  
+        INT eOption,  
+        void* iValue);  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ *HDBC*  
+ É o identificador de conexão ODBC habilitado para cópia em massa.  
+  
+ *eOption*  
+ É um dos seguintes:  
+  
+ BCPABORT  
+ Para uma operação de cópia em massa que já está em andamento. Chamar **bcp_control** com um *eOption* de BCPABORT de outro thread para interromper a execução em massa a operação de cópia. O *iValue* parâmetro é ignorado.  
+  
+ BCPBATCH  
+ É o número de linhas por lote. O padrão é 0, que indica todas as linhas de uma tabela, quando os dados estão sendo extraídos, ou todas as linhas no arquivo de dados do usuário, quando os dados estão sendo copiados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um valor menor que 1 redefine BCPBATCH para o padrão.  
+  
+ BCPDELAYREADFMT  
+ Um booliano, se definido como verdadeiro, fará com que [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) Leia na execução. Se false (padrão), bcp_readfmt imediatamente irá ler o arquivo de formato. Um erro de sequência ocorrerá se BCPDELAYREADFMT for true e você chamar bcp_columns ou bcp_setcolfmt.  
+  
+ Um erro de sequência também ocorrerá se você chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` depois de chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` e bcp_writefmt.  
+  
+ Para obter mais informações, consulte [descoberta de metadados](../../relational-databases/native-client/features/metadata-discovery.md).  
+  
+ BCPFILECP  
+ *iValue* contém o número da página de código para o arquivo de dados. Você pode especificar o número da página de código, como 1252 ou 850, ou como um destes valores:  
+  
+ BCPFILE_ACP: os dados do arquivo estão na página de código do Microsoft Windows® do cliente.  
+  
+ BCPFILE_OEMCP: os dados do arquivo estão na página de código OEM do cliente (padrão).  
+  
+ BCPFILE_RAW: os dados do arquivo estão na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ BCPFILEFMT  
+ O número de versão do formato de arquivo de dados. Pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor. Por exemplo, para importar dados que foi obtidos de uma coluna de texto em uma [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server em uma **varchar (max)** coluna em uma [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou servidor mais recente, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de um **varchar (max)** coluna, ele será salvo como colunas de texto são salvos no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Formatar e podem ser importados para uma coluna de texto de um [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
+  
+ BCPFIRST  
+ É a primeira linha de dados a ser copiada em um arquivo ou tabela. O padrão é 1; um valor menor que 1 redefine essa opção para seu valor padrão.  
+  
+ BCPFIRSTEX  
+ Para operações de saída BCP, especifica a primeira linha da tabela do banco de dados a ser copiada no arquivo de dados.  
+  
+ Para BCP em operações, especifica a primeira linha do arquivo de dados a ser copiada na tabela de banco de dados.  
+  
+ O *iValue* parâmetro deve ser o endereço de um inteiro assinado de 64 bits que contém o valor. O valor máximo que pode ser passado a BCPFIRSTEX é 2^63-1.  
+  
+ BCPFMTXML  
+ Especifica que o arquivo de formato gerado deve estar no formato XML. Eles está desativado por padrão.  
+  
+ Os arquivos de formato XML apresentam maior flexibilidade, mas com alguns restrições adicionadas. Por exemplo, você não pode especificar o prefixo e o terminador para um campo simultaneamente, o que era possível nos arquivos de formato mais antigos.  
+  
+> [!NOTE]  
+>  Os arquivos de formato XML só são suportados quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado junto com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  
+ BCPHINTS  
+ *iValue* contém um ponteiro de cadeia de caracteres SQLTCHAR. A cadeia de caracteres endereçada especifica dicas de processamento da cópia em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma instrução Transact-SQL que retorna um conjunto de resultados. Se uma instrução Transact-SQL especificada retornar mais de um conjunto de resultados, todos os conjuntos de resultados depois do primeiro serão ignorados. Para obter mais informações sobre dicas de processamento de cópia em massa, consulte [utilitário bcp](../../tools/bcp-utility.md).  
+  
+ BCPKEEPIDENTITY  
+ Quando *iValue* for TRUE, especifica que as funções de cópia em massa inserem valores de dados fornecidos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colunas definidas com uma restrição de identidade. O arquivo de entrada deve fornecer valores para as colunas de identidade. Se essa opção não for definida, novos valores de identidade serão gerados para as linhas inseridas. Quaisquer dados contidos no arquivo para as colunas de identidade serão ignorados.  
+  
+ BCPKEEPNULLS  
+ Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando *iValue* for TRUE, valores vazios serão convertidos para NULL no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.  
+  
+ BCPLAST  
+ É a última linha a ser copiada. O padrão é copiar todas as linhas; um valor menor que 1 redefine essa opção para seu padrão.  
+  
+ BCPLASTEX  
+ Para operações de saída BCP, especifica a última linha da tabela do banco de dados a ser copiada no arquivo de dados.  
+  
+ Para BCP em operações, especifica a última linha do arquivo de dados a ser copiada na tabela do banco de dados.  
+  
+ O *iValue* parâmetro deve ser o endereço de um inteiro assinado de 64 bits que contém o valor. O valor de máximo que pode ser passado para BCPLASTEX é 2^63-1.  
+  
+ BCPMAXERRS  
+ É o número de erros permitido antes de ocorrer uma falha na operação de cópia em massa. O padrão é 10; um valor menor que 1 redefine essa opção para seu padrão. A cópia em massa impõe um máximo de 65.535 erros. Uma tentativa de definir esta opção como um valor maior que 65.535 resulta na definição da opção como 65.535.  
+  
+ BCPODBC  
+ Especifica que, quando for verdadeiro, **datetime** e **smalldatetime** valores salvos em formato de caractere irá usar o prefixo de sequência de escape de carimbo de hora ODBC e o sufixo. A opção BCPODBC só se aplica a BCP_OUT.  
+  
+ Quando for falso, um **datetime** valor que representa 1 de janeiro de 1997 é convertido para a cadeia de caracteres: 1997-01-01 00:00:00.000. Quando TRUE, o mesmo **datetime** valor é representado como: {ts ' 00:00:00.000 1997-01-01'}.  
+  
+ BCPROWCOUNT  
+ Retorna o número de linhas afetadas pela operação BCP atual (ou última).  
+  
+ BCPTEXTFILE  
+ Quando TRUE, especifica que o arquivo de dados é um arquivo de texto, em vez de um arquivo binário. Se o arquivo for um arquivo de texto, BCP determinará se ele é ou não Unicode, verificando o marcador de bytes Unicode nos dois primeiros bytes do arquivo de dados.  
+  
+ BCPUNICODEFILE  
+ Quando TRUE, especifica que o arquivo de entrada é um arquivo Unicode.  
+  
+ *iValue*  
+ É o valor especificado *eOption*. *iValue* é um valor inteiro (LONGLONG) convertido em um ponteiro void para permitir expansão futura para valores de 64 bits.  
+  
+## <a name="returns"></a>Retorna  
+ SUCCEED ou FAIL.  
+  
+## <a name="remarks"></a>Comentários  
+ Esta função define vários parâmetros de controle para operações de cópia em massa, incluindo o número de erros permitido antes do cancelamento de uma cópia em massa, os número da primeira e da última linhas a serem copiadas de um arquivo de dados e o tamanho do lote.  
+  
+ Esta função é usada também para especificar a instrução SELECT durante uma operação de cópia em massa de saída do conjunto de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma SELECT. Definir *eOption* como BCPHINTS e defina *iValue* para ter um ponteiro para uma cadeia de caracteres SQLTCHAR que contém a instrução SELECT.  
+  
+ Esses parâmetros de controle só são úteis ao fazer cópias entre um arquivo de usuário e uma tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configurações de parâmetro de controle não têm nenhum efeito nas linhas copiadas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+  
+## <a name="example"></a>Exemplo  
+  
+```  
+// Variables like henv not specified.  
+SQLHDBC      hdbc;  
+DBINT      nRowsProcessed;  
+  
+// Application initiation, get an ODBC environment handle, allocate the  
+// hdbc, and so on.  
+...   
+  
+// Enable bulk copy prior to connecting on allocated hdbc.  
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP, (SQLPOINTER) SQL_BCP_ON,  
+   SQL_IS_INTEGER);  
+  
+// Connect to the data source, return on error.  
+if (!SQL_SUCCEEDED(SQLConnect(hdbc, _T("myDSN"), SQL_NTS,  
+   _T("myUser"), SQL_NTS, _T("myPwd"), SQL_NTS)))  
+   {  
+   // Raise error and return.  
+   return;  
+   }  
+  
+// Initialize bulk copy.   
+if (bcp_init(hdbc, _T("address"), _T("address.add"), _T("addr.err"),  
+   DB_IN) == FAIL)  
+   {  
+   // Raise error and return.  
+   return;  
+   }  
+  
+// Set the number of rows per batch.   
+if (bcp_control(hdbc, BCPBATCH, (void*) 1000) == FAIL)  
+   {  
+   // Raise error and return.  
+   return;  
+   }  
+  
+// Set file column count.   
+if (bcp_columns(hdbc, 1) == FAIL)  
+   {  
+   // Raise error and return.  
+   return;  
+   }  
+  
+// Set the file format.   
+if (bcp_colfmt(hdbc, 1, 0, 0, SQL_VARLEN_DATA, '\n', 1, 1)  
+   == FAIL)  
+   {  
+   // Raise error and return.  
+   return;  
+   }  
+  
+// Execute the bulk copy.   
+if (bcp_exec(hdbc, &nRowsProcessed) == FAIL)  
+   {  
+   // Raise error and return.  
+   return;  
+   }  
+  
+printf_s("%ld rows processed by bulk copy.", nRowsProcessed);  
+  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+  
+  

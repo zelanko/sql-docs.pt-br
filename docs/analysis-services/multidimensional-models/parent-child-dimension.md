@@ -25,17 +25,16 @@ helpviewer_keywords:
 - members [Analysis Services], data
 - parent-child dimensions [Analysis Services]
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6835612c0b7ea9a6e42217366e8d745897300bfb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b0c336d30bf5034106d02d29d7e12a50ccf1a194
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parent-child-dimension"></a>Dimensão pai-filho
   Uma hierarquia pai-filho é uma hierarquia em uma dimensão padrão que contém um atributo pai. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. A posição de um membro em uma hierarquia pai-filho é determinada pelas propriedades **KeyColumns** e **RootMemberIf** do atributo pai, enquanto a posição de um membro em um nível é determinada pela propriedade **OrderBy** do atributo pai. Para obter mais informações sobre as propriedades de atributo, consulte [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
@@ -63,7 +62,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos em hierarquias pai-filho](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
- [Propriedades de dimensão de banco de dados](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
+ [Propriedades de dimensão do banco de dados](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   
-

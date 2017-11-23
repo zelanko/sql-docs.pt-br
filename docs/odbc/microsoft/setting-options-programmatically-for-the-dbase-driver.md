@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - DBase driver [ODBC], setting options programmatically
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc037c3db2eddaf91338d1ce74aa4894f2a3b7b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2760e0b08417121e765582904565461501eb0df6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Definindo opções de forma programática para o Driver dBASE
 |Opção|Description|Método|  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |Somente Leitura|Designa o banco de dados como somente leitura.|Para definir essa opção dinamicamente, use o **READONLY** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Selecione o diretório|Exibe uma caixa de diálogo onde você pode selecionar um diretório que contém os arquivos que você deseja acessar.<br /><br /> Quando você define um diretório de origem de dados, especifique o diretório onde estão localizados os arquivos usados com mais frequência. O driver ODBC usa esse diretório como o diretório padrão. Copie outros arquivos nesse diretório, se eles são usados com frequência. Como alternativa, você pode qualificar nomes de arquivo em uma instrução SELECT com o nome do diretório:<br /><br /> SELECIONE \* DE C:\MYDIR\EMP<br /><br /> Ou, você pode especificar um novo diretório padrão usando o **SQLSetConnectOption** função com a opção SQL_CURRENT_QUALIFIER.|Para definir essa opção dinamicamente, use o **DEFAULTDIR** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Mostrar linhas excluídas|Especifica se linhas que foram marcadas como excluídos podem ser recuperadas ou posicionadas em. Se for desmarcada, as linhas excluídas não são exibidas; Se selecionada, as linhas excluídas são tratadas o mesmo que as linhas excluídas não. O padrão é desmarcado.|Para definir essa opção dinamicamente, use o **excluído** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|
-

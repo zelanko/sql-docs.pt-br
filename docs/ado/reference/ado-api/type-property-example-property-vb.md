@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Type property [property] [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Type property [property] [ADO], Visual Basic example
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ed5cb366292f87e294576ec880947888631e7a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9d97025218856d56b291fe50e67f69b7e4202b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-example-property-vb"></a>Exemplo de propriedade de tipo (propriedade) (VB)
 Este exemplo demonstra o [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade. É um modelo de um utilitário para listar os nomes e tipos de uma coleção, como [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md), [campos](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  
@@ -158,4 +154,3 @@ End Sub
 ## <a name="see-also"></a>Consulte também  
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Propriedade Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-

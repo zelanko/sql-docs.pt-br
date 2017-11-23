@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e868f5798e759a9b84e9c28d2c1fa82bb34c4f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursors"></a>Cursores roláveis
 Aplicativos modernos em tela, o usuário rola para trás e frente os dados. Para esses aplicativos, retornando a uma linha anteriormente busca é um problema. Uma possibilidade é feche e reabra o cursor e, em seguida, buscar linhas até que o cursor atinge a linha necessária. Outra possibilidade é ler o conjunto de resultados, armazenar em cache localmente e implementar a rolagem no aplicativo. Ambas as possibilidades funcionam bem somente com conjuntos de resultados pequenos e a segunda possibilidade é difícil de implementar. Uma solução melhor é usar um *cursor rolável,* que pode retroceder e Avançar no conjunto de resultados.  
@@ -50,4 +48,3 @@ Aplicativos modernos em tela, o usuário rola para trás e frente os dados. Para
 -   [Rolagem relativa e absoluta](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
   
 -   [Indicadores](../../../odbc/reference/develop-app/bookmarks-odbc.md)
-

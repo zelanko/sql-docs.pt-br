@@ -20,17 +20,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-partition-writeback"></a>Definir o write-back de partições
   Se você habilitar um grupo de medidas para gravação, os usuários finais poderão alterar dados de cubo enquanto procuram por ele. As alterações são salvas em uma tabela separada chamada tabela de write-back e não nos dados de cubo ou na fonte de dados. Os usuários finais que procuram uma partição habilitada para gravação observam o efeito líquido de todas as alterações na tabela de write-back da partição.  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Habilitando e protegendo a entrada de dados com write-back do Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   
-

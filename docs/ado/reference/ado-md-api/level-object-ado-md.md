@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Level
-helpviewer_keywords:
-- Level object [ADO MD]
+f1_keywords: Level
+helpviewer_keywords: Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 540048b6ba889152089b39a77aa926a5c2fd61f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73258b69ee6a341098365443f388c6944eb2dd51
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="level-object-ado-md"></a>Objeto de nível (ADO MD)
 Contém um conjunto de membros, cada um deles tem a mesma classificação dentro de uma hierarquia.  
@@ -53,14 +49,14 @@ Contém um conjunto de membros, cada um deles tem a mesma classificação dentro
 |Nome|Description|  
 |----------|-----------------|  
 |CatalogName|O nome do catálogo ao qual pertence este cubo.|  
-|Nome do cubo|O nome do cubo.|  
+|CubeName|O nome do cubo.|  
 |Description|Uma descrição significativa do nível.|  
 |DimensionUniqueName|O nome ambíguo do [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|O nome ambíguo de hierarquia.|  
 |LevelCaption|Um rótulo ou legenda associada ao nível.|  
 |LevelCardinality|O número de membros no nível.|  
 |LevelGUID|O GUID do nível.|  
-|Nome do nível|Nome do nível.|  
+|LevelName|Nome do nível.|  
 |LevelNumber|A distância entre o nível e a raiz da hierarquia.|  
 |LevelType|O tipo de nível.|  
 |LevelUniqueName|O nome ambíguo do nível.|  
@@ -76,4 +72,3 @@ Contém um conjunto de membros, cada um deles tem a mesma classificação dentro
  [Coleção de níveis (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [Coleção de membros (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

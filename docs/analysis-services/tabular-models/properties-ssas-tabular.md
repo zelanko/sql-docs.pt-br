@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: efb844dd4888a93bf805a7b22a278366bdf5d388
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="properties-ssas-tabular"></a>Propriedades (SSAS tabular)
   Os projetos de modelo tabular no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] têm várias propriedades que definem comportamentos para o projeto, o modelo, a relação e a implantação. As configurações de propriedades são armazenadas em formato XML no arquivo Model.bim, porém, todas as propriedades descritas nesta seção podem ser configuradas nas janelas de **Propriedades** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -42,4 +41,3 @@ ms.lasthandoff: 09/01/2017
 |[Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Fornece descrições e etapas de configuração para um modelo padrão e propriedades de implantação. As propriedades padrão se aplicam a novos projetos de modelo tabular. Depois que um novo projeto é criado, estas propriedades ainda podem ser alteradas para um projeto de modelo específico dependendo dos seus requisitos.|  
   
   
-

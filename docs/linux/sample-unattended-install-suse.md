@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: a9253b744e337a69a86e6562156806d59b8f66a6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: e181fb02497f1673a8993687d159f6636aca4959
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Exemplo: De script de instalação autônoma do SQL Server para SUSE Linux Enterprise Server
 
@@ -231,4 +230,3 @@ Em seguida, execute o script de Bash da seguinte maneira:
 ```
 
 Para obter mais informações sobre o SQL Server no Linux, consulte [do SQL Server na visão geral do Linux](sql-server-linux-overview.md).
-

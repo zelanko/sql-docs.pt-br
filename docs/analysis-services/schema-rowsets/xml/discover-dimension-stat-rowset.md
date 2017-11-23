@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ed2707a9ee417f8e019137034e90f1a9132948e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8646303bf73732a1a9f62c94879840e9e9866865
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverdimensionstat-rowset"></a>Conjunto de linhas DISCOVER_DIMENSION_STAT
   Fornece informações sobre uma dimensão, inclusive o nome do banco de dados que a contém, o nome da dimensão, seus atributos e uma contagem dos membros de cada atributo. Em um modelo de tabela, isso corresponde às colunas em uma tabela e ao número de valores em cada coluna.  
@@ -56,7 +54,6 @@ ms.lasthandoff: 09/01/2017
 |ADOMDNAME|PartitionDimensionStat|  
   
 ## <a name="see-also"></a>Consulte também  
- [XML for Analysis conjuntos de linhas de esquema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdf21e47900f66d564ff209261fb0b3533f2d9cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7786d6273c7941863b413f384ea8eb86bbbe84e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos Naive Bayes (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -303,4 +302,3 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  [Algoritmo Naïve Bayes da Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  
   
   
-

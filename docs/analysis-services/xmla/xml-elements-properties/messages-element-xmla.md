@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Messages Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Messages Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Messages
 - microsoft.xml.analysis.messages
 - urn:schemas-microsoft-com:xml-analysis#Messages
-helpviewer_keywords:
-- Messages element
+helpviewer_keywords: Messages element
 ms.assetid: 719d15ff-f18b-4c56-80ba-a9114c0b7d8a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 615dd05443d6dd59255317e1e55cebf420969309
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b45be9ceeaf0feb601ea873b5e62f3a34e99ae5a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="messages-element-xmla"></a>Elemento Messages (XMLA)
   Contém uma coleção de elementos [Message](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md) retounados de uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pela chamada de um método [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) .  
@@ -75,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

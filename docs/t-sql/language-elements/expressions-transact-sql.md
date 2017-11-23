@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Boolean expressions
 - expressions [SQL Server], about expressions
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: bc14512bf2ab1eaa2eaa6b51891361f26189314d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 826d1ab9f4a0a68d692551ae58a529ab8b7ebfae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="expressions-transact-sql"></a>Expressões (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,7 +134,7 @@ GO
  A expressão `1+2` é avaliada como `3` em cada linha do conjunto de resultados. Embora a expressão `ProductID` gere um valor exclusivo em cada linha de conjunto de resultados, cada linha tem apenas um valor para `ProductID`.  
   
 ## <a name="see-also"></a>Consulte também  
- [FUSO horário &AMP; #40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [FUSO horário &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [Caso &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [União &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
@@ -151,4 +148,3 @@ GO
  [ONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

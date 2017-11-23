@@ -19,17 +19,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b2e5047564e2001f87691d622a736c9ad28b87c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebc3093a0e030aca329338359be2a6f256c24fe7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Criar e gerenciar uma partição local (Analysis Services)
   Você pode criar mais partições para um grupo de medidas para melhorar o desempenho do processamento. Ter várias partições permite a você alocar dados de fatos em diversos arquivos de dados físicos correspondentes em servidores locais e remotos. No Analysis Services, as partições podem ser processadas de forma independente e em paralelo, permitindo maior controle sobre o processamento de cargas de trabalho no servidor.  
@@ -137,4 +136,3 @@ ms.lasthandoff: 09/01/2017
  [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
-

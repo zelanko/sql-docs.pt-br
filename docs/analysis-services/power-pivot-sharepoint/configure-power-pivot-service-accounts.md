@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: aae3f818de4936974dd53f14c2b3fdbbea0b369f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurar contas de serviço Power Pivot
   Uma [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]instalação inclui dois serviços que oferecem suporte a operações de servidor. O **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** é um serviço Windows que fornece processamento de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e suporte a consultas em um servidor de aplicativos. A conta de logon desse serviço sempre é especificada durante a Instalação do SQL Server, quando você instala o Analysis Services no modo integrado do SharePoint.  
@@ -194,4 +193,3 @@ ms.lasthandoff: 09/01/2017
  [Configurar a conta da atualização de dados autônoma PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   
-

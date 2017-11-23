@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services, connecting
+helpviewer_keywords: Analysis Services, connecting
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 40d9f0516485989d7791046c197732bdab103a4a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 626d0643a170f96850c6c274d64694e86e4663a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Conectar em Modo Online a um Banco de Dados do Analysis Services
   Você pode se conectar diretamente a um banco de dados existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e modificar seus objetos. Quando você se conecta diretamente a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , as alterações feitas nos objetos ocorrem de imediato e nenhum projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [Criando modelos multidimensionais usando o SQL Server Data Tools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   
-

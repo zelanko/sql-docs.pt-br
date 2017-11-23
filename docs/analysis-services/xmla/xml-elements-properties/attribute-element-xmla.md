@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Attribute Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Attribute Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Attribute
 - microsoft.xml.analysis.attribute
 - urn:schemas-microsoft-com:xml-analysis#Attribute
-helpviewer_keywords:
-- Attribute element
+helpviewer_keywords: Attribute element
 ms.assetid: 0df9cf44-dc5f-4234-8a5a-daac8aabc0d6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1556d139665387068b10cd034b19c3246096100b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2ac9985902b6e91fd2f69b2cc7b7ea3eec6cc79e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-element-xmla"></a>Elemento Attribute (XMLA)
   Define ou filtra um membro em um atributo no qual um pai [inserir](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [atualização](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), ou [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) comando executa.  
@@ -91,4 +86,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensões habilitadas para gravação](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

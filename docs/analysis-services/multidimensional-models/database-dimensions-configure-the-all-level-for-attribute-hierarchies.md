@@ -24,17 +24,16 @@ helpviewer_keywords:
 - members [Analysis Services], All
 - AllMemberName property
 ms.assetid: 0cb35e6f-b10f-483d-b893-78f6ca3979fd
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f86a46abd96db5c329e66d0848c51d3609d55e5c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2378dafcda0d9eca8786fb81cadfd44b22d0998b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---configure-the-all-level-for-attribute-hierarchies"></a>Dimensões de banco de dados - Configure o nível (All) para hierarquias de atributo
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o nível (All) é um nível opcional gerado pelo sistema. Contém apenas um membro, cujo valor é a agregação de valores de todos os membros do nível imediatamente subordinado. Este membro é chamado de membro All. Trata-se de um membro gerado pelo sistema e que não é incluído na tabela de dimensões. Como o membro do nível (All) está no topo da hierarquia, seu valor é a agregação consolidada dos valores de todos os membros da hierarquia. Geralmente, o membro All funciona como membro padrão de uma hierarquia.  
@@ -51,4 +50,3 @@ ms.lasthandoff: 09/01/2017
  [Definir um membro padrão](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
   
   
-

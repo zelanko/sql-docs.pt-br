@@ -20,17 +20,16 @@ helpviewer_keywords:
 - dimensions [Analysis Services], standard
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eeabc8b64e3d5450373fb1235a78a27a8aff5a5b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1828a2a8c2150c4fabfd809be2e5edba5b0e0036
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Criar uma dimensão usando uma tabela existente
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente para Dimensões no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão por meio de uma tabela existente. Isso é feito selecionando a opção **Usar uma tabela existente** na página **Selecionar Método de Criação** do assistente. Se você selecionar essa opção, o assistente fornecerá a base da estrutura de dimensão nas tabelas de dimensão, suas colunas e qualquer relação entre essas colunas em uma exibição da fonte de dados existente. O assistente dá exemplos de dados na tabela de origem e nas tabelas relacionadas. Ele usa esses dados para definir as colunas de atributo baseadas nas colunas das tabelas de dimensão, e para definir hierarquias de atributos (chamadas hierarquias *definidas pelo usuário* ). Depois que você usar o Assistente para Dimensões para criar sua dimensão, é possível usar o Designer de Dimensão para adicionar, remover e configurar atributos e hierarquias na dimensão.  
@@ -100,7 +99,6 @@ ms.lasthandoff: 09/01/2017
  [Criar uma dimensão de tempo ao gerar uma tabela de tempo](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Criar uma dimensão de tempo ao gerar uma tabela de tempo](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Criar uma dimensão ao gerar uma tabela não seja de tempo na fonte de dados](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   
-

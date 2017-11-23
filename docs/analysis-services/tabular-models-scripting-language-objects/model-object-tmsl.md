@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-object-tmsl"></a>Objeto de modelo (TMSL)
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/01/2017
  O local no disco para colocar o modelo.  
   
  defaultMode  
- O método padrão para disponibilizar os dados na partição.  
+ O método padrão para disponibilizar dados na partição.  
   
  defaultDataView  
  Para modelos no modo DirectQuery, essa propriedade determina quais partições são usadas para executar consultas no modelo.  Os valores válidos incluem completo e exemplo.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

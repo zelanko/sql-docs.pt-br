@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- multidimensional data [Analysis Services], about multidimensional data
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: multidimensional data [Analysis Services], about multidimensional data
 ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 77fae4f9fd4b057a5388029b1544aa72842d91ae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6416855a4cfac989e9571f187d95a65343dba196
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Entendendo a arquitetura Microsoft OLAP
   Use estes tópicos para compreender os bancos de dados multidimensionais do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e como planejar a implementação dos bancos de dados multidimensionais em sua solução de Business Intelligence.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
  [Mais…](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  ![Ícone de pasta do arquivo pequeno](../../../analysis-services/media/filefolder-small.png "arquivo pequeno ícone da pasta") **arquitetura física**  
- [Componentes de servidor do mecanismo OLAP](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
+ [Componentes do servidor de mecanismo OLAP](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
   
  [Cubos locais &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)  
   
@@ -63,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [Referência técnica &#40; SSAS &#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   
-

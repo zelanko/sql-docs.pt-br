@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Criar um Cubo de um modelo sem usar uma Exibição da Fonte de Dados
   Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  Na página **Concluindo o Assistente** , examine a estrutura do novo cubo e, na caixa **Nome do cubo** , digite um nome para ele. Como opção, marque a caixa de seleção **Gerar esquema agora** para iniciar o assistente de geração de esquema. Na maioria dos casos, você não deve marcar esta caixa de seleção se planejar criar outros objetos. Você também pode usar o Designer de Cubo para gerar o esquema posteriormente.  
   
   
-

@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7221a67fb73c55b0173da2c10826d75003c50e6d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94f4cf7687c8e1469ea5f3a4260b69224e0ddbc0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Conjunto de linhas DISCOVER_CSDL_METADATA
   Retorna informações sobre um modelo de dados (de tabela ou multidimensional) do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], fornecendo a definição do modelo no formato da CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI). A CSDLBI se baseia na CSDL, um esquema XML usado pela Estrutura de Dados de Entidade que é utilizada para comunicação entre um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e o cliente [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . As anotações de BI (Business Intelligence) fornecem metadados adicionais sobre modelos de tabela e os objetos neles. Para obter mais informações sobre modelos de dados de tabela, consulte [CSDLBI &#40;Anotações CSDL para Business Intelligence&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
@@ -136,4 +134,3 @@ ms.lasthandoff: 09/01/2017
  [Anotações CSDL para Business Intelligence &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   
-

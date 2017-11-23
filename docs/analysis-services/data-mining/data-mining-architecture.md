@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c220da116fb0294ad463d8a0e9c1e4ade6ce652
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-architecture"></a>Arquitetura de mineração de dados
   Esta seção descreve a arquitetura de soluções de mineração de dados que são hospedadas em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os tópicos desta seção descrevem a arquitetura lógica e física de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que oferece suporte à mineração de dados, e também fornecem informações sobre os clientes, provedores e protocolos que podem ser usados na comunicação com servidores de mineração de dados e para trabalhar local ou remotamente com objetos de mineração de dados.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [Programação de mineração de dados](../../analysis-services/data-mining-programming.md)  
   
   
-

@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriedades do SQL Server (guia Parâmetros de Inicialização)
   Use esta caixa de diálogo para adicionar ou remover parâmetros de inicialização do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os parâmetros de inicialização podem ter um grande efeito no desempenho do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de adicionar ou alterar os parâmetros de inicialização, consulte o tópico "Usando as opções de inicialização do Serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/02/2017
  Para remover um parâmetro, selecione um parâmetro e clique em **Remover**.  
   
 ## <a name="parameter-format"></a>Formato do parâmetro  
- Não insira um separador entre parâmetros. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager adiciona o separador automaticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager impõe os seguintes requisitos de parâmetro.  
+ Não insira um separador entre parâmetros. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager adiciona o separador automaticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager impõe os seguintes requisitos de parâmetros.  
   
 -   Espaços à direita e à esquerda são cortados de qualquer parâmetro de inicialização.  
   
@@ -85,4 +83,3 @@ ms.lasthandoff: 08/02/2017
  Para obter mais informações sobre os parâmetros de inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte “Como configurar as opções de inicialização do servidor ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)” nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-

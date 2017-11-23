@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 4511f34d149494cd48a0ee52a94cc668bfdd8960
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introdução ao modelo de objeto de tabela (TOM) no Analysis Services AMO
 
@@ -76,4 +75,3 @@ A decisão de usar um ou outro ficará às especificações de seus requisitos. 
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
 [O Analysis Services PowerShell](../../analysis-services/powershell/analysis-services-powershell-reference.md)
   
-

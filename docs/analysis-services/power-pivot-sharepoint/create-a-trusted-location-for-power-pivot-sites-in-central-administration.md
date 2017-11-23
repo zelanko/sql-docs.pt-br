@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fcfb1bb5f17a912178b20c9ff96ef8feaed76e2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Criar um local confiável para sites do Power Pivot na Administração Central
   Os Serviços do Excel permitem especificar quais locais são repositórios válidos para pastas de trabalho que você abrir em um servidor do SharePoint. Esses locais são chamados de "locais confiáveis" e você pode usar diferentes definições de configuração para cada local confiável que você criar. Para uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, você pode considerar criar um local confiável para sites que tenham pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de forma que você possa aplicar as configurações que funcionam melhor para acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , enquanto preserva valores padrão para o resto do farm.  
@@ -73,7 +72,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Consulte também  
  [Galeria do Power Pivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
  [Criar e personalizar a Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Usar a Galeria Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
+ [Usar Galeria do Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   
-

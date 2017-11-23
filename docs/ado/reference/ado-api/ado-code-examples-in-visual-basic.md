@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- ADO code examples, Visual Basic
+dev_langs: VB
+helpviewer_keywords: ADO code examples, Visual Basic
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 753b12d32c1772db5eea33ecda12a960f97316a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c62113096ccc6737acd04b444d307658f3bf08f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Exemplos de código ADO no Visual Basic
 Use os exemplos de código a seguir para aprender a usar os métodos, propriedades e eventos ao gravar no Visual Basic do ADO.  
@@ -167,4 +163,3 @@ Use os exemplos de código a seguir para aprender a usar os métodos, propriedad
  [Exemplos de código ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Exemplos de código ADO no Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [Apêndice D: Exemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
-

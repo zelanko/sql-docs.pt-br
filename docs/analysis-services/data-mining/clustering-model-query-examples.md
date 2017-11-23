@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e60908ae9bba2e5f549b1f3fc57581553785938f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clustering-model-query-examples"></a>Exemplos de consulta de modelo de clustering
   Ao criar uma consulta em um modelo de mineração de dados, é possível recuperar metadados sobre o modelo ou criar uma consulta de conteúdo que forneça detalhes sobre os padrões descobertos na análise. Se preferir, crie uma consulta de previsão, que usa os padrões do modelo para fazer previsões para os novos dados. Cada tipo de consulta fornece informações diferentes. Por exemplo, uma consulta de conteúdo pode fornecer detalhes adicionais sobre os clusters encontrados, enquanto uma consulta de previsão pode informar a qual cluster um novo ponto de dados provavelmente pertence.  
@@ -402,4 +401,3 @@ NATURAL PREDICTION JOIN
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   
-
