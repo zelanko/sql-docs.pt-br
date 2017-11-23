@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - cursors [ODBC], key-set driven
 - cursors [ODBC], mixed
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 638cd5288073fa374f81a73273ed999a4697c8b2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mixed-cursors"></a>Cursores mistos
 Um cursor misto é uma combinação de um cursor controlado por conjunto de chaves e um cursor dinâmico. Ele é usado quando o conjunto de resultados for muito grande para ser razoavelmente salvar as chaves para o conjunto de resultados inteiro. Mistos cursores são implementados por meio da criação de um conjunto de chaves, mas menor do que o conjunto de resultados inteiro maior do que o conjunto de linhas.  
@@ -42,4 +40,3 @@ Um cursor misto é uma combinação de um cursor controlado por conjunto de chav
  Agora suponha que outro aplicativo linhas de exclusões 11 e 101. Se o cursor tenta recuperar a linha 11, ele será exibido um buraco porque ele tem uma chave para essa linha, mas não há nenhuma linha; Isso é controlado por comportamento. Se o cursor tenta recuperar a linha 101, o cursor não detectará que a linha está falta porque ele não tem uma chave para a linha. Em vez disso, ele recuperará o que era anteriormente linha 102. Esse é o comportamento de cursor dinâmico.  
   
  Um cursor misto é equivalente a um cursor controlado por conjunto de chaves quando o tamanho do conjunto de chaves é igual ao tamanho do conjunto de resultados. Um cursor misto é equivalente a um cursor dinâmico quando o tamanho do conjunto de chaves é igual a 1.
-

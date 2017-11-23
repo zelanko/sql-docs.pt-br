@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 775c3d0464443d11b833a230591b94293343086b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apêndice b: tabelas de transição de estado de ODBC
 As tabelas neste apêndice mostram como funções ODBC causam transições do ambiente, conexão, instrução e estados do descritor. O estado do ambiente, conexão, instrução ou descritor geralmente determina quando as funções que usam o tipo de identificador (ambiente, conexão, instrução ou descritor) correspondente podem ser chamadas. Os estados de ambiente, conexão, instrução e descritor se sobrepor aproximadamente conforme mostrado nas ilustrações a seguir. Por exemplo, a sobreposição exata de conexão estados C5 e C6 e estados de instrução que S1 por meio de /s12 é – dependente, da fonte de dados, pois transações começam em momentos diferentes com diferentes fontes de dados, e depende do estado de descritor D1i (descritor alocado implicitamente) sobre o estado da instrução ao qual o descritor está associado, ao estado D1e (explicitamente alocados descritor) é independente do estado de qualquer instrução. Para obter uma descrição de cada estado, consulte [ambiente transições](../../../odbc/reference/appendixes/environment-transitions.md), [Conexão transições](../../../odbc/reference/appendixes/connection-transitions.md), [transições de instrução](../../../odbc/reference/appendixes/statement-transitions.md), e [transições do descritor ](../../../odbc/reference/appendixes/descriptor-transitions.md), mais adiante neste apêndice.  
@@ -105,4 +103,3 @@ As tabelas neste apêndice mostram como funções ODBC causam transições do am
 -   [Transições de instrução](../../../odbc/reference/appendixes/statement-transitions.md)  
   
 -   [Transições de descritor](../../../odbc/reference/appendixes/descriptor-transitions.md)
-

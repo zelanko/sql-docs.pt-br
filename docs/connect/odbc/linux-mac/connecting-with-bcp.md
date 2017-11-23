@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- bcp
+helpviewer_keywords: bcp
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f7e9db6a1ea636975a3f5719d9a1b3e9d5721eb6
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1d2c7f5346d3d834a14161da188733cd72dcede1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connecting-with-bcp"></a>Conectando com bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -156,4 +153,3 @@ Usado com as opções format e -f format_file, gera um arquivo em formato basead
 ## <a name="see-also"></a>Consulte também
 
 [Conectando com **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
-

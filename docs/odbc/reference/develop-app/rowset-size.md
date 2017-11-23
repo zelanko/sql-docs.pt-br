@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rowset-size"></a>Tamanho do conjunto de linhas
 O tamanho do conjunto de linhas a ser usado depende do aplicativo. Aplicativos baseados em tela comumente siga uma das duas estratégias. A primeira é para definir o tamanho do conjunto de linhas para o número de linhas exibidas na tela; Se o usuário o redimensiona a tela, o aplicativo altera o tamanho do conjunto de linhas adequadamente. A segunda é definir o tamanho do conjunto de linhas para um número maior, como 100, que reduz o número de chamadas para a fonte de dados. O aplicativo localmente rola dentro do conjunto de linhas quando possível e busca de novas linhas apenas quando ele rola fora do conjunto de linhas.  
@@ -43,4 +41,3 @@ O tamanho do conjunto de linhas a ser usado depende do aplicativo. Aplicativos b
 -   **SQLSetPos** usa o tamanho de conjunto de linhas está em vigor a partir de uma chamada anterior para **SQLFetch** ou **SQLFetchScroll**, pois **SQLSetPos** opera em um conjunto de linhas que já foi definido. **SQLSetPos** também escolherá o novo tamanho do conjunto de linhas se **SQLBulkOperations** foi chamado depois que o tamanho do conjunto de linhas foi alterado.  
   
 -   **SQLBulkOperations** usa o tamanho do conjunto de linhas em vigor no momento da chamada, porque ele executa as operações em uma tabela independente de qualquer conjunto de linhas busca.
-

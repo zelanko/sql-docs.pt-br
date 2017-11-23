@@ -1,30 +1,31 @@
 ---
 title: Fluxo de trabalho ETL | Microsoft Docs
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 3b81a6494458f7d9f2e89b120119e402786e21ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85898dfc3a12ee195910bf965f0099b35f95b239
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Fluxo de trabalho WideWorldImportersDW ETL
-O pacote ETL WWI_Integration é usado para migrar dados do banco de dados de WideWorldImporters para o banco de dados WideWorldImportersDW como as alterações de dados. O pacote é executado periodicamente (geralmente diariamente).
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]O pacote ETL WWI_Integration é usado para migrar dados do banco de dados de WideWorldImporters para o banco de dados WideWorldImportersDW como as alterações de dados. O pacote é executado periodicamente (geralmente diariamente).
 
 ## <a name="overview"></a>Visão geral
 
@@ -80,4 +81,3 @@ Código-fonte para recriar o banco de dados de exemplo está disponível no segu
    - Clique em Okey para criar o trabalho.
 
 3. Executar ou agendar o trabalho.
-

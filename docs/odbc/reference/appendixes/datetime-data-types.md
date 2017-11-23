@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - compatibility [ODBC], datetime data types
 - data types [ODBC], time
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ff5b0244e54432e28d5a1b43d813911b3f90ffd2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="datetime-data-types"></a>Tipos de dados de data e hora
 Em ODBC 3*. x*, os identificadores de data, hora e tipos de dados SQL timestamp foram alterados de SQL_DATE, SQL_TIME e SQL_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 9, 10 e 11) para SQL _ TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 91, 92 e 93), respectivamente. O tipo C correspondente identificadores foram alterados de SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME e SQL_C_TYPE_TIMESTAMP, respectivamente e as instâncias de **#define** foram alterados adequadamente.  
@@ -48,4 +46,3 @@ Em ODBC 3*. x*, os identificadores de data, hora e tipos de dados SQL timestamp 
  Quando todos os tipos de dados são solicitados em uma chamada para **SQLGetTypeInfo**, o conjunto de resultados retornado pela função conterá SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP conforme definido em ODBC 3*. x*, e SQL_DATE, SQL_TIME e SQL_TIMESTAMP, conforme definido no ODBC 2. *x*.  
   
  Devido a como o ODBC 3*. x* Gerenciador de Driver executa o mapeamento de tipos de dados data, hora e carimbo de hora, ODBC 3*. x* drivers precisam apenas reconhecer **#defines** de 91, 92, e 93 para a data, hora e tipos de dados timestamp C inserido no *TargetType* argumentos de **SQLBindCol** e **SQLGetData** ou  *ValueType* argumento de **SQLBindParameter**e precisa apenas reconhecer **#defines** de 91, 92 e 93 para a data, hora e tipos de dados timestamp SQL inserido no *ParameterType* argumento de **SQLBindParameter** ou *DataType* argumento de **SQLGetTypeInfo**. Para obter mais informações, consulte [alterações de tipo de dados Datetime](../../../odbc/reference/develop-app/datetime-data-type-changes.md).
-

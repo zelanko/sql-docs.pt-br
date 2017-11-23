@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bed6c0fda5b192d92ff5b0fb2eebb151070ee096
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-handles"></a>Identificadores de Conexão
 Um *conexão* consiste em um driver e uma fonte de dados. Um identificador de conexão identifica cada conexão. O identificador de conexão define não qual driver usar apenas a fonte de dados para usar com esse driver. Dentro de um segmento de código que implementa ODBC (o Gerenciador de Driver ou um driver), o identificador de conexão identifica uma estrutura que contém informações de conexão, como o seguinte:  
@@ -44,4 +42,3 @@ Um *conexão* consiste em um driver e uma fonte de dados. Um identificador de co
  Identificadores de Conexão são usadas principalmente ao conectar-se à fonte de dados (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**), desconectar-se de que os dados fonte (**SQLDisconnect**), obtendo informações sobre o driver e fonte de dados (**SQLGetInfo**), recuperando diagnóstico (**SQLGetDiagField** e **SQLGetDiagRec**) e a execução de transações (**SQLEndTran**). Eles também são usados quando a configuração e Obtendo atributos de conexão (**SQLSetConnectAttr** e **SQLGetConnectAttr**) e ao obter o formato nativo de uma instrução SQL (**SQLNativeSql** ).  
   
  Identificadores de Conexão são alocados com **SQLAllocHandle** e liberadas com **SQLFreeHandle**.
-

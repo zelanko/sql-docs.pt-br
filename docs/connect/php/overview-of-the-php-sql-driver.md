@@ -8,22 +8,20 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6f045be45ddaa373d0aaba01d1c49fea66c49915
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4badc426f6dbff44784bd8487b04bc0665d959ad
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="overview-of-the-php-sql-driver"></a>Visão geral do driver SQL de PHP
 
@@ -51,4 +49,3 @@ Para usar o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] deve ter a
 [Introdução ao Driver SQL de PHP](../../connect/php/getting-started-with-the-php-sql-driver.md)
 [guia de programação para o Driver SQL de PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
 [aplicativo de exemplo &#40; Driver SQLSRV &#41;](../../connect/php/example-application-sqlsrv-driver.md)
-

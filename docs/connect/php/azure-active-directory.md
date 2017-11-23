@@ -7,19 +7,17 @@ ms.service:
 ms.component: php
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
+ms.openlocfilehash: eb13c1a57c63ce013a3b546572994106b8b1ffc0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01d921ebee152924b905fa7a9de8c6d46f41ca64
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Conecte-se usando a autenticação do Active Directory do Azure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -134,4 +132,3 @@ O exemplo a seguir faz o mesmo que acima com o driver PDO_SQLSRV.
 ```
 ## <a name="see-also"></a>Consulte também  
 [Usando o Active Directory do Azure com o Driver ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
-

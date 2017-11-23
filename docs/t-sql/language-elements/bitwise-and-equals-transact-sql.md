@@ -1,5 +1,5 @@
 ---
-title: '&amp;= (AND bit a bit EQUALS) (Transact-SQL) | Microsoft Docs'
+title: "&amp;= (Atribuição AND bit a bit) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '&='
 - '&=_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators, &=
+- assignment operators, &=
+- augmented operators, &=
 - '&= (bitwise AND equals)'
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2abeab8180dcc59db7abc07a379355941a414e2d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f5c52444f3ba653db65c5ad700dd8d11704466c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="amp-bitwise-and-equals-transact-sql"></a>&amp;= (AND bit a bit EQUALS) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= (Atribuição AND bit a bit) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
 
   Executa uma operação AND lógica bit a bit entre dois valores inteiros e define um valor para o resultado da operação.  
   
@@ -63,4 +63,3 @@ expression &= expression
  [Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

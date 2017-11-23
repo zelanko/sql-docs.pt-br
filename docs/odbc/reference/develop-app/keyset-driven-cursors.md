@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="keyset-driven-cursors"></a>Cursores controlados por conjunto de chaves
 Um cursor controlado por fica entre static e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele não detectar sempre alterações para a associação e a ordem do conjunto de resultados. Como um cursor dinâmico, ele detectar alterações em valores de linhas no conjunto (sujeito o nível de isolamento da transação, conforme definido pelo atributo de conexão SQL_ATTR_TXN_ISOLATION) de resultados.  
@@ -42,4 +40,3 @@ Um cursor controlado por fica entre static e um cursor dinâmico em sua capacida
  Cursores controlados por conjuntos de chaves geralmente são implementados por meio da criação de uma tabela temporária que contém as chaves para cada linha no conjunto de resultados. Porque o cursor também deve determinar se linhas foram atualizadas, esta tabela normalmente contém uma coluna com informações de controle de versão de linha.  
   
  Para rolar sobre o conjunto de resultados original, o cursor controlado por abre um cursor estático sobre a tabela temporária. Para recuperar uma linha no conjunto de resultados original, o cursor primeiro recupera a chave apropriada da tabela temporária e, em seguida, recupera os valores atuais para a linha. Se forem usados cursores em bloco, o cursor deve recuperar várias linhas e chaves.
-

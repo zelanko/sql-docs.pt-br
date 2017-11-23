@@ -8,24 +8,22 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 179efeac4673884e615648d1ed118398132dc6f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-sources"></a>Fontes de Dados
 Um *fonte de dados* é simplesmente a fonte de dados. Ele pode ser um arquivo, um banco de dados específico em um DBMS ou até mesmo um feed de dados ao vivo. Os dados podem ser localizados no mesmo computador que o programa, ou em outro computador em algum lugar em uma rede. Por exemplo, uma fonte de dados pode ser um DBMS do Oracle em execução em um sistema de operacional OS/2®, acessado por Novell® Netware; um DBMS de DB2 da IBM acessados por meio de um gateway. uma coleção de arquivos Xbase em um diretório de servidor. ou um arquivo de banco de dados local do Microsoft® Access.  
@@ -41,4 +39,3 @@ Um *fonte de dados* é simplesmente a fonte de dados. Ele pode ser um arquivo, u
 -   [Usando fontes de dados](../../odbc/reference/using-data-sources.md)  
   
 -   [Exemplo de fonte de dados](../../odbc/reference/data-source-example.md)
-

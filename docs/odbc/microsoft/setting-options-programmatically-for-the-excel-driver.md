@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], setting options programmatically
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e728a06c640203a2a3057933a3c40b543b01d4d3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da1f2ed6bbca3709c8223713f4841ed34288f5a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Opções de configuração por meio de programação para o Driver do Excel
 |Opção|Description|Método|  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 |Somente Leitura|Designa o banco de dados como somente leitura.|Para definir essa opção dinamicamente, use o **READONLY** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Linhas de varredura|O número de linhas a serem examinadas para determinar o tipo de dados de cada coluna. O tipo de dados é determinado o número máximo de tipos de dados encontrados. Se forem encontrados dados que não coincide com o tipo de dados avaliado para a coluna, o tipo de dados será retornado como um valor nulo.<br /><br /> Para o driver do Microsoft Excel, você pode inserir um número de 1 a 16 para as linhas a serem examinadas. O valor padrão é 8; Se estiver definido como 0, todas as linhas são examinadas. (Um número fora do limite retornará um erro.)|Para definir essa opção dinamicamente, use o **MAXSCANROWS** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Selecione o diretório|Exibe uma caixa de diálogo onde você pode selecionar um diretório que contém os arquivos que você deseja acessar.<br /><br /> Ao definir um diretório de origem de dados (para todos os drivers, exceto o Microsoft Access), especifique o diretório onde estão localizados os arquivos mais comumente usados. O driver ODBC usa esse diretório como o diretório padrão. Copie outros arquivos nesse diretório, se eles são usados com frequência. Como alternativa, você pode qualificar nomes de arquivo em uma instrução SELECT com o nome do diretório:<br /><br /> SELECIONE \* DE C:\MYDIR\EMP<br /><br /> Ou, você pode especificar um novo diretório padrão usando o **SQLSetConnectOption** função com a opção SQL_CURRENT_QUALIFIER.<br /><br /> Para o Microsoft Excel 3.0 ou 4.0 arquivos, a exibição de caminho é rotulado como "Directory" e o botão de seleção de caminho é rotulado "Selecionar diretório". Para arquivos do Microsoft Excel 5.0, 7.0 ou 97, a exibição de caminho é rotulado como "Planilha" e o botão de seleção de caminho é rotulado "Selecionar a pasta de trabalho". Ao definir um diretório de origem de dados, especifique o diretório onde os arquivos do Microsoft Excel mais comumente usados estão localizados para o Microsoft Excel 3.0/4.0 ou o diretório onde o arquivo de pasta de trabalho está localizado para o Microsoft Excel 5.0, 7.0 ou 97. **Usar o diretório atual** está desabilitado para o Microsoft Excel 5.0, 7.0 e 97.|Para definir essa opção dinamicamente, use o **DEFAULTDIR** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|
-

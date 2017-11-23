@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,18 +16,16 @@ helpviewer_keywords:
 - comparing bookmarks [ODBC]
 - bookmarks [ODBC]
 ms.assetid: ea347635-fbe3-41c1-b537-4048b7c0f7da
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c3d26095cf879859e6ea74784fcf87694ba5eb5d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ebcf375311af498dbb4c777707b7febcddb05a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="comparing-bookmarks"></a>Comparando indicadores
 Como os indicadores são bytes comparável, podem ser comparados para igualdade ou de desigualdade. Para fazer isso, um aplicativo trata cada indicador como uma matriz de bytes e compara os dois indicadores byte a byte. Como indicadores têm garantia distintos apenas dentro de um conjunto de resultados, ele faz sentido para comparar os marcadores que foram obtidos de diferentes conjuntos de resultados.
-

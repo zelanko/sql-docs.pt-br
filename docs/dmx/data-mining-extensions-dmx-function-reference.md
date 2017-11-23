@@ -13,24 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - functions [DMX]
 - Data Mining Extensions [Analysis Services], functions
 ms.assetid: fadd105b-9c8e-4118-a1f7-c0518b9ad970
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f459409c538db56df0664c86022bff36b6250eeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a1871de9ebb81ef5bd88063a3a26067e86b32ad3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Referência de função de DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |Função|Description|  
 |--------------|-----------------|  
 |[Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)|Lista as funções que podem ser usadas com todos os tipos de modelos e fornece links para mais informações sobre como consultar tipos específicos de modelos de mineração.|  
-|[Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Fornece uma visão geral de como construir uma consulta de previsão usando DMX.|  
+|[Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Fornece uma visão geral de como construir uma consulta de previsão usando DMX.|  
 |[BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)|Retorna uma tabela que contém um número especificado de linhas mais baixas, em ordem crescente de classificação, com base em uma expressão de classificação.|  
   
  A tabela a seguir lista as funções que a DMX suporta.  
@@ -85,7 +83,6 @@ ms.lasthandoff: 08/02/2017
  [Extensões de mineração de dados &#40; DMX &#41; Elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Noções básicas sobre a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

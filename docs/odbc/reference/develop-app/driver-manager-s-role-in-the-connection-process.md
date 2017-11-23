@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 797d3439b378cb5caef62af019352ff6797fdb43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>O Gerenciador de driver &#39; s função no processo de Conexão
 Lembre-se de que aplicativos não chamar funções de driver diretamente. Em vez disso, eles chamam funções do Gerenciador de Driver com o mesmo nome e o Gerenciador de Driver chama as funções de driver. Geralmente, isso acontece quase imediatamente. Por exemplo, o aplicativo chama **SQLExecute** no Gerenciador de Driver e depois de algumas verificações de erro, o Gerenciador de Driver chamará **SQLExecute** no driver.  
@@ -48,4 +46,3 @@ Lembre-se de que aplicativos não chamar funções de driver diretamente. Em vez
  O Gerenciador de Driver bloqueará o identificador de ambiente (*henv*) antes de chamar um driver **SQLAllocHandle** e **SQLFreeHandle** quando *HandleType* é definido como **SQL_HANDLE_DBC**.  
   
  Quando o aplicativo chama **SQLDisconnect**, as chamadas de Gerenciador de Driver **SQLDisconnect** no driver. No entanto, ele deixa o driver carregado no caso do aplicativo se reconecta ao driver. Quando o aplicativo chama **SQLFreeHandle** com a opção SQL_HANDLE_DBC, chama o Gerenciador de Driver **SQLFreeHandle** no driver. Se o driver não for usado por qualquer outra conexão, em seguida, chama o Gerenciador de Driver **SQLFreeHandle** no driver com o SQL_HANDLE_ENV opção e descarrega o driver.
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4e41033ffb30801fd388f7816c34c8a7751daa9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de Node. js
 Você precisará configurar seu ambiente de desenvolvimento com os pré-requisitos para desenvolver um aplicativo usando o Driver do Node.js para SQL Server.  O método mais comum é usar o Gerenciador de pacotes de nó (npm) para instalar o módulo entediante, mas você pode baixar o módulo entediante diretamente no [Github](https://github.com/pekim/tedious) se você preferir.  
@@ -107,4 +105,3 @@ c. Após o download, execute o dmg para instalar o Node. js
 > npm install tedious  
 ```  
   
-

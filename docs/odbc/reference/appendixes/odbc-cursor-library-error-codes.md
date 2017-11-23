@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - error codes [ODBC], cursor library
 - ODBC cursor library [ODBC], error codes
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c1dcdaf02010c150e40295226e1258e385cdf75f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 308ad8ed54aacb9ab7bc169efd9dad020e2f2b66
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-cursor-library-error-codes"></a>Códigos de erro de biblioteca de Cursor ODBC
 > [!IMPORTANT]  
@@ -62,4 +60,3 @@ ms.lasthandoff: 09/09/2017
 |SL012|Associações de instrução não podem ser alteradas enquanto um cursor é aberto.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
 |SL014|Uma solicitação posicionada foi enviada e nem todos os campos de contagem de coluna foram armazenados em buffer.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
 |SL015|**SQLFetch** e **SQLFetchScroll** não podem ser misturados.|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|
-

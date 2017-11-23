@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- streaming data
+helpviewer_keywords: streaming data
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 951bc5044845acff7282ee15c4acf2df4b533ce0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df28daa518ae435265a7b21239a04111b24cc859
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>Tipos de dados com suporte a fluxo usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,4 +58,3 @@ Os seguintes tipos de dados do SQL Server podem ser recuperados como fluxos com 
 [Tipos de dados padrão do PHP](../../connect/php/default-php-data-types.md)  
 [Como especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
-

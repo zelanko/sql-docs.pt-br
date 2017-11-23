@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1136751fc7ec479cd3538814369cafed8ca45abf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-a-row-of-data"></a>Busca de uma linha de dados
 Para buscar uma linha de dados, um aplicativo chama **SQLFetch**. **SQLFetch** pode ser chamado com qualquer tipo de cursor, mas ele só move o cursor de conjunto de linhas em uma direção de somente avanço. **SQLFetch** avança o cursor para a próxima linha e retorna os dados de todas as colunas que foram associados com chamadas para **SQLBindCol**. Quando o cursor atinge o final do resultado definido, **SQLFetch** retorna SQL_NO_DATA. Para obter exemplos de chamada **SQLFetch**, consulte [SQLBindCol usando](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
@@ -44,4 +42,3 @@ Para buscar uma linha de dados, um aplicativo chama **SQLFetch**. **SQLFetch** p
  Dados de caractere devem ser terminada em nulo pelo driver antes de ser retornado para o aplicativo, mesmo se ele foi truncado. O caractere null de terminação não está incluído no comprimento de bytes retornados, mas requer espaço no buffer de associados. Por exemplo, suponha que um aplicativo usa cadeias de caracteres compostas de dados de caractere no conjunto de caracteres ASCII, um driver tem 50 caracteres de dados para retornar e o buffer do aplicativo é 25 bytes de comprimento. No buffer do aplicativo, o driver retorna os primeiro 24 caracteres seguidos por um caractere null de terminação. No buffer de comprimento/indicador, ele retorna um comprimento de bytes de 50.  
   
  O aplicativo pode restringir o número de linhas no conjunto de resultados por definir o atributo de instrução SQL_ATTR_MAX_ROWS antes de executar a instrução que cria o resultado definido. Por exemplo, o modo de visualização em um aplicativo usado para formatar relatórios precisa apenas dados suficientes para exibir a primeira página do relatório. Restringindo o tamanho do conjunto de resultados, tal recurso seria executado mais rapidamente. Esse atributo de instrução destina-se para reduzir o tráfego de rede e pode não ter suporte de todos os drivers.
-

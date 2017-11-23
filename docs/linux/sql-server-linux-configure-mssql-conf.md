@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
+ms.openlocfilehash: ace4b62046bdb10ab32718d2c941892ef83d0ee8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 14a7f9cb0f9888339140a226d31368deaf7b32f5
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server no Linux com a ferramenta mssql conf
 
@@ -459,4 +458,3 @@ traceflag = 3456
 Em vez de usar variáveis de ambiente para fazer algumas dessas alterações de configuração, consulte [as configurações de configurar o SQL Server com variáveis de ambiente](sql-server-linux-configure-environment-variables.md).
 
 Para outros cenários e ferramentas de gerenciamento, consulte [gerenciar o SQL Server no Linux](sql-server-linux-management-overview.md).
-

@@ -1,30 +1,31 @@
 ---
 title: Uso de recursos do SQL Server | Microsoft Docs
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: f2feaaa999a6010ab493e9f4f73f6ffdef576e82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 90b1cd86f2fcc282922111ac9325470635bcfcad
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Uso de recursos do SQL Server
-WideWorldImporters o uso de recursos do SQL Server e recursos no banco de dados OLTP.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters o uso de recursos do SQL Server e recursos no banco de dados OLTP.
 
 WideWorldImporters é projetado para exibir muitos dos principais recursos do SQL Server, incluindo os recursos mais recentes introduzidos no SQL Server 2016. A seguir está uma lista de recursos do SQL Server, recursos e uma descrição de como eles são usados em WideWorldImporters.
 
@@ -51,4 +52,3 @@ WideWorldImporters é projetado para exibir muitos dos principais recursos do SQ
 |Repositório de Consultas|Repositório de consultas está habilitado no banco de dados. Depois de executar algumas consultas, abra o banco de dados no Management Studio, abra o nó do repositório de consultas, que está sob o banco de dados, e abrir o relatório principais consultas de consumo de recursos para ver as execuções de consulta e os planos para consultas que acabou de ser executada.|
 |STRING_SPLIT|A coluna `DeliveryInstructions` na tabela `Sales.Invoices`tem um valor separado por vírgulas que pode ser usado para demonstrar STRING_SPLIT.|
 |Auditoria|Auditoria do SQL Server pode ser habilitada para este banco de dados de exemplo, executando a seguinte instrução no banco de dados:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>No banco de dados SQL Azure, a auditoria é habilitada por meio de [portal do Azure](https://portal.azure.com/).<br/><br/>Operações de segurança que envolvem logons, funções e permissões são registradas em todos os sistemas onde a auditoria está habilitada (incluindo sistemas standard edition). Auditoria é direcionada para o log do aplicativo, porque isso está disponível em todos os sistemas e não requer permissões adicionais. Um aviso é visto que, para maior segurança, ele deve ser redirecionado para o log de segurança ou um arquivo em uma pasta segura. Um link é fornecido para descrever a configuração adicional necessária.<br/><br/>Para sistemas de desenvolvedor/avaliação/enterprise edition, o acesso a todos os dados transacionais financeiros é auditado.|
-

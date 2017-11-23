@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2af7ec87b34ba6b2a8482d9321905f409dd9dd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-interval-structure"></a>Estrutura de intervalo de C
 Cada um dos tipos de dados C intervalo listado no [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md) seção usa a mesma estrutura para conter os dados de intervalo. Quando **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** é chamado, o driver retorna dados na estrutura de SQL_INTERVAL_STRUCT, usa o valor especificado pelo para os tipos de dados C (na chamada para **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**) para interpretar o conteúdo de SQL_INTERVAL_STRUCT e preenche o *interval_type* campo da estrutura com a *enum* valor correspondente ao tipo de C. Observe que os drivers não lê o *interval_type* campo para determinar o tipo do intervalo; eles recuperarem o valor do campo de descritor SQL_DESC_CONCISE_TYPE. Quando a estrutura é usada para dados de parâmetro, o driver usa o valor especificado pelo aplicativo no campo SQL_DESC_CONCISE_TYPE de APD para interpretar o conteúdo de SQL_INTERVAL_STRUCT, mesmo que o aplicativo define o valor da  *interval_type* campo para um valor diferente.  
@@ -78,4 +76,3 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  O *interval_type* campo do SQL_INTERVAL_STRUCT indica para o aplicativo que estrutura é mantida na união e também quais membros da estrutura são relevantes. O *interval_sign* campo tem o valor SQL_FALSE se o intervalo à esquerda de campo não está assinado; se for SQL_TRUE, o campo principal é negativo. O valor no campo à esquerda em si é sempre não assinado, independentemente do valor *interval_sign*. O *interval_sign* campo atua como um bit de sinal.
-

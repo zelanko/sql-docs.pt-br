@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13a50475602b7f71a7da33ebaaecb4c09eeaf534
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-size"></a>Tamanho da coluna
 O tamanho da coluna (ou parâmetro) dos tipos de dados numérico é definido como o número máximo de dígitos usado pelo tipo de dados da coluna ou parâmetro ou a precisão dos dados. Para tipos de caracteres, esse é o comprimento em caracteres de dados. para tipos de dados binários, o tamanho da coluna é definido como o comprimento em bytes dos dados. Para o tempo, timestamp e todos os tipos de dados de intervalo, este é o número de caracteres a representação de caracteres de dados. O tamanho da coluna definido para cada tipo de dados SQL conciso é mostrado na tabela a seguir.  
@@ -75,4 +73,3 @@ O tamanho da coluna (ou parâmetro) dos tipos de dados numérico é definido com
 |Todos os tipos numéricos|PRECISION|  
 |Todos os tipos de data/hora e intervalo|LENGTH|  
 |SQL_BIT|LENGTH|
-

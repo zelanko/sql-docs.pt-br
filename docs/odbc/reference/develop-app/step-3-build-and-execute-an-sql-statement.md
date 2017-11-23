@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f213203e7601c79f8f5336756462d6ad344aaa8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Etapa 3: Criar e executar uma instrução SQL
 A terceira etapa é criar e executar uma instrução SQL, conforme mostrado na ilustração a seguir. Os métodos usados para executar essa etapa serão prováveis podem variar muito. O aplicativo pode solicitar que o usuário insira uma instrução SQL, crie uma instrução SQL com base na entrada do usuário, ou usar uma instrução SQL embutido. Para obter mais informações, consulte [construindo instruções de SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
@@ -46,4 +44,3 @@ A terceira etapa é criar e executar uma instrução SQL, conforme mostrado na i
 |**Selecione** ou função de catálogo|[Etapa 4a: Buscar os resultados](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**ATUALIZAÇÃO**, **excluir**, ou **inserir**|[Etapa 4b: Buscar a contagem de linhas](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |Todas as outras instruções SQL|Etapa 3: Criar e executar uma instrução SQL (Este tópico) ou [etapa 5: confirmar a transação](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
-

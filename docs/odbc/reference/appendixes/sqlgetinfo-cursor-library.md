@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetInfo function [ODBC], Cursor Library
+helpviewer_keywords: SQLGetInfo function [ODBC], Cursor Library
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe270f6c939711d91a6b6c7a4ffd2a0a37479334
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8e1aa6617d19c9028ff08dcf171abac060bb6f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo (biblioteca de Cursor)
 > [!IMPORTANT]  
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  A biblioteca de cursores implementa o mesmo comportamento do cursor quando transações são confirmadas ou revertidas como a fonte de dados. Ou seja, confirmar ou reverter uma transação, ou chamando **SQLEndTran** ou usando o atributo de conexão SQL_ATTR_AUTOCOMMIT, pode fazer com que a fonte de dados excluir os planos de acesso e fechar os cursores para todas as instruções em uma conexão. Para obter mais informações, consulte os tipos de informações SQL_CURSOR_COMMIT_BEHAVIOR e SQL_CURSOR_ROLLBACK_BEHAVIOR no [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).
-

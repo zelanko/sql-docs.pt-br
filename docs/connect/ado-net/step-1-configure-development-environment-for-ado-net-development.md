@@ -8,22 +8,20 @@ ms.service:
 ms.component: ado-net
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ee138401f61663fbfc078f893ed542503d30be77
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3d33660b662ea3e89d10d04266425261a6eb9f6e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento do ADO.NET
 
@@ -47,4 +45,3 @@ Nosso exemplo de código atual usa ADO.NET do .NET Framework para Windows. O .NE
 Links para baixar o .NET Core para uma variedade de sistemas operacionais, estão disponíveis em:
 
 - ![Um círculo seta download](../../ssdt/media/download.png)[para baixar e instalar o .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fb717a151e6917d49e164cfeba9b3df3507d46e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dynamic-sql"></a>SQL dinâmico
 Embora o SQL estática funciona bem em muitas situações, há uma classe de aplicativos no qual o acesso a dados não pode ser determinado com antecedência. Por exemplo, suponha que uma planilha permite que um usuário insira uma consulta, que envia a planilha para o DBMS para recuperar dados. O conteúdo dessa consulta, obviamente, não pode ser conhecido para o programador quando o programa de planilha é gravado.  
@@ -48,4 +46,3 @@ Embora o SQL estática funciona bem em muitas situações, há uma classe de apl
 3.  O programa pode usar a instrução EXECUTE repetidamente, fornecendo valores de parâmetros diferentes cada vez que a instrução dinâmica é executada.  
   
  Execução preparada ainda não é o mesmo SQL estático. No SQL estático, as quatro primeiras etapas de processamento de uma instrução SQL ocorrem em tempo de compilação. Na execução preparada, essas etapas ainda ocorrem em tempo de execução, mas elas são executadas apenas uma vez; execução do plano ocorre somente quando EXECUTE é chamado. Isso ajuda a eliminar algumas das desvantagens inerentes à arquitetura do SQL dinâmico de desempenho. A ilustração a seguir mostra as diferenças entre SQL estático, SQL dinâmico com execução imediata e SQL dinâmico com execução preparada.
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7d30a5a79391025b1be0312ca2020de47c2db5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>Escolhendo uma gramática SQL
 A primeira decisão a tomar quando construindo instruções SQL é qual gramática para usar. Além de gramáticas disponíveis de vários corpos de padrões, como Open Group, ANSI e ISO, praticamente todos os fornecedores DBMS define sua própria gramática, cada um deles varia do padrão.  
@@ -41,4 +39,3 @@ A primeira decisão a tomar quando construindo instruções SQL é qual gramáti
  Portanto, há realmente duas opções de gramática usar: a gramática de SQL-92 (e o sequências de escape de ODBC) e uma gramática DBMS específico. Dos dois, apenas a gramática de SQL-92 é interoperável, para que todos os aplicativos interoperáveis devem usá-lo. Aplicativos que não são interoperáveis podem usar a gramática de SQL-92 ou uma gramática DBMS específico. Específicas do DBMS gramáticas tem duas vantagens: eles podem explorar os recursos não cobertos por SQL-92, e eles são um pouco mais rápidos porque o driver não precisa modificá-las. O segundo recurso pode ser imposto parcialmente, definindo o atributo de instrução SQL_ATTR_NOSCAN, que interrompe o driver de pesquisa e substituição das sequências de escape.  
   
  Se a gramática de SQL-92 for usada, o aplicativo pode descobrir como ele é modificado pelo driver chamando **SQLNativeSql**. Isso geralmente é útil ao depurar aplicativos. **SQLNativeSql** aceita uma instrução SQL e retorna depois que o driver tenha modificado. Como essa função está no nível de conformidade a principal interface, há suporte por todos os drivers.
-

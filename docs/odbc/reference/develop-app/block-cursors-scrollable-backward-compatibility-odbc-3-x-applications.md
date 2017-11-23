@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - cursors [ODBC], compatibility issues
 - SQLFetchScroll function [ODBC], block cursors
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bc3b2fa0e72329300f4fb6aa52c274a0ce0f9b83
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Cursores em bloco, cursores roláveis e compatibilidade com versões anteriores para os aplicativos ODBC 3. x
 A existência de ambos **SQLFetchScroll** e **SQLExtendedFetch** representa o primeiro clear dividido em ODBC entre o aplicativo de Interface de programação (API), que é o conjunto de funções de chamadas de aplicativo e o serviço de provedor de Interface (IDA), que é o conjunto de funções implementa o driver. Essa divisão é necessário para equilibrar o requisito em ODBC 3. *x*, que usa **SQLFetchScroll**para alinhar com os padrões e ser compatível com ODBC 2. *x*, que usa **SQLExtendedFetch**.  
@@ -52,4 +50,3 @@ A existência de ambos **SQLFetchScroll** e **SQLExtendedFetch** representa o pr
   
 > [!NOTE]  
 >  ODBC 3. *x* aplicativos não devem usar **SQLExtendedFetch** ou o atributo da instrução SQL_ROWSET_SIZE. Em vez disso, eles devem usar **SQLFetchScroll** e o atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE. ODBC 3. *x* aplicativos não devem usar **SQLSetPos** com um *operação* de SQL_ADD, mas deve usar **SQLBulkOperations** com um *Operação* de SQL_ADD.
-

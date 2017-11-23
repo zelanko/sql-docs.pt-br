@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], fetching results
 - fetches [ODBC], fetching results
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f706364735794aea773847431a9d42d0a09c8183
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-4a-fetch-the-results"></a>Etapa 4a: buscar os resultados
 A próxima etapa é obter os resultados, conforme mostrado na ilustração a seguir.  
@@ -42,4 +40,3 @@ A próxima etapa é obter os resultados, conforme mostrado na ilustração a seg
  Para obter uma descrição completa de recuperar os resultados, consulte [recuperar resultados (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md) e [recuperar resultados (Avançado)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
   
  O aplicativo agora retorna a "Etapa 3: criar e executar uma instrução SQL" para executar outra instrução na mesma transação; ou vai para a "Etapa 5: a transação de confirmação" confirmar ou reverter a transação.
-
