@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Index::put_IndexNulls
 - _Index::PutIndexNulls
 - _Index::IndexNulls
-helpviewer_keywords:
-- IndexNulls property [ADOX]
+helpviewer_keywords: IndexNulls property [ADOX]
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 309e07895b6ad8bfac41a9e4465f31d2c488fc4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f040cded9fb01fbe140a2a7215fd7ba333f4104a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="indexnulls-property-adox"></a>Propriedade IndexNulls (ADOX)
 Indica se os registros com valores nulos em seus campos de índice têm entradas de índice.  
@@ -48,4 +45,3 @@ Indica se os registros com valores nulos em seus campos de índice têm entradas
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo da propriedade IndexNulls (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
-

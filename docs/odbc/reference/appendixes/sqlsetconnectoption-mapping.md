@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 55ccf421e9db76c570608b4bfc380e0c48dc1f2d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectoption-mapping"></a>Mapeamento de SQLSetConnectOption
 Quando um ODBC 2. *x* aplicativo chama **SQLSetConnectOption** por meio de um ODBC 3*. x* driver, a chamada para  
@@ -67,4 +65,3 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  No ODBC 2. *x*, um aplicativo pode chamar **SQLSetConnectOption** para definir uma opção de instrução. Quando isso for feito, o driver estabelece a opção de instrução como padrão para todas as instruções posteriormente alocadas para essa conexão. Ele é definido pelo driver se o driver define a opção de instrução para qualquer instrução existente associado com a conexão especificada.  
   
  Essa capacidade foi preterida no ODBC 3*. x*. ODBC 3*. x* drivers precisam apenas oferece suporte à definição do ODBC 2. *x* atributos de instrução em nível de conexão se desejar trabalhar com ODBC 2. *x* aplicativos que fazem isso. ODBC 3*. x* aplicativos nunca devem definir atributos de instrução no nível de conexão. ODBC 3*. x* atributos de instrução não podem ser definidos no nível de conexão, com exceção dos atributos SQL_ATTR_METADATA_ID e SQL_ATTR_ASYNC_ENABLE, que são atributos de conexão e atributos de instrução e pode ser definir o nível de conexão ou o nível de instrução.
-

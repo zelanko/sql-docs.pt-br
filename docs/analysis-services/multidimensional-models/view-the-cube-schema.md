@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-cube-schema"></a>Exibir o esquema do cubo
   O painel **Exibição da Fonte de Dados** da guia **Estrutura do Cubo** no **Designer do Cubo** exibe o esquema do cubo. O esquema é o conjunto de tabelas das quais são derivadas as medidas e as dimensões para um cubo. Todo esquema de cubo consiste em uma ou mais tabelas de fato e uma ou mais tabelas de dimensão nas quais são baseadas as medidas e as dimensões no cubo.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
 |Editar o esquema da exibição da fonte de dados|No menu **Exibição da Fonte de Dados** , clique em **Editar Exibição da Fonte de Dados**.<br /><br /> - ou -<br /><br /> Clique com o botão direito do mouse na tela de fundo do painel **Exibição da Fonte de Dados** e clique em **Editar Exibição da Fonte de Dados**.|  
   
   
-

@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a688b9544642ecb9dc5cbca1d7c5e3af90a5ebd4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 868de22e20887c0d038cf65690649ae6a41530e1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-classes---introduction"></a>Classes AMO - Introdução
   Analysis Management Objects (AMO) é uma biblioteca de classes criada para gerenciar uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de um aplicativo cliente. Você usará as classes AMO para administrar objetos do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] como bancos de dados, dimensões, cubos, estruturas e modelos de mineração, funções e permissões, exceções e outros  
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 |[Classes OLAP AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Descreve classes que permitem a você gerenciar os objetos OLAP no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Classes de mineração de dados AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Descreve classes que permitem a você gerenciar os objetos de mineração de dados no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Classes de segurança AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Descreve classes que permitem a você controlar o acesso a outros objetos e e a manter a segurança.|  
-|[AMO outras Classes e métodos](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Descreve classes e métodos que ajudam os administradores de OLAP ou de Mineração de Dados a concluírem suas tarefas diárias.|  
+|[Outras classes e métodos AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Descreve classes e métodos que ajudam os administradores de OLAP ou de Mineração de Dados a concluírem suas tarefas diárias.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.AnalysisServices>   
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [Desenvolvendo com o Analysis Management Objects &#40; AMO &#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   
-

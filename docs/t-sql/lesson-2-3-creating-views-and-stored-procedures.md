@@ -2,32 +2,31 @@
 title: "Criando exibições e procedimentos armazenados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- creating views and stored procedures
+applies_to: SQL Server 2016
+helpviewer_keywords: creating views and stored procedures
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b246171441ba9eedb213fd2baef55d8dc7668d26
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bc361e589dba1215781adcf951fd419b7dc806f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Lição 2-3 - Criando exibições e procedimentos armazenados
-Agora que a Mary pode acessar o banco de dados **TestData** , talvez convenha criar alguns objetos de banco de dados, como uma exibição e um procedimento armazenado, e conceder a Mary acesso a eles. Uma exibição é uma instrução SELECT armazenada e um procedimento armazenado é uma ou mais instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas como um lote.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Agora que a Mary pode acessar o **TestData** banco de dados, você talvez queira criar alguns objetos de banco de dados, como um modo de exibição e um procedimento armazenado e conceder a Mary acesso a eles. Uma exibição é uma instrução SELECT armazenada e um procedimento armazenado é uma ou mais instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas como um lote.  
   
 Exibições são tabelas do tipo para consultas e não aceitam parâmetros. Procedimentos armazenados são mais complexos que exibições. Procedimentos armazenados podem ter parâmetros de entrada e saída e conter instruções para controlar o fluxo do código, como instruções IF e WHILE. É uma boa prática de programação usar procedimentos armazenados para todas as ações repetitivas no banco de dados.  
   
@@ -92,4 +91,3 @@ Neste exemplo, você usará CREATE VIEW para criar uma exibição que seleciona 
   
   
   
-

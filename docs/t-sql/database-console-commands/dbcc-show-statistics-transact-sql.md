@@ -3,10 +3,12 @@ title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -32,20 +33,19 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 38abfb552f1bb969c132d5086ca007d36541a76c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS exibe as estatísticas de otimização de consulta atuais de uma tabela ou exibição indexada. O otimizador de consulta usa as estatísticas para calcular a cardinalidade ou o número de linhas no resultado da consulta, o que permite a esse otimizador criar um plano de consulta de alta qualidade. Por exemplo, o otimizador de consulta pode usar estimativas de cardinalidade para escolher o operador de busca do índice, em vez do operador de verificação do índice no plano de consulta, melhorando o desempenho da consulta ao evitar uma verificação de índice que consome muitos recursos.
   
@@ -149,7 +149,7 @@ Para cada etapa do histograma:
 O otimizador de consulta define as etapas do histograma de acordo com o significado estatístico delas. Ele usa um algoritmo de diferença máxima para minimizar o número de etapas no histograma, enquanto maximiza a diferença entre os valores de limite. O número máximo de etapas é 200. O número de etapas do histograma pode ser menor do que o número de valores distintos, até mesmo para colunas com menos de 200 pontos de limite. Por exemplo, uma coluna com 100 valores distintos pode ter um histograma com menos de 100 pontos de limite.
   
 ## <a name="density-vector"></a>Vetor de densidade  
-O otimizador de consulta usa densidades para aprimorar as estimativas de cardinalidade de consultas que retornam várias colunas da mesma tabela ou exibição indexada. O vetor de densidade contém uma densidade para cada prefixo de colunas no objeto de estatísticas. Por exemplo, se o objeto de estatísticas tiver as colunas de chave CustomerId, ItemId e Price, a densidade será calculada com base em cada um dos prefixos de coluna a seguir.
+O otimizador de consulta usa densidades para aprimorar as estimativas de cardinalidade de consultas que retornam várias colunas da mesma tabela ou exibição indexada. O vetor de densidade contém uma densidade para cada prefixo de colunas no objeto de estatísticas. Por exemplo, se um objeto de estatísticas tiver as colunas de chave `CustomerId`, `ItemId` e `Price`, densidade é calculada para cada um dos seguintes prefixos de coluna.
   
 |Prefixo de coluna|Densidade calculada em|  
 |---|---|
@@ -163,7 +163,7 @@ O otimizador de consulta usa densidades para aprimorar as estimativas de cardina
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Permissões para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 Para exibir o objeto de estatísticas, o usuário deve possuir a tabela ou o usuário deve ser um membro do `sysadmin` função fixa de servidor a `db_owner` função de banco de dados fixa ou `db_ddladmin` função fixa de banco de dados.
   
-O SQL Server 2012 SP1 modifica as restrições de permissão e permite que os usuários com a permissão SELECT utilizem esse comando. Para que as permissões SELECT sejam suficientes para executar o comando, é necessário atender aos seguintes requisitos:
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 modifica as restrições de permissão e permite que os usuários com a permissão SELECT utilizem esse comando. Para que as permissões SELECT sejam suficientes para executar o comando, é necessário atender aos seguintes requisitos:
 -   Os usuários devem ter permissões em todas as colunas do objeto de estatísticas  
 -   Os usuários devem ter permissão em todas as colunas em uma condição de filtro (se houver)  
 -   A tabela não pode ter uma política de segurança de nível de linha.  
@@ -227,4 +227,3 @@ Os resultados mostram o cabeçalho, o vetor de densidade e parte do histograma.
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.DM db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
-

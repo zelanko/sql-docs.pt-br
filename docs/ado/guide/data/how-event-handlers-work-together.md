@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2b826bed21c5fcec7a0e6d957f3b0a03eac858c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a2e603819e2d4c44bf612d62f86f448c560e0828
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="how-event-handlers-work-together"></a>Como os manipuladores de eventos funcionam em conjunto
 A menos que você estiver programando no Visual Basic, todos os manipuladores de eventos para **Conexão** e **registros** eventos devem ser implementados, independentemente se você realmente processar todos os eventos. A quantidade de trabalho de implementação, que você precisa fazer depende de sua linguagem de programação. Para obter mais informações, consulte [ADO instanciação de eventos por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
@@ -66,4 +64,3 @@ A menos que você estiver programando no Visual Basic, todos os manipuladores de
  [Instanciação de evento ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Parâmetros de evento](../../../ado/guide/data/event-parameters.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)
-

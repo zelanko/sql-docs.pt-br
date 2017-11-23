@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server no cliente do Linux VDI especificação do SDK
 
@@ -200,7 +199,7 @@ Quando esta rotina deve bloquear a esperar para um comando, o thread será deixa
 | |**pCmd** |Este é o endereço de um comando anteriormente retornado de ClientVirtualDevice::GetCommand.
 | |**completionCode** |Este é um código de status que indica o status de conclusão. Esse parâmetro deve ser retornado para todos os comandos. O código retornado deve ser apropriado para o comando que está sendo executado. ERROR_SUCCESS é usado em todos os casos para denotar um comando executado com êxito. Para obter uma lista de possíveis códigos, consulte o arquivo vdierror.h. Aparece uma lista de códigos de status típicos para cada comando em "Comandos" neste documento.
 | |**bytesTransferred** |Este é o número de bytes transferidos com êxito. Isso será retornado apenas para a transferência de dados, comandos de leitura e gravação.
-| |**position** |Esta é uma resposta para o comando GetPosition somente.
+| |**posição** |Esta é uma resposta para o comando GetPosition somente.
         
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |
@@ -330,6 +329,5 @@ Comentários do processo que invoca a função GetBufferHandle é responsável p
 | |**VD_E_INVALID** |O ppBuffer é um identificador inválido.
 
 **Comentários** deve ter cuidado para comunicar as alças corretamente. Identificadores são locais para um conjunto único de dispositivo virtual. Os processos de parceiro, um identificador de compartilhamento devem garantir que buffer identificadores são usados somente dentro do escopo do dispositivo virtual definido do que o buffer foi originalmente obtido.
-
 
 

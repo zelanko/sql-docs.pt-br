@@ -1,0 +1,51 @@
+---
+title: Carregando a planilha de planejamento capacidade do servidor (SQL Server PDW)
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+ms.prod: sql-non-specified
+ms.prod_service: mpp-data-warehouse
+ms.service: 
+ms.component: analytics-platform-system
+ms.suite: sql
+ms.custom: 
+ms.technology: mpp-data-warehouse
+description: "Esta planilha de planejamento de capacidade ajuda você a determinar os requisitos de um servidor de carregamento para carregar dados no SQL Server PDW."
+ms.date: 01/05/2017
+ms.topic: article
+ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
+caps.latest.revision: "9"
+ms.openlocfilehash: e14d4baca91e0b892b84620330655271fa67badb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
+---
+# <a name="loading-server-capacity-planning-worksheet"></a>Carregando a planilha de planejamento de capacidade do servidor
+Esta planilha de planejamento de capacidade ajuda você a determinar os requisitos de um servidor de carregamento para carregar dados no SQL Server PDW. Use isso para criar seu plano para compra ou provisionamento existentes ao carregar servidores.  
+  
+## <a name="worksheet-notes"></a>Notas de planilha
+  
+1.  Essa planilha se aplica aos servidores que irá carregar dados com o **dwloader** a ferramenta de carregamento de linha de comando.  
+  
+2.  Para carregar os dados com o Integration Services ou uma ferramenta de carregamento de terceiros, os requisitos podem variar de acordo com as diferenças no processo de carregamento.  
+  
+3.  A maioria dos requisitos se aplicam ao carregar qualquer um dos arquivos de dados compactado ou não compactado; as diferenças nos requisitos são indicadas em negrito.  
+  
+## <a name="clipboardmediaclipboard-iconpng-clipboard-capacity-planning-worksheet"></a>![Área de transferência](media/clipboard-icon.png "área de transferência") planilha de planejamento de capacidade  
+  
+Esta planilha de impressão e preenchê-lo com seus próprios requisitos.  
+  
+|Componente|Requisito|Preencha essa coluna com seus próprios requisitos|Recomendações|  
+|-------------|---------------|--------------------------------------------------|-------------------|  
+|Armazenamento|Você planeja armazenar no servidor de carregamento em qualquer determinado período de tempo máximo de bytes.|![Ícone de lápis](media/pencil-icon.png "ícone de lápis")|Para determinar os requisitos de armazenamento, calcule a quantidade de dados você planeja armazenar no servidor de carregamento em qualquer período de tempo determinado.  São os requisitos de capacidade para carregar arquivos. o sistema operacional e os arquivos de carga devem ser matrizes de disco diferente.<br /><br />Por exemplo: se você planeja carregar 100 GB de dados do disco 3 vezes por dia, mas não excluir os arquivos de dados até o fim da semana, é necessário um mínimo TB 2.1 para armazenar os arquivos de dados. É recomendável sendo conservadora e Obtendo sobre armazenamento de 30% a mais para levar em conta as variações e crescimento.  Neste exemplo, seria melhor 2.73 TB de espaço de armazenamento.|  
+|Taxa de carga|Máximo de bytes de dados para carregar no PDW por hora.|![Ícone de lápis](media/pencil-icon.png "ícone de lápis")|Essa é uma estimativa. Ao calcular a esse requisito, suponha que os arquivos já estão no servidor de carregamento e que outras condições de carregamento serão tão bons quanto possíveis.<br /><br />Por exemplo: não é preciso considerar compactação de dados como dwloader sempre envia dados descompactados para o PDW. Não é necessário considerar as conversões de tipo de dados e o tamanho da tabela de destino.|  
+|Rede|Tipo de conexão de rede.|![Ícone de lápis](media/pencil-icon.png "ícone de lápis")|Determine o melhor tipo de conexão de rede para atender aos requisitos de taxa de carga.<br /><br />Por exemplo: InfiniBand ou 10 GB Ethernet fornecerá as taxas de carregamento ideal. Ethernet de 1 Gbit limitará taxas de carga para 360 GB por hora ou menos.|  
+|E/S|Bytes por hora para leituras e gravações.|![Ícone de lápis](media/pencil-icon.png "ícone de lápis")|Para carregar dados, dwloader deve ler todos os dados do disco antes de enviá-lo ao PDW.<br /><br />Cada servidor de carregamento não é possível carregar os dados mais rápido do que o dispositivo pode receber dados de todas as fontes de carregamento. Para economizar dinheiro, planeje e/s de leitura a capacidade de carregamento de forma que ela não excede a capacidade de carga do dispositivo de.<br /><br />Por exemplo:<br />PDW recebe e carrega dados em um dispositivo de rack de 1 a uma taxa máxima de 1,8 TB por hora. Para um dispositivo com 2 ou mais racks, a taxa de carga máxima é 3,6 TB por hora.<br /><br />Se você planeja carregar de vários servidores de carregamento ao mesmo tempo, os requisitos de e/s para cada servidor de carregamento será menor do que quando um servidor está fazendo todo o carregamento.<br /><br />Por exemplo: um servidor de carregamento pode carregar um máximo de 1,8 TB por hora de um dispositivo de rack 1. Dois servidores de carregamento foi cada simultaneamente carregar 900 GB por hora em um dispositivo de rack 1. Níveis mais altos de simultaneidade podem reduzir a eficiência e a taxa de transferência máxima.<br /><br />Capacidade de e/s, levam em consideração todos a e/s ocorrendo no servidor de carregamento. Se o servidor de carregamento tem outro tráfego de e/s, além de carregamentos de dados, como a recepção de arquivos de dados de um servidor ETL, aumenta os requisitos de e/s.<br /><br />Para dados compactados, os requisitos de e/s dependem da taxa de compactação de dados. dwloader lê os dados compactados e, em seguida, descompacta-lo antes de enviá-lo ao PDW. Quanto maior a taxa de compactação, menos dados carregando o servidor precisará ler do disco.<br /><br />Por exemplo: se a taxa de carga necessário é 1,8 TB por hora e os dados são armazenados no servidor de carregamento com a compactação de 2:1, em seguida, carregando o servidor precisa apenas de leitura 900 GB por hora do disco, em vez de 1,8 TB. Uma taxa de compactação de 3:1 significa que o servidor de carregamento precisa ler 600 GB por hora do disco.|  
+|CPU|Número de soquetes.|![Ícone de lápis](media/pencil-icon.png "ícone de lápis")|Para carregar os dados não compactados, dwloader não é um aplicativo de uso intensivo de CPU.  Como um requisito mínimo, é recomendável usar um servidor de soquete 2 fabricados recentemente.<br /><br />Para carregar dados compactados, você precisa suficientes de CPU para descompactar os dados antes de enviá-lo ao PDW. dwloader pode executar 10 threads ativos ao mesmo tempo. Se você planeja carregar 10 arquivos compactados simultaneamente, é recomendável que o servidor tem pelo menos uma CPU de núcleo de 10 ou duas CPUs de 6 núcleos.|  
+|RAM|GB de memória que permite que o Windows em cache os arquivos durante o carrega.|![Ícone de lápis](media/pencil-icon.png "ícone de lápis")|dwloader usa muito pouco de RAM no servidor de carregamento. Para desempenho, o Windows usa memória para armazenar em cache os arquivos de carregamento depois de lê-los do disco.<br /><br />Para determinar os requisitos de RAM, consulte a sua instalação do Windows Server e os requisitos de aplicativo de parte 3. Se você não tem requisitos de outras fontes, é recomendável um mínimo de 32 GB.<br /><br />Para dados compactados, RAM mais rápido é útil porque isso acelerará a descompactação.|  
+  
+## <a name="see-also"></a>Consulte também  
+[Adquirir e configurar um servidor de carregamento](acquire-and-configure-loading-server.md)  
+[Carregador de linha de comando de dwloader](dwloader.md)  
+  

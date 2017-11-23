@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- QueryNotifications Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: QueryNotifications Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- QueryNotifications element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: QueryNotifications element
 ms.assetid: 0e7e951f-c8b9-4492-bb01-e4b5d16edde6
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 47c6e735cb0485c488ba136c8a3afcc3d274529d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73b252a1c3d31c180f9a6b876ab768fa74499421
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="querynotifications-element-assl"></a>Elemento QueryNotifications (ASSL)
   Contém a coleção de [QueryNotification](../../../analysis-services/scripting/objects/querynotification-element-assl.md) elementos que fornecem informações para o [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) elemento sobre consultas a serem executadas para determinar se uma fonte de dados foi modificada.  
@@ -73,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [Coleções de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

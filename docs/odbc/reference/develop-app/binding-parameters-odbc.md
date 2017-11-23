@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- binding parameters [ODBC]
+helpviewer_keywords: binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e0994006c2e99c8f1e454eaf07b74fffcee70e9f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20879f658c1fdc2ca8a4527f76a540ab2700b98f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-parameters-odbc"></a>Associação de parâmetros ODBC
 Cada parâmetro em uma instrução SQL deve ser associado, ou *associado,* a uma variável no aplicativo antes da instrução é executada. Quando o aplicativo associa uma variável para um parâmetro, ele descreve essa variável, endereço, tipo de dados C e assim por diante — para o driver. Ele também descreve o próprio parâmetro — dados SQL tipo, precisão e assim por diante. O driver armazena essas informações na estrutura, ele mantém para essa instrução e usa as informações para recuperar o valor da variável quando a instrução é executada.  
@@ -57,4 +54,3 @@ SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?
 -   [Deslocamentos de associação de parâmetro](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
   
 -   [Descrevendo parâmetros](../../../odbc/reference/develop-app/describing-parameters.md)
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLConfigDataSource function [ODBC], ODBC driver for Oracle
+helpviewer_keywords: SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17d7cfdacb91ff3963a1bf77343c171e8f9d3fec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Usando SQLConfigDatasource com o Driver ODBC para Oracle
 > [!IMPORTANT]  
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|N/A|Opção de conversão.|  
 |TxnCap|2|""|N/A|Compatível com a transação. Se for 0, o driver informa que não dá suporte a transações. Se for 1, o driver informa que ele seja capaz de realizar transações.|  
 |UID|30|""|N/A|Nome de usuário.|
-

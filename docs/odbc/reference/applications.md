@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ea2d2f08fb0d31ed141281b195742462350a5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="applications"></a>Aplicativos
 Um *aplicativo* é um programa que chama a API de ODBC para acessar dados. Embora muitos tipos de aplicativos são possíveis, a maioria se enquadram em três categorias, que são usadas como exemplos em todo este guia.  
@@ -63,4 +61,3 @@ Um *aplicativo* é um programa que chama a API de ODBC para acessar dados. Embor
 -   Desconectando da fonte de dados.  
   
  Como a maioria dos dados para o trabalho de acesso é feito com o SQL, a tarefa primária para as quais aplicativos usam o ODBC é enviar instruções SQL e recuperar os resultados (se houver) gerados por essas instruções. Outras tarefas para que os aplicativos usam ODBC incluem determinar e ajustando a recursos de driver e navegando o catálogo de banco de dados.
-
