@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], tasks
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e814f2780baecee5c33edd38f6def2f30abafddd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 331e3aee3a4a60cbfa1a1308b71da80bf9772f23
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-tasks"></a>Tarefas de driver
 As tarefas específicas realizadas por drivers incluem:  
@@ -42,4 +40,3 @@ As tarefas específicas realizadas por drivers incluem:
 -   Enviar dados para e recuperar dados da fonte de dados, incluindo conversão de tipos de dados conforme especificado pelo aplicativo.  
   
 -   Mapeando erros específicos de DBMS para SQLSTATEs do ODBC.
-

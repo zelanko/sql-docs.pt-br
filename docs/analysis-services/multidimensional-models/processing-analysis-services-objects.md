@@ -18,17 +18,16 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-analysis-services-objects"></a>Processando objetos do Analysis Services
   O processamento afeta os seguintes tipos de objeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : bancos de dados, cubos, dimensões, grupos de medidas, partições e estruturas e modelos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para cada objeto, é possível especificar o nível de processamento ou selecionar a opção Processar Padrão para habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a selecionar automaticamente o nível ideal de processamento. Para obter mais informações sobre os diferentes níveis de processamento para cada objeto, consulte [Processamento de opções e configurações &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
@@ -108,4 +107,3 @@ ms.lasthandoff: 09/01/2017
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

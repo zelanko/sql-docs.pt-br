@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - level 1 API functions [ODBC]
 - API functions [ODBC]
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f6aac543377e321be8db38f7dd95fad16efbac2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Funções de API de nível 1 (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|Recupera o conjunto ideal de colunas que identifica exclusivamente uma linha na tabela.|  
 |**SQLStatistics**|Recupera uma lista de estatísticas sobre uma única tabela e índices ou nomes de marca, associados à tabela. O driver retorna as informações como um conjunto de resultados.|  
 |**SQLTables**|Retorna a lista de nomes de tabela especificado pelo parâmetro no **SQLTables** instrução. Se nenhum parâmetro for especificado, retorna os nomes de tabela armazenados na fonte de dados atual. O driver retorna as informações como um conjunto de resultados.<br /><br /> Chamadas de tipo de enumeração não receberão uma entrada de conjunto de resultados para modos de exibição remotos ou locais exibições com parâmetros. No entanto, uma chamada para **SQLTables** com uma tabela exclusiva especificador de nome encontrará uma correspondência para exibição, se presente, com esse nome; Isso permite que a API verificar se há conflitos de nome antes da criação de uma nova tabela.<br /><br /> Sinônimos públicos são retornados com um valor TABLE_OWNER "".<br /><br /> Propriedade SYS ou sistema de modos de exibição são identificados como modo de exibição do sistema.|
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - time data type [ODBC]
 - converting data from c to SQL types [ODBC], time
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b2bdc4c764afc7574fe5898bdf9e356b25d2954b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f1a59c15d2ebf1866d4543fa89662888154d4da
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-time"></a>C para SQL: tempo
 O identificador para o tipo de dados do ODBC C de tempo é:  
@@ -50,4 +48,3 @@ O identificador para o tipo de dados do ODBC C de tempo é:
  Quando dados de tempo C são convertidos em dados de SQL de caractere, os dados de caracteres resultante estão no "*hh*:*mm*:*ss*" formato.  
   
  O driver ignora o valor de comprimento/indicador ao converter dados do momento em que tipo de dados de C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados C de tempo. O valor de comprimento/indicador é passado a *StrLen_or_Ind* argumento **SQLPutData** e no buffer especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**. O buffer de dados é especificado com o *DataPtr* argumento na **SQLPutData** e *ParameterValuePtr* argumento **SQLBindParameter**.
-

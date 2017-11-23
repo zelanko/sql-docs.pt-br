@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d074eb99de5c97bb9df38d6f2305fb906370f64a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurar a coleta de dados de uso para o Power Pivot para SharePoint
   A coleta de dados de uso é um recurso do SharePoint em nível de farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que mostram como os dados e serviços do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -201,7 +200,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de parâmetro de configuração &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Coleta de dados de uso do PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
+ [Coleta de dados de uso do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   
-

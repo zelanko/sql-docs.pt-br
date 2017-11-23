@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2483225abebeb66fe691ee11e33f1322a3f10dc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b69a5fd295ac6107f5469966cb0b4d7329018eee
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multiplicity-element-assl"></a>Elemento Multiplicity (ASSL)
   Indica se os atributos em RelationshipEnd estão em "um" lado ou em "muitos" lados de uma relação.  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  A enumeração que corresponde aos valores permitidos para **função** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Multiplicity>.  
   
   
-

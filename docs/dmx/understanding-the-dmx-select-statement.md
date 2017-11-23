@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - browsing mining model [Analysis Services]
 - Data Mining Extensions [Analysis Services], statements
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - statements [DMX], SELECT statement
 - copying mining models
 ms.assetid: 61e97285-4a06-4434-9a40-38cde5af7c3f
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f8429c48fb398f1d1a9e3f20741c7eecfd0810b5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7431bc5b84d76725904fff27f63c73121e13fa48
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Compreendendo a instrução DMX Select
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -127,4 +125,3 @@ ms.lasthandoff: 08/02/2017
  [Extensões de mineração de dados &#40; DMX &#41; Convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   
   
-

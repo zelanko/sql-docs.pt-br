@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cfa7bcaf6c193a7abde71020d563a095ace3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-arrays-of-parameters"></a>Usando matrizes de parâmetros
 Para usar matrizes de parâmetros, o aplicativo chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAMSET_SIZE para especificar o número de conjuntos de parâmetros. Ele chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar o endereço de uma variável na qual o driver pode retornar o número de conjuntos de parâmetros processados, incluindo conjuntos de erro. Ele chama **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_PARAM_STATUS_PTR para apontar para uma matriz no qual retornar informações de status para cada linha de valores de parâmetro. O driver armazena esses endereços na estrutura mantém para a instrução.  
@@ -61,4 +59,3 @@ Para usar matrizes de parâmetros, o aplicativo chama **SQLSetStmtAttr** com um 
 -   Porque o driver não interpreta o valor de *ParameterValuePtr* argumento de **SQLBindParameter** para parâmetros de dados em execução, se o aplicativo fornece um ponteiro para uma matriz,  **SQLParamData** não extrair e retornar um elemento dessa matriz para o aplicativo. Em vez disso, ele retorna que o valor escalar o aplicativo tinha fornecido. Isso significa que o valor retornado por **SQLParamData** é não é suficiente para especificar o parâmetro para o qual o aplicativo deve enviar dados; o aplicativo também deve considerar o número da linha atual.  
   
      Quando apenas alguns dos elementos de uma matriz de parâmetros são parâmetros de dados em execução, o aplicativo deve passar o endereço de uma matriz em *ParameterValuePtr* que contém elementos para todos os parâmetros. Esta matriz é interpretada normalmente para os parâmetros que não são parâmetros de dados em execução. Para os parâmetros de dados em execução, o valor que **SQLParamData** fornece para o aplicativo, que normalmente poderia ser usado para identificar os dados que o driver está solicitando esta vez, sempre é o endereço da matriz.
-

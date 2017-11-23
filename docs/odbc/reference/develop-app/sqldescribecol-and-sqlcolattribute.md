@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6044ca37e00d96c4a86fb5e9740ec6dfc824ca51
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a80ccf6ed695433a109770a567f50d100fd3a33
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol e SQLColAttribute
 **SQLDescribeCol** e **SQLColAttribute** são usados para recuperar metadados de conjunto de resultados. A diferença entre essas duas funções é que **SQLDescribeCol** sempre retorna as mesmo cinco peças de informação (uma coluna Nome, tipo de dados, precisão, escala e nulidade), enquanto **SQLColAttribute** retorna uma única informação solicitada pelo aplicativo. No entanto, **SQLColAttribute** pode retornar uma seleção muito mais rica de metadados, incluindo diferenciação de uma coluna, exibir o tamanho, a atualização e a capacidade de pesquisa.  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  Um aplicativo pode recuperar metadados de conjunto de resultados a qualquer momento depois que uma instrução foi preparada ou executada e antes do cursor sobre o resultado do conjunto é fechado. Muito poucos aplicativos exigem metadados de conjunto de resultados após a instrução é preparada e antes de ser executado. Se possível, os aplicativos devem esperar para recuperar metadados até depois que a instrução é executada, pois algumas fontes de dados não é possível retornar metadados para instruções preparadas e geralmente é um processo lento emular esse recurso no driver. Por exemplo, o driver pode gerar um resultado de linha de zero definido, substituindo o **onde** cláusula de um **selecione** instrução com a cláusula **WHERE 1 = 2** e executar o instrução resultante.  
   
  Metadados geralmente são caro para recuperar da fonte de dados. Por isso, drivers devem armazenar em cache todos os metadados que recuperar do servidor e mantenha para enquanto o cursor sobre o resultado do conjunto estiver aberto. Além disso, os aplicativos devem solicitar apenas os metadados que absolutamente necessitam.
-

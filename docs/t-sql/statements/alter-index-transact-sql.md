@@ -3,17 +3,18 @@ title: "Instrução ALTER INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifica uma tabela ou índice de exibição existente (relacional ou XML) desabilitando, recriando ou reorganizando o índice, ou definindo opções no índice.  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |REORGANIZAR partição = *número_da_partição*|Índice não particionado, índice XML, índice espacial ou índice desabilitado|  
 |IGNORE_DUP_KEY = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice ColumnStore: **aplica-se a:** (começando com o SQL Server 2012) do SQL Server e banco de dados do SQL Azure.|  
 |ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice ColumnStore: **aplica-se a:** (começando com o SQL Server 2012) do SQL Server e banco de dados do SQL Azure.|
-| RETOMÁVEIS = ON  | Índices retomáveis não tem suportados com **todos os** palavra-chave. <br /><br /> **Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública) |   
+| RETOMÁVEIS = ON  | Índices retomáveis não tem suportados com **todos os** palavra-chave. <br /><br /> **Aplica-se a**: começando com o SQL Server 2017 e o Azure banco de dados SQL |   
   
 > [!WARNING]
 >  Para obter mais informações sobre operações de índice que podem ser executadas online, consulte [diretrizes para operações de índice Online](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -436,7 +436,7 @@ FILLFACTOR = *fator de preenchimento*
 
 RETOMÁVEIS  **=**  {ON | **OFF**}
 
-**Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)  
+**Aplica-se a**: começando com o SQL Server 2017 e o Azure banco de dados SQL   
 
  Especifica se uma operação de índice online é reiniciável.
 
@@ -446,7 +446,7 @@ RETOMÁVEIS  **=**  {ON | **OFF**}
 
 MAX_DURATION  **=**  *tempo* [**minutos**] usado com **RETOMÁVEL = ON** (requer **ONLINE = ON**).
  
-**Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)  
+**Aplica-se a**: começando com o SQL Server 2017 e o Azure banco de dados SQL 
 
 Indica o tempo (um valor inteiro especificado em minutos) que um retomáveis online operação de índice é executada antes de ser pausado. 
 
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Aplica-se a**: começando com o SQL Server 2017 (recurso está em visualização pública)
+**Aplica-se a**: começando com o SQL Server de 2017  
 
 Retome uma operação de índice é pausada manualmente ou devido a uma falha.
 
 MAX_DURATION usado com **RETOMÁVEL = ON**
 
  
-**Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)
+**Aplica-se a**: começando com o SQL Server 2017 e o Azure banco de dados SQL
 
 O tempo de operação de índice online retomáveis (um valor inteiro especificado em minutos) é executada após a retomada. Quando o tempo expira, a operação retomável está pausada se ele ainda está em execução.
 
 WAIT_AT_LOW_PRIORITY usado com **RETOMÁVEL = ON** e **ONLINE = ON**.  
   
-**Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)
+**Aplica-se a**: começando com o SQL Server 2017 e o Azure banco de dados SQL 
   
  Retomar uma recompilação de índice online após uma pausa de espera de bloqueio de operações nesta tabela. **WAIT_AT_LOW_PRIORITY** indica que a operação de recriação de índice online aguardará bloqueios de baixa prioridade, permitindo que outras operações continuem enquanto a operação de compilação de índice online estiver aguardando. A omissão de **WAIT AT LOW PRIORITY** opção é equivalente a `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Para obter mais informações, consulte [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 PAUSAR
  
-**Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)
+**Aplica-se a**: começando com o SQL Server 2017 e o Azure banco de dados SQL 
   
 Pause uma operação de recompilação de índice online reiniciável.
 
 ANULAR
 
-**Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)   
+**Aplica-se a**: começando com o SQL Server 2017 e o Azure banco de dados SQL   
 
 Anule uma operação de índice em execução ou em pausa que foi declarada como reiniciável. Você precisa executar explicitamente um **anular** operação de reconstrução de um índice retomável de finalização do comando. Falha ou pausar uma operação de índice retomáveis não encerra sua execução; em vez disso, ele deixa a operação em um estado de pausa indefinido.
   
@@ -712,7 +712,7 @@ Anule uma operação de índice em execução ou em pausa que foi declarada como
 
 ### <a name="resumable-index-operations"></a>Operações de índice retomáveis
 
-**Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)
+**Aplica-se a**: começando com o SQL Server 2017 e o Azure banco de dados SQL 
 
 RECONSTRUÇÃO de índice ONLINE é especificado como retomáveis usando o RETOMÁVEL = opção. 
 -  A opção RETOMÁVEL não é persistente nos metadados para um determinado índice e se aplica somente a duração de uma instrução DDL atual. Portanto, o RETOMÁVEL = ON cláusula deve ser especificada explicitamente para habilitar a oferecer.
@@ -786,7 +786,7 @@ A seguinte funcionalidade está desabilitada para operações de recriação de 
   
 -   Índices ColumnStore não estão disponíveis antes do SQL Server 2012. 
 
--  Operações de índice retomáveis estão disponível começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública) |   
+-  Operações de índice retomáveis estão disponíveis a partir 2017 do SQL Server e banco de dados do SQL Azure   
   
 ## <a name="basic-syntax-example"></a>Exemplo de sintaxe básica:   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Recompilação de índice online de retomáveis
 
-**Aplica-se a**: começando com o SQL Server 2017 e o Azure SQL Database (recurso está em visualização pública)    
+**Aplica-se a**: começando com o SQL Server 2017 e o Azure banco de dados SQL   
 
  Os exemplos a seguir mostram como usar a recompilação de índice online de reiniciável. 
 
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

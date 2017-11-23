@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], writing interoperable applications
+helpviewer_keywords: interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97d25a4d641e63dd081f16601f78e48d0ec8e17b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 89e348d084f150bdcb2d74f4d4dd561816fc351f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="features-to-watch-for"></a>Recursos para ver
 Esta seção descreve uma série de recursos que os desenvolvedores de aplicativos geralmente levam para concedidas. Na verdade, esses recursos variam muito em forma de suporte entre DBMSs; e suporte Falha ao código para eles é pode causar problemas em aplicativos interoperáveis.  
@@ -49,4 +46,3 @@ Esta seção descreve uma série de recursos que os desenvolvedores de aplicativ
 -   [Gramática SQL ODBC](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
   
 -   [Processamento em lotes](../../../odbc/reference/develop-app/batch-processing.md)
-

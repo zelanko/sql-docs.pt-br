@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 2fcc328140d3812d6000a137c8aabf9294b98de3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2736223d2a333738ca17b3b3307034c6744512d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Comentários do cliente para o SQL Server no Linux
 
@@ -145,4 +144,3 @@ Para habilitar a auditoria Local no docker, você deve ter Docker [persistir os 
 ## <a name="next-steps"></a>Próximas etapas
 
 Para obter mais informações sobre o SQL Server no Linux, consulte o [visão geral do SQL Server no Linux](sql-server-linux-overview.md).
-

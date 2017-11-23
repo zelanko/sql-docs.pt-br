@@ -6,15 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
 
@@ -108,7 +113,10 @@ Na próxima seção, você irá configurar o armazenamento compartilhado e mover
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Configurar o armazenamento compartilhado e mover arquivos de banco de dados 
 
-Há uma variedade de soluções para fornecer armazenamento compartilhado. Este passo a passo demonstra como configurar o armazenamento compartilhado com NFS. Recomendamos que siga as práticas recomendadas e usar o Kerberos para proteger NFS (você pode encontrar um exemplo aqui: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). Se você não fizer isso, qualquer pessoa pode acessar a rede e falsificar o endereço IP de um nó do SQL será capaz de acessar os arquivos de dados. Como sempre, certifique-se de seu sistema de modelo de ameaça você antes de usá-lo em produção. Outra opção de armazenamento é usar o compartilhamento de arquivos SMB.
+Há uma variedade de soluções para fornecer armazenamento compartilhado. Este passo a passo demonstra como configurar o armazenamento compartilhado com NFS. Recomendamos que siga as práticas recomendadas e usar o Kerberos para proteger NFS (você pode encontrar um exemplo aqui: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+
+>[!Warning]
+>Se você não proteger NFS, quem pode acessar sua rede e falsificar o endereço IP de um nó do SQL será capaz de acessar os arquivos de dados. Como sempre, certifique-se de seu sistema de modelo de ameaça você antes de usá-lo em produção. Outra opção de armazenamento é usar o compartilhamento de arquivos SMB.
 
 ### <a name="configure-shared-storage-with-nfs"></a>Configurar o armazenamento compartilhado com NFS
 
@@ -391,4 +399,3 @@ Neste ponto, ambas as instâncias do SQL Server estão configuradas para executa
 ## <a name="next-steps"></a>Próximas etapas
 
 [Operar o SQL Server no cluster de disco compartilhado do Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

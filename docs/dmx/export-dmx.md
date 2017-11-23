@@ -13,27 +13,24 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- EXPORT
-dev_langs:
-- DMX
+f1_keywords: EXPORT
+dev_langs: DMX
 helpviewer_keywords:
 - exporting mining models
 - exporting mining structures
 - mining structures [DMX], exporting
 - EXPORT statement
 ms.assetid: 97617071-e560-4080-81af-a80276fc0823
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 9997c79cba1c9c87d91c3deb53bbdd56bc389353
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bfc3e8344d1c6967185979c0970be6d49b572500
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +78,6 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [Extensões de mineração de dados &#40; DMX &#41; Instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
  [IMPORTAR &#40; DMX &#41;](../dmx/import-dmx.md)   
- [Exportar e importar objetos de mineração de dados](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Exportar e importar objetos de Mineração de dados](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   
-

@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SET
 - SET_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ISO SET statements
 - queries [SQL Server], executing
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - statistical information [SQL Server], SET statements
 - locking [SQL Server], SET statements
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3832a2be6952354122c999d3c88c7ad1610b623d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-statements-transact-sql"></a>Instruções SET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,4 +91,3 @@ ms.lasthandoff: 09/01/2017
      Se qualquer uma dessas opções não for definida com os valores solicitados, haverá falha nas ações INSERT, UPDATE, DELETE, DBCC CHECKDB e DBCC CHECKTABLE em exibições ou tabelas indexadas com índices em colunas computadas. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um erro que lista todas as opções definidas incorretamente. Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processará as instruções SELECT nessas tabelas ou exibições indexadas como se os índices nas colunas computadas ou nas exibições não existissem.  
   
   
-

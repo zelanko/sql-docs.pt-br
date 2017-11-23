@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], capabilities
 - cursors [ODBC], scrollable
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 490369663aaaee6f9dbb70504b61087ad96191d8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 899a0c01994963a95b6b40936f481882e9634927
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determining-cursor-capabilities"></a>Determinar os recursos do Cursor
 As seguintes opções de quatro na **SQLGetInfo** descrevem quais tipos de cursor são suportados e quais são seus recursos:  
@@ -41,4 +39,3 @@ As seguintes opções de quatro na **SQLGetInfo** descrevem quais tipos de curso
 -   SQL_KEYSET_CURSOR_ATTRIBUTES2 ou SQL_STATIC_CURSOR_ATTRIBUTES2 (dependendo do tipo de cursor). Indica se os cursores estáticos e controlados por conjunto de chaves podem detectar suas próprias atualizações, inserções e exclusões.  
   
  Um aplicativo pode determinar os recursos do cursor em tempo de execução chamando **SQLGetInfo** com essas opções. Normalmente, isso é feito por aplicativos genéricos. Recursos do cursor também podem ser determinados durante o desenvolvimento de aplicativo e seu uso embutido no aplicativo. Isso normalmente é feito por aplicativos verticais e personalizados, mas também pode ser feito por aplicativos genéricos que usam uma implementação de cursor do lado do cliente, como a biblioteca de cursores ODBC.
-

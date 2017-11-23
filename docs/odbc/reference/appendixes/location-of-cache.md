@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aab634773e5a76270ba83d8c11596345fda6e163
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 645ff6dc68fec7cf332face2fe53a43555887a48
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="location-of-cache"></a>Local do Cache
 > [!IMPORTANT]  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Se a biblioteca de cursores no Microsoft® WindowsNT®/Windows2000 tentativas de cache de dados em um arquivo temporário no diretório atual, enquanto o aplicativo é executado de um compartilhamento somente leitura ou um CD (como um exemplo da biblioteca Microsoft Foundation Class), SQLSTATE HY000 (geral Error-Unable para criar um buffer de arquivo) será retornado.
-

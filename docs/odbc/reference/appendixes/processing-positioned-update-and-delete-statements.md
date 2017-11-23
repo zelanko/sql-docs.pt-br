@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9061ad8221537eaa00eb40fab56fa10d3357198d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>Processamento posicionado instruções Update e Delete
 > [!IMPORTANT]  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 -   Se o driver oferece suporte a apenas uma instrução ativa, buscas de biblioteca de cursor o restante do resultado definido e refetches, em seguida, o conjunto de linhas atual de seu cache antes de executar um posicionadas instrução update ou delete. Se o aplicativo chama uma função que retorna metadados em um conjunto de resultados (por exemplo, **SQLNumResultCols** ou **SQLDescribeCol**), a biblioteca de cursores retornará um erro.  
   
 -   Se uma atualização posicionada ou uma instrução delete for executada em uma coluna de uma tabela que inclui uma coluna de carimbo de hora que é atualizada automaticamente sempre que uma atualização é executada, todas as demais atualização posicionada ou instruções delete irá falhar se a coluna de carimbo de hora associado. Isso ocorre porque pesquisado update ou delete instrução que cria a biblioteca de cursores não identifica com precisão a linha a ser atualizada. O valor na instrução pesquisada para a coluna de carimbo de hora não corresponderá o valor atualizado automaticamente da coluna de carimbo de hora.
-

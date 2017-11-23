@@ -1,220 +1,103 @@
 ---
 title: "Catálogo de banco de dados | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 10/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: 3
+ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 16606144dfc216d1da57386e97ee02b43691252b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 036afa491ae8390c38520d7dff2e5c6cd0d1a419
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="database-catalog"></a>Catálogo de banco de dados
-O banco de dados de WideWorldImporters contém todas as a informações de transações e dados diário para compras e vendas, bem como dados de sensor de veículos e salas frios.
+# <a name="wideworldimportersdw-database-catalog"></a>Catálogo de banco de dados WideWorldImportersDW
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Explicações para os esquemas, tabelas e procedimentos armazenados no banco de dados WideWorldImportersDW. 
+
+O banco de dados WideWorldImportersDW é usado para processamento analítico e de data warehouse. Os dados transacionais sobre vendas e compras são gerados no banco de dados de WideWorldImporters e carregados no banco de dados WideWorldImportersDW usando um **processo ETL diário**.
+
+Os dados em WideWorldImportersDW, portanto, reflete os dados de WideWorldImporters, mas as tabelas são organizadas de maneira diferente. Embora WideWorldImporters tem um esquema normalizado tradicional, WideWorldImportersDW usa o [esquema em estrela](https://wikipedia.org/wiki/Star_schema) abordagem para seu design de tabela. Além das tabelas de fatos e dimensões, o banco de dados inclui um número de tabelas de preparo que são usados no processo de ETL.
 
 ## <a name="schemas"></a>Esquemas
 
-WideWorldImporters usa esquemas para finalidades diferentes, como armazenamento de dados, definir como os usuários podem acessar os dados e fornecer objetos de integração e desenvolvimento de depósito de dados.
-
-### <a name="data-schemas"></a>Esquemas de dados
-
-Esses esquemas contenham os dados. Um número de tabelas é necessárias para todos os outros esquemas e está localizado no esquema do aplicativo.
+Os diferentes tipos de tabelas são organizados em três esquemas.
 
 |esquema|Description|
 |-----------------------------|---------------------|
-|Aplicativo|Todo o aplicativo usuários, contatos e parâmetros. Isso também contém tabelas de referência com dados que são usados por vários esquemas|
-|Purchasing|Item de estoque de compras de fornecedores e detalhes sobre fornecedores.|  
-|Sales|Estoque item venda para clientes de varejo e detalhes sobre as pessoas de vendas e clientes. |  
-|Warehouse|Inventário de item de estoque e transações.|  
-
-### <a name="secure-access-schemas"></a>Esquemas de acesso seguro
-
-Esses esquemas são usados para aplicativos externos que não têm permissão para acessar as tabelas de dados diretamente. Elas contêm exibições e procedimentos armazenados usados por aplicativos externos.
-
-|esquema|Description|
-|-----------------------------|---------------------|
-|Site|Todo o acesso ao banco de dados do site da empresa é a este esquema.|
-|Relatórios|Todo o acesso ao banco de dados de relatórios do Reporting Services é a este esquema.|
-|Power BI|Todo o acesso ao banco de dados de painéis do Power BI por meio do Gateway corporativo é por este esquema.|
-
-Observe que os relatórios e PowerBI esquemas não são usadas na versão inicial do banco de dados de exemplo. No entanto, os exemplos do Reporting Services e o Power BI criados sobre esse banco de dados são incentivados a usar esses esquemas.
-
-### <a name="development-schemas"></a>Esquemas de desenvolvimento
-
-Esquemas de finalidade especial
-
-|esquema|Description|
-|-----------------------------|---------------------|
-|Integração|Objetos e procedimentos necessários para a integração do data warehouse (ou seja, migrando os dados para o banco de dados WideWorldImportersDW).|
-|Sequências|Contém sequências usadas por todas as tabelas no aplicativo.|
+|Dimensão|Tabelas de dimensões.|
+|Fato|Tabelas de fatos.|  
+|Integração|Tabelas de preparo e outros objetos necessários para ETL.|  
 
 ## <a name="tables"></a>Tabelas
 
-Todas as tabelas no banco de dados são nos esquemas de dados.
+As tabelas de dimensões e fatos são listadas abaixo. As tabelas no esquema de integração são usadas somente para o processo ETL e não são listadas.
 
-### <a name="application-schema"></a>Esquema do aplicativo
+### <a name="dimension-tables"></a>Tabelas de dimensão
 
-Detalhes de parâmetros e as pessoas (usuários e contatos), junto com as tabelas de referência comum (comuns a vários outros esquemas).
+WideWorldImportersDW tem as seguintes tabelas de dimensões. A descrição inclui a relação com as tabelas de origem no banco de dados de WideWorldImporters.
 
-|Table|Description|
+|Table|Tabelas de origem|
 |-----------------------------|---------------------|
-|SystemParameters|Contém os parâmetros configuráveis de todo o sistema.|
-|Pessoas|Contém os nomes de usuário, informações de contato para todos os que usam o aplicativo e para as pessoas que trata a Wide World Importers em organizações de cliente. Isso inclui a funcionários, clientes, fornecedores e quaisquer outros contatos. Para as pessoas que receberam permissão para usar o sistema ou o site, as informações incluem detalhes de logon.|
-|Cidades|Há muitos endereços armazenado no sistema, pessoas, endereços de entrega de organização de cliente, endereços de retirada em fornecedores, etc. Sempre que um endereço é armazenado, há uma referência a uma cidade nesta tabela. Também é um local espacial de cada cidade.|
-|StateProvinces|Cidades fazem parte de estados ou províncias. Esta tabela tem detalhes deles, incluindo dados espaciais que descrevem os limites de cada estado ou província.|
-|Países|Estados ou províncias fazem parte de países. Esta tabela tem detalhes deles, incluindo dados espaciais que descrevem os limites de cada país.|
-|DeliveryMethods|Opções de entrega de itens de estoque (por exemplo, caminhão/van, post, retirada, courier, etc.)|
-|PaymentMethods|Opções para fazer pagamentos (por exemplo, o dinheiro, a verificação, EFT, etc.)|
-|TransactionTypes|Tipos de cliente, fornecedor ou transações de estoque (por exemplo, fatura, nota de crédito, etc.)|
+|Cidade|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|Cliente|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
+|Data|Nova tabela com informações sobre datas, incluindo o ano fiscal (com base em 1º de novembro Iniciar para ano fiscal).|
+|Employee|`Application.People`.|
+|StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
+|Fornecedor|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
+|PaymentMethod|`Application.PaymentMethods`.|
+|TransactionType|`Application.TransactionTypes`.|
 
-### <a name="purchasing-schema"></a>Esquema de compra
+### <a name="fact-tables"></a>Tabelas de fatos
 
-Detalhes de fornecedores e de compras de item de estoque.
+WideWorldImportersDW tem as seguintes tabelas de fatos. A descrição inclui a relação com as tabelas de origem no banco de dados de WideWorldImporters, bem como as classes de consultas/relatório de análise, com que cada tabela de fatos geralmente é usada.
 
-|Table|Description|
-|-----------------------------|---------------------|
-|Suppliers|Tabela de entidade principal de fornecedores (empresas)|
-|SupplierCategories|Categorias de fornecedores (por exemplo, novelties, brinquedos, roupas, empacotamento, etc.)|
-|SupplierTransactions|Todas as transações financeiras que são relacionados ao fornecedor (faturas, pagamentos)|
-|PurchaseOrders|Detalhes de pedidos de compra do fornecedor|
-|PurchaseOrderLines|Ordens de compra de linhas de detalhes de fornecedor|
-
- 
-### <a name="sales-schema"></a>Esquema de vendas
-
-Detalhes de clientes, vendedores e de vendas de item de estoque.
-
-|Table|Description|
-|-----------------------------|---------------------|
-|Customers|Tabelas de entidade principal para clientes (organizações ou pessoas físicas)|
-|CustomerCategories|Categorias de clientes (ou seja novidade repositórios supermercados, etc.)|
-|BuyingGroups|As organizações do cliente podem fazer parte de grupos de exercer maior capacidade de compra|
-|CustomerTransactions|Todas as transações financeiras que estão relacionadas ao cliente (faturas, pagamentos)|
-|SpecialDeals|Tipo de preço especiais. Isso pode incluir preços fixos, desconto em dólares ou porcentagem de desconto.|
-|Orders|Detalhes de pedidos de clientes|
-|OrderLines|Linhas de detalhes de pedidos de clientes|
-|Faturas|Detalhes de faturas de clientes|
-|InvoiceLines|Linhas de detalhes de faturas do cliente|
-
-### <a name="warehouse-schema"></a>Esquema de data warehouse
-
-Detalhes de itens de estoque, seus títulos e transações.
-
-|Table|Description|
-|-----------------------------|---------------------|
-|StockItems|Tabela de entidade principal para itens de estoque|
-|StockItemHoldings|Colunas não temporal para itens de estoque. Essas colunas arefrequently atualizado.|
-|StockGroups|Grupos para categorizar itens de estoque (por exemplo, novelties toys, novelties edible, etc.)|
-|StockItemStockGroups|Quais ações são na qual o estoque grupos (muitos para muitos)|
-|Cores|Itens de estoque (opcionalmente) podem ter cores|
-|PackageTypes|Maneiras de itens de estoque podem ser empacotadas (por exemplo, caixa de embalagem, paleta, kg, etc.|
-|StockItemTransactions|Transações que abrangem todas as movimentações de todos os itens de estoque (recebimento, venda, baixa)|
-|VehicleTemperatures|Temperaturas gravadas regularmente do resfriadores de veículo|
-|ColdRoomTemperatures|Registrado regularmente temperaturas de resfriadores sala frios|
-
-
-## <a name="design-considerations"></a>Considerações de design
-
-Design de banco de dados é subjetiva e não é possível criar um banco de dados correto ou incorreto. As tabelas neste banco de dados e esquemas mostram obter ideias de como você pode criar seu próprio banco de dados.
-
-### <a name="schema-design"></a>Design de esquema
-
-WideWorldImporters usa um pequeno número de esquemas para que seja fácil de entender o sistema de banco de dados e demonstrar os princípios de banco de dados.  
-
-Sempre que possível, o banco de dados collocates tabelas geralmente são consultadas juntos no mesmo esquema para minimizar a complexidade de junção.
-
-O esquema de banco de dados foi gerado pelo código com base em uma série de tabelas de metadados em outro banco de dados WWI_Preparation. Assim, WideWorldImporters um grau muito alto de consistência de design, a consistência de nomenclatura e integridade. Para obter detalhes sobre como o esquema tiver sido gerado, consulte o código-fonte: [wide world-importadores/wwi-banco de dados-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
-
-### <a name="table-design"></a>Design de tabela
-
-- Todas as tabelas têm chaves primárias de coluna única para simplicidade de junção.
-- Todos os esquemas, tabelas, colunas, índices e restrições de verificação tem uma descrição de propriedade que pode ser usada para identificar a finalidade do objeto ou coluna estendida. Tabelas com otimização de memória são uma exceção a isso, desde que eles não há suporte para propriedades estendidas.
-- Todas as chaves estrangeiras são automaticamente indexadas, a menos que haja outro índice não clusterizado que tenha o mesmo componente à esquerda.
-- Numeração automática em tabelas com base em sequências. Essas sequências são mais fáceis de trabalhar com servidores vinculados e ambientes semelhantes que as colunas de identidade. Tabelas com otimização de memória usam colunas de identidade, pois eles não dão suporte no SQL Server 2016.
-- Uma única sequência (TransactionID) é usada para essas tabelas: CustomerTransactions, SupplierTransactions e StockItemTransactions. Isso demonstra como um conjunto de tabelas pode ter uma única sequência.
-- Algumas colunas têm valores padrão apropriados.
-
-### <a name="security-schemas"></a>Esquemas de segurança
-
-Para segurança, WideWorldImporters não permite a aplicativos externos acessem diretamente os esquemas de dados. Para isolar o acesso, WideWorldImporters usa esquemas de acesso de segurança que não contêm dados, mas contém exibições e procedimentos armazenados. Aplicativos externos usam os esquemas de segurança para recuperar os dados que eles têm permissão para exibir.  Dessa forma, os usuários podem executar apenas as exibições e procedimentos armazenados nos esquemas de acesso seguro
-
-Por exemplo, este exemplo inclui painéis do Power BI. Um aplicativo externo acessa esses painéis do Power BI do gateway do Power BI como um usuário que tem permissão somente leitura no esquema de Power BI.  Permissão somente leitura, o usuário só precisa de permissão SELECT e EXECUTE no esquema do Power BI. Um administrador de banco de dados em WWI atribui essas permissões conforme necessário.
+|Table|Tabelas de origem|Análise de exemplo|
+|-----------------------------|---------------------|---------------------|
+|Order|`Sales.Orders`e`Sales.OrderLines`|Pessoas, produtividade de seletor/packer, de vendas e no tempo para separar as ordens. Além disso, baixa estoque situações que levam a fazer pedidos.|
+|Venda|`Sales.Invoices`e`Sales.InvoiceLines`|Datas de vendas, datas de entrega, lucratividade ao longo do tempo, lucratividade por vendedor.|
+|Compra|`Purchasing.PurchaseOrderLines`|Prazos de entrega real do vs esperado|
+|Transaction|`Sales.CustomerTransactions`e`Purchasing.SupplierTransactions`|Medindo o problema datas vs finalização datas e valores.|
+|Movimentação|`Warehouse.StockTransactions`|Movimentações ao longo do tempo.|
+|Retenção de estoque|`Warehouse.StockItemHoldings`|Níveis de estoque disponível e o valor.|
 
 ## <a name="stored-procedures"></a>Procedimentos armazenados
 
-Procedimentos armazenados são organizados em esquemas. A maioria dos esquemas é usada para fins de exemplo ou configuração.
+Os procedimentos armazenados são usados principalmente para o processo de ETL e para fins de configuração.
 
-O `Website` esquema contém os procedimentos armazenados que podem ser usados por um front-end da Web.
-
-O `Reports` e `PowerBI` esquemas destinam-se para o reporting services e Power BI fins. Extensões do exemplo são incentivados a usar esses esquemas para fins de relatório.
-
-### <a name="website-schema"></a>Esquema de site
-
-Esses são os procedimentos usados por um aplicativo cliente, como um front-end da Web.
-
-|Procedimento|Finalidade|
-|-----------------------------|---------------------|
-|ActivateWebsiteLogon|Permite que uma pessoa (de `Application.People`) para ter acesso ao site.|
-|ChangePassword|Altera a senha do usuário (para usuários que não estão usando os mecanismos de autenticação externa).|
-|InsertCustomerOrders|Permite a inserção de um ou mais pedidos de clientes (incluindo as linhas de ordem).|
-|InvoiceCustomerOrders|Usa uma lista de pedidos por ser faturado e processa as faturas.|
-|RecordColdRoomTemperatures|Usa uma lista de dados de sensor, como um parâmetro com valor de tabela (TVP) e aplica os dados para o `Warehouse.ColdRoomTemperatures` tabela temporal.|
-|RecordVehicleTemperature|Leva uma matriz JSON e usa-o para atualizar `Warehouse.VehicleTemperatures`.|
-|SearchForCustomers|Pesquisa de clientes por nome ou parte do nome (o nome da empresa ou o nome da pessoa).|
-|SearchForPeople|Procura por pessoas por nome ou parte do nome.|
-|SearchForStockItems|Pesquisas de estoque itens por nome ou parte do nome ou comentários de marketing.|
-|SearchForStockItemsByTags|Pesquisa para itens de estoque por marcas.|
-|SearchForSuppliers|Procura por fornecedores por nome ou parte do nome (o nome da empresa ou o nome da pessoa).|
-
-### <a name="integration-schema"></a>Esquema de integração
-
-Os procedimentos armazenados nesse esquema são usados pelo processo de ETL. Obter os dados necessários de várias tabelas para o período de tempo necessário para o [pacote ETL](etl-workflow.md).
-
-### <a name="dataloadsimulation-schema"></a>Esquema de DataLoadSimulation
-
-Simula uma carga de trabalho que insere vendas e compras. O procedimento armazenado principal é `PopulateDataToCurrentDate`, que é usado para inserir dados de exemplo até a data atual.
-
-|Procedimento|Finalidade|
-|-----------------------------|---------------------|
-|Configuration_ApplyDataLoadSimulationProcedures|Recria os procedimentos necessários para dados de simulação carga. Isso é necessário para colocar dados até a data atual.|
-|Configuration_RemoveDataLoadSimulationProcedures|Isso remove os procedimentos novamente após a conclusão da simulação de dados.|
-|DeactiveTemporalTablesBeforeDataLoad|Remove a natureza temporal de todas as tabelas temporais e onde aplicável, aplica um gatilho para que as alterações podem ser feitas como se eles foram aplicados em uma data anterior de permitir que as tabelas temporais de sys.|
-|PopulateDataToCurrentDate|Usado para colocar os dados até a data atual. Deve ser executado antes de quaisquer outras opções de configuração depois de restaurar o banco de dados de um backup inicial.|
-|ReactivateTemporalTablesAfterDataLoad|Restabelece as tabelas temporais, incluindo a verificação de consistência de dados. (Remove os disparadores associados).|
-
+Extensões do exemplo são incentivados a usar o `Reports` esquema para relatórios do Reporting Services e o `PowerBI` esquema para acesso ao Power BI.
 
 ### <a name="application-schema"></a>Esquema do aplicativo
 
-Esses procedimentos são usados para configurar a amostra. Eles são usados para aplicar os recursos do enterprise edition para a versão standard edition do exemplo e também adicionar auditoria e indexação de texto completo.
+Esses procedimentos são usados para configurar a amostra. Eles são usados para aplicar os recursos do enterprise edition para a versão standard edition do exemplo, adicione o PolyBase e propagar novamente ETL.
 
 |Procedimento|Finalidade|
 |-----------------------------|---------------------|
-|AddRoleMemberIfNonexistant|Adiciona um membro a uma função se o membro não estiver na função|
-|Configuration_ApplyAuditing|Adiciona a auditoria. Auditoria de servidor é aplicada para bancos de dados standard edition; auditoria de banco de dados adicional é adicionada para o enterprise edition.|
-|Configuration_ApplyColumnstoreIndexing|Aplica-se columnstore indexação a `Sales.OrderLines` e `Sales.InvoiceLines` e reindexes adequadamente.|
-|Configuration_ApplyFullTextIndexing|Aplica-se a índices de texto completo para `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, e `Warehouse.StockItems`. Substitui `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` com os procedimentos de substituição que usam a indexação de texto completo.|
-|Configuration_ApplyPartitioning|Aplica o particionamento de tabela para `Sales.CustomerTransactions and `'Purchasing.SupplierTransactions e reorganizar os índices de acordo com.|
-|Configuration_ApplyRowLevelSecurity|Se aplica a segurança em nível de linha para filtrar os clientes por vendas território relacionadas a funções.|
-|Configuration_ConfigureForEnterpriseEdition|Aplica-se a indexação de columnstore, texto completo, na memória, polybase e particionamento.|
-|Configuration_EnableInMemory|Adiciona um grupo de arquivos com otimização de memória (quando não estiver trabalhando no Azure), substitui `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` com equivalentes na memória e migra os dados, recria o `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` tipos de tabela com otimização de memória equivalentes, descarta e recria os procedimentos `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, e `Website.RecordColdRoomTemperatures` que usa esses tipos de tabela.|
-|Configuration_RemoveAuditing|Remove a configuração de auditoria.|
-|Configuration_RemoveRowLevelSecurity|Remove a configuração de segurança em nível de linha (Isso é necessário para que as alterações às tabelas associadas).|
-|CreateRoleIfNonExistant|Cria uma função de banco de dados se ele ainda não existir.|
+|Configuration_ApplyPartitionedColumnstoreIndexing|Aplica o particionamento e columnstore índices para tabelas de fatos.|
+|Configuration_ConfigureForEnterpriseEdition|Aplica o particionamento, columnstore na memória e indexação.|
+|Configuration_EnableInMemory|Substitui as tabelas de preparo de integração com as tabelas com otimização de memória SCHEMA_ONLY para melhorar o desempenho de ETL.|
+|Configuration_ApplyPolybase|Configura uma fonte de dados externa, o formato de arquivo e a tabela.|
+|Configuration_PopulateLargeSaleTable|Aplica as alterações do enterprise edition, e preenche uma quantidade maior de dados para o ano de 2012 como histórico adicional.|
+|Configuration_ReseedETL|Remove os dados existentes e reinicia as propagações de ETL. Isso permite popular novamente o banco de dados OLAP para fazer a correspondência de linhas atualizadas no banco de dados OLTP.|
 
+### <a name="integration-schema"></a>Esquema de integração
+
+Os procedimentos usados no processo de ETL se enquadram nestas categorias:
+- Procedimentos de auxiliar para o pacote ETL - Get * todos os procedimentos.
+- Os procedimentos usados pelo pacote de ETL para migrar os dados preparados nas tabelas de DW - todos os procedimentos de migração de *.
+- `PopulateDateDimensionForYear`-Usa um ano e garante que todas as datas que ano são preenchidas no `Dimension.Date` tabela.
 
 ### <a name="sequences-schema"></a>Esquema de sequências
 
@@ -222,6 +105,5 @@ Procedimentos para configurar as sequências no banco de dados.
 
 |Procedimento|Finalidade|
 |-----------------------------|---------------------|
-|ReseedAllSequences|Chama o procedimento ReseedSequenceBeyondTableValue para todas as sequências.|
-|ReseedSequenceBeyondTableValue|Usado para reposicionar o próximo valor de sequência além do valor em qualquer tabela que usa a mesma sequência. (Como um DBCC CHECKIDENT para equivalente de colunas de identidade para as sequências, mas em potencialmente várias tabelas).|
-
+|ReseedAllSequences|Chama o procedimento `ReseedSequenceBeyondTableValue` para todas as sequências.|
+|ReseedSequenceBeyondTableValue|Usado para reposicionar o próximo valor de sequência além do valor em qualquer tabela que usa a mesma sequência. (Como um `DBCC CHECKIDENT` para equivalente de colunas de identidade para as sequências, mas em potencialmente várias tabelas.)|

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64af89226e917b05c28f0c85500281fa84bc676c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 54a471846953e7afffa74fe910ae7376731e517b
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="time-date-and-interval-functions"></a>Funções de hora, data e intervalo
 A tabela a seguir lista as funções de data e hora que são incluídas no conjunto de função escalar ODBC. Um aplicativo pode determinar quais funções de data e hora são suportadas por um driver chamando **SQLGetInfo** com um *tipo de informação* de SQL_TIMEDATE_FUNCTIONS.  
@@ -66,4 +64,3 @@ A tabela a seguir lista as funções de data e hora que são incluídas no conju
 |**TIMESTAMPDIFF (** *intervalo*, *timestamp_exp1*, *timestamp_exp2* **)** (ODBC 2.0)|Retorna o número inteiro de intervalos de tipo *intervalo* pelo qual *timestamp_exp2* é maior do que *timestamp_exp1*. Os valores válidos de *intervalo* são as seguintes palavras-chave:<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> onde as frações de segundo são expressos em bilionésimos de segundo. Por exemplo, a instrução SQL a seguir retorna o nome de cada funcionário e o número de anos, que ele foi empregado:<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> Se uma das expressões de carimbo de hora é um valor de hora e *intervalo* Especifica dias, semanas, meses, trimestres ou anos, a parte da data de carimbo de hora que é definida como a data atual antes de calcular a diferença entre os carimbos de hora.<br /><br /> Se uma das expressões de carimbo de hora é um valor de data e *intervalo* Especifica frações segundos, segundos, minutos ou horas, a parte de hora de carimbo de hora que é definida para 0 antes de calcular a diferença entre os carimbos de hora.<br /><br /> Um aplicativo determina quais intervalos de uma fonte de dados oferece suporte ao chamar **SQLGetInfo** com a opção SQL_TIMEDATE_DIFF_INTERVALS.|  
 |**SEMANA (** *date_exp* **)** (ODBC 1.0)|Retorna a semana do ano com base no campo semana de *date_exp* como um valor inteiro no intervalo de 1 a 53.|  
 |**ANO (** *date_exp* **)** (ODBC 1.0)|Retorna o ano com base no campo ano de *date_exp* como um valor inteiro. O intervalo é – dependente da fonte de dados.|
-

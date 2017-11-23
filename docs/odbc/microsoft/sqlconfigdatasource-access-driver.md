@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Access Driver
 - Access driver [ODBC], SQLConfigDataSource
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ffa0ff5fe4f788a3ec72ee003db166514f132db
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (Driver de acesso)
 > [!NOTE]  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
 |THREADS|O número de threads de plano de fundo para o mecanismo de usar. Esse valor padrão é 3, mas pode ser alterado.<br /><br /> Isso define a mesma opção como **Threads** na caixa de diálogo de instalação.|  
 |UID|Para o driver do Microsoft Access, o nome da ID de usuário usado para logon.|  
 |USERCOMMITSYNC|Determina se o driver do Microsoft Access será executado assincronamente transações definidas pelo usuário. Esse valor é definido inicialmente como "Sim", que significa que o driver do Microsoft Access aguardará confirmações em uma transação definida pelo usuário para ser concluída.<br /><br /> O valor dessa opção não deve ser alterado sem considerar cuidadosamente as consequências. Para obter mais informações sobre a opção, consulte o *guia do programador do Microsoft Jet Database Engine*.<br /><br /> Isso define a mesma opção como **UserCommitSync** na caixa de diálogo de instalação.|
-

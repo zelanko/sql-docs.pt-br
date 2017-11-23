@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 996e0cc19a0828fe7ca7a7ba1bd1a95402ebbe81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilando um programa SQL inserido
 Como um programa SQL inserido contém uma mistura de instruções de linguagem SQL e host, não podem ser enviado diretamente a um compilador de idioma do host. Em vez disso, ele é compilado por meio de um processo de várias etapas. Embora esse processo é diferente para cada produto, as etapas são aproximadamente o mesmo para todos os produtos.  
@@ -50,4 +48,3 @@ Como um programa SQL inserido contém uma mistura de instruções de linguagem S
 5.  O módulo de solicitação de banco de dados gerado pelo pré-compilador é enviado a um utilitário especial de associação. Esse utilitário examina as instruções SQL, analisa, valida e otimiza-las e, em seguida, gera um plano de acesso para cada instrução. O resultado é um plano de acesso combinado para todo o programa, que representa uma versão executável das instruções SQL inseridas. O utilitário de associação armazena o plano no banco de dados, geralmente atribuindo-o nome do programa aplicativo que irá usá-la. Se esta etapa ocorre em tempo de execução ou tempo de compilação depende do DBMS.  
   
  Observe que as etapas usadas para compilar um programa SQL inserido correlacionam em conjunto com as etapas descritas anteriormente na [processar uma instrução SQL](../../odbc/reference/processing-a-sql-statement.md). Em particular, observe que o pré-compilador separa as instruções SQL de código de idioma do host, e o utilitário de associação analisa e valida as instruções SQL e cria os planos de acesso. Em DBMSs onde a etapa 5 ocorre em tempo de compilação, as quatro primeiras etapas de processamento de uma instrução SQL ocorrem em tempo de compilação, enquanto a última etapa (execução) ocorre em tempo de execução. Isso tem o efeito de tornar a execução da consulta em tais DBMSs muito rápidos.
-

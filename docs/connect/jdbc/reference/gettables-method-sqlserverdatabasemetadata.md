@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getTables
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getTables
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c469b56d30e93ba96378df87490be5cea83d8c2a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bbf35aeec7b5626b380fc654995d181fe124811
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Método getTables (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,7 +75,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema da tabela.|  
 |TABLE_NAME|**Cadeia de caracteres**|O nome da tabela.|  
 |TABLE_TYPE|**Cadeia de caracteres**|O tipo de tabela.|  
-|REMARKS|**Cadeia de caracteres**|A descrição da tabela.<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] não retorna um valor para essa coluna.  |  
+|REMARKS|**Cadeia de caracteres**|A descrição da tabela.<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] não retorna um valor para essa coluna.|  
 |TYPE_CAT|**Cadeia de caracteres**|Não há suporte do JDBC Driver.|  
 |TYPE_SCHEM|**Cadeia de caracteres**|Não há suporte do JDBC Driver.|  
 |TYPE_NAME|**Cadeia de caracteres**|Não há suporte do JDBC Driver.|  
@@ -121,4 +117,3 @@ public static void executeGetTables(Connection con) {
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

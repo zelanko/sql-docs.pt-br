@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e63f642f7a1921f9d65cd6f8fe665b9e83c9404c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="paradox-data-types"></a>Tipos de dados Paradox
 O driver ODBC Paradox mapeia tipos de dados do Paradox para tipos de dados SQL ODBC. A tabela a seguir lista todos os tipos de dados Paradox e mostra o ODBC SQL são mapeados para os tipos de dados.  
@@ -69,4 +67,3 @@ O driver ODBC Paradox mapeia tipos de dados do Paradox para tipos de dados SQL O
 |timestamp|Quando um valor é inserido em uma coluna de carimbo de hora pelo driver Paradox e subsequentemente recuperado da coluna, o valor recuperado pode diferir do que o valor inserido por até 1 segundo em razão do arredondamento.|  
   
  Mais limitações nos tipos de dados podem ser encontradas no [limitações do tipo de dados](../../odbc/microsoft/data-type-limitations.md).
-

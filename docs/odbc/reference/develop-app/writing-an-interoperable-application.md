@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ec3f9821b729c593fac8cb280f8596eaf0dbed1d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab5be84b66571f7ca361a3b158921330c00007f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-an-interoperable-application"></a>Escrevendo um aplicativo de interoperabilidade
 Sempre que um aplicativo usa o mesmo código com mais de um driver, esse código deve ser interoperável entre esses drivers. Na maioria dos casos, essa é uma tarefa fácil. Por exemplo, o código para buscar linhas com um cursor somente de avanço é o mesmo para todos os drivers. Em alguns casos, isso pode ser mais difícil. Por exemplo, o código para construir identificadores para uso em instruções SQL deve considerar o caso de identificador, cotar e convenções de nomenclatura de três partes, parte de uma e duas partes.  
@@ -46,4 +44,3 @@ Sempre que um aplicativo usa o mesmo código com mais de um driver, esse código
 -   [Verificando o suporte ao recurso e a variabilidade](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
 -   [Recursos a serem inspecionados](../../../odbc/reference/develop-app/features-to-watch-for.md)
-

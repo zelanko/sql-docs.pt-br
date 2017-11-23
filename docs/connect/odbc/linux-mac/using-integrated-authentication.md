@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- integrated authentication
+helpviewer_keywords: integrated authentication
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e2c2a07d94fce76b37970cc998ae6a0959a0080
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-integrated-authentication"></a>Como usar a autenticação integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -141,4 +138,3 @@ Para obter mais informações sobre autenticação de computadores Linux ou macO
 [Notas de versão](../../../connect/odbc/linux-mac/release-notes.md)
 
 [Usando o Active Directory do Azure](../../../connect/odbc/using-azure-active-directory.md)
-

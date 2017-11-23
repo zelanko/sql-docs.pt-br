@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - subkeys [ODBC], ODBC subkey
 - ODBC subkey [ODBC]
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3a01cda7280ec0a6a70bca8cf7f9fdec503c92d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c90ca7ef439d1f12df7ddb18e95dea883b7142af
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-subkey"></a>Subchave do ODBC
 Os valores na subchave ODBC especificam opções de rastreamento de ODBC. Essas opções são definidas por meio da guia de rastreamento da caixa de diálogo Administrador de fonte de dados ODBC exibida pelo **SQLManageDataSources**. A subchave ODBC em si é opcional. O formato desses valores é conforme mostrado na tabela a seguir.  
@@ -51,4 +49,3 @@ Trace : REG_SZ : 1
 TraceFile : REG_SZ : C:\ODBC.LOG  
   
 ```
-

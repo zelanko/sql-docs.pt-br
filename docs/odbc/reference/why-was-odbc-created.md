@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], about ODBC
+helpviewer_keywords: ODBC [ODBC], about ODBC
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e94325210db4232ae3a5b715aa26a059d7895eae
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="why-was-odbc-created"></a>Por que o ODBC foi criado?
 Historicamente, empresas usaram um DBMS único. Todo o acesso de banco de dados foi feito por meio de front-end de sistema ou aplicativos escritos para funcionar exclusivamente com este sistema. No entanto, como o uso de computadores cresceu e mais hardware e software tornou-se disponível, as empresas iniciado para adquirir DBMSs diferentes. Os motivos foram muitas: pessoas compradas o que era mais barato, o que mais rápido, o que eles já soubessem, o que foi mais recente no mercado, o que funcionou melhor para um único aplicativo. Outros motivos foram reorganizações e fusões, onde departamentos que anteriormente tinham um DBMS único agora tinham vários.  
@@ -37,4 +34,3 @@ Historicamente, empresas usaram um DBMS único. Todo o acesso de banco de dados 
  Um problema semelhante que fornecedores de software independentes (ISVs). Geralmente, fornecedores de software de banco de dados para minicomputadores e mainframes de gravação foram forçados a escrever uma versão de um aplicativo para cada DBMS ou escrever código específico do DBMS para cada DBMS que desejem acessar. Fornecedores de software para computadores pessoais de gravação precisavam criar rotinas de acesso a dados para cada DBMS diferente com o qual eles querem trabalhar. Geralmente, isso significa que uma grande quantidade de recursos foram gastos escrevendo e mantendo rotinas em vez de aplicativos de acesso a dados e aplicativos geralmente foram vendidos não a qualidade mas se eles podem acessar os dados em um determinado DBMS.  
   
  O que os dois conjuntos de desenvolvedores necessário foi uma maneira de acessar dados em diferentes DBMSs. O grupo de mainframe e minicomputador precisava de uma forma para mesclar dados de DBMSs diferentes em um único aplicativo, enquanto o grupo de computador pessoal necessário essa capacidade, bem como uma maneira de gravar um único aplicativo que foi independente de qualquer um DBMS. Em resumo, ambos os grupos necessários forma interoperável para acessar dados. eles necessária conectividade aberta de banco de dados.
-

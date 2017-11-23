@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - result sets [ODBC], block cursors
 - rowset status [ODBC]
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f4451ccb74ca19a02c352c2e7361d0ec8e84c87d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="row-status-array"></a>Matriz de Status de linha
 Além dos dados, **SQLFetch** e **SQLFetchScroll** pode retornar uma matriz que fornece o status de cada linha no conjunto de linhas. Esta matriz é especificada pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR. Esta matriz é alocada pelo aplicativo e deve ter elementos são especificadas pelo atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE. Os valores na matriz são definidos **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, e **SQLSetPos.** Os valores descrevem o status da linha e se o status foi alterado desde a última busca.  
@@ -44,4 +42,3 @@ Além dos dados, **SQLFetch** e **SQLFetchScroll** pode retornar uma matriz que 
 |SQL_ROW_DELETED|A linha foi excluída desde a última busca.|  
 |SQL_ROW_ADDED|A linha foi inserida por **SQLBulkOperations**. Se a linha será buscada novamente ou é atualizada por **SQLSetPos**, seu status é SQL_ROW_SUCCESS.<br /><br /> Esse valor não está definido por **SQLFetch** ou **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|O conjunto de linhas sobrepostos final do conjunto de resultados, e nenhuma linha foi retornada que correspondeu a esse elemento da matriz de status de linha.|
-

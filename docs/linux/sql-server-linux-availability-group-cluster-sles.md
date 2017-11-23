@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
+ms.openlocfilehash: d8ebecb0d6ff5892bdee8cf4cf98287f1ace33e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50a2633790b9878a8be2a9a3c417fc877a37633d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar SLES Cluster para o grupo de disponibilidade do SQL Server
 
@@ -123,9 +122,9 @@ Em servidores Linux configurar o grupo de disponibilidade e, em seguida, configu
 
 3. Para configurar a camada de comunicação do cluster (Corosync): 
 
-   A. Insira um endereço de rede para associar a. Por padrão, o script irá propor o endereço de rede de eth0. Como alternativa, digite um endereço de rede diferente, por exemplo, o endereço de bond0. 
+   a. Insira um endereço de rede para associar a. Por padrão, o script irá propor o endereço de rede de eth0. Como alternativa, digite um endereço de rede diferente, por exemplo, o endereço de bond0. 
 
-   B. Insira um endereço de multicast. O script propõe um endereço aleatório que você pode usar como padrão. 
+   b. Insira um endereço de multicast. O script propõe um endereço aleatório que você pode usar como padrão. 
 
    c. Insira uma porta de multicast. O script propõe 5405 como padrão. 
 
@@ -313,4 +312,3 @@ Para obter detalhes adicionais, consulte:
 ## <a name="next-steps"></a>Próximas etapas
 
 [Operar o grupo de disponibilidade de alta disponibilidade](sql-server-linux-availability-group-failover-ha.md)
-

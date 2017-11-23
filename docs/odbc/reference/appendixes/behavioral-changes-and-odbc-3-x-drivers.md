@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7a5bcfea240af2477b3522f2baa849a6a5a6876
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5bd1ce6560e8c93d22cac8f99f2eee53be1b953
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Alterações de comportamento e os Drivers ODBC 3. x
 O atributo de ambiente SQL_ATTR_ODBC_VERSION indica para o driver se ele precisa apresentar ODBC 2. *x* comportamento ou ODBC 3*. x* comportamento. Como o atributo de ambiente SQL_ATTR_ODBC_VERSION é definido depende do aplicativo. ODBC 3*. x* aplicativos devem chamar **SQLSetEnvAttr** para definir esse atributo depois que eles chamam **SQLAllocHandle** para alocar um identificador de ambiente e antes que eles chamam  **SQLAllocHandle** para alocar um identificador de conexão. Se eles falharem em fazer isso, o Gerenciador de Driver retornará SQLSTATE HY010 (erro de sequência de função) na última chamada **SQLAllocHandle**.  
@@ -56,4 +54,3 @@ O atributo de ambiente SQL_ATTR_ODBC_VERSION indica para o driver se ele precisa
 -   [Chamando SQLSetPos para inserir dados](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
   
 -   [Carregamento por ordinal](../../../odbc/reference/appendixes/loading-by-ordinal.md)
-

@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ODBC function calls
 - keywords [SQL Server], reserved
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="reserved-keywords-transact-sql"></a>Reservado palavras-chave-Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="reserved-keywords-transact-sql"></a>Palavras-chave reservadas (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa palavras-chave reservadas para definir, manipular e acessar bancos de dados. As palavras-chave reservadas fazem parte da gramática da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para analisar e compreender as instruções e os lotes [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora seja sintaticamente possível usar as palavras-chave reservadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como identificadores e nomes de objeto em scripts [!INCLUDE[tsql](../../includes/tsql-md.md)], você só pode fazer isso usando identificadores delimitados.  
   
@@ -120,38 +117,38 @@ ms.lasthandoff: 09/01/2017
 |-|-|-|  
 |**ABSOLUTO**|**EXEC**|**SOBREPOSIÇÕES**|  
 |**AÇÃO**|**EXECUTE**|**PREENCHIMENTO**|  
-|**ADA**|**EXISTE**|**PARCIAL**|  
+|**ADA**|**EXISTS**|**PARCIAL**|  
 |**ADICIONAR**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**EXTRAIR**|**POSIÇÃO**|  
 |**ALOCAR**|**FALSE**|**PRECISÃO**|  
-|**ALTER**|**BUSCA**|**PREPARAR**|  
+|**ALTER**|**FETCH**|**PREPARAR**|  
 |**AND**|**PRIMEIRO**|**PRESERVAR**|  
-|**QUALQUER**|**FLOAT**|**PRIMARY**|  
+|**ANY**|**FLOAT**|**PRIMARY**|  
 |**SÃO**|**PARA**|**ANTES DE**|  
 |**AS**|**EXTERNA**|**PRIVILÉGIOS**|  
-|**ASC**|**FORTRAN**|**PROCEDIMENTO**|  
+|**ASC**|**FORTRAN**|**PROCEDURE**|  
 |**ASSERÇÃO**|**ENCONTRADO**|**PÚBLICO**|  
 |**AT**|**FROM**|**LEITURA**|  
-|**AUTORIZAÇÃO**|**FULL**|**REAL**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
 |**AVG**|**OBTER**|**REFERÊNCIAS**|  
 |**BEGIN**|**GLOBAL**|**RELATIVO**|  
 |**BETWEEN**|**GO**|**RESTRINGIR**|  
-|**BITS**|**IR PARA**|**REVOKE**|  
+|**BITS**|**GOTO**|**REVOKE**|  
 |**FUNÇÃO BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**AMBOS**|**GRUPO**|**REVERSÃO**|  
 |**POR**|**TENDO**|**LINHAS**|  
-|**EM CASCATA**|**HORA**|**ESQUEMA**|  
+|**EM CASCATA**|**HORA**|**SCHEMA**|  
 |**EM CASCATA**|**IDENTIDADE**|**ROLAGEM**|  
-|**CASO**|**IMEDIATA**|**SEGUNDO**|  
+|**CASE**|**IMEDIATA**|**SEGUNDO**|  
 |**CONVERSÃO**|**IN**|**SEÇÃO**|  
 |**CATÁLOGO**|**INCLUIR**|**SELECT**|  
-|**CHAR**|**ÍNDICE**|**SESSÃO**|  
+|**CHAR**|**INDEX**|**SESSÃO**|  
 |**CHAR_LENGTH**|**INDICADOR**|**SESSION_USER**|  
 |**CARACTERE**|**INICIALMENTE**|**DEFINIR**|  
 |**CHARACTER_LENGTH**|**INTERNA**|**TAMANHO**|  
 |**SELEÇÃO**|**ENTRADA**|**SMALLINT**|  
-|**FECHAR**|**NÃO DIFERENCIA**|**ALGUNS**|  
-|**UNIÃO**|**INSERT**|**ESPAÇO**|  
+|**CLOSE**|**NÃO DIFERENCIA**|**ALGUNS**|  
+|**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**SQL**|  
 |**AGRUPAMENTO**|**NÚMERO INTEIRO**|**SQLCA**|  
 |**COLUNA**|**SE CRUZAM**|**SQLCODE**|  
@@ -159,42 +156,42 @@ ms.lasthandoff: 09/01/2017
 |**CONECTE-SE**|**EM**|**SQLSTATE**|  
 |**CONEXÃO**|**IS**|**SQLWARNING**|  
 |**RESTRIÇÃO**|**ISOLAMENTO**|**SUBSTRING**|  
-|**RESTRIÇÕES**|**JUNÇÃO**|**SOMA**|  
-|**CONTINUAR**|**CHAVE**|**SYSTEM_USER**|  
-|**CONVERTER**|**LANGUAGE**|**TABELA**|  
+|**RESTRIÇÕES**|**JUNÇÃO**|**SUM**|  
+|**CONTINUE**|**CHAVE**|**SYSTEM_USER**|  
+|**CONVERTER**|**LANGUAGE**|**TABLE**|  
 |**CORRESPONDENTE**|**ÚLTIMO**|**TEMPORÁRIO**|  
-|**CONTAGEM**|**À ESQUERDA**|**EM SEGUIDA**|  
+|**COUNT**|**À ESQUERDA**|**EM SEGUIDA**|  
 |**CRIAR**|**LEFT**|**TEMPO**|  
 |**CRUZADA**|**NÍVEL**|**CARIMBO DE HORA**|  
 |**ATUAL**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**INFERIOR**|**PARA**|  
+|**CURRENT_TIME**|**LOWER**|**PARA**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**À DIREITA**|  
-|**CURRENT_USER**|**MÁX.**|**TRANSAÇÃO**|  
-|**CURSOR**|**MIN**|**TRADUZIR**|  
+|**CURRENT_USER**|**MAX**|**TRANSAÇÃO**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
 |**DATA**|**MINUTO**|**TRADUÇÃO**|  
-|**DIA**|**MÓDULO**|**TRIM**|  
-|**DESALOCAR**|**MÊS**|**TRUE**|  
+|**DAY**|**MÓDULO**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**TRUE**|  
 |**DEC**|**NOMES**|**UNIÃO**|  
 |**DECIMAL**|**NACIONAL**|**EXCLUSIVO**|  
 |**DECLARE**|**NATURAL**|**DESCONHECIDO**|  
-|**PADRÃO**|**NCHAR**|**UPDATE**|  
-|**ADIÁVEL**|**AVANÇAR**|**SUPERIOR**|  
+|**DEFAULT**|**NCHAR**|**UPDATE**|  
+|**ADIÁVEL**|**AVANÇAR**|**UPPER**|  
 |**ADIADO**|**NÃO**|**USO**|  
-|**DELETE**|**NONE**|**USUÁRIO**|  
+|**DELETE**|**NONE**|**USER**|  
 |**DESC**|**NOT**|**USANDO O**|  
 |**DESCREVER**|**NULL**|**VALUE**|  
 |**DESCRITOR**|**NULLIF**|**VALORES**|  
 |**DIAGNÓSTICO**|**NUMÉRICO**|**VARCHAR**|  
 |**DESCONECTAR**|**OCTET_LENGTH**|**VARIÁVEL**|  
-|**DISTINCT**|**DE**|**MODO DE EXIBIÇÃO**|  
+|**DISTINCT**|**DE**|**VIEW**|  
 |**DOMÍNIO**|**ON**|**QUANDO**|  
 |**DUPLO**|**SOMENTE**|**SEMPRE QUE**|  
-|**DROP**|**ABRIR**|**WHERE**|  
+|**DROP**|**OPEN**|**WHERE**|  
 |**ELSE**|**OPÇÃO**|**COM**|  
 |**END**|**OR**|**TRABALHO**|  
 |**EXEC FINAL**|**ORDEM**|**GRAVAÇÃO**|  
-|**ESCAPE**|**EXTERNA**|**ANO**|  
+|**ESCAPE**|**EXTERNA**|**YEAR**|  
 |**EXCETO**|**SAÍDA**|**ZONA**|  
 |**EXCEÇÃO**|||  
   
@@ -300,4 +297,3 @@ ms.lasthandoff: 09/01/2017
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-

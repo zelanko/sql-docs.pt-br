@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - CREATE PROC
 - PROC_TSQL
 - CREATE_PROCEDURE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
 - table-valued parameters
@@ -48,17 +46,16 @@ helpviewer_keywords:
 - automatic stored procedure execution
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-caps.latest.revision: 180
+caps.latest.revision: "180"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 086151e2916335ae0d7cda3eef11a79363d3ce53
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 23460288040b37ec6a09293bc02a46e4f9af94fa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -450,8 +447,8 @@ GO
 |Exibição|Description|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Retorna a definição de um procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)]. O texto de um procedimento criado com a opção de criptografia não pode ser exibido usando o **sql_modules** exibição do catálogo.|  
-|[assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Retorna informações sobre um procedimento CLR.|  
-|[sys. Parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Retorna informações sobre os parâmetros que são definidos em um procedimento.|  
+|[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Retorna informações sobre um procedimento CLR.|  
+|[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Retorna informações sobre os parâmetros que são definidos em um procedimento.|  
 |[sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|Retorna os objetos referenciados por um procedimento.|  
   
  Para calcular o tamanho de um procedimento compilado, use os Contadores de Desempenho do Sistema a seguir.  
@@ -501,7 +498,7 @@ GO
 |[Sintaxe básica](#BasicSyntax)|CREATE PROCEDURE|  
 |[Passando parâmetros](#Parameters)|@parameter <br> &nbsp;&nbsp;• = default <br> &nbsp;&nbsp;• SAÍDA <br> &nbsp;&nbsp;tipo de parâmetro com valor de tabela • <br> &nbsp;&nbsp;• CURSOR VARYING|  
 |[Modificando dados usando um procedimento armazenado](#Modify)|UPDATE|  
-|[Tratamento de erros](#Error)|TRY…CATCH|  
+|[Tratamento de erro](#Error)|TRY…CATCH|  
 |[Ofuscando a definição do procedimento](#Encrypt)|WITH ENCRYPTION|  
 |[Forçar o recompilação do procedimento](#Recompile)|WITH RECOMPILE|  
 |[Definir o contexto de segurança](#Security)|EXECUTE AS|  
@@ -1021,7 +1018,6 @@ EXEC Get10TopResellers;
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
   
-
 
 
 

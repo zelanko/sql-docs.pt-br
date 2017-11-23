@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2cb1af941d23ae7ea03bac265642bd9cbbb152d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce7fa26983200ba8857c44e6d085410e337e8df8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="programming-considerations"></a>Considerações sobre programação
 Esta seção aborda brevemente alguns tópicos relacionados ao escrever aplicativos ODBC e drivers.  
@@ -47,4 +45,3 @@ Esta seção aborda brevemente alguns tópicos relacionados ao escrever aplicati
 -   [Compatibilidade com versões anteriores e a conformidade com padrões](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)  
   
 -   [ODBC no Windows](../../../odbc/reference/develop-app/odbc-in-windows.md)
-

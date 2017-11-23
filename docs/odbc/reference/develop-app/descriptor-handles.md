@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - ird [ODBC]
 - application row descriptor [ODBC]
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 44f8593c55579c40854190c8710fdfde0b753d0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 99b1b3dc2eabd38aea148ad5ba946d7dd0da857d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-handles"></a>Identificadores de descritor
 Um *descritor* é uma coleção de metadados que descrevem os parâmetros de uma instrução SQL ou as colunas do conjunto de resultados, como visto pelo aplicativo ou driver (também conhecido como o *implementação*). Portanto, pode preencher um descritor de qualquer um dos quatro funções:  
@@ -54,4 +52,3 @@ Um *descritor* é uma coleção de metadados que descrevem os parâmetros de uma
  A maioria das operações em ODBC podem ser executadas sem o uso explícito de descritores pelo aplicativo. No entanto, os descritores de fornecem um atalho prático para algumas operações. Por exemplo, suponha que um aplicativo que deseja inserir dados de dois conjuntos diferentes de buffers. Para usar o primeiro conjunto de buffers, poderia chamar repetidamente **SQLBindParameter** para associá-las para os parâmetros em uma **inserir** instrução e, em seguida, execute a instrução. Para usar o segundo conjunto de buffers, ele deve repetir esse processo. Como alternativa, ele pode configurar associações para o primeiro conjunto de buffers em um descritor e o segundo conjunto de buffers no descritor do outro. Para alternar entre os conjuntos de associações, o aplicativo poderia simplesmente chamar **SQLSetStmtAttr** e associar o descritor correto com a instrução como APD.  
   
  Para obter mais informações sobre descritores, consulte [tipos de descritores](../../../odbc/reference/develop-app/types-of-descriptors.md).
-

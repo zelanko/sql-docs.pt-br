@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STIsSimple_TSQL
 - STIsSimple (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STIsSimple (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STIsSimple (geometry Data Type)
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4f89a0b23de2e371fa7d88e72bf7adcb75b085c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 12b150546378ef76c0165c6d8e3c166e93db304b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -66,8 +62,7 @@ SELECT @g.STIsSimple();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

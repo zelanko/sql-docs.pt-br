@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - optimistic concurrency [ODBC]
 - read-only concurrency control [ODBC]
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1b457d3cc344821cbcfc567ba1617089ca4a7b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 737fadc881109457051cf30bfce9b493bd164f1c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="concurrency-types"></a>Tipos de simultaneidade
 Para resolver o problema de redução de simultaneidade em cursores, ODBC expõe quatro tipos diferentes de simultaneidade do cursor:  
@@ -41,4 +39,3 @@ Para resolver o problema de redução de simultaneidade em cursores, ODBC expõe
 -   **Simultaneidade otimista usando versões de linha e simultaneidade otimista usando valores** o cursor usa a simultaneidade otimista: atualizar ou excluir linhas apenas se eles não foram alterados desde a última foram lidas. Para detectar alterações, ele compara valores ou versões de linha. Não há nenhuma garantia de que o cursor será capaz de atualizar ou excluir uma linha, mas a simultaneidade é muito maior do que quando o bloqueio é usado. Para obter mais informações, consulte a seção a seguir, [simultaneidade otimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
  Um aplicativo especifica o tipo de simultaneidade que deseja que o cursor a ser usado com o atributo de instrução SQL_ATTR_CONCURRENCY. Para determinar quais tipos têm suporte, ele chama **SQLGetInfo** com a opção SQL_SCROLL_CONCURRENCY.
-

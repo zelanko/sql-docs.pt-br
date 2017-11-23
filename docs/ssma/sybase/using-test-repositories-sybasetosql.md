@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Test Repositories
+helpviewer_keywords: Tester Component,Test Repositories
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2348c527027603895cee2ebda45ea55b21626044
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8c790666f48f142e65a0293bef2170dc12eb5f7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Uso de repositórios de teste (SybaseToSQL)
 Os repositórios de repositório de teste do SSMA SSMA Tester casos de teste e resultados de teste para uso posterior. Os dados de repositório são salvos nas tabelas do SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_sybase_utilities** de **ssmatesterdb_syb** banco de dados.  
@@ -86,4 +83,3 @@ Os botões a seguir estão disponíveis na página de resultados de teste:
 [Executar casos de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

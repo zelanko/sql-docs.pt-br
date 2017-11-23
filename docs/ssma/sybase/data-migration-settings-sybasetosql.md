@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 81e5bbb49d94d964c00a45d51d4b9a6b7620c5da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0873c644809c32ecbffa5fbea00bdf71176e9ad2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-migration-settings-sybasetosql"></a>Configurações de migração de dados (SybaseToSQL)
   
@@ -63,4 +61,3 @@ Há dois botões presentes viz.:
 ## <a name="see-also"></a>Consulte também  
 [Migração de dados Sybase para o SQL Server/SQL Azure](http://msdn.microsoft.com/en-us/54a39f5e-9250-4387-a3ae-eae47c799811)  
   
-

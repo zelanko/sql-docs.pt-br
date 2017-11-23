@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84b8e31821e1571da8272806c5fcd7f5563a4182
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Buscar linhas com SQLBulkOperations
 Dados podem ser refetched em um conjunto de linhas usando indicadores por uma chamada para **SQLBulkOperations.** As linhas a serem obtidos são identificadas por indicadores em uma coluna de indicador associado. Colunas com um valor de SQL_COLUMN_IGNORE não tiverem sido buscadas.  
@@ -46,4 +44,3 @@ Dados podem ser refetched em um conjunto de linhas usando indicadores por uma ch
 4.  Chamadas **SQLBulkOperations** com o *operação* argumento definido como SQL_FETCH_BY_BOOKMARK.  
   
  Não é necessário para o aplicativo para usar a matriz de operação de linha para impedir que a operação a ser executada em determinadas colunas. O aplicativo seleciona as linhas que deseja buscar copiando apenas os indicadores para as linhas para a matriz de indicador associado.
-

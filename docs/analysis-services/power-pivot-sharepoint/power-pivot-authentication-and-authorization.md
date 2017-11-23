@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticação e autorização do Power Pivot
   Uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, executada dentro de um farm do SharePoint 2010, usa o subsistema de autenticação e o modelo de autorização fornecidos pelos servidores do SharePoint. A infraestrutura de segurança do SharePoint se estende ao conteúdo e às operações do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] porque todo o conteúdo relacionado ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]é armazenado nos bancos de dados de conteúdo do SharePoint, e todas as operações relacionadas ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]são executadas pelos serviços compartilhados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Os usuários que solicitam uma pasta de trabalho que contém dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são autenticados, usando uma identidade de usuário do SharePoint que é baseada na respectiva identidade de usuário do Windows. As permissões de exibição na pasta de trabalho determinam se a solicitação é concedida ou negada.  
@@ -108,7 +107,7 @@ ms.lasthandoff: 09/01/2017
  Nos Serviços do Excel, as configurações relacionadas à segurança são especificadas em locais confiáveis, provedores de dados confiáveis e bibliotecas de conexão de dados confiáveis. A tabela a seguir descreve as configurações que permitem ou aprimoram o acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se uma configuração não estiver listada aqui, ela não terá nenhum efeito nas conexões com o servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para saber como especificar essas configurações passo a passo, consulte a seção "Habilitar Serviços do Excel" em [Configuração inicial (Power Pivot para SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 > [!NOTE]  
->  A maioria das configurações relacionadas à segurança se aplicam a locais confiáveis. Se quiser preservar valores padrão ou usar valores diferentes para sites diferentes, você poderá criar mais um local confiável para sites que contenham dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e, então, configurar os seguintes parâmetros apenas para esse site. Para obter mais informações, consulte [Criar um local confiável para sites do PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  A maioria das configurações relacionadas à segurança se aplicam a locais confiáveis. Se quiser preservar valores padrão ou usar valores diferentes para sites diferentes, você poderá criar mais um local confiável para sites que contenham dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e, então, configurar os seguintes parâmetros apenas para esse site. Para obter mais informações, consulte [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 |Área|Configuração|Description|  
 |----------|-------------|-----------------|  
@@ -127,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Arquitetura de segurança do Power Pivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   
-

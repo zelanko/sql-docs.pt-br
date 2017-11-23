@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
-ms.contentlocale: pt-br
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
@@ -34,14 +32,14 @@ Um aplicativo ODBC pode usar vários conjuntos de MARS (resultados ativos) e out
 ## <a name="available-features"></a>Recursos disponíveis  
 As seções a seguir do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentação Native Client para ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) são válidas ao usar o driver ODBC no macOS e Linux:  
 
--   [Comunicação com o SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Comunicando-se com o SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
 -   [Suporte de tempo limite de Conexão e consulta](http://msdn.microsoft.com/library/ms130822.aspx)  
 -   [Cursores](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
 -   [Data/hora melhorias (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
 -   [Executando consultas (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
--   [Tratamento de erros e mensagens](http://msdn.microsoft.com/library/ms131289.aspx)  
+-   [Tratando de erros e mensagens](http://msdn.microsoft.com/library/ms131289.aspx)  
 -   [Autenticação Kerberos](http://msdn.microsoft.com/library/cc280459.aspx)  
--   [Tipos definidos pelo usuário do CLR grandes (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
+-   [Tipos de dados CLR grandes definidos pelo usuário (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [Executando transações (ODBC) (exceto transações distribuídas)](http://msdn.microsoft.com/library/ms131706.aspx)  
 -   [Processando resultados (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Executando procedimentos armazenados](http://msdn.microsoft.com/library/ms131440.aspx)
@@ -118,4 +116,3 @@ Quando caracteres multibyte UTF-8 ou UTF-16 substitutos são divididos em buffer
 [Problemas conhecidos nesta versão do driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [Notas de versão](../../../connect/odbc/linux-mac/release-notes.md)
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7db96c719d22b3f6dd47a02eac2ef7724c0b6040
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 709df0de2e0191c0f03026afdad7b8e9b8480cae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Arquivo Schema (Driver de arquivo de texto)
 Quando o driver de texto é usado, o formato do arquivo de texto é determinado por meio de um arquivo de informações de esquema. O arquivo de informações de esquema é sempre chamado Schema e sempre é mantido no mesmo diretório como a fonte de dados de texto. O arquivo de informações de esquema fornece IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo Schema.ini é sempre necessário para acessar dados de comprimento fixo. Você deve usar um arquivo Schema quando sua tabela de texto contém a data e hora, moeda, ou dados decimais ou sempre que quiser mais controle sobre a manipulação de dados na tabela.  
@@ -136,4 +134,3 @@ CharacterSet=ANSI
   
 > [!NOTE]  
 >  Se você omitir uma entrada, o valor padrão no painel de controle do Windows será usado.
-

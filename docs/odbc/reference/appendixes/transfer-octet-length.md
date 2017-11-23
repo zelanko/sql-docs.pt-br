@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - data types [ODBC], transfer octet length
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e9a6655bde245348b3b70c3d29631be1b9caa60b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-octet-length"></a>Comprimento do octeto transferência
 O comprimento de octetos de transferência de uma coluna é o número máximo de bytes retornados para o aplicativo quando os dados são transferidos para seu tipo de dados C padrão. Para dados de caracteres, o comprimento de octetos de transferência não inclui o espaço para o caractere null de terminação. O comprimento de octetos de transferência de uma coluna pode ser diferente do número de bytes necessários para armazenar os dados na fonte de dados.  
@@ -54,4 +52,3 @@ O comprimento de octetos de transferência de uma coluna é o número máximo de
 |SQL_GUID|16 (o tamanho da estrutura de GUID).|  
   
  [a] se o driver não pode determinar o comprimento de coluna ou parâmetro para tipos de variáveis, ela retornará SQL_NO_TOTAL.
-

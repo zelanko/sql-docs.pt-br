@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], adding
 - adding data sources [ODBC], Visual FoxPro ODBC driver
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5e60681b7a3f30a83c2a1227c466b663b1b4d8a7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d158cf38e5755e0e443d6cb47e4053bd05d45287
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Adicionando uma fonte de dados do Visual FoxPro
 Para acessar dados do Visual FoxPro do seu aplicativo, você deve ter uma fonte de dados. Você pode criar uma fonte de dados da seguinte maneira:  
@@ -57,4 +55,3 @@ Para acessar dados do Visual FoxPro do seu aplicativo, você deve ter uma fonte 
      O novo nome de fonte de dados é exibido na lista de fontes de dados do usuário na guia DSN de usuário da caixa de diálogo Administrador de fonte de dados ODBC.  
   
 6.  Clique em Okey para salvar a nova fonte de dados e fechar a caixa de diálogo Administrador de fonte de dados ODBC.
-

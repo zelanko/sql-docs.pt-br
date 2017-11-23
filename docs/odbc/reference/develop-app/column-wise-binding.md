@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8419aeccf298788898fa6b764682faa0cff73e54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 82a065d797a7c4ba9f2fcd7dc4bbe6f7a47216e6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-wise-binding"></a>A associação
 Ao usar a associação, um aplicativo associar um ou dois ou em alguns casos, três, matrizes para cada coluna para o qual os dados são a ser retornado. A primeira matriz contém os valores de dados, e a segunda matriz contém buffers de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separados, definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, está associada a uma matriz de terceira. Cada matriz contém elementos existem linhas no conjunto de linhas.  
@@ -100,4 +98,3 @@ while ((rc = SQLFetchScroll(hstmt,SQL_FETCH_NEXT,0)) != SQL_NO_DATA) {
 // Close the cursor.  
 SQLCloseCursor(hstmt);  
 ```
-

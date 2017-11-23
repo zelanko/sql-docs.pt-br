@@ -13,24 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], data types
 - Data Mining Extensions [Analysis Services], data types
 - data types [DMX]
 ms.assetid: 4d81fe82-b187-4f80-b8ea-fe37423123a6
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8a66c05b21a723aaa50de515cb9e686fb85e603c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ca5ce97a712125578507dd9ce13f4241c7fafe3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-types-dmx"></a>Tipos de dados (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 08/02/2017
  Para obter mais informações sobre os dados de tipos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece suporte, consulte [tipos de dados &#40; mineração de dados &#41;](../analysis-services/data-mining/data-types-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40; Analysis Services – mineração de dados &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -61,7 +59,6 @@ ms.lasthandoff: 08/02/2017
  [Extensões de mineração de dados &#40; DMX &#41; Elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Noções básicas sobre a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

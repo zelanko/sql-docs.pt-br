@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 231aeea7b69585b01df5064b62707a85ec016ff7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 996f6ff5a36c0aa96d857a548e272a756acf2212
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver para SQL Server
 
@@ -61,4 +59,3 @@ O Microsoft JDBC Driver para SQL Server foi testado com os principais servidores
 * [Guia de Introdução com Java no Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
 * [Guia de Introdução do Java no Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
 * [Guia de Introdução do Java no SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
-

@@ -6,16 +6,20 @@ ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords:
-- Linux, AAD authentication
+helpviewer_keywords: Linux, AAD authentication
+ms.workload: On Demand
+ms.openlocfilehash: ab9be968e11688a960e4306f82cf7ca47666f688
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Autenticação do Active Directory com o SQL Server no Linux
 
@@ -144,8 +148,13 @@ Use as seguintes etapas para adicionar um [!INCLUDE[ssNoVersion](../includes/ssn
    > Se você vir um erro, "pacotes necessários não estão instalados", você deve instalar esses pacotes usando o Gerenciador de pacotes de distribuição Linux antes de executar o `realm join` comando novamente.
    >
    > Se você receber um erro, "Permissões insuficientes para ingressar no domínio", em seguida, você precisará verificar com um administrador de domínio que você tem permissões suficientes para adicionar máquinas Linux ao domínio.
+   
+   > SQL Server usa SSSD e NSS para mapear contas de usuário e grupos para identificadores de segurança (SID). SSSD deve ser configurado e em execução na ordem para o SQL Server criar logons do AD com êxito. Realmd normalmente faz isso automaticamente como parte do ingresso no domínio, mas em alguns casos, será necessário fazer isso separadamente.
+   >
+   > Confira o seguinte para configurar [SSSD manualmente](https://access.redhat.com/articles/3023951), e [configurar NSS para trabalhar com SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
-1. Verifique se que você agora pode reunir informações sobre um usuário do domínio e que você pode adquirir um tíquete Kerberos como esse usuário.
+  
+5. Verifique se que você agora pode reunir informações sobre um usuário do domínio e que você pode adquirir um tíquete Kerberos como esse usuário.
 
    We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
 
@@ -297,4 +306,3 @@ Em seguida, explore a outros cenários de segurança para o SQL Server no Linux.
 
 > [!div class="nextstepaction"]
 >[Criptografar conexões ao SQL Server no Linux](sql-server-linux-encrypted-connections.md)
-

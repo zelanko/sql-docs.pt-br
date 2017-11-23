@@ -1,8 +1,7 @@
 ---
 title: "Métodos RDS | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e2a034ccdd85f3c05d3438cd8a589ac47d1aabd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 623b1f814d23ab8a23e87634ba1fe16b647907d0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-methods"></a>Métodos RDS
 > [!IMPORTANT]
@@ -46,6 +44,5 @@ ms.lasthandoff: 09/09/2017
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Envia as alterações de localmente em cache e atualizáveis pendentes **registros** à fonte de dados especificado no **conectar** propriedade.|  
 |[Método Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2.5 e superior).|  
 |[Método Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão (para uso com o ADO 2.1).|
-
 
 

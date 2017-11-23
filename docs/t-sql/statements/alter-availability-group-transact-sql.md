@@ -1,12 +1,14 @@
 ---
 title: ALTERAR o grupo de disponibilidade (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,28 +16,26 @@ f1_keywords:
 - ALTER_AVAILABILITY_TSQL
 - ALTER AVAILABILITY GROUP
 - ALTER AVAILABILITY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - ALTER AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
+caps.latest.revision: "152"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ef1d68317c2e288a13d7b07d559b5de45e29cd28
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Altera um sempre no grupo de disponibilidade em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A maioria dos argumentos ALTER AVAILABILITY GROUP só têm suporte na réplica primária atual. Entretanto, os argumentos JOIN, FAILOVER e FORCE_FAILOVER_ALLOW_DATA_LOSS só têm suporte na réplica secundária.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```SQL  
   
 ALTER AVAILABILITY GROUP group_name   
   {  
@@ -81,7 +81,7 @@ ALTER AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
        FAILOVER_MODE = { AUTOMATIC | MANUAL }   
        [ , <add_replica_option> [ ,...n ] ]  
     )   
@@ -227,7 +227,7 @@ ALTER AVAILABILITY GROUP group_name
 
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- Introduzido no SQL Server de 2017 CTP 2.2. Usado para definir um número mínimo de réplicas secundárias síncronas necessário para confirmar antes que o primário confirma uma transação. Garante que as transações do SQL Server aguardará até que os logs de transação são atualizados durante o número mínimo de réplicas secundárias. O padrão é 0, que fornece o mesmo comportamento que o SQL Server 2016. O valor mínimo é 0. O valor máximo é o número de réplicas menos 1. Essa opção se relaciona com réplicas no modo de confirmação síncrona. Quando réplicas estão no modo de confirmação síncrona, gravações na réplica primária espera até que as gravações nas réplicas secundárias síncronas são confirmadas para o log de transações do banco de dados de réplica. Se um SQL Server que hospeda uma réplica de síncrona secundária para de responder, o SQL Server que hospeda a réplica primária marcará essa réplica secundária não SINCRONIZADA e continuar. Quando o banco de dados não responder volta a ficar online ficará em um estado "não sincronizado" e a réplica será marcada como não íntegro até que o primário pode torná-la síncrona novamente. Essa configuração garante que a réplica primária não continuará até que o número mínimo de réplicas que foram confirmadas cada transação. Se o número mínimo de réplicas não estiver disponível, confirmações no primário falhará. Essa configuração se aplica a grupos de disponibilidade com o tipo de cluster `WSFC` e `EXTERNAL`. Para o tipo de cluster `EXTERNAL` a configuração é alterada quando o grupo de disponibilidade é adicionado a um recurso de cluster. Consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](../../linux/sql-server-linux-availability-group-ha.md).
+ Introduzidos no SQL Server de 2017. Usado para definir um número mínimo de réplicas secundárias síncronas necessário para confirmar antes que o primário confirma uma transação. Garante que as transações do SQL Server aguardará até que os logs de transação são atualizados durante o número mínimo de réplicas secundárias. O padrão é 0, que fornece o mesmo comportamento que o SQL Server 2016. O valor mínimo é 0. O valor máximo é o número de réplicas menos 1. Essa opção se relaciona com réplicas no modo de confirmação síncrona. Quando réplicas estão no modo de confirmação síncrona, gravações na réplica primária espera até que as gravações nas réplicas secundárias síncronas são confirmadas para o log de transações do banco de dados de réplica. Se um SQL Server que hospeda uma réplica de síncrona secundária para de responder, o SQL Server que hospeda a réplica primária marcará essa réplica secundária não SINCRONIZADA e continuar. Quando o banco de dados não responder volta a ficar online ficará em um estado "não sincronizado" e a réplica será marcada como não íntegro até que o primário pode torná-la síncrona novamente. Essa configuração garante que a réplica primária não continuará até que o número mínimo de réplicas que foram confirmadas cada transação. Se o número mínimo de réplicas não estiver disponível, confirmações no primário falhará. Para o tipo de cluster `EXTERNAL` a configuração é alterada quando o grupo de disponibilidade é adicionado a um recurso de cluster. Consulte [alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade](../../linux/sql-server-linux-availability-group-ha.md).
   
  Adicionar banco de dados *database_name*  
  Especifica uma lista de um ou mais bancos de dados do usuário que você deseja acrescentar ao grupo de disponibilidade. Esses bancos de dados devem residir na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda a réplica primária atual. É possível especificar vários bancos de dados para um grupo de disponibilidade, mas cada banco de dados pode pertencer a apenas um grupo de disponibilidade. Para obter informações sobre o tipo de bancos de dados que pode dar suporte a um grupo de disponibilidade, consulte [pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Para descobrir quais bancos de dados locais já pertencem a um grupo de disponibilidade, consulte o **replica_id** coluna o [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo.  
@@ -284,7 +284,7 @@ ALTER AVAILABILITY GROUP group_name
  *port*  
  É um número de porta que está associado ao ponto de extremidade de espelhamento da instância do servidor parceiro (para a opção ENDPOINT_URL) ou o número de porta usado pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] da instância de servidor (para a opção READ_ONLY_ROUTING_URL).  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY}  
  Especifica se a réplica primária tem que esperar a réplica secundária confirmar o fortalecimento (gravação) dos registros de log no disco, antes de a réplica primária poder confirmar a transação em um determinado banco de dados primário. As transações em bancos de dados diferentes na mesma réplica primária podem ser confirmadas independentemente.  
   
  SYNCHRONOUS_COMMIT  
@@ -292,7 +292,16 @@ ALTER AVAILABILITY GROUP group_name
   
  ASYNCHRONOUS_COMMIT  
  Especifica se a réplica primária confirma transações sem esperar que essa réplica secundária fortaleça o log (modo de disponibilidade de confirmação síncrona). Você pode especificar ASYNCHRONOUS_COMMIT para até cinco réplicas de disponibilidade, inclusive a réplica primária.  
-  
+
+ CONFIGURATION_ONLY Especifica que a réplica primária sincronicamente confirmar metadados de configuração do grupo de disponibilidade para o banco de dados mestre nesta réplica. A réplica não conterão dados de usuário. Essa opção:
+
+- Pode ser hospedado em qualquer edição do SQL Server, inclusive a Express Edition.
+- Requer que os dados de espelhamento de ponto de extremidade da réplica seja de tipo CONFIGURATION_ONLY `WITNESS`.
+- Não pode ser alterado.
+- Não é válida quando `CLUSTER_TYPE = WSFC`. 
+
+   Para obter mais informações, consulte [única réplica de configuração](../../linux/sql-server-linux-availability-group-ha.md).
+    
  AVAILABILITY_MODE é necessário na cláusula ADD REPLICA ON e opcional na cláusula MODIFY REPLICA ON. Para obter mais informações, veja [Modos de disponibilidade &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  FAILOVER_MODE  **=**  {AUTOMÁTICA | MANUAL}  
@@ -600,7 +609,7 @@ ALTER AVAILABILITY GROUP group_name
 ###  <a name="Join_Secondary_Replica"></a> A. Unindo uma réplica secundária a um grupo de disponibilidade  
  O exemplo a seguir une a réplica secundária à qual você está conectado para o `AccountsAG` grupo de disponibilidade.  
   
-```  
+```SQL  
 ALTER AVAILABILITY GROUP AccountsAG JOIN;  
 GO  
 ```  
@@ -608,7 +617,7 @@ GO
 ###  <a name="Force_Failover"></a> B. Forçando failover de um grupo de disponibilidade  
  O exemplo a seguir força o failover do grupo de disponibilidade `AccountsAG` para a réplica secundária à qual você está conectado.  
   
-```  
+```SQL
 ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
 GO  
 ```  
@@ -624,4 +633,3 @@ GO
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-

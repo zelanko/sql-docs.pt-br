@@ -5,33 +5,29 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.computermgr.cert.general.f1
-helpviewer_keywords:
-- MSSQLSERVER property protocols
+f1_keywords: sql13.swb.computermgr.cert.general.f1
+helpviewer_keywords: MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f4d1f8c396155a371e96255503844e6bdf0d16d7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 71fbfe0f85936f3db04c527291e1baa0064dc1f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# Protocolos para propriedades MSSQLSERVER (guia Certificado)
+# <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Protocolos para propriedades MSSQLSERVER (guia Certificado)
   Use a guia **Certificado** na caixa de diálogo **Protocolos para Propriedades MSSQLSERVER** para selecionar um certificado para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou para exibir as propriedades de um certificado. Todos os campos estarão em branco até que um certificado seja selecionado.  
   
  Os certificados são armazenados localmente para os usuários no computador. Para carregar um certificado a ser usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessário estar executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager sob a mesma conta de usuário que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Cabeçalho de página  
+## <a name="page-header"></a>Cabeçalho de página  
  **Exibição**  
  Fornece acesso a detalhes adicionais no certificado. Não disponível até que um certificado seja selecionado na caixa **Certificado** . Para obter informações adicionais sobre detalhes do certificado, consulte a documentação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
@@ -41,7 +37,7 @@ ms.lasthandoff: 08/02/2017
  **Certificado**  
  Nome do certificado, conforme determinado pelo provedor de segurança. Selecione um certificado para ver os detalhes na grade de propriedades.  
   
-## Opções  
+## <a name="options"></a>Opções  
  Data de Validade  
  A data final do período de validade do certificado.  
   
@@ -55,4 +51,3 @@ ms.lasthandoff: 08/02/2017
  Informações relativas ao destinatário do certificado.  
   
   
-

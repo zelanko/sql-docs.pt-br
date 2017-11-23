@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - cursors [ODBC], cursor library
 - block cursors [ODBC]
 ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 96b3b09306c9e91b883fbb32b1fcc26afc53e315
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a6250d693414a9d63077bcc5e47438d847ae72ce
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-odbc-cursor-library"></a>A biblioteca de cursores ODBC
 > [!IMPORTANT]  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  Bloco e cursores roláveis são adições muito útil para muitos aplicativos. No entanto, nem todos os drivers dão suporte a bloco e cursores roláveis. O mesmo é verdadeiro para atualização posicionada e instruções delete e **SQLSetPos**, que são abordadas na atualização de dados. Portanto, o componente ODBC do SDK do Windows, anteriormente incluída no Microsoft Data Access Components (MDAC) SDK, inclui uma biblioteca de cursor. A biblioteca de cursores implementa bloco, Cursores estáticos, posicionada instruções update e delete, e **SQLSetPos** para qualquer driver que atende o nível de conformidade de CLI de padrão de grupo aberto. A biblioteca de cursores pode ser redistribuída com aplicativos de ODBC. Consulte o contrato de licença no SDK para obter mais informações.  
   
  Para usar a biblioteca de cursores, um aplicativo define o atributo de conexão SQL_ATTR_ODBC_CURSORS antes de se conectar à fonte de dados. Para obter mais informações sobre a biblioteca de cursores, consulte [biblioteca de cursores de ODBC apêndice f:](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md).
-

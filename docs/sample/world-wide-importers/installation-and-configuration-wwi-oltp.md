@@ -1,30 +1,31 @@
 ---
 title: "Instalação e configuração | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: ef13bdeef7991953bf910b97a220a3edc824ce4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3b4a02b7b8c17f6bd5a75714a8fc3357dcfbd9a3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-and-configuration"></a>Instalação e configuração
-Wide World Importers OLTP instruções de instalação e configuração do banco de dados.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers OLTP instruções de instalação e configuração do banco de dados.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -96,5 +97,4 @@ Aplica-se a: banco de dados SQL do Azure
 Segurança em nível de linha não está habilitada por padrão no download do bacpac de WideWorldImporters. Para habilitar a segurança em nível de linha no banco de dados, execute o seguinte procedimento armazenado:
 
     EXECUTE [Application].[Configuration_ApplyAuditing]
-
 

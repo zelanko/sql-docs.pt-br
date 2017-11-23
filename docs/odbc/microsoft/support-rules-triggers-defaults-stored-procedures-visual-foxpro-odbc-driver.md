@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f1592db374d02534121ed75cfe8e07429f1aacac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e11b18afb96c7e5c1dc6ef6c23fc56cd3a75548e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Suporte para regras e procedimentos armazenados (do Visual FoxPro ODBC Driver), valores padrão e gatilhos
 Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou procedimentos armazenados usando o Driver de ODBC do Visual FoxPro. No entanto, seu aplicativo pode interagir com as regras existentes, gatilhos, valores padrão ou procedimentos armazenados que insere, atualiza ou exclui do Visual FoxPro dados armazenados em um banco de dados.  
@@ -292,4 +290,3 @@ Você não pode criar regras do Visual FoxPro, gatilhos, valores padrão ou proc
 ||||  
 |-|-|-|  
 |Comando ZAP|||
-

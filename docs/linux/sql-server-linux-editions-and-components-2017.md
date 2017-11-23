@@ -31,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edições e recursos com suporte do SQL Server 2017 no Linux
 
@@ -49,7 +48,7 @@ Este artigo fornece detalhes dos recursos suportados pelas várias edições do 
 Os requisitos de instalação variam de acordo com as necessidades do aplicativo. As diferentes edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acomodam desempenho, tempo de execução e requisitos de preço exclusivos para organizações e indivíduos. Os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que você instala dependem também dos seus requisitos específicos. As seções a seguir ajudarão você a entender como fazer a melhor escolha entre as edições e os componentes disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 Para notas de versão mais recentes e informações sobre novidades, consulte o seguinte:
-- [Notas de versão do Linux do SQL Server](sql-server-linux-release-notes.md)
+- [Notas de versão do SQL Server no Linux](sql-server-linux-release-notes.md)
 - [O que há de novo no SQL Server no Linux](sql-server-linux-whats-new.md)
 
 Para obter uma lista dos recursos do SQL Server não está disponíveis no Linux, consulte [sem suporte a recursos e serviços](sql-server-linux-release-notes.md#Unsupported).
@@ -121,11 +120,11 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Backup criptografado|Sim|Sim|Não|Não|
 |Backup híbrido para o Microsoft Azure (backup para URL)|Sim|Sim|Não|Não|
   
-<sup>1</sup> no Enterprise edition, o número de nós é o máximo do sistema operacional. Na edição Standard há suporte para dois nós. 
+<sup>1</sup> no Enterprise edition, o número de nós é o máximo do sistema operacional. Na Standard Edition, há suporte para dois nós. 
 
 <sup>2</sup> na Enterprise edition, oferece suporte para até 8 réplicas secundárias - incluindo 2 réplicas secundárias síncronas. 
 
-<sup>3</sup> standard edition oferece suporte a grupos de disponibilidade básica. Um grupo de disponibilidade básica oferece suporte a duas réplicas, com um banco de dados. Para obter mais informações sobre grupos de disponibilidade básica, consulte [grupos de disponibilidade básicos](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> standard edition oferece suporte a grupos de disponibilidade básica. Um grupo de disponibilidade básico dá suporte a duas réplicas, com um banco de dados. Para obter mais informações sobre grupos de disponibilidade básicos, consulte [Grupos de Disponibilidade Básicos](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> Escalabilidade e desempenho do RDBMS  
   
@@ -229,4 +228,3 @@ Para obter informações sobre os recursos do Integration Services (SSIS) com su
 
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Path Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Path Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Path
-helpviewer_keywords:
-- Path element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Path
+helpviewer_keywords: Path element
 ms.assetid: 0edc59ac-1671-4fe1-9b7c-6c1548df5c63
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a0923ff4ef757d1b03d7e3bff75a9de7cc3201f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f174caeb72d2a917be4c1e76c0bc1aa9b1b7e7dc
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="path-element-assl"></a>Elemento Path (ASSL)
   Contém o caminho, conforme fornecido por uma instância de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], de um relatório usado pelo [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) elemento.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

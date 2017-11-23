@@ -3,10 +3,12 @@ title: CRIAR chave de criptografia de banco de dados (Transact-SQL) | Microsoft 
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
+ms.prod_service: pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,27 +22,25 @@ f1_keywords:
 - sql13.swb.dbencryptionkeyg.f1
 - CREATE DATABASE ENCRYPTION
 - CREATE_DATABASE_ENCRYPTION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - database encryption key
 - CREATE DATABASE ENCRYPTION KEY statement
 - database encryption key, create
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "30"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b108a5cddba7052d177760374d8c5047b28fb25c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 559e85cf5ba8e565a6afc86d3537b476365bd980
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
  Cria uma chave de criptografia que é usada para criptografar um banco de dados de maneira transparente. Para obter mais informações sobre criptografia de banco de dados transparente, consulte [Transparent Data Encryption &#40; TDE &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -110,20 +110,6 @@ ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
 GO  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Para obter exemplos adicionais usando a TDE, consulte [criptografia transparente de dados (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d).  
-  
-O exemplo a seguir cria uma chave de criptografia de banco de dados denominada `AES_256` e protege a chave privada com um certificado denominado `MyServerCert`.  
-  
-```  
--- Uses AdventureWorks  
-  
-CREATE DATABASE ENCRYPTION KEY  
-WITH ALGORITHM = AES_256  
-ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
-GO  
-```  
-  
 ## <a name="see-also"></a>Consulte também  
 [TDE &#40;Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
 [Criptografia do SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)   
@@ -134,4 +120,3 @@ GO
 [Remova a chave de criptografia de banco de dados &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
 [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
     
-

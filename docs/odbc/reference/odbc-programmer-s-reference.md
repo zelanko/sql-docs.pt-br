@@ -1,5 +1,5 @@
 ---
-title: "ODBC programador & #39; referência de s | Microsoft Docs"
+title: "ODBC programador referência de | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], reference
+helpviewer_keywords: ODBC [ODBC], reference
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3c5440b6cfc25665156986a0aed99a1fa05e16be
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="odbc-programmer39s-reference"></a>O programador ODBC & #39; s referência
+# <a name="odbc-programmer39s-reference"></a>O programador ODBC referência
 O *referência do programador de ODBC* contém as seções a seguir.  
   
 -   [O que há de novo no ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) lista os novos recursos ODBC que foram incluídos no SDK do Windows 8.  
@@ -130,4 +127,3 @@ O *referência do programador de ODBC* contém as seções a seguir.
 -   Welch, Keith: *usando o ODBC 2* (Que, 1994).  
   
 -   Whiting, fatura: *Aprenda ODBC em 21 dias* (Howard W. Sams & empresa, 1994).
-

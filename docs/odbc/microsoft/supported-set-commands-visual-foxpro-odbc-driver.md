@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver [ODBC], SET commands
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eaa08d220f854e983743e26ad94e7af7f306158a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db557f215db12f95c2dd0a44a8448a138dac3856
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Com suporte do conjunto de comandos (Driver ODBC do Visual FoxPro)
 O aplicativo pode enviar a seguir do Visual FoxPro **definir** comandos para uma fonte de dados:  
@@ -55,4 +53,3 @@ O aplicativo pode enviar a seguir do Visual FoxPro **definir** comandos para uma
  [REPROCESSAMENTO DE CONJUNTO](../../odbc/microsoft/set-reprocess-command.md)  
   
  [CONJUNTO EXCLUSIVO](../../odbc/microsoft/set-unique-command.md)
-

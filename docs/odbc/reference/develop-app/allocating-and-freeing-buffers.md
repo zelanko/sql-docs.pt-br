@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e8bd2822a1892c967a23e3cdf62753f43952c1c7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73689fb95eb9b51e7f5f16b10c43256ef63f8dd2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="allocating-and-freeing-buffers"></a>Alocar e liberar Buffers
 Todos os buffers são alocados e liberados pelo aplicativo. Se um buffer não é adiado, ele precisa existir somente para a duração da chamada para uma função. Por exemplo, **SQLGetInfo** retorna o valor associado com uma opção específica no buffer apontado pelo *InfoValuePtr* argumento. Esse buffer pode ser liberado imediatamente após a chamada a **SQLGetInfo**, conforme mostrado no exemplo de código a seguir:  
@@ -98,4 +96,3 @@ void BindAColumn(SQLHSTMT hstmt)  // WARNING! This function won't work!
    // ValuePtr is freed when BindAColumn exits.  
 }  
 ```
-

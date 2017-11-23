@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: 
 ms.workload: Inactive
+ms.openlocfilehash: e501fb2cd76e897e3be50493ec4a87d149de14a6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: eaf6ab8c21c6a0685886d2c031434a68ff2cb8b8
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Automatizar a migração de banco de dados para o Linux com o SQL Server Migration Assistant
 
@@ -48,5 +47,4 @@ Em seguida, execute o [Migration Assistant SSMA (SQL Server)](http://msdn.micros
 ## <a name="see-also"></a>Consulte também
 - [Blog de migração de dados da Microsoft](http://blogs.msdn.microsoft.com/datamigration)
 - [Blog do SQL Server Migration Assistant (SSMA)](http://blogs.msdn.microsoft.com/ssma/)
-
 

@@ -16,8 +16,7 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER_MINING_STRUCTURE
 - ALTER MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining structures [DMX], creating
 - WITH DRILLTHROUGH clause
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - parameter lists [DMX]
 - ALTER MINING STRUCTURE statement
 ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1e835c27541ab59fc6913b31600cd5804ea99f6b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7ad24d223012bb301abc57f2fb48f34e112a7647
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -143,7 +141,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREVER**|Esta coluna pode ser prevista pelo modelo e seus valores podem ser usados como entrada para prever o valor de outras colunas de previsão.|  
+|**PREDICT**|Esta coluna pode ser prevista pelo modelo e seus valores podem ser usados como entrada para prever o valor de outras colunas de previsão.|  
 |**PREDICT_ONLY**|Esta coluna pode ser prevista pelo modelo, mas seus valores não podem ser usados em casos de entrada para prever o valor de outras colunas de previsão.|  
   
 ## <a name="filter-criteria-expressions"></a>Expressões de critérios de filtro  
@@ -228,4 +226,3 @@ USING Microsoft_Decision Trees
  [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

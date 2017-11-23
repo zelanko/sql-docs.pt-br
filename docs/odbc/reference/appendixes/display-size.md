@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC], display size
 - SQL data types [ODBC], column characteristics
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9facf94a89033e4bc765439d45b897a96ba7bf88
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3faac66828cdc408f9bd153377a3aefe74b882b0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="display-size"></a>Tamanho de exibição
 O tamanho de exibição de uma coluna é o número máximo de caracteres necessários para exibir dados em formato de caractere. A tabela a seguir define o tamanho de exibição para cada tipo de dados SQL ODBC.  
@@ -52,4 +50,3 @@ O tamanho de exibição de uma coluna é o número máximo de caracteres necess�
 |SQL_GUID|36 (o número de caracteres a *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato|  
   
  [a] se o driver não pode determinar o comprimento de coluna ou parâmetro de tipos de variáveis, ela retornará SQL_NO_TOTAL.
-

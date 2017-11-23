@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: dea846a3de7ce7ad60f46d58239e0d5fce9a9af7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4bb8091460427468705575dd00b8f41138ac3134
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Trabalhando com o SSMA para o Console do Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Versão do Migration Assistant (SSMA) para Oracle agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script de entrada para o aplicativo para executar os comandos de formulário. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -31,7 +29,7 @@ Os tópicos abordados nesta seção incluem:
   
 |||  
 |-|-|  
-|**Tópicos**|**Descrição**|  
+|**Tópicos**|**Description**|  
 |[Guia de Introdução com o SSMA para Console do Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Explica o procedimento para executar o aplicativo de console.|  
 |[Opções de linha de comando no Console do SSMA &#40; OracleToSQL &#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Descreve as opções de linha de comando e os parâmetros para operar o aplicativo de console SSMA.|  
 |[Criando arquivos de Script &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Explica como criar um arquivo de script.|  
@@ -46,4 +44,3 @@ Os tópicos abordados nesta seção incluem:
 ## <a name="see-also"></a>Consulte também  
 [Guia de Introdução com o SSMA para o Console do Oracle](http://msdn.microsoft.com/en-us/667a5e4a-6848-4973-a72d-1287f64718ac)  
   
-

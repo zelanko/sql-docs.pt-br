@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STNumPoints_TSQL
 - STNumPoints (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STNumPoints (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STNumPoints (geometry Data Type)
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3f14dac25ae563abd3c390c670697c68824baad
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 17dc20837c72439fc79fec62170edfb8eca34d9a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -62,7 +58,6 @@ SELECT @g.STNumPoints();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-

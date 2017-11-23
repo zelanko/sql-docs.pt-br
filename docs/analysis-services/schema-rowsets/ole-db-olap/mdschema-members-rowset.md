@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEMBERS
+apiname: MDSCHEMA_MEMBERS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEMBERS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a5ac98919c5ac10900eb69c9fe7319c6e8b22a75
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d1402e80fc0746407e4057916adebd0cc373577b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemamembers-rowset"></a>Conjunto de linhas MDSCHEMA_MEMBERS
   Descreve os membros dentro de um banco de dados.  
@@ -88,7 +84,6 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) A restrição padrão é um valor de 1. Um bitmap com um dos seguintes valores válidos:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSÃO|  
   
 ## <a name="see-also"></a>Consulte também  
- [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

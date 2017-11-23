@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], application types
 - application compatibility issues [ODBC]
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3cca547e091ffdd601550b5cfb4ddb6b078f0900
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-applications"></a>Tipos de aplicativos
 Aplicativos ODBC podem ser classificados da seguinte maneira:  
@@ -88,4 +86,3 @@ Aplicativos ODBC podem ser classificados da seguinte maneira:
     -   Usa os novos recursos em uma versão posterior do ODBC somente dentro do código condicional.  
   
     -   Limitou condicional código para tratar alterações de comportamento ou foi registrado para ser uma versão anterior do aplicativo de ODBC.
-

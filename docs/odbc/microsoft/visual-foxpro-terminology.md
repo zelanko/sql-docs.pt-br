@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], glossary
 - FoxPro ODBC driver [ODBC], glossary
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe5c5f616bf90ad4ba3a011726d5e00022a1e9a6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7204f0e0185373d88606fb01a5d3382a23dd91a1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="visual-foxpro-terminology"></a>Terminologia do Visual FoxPro
 **database**  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
  No Visual FoxPro, os registros são armazenados em uma tabela. Cada linha de uma tabela representa um registro, e as colunas da tabela representam os campos do registro. Cada tabela do Visual FoxPro é armazenada em seu próprio arquivo com uma extensão. dbf. Tabelas do Visual FoxPro podem ser associadas um banco de dados.  
   
  FoxPro versão 2. *x* tabelas não estão associadas um banco de dados.
-

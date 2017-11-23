@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_PROVIDER_TYPES
+apiname: DBSCHEMA_PROVIDER_TYPES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_PROVIDER_TYPES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3de186cec4b3299bbdc43cf2fe63c806c228cb66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6906aec1d1c1dd53b8c833d59483aa0453cf284b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>Conjunto de linhas DBSCHEMA_PROVIDER_TYPES
   Identifica os tipos de dados (base) suportados pelo provedor de dados.  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |**MAXIMUM_SCALE**|**DBTYPE_I2**|O número máximo de dígitos permitidos à direita do separador decimal quando o indicador de tipo é **DBTYPE_VARNUMERIC**, **DBTYPE_DECIMAL**ou **DBTYPE_NUMERIC**; caso contrário, N**U**LL.|  
 |**GUID**|**DBTYPE_GUID**|(Para uso futuro) O **GUID** do tipo, se o tipo for descrito em uma biblioteca de tipos. Caso contrário, **NULL**.|  
 |**TYPELIB**|**DBTYPE_WSTR**|(Para uso futuro) A biblioteca de tipos que contém a descrição do tipo, se o tipo for descrito em uma biblioteca de tipos. Caso contrário, NULL.|  
-|**VERSÃO**|**DBTYPE_WSTR**|(Para uso futuro) A versão da definição de tipo. Talvez os provedores queiram obter definições de tipo de versão. Provedores diferentes podem usar esquemas de controle de versão diferentes, tais como um carimbo de data/hora ou número (inteiro ou float). **NULL** se não tiver suporte.|  
+|**VERSION**|**DBTYPE_WSTR**|(Para uso futuro) A versão da definição de tipo. Talvez os provedores queiram obter definições de tipo de versão. Provedores diferentes podem usar esquemas de controle de versão diferentes, tais como um carimbo de data/hora ou número (inteiro ou float). **NULL** se não tiver suporte.|  
 |**IS_LONG**|**DBTYPE_BOOL**|Um Booliano que indica se o tipo de dados é um objeto binário grande (BLOB) e se tem dados muito longos.<br /><br /> **VARIANT_TRUE** indica que o tipo de dados é um **BLOB** que contém dados muito longos; a definição de dados muito longos é específica do provedor.<br /><br /> **VARIANT_FALSE** indica que o tipo de dados é um **BLOB** que não contém dados muito longos ou não é um **BLOB**.<br /><br /> Este valor determina a configuração do sinalizador **DBCOLUMNFLAGS_ISLONG** retornada por **GetColumnInfo** em **IColumnsInfo** e **GetParameterInfo** em **ICommandWithParameters**.|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|Um Booliano que indica se o tipo de dados é a melhor correspondência.<br /><br /> **VARIANT_TRUE** indica que o tipo de dados é a melhor correspondência entre todos os tipos de dados do repositório de dados e o tipo de dados OLE DB indicado pelo valor na coluna **DATA_TYPE** .<br /><br /> **VARIANT_FALSE** indica que o tipo de dados não é a melhor correspondência.<br /><br /> Para cada conjunto de linhas no qual o valor da coluna **DATA_TYPE** for idêntico, a coluna **BEST_MATCH** será definida como **VARIANT_TRUE** em apenas uma linha.|  
 |**IS_FIXEDLENGTH**|**DBTYPE_BOOL**|Um Booliano que indica se a coluna tem um comprimento fixo.<br /><br /> **VARIANT_TRUE** indica que colunas deste tipo criadas pela linguagem de definição de dados (DDL) terão um comprimento fixo.<br /><br /> **VARIANT_FALSE** indica que colunas deste tipo, criadas pela DDL, terão comprimento variável.<br /><br /> Se o campo for **NULL**, será desconhecido se o provedor mapeará esse campo com uma coluna de comprimento fixo ou variável.|  
@@ -77,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Conjuntos de linhas do esquema OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

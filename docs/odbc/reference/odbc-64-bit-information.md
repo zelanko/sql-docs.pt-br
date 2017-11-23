@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 027c953dd10145318e764959a42911fb0b413d03
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e19cb2defa4e2e0e17f94b32af8f94606759f2ab
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-64-bit-information"></a>Informações de 64 bits do ODBC
 Começando com o Windows Server 2003, sistemas operacionais da Microsoft têm suporte para as bibliotecas ODBC de 64 bits. Os cabeçalhos ODBC e bibliotecas fornecidas inicialmente com o SDK do MDAC 2.7 contêm alterações para permitir que os programadores a escrever código para novas plataformas de 64 bits. Assegurando que seu código usa os tipos ODBC definido listados abaixo, você pode compilar o código-fonte para plataformas de 64 bits e 32 bits baseadas no mesmo o **Win64** ou **WIN32** macros.  
@@ -506,4 +504,3 @@ typedef SQLULEN BOOKMARK;
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução ao ODBC](../../odbc/reference/introduction-to-odbc.md)
-

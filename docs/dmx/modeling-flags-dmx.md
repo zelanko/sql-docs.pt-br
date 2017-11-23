@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - REGRESSOR flag
 - DMX [Analysis Services], modeling flags
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - flags [DMX]
 - NOT NULL flag
 ms.assetid: 498d25f7-9597-47ae-8717-61ddd1d2fd15
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8db8cd9de8d614c3b44bb2012dfbc5b33448807c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce032085f10db22608aee69b886724309e83506b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="modeling-flags-dmx"></a>Sinalizadores de modelagem (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/02/2017
   
  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece suporte aos seguintes sinalizadores de modelagem:  
   
- **NÃO NULO**  
+ **NOT NULL**  
  Os valores da coluna de atributo não devem jamais conter um valor nulo. Ocorrerá um erro se o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encontrar um valor nulo nessa coluna de atributo durante o processo de treinamento do modelo. Esse sinalizador é definido em uma coluna de estrutura de mineração.  
   
  **REGRESSOR**  
@@ -72,7 +70,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  Para obter mais informações sobre como trabalhar com colunas do modelo de mineração, consulte [colunas do modelo de mineração](../analysis-services/data-mining/mining-model-columns.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40; Analysis Services – mineração de dados &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -81,7 +79,6 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [Extensões de mineração de dados &#40; DMX &#41; Convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Noções básicas sobre a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

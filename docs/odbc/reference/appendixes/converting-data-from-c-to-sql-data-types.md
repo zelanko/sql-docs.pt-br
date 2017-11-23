@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d3f3edee7f90920ad1d3ff68ccf3057a248b3b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8f3f8c3c62c7a4d4c6765d52c48d592ff92a21e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversão de dados de C para tipos de dados SQL
 Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recupera os dados para todos os parâmetros associados com **SQLBindParameter** em locais de armazenamento do o aplicativo. Quando um aplicativo chama **SQLSetPos**, o driver recupera os dados para uma atualização ou operação de adição de colunas associadas a **SQLBindCol**. Para parâmetros de dados em execução, o aplicativo envia os dados de parâmetro com **SQLPutData**. Se necessário, o driver converterá os dados do tipo de dados especificado pelo *ValueType* argumento **SQLBindParameter** para o tipo de dados especificado pelo *ParameterType*argumento **SQLBindParameter**e, em seguida, envia os dados para a fonte de dados.  
@@ -86,4 +84,3 @@ Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recuper
 -   [C to SQL: intervalos de tempo-dia](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
 -   [Exemplos de conversão de dados C to SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
-

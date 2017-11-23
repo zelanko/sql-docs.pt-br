@@ -8,28 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - symmetric keys [SQL Server], permissions
 - permissions [SQL Server], symmetric keys
 - REVOKE statement, symmetric keys
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8a700868c11a26597509fe675f7de675084b5ecc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cf946b948a1bd79fbcf017833e708e545c6ffba5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>Permissões de chave simétrica REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -135,14 +132,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [symmetric_keys & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [CONCEDER permissões de chave simétrica & #40; Transact-SQL & #41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [Negar permissões de chave simétrica & #40; Transact-SQL & #41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
+ [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [CONCEDER permissões de chave simétrica &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [Negar permissões de chave simétrica &#40; Transact-SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-
 

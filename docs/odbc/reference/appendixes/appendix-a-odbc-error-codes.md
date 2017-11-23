@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - error codes [ODBC], SQLSTATE
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1117eac94fdad6d90fda688f1a324608f0b37dad
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 725d16d6326d5fb99ce8d923bd35c64351b3e6cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Apêndice A: Códigos de erro ODBC
 Este tópico discute os valores de SQLSTATE para ODBC 3. *x*. Para obter mais informações sobre ODBC 3. *x* valores SQLSTATE, consulte [mapeamentos de SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
@@ -158,4 +156,3 @@ Este tópico discute os valores de SQLSTATE para ODBC 3. *x*. Para obter mais in
 |IM013|Erro de arquivo de rastreamento|Todas as funções ODBC.|  
 |IM014|Nome inválido de DSN de arquivo|**SQLDriverConnect**|  
 |IM015|Fonte de dados de arquivo corrompido|**SQLDriverConnect**|
-

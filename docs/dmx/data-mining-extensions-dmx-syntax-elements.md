@@ -13,25 +13,23 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], syntax elements
 - syntax elements [DMX]
 - statements [DMX], syntax elements
 - DMX [Analysis Services], syntax elements
 ms.assetid: 25e45fa4-6409-47e0-a888-4af26d1c69b0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b15d438073fa4fb6633e2b5cee7e9710487e5c4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 08a8b7863bfc6f680685b910d04ce1af91108a2a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementos de sintaxe de DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +78,6 @@ ms.lasthandoff: 08/02/2017
  [Extensões de mineração de dados &#40; DMX &#41; Convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Noções básicas sobre a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-
