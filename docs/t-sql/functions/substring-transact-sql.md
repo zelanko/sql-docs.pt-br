@@ -38,8 +38,9 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/01/2017
 
 ---
+
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna parte de uma expressão de caractere, binária, de texto ou de imagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -48,18 +49,18 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-SUBSTRING ( expression ,start , length )  
+SUBSTRING (expressão, início, comprimento)  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *expressão*  
- É um **caracteres**, **binário**, **texto**, **ntext**, ou **imagem**[deexpressão](../../t-sql/language-elements/expressions-transact-sql.md).  
+ *Expressão*  
+ É um **caractere**, **binário**, **texto**, **ntext**, ou **imagem** de [expressão](../../t-sql/language-elements/expressions-transact-sql.md). 
   
- *Iniciar*  
- É um número inteiro ou **bigint** expressão que especifica onde os caracteres retornados devem iniciar. (A numeração é 1 com base, significando que o primeiro caractere da expressão é 1). Se *iniciar* é menor que 1, a expressão retornada começará no primeiro caractere que é especificado em *expressão*. Nesse caso, o número de caracteres que são retornados é o maior valor de soma de *iniciar* + *comprimento*- 1 ou 0. Se *iniciar* é maior que o número de caracteres na expressão de valor, uma expressão de comprimento zero será retornada.  
+ *Início*  
+ É um número inteiro ou **bigint** que especifica onde os caracteres retornados devem iniciar. (A numeração é 1 base, significando que o primeiro caractere da expressão é 1). Se *início* é menor que 1, a expressão retornada começará no primeiro caractere que é especificado em *expressão*. Nesse caso, o número de caracteres que são retornados é o maior valor de soma de *início* + *comprimento*- 1 ou 0. Se *início* é maior que o número de caracteres na expressão de valor, uma expressão de comprimento zero será retornada.  
   
- *length*  
- É um inteiro positivo ou **bigint** que especifica quantos caracteres da expressão de *expressão* será retornado. Se *comprimento* é negativo, um erro será gerado e a instrução é encerrada. Se a soma de *iniciar* e *comprimento* é maior que o número de caracteres em *expressão*, a expressão de valor inteiro, começando no *iniciar*será retornado.  
+ *Comprimento*  
+ É um inteiro positivo ou **bigint** que especifica quantos caracteres da expressão de *expressão* serão retornados. Se o *comprimento* for negativo, um erro será gerado e a instrução será encerrada. Se a soma de *início* e *comprimento* for maior do que o número de caracteres em *expressão*, a expressão de valor inteiro, começando no *início*, será retornada.   
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna dados de caractere se *expressão* é um dos tipos de dados de caracteres com suporte. Retorna dados binários se *expressão* é um com suporte **binário** tipos de dados. A cadeia de caracteres retornada é do mesmo tipo que a expressão especificada com as exceções mostradas na tabela.  
@@ -71,17 +72,17 @@ SUBSTRING ( expression ,start , length )
 |**binário**/**varbinary**/**imagem**|**varbinary**|  
   
 ## <a name="remarks"></a>Comentários  
- Os valores para *iniciar* e *comprimento* deve ser especificado em número de caracteres para **ntext**, **char**, ou **varchar**  tipos de dados e de bytes para **texto**, **imagem**, **binário**, ou **varbinary** tipos de dados.  
+ Os valores para *início* e *comprimento* devem ser especificados em número de caracteres para tipos de dados **ntext**, **char**, ou **varchar** e bytes para **texto**, **imagem**, **binário** ou **varbinary**.   
   
- O *expressão* devem ser **varchar (max)** ou **varbinary (max)** quando o *iniciar* ou *comprimento* contém um valor maior que 2147483647.  
+ A *expressão* deve ser **varchar (max)** ou **varbinary (max)** quando o *início* ou *comprimento* contém um valor maior que 2147483647.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar agrupamentos de caracteres suplementares (SC), ambos *iniciar* e *comprimento* contarão cada par substituto *expressão* como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Ao usar agrupamentos de caracteres suplementares (SC), tanto *início* quanto *comprimento* contarão cada par substituto de *expressão* como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).   
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-substring-with-a-character-string"></a>A. Usando SUBSTRING com uma cadeia de caracteres  
- O exemplo a seguir mostra como retornar somente uma parte de uma cadeia de caracteres. Do `sys.databases` tabela, esta consulta retorna o sistema de nomes de banco de dados na primeira coluna, a primeira letra do banco de dados na segunda coluna e os terceiros e quarto caracteres na coluna final.  
+ O exemplo a seguir mostra como retornar somente uma parte de uma cadeia de caracteres. Na tabela `sys.databases`, esta consulta retorna os nomes dos bancos de dados do sistema na primeira coluna, a primeira letra do banco de dados na segunda coluna e o terceiro e o quarto caracteres na coluna final.   
   
 ```  
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
@@ -92,12 +93,12 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|name |Inicial |ThirdAndFourthCharacters|
+|nome |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|mestre  |m  |ST |
-|tempdb  |t  |pacote de gerenciamento |
+|mestre  |m  |st |
+|tempdb  |t  |mp |
 |modelo   |m  |de |
-|msdb    |m  |banco de dados |
+|msdb    |m  |db |
 
 
   
@@ -122,7 +123,7 @@ bcd
 > [!NOTE]  
 >  Para executar os exemplos a seguir, você deve instalar o **pubs** banco de dados.  
   
- O exemplo a seguir mostra como retornar os 10 primeiros caracteres de cada um **texto** e **imagem** coluna de dados no `pub_info` tabela do `pubs` banco de dados. **texto** dados são retornados como **varchar**, e **imagem** dados são retornados como **varbinary**.  
+ O exemplo a seguir mostra como retornar os 10 primeiros caracteres de cada coluna de dados de **texto** e **imagem** na tabela `pub_info`do banco de dados `pubs`. Os dados de **texto** são retornados como **varchar** e os dados de **imagem** são retornadas como **varbinary**.  
   
 ```  
 USE pubs;  
@@ -142,7 +143,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- O exemplo a seguir mostra o efeito de SUBSTRING em ambos os **texto** e **ntext** dados. Primeiro, este exemplo cria uma nova tabela no banco de dados `pubs` chamado `npub_info`. Depois, o exemplo cria a coluna `pr_info` na tabela `npub_info` com os primeiros 80 caracteres da coluna `pub_info.pr_info` e adiciona um `ü` como o primeiro caractere. Por fim, um `INNER JOIN` recupera todos os números de identificação de publicador e o `SUBSTRING` de ambos os **texto** e **ntext** colunas de informações do publicador.  
+ O exemplo a seguir mostra o efeito de SUBSTRING em ambos os tipos de dado **texto** e **ntext**. Primeiro, este exemplo cria uma nova tabela no banco de dados `pubs` chamado `npub_info`. Depois, o exemplo cria a coluna `pr_info` na tabela `npub_info` com os primeiros 80 caracteres da coluna `pub_info.pr_info` e adiciona um `ü` como o primeiro caractere. Por fim, um `INNER JOIN` recupera todos os números de identificação de publicador e o `SUBSTRING` de ambos os **texto** e **ntext** colunas de informações do publicador.  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
@@ -228,6 +229,7 @@ bcd
  [Funções de cadeia de caracteres &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
+
 
 
 
