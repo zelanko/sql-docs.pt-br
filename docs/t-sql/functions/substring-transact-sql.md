@@ -50,13 +50,13 @@ SUBSTRING (expressão, início, comprimento)
   
 ## <a name="arguments"></a>Argumentos  
  *Expressão*  
- É um **caracter**, **binário**, **texto**, **ntext**, ou **imagem** de [expressão](../../t-sql/language-elements/expressions-transact-sql.md).  
+ É um **caractere**, **binário**, **texto**, **ntext**, ou **imagem** de [expressão](../../t-sql/language-elements/expressions-transact-sql.md). 
   
  *Início*  
  É um número inteiro ou **bigint** que especifica onde os caracteres retornados devem iniciar. (A numeração é 1 base, significando que o primeiro caractere da expressão é 1). Se *início* é menor que 1, a expressão retornada começará no primeiro caractere que é especificado em *expressão*. Nesse caso, o número de caracteres que são retornados é o maior valor de soma de *início* + *comprimento*- 1 ou 0. Se *início* é maior que o número de caracteres na expressão de valor, uma expressão de comprimento zero será retornada.  
   
  *Comprimento*  
- É um inteiro positivo ou **bigint** que especifica quantos caracteres da expressão de *expressão* será retornado. Se *comprimento* é negativo, um erro será gerado e a instrução é encerrada. Se a soma de *início* e *comprimento* é maior que o número de caracteres em *expressão*, a expressão de valor inteiro começando no *início* será retornado.  
+ É um inteiro positivo ou **bigint** que especifica quantos caracteres da expressão de *expressão* serão retornados. Se o *comprimento* for negativo, um erro será gerado e a instrução será encerrada. Se a soma de *início* e *comprimento* for maior do que o número de caracteres em *expressão*, a expressão de valor inteiro, começando no *início*, será retornada.   
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna dados de caractere se *expressão* é um dos tipos de dados de caracteres com suporte. Retorna dados binários se *expressão* é um com suporte **binário** tipos de dados. A cadeia de caracteres retornada é do mesmo tipo que a expressão especificada com as exceções mostradas na tabela.  
@@ -68,17 +68,17 @@ SUBSTRING (expressão, início, comprimento)
 |**binário**/**varbinary**/**imagem**|**varbinary**|  
   
 ## <a name="remarks"></a>Comentários  
- Os valores para *início* e *comprimento* devem ser especificados em número de caracteres para **ntext**, **char**, ou **varchar**  e de bytes para **texto**, **imagem**, **binário**, ou **varbinary**.  
+ Os valores para *início* e *comprimento* devem ser especificados em número de caracteres para tipos de dados **ntext**, **char**, ou **varchar** e bytes para **texto**, **imagem**, **binário** ou **varbinary**.   
   
  A *expressão* deve ser **varchar (max)** ou **varbinary (max)** quando o *início* ou *comprimento* contém um valor maior que 2147483647.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- Ao usar agrupamentos de caracteres suplementares (SC), ambos *início* e *comprimento* contarão cada par substituto de *expressão* como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Ao usar agrupamentos de caracteres suplementares (SC), tanto *início* quanto *comprimento* contarão cada par substituto de *expressão* como um único caractere. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).   
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-substring-with-a-character-string"></a>A. Usando SUBSTRING com uma cadeia de caracteres  
- O exemplo a seguir mostra como retornar somente uma parte de uma cadeia de caracteres. Da tabela `sys.databases`, esta consulta retorna os nomes dos bancos de dados do sistema na primeira coluna, a primeira letra do banco de dados na segunda coluna e o terceiro e quarto caracteres na coluna final.  
+ O exemplo a seguir mostra como retornar somente uma parte de uma cadeia de caracteres. Na tabela `sys.databases`, esta consulta retorna os nomes dos bancos de dados do sistema na primeira coluna, a primeira letra do banco de dados na segunda coluna e o terceiro e o quarto caracteres na coluna final.   
   
 ```  
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
@@ -119,7 +119,7 @@ bcd
 > [!NOTE]  
 >  Para executar os exemplos a seguir, você deve instalar o **pubs** banco de dados.  
   
- O exemplo a seguir mostra como retornar os 10 primeiros caracteres de cada coluna de **texto** e **imagem** na tabela `pub_info`do banco de dados `pubs`. dados tipo **texto** são retornados como **varchar**, e **imagem** retornadas como **varbinary**.  
+ O exemplo a seguir mostra como retornar os 10 primeiros caracteres de cada coluna de dados de **texto** e **imagem** na tabela `pub_info`do banco de dados `pubs`. Os dados de **texto** são retornados como **varchar** e os dados de **imagem** são retornadas como **varbinary**.  
   
 ```  
 USE pubs;  
