@@ -2,9 +2,12 @@
 title: Importar documentos JSON para o SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dfd93090f4cec421d57ab993fc4e0d6f587ab426
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4482935894f2aa785814c1af430065920afe25b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON para o SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Este tópico descreve como importar arquivos JSON para o SQL Server. No momento, há muitos documentos JSON armazenados em arquivos. Informações de log de aplicativos em arquivos JSON, sensores que geram informações são armazenadas em arquivos JSON e assim por diante. É importante ser capaz de ler os dados JSON armazenados em arquivos, carregar os dados no SQL Server e analisá-los.
 

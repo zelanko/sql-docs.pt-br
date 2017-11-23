@@ -2,9 +2,12 @@
 title: "Bancos de dados relacionais do Microsoft SQL – orientação | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0ad6c0a663d8204152ec457e24dad3435a5d47bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 82285d59fa04d06f3a4aef08b3961de1ac26ca90
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Orientação sobre o uso dos bancos de dados relacionais do Microsoft SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Esta seção contém os recursos e as tarefas associadas aos bancos de dados, objetos de banco de dados, tipos de dados e os mecanismos do Microsoft SQL usados para trabalhar com dados ou gerenciá-los. Essas informações são comuns a maioria das versões do [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. Tópicos individuais podem indicar que alguns recursos são limitados a algumas plataformas. Para obter informações sobre uma plataforma específica, consulte os seguintes links: 
   

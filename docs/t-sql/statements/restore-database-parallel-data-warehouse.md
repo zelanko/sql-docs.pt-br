@@ -3,8 +3,11 @@ title: RESTAURAR banco de dados (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTAURAR o banco de dados (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Restaura um [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] banco de dados de usuário de um backup de banco de dados para um [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dispositivo. O banco de dados é restaurado de um backup que foi criado anteriormente a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP de banco de dados &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) comando. Use o backup e restaurar operações para criar um plano de recuperação de desastres, ou mover bancos de dados de um dispositivo para outro.  
   

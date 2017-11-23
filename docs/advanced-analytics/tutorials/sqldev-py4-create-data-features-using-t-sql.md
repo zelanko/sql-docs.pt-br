@@ -5,26 +5,23 @@ ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2017
+applies_to: SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/18/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>Etapa 4: Criar recursos de dados usando o T-SQL
 
@@ -128,6 +125,5 @@ A próxima etapa, você aprenderá como usar esses recursos de dados para criar 
 ## <a name="previous-step"></a>Etapa anterior
 
 [Etapa 3: Explorar e visualizar os dados](sqldev-py3-explore-and-visualize-the-data.md)
-
 
 

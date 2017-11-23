@@ -3,17 +3,18 @@ title: SUSER_SID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SUSER_SID
 - SUSER_SID_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - logins [SQL Server], users
 - SIDs [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - SUSER_SID function
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 77c7ab84b6fe936722f0b0c18ca889922485f1fd
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ab02d47027f970e05820bc377d72f60938b52b62
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o SID (número de identificação de segurança) para o nome de logon especificado.  
   
@@ -136,4 +136,3 @@ SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));
  [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
-

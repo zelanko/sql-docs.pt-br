@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataSource Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataSource Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#DataSource
 - http://schemas.microsoft.com/analysisservices/2003/engine#DataSource
 - microsoft.xml.analysis.datasource
-helpviewer_keywords:
-- DataSource element
+helpviewer_keywords: DataSource element
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5c38d2dadf0cf9499c8b9558f843b2f4c8b0b0a6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 53b11f7fa8fb80ec5ff6791922444873adb2230c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasource-element-xmla"></a>Elemento DataSource (XMLA)
   Contém uma ligação de fonte de dados fora de linha para o pai [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) ou [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) elemento.  
@@ -80,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

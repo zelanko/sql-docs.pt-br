@@ -3,8 +3,11 @@ title: "Disparar funções (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,7 +18,7 @@ ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
 caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="trigger-functions-transact-sql"></a>Funções de gatilho (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   As funções escalares a seguir podem ser usadas na definição de um gatilho para testar alterações em valores de dados ou retornar outros dados.  
   

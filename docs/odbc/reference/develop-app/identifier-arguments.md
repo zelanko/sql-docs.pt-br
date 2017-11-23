@@ -3,10 +3,12 @@ title: Argumentos de identificador | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifier-arguments"></a>Argumentos de identificador
 Se uma cadeia de caracteres em um argumento de identificador está entre aspas, o driver remove à esquerda e à direita de espaços em branco e literalmente trata a cadeia de caracteres entre aspas. Se a cadeia de caracteres não está entre aspas, o driver remove dobras e espaços em branco à direita a cadeia de caracteres em maiusculas. A definição de um argumento de identificador para um ponteiro nulo retornará SQL_ERROR e SQLSTATE HY009 (uso inválido de ponteiro nulo), a menos que o argumento é um nome de catálogo e não há suporte para catálogos.  
@@ -41,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Identificadores entre aspas são usados para distinguir um nome de coluna true de uma coluna pseudo o mesmo nome, como ROWID no Oracle. Se for passado "ROWID" em um argumento de uma função de catálogo, a função funcionarão com a coluna pseudo ROWID se ele existir. Se a coluna pseudo não existir, a função funciona apenas com a coluna "ROWID". Se ROWID é passado um argumento de uma função de catálogo, a função funciona apenas com a coluna ROWID.  
   
  Para obter mais informações sobre os identificadores entre aspas, consulte [identificadores entre aspas](../../../odbc/reference/develop-app/quoted-identifiers.md).
-

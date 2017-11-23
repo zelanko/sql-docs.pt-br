@@ -3,10 +3,12 @@ title: '&gt;(Maior que) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +18,24 @@ f1_keywords:
 - '>_TSQL'
 - Greater Than
 - '>'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5ca1c189b4548175fd1038b2c83bed87d768a776
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 20d07527184cd767723198509bff3b55b0562595
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt;(Maior que) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Compara duas expressões (um operador de comparação) no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ao comparar expressões não nulas, o resultado será TRUE se o operando da esquerda tiver um valor maior que o operando da direita; caso contrário, o resultado será FALSE. Se um ou ambos os operandos forem NULL, consulte o tópico [SET ANSI_NULLS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
@@ -107,4 +107,3 @@ TRUE
  [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

@@ -3,27 +3,28 @@ title: SQLConfigDataSource (Driver de arquivo de texto) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], Text File Driver
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22cbd006c0c499988b5552fb3057e4ce7af67c44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e781871cc8507d10617e1a147fa6d5a7c06ac756
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (Driver de arquivo de texto)
 > [!NOTE]  
@@ -45,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 |FORMAT|Para o driver de texto, pode ser FIXEDLENGTH, TABDELIMITED, CSVDELIMITED (por uma vírgula) ou DELIMITED() (pelo caractere especial especificado entre parênteses). O caractere especial é um caractere de comprimento e pode estar no formato de caractere, decimal ou hexadecimal.|  
 |MAXSCANROWS|O número de linhas a serem examinadas ao definir o tipo de dados da coluna com base em dados existentes.<br /><br /> Para o driver de texto, você pode inserir um número de 1 a 32767 para o número de linhas a serem examinadas; No entanto, o valor padrão será sempre 25. (Um número fora do limite retornará um erro.)<br /><br /> Isso define a mesma opção como **linhas a examinar** na caixa de diálogo de instalação.|  
 |READONLY|TRUE para tornar o arquivo somente leitura; FALSE para tornar o arquivo não é somente leitura.<br /><br /> Isso define a mesma opção como **somente leitura** na caixa de diálogo de instalação.|
-

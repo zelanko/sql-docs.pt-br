@@ -17,17 +17,16 @@ f1_keywords:
 - sql13.asvs.bidtoolset.createrelatdb.f1
 - sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7580e80413bc84d67ae6cc65c9a6c3d86f3f1603
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bc0373c1b0e018430106530da93107c600bbdee
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Criar uma relação entre duas tabelas (SSAS tabular)
   Se as tabelas da fonte de dados não tiverem relações existentes ou se você adicionar novas tabelas, será possível usar as ferramentas no designer de modelo para criar novas relações. Para obter informações sobre como as relações são usadas em modelos tabulares, consulte [Relações &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
@@ -83,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [Relações &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   
-

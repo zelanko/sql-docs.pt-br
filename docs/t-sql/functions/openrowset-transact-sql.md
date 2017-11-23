@@ -3,8 +3,11 @@ title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 caps.latest.revision: 130
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Inclui todas as informações de conexão exigidas para acessar dados remotos de uma fonte de dados OLE DB. Este método é uma alternativa para acessar tabelas em um servidor vinculado e se trata de um método de uso único e ad hoc para conexão e acesso a dados remotos por meio de OLE DB. Para mais referências frequentes a fontes de dados OLE DB, use servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). O `OPENROWSET` função pode ser referenciada na cláusula FROM de uma consulta como se fosse um nome de tabela. O `OPENROWSET` função também pode ser referenciada como a tabela de destino de um `INSERT`, `UPDATE`, ou `DELETE` instrução, sujeita aos recursos do provedor OLE DB. Embora a consulta pode retornar vários conjuntos de resultados, `OPENROWSET` retorna somente o primeiro deles.  
   

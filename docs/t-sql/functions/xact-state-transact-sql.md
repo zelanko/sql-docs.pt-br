@@ -3,17 +3,18 @@ title: XACT_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - XACT_STATE
 - XACT_STATE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - states [SQL Server], transactions
 - uncommittable transactions
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - transactions [SQL Server], state
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 81d8b98cf6f7ddd80e3952b82ae13cea75a81abd
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d5760cf8b2da0abea5505245681ae5164cbc9aca
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   É uma função escalar que informa o estado de transação de usuário de uma solicitação em execução atualmente. XACT_STATE indica se a solicitação tem uma transação de usuário ativa e se a transação consegue ser confirmada.  
   
@@ -119,4 +119,3 @@ GO
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   
-

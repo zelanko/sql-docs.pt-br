@@ -2,9 +2,12 @@
 title: "Solução de problemas de conexão com o Mecanismo de Banco de Dados do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 02/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 33ea706474d71f9424aa724f18f2febd69ae62d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Esta é uma lista extensa de técnicas de solução de problemas a serem usadas quando você não conseguir se conectar ao Mecanismo de Banco de Dados do SQL Server. Essas etapas não estão na ordem dos problemas mais prováveis, que você provavelmente já tentou. Essas etapas estão na ordem dos problemas mais básicos para os mais complexos. Essas etapas presumem que você está se conectando ao SQL Server de outro computador usando o protocolo TCP/IP, que é a situação mais comum. Essas etapas foram escritas para SQL Server 2016 com o SQL Server e os aplicativos clientes em execução no Windows 10, porém as etapas geralmente se aplicam a outras versões do SQL Server e outros sistemas operacionais com apenas ligeiras modificações.
 

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Consulta MDX e o eixo da segmentação de dados - especificar o conteúdo de um eixo do Slicer
   O eixo de slicer filtra os dados retornados pela instrução MDX SELECT, restringindo os dados retornados para que somente os dados da intersecção com os membros especificados sejam retornados. Pode ser considerado como um eixo adicional invisível em uma consulta. O eixo de slicer é definido na cláusula WHERE da instrução MDX SELECT.  
@@ -92,4 +91,3 @@ WHERE(
  Como mencionado antes, o uso de um conjunto na cláusula WHERE implicitamente agregará valores a todos os membros do conjunto. Nesse caso, a consulta mostra valores agregados para os Estados Unidos e o Reino Unido em cada célula.  
   
   
-

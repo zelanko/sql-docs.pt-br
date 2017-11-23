@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sybase Console,Sample Console Script Files
+helpviewer_keywords: Sybase Console,Sample Console Script Files
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6777922c0282df350ed0107dc3a37ef7102ef5d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cb3c0f4f2e9f57b10527b9e524eae10563efebe
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Trabalhando com os arquivos de Script do Console de exemplo (SybaseToSQL)
 Alguns arquivos de exemplo foram fornecidos junto com o produto para a referência de usuário e uso. Esta seção descreve a maneira de personalizar facilmente esses scripts para se adequar às necessidades do usuário final.  
@@ -135,4 +132,3 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
 [Criar os arquivos de Conexão do servidor &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
 [Gerando relatórios &#40; SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   
-

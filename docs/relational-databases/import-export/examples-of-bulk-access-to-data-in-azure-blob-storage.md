@@ -2,9 +2,12 @@
 title: Exemplos de acesso em massa a dados no Armazenamento de Blobs do Azure | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ae984df5d86e1f93281653e8d62b6ad2d1f649e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a1ad891d370e08baf406b46c4ff090847288df33
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Exemplos de acesso em massa a dados no Armazenamento de Blobs do Azure
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 As instruções `BULK INSERT` e `OPENROWSET` podem acessar diretamente um arquivo no armazenamento de blobs do Azure. Os exemplos a seguir usam dados de um arquivo CSV (valores separados por vírgula) (denominado `inv-2017-01-19.csv`), armazenado em um contêiner (chamado `Week3`), armazenado em uma conta de armazenamento (chamada `newinvoices`). O caminho para o arquivo de formato pode ser usado, mas não está incluído nesses exemplos. 
 

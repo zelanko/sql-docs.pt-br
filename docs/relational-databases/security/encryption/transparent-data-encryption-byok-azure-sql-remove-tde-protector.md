@@ -5,7 +5,7 @@ keywords:
 services: sql-database
 documentationcenter: 
 author: becczhang
-manager: cguyer
+manager: craigg
 editor: 
 ms.assetid: 
 ms.service: sql-database
@@ -16,15 +16,14 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 5756f318196967169dfbd0272b3ea9af365cdb5a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: be2fd15b1f742d7edb01d39be69456c58d472801
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>Remover um Protetor de TDE (Transparent Data Encryption) usando o PowerShell
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 - Você deve ter uma assinatura do Azure e ser um administrador na assinatura

@@ -3,31 +3,30 @@ title: "AsBinaryZM (DataType Geométrico) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- AsBinaryZM geometry
+dev_langs: TSQL
+helpviewer_keywords: AsBinaryZM geometry
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a509d7e6297081816cfdd146ea10afc90be7e60
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e2b778d41e6a3d4f7701140584fd3c833a726948
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (DataType geométrico)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Retorna a representação do Open Geospatial Consortium (OGC) Well-Known Binary (WKB) de um **geometria** instância aumentada com qualquer **Z** (elevação) e **M** (medida) valores transportados pela instância.
   
@@ -63,5 +62,4 @@ SELECT @g1.AsBinaryZM();
  [Z &#40; tipo de dados geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
-
 

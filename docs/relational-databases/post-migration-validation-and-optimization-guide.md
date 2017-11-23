@@ -2,9 +2,12 @@
 title: "Validação pós-migração e guia de otimização | Microsoft Docs"
 ms.custom: 
 ms.date: 5/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: pelopes
 ms.author: harinid
 manager: 
 ms.workload: Inactive
-ms.openlocfilehash: 9a886b8b2b617f3c507f98c3c2dbd495bf2d86a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 09020e8a41d4d378bf8f2f8aadc7a0c1f4996f01
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 A etapa pós-migração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é crucial para reconciliar a precisão e a integridade dos dados, bem como descobrir problemas de desempenho com a carga de trabalho.
 

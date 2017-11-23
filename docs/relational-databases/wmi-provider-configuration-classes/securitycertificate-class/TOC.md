@@ -1,4 +1,4 @@
-# [Propriedade de contexto (classe SecurityCertificate)](context-property-securitycertificate-class.md)
+# [Propriedade Context (classe SecurityCertificate)](context-property-securitycertificate-class.md)
 # [Propriedade ExpirationDate (classe SecurityCertificate)](expirationdate-property-securitycertificate-class.md)
 # [Propriedade FriendlyName (classe SecurityCertificate)](friendlyname-property-securitycertificate-class.md)
 # [Método GetCurrentCertificate (classe SecurityCertificate)](getcurrentcertificate-method-securitycertificate-class.md)

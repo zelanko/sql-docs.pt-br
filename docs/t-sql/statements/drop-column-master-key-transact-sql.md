@@ -1,13 +1,14 @@
 ---
 title: CHAVE MESTRA de coluna de DROP (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/20/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,25 +16,22 @@ f1_keywords:
 - DROP_COLUMN_MASTER_KEY_TSQL
 - DROP COLUMN MASTER
 - DROP_COLUMN_MASTER_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- sys.column_master_keys catalog view
+dev_langs: TSQL
+helpviewer_keywords: sys.column_master_keys catalog view
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 207fd618b0381f69a74bee00bf92b7df248b8aed
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d49d880d78982aa55bbaefc1fadc561e62a26dce
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Descarta uma chave mestra de banco de dados. Essa é uma operação de metadados.  
   
@@ -74,4 +72,3 @@ GO
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)  
   
   
-

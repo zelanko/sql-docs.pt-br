@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Actions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Actions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Actions
-helpviewer_keywords:
-- Actions element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Actions
+helpviewer_keywords: Actions element
 ms.assetid: 100a4209-2c22-4902-a8ca-f2bd99bf8fbb
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ecc041df5eeba2bb3f0894d41a77a119c6a1cac5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e72e49fd28d21865774b201349c48dee6b725efd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="actions-element-assl"></a>Elemento Actions (ASSL)
   Contém a coleção de ações para um [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) ou [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.  
@@ -84,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Coleções de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

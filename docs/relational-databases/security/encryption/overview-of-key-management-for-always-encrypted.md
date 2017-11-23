@@ -2,9 +2,12 @@
 title: "Visão geral do gerenciamento de chaves do Always Encrypted | Microsoft Docs"
 ms.custom: 
 ms.date: 07/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 313e9c416f29321c38c47b80002b9ca219e36cf8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00fbddda37b58442e37618a25347576bc88caf07
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usa dois tipos de chaves de criptografia para proteger seus dados, uma chave para criptografar os dados e outra para criptografar a chave que criptografa os dados. A chave de criptografia de coluna criptografa os dados, a chave mestra de coluna criptografa a chave de criptografia de coluna. Este artigo fornece uma visão geral detalhada para gerenciar essas chaves de criptografia.

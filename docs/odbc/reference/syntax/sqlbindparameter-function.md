@@ -3,33 +3,30 @@ title: "Função SQLBindParameter | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBindParameter
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBindParameter
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBindParameter
-helpviewer_keywords:
-- SQLBindParameter function [ODBC]
+f1_keywords: SQLBindParameter
+helpviewer_keywords: SQLBindParameter function [ODBC]
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 083be2fe5cda6f28cb250a3e0bc4aaef9bf30ef2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e1984e301d72e8f2f80cce8e5a5c9864dad0e956
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbindparameter-function"></a>Função SQLBindParameter
 **Conformidade**  
@@ -593,4 +590,3 @@ int main() {
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)
-

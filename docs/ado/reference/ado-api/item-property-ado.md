@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -45,20 +44,18 @@ f1_keywords:
 - Parameters::get_Item
 - Errors::Item
 - Procedures::get_Item
-helpviewer_keywords:
-- Item property [ADO]
+helpviewer_keywords: Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b82a73846dacf2607bdd86e3b4d75609d575ebe9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59779714027c0ff619293d01de851daec7bbe158
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="item-property-ado"></a>Propriedade item (ADO)
 Indica um membro específico de uma coleção, por nome ou número ordinal.  
@@ -73,7 +70,7 @@ Set object = collection.Item ( Index )
  Retorna uma referência de objeto.  
   
 ## <a name="parameters"></a>Parâmetros  
- *Índice*  
+ *Index*  
  Um **Variant** expressão que é avaliada para o nome ou o número ordinal de um objeto em uma coleção.  
   
 ## <a name="remarks"></a>Comentários  
@@ -101,4 +98,3 @@ collection (Index)
 ## <a name="see-also"></a>Consulte também  
  [Exemplo da propriedade item (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Exemplo da propriedade Item (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   
-

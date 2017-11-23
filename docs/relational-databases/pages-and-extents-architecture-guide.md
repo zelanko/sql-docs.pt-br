@@ -3,8 +3,11 @@ title: "Guia de arquitetura de páginas e extensões | Microsoft Docs"
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebc9b8e32bc6848547b8833841876b74ca25cc27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 991def989273019e4a58d7ffc6b37a42b73953dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 A página é a unidade fundamental de armazenamento de dados no SQL Server. Uma extensão consiste em uma coleção de oito páginas fisicamente contíguas. As extensões ajudam a gerenciar páginas de maneira eficaz. Este guia descreve as estruturas de dados que são usadas para gerenciar páginas e extensões em todas as versões do SQL Server. Entender a arquitetura de páginas e extensões é importante para projetar e desenvolver bancos de dados que tenham um desempenho eficiente.
 

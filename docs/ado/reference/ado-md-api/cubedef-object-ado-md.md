@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- CubeDef
-helpviewer_keywords:
-- CubeDef object [ADO MD]
+f1_keywords: CubeDef
+helpviewer_keywords: CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b2d69c9a59868ee135cc98ec8de61d5be166224
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: acf8f7ad28f56e8eee7dc1a78fb05d6cac99dd39
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubedef-object-ado-md"></a>Objeto CubeDef (ADO MD)
 Representa um cubo de um esquema multidimensional, que contém um conjunto de dimensões relacionadas.  
@@ -51,7 +47,7 @@ Representa um cubo de um esquema multidimensional, que contém um conjunto de di
 |CatalogName|O nome do catálogo ao qual pertence este cubo.|  
 |CreatedOn|Data e hora de criação de cubo.|  
 |CubeGUID|GUID do cubo.|  
-|Nome do cubo|O nome do cubo.|  
+|CubeName|O nome do cubo.|  
 |CubeType|O tipo do cubo.|  
 |DataUpdatedBy|ID de usuário da pessoa que está fazendo a última atualização de dados.|  
 |Description|Uma descrição significativa do cubo.|  
@@ -69,4 +65,3 @@ Representa um cubo de um esquema multidimensional, que contém um conjunto de di
  [Coleção de CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
  [Coleção de dimensões (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

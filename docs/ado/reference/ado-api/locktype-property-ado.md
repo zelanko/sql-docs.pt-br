@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::LockType
-helpviewer_keywords:
-- LockType property [ADO]
+f1_keywords: Recordset15::LockType
+helpviewer_keywords: LockType property [ADO]
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c3b9a206a312fcd0ac113f19de73979050e35c78
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b2f293565affedf74facb22fffc85b3b2ead179
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locktype-property-ado"></a>Propriedade LockType (ADO)
 Indica o tipo de bloqueios colocados em registros durante a edição.  
@@ -56,4 +52,3 @@ Indica o tipo de bloqueios colocados em registros durante a edição.
  [Exemplo de propriedades EditMode (VC + +), CursorType e LockType](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Método CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
-

@@ -2,9 +2,12 @@
 title: "Configurar a opção de configuração de servidor cursor threshold | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cc15aac075fa91aed742dd70f3e7c65a5858c9a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a6695ff7007a9a3b3145f88362f0ae201c75fd8f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>Configurar a opção de configuração de servidor cursor threshold
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como configurar a opção de configuração de servidor **cursor threshold** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **cursor threshold** especifica o número de linhas no conjunto de cursores em que os conjuntos de chaves de cursor são gerados de forma assíncrona. Quando os cursores geram um conjunto de chaves para um conjunto de resultados, o otimizador de consulta calcula o número de linhas que serão retornadas para aquele conjunto de resultados. Se o otimizador de consulta calcular que o número de linhas retornadas é maior do que esse limite, o cursor será gerado de forma assíncrona, permitindo que o usuário busque linhas do cursor enquanto o cursor continua sendo populado. Caso contrário, o cursor é gerado de forma síncrona e a consulta aguarda até que todas as linhas sejam retornadas.  
   

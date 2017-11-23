@@ -2,9 +2,12 @@
 title: Aplicativo Data Quality Client | Microsoft Docs
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 940d2cb164c6f1d1af3574ae204d379d8293ce8f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0e15b684c3bce4b0f4c0b08f915077c68afb05e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-quality-client-application"></a>Aplicativo cliente Data Quality
   O aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite executar operações de qualidade de dados usando uma ferramenta autônoma. Esse aplicativo permite criar bases de dados de conhecimento, criar e executar projetos de qualidade de dados e executar tarefas administrativas.  

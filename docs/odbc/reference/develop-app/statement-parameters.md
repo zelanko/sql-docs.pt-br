@@ -3,26 +3,26 @@ title: "Parâmetros de instrução | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- statement parameters [ODBC]
+helpviewer_keywords: statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7039a3830f24f29260b41ad244799be677fc817b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e56b61d47581f98f37560875de920c45029c2e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-parameters"></a>Parâmetros de instrução
 Um *parâmetro* é uma variável em uma instrução SQL. Por exemplo, suponha que uma tabela de peças possui colunas nomeadas PartID, descrição e preço. Para adicionar uma parte sem parâmetros exigiria construindo uma instrução SQL, como:  
@@ -58,4 +58,3 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [Parâmetros de procedimento](../../../odbc/reference/develop-app/procedure-parameters.md)  
   
 -   [Matriz de valores de parâmetros](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)
-

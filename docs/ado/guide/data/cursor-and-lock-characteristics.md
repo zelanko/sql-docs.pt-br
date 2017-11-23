@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - adOpenDynamic [ADO]
 - cursors [ADO], characteristics
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84f06591c70a42701ca264c99af00e4f072aadd0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a1313c42582efee8330abb89a03645dc1491217
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursor-and-lock-characteristics"></a>Cursor e características de bloqueio
 Enquanto as características de um cursor dependem dos recursos do provedor, as seguintes vantagens e desvantagens geralmente se aplicam a vários tipos de cursores e bloqueios.  
@@ -42,4 +40,3 @@ Enquanto as características de um cursor dependem dos recursos do provedor, as 
 |**adLockBatchOptimistic**|-Atualizações em lotes<br />-Permite cenários desconectados<br />-Outros usuários acessem dados|-Dados podem ser alterados por vários usuários ao mesmo tempo|  
 |**adLockPessimistic**|-Data não pode ser alterado por outros usuários enquanto bloqueado|-Impede que outros usuários acessem dados enquanto bloqueado|  
 |**adLockOptimistic**|-Outros usuários acessem dados|-Dados podem ser alterados por vários usuários ao mesmo tempo|
-

@@ -3,8 +3,11 @@ title: Fechar (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Fecha um cursor aberto liberando o conjunto de resultados atual e qualquer bloqueio de cursor mantido nas linhas onde o cursor é posicionado. CLOSE deixa as estruturas de dados disponíveis para reabertura, mas as atualizações buscadas e posicionadas não são permitidas até que o cursor seja reaberto. CLOSE deve ser emitido em um cursor aberto; CLOSE não é permitido em cursores que somente foram declarados ou estão fechados.  
   

@@ -2,9 +2,12 @@
 title: "Executar um projeto de correspondência | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c15245cf026a3746660a1f82394240a3f5aaa6a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 284e081f53fe047a257d22020d0792897c8623ed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
   Este tópico descreve como executar a correspondência de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O processo de correspondência identifica clusters de registros de correspondência com base em regras de correspondência na política de correspondência, designa um registro de cada cluster como o sobrevivente com base em uma regra de sobrevivência, e exporta os resultados. O DQS executa o processo de correspondência, também chamado de eliminação de duplicação, em um processo assistido por computador, mas você cria regras de correspondência interativamente e seleciona a regra de correspondência a partir de várias opções; assim, você controla o processo de correspondência.  

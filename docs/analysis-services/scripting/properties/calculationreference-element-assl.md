@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CalculationReference Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CalculationReference Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CalculationReference
-helpviewer_keywords:
-- CalculationReference element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CalculationReference
+helpviewer_keywords: CalculationReference element
 ms.assetid: 4dd18b1f-55c3-4673-afbe-736d1bce8331
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63cd18baa021f06c7bc1ede593ede2d0050b1765
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 18df3c7f00efc4173b5651c2f2fb7528419278c3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculationreference-element-assl"></a>Elemento CalculationReference (ASSL)
   Contém o nome do conjunto nomeado ou da célula calculada mencionado pelo [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md).  
@@ -72,10 +66,9 @@ ms.lasthandoff: 09/01/2017
  O elemento que corresponde ao pai do **CalculationReference** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento CalculationProperties & #40; ASSL & #41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
- [Elemento MdxScript & #40; ASSL & #41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
- [Elemento MdxScripts & #40; ASSL & #41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
- [Propriedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Elemento CalculationProperties &#40; ASSL &#41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
+ [Elemento MdxScript &#40; ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
+ [Elemento MdxScripts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
+ [Propriedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - deleting attributes
 - attributes [Analysis Services], removing
 ms.assetid: b41387c1-6c7d-42dc-bc14-d40586acb769
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e9c4bcca48bbd02d572cf8a695730c898273ea0a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 845439c812807797bf75890e160bc7988be36d66
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---remove-an-attribute-from-a-dimension"></a>Propriedades de atributo - remover um atributo de uma dimensão
   Para remover um atributo de uma dimensão no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], clique com o botão direito do mouse no atributo no painel **Atributos** da guia **Estrutura da Dimensão** do Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e em **Excluir**. Na caixa de diálogo **Excluir Objetos** , clique em **OK**. Isso remove o atributo da dimensão, mas não afeta a exibição da fonte de dados da dimensão.  
@@ -39,4 +38,3 @@ ms.lasthandoff: 09/01/2017
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "O histórico dos Drivers de banco de dados de área de trabalho | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], history
 - desktop database drivers [ODBC], history
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: beb79b003e6e36b195d781b071dde814c5265adc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Histórico dos Drivers de banco de dados de área de trabalho
 A tabela a seguir mostra o histórico de versões de Drivers de banco de dados de área de trabalho.  
@@ -39,4 +40,3 @@ A tabela a seguir mostra o histórico de versões de Drivers de banco de dados d
   
 > [!NOTE]  
 >  Os drivers version3.5 foram projetados para trabalhar com ODBC2. *x*. Embora elas também funcionam com ODBC 3.0, eles não dão suporte a todos os recursos de ODBC 3.0. Para obter mais informações sobre como esses drivers funcionam com ODBC 3.0, consulte [compatibilidade com versões anteriores e a conformidade com padrões](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
-

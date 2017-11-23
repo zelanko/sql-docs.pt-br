@@ -6,15 +6,19 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 11300c84bd7453845176d179ea69d3ea3ba0f437
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c32c0593df6b40cc76ecafaabc0571090f2907fa
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurar a instância de cluster de failover - SMB - SQL Server no Linux
 
@@ -260,4 +264,3 @@ Agora você está pronto para configurar a FCI.
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/05-smbsource.png 
 [2]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/10-testcreatedb.png 
-

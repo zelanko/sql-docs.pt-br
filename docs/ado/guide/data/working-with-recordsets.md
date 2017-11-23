@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO]
+helpviewer_keywords: Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf54089c037d972649d3acc872a38eed21d02507
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-recordsets"></a>Trabalhando com conjuntos de registros
 O **registros** objeto possui recursos internos que permitem a você reorganizar a ordem dos dados no conjunto de resultados, para procurar um registro específico com base em critérios fornecidos por você e até mesmo para otimizar as operações de pesquisa usando os índices. Se esses recursos estão disponíveis para uso depende do provedor e, em alguns casos, como do [índice](../../../ado/reference/ado-api/index-property.md) propriedade — a estrutura da fonte de dados em si.  
@@ -174,4 +171,3 @@ Loop
  Fechando o original **registros** não fechar suas cópias, nem o fechamento fechar uma cópia original ou qualquer uma das outras cópias.  
   
  Você pode clonar um **registros** objeto apenas se ele dá suporte a indicadores. Valores de indicador são intercambiáveis; ou seja, uma referência de indicador de um **registros** objeto refere-se para o mesmo registro em qualquer um de seus clones.
-

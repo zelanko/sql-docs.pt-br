@@ -19,17 +19,16 @@ helpviewer_keywords:
 - classification accuracy [data mining]
 - accuracy testing [data mining]
 ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f440a7cd7770f1412480e19304af4efcf17b1fba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b6e4e67306c225af2ba3d2cd418ceaed2d2541
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>Escolher um tipo de gráfico de precisão e definir opções de gráfico
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece vários métodos para determinar a validade de seus modelos de mineração. O tipo de gráfico de precisão que você pode criar para cada modelo ou estrutura depende destes fatores:  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  O formato do relatório de validação cruzada é o mesmo para todos os tipos de modelo e não pode ser configurado. Entretanto, o conteúdo do relatório difere dependendo do tipo de modelo que você está analisando e do tipo de dados do atributo previsível. Também é possível copiar os resultados do relatório para a área de transferência e trabalhar com os dados no Excel.  
   
   
-

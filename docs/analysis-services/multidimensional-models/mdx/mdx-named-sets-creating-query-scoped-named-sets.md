@@ -18,17 +18,16 @@ helpviewer_keywords:
 - query-scoped named sets [MDX]
 - WITH keyword
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a05d52185020b6906469f3244e3ae1a6b1fc7a2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 06751ad71a12e537728167d4d8a9cdec0a870962
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Conjuntos nomeados de MDX denominado conjuntos - criando no escopo da consulta
   Se um conjunto nomeado for necessário para uma única consulta MDX, é possível defini-lo usando a palavra-chave WITH. O conjunto nomeado criado com a palavra-chave WITH deixará de existir ao fim da execução da consulta.  
@@ -107,4 +106,3 @@ FROM Sales
  [Criando no escopo da sessão nomeados conjuntos &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   
-

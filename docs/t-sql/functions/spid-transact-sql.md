@@ -3,17 +3,18 @@ title: '@@SPID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@SPID'
 - '@@SPID_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - '@@SPID function'
 - session_id
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - session IDs [SQL Server]
 - process ID of current user process
 ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f5d6ae023f4d736dc195034eeef0073845d7e2d5
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: db822ff8405a24981def755f49844a8ff7b789c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="x40x40spid-transact-sql"></a>& #x 40; & #x 40. SPID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna a ID de sessão do processo de usuário atual.  
   
@@ -79,8 +79,7 @@ SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', 
 ## <a name="see-also"></a>Consulte também  
  [Funções de configuração](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [SP_WHO](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+ [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   
-
 

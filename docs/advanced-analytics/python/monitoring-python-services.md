@@ -1,31 +1,25 @@
 ---
 title: "Monitorar os serviços do Python | Microsoft Docs"
 ms.custom: 
-ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 2ceb39953380f2742f8a845f540b378a60d8200b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 79165746d00ad0f381cd702ef9ac31358f4e136d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-python-services"></a>Monitorar os serviços do Python
 
 Esta seção está em desenvolvimento.
 
-> [!NOTE]
-> Suporte do Python é um novo recurso do SQL Server 2017 e está na versão de pré-lançamento. Pesquisar para obter mais informações em breve.
-
 Em geral, você pode monitorar qualquer script externo, incluindo aquele executado Python, usando a mesma estrutura que foi fornecida para a execução de script R no SQL Server 2016. Para obter mais informações, consulte [monitoramento R Services](../r/monitoring-r-services.md).
-

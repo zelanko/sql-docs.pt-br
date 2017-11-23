@@ -3,37 +3,37 @@ title: IDENT_CURRENT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IDENT_CURRENT
 - IDENT_CURRENT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - last identity value generated for table
 - identity values [SQL Server], last generated
 - identity columns, current value
 - IDENT_CURRENT function
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 9e303b59af41301be2b171c9b6a917dfad6139dc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4b3563392c1df2b6056904f932b0fa2c5eaa3db3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="identcurrent-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o valor da última identidade gerado para uma tabela ou exibição especificada. O valor da última identidade gerado pode ser para qualquer sessão e para qualquer escopo.  
   
@@ -144,11 +144,10 @@ SELECT IDENT_CURRENT('t7');
   
 ## <a name="see-also"></a>Consulte também  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
- [SCOPE_IDENTITY & #40; Transact-SQL & #41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR & #40; Transact-SQL & #41;](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED & #40; Transact-SQL & #41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [Expressões & #40; Transact-SQL & #41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funções do sistema & #40; Transact-SQL & #41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
+ [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
-

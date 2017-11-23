@@ -19,17 +19,16 @@ helpviewer_keywords:
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8c153dbc0b85271f175c86b37ee2b165957e926c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 11eaa65564dcd59442bd8b111c0de009b00e8fd4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores de banco de dados do podem alterar o modo de leitura/gravação de um banco de dados Tabular ou Multidimensional como parte do esforço maior que distribui uma carga de trabalho de consulta entre vários servidores somente consulta.  
@@ -151,4 +150,3 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
  [Elemento DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   
-

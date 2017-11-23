@@ -3,17 +3,18 @@ title: DIA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DAY_TSQL
 - DAY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - date and time [SQL Server], DAY
 - dates [SQL Server], functions
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - dateparts [SQL Server], day
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 444df60a2cfe3adae045020b3db8d673946dccb1
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 9edfdc46ede4c090080c09253e2bb213a384816c
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Retorna um inteiro que representa o dia (dia do mês) especificada *data*.
   
@@ -78,6 +78,5 @@ SELECT YEAR(0), MONTH(0), DAY(0);
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-
 
 

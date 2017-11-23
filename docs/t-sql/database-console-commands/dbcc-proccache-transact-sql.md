@@ -1,12 +1,14 @@
 ---
 title: DBCC PROCCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,27 +16,25 @@ f1_keywords:
 - DBCC_PROCCACHE_TSQL
 - PROCCACHE_TSQL
 - PROCCACHE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - procedure cache [SQL Server]
 - displaying procedure cache information
 - DBCC PROCCACHE statement
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f818e3204f16892cb3bde8e8570a219abbd48aa3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 97e617e7867c90bf1e66c5e64e37b9039087d463
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Exibe informações em um formato de tabela sobre o cache de procedimento.
   
@@ -79,4 +79,3 @@ Exige associação à função de servidor fixa **sysadmin** ou à função de b
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   
-

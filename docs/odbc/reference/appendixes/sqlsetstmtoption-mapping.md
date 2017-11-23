@@ -3,27 +3,28 @@ title: Mapeamento de SQLSetStmtOption | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e70f226277b3ad4932756095a8ebc2f3121ee0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3aba3d69d8bbb90b1296bf821b6552d25a05b7b2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Mapeamento de SQLSetStmtOption
 Quando um aplicativo chama **SQLSetStmtOption** por meio de um ODBC 3*. x* driver, a chamada para  
@@ -61,4 +62,3 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
  Quando um aplicativo chama **SQLSetStmtAttr** para definir SQL_ATTR_USE_BOOKMARKS como SQL_UB_ON em um ODBC 3*. x* driver, o atributo da instrução SQL_ATTR_USE_BOOKMARKS está definido como SQL_UB_FIXED. SQL_UB_ON é a mesma constante como SQL_UB_FIXED. O Gerenciador de Driver passa SQL_UB_FIXED por meio do driver. SQL_UB_FIXED foi preterido no ODBC 3*. x*, mas um ODBC 3*. x* driver deve implementá-lo para trabalhar com ODBC 2. *x* aplicativos que usam marcadores de comprimento fixo.  
   
  Para um ODBC 3*. x* driver, o Gerenciador de Driver não verifica se *opção* é entre SQL_STMT_OPT_MIN e SQL_STMT_OPT_MAX ou é maior do que SQL_CONNECT_OPT_DRVR_START.
-

@@ -3,33 +3,30 @@ title: "Função SQLColumns | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLColumns
-apilocation:
-- sqlsrv32.dll
+apiname: SQLColumns
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLColumns
-helpviewer_keywords:
-- SQLColumns function [ODBC]
+f1_keywords: SQLColumns
+helpviewer_keywords: SQLColumns function [ODBC]
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 62d91e0a8fdccfe55b077fb52014a3ccc92e92ae
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad949b4c4454915cfddec71c611e8cc67336a0ec
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolumns-function"></a>Função SQLColumns
 **Conformidade**  
@@ -305,4 +302,3 @@ int main() {
 ## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

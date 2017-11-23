@@ -2,26 +2,31 @@
 title: "Planejar a adoção de recursos de OLTP in-memory no SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 05/08/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd0761385c8cfd00c065f9593308c43328539ebd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Este artigo descreve as formas como a adoção de recursos in-memory afeta outros aspectos do seu sistema empresarial.
@@ -416,5 +421,6 @@ Você pode tornar seus scripts do Transact-SQL mais robustos contra possíveis e
 ## <a name="related-links"></a>Links relacionados
 
 - [OLTP na memória (otimização na memória)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+
 
 

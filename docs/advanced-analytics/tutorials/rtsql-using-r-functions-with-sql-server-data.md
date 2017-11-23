@@ -5,25 +5,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 919f29c8d96324f21dde2e87bb861f3e76f8241d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db97b781e0206144e94a9ca22030c47bc2f7a7b8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>Usando funções de R com dados do SQL Server (R no início rápido do SQL)
 
@@ -114,5 +112,4 @@ Para obter um exemplo, consulte este tutorial: [Criar recursos de dados](../tuto
 
 Em seguida, você criará um modelo de previsão usando R no SQL Server.
 
-[Criar um modelo de previsão](../tutorials/rtsql-create-a-predictive-model-r.md)
-
+[Criar um modelo preditivo](../tutorials/rtsql-create-a-predictive-model-r.md)

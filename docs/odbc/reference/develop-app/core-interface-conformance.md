@@ -3,10 +3,12 @@ title: "Conformidade de Interface de núcleo | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07c5896fc179f8224914d0af8b4aa9defa94b9bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c535d6756ba2fa5eaa20d6dec9ca3ad7ae3c85b4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="core-interface-conformance"></a>Conformidade de Interface de núcleo
 Todos os drivers ODBC devem exibir pelo menos nível de núcleo conformidade de interface. Como os recursos no nível de núcleo são aqueles requeridos por aplicativos interoperáveis mais genéricos, o driver pode trabalhar com esses aplicativos. Os recursos no nível de núcleo também correspondem aos recursos definidos na especificação ISO CLI e para os recursos definidos na especificação Open CLI de grupo. Um driver ODBC do nível de núcleo interface – compatível permite que o aplicativo faça o seguinte:  
@@ -73,4 +74,3 @@ Todos os drivers ODBC devem exibir pelo menos nível de núcleo conformidade de 
   
     > [!IMPORTANT]  
     >  Drivers ODBC deve implementar as funções em nível de conformidade da interface principal.
-

@@ -1,10 +1,13 @@
 ---
 title: "Funções de nível de banco de dados | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -39,16 +42,16 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: "49"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79d5d634cfeb240c096d9ed6d92f16c2e7401e46
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Para gerenciar facilmente as permissões em seus bancos de dados, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece várias *funções* , que são entidades de segurança que agrupam outras entidades. Elas são como ***grupos*** no sistema operacional [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. As funções de nível de banco de dados são permitidas em todo banco de dados em seus escopos de permissões.  
 

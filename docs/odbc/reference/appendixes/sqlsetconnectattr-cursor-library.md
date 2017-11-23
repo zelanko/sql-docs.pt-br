@@ -3,26 +3,26 @@ title: SQLSetConnectAttr (biblioteca de Cursor) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetConnectAttr function [ODBC], Cursor Library
+helpviewer_keywords: SQLSetConnectAttr function [ODBC], Cursor Library
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21c6d5d6b754f7d78c65bde2edb115809a2d73ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf6a14b8215f981e5e0e9c0ca6e9b2e1a2269f65
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr (biblioteca de Cursor)
 > [!IMPORTANT]  
@@ -35,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  O aplicativo deve chamar **SQLSetConnectAttr** para especificar o uso da biblioteca de cursor depois de chamar **SQLAllocHandle** com um *HandleType* SQL_HANDLE_DBC para alocar a conexão e antes de se conectar à fonte de dados. Se um aplicativo chamar **SQLSetConnectAttr** com o atributo SQL_ATTR_ODBC_CURSORS enquanto a conexão ainda está ativa, a biblioteca de cursores retornará um erro.  
   
  Para definir um atributo de instrução com suporte a biblioteca de cursores para todas as instruções associadas com uma conexão, um aplicativo deve chamar **SQLSetConnectAttr** para esse atributo de instrução depois que ele se conecta à fonte de dados e antes Abre o cursor. Se um aplicativo chamar **SQLSetConnectAttr** com uma declaração de atributo e um cursor está aberto em uma instrução associada com a conexão, o atributo de instrução não será aplicado a essa instrução até que o cursor seja fechado e reaberta.
-

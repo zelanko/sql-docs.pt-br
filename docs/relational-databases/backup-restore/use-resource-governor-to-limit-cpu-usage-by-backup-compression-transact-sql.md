@@ -2,9 +2,12 @@
 title: "Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3b254dd4fa4b664a0787898a61cc94ca050a097
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Por padrão, a compactação de backup aumenta consideravelmente o uso de CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar um backup compactado de baixa prioridade em uma sessão cujo uso de CPU seja limitado pelo[Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md) quando houver contenção de CPU. Este tópico apresenta um cenário que classifica as sessões de um usuário específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeando-as para um grupo de carga de trabalho do Administrador de Recursos que limita o uso de CPU em casos como esse.  
   

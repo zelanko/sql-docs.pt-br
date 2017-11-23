@@ -1,13 +1,14 @@
 ---
 title: "CRIAR um índice COLUMNSTORE (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,29 +22,26 @@ f1_keywords:
 - CREATE COLUMNSTORE INDEX
 - CREATE_CLUSTERED_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - index creation [SQL Server], columnstore indexes
 - columnstore index, creating
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0fb8883678dad7a62cac9c2109b093ee79e27b27
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 Converter uma tabela rowstore em um índice columnstore clusterizado ou criar um índice columnstore não clusterizado. Use um índice columnstore para executar análise operacional em tempo real com eficiência em uma carga de trabalho OLTP ou para melhorar o desempenho de consulta e compactação de dados de data warehouse cargas de trabalho.  
   
@@ -714,5 +712,4 @@ WITH ( DROP_EXISTING = ON);
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
-
 

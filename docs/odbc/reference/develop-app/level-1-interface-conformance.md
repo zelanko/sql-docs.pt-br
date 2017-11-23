@@ -3,10 +3,12 @@ title: "Conformidade de Interface de nível 1 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>Conformidade de Interface de nível 1
 O nível de conformidade de interface de nível 1 inclui a funcionalidade do nível de conformidade do interface principal mais recursos adicionais, como transações, que geralmente estão disponíveis em um DBMS relacional OLTP. Um driver de interface – em conformidade com o nível 1 permite que o aplicativo faça o seguinte, além dos recursos em nível de conformidade a principal interface:  
@@ -40,4 +41,3 @@ O nível de conformidade de interface de nível 1 inclui a funcionalidade do ní
 |107|Use funções ODBC em vez de instruções SQL para executar determinadas operações de banco de dados: **SQLSetPos** com SQL_POSITION e SQL_REFRESH.|  
 |108|Obter acesso ao conteúdo de vários conjuntos de resultados gerados por lotes e procedimentos armazenados, chamando **SQLMoreResults**.|  
 |109|Delimitar transações abrangência várias funções ODBC com atomicidade true e a capacidade de especificar SQL_ROLLBACK em **SQLEndTran**.|
-

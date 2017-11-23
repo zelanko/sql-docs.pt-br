@@ -3,10 +3,12 @@ title: CAST e CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CAST function
 - automatic data type conversion
@@ -34,20 +35,19 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: 136
+caps.latest.revision: "136"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Converte uma expressão de um tipo de dados para outro.  
 Por exemplo, os exemplos a seguir alterar o tipo de dados de entrada, em dois outros tipos de dados, com diferentes níveis de precisão.
@@ -716,4 +716,3 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md)
   
-

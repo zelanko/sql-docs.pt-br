@@ -1,13 +1,14 @@
 ---
 title: "Altere a política de segurança (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,25 +16,22 @@ f1_keywords:
 - ALTER SECURITY POLICY
 - ALTER_SECURITY_TSQL
 - ALTER SECURITY
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ALTER SECURITY POLICY statement
+dev_langs: TSQL
+helpviewer_keywords: ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0b420b7b73af8f32d2de9dac39cc4f57b41680c7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7babf1f7769d800f18a17ee21b87a0ba2b997fb6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-security-policy-transact-sql"></a>Altere a política de segurança (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Altera uma política de segurança.  
   
@@ -168,4 +166,3 @@ ALTER SECURITY POLICY rls.SecPol
  [sys. security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
-

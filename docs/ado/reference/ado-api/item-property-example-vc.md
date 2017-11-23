@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Item property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Item property [ADO], VC++ example
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9d2e80a97f3ae8581d18e67895aa4365f253fc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f154b79927d448b925dc8211d2373aca7b2731e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="item-property-example-vc"></a>Exemplo da propriedade item (VC + +)
 Este exemplo demonstra como o [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade acessa os membros de uma coleção. O exemplo abre o ***autores*** tabela do ***Pubs*** banco de dados com um comando com parâmetros.  
@@ -245,4 +241,3 @@ void PrintComError(_com_error &e) {
  [Propriedade item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [Coleção de parâmetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

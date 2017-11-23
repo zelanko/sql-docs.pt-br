@@ -3,17 +3,18 @@ title: SYSTEM_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYSTEM_USER_TSQL
 - SYSTEM_USER
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - current user names
 - system-supplied user names [SQL Server]
@@ -25,20 +26,19 @@ helpviewer_keywords:
 - system usernames [SQL Server]
 - users [SQL Server], names
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 070e6a1b7d2e739b3f2b1f4c594ffdecd25fcb85
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d3f13d5db5d7787a60c455edc64644f4c23779fc
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Permite que um valor fornecido pelo sistema para o logon atual seja inserido em uma tabela quando nenhum valor padrão é especificado.  
   
@@ -150,5 +150,4 @@ SELECT SYSTEM_USER;
  [USUÁRIO &#40; Transact-SQL &#41;](../../t-sql/functions/user-transact-sql.md)  
   
   
-
 

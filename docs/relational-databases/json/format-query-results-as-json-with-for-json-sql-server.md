@@ -1,10 +1,13 @@
 ---
 title: Formatar os resultados da consulta como JSON com o FOR JSON (SQL Server) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e4b2fc43cd25a1c31ecc82c7f2e6085d3e1fdc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3a3264d10535196e245ca9f5e0e59366667cf3fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formatar os resultados da consulta como JSON com o FOR JSON (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Formate os resultados da consulta ou exporte os dados do SQL Server como JSON adicionando a cláusula **FOR JSON** a uma instrução **SELECT**. Use a cláusula **FOR JSON** para simplificar os aplicativos cliente ao delegar a formatação da saída JSON do aplicativo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

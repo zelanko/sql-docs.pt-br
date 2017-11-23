@@ -3,35 +3,35 @@ title: HOST_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/21/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - HOST_NAME_TSQL
 - HOST_NAME
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - HOST_NAME function
 - workstation names [SQL Server]
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 403dc48bcc04845429ed85cbe69759d96c6a66f4
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1f10245c8a84469877d9f455c2518d7b4ba48173
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hostname-transact-sql"></a>HOST_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retorna o nome da estação de trabalho.  
   
@@ -74,4 +74,3 @@ GO
  [Funções do sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
-

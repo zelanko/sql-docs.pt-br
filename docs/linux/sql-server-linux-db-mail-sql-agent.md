@@ -6,16 +6,20 @@ ms.author: meetb
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
+ms.openlocfilehash: 36411ef9c26155f91956fbe572e60b3490f61b98
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Email de banco de dados e alertas de Email com o SQL Agent no Linux
 
@@ -133,4 +137,3 @@ GO
 
 ## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações sobre como usar o SQL Server Agent para criar, agendar e executar trabalhos, consulte [executar um trabalho do SQL Server Agent no Linux](sql-server-linux-run-sql-server-agent-job.md).
-

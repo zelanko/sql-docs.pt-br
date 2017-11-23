@@ -2,9 +2,12 @@
 title: "Usar relações de valor em um domínio de composição | Microsoft Docs"
 ms.custom: 
 ms.date: 11/22/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71cd638afa10bb623b5984596f511b09cdbc41f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b20052523a8b25ea9fad5983a523cdccbd702b61
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Usar relações de valor em um domínio composto
   Este tópico descreve como exibir combinações de valores encontradas para o domínio composto durante o processo de descoberta de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Esta página mostra o número de ocorrências das combinações de valores. O gerenciamento de valores não tem suporte para domínios compostos; portanto, você não pode executar operações nesses valores.  

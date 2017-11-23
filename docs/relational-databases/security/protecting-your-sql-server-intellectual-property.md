@@ -3,8 +3,11 @@ title: Protegendo a propriedade intelectual do SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 01/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 caps.latest.revision: "3"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 363fa4744ca429f19e2c8dd2375146e616e85f85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7839940c07b1322cf00d357055caf83ad30daca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Protegendo a propriedade intelectual do seu SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Os desenvolvedores de software geralmente perguntam como distribuir seus aplicativos de dados do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para os clientes e ainda evitar que os clientes de analisem e desconstruam seus aplicativos. O ponto principal aqui, é que a proteção da sua propriedade intelectual é uma questão legal e essa proteção consta no contrato de licença. Quando o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] é instalado em um computador que outras pessoas administram, inerentemente você perde alguns aspectos do controle. 
 

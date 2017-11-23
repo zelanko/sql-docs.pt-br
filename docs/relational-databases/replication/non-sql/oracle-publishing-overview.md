@@ -2,9 +2,12 @@
 title: "Visão geral da publicação Oracle | Microsoft Docs"
 ms.custom: 
 ms.date: 08/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc60029a1bf059b121cf4e721e700462525fb1fb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 888fdaaa1943e3b8e31010b9f6f695abf0cd2180
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oracle-publishing-overview"></a>Visão geral da Publicação Oracle  
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Desde o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], você pode incluir Publicadores Oracle em sua topologia de replicação pelo Oracle versão 9i. Os servidores de publicação podem ser implantados em todos os sistemas operacionais e de hardware com suporte pelo Oracle. O recurso é criado sob a base bem-estabelecida da replicação de instantâneo e da replicação transacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fornecendo desempenho e usabilidade similares.  
   

@@ -2,35 +2,34 @@
 title: ClusterProbability (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ClusterProbability
-dev_langs:
-- DMX
-helpviewer_keywords:
-- ClusterProbability function
+f1_keywords: ClusterProbability
+dev_langs: DMX
+helpviewer_keywords: ClusterProbability function
 ms.assetid: a6447b3c-94ce-4122-a3eb-6f3827598d8f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 0dfd508ca34f1b2b138087a0386fb1596ef0bc37
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b7f68000caa8fd90dd2a2396ff17f0fd701b96d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.  
   
@@ -81,4 +80,3 @@ NATURAL PREDICTION JOIN
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

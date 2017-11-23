@@ -2,9 +2,12 @@
 title: "Estatísticas para tabelas com otimização de memória | Microsoft Docs"
 ms.custom: 
 ms.date: 10/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef309831ab19ef8e69a27e8fefa3313f444ce147
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8c50af97ea15a504445dfc91491a892f050120d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estatísticas para tabelas com otimização de memória
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   O otimizador de consulta usa estatísticas sobre colunas para criar planos de consulta que melhoram o desempenho das consultas. As estatísticas são coletadas de tabelas no banco de dados e armazenadas nos metadados do banco de dados.  
   

@@ -3,10 +3,12 @@ title: CRIAR o esquema (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/01/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - SCHEMA
 - CREATE SCHEMA
 - SCHEMA_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - owners [SQL Server], schemas
 - table creation [SQL Server], CREATE SCHEMA statement
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - schemas [SQL Server], creating
 - CREATE SCHEMA statement
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3185725a8b5db647d047830f4b87248b839ad230
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 58eaf0c325ab4884dfe1e67ae0b0889a2ca6769a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Cria um esquema no banco de dados atual. A transação CREATE SCHEMA também pode criar tabelas e exibições no novo esquema e definir permissões GRANT, DENY ou REVOKE nesses objetos.  
   
@@ -194,6 +194,5 @@ GO
  [Criar um esquema de banco de dados](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
   
   
-
 
 

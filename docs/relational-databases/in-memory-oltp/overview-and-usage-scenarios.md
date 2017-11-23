@@ -2,9 +2,12 @@
 title: "Visão geral e cenários de uso | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33804f220a760d2959f5e3feb1a629b07d1b0296
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aad4ec39a2c228e747c16bae740c7018f8184d36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="overview-and-usage-scenarios"></a>Visão geral e cenários de uso
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 O OLTP in-memory é a principal tecnologia disponível no SQL Server e no Banco de Dados SQL do Azure para otimizar o desempenho de processamento de transações, de ingestão de dados, de carregamento de dados e de cenários de dados transitórios. Este tópico inclui uma visão geral da tecnologia e descreve os cenários de uso do OLTP in-memory. Use essas informações para determinar se o OLTP in-memory é adequado para seu aplicativo. O tópico termina com um exemplo que mostra objetos OLTP in-memory, referências a uma demonstração de desempenho e a recursos que você pode usar para as próximas etapas.
 

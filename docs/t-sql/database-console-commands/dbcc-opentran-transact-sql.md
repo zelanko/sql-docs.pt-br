@@ -1,10 +1,13 @@
 ---
 title: DBCC OPENTRAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 DBCC OPENTRAN ajuda a identificar as transações ativas que podem impedir o truncamento do log. DBCC OPENTRAN exibe informações sobre a transação ativa mais antiga e sobre as transações replicadas distribuídas e não distribuídas mais antigas, se houver, dentro do log de transação do banco de dados especificado. Os resultados serão exibidos somente se houver uma transação ativa que existe no log ou se o banco de dados contiver informações de replicação. Uma mensagem informativa será exibida se não houver transações ativas no log.
   

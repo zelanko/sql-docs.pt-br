@@ -6,16 +6,20 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
+ms.openlocfilehash: 9f774a7fde6a67bd5be6cd1bd395131c3c6ee0ba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b4e70106782541d771a2539d025a0a6dd75c34d9
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Use o SQL Server Management Studio (SSMS) no Windows para gerenciar o SQL Server no Linux
 
@@ -85,4 +89,3 @@ Além das consultas, você pode usar instruções T-SQL para criar e gerenciar b
 Se você estiver familiarizado com o T-SQL, consulte [Tutorial: gravando instruções de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md) e [referência Transact-SQL (mecanismo de banco de dados)](https://msdn.microsoft.com/library/bb510741.aspx).
 
 Para obter mais informações sobre como usar o SSMS, consulte [usar o SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx).
-

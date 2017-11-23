@@ -3,27 +3,28 @@ title: Enviando dados Long | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6fdd0c7da1074a5f6a1d86a941fd29330145f07c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-long-data"></a>Enviando dados Long
 Definem DBMSs *dados long* como qualquer caractere ou dados binários em um determinado tamanho, como 254 caracteres. Pode não ser possível armazenar todo o item de dados longo na memória, como quando o item representa um documento de texto longo ou um bitmap. Como esses dados não podem ser armazenadas em um único buffer, a fonte de dados envia para o driver em partes com **SQLPutData** quando a instrução é executada. Parâmetros para o qual os dados são enviados em tempo de execução são conhecidos como *parâmetros de dados em execução*.  
@@ -50,4 +51,3 @@ Definem DBMSs *dados long* como qualquer caractere ou dados binários em um dete
  Depois de **SQLExecute** ou **SQLExecDirect** retorna SQL_NEED_DATA e antes de dados tem sido completamente enviados para o último parâmetro de dados em execução, a instrução está em um estado de dados necessário. Enquanto uma instrução está em um estado de dados necessário, o aplicativo pode chamar somente **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, ou **SQLGetDiagRec**; todas as outras funções retornam SQLSTATE HY010 (erro de sequência de função). Chamando **SQLCancel** cancela a execução da instrução e o retorna ao estado anterior. Para obter mais informações, consulte [tabelas de transição de estado do apêndice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Para obter um exemplo de envio de dados em tempo de execução, consulte o [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) descrição da função.
-

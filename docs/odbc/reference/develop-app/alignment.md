@@ -3,26 +3,26 @@ title: Alinhamento | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alignment issues [ODBC]
+helpviewer_keywords: alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alignment"></a>Alinhamento
 Os problemas de alinhamento em um aplicativo ODBC geralmente não são diferentes do que em qualquer outro aplicativo. Ou seja, a maioria dos aplicativos de ODBC tem poucas ou nenhuma problemas com alinhamento. As penalidades para o alinhamento não endereços variam de acordo com o hardware e sistema operacional e podem ser tão pequenas como uma pequena penalidade de desempenho ou como principal como um erro fatal de tempo de execução. Portanto, os aplicativos ODBC portáteis e os aplicativos ODBC em particular, cuidado alinhar os dados corretamente.  
@@ -52,4 +52,3 @@ Os problemas de alinhamento em um aplicativo ODBC geralmente não são diferente
  ![Associação pelo maior limite de alinhamento](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Embora essa solução deixa intervalos maiores, o código para implementá-lo é relativamente simples e rápida. Na maioria dos casos, isso desloca a penalidade paga na memória não utilizada. Para obter um exemplo que usa esse método, consulte [SQLBindCol usando](../../../odbc/reference/develop-app/using-sqlbindcol.md).
-

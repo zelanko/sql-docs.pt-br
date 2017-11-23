@@ -3,8 +3,11 @@ title: Nome de agrupamento do Windows (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,7 +23,7 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nome de agrupamento do Windows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Especifica o nome de agrupamento do Windows na cláusula COLLATE em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome de agrupamento do Windows é composto pelo designador de agrupamento e pelos estilos de comparação.  
   

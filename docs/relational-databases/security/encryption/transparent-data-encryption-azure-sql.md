@@ -5,7 +5,7 @@ keywords:
 services: sql-database
 documentationcenter: 
 author: becczhang
-manager: cguyer
+manager: craigg
 editor: 
 ms.assetid: 
 ms.service: sql-database
@@ -16,15 +16,14 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: ac3ea91dc2db3d1cfb22dca2fdc341650c74b95b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d486dd7b9d3019cfb3f3cf88482cdb578e9f9066
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption para Data Warehouse e Banco de Dados SQL do Azure
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 A TDE (Transparent Data Encryption) ajuda a proteger O Data Warehouse e o Banco de Dados SQL do Azure contra a ameaça de atividades mal-intencionadas executando criptografia e descriptografia em tempo real do banco de dados, backups associados e arquivos de log de transações em repouso sem exigir alterações no aplicativo.
 

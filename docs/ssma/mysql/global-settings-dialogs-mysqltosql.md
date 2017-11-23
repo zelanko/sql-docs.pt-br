@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 41cf229fefb02c21c9b83ae9225e2d5b1d8994de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50ed2ce28bcc12896d116c9b95d2481d91bc8838
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-dialogs-mysqltosql"></a>Configurações globais (caixas de diálogo) (MySQLToSQL)
 Use a página de caixas de diálogo do **configurações globais** caixa de diálogo para especificar as configurações de aviso para o SSMA e uma ação do usuário padrão.  
@@ -49,4 +47,3 @@ Use esta opção para especificar o comportamento de substituição de objeto pa
   
 -   Se você selecionar **False**, SSMA não substitui os metadados do objeto durante a conversão.  
   
-

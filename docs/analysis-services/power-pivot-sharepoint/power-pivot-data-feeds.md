@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
 - Atom data feeds
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4703cf8f6ac0af1d45c4fcfb4129b40fd52ecb9a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b6ee3f4fe47a524fb645040adb6e6a61691decc6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-data-feeds"></a>Feeds de dados do Power Pivot
   Um feed de dados fornece um fluxo de dados sob demanda de uma fonte de dados online para um aplicativo cliente. No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar feeds de dados para adicionar dados de um serviço ou um aplicativo Web com reconhecimento do Atom a uma fonte de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em uma pasta de trabalho do Excel.  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  [Compartilhar feeds de dados usando uma biblioteca de feed de dados &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
-

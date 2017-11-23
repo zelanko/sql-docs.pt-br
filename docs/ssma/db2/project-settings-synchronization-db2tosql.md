@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb92c6d631e2de816e1b3e3a25e34f96a7f37cbc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3b2dee631b1f0d21b69949e5239f279cc22fdabe
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Projeto Settings(Synchronization) (DB2ToSQL)
 A página de sincronização do **configurações de projeto** caixa de diálogo contém configurações que personalizam o SSMA carrega e atualizações de banco de dados objetos, como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -106,4 +104,3 @@ Especifica a configuração padrão na caixa de diálogo de sincronização quan
   
 -   Se você selecionar **ignorar**, SSMA não executará qualquer ação de atualização.  
   
-

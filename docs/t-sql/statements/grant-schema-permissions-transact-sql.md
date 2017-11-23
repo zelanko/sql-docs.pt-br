@@ -3,8 +3,11 @@ title: "Permissões de esquema GRANT (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,7 +23,7 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

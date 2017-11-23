@@ -3,10 +3,12 @@ title: "Funções de API de nível 2 (Driver ODBC para Oracle) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6232a890c5898bcf543df9e47c97f363e2bfca12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>Funções de API de nível 2 (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -52,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Retorna uma lista de procedimentos na fonte de dados. Para procedimentos de pacotes, a coluna de nome de procedimento está em *packagename.procedurename* formato.<br /><br /> Como o Oracle não fornece uma forma de distinguir empacotados procedimentos de funções empacotadas, o driver retorna SQL_PT_UNKNOWN para a coluna PROCEDURE_TYPE.|  
 |**SQLSetPos**|Define a posição do cursor em um conjunto de linhas. Você pode usar **SQLSetPos** com **SQLGetData** para recuperar linhas de colunas desassociadas depois posicionando o cursor para uma linha específica no conjunto de linhas. Linhas adicionadas ao conjunto de resultados usando *fOption* SQL_ADD são adicionados após a última linha no conjunto de resultados.|  
 |**SQLSetScrollOptions**|Define as opções que controlam o comportamento de cursores associado com um identificador de instrução, hstmt. Para obter detalhes, consulte [combinações de simultaneidade e o tipo de Cursor](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
-

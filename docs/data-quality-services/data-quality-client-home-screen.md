@@ -2,9 +2,12 @@
 title: Tela inicial do Data Quality Client | Microsoft Docs
 ms.custom: 
 ms.date: 02/29/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00954a6fe6d3fcdbeea9094ee71e2c6a4cf958b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 518ea2fbf0a3e6f667a2d7a488de19d64b1b20ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-quality-client-home-screen"></a>Tela inicial do Cliente Data Quality
   Use esta tela para obter acesso às interfaces do usuário de cada um dos três grupos de tarefas do DQS ( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ): gerenciamento da base de dados de conhecimento, projetos de qualidade de dados e administração.  

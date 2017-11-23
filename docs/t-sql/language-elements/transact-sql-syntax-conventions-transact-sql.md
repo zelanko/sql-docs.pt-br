@@ -3,16 +3,16 @@ title: "Convenções de sintaxe Transact-SQL (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- sql13.TSQLExpandPortal.f1
-dev_langs:
-- TSQL
+f1_keywords: sql13.TSQLExpandPortal.f1
+dev_langs: TSQL
 helpviewer_keywords:
 - conventions [SQL Server]
 - Applies to section in Transact-SQL topics
@@ -27,19 +27,18 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a1c60d865d1b18eae1cd89ea226e91e8e7b5b9e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL sintaxe convenções-Transact-SQL
+# <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   A tabela a seguir lista e descreve as convenções usadas nos diagramas de sintaxe na Referência [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -127,6 +126,5 @@ ms.lasthandoff: 09/01/2017
  [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   
-
 
 

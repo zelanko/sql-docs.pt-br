@@ -2,9 +2,12 @@
 title: "Correspondência de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f6902b25f18905ce55dbd30e12917a4af858c139
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a688b5d0da43f4c49e22c70bf1faf3bc1773097d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-matching"></a>Correspondência de dados
   O processo de correspondência de dados do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ajuda você a reduzir a duplicação de dados e a aprimorar a exatidão dos dados em uma fonte de dados. A correspondência analisa o grau de duplicação em todos os registros de uma única fonte de dados, retornando probabilidades ponderadas de uma correspondência entre cada conjunto de registros comparados. Você pode decidir então quais registros são correspondências e executar a ação apropriada nos dados de origem.  

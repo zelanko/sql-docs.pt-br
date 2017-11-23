@@ -2,11 +2,12 @@
 title: Inicializar automaticamente o grupo de disponibilidade AlwaysOn | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
-ms.openlocfilehash: 151aa8876623f8d3cca40a953b318f0c0663f92e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inicializar automaticamente o grupo de disponibilidade AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 O SQL Server 2016 introduz a propagação automática de grupos de disponibilidade. Quando você cria um grupo de disponibilidade com propagação automática, o SQL Server cria automaticamente as réplicas secundárias para cada banco de dados no grupo. Não é mais necessário fazer backup e restaurar manualmente as réplicas secundárias. Para habilitar a propagação automática, crie o grupo de disponibilidade com o T-SQL ou use a versão mais recente do SQL Server Management Studio.
 

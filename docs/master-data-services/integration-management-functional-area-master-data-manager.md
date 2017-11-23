@@ -2,9 +2,12 @@
 title: "Área funcional Gerenciamento de Integração (Master Data Manager) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67dbfddf6209f0c717b83836e63a72b1ea3b4ad7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d2be4f95cd58ba57c425184af9b237cda54eb77
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Área funcional Gerenciamento de Integração (Master Data Manager)
   Na área funcional Gerenciamento de Integração, os administradores podem importar dados de tabelas de preparo e criar exibições de assinatura a serem usadas para sistemas de assinatura. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  

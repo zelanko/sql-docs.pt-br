@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Type property [field] [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 16bfc2bc77c729bc2ae2043a79889dd461018137
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 109fda6751505bbdaf059e97a1bbf645962b9ec1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-example-field-vc"></a>Exemplo de propriedade de tipo (campo) (VC + +)
 Este exemplo demonstra o [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade exibindo o nome da constante que corresponde ao valor da **tipo** propriedade de todos os a [campo](../../../ado/reference/ado-api/field-object.md) objetos do ***Funcionários*** tabela. A função FieldType é necessária executar este procedimento.  
@@ -181,4 +177,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Consulte também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Propriedade Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-

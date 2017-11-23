@@ -1,32 +1,30 @@
 ---
 title: "Índices de hash para tabelas com otimização de memória | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.component: in-memory-oltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e9fc5c574cc4fee841cfc6598623ec20ae26c504
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>Índices de hash para tabelas com otimização de memória
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Este artigo descreve o tipo de índice de *hash* disponível para uma tabela com otimização de memória. O artigo:  
@@ -440,4 +438,3 @@ O índice de duas colunas pode ser um índice não clusterizado ou um índice de
 O índice de hash precisa da cláusula WHERE para especificar um teste de igualdade para cada uma das colunas de sua chave. Caso contrário, o índice de hash não será útil para o otimizador.  
   
 Nenhum tipo de índice é útil se a cláusula WHERE especifica somente a segunda coluna na chave de índice.  
-

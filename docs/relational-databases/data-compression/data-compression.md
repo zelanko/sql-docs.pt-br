@@ -1,10 +1,13 @@
 ---
 title: "Compactação de dados | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: compression
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1090baa9aee0a742094a50fc313568bd552d17e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 996f547876031c29f975d85949d2ff300afdee5b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-compression"></a>Data Compression
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dão suporte à compactação de linhas e de páginas para tabelas e índices rowstore, e dão suporte a columnstore e à compactação de arquivamento columnstore para tabelas e índices columnstore.  
   

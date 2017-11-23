@@ -3,28 +3,28 @@ title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a0318d108d6dfaaa374af9a1ab8a148ff960dfcd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Seleciona os dados de um [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] banco de dados e copia esses dados para uma nova tabela em um SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados em um servidor remoto. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]usa o dispositivo, com todos os benefícios MPP do processamento de consulta, para selecionar os dados para a cópia remota. Use isto para cenários que requerem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionalidade.  
   
@@ -170,5 +170,4 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 ```  
   
   
-
 

@@ -1,13 +1,14 @@
 ---
 title: "ALTERAR a configuração de escopo do banco de dados (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTERAR a configuração de escopo do banco de dados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Essa instrução permite que várias definições de configuração de banco de dados no **banco de dados individual** nível. Essa instrução está disponível no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Essas configurações são:  
   
@@ -135,7 +135,7 @@ Limpa o cache de procedimento (plano) para o banco de dados. Isso pode ser execu
 
 IDENTITY_CACHE  **=**  { **ON** | OFF}  
 
-**Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (o recurso está em visualização pública) 
+**Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Habilita ou desabilita o cache de identidade no nível de banco de dados. O padrão é **ON**. Cache de identidade é usado para melhorar o desempenho de INSERT em tabelas com colunas de identidade. Para evitar lacunas nos valores de uma coluna de identidade em casos em que o servidor reinicia inesperadamente ou o failover para um servidor secundário, desabilite a opção IDENTITY_CACHE. Essa opção é semelhante à existente [272 do sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), exceto que ela pode ser definida no nível do banco de dados em vez de apenas no nível do servidor.   
 
@@ -300,4 +300,3 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
  [Opções de configuração do servidor &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [Configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
-

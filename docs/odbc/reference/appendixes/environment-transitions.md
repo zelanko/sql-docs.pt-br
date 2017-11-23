@@ -3,10 +3,12 @@ title: "Transições de ambiente | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], environment
 - state transitions [ODBC], environment
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 13d7b923f6fad42df791aa757d6c0349f58ad7d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a044161df57f81fee3639fd26c94b5860d5c1913
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="environment-transitions"></a>Transições de ambiente
 Ambientes de ODBC tem os seguintes três estados.  
@@ -136,4 +137,3 @@ Ambientes de ODBC tem os seguintes três estados.
 |E0<br /><br /> Não alocado|E1<br /><br /> Alocado|E2<br /><br /> Conexão|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|(IH)|--|
-

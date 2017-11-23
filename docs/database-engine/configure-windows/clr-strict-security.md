@@ -3,9 +3,12 @@ title: "Segurança estrita do CLR | Microsoft Docs"
 description: "Como configurar a segurança estrita do CLR no SQL Server"
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6f38449d20aa21da76fbaa375c91c88e664d3c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4902f0cbbdef0f7c684d154aad3bc896d138228b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="clr-strict-security"></a>Segurança estrita do CLR   
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Controla a interpretação das permissões `SAFE`, `EXTERNAL ACCESS` e `UNSAFE` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 

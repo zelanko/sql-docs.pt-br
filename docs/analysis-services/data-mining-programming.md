@@ -14,22 +14,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data mining [Analysis Services], developer's guide
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data mining [Analysis Services], developer's guide
 ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 93e263ee6ed7e8b3eb5bdf0f6596f5ddf636f199
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf88386fe9846ba1fee17f840a11ab635c050d01
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-programming"></a>Programação de mineração de dados
   Se você considerar que ferramentas e visualizadores internos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não atendem às suas necessidades, poderá ampliar a capacidade do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] codificando suas próprias extensões. Nessa abordagem, você tem duas opções:  
@@ -81,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Extensões de mineração de dados &#40; DMX &#41; Referência](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
-

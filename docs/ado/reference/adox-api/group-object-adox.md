@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Group
-helpviewer_keywords:
-- group object [ADOX]
+f1_keywords: Group
+helpviewer_keywords: group object [ADOX]
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a45b7388be1fa7c0a04d1142f6d11ef6fd796333
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16aad2cd94a457d3d6efe97326fdbe7e6c06e53d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="group-object-adox"></a>Objeto de grupo (ADOX)
 Representa uma conta de grupo que tenha permissões de acesso dentro de um banco de dados protegido.  
@@ -53,4 +49,3 @@ Representa uma conta de grupo que tenha permissões de acesso dentro de um banco
 ## <a name="see-also"></a>Consulte também  
  [Coleção de grupos (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Coleção Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-

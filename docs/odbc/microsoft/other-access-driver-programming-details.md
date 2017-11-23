@@ -3,10 +3,12 @@ title: "Outros detalhes de programação do Driver de acesso | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7c7e1c16dc4c44005e1c39775414f3fb2294440
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 716d0e133f96f232a0d93427d734ea9c142a5ff7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="other-access-driver-programming-details"></a>Outros detalhes de programação do Driver de acesso
 > [!NOTE]  
@@ -57,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 -   [Encryption (Driver do Access)](../../odbc/microsoft/encryption-access-driver.md)  
   
 -   [Usando o atributo de cadeia de conexão ExtendedAnsiSQL (Driver do Access)](../../odbc/microsoft/using-the-extendedansisql-connection-string-attribute-access-driver.md)
-

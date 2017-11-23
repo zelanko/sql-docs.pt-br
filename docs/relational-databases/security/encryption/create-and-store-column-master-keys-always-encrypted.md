@@ -2,9 +2,12 @@
 title: Criar e armazenar chaves mestras de coluna (Always Encrypted) | Microsoft Docs
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a250eaea12b32fb08603efb56a7a5105502fc38
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0aaccaa65855630a7b08cdae1af41fdfeeba62a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Criar e armazenar chaves mestras de coluna (Always Encrypted)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 *Chaves mestras de coluna* são chaves de proteção de chave usadas no Always Encrypted para criptografar chaves de criptografia de coluna. As chaves mestras de coluna devem ser armazenadas em um repositório de chaves confiável e precisam estar acessíveis aos aplicativos que precisam criptografar ou descriptografar dados e às ferramentas para a configuração do Sempre Criptografado e o gerenciamento de chaves Sempre Criptografado.
 

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b2308e32d81d9a3044bfe0583373fd54fdd93852
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9b92232ff44db431bf7b6f05a7f61da100dc556
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Exemplo de propriedades de RecordCount (VC + +) e filtro
 Este exemplo usa o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade para abrir uma nova [registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base em uma determinada condição aplicada a um existente **registros**. Ele usa o [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) para mostrar o número de registros em duas **conjuntos de registros**. A função FilterField é necessária executar este procedimento.  
@@ -314,4 +311,3 @@ Scootney Books, USA
  [Propriedade de filtro](../../../ado/reference/ado-api/filter-property.md)   
  [Propriedade RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

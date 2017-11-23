@@ -18,17 +18,16 @@ helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 76a57719a0e6e5fcfe899cfcd96f3187bc11ec30
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 589e282fbe84a37fd9b966a14441fe7885c71285
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimension-attribute-properties-reference"></a>Referência de propriedades de atributo de dimensão
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], existem muitas propriedades que determinam como funcionam as dimensões e os atributos da dimensão. A tabela a seguir lista e descreve cada uma dessas propriedades de atributo.  
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   
-

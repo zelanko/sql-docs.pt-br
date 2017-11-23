@@ -1,10 +1,13 @@
 ---
 title: "Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 caps.latest.revision: "66"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 972ea846249400c3219c27f446a61dee824caca6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2482102b183fcc86005c83fd4a69f824979e8b25
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   O Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para Cofre de Chaves do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure permite que a criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use o serviço de Cofre de Chaves do Azure como um provedor de [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) para proteger suas chaves de criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

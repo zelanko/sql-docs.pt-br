@@ -3,10 +3,12 @@ title: ISDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - ISDATE_TSQL
 - ISDATE
 - ISDATETIME_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - date and time [SQL Server], ISDATE
@@ -30,20 +31,19 @@ helpviewer_keywords:
 - time [SQL Server], validate
 - ISDATE function [SQL Server]
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: b9f17d829f3acf7c72a8599eb71b945c58d4cb0a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e005b11ad15170dcc2f6f45441d62e6ccc29570
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retornará 1 se o *expressão* é válido **data**, **tempo**, ou **datetime** valor; caso contrário, 0.  
   
@@ -160,5 +160,4 @@ ELSE
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-
 

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADOX, fundamentals
+helpviewer_keywords: ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22ef8c10cbc4cec9024b311297e3853790687bc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dbc8d415e4dfcaeb4bf7e6a489bd407e87335874
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-fundamentals"></a>Conceitos básicos do ADOX
 Microsoft® ActiveX® Data objetos extensões de linguagem de definição de dados e segurança (ADOX) é uma extensão para os objetos do ADO e o modelo de programação. ADOX inclui objetos para criação de esquema e modificação, bem como a segurança. Como é uma abordagem baseada em objeto para manipulação de esquema, você pode escrever código que funciona em dados de várias fontes, independentemente das diferenças nas suas sintaxes nativo.  
@@ -61,4 +58,3 @@ Microsoft® ActiveX® Data objetos extensões de linguagem de definição de dad
  [Propriedades ADOX](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Guia do programador do ADO](../../../ado/guide/ado-programmer-s-guide.md)
-

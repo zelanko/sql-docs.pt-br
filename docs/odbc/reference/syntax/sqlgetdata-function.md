@@ -3,33 +3,30 @@ title: "Função SQLGetData | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetData
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetData
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetData
-helpviewer_keywords:
-- SQLGetData function [ODBC]
+f1_keywords: SQLGetData
+helpviewer_keywords: SQLGetData function [ODBC]
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: be2121e56cd0fb728c8af0fbb43bcfbf24bd0c57
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 463a6b68149786cd9cc14ca913e3a2b2104a59e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetdata-function"></a>Função SQLGetData
 **Conformidade**  
@@ -279,4 +276,3 @@ if (retcode == SQL_SUCCESS) {
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)
-

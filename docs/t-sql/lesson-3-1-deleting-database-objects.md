@@ -2,32 +2,31 @@
 title: Excluindo objetos de banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- deleting database objects
+applies_to: SQL Server 2016
+helpviewer_keywords: deleting database objects
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d8e3d5eba52076ae58337fb9579781cad10a5f42
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7bcd4f3254cfd6b648411ae6fb9c364fa7017913
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-1---deleting-database-objects"></a>Lição 1 de 3: excluindo objetos de banco de dados
-Para remover todos os rastreamentos deste tutorial, você pode simplesmente excluir o banco de dados. No entanto, neste tópico, você passará pelas etapas para reverter todas as ações feitas durante o tutorial.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Para remover todos os rastreamentos deste tutorial, você pode simplesmente excluir o banco de dados. No entanto, neste tópico, você passará pelas etapas para reverter todas as ações feitas durante o tutorial.  
   
 ### <a name="removing-permissions-and-objects"></a>Removendo permissões e objetos  
   
@@ -121,4 +120,3 @@ Isso conclui o tutorial Escrevendo Instruções [!INCLUDE[tsql](../includes/tsql
   
   
   
-

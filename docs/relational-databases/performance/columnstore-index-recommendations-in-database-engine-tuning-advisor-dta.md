@@ -2,9 +2,12 @@
 title: "Recomendações de índice columnstore no DTA (Orientador de Otimização do Mecanismo de Banco de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d2c7a4a2d87fb730ebca3f4804b059471899823
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c94bd59f4e383606c12aa90efc1fbff2f831d1cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Recomendações de índice columnstore no DTA (Orientador de Otimização do Mecanismo de Banco de Dados)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  
   As cargas de trabalho de data warehousing e de análise podem se beneficiar muito dos [índices columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md), bem como os índices rowstore tradicionais. A escolha de quais índices columnstore e rowstore criar para seu banco de dados depende da carga de trabalho do aplicativo. No SQL Server 2016, o [DTA (Orientador de Otimização do Mecanismo de Banco de Dados)](../../relational-databases/performance/database-engine-tuning-advisor.md) pode analisar sua carga de trabalho e recomendar uma combinação apropriada de índices columnstore e rowstore para criar no banco de dados. 

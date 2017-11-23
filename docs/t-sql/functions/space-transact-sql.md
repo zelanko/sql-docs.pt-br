@@ -3,36 +3,36 @@ title: "ESPAÇO (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SPACE_TSQL
 - SPACE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - strings [SQL Server], repeated spaces
 - repeated spaces
 - SPACE function
 ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d3cfb89c5b62f7b3be6b3ecf6ead66f2df8d55c8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f5de41d3d7619af5f83fa2bee8cd30f980f291b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna uma cadeia de caracteres de espaços repetidos.  
   
@@ -86,6 +86,5 @@ GO
  [Funções internas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
-
 
 

@@ -3,10 +3,12 @@ title: "Tipos de dados de parâmetro | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 655868b77b482a11145e8947e1ea81d34270ca65
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parameter-data-types"></a>Tipos de dados de parâmetro
 Embora cada parâmetro é especificado com **SQLBindParameter** é definido usando um tipo de dados do SQL, os parâmetros em uma instrução SQL ter nenhum intrínsecos tipo de dados. Portanto, os marcadores de parâmetro podem ser incluídos em uma instrução SQL somente se seus tipos de dados podem ser inferidos de outro operando na instrução. Por exemplo, em uma expressão aritmética, como? + COLUMN1, o tipo de dados do parâmetro pode ser deduzido do tipo de dados da coluna nomeada representado por COLUMN1. Um aplicativo não pode usar um marcador de parâmetro se o tipo de dados não pode ser determinado.  
@@ -41,4 +42,3 @@ Embora cada parâmetro é especificado com **SQLBindParameter** é definido usan
 |Um valor usado com **IN**|Mesmo que a expressão ou o primeiro valor, se houver um marcador de parâmetro na expressão|  
 |Um valor padrão usado com **como**|VARCHAR|  
 |Um valor de atualização usado com **atualizar**|Mesmo que a coluna de atualização|
-

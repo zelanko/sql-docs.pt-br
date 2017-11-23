@@ -6,20 +6,24 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: data-quality-services
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
 ms.author: genemi
 ms.workload: data-quality-services
-ms.openlocfilehash: 153edd4079a3baa18a590771dc407314d0cd267e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 40c98b58bb5caf5f59aace35724bbef5b14f07cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Novo e atualizados recentemente: Data Quality Services para SQL Server
 

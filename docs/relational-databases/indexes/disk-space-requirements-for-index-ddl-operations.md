@@ -2,9 +2,12 @@
 title: "Requisitos de espaço em disco para operações de índice DDL | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa0c1457fbe63f013759b545929d98ea16ff3bf4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ddf19430350de7403cc3c9d46416cbc6cfa409c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisitos de espaço em disco para operações de índice DDL
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   O espaço em disco é uma consideração importante ao criar, recriar ou cancelar índices. Um espaço em disco inadequado pode degradar o desempenho ou até mesmo provocar falha na operação de índice. Este tópico fornece informações gerais que poderão lhe ajudar a determinar a quantidade de espaço em disco necessária para operações DDL (Linguagem de Definição de Dados) de índice.  
   

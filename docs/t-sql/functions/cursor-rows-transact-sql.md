@@ -3,8 +3,11 @@ title: '@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>& #x 40; & #x 40. CURSOR_ROWS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Retorna o número de linhas de qualificação atualmente no último cursor aberto na conexão. Para melhorar o desempenho, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode popular cursores estáticos e conjuntos de chaves grandes assincronamente. @@CURSOR_ROWS pode ser chamado para determinar que o número de linhas que se qualificam para um cursor é recuperado no momento @@CURSOR_ROWS é chamado.
   

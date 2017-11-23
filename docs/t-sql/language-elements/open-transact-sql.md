@@ -3,17 +3,18 @@ title: Abrir (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPEN_TSQL
 - OPEN
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - opening cursors
 - cursors [SQL Server], opening
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - OPEN statement
 - Transact-SQL cursors, opening
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: aec83ff9ef56b4d4ae02867d4055d0b1e38f41ec
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e065102cd08e12d0e7d80557dfa627f531ec629c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Abre uma [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor de servidor e popula o cursor executando o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução especificada no DECLARE CURSOR ou conjunto *cursor_variable* instrução.  
   
@@ -94,4 +94,3 @@ DEALLOCATE Employee_Cursor;
  [Busca &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   
-

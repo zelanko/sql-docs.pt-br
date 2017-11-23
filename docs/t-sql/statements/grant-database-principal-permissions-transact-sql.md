@@ -3,8 +3,11 @@ title: "CONCEDER permissões de banco de dados Principal (Transact-SQL) | Micros
 ms.custom: 
 ms.date: 03/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

@@ -3,17 +3,18 @@ title: File_name (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FILE_NAME_TSQL
 - FILE_NAME
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - viewing file names
 - file names [SQL Server], FILE_NAME
@@ -25,19 +26,18 @@ helpviewer_keywords:
 - FILE_NAME function
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
+ms.openlocfilehash: b6478b5e9eb148dea799fb928384098712e4810d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 0fcf9f37da268e266cb94037995f271c54536cb8
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o nome de arquivo lógico para o número de identificação (ID) de arquivo fornecido.  
   

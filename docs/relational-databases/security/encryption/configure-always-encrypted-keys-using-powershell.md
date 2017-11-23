@@ -2,9 +2,12 @@
 title: Configurar as chaves Always Encrypted usando o PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fd7e5c31b5a89795ba4f359641c53847031d504
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0e85070af106dd7f8aa334c7163fc0e1734ed86d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configurar chaves do Always Encrypted usando o PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
     
 Este artigo fornece as etapas para provisionar chaves para Always Encrypted usando o [módulo do SqlServer PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md). Você pode usar o PowerShell para provisionar chaves Always Encrypted [com e sem separação de funções](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles), oferecendo controle sobre quem tem acesso à criptografia de chaves real no repositório de chaves e quem tem acesso ao banco de dados. 

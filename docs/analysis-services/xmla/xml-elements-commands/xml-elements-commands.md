@@ -13,31 +13,29 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - commands [XML for Analysis]
 - XML for Analysis, commands
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 19644de3ba240e417faa3d787360686d7b5c835f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64577ef2799fd56cc4e404a42fc351be8ece6baa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---commands"></a>Elementos XML - comandos
   Esta seção de referência contém XML para elementos Analysis (XMLA) que podem ser usados dentro de **comando** elemento durante um **Execute** chamada de método.  
   
 |Elemento|Description|  
 |-------------|-----------------|  
-|[Elemento ALTER (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contém elementos do Analysis Services Scripting Language (ASSL) usados pelo [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método para alterar objetos em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Elemento Alter (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contém elementos do Analysis Services Scripting Language (ASSL) usados pelo [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método para alterar objetos em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Elemento de backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Faz backup de um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados para um arquivo de backup.|  
 |[Elemento batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Executa o XML de um ou mais comandos Analysis (XMLA) como uma operação em lote, em sequência ou em paralelo, em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Elemento BeginTransaction](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Começa uma transação na sessão atual com uma instância do Analysis Services.|  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/01/2017
 |[Elemento UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)|Atualiza células em um cubo habilitado para gravação.|  
   
   
-

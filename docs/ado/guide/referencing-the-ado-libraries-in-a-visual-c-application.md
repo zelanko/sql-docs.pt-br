@@ -11,24 +11,22 @@ ms.component: guide
 ms.technology: "“drivers”"
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries in a Visual C++ application[ADO]
 - ADO, libraries
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b25081133a9af071fbd0dfb2ee98344c60d3d35a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 44d731d8c9e61c29f1dc9eb0c8ea12d57402639c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Fazer referência às bibliotecas do ADO em um aplicativo do Visual C++
 Para usar a versão mais recente do ADO em um aplicativo do Visual C++, use a seguinte `#import` diretiva:  
@@ -52,4 +50,3 @@ Para usar a versão mais recente do ADO em um aplicativo do Visual C++, use a se
 -   *msado21.tlb*, biblioteca de tipos 2.1 de ADO  
   
 -   *msado20.tlb*, biblioteca de tipos 2.0 de ADO
-

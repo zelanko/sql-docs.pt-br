@@ -19,17 +19,16 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83259b46fd10b45e25e032dfdb692fd654c67260
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuração de erro para o cubo, partição e processamento de dimensão
   As propriedades de configuração de erro no cubo, na partição ou nos objetos de dimensão determinam como o servidor responde quando ocorrem erros de integridade de dados durante o processamento. As chaves duplicadas, chaves ausentes e os valores nulos em uma coluna de chave normalmente disparam esses erros, e embora o registro que cause o erro não seja adicionado ao banco de dados, você pode definir propriedades que determinam o que acontece em seguida. Por padrão, o processamento para. No entanto, durante o desenvolvimento do cubo, talvez você queira que o processamento continue quando ocorrerem os erros de forma que você possa testar comportamentos do cubo com dados importados, mesmo se estiverem incompletos.  
@@ -195,4 +194,3 @@ ms.lasthandoff: 09/01/2017
  [Definir o membro desconhecido e propriedades de processamento nulo](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   
-

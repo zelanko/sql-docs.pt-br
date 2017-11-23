@@ -3,8 +3,11 @@ title: index_option (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,7 +20,7 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 caps.latest.revision: 68
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Especifica um conjunto de opções que podem ser aplicadas a um índice que faz parte de uma definição de restrição que é criada usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   

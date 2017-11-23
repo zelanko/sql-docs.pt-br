@@ -1,13 +1,14 @@
 ---
 title: "Compatibilidade com versões anteriores do SQL Server 2016 Analysis Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b7c58d201f40123ab206d02a4b32948c3d976c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f54505056125f11f3843a671a76136288f54b5d1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilidade com versões anteriores do Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -52,9 +52,9 @@ Os recursos a seguir estão obsoletas nesta versão:
 |Multidimensional|Cubos de sessão. Não há nenhuma substituição.|  
 |Multidimensional|Cubos locais. Não há nenhuma substituição.|  
 |Tabular|Os níveis de compatibilidade de modelo de tabela 1100 e 1103 não terão suporte em uma versão futura. A substituição é definir modelos de nível de compatibilidade 1200 ou superior, convertendo definições de modelo para metadados tabulares. Consulte [Nível de compatibilidade para modelos de tabela no Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
-|Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitorar o Analysis Services com Eventos Estendidos do SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)|  
+|Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Ferramentas|Server Profiler para reprodução de rastreamento <br />Substituição. Não há nenhuma substituição.|  
-|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -   Configuração de rastreamento: Microsoft.SqlServer.Management.XEvent<br />-   Leitura de rastreamento: Microsoft.SqlServer.XEvent.Linq<br />-   Reprodução de rastreamento: nenhuma|  
+|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: Microsoft.SqlServer.Management.XEvent<br />-Leitura de rastreamento: Microsoft.SqlServer.XEvent.Linq<br />-   Reprodução de rastreamento: nenhuma|  
   
 > [!NOTE]  
 >  Os anúncios anteriores de recursos preteridos do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] permanecem em vigor. Como o código de suporte a esses recursos ainda não foi retirado do produto, muitos desses recursos ainda estão presentes nesta versão. Enquanto os recursos anteriormente preteridos possam ser acessados, que eles ainda são considerados preteridos e podem ser fisicamente removidos do produto a qualquer momento.  
@@ -129,4 +129,3 @@ Os comportamentos de recursos alterados nesta versão, mas que não interrompem 
 
 ## <a name="see-also"></a>Consulte também
 [Compatibilidade com versões anteriores do Analysis Services (SQL Server 2017)](analysis-services-backward-compatibility-sql2017.md)
-

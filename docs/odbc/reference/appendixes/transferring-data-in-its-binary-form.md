@@ -3,10 +3,12 @@ title: "Transferência de dados em seu formato binário | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - transferring data in binary form [ODBC]
 - binary data transfers [ODBC]
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 69a47d8d74c3966ed201d89381f191fd55642345
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c54b61ec668e9282d723e48f1c50d1005740ac1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Transferência de dados em seu formato binário
 Um aplicativo com segurança pode transferir dados (no formato interno usado por um DBMS especificado) entre duas fontes de dados que usam o mesmo DBMS e a plataforma de hardware. Para uma determinada parte dos dados, os tipos de dados SQL devem ser o mesmo em fontes de dados de origem e destino. O tipo de dados C é SQL_C_BINARY.  
@@ -35,4 +36,3 @@ Um aplicativo com segurança pode transferir dados (no formato interno usado por
 >  Aplicativos que transferir os dados (exceto dados binários) dessa maneira não são interoperáveis entre DBMSs.  
   
  **SQLCopyDesc** pode ser usado para copiar associações de linha de DBMS de origem para associações de parâmetro no DBMS de destino.
-

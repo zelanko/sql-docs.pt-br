@@ -3,14 +3,15 @@ title: Sinalizadores de rastreamento (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -20,20 +21,19 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: 171
+caps.latest.revision: "171"
 author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 44c2252590b6fdb9ffdbe895830eb49328c28e6a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 16e963170716b8c135bb01ffb5fcd9cf86e65256
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - sinalizadores de rastreamento (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Os sinalizadores de rastreamento são usados para definir temporariamente características de servidor específicas ou para desativar um determinado comportamento. Por exemplo, se o sinalizador de rastreamento 3205 for definido quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciar, a compactação de hardware para drivers de fita será desabilitada. Os sinalizadores de rastreamento são usados com frequência para diagnosticar problemas de desempenho ou depurar procedimentos armazenados ou sistemas de computador complexos.
   
@@ -187,5 +187,4 @@ SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUER
 [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
 [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
 [Dicas de consulta (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
-
 

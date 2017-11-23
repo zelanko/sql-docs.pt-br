@@ -3,8 +3,11 @@ title: SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/03/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Faz com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siga as regras ISO relativas às aspas que delimitam identificadores e cadeias de caracteres literais. Identificadores delimitados por aspas duplas podem ser palavras-chave reservadas [!INCLUDE[tsql](../../includes/tsql-md.md)] ou podem conter caracteres que nem sempre são permitidos pelas regras da sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores.  
   

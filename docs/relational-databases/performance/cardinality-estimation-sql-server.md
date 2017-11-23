@@ -2,9 +2,12 @@
 title: Estimativa de cardinalidade (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7fc8688959d0ca4c58052b47f2af79c6dd95ee25
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b1c53b09fe118de3a90c78bd1393da90a915385b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Este artigo ilustra como você pode avaliar e escolher a melhor configuração de CE (estimativa de cardinalidade) para o sistema SQL. A maior parte dos sistemas se beneficia da CE mais recente, pois ela é a mais precisa. A CE prevê o número de linhas que sua consulta provavelmente retornará. A previsão de cardinalidade é usada pelo Otimizador de Consulta para gerar o plano de consulta ideal. Com estimativas mais precisas, o Otimizador de Consulta normalmente pode fazer um trabalho melhor de produção de um plano de consulta melhor.  

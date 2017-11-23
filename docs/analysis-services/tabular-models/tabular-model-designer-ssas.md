@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>Designer de Modelos Tabulares (SSAS)
 O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrado com o Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], com modelos adicionais de tipo de projeto especificamente para desenvolver soluções profissionais de modelo tabular.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] é instalado como um download gratuito da Web. Consulte [Baixar o SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md) para obter detalhes.    
@@ -146,4 +144,3 @@ O designer de modelo tabular faz parte do [!INCLUDE[ssBIDevStudioFull](../../inc
  [Propriedades &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
-

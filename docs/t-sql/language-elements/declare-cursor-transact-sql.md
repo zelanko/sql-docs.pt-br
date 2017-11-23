@@ -3,8 +3,11 @@ title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Define os atributos de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)], como seu comportamento de rolagem e a consulta usada para construir o conjunto de resultados no qual o cursor funciona. DECLARE CURSOR aceita uma sintaxe fundada no padrão ISO e uma sintaxe que usa um conjunto de extensões [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

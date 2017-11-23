@@ -3,8 +3,11 @@ title: SWITCHOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +29,7 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna um **datetimeoffset** valor é alterado do deslocamento de fuso horário armazenado para um novo deslocamento de fuso horário especificado.  
   

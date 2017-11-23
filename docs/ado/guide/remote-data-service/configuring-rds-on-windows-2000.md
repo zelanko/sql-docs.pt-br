@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS configuration [ADO], Windows 2000
+helpviewer_keywords: RDS configuration [ADO], Windows 2000
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 831608a7930f9fae1bef31132ee11f22654a8b5c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf283b40d32f26b916d87ecf7d6946bf97eea415
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configurando o RDS no Windows 2000
 Se você tiver dificuldade obtendo RDS funcione corretamente após a atualização para o Windows 2000, siga estas etapas para solucionar o problema:  
@@ -49,6 +46,5 @@ Se você tiver dificuldade obtendo RDS funcione corretamente após a atualizaç�
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 

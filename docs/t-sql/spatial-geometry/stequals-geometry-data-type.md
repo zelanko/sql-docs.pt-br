@@ -3,34 +3,33 @@ title: STEquals (tipo de dados geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STEquals (geometry Data Type)
 - STEquals_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STEquals (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STEquals (geometry Data Type)
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e6038e3dbf825fd94590cfdb1562ff5b36ffb80e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8aaaa3e346f3b2c21bed8476cbebcbdc03e1ec94
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (tipo de dados geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Retornará 1 se uma **geometria** instância representa o mesmo ponto definido como outro **geometria** instância. Retornará 0 se isso não ocorrer.
   
@@ -66,8 +65,7 @@ SELECT @g.STEquals(@h);
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [Métodos do OGC em instâncias de geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

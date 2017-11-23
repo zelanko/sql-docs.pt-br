@@ -3,8 +3,11 @@ title: Feche o Driver JDBC conjuntos de resultados abertos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -22,28 +25,28 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/09/2017
 
 ---
-# Método autoCommitFailureClosesAllResultSets (SQLServerDatabaseMetaData)
+# <a name="autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata"></a>Método autoCommitFailureClosesAllResultSets (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Indica se o driver JDBC fecha todos os conjuntos de resultados abertos, inclusive aqueles colocados em espera, quando uma confirmação automática é habilitada e uma exceção é lançada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 public boolean autoCommitFailureClosesAllResultSets()  
 ```  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  **True** se resultar abrir todos os conjuntos, inclusive aqueles, forem fechados quando uma confirmação automática está habilitada e uma exceção é gerada. Caso contrário, **false**.  
   
-## Exceções  
+## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Esse método autoCommitFailureClosesAllResultSets é especificado pelo método autoCommitFailureClosesAllResultSets na interface DatabaseMetadata.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

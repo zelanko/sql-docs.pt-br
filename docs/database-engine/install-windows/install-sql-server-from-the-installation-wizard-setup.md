@@ -2,11 +2,12 @@
 title: "Instalar o SQL Server 2016 por meio do Assistente de Instalação (Instalação) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +20,14 @@ caps.latest.revision: "91"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: b97afc1f7fd9464e5ef5074e9e2b3d1ccb98d4b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6f354a0639adf1db8e99a5f4e245f9df16211f51
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Este artigo explica como instalar o SQL Server com o Assistente de Instalação. Aplica-se a [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] e [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Instalar o SQL Server 2014 por meio do Assistente de Instalação (Instalação)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
 Este tópico apresenta um procedimento passo a passo sobre como instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o assistente para instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Assistente para Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma única árvore de recursos para instalação de todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que você não precise instalá-los individualmente. Para obter mais informações sobre como instalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individualmente, veja [Instalar o SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  

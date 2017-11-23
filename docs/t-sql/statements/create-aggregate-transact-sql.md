@@ -3,10 +3,12 @@ title: "Criar agregação (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,27 +16,25 @@ f1_keywords:
 - CREATE AGGREGATE
 - AGGREGATE_TSQL
 - AGGREGATE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CREATE AGGREGATE statement
 - aggregate functions [SQL Server], user-defined
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 877e72a18d11fbf31a6ea61f6abed515f5b746f6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad5cf36e97bf3903cc9d42ec5179de6375624f95
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria uma função de agregação definida pelo usuário, cuja implementação está definida em uma classe de um assembly no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] associe a função de agregação à sua implementação, o assembly do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contém a implementação deverá primeiramente ser carregado em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o uso de uma instrução CREATE ASSEMBLY.  
   
@@ -124,4 +124,3 @@ GO
  [Remover agregação &#40; Transact-SQL &#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   
-

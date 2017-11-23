@@ -3,8 +3,11 @@ title: ToString (mecanismo de banco de dados) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,7 +23,7 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="tostring-database-engine"></a>ToString (Mecanismo de Banco de Dados)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Retorna uma cadeia de caracteres com representação lógica de *isso*. ToString é chamado implicitamente quando uma conversão de **hierarchyid** como uma cadeia de caracteres de tipo ocorre. Atua como o oposto do [Parse &#40; mecanismo de banco de dados &#41;](../../t-sql/data-types/parse-database-engine.md).
   

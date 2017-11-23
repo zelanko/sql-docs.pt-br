@@ -3,8 +3,11 @@ title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Executa a consulta passagem especificada no servidor vinculado especificado. Esse servidor é uma fonte de dados OLE DB. OPENQUERY pode ser referenciada na cláusula FROM de uma consulta como se fosse um nome de tabela. OPENQUERY também pode ser referenciada como a tabela de destino de uma instrução INSERT, UPDATE ou DELETE. Isso dependerá dos recursos do provedor OLE DB. Embora a consulta possa retornar vários conjuntos de resultados, OPENQUERY retorna somente o primeiro deles.  
   

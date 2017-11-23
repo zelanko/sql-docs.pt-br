@@ -13,25 +13,23 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - schema rowsets [Analysis Services]
 - rowsets [Analysis Services], data mining
 - data mining [Analysis Services], schema rowsets
 ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 35f4df3e7e01a8f0987e955a180842efde5793e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad8ac453d1d299be98f3cb46496685063fd66576
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-schema-rowsets"></a>Conjuntos de linhas de esquema de mineração de dados
   Um servidor que está executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] suporta os seguintes conjuntos de linhas do esquema de mineração de dados. Para verificar se um determinado provedor XML/A oferece suporte a um conjunto de linhas específico, use o [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) conjunto de linhas com o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
@@ -46,7 +44,7 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
   
 |Conjunto de linhas do esquema|Description|  
 |-------------------|-----------------|  
-|[Linhas de DMSCHEMA_MINING_COLUMNS](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Descreve as colunas individuais de todos os modelos de mineração de dados definidos implantados no servidor.|  
+|[Conjunto de linhas DMSCHEMA_MINING_COLUMNS](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Descreve as colunas individuais de todos os modelos de mineração de dados definidos implantados no servidor.|  
 |[Conjunto de linhas DMSCHEMA_MINING_FUNCTIONS](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Descreve as funções de previsão e as funções de mineração que podem ser usadas com cada algoritmo de mineração de dados instalado no servidor.|  
 |[Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Permite que o aplicativo cliente procure o conteúdo de um modelo de mineração de dados treinado.|  
 |[Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT_PMML](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|Retorna a representação XML (PMML 2.1) do conteúdo do modelo de mineração.|  
@@ -64,4 +62,3 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
  [Linhas do esquema de mineração de dados &#40; SSAs &#41;](../../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)  
   
   
-

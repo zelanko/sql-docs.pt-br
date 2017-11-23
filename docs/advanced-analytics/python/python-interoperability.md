@@ -1,31 +1,26 @@
 ---
-title: Interoperabilidade de Python | Microsoft Docs
+title: Interoperabilidade do Python com o SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ee7187d490c8da80c66fb27156b2726e71782238
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="python-interoperability"></a>Interoperabilidade de Python
+# <a name="python-interoperability-with-sql-server"></a>Interoperabilidade do Python com o SQL Server
 
 Este tópico descreve os componentes do Python que são instalados quando você habilitar o recurso **serviços de aprendizado de máquina (no banco de dados)** e selecione Python como o idioma.
-
-> [!NOTE]
-> Suporte para Python é um recurso de pré-lançamento e ainda está em desenvolvimento.
 
 ## <a name="python-components"></a>Componentes do Python
 
@@ -35,11 +30,11 @@ A distribuição que está associada um determinado [!INCLUDE[ssNoVersion_md](..
 
 Por exemplo, se você instalou os serviços de aprendizado de máquina com a opção de Python na instância padrão, procure em:
 
-`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER`
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 Instalação de serviços de aprendizado de máquina do SQL Server 2017 adiciona a distribuição Anaconda de Python. Especificamente, os instaladores Anaconda 3 são usados, com base na ramificação Anaconda 4.3. O nível esperado do Python para o SQL Server 2017 é Python 3.5.
 
-## <a name="new-in-this-release"></a>Novo nesta versão
+## <a name="new-python-packages-in-this-release"></a>Novos pacotes do Python nesta versão
 
 Para obter uma lista de pacotes com suporte para a distribuição da Anaconda, consulte o site de análise de continuidade: [a lista de pacotes Anaconda](https://docs.continuum.io/anaconda/pkg-docs)
 
@@ -47,9 +42,9 @@ Serviços de aprendizado de máquina no SQL Server 2017 também inclui o novo **
 
 Essa biblioteca fornece funcionalidade equivalente para que o **RevoScaleR** pacote para o Microsoft R. Em outras palavras, ele oferece suporte à criação de contextos de computação remota, bem como um vários modelos de aprendizado de máquina escalonável, tais como **rxLinMod**. Para obter mais informações sobre RevoScaleR, consulte [distribuída e a computação paralela com ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing).
 
-Porque o suporte a Python é um recurso de pré-lançamento e ainda está em desenvolvimento, o **revoscalepy** biblioteca atualmente inclui apenas um subconjunto da funcionalidade RevoScaleR. 
+O [microsoftml para Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) pacote é instalado como parte do aprendizado de máquina do SQL Server quando você adiciona o Python para sua instalação. Este pacote contém muitos algoritmos aprendizado de máquina que foram otimizados para velocidade e a precisão, bem como transformações para trabalhar com texto e imagens de linha. Para obter detalhes, consulte [usando o pacote de MicrosoftML com o SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package).
 
-Adições futuras podem incluir o [Microsoft cognitivas Toolkit](https://www.microsoft.com/research/product/cognitive-toolkit/). Essa biblioteca anteriormente conhecido como CNTK, oferece suporte a uma variedade de modelos de rede neural, incluindo redes convolutional (CNN), redes recorrentes (RNN) e redes de longa memória termo curto (LSTM).
+Microsoftml e revoscalepy estão estritamente ligadas; fontes de dados usadas em microsoftml são definidos como objetos revoscalepy. Limitações de contexto na transferência de revoscalepy para microsoftml de computação. Ou seja, toda a funcionalidade está disponível para operações de locais, mas a mudança para um contexto de computação remota exige RxInSqlServer.
 
 ## <a name="using-python-in-sql-server"></a>Usando Python no SQL Server
 
@@ -76,5 +71,4 @@ Como parte da instalação dos serviços de aprendizado de máquina com Python, 
 
 ## <a name="see-also"></a>Consulte também
 
-[Bibliotecas de Python e tipos de dados](python-libraries-and-data-types.md)
-
+[Bibliotecas Python e tipos de dados](python-libraries-and-data-types.md)

@@ -3,8 +3,11 @@ title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,7 +25,7 @@ ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>& #x 40; & #x 40. NESTLEVEL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o nível aninhando da execução de procedimento armazenado atual (inicialmente 0) no servidor local.  
   

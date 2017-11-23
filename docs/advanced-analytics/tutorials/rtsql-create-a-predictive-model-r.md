@@ -5,25 +5,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bf9c1aec8ef4f065ac56e4439cbfbf0c2248727a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73d957b05c9bc964a3da1c7e177d9413e0c73aa9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Criar um modelo de previsão (R no início rápido do SQL)
 
@@ -159,7 +157,6 @@ Lembre-se essas regras para trabalhar com parâmetros SQL e R variáveis `sp_exe
 
 Agora que você tem um modelo, na etapa final, você aprenderá a gerar previsões com base nele e plotar os resultados.
 
-[Prever e plotar do modelo](../tutorials/rtsql-predict-and-plot-from-model.md)
-
+[Prever e plotar com base no modelo](../tutorials/rtsql-predict-and-plot-from-model.md)
 
 

@@ -3,8 +3,11 @@ title: Fontes de dados | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -38,3 +41,4 @@ Um *fonte de dados* é simplesmente a fonte de dados. Ele pode ser um arquivo, u
 -   [Usando fontes de dados](../../odbc/reference/using-data-sources.md)  
   
 -   [Exemplo de fonte de dados](../../odbc/reference/data-source-example.md)
+

@@ -3,34 +3,33 @@ title: RADIANOS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RADIANS
 - RADIANS_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- RADIANS function
+dev_langs: TSQL
+helpviewer_keywords: RADIANS function
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c36e42ad7cb28ae752809015fc90541d7530a807
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 64c662ed806f5173c506756433318d589a42d4ea
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna radianos quando uma expressão numérica, em graus, é inserida.  
   
@@ -132,5 +131,4 @@ The RADIANS of the angle is: 3.44022
  [Money e smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
-
 

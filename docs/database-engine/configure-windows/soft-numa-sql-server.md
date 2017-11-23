@@ -1,10 +1,13 @@
 ---
 title: Soft-NUMA (SQL Server) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7516d8a10fc121bfa05661eb94084fa148fce0ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: adde08cc4584568c42d896b70ffbcc49689d6416
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Processadores modernos têm vários núcleos múltiplos por soquete. Cada soquete é representado, em geral, como um único nó NUMA. O mecanismo de banco de dados do SQL Server particiona diversas estruturas internas e particiona threads de serviço para cada nó NUMA.  Com processadores contendo 10 ou mais núcleos por soquete, o uso de software NUMA para dividir nós NUMA de hardware geralmente aumenta a escalabilidade e o desempenho. Antes do SQL Server 2014 SP2, o NUMA baseado em software (soft-NUMA) solicitou que você editasse o Registro para adicionar uma máscara de afinidade de configuração de nó e foi configurada por computador em vez de por cada instância.  Com o SQL Server 2014 SP2 e o SQL Server 2016, o soft-NUMA é configurado automaticamente no nível da instância de banco de dados quando o serviço SQL Server é iniciado.  
   

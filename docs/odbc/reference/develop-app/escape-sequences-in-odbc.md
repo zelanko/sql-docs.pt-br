@@ -3,10 +3,12 @@ title: "Sequências em ODBC de escape | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1981e538d5ea3a8730547544f99bcbf96d0e9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92fd9745bccacad3d7487c3ed9f1bee58eeb4411
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequências de escape de ODBC
 Um número de recursos de idioma, como junções externas e chamadas de função escalar, geralmente é implementado por DBMSs. No entanto, sintaxes para esses recursos costumam ser DBMS específico, mesmo quando sintaxes padrão são definidos por vários corpos de padrões. Por isso, o ODBC define sequências de escape que contêm sintaxes padrão para os seguintes recursos de idioma:  
@@ -72,4 +73,3 @@ Um número de recursos de idioma, como junções externas e chamadas de função
 -   [Junções externas](../../../odbc/reference/develop-app/outer-joins.md)  
   
 -   [Chamadas de procedimento](../../../odbc/reference/develop-app/procedure-calls.md)
-

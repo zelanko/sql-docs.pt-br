@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- ADOX code examples, Visual Basic
+dev_langs: VB
+helpviewer_keywords: ADOX code examples, Visual Basic
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72497e01d95884bdfb09a451936b0df086e7b321
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41dd48bcdb7a10b0aabdc4bbf4458aab0e593a1c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Exemplos de código ADOX no Microsoft Visual Basic
 Estes tópicos fornecem código de exemplo para ajudá-lo a entender como usar ADOX. Todos os exemplos de código são gravados usando o Microsoft Visual Basic.  
@@ -108,4 +104,3 @@ Estes tópicos fornecem código de exemplo para ajudá-lo a entender como usar A
 -   [Exemplo de coleções Views e Fields (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)  
   
 -   [Coleção Views, exemplo da propriedade CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
-

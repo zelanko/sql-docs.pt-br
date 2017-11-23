@@ -2,9 +2,12 @@
 title: Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bc07410eac65ad7fb7b4da5370b28d9891e890a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b605fdc999d3b0bb8937428e7b158322d182d839
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
    O [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a solução de alta disponibilidade e recuperação de desastre incorporada no [!INCLUDE[sssql11](../../../includes/sssql11_md.md)], requer o WSFC (Windows Server Failover Clustering). Além disso, embora o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não seja dependente do clustering de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você pode usar uma FCI (instância de clustering de failover) para hospedar uma réplica de disponibilidade para um grupo de disponibilidade. É importante saber a função de cada tecnologia de clustering e quais considerações precisam ser observadas ao criar o ambiente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   

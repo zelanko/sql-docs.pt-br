@@ -2,11 +2,12 @@
 title: "Configurar um grupo de disponibilidade para transações distribuídas | Microsoft Docs"
 ms.custom: 
 ms.date: 07/19/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +22,14 @@ caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 523b46925b2ed32ab68840fcc76ddead5d613758
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurar um grupo de disponibilidade para transações distribuídas
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 O [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] dá suporte a todas as transações distribuídas, incluindo bancos de dados em um grupo de disponibilidade. Este artigo explica como configurar um grupo de disponibilidade para transações distribuídas  
 

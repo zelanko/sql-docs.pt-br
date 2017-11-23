@@ -3,8 +3,11 @@ title: "Determinando permissões de mecanismo de banco de dados eficiente | Micr
 ms.custom: 
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 caps.latest.revision: "5"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70359d3c8b34fabec496ad9fbc165bcc7d1707c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinando permissões eficientes do Mecanismo de Banco de Dados
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Este tópico descreve como determinar quem tem permissões para vários objetos no mecanismo de banco de dados do SQL Server. O SQL Server implementa dois sistemas de permissão para o mecanismo de banco de dados. Um sistema mais antigo de funções fixas tem permissões pré-configuradas. Está disponível, a partir do SQL Server 2005, um sistema mais flexível e preciso. (As informações neste tópico se aplicam ao SQL Server, a partir do 2005. Alguns tipos de permissões não estão disponíveis em algumas versões do SQL Server.)
 

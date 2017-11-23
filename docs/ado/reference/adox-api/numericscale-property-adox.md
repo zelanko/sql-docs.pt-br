@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Column::NumericScale
 - _Column::put_NumericScale
 - _Column::get_NumericScale
-helpviewer_keywords:
-- NumericScale property [ADOX]
+helpviewer_keywords: NumericScale property [ADOX]
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 719c0164cd33f3d88f07c77414f7105e17b2477d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5f943223be304de56e52f54510bd6d27bac6d15
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="numericscale-property-adox"></a>Propriedade NumericScale (ADOX)
 Indica a escala de um valor numérico na coluna.  
@@ -51,4 +48,3 @@ Indica a escala de um valor numérico na coluna.
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de código ADOX: NumericScale e exemplo de propriedades de precisão (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Propriedade Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
-

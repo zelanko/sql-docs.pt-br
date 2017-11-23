@@ -2,9 +2,12 @@
 title: "Guia de Introdução às permissões do mecanismo de banco de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -13,16 +16,16 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21d6f4a4434b90561216edc72fb25d5f305fa43d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ff03a1d00fc6cd1972ecb1d5915882287f372a5f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   As permissões no [!INCLUDE[ssDE](../../../includes/ssde-md.md)] são gerenciadas no nível do servidor por meio de funções de logon e de servidor, e no nível do banco de dados por meio de funções de usuários do banco de dados e funções de banco de dados. O modelo para o [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] expõe o mesmo sistema dentro de cada banco de dados, mas as permissões no nível do servidor não estão disponíveis. Este tópico examina alguns conceitos básicos de segurança e descreve uma implementação comum das permissões.  
   

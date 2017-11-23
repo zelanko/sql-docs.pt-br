@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 31c5fe416166627ac63f0f65e3b8c1102fc48f8e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 217492904d3d21818fed28222dcc6acaf193c92b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Conectar-se ao banco de dados do SQL Azure (SybaseToSQL)
 Para migrar bancos de dados Sybase para o banco de dados de SQL do Azure, você deve se conectar à instância de destino de banco de dados de SQL do Azure. Quando você se conectar, SSMA obtém metadados sobre todos os bancos de dados na instância do banco de dados de SQL do Azure e exibe os metadados de banco de dados no Gerenciador de metadados de banco de dados do Azure SQL. O SSMA armazena informações da instância do Azure SQL DB está conectado, mas não armazena as senhas.  
@@ -95,4 +93,3 @@ A próxima etapa da migração depende de suas necessidades de projeto:
 ## <a name="see-also"></a>Consulte também  
 [Migrando Sybase ASE bancos de dados do SQL Server - banco de dados SQL do Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

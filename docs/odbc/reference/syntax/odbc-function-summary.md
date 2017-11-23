@@ -3,26 +3,26 @@ title: "Resumo de função ODBC | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- functions [ODBC], listed by task
+helpviewer_keywords: functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bce96e014e56a783f4f367120f1ba6f911d91ed5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9441a955eaa4a9001b7acd655f7753e32f49e68e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-function-summary"></a>Resumo de função ODBC
 A tabela a seguir lista funções ODBC, agrupadas por tipo de tarefa e inclui a designação de conformidade e uma breve descrição da finalidade de cada função. Para obter mais informações sobre as designações de conformidade, consulte [ODBC e a CLI padrão](../../../odbc/reference/odbc-and-the-standard-cli.md). Para obter mais informações sobre a sintaxe e semântica para cada função, consulte [referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  
@@ -86,4 +86,3 @@ A tabela a seguir lista funções ODBC, agrupadas por tipo de tarefa e inclui a 
 ||[SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|ODBC|Cancela o processamento em uma instrução ou a conexão.|  
 ||[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|ISO 92|Confirma ou reverte uma transação.|  
 |Encerrar uma conexão|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|ISO 92<br /><br /> ISO 92|Fecha a conexão.<br /><br /> Libera um identificador de ambiente, conexão, instrução ou descritor.|
-

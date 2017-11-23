@@ -20,17 +20,16 @@ helpviewer_keywords:
 - charts [Analysis Services]
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 445c65775a59a1fb9490d947246b22f4adeded2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d2916b5895028aebea5b05f28a09ad7432e509f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Gráfico de ganho (Analysis Services - Mineração de dados)
   Um gráfico de ganho exibe a rentabilidade estimada associada ao uso de um modelo de mineração. Por exemplo, suponhamos que seu modelo preveja quais clientes a empresa deve contatar em um cenário comercial. Nesse caso, você adicionaria às informações de gráfico de ganho sobre o custo da condução de uma campanha de mala direta. Em seguida, no gráfico completo, você pode consultar o ganho estimado se os clientes são destinados corretamente, em relação a clientes contatados aleatoriamente.  
@@ -110,4 +109,3 @@ ms.lasthandoff: 09/01/2017
  [Testando a precisão com gráficos de comparação de precisão &#40;Tutorial de mineração de dados básica&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   
-

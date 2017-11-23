@@ -1,10 +1,13 @@
 ---
 title: Implementando UPDATE com FROM ou subconsultas | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 337a85dddb52869d8ec54d13bb8231164b98f4e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5de86bfa68d281e79f77b9578eff2385f20c0958
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementando UPDATE com FROM ou subconsultas
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Os módulos do T-SQL compilados de forma nativa não dão suporte à cláusula FROM e não dão suporte a subconsultas em instruções UPDATE (elas têm suporte em SELECT). Instruções UPDATE com a cláusula FROM normalmente são usadas para atualizar informações em uma tabela baseada em um TVP (parâmetro com valor de tabela) ou para atualizar colunas em uma tabela em um gatilho AFTER. 
 

@@ -27,17 +27,16 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2fbf3b08a21782434702dad4383a797293156593
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c63e2966073fc045401febb16b1a350e94552c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Clustering
   Esta seção explica a implementação do algoritmo de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] , inclusive os parâmetros que podem ser usados para controlar o comportamento de modelos de clustering. Ela também fornece orientação sobre como melhorar o desempenho ao criar e processar modelos de clustering.  
@@ -193,4 +192,3 @@ ms.lasthandoff: 09/01/2017
  [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   
-

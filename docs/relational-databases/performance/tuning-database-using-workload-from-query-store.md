@@ -2,9 +2,12 @@
 title: "Ajustando o banco de dados usando a carga de trabalho do repositório de consultas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ajustando o banco de dados usando a carga de trabalho do repositório de consulta
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 O recurso [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) no SQL Server captura automaticamente um histórico das consultas, planos e estatísticas de tempo de execução e persiste essas informações no banco de dados. O [DTA (Orientador de Otimização do Mecanismo de Banco de Dados)](../../relational-databases/performance/database-engine-tuning-advisor.md) dá suporte a uma nova opção para usar o armazenamento de consulta para selecionar automaticamente uma carga de trabalho adequada para ajuste. Para muitos usuários, isso pode eliminar a necessidade de coletar explicitamente uma carga de trabalho para ajuste. Esse recurso só estará disponível se o banco de dados tiver o recurso Repositório de Consultas ativado. 

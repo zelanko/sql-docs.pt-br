@@ -2,9 +2,12 @@
 title: Desenvolver usando o Always Encrypted com o Provedor de Dados .NET Framework | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1d4030aecc010d835e8452ff555322e836efde2a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 531989070a8e3f416fee19af797555284294e7da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desenvolver usando o Always Encrypted com o Provedor de Dados .NET Framework
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Este artigo fornece informações sobre como desenvolver aplicativos .NET usando o [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) e o [Provedor de Dados .NET Framework para SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
 

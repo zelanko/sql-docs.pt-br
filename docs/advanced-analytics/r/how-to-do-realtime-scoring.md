@@ -1,24 +1,22 @@
 ---
 title: "Como realizar em tempo real de pontuação ou pontuação nativo no SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: e036310aa348437047be4f4270764b9f4c002afa
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Como realizar em tempo real de pontuação ou pontuação nativo no SQL Server
 
@@ -37,7 +35,7 @@ As opções a seguir têm suporte para previsão de lote rápida:
 > Uso da função de previsão é recomendado em 2017 do SQL Server.
 > Para usar sp\_rxPredict requer que você habilitar a integração do SQLCLR. Considere as implicações de segurança antes de habilitar essa opção.
 
-O processo geral de preparar o modelo e, em seguida, gerar pontuações é muito semelhante:
+O processo geral de preparar o modelo e, em seguida, gerar pontuações é semelhante:
 
 1. Crie um modelo usando um algoritmo com suporte.
 2. Serialize o modelo usando um formato binário especial.
@@ -54,7 +52,7 @@ O processo geral de preparar o modelo e, em seguida, gerar pontuações é muito
 
 ### <a name="serialization-and-storage"></a>Serialização e armazenamento
 
-Para usar um modelo com uma das opções de classificação rápidas, o modelo deve ser salvo em um formato serializado especial, que foi otimizado para o tamanho e a eficiência de pontuação.
+Para usar um modelo com uma das opções de classificação rápidas, salve o modelo usando um formato serializado especial, que foi otimizado para o tamanho e a eficiência de pontuação.
 
 + Chamar `rxSerializeModel` para gravar um modelo com suporte para o **bruto** formato.
 + Chamar `rxUnserializeModel` para reconstituir o modelo para uso em outro código de R, ou para exibir o modelo.
@@ -75,7 +73,7 @@ Código de R, há duas maneiras de salvar o modelo em uma tabela:
 
   O `rxWriteObject()` função pode recuperar objetos de R de uma fonte de dados ODBC como o SQL Server ou gravar objetos do SQL Server. A API é modelada de um repositório de chave-valor simple.
   
-  Se você usar essa função, certifique-se de serialize o modelo usando a nova função de serialização primeiro. Em seguida, defina o *serializar* sinalizador em `rxWriteObject` como FALSE, para evitar repetir a etapa de serialização.
+  Se você usar essa função, certifique-se de serialize o modelo usando a nova função de serialização primeiro. Em seguida, defina o *serializar* argumento `rxWriteObject` como FALSE, para evitar repetir a etapa de serialização.
 
 + Você pode também salvar o modelo em formato bruto em um arquivo e, em seguida, ler o arquivo no SQL Server. Essa opção pode ser útil se você estiver movendo ou copiando modelos entre ambientes.
 
@@ -125,7 +123,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-O código a seguir cria um modelo baseado no **íris** conjunto de dados e salva-o para a tabela de modelos.
+O código a seguir cria um modelo baseado no **íris** conjunto de dados e salva-o para a tabela chamada **modelos**.
 
 ```SQL
 DECLARE @model varbinary(max);
@@ -143,7 +141,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> Você deve usar o [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) RevoScaleR para salvar o modelo de função. O padrão R `serialize` função não é possível gerar o formato necessário.
+> Certifique-se de usar o [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) RevoScaleR para salvar o modelo de função. O padrão R `serialize` função não é possível gerar o formato necessário.
 
 Você pode executar uma instrução como a seguir para exibir o modelo armazenado em formato binário:
 
@@ -182,7 +180,7 @@ Esta seção descreve as etapas necessárias para configurar o **em tempo real**
 Você deve habilitar esse recurso para cada banco de dados que você deseja usar para pontuação. O administrador do servidor deve executar o utilitário de linha de comando, RegisterRExt.exe, que é incluído com o pacote RevoScaleR.
 
 > [!NOTE]
-> Em ordem de pontuação para trabalhar e em tempo real, a funcionalidade de SQL CLR precisa ser habilitado na instância e o banco de dados precisa ser marcado como confiável. Quando você executa o script, essas ações são executadas para você. No entanto, você deve considerar as implicações de segurança adicional.
+> Na ordem de pontuação para trabalhar e em tempo real, a funcionalidade de SQL CLR precisa ser habilitado na instância; Além disso, o banco de dados precisa ser marcado como confiável. Quando você executa o script, essas ações são executadas para você. No entanto, considere as implicações de segurança adicional antes de fazer isso!
 
 1. Abra um prompt de comando com privilégios elevados e navegue até a pasta onde RegisterRExt.exe está localizado. O caminho a seguir pode ser usado em uma instalação padrão:
     
@@ -208,11 +206,11 @@ Você deve habilitar esse recurso para cada banco de dados que você deseja usar
 
 > [!NOTE]
 > 
-> No SQL Server de 2017, medidas adicionais de segurança estão em vigor para evitar problemas com a integração CLR. Essas medidas impõem restrições adicionais sobre o uso desse procedimento armazenado também.
+> No SQL Server de 2017, medidas adicionais de segurança estão em vigor para evitar problemas com a integração CLR. Essas medidas impõem restrições adicionais sobre o uso desse procedimento armazenado também. 
 
 ### <a name="step-2-prepare-and-save-the-model"></a>Etapa 2. Preparar e salvar o modelo
 
-O formato binário exigido pelo sp\_rxPredict é o mesmo que para PREVER. Portanto, no seu código R, inclui uma chamada para [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)e certifique-se de especificar _realtimeScoringOnly_ = TRUE, como neste exemplo:
+O formato binário exigido pelo sp\_rxPredict é o mesmo que o formato necessário para usar a função de previsão. Portanto, no seu código R, inclui uma chamada para [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)e certifique-se de especificar `realtimeScoringOnly = TRUE`, como no exemplo:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -227,7 +225,8 @@ Como o formato binário é o mesmo que é usado pela função de previsão, voc�
 ```SQL
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree.model' AND model_version = 'v1''
+WHERE model_name = 'iris.dtree' 
+AND model_version = 'v1''
 
 EXEC sp_rxPredict
 @model = @irismodel,
@@ -255,4 +254,3 @@ Servidor de aprendizado de máquina dá suporte a distribuídas em tempo real de
 + [Implantar um modelo de Python como um serviço web com sdk azureml-modelo-management](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publicar um modelo em tempo real ou um bloco de código de R como um novo serviço da web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [pacote de mrsdeploy para R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
-

@@ -3,24 +3,25 @@ title: Atualizar um Driver 3.5 para um Driver 3.8 | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5dc39bf1203a06d571bf188e17e7066e53167415
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 98b9c8e3e2179801a4cb7cd2947939d6f2927a02
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Atualizar um Driver 3.5 para um Driver 3.8
 Este tópico fornece diretrizes e considerações de atualização de um driver de ODBC 3.5 para um driver de ODBC 3.8.  
@@ -81,4 +82,3 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
  [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Drivers ODBC fornecidos pela Microsoft](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [Novidades no ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
-

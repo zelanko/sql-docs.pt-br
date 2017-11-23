@@ -3,24 +3,25 @@ title: Convertendo tipos de dados | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3a0c956c00e21630aca34b4ea8cab2fd7760a66b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed74d8f624c96b5c4c0aa083b84f62e59a0b1a22
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="converting-data-types"></a>Convertendo tipos de dados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,4 +44,3 @@ O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] permite que você es
 [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [Aplicativo de exemplo &#40;driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   
-

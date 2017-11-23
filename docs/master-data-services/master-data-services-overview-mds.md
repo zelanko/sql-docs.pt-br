@@ -1,10 +1,13 @@
 ---
 title: "Visão geral do MDS (Master Data Services) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 023472f0c047e244f1e4a60fa519a9dc41046743
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: beb17b82f5dc7ce522403d7d32a71e52a497bd2e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="master-data-services-overview-mds"></a>Visão geral do MDS (Master Data Services)
   Este tópico descreve os principais recursos de organização e gerenciamento de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 

@@ -3,8 +3,11 @@ title: Cadeia de caracteres operadores (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="string-operators-transact-sql"></a>Operadores de cadeia de caracteres (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os seguintes operadores de cadeia de caracteres. Os operadores de concatenação de cadeias de caracteres combinam duas ou mais cadeias de caracteres ou binárias, colunas ou uma combinação de cadeias de caracteres e nomes de colunas em uma expressão. Operadores de cadeia de caracteres curinga podem corresponder um ou mais caracteres em uma operação de comparação de cadeia de caracteres, como LIKE ou PATINDEX.  
   

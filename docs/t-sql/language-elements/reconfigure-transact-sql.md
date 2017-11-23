@@ -3,17 +3,18 @@ title: RECONFIGURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/20/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RECONFIGURE
 - RECONFIGURE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - reconfiguring configuration options
 - configuration options [SQL Server], reconfiguring
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - RECONFIGURE
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 363a7f12b0be75dd73a2a72402c82be4ba403ed6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32039a4077f028a078e9265c6d18f5cbb6187e3f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Atualiza o valor configurado atualmente (a **config_value** coluna o **sp_configure** conjunto de resultados) de uma opção de configuração alterada com o **sp_configure** sistema procedimento armazenado. Como algumas opções de configuração requerem uma parada do servidor e reinicialização para atualizar o valor atualmente em execução, RECONFIGURE nem sempre atualiza o valor atualmente em execução (a **run_value** coluna o **sp_configure**  conjunto de resultados) para um valor de configuração alterado.    
     
@@ -81,4 +81,3 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
     
   
-

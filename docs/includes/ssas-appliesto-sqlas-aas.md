@@ -1,0 +1,1 @@
+**APLICA-SE A:**![sim](media/yes.png)SQL Server Analysis Services![sim](media/yes.png)Azure Analysis Services

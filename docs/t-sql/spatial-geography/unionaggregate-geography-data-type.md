@@ -3,34 +3,33 @@ title: UnionAggregate (tipo de dados geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UnionAggregate
 - UnionAggregate_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- UnionAggregate method (geography)
+dev_langs: TSQL
+helpviewer_keywords: UnionAggregate method (geography)
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c4341142b5238fe4a8377cf052710b753f8a68c1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b98e5b8ff7f9c9c544b905e68eefa3669710112b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Executa uma operação de união em um conjunto de objetos de geografia.
   
@@ -70,7 +69,6 @@ UnionAggregate ( geography_operand )
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Métodos de Geografia estática estendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

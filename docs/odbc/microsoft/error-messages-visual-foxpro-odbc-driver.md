@@ -3,10 +3,12 @@ title: Mensagens de erro (Driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27a6df2276d2d474137038fdbe0b42fdf2b05e5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Mensagens de erro (Driver ODBC do Visual FoxPro)
 Quando ocorre um erro, o driver do Visual FoxPro retorna as seguintes informações:  
@@ -59,4 +60,3 @@ Quando ocorre um erro, o driver do Visual FoxPro retorna as seguintes informaç�
  Por exemplo, se o Driver de ODBC do Visual FoxPro não foi possível encontrar a Employee. dbf de arquivo, ele pode retornar a seguinte mensagem de erro:  
   
  "[*Microsoft*] [*Driver ODBC do Visual FoxPro*] não existe arquivo 'Employee. dbf'"
-

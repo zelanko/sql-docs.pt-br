@@ -1,10 +1,13 @@
 ---
 title: Converter dados JSON em linhas e colunas com OPENJSON (SQL Server) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c78b75fb6a25a9d91e8d06f45f671999cb1c437
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b40959b38860bc9e31bf093d7498c4391be19fce
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Converter dados JSON em linhas e colunas com OPENJSON (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 A função de conjunto de linhas **OPENJSON** converte o texto JSON em um conjunto de linhas e colunas. Depois de transformar uma coleção JSON em um conjunto de linhas com **OPENJSON**, é possível executar qualquer consulta SQL nos dados retornados ou inseri-los em uma tabela do SQL Server. 
   

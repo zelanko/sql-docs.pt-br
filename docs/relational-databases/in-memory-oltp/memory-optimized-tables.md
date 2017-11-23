@@ -2,9 +2,12 @@
 title: "Tabelas com otimização de memória | Microsoft Docs"
 ms.custom: 
 ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 07be4fcfccb1f962162f1cc8ce540399347e1bc1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 813d5ece519cd6545ffbb1ebcb03271cadaa5bb1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="memory-optimized-tables"></a>Tabelas com otimização de memória
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   O OLTP na memória do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda a aumentar o desempenho de aplicativos OLTP por meio de acesso a dados com otimização de memória eficiente, compilação nativa de lógica de negócios e algoritmos livres de bloqueio e trava. O recurso OLTP na memória inclui tipos de tabela e tabelas com otimização de memória, bem como compilação nativa de procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] para acesso eficiente a essas tabelas.  
   

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- DeleteRule property [ADOX], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: DeleteRule property [ADOX], Visual Basic example
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 865aeacf705b220c54c372d60f8e6c3ba92c958b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7080e1d2bb3fe208fa9f3f7311438c94c41429e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deleterule-property-example-vb"></a>Exemplo de propriedade DeleteRule (VB)
 Este exemplo demonstra o [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) propriedade de um [chave](../../../ado/reference/adox-api/key-object-adox.md) objeto. O código acrescenta um novo [tabela](../../../ado/reference/adox-api/table-object-adox.md) e, em seguida, define uma nova chave primária, definindo **DeleteRule** para **adRICascade**.  
@@ -95,4 +91,3 @@ End Sub
 ## <a name="see-also"></a>Consulte também  
  [Propriedade DeleteRule (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
-

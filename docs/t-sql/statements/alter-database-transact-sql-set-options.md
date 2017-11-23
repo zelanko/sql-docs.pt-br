@@ -1,18 +1,18 @@
 ---
 title: "ALTERAR as opções de conjunto de banco de dados (Transact-SQL) | Microsoft Docs"
 description: "Saiba mais sobre como definir opções de banco de dados, como criptografia automática e ajuste, o repositório de consultas em um SQL Server e banco de dados do SQL Azure"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - online database state [SQL Server]
 - database options [SQL Server]
@@ -27,20 +27,19 @@ helpviewer_keywords:
 - automatic tuning
 - SQL plan regression correction
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
+caps.latest.revision: "159"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: b460ca1e3f662ea59c0b7bcd4b1fc0e0e059e236
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5dbb93a69c6f8194c2d17eb982fae1ba15d4a522
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Este tópico contém a sintaxe de ALTER DATABASE relacionada à configuração das opções de banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para outra sintaxe ALTER DATABASE, consulte os tópicos a seguir.  
   
@@ -1282,4 +1281,3 @@ SET QUERY_STORE = ON
  [data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   
-

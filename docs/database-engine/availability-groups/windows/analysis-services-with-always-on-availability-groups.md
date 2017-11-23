@@ -2,9 +2,12 @@
 title: Analysis Services com Grupos de Disponibilidade AlwaysOn | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e61f61c0814d3b5a6e7691203f9da946fc211db7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3f6c3afd409b4c1d7ddf2ad5e099078dfa5238f8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services com grupos de disponibilidade AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Um grupo de disponibilidade AlwaysOn é uma coleção predefinida de bancos de dados relacionais do SQL Server que faz failover junto quando condições disparam um failover em qualquer um dos bancos de dados, redirecionando solicitações para um banco de dados espelhado em outra instância no mesmo grupo de disponibilidade. Se você estiver usando grupos de disponibilidade como sua solução de alta disponibilidade, poderá usar um banco de dados nesse grupo como uma fonte de dados em uma solução de tabela do Analysis Services ou multidimensional. Todas as operações do Analysis Services a seguir funcionam como esperado ao usar um banco de dados de disponibilidade: processando ou importando dados, consultando dados relacionais diretamente (usando o armazenamento de ROLAP ou o modo DirectQuery), e writeback.  
   

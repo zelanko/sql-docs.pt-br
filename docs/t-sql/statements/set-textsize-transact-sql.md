@@ -3,10 +3,12 @@ title: SET TEXTSIZE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - TEXTSIZE
 - SET_TEXTSIZE_TSQL
 - SET TEXTSIZE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - SET TEXTSIZE statement
 - SELECT statement [SQL Server], text size returned
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - TEXTSIZE option
 - text size returned [SQL Server]
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5ecffd26c600d3a224824aa9a64ce347cd2f9fbc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2d9925b382a7d09722846ca7da583fb92fe4609c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Especifica o tamanho do **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **texto**, **ntext** , e **imagem** dados retornados por uma instrução SELECT.  
   
@@ -73,4 +73,3 @@ SET TEXTSIZE { number }
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-

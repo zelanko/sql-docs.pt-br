@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ffbac3cbba343bdaa966c6018cfa8add822e3869
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b60f1804e6d465a397704b284c30611b42524420
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Criar um relatório do Power View com uma fonte de dados multidimensional
   A criação de um relatório Power View com base em um modelo multidimensional não é diferente de criar um relatório com base em uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou em um modelo tabular do Analysis Services. Os relatórios do Power View são criados de um arquivo de conexão da Fonte de Dados de Relatório (.rsds) em uma biblioteca do SharePoint. Para obter mais informações sobre como criar um .rsds, consulte [Criar uma fonte de dados de relatórios](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
@@ -39,4 +38,3 @@ ms.lasthandoff: 09/01/2017
 -   Na biblioteca do SharePoint, clique na seta ao lado da conexão de fonte de dados de relatório compartilhada (o .rsds que se conecta ao modelo multidimensional) e clique em **Criar Relatório do Power View**.  
   
   
-

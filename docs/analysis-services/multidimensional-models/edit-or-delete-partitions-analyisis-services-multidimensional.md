@@ -18,17 +18,16 @@ helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7c951e3abb2fffc3882869e31570342e7647bd6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a253d7cc22d90a06369a914b7aec8b4a8ec315f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Editar ou excluir partições (Analysis Services – Multidimensional)
   As partições do cubo são modificadas usando a guia **Partições** do Designer de Cubo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. A guia **Partições** lista as partições para todos os grupos de medidas de um cubo. Essa guia também lista as partições de write-back habilitadas para gravação.  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
-

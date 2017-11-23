@@ -3,33 +3,30 @@ title: "Função no SQLConfigDriver | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLConfigDriver
-apilocation:
-- sqlsrv32.dll
+apiname: SQLConfigDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLConfigDriver
-helpviewer_keywords:
-- SQLConfigDriver function [ODBC]
+f1_keywords: SQLConfigDriver
+helpviewer_keywords: SQLConfigDriver function [ODBC]
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad15d5e7d61d9ef4b85ae347376f01b0bdb6ec67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9dd30a466fefda6f8b100fdd9595e9ab65e4d85f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdriver-function"></a>Função no SQLConfigDriver
 **Conformidade**  
@@ -122,4 +119,3 @@ BOOL SQLConfigDriver(
 |---------------------------|---------|  
 |Adicionar, modificar ou remover um driver|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)(na configuração de DLL)|  
 |Removendo a fonte de dados padrão|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|
-

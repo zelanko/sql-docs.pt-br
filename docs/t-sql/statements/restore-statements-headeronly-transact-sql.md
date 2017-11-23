@@ -3,10 +3,12 @@ title: RESTORE HEADERONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/07/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,28 +16,26 @@ f1_keywords:
 - RESTORE HEADERONLY
 - RESTORE_HEADERONLY_TSQL
 - HEADERONLY_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - backup sets [SQL Server], header information
 - headers [SQL Server]
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-caps.latest.revision: 95
+caps.latest.revision: "95"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5ea17d9f848a47639b748e6f243f604e0e3e2bb2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 694c77c3d59b5565e6c5b25eaf946e9ebaa0e22f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instruções - de RESTORE HEADERONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna um conjunto de resultados que contém todas as informações do cabeçalho de backup de todos os conjuntos de backup em um determinado dispositivo de backup no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -189,4 +189,3 @@ GO
  [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
 title: "Introdução aos Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 87b0169d30aa2eef6c77df57bb15bc9a44d14c7e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32004cf90c0e9847b91b144629ab1c093e495bf1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Introdução aos Grupos de Disponibilidade AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este tópico apresenta as etapas para configurar instâncias do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para dar suporte a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e para criar, gerenciar e monitorar um grupo de disponibilidade.  
   

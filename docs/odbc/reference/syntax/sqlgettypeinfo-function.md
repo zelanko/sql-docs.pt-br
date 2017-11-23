@@ -3,33 +3,30 @@ title: "Função SQLGetTypeInfo | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetTypeInfo
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetTypeInfo
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetTypeInfo
-helpviewer_keywords:
-- SQLGetTypeInfo function [ODBC]
+f1_keywords: SQLGetTypeInfo
+helpviewer_keywords: SQLGetTypeInfo function [ODBC]
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3ab63b576841aef6dec553ecc0c07ccec010319
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7411a992bfbcb56a05e8ada5e4849a24ab8d2894
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgettypeinfo-function"></a>Função SQLGetTypeInfo
 **Conformidade**  
@@ -154,4 +151,3 @@ SQLRETURN SQLGetTypeInfo(
 ## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

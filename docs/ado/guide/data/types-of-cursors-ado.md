@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cursors [ADO], types
+helpviewer_keywords: cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7c8ab039bfe5754587e3f7adda36c0b715138d65
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7648e91432bd90c03398e5189e4101b9741841c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="types-of-cursors-ado"></a>Tipos de cursores (ADO)
 Como regra geral, seu aplicativo deve usar o cursor mais simples que fornece acesso a dados necessários. Cada característica de cursor adicionais além do básico (somente avanço, somente leitura, estáticos, rolagem, sem buffer) tem um preço — na memória do cliente, a carga de rede ou o desempenho. Em muitos casos, as opções de cursor padrão geram um cursor mais complexo do que realmente necessidades de seu aplicativo.  
@@ -57,4 +54,3 @@ Como regra geral, seu aplicativo deve usar o cursor mais simples que fornece ace
  [Cursores estáticos](../../../ado/guide/data/static-cursors.md)   
  [Cursores](../../../ado/guide/data/keyset-cursors.md)   
  [Cursores dinâmicos](../../../ado/guide/data/dynamic-cursors.md)
-

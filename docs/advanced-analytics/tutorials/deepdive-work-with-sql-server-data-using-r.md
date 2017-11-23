@@ -1,31 +1,26 @@
 ---
 title: Trabalhar com dados do SQL Server usando o R | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 0a3d7ba0-4113-4cde-9645-debba45cae8f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 12dfdfd70de5908277718677194e2ec9b0775531
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6db9cc485778e4074b5b648b23572edee3a0f42e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-sql-server-data-using-r"></a>Trabalhar com dados do SQL Server usando o R
 
@@ -132,7 +127,6 @@ Esta seção lista alguns problemas comuns que podem ocorrer durante a configura
 ## <a name="overview"></a>Visão geral
 
 [Aprofundamento da ciência de dados: Usando os pacotes RevoScaleR](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-
 
 
 

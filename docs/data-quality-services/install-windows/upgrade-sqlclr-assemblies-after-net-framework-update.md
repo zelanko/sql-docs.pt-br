@@ -2,9 +2,12 @@
 title: "Atualizar assemblies SQLCLR após atualizar o .NET Framework | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6db39bd532f38aea27f8e2860757a5f174f481d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c9384a279be88705da26000e9ed39c17d675f28b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Atualizar assemblies SQLCLR após atualizar o .NET Framework
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] O DQS é uma coleção de rotinas SQLCR (SQL Common Language Runtime) que fazem referência aos assemblies do Microsoft .NET Framework 4. Quando você instala qualquer atualização do .NET Framework em seu computador que afete qualquer assembly do .NET Framework referenciado, isso leva a uma alteração na MVID (ID da Versão do Módulo) do assembly no GAC (Cache de Assembly Global). Isso causa uma incompatibilidade entre as MVIDs do assembly referenciado no GAC e o assembly no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

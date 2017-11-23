@@ -5,26 +5,22 @@ ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db6a2ee4c642ca6e868170629460c4722020d935
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4970a681733d8920b9eef6b27023f9ae1c7ce981
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-and-modify-the-sql-server-data"></a>Consultar e modificar os dados do SQL Server
 
@@ -151,7 +147,6 @@ Agora as três variáveis especificadas (_gender_, _state_e _cardholder_) são t
 ## <a name="previous-step"></a>Etapa anterior
 
 [Criar Objetos de Dados do SQL Server usando RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
 
 
 

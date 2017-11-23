@@ -2,9 +2,12 @@
 title: "Tarefa verificar integridade do banco de dados (Plano de Manutenção) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79bd76e9bcf3be9873149ab94041d92685e81dac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5f4193b616fe1a333f95301356980b6f5f991245
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Tarefa Verificar Integridade do Banco de Dados (Plano de Manutenção)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use a caixa de diálogo **Tarefa Verificar Integridade do Banco de Dados** para verificar a alocação e integridade estrutural de tabelas do usuário e do sistema, além de índices no banco de dados, executando a instância `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . A execução de `DBCC` garante que quaisquer problemas de integridade com o banco de dados sejam reportados, permitindo assim serem endereçados posteriormente por um administrador do sistema ou proprietário de banco de dados.  
   

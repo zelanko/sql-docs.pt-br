@@ -3,32 +3,32 @@ title: "Referência do Transact-SQL (mecanismo de banco de dados) | Microsoft Do
 ms.custom: 
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sql13.tsqlref.f1
 - devlang-tsql
-helpviewer_keywords:
-- Transact-SQL
+helpviewer_keywords: Transact-SQL
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: db6310309c694a856727672cd5d1e5ad80ae6b49
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bfc7cd52aeae6978dcd21d84bd6fd7ac99de1c21
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transact-sql-reference-database-engine"></a>Referência do Transact-SQL (Mecanismo de Banco de Dados)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Este tópico fornece as Noções básicas sobre como localizar e use os tópicos de referência do Microsoft Transact-SQL (T-SQL). T-SQL é central para usar serviços e produtos do Microsoft SQL. Todas as ferramentas e aplicativos que se comunicam com um banco de dados SQL fazem enviando comandos T-SQL.  
 
@@ -96,4 +96,3 @@ Agora que você sabe como localizar os tópicos de referência do T-SQL, você e
 
   
   
-

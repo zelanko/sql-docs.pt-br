@@ -3,33 +3,30 @@ title: "Função SQLSetScrollOptions | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetScrollOptions
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetScrollOptions
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetScrollOptions
-helpviewer_keywords:
-- SQLSetScrollOptions function [ODBC]
+f1_keywords: SQLSetScrollOptions
+helpviewer_keywords: SQLSetScrollOptions function [ODBC]
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e8f0d027727a4bf6c64f9868913544c41661838
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 432fbea7fb864b0a42a000eb46df6c2642b7c28b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetscrolloptions-function"></a>Função SQLSetScrollOptions
 **Conformidade**  
@@ -50,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Consulte também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a262f8ac21748942f36a74773eab898ee321ae57
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Iniciar ou parar um Power Pivot para SharePoint Server
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O Serviço de Sistema e uma instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] funcionam em conjunto no mesmo servidor de aplicativos local para dar suporte à solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   
-

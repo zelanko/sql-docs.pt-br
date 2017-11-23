@@ -1,10 +1,13 @@
 ---
 title: "Selecionar linhas para migrar usando uma função de filtro (Stretch Database) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/27/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 290d0a17271d7099904eb7f4f50ffd8280fe2264
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 68a67526e9e84d62861f322b663debba754371ff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selecionar linhas para migrar usando uma função de filtro (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Se você armazenar dados inertes em uma tabela separada, será possível configurar o Stretch Database para migrar a tabela inteira. Por outro lado, se sua tabela contiver dados dinâmicos e inertes, você poderá especificar um predicado de filtro para selecionar as linhas a serem migradas. O predicado de filtro é uma função com valor de tabela embutida. Este tópico descreve como escrever uma função com valor de tabela embutida para selecionar linhas a serem migradas.  
   

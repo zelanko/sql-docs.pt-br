@@ -5,22 +5,20 @@ ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e384893-04da-43f9-b100-bfe99888f085
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fd19bc25e1e4602a54bf89e18c8959a282552f63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 88337da76b3a44b9dc797fd1d9f187bfda7396c8
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-or-disable-r-package-management-for-sql-server"></a>Habilitar ou desabilitar o gerenciamento de pacotes de R para o SQL Server
 
@@ -101,5 +99,4 @@ Para habilitar ou desabilitar o gerenciamento de pacote requer que o utilitário
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciamento de pacotes de R para o SQL Server](r-package-management-for-sql-server-r-services.md)
-
+[Gerenciamento de pacotes R para SQL Server](r-package-management-for-sql-server-r-services.md)

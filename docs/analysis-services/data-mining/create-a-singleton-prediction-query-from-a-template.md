@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- singleton query predictions [DMX]
+helpviewer_keywords: singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7b455a9f4c8996ec2dd9e6d255f4e9f282d58df4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c54b65567095408f66c01d22b7f39d839ae939b2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Criar uma consulta de previsão singleton a partir de um modelo
   Uma consulta singleton é útil quando você tem um modelo a ser usado para previsão, mas não deseja mapeá-lo para um conjunto de dados de entrada externo ou fazer previsões em massa. Uma consulta singleton permite oferecer um valor ou valores ao modelo e ver instantaneamente o valor previsto.  
@@ -105,4 +103,3 @@ AS [t]
  [Criando previsões &#40;Tutorial básico de Data Mining&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   
-

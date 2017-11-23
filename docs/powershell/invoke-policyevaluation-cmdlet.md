@@ -2,9 +2,12 @@
 title: cmdlet Invoke-PolicyEvaluation | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 296534b89550efde62d0c2e1dea02c06d4896f8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b06de61335e318438f4e75e694de7c0eb3521bc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
   O**Invoke-PolicyEvaluation** é um cmdlet do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que relata se um conjunto de objetos SQL Server de destino é compatível com as condições especificadas em uma ou mais políticas do Gerenciamento Baseado em Políticas.  

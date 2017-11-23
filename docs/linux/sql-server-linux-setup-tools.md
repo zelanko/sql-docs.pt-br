@@ -6,16 +6,20 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
+ms.openlocfilehash: 8d97ba08eae758a22195250521935268aadb770e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 130da2409070f0acfda0bf78fcf2c4326bbeec92
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalar as ferramentas de linha de comando do SQL Server de sqlcmd e bcp em Linux
 
@@ -265,4 +269,3 @@ Para obter um exemplo de como usar **sqlcmd** para se conectar ao SQL Server e c
 - [Executar no Docker](quickstart-install-connect-ubuntu.md)
 
 Para obter um exemplo de como usar **bcp** para importação e exportação em massa dados, consulte [dados de cópia em massa para o SQL Server no Linux](sql-server-linux-migrate-bcp.md).
-

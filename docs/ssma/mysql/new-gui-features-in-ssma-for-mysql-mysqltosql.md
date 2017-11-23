@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8fbb87c5be27ba3778b061f63c2cb9409c9e4615
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ac62e3e7a77ad3e4941f8a8da143eba8e0b253fd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Novos recursos de interface gráfica do usuário do SSMA para MySQL (MySQLToSQL)
 Este capítulo descreve novos recursos da Interface de usuário do SSMA  
@@ -132,4 +130,3 @@ Você pode executar a pesquisa de texto rápida usando os seguintes recursos:
 ### <a name="advanced-search"></a>Pesquisa avançada  
 Para abrir a caixa de diálogo de pesquisa avançada, no menu Editar ponto localizar, em seguida, clique em pesquisa avançada. Na caixa de diálogo, você poderá encontrar qualquer objeto usando o padrão. Na parte superior da caixa de diálogo, você pode escolher categorias de objeto e de área de pesquisa.  
   
-

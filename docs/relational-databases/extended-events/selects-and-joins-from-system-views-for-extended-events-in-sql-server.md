@@ -2,9 +2,12 @@
 title: "SELECTs e JOINs de exibições do sistema de Eventos Estendidos no SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -16,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f74637bd0e696ae4fd17d54f3826181e5d2ecf29
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Seleções e junções em exibições do sistema dos Eventos Estendidos no SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Este artigo explica os dois conjuntos de exibições do sistema relacionados a eventos estendidos no Microsoft SQL Server e no serviço de nuvem do Banco de Dados SQL do Azure. O artigo ilustra:

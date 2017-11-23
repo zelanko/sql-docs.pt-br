@@ -1,20 +1,20 @@
 ---
 title: "FUNÇÃO DROP (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP ROLE
 - DROP_ROLE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting roles
 - database roles [SQL Server], removing
@@ -23,20 +23,19 @@ helpviewer_keywords:
 - roles [SQL Server], removing
 - dropping roles
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d3ab74cca51d7fc52edb134d29887bb30abb4499
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 86266835ec5d54ce08bdf7fe18d93dd9d4de1737
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Remove uma função do banco de dados.  
   
@@ -102,6 +101,5 @@ GO
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   
-
 
 

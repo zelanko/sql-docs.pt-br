@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Profiler, permissions
 - security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f7fd787af4d874b8c0d6d7fc23aa58227f4c58e2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a444574b79bac234d14e5643397ecfca58d16a63
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Permissões necessárias para executar o SQL Server Profiler
   Por padrão, executar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] requer as mesmas permissões de usuário que os procedimentos armazenados Transact-SQL utilizados para criar rastreamentos. Para executar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], os usuários devem dispor da permissão ALTER TRACE. Para obter mais informações, veja [Permissões GRANT do servidor &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md).  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="permissions-used-to-replay-traces"></a>Permissões usadas para repetir rastreamentos  
  Repetir rastreamentos também requer que o usuário responsável disponha da permissão ALTER TRACE.  
   
- No entanto, durante a repetição, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usará o comando EXECUTE AS se um evento Audit Login for encontrado no rastreamento que está sendo repetido. O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa o comando EXECUTE AS para representar o usuário associado ao evento de logon.  
+ No entanto, durante a repetição, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usará o comando EXECUTE AS se um evento Audit Login for encontrado no rastreamento que está sendo repetido. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa o comando EXECUTE AS para representar o usuário associado ao evento de logon.  
   
  Se o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encontrar um evento de logon em um rastreamento que está sendo repetido, serão realizadas as seguintes verificações de permissão:  
   
@@ -45,9 +43,9 @@ ms.lasthandoff: 08/02/2017
   
 2.  Um evento de logon para o Usuário2 é encontrado no rastreamento que está sendo repetido.  
   
-3.  O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa o comando EXECUTE AS para representar o Usuário2.  
+3.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa o comando EXECUTE AS para representar o User2.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tenta autenticar User2 e, dependendo dos resultados, o seguinte ocorre:  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta autenticar User2 e, dependendo dos resultados, uma destas situações ocorrerá:  
   
     1.  Se o Usuário2 não puder ser autenticado, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] retornará um erro e continuará repetindo o rastreamento como Usuário1.  
   
@@ -72,9 +70,8 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [Repetir rastreamentos](../../tools/sql-server-profiler/replay-traces.md)   
- [Criar um rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Reproduzir uma tabela de rastreamento &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Criar um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Reproduzir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproduzir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
   
-

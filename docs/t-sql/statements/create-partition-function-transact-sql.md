@@ -3,8 +3,11 @@ title: "Criar função de partição (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
@@ -40,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria uma função no banco de dados atual que mapeia as linhas de uma tabela ou índice em partições com base nos valores de uma coluna especificada. Usar CREATE PARTITION FUNCTION é a primeira etapa na criação de uma tabela particionada ou índice. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], uma tabela ou índice pode ter no máximo 15.000 partições.  
   

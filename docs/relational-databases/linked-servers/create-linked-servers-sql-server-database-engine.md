@@ -1,10 +1,13 @@
 ---
 title: Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/20/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linked-servers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2d897f66e7a1faa5d628442d3dd1153c32825d48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ba9740868c30bcc587cae0f99411bd6a49276fc1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
 
   Este tópico mostra como criar um servidor vinculado e acessar dados de outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Criar um servidor vinculado permite trabalhar com dados de várias origens. O servidor vinculado não precisa ser outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas esse é um cenário comum.  

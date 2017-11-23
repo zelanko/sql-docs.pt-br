@@ -3,27 +3,28 @@ title: "Construindo instruções SQL interoperável | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f3ce3621c9a6cd709dc008f436fe89fbba14ef3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 070b42e5350471ec86fbc256f2005dd7c0385002
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Construindo instruções SQL interoperáveis
 Conforme mencionado na seção anterior, os aplicativos interoperáveis devem usar a gramática SQL ODBC. Além de usar esta gramática, no entanto, um número de problemas adicionais é enfrentado pelos aplicativos interoperáveis. Por exemplo, o que um aplicativo faz se desejar usar um recurso, como junções externas, que não é suportado por todas as fontes de dados?  
@@ -49,4 +50,3 @@ Conforme mencionado na seção anterior, os aplicativos interoperáveis devem us
 -   [Marcadores de parâmetro em chamadas de procedimento](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
   
 -   [Instruções DDL](../../../odbc/reference/develop-app/ddl-statements.md)
-

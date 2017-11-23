@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tuning reports [SQL Server]
+applies_to: SQL Server 2016
+helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a395ca1faceb1465c1ce7dc8fc43215dae31c8be
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Lição 1-3 - exibindo relatórios de ajuste
 Na prática anterior desta lição, você exibiu os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que criam ou cancelam objetos de banco de dados nas recomendações do Orientador de Otimização do Mecanismo de Banco de Dados que foram geradas como resultado da sessão de ajuste MySession. A sessão de ajuste MySession foi criada no [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
@@ -53,8 +49,7 @@ Além de ser muito útil para exibir os scripts que podem ser usados para implem
 Você explorou a guia **Relatórios** da sessão de ajuste MySession na interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar esses mesmos passos para explorar os relatórios que foram gerados para a sessão de ajuste EvaluateMySession. Clique duas vezes em **EvaluateMySession** no painel **Monitor de Sessão** para começar.  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 3: Usando o utilitário de Prompt de comando dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Lição 3: Usando o utilitário de prompt de comando dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
   
-

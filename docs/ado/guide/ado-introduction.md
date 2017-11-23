@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, programming
+helpviewer_keywords: ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: MightyPen
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ce6cdcbf6969f00c42b1fe06f591471a0735e8d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 17fb13aafe00ce39d18ea52c3a2240f4bebf14d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-overview-and-benefits"></a>Benefícios e visão geral de ADO
 ActiveX Data Objects (ADO) é uma interface de alto nível, fácil de usar para OLE DB. OLE DB é uma interface de nível baixo, alto desempenho para uma variedade de armazenamentos de dados. ADO e OLE DB podem trabalhar com relacional (tabela) e não relacionais (hierárquica ou fluxo) dados.
@@ -44,4 +42,3 @@ ActiveX Data Objects (ADO) é uma interface de alto nível, fácil de usar para 
 -   [Tabela de tecnologia ADO](../../ado/guide/ado-technology-table.md)
 
 -   [Problemas de design de segurança ADO](../../ado/guide/ado-security-design-issues.md)
-

@@ -2,9 +2,12 @@
 title: "SQL Server Data Tools e Visual Studio 2017 – Termos de Licença | Microsoft Docs"
 ms.custom: 
 ms.date: 08/04/2017
-ms.prod: sql-non-specified
+ms.prod: ssdt
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41683913bb6d130684ffc6cf6a76274139ffa395
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 91a0225159bc963220e1a6f98838766ac99ee396
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools – Termos de Licença
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## <a name="microsoft-software-license-terms"></a>TERMOS DE LICENÇA PARA SOFTWARE MICROSOFT  
   
 **MICROSOFT SQL SERVER DATA TOOLS**  

@@ -2,9 +2,12 @@
 title: Usar conjuntos de colunas | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33ffb3b6bce237503e40fc5609f5cc0334d62167
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0871c2e084749a9ceb79192e55e3a99cb24eb351
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   As tabelas que usam colunas esparsas podem designar um conjunto de colunas para retornar todas as colunas esparsas na tabela. Um conjunto de colunas é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. Um conjunto de colunas é como uma coluna calculada em que o conjunto de colunas não é fisicamente armazenado na tabela. Um conjunto de colunas difere de uma coluna calculada em que o conjunto de colunas é diretamente atualizável.  
   

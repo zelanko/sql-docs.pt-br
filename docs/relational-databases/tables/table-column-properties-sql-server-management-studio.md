@@ -2,9 +2,12 @@
 title: Propriedades da coluna de tabela (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eaf12a0ac440affa5fe6009431d7c90ce7f47c53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 66ebe137da10784f3999e9039538895afa701abe
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriedades da coluna de tabela (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   As propriedades aparecem no painel inferior do Criador de Tabelas. A menos que seja indicado o contrário, será possível editar as propriedades na janela Propriedades quando a coluna for selecionada. As **Propriedades de Colunas** podem ser exibidas em categorias ou em ordem alfabética. Muitas propriedades aparecem ou podem ser alteradas apenas para certos tipos de dados.  
   

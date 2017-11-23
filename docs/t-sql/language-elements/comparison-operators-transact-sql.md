@@ -3,8 +3,11 @@ title: "Operadores de comparação (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="comparison-operators-transact-sql"></a>Operadores de comparação (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Os operadores de comparação testam se duas expressões são iguais. Operadores de comparação podem ser usados em todas as expressões menos em expressões do **texto**, **ntext**, ou **imagem** tipos de dados. A tabela a seguir lista os operadores de comparação [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

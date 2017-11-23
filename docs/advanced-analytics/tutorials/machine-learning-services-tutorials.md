@@ -1,35 +1,32 @@
 ---
 title: "Tutoriais de aprendizado de máquina do SQL Server | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/29/2017
-ms.prod: sql-server-2016
+ms.custom: SQL2016_New_Updated
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- Python
+applies_to: SQL Server 2016
+dev_langs: Python
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c0547d809e73e13b7bedcc8ac960b00c7c8a9706
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0ebeae12d6987154baa7ccb7c9417e9f92b2bbe0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-machine-learning-tutorials"></a>Tutoriais de aprendizado de máquina do SQL Server
 
-Este artigo fornece uma lista abrangente de aplicativos de exemplo que usam recursos de aprendizado de máquina no SQL Server 2016 ou o SQL Server 2017, tutoriais e demonstrações. Comece aqui aprender a executar R ou Python do T-SQL, usar os contextos de computação local e remoto e otimizar seu código R e Python para um ambiente de produção do SQL.
+Este artigo fornece uma lista abrangente de aplicativos de exemplo que usam recursos de aprendizado de máquina no SQL Server 2016 ou o SQL Server 2017, tutoriais e demonstrações. Comece aqui saber como otimizar seu código R e Python para um ambiente de produção do SQL, a execução de R ou Python do T-SQL e como usar os contextos de computação local e remoto.
 
 ## <a name="start-here"></a>Comece aqui
 
@@ -47,7 +44,7 @@ Para obter mais informações sobre como configurar e requisitos, consulte [pré
 
 + [Soluções](#bkmk_solutions) 
 
-    Modelos da equipe de ciência de dados da Microsoft são personalizáveis, para começar rapidamente com o aprendizado de máquina. Cada solução personalizada para uma tarefa específica ou um problema de setor; Além disso, a maioria das soluções são projetados para ser executado no SQL Server ou em um ambiente de nuvem como o aprendizado de máquina do Azure. Outra solução pode executar em clusters Microsoft R Server ou HDI Spark.
+    Modelos da equipe de ciência de dados da Microsoft são personalizáveis, para começar rapidamente com o aprendizado de máquina. Cada solução personalizada para uma tarefa específica ou um problema de setor; Além disso, a maioria das soluções são projetados para ser executado no SQL Server ou em um ambiente de nuvem como o aprendizado de máquina do Azure. Outras soluções podem executar no Linux ou em clusters de Hadoop ou Spark, usando o Microsoft R Server ou o servidor de aprendizado de máquina.
 
 ### <a name ="bkmk_samples"></a>Exemplos de produto do SQL Server
 
@@ -67,13 +64,13 @@ Esses exemplos e demonstrações fornecidas pela equipe de desenvolvimento do SQ
 
 + [Criar um modelo de previsão usando R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
 
-  Saiba como uma empresa de aluguel ski pode usar o aprendizado de máquina para prever locações futuras, que ajuda a equipe e plano de negócios para atender às demandas futuras. Este exemplo usa os algoritmos Microsoft R para criar um modelo de árvores de decisão e regressão logística. 
+  Saiba como uma empresa de aluguel ski pode usar o aprendizado de máquina para prever locações futuras, que ajuda a equipe e plano de negócios para atender às demandas futuras. Este exemplo usa os algoritmos da Microsoft para criar modelos de árvores de decisão e regressão logística. 
   
   Aplica-se a: SQL Server 2016 ou o SQL Server de 2017
 
 + [Criar um modelo de previsão usando Python e o SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 
-   Crie o aplicativo de análise de aluguel ski usando Python, para ajudar a planejar demandas futuras. Este exemplo usa a nova biblioteca do Python, **revoscalepy**, para criar um modelo de regressão linear. 
+   Crie o aplicativo de análise de aluguel ski usando Python, para ajudar a planejar demandas futuras. Este exemplo usa a nova biblioteca do Python, **revoscalepy**, para criar um modelo de regressão linear.
    
    Aplica-se a: SQL Server de 2017
 
@@ -94,11 +91,11 @@ Para obter mais informações, consulte [Modelos de aprendizado de máquina com 
 
     Deseja saber a verdadeira história por trás do R Services? Leia este artigo de desenvolvimento e a equipe de PM que explica a origem e metas do SQL Server R Services.
 
-+ [Tutoriais e dados de exemplo para o Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
++ [Tutoriais e dados de exemplo para o Microsoft R](https://docs.microsoft.com/machine-learning-server/r/tutorial-introduction)
 
     Saiba mais sobre o Microsoft R, e que o pacote RevoScaleR oferece nesta coleção dos tutoriais rápidos. Saiba como escrever código R uma vez e implantar em qualquer lugar, usando o RevoScaleR fontes de dados e contextos de computação remota.
 
-+ [Introdução ao MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Introdução ao MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package)
 
   Saiba como usar os novos algoritmos no pacote MicrosoftML para modelagem avançada e transformações de dados escalonáveis, otimizadas para vários contextos de computação.
 
@@ -106,8 +103,8 @@ Para obter mais informações, consulte [Modelos de aprendizado de máquina com 
 
 Para executar esses tutoriais, você deve baixar e instalar a componentes de aprendizado de máquina do SQL Server, conforme descrito aqui:
 
-+ [Configurar o SQL Server R Services](../r/set-up-sql-server-r-services-in-database.md)
-+ [Configurar os serviços do SQL Server Python](../python/setup-python-machine-learning-services.md)
++ [Configurar serviços de aprendizado de máquina do SQL Server 2017 ou SQL Server 2016 R Services](../r/set-up-sql-server-r-services-in-database.md)
++ [Configurar os serviços do SQL Server de 2017 Python](../python/setup-python-machine-learning-services.md)
 
 Com o SQL Server 2017, você pode instalar o R ou Python ou ambos. Caso contrário, o processo de instalação, arquitetura e requisitos gerais são as mesmas.
 
@@ -115,10 +112,9 @@ Depois de executar a instalação do SQL Server, não se esqueça destas etapas 
 
 1. Habilitar o recurso de execução do script externo executando `sp_configure 'external scripts enabled', 1`. Siga as instruções para reconfigurar e reinicie o SQL Server.
 2. Certifique-se de que o serviço Launchpad é executado e que o trabalhador contas ele usa podem se conectar à instância do SQL Server.
-3. Examine as permissões associadas a contas de usuário do Windows que serão executados scripts de R ou Python e logons do SQL Server. Todos os precisam de permissão para executar scripts R ou Python e para conectar-se à instância. Dependendo do exemplo, eles também talvez precise de permissões para ler e gravar dados e criar objetos de banco de dados.
+3. Examine as permissões associadas com os usuários que executam scripts de R ou Python. Independentemente de você usar contas de usuário do Windows ou logons do SQL Server, o usuário deve ter permissão para executar scripts R ou Python e deve ser capaz de se conectar à instância. Dependendo do tutorial, o usuário também pode exigir permissão para gravar dados, criar objetos de banco de dados ou fazer uma massa importação de dados.
 
 Para obter detalhes, consulte este artigo para alguns problemas comuns de instalação e configuração: [Solucionando problemas de serviços de aprendizado de máquina](../machine-learning-troubleshooting-faq.md)
 
 > [!NOTE]
 > Não é possível executar esses tutoriais usando outra ferramenta de software livre R ou Python. Ambiente de desenvolvimento e o computador do SQL Server com o aprendizado de máquina devem ter os R ou Python bibliotecas fornecidas pela Microsoft, que oferecem suporte à integração com o SQL Server e o uso de contextos de computação remota.
-

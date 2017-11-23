@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c52d3ad3556021c7f4d37c08dc0456733457cb87
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e79739162ee4eba9fde6af1efddd7b5b273b73d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Configurar o tamanho máximo de upload de arquivo (Power Pivot para SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] As pastas de trabalho geralmente contêm grandes quantidades de dados que resultam em arquivos que excedem o tamanho máximo do arquivo permitido para carregamentos do SharePoint. Ao tentar carregar um arquivo que excede o limite superior, você receberá o seguinte erro no SharePoint:  
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/01/2017
 7.  Clique em **OK**.  
   
   
-

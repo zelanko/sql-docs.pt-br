@@ -3,10 +3,12 @@ title: "CRIAR o catálogo de texto completo (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,26 +22,24 @@ f1_keywords:
 - FULLTEXT_CATALOG_TSQL
 - CREATE FULLTEXT
 - FULLTEXT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - CREATE FULLTEXT CATALOG statement
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 65872ec24d605e61bf284446c976c51b053e999c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: f08bdaeaacb970c839ea1d7bb31c44f454daadf8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/13/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria um catálogo de texto completo para um banco de dados. Um catálogo de texto completo pode ter vários índices de texto completo, mas um índice de texto completo só pode fazer parte de um único catálogo de texto completo. Cada banco de dados pode conter zero ou mais catálogos de texto completo.  
   
@@ -128,4 +128,3 @@ GO
  
   
   
-

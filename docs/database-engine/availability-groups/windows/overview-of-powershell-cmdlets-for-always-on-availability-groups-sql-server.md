@@ -2,9 +2,12 @@
 title: "Visão geral de cmdlets do PowerShell para Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d7cbdbe53539560689cdb3b7f8e4db2b09646b7a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc2edc1718ceac4ba81f1ff45809b70d9e2637cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Visão geral de cmdlets do PowerShell para grupos de disponibilidade AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] O PowerShell é um shell de linha de comando baseado em tarefa e linguagem de script criado especialmente para a administração do sistema. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece um conjunto de cmdlets do PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que permitem implantar, gerenciar e monitorar grupos de disponibilidade, réplicas de disponibilidade e bancos de dados de disponibilidade.  
   

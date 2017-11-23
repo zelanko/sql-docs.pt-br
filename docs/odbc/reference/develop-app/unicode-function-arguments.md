@@ -3,27 +3,28 @@ title: "Argumentos de função Unicode | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b8d2ee5be47e77fe639299da0851029494d88c4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ff461881ea10c904ceefd1c51a364984ca10971b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-function-arguments"></a>Argumentos de função Unicode
 O Gerenciador de Driver ODBC 3.5 (ou superior) oferece suporte a versões ANSI e Unicode de todas as funções que aceitam ponteiros para cadeias de caracteres ou SQLPOINTER em seus argumentos. As funções de Unicode são implementadas como funções (com um sufixo de *W*), e não como macros. As funções ANSI (que pode ser chamado com ou sem um sufixo de *um*) são idênticas às funções de API ODBC atuais.  
@@ -79,4 +80,3 @@ O Gerenciador de Driver ODBC 3.5 (ou superior) oferece suporte a versões ANSI e
 -   [Drivers Unicode](../../../odbc/reference/develop-app/unicode-drivers.md)  
   
 -   [Mapeamento de função no Gerenciador de Driver](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)
-

@@ -3,8 +3,11 @@ title: Tipos de dados (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 9/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -18,7 +21,7 @@ ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
@@ -27,9 +30,8 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 09/27/2017
 
 ---
-
 # <a name="data-types-transact-sql"></a>Tipos de dados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cada coluna, variável local, expressão e parâmetro tem um tipo de dados relacionado. O tipo de dados é um atributo que especifica o tipo de dados que o objeto pode manter: dados inteiros, dados de caractere, dados monetários, data e hora, cadeiasx de caracteres binárias etc.
   

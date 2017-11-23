@@ -3,8 +3,11 @@ title: Guia de arquitetura de thread e tarefa | Microsoft Docs
 ms.custom: 
 ms.date: 10/26/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6f2ded3d40a1f17980507fdf92d05e3517f0bc54
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a4ee27d7a15dcd93fbeffc60ff8f6f67309efb2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Threads são um recurso do sistema operacional que permite a separação da lógica de aplicativo em vários caminhos de execução simultâneos. Esse recurso é útil quando aplicativos complexos têm muitas tarefas que podem ser executadas ao mesmo tempo. 
 

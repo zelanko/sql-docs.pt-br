@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReportFormatParameter Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReportFormatParameter Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReportFormatParameter
-helpviewer_keywords:
-- ReportFormatParameter element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReportFormatParameter
+helpviewer_keywords: ReportFormatParameter element
 ms.assetid: 064a8683-c44b-4261-be4d-32226d3d3119
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 043474622aff2a8f0ff3d19de636d17efa12341c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0c5717a4f1896e42c35d035a6b91438bed998ae3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reportformatparameter-element---asl"></a>Elemento ReportFormatParameter - ASL
   Contém o nome e o valor de um parâmetro que especifica como uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] relatório é formatado no tempo de execução.  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

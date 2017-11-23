@@ -1,27 +1,23 @@
 ---
-title: SQL Server R Services | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/22/2017
-ms.prod: sql-server-2016
+title: "Serviços com Python de aprendizado de máquina | Microsoft Docs"
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: af81754d0e6b87546432ea864098da4615522670
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 140885b86f0f6fa1a56119246c859f143f596726
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="machine-learning-services-with-python"></a>Serviços de aprendizado de máquina com Python
 
@@ -33,11 +29,11 @@ Esta versão inclui a distribuição Anaconda do Python, bem como o novo [revosc
 
 Você pode instalar tudo que você precisa para começar a usar o Python por meio da instalação do SQL Server 2017:
 
-+ **Serviços de aprendizado de máquina (no banco de dados):** instalar esse recurso, junto com o mecanismo de banco de dados do SQL Server, para permitir a execução segura de scripts de R no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador.
++ **Serviços de aprendizado de máquina (no banco de dados):** instalar esse recurso, junto com o mecanismo de banco de dados do SQL Server, para permitir a execução segura de scripts Python no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador.
   
      Quando você seleciona esse recurso, extensões são instaladas no mecanismo de banco de dados para permitir a execução de scripts de Python e um novo serviço é criado, o [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], para gerenciar as comunicações entre o tempo de execução do Python e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.
 
-+ **Servidor de aprendizado de máquina (autônomo):** se você não precisar de integração do SQL Server, instale esse recurso para obter suporte de Python no Microsoft R Server. Isso permite que você operacionalizar soluções de Python usando **mrsdeploy**.
++ **Servidor de aprendizado de máquina (autônomo):** se você não precisar de integração do SQL Server, instale esse recurso para obter suporte Python e R para aprendizado de máquina distribuído. Você também pode implantar sua solução de Python como um serviço web usando **mrsdeploy**.
   
      Não instale esse recurso no mesmo computador que está executando serviços de aprendizado de máquina do SQL Server.
 
@@ -47,4 +43,3 @@ Você pode instalar tudo que você precisa para começar a usar o Python por mei
 [Configurar serviços no banco de dados de aprendizado de máquina do Python](setup-python-machine-learning-services.md)
 
 [Tutoriais do Python](../tutorials/sql-server-python-tutorials.md)
-

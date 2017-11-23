@@ -3,17 +3,18 @@ title: Tabela dicas (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
 - Table Hint
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - SERIALIZABLE table hint
 - UPDLOCK table hint
@@ -36,20 +37,19 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 174
+caps.latest.revision: "174"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c87922c612c4da8b1ca6841b0d7ff7c3f191eb50
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) - tabela
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Dicas de tabela substituem o comportamento padrão do otimizador de consulta para a duração da instrução DML (linguagem) de manipulação de dados especificando um método de bloqueio, um ou mais índices, uma operação de processamento de consulta como uma busca de índice ou de exame de tabela ou outras opções. As dicas da tabela são especificadas na cláusula FROM da instrução DML e afetam apenas a tabela ou exibição referenciada nessa cláusula.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [MESCLAGEM](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -505,4 +505,3 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
  [Query Hints &#40;Transact-SQL&#41; [Dicas de consulta (Transact-SQL)]](../../t-sql/queries/hints-transact-sql-query.md)  
   
   
-

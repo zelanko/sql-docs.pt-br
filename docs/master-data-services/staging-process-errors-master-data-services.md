@@ -2,9 +2,12 @@
 title: Erros de processo de preparo (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8328c57fe3d4ad81262fd49e42b0305d7edd1d26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 60d930bbdd618e5a99450735bdfe290d8f1a9e59
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
   Quando o processo de preparo é concluído, todos os registros processados nas tabelas de preparo têm um valor na coluna ErrorCode. Esses valores são listados na tabela a seguir.  
