@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - member functions [MDX]
 - level functions [MDX]
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - logical functions [MDX]
 - set functions [MDX]
 ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: a6c3d086028a7906f540e716308fc9c15ee9287f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 30cd14ab8d2725f559e317f92071a289ab047268
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-function-reference-mdx"></a>Referência de função MDX (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +134,7 @@ ms.lasthandoff: 08/02/2017
 |[RollupChildren &#40; MDX &#41;](../mdx/rollupchildren-mdx.md)|Retorna um valor gerado pelo acúmulo dos valores dos filhos de um membro especificado usando o operador unário especificado.|  
 |[StdDev &#40; MDX &#41;](../mdx/stddev-mdx.md)|Alias de [Stdev &#40; MDX &#41; ](../mdx/stdev-mdx.md).|  
 |[StddevP &#40; MDX &#41;](../mdx/stddevp-mdx.md)|Alias de [StdevP &#40; MDX &#41; ](../mdx/stdevp-mdx.md).|  
-|[StDev &#40; MDX &#41;](../mdx/stdev-mdx.md)|Retorna o desvio padrão de exemplo de uma expressão numérica, avaliado em relação a um conjunto, usando a fórmula de população não polarizada.|  
+|[StDev &#40; MDX &#41;](../mdx/stdev-mdx.md)|Retorna o desvio padrão de exemplo de uma expressão numérica, avaliado em relação a um conjunto, usando a fórmula de população não polarizada..|  
 |[StdevP &#40; MDX &#41;](../mdx/stdevp-mdx.md)|Retorna o desvio padrão de população de uma expressão numérica avaliada sobre um conjunto, usando a fórmula de população polarizada.|  
 |[StrToValue &#40; MDX &#41;](../mdx/strtovalue-mdx.md)|Retorna o valor especificado por uma cadeia de caracteres formatada para MDX.|  
 |[Soma &#40; MDX &#41;](../mdx/sum-mdx.md)|Retorna a soma de uma expressão numérica avaliada em um conjunto.|  
@@ -246,4 +243,3 @@ ms.lasthandoff: 08/02/2017
  [Referência de linguagem MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
-

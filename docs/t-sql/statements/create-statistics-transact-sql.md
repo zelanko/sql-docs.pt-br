@@ -3,10 +3,12 @@ title: "CRIAR estatísticas (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - STATISTICS_TSQL
 - CREATE STATISTICS
 - CREATE_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], creating
 - indexed views [SQL Server], statistics
@@ -25,20 +26,19 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: 105
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "105"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e09604deac2b823243515c10398dc27c75941bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Cria estatísticas de otimização de consulta em uma ou mais colunas de uma tabela, uma exibição indexada ou uma tabela externa. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade; em alguns casos, você precisa criar estatísticas adicionais com CREATE STATISTICS ou modificar o design de consulta para melhorar o desempenho da consulta.  
   
@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = {ON | OFF}  
  Quando **ON**, as estatísticas reterá o percentual de amostragem de criação para as atualizações subsequentes que não especificam explicitamente um percentual de amostragem. Quando **OFF**, percentual de amostragem de estatísticas será redefinida para amostragem padrão em atualizações subsequentes que não especificam explicitamente um percentual de amostragem. O padrão é **OFF**. 
  
- **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 atualização cumulativa 4.  
+ **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
  STATS_STREAM  **=**  *stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -317,5 +317,4 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;
  [stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
-
 

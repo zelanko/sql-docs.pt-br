@@ -1,8 +1,7 @@
 ---
 title: "Estado de prontidão é de propriedade (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- ReadyState property [ADO]
+helpviewer_keywords: ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d5533fd471b6aee697825d2251c84adbcdfccfa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cfcc72e79e90e10885d329208208db2f1a0267f5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="readystate-property-rds"></a>Estado de prontidão é de propriedade (RDS)
 Indica o progresso de uma [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto que recupera dados em seu [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -55,6 +52,5 @@ Indica o progresso de uma [DataControl](../../../ado/reference/rds-api/datacontr
  [Exemplo de estado de prontidão é de propriedade (VBScript)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)   
  [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [Propriedade ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)
-
 
 

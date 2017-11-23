@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,24 +18,22 @@ f1_keywords:
 - CREATE_SEARCH_PROPERTY_TSQL
 - CREATE SEARCH PROPERTY
 - CREATE SEARCH PROPERTY LIST
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], creating
 - CREATE SEARCH PROPERTY LIST statement
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 71432baf23daeae2a1f60384dcbe98db7b708e91
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b055be4f948b62553ddbabb40613971a0e5619d8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -107,7 +104,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
  O exemplo a seguir cria uma nova lista de propriedades de pesquisa denominada `DocumentPropertyList`. O exemplo usa um [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) instrução para associar a nova lista de propriedade com o índice de texto completo do `Production.Document` tabela o `AdventureWorks` banco de dados, sem iniciar uma população.  
   
 > [!NOTE]  
->  Para obter um exemplo que adiciona várias propriedades de pesquisa famosas predefinidas a essa lista de propriedades de pesquisa, consulte [ALTER SEARCH PROPERTY LIST & #40; Transact-SQL & #41; ](../../t-sql/statements/alter-search-property-list-transact-sql.md). Depois de adicionar propriedades de pesquisa à lista, o administrador de banco de dados deverá usar outra instrução ALTER FULLTEXT INDEX com a cláusula START FULL POPULATION.  
+>  Para obter um exemplo que adiciona várias propriedades de pesquisa famosas predefinidas a essa lista de propriedades de pesquisa, consulte [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-search-property-list-transact-sql.md). Depois de adicionar propriedades de pesquisa à lista, o administrador de banco de dados deverá usar outra instrução ALTER FULLTEXT INDEX com a cláusula START FULL POPULATION.  
   
 ```  
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
@@ -133,13 +130,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER SEARCH PROPERTY LIST & #40; Transact-SQL & #41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
- [DROP SEARCH PROPERTY LIST & #40; Transact-SQL & #41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
- [sys. registered_search_properties & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [registered_search_property_lists & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
- [sys.DM fts_index_keywords_by_property & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [DROP SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
+ [sys. registered_search_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.DM fts_index_keywords_by_property &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
   
   
-

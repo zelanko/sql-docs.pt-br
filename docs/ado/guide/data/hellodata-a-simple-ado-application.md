@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 339f65cf1d4715d66e6c96316b04b072873d015d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c7d61c6349945274febc92e4e6b5acfcc379b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Um aplicativo ADO simples
 Este aplicativo simples percorre cada uma das quatro principais operações ADO: obtendo, examinando, editar e atualizar dados. Essas operações são executadas no banco de dados de exemplo Northwind incluído com o Microsoft® SQL Server. Para focalizar os conceitos básicos do ADO e evitar desordem de código, no exemplo de tratamento de erro é mínimo.  
@@ -37,7 +35,7 @@ Este aplicativo simples percorre cada uma das quatro principais operações ADO:
   
 2.  Criar quatro botões de comando na parte superior do formulário, definindo a **nome** e **legenda** propriedades com os valores mostrados na tabela no final deste tópico.  
   
-3.  Abaixo os botões, adicione um **Microsoft controle DataGrid** (Msdatgrd.ocx). O arquivo Msdatgrd.ocx está incluído com o Visual Basic e está localizado na pasta \windows\system32 ou \Winnt\System32. Para adicionar o controle DataGrid ao painel de ferramentas do Visual Basic, selecione **componentes...**  do **projeto** menu. Em seguida, marque a caixa ao lado de "Microsoft controle DataGrid 6.0 (SP3) (OLEDB)" e, em seguida, clique em **Okey**. Para adicionar o controle ao projeto, arraste o controle DataGrid da caixa de ferramentas para o formulário do Visual Basic.  
+3.  Abaixo os botões, adicione um **Microsoft controle DataGrid** (Msdatgrd.ocx). O arquivo Msdatgrd.ocx está incluído com o Visual Basic e está localizado na pasta \windows\system32 ou \Winnt\System32.. Para adicionar o controle DataGrid ao painel de ferramentas do Visual Basic, selecione **componentes...**  do **projeto** menu. Em seguida, marque a caixa ao lado de "Microsoft controle DataGrid 6.0 (SP3) (OLEDB)" e, em seguida, clique em **Okey**. Para adicionar o controle ao projeto, arraste o controle DataGrid da caixa de ferramentas para o formulário do Visual Basic.  
   
 4.  Criar um **TextBox** no formulário abaixo da grade e defina suas propriedades conforme mostrado na tabela. O formulário deve se parecer com a figura a seguir, quando tiver terminado.  
   
@@ -66,4 +64,3 @@ Este aplicativo simples percorre cada uma das quatro principais operações ADO:
 ||Caption|Editar dados|  
 |Botão de comando|Nome|cmdUpdateData|  
 ||Caption|Atualizar dados|
-

@@ -24,10 +24,10 @@ Antes de criar o grupo de disponibilidade, você precisa:
 1. **Configurar o arquivo dos hosts**
 
 >[!NOTE]
->Se os nomes de host estiverem registrados com o IP no servidor DNS, não será necessário executar as etapas abaixo. Faça a validação para que todos os nós que fazem parte da configuração do grupo de disponibilidade possam se comunicar entre si (o ping no nome do host deverá responder com o endereço IP correspondente). Além disso, verifique se o arquivo /etc/hosts não contém um registro que mapeia o endereço IP do localhost 127.0.0.1 com o nome do host do nó.
+>Se os nomes de host estiverem registrados com o IP no servidor DNS, não será necessário executar as etapas abaixo. Valide se todos os nós que fazem parte da configuração do grupo de disponibilidade podem se comunicar entre si (ping no nome do host deverá responder com o endereço IP correspondente). Além disso, verifique se o arquivo /etc/hosts não contém um registro que mapeia o endereço IP do localhost, 127.0.0.1 com o nome do host do nó.
 
 
-   O arquivo de hosts em cada servidor contém os endereços IP e os nomes de todos os servidores que farão parte do grupo de disponibilidade. 
+   O arquivo de hosts em cada servidor contém os endereços IP e nomes de todos os servidores que farão parte do grupo de disponibilidade. 
 
    O comando a seguir retorna o endereço IP do servidor atual:
 
@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 Como opção, é possível habilitar eventos estendidos de grupos de disponibilidade Always On para ajudar com o diagnóstico da causa raiz ao solucionar problemas de um grupo de disponibilidade. Execute o comando a seguir em cada instância do SQL Server. 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ Para obter mais informações sobre essa sessão XE, consulte [Eventos de extens
 
 O script de Transact-SQL a seguir cria um logon denominado `dbm_login` e um usuário chamado `dbm_user`. Atualize o script com uma senha forte. Execute o seguinte comando em todos as instâncias do SQL Server para criar o usuário de ponto de extremidade de espelhamento de banco de dados.
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -95,9 +95,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 O serviço do SQL Server no Linux usa certificados para autenticar a comunicação entre os pontos de extremidade de espelhamento. 
 
-O script de Transact-SQL a seguir cria uma chave mestra e um certificado. Em seguida, ele faz backup do certificado e protege o arquivo com uma chave privada. Atualize o script com senhas fortes. Conecte-se à instância primária do SQL Server e execute o seguinte Transact-SQL para criar o certificado:
+O script de Transact-SQL a seguir cria uma chave mestra e um certificado. Em seguida, ele faz backup do certificado e protege o arquivo com uma chave privada. Atualize o script com senhas fortes. Conecte-se à instância primária do SQL Server e execute a seguinte Transact-SQL para criar o certificado:
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -117,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-Em cada servidor de destino, conceda permissão ao usuário mssql para acessar o certificado.
+Em cada servidor de destino, dê permissão ao usuário mssql para acessar o certificado.
 
 ```bash
 cd /var/opt/mssql/data
@@ -128,7 +128,7 @@ chown mssql:mssql dbm_certificate.*
 
 O script do Transact-SQL a seguir cria uma chave mestra e um certificado com base no backup que você criou na réplica primária do SQL Server. O comando também autoriza o usuário a acessar o certificado. Atualize o script com senhas fortes. A senha de descriptografia é a mesma senha que você usou para criar o arquivo. pvk em uma etapa anterior. Execute o script a seguir em todos os servidores secundários para criar o certificado.
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -139,18 +139,15 @@ CREATE CERTIFICATE dbm_certificate
             );
 ```
 
-## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Criar os pontos de extremidade de espelhamento de banco de dados em todas as réplicas
+## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Crie os pontos de extremidade de espelhamento de banco de dados em todas as réplicas
 
-Os pontos de espelhamento de banco de dados usam o Protocolo de Controle de Transmissão (TCP) para enviar e receber mensagens entre as instâncias de servidor que participam das sessões do espelhamento de banco de dados ou hospedam réplicas de disponibilidade. O ponto de extremidade de espelhamento de banco de dados escuta em um exclusivo número de porta TCP. 
+Os pontos de espelhamento de banco de dados usam o Protocolo de Controle de Transmissão (TCP) para enviar e receber mensagens entre as instâncias de servidor que participam das sessões do espelhamento de banco de dados ou hospedam réplicas de disponibilidade. O ponto de extremidade de espelhamento de banco de dados escuta em um exclusivo número de porta TCP. O ouvinte TCP requer um endereço IP do ouvinte. O endereço IP do ouvinte deve ser um endereço IPv4. Você também pode usar `0.0.0.0`. 
 
 O Transact-SQL a seguir cria um ponto de extremidade de escuta chamado `Hadr_endpoint` para o grupo de disponibilidade. Ele começa no ponto de extremidade e concede a permissão de conexão para o usuário que você criou. Antes de executar o script, substitua os valores entre `**< ... >**`.
 
->[!NOTE]
->Para esta versão, não use um endereço IP diferente para o IP do ouvinte. Estamos trabalhando para corrigir esse problema, mas o único valor aceitável agora é “0.0.0.0”.
+Atualizar o Transact-SQL a seguir para o seu ambiente em todas as instâncias do SQL Server: 
 
-Atualize o Transact-SQL a seguir para o seu ambiente em todas as instâncias do SQL Server: 
-
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->A porta TCP do firewall precisa ser aberta para a porta do ouvinte.
+>[!NOTE]
+>Se você estiver usando o SQL Server Express Edition em um nó para hospedar uma réplica somente de configuração, é o único valor válido para a função `WITNESS`. Execute o seguinte script no SQL Server Express Edition.
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->Para a versão do SQL Server 2017, o único método de autenticação com suporte para o ponto de extremidade com espelhamento de banco de dados é o `CERTIFICATE`. A opção `WINDOWS` será habilitada em uma versão futura.
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-Para obter mais informações, consulte [O ponto de extremidade de espelhamento de banco de dados (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
