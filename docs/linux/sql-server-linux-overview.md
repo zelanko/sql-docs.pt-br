@@ -24,7 +24,7 @@ ms.lasthandoff: 10/05/2017
 ---
 # <a name="sql-server-on-linux"></a>SQL Server no Linux
 
-SQL Server 2017 agora é executado no Linux. É o mesmo mecanismo de banco de dados do SQL Server, com muitos recursos e serviços, independentemente de seu sistema operacional semelhante.
+O SQL Server 2017 agora é executado no Linux. Ele tem o mesmo mecanismo de banco de dados do SQL Server, com uma variedade maior de recursos e serviços, independentemente do sistema operacional que esteja sendo executado na máquina.
 
 ## <a name="install"></a>Instalar
 
