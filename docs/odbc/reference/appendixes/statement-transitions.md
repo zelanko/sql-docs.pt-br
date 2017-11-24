@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - state transitions [ODBC], statement
 - statement transitions [ODBC]
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 328529660d13c324e0d69749285c9e0022a04405
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45ee32a803f8c337b5d937699d2000abd718502f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="statement-transitions"></a>Transições de instrução
 Instruções de ODBC tem os seguintes estados.  
@@ -69,7 +67,7 @@ Instruções de ODBC tem os seguintes estados.
   
  [4] essa linha mostra transições quando *HandleType* foi SQL_HANDLE_DESC.  
   
- [5] chamada **SQLAllocHandle** com *OutputHandlePtr* apontando para um identificador válido substituirá esse identificador sem levar em consideração para o conteúdo anterior ao manipula e pode causar problemas para drivers ODBC. É incorretova programação de aplicativo de ODBC para chamar **SQLAllocHandle** duas vezes com a mesma variável de aplicativo definida para  *\*OutputHandlePtr* sem chamar  **SQLFreeHandle** para liberar o identificador antes realocando-lo. Substituindo o ODBC identificadores dessa forma podem causar um comportamento inconsistente ou erros por parte de drivers ODBC.  
+ [5] chamada **SQLAllocHandle** com *OutputHandlePtr* apontando para um identificador válido substituirá esse identificador sem levar em consideração para o conteúdo anterior ao manipula e pode causar problemas para drivers ODBC. É incorretova programação de aplicativo de ODBC para chamar **SQLAllocHandle** duas vezes com a mesma variável de aplicativo definida para * \*OutputHandlePtr* sem chamar ** SQLFreeHandle** para liberar o identificador antes realocando-lo. Substituindo o ODBC identificadores dessa forma podem causar um comportamento inconsistente ou erros por parte de drivers ODBC.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -258,7 +256,7 @@ Instruções de ODBC tem os seguintes estados.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000 [1]|24000|  
   
- [1] esse erro é retornado pelo Gerenciador de Driver se **SQLFetch** ou **SQLFetchScroll** não retornou SQL_NO_DATA e é retornada pelo driver se **SQLFetch** ou  **SQLFetchScroll** retornou SQL_NO_DATA.  
+ [1] esse erro é retornado pelo Gerenciador de Driver se **SQLFetch** ou **SQLFetchScroll** não retornou SQL_NO_DATA e é retornada pelo driver se **SQLFetch** ou ** SQLFetchScroll** retornou SQL_NO_DATA.  
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
@@ -282,7 +280,7 @@ Instruções de ODBC tem os seguintes estados.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000 HY010 de [p] [np]|24000 [p], [1] HY010 [np]|24000 HY010 de [p] [np]|  
   
- [1] esse erro é retornado pelo Gerenciador de Driver se **SQLFetch** ou **SQLFetchScroll** não retornou SQL_NO_DATA e é retornada pelo driver se **SQLFetch** ou  **SQLFetchScroll** retornou SQL_NO_DATA.  
+ [1] esse erro é retornado pelo Gerenciador de Driver se **SQLFetch** ou **SQLFetchScroll** não retornou SQL_NO_DATA e é retornada pelo driver se **SQLFetch** ou ** SQLFetchScroll** retornou SQL_NO_DATA.  
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
@@ -331,7 +329,7 @@ Instruções de ODBC tem os seguintes estados.
   
  [1] essa linha mostra transições quando *opção* foi SQL_CLOSE.  
   
- [2] essa linha mostra transições quando *opção* foi SQL_UNBIND ou SQL_RESET_PARAMS. Se o *opção* argumento era SQL_DROP e o driver subjacente é um ODBC 3*. x* driver, o Gerenciador de Driver mapeia isso para uma chamada para **SQLFreeHandle** com  *HandleType* definido como SQL_HANDLE_STMT. Para obter mais informações, consulte a tabela de transição para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ [2] essa linha mostra transições quando *opção* foi SQL_UNBIND ou SQL_RESET_PARAMS. Se o *opção* argumento era SQL_DROP e o driver subjacente é um ODBC 3*. x* driver, o Gerenciador de Driver mapeia isso para uma chamada para **SQLFreeHandle** com * HandleType* definido como SQL_HANDLE_STMT. Para obter mais informações, consulte a tabela de transição para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
@@ -593,4 +591,3 @@ Instruções de ODBC tem os seguintes estados.
  [1] de *atributo* argumento não era SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_SIMULATE_CURSOR, SQL_ATTR_USE_BOOKMARKS, SQL_ATTR_CURSOR_SCROLLABLE e SQL_ATTR_CURSOR_SENSITIVITY.  
   
  [2] de *atributo* argumento era SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_SIMULATE_CURSOR, SQL_ATTR_USE_BOOKMARKS, SQL_ATTR_CURSOR_SCROLLABLE e SQL_ATTR_CURSOR_SENSITIVITY.
-
