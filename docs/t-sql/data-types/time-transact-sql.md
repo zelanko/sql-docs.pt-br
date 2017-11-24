@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|hh [. nnnnnnn] para Informatica)<br /><br /> Para obter mais informações, consulte a seção "Compatibilidade com versões anteriores de clientes de nível inferior" a seguir.|  
 |Intervalo|00:00:00.0000000 por meio de 23:59:59.9999999 (00:00:00.000 por meio de 23:59:59.999 para Informatica)|  
 |Intervalos de elementos|hh são dois dígitos, variando de 0 a 23, que representam a hora.<br /><br /> mm são dois dígitos, variando de 0 a 59, que representam o minuto.<br /><br /> ss são dois dígitos, variando de 0 a 59, que representam o segundo.<br /><br /> n\*é zero a sete dígitos, variando de 0 a 9999999, que representa as frações de segundo. Para Informatica, n\* é zero a três dígitos, variando de 0 a 999.|  
-|Comprimento de caracteres|mínimo de 8 posições (HH) para o máximo de 16 (. nnnnnnn). Para Informatica, o máximo é de 12 (hh:mm:ss.nnn).|  
+|Comprimento de caracteres|Mínimo de 8 posições (hh:mm:ss) até um máximo de 16 (hh:mm:ss.nnnnnnn) Para Informatica, o máximo é de 12 (hh:mm:ss.nnn).|  
 |Precisão, escala<br /><br /> (usuário especifica apenas escala)|Consulte a tabela a seguir.|  
 |Tamanho de armazenamento|5 bytes, fixos, são o padrão com o padrão de precisão de frações de segundo de 100 ns. Informatica, o padrão é 4 bytes, fixos, com o padrão de 1 MS fracionários precisão de segundo.|  
 |Precisão|100 nanossegundos (1 milissegundo em Informatica)|  
