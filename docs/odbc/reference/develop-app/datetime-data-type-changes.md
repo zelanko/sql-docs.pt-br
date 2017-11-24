@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - compatibility [ODBC], datetime data types
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40d432cd25752c88b6c82209269c1d37a6bf5f63
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="datetime-data-type-changes"></a>Alterações de tipo de dados datetime
 Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp foram alterados de SQL_DATE, SQL_TIME e SQL_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 9, 10 e 11) para SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP (com instâncias de **#define** no arquivo de cabeçalho de 91, 92 e 93), respectivamente. Os identificadores de tipo C correspondentes foram alterados desde SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME e SQL_C_TYPE_TIMESTAMP, respectivamente.  
@@ -68,4 +66,3 @@ Em ODBC 3. *x*, os identificadores de data, hora e tipos de dados SQL timestamp 
  [1] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 2. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.  
   
  [2] como resultado de isso, um ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver pode usar os códigos de data, hora ou carimbo de hora retornados nos conjuntos de resultados retornados pelas funções de catálogo.
-

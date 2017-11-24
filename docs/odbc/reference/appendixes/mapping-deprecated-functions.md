@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bf9d6ecc7971d8047dff4a808e1fe84a6261b71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61d05017039673989e1477501feb17b3da6d7220
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mapping-deprecated-functions"></a>Mapeamento de funções de preteridas
 Esta seção descreve como preteridas funções são mapeados por ODBC 3*. x* Gerenciador de Driver para garantir a compatibilidade com versões anteriores do ODBC 3*. x* drivers que são usados com o ODBC 2. *x* aplicativos. O Gerenciador de Driver executa esse mapeamento, independentemente da versão do aplicativo. Como cada ODBC 2. *x* funções na lista a seguir é mapeado para o ODBC 3 correspondente*. x* função quando chamado em um ODBC 3*. x* driver, o ODBC 3*. x*driver não precisa implementar o ODBC 2. *x* funções.  
@@ -100,4 +98,3 @@ Esta seção descreve como preteridas funções são mapeados por ODBC 3*. x* Ge
 -   [Mapeamento SQLSetStmtOption](../../../odbc/reference/appendixes/sqlsetstmtoption-mapping.md)  
   
 -   [Mapeamento SQLTransact](../../../odbc/reference/appendixes/sqltransact-mapping.md)
-
