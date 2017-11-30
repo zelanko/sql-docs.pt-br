@@ -1,5 +1,5 @@
 ---
-title: Criar um alerta de dados no Designer de alertas de dados | Microsoft Docs
+title: Criar um alerta de dados no Designer de Alertas de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3cbf24497be6bc9716678645568850297158c20f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um alerta de dados no Designer de Alertas de Dados
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/17/2017
 Você cria definições de alerta de dados no Designer de Alertas de Dados. Depois de salvar as definições de alertas, é possível abri-la novamente, editá-la e salvá-la novamente no Designer de Alertas de Dados. Para obter informações sobre como editar definições de alertas, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) e [Editar um alerta de dados no Designer de Alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
 ## <a name="create-a-data-alert-definition"></a>Criar uma definição de alerta de dados
  
@@ -47,7 +46,7 @@ Você cria definições de alerta de dados no Designer de Alertas de Dados. Depo
   
      A imagem a seguir mostra o menu **Ações** .  
   
-     ![Abra o Designer de alertas de biblioteca do SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "abrir o Designer de alertas de biblioteca do SharePoint")  
+     ![Abrir o Designer de Alertas por meio da biblioteca do SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Abrir o Designer de Alertas por meio da biblioteca do SharePoint")  
   
      O Designer de Alertas de Dados é aberto e mostra as primeiras 100 linhas do primeiro feed de dados que o relatório gera em uma tabela.  
   
@@ -121,7 +120,7 @@ Você cria definições de alerta de dados no Designer de Alertas de Dados. Depo
   
 20. Opcionalmente, na caixa de texto **Assunto** , atualize a linha de Assunto da mensagem de alerta.  
   
-     O assunto padrão é **de alertas de dados para \<nome do alerta de dados >**.  
+     O Assunto padrão é **Alerta de dados para \<data alert name>**.  
   
 21. Opcionalmente, na caixa de texto **Descrição** , digite uma descrição da mensagem de alerta.  
   
@@ -129,9 +128,8 @@ Você cria definições de alerta de dados no Designer de Alertas de Dados. Depo
 
 ## <a name="see-also"></a>Consulte também
 
-[Designer de alertas de dados](../reporting-services/data-alert-designer.md)   
-[Gerenciador de alertas de dados para os administradores de alerta](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+[Designer de Alertas de Dados](../reporting-services/data-alert-designer.md)   
+[Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "Autenticação com o servidor de relatório | Microsoft Docs"
+title: "Autenticação com o Servidor de Relatório | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -17,21 +17,19 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c38fc293a297544710b77b52d054fae58273340e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="authentication-with-the-report-server"></a>Autenticação com o servidor de relatório
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) oferece várias opções configuráveis para autenticar usuários e aplicativos de cliente em relação ao servidor de relatório. Por padrão, o servidor de relatório usa a Autenticação Integrada do Windows e supõe relações de confiança onde os recursos do cliente e da rede estão no mesmo domínio ou em um domínio confiável. Dependendo de sua topologia de rede e das necessidades de sua organização, você pode personalizar o protocolo de autenticação usado para a Autenticação Integrada do Windows, usar a autenticação básica ou usar uma extensão de autenticação baseada em formulários personalizada fornecida por você. Cada um dos tipos de autenticação pode ser ativado ou desativado individualmente. Você poderá habilitar mais de um tipo de autenticação se desejar que o servidor de relatório aceite solicitações de vários tipos.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) oferece várias opções configuráveis para autenticar usuários e aplicativos cliente em relação ao servidor de relatório. Por padrão, o servidor de relatório usa a Autenticação Integrada do Windows e supõe relações de confiança onde os recursos do cliente e da rede estão no mesmo domínio ou em um domínio confiável. Dependendo de sua topologia de rede e das necessidades de sua organização, você pode personalizar o protocolo de autenticação usado para a Autenticação Integrada do Windows, usar a autenticação básica ou usar uma extensão de autenticação baseada em formulários personalizada fornecida por você. Cada um dos tipos de autenticação pode ser ativado ou desativado individualmente. Você poderá habilitar mais de um tipo de autenticação se desejar que o servidor de relatório aceite solicitações de vários tipos.
   
  Todos os usuários ou aplicativos que solicitam acesso a conteúdo ou operações do servidor de relatório devem ser autenticados antes de o acesso ser permitido.  
   
@@ -53,8 +51,8 @@ ms.lasthandoff: 08/09/2017
 |---------------------------|-----------------|  
 |Anônima|O servidor de relatório não aceitará solicitações não autenticadas de um usuário anônimo, a menos naquelas implantações que incluem uma extensão de autenticação personalizada.<br /><br /> O Construtor de Relatórios aceitará solicitações não autenticadas se você habilitar o acesso a ele em um servidor de relatório configurado para autenticação Básica.<br /><br /> Em todos os outros casos, as solicitações anônimas são rejeitadas com um erro Status HTTP 401 – Acesso Negado antes de a solicitação chegar a [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Os clientes que recebem o erro 401 de acesso negado devem reformular a solicitação com um tipo de autenticação válido.|  
 |Tecnologias de logon único (SSO)|Não há suporte nativo para tecnologias de logon único no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para usar uma tecnologia de logon único, você deve criar uma extensão de autenticação personalizada.<br /><br /> O ambiente de hospedagem do servidor de relatório não dá suporte a filtros ISAPI. Se a tecnologia SSO que você está usando é implementada como filtro ISAPI, considere usar o suporte interno do ISA Server para RSASecueID ou o protocolo RADIUS. Do contrário, você poderá criar um filtro ISAPI do ISA Server ou HTTPModule para RS, mas é recomendável usar o ISA Server diretamente.|  
-|Passport|Não tem suporte no SQL Server Reporting Services.|  
-|Digest|Não tem suporte no SQL Server Reporting Services.|  
+|Passport|Sem suporte no SQL Server Reporting Services.|  
+|Digest|Sem suporte no SQL Server Reporting Services.|  
   
 ## <a name="configuration-of-authentication-settings"></a>Configuração dos parâmetros de autenticação  
  Configurações de autenticação são definidas para segurança padrão quando a URL do servidor de relatório é reservada. Se essas configurações forem modificadas incorretamente, o servidor de relatório retornará erros HTTP 401 – Acesso Negado para solicitações HTTP que não podem ser autenticadas. Para escolher um tipo de autenticação, você deve saber de que forma a Autenticação do Windows é suportada na rede. Especifique pelo menos um tipo de autenticação. Podem ser especificados vários tipos de autenticação para RSWindows. Os tipos de autenticação do RSWindows (ou seja, **RSWindowsBasic**, **RSWindowsNTLM**, **RSWindowsKerberos**e **RSWindowsNegotiate**) se excluem mutuamente com Personalizado.  
@@ -68,32 +66,32 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Configurar a autenticação do Windows no servidor de relatório](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+-   [Configurar a Autenticação do Windows no servidor de relatório](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
   
--   [Configurar a autenticação básica no servidor de relatório](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
+-   [Configurar a autenticação Básica no servidor de relatório](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
   
--   [Configurar a autenticação de formulários ou personalizado no servidor de relatório](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+-   [Configurar autenticação personalizada ou de formulários no servidor de relatório](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrições das tarefas|Links|  
 |-----------------------|-----------|  
-|Configurar o tipo de Autenticação Integrada do Windows.|[Configurar a autenticação do Windows no servidor de relatório](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
-|Configurar o tipo de Autenticação Básica.|[Configurar a autenticação básica no servidor de relatório](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
+|Configurar o tipo de Autenticação Integrada do Windows.|[Configurar a Autenticação do Windows no servidor de relatório](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
+|Configurar o tipo de Autenticação Básica.|[Configurar a autenticação Básica no servidor de relatório](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Configurar a autenticação de formulários ou um tipo de Autenticação Personalizada.|[Configurar autenticação personalizada ou de formulários no servidor de relatório](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
 |Habilite o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para tratar o cenário de autenticação personalizada.|[Configurar o portal da Web para passar cookies de autenticação personalizados](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+[Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Especificar informações de Conexão para fontes de dados de relatório e credenciais](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+[Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Implementando uma extensão de segurança](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
-[Configurar conexões SSL em um servidor de relatório do modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[Configurar o acesso do construtor de relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
+[Configurar conexões SSL em um servidor de relatórios de modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+[Configurar o acesso ao Construtor de Relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Visão geral de extensões de segurança](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Autenticação no Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Autorização no Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

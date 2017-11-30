@@ -1,5 +1,5 @@
 ---
-title: "Cabeçalhos e rodapés de página (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé nas partes superior e inferior de cada página, respectivamente. Os cabeçalhos e rodapés podem conter texto estático, imagens, linhas, retângulos, bordas, cor e imagens de plano de fundo e expressões. Expressões incluem referências a campos de conjunto de dados de relatórios com exatamente um conjunto de dados e chamadas de função de agregação que incluem o conjunto de dados como um escopo.  
@@ -44,9 +43,9 @@ ms.lasthandoff: 08/09/2017
   
  Por padrão, relatórios têm rodapés de página, mas não cabeçalhos de página. Para obter mais informações sobre como adicionar ou removê-los, consulte [Adicionar ou remover um cabeçalho ou rodapé de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
- Em geral, cabeçalhos e rodapés contêm números de página, títulos de relatório e outras propriedades de relatório. Para obter mais informações sobre como adicionar esses itens ao cabeçalho ou rodapé, consulte [Exibir números de página ou outras propriedades do relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md).  
+ Em geral, cabeçalhos e rodapés contêm números de página, títulos de relatório e outras propriedades de relatório. Para obter mais informações sobre como adicionar esses itens ao cabeçalho ou rodapé do relatório, consulte [Exibir números de página ou outras propriedades do relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md).  
   
- Depois que você criar um cabeçalho de página ou rodapé, ele será exibido em cada página do relatório. Para obter mais informações sobre como suprimir cabeçalhos e rodapés de páginas da primeira e da última página, consulte [Ocultar um cabeçalho ou rodapé de página na primeira ou na última página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md).  
+ Depois que você criar um cabeçalho de página ou rodapé, ele será exibido em cada página do relatório. Para obter mais informações sobre como suprimir cabeçalhos e rodapés de página da primeira e da última página, consulte [Ocultar um cabeçalho ou rodapé de página na primeira ou na última página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -81,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
  Ao calcular totais de página, podem haver diferenças nos totais se você usar extensões de renderização diferentes para exibir o relatório. A saída paginada é calculada de forma diferente para cada extensão de renderização. A mesma página exibida em HTML pode mostrar totais diferentes quando exibida em PDF se o volume de dados na página do PDF for diferente. Para obter mais informações, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-### <a name="for-reports-with-multiple-datasets"></a>Para relatórios com vários conjuntos de dados   
+### <a name="for-reports-with-multiple-datasets"></a>Para relatórios com vários conjuntos de dados  
  Para relatórios com mais de um conjunto de dados, não é possível adicionar campos ou imagens vinculadas a dados diretamente a um cabeçalho ou rodapé. No entanto, você pode escrever uma expressão que, indiretamente, faz referência a um campo ou a uma imagem vinculada a dados que você deseja usar em um cabeçalho ou rodapé.  
   
  Para colocar dados variáveis em um cabeçalho ou rodapé:  
@@ -94,7 +93,7 @@ ms.lasthandoff: 08/09/2017
   
      `=First(ReportItems!TXT_LastName.Value)`  
   
- Não é possível usar funções de agregação em campos no cabeçalho ou rodapé de página. Você só pode usar uma função de agregação em itens de relatório no corpo de relatório. Para expressões comuns em cabeçalhos e rodapés de página, consulte [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
+ Não é possível usar funções de agregação em campos no cabeçalho ou rodapé de página. Você só pode usar uma função de agregação em itens de relatório no corpo de relatório. Para obter expressões comuns em cabeçalhos e rodapés de página, consulte [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
 #### <a name="adding-a-data-bound-image-to-a-header-or-footer"></a>Adicionando uma imagem vinculada a dados a um cabeçalho ou rodapé  
  Você pode usar dados de imagem armazenados em um banco de dados em um cabeçalho ou rodapé. No entanto, não pode fazer referência a campos do banco de dados diretamente do item de relatório Imagem. Em vez disso, adicione uma caixa de texto ao corpo do relatório e, em seguida, defina a caixa de texto para o campo de dados que contém a imagem (observe que o valor deve ser codificado para base64). Você pode ocultar a caixa de texto do corpo do relatório para evitar mostrar a imagem codificada em base64. Em seguida, é possível fazer referência ao valor da caixa de texto oculta do item de relatório Imagem no cabeçalho ou rodapé de página.  
@@ -115,7 +114,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="designing-reports-with-page-headers-and-footers-for-specific-renderers"></a>Criando relatórios com cabeçalhos e rodapés de página para processadores específicos  
  Quando um relatório é processado, os dados e as informações de layout são combinados. Quando você exibir um relatório, a informações combinadas serão transmitidas a um processador que determinará a quantidade de dados do relatório que caberá em cada página.  
   
- Se você usar um navegador para exibir um relatório do servidor de relatório, o processador de HTML controlará o conteúdo das páginas do relatório que você verá. Se você planeja entregar os relatórios em formatos diferentes daquele usado na exibição ou se planeja imprimir os relatórios em um formato específico, convém otimizar o layout do relatório para o processador que você pretende usar para gerar o formato final. Para obter mais informações sobre paginação de relatório, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Se você usar um navegador para exibir um relatório do servidor de relatório, o processador de HTML controlará o conteúdo das páginas do relatório que você verá. Se você planeja entregar os relatórios em formatos diferentes daquele usado na exibição ou se planeja imprimir os relatórios em um formato específico, convém otimizar o layout do relatório para o processador que você pretende usar para gerar o formato final. Para obter mais informações sobre a paginação de relatório, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ### <a name="working-with-page-headers-and-footers-in-excel"></a>Trabalhando com cabeçalhos e rodapés de página no Excel  
  Ao definir cabeçalhos e rodapés de página para relatórios que se destinam à extensão de renderização do Excel, siga estas diretrizes para obter os melhores resultados:  
@@ -130,11 +129,10 @@ ms.lasthandoff: 08/09/2017
   
  Uma contagem de páginas mais precisa baseia-se em páginas lógicas que se correlacionam às dimensões de uma página impressa. No Excel, o rodapé de página usa números de página lógicos automaticamente. Para posicionar a contagem de página lógica no cabeçalho da página, defina as configurações de informações de dispositivo para usar cabeçalhos simples. Lembre-se de que, ao usar cabeçalhos simples, você elimina a capacidade de lidar com layout de relatório complexo na região de cabeçalho.  
   
- Para obter mais informações, consulte [Exportar para Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Para obter mais informações, consulte [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Inserir uma imagem em um relatório &#40;Construtor de relatórios e SSR&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Retângulos e linhas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Inserir uma imagem em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

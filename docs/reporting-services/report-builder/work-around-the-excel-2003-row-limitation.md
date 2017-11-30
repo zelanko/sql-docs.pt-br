@@ -1,5 +1,5 @@
 ---
-title: "Solução alternativa a limitação de linhas do Excel 2003 | Microsoft Docs"
+title: "Solução do problema de limitação de linhas do Excel 2003 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 764b6da1c5ea43d02d7b5b950aa056434acf1a12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   Este tópico explica como resolver a limitação de linhas do Excel 2003 quando você exporta relatórios paginados para o Excel. A solução alternativa é para um relatório que contém apenas uma tabela.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Clique com o botão direito do mouse na linha Dados da tabela e clique em **Adicionar Grupo** > **Grupo Pai** para adicionar um grupo de tabelas externo.  
   
-     ![Selecione o grupo pai](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "selecione o grupo pai")  
+     ![Selecionar o grupo pai](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Selecionar o grupo pai")  
   
 3.  Digite a fórmula a seguir na caixa de expressão **Agrupar por** e clique em **OK** para adicionar o grupo pai.  
   
@@ -49,21 +48,20 @@ ms.lasthandoff: 08/09/2017
   
 4.  Exclua a coluna de grupo clicando com o botão direito do mouse no cabeçalho de coluna, clicando em **Excluir Colunas**, selecionando **Excluir colunas apenas**e clicando em **OK**.  
   
-     ![Excluir uma coluna de grupo](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "excluir uma coluna de grupo")  
+     ![Excluir uma coluna de grupo](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Excluir uma coluna de grupo")  
   
 5.  Clique com o botão direito do mouse em **Grupo 1** na seção **Grupos de Linhas** e clique em **Propriedades do Grupo**.  
   
-     ![Exibir propriedades do grupo](../../reporting-services/report-builder/media/groupproperties-updated.png "exibir propriedades do grupo")  
+     ![Exibir as propriedades do grupo](../../reporting-services/report-builder/media/groupproperties-updated.png "Exibir as propriedades do grupo")  
   
 6.  Na página **Classificação** da caixa de diálogo **Propriedades do Grupo** , selecione a opção de classificação padrão e clique em **Excluir**.  
   
-     ![Excluir classificação padrão](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "excluir classificação padrão")  
+     ![Excluir classificação padrão](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Excluir classificação padrão")  
   
 7.  Na página **Quebras de Página** , clique em **Entre cada instância de um grupo** e clique em **OK**.  
   
-     ![Definir quebras de página](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "definir quebras de página")  
+     ![Definir quebras de página](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Definir quebras de página")  
   
 8.  Salve o relatório. Quando você exportá-lo para o Excel, a exportação será realizada para várias planilhas, e cada planilha conterá um máximo de 65000 linhas.  
   
   
-

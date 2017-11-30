@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- names [SQL Server], columns with
+helpviewer_keywords: names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: b4b9a8774565dd0e31caf940cf3e8254b0987205
 ms.openlocfilehash: 3a2651e6e67cceb648049f99ab9588a44b7f3fb0
-ms.contentlocale: pt-br
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columns-with-a-name"></a>Colunas com um nome
   As seguintes são as condições específicas nas quais colunas de conjunto de linhas com um nome são mapeadas, diferenciando maiúsculas e minúsculas, para o XML resultante:  
@@ -38,7 +35,7 @@ ms.lasthandoff: 11/08/2017
 -   Uma coluna tem um nome diferente.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>O nome da coluna começa com uma arroba (@)  
- Se o nome da coluna começa com um sinal de arroba (@) e não contém uma barra (/), um atributo do `row` elemento que tem o valor da coluna correspondente é criado. Por exemplo, a seguinte consulta retorna um conjunto de linhas (@PmId, Nome) de duas colunas. No XML resultante, um **PmId** atributo é adicionado ao correspondente `row` elemento e um valor de ProductModelID é atribuído a ele.  
+ Se o nome da coluna começar com uma arroba (@) e não contiver uma barra (/), um atributo do elemento `row` que tem o valor da coluna correspondente será criado. Por exemplo, a seguinte consulta retorna um conjunto de linhas (@PmId, Nome) de duas colunas. No XML resultante, um atributo **PmId** é adicionado ao elemento `row` correspondente e um valor de ProductModelID é atribuído a ele.  
   
 ```  
   
@@ -71,9 +68,9 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>O nome da coluna não começa com uma arroba (@)  
- Se o nome da coluna não começa com um sinal de arroba (@), não é um dos testes de nó XPath e não contiver uma barra (/), um elemento XML que é um subelemento do elemento linha, `row` por padrão, é criado.  
+ Se o nome da coluna não começar com uma arroba (@), não for um dos testes do nó XPath e não contiver uma barra (/), um elemento XML que é um subelemento do elemento linha, `row`, será criado, por padrão.  
   
- A consulta a seguir especifica o nome da coluna, o resultado. Portanto, um `result` elemento filho é adicionado para o `row` elemento.  
+ A consulta a seguir especifica o nome da coluna, o resultado. Portanto, um filho do elemento `result` é adicionado ao elemento `row`.  
   
 ```  
 SELECT 2+2 as result  
@@ -88,7 +85,7 @@ for xml PATH
 </row>  
 ```  
   
- O exemplo a seguir especifica o nome da coluna, ManuWorkCenterInformation, para o XML retornado pelo XQuery especificado em relação à coluna Instructions de tipo **xml**. Portanto, um `ManuWorkCenterInformation` elemento é adicionado como um filho de `row` elemento.  
+ O exemplo a seguir especifica o nome da coluna, ManuWorkCenterInformation, para o XML retornado pelo XQuery especificado em relação à coluna Instructions de tipo **xml**. Portanto, um elemento `ManuWorkCenterInformation` é adicionado como um filho do elemento `row`.  
   
 ```  
 SELECT   
@@ -133,7 +130,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Os nomes de colunas são usados como um caminho para construir XML no modo PATH. O nome da coluna que contém valores de ID de funcionário, começa com '\@'. Portanto, um atributo **EmpID**, é adicionada para o `row` elemento. Todas as outras colunas incluem uma barra ('/') no nome da coluna que indica hierarquia. O XML resultante terá o `EmpName` filho sob o `row` elemento e o `EmpName` filho terá `First`, `Middle` e `Last` filhos do elemento.  
+ Os nomes de colunas são usados como um caminho para construir XML no modo PATH. O nome da coluna que contém valores de ID de funcionário, começa com “\@”. Portanto, um atributo **EmpID** é adicionado ao elemento `row`. Todas as outras colunas incluem uma barra ('/') no nome da coluna que indica hierarquia. O XML resultante terá o filho `EmpName` sob o elemento `row` e o filho `EmpName` terá os filhos dos elementos `First`, `Middle` e `Last`.  
   
 ```  
 <row EmpID="1">  
@@ -172,7 +169,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  Por padrão, o modo PATH gera XML centrado em elemento. Portanto especificar a diretiva ELEMENTS em uma consulta em modo PATH não tem nenhum efeito. No entanto, conforme mostrado no exemplo anterior, a diretiva ELEMENTS é útil com XSINIL para gerar elementos para valores nulos.  
   
- Além da ID e do nome, a consulta a seguir recupera um endereço de funcionário. De acordo com o caminho nos nomes das colunas para colunas de endereço, um `Address` elemento filho é adicionado para o `row` elemento e os detalhes do endereço são adicionados como filhos do elemento a `Address` elemento.  
+ Além da ID e do nome, a consulta a seguir recupera um endereço de funcionário. De acordo com o caminho nos nomes das colunas de endereço, um filho do elemento `Address` é adicionado ao elemento `row` e os detalhes do endereço são adicionados como filhos do elemento `Address`.  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -205,7 +202,7 @@ FOR XML PATH
 ```  
   
 ## <a name="several-columns-share-the-same-path-prefix"></a>Várias colunas compartilham o mesmo prefixo  
- Se várias colunas subsequentes compartilharem o mesmo prefixo de caminho, elas serão agrupadas sob o mesmo nome. Se diferentes prefixos de namespace estiverem sendo usados, mesmo que estejam associados ao mesmo namespace, um caminho será considerado diferente. Na consulta anterior, as colunas FirstName, MiddleName e LastName compartilham o mesmo prefixo EmpName. Portanto, eles são adicionados como filhos do `EmpName` elemento. Isso também é o caso quando for criar o `Address` elemento no exemplo anterior.  
+ Se várias colunas subsequentes compartilharem o mesmo prefixo de caminho, elas serão agrupadas sob o mesmo nome. Se diferentes prefixos de namespace estiverem sendo usados, mesmo que estejam associados ao mesmo namespace, um caminho será considerado diferente. Na consulta anterior, as colunas FirstName, MiddleName e LastName compartilham o mesmo prefixo EmpName. Portanto, elas são adicionadas como filhos do elemento `EmpName`. Esse também é o caso quando o elemento `Address` foi criado no exemplo anterior.  
   
 ## <a name="one-column-has-a-different-name"></a>Uma coluna tem um nome diferente  
  Se uma coluna com um nome diferente aparecer no meio, ela quebrará o agrupamento, conforme mostrado na seguinte consulta modificada. A consulta quebra o agrupamento de FirstName, MiddleName e LastName, conforme especificado na consulta anterior, adicionando colunas de endereço no meio das colunas FirstName e MiddleName.  
@@ -225,7 +222,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Como resultado, a consulta cria dois `EmpName` elementos. A primeira `EmpName` elemento tem o `FirstName` filho do elemento e a segunda `EmpName` elemento tem o `MiddleName` e `LastName` filhos do elemento.  
+ Como resultado, a consulta cria dois elementos `EmpName`. O primeiro elemento `EmpName` tem o filho do elemento `FirstName` e o segundo elemento `EmpName` tem os filhos dos elementos `MiddleName` e `LastName`.  
   
  Este é o resultado:  
   
@@ -248,4 +245,3 @@ FOR XML PATH
  [Usar o modo PATH com FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   
-

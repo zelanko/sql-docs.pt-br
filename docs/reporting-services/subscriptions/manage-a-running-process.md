@@ -28,17 +28,16 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 805c1ba338d75d49e6dbd48fb6f1d8af2f5e5701
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] monitora o status dos trabalhos que estão em execução no servidor de relatório. Em intervalos regulares, o servidor de relatório examina os trabalhos em andamento e grava as informações de status no banco de dados do servidor de relatório ou os bancos de dados de aplicativo de serviço para o modo do SharePoint. Um trabalho está em andamento se algum dos seguintes processos estiver ocorrendo: execução de consulta em um servidor de banco de dados remoto ou local, processamento de relatórios e renderização de relatórios.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Assinaturas padrão de propriedade de usuários individuais.  
   
- O cancelamento de um trabalho só cancela os processos que estão em execução no servidor de relatório. Como o servidor de relatório não gerencia o processamento de dados que ocorre em outros computadores, cancele manualmente os processamentos de consulta que, consequentemente, ficam órfãos em outros sistemas. Especifique valores de tempo limite de consulta para desligar automaticamente consultas que estão demorando muito a serem executadas. Para obter mais informações, consulte [valores de tempo limite da definição de relatório e processamento de conjunto de dados compartilhados &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para obter mais informações sobre como pausar temporariamente um relatório, consulte [Desabilitar ou pausar o processamento de relatório e de assinatura](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ O cancelamento de um trabalho só cancela os processos que estão em execução no servidor de relatório. Como o servidor de relatório não gerencia o processamento de dados que ocorre em outros computadores, cancele manualmente os processamentos de consulta que, consequentemente, ficam órfãos em outros sistemas. Especifique valores de tempo limite de consulta para desligar automaticamente consultas que estão demorando muito a serem executadas. Para obter mais informações, consulte [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para obter mais informações sobre como pausar temporariamente um relatório, consulte [Desabilitar ou pausar o processamento de relatório e de assinatura](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  Em circunstâncias raras, você talvez precise reinicializar o servidor para cancelar um processo. No modo do SharePoint, talvez seja necessário reiniciar o pool de aplicativos hospedando o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Iniciar e parar o serviço Servidor de Relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -126,11 +125,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Cancelar Trabalhos do Servidor de Relatório &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Propriedades de trabalho &#40; Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Modificar um arquivo de configuração do Reporting Services &#40; Rsreportserver. config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Propriedades do trabalho &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Arquivo de Configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Monitorar o desempenho do servidor de relatório](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Localizando e exibindo relatórios com um navegador (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Localizando e exibindo relatórios com um navegador (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 981003ec6e3520053dca8e5467d0c7def217c29a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Localizando e exibindo relatórios com um navegador (Construtor de Relatórios e SSRS)
   Você pode usar qualquer navegador da Web com suporte para exibir um relatório por meio de uma conexão direta com um servidor de relatório. Cada relatório tem um endereço URL em um servidor de relatórios. Você pode digitar o endereço da Web de um relatório para abri-lo em uma janela do navegador independentemente de um aplicativo da Web. O relatório é aberto no formato HTML e inclui a barra de ferramentas do relatório para que você possa navegar em páginas ou procurar valores de dados no relatório. Você pode definir parâmetros na URL para ocultar a barra de ferramentas ou selecionar o formato de saída do relatório.  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Se você não souber o endereço da Web de um relatório, poderá abrir o endereço da Web do servidor de relatórios e procurar a hierarquia da pasta do servidor de relatórios para selecionar o relatório que deseja exibir. O diagrama a seguir ilustra uma hierarquia de pasta como ela é exibida em uma janela do navegador.  
   
- ![Pastas em um navegador](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![Pastas em um navegador](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Pastas em um navegador")  
 Pastas em um navegador  
   
 > [!NOTE]  
@@ -48,9 +47,9 @@ Pastas em um navegador
   
 -   Um link com nenhum outro indicador é um relatório ou um modelo.  
   
--   A marca \<ds > indica uma fonte de dados compartilhada.  
+-   A marcação \<ds> indica uma fonte de dados compartilhada.  
   
--   A marca \<dir > indica um item de pasta.  
+-   A marcação \<dir> indica um item de pasta.  
   
 -   Uma extensão de nome de arquivo indica um recurso. A extensão do nome do arquivo identifica o tipo MIME do recurso. Por exemplo, .jpg indica uma imagem em formato JPEG.  
   
@@ -64,4 +63,3 @@ Pastas em um navegador
  Para obter mais informações sobre como acessar um relatório usando uma URL, incluindo informações sobre como a URL é construída, consulte “Acesso à URL” na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
   
-

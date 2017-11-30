@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainproperties.f1
+f1_keywords: sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21943e484d690d0ff26cf9a93e0688e0804dd02c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-domain-properties"></a>Definir propriedades do domínio
   Este tópico descreve como definir propriedades de domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -57,7 +54,7 @@ ms.lasthandoff: 09/09/2017
  Quando um domínio é criado, o nome ou a descrição do domínio pode ser alterado. O nome do domínio deve ser exclusivo para a base de dados de conhecimento. A descrição pode ter até 256 caracteres.  
   
 ###  <a name="Type"></a> Tipo de Dados  
- Quando você criar o domínio, selecione um dos tipos de dados a seguir para obter os valores no domínio: **Cadeia de Caracteres** (o padrão), **Data**, **Inteiro**ou **Decimal**. Depois de criar o domínio, você poderá exibir o tipo de dados, mas não poderá alterá-lo O tipo de dados selecionado para um domínio define o tipo de dados de origem que pode ser mapeado para o domínio. Para obter informações sobre tipos de dados com suporte para cada um dos quatro tipos de dados de domínio no DQS, consulte [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Quando você criar o domínio, selecione um dos tipos de dados a seguir para obter os valores no domínio: **Cadeia de Caracteres** (o padrão), **Data**, **Inteiro**ou **Decimal**. Depois de criar o domínio, você poderá exibir o tipo de dados, mas não poderá alterá-lo O tipo de dados selecionado para um domínio define o tipo de dados de origem que pode ser mapeado para o domínio. Para obter informações sobre tipos de dados com suporte em cada um dos quatro tipos de dados de domínio no DQS, consulte [Tipos de dados do SQL Server e do SSIS com suporte para domínios do DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Usar Valores Principais  
  Marque esta caixa de seleção para especificar que o valor principal em um grupo de sinônimos será gerado, e não um valor que é sinônimo dele. Cancele a seleção de **Usar Valores Principais** para especificar que cada valor de sinônimo seja gerado em sua forma correta ou corrigida, e não seja substituído pelo valor principal do seu grupo.  
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/09/2017
  Se o tipo de dados for **Cadeia de Caracteres**, selecione para especificar que erros de sintaxe não sejam identificados pelo DQS no domínio durante a limpeza. Marque esta caixa de seleção quando a identificação de erros de sintaxe para esse domínio for irrelevante. Por exemplo, a identificação de erros de sintaxe pode não ter importância para um número de série. Este controle só está disponível para o tipo de dados cadeia de caracteres. O DQS não verificará se existem erros de sintaxe em tipos de dados que não sejam cadeia de caracteres.  
   
   
-

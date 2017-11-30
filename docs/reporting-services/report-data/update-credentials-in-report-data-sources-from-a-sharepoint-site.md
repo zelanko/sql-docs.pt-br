@@ -1,5 +1,5 @@
 ---
-title: "Atualizar credenciais em fontes de dados de relatório de um Site do SharePoint | Microsoft Docs"
+title: "Atualizar as credenciais em fontes de dados de relatório por meio de um site do SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a51aa3ec7297ff2c183057f32e35a9012dddc6af
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Atualizar credenciais em fontes de dados de relatório de um site do SharePoint
   Este tópico descreve como atualizar as fontes de dados incorporadas nos relatórios e nas fontes de dados compartilhadas salvas em uma biblioteca de documentos do SharePoint.  
@@ -50,11 +49,11 @@ ms.lasthandoff: 08/09/2017
   
      A opção **Não são necessárias credenciais** também pode ser usada em algumas circunstâncias.  
   
-     Em alguns tipos de fonte de dados, a conta de execução autônoma deve estar configurada no servidor de relatórios. Para obter mais informações, consulte o tópico do tipo de fonte de dados correspondente em [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Em alguns tipos de fonte de dados, a conta de execução autônoma deve estar configurada no servidor de relatórios. Para obter mais informações, consulte o tópico do tipo de fonte de dados correspondente em [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 7.  Digite um nome de usuário e uma senha.  
   
-    -   Se a conta é uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domínio >\\< conta\>e, em seguida, selecione **usar as credenciais do Windows ao conectar-se à fonte de dados**.  
+    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<account\>. Em seguida, selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**.  
   
     -   Se o nome de usuário e a senha forem credenciais do banco de dados, não selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir o contexto de execução para esta conta**.  
   
@@ -76,11 +75,11 @@ ms.lasthandoff: 08/09/2017
   
      A opção **Não são necessárias credenciais** também pode ser usada em algumas circunstâncias. Essa opção só funcionará se a fonte de dados não aceitar credenciais ou se você estiver passando as credenciais de alguma outra forma.  
   
-     Em alguns tipos de fonte de dados, a conta de execução autônoma deve estar configurada no servidor de relatórios. Para obter mais informações, consulte o tópico do tipo de fonte de dados correspondente em [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Em alguns tipos de fonte de dados, a conta de execução autônoma deve estar configurada no servidor de relatórios. Para obter mais informações, consulte o tópico do tipo de fonte de dados correspondente em [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) e [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 5.  Digite um nome de usuário e uma senha.  
   
-    -   Se a conta é uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domínio >\\< conta\>e, em seguida, selecione **usar as credenciais do Windows ao conectar-se à fonte de dados.**  
+    -   Se a conta for uma conta de usuário de domínio do Windows, especifique-a neste formato: \<domain>\\<account\>. Em seguida, selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados.**  
   
     -   Se o nome de usuário e a senha forem credenciais do banco de dados, não selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**. Se o servidor de banco de dados oferecer suporte à representação ou delegação, você poderá selecionar **Definir o contexto de execução para esta conta**.  
   
@@ -94,4 +93,3 @@ ms.lasthandoff: 08/09/2017
  [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   
-

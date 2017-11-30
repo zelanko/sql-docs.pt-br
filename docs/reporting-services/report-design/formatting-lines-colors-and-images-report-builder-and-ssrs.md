@@ -1,5 +1,5 @@
 ---
-title: "Formatando linhas, cores e imagens (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,20 +24,19 @@ f1_keywords:
 - "10066"
 - sql13.rtp.rptdesigner.subreportproperties.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ba2dbc33b0d61b35fc7bee87b6171016af73279
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c4ebd52faa7a3061c58037d394d53e9647c8a6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]fornece a capacidade de formatar linhas, cores, regiões de dados, imagens e outros itens de relatório.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite formatar linhas, cores, regiões de dados, imagens e outros itens de relatório.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
  Para formatar bordas e linhas de grade em uma caixa de texto, do layout do relatório ou em torno de uma imagem, use a guia **Borda** da caixa de diálogo **Propriedades** do item de relatório. Por exemplo, se você quiser adicionar uma borda em torno de uma imagem, clique com o botão direito do mouse na imagem e, na caixa de diálogo **Propriedades da Imagem** , clique em **Borda**.  
   
- Além das molduras de borda padrão, é possível aplicar outras molduras. Para obter mais informações, consulte [Adicionar uma moldura de borda a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md).  
+ Além das molduras de borda padrão, é possível aplicar outras molduras. Para obter mais informações, consulte [Adicionar um quadro de borda a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md).  
   
  Também é possível adicionar uma borda ao próprio relatório. Para obter mais informações, consulte [Adicionar uma borda a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
@@ -62,10 +61,9 @@ ms.lasthandoff: 08/09/2017
  Também é possível adicionar imagens como logotipos ao plano de fundo do relatório ou a um retângulo, caixa de texto, tabela, matriz, ou algumas partes de um gráfico, ou às seções do corpo e da página de um relatório. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatação de texto e espaços reservados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatação de números e datas &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Formatar texto em uma caixa de texto &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Caixa de diálogo de preenchimento &#40; Construtor de relatórios e SSRS &#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
+ [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [Caixa de diálogo Preenchimento &#40;Construtor de Relatórios e SSRS&#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
   
   
-

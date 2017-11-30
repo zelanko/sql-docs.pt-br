@@ -1,50 +1,46 @@
 ---
-title: "Criar um relatório de tabela básico (Tutorial SSRS) | Microsoft Docs"
+title: "Criando um relatório de tabela básico (Tutorial do SSRS) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 658a882ae3c4e907e50b71a5b98137aa009ea4e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Criando um relatório de tabela básico (Tutorial do SSRS)
 
-Neste tutorial, você usar o Designer de relatórios no SQL Server Data Tools para criar um basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] relatório com uma tabela, com base em paginado o  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**  banco de dados. Você também pode criar [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] relatórios com o construtor de relatórios paginados. 
+Neste tutorial, você usa o Designer de Relatórios no SQL Server Data Tools para criar um relatório paginado básico do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com uma tabela, com base no banco de dados **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**. Você também pode criar relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com o Construtor de Relatórios. 
 
-Como percorrer este tutorial, você será criar um projeto de relatório, configurar as informações de conexão, definir uma consulta, adicionar uma região de dados de tabela, agrupar e totalizar alguns campos e visualizar o relatório.  
+Conforme você segue este tutorial, criará um projeto de relatório, configurará informações de conexão, definirá uma consulta, adicionará uma região de dados de Tabela, agrupará e somará alguns campos e visualizará o relatório.  
   
 ## <a name="requirements"></a>Requisitos  
 Para que você possa usar o tutorial, os itens a seguir devem estar instalados no sistema:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Mecanismo de banco de dados do SQL Server.  
+-   Mecanismo de banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] em modo Nativo.  
   
--   O banco de dados [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Para obter mais informações, consulte [Bancos de dados de exemplo do Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
+-   O banco de dados [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Para obter mais informações, consulte [Bancos de dados de exemplo do Adventure Works 2014](https://github.com/Microsoft/sql-server-samples/releases).  
   
- -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) com os componentes de "SQL Server Reporting Services" instalados para que você tenha o Designer de relatórios.    
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) com os componentes “SQL Server Reporting Services” instalados para que você tenha o Designer de Relatórios.    
   
 Também é necessário ter permissões somente leitura para recuperar dados do banco de dados [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .
 
@@ -68,4 +64,3 @@ Também é necessário ter permissões somente leitura para recuperar dados do b
 [Tutoriais de Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

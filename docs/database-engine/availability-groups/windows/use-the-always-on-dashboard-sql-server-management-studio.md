@@ -1,34 +1,34 @@
 ---
 title: Usar o painel do grupo de disponibilidade AlwaysOn (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/30/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.f1
+f1_keywords: sql13.swb.agdashboard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5aa07d7f0664e89aca776375d5a173ca93fd4624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade AlwaysOn (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Os administradores de banco de dados usam o painel do grupo de disponibilidade AlwaysOn para obter uma visão rápida da integridade de um grupo de disponibilidade e de suas réplicas de disponibilidade e seus bancos de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alguns dos usos típicos do painel do grupo de disponibilidade são:  
   
@@ -123,7 +123,10 @@ ms.lasthandoff: 08/02/2017
  O nome e o estado do cluster onde a instância do servidor conectado e o grupo de disponibilidade são nós membros.  
   
 ##  <a name="AvReplicaDetails"></a> Detalhes da réplica de disponibilidade  
- O painel **Réplica de Disponibilidade** exibe as seguintes colunas:  
+
+Quando conectada à réplica primária, a exibição **Detalhes da réplica de disponibilidade** mostra informações de todas as réplicas do grupo de disponibilidade. Quando conectada a uma réplica secundária, a exibição mostra apenas informações da réplica conectada.  
+
+O painel **Réplica de Disponibilidade** exibe as seguintes colunas:  
   
  **Nome**  
  O nome da instância do servidor que hospeda a réplica de disponibilidade. Essa coluna é mostrada por padrão.  
@@ -362,4 +365,3 @@ ms.lasthandoff: 08/02/2017
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

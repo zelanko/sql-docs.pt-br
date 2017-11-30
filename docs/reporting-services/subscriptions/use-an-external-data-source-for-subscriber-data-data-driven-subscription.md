@@ -1,5 +1,5 @@
 ---
-title: Usar uma fonte de dados externa para dados de assinante (assinatura controlada por dados) | Microsoft Docs
+title: Usar uma fonte de dados externa para obter dados do assinante (assinatura controlada por dados) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b09ee93e701bb9555fcd022e10cede4fde4d4174
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar uma fonte de dados externa para obter dados de assinante (assinatura controlada por dados)
   Em uma assinatura controlada por dados, os dados de assinatura dinâmicos são fornecidos por uma consulta ou um comando que recupera dados de uma fonte de dados externa. Os dados de assinatura podem ser recuperados de qualquer fonte de dados com suporte que satisfaça os requisitos para o processamento de assinaturas controladas por dados. A sintaxe da consulta ou do comando deve ser válida para uma extensão de processamento de dados instalada com seu servidor de relatório.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Transmitindo valores de parâmetro do banco de dados de assinantes para o relatório  
  Se estiver criando uma assinatura controlada por dados para um relatório parametrizado, use valores de parâmetro variáveis para personalizar a saída de cada relatório. Por exemplo, o banco de dados de assinantes pode conter números de identificação de funcionários, datas de contratação, cargos e informações sobre a localização de escritórios que podem ser usados para filtrar dados de relatório. Se o relatório aceitar os parâmetros baseados nesses dados ou em outros dados de coluna disponíveis, você pode mapear o parâmetro para a coluna adequada.  
   
- Ao mapear campos de assinante para parâmetros de relatório, verifique se os tipos de dados e os comprimentos de coluna são compatíveis. Se houver uma desigualdade de tipo de dados, um erro ocorrerá durante o processamento da assinatura. Para saber mais sobre como usar dados de assinante em um relatório com parâmetros, consulte [criar uma assinatura controlada por dados &#40; Tutorial do SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Ao mapear campos de assinante para parâmetros de relatório, verifique se os tipos de dados e os comprimentos de coluna são compatíveis. Se houver uma desigualdade de tipo de dados, um erro ocorrerá durante o processamento da assinatura. Para saber mais sobre como usar dados do assinante em um relatório com parâmetros, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Modificando a fonte de dados de assinante  
  As modificações a seguir feitas na fonte de dados de assinante podem impedir a execução da assinatura:  
@@ -87,7 +86,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Consulte também  
  [Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Assinaturas e entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

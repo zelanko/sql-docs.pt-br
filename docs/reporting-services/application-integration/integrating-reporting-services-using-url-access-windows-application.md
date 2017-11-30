@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Windows applications [Reporting Services]
 - Web Browser controls [Reporting Services]
@@ -19,19 +18,18 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 782be214cb491e1fdddf6ff7d45ac377fcfbf8a4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: bd579f1ce1b2f44de76c41b2e6f3c8062589f0c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integrando o Reporting Services usando o acesso de URL - o aplicativo do Windows
+# <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integrando o Reporting Services usando o acesso à URL – aplicativo do Windows
   Embora o acesso à URL a um servidor de relatório seja otimizado para um ambiente da Web, você também pode usá-lo para inserir relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. No entanto, o acesso à URL que envolve o Windows Forms ainda exige que você use tecnologia de navegador da Web. Você pode usar os seguintes cenários de integração com o acesso à URL e o Windows Forms:  
   
 -   Exiba um relatório de um aplicativo Windows Form iniciando um navegador da Web programaticamente.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/12/2017
 -   Use o controle <xref:System.Windows.Forms.WebBrowser> em um Windows Form para exibir um relatório.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Iniciando o Internet Explorer a partir de um Windows Form  
- Você pode usar a classe <xref:System.Diagnostics.Process> para acessar um processo que esteja em execução em um computador. O <xref:System.Diagnostics.Process> classe é útil [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] construção para iniciar, parar, controlar e monitorar aplicativos. Para exibir um relatório específico em seu banco de dados do servidor de relatório, você pode iniciar o **IExplore** processo, passando a URL para o relatório. O exemplo de código a seguir pode ser usado para iniciar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer e para passar uma URL específica do relatório quando o usuário clicar em um botão de um Windows Form.  
+ Você pode usar a classe <xref:System.Diagnostics.Process> para acessar um processo que esteja em execução em um computador. A classe <xref:System.Diagnostics.Process> é um constructo útil do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para iniciar, interromper, controlar e monitorar aplicativos. Para exibir um relatório específico no banco de dados do servidor de relatório, inicie o processo **IExplore**, passando a URL para o relatório. O exemplo de código a seguir pode ser usado para iniciar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer e para passar uma URL específica do relatório quando o usuário clicar em um botão de um Windows Form.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -95,17 +93,17 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Para adicionar o controle WebBrowser ao seu Windows Form  
   
-1.  Criar um novo aplicativo do Windows no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Crie um novo aplicativo do Windows no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-2.  Localize o <xref:System.Windows.Forms.WebBrowser> controlar o **caixa de ferramentas** caixa de diálogo.  
+2.  Localize o controle <xref:System.Windows.Forms.WebBrowser> na caixa de diálogo **Caixa de Ferramentas**.  
   
-     Se o **caixa de ferramentas** é não visível você pode acessá-la clicando o **exibição** item de menu e selecionando **caixa de ferramentas**.  
+     Se a **Caixa de Ferramentas** não estiver visível, acesse-a clicando no item de menu **Exibir** e selecionando **Caixa de Ferramentas**.  
   
-3.  Arraste o <xref:System.Windows.Forms.WebBrowser>controle para a superfície de design do seu Windows Form.  
+3.  Arraste o controle <xref:System.Windows.Forms.WebBrowser> para a superfície de design do Windows Form.  
   
-     O <xref:System.Windows.Forms.WebBrowser>controle chamado webBrowser1 será adicionado ao formulário  
+     O controle <xref:System.Windows.Forms.WebBrowser> chamado webBrowser1 será adicionado ao Form  
   
- Direcione o <xref:System.Windows.Forms.WebBrowser> controle a uma URL chamando seu **navegar** método. Você pode atribuir uma cadeia de caracteres de acesso à URL específica ao seu controle <xref:System.Windows.Forms.WebBrowser> em tempo de execução como mostrado no exemplo a seguir.  
+ Direcione o controle <xref:System.Windows.Forms.WebBrowser> para uma URL chamando seu método **Navigate**. Você pode atribuir uma cadeia de caracteres de acesso à URL específica ao seu controle <xref:System.Windows.Forms.WebBrowser> em tempo de execução como mostrado no exemplo a seguir.  
   
 ```vb  
 Dim url As String = "http://localhost/reportserver?/" & _  
@@ -124,9 +122,8 @@ webBrowser1.Navigate(url);
 ## <a name="see-also"></a>Consulte também  
  [Integrando o Reporting Services em aplicativos](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Integrando o Reporting Services usando o acesso à URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Integrando o Reporting Services usando SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
+ [Integrando o Reporting Services usando o SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
  [Integrando o Reporting Services usando os controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
- [Acesso de URL &#40; SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [Acesso à URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   
-

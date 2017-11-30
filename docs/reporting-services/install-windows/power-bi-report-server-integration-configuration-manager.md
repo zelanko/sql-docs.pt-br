@@ -1,13 +1,11 @@
 ---
-title: "Integração do servidor de relatórios de BI (Configuration Manager) de energia | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Integração do Servidor de Relatórios do Power BI (Gerenciador de Configurações) | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,14 +16,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 6a99f3051cb4f4cae12c525204387906fbf3d8b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integração de servidor de relatório do Power BI (Configuration Manager)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -36,9 +32,9 @@ A página  **Integração do Power BI** no [!INCLUDE[ssRSnoversion](../../includ
 
 Além de uma conexão de Internet ativa para que você possa navegar até o serviço do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , estes são os requisitos para concluir a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
-- **Azure Active Directory:** sua organização deve usar o Azure Active Directory, que fornece gerenciamento de identidades e diretórios para serviços e aplicativos Web do Azure. Para obter mais informações, consulte [o que é o Active Directory do Azure?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory:** sua organização deve usar o Azure Active Directory, que fornece gerenciamento de identidades e diretórios para serviços e aplicativos Web do Azure. Para obter mais informações, consulte [O que é o Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Office 365 e o Microsoft Intune.   Locatários virais não têm suporte no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Office 365 e o Microsoft Intune.   Não há suporte para locatários virais no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - O usuário que executando a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] precisa ser um membro do locatário do Azure AD, um administrador de sistema do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e um administrador de sistema para o banco de dados de catálogo ReportServer.
 
@@ -48,7 +44,7 @@ Além de uma conexão de Internet ativa para que você possa navegar até o serv
 
         PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
 
-Para obter mais informações sobre como armazenar credenciais, consulte a seção "Configurar credenciais armazenadas para uma fonte de dados específica do relatório" na [armazenar credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
+Para obter mais informações sobre como armazenar credenciais, consulte a seção “Configurar as credenciais armazenadas para uma fonte de dados específica ao relatório” em [Armazenar as credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Um administrador pode examinar os arquivos de log do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para saber mais.  Ele verá mensagens semelhantes à seguinte. Uma ótima maneira de examinar e monitorar arquivos de log do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query nos arquivos.  Para saber mais e para assistir a um vídeo curto, veja [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
@@ -58,7 +54,7 @@ Um administrador pode examinar os arquivos de log do  [!INCLUDE[ssRSnoversion](.
 
 ##  <a name="bkmk_steps2integrate"></a> Para integrar e registrar o Servidor de Relatório
 
-Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Para obter mais informações, consulte [Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 1. Selecione a página de integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 
@@ -74,7 +70,7 @@ Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
 
 **Cancelar o registro:** o cancelamento do registro do servidor de relatório do Azure Active Directory resultará no seguinte:
 
-- O **minhas configurações** link não será visível na barra de menu do portal da web.
+- O link **Minhas Configurações** não será mais visível na barra de menus do portal da Web.
 
 - Os itens de relatório que já tiverem sido fixados continuarão fixados nos painéis; no entanto, os blocos não serão atualizados no painel.
 
@@ -112,9 +108,9 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 3. Seu locatário gerenciado dentro do Azure Active Directory é onde o aplicativo cliente do Power BI é criado.
 
-4. O registro inclui uma URL de redirecionamento que é usada quando os usuários entram no servidor de relatório.  A ID do aplicativo e as URLS são salvas no banco de dados ReportServer. A URL de redirecionamento é usada durante as chamadas de autenticação do Azure para que a chamada possa retornar para o servidor de relatório. Por exemplo, quando os usuários entrarem ou fixar itens em um painel.
+4. O registro inclui uma URL de redirecionamento que é usada quando os usuários entram no servidor de relatório.  A ID do aplicativo e as URLS são salvas no banco de dados ReportServer. A URL de redirecionamento é usada durante as chamadas de autenticação do Azure para que a chamada possa retornar para o servidor de relatório. Por exemplo, quando os usuários entrarem ou fixarem itens em um painel.
 
-5. A ID do aplicativo e as URLS são exibidas no Configuration Manager.
+5. A ID do Aplicativo e as URLS são exibidas no Gerenciador de Configurações.
 
  ![ssrs_pbiflow_integration](../../reporting-services/install-windows/media/ssrs-pbiflow-integration.png "ssrs_pbiflow_integration")
 
@@ -122,7 +118,7 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 1. Os usuários visualizam relatórios no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e na primeira vez que clicarem para fixar um item de relatório do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Eles serão redirecionados para a página de logon do Azure AD. Eles também podem entrar por meio da página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obter mais informações, consulte [minhas configurações para integração do Power BI &#40; portal web &#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. Eles serão redirecionados para a página de logon do Azure AD. Eles também podem entrar por meio da página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obter mais informações, consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
 3. Um token de segurança do usuário é retornado para o servidor de relatório.
 
@@ -134,7 +130,7 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 7. Uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é criada para gerenciar a atualização agendada do item de relatório para o bloco do painel. A assinatura usa o token de segurança que foi criado quando o usuário se conectou.
 
-     O token é válido para **90 dias**, depois que os usuários precisam fazer logon novamente para criar um novo token de usuário. Quando o token tiver expirado, os blocos fixos ainda estarão exibidos no painel, mas os dados não serão atualizados.  As assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usadas para os itens fixados gerarão um erro até que um novo token de usuário seja criado. Consulte [minhas configurações para integração do Power BI &#40; portal web &#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). para obter mais informações.
+     O token é válido por **90 dias** e, após esse período, os usuários precisam fazer logon novamente para criar um novo token de usuário. Quando o token tiver expirado, os blocos fixos ainda estarão exibidos no painel, mas os dados não serão atualizados.  As assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usadas para os itens fixados gerarão um erro até que um novo token de usuário seja criado. Consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). para obter mais informações.
 
 Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas e, em vez disso, a ID do aplicativo e as URLS serão recuperadas do banco de dados ReportServer e o fluxo continuará com a etapa 5.
 
@@ -158,9 +154,8 @@ Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Minhas configurações para integração do Power BI](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Minhas Configurações para integração do Power BI](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Fixar itens do Reporting Services nos dashboards do Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

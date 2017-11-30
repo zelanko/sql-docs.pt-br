@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML Web service [Reporting Services], WSDL
 - Web service [Reporting Services], SOAP
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 6a5e70f353771fb763029f8fa3306ce04067f3e6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9519a04820618fc8f3a59c16b8282b6be1cb0146
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="accessing-the-soap-api"></a>Acessando a API SOAP
   O serviço Web Serviço de Relatório usa o SOAP sobre HTTP e age como uma interface de comunicações entre programas cliente e o servidor de relatório. O serviço Web oferece dois pontos de extremidade - um para a execução de relatórios e outro para o gerenciamento de relatórios - e consiste em métodos e em um conjunto de objetos de tipo complexo que podem ser usados para o acesso da funcionalidade completa do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para chamar o serviço, referencie a WSDL (Reporting Services Web Services Description Language).  
@@ -49,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 -   O ponto de extremidade <xref:ReportExecution2005> permite que os desenvolvedores processem e renderizem relatórios programaticamente em um Servidor de Relatório. A WSDL para esse ponto de extremidade é acessada por meio de `ReportExecution2005.asmx?wsdl`.  
   
- WSDL pode ser consumida por kits de desenvolvimento que dão suporte a SOAP e serviços da Web, como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ A WSDL pode ser consumida por kits de desenvolvimento que dão suporte a SOAP e a serviços Web, como o SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  O exemplo a seguir mostra o formato da URL para o arquivo WSDL de gerenciamento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
@@ -61,15 +59,14 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
 |Elemento da URL|Description|  
 |-----------------|-----------------|  
-|*servidor*|O nome do servidor no qual o servidor de relatório é implantado.|  
-|*ReportServer*|O nome da pasta que contém o serviço Web XML. Configurado durante a instalação.|  
-|*\<nome do ponto de extremidade >. asmx*|O nome do ponto de extremidade do serviço web.|  
+|*server*|O nome do servidor no qual o servidor de relatório é implantado.|  
+|*reportserver*|O nome da pasta que contém o serviço Web XML. Configurado durante a instalação.|  
+|*\<endpoint name>.asmx*|O nome do ponto de extremidade do serviço web.|  
   
  Para obter mais informações sobre o formato WSDL, consulte a especificação de WSDL feita pelo W3C (World Wide Web Consortium em http://www.w3.org/TR/wsdl.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando aplicativos que usam o serviço Web e o .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Serviço Web servidor de relatório](../../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Criando aplicativos usando o serviço Web e o .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Serviço Web do Servidor de Relatório](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

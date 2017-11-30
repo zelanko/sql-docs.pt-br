@@ -1,5 +1,5 @@
 ---
-title: "Caixas de texto (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Caixas de texto (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 932f2277845e4e47032baf80443c0d339cb45ea7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caixas de texto (Construtor de Relatórios e SSRS)
   Quando você pensa em uma caixa de texto, provavelmente imagina uma caixa autônoma que contém texto em uma superfície como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. Nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , algumas caixas de texto são assim, e podem exibir texto estático para títulos, descrições e rótulos ou texto dinâmico baseado em expressões. Mas todas as células de uma tabela ou matriz (uma região de dados tablix) também contêm uma caixa de texto, que pode ser formatada da mesma maneira que caixas de texto autônomas do seu relatório.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
  Para mostrar texto repetido em um layout de formato livre, crie uma região de dados de lista e coloque a caixa de texto nele. Use uma lista quando quiser repetir um formato para vários valores, como, por exemplo, um formato de fatura do cliente repetido uma vez para cada cliente. Leia mais sobre a [criação de formulários e notas fiscais com listas de desejos](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- Use um contêiner de retângulo quando quiser controlar o layout da caixa de texto e o espaço em branco abaixo da última caixa de texto. Para obter mais informações, consulte [retângulos e linhas &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
+ Use um contêiner de retângulo quando quiser controlar o layout da caixa de texto e o espaço em branco abaixo da última caixa de texto. Para obter mais informações, consulte [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
   
  A expressão em uma caixa de texto pode conter texto literal, apontar para um campo do banco de dados ou calcular dados. Todas as expressões são mostradas como texto de espaço reservado para que seja possível formatar números, cores e outras propriedades de aparência. Você também pode combinar espaços reservados com texto literal na mesma caixa de texto.  
   
@@ -72,7 +71,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatando números e datas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   
-

@@ -1,29 +1,27 @@
 ---
 title: Guia de arquitetura de processamento de consultas | Microsoft Docs
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21fcbd9486cd94e3d3e5370f5374aaeb99d36324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +36,9 @@ O processamento de uma única instrução SQL é o modo mais básico para o [!IN
 
 Uma instrução `SELECT` não é de procedimento; ela não determina as etapas exatas que o servidor de banco de dados deve usar para recuperar os dados solicitados. Isso significa que o servidor de banco de dados deve analisar a instrução para determinar o modo mais eficiente para extrair os dados solicitados. Isso é conhecido como otimização da instrução `SELECT` . O componente que faz isso é chamado de Otimizador de Consulta. A entrada do Otimizador de Consulta consiste em uma consulta, o esquema de banco de dados (definições de tabela e de índice) e as estatísticas de banco de dados. A saída do Otimizador de Consulta é um plano de execução de consulta, às vezes chamado de plano de consulta ou apenas de plano. O conteúdo de um plano de consulta é descrito posteriormente com mais detalhe neste tópico.
 
-As entradas e as saídas do otimizador de consulta durante a otimização de uma única instrução `SELECT` são ilustradas no seguinte diagrama: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+As entradas e as saídas do Otimizador de Consulta durante a otimização de uma única instrução `SELECT` são ilustradas no seguinte diagrama:
+
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Uma instrução `SELECT` define apenas o seguinte:  
 * O formato do conjunto de resultados. Isso é especificado principalmente na lista de seleção. Porém, outras cláusulas como `ORDER BY` e `GROUP BY` também afetam a forma final do conjunto de resultados.
@@ -619,7 +619,7 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente
   Cada operação de consulta ou índice exige um determinado número de threads de trabalho para execução. A execução de um plano paralelo exige mais threads de trabalho que um plano serial e o número de threads de trabalho exigidos aumenta conforme o grau de paralelismo. Quando o requisito de thread de trabalho do plano paralelo de um grau específico de paralelismo não puder ser atendido, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminuirá automaticamente o grau de paralelismo ou abandonará completamente o plano paralelo no contexto de carga de trabalho especificado. Depois, ele executará o plano consecutivo (um thread de trabalho). 
 
 3. O tipo de operação de consulta ou de índice executada.  
-  As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Embora não recomendado, os usuários podem alterar o valor padrão, 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
+  As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Os usuários podem alterar o valor padrão 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se os testes adequados descobriram que um valor diferente é mais adequado para a carga de trabalho em execução. 
 
 4. Se houver um número suficiente de linhas para processar.  
   Se o otimizador de consulta determinar que o número de linhas é muito baixo, não apresentará os operadores de troca para distribuir as linhas. Por conseguinte, os operadores serão executados em série. A execução dos operadores em um plano consecutivo evita cenários quando os custos de inicialização, distribuição e coordenação excedem os ganhos alcançados pela execução de operador paralela.
@@ -716,9 +716,9 @@ Aqui há um possível plano paralelo gerado para a consulta mostrada anteriormen
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) Plano de consulta com DOP 4, envolve uma junção de duas tabelas
+A ilustração abaixo mostra um plano de consulta executado com um grau de paralelismo igual a 4 e envolvendo uma junção de duas tabelas.
 
-A ilustração mostra um plano do Otimizador de Consulta executado com um grau de paralelismo igual a 4 e envolvendo uma junção de duas tabelas.
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 O plano paralelo contém três operadores de paralelismo. O operador Index Seek do índice `o_datkey_ptr` e o operador Index Scan do índice `l_order_dates_idx` são executados em paralelo. Isso produz vários fluxos exclusivos. Isso pode ser determinado com base nos operadores Parallelism mais próximos acima dos operadores Index Scan e Index Seek, respectivamente. Ambos estão reparticionando o tipo de troca. Ou seja, eles estão apenas embaralhando novamente os dados entre os fluxos e produzindo na saída o mesmo número de fluxos existente na entrada. Esse número de fluxos é igual ao grau de paralelismo.
 
@@ -727,6 +727,8 @@ O operador de paralelismo acima do operador `l_order_dates_idx` Index Seek está
 O operador de paralelismo acima do operador Index Seek está reparticionando seus fluxos de entrada usando o valor de `O_ORDERKEY`. Como sua entrada não é classificada nos valores da coluna `O_ORDERKEY` e esta é a coluna de junção no operador `Merge Join`, o operador Sort entre os operadores de paralelismo e Merge Join verificam se a entrada é classificada para o operador `Merge Join` nas colunas de junção. O operador `Sort`, assim como o operador Merge Join, é executado em paralelo.
 
 O operador de paralelismo superior reúne resultados de vários fluxos em um único fluxo. As agregações parciais executadas pelo operador Stream Aggregate abaixo do operador de paralelismo são acumuladas em um único valor `SUM` de cada valor diferente de `O_ORDERPRIORITY` no operador Stream Aggregate acima do operador de paralelismo. Como esse plano tem dois segmentos de troca com grau de paralelismo igual a 4, ele usa oito threads de trabalho.
+
+Para obter mais informações sobre os operadores usados neste exemplo, consulte a [Referência de operadores físicos e lógicos do plano de execução](../relational-databases/showplan-logical-and-physical-operators-reference.md).
 
 ### <a name="parallel-index-operations"></a>Operações de índice paralelo
 
@@ -1040,4 +1042,3 @@ GO
  [Melhor prática com o Repositório de Consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimativa de cardinalidade](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Processamento de consulta adaptável](../relational-databases/performance/adaptive-query-processing.md)
-

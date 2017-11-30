@@ -1,29 +1,30 @@
 ---
 title: "Novidades no mecanismo de banco de dados – SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2017
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: eddd1edd812d9224e151960788f8f510f809fb27
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)] para o [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Clique nos links para obter mais informações sobre cada item.
 
@@ -67,7 +68,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
     - Operador`CROSS APPLY` em módulos compilados nativamente.   
 - Foram adicionadas as novas funções de cadeia de caracteres [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md)e [TRIM](../t-sql/functions/trim-transact-sql.md) .   
 - Agora há suporte para a cláusula `WITHIN GROUP` pela função [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) .
-- Foram adicionadas duas novas famílias de agrupamento em japonês (Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140), além da opção de agrupamento de Seletor sensível à variação (_VSS) para uso em agrupamentos em japonês. Para obter mais detalhes, consulte [Suporte a Agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)   
+- Duas novas famílias de agrupamento em japonês (Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140) foram adicionadas, além da opção de agrupamento Variation-selector-sensitive (_VSS) para uso nesses novos agrupamentos em japonês. Além disso, todos os novos agrupamentos dão suporte automático a caracteres suplementares sem a necessidade de especificar a opção _SC. Para obter mais detalhes, consulte [Suporte a Agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)   
 - As novas opções de acesso em massa [[BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)] permitem acessar os dados diretamente em um arquivo especificado como o formato CSV e em arquivos armazenados no armazenamento de Blobs do Azure por meio da nova opção `BLOB_STORAGE` de [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 - **COMPATIBILITY_LEVEL** 140 do banco de dados foi adicionado.   Os clientes executando neste nível obterão os últimos recursos de linguagem e comportamentos de otimizador de consulta. Isso inclui alterações em cada versão de pré-lançamento que a Microsoft lançar.
 - Melhorias na forma como os limites de atualização de estatísticas incrementais são computados (necessário modo de compatibilidade 140).
@@ -86,5 +87,4 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
 - Novas permissões: `DATABASE SCOPED CREDENTIAL` agora é uma classe de protegível, suporte `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`e `VIEW DEFINITION` permissões. `ADMINISTER DATABASE BULK OPERATIONS`, que é restrito ao Banco de Dados SQL, agora está visível em `sys.fn_builtin_permissions`.   
 - A DMV [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) foi adicionada para fornecer informações de sistema operacional para Windows e Linux.   
 - As funções de banco de dados são criadas com R Services para gerenciar permissões associadas aos pacotes. Para obter mais informações, consulte [Gerenciamento de pacotes de R para o SQL Server](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
-
 

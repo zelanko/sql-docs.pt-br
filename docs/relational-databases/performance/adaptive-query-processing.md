@@ -2,7 +2,7 @@
 title: "Processamento de consultas adaptável em bancos de dados Microsoft SQL | Microsoft Docs | Microsoft Docs"
 description: "Recursos de processamento de consulta adaptável para melhorar o desempenho da consulta no SQL Server (2017 e posteriores) e no Banco de Dados SQL do Azure."
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/13/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,14 +15,12 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64f0c0226ab040eb8b43c4b62a6784296d22c6aa
+ms.sourcegitcommit: fa030c0d644bae31f9688b1cc3523f60834f13c5
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/14/2017
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>Processamento de consultas adaptável em bancos de dados SQL
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -183,7 +181,7 @@ Compare o plano anterior com o plano real gerado com a execução intercalada ha
 1. Além disso, observe que não há mais avisos de despejo necessários, pois estamos concedendo mais memória, com base na contagem verdadeira de linhas que fluem da verificação da tabela de MSTVF.
 
 ### <a name="interleaved-execution-eligible-statements"></a>Instruções qualificadas para execução intercalada
-A MSTVF que referencia instruções em execução intercalada deve estar somente leitura e não fazer parte de uma operação de modificação de dados. Além disso, as MSTVFs não serão qualificadas para execução intercalada se forem usadas dentro de um CROSS APPLY.
+A MSTVF que referencia instruções em execução intercalada deve estar somente leitura e não fazer parte de uma operação de modificação de dados. Além disso, MSTVFs não serão qualificados para execução intercalada se não usarem constantes em tempo de execução.
 
 ### <a name="interleaved-execution-benefits"></a>Benefícios de execução intercalada
 Em geral, quanto maior a distorção entre o número de linhas real e estimado, juntamente com o número de operações do plano de downstream, maior o impacto no desempenho.
@@ -231,5 +229,4 @@ Os planos que usam execução intercalada podem ser forçados. O plano é a vers
 [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demonstrando o Processamento de Consulta Adaptável](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

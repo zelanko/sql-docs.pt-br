@@ -1,5 +1,5 @@
 ---
-title: "Funcionalidade interativa - extensões de renderização de relatório diferentes | Microsoft Docs"
+title: "Funcionalidade interativa – extensões de renderização de relatório diferentes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e91731abe741a802252475bb054c826454ee2a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidade interativa - extensões de renderização de relatório diferentes
+# <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidade interativa – extensões de renderização de relatório diferentes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece recursos para interagir com um relatório paginado no tempo de execução. Nem todos os formatos de renderização de relatório dão suporte a uma gama completa de recursos interativos. Use a tabela a seguir para entender como cada recurso interativo funciona em formatos específicos.  
   
 > [!NOTE]  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 |-------------------|-------------------------|  
 |Visualização/Visualizador de Relatórios, HTML|Os usuários clicam nos ícones de expansão e recolhimento para exibir as seções de um relatório.|  
 |PDF|O servidor de relatórios exporta o estado atual de exibição ou ocultação do relatório para o PDF. A alternância interativa não tem suporte|  
-|Excel|Os links de detalhamento que podem ser alternados são renderizados como estruturas recolhíveis no Excel. Você pode expandir e pode recolher as seções do relatório no Excel. Para obter mais informações sobre as limitações impostas pelo Excel, consulte [exportando para o Microsoft Excel &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Os links de detalhamento que podem ser alternados são renderizados como estruturas recolhíveis no Excel. Você pode expandir e pode recolher as seções do relatório no Excel. Para obter mais informações sobre as limitações impostas pelo Excel, consulte [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|O servidor de relatórios exporta o estado atual de exibição ou ocultação do relatório para o PDF. A alternância interativa não tem suporte|  
 |Outro|Não disponível em MHTML, XML, ou CSV. Ao exportar para um formato Imagem, o servidor de relatórios exporta o estado de exibição ou ocultação do relatório para o PDF. Não há suporte para a alternância interativa.|  
   
@@ -116,10 +115,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Classificação interativa, mapas de documentos e Links &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

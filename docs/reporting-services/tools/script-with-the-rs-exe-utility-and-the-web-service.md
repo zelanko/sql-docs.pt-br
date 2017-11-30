@@ -1,5 +1,5 @@
 ---
-title: "Utilitário e o serviço Web de script com o rs.exe | Microsoft Docs"
+title: "Gerar scripts com o utilitário rs.exe e o serviço Web | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41e0843d517f4fe24c16c6071ba8a1921be68502
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6c01ecec4f909ff4e5cbe445b1685b6dd07a750
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Gerar scripts com o utilitário rs.exe e o serviço Web
   Desenvolvedores e administradores de servidor de relatório podem executar operações em um servidor de relatório por meio do utilitário **rs** (RS.exe). Com esse utilitário, é possível administrar de forma programática um servidor de relatório usando scripts gravados com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
@@ -36,15 +35,14 @@ ms.lasthandoff: 08/09/2017
   
  Para exemplos de script, consulte o seguinte:  
   
- [Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Consulte também  
  [Implantação de script e tarefas administrativas](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Serviço Web servidor de relatório](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Referência técnica &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Utilitário RS.exe &#40; SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [serviço Web Servidor de Relatórios](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Utilitário RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   
-

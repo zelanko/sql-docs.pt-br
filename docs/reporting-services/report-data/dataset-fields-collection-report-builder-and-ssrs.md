@@ -1,5 +1,5 @@
 ---
-title: "Coleção de campos do conjunto de dados (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Os campos de um conjunto de dados representam os dados de uma conexão de dados. Um campo pode representar dados numéricos ou não numéricos. Os exemplos incluem valores de vendas, vendas totais, nomes de clientes, identificadores de banco de dados, URLs, imagens, dados espaciais e endereços de email. Na superfície de design, os campos aparecem como expressões em itens de relatório, como caixas de texto, tabelas e gráficos.  
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  As fontes de dados que dão suporte às consultas multidimensionais, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], dão suporte às propriedades nos campos. As propriedades de campo aparecem no conjunto de resultados de uma consulta, mas não são visíveis no painel **Dados do Relatório** . Elas ainda estão disponíveis para serem usadas no relatório. Para fazer referência a uma propriedade de um campo, arraste o campo para o relatório e altere a propriedade padrão **Value** para o nome do campo da propriedade desejada. Por exemplo, em um cubo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você pode definir formatos para valores nas células do cubo. O valor formatado está disponível pelo uso da propriedade de campo **FormattedValue**. Para usar o valor diretamente em vez de usar um valor e definir a propriedade de formato da caixa de texto, arraste o campo para a caixa de texto e altere a expressão `=Fields!FieldName.Value` para `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]  
->  Nem todas as propriedades **Field** podem ser usadas com todas as fontes de dados. As propriedades **Value** e **IsMissing** são definidas para todas as fontes de dados. Haverá suporte para outras propriedades predefinidas (como **Key**, **UniqueName**e **ParentUniqueName** para fontes de dados multidimensionais) apenas se a fonte de dados fornecer essas propriedades. Propriedades personalizadas são suportadas por alguns provedores de dados. Para obter mais informações, consulte os tópicos específicos sobre propriedades de campo estendidas para o tipo de fonte de dados em [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Por exemplo, para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fonte de dados, consulte [propriedades de campo estendidas para um banco de dados do Analysis Services &#40; SSRS &#41; ](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  Nem todas as propriedades **Field** podem ser usadas com todas as fontes de dados. As propriedades **Value** e **IsMissing** são definidas para todas as fontes de dados. Haverá suporte para outras propriedades predefinidas (como **Key**, **UniqueName**e **ParentUniqueName** para fontes de dados multidimensionais) apenas se a fonte de dados fornecer essas propriedades. Propriedades personalizadas são suportadas por alguns provedores de dados. Para obter mais informações, consulte os tópicos específicos sobre propriedades de campo estendidas para o tipo de fonte de dados em [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Por exemplo, para uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
 ##  <a name="Defaults"></a> Compreendendo as expressões padrão dos campos  
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Caixa de diálogo Propriedades do Conjunto de Dados, Campos &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [Partes de relatório e conjuntos de dados no construtor de relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Relatório inserido conjuntos de dados e conjuntos de dados compartilhados e &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

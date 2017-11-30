@@ -1,25 +1,24 @@
 ---
-title: "Agrupar dados por colunas ou linhas em um relatório móvel | O Reporting Services | Microsoft Docs"
+title: "Agrupar dados por colunas ou linhas em um relatório móvel | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: de6eddf3b9338ac15f5036c2065df2f82f0c9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Agrupar dados por colunas ou linhas em um relatório móvel | Reporting Services
 Você pode organizar os dados por colunas ou linhas em vários tipos de gráficos no [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. Acompanhe esse passo a passo.
@@ -52,7 +51,7 @@ As etapas a seguir usam uma tabela de totais de comparação com dados simulados
 
 6. Na guia **Layout** , no painel **Propriedades visuais** , altere a **Estrutura de dados** de **Por colunas** para **Por linhas**.  
 
-7. Selecione a guia **Dados** . Agora a tabela SimulatedTable tem uma coluna **Categoria** junto com as colunas **Métrica** e **Comparação** , com a categoria A a E. 
+7. Selecione a guia **Dados** . Agora a tabela SimulatedTable tem uma coluna **Category**, junto com as colunas **Metric** e **Comparison**, com a Categoria A a E. 
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 

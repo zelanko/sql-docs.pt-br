@@ -1,28 +1,25 @@
 ---
-title: "Lição 2: Definir uma Conexão de dados e a tabela de dados para o relatório pai | Microsoft Docs"
+title: "Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: adc2cc7d329586bae6fb85edb08d71fe51aaaef8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 29ff53a0c766ca791b2ca0e845fed7779e7c1e05
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai
 Depois que você criar um novo projeto de site usando o modelo de site ASP.NET para o Visual C #, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório pai. Neste tutorial, a conexão de dados é estabelecida com o banco de dados AdventureWorks2014.  
@@ -65,7 +62,7 @@ Depois que você criar um novo projeto de site usando o modelo de site ASP.NET p
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-    Você também pode criar a consulta clicando em **Construtor de Consultas**e verificar a consulta selecionando **Executar Consulta**. Se a consulta não retornar os dados esperados, talvez você esteja usando uma versão anterior do AdventureWorks. Para obter mais informações sobre como obter o banco de dados de exemplo **AdventureWorks2014** , consulte [Amostras de produto do Banco de Dados Microsoft SQL Server](http://msftdbprodsamples.codeplex.com/).  
+    Você também pode criar a consulta clicando em **Construtor de Consultas**e verificar a consulta selecionando **Executar Consulta**. Se a consulta não retornar os dados esperados, talvez você esteja usando uma versão anterior do AdventureWorks. Para obter mais informações sobre como obter o banco de dados de exemplo **AdventureWorks2014**, consulte [Bancos de dados de exemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
 11. Na página **Escolher os Métodos a Serem Gerados** , lembre-se de desmarcar **Crie métodos para enviar atualizações diretamente ao banco de dados (GenerateDBDirectMethods)**e selecione **Concluir**.  
   
@@ -81,5 +78,4 @@ Depois que você criar um novo projeto de site usando o modelo de site ASP.NET p
 ## <a name="next-task"></a>Próxima tarefa  
 Você criou uma conexão de dados e uma tabela de dados para o relatório pai. Em seguida, você criará o relatório pai usando o Assistente de Relatório. Consulte [Lição 3: Criar o relatório pai usando o Assistente de Relatório](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md).  
   
-
 

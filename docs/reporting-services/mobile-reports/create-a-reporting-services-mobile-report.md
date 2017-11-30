@@ -5,33 +5,31 @@ ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 800aa539255c937b089c13999d57f64bf0ec6558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Criar um relatório móvel do Reporting Services
-Com o SQL Server Mobile Report Publisher, você pode criar rapidamente relatórios móveis do SQL Server 2016 Reporting Services que se ajustam a qualquer tamanho de tela, em uma superfície de design com colunas, linhas de grade ajustáveis e elementos flexíveis de relatório móvel.  
+Com o Publicador de Relatórios Móveis do SQL Server, você pode criar relatórios móveis do SQL Server 2016 Reporting Services com rapidez que se ajustam à qualquer tamanho de tela, em uma superfície de design com colunas e linhas de grade ajustáveis e elementos flexíveis de relatório móvel.  
   
-Na primeira vez que você criar um relatório móvel, você pode instalar o SQL Server Mobile Report Publisher em sua máquina local do portal da web do Reporting Services. Ou então, você pode instalá-lo do [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Depois da primeira vez, você poderá iniciá-lo no portal da Web ou localmente.   
+Na primeira vez que você criar um relatório móvel, instale o Publicador de Relatórios Móveis do SQL Server no computador local pelo portal da Web do Reporting Services. Ou então, você pode instalá-lo do [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Depois da primeira vez, você poderá iniciá-lo no portal da Web ou localmente.   
     
-1. Na barra superior do portal da web do Reporting Services, selecione **novo** > **relatório móvel**.  
+1. Na barra superior do portal da Web do Reporting Services, selecione **Novo** > **Relatório Móvel**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. Sobre o **Layout** guia no Editor de relatórios móveis, selecione navegador, medidor, gráfico, mapa ou datagrid e arraste-o para a grade de design.  
+2. Na guia **Layout** no Publicador de Relatórios Móveis, selecione um navegador, medidor, gráfico, mapa ou uma grade de dados e arraste-o para a grade de design.  
   
 3. Pegue o canto inferior direito do elemento e arraste-o para o tamanho desejado.  
   
@@ -77,4 +75,3 @@ Na primeira vez que você criar um relatório móvel, você pode instalar o SQL 
 -   [Formatar um relatório móvel do Reporting Services para telefone ou tablet](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
-

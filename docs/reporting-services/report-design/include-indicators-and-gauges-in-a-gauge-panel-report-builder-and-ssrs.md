@@ -1,5 +1,5 @@
 ---
-title: "Incluir indicadores e medidores em um painel de medidores (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Incluir indicadores e medidores em um painel de medidores (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4597b87876b52b41810f62423a59fef7b45394b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Incluir indicadores e medidores em um painel de medidores (Construtor de Relatórios e SSRS)
   O painel de medidores é o contêiner de nível superior que mantém um ou mais medidores e indicadores. Os indicadores podem ser inseridos em medidores ou colocados ao lado deles no painel de medidores.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Insira uma coluna em sua tabela ou matriz. Para obter mais informações, consulte [Inserir ou excluir uma coluna &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
-3.  Na guia **Inserir**, no grupo **Regiões de Dados**, clique em **Medidor** e clique em uma célula na nova coluna. A caixa de diálogo **Selecionar Tipo de Medidor** é exibida.  
+3.  Na guia **Inserir** , no grupo **Regiões de Dados** , clique em **Medidor**e clique em uma célula na nova coluna. A caixa de diálogo **Selecionar Tipo de Medidor** é exibida.  
   
 4.  Clique em **Radial**. O primeiro medidor radial é selecionado.  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Insira uma coluna em sua tabela ou matriz. Para obter mais informações, consulte [Inserir ou excluir uma coluna &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
-3.  Na guia **Inserir**, no grupo **Regiões de Dados**, clique em **Medidor** e clique em uma célula na coluna inserida. A caixa de diálogo **Selecionar Tipo de Medidor** é exibida.  
+3.  Na guia **Inserir** , no grupo **Regiões de Dados** , clique em **Medidor**e clique em uma célula na coluna inserida. A caixa de diálogo **Selecionar Tipo de Medidor** é exibida.  
   
 4.  Clique em **Radial**. O primeiro medidor radial é selecionado.  
   
@@ -109,4 +108,3 @@ ms.lasthandoff: 08/09/2017
  [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

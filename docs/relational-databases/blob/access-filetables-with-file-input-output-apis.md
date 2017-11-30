@@ -5,23 +5,21 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], accessing files with file APIs
+helpviewer_keywords: FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6e9485840cba88623f686d33899475f0f572babe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
   Descreve como a E/S do sistema de arquivos funciona em uma FileTable.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> Excluindo arquivos e diretórios em uma FileTable  
  Toda a semântica da API de E/S de arquivos do Windows é imposta ao excluir um arquivo ou diretório.  
   
--   Excluindo um diretório falhará se o diretório contiver qualquer subdiretório de arquivos.  
+-   A exclusão de um diretório falhará se o diretório contiver arquivos ou subdiretórios.  
   
 -   A exclusão de um arquivo ou diretório remove a linha correspondente da FileTable. Isso é equivalente a excluir a linha por meio de uma operação [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
@@ -136,4 +134,3 @@ ms.lasthandoff: 06/22/2017
  [DDL, funções, procedimentos armazenados e exibições de FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

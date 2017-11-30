@@ -1,5 +1,5 @@
 ---
-title: "Partes de relatório e conjuntos de dados no construtor de relatórios | Microsoft Docs"
+title: "Partes de relatório e conjuntos de dados no Construtor de Relatórios | Microsoft Docs"
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a22f1e59a693551ffb1575ffdeb351c58480b96b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Partes de relatório e conjuntos de dados no Construtor de Relatórios
   No Construtor de Relatórios, a maneira mais fácil de incluir dados em um relatório é adicionando partes de relatório da Galeria de Partes de Relatório. As partes de relatório contêm os conjuntos de dados dos quais dependem, conhecidos como *conjuntos de dados dependentes*. Os conjuntos de dados dependentes se baseiam em fontes de dados compartilhadas e podem ser conjuntos de dados inseridos ou compartilhados. Leia mais sobre as [Partes do relatório](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -60,10 +59,9 @@ ms.lasthandoff: 08/09/2017
 >  Para assegurar que você e outros usuários possam continuar usando os dados de um conjunto de dados compartilhado com êxito, é necessário entender os princípios por trás da proteção de itens de relatório. Para obter mais informações, consulte [Proteger itens de conjunto de dados compartilhados](../../reporting-services/security/secure-shared-dataset-items.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Modo de exibição de Design de relatório &#40; Construtor de relatórios &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Segurança &#40; Construtor de relatórios &#41;](../../reporting-services/report-builder/security-report-builder.md)   
- [Partes de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Relatório de conjuntos de dados inseridos e compartilhados de conjuntos de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Segurança &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/security-report-builder.md)   
+ [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

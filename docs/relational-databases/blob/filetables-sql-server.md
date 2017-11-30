@@ -5,8 +5,7 @@ ms.date: 10/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 605875c9ed6e60861f899ec88e465c636a5976d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5403ba768ce8c511b2054b7b34a32b66546d019e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
   O recurso FileTable oferece suporte para namespace de arquivo do Windows e compatibilidade de aplicativos do Windows com dados de arquivo armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O FileTable permite que um aplicativo integre seus componentes de armazenamento e gerenciamento de dados e forneça serviços integrados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusive pesquisa de texto completo e pesquisa semântica, em dados não estruturados e metadados.  
@@ -63,9 +61,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Cada linha contém os seguintes itens: Para obter mais informações sobre o esquema de uma FileTable, veja [Esquema de FileTable](../../relational-databases/blob/filetable-schema.md).  
   
-    -   Uma coluna**file_stream** para dados de fluxo e um identificador (GUID) **stream_id** . (A coluna **file_stream** é NULL para um diretório.)  
+    -   Uma coluna **file_stream** para dados de fluxo e um identificador (GUID) **stream_id**. (A coluna **file_stream** é NULL para um diretório.)  
   
-    -   As colunas **path_locator** e **parent_path_locator** para representar e manter a hierarquia de arquivos e diretórios.  
+    -   As colunas **path_locator** e **parent_path_locator** para representar e manter a hierarquia de diretórios do item atual (arquivo ou diretório).  
   
     -   10 atributos de arquivo, como a data de criação e a data de modificação que são úteis com APIs de E/S de arquivo.  
   
@@ -138,4 +136,3 @@ ms.lasthandoff: 06/22/2017
  Lista as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e os objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foram adicionados ou alterados para oferecer suporte ao recurso FileTable.  
   
   
-

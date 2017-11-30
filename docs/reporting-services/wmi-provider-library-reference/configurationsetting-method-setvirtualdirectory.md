@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SetVirtualDirectory method
+helpviewer_keywords: SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d86d0c416df4ecc01f940ebabad2e409aa826599
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c035ce144153e64eaa183a2131ffee08518807df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setvirtualdirectory"></a>Método ConfigurationSetting - SetVirtualDirectory
+# <a name="configurationsetting-method---setvirtualdirectory"></a>Método de ConfigurationSetting – SetVirtualDirectory
   Define o nome do diretório virtual de um dado aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -74,4 +72,3 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

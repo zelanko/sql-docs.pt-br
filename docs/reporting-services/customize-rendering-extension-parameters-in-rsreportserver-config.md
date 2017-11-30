@@ -1,5 +1,5 @@
 ---
-title: "Personalizar a renderização de parâmetros de extensão em rsreportserver. config | Microsoft Docs"
+title: "Personalizar parâmetros de extensão de renderização em RSReportServer.Config | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a04703eb04c9745fd5a1de0a5378b29210f61b65
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar parâmetros de extensão de renderização em RSReportServer.config
   Você pode especificar parâmetros de extensão de renderização no arquivo de configuração RSReportServer para substituir o comportamento de renderização de relatório padrão para os relatórios executados em um servidor de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Os parâmetros de extensão de renderização podem ser modificados com os seguintes objetivos:  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 -   A estrutura XML **DeviceInfo** define as configurações de informações de dispositivo que são usadas por uma extensão de renderização. A maioria dos parâmetros de extensão de renderização é especificada como configurações de informações de dispositivo.  
   
- Você pode usar um editor de texto para modificar o arquivo. O arquivo RSReportServer.config pode ser localizado na pasta \Reporting Services\Report Server\Bin. Para obter mais informações sobre como modificar arquivos de configuração, consulte [modificar um arquivo de configuração do Reporting Services &#40; Rsreportserver. config &#41; ](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Você pode usar um editor de texto para modificar o arquivo. O arquivo RSReportServer.config pode ser localizado na pasta \Reporting Services\Report Server\Bin. Para obter mais informações sobre como modificar arquivos de configuração, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Alterando o nome para exibição  
  O nome para exibição de uma extensão de renderização aparece na lista Exportar da barra de ferramentas de relatório. Exemplos de nomes para exibição padrão incluem arquivos da Web, TIFF e Acrobat (PDF). Você pode substituir o nome para exibição padrão por um valor personalizado especificando o elemento **OverrideNames** nos arquivos de configuração. Além disso, se duas instâncias de uma única extensão de renderização forem definidas, use o elemento **OverrideNames** para diferenciar cada instância na lista Exportar.  
@@ -137,13 +136,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Consulte também  
  [Arquivo de Configuração RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Arquivo de configuração RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Configurações de informações do dispositivo CSV](../reporting-services/csv-device-information-settings.md)   
- [Configurações das informações de dispositivo do Excel](../reporting-services/excel-device-information-settings.md)   
- [Configurações de informações do dispositivo HTML](../reporting-services/html-device-information-settings.md)   
+ [Configurações de informações de dispositivo CSV](../reporting-services/csv-device-information-settings.md)   
+ [Configurações de informações de dispositivo Excel](../reporting-services/excel-device-information-settings.md)   
+ [Configurações de informações de dispositivo HTML](../reporting-services/html-device-information-settings.md)   
  [Configurações de informações de dispositivo de imagem](../reporting-services/image-device-information-settings.md)   
- [Configurações de informações do dispositivo MHTML](../reporting-services/mhtml-device-information-settings.md)   
- [Configurações de informações do dispositivo PDF](../reporting-services/pdf-device-information-settings.md)   
+ [Configurações de informações de dispositivo MHTML](../reporting-services/mhtml-device-information-settings.md)   
+ [Configurações de informações de dispositivo PDF](../reporting-services/pdf-device-information-settings.md)   
  [Configurações de informações do dispositivo XML](../reporting-services/xml-device-information-settings.md)  
   
   
-

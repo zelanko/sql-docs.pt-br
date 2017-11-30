@@ -1,5 +1,5 @@
 ---
-title: "Relatórios detalhados (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Relatórios de detalhamento (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 7fd9e9c78c6e77fe740f21d109f5444c0ff8fd14
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd7b2f812481abbe3bf541322582804a6a415236
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Relatórios detalhados (Construtor de Relatórios e SSRS)
   Um relatório detalhado é um relatório que pode ser aberto pelo usuário quando ele clicar em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Por exemplo, nesta ilustração, o relatório de resumo de vendas lista ordens e totais de vendas. Quando um usuário clica em um número de ordem na lista de resumo, outro relatório é aberto, exibindo os detalhes da ordem.  
   
  ![rs_DrillThru](../../reporting-services/report-design/media/rs-drillthru.gif "rs_DrillThru")  
   
- Os dados no relatório detalhado não serão recuperados até que o usuário clique no link no relatório principal que abre o relatório detalhado. Se for necessário recuperar os dados do relatórios principal e do relatório detalhado ao mesmo tempo, considere usar um sub-relatório. Para obter mais informações, consulte [sub-relatórios &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
+ Os dados no relatório detalhado não serão recuperados até que o usuário clique no link no relatório principal que abre o relatório detalhado. Se for necessário recuperar os dados do relatórios principal e do relatório detalhado ao mesmo tempo, considere usar um sub-relatório. Para obter mais informações, consulte [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Ao trabalhar no Construtor de Relatórios, você deve estar conectado a um servidor de relatório para exibir o relatório detalhado que é aberto quando clica no link de detalhamento no relatório principal.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
  Para se familiarizar rapidamente com os relatórios detalhados, consulte [Tutorial: Criando relatórios principais e de detalhamento &#40;Construtor de Relatórios&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Parâmetros em relatórios detalhados  
- Geralmente, o relatório detalhado contém parâmetros que são passados para ele pelo relatório de resumo. No exemplo de relatório de resumo de vendas, o relatório inclui o campo [OrderNumber] na caixa de texto de uma célula da tabela. O relatório detalhado contém um parâmetro que usa o número do pedido como um valor. Ao definir o link do relatório detalhado na caixa de texto de [OrderNumber], defina também o parâmetro do relatório de destino como [OrderNumber]. Quando o usuário clica no número da ordem no relatório de resumo, o relatório de detalhes de destino é aberto e exibe as informações desse número de ordem. Para exibir instruções sobre como personalizar relatórios detalhados com base nos valores de parâmetro, consulte [parâmetros de relatório &#40; Construtor de relatórios e Designer de relatórios &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) e [função InScope &#40; Construtor de relatórios e SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  
+ Geralmente, o relatório detalhado contém parâmetros que são passados para ele pelo relatório de resumo. No exemplo de relatório de resumo de vendas, o relatório inclui o campo [OrderNumber] na caixa de texto de uma célula da tabela. O relatório detalhado contém um parâmetro que usa o número do pedido como um valor. Ao definir o link do relatório detalhado na caixa de texto de [OrderNumber], defina também o parâmetro do relatório de destino como [OrderNumber]. Quando o usuário clica no número da ordem no relatório de resumo, o relatório de detalhes de destino é aberto e exibe as informações desse número de ordem. Para exibir instruções sobre como personalizar relatórios de detalhamento com base nos valores de parâmetro, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) e [Função InScope &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  
   
 ## <a name="designing-the-drillthrough-report"></a>Criando o relatório detalhado  
  Para criar um relatório detalhado, você deve criar o relatório detalhado antes de criar a ação de detalhamento no relatório principal.  
@@ -53,6 +53,6 @@ ms.lasthandoff: 08/09/2017
  Para exibir um relatório de resumo com links de detalhamento após sua publicação, é preciso verificar se os relatórios detalhados estão no mesmo servidor do relatório de resumo. Em todas as situações, o usuário deve ter permissões no relatório detalhado para exibi-lo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

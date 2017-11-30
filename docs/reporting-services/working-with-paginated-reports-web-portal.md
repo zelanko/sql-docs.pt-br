@@ -1,28 +1,25 @@
 ---
-title: "Trabalhando com relatórios paginados (portal da web) | Microsoft Docs"
+title: "Trabalhando com relatórios paginados (portal da Web) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62c2bbf3279d4c9f6303a394cc83c95e6418005c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>Trabalhando com relatórios paginados (portal da Web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -50,7 +47,7 @@ Para gerenciar um relatório paginado existente, você pode fazer o seguinte.
 > [!NOTE]
 > Se você não vir relatórios paginados na pasta, certifique-se de estar visualizando relatórios paginados. Você pode selecionar **Modo de Exibição** na barra de menus na parte superior direita do portal da Web. Certifique-se de que a opção **Relatórios paginados** está marcada.  
   
-1.  Selecione o **reticências (...)**  para o conjunto de dados que você deseja gerenciar.  
+1.  Selecione as **reticências (...)** do conjunto de dados que deseja gerenciar.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -127,12 +124,12 @@ Isso permite a você não fornecer nenhuma credencial para a fonte de dados. Se 
 Para usar essa opção, a conta de execução autônoma deve estar previamente configurada para o seu servidor de relatório. A conta de execução autônoma é usada para conectar a fontes externas, quando outros cursos de credenciais não estiverem disponíveis. Se você especificar essa opção e a conta não estiver configurada, a conexão com a fonte de dados do relatório falhará e o processamento do relatório não ocorrerá. Para obter mais informações sobre essa conta, consulte [Configurar a conta de execução autônoma (Gerenciador de Configuração do SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Assinaturas  
-Uma assinatura do Reporting Services é uma configuração que fornece um relatório em um momento específico ou em resposta a um evento, em um formato de arquivo que você especificar. Por exemplo, toda quarta-feira, salvar o relatório MonthlySales.rdl como um documento do Microsoft Word em um compartilhamento de arquivo. As assinaturas podem ser usadas para agendar e automatizar a entrega de um relatório e com um conjunto específico de valores de parâmetros do relatório. Para obter mais informações, consulte [trabalhando com assinaturas](working-with-subscriptions-web-portal.md).
+Uma assinatura do Reporting Services é uma configuração que fornece um relatório em um momento específico ou em resposta a um evento, em um formato de arquivo que você especificar. Por exemplo, toda quarta-feira, salvar o relatório MonthlySales.rdl como um documento do Microsoft Word em um compartilhamento de arquivo. As assinaturas podem ser usadas para agendar e automatizar a entrega de um relatório e com um conjunto específico de valores de parâmetros do relatório. Para obter mais informações, consulte [Trabalhando com assinaturas](working-with-subscriptions-web-portal.md).
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Itens Dependentes  
-Use a página Itens Dependentes para exibir uma lista de itens que fazem referência a este relatório. O ícone para cada tipo de item indica do que se trata. Você pode selecionar o **reticências (...)**  em cada item para gerenciar esses itens adicionais.  
+Use a página Itens Dependentes para exibir uma lista de itens que fazem referência a este relatório. O ícone para cada tipo de item indica do que se trata. Em seguida, selecione as **reticências (...)** em cada item para gerenciar esses itens mais detalhadamente.  
   
 ## <a name="caching"></a>Cache  
 Quando o assunto é armazenar dados em cache para um relatório paginado, há opções. Você começará com uma simples seleção.  
@@ -149,7 +146,7 @@ A seleção de **Armazenar cópias deste relatório em cache e utilizá-las quan
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
-Para obter mais informações, consulte [trabalhar com instantâneos](working-with-snapshots-web-portal.md).
+Para obter mais informações, consulte [Trabalhando com instantâneos](working-with-snapshots-web-portal.md).
   
 ### <a name="cache-expiration"></a>Validade do cache  
   
@@ -201,5 +198,4 @@ Selecione para alterar a maneira como a segurança é definida para o item atual
 [Portal da Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabalhar com conjuntos de dados compartilhados](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

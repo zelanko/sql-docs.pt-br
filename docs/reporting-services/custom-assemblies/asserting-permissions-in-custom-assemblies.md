@@ -1,5 +1,5 @@
 ---
-title: "Declarando permissões em Assemblies personalizados | Microsoft Docs"
+title: "Declarando permissões em assemblies personalizados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - secure calls [Reporting Services]
 - custom assemblies [Reporting Services], permissions
@@ -21,30 +20,30 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: dc3e6e84c3f0a70a3c794b5cfd803e228e5dcce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: e98c186e950b5f4186aea4057fb63c0f27eaf1b3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Declarando permissões em assemblies personalizados
-  Por padrão, o código de assembly personalizado é executado com limitados **execução** conjunto de permissões. Em alguns casos, talvez você queira implementar um assembly personalizado que crie chamadas seguras para proteger recursos em seu sistema de segurança (como um arquivo ou o Registro). Para realizar isso, faça o seguinte:  
+  Por padrão, o código de assembly personalizado é executado com o conjunto de permissões limitado **Execução**. Em alguns casos, talvez você queira implementar um assembly personalizado que crie chamadas seguras para proteger recursos em seu sistema de segurança (como um arquivo ou o Registro). Para realizar isso, faça o seguinte:  
   
-1.  Identifique as permissões exatas das quais o seu código precisa para fazer a chamada segura. Se esse método é parte de um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] biblioteca, essas informações devem ser incluídas na documentação do método.  
+1.  Identifique as permissões exatas das quais o seu código precisa para fazer a chamada segura. Se esse método fizer parte de uma biblioteca do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], essas informações deverão ser incluídas na documentação do método.  
   
-2.  Modifique os arquivos de configuração de política de servidor de relatório para conceder as permissões exigidas ao assembly personalizado. Para obter mais informações sobre os arquivos de configuração de política de segurança, consulte [usando o Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).  
+2.  Modifique os arquivos de configuração de política de servidor de relatório para conceder as permissões exigidas ao assembly personalizado. Para obter mais informações sobre os arquivos de configuração da política de segurança, consulte [Usando arquivos da política de segurança do Reporting Services](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).  
   
-3.  Declare as permissões exigidas como parte do método no qual a ligação segura será feita. Isso é necessário porque o código de assembly personalizado que é chamado pelo servidor de relatório é parte do assembly de host do expressão de relatório, que é executado com **execução** permissão por padrão. O **execução** conjunto de permissões permite que o código para ser executado, mas não use recursos protegidos.  
+3.  Declare as permissões exigidas como parte do método no qual a ligação segura será feita. Isso é obrigatório porque o código de assembly personalizado chamado pelo servidor de relatório faz parte do assembly host de expressão de relatório, executado com a permissão **Execução** por padrão. O conjunto de permissões **Execução** permite que o código seja executado, mas não permite o uso de recursos protegidos.  
   
-4.  Marque o assembly personalizado com **AllowPartiallyTrustedCallersAttribute** se ele está assinado com um nome forte. Isso é necessário porque os assemblies personalizados são chamados de uma expressão de relatório que faz parte do assembly de host do expressão de relatório, que, por padrão, não é concedido **FullTrust**; portanto, é um chamador "parcialmente confiável". Para obter mais informações, consulte [Named Custom Assemblies](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md).  
+4.  Marque o assembly personalizado com **AllowPartiallyTrustedCallersAttribute** se ele for assinado com um nome forte. Isso é obrigatório porque os assemblies personalizados são chamados por uma expressão de relatório que faz parte do assembly host de expressão de relatório que, por padrão, não recebe a permissão **FullTrust**; dessa forma, ele é um chamador “parcialmente confiável”. Para obter mais informações, consulte [Usando assemblies de nome forte personalizados](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md).  
   
 ## <a name="implementing-a-secure-call"></a>Implementando uma chamada segura  
- Você pode modificar os arquivos de configuração de política para conceder as permissões específicas ao seu assembly. Por exemplo, se você estiver escrevendo um assembly personalizado para manipular conversão de moedas, talvez seja necessário ler as taxas de câmbio da moeda atual em um arquivo. Para recuperar as informações de taxa, você precisa adicionar uma permissão de segurança adicional, **FileIOPermission**, para o conjunto de permissões para o assembly. Crie a entrada adicional a seguir no arquivo de configuração de política:  
+ Você pode modificar os arquivos de configuração de política para conceder as permissões específicas ao seu assembly. Por exemplo, se você estiver escrevendo um assembly personalizado para manipular conversão de moedas, talvez seja necessário ler as taxas de câmbio da moeda atual em um arquivo. Para recuperar as informações de taxa, você precisará adicionar outra permissão de segurança, **FileIOPermission**, ao conjunto de permissões do assembly. Crie a entrada adicional a seguir no arquivo de configuração de política:  
   
 ```  
 <PermissionSet class="NamedPermissionSet"  

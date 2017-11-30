@@ -1,28 +1,25 @@
 ---
-title: "Adicionar um servidor de relatório a um Farm (expansão do SSRS) | Microsoft Docs"
+title: "Adicionar um servidor de relatório a um farm (expansão do SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d1a4e4da2f35e6bea1acebb686c7395bfc12b25b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Adicionar um servidor de relatório a um farm (expansão SSRS)
 
   Adicionar um segundo ou mais servidores de relatório de modo do SharePoint ao seu farm do SharePoint pode melhorar o desempenho e o tempo de resposta do processamento do servidor de relatório. Se você perceber que o desempenho está mais lento à medida que você adiciona mais usuários, relatórios e outros aplicativos ao servidor de relatório, então a adição de servidores de relatório pode melhorar o desempenho. Isto também é recomendado para adicionar um segundo servidor de relatório para aumentar a disponibilidade de servidores de relatório quando houver problemas com hardware ou você estiver realizando manutenção geral em servidores individuais em seu ambiente. A partir da versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , as etapas para expansão de um ambiente do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo do SharePoint seguem a implantação padrão de farm do SharePoint e aproveita os recursos de balanceamento de carga do SharePoint.  
@@ -61,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   (4) Representa uma solução de software ou hardware de NLB (balanceamento de carga de rede)  
   
- ![Adicionar um servidor de aplicativos do Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "adicionando um servidor de aplicativos do Reporting Services")  
+ ![Adicionando um servidor de aplicativos do Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Adicionando um servidor de aplicativos do Reporting Services")  
   
  As etapas a seguir pressupõem que um administrador esteja instalando e configurando o servidor. O servidor será instalado como um novo servidor de aplicativos no farm e não usado como um WFE (front-end da Web).  
   
@@ -74,11 +71,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_additional"></a> Configuração adicional  
  Você pode otimizar servidores individuais do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma implantação em expansão para realizar somente processamento em segundo plano, para que eles não tenham que competir por recursos com execução interativa de relatório. O processamento em segundo plano inclui agendas, assinaturas e alertas de dados.  
   
- Para alterar o comportamento de servidores de relatórios individuais, defina  **\<IsWebServiceEnable >** como false no **rsreportserver. config** arquivo de configuração.  
+ Para alterar o comportamento de servidores de relatórios individuais, defina **\<IsWebServiceEnable>** como falso no arquivo de configuração **RSreportServer.config**.  
   
- Por padrão, os servidores de relatórios são configurados com \<IsWebServiceEnable > definido como TRUE. Quando todos os servidores forem configurados para TRUE, o interativo e em segundo plano terão a carga equilibrada em todos os nós no farm.  
+ Por padrão, os servidores de relatório são configurados com \<IsWebServiceEnable> definido como TRUE. Quando todos os servidores forem configurados para TRUE, o interativo e em segundo plano terão a carga equilibrada em todos os nós no farm.  
   
- Se você configurar todos os servidores de relatório com \<IsWebServiceEnable > definido como False, você verá uma mensagem de erro semelhante à seguinte quando tentar usar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recursos:  
+ Se você configurar todos os servidores de relatório com \<IsWebServiceEnable> definido como False, verá uma mensagem de erro semelhante à seguinte quando tentar usar os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
       The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
  
@@ -89,5 +86,4 @@ ms.lasthandoff: 08/09/2017
 [Adicionar o SharePoint Server a um farm no SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Adicionar o SharePoint Server a um farm no SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

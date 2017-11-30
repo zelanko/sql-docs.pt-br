@@ -19,17 +19,16 @@ helpviewer_keywords:
 - report processing [Reporting Services], verifying execution
 - checking report execution
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97015ca82fd8a58c3c5cd351b2f7379711d65aa1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 05712a9ff9fe3f80b5fcdbafa772a4024c941860
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="verifying-a-report-run"></a>Verificando uma execução de relatório
   Para visualizar informações sobre o status de processamento do relatório, você pode usar os arquivos de log ou consultar as informações sobre status exibidas com o relatório no Gerenciador de Relatórios.  
@@ -46,14 +45,13 @@ ms.lasthandoff: 08/09/2017
   
 |Para este tipo de relatório|As informações sobre data e hora estão localizadas aqui|Para exibir as informações, faça o seguinte|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Um relatório que é executado como um instantâneo de relatório.|Na página Conteúdo. Para obter mais informações, consulte [página conteúdo &#40; Gerenciador de relatórios &#41; ](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Localize a pasta que contém o relatório.<br /><br /> 2) Defina a pasta na exibição Detalhes.<br /><br /> 3) Observe a data e hora na coluna **Quando Executado** .|  
-|Um instantâneo no histórico de relatórios.|Na página Propriedades do Histórico. Para obter mais informações, consulte [página de propriedades de opções de instantâneo &#40; Gerenciador de relatórios &#41; ](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Abra o relatório.<br /><br /> 2) Clique na página **Propriedades** .<br /><br /> 3) Clique na guia **Histórico** .<br /><br /> 4) Observe a data e hora na coluna **Quando Executado** .|  
+|Um relatório que é executado como um instantâneo de relatório.|Na página Conteúdo. Para obter mais informações, consulte [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Localize a pasta que contém o relatório.<br /><br /> 2) Defina a pasta na exibição Detalhes.<br /><br /> 3) Observe a data e hora na coluna **Quando Executado** .|  
+|Um instantâneo no histórico de relatórios.|Na página Propriedades do Histórico. Para obter mais informações, consulte [Página de propriedades Opções de Instantâneo &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Abra o relatório.<br /><br /> 2) Clique na página **Propriedades** .<br /><br /> 3) Clique na guia **Histórico** .<br /><br /> 4) Observe a data e hora na coluna **Quando Executado** .|  
 |Um relatório armazenado em cache.|Na agenda usada para criar e atualizar o relatório armazenado em cache.|1) Abra o relatório.<br /><br /> 2) Clique na página **Propriedades** .<br /><br /> 3) Clique na guia **Execução** .<br /><br /> 4) Abra a agenda.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   
-

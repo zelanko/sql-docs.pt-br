@@ -1,28 +1,25 @@
 ---
-title: "Lição 4: Definir uma Conexão de dados e a tabela de dados para o relatório filho | Microsoft Docs"
+title: "Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 214067875871c249aa56d0ed191f787a08b3ed7b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c717fecbc14933bdfaac30e64faa2b8a9ff2940
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho
 Depois que você criar o relatório pai, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório filho. Neste tutorial, a conexão de dados é estabelecida com o banco de dados AdventureWorks2014.  
@@ -63,7 +60,7 @@ Depois que você criar o relatório pai, a próxima etapa será criar uma conex�
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-    Você também pode criar a consulta selecionando **Construtor de Consultas**e verificar a consulta selecionando o botão **Executar Consulta** . Se a consulta não retornar os dados esperados, talvez você esteja usando uma versão anterior do AdventureWorks. Para obter mais informações sobre como obter o banco de dados de exemplo **AdventureWorks2014** , consulte [Amostras de produto do Banco de Dados Microsoft SQL Server](http://msftdbprodsamples.codeplex.com/).  
+    Você também pode criar a consulta selecionando **Construtor de Consultas**e verificar a consulta selecionando o botão **Executar Consulta** . Se a consulta não retornar os dados esperados, talvez você esteja usando uma versão anterior do AdventureWorks. Para obter mais informações sobre como obter o banco de dados de exemplo **AdventureWorks2014**, consulte [Bancos de dados de exemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
 10. Na página **Escolher os Métodos a Serem Gerados** , desmarque **Crie métodos para enviar atualizações diretamente ao banco de dados (GenerateDBDirectMethods)**e selecione **Concluir**.  
   
@@ -79,5 +76,4 @@ Depois que você criar o relatório pai, a próxima etapa será criar uma conex�
 ## <a name="next-task"></a>Próxima tarefa  
 Você criou uma conexão de dados e uma tabela de dados para o relatório filho. Em seguida, você criará o relatório filho usando o Assistente de Relatório. Consulte [Lição 5: Criar o relatório filho usando o Assistente de Relatório](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
-
 

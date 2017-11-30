@@ -1,5 +1,5 @@
 ---
-title: "Importando HTML para um relatório (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Importando HTML para um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ccab26863c41430de2987c9c4573cd1ad53b173
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2c1cefaa2ece7d13882c7807fefd5aa54367d84
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importando HTML para um relatório (Construtor de Relatórios e SSRS)
   É possível usar uma caixa de texto para inserir em um relatório um texto formatado em HTML recuperado de um campo em seu conjunto de dados. O texto pode ser de qualquer expressão simples ou complexa avaliada como HTML formatado corretamente. O texto formatado pode ser renderizado em todos os formatos de saída com suporte, inclusive PDF.  
@@ -41,15 +40,15 @@ ms.lasthandoff: 08/09/2017
 ## <a name="supported-html-tags"></a>Tags HTML Suportadas  
  A seguir, há uma lista completa de marcas que são renderizadas como HTML quando definidas como texto de espaço reservado:  
   
--   Hiperlinks: \<A HREF >  
+-   Hiperlinks: \<A HREF>  
   
--   Fontes: \<fonte >  
+-   Fontes: \<FONT>  
   
--   Elementos de cabeçalho, estilo e bloco: \<H {n} >, \<DIV >, \<SPAN >,\<P >, \<DIV >, \<LI >, \<HN >  
+-   Elementos de cabeçalho, estilo e bloco: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
   
--   Formato de texto: \<B >, \<, >, \<U >, \<S >  
+-   Formato de texto: \<B>, \<I>, \<U>, \<S>  
   
--   Manipulação de lista: \<OL >, \<UL >, \<LI >  
+-   Manipulação de lista: \<OL>, \<UL>, \<LI>  
   
  Qualquer outra marcação HTML será ignorada durante o processamento de relatório. Se o HTML representado pela expressão no texto de espaço reservado não for bem formado, o espaço reservado será processado como texto sem-formatação. Todas as marcas HTML não diferenciam maiúsculas de minúsculas.  
   
@@ -84,12 +83,11 @@ ms.lasthandoff: 08/09/2017
   
 -   Valores CSS malformados são ignorados da mesma maneira que HTML malformado.  
   
--   Quando o atributo e os atributos de estilo CSS existirem na mesma marca, a propriedade CSS tem maior precedência. Por exemplo, se o texto  **\<estilo p = "alinhamento de texto: direito" align = "left" >**, será aplicado somente o atributo de alinhamento de texto e o texto será alinhado à direita.  
+-   Quando o atributo e os atributos de estilo CSS existirem na mesma marca, a propriedade CSS tem maior precedência. Por exemplo, se o texto for **\<p style="text-align: right" align="left">**, somente o atributo de alinhamento de texto será aplicado e o texto será alinhado à direita.  
   
--   Para atributos e a estilos CSS, se uma propriedade for especificada mais de uma vez, somente sua última instância será aplicada. Por exemplo, se o texto  **\<p align = "left" align = "direita" >**, o texto será alinhado à direita.  
+-   Para atributos e a estilos CSS, se uma propriedade for especificada mais de uma vez, somente sua última instância será aplicada. Por exemplo, se o texto for **\<p align="left" align="right">**, ele será alinhado à direita.  
   
 ## <a name="see-also"></a>Consulte também  
  [Renderizando para HTML &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   
-

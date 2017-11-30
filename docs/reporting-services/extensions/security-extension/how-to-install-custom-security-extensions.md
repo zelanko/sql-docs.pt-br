@@ -1,5 +1,5 @@
 ---
-title: "Como instalar as extensões de segurança personalizadas | Microsoft Docs"
+title: "Como instalar extensões de segurança personalizadas | Microsoft Docs"
 ms.custom: 
 ms.date: 07/10/2017
 ms.prod: sql-server-2016
@@ -11,38 +11,36 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
-ms.openlocfilehash: 58cfeef7d74e0641b965c307551f0fba4a7ff09c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c3a035503b98ba0dec235b9d7f402947b35d1fe5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="how-to-install-custom-security-extensions"></a>Como instalar as extensões de segurança personalizadas
+# <a name="how-to-install-custom-security-extensions"></a>Como instalar extensões de segurança personalizadas
 
 [!INCLUDE[ssrs-appliesto](../../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../../includes/ssrs-appliesto-pbirs.md)]
 
-Reporting Services 2016 introduziu um novo portal da web para hospedar novos APIs Odata e também hospedar novas cargas de trabalho de relatório, como KPIS e relatórios móveis. Esse novo portal se baseia em tecnologias mais recentes e é isolado de ReportingServicesService a familiar, executando em um processo separado. Esse processo não é um aplicativo ASP.NET hospedado e como tal quebras suposições de extensões de segurança personalizadas existentes. Além disso, não permite que as interfaces atuais para extensões de segurança personalizadas para qualquer contexto externo ser transmitido, deixando os implementadores com a única opção para inspecionar objetos globais de ASP.NET conhecidos, isso necessário algumas alterações na interface.
+O Reporting Services 2016 introduziu um novo portal da Web para hospedar novas APIs do OData e também hospedar novas cargas de trabalho de relatório, como KPIs e relatórios móveis. Esse novo portal se baseia em tecnologias mais recentes e é isolado do conhecido ReportingServicesService, sendo executado em um processo separado. Esse processo não é um aplicativo ASP.NET hospedado e, como tal, acaba com os pressupostos das extensões de segurança personalizadas existentes. Além disso, as interfaces atuais das extensões de segurança personalizadas não permitem que nenhum contexto externo seja passado, deixando os implementadores com a única opção de inspecionar Objetos ASP.NET globais conhecidos. Isso exigia alterações na interface.
 
 ## <a name="what-changed"></a>O que mudou?
 
-Uma nova interface foi introduzida que podem ser implementadas que fornece um IRSRequestContext fornecendo as propriedades mais comuns usadas pelas extensões para tomar decisões relacionadas à autenticação.
+Uma nova interface foi introduzida, que pode ser implementada e que fornece um IRSRequestContext, fornecendo as propriedades mais comuns usadas pelas extensões para tomar decisões relacionadas à autenticação.
 
-Nas versões anteriores, o Gerenciador de relatórios foi front-end e pode ser configurado com sua própria página de logon personalizada. No Reporting Services 2016, apenas uma página hospedada pelo reportserver é suportada e deverá autenticar para ambos os aplicativos.
+Nas versões anteriores, o Gerenciador de Relatórios era o front-end e podia ser configurado com sua própria página de logon personalizada. No Reporting Services 2016, há suporte para apenas uma página hospedada pelo reportserver e ela deve se autenticar em ambos os aplicativos.
 
 ## <a name="implementation"></a>Implementação
 
-Nas versões anteriores, extensões podiam confiar em uma suposição comum que os objetos do ASP.NET seria prontamente disponíveis. Desde que o novo portal não é executado em ASP.NET, a extensão pode pressionar problemas com objetos que são NULL.
+Nas versões anteriores, as extensões podiam confiar em um pressuposto comum de que os objetos ASP.NET estariam prontamente disponíveis. Já que o novo portal não é executado no ASP.NET, a extensão pode ter problemas com objetos sendo NULL.
 
-O exemplo mais genérico está acessando HttpContext para ler as informações de solicitação, como cabeçalhos e cookies. Para permitir extensões tomar decisões mesmo apresentamos um novo método de extensão que fornece informações de solicitação e é chamado durante a autenticação do portal. 
+O exemplo mais genérico é acessar HttpContext.Current para ler as informações de solicitação, como cabeçalhos e cookies. Para permitir que as extensões tomem as mesmas decisões, introduzimos um novo método na extensão que fornece informações de solicitação e é chamado durante a autenticação no portal. 
 
-As extensões necessárias para implementar o <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> interface para aproveitar isso. As extensões necessárias para implementar as duas versões do <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo%2A> método, como é chamado pelo contexto reportserver e outros usado no processo de webhost. O exemplo a seguir mostra uma das implementações simples para o portal em que a identidade resolvida pelo reportserver é usada.
+As extensões devem implementar a interface <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> para aproveitar isso. As extensões precisarão implementar as duas versões do método <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo%2A>, pois ele é chamado pelo contexto do reportserver e o outro é usado no processo do webhost. A amostra abaixo apresenta uma das implementações simples para o portal, em que a identidade resolvida pelo reportserver é a que é usada.
 
 ``` 
 public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIdentity, out IntPtr userId)
@@ -60,21 +58,21 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>Implantação e configuração
 
-As configurações básicas necessárias para a extensão de segurança personalizadas são as mesmas que as versões anteriores. As alterações são necessárias para a Web. config e rsreportserver. config: para obter mais informações, consulte [configurar personalizados ou autenticação de formulários no servidor de relatório](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+As configurações básicas necessárias para a extensão de segurança personalizada são as mesmas das versões anteriores. São necessárias alterações em web.config e rsreportserver.config: para obter mais informações, consulte [Configurar a autenticação personalizada ou de formulários no servidor de relatório](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
-Não é mais um Web. config separado para o Gerenciador de relatórios, o portal herdarão as mesmas configurações que o ponto de extremidade do reportserver.
+Não há mais um web.config separado para o Gerenciador de Relatórios; o portal herdará as mesmas configurações do ponto de extremidade do reportserver.
 
 ## <a name="machine-keys"></a>Chaves do computador
 
-No caso de autenticação de formulários que exige que a descriptografia do cookie de autenticação, os dois processos precisam ser configurados com o mesmo algoritmo de chave e a descriptografia de máquina. Essa era uma etapa familiar para aqueles que anteriormente tinha o programa de instalação do Reporting Services para trabalhar em ambientes de expansão, mas agora é um requisito mesmo para implantações em um único computador.
+Para o caso da autenticação de Formulários que exige a descriptografia do cookie de Autenticação, os dois processos precisam ser configurados com a mesma chave do computador e algoritmo de descriptografia. Essa era uma etapa conhecida para aqueles que anteriormente instalavam o Reporting Services para funcionar em ambientes de expansão, mas agora é um requisito até mesmo para implantações em um único computador.
 
-Você deve usar uma determinada chave de validação para fazer a implantação, há várias ferramentas para gerar as chaves como Gerenciador de serviços de informações para Internet (IIS). Outras ferramentas podem ser encontradas na internet.
+Você deve usar uma chave de validação específica para a implantação; há várias ferramentas para gerar as chaves, como o Gerenciador do IIS (Serviços de Informações da Internet). Outras ferramentas podem ser encontradas na Internet.
 
 ### <a name="sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services 2017 e posterior
 
 **\ReportServer\rsReportServer.config**
 
-Adicione `<configuration>`.
+Adicione em `<configuration>`.
 
 ```
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
@@ -84,15 +82,15 @@ Adicione `<configuration>`.
 
 **\ReportServer\web.config**
 
-Adicione `<system.web>`.
+Adicione em `<system.web>`.
     
 ```
     <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
 ```
 
-**\RSWebApp\Microsoft.ReportingServices.portal.Webhost.exe.config**
+**\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe.config**
 
-Adicione `<configuration>`.
+Adicione em `<configuration>`.
 
 ```
     <system.web>
@@ -102,11 +100,11 @@ Adicione `<configuration>`.
 
 ### <a name="power-bi-report-server"></a>Servidor de Relatório do Power BI
 
-Isso está disponível a partir da versão de junho de 2017 (compilação 14.0.600.301).
+Isso está disponível a partir da versão de junho de 2017 (Build 14.0.600.301).
 
 **\ReportServer\rsReportServer.config**
 
-Adicione `<configuration>`.
+Adicione em `<configuration>`.
 
 ```
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
@@ -114,7 +112,7 @@ Adicione `<configuration>`.
 
 ## <a name="configure-passthrough-cookies"></a>Configurar cookies de passagem
 
-O novo portal e reportserver se comunicar usando APIs do soap interno para algumas das suas operações (semelhantes para a versão anterior do Gerenciador de relatórios). Quando cookies adicionais devem ser passadas do portal para o servidor as propriedades de PassThroughCookies ainda está disponível. Para obter mais informações, consulte [configurar o Portal da Web para transmitir Cookies de autenticação personalizados](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
+O novo portal e o reportserver se comunicam usando APIs SOAP internas para algumas de suas operações (semelhante à versão anterior do Gerenciador de Relatórios). Quando cookies adicionais precisarem ser passados do portal para o servidor, as propriedades de PassThroughCookies ainda estarão disponíveis. Para obter mais informações, consulte [Configurar o portal da Web para passar cookies de autenticação personalizados](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
 
 ```
 <UI>
@@ -128,8 +126,7 @@ O novo portal e reportserver se comunicar usando APIs do soap interno para algum
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Configurar a autenticação de formulários ou personalizado no servidor de relatório](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
-[Configurar o Gerenciador de relatórios para transmitir Cookies de autenticação personalizados](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
+[Configurar autenticação personalizada ou de formulários no servidor de relatório](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+[Configurar o Gerenciador de Relatórios para passar cookies de autenticação personalizados](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

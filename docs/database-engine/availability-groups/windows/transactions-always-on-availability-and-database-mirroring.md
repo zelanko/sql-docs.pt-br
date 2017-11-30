@@ -1,12 +1,14 @@
 ---
 title: "Transações – grupos de disponibilidade AlwaysOn e espelhamento de banco de dados | Microsoft Docs"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.date: 11/01/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 74b2beeb4f74afab2dc7300e51093d3e271f58e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc86ef8e495bacaaaebf2470306b25d38d5158e5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transações – grupos de disponibilidade e espelhamento de banco de dados
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este tópico descreve o suporte de transações distribuídas e entre bancos de dados para Grupos de Disponibilidade do AlwaysOn e espelhamento de banco de dados.  
 
@@ -65,7 +66,7 @@ O SQL Server 2016 introduz a capacidade de usar transações distribuídas em qu
   
 -   Os grupos de disponibilidade devem estar em execuçaõ no Windows Server 2016 ou Windows Server 2012 R2. Para o Windows Server 2012 R2, é necessário instalar a atualização em KB3090973 disponível em [https://support.microsoft.com/pt-br/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
   
--   Availability groups must be created with the **CREATE AVAILABILITY GROUP** e a cláusula **WITH DTC_SUPPORT = PER_DB** . No momento, você não pode alterar um grupo de disponibilidade existente.  
+-   Os grupos de disponibilidade devem ser criados com o comando **CREATE AVAILABILITY GROUP** e a cláusula **WITH DTC\_SUPPORT = PER_DB**. No momento, você não pode alterar um grupo de disponibilidade existente.  
 
 - Todas as instâncias do SQL Server que farão parte do Grupo de Disponibilidade devem ter o SQL Server 2016 ou posterior.
  
@@ -93,8 +94,7 @@ O SQL Server 2016 introduz a capacidade de usar transações distribuídas em qu
 > [!NOTE]  
 >  Não há suporte para o uso do Espelhamento de Banco de Dados com o DTC nem para o uso de grupos de disponibilidade com o DTC de maneiras não aprovadas neste tópico.  Isso não significa que os aspectos do produto não relacionados ao DTC não tenham suporte; no entanto, quaisquer problemas decorrentes do uso incorreto de transações distribuídas não terão suporte.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="next-steps"></a>Próximas etapas  
  [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   
-

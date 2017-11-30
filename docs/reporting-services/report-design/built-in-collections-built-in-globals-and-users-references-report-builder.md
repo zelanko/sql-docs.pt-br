@@ -1,5 +1,5 @@
 ---
-title: "Referências globais internas e referências de usuários (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Referências de globais internas e referências de usuários (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: db369d1d9cd1e8767da8dc25a2a2487f138044d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Coleções internas - globais internas e referências de usuários (construtor de relatórios)
+# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Referências de globais internas e referências de usuários (Construtor de Relatórios)
   A coleção de campos internos que inclui as coleções **Globals** e **User** representa valores globais fornecidos pelo Reporting Services quando um relatório é processado. A coleção de **Globals** fornece valores, como o nome do relatório, a hora em que o seu processamento foi iniciado e os números das páginas atuais para o cabeçalho ou o rodapé do relatório. A coleção de **User** fornece o identificador de usuário e configurações de idioma. Esses valores podem ser usados em expressões para filtrar resultados em um relatório.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Usando a coleção de globais  
- A coleção de **Globals** contém as variáveis globais para o relatório. Na superfície de design, essas variáveis são exibidas prefixadas por um & (e comercial), por exemplo, `[&ReportName]`. A tabela a seguir descreve os membros da coleção de **Globals** .  
+ A coleção de **Globals** contém as variáveis globais para o relatório. Na superfície de design, essas variáveis são exibidas prefixadas por um & (E comercial), por exemplo, `[&ReportName]`. A tabela a seguir descreve os membros da coleção de **Globals** .  
   
 |**Membro**|**Tipo**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Usando a coleção de usuário  
- A coleção de **User** contém dados sobre o usuário que está executando o relatório. É possível usar essa coleção para filtrar os dados exibidos em um relatório, por exemplo, mostrando apenas os dados do usuário atual ou para exibir a ID do usuário, por exemplo, em um título do relatório. Na superfície de design, essas variáveis são exibidas prefixadas por um & (e comercial), por exemplo, `[&UserID]`.  
+ A coleção de **User** contém dados sobre o usuário que está executando o relatório. É possível usar essa coleção para filtrar os dados exibidos em um relatório, por exemplo, mostrando apenas os dados do usuário atual ou para exibir a ID do usuário, por exemplo, em um título do relatório. Na superfície de design, essas variáveis são exibidas prefixadas por um & (E comercial), por exemplo, `[&UserID]`.  
   
  A tabela a seguir descreve os membros da coleção de **User** .  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Caixa de diálogo expressão &#40; Construtor de relatórios &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [Tipos de dados em expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Formatação de números e datas &#40;Construtor de relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Caixa de diálogo Expressão &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

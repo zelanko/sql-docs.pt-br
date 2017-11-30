@@ -1,27 +1,25 @@
 ---
-title: "Tutorial: Adicionando um KPI ao relatório (construtor de relatórios) | Microsoft Docs"
+title: "Tutorial: Adicionando um KPI ao relatório (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 0ba9911d41a851ed51150d83e96b61c2e7ec2c2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
@@ -59,7 +57,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para obter mais informações, consulte [Tutorial: Criando um relatório de tabela básico &#40; Construtor de relatórios &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para obter mais informações, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -163,7 +161,7 @@ Vamos aumentar a largura das colunas e definir o formato para as datas e a moeda
 
 3. Pressione a tecla Ctrl e selecione as quatro células que contêm [Sum(Sales)].
 
-4. Sobre o **início** guia > **número** > **moeda**. As células são alteradas para mostrar a moeda formatada.
+4. Na guia **Início** > **Número** > **Moeda**. As células são alteradas para mostrar a moeda formatada.
 
    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [$12,345.00]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.
     
@@ -173,7 +171,7 @@ Vamos aumentar a largura das colunas e definir o formato para as datas e a moeda
 
 6. Clique na célula que contém [SalesDate].
 
-6. No **número** grupo > **data**.
+6. No grupo **Número** > **Data**.
 
    A célula exibe a data de exemplo [1/31/2000]. 
 
@@ -213,13 +211,13 @@ Um medidor representa um único valor em um conjunto de dados. Este tutorial usa
   
 1.  Mude novamente para o modo Design.  
   
-2.  Na tabela, clique na alça da coluna para a coluna de vendas > **Inserir coluna** > **direita**. Uma nova coluna é adicionada à tabela.  
+2.  Na tabela, clique com o botão direito do mouse na alça da coluna Sales > **Inserir Coluna** > **Direita**. Uma nova coluna é adicionada à tabela.  
 
     ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  Digite **KPI Linear** no título de coluna.  
   
-4.  Sobre o **inserir** guia > **visualizações de dados** > **medidor**e, em seguida, clique na superfície de design fora da tabela.   
+4.  Na guia **Inserir** > **Visualizações de Dados** > **Medidor** e, em seguida, clique na área de design fora da tabela.   
   
 5.  Na caixa de diálogo **Selecionar Tipo de Medidor** , selecione o primeiro tipo de medidor linear, **Horizontal**.  
   
@@ -235,13 +233,13 @@ Um medidor representa um único valor em um conjunto de dados. Este tutorial usa
    
 9. No painel **Dados do Medidor** , clique na seta ao lado de **LinearPointer1** > **Propriedades do Ponteiro**.  
   
-10. No **propriedades do ponteiro Linear** caixa de diálogo > **opções do ponteiro** guia > **tipo de ponteiro**, certifique-se de **barra** está selecionado. 
+10. Na caixa de diálogo **Propriedades do Ponteiro Linear** > guia **Opções de Ponteiro** > **Tipo de Ponteiro**, verifique se a opção **Barra** está selecionada. 
  
 11. Clique em **OK**.  
   
 12. Clique com o botão direito do mouse na escala do medidor e clique em **Propriedades da Escala**.  
   
-13. No **propriedades de escala Linear** caixa de diálogo > **geral** guia, defina **máximo** como 25000.  
+13. Na caixa de diálogo **Propriedades da Escala Linear** > guia **Geral**, defina **Máximo** como 25.000.  
 
     > [!NOTE]  
     > Em vez de uma constante como 25.000, é possível usar uma expressão para calcular dinamicamente o valor da opção **Máximo** . A expressão usaria a agregação do recurso de agregação e semelhante à expressão `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
@@ -262,19 +260,19 @@ Um medidor representa um único valor em um conjunto de dados. Este tutorial usa
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="Indicator"></a>5. Exibir um KPI usando um indicador  
-Indicadores são medidores pequenos e simples que comunicam valores de dados em um relance. Por conta de seu tamanho e simplicidade, os indicadores costumam ser usados em tabelas e matrizes. Para obter mais informações, consulte [indicadores &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+Indicadores são medidores pequenos e simples que comunicam valores de dados em um relance. Por conta de seu tamanho e simplicidade, os indicadores costumam ser usados em tabelas e matrizes. Para obter mais informações, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Para exibir o estado atual de um KPI usando um indicador  
   
 1.  Alterne para o modo Design.  
   
-2.  Na tabela, clique na alça da coluna para a coluna de KPI Linear que você adicionou no último procedimento > **Inserir coluna** > **direita**. Uma nova coluna é adicionada à tabela.  
+2.  Na tabela, clique com o botão direito do mouse na alça da coluna KPI Linear que você adicionou no último procedimento > **Inserir Coluna** > **Direita**. Uma nova coluna é adicionada à tabela.  
   
 3.  Digite **KPI de Alerta** no título de coluna.  
   
 4.  Clique na célula do subtotal da subcategoria, ao lado do medidor linear adicionado no último procedimento.  
   
-5.  Sobre o **inserir** guia > **visualizações de dados** > clique duas vezes em **indicador.**  
+5.  Na guia **Inserir** > **Visualizações de Dados** > clique duas vezes em **Indicador.**  
   
 6.  Na caixa de diálogo **Selecionar Tipo de Indicador** , em **Formas**, selecione o primeiro tipo de forma, **3 Semáforos (Não Coroados)**.  
   
@@ -352,5 +350,4 @@ Você completou com êxito o tutorial Adicionando um KPI ao relatório. Para obt
 * [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)
 * [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

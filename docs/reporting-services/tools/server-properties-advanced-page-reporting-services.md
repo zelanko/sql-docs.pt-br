@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 80f962efa995f8f6a5d422f8b470826acddbab58
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 Use essa página para definir propriedades do sistema no servidor de relatórios. Há vários modos de definir propriedades do sistema. Essa ferramenta fornece uma interface gráfica do usuário para que você possa definir propriedades sem precisar gravar código.
 
-Para abrir essa página, inicie o SQL Server Management Studio, conecte-se a uma instância de servidor de relatório, clique no nome do servidor de relatório e selecione **propriedades**. Selecione **avançado** para abrir essa página.
+Para abrir essa página, inicie o SQL Server Management Studio, conecte-se a uma instância do servidor de relatório, clique com o botão direito do mouse no nome do servidor de relatório e selecione **Propriedades**. Selecione **Avançado** para abrir essa página.
 
 ## <a name="options"></a>Opções
 
@@ -80,7 +77,7 @@ Define como os instantâneos são compactados. O valor padrão é **SQL**. Os va
 
 |Valores|Description|
 |---------|---------|
-|**SQL**|Instantâneos são compactados quando armazenados no banco de dados de servidor de relatório. Esse é o comportamento atual.|
+|**SQL**|Instantâneos são compactados quando armazenados no banco de dados do servidor de relatório. Esse é o comportamento atual.|
 |**Nenhuma**|Instantâneos não são compactados.|
 |**Todos**|Instantâneos são compactados para todas as opções de armazenamento, que incluem o banco de dados do servidor de relatório ou o sistema de arquivos.|
 
@@ -95,8 +92,8 @@ Determina se a segurança integrada do Windows tem suporte para conexões de fon
 
 |Valores|Description|
 |---------|---------|
-|**Verdadeiro**|Segurança integrada do Windows está habilitada.|
-|**Falso**|Segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.|
+|**Verdadeiro**|A segurança integrada do Windows está habilitada.|
+|**Falso**|A segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.|
 
 **EnableLoadReportDefinition**  
 Selecione essa opção para especificar se os usuários podem executar relatório ad hoc de um Construtor de Relatórios. A definição dessa opção determina o valor da propriedade **EnableLoadReportDefinition** no servidor de relatórios.  
@@ -117,31 +114,34 @@ Especifica o número de entradas de cache de dados que podem estar ativas em uma
 **EditSessionTimeout**  
 Especifica o número de segundos antes que o tempo limite de uma sessão de edição de relatório seja excedido. O valor padrão é 7200 segundos (2 horas).  
 
-**EnableCustomVisuals** ***(Power BI apenas)***  
-PowerBI ReportServer deve habilitar a exibição de visuais personalizados do Power BI. Os valores são True, False.  O padrão é True.  
+**EnableCustomVisuals** ***(somente Servidor de Relatório do Power BI)***  
+Se o Servidor de Relatório do PowerBI permitir a exibição de visuais personalizados do Power BI. Os valores são True ou False.  O padrão é True.  
 
-**EnablePowerBIReportExportData** ***(Power BI apenas)***  
-PowerBI ReportServer deve habilitar a exportação de dados de visuais do Power BI. Os valores são True, False.  O padrão é True.  
+**EnablePowerBIReportExportData** ***(somente Servidor de Relatório do Power BI)***  
+Se o Servidor de Relatório do PowerBI permitir a exportação de dados de visuais do Power BI. Os valores são True ou False.  O padrão é True.  
+
+**ScheduleRefreshTimeoutMinutes** ***(somente Servidor de Relatório do Power BI)***  
+Tempo limite de atualização de dados em minutos, para a atualização Agendada em relatórios do Power BI com modelos AS inseridos. O padrão é 120 minutos.
 
 **EnableTestConnectionDetailedErrors**  
 Indica se são enviadas mensagens de erro detalhadas ao computador cliente quando os usuários testam as conexões de fonte de dados usando o servidor de relatório. O valor padrão é **true**. Se a opção for definida como **false**, apenas as mensagens de erro genéricas serão enviadas.
 
 **AccessControlAllowCredentials**  
-Indica se a resposta à solicitação do cliente pode ser exibida quando o sinalizador 'credenciais' está definido como true. O valor padrão é **false**.
+Indica se a resposta à solicitação do cliente pode ser exposta quando o sinalizador “credentials” está definido como verdadeiro. O valor padrão é **false**.
 
-**AccessControlAllowHeaders** uma lista de separada por vírgulas dos cabeçalhos que o servidor permitirá quando um cliente faz uma solicitação. Essa propriedade pode ser uma cadeia de caracteres vazia, especificando * permitirá que todos os cabeçalhos.
+**AccessControlAllowHeaders** Uma lista de separada por vírgula de cabeçalhos que o servidor permitirá quando um cliente fizer uma solicitação. Essa propriedade pode ser uma cadeia de caracteres vazia e especificar * permitirá todos os cabeçalhos.
 
-**AccessControlAllowMethods** uma lista de separados por vírgulas dos métodos HTTP que o servidor permitirá quando um cliente faz uma solicitação. Os valores padrão são (GET, PUT, POST, PATCH, DELETE), especificando * permitirá que todos os métodos.
+**AccessControlAllowMethods** Uma lista de separada por vírgula de métodos HTTP que o servidor permitirá quando um cliente fizer uma solicitação. Os valores padrão são (GET, PUT, POST, PATCH, DELETE) e especificar * permitirá todos os métodos.
 
-**AccessControlAllowOrigin** uma lista de separada por vírgulas de origens que o servidor permitirá quando um cliente faz uma solicitação. O valor padrão é em branco, que impede que todas as solicitações, especificando * permitirá que todas as origens quando as credenciais não estão definidas; Se as credenciais são especificadas de uma lista explícita de origens deve ser especificada.
+**AccessControlAllowOrigin** Uma lista de separada por vírgula de origens que o servidor permitirá quando um cliente fizer uma solicitação. O valor padrão é em branco, o que impede todas as solicitações e especificar * permitirá todas as origens quando as credenciais não estiverem definidas; se as credenciais forem especificadas, uma lista explícita de origens deverá ser especificada.
 
-**AccessControlExposeHeaders** uma lista de separada por vírgulas dos cabeçalhos que o servidor irá expor para clientes. O valor padrão é vazio.
+**AccessControlExposeHeaders** Uma lista de separada por vírgula de cabeçalhos que o servidor exporá para os clientes. O valor padrão é vazio.
 
-**AccessControlMaxAge** Especifica o número de segundos que os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
+**AccessControlMaxAge** Especifica o número de segundos durante os quais os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
 
 ## <a name="see-also"></a>Consulte também
 
-[Definir propriedades do servidor de relatório &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+[Definir propriedades do servidor de relatório &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
 [Propriedades do Reporting Services](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
 [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
@@ -149,5 +149,4 @@ Indica se a resposta à solicitação do cliente pode ser exibida quando o sinal
 [Implantação de script e tarefas administrativas](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [Habilitar e desabilitar Meus Relatórios](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

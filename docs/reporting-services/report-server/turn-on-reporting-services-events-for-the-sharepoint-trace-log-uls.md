@@ -11,20 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: be2f1f7acebd93946e4319b81f4a23b436808702
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Ativar eventos do Reporting Services para o log de rastreamento do SharePoint (ULS)
+# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
   A partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], os servidores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint podem gravar eventos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no log de rastreamento do ULS (Serviço de Log Unificado do SharePoint). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estão disponíveis na página Monitoramento da Administração Central do SharePoint.  
   
@@ -117,7 +115,7 @@ Get-SPDiagnosticConfig
 |Catálogo do servidor de relatório||  
 |Parte do servidor de relatório||  
 |Limpeza do servidor de relatório||  
-|Gerenciador de configuração do servidor de relatório|Entradas de exemplo:<br /><br /> Url interna do servidor de relatório `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing ou configuração ExtendedProtectionLevel inválida|  
+|Gerenciador de configuração do servidor de relatório|Entradas de exemplo:<br /><br /> URL interna do servidor de relatório MediumUsing `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing ou configuração ExtendedProtectionLevel inválida|  
 |Criptografia do servidor de relatório||  
 |Extensão de dados do servidor de relatório||  
 |Sondagem de BD do servidor de relatório||  
@@ -147,13 +145,13 @@ Get-SPDiagnosticConfig
 |Serviço compartilhado|Entradas de exemplo:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Acesso de MediumGranting a bancos de dados de conteúdo.<br /><br /> Instâncias de MediumProvisioning para ReportingWebServiceApplication<br /><br /> Alteração de conta de serviço MediumProcessing para ReportingWebServiceApplication<br /><br /> Permissões de banco de dados MediumSetting|  
   
 ##  <a name="bkmk_powershell"></a> Exiba um arquivo de log com o PowerShell  
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell")você pode usar o PowerShell para retornar uma lista da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eventos relacionados a partir de um arquivo de Log ULS. Digite o seguinte comando do SharePoint 2010 Management Shell para retornar uma lista filtrada de linhas do arquivo de log ULS UESQL11SPOINT-20110606-1530.log, que contêm “**sql server reporting services**”:  
+ ![Conteúdo relacionado do PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado do PowerShell")Você pode usar o PowerShell para retornar uma lista de eventos relacionados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de um arquivo de log de ULS. Digite o seguinte comando do SharePoint 2010 Management Shell para retornar uma lista filtrada de linhas do arquivo de log ULS UESQL11SPOINT-20110606-1530.log, que contêm “**sql server reporting services**”:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
 ```  
   
- Também há muitas ferramentas que você pode baixar que permitirão a leitura de logs de ULS. Por exemplo, o [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) ou o [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Ambos estão disponíveis no CodePlex.  
+ Também há ferramentas que podem ser baixadas que permitirão a leitura de logs do ULS. Por exemplo, o [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), disponível no GitHub. 
   
  Para obter mais informações sobre como usar o PowerShell para exibir dados de log, consulte [Exibir logs de diagnóstico (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
   
@@ -162,5 +160,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Para obter mais informações e as etapas para configurar o log de diagnóstico em um servidor SharePoint na Administração Central do SharePoint 2010, consulte [Configurar definições do log de diagnóstico (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 27f2dab25bd2c5e956b847666836de8757a65911
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea832d4470d5a7cdca520cd568baf8df32fa390c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controlando a exibição da região de dados Tablix em uma página do relatório
 Leia sobre as propriedades que você poderá definir em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para uma região de dados de tabela, matriz ou lista a fim de alterar sua aparência quando você vir o relatório.  
@@ -31,7 +30,7 @@ Regiões de dados de tabela, matriz e lista são exemplos de regiões de dados *
   
 -   **Formatando dados.** Para formatar dados em uma tabela, matriz ou lista, defina as propriedades de formato da caixa de texto na célula. É possível definir propriedades para várias células ao mesmo tempo. Para formatar dados em um gráfico, defina as propriedades de formatação na série. Para obter mais informações, consulte [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md) e [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md).  
   
--   **Gravando expressões**. Para obter mais informações, consulte [Uso de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
+-   **Gravando expressões**. Para obter mais informações, consulte [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
 -   **Controlando a ordem de classificação**. Para controlar a ordem de classificação, defina expressões de classificação na região de dados. Para controlar a ordem de classificação das linhas e das colunas associadas a um grupo, defina expressões de classificação no grupo, inclusive os grupos detalhados. Também é possível adicionar botões de classificação interativos para permitir que o usuário classifique uma região de dados Tablix ou seus grupos. Para obter mais informações, consulte [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -64,7 +63,7 @@ Regiões de dados de tabela, matriz e lista são exemplos de regiões de dados *
   
  Se uma região de dados Tablix tiver apenas uma área de corpo Tablix, não haverá nenhum cabeçalho de grupo. Só existem membros de tablix estáticos e dinâmicos. Um membro estático é exibido uma vez em relação a um grupo de linhas ou colunas Tablix. Um membro dinâmico ocorre uma vez para cada valor de grupo exclusivo. Por exemplo, em uma região de dados Tablix que exibe um pedido de vendas, os nomes de coluna podem ser exibidos no pedido de vendas em um membro de linha estático. Cada linha do pedido de vendas é exibido em um membro de linha dinâmico.  
   
- Você pode ajudar a controlar como um membro Tablix é processado definindo propriedades no painel Propriedades. Para obter mais informações, consulte "Modo avançado" no [Painel Agrupamento &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+ Você pode ajudar a controlar como um membro Tablix é processado definindo propriedades no painel Propriedades. Para obter mais informações, consulte “Modo avançado” em [Painel Agrupamento &#40;Construtor de Relatórios&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md).  
   
  A lista a seguir descreve modos que podem ajudar a controlar como uma região de dados Tablix aparece em um relatório:  
   
@@ -72,18 +71,17 @@ Regiões de dados de tabela, matriz e lista são exemplos de regiões de dados *
   
 -   **Mantendo cabeçalhos de linha e coluna na exibição durante a rolagem**. É possível controlar se você deve manter os cabeçalhos de linha e coluna na exibição ao rolar um relatório usando um navegador. Para obter informações, consulte [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
- Para obter mais informações sobre como a exportação de um relatório de formatos diferentes afeta a maneira como uma região de dados Tablix é renderizada, consulte [Renderizando comportamentos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre como a exportação de um relatório de formatos diferentes afeta a maneira como uma região de dados Tablix é renderizada em uma página, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Regiões de dados aninhadas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Controlando quebras de página, títulos, colunas e linhas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Região de dados Tablix &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tabelas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Controlando quebras de páginas, títulos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Criar uma matriz](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Criar formulários e faturas com listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Criar faturas e formulários com listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

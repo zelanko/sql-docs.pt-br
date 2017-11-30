@@ -1,5 +1,5 @@
 ---
-title: "Relatório de criação de conceitos (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Conceitos de criação de relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 312291488481b09890f590db58ef416d5967c507
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceitos de criação de relatórios (Construtor de Relatórios e SSRS)
   Esta seção define brevemente alguns dos principais conceitos usados para descrever relatórios paginados na documentação do Construtor de Relatórios e do Designer de Relatórios. Para obter definições de palavras ou de termos específicos, consulte o [Glossário &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  
@@ -42,11 +41,10 @@ ms.lasthandoff: 09/27/2017
  [Regiões de dados e mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Descreve os tipos de regiões de dados que podem ser adicionados a um layout de relatório. As regiões de dados determinam a aparência de um relatório: tabular, matriz, lista ou gráfico.  
   
- [Conceito de parâmetros de relatório (construtor de relatórios e SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Conceito de parâmetros de relatório (Construtor de Relatórios e SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Descreve os métodos para a definição e o uso de parâmetros de relatório e o modo como eles são gerenciados independentemente da definição de relatório no servidor de relatório.  
   
 ## <a name="see-also"></a>Consulte também  
  [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   
-

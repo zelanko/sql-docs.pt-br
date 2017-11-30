@@ -1,5 +1,5 @@
 ---
-title: "Bibliotecas de classe de Item de relatório personalizado | Microsoft Docs"
+title: "Bibliotecas de classes de itens de relatório personalizados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f216228c01e835e88cd9d4c7d7d4190648a386db
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fbd23c312a441fe7df7b85033e95c96ff2d3a8a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de classes de itens de relatório personalizados
-  Itens de relatório personalizados usam classes do **reportdesigner** namespace. As classes usadas para implementar um item de relatório personalizado podem ser agrupadas em duas categorias principais: classes exclusivas destinadas a dar suporte à infraestrutura do item de relatório personalizado, e classes de wrapper gerenciado que encapsula a funcionalidade de elementos relevantes em linguagem RDL. Para obter um exemplo de código sobre como usar essas classes, consulte [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+  Os itens de relatório personalizados usam classes do namespace **Microsoft.ReportDesigner**. As classes usadas para implementar um item de relatório personalizado podem ser agrupadas em duas categorias principais: classes exclusivas destinadas a dar suporte à infraestrutura do item de relatório personalizado, e classes de wrapper gerenciado que encapsula a funcionalidade de elementos relevantes em linguagem RDL. Para obter um exemplo de código sobre como usar essas classes, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>Classes de infraestrutura de itens de relatórios personalizados  
  As classes a seguir são usadas para implementar um item de relatório personalizado.  
@@ -48,12 +46,12 @@ ms.lasthandoff: 08/09/2017
 |**Tipo**|O tipo do item de relatório personalizado.|  
 |**CustomData**|Um objeto <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> que encapsula as propriedades de dados do item de relatório personalizado especificadas no momento da criação.|  
 |**CustomProperties**|Uma coleção de propriedades personalizadas do item de relatório personalizado.|  
-|**Altura**|A altura do controle do item de relatório personalizado.|  
-|**Largura**|A largura do controle do item de relatório personalizado.|  
+|**Height**|A altura do controle do item de relatório personalizado.|  
+|**Width**|A largura do controle do item de relatório personalizado.|  
 |**Relatório**|Um contêiner das propriedades em nível de relatório, como a lista de conjuntos de dados do relatório.|  
 |**AltReportItem**|O objeto de item de relatório alternativo, a ser usado onde o controle de item de relatório personalizado em tempo de execução não tem suporte.|  
 |**Estilo**|As propriedades de estilo do item de relatório personalizado.|  
-|**Adornos**|Uma janela de adorno usada para a edição interativa do controle.|  
+|**Adornment**|Uma janela de adorno usada para a edição interativa do controle.|  
 |**Site**|O **ISite** do componente.|  
 |**DesignerVerbCollection**|Uma matriz de verbos personalizados do menu de atalho do controle.|  
   
@@ -66,12 +64,12 @@ ms.lasthandoff: 08/09/2017
 |**EndEdit**|Desativa a edição interativa do controle.|  
 |**GetService**|Retorna um objeto que representa um serviço.|  
 |**InitializeNewComponent**|Chamado quando um novo item de relatório personalizado é criado.|  
-|**Invalidar**|Redesenha a superfície inteira do controle.|  
+|**Invalidate**|Redesenha a superfície inteira do controle.|  
 |**OnDragEnter**<br /><br /> **OnDragDrop**|Chamado quando um objeto é arrastado para o controle.|  
-|**OnPaint**|Chamado em resposta ao **pintura** eventos.|  
+|**OnPaint**|Chamado em resposta ao evento **Paint**.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Este é o atributo usado para identificar o tipo do item de relatório personalizado. O nome deve corresponder ao valor da \< **nome**> atributo o **ReportItem** elemento no arquivo de configuração do Designer de relatórios.  
+ Este é o atributo usado para identificar o tipo do item de relatório personalizado. O nome deve corresponder ao valor do atributo \<**Name**> do elemento **ReportItem** no arquivo de configuração do Designer de Relatórios.  
   
 #### <a name="public-methods"></a>Métodos públicos  
   
@@ -89,19 +87,19 @@ ms.lasthandoff: 08/09/2017
 |**LocalizedNameAttribute**|Constrói o objeto LocalizedNameAttribute.|  
   
 ### <a name="microsoftreportdesigneradornment"></a>Microsoft.ReportDesigner.Adornment  
- O **adorno** classe é usada pelo componente de tempo de design de item de relatório personalizado forneça áreas fora do retângulo principal da superfície de design. Essas áreas podem tratar eventos de interface do usuário, tais como cliques de mouse e operações de arrastar e soltar.  
+ A classe **Adornment** é usada pelo componente de item de relatório personalizado em tempo de design para fornecer áreas fora do retângulo principal da área de design. Essas áreas podem tratar eventos de interface do usuário, tais como cliques de mouse e operações de arrastar e soltar.  
   
 #### <a name="public-methods"></a>Métodos públicos  
   
 |||  
 |-|-|  
-|**OnShow**|Chamado quando o **adorno** está ativado.|  
-|**OnHide**|Chamado quando o **adorno** está desativado.|  
-|**Horas de pintura**|Chamado em resposta ao **pintura** eventos.|  
-|**OnDragEnter**<br /><br /> **OnDragOver**<br /><br /> **OnDragLeave**<br /><br /> **OnDragDrop**|Chamado quando um objeto é arrastado para o **adorno**.|  
+|**OnShow**|Chamado quando o **Adornment** é ativado.|  
+|**OnHide**|Chamado quando o **Adornment** é desativado.|  
+|**Paint**|Chamado em resposta ao evento **Paint**.|  
+|**OnDragEnter**<br /><br /> **OnDragOver**<br /><br /> **OnDragLeave**<br /><br /> **OnDragDrop**|Chamado quando um objeto é arrastado para o **Adornment**.|  
   
 ### <a name="microsoftreportdesigneradornerservice"></a>Microsoft.ReportDesigner.AdornerService  
- Essa classe é usada para fornecer um conjunto de serviços de exibição usados pelo item de relatório personalizado para dar suporte a **adorno** objetos para o componente de tempo de design de item de relatório personalizado.  
+ Essa classe é usada para fornecer uma coleção de serviços de exibição usados pelo item de relatório personalizado para dar suporte a objetos **Adornment** para o componente de item de relatório personalizado em tempo de design.  
   
 #### <a name="public-properties"></a>Propriedades públicas  
   
@@ -136,12 +134,11 @@ ms.lasthandoff: 08/09/2017
 |||  
 |-|-|  
 |**DataSetName**|O nome do conjunto de dados que contém os campos a serem soltos.|  
-|**Campos**|A coleção de campos (**Microsoft.ReportDesigner.Field**) a ser removido.|  
+|**Fields**|A coleção de campos (**Microsoft.ReportDesigner.Field**) a ser removida.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Linguagem de definição de relatório &#40; SSRS &#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Criando um componente de tempo de execução do Item de relatório personalizado](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Criando um componente de tempo de Design de Item de relatório personalizado](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
+ [Linguagem RDL &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
+ [Criando um componente de item de relatório personalizado em tempo de execução](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Criar um componente de tempo de design de item de relatório personalizado](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
   
   
-

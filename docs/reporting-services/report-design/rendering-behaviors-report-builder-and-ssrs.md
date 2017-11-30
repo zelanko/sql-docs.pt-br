@@ -1,5 +1,5 @@
 ---
-title: "Comportamentos de renderização (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Comportamentos de renderização (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4cf19162ddf8e94b897de746e311f218a94b9dda
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamentos de renderização (Construtor de Relatórios e SSRS)
   Dependendo do renderizador selecionado, algumas regras são aplicadas ao corpo do relatório e ao seu conteúdo quando um relatório é renderizado. Como os itens de relatório são ajustados juntos em uma página é determinado pela combinação destes fatores:  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Suporte específico do renderizador para paginação.  
   
- Este tópico discute a regras gerais aplicadas pelo Reporting Services. Para obter mais informações, consulte [Renderizando regiões de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md), [Renderização de itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md) e [Renderizando dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md).  
+ Este tópico discute a regras gerais aplicadas pelo Reporting Services. Para obter mais informações, consulte [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md), [Renderizando regiões de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md) e [Renderizando dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/09/2017
  As regras a seguir se aplicam aos cabeçalhos e rodapés das páginas quando renderizados em HTML ou no formato de renderização MHTM:  
   
 > [!NOTE]  
->  Para obter informações sobre como o Excel renderiza os cabeçalhos e rodapés, consulte [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md). Para obter informações sobre como o Word renderiza os cabeçalhos e rodapés, consulte [Exportando para o Microsoft Word &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
+>  Para obter informações sobre como o Excel renderiza cabeçalhos e rodapés, consulte [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md). Para obter informações sobre como o Word renderiza cabeçalhos e rodapés, consulte [Exportando para o Microsoft Word &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
   
 -   Quando presentes o cabeçalho e o rodapés são renderizados nas partes superior e inferior de cada página dentro de uma área utilizável da página.  
   
@@ -134,9 +133,8 @@ ms.lasthandoff: 08/09/2017
 -   As quebras de página lógicas definidas em itens em células de tabela ou matriz não são mantidas. Isso não se aplica a itens em listas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funcionalidade interativa para extensões &#40; de renderização de relatório diferente Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Renderizando para HTML &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Layout de página e renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Renderizando para HTML &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
-

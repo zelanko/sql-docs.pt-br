@@ -14,26 +14,25 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: f1ead2884fe5826814d79e869c4c345cbf3d5b6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar o Reporting Services para usar um nome alternativo da entidade
 
-Este tópico explica como configurar o SSRS (Reporting Services) para usar um nome alternativo da entidade (SAN), modificando o arquivo rsreportserver. config e usando a ferramenta Netsh.exe.
+Este tópico explica como configurar o SSRS (Reporting Services) para usar um SAN (nome alternativo da entidade) modificando o arquivo rsreportserver.config e usando a ferramenta Netsh.exe.
 
 As instruções aplicam-se à URL do Reporting Service e à URL do Serviço Web.
 
 Para usar um SAN, o certificado SSL deve estar registrado no servidor, assinado e ter a chave privada. Você não pode usar um certificado autoassinado  
   
- URLs no Reporting Services podem ser configurados para usar um certificado SSL. Um certificado normalmente tem apenas um nome de entidade, o que permite apenas uma URL por sessão SSL (protocolo SSL). A SAN é um campo adicional no certificado que permite que um serviço SSL para escutar para muitas URLs e compartilhe a porta SSL com outros aplicativos. A SAN é semelhante `www.s2.com`.  
+ As URLs no Reporting Services podem ser configuradas para usar um certificado SSL. Um certificado normalmente tem apenas um nome de entidade, o que permite apenas uma URL por sessão SSL (protocolo SSL). O SAN é um campo adicional no certificado que permite que um serviço SSL ouça muitas URLs e compartilhe a porta SSL com outros aplicativos. O SAN é semelhante a `www.s2.com`.  
   
- Para obter mais informações sobre as configurações de SSL para o Reporting Services, consulte [configurar conexões SSL em um servidor de relatório do modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Para obter mais informações sobre configurações SSL para o Reporting Services, consulte [Configurar conexões SSL em um servidor de relatório no modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurar o SSRS para usar um nome alternativo da entidade para a URL do serviço web
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurar o SSRS para usar um nome alternativo da entidade para a URL do serviço Web
   
 1.  Iniciar o Gerenciador de Configuração do Reporting Services.  
   
@@ -41,13 +40,13 @@ Para usar um SAN, o certificado SSL deve estar registrado no servidor, assinado 
   
 2.  Na página **URL do Serviço Web** , escolha uma porta SSL e o certificado SSL.  
   
-     ![Gerenciador de configuração do Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Gerenciador de configuração do Reporting Services")  
+     ![Gerenciador de Configurações do Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Gerenciador de Configurações do Reporting Services")  
   
      O gerente de configuração registra o certificado SSL para a porta.  
   
 3.  Abra o arquivo rsreportserver.config.  
   
-     Modo nativo do SSRS, o arquivo está localizado por padrão na seguinte pasta:  
+     Para o modo Nativo do SSRS, o arquivo está localizado por padrão na seguinte pasta:  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -126,10 +125,9 @@ Para usar um SAN, o certificado SSL deve estar registrado no servidor, assinado 
   
 ## <a name="see-also"></a>Consulte também
 
- [Arquivo de configuração rsreportserver. config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gerenciador de configuração do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Arquivo de configuração RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Modificar um arquivo de configuração do Reporting Services](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configurar as URLs do servidor de relatório](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Configurar as URLs do Servidor de Relatório](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

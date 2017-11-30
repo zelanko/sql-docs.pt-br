@@ -1,5 +1,5 @@
 ---
-title: "Gerenciar um aplicativo de serviço do SharePoint do Reporting Services | Microsoft Docs"
+title: "Gerenciar um aplicativo de serviço do SharePoint no Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,25 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 22270e6f1aa209ef9a6938b92d0252678c2ad7e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gerenciar um aplicativo de serviço do SharePoint do Reporting Services
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gerenciar um aplicativo de serviço do SharePoint no Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]aplicativos de serviço são gerenciados na Administração Central do SharePoint. As páginas Gerenciamento e Propriedades permitem atualizar a configuração do aplicativo de serviço, bem como as tarefas de administração comuns.  
+  Os aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são gerenciados na Administração Central do SharePoint. As páginas Gerenciamento e Propriedades permitem atualizar a configuração do aplicativo de serviço, bem como as tarefas de administração comuns.  
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
-## <a name="open-service-application-properties-page"></a>Página de propriedades do aplicativo de serviço aberto
+## <a name="open-service-application-properties-page"></a>Abrir a página de propriedades do aplicativo de serviço
 
  Para abrir a página de propriedades de um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , siga as etapas abaixo:  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 10/06/2017
   
  Para obter mais informações sobre as propriedade do aplicativo de serviço, consulte [Etapa 3: Criar um aplicativo de serviço do Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
-## <a name="open-service-application-management-pages"></a>Páginas de gerenciamento de aplicativo de serviço aberto
+## <a name="open-service-application-management-pages"></a>Abrir as páginas de gerenciamento do aplicativo de serviço
 
  Para abrir as páginas de gerenciamento de um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , siga as etapas abaixo:  
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 10/06/2017
   
 3.  Se desejar, você poderá clicar próximo ao nome ou na coluna **tipo** do aplicativo de serviço; essa ação selecionará toda a linha. Em seguida, clique no botão **Gerenciar** na faixa de opções do SharePoint.  
   
-## <a name="system-settings-page"></a>Página Configurações do sistema
+## <a name="system-settings-page"></a>Página de configurações do sistema
 
  A página de configurações de sistemas permite configurar o comportamento e a experiência de usuário do aplicativo de serviço, incluindo vários tempos limite.
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 10/06/2017
 |Tempo de Vida de Parâmetros Armazenados|O padrão é 180|  
 |Limite de Parâmetros Armazenados|O padrão é 1500 dias.|  
   
-### <a name="session-settings"></a>Configurações de sessão
+### <a name="session-settings"></a>Configurações da sessão
   
 |Configuração|Comentários|  
 |-------------|--------------|  
@@ -75,7 +74,7 @@ ms.lasthandoff: 10/06/2017
 |Usar Cookies de Sessão|O padrão é TRUE.|  
 |Tempo Limite do Relatório EDLX|O padrão é 1.800 segundos.|  
   
-### <a name="system-settings-for-logging"></a>Configurações do sistema para registro em log
+### <a name="system-settings-for-logging"></a>Configurações do sistema para log
   
 |Configuração|Comentários|  
 |-------------|--------------|  
@@ -93,12 +92,12 @@ ms.lasthandoff: 10/06/2017
 |Habilitar Erros Remotos|O padrão é FALSE|  
 |Habilitar Erros Detalhados de Conexão de Teste|O padrão é TRUE.|  
   
-### <a name="client-settings"></a>Configurações do cliente
+### <a name="client-settings"></a>Configurações de cliente
   
 |Configuração|Comentários|  
 |-------------|--------------|  
 |Habilitar Download do Construtor de Relatórios|O padrão é TRUE.<br /><br /> Especifica se os clientes podem ver o botão para baixar o aplicativo de construtor de relatórios.|  
-|URL de Inicialização do Construtor de Relatórios|Especifique uma URL personalizada quando o servidor de relatórios não usar a URL padrão do Construtor de Relatórios. Essa configuração é opcional. Se você não especificar um valor, a URL padrão será usada, o que inicia o Construtor de Relatórios. Para iniciar o construtor de relatórios 3.0 como um clique-aplicativo ClickOnce, digite o seguinte valor: http://\<computername > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL de Inicialização do Construtor de Relatórios|Especifique uma URL personalizada quando o servidor de relatórios não usar a URL padrão do Construtor de Relatórios. Essa configuração é opcional. Se você não especificar um valor, a URL padrão será usada, o que inicia o Construtor de Relatórios. Para iniciar o Construtor de Relatórios 3.0 como um aplicativo ClickOnce, insira o seguinte valor: http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Habilitar Impressão de Cliente|O padrão é TRUE.<br /><br /> Especifica se os usuários podem baixar o controle do cliente, que fornece opções de impressão.|  
 |Editar Tempo Limite da Sessão|O padrão é 7200 segundos.|  
 |Editar Limite de Cache de Sessão|O padrão é 5.|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/06/2017
 
  Você pode visualizar e excluir os trabalhos em execução; por exemplo trabalhos que foram criados pelas assinaturas de relatórios e assinaturas controladas por dados. A página não é usada para gerenciar assinaturas, mas trabalhos que foram disparados por uma assinatura. Por exemplo, uma assinatura que foi agendada para ser executada uma vez a cada hora gerará um trabalho por hora que será exibido na página **Gerenciar Trabalhos** .  
   
- ![Gerenciar trabalhos em execução](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gerenciar trabalhos em execução")  
+ ![gerenciar trabalhos em execução](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "gerenciar trabalhos em execução")  
   
 ## <a name="key-management"></a>Gerenciamento de chaves
  A tabela a seguir resume as páginas de gerenciamento de chaves  
@@ -152,7 +151,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Selecione para especificar uma conta.  
   
  **Conta**  
- Insira uma conta de usuário de domínio do Windows. Use este formato:  *\<domínio >\\< conta de usuário\>*.  
+ Insira uma conta de usuário de domínio do Windows. Use este formato: *\<domain>\\<user account\>*.  
   
  **Senha**  
  Digite a senha.  
@@ -194,4 +193,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  Marque a caixa do proxy e clique em **Ok**.  
   
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

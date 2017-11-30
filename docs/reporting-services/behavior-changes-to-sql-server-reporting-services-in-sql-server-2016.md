@@ -1,5 +1,5 @@
 ---
-title: "Alterações de comportamento no SQL Server Reporting Services no SQL Server 2016 | Microsoft Docs"
+title: "Alterações de comportamento do SQL Server Reporting Services no SQL Server 2016 | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -23,35 +23,32 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: b97215eceda641e7478edb659e61298e43b00859
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b6b571ac0d96c2221e41234fb3134ddcc6380b08
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>Alterações de comportamento no SQL Server Reporting Services no SQL Server 2016
+# <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>Alterações de comportamento do SQL Server Reporting Services no SQL Server 2016
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Este tópico descreve as alterações no comportamento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Alterações de comportamento afetam como os recursos funcionam ou interagem no SQL Server 2016 em comparação com versões anteriores do SQL Server.  
+Este tópico descreve as alterações no comportamento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. As alterações de comportamento afetam a maneira como os recursos funcionam ou interagem no SQL Server 2016 em comparação com as versões anteriores do SQL Server.  
 
 Não há nenhuma alteração de comportamento.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Novidades no Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
+[Novidades do Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
 [Recursos preteridos do SQL Server Reporting Services no SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 [Funcionalidade descontinuada do SQL Server Reporting Services no SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
 [Alterações recentes no SQL Server Reporting Services no SQL Server 2016](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -5,8 +5,7 @@ ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,23 +17,24 @@ helpviewer_keywords:
 - startup options [SQL Server]
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9acd28a1480da44ca385a405a72269c124d4bd7c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
-ms.openlocfilehash: c314a49371def978bf695970694b697fded976c3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/22/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-service-startup-options"></a>Opções de inicialização do serviço Mecanismo de Banco de Dados
   As opções de inicialização designam certos locais de arquivos necessários durante inicialização e especificam algumas condições que abrangem o servidor. A maioria dos usuários não precisa especificar opções de inicialização a menos que você esteja solucionando problemas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou tenha um problema incomum e é instruído a usar uma opção de inicialização pelo Suporte de Cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!WARNING]  
 >  O uso impróprio de opções de inicialização pode afetar o desempenho do servidor e impedir o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de iniciar.  
+>
+>  Inicie o SQL Server no Linux com o usuário “mssql” para evitar problemas futuros de inicialização. Exemplo: “sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]” 
   
 ## <a name="about-startup-options"></a>Sobre as opções de inicialização  
  Quando você instala o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a Instalação grava um conjunto de opções de inicialização padrão no Registro do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Você pode usar essas opções de inicialização para especificar um arquivo de banco de dados  mestre alternado, mestre arquivo de log de banco de dados ou arquivo de log de erros. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não conseguir localizar os arquivos necessários, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não será iniciado.  
@@ -84,4 +84,3 @@ ms.lasthandoff: 09/22/2017
  [Aplicativo sqlservr](../../tools/sqlservr-application.md)  
   
   
-

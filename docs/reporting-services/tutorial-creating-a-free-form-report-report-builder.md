@@ -1,27 +1,25 @@
 ---
-title: "Tutorial: Criando um relatório de formato livre (construtor de relatórios) | Microsoft Docs"
+title: "Tutorial: Criando um relatório de formato livre (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: eeb53cfbcf47af7c3580cb75b34acaf0f140810d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: criando um relatório de formato livre (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado que atua como um boletim informativo. Cada página exibe um texto estático, visuais de resumo e dados de vendas de exemplo detalhados.
@@ -60,9 +58,9 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
-4.  Verifique se o tipo de conexão é Microsoft SQL Server e, em seguida, o **cadeia de caracteres de Conexão** caixa Tipo: **fonte de dados = \<servername >**  
+4.  Verifique se o tipo de conexão é Microsoft SQL Server e, em seguida, na caixa **Cadeia de conexão**, digite: **Fonte de Dados = \<servername>**  
   
-    **\<ServerName >**, por exemplo, Report001, especifica um computador no qual uma instância do mecanismo de banco de dados do SQL Server está instalada. Como os dados deste relatório não são extraídos de um banco de dados SQL Server, você não precisa incluir o nome de um banco de dados. O banco de dados padrão no servidor especificado é usado apenas para analisar a consulta.  
+    **\<servername>**, por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Como os dados deste relatório não são extraídos de um banco de dados SQL Server, você não precisa incluir o nome de um banco de dados. O banco de dados padrão no servidor especificado é usado apenas para analisar a consulta.  
   
 5.  Clique em **Credenciais**e insira as credenciais necessárias para conexão à instância do Mecanismo de Banco de Dados do SQL Server.  
   
@@ -130,7 +128,7 @@ Você usará uma lista para exibir as informações de vendas das regiões de ve
   
 ### <a name="to-add-a-list"></a>Para adicionar uma lista  
   
-1.  Sobre o **inserir** guia > **regiões de dados** > **lista**. 
+1.  Na guia **Inserir** > **Regiões de Dados** > **Lista**. 
 
 2. Clique no corpo do relatório (entre as áreas do título e do rodapé) e arraste para criar a caixa de listagem. Crie a caixa de listagem com cerca de 18 centímetros de altura e 16 centímetros de largura. Para obter o tamanho exato, no painel **Propriedades** , em **Posição**, digite valores para as propriedades **Largura** e **Altura** .
   
@@ -169,7 +167,7 @@ Você usará uma lista para exibir as informações de vendas das regiões de ve
   
 5.  Selecione **Excluir somente colunas**.  
   
-6.  No painel de grupos de linhas, clique com botão direito do **detalhes** grupo > **excluir grupo**.  
+6.  No painel Grupos de Linhas, clique com o botão direito do mouse no grupo **Detalhes** > **Excluir Grupo**.  
    
 7.  Clique em **Excluir somente grupo**.  
   
@@ -184,7 +182,7 @@ Uma das vantagens de usar uma região de dados da lista é que você pode adicio
 
 2. Clique no canto superior esquerdo da lista e arraste para criar o retângulo com 17,78 centímetros de altura e 8,89 centímetros de largura. Novamente, para obter o tamanho exato, no painel **Propriedades** , em **Posição**, digite valores para **Largura** e **Altura**.
   
-2.  Clique com botão direito do retângulo > **propriedades do retângulo**.  
+2.  Clique com o botão direito do mouse no retângulo > **Propriedades do Retângulo**.  
   
 3.  Clique na guia **Preenchimento** .  
   
@@ -205,11 +203,11 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Sobre o **inserir** guia > **caixa de texto**. Clique no canto superior esquerdo da lista, dentro do retângulo que você adicionou anteriormente, e arraste para criar a caixa de texto com 9,76 centímetros de largura e 12,70 centímetros de altura.  
+2.  Na guia **Inserir** > **Caixa de Texto**. Clique no canto superior esquerdo da lista, dentro do retângulo que você adicionou anteriormente, e arraste para criar a caixa de texto com 9,76 centímetros de largura e 12,70 centímetros de altura.  
   
 3.  Com o cursor na caixa de texto, digite: **Boletim informativo para** . Inclua um espaço após a palavra “para”, para separar o texto do campo que será adicionado na próxima etapa.   
   
-    ![Adicionar texto de título de boletim informativo](../reporting-services/media/tutorial-newsletterfor.png "adicionar texto de título de boletim informativo")  
+    ![Adicionar texto do cabeçalho do boletim informativo](../reporting-services/media/tutorial-newsletterfor.png "Adicionar texto do cabeçalho do boletim informativo")  
   
 4.  Arraste o campo `[Territory]` de ListDataSet no painel Dados do Relatório até a caixa de texto e coloque-o após “Boletim informativo para”.  
   
@@ -217,7 +215,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
   
 5.  Selecione o texto e o campo `[Territory]` .  
   
-6.  Sobre o **início** guia > **fonte**, selecione: 
+6.  Na guia **Início** > **Fonte**, selecione: 
   
     *  **Segoe Semibold**.
     *  **20 pt**.
@@ -229,7 +227,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
    
 11. Selecione o texto que você adicionou nas etapas anteriores.
   
-12. Sobre o **início** guia > **fonte**, selecione: 
+12. Na guia **Início** > **Fonte**, selecione: 
   
     *  **Segoe Semibold**.
     *  **16 pt**.
@@ -246,7 +244,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
   
 16. Selecione o texto que você acabou de adicionar.  
   
-17.  Sobre o **início** guia > **fonte**, selecione: 
+17.  Na guia **Início** > **Fonte**, selecione: 
   
       *  **Interface do usuário do Segoe**.
       *  **10 pt**.
@@ -258,13 +256,13 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
 
 25. Selecione o texto e o campo que você acabou de adicionar.  
   
-17.  Sobre o **início** guia > **fonte**, selecione: 
+17.  Na guia **Início** > **Fonte**, selecione: 
   
       *  **Segoe Semibold**.
       *  **16 pt**.
       *  **Black**.  
   
-22. Selecione apenas o `[Sales]` campo, clique no campo > **expressão**.  
+22. Selecione apenas o campo `[Sales]`, clique com o botão direito do mouse no campo > **Expressão**.  
   
 23. Na caixa **Expressão** , altere a expressão para incluir a função Sum da seguinte forma:  
   
@@ -276,7 +274,7 @@ Você pode adicionar caixas de texto para exibir um texto estático que é repet
   
     ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
  
-29. Com `[Sum(Sales)]` ainda selecionada, no **início** guia > **número** grupo > **moeda**.  
+29. Com `[Sum(Sales)]` ainda selecionado, na guia **Início** > grupo **Número** > **Moeda**.  
   
 30. Clique com o botão direito do mouse na caixa de texto com o texto “Clique para adicionar título” e clique em **Excluir**.  
   
@@ -295,7 +293,7 @@ Use o Assistente de Nova Tabela e Matriz para adicionar uma tabela ao relatório
   
 ### <a name="to-add-a-table"></a>Para adicionar uma tabela  
   
-1.  Sobre o **inserir** guia > **regiões de dados** área > **tabela** > **Assistente de tabela**.  
+1.  Na guia **Inserir** > área **Regiões de Dados** > **Tabela** > **Assistente de Tabela**.  
   
 2.  Na página **Escolher um conjunto de dados** , clique em **ListDataset** > **Avançar**.  
   
@@ -326,9 +324,9 @@ Use o Assistente de Nova Tabela e Matriz para adicionar uma tabela ao relatório
 
     ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
 
-12. Selecione o campo [SalesDate]. Sobre o **início** guia > **número**, alterar **padrão** para **data**.
+12. Selecione o campo [SalesDate]. Na guia **Início** > **Número**, altere **Padrão** para **Data**.
 
-13. Selecione os campos [Sum(Sales)]. Sobre o **início** guia > **número**, alterar **padrão** para **moeda**.
+13. Selecione os campos [Sum(Sales)]. Na guia **Início** > **Número**, altere **Padrão** para **Moeda**.
 
 Clique em **Executar** para visualizar o relatório.  
   
@@ -374,11 +372,11 @@ Adicione uma linha para separar as áreas editoriais e detalhadas do relatório.
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Sobre o **inserir** guia > **itens de relatório** > **linha.**  
+2.  Na guia **Inserir** > **Itens de Relatório** > **Linha**.  
   
 3.  Desenhe uma linha abaixo da caixa de texto adicionada na lição 4.  
   
-4.  Clique na linha e, no **início** guia > **borda**, selecione:
+4.  Clique na linha e, na guia **Início** > **Borda**, selecione:
      * **Largura** – selecione **3** pt.
      * **Cor** – selecione **Tomate**.  
   
@@ -389,7 +387,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Sobre o **inserir** guia > **itens de relatório** >  **retângulo**. Arraste o retângulo para dentro da caixa de listagem à direita da tabela para criar um retângulo com cerca de 6 centímetros de largura e 20 centímetros de altura.  
+2.  Na guia **Inserir** > **Itens de Relatório** >  **Retângulo**. Arraste o retângulo para dentro da caixa de listagem à direita da tabela para criar um retângulo com cerca de 6 centímetros de largura e 20 centímetros de altura.  
   
 3.  Com o novo retângulo selecionado, no painel Propriedades, crie **BorderColor LightGrey**, **BorderStyle Solid**e **BorderWidth 2 pt**. 
 
@@ -397,7 +395,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 ## <a name="to-add-a-pie-chart"></a>Para adicionar um gráfico de pizza  
   
-1.  Sobre o **inserir** guia > **visualizações de dados** > **gráfico** > **Assistente de gráfico**.  
+1.  Na guia **Inserir** > **Visualizações de Dados** > **Gráfico** > **Assistente de Gráfico**.  
   
 2.  Na página **Escolher um conjunto de dados** , clique em **ListDataset** > **Avançar**.  
   
@@ -415,12 +413,12 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
    
 10. Selecione o título do gráfico e digite: **Quantidades Vendidas do Produto**.  
   
-12. Sobre o **início** guia > **fonte**, tornar o título:
+12. Na guia **Início** > **Fonte**, crie o título:
     * **Fonte** **Interface do usuário do Sego Seminegrito**.
     * **Tamanho** **12 pt**.
     * **Cor** **Black**.  
 
-13. Com o botão direito na legenda > **propriedades da legenda**.
+13. Clique com o botão direito do mouse na legenda > **Propriedades da Legenda**.
 
 14. Na guia **Geral** , em **Posição da legenda**, selecione o ponto central na parte inferior. 
   
@@ -432,7 +430,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
 ## <a name="to-add-a-column-chart"></a>Para adicionar um gráfico de colunas  
   
-1.  Sobre o **inserir** guia > **visualizações de dados** > **gráfico,** > **Assistente de gráfico**.  
+1.  Na guia **Inserir** > **Visualizações de Dados** > **Gráfico** > **Assistente de Gráfico**.  
   
 2.  Na página **Escolher um conjunto de dados** , clique em **ListDataset**e em **Avançar**.  
   
@@ -454,7 +452,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
    
 10. Selecione o título do gráfico e digite: **Vendas de Produtos**.  
   
-12. Sobre o **início** guia > **fonte**, tornar o título:
+12. Na guia **Início** > **Fonte**, crie o título:
     * **Fonte** **Interface do usuário do Sego Seminegrito**.
     * **Tamanho** **12 pt**.
     * **Cor** **Black**.  
@@ -466,7 +464,7 @@ Os retângulos ajudam a controlar a renderização do relatório. Posicione um g
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Selecione o eixo do gráfico e na *início** guia > **número** > **moeda**.
+12. Selecione o eixo do gráfico e, na guia *Início** > **Número** > **Moeda**.
 
 13. Selecione **Diminuir Decimal** duas vezes para que o número mostre apenas dólares, sem centavos.      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Para verificar se os gráficos estão dentro do retângulo  
@@ -494,7 +492,7 @@ Você pode usar retângulos como contêineres para outros itens em uma página d
   
 1.  Selecione o gráfico de pizza, pressione a tecla Ctrl e selecione o gráfico de colunas.  
   
-2.  Com ambos os gráficos selecionados, clique com botão direito > **Layout** > **mesma largura**.  
+2.  Com ambos os gráficos selecionados, clique com o botão direito do mouse > **Layout** > **Ajustar para Mesma Largura**.  
   
     > [!NOTE]  
     > O item no qual você clica primeiro determina a largura de todos os itens selecionados.  
@@ -513,10 +511,9 @@ Para obter mais informações sobre listas, consulte:
 * [Criar faturas e formulários com listas](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Células, linhas e colunas da região de dados Tablix &#40;Construtor de Relatórios&#41; e SSRS](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Para obter mais informações sobre designers de consulta, consulte [Designers de consulta &#40; Construtor de relatórios &#41; ](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) e [Interface de usuário do Designer de consulta baseado em texto &#40; Construtor de relatórios &#41; ](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Para obter mais informações sobre designers de consultas, consulte [Designers de Consultas &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) e [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
   
-
 

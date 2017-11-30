@@ -5,8 +5,7 @@ ms.date: 08/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8aea52a04d46a97dc90a7454000c9989382edbee
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46b3d92d8c1f6a720eb39a701aca50a8bc2733b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
   As seções a seguir documentam a funcionalidade do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as operações associadas.  
@@ -129,9 +127,9 @@ ms.lasthandoff: 08/03/2017
   
 -   Marca de verificação verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Número de aplicativos da camada de dados que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
   
--   Seta para baixo verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Os recursos estão subutilizados.  
+-   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Os recursos estão subutilizados.  
   
--   Seta para cima vermelha - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Os recursos estão superutilizados.  
+-   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Os recursos estão superutilizados.  
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
@@ -269,11 +267,11 @@ ms.lasthandoff: 08/03/2017
   
  Os ícones do estado de integridade fornecem o status resumido de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por categoria de utilização:  
   
--   Verificação verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
+-   Marca de verificação verde – ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") – Número de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não estão violando políticas de utilização de recursos. Os recursos estão bem-utilizados.  
   
--   Seta para baixo verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Os recursos estão subutilizados.  
+-   Seta para baixo verde – ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") – Os recursos estão subutilizados.  
   
--   Seta para cima vermelha - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Os recursos estão superutilizados.  
+-   Seta para cima vermelha – ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") – Os recursos estão superutilizados.  
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
@@ -518,4 +516,3 @@ Use as guias de Administração do Utilitário para gerenciar configurações de
  [Solucionar problemas do Utilitário do SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

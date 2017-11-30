@@ -1,5 +1,5 @@
 ---
-title: Gerenciar todos os alertas de dados em um Site do SharePoint no Gerenciador de alertas de dados | Microsoft Docs
+title: Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c0451f12b68cd45a387bfca4d94c8cf4f71919ea
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: c8d04c7c8406b1a1653be71b6e76110e4479fedb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados
 
@@ -32,12 +31,12 @@ ms.lasthandoff: 08/17/2017
 
 Os administradores de alerta do SharePoint podem exibir uma lista dos alertas de dados criados por qualquer usuário do site e informações sobre os alertas. Os administradores de alerta também podem excluir alertas. A imagem a seguir mostra os recursos disponíveis para os administradores de alerta no Gerenciador de Alerta de Dados.
 
- ![Gerenciador de alertas para administradores do site do](../reporting-services/media/rs-alertmanagersite.gif "Gerenciador de alertas para administradores do site do")
+ ![Gerenciador de Alertas para administradores de site do SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Alert Manager for SharePoint site administrators")
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
-## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>Exibir uma lista dos alertas criados por um usuário do site  
+## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>Exibir uma lista de alertas criados por um usuário do site  
   
 1.  Vá para o site do SharePoint onde as definições de alertas de dados são salvas.  
   
@@ -62,8 +61,7 @@ Os administradores de alerta do SharePoint podem exibir uma lista dos alertas de
 
 ## <a name="see-also"></a>Consulte também
 
-[Gerenciador de alertas de dados para os administradores de alerta](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+[Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

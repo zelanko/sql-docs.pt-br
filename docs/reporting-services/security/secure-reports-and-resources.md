@@ -17,17 +17,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-reports-and-resources"></a>Proteger relatórios e recursos
   É possível definir a segurança de relatórios e recursos individuais para controlar o nível de acesso que os usuários têm a esses itens. Por padrão, somente os usuários que são membros do grupo interno de **Administradores** podem executar relatórios, exibir recursos, modificar propriedades e excluir os itens. Todos os outros usuários devem ter atribuições de função que permitam o acesso a um relatório ou recurso.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  O relatório é publicado em um servidor de relatórios ou de outra forma disponibilizado de modo que o valor de parâmetro de relatório possa ser controlado pela URL de uma página da Web.  
   
-3.  Um invasor cria um link para a página da web ou o servidor de relatório especificando o valor do parâmetro no formulário "javascript:\<script mal-intencionado aqui >" e envia esse link para alguém em um ataque de atração.  
+3.  Um invasor cria um link para a página da Web ou o servidor de relatório, especificando o valor do parâmetro no formato “javascript:\<malicious script here>” e envia esse link a outra pessoa em um ataque de atração.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Atenuando ataques de injeção de script em um hiperlink de um relatório ou documento publicado  
  Relatórios podem conter hiperlinks inseridos no valor da propriedade Action de um item de relatório ou parte de um item de relatório. Hiperlinks podem ser associados a dados que recuperados de uma fonte de dados externa quando o relatório é processado. Se um usuário mal-intencionado modificar os dados subjacentes, o hiperlink pode correr o risco de explorações de script. Se um usuário clicar no link no relatório publicado ou exportado, o script mal-intencionado pode ser executado.  
@@ -81,10 +80,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Criar e gerenciar atribuições de função](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurar o acesso do construtor de relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
- [Concedendo permissões em um servidor de relatório do modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Itens de fontes de dados compartilhadas segura](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Armazenar credenciais em uma fonte de dados Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Configurar o acesso ao Construtor de Relatórios](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Concedendo permissões em um servidor de relatório no modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Proteger itens de fontes de dados compartilhadas](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Armazenar credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConnectionPoolSize
-apilocation:
-- reportingservices.mof
+apiname: ConnectionPoolSize
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- ConnectionPoolSize property
+helpviewer_keywords: ConnectionPoolSize property
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b329ec9fee9cdf8df13e4272157c2915b6d64996
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c61b55058e04b7af00098a74cc420e40e6fef371
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---connectionpoolsize"></a>Propriedade ConfigurationSetting - ConnectionPoolSize
+# <a name="configurationsetting-property---connectionpoolsize"></a>Propriedade de ConfigurationSetting – ConnectionPoolSize
   O tamanho do pool de conexão usado pelo servidor de relatório para se comunicar com a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório. Somente leitura.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -56,4 +52,3 @@ public UInt32 ConnectionPoolSize;
  [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

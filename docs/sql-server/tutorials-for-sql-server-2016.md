@@ -1,29 +1,28 @@
 ---
 title: Tutoriais do SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 06/21/2017
+ms.date: 10/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriais do SQL Server
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornece tutoriais para ajudar você a aprender novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um tutorial abordar um recurso mais recente, ele indicará a versão mínima para concluir o tutorial.  
+
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornece tutoriais para ajudar você a aprender novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um tutorial aborda um recurso mais recente, ele indicará a versão mínima para concluir o tutorial.  
      
 -   Se um tutorial usar um dos bancos de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], baixe e use a versão mais recente do CodePlex. Para obter mais informações, consulte [Bancos de dados e scripts do AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Baixe uma pasta de trabalho do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e os relatórios do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] a serem usados com os tutoriais do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] : vá para [Amostras do Power View para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
@@ -32,7 +31,7 @@ ms.lasthandoff: 07/31/2017
  
 ## <a name="current-tutorials"></a>Tutoriais atuais  
   
-|Tecnologia|Descrição|  
+|Tecnologia|Description|  
 |--------------|---------------|  
 |[Tutoriais do Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Saiba como desenvolver e implantar modelos de tabela ou multidimensionais do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Saiba também como usar ferramentas como o PowerPivot para analisar os dados nos modelos.|  
 |[Tutoriais do Mecanismo de Banco de Dados](../relational-databases/database-engine-tutorials.md)|Saiba como conectar-se a uma instância do mecanismo de banco de dados e, em seguida compilar e executar instruções Transact-SQL.|  
@@ -40,9 +39,9 @@ ms.lasthandoff: 07/31/2017
 |[Tutoriais do Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a criar e implantar pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Tutoriais de Replicação](../relational-databases/replication/replication-tutorials.md)|Saiba como configurar e executar topologias de replicação usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprender a criar relatórios e assinaturas básicos.|  
-|[Tutoriais do SQL Server R Services](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Aprenda a trabalhar com dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a linguagem R e executar scripts R no [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Tutoriais de aprendizado de máquina do SQL Server](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Saiba como trabalhar com os dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando o R ou o Python. Execute scripts do R ou Python no [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
- ## <a name="previously-published-tutorials"></a>Tutoriais anteriormente publicados:  
+ ## <a name="previously-published-tutorials"></a>Tutoriais publicados anteriormente 
   
  - [Tutoriais para SQL Server 2014](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
   
@@ -51,4 +50,3 @@ ms.lasthandoff: 07/31/2017
  - [Tutoriais do SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

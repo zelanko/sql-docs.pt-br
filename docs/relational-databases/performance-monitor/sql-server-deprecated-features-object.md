@@ -5,8 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c98544cf7c685fe39d4f42315ddecf5fa9e8a0b2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Híndi|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de agrupamento. Planeje a modificação de aplicativos que usam este agrupamento. Use Indic_General_90.|  
 |Dica da tabela HOLDLOCK sem parênteses||  
 |IDENTITYCOL|A sintaxe de INDENTITYCOL foi encontrada. Reescreva instruções para usar a sintaxe de identidade $. Ocorre uma vez por compilação.|  
-|Lista de seleção de exibição indexada sem COUNT_BIG (*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (*).|  
+|Lista de seleção de exibição indexada sem COUNT_BIG (\*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*).|  
 |INDEX_OPTION|As sintaxes CREATE TABLE, ALTER TABLE ou CREATE INDEX sem parênteses delimitando as opções foram encontradas. Reescreva a instrução para usar a sintaxe atual. Ocorre uma vez por consulta.|  
 |INDEXKEY_PROPERTY|A sintaxe INDEXKEY_PROPERTY foi encontrada. Reescreva instruções para consultar sys.index_columns. Ocorre uma vez por compilação.|  
 |Dicas TVF indiretas|A aplicação indireta de dicas de tabela à invocação de uma TVF (função com valor de tabela) com várias instruções através de uma exibição será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -128,7 +127,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Nome de coluna com mais de duas partes|Uma consulta usou um nome de 3 partes ou de 4 partes na lista de colunas. Altere a consulta para usar os nomes de 2 partes em conformidade com o padrão. Ocorre uma vez por compilação.|  
 |Várias dicas de tabela sem vírgula|Um espaço foi usado como o separador entre dicas de tabela. Use uma vírgula. Ocorre uma vez por compilação.|  
 |NOLOCK ou READUNCOMMITTED em UPDATE ou DELETE|NOLOCK ou READUNCOMMITTED foram encontradas na cláusula FROM de uma instrução UPDATE ou DELETE. Remova as dicas de tabela NOLOCK ou READUNCOMMITTED da cláusula FROM.|  
-|Operadores de junção externa não ANSI *= ou =\*|Uma instrução que usa a sintaxe de junção * = ou =\* foi encontrada. Reescreva a instrução para usar a sintaxe de junção ANSI. Ocorre uma vez por compilação.|  
+|Operadores de junção externa não ANSI *= ou =\*|Uma instrução que usa a sintaxe de junção *= ou =\* foi encontrada. Reescreva a instrução para usar a sintaxe de junção ANSI. Ocorre uma vez por compilação.|  
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Referencias a sys.numbered_procedure_parameters preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
 |numbered_procedures|Referencias a sys.numbered_procedures preterido foram encontradas. Não use. Ocorre uma vez por compilação.|  
@@ -292,4 +291,3 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
  [Usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

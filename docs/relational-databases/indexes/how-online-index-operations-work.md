@@ -4,43 +4,43 @@ ms.custom:
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: SQL
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
-- preexisting indexes [SQL Server]
+- pre-existing indexes [SQL Server]
 - target indexes [SQL Server]
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-online-index-operations-work"></a>Como funcionam as operações de índice online
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Esse tópico define as estruturas que existem durante uma operação de índice online e mostra as atividades associadas a elas.  
   
 ## <a name="online-index-structures"></a>Estruturas de índice online  
- Para permitir atividade de usuário simultânea durante uma operação DDL (linguagem de definição de dados) de índice, as seguintes estruturas são usadas durante a operação de índice online: índices de origem e preexistentes, destino e, para recompilar um heap ou remover um índice clusterizado online, um índice de mapeamento temporário.  
+ Para permitir a atividade de usuário simultânea durante uma operação DDL (linguagem de definição de dados) de índice, as seguintes estruturas são usadas durante a operação de índice online: índices de origem e preexistentes, destino e, para recompilar um heap ou remover um índice clusterizado online, um índice de mapeamento temporário.  
   
 -   **Índices de origem e preexistentes**  
   
-     A origem é a tabela original ou os dados do índice clusterizado. Índices preexistentes são quaisquer índices não clusterizados associados à estrutura de origem. Por exemplo, se a operação de índice online estiver recompilando um índice clusterizado que tenha quatro índices não clusterizados associados, a origem será o índice clusterizado existente, e os índices preexistentes serão os índices não clusterizados.  
+     A origem é a tabela original ou os dados do índice clusterizado. Índices preexistentes são índices não clusterizados associados à estrutura de origem. Por exemplo, se a operação de índice online estiver recompilando um índice clusterizado que tem quatro índices não clusterizados associados, a origem será o índice clusterizado existente e os índices preexistentes serão os índices não clusterizados.  
   
      Os índices preexistentes estão disponíveis a usuários simultâneos para operações de seleção, inserção, atualização e exclusão. Isso inclui inserções em massa (aceitas mas não recomendadas) e atualizações implícitas por gatilhos e restrições de integridade referenciais. Todos os índices preexistentes estão disponíveis para consultas e pesquisas. Isso significa eles podem ser selecionados pelo otimizador de consulta e, se necessário, especificados pelas dicas de índice.  
   
@@ -66,13 +66,13 @@ ms.lasthandoff: 06/22/2017
   
 |Fase|Atividade de origem|Bloqueios de origem|  
 |-----------|---------------------|------------------|  
-|Preparação<br /><br /> Fase muito curta|Preparação dos metadados do sistema para criar uma nova estrutura de índice vazia.<br /><br /> Um instantâneo da tabela é definido. Ou seja, o controle de versão de linha é usado para fornecer uma consistência de leitura em nível de transação.<br /><br /> As operações de usuário simultâneas de gravação na origem são bloqueadas por um período muito curto.<br /><br /> Operações DLL não simultâneas são permitidas, exceto na criação de múltiplos índices não clusterizados.|S (Shared) na tabela *<br /><br /> IS (Intent Shared)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Compilação<br /><br /> Fase principal|Os dados são digitalizados, classificados, mesclados e inseridos na origem em operações de carregamento em massa.<br /><br /> As operações de usuário simultâneas de exclusão, atualização, inserção e seleção são aplicadas aos índices preexistentes e a quaisquer outros novos índices sendo compilados.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
-|Final<br /><br /> Fase muito curta|Todas as transações atualizadas não confirmadas devem ser concluídas antes do início desta fase. Dependendo do bloqueio adquirido, todas as novas transações de usuário de leitura ou gravação devem ser bloqueadas por um período muito curto até que essa fase seja completada.<br /><br /> Os metadados do sistema estão atualizados para substituir a origem pelo destino.<br /><br /> Se necessário, a origem será removida. Por exemplo, depois de recompilar e remover um índice clusterizado.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S na tabela se estiver criando um índice não clusterizado.\*<br /><br /> SCH-M (Schema Modification) se qualquer estrutura de origem (índice ou tabela) for removida.\*|  
+|Preparação<br /><br /> Fase curta|Preparação dos metadados do sistema para criar uma nova estrutura de índice vazia.<br /><br /> Um instantâneo da tabela é definido. Ou seja, o controle de versão de linha é usado para fornecer uma consistência de leitura em nível de transação.<br /><br /> As operações de gravação de usuário simultâneas na origem são bloqueadas por um período curto.<br /><br /> Operações DLL não simultâneas são permitidas, exceto na criação de múltiplos índices não clusterizados.|S (Shared) na tabela *<br /><br /> IS (Intent Shared)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|Compilação<br /><br /> Fase principal|Os dados são digitalizados, classificados, mesclados e inseridos na origem em operações de carregamento em massa.<br /><br /> As operações de usuário simultâneas de exclusão, atualização, inserção e seleção são aplicadas aos índices preexistentes e a quaisquer outros novos índices compilados.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Final<br /><br /> Fase curta|Todas as transações atualizadas não confirmadas devem ser concluídas antes do início desta fase. Dependendo do bloqueio adquirido, todas as novas transações de usuário de leitura ou gravação devem ser bloqueadas por um período curto até que essa fase seja concluída.<br /><br /> Os metadados do sistema estão atualizados para substituir a origem pelo destino.<br /><br /> Se necessário, a origem será removida. Por exemplo, depois de recompilar e remover um índice clusterizado.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S na tabela se estiver criando um índice não clusterizado.\*<br /><br /> SCH-M (Schema Modification) se qualquer estrutura de origem (índice ou tabela) for removida.\*|  
   
- \* A operação de índice aguardará a conclusão de transações de atualização não confirmadas antes de adquirir o bloqueio S ou SCH-M na tabela.  
+ \* A operação de índice aguarda a conclusão de transações de atualização não confirmadas antes de adquirir o bloqueio S ou SCH-M na tabela.  
   
- ** O bloqueio de recurso INDEX_BUILD_INTERNAL_RESOURCE evita a execução de operações DDL (linguagem de definição de dados) simultâneas nas estruturas de origem e preexistentes enquanto a operação de índice está em andamento. Por exemplo, esse bloqueio evita a recompilação simultânea de dois índices na mesma tabela. Embora esse bloqueio de recurso esteja associado ao bloqueio Sch-M, ele não evita as instruções de manipulação de dados.  
+ ** O bloqueio de recurso INDEX_BUILD_INTERNAL_RESOURCE previne a execução de operações DDL (linguagem de definição de dados) simultâneas nas estruturas de origem e preexistentes enquanto a operação de índice está em andamento. Por exemplo, esse bloqueio evita a recompilação simultânea de dois índices na mesma tabela. Embora esse bloqueio de recurso esteja associado ao bloqueio Sch-M, ele não evita as instruções de manipulação de dados.  
   
  A tabela anterior mostra um único bloqueio Shared (S) adquirido durante a fase de compilação de uma operação de índice online que envolve um único índice. Quando índices clusterizados e não clusterizados são compilados ou recompilados em uma única operação de índice online (por exemplo, durante a criação de índice clusterizado inicial em uma tabela que contém um ou mais índices não clusterizados), dois bloqueios S de curto prazo são adquiridos durante a fase de compilação, seguidos de bloqueios IS (Tentativa Compartilhada) de longo prazo. Um bloqueio S é adquirido primeiramente para a criação de índice clusterizado e, quando a criação do índice clusterizado é concluída, um bloqueio S de curta duração é adquirido para a criação dos índices não clusterizados. Depois que os índices não clusterizados são criados, ocorre o downgrade do bloqueio S para um bloqueio IS até a fase final da operação de índice online.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
  O destino não é acessado por instruções SELECT emitidas pelo usuário até que a operação de índice seja concluída.  
   
- Após a conclusão da preparação e da fase final, os planos de consulta e atualização armazenados no cache de procedimento são invalidados. As consultas subsequentes usarão o novo índice.  
+ Após a conclusão da preparação e da fase final, os planos de consulta e atualização armazenados no cache de procedimento são invalidados. As consultas posteriores usarão o novo índice.  
   
  O tempo de vida de um cursor declarado em uma tabela que está envolvida em uma operação de índice online é limitado pelas fases de índice online. Os cursores de atualização são invalidados em cada fase. Os cursores somente leitura são invalidados somente após a fase final.  
   
@@ -97,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [Diretrizes para operações de índice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
-

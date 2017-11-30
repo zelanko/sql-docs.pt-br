@@ -1,5 +1,5 @@
 ---
-title: "Gerando Feeds de dados de relatórios (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Gerando feeds de dados de relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9e11ab920d6af6f09aa911f237ecf3a7c234b016
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Gerando feeds de dados de relatórios (Construtor de Relatórios e SSRS)
 
-  A extensão de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom gera um documento de serviço Atom que lista os feeds de dados disponíveis em um relatório paginado e os feeds de dados das regiões de dados em um relatório. Use essa extensão para gerar feeds de dados compatíveis com Atom legíveis e intercambiáveis com aplicativos que podem consumir feeds de dados gerados de relatórios. Por exemplo, você pode usar a extensão de renderização Atom para feeds de dados gerados que você pode usar no Power Pivot ou Power BI.  
+  A extensão de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom gera um documento de serviço Atom que lista os feeds de dados disponíveis em um relatório paginado e os feeds de dados das regiões de dados em um relatório. Use essa extensão para gerar feeds de dados compatíveis com Atom legíveis e intercambiáveis com aplicativos que podem consumir feeds de dados gerados de relatórios. Por exemplo, você pode usar a extensão de renderização Atom para feeds de dados gerados a serem usados no Power Pivot ou no Power BI.  
   
  O documento de serviço Atom lista pelo menos um feed de dados para cada região de dados em um relatório. Dependendo do tipo de região de dados e dos dados que a região de dados exibe, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode gerar vários feeds de dados de uma região de dados. Por exemplo, uma matriz ou gráfico podem fornecer vários feeds de dados. Quando a extensão de renderização Atom cria o documento de serviço Atom, um identificador exclusivo é criado para cada feed de dados e você usa o identificador na URL para acessar o conteúdo do feed de dados.  
   
@@ -85,13 +83,13 @@ ms.lasthandoff: 08/09/2017
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>Seção de dados  
- A seção de dados dos feeds de dados contém um \< **entrada**> elemento para cada linha no conjunto de linhas mesclada gerado pela extensão de renderização Atom.  
+ A seção de dados dos feeds de dados contém um elemento \<**entry**> para cada linha no conjunto de linhas bidimensional gerado pela extensão de renderização Atom.  
   
  O diagrama a seguir mostra um relatório que usa grupos e totais.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- O XML a seguir mostra um \< **entrada**> elemento do relatório em um feed de dados. Observe que o \< **entrada**> elemento inclui os totais de vendas e pedidos para o grupo e os totais de vendas e pedidos para todos os grupos. O \< **entrada**> elemento inclui todos os valores no relatório.  
+ O XML a seguir mostra um elemento \<**entry**> desse relatório em um feed de dados. Observe que o elemento \<**entry**> inclui os totais de vendas e pedidos para o grupo e os totais de vendas e pedidos para todos os grupos. O elemento \<**entry**> inclui todos os valores no relatório.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -120,11 +118,11 @@ ms.lasthandoff: 08/09/2017
   
  As linhas de dados para regiões de dados aninhadas em geral são largas, principalmente se as tabelas aninhadas e as matrizes tiverem grupos e totais. Talvez você ache útil exportar o relatório para um feed de dados e exibir o feed de dados para verificar se os dados gerados correspondem ao esperado.  
   
- Quando a extensão de renderização Atom cria o documento de serviço Atom, um identificador exclusivo é criado para cada feed de dados e você usa o identificador na URL para exibir o conteúdo do feed de dados. O documento de serviço de Atom de exemplo, mostrado acima, inclui a URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. A URL identifica o relatório (Resumo de Vendas do Produto), o formato de renderização Atom (ATOM) e o nome do feed de dados (xAx0x1).  
+ Quando a extensão de renderização Atom cria o documento de serviço Atom, um identificador exclusivo é criado para cada feed de dados e você usa o identificador na URL para exibir o conteúdo do feed de dados. O documento de serviço Atom de exemplo, mostrado acima, inclui a URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. A URL identifica o relatório (Resumo de Vendas do Produto), o formato de renderização Atom (ATOM) e o nome do feed de dados (xAx0x1).  
   
  Os nomes do item de relatório seguem o padrão de nomes de elemento RDL dos itens de relatório e, com frequência, não são intuitivos, nem fáceis de lembrar. Por exemplo, o nome padrão da primeira matriz posicionada em um relatório é Tablix 1. Os feeds de dados usam esses nomes.  
   
- Para facilitar o trabalho com o feed de dados, use a propriedade DataElementName da região de dados para fornecer nomes amigáveis. Se você fornecer um valor para DataElementName subelemento do feed de dados \< **d**> será usado é em vez do nome de região de dados padrão. Por exemplo, se o nome padrão de uma região de dados for Tablix1 e DataElementName definiu SalesByTerritoryYear o \< **d**> nos dados de feed usará SalesByTerritoryYear. Se as regiões de dados tiverem dois feeds de dados como o relatório de matriz descrito acima, os nomes usados nos feeds de dados serão alesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
+ Para facilitar o trabalho com o feed de dados, use a propriedade DataElementName da região de dados para fornecer nomes amigáveis. Se você fornecer um valor para DataElementName, o subelemento do feed de dados \<**d**> usará isso, em vez do nome padrão da região de dados. Por exemplo, se o nome padrão de uma região de dados for Tablix1 e DataElementName definir SalesByTerritoryYear, o \<**d**> no feed de dados usará SalesByTerritoryYear. Se as regiões de dados tiverem dois feeds de dados como o relatório de matriz descrito acima, os nomes usados nos feeds de dados serão alesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
   
  Se você comparar os dados mostrados no relatório e os dados no feed de dados, poderá observar algumas diferenças. Os relatórios frequentemente mostram dados numéricos e dados de hora/data, enquanto o feed de dados contém dados não formatados.  
   
@@ -198,5 +196,4 @@ ms.lasthandoff: 08/09/2017
 [Exportando para um arquivo CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
 [Exportar relatórios](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

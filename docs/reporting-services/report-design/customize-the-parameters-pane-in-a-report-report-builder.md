@@ -1,37 +1,35 @@
 ---
-title: "Personalizar o painel de parâmetros em um relatório (construtor de relatórios) | Microsoft Docs"
+title: "Personalizar o painel de parâmetros em um relatório (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7e31a23d41c011787960cc662c11f763bab7291b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Personalizar o painel de parâmetros em um relatório (Construtor de Relatórios)
   Ao criar relatórios paginados com parâmetros no Construtor de Relatórios, você pode personalizar o painel Parâmetros. No modo de exibição de Design de relatório, você pode arrastar um parâmetro para uma coluna e linha específicas no painel Parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.  
   
- Quando você arrasta um parâmetro para uma nova coluna e linha no painel, a ordem do parâmetro é alterada no painel **Dados do Relatório** . Quando você altera a ordem do parâmetro no painel de **Dados do Relatório**, o local do parâmetro no painel é alterado. Para obter mais informações sobre por que a ordem do parâmetro é importante, consulte [Alterar a ordem de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
+ Quando você arrasta um parâmetro para uma nova coluna e linha no painel, a ordem do parâmetro é alterada no painel **Dados do Relatório** . Quando você altera a ordem do parâmetro no painel de **Dados do Relatório** , o local do parâmetro no painel é alterado. Para obter mais informações sobre por que a ordem do parâmetro é importante, consulte [Alterar a ordem de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
 ## <a name="to-customize-the-parameters-pane"></a>Para personalizar o painel de parâmetros  
   
 1.  Na guia **Exibição** , marque a caixa de seleção **Parâmetros** para exibir o painel de parâmetros.  
   
-     ![Painel de parâmetros de acesso da guia Exibir](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "painel de parâmetros de acesso da guia Exibir")  
+     ![Acessar o painel de parâmetros na guia Exibir](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Acessar o painel de parâmetros na guia Exibir")  
   
      O painel aparece na parte superior da superfície de design.  
   
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Clique com o botão direito do mouse em uma célula vazia no painel de parâmetros e clique em **Adicionar Parâmetro**.  
   
-         ![Adicionar um novo parâmetro no painel de parâmetros de](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "adicionar o novo parâmetro no painel de parâmetros")  
+         ![Adicionar um novo parâmetro por meio do painel de parâmetros](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Adicionar um novo parâmetro por meio do painel de parâmetros")  
   
     -   Clique com o botão direito do mouse em **Parâmetros** no painel de **Dados do Relatório** e, depois, clique em **Adicionar Parâmetro**.  
   
@@ -51,13 +49,13 @@ ms.lasthandoff: 08/09/2017
   
     -   No painel de parâmetros, clique com o botão direito do mouse no parâmetro e depois clique em **Propriedades do Parâmetro**.  
   
-         ![Acessar propriedades de parâmetro no painel de parâmetros](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "acessar propriedades de parâmetro no painel de parâmetros")  
+         ![Acessar as propriedades de parâmetro no painel de parâmetros](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Acessar as propriedades de parâmetro no painel de parâmetros")  
   
     -   No painel de **Dados do Relatório** , clique com o botão direito do mouse no parâmetro e depois clique em **Propriedades do Parâmetro**.  
   
 5.  Para adicionar novas colunas e linhas ao painel ou para excluir colunas e linhas existentes, clique com o botão direito do mouse em qualquer lugar no painel de parâmetros e, em seguida, clique em um comando no menu exibido.  
   
-     ![Adicionar linhas e colunas ao painel de parâmetros](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "adicionar colunas e linhas no painel de parâmetros")  
+     ![Adicionar colunas e linhas ao painel de parâmetros](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Adicionar colunas e linhas ao painel de parâmetros")  
   
     > [!IMPORTANT]  
     >  Quando você exclui uma coluna ou linha que contém parâmetros, eles são excluídos do relatório.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
     -   No painel de parâmetros, clique com o botão direito do mouse no parâmetro e depois clique em  **Excluir**.  
   
-         ![Excluir parâmetros do painel de parâmetros](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "excluir parâmetros do painel de parâmetros")  
+         ![Excluir parâmetros do painel de parâmetros](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Excluir parâmetros do painel de parâmetros")  
   
     -   No painel de **Dados do Relatório** , clique com o botão direito do mouse no parâmetro e depois clique em **Excluir**.  
   
@@ -74,4 +72,3 @@ ms.lasthandoff: 08/09/2017
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

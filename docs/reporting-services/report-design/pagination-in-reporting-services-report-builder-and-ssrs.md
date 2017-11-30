@@ -1,5 +1,5 @@
 ---
-title: "Paginação no Reporting Services (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Paginação no Reporting Services (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ad24564f035952b3bf4834162e1039370efb3f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9e295143b577d99732186b0cefda5be908c1c34
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginação no Reporting Services (Construtor de Relatórios e SSRS)
   A paginação se refere ao número de páginas dentro de um relatório e ao modo como os itens de relatório são organizados nessas páginas. A paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varia, dependendo da extensão de renderização que você usa para exibir e entregar o relatório. Ao executar um relatório no servidor de relatórios, o relatório usa o processador HTML. O HTML segue um conjunto específico de regras de paginação. Por exemplo, se exportar o mesmo relatório para o PDF, o processador do PDF será utilizado e um conjunto de regras diferente será aplicado, portanto, o relatório será paginado de modo diferente. Para desenvolver com êxito um relatório que seja facilmente lido pelos seus usuários bem como que seja otimizado para o processador que pretende usar na entrega do relatório, você deve entender as regras utilizadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,14 +50,14 @@ ms.lasthandoff: 08/09/2017
   
  A área da página física que resta após a alocação do espaço para as margens, espaçamento das colunas e o cabeçalho e rodapé da página, é chamada de *área utilizável da página*. As margens só são aplicadas quando renderizar e imprimir os relatórios em formatos de processador de quebra de página não flexível. A imagem a seguir indica a margem e área utilizável da página de uma página física.  
   
- ![Página física com margens e área utilizável. ] (../../reporting-services/report-design/media/rspagemargins.gif "Página física com margens e área utilizável.")  
+ ![Página física com margens e área utilizável.](../../reporting-services/report-design/media/rspagemargins.gif "Página física com margens e área utilizável.")  
   
 ### <a name="newsletter-style-columns"></a>Colunas com estilo de boletim informativo  
  Seu relatório pode ser dividido em colunas, como as colunas de um jornal, mas são tratadas como páginas lógicas renderizadas na mesma página física. Elas são organizadas da esquerdo para direita, da parte superior para a parte inferior e são separadas por uma espaço em branco entre cada coluna. Se o relatório estiver dividido em mais de uma coluna, cada página física será dividida verticalmente em colunas, cada qual considerada uma página lógica. Por exemplo, suponhamos que você tenha duas colunas em uma página física. O conteúdo de seu relatório preenche a primeira coluna e em seguida a segunda coluna. Se o relatório não couber completamente dentro das duas primeiras colunas, o relatório preenche a primeira coluna e em seguida a segunda coluna na página seguinte. As colunas continuam sendo preenchidas, da esquerda para a direita, da parte superior para a parte inferior até que todos os itens do relatório sejam renderizadas. Se especificar tamanho de colunas que fazem com que a largura horizontal ou vertical se iguala a zero, o espaçamento das colunas se tornará zero por padrão.  
   
  As colunas são especificadas usando o painel **Propriedades do Relatório** , a caixa de diálogo **Configurar Página** ou alterando as propriedades TopMargin, BottomMargin, LeftMargin e RightMargin no painel **Propriedades** . Se quiser usar um tamanho de margem que não está definida, você pode especificar o tamanho da margem usando as configurações das Informações de Dispositivo para o processador específico que está sendo usado para exportar o relatório. As colunas só são aplicadas quando você renderizar e imprimir os relatórios em PDF ou em formatos de Imagem. A imagem a seguir indica a área de página utilizável de uma página que contém colunas.  
   
- ![Página física com colunas representadas. ] (../../reporting-services/report-design/media/rspagecolumns.gif "Página física com colunas representadas.")  
+ ![Página física com colunas representadas.](../../reporting-services/report-design/media/rspagecolumns.gif "Página física com colunas representadas.")  
   
 ## <a name="page-breaks-and-page-names"></a>Quebras de páginas e nomes de página  
  Um relatório pode ser mais legível e seus dados mais fáceis de auditar e exportar quando ele tem nomes de página. O Reporting Services fornece propriedades para relatórios e regiões de dados do tablix (tabela, matriz e lista), grupos e retângulos do relatório para controlar a paginação, reiniciar números de página e fornecer novos nomes de página de relatório em quebras de páginas. Estes recursos podem aprimorar relatórios independentemente do formato no qual eles são renderizados, mas são especialmente úteis ao exportar relatórios para pastas de trabalho do Excel.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/09/2017
   
  Você pode definir a propriedade BreakLocation nas caixas de diálogo **Propriedades do Tablix**, **Propriedades do Retângulo**ou **Propriedades de Grupo** , mas é necessário definir as propriedades Disabled, ResetPageNumber e PageName no painel Propriedades do Construtor de Relatórios. Se as propriedades no painel Propriedades estiverem organizadas por categoria, você encontrará as propriedades na categoria **PageBreak** . Para grupos, a categoria **PageBreak** está dentro da categoria **Grupo** .  
   
- Você pode usar constantes e expressões simples ou complexas para definir o valor das propriedades Disabled e ResetPageNumber. Contudo, você não pode usar expressões com a propriedade BreakLocation. Para obter mais informações sobre gravar e usar expressões, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ Você pode usar constantes e expressões simples ou complexas para definir o valor das propriedades Disabled e ResetPageNumber. Contudo, você não pode usar expressões com a propriedade BreakLocation. Para obter mais informações sobre como gravar e usar expressões, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
  Em seu relatório, você pode escrever expressões que referenciam os nomes da página atual ou os números de página ao usar a coleção **Globals** . Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
@@ -88,6 +88,6 @@ ms.lasthandoff: 08/09/2017
  Para obter mais informações sobre como essas propriedades funcionam quando os relatórios são exportados para o Excel, consulte [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Layout de página e renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

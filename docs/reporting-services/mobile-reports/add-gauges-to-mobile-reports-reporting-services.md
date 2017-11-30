@@ -1,26 +1,24 @@
 ---
-title: "Adicione indicadores para relatórios móveis | O Reporting Services | Microsoft Docs"
+title: "Adicionar medidores a relatórios móveis | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Adicionar medidores a relatórios móveis | Reporting Services
 Medidores são os visuais mais básicos e amplamente usados em relatórios móveis. Eles exibem um único valor de um conjunto de dados – apenas o valor ou o valor comparado a uma meta.
@@ -29,7 +27,7 @@ Medidores são os visuais mais básicos e amplamente usados em relatórios móve
   
 *Visualizações de medidor na guia Layout*  
   
-Todos os indicadores no SQL Server Mobile Report Publisher têm pelo menos uma propriedade em comum: um valor principal, definido como um campo numérico em uma das tabelas de dados no relatório móvel.  
+No Publicador de Relatórios Móveis do Microsoft SQL Server, todos os medidores têm pelo menos uma propriedade em comum: um valor principal, definido como um campo numérico em uma das tabelas de dados no relatório móvel.  
 
 Todos os medidores, exceto pelo medidor de Número, também podem exibir um valor de comparação, ou *delta*, – a relação entre o valor principal e um valor de comparação. O valor de comparação é, muitas vezes, o objetivo e o medidor é um indicador visual do progresso para esse objetivo, ou o delta entre o valor real e o objetivo.
 
@@ -95,4 +93,3 @@ Ela determina como os números exibidos no medidor são formatados – por exemp
 * [Navegadores nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizações nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Grades de dados nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

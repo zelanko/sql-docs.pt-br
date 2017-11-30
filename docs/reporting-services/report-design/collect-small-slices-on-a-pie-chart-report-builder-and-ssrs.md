@@ -1,5 +1,5 @@
 ---
-title: "Coletar fatias pequenas em um gráfico de pizza (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Coletar fatias pequenas em um gráfico de pizza (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,26 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e25526de7b4ae194d0aa510c12a9a995208c035a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a791e5bae17ab1259fb664d065a9a13fcde21aa1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Coletar fatias pequenas em um gráfico de pizza (Construtor de Relatórios e SSRS)
-Gráficos de pizza com muitas fatias pode parecer clusterizados. Saiba como coletar várias fatias pequenas em um gráfico de pizza em uma única fatia em [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] relatórios paginados.
+Gráficos de pizza com muitas fatias podem parecer desorganizados. Saiba como reunir várias fatias pequenas de um gráfico de pizza em uma única fatia nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
  
  Para coletar pequenas fatias em uma fatia, primeiro decida se o limite para coleta de pequenas fatias será medido como uma porcentagem do gráfico de pizza ou como um valor fixo. 
  
- O [Tutorial: adicionar um gráfico de pizza ao seu relatório (construtor de relatórios)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) orienta você por meio de coleta de pequenas fatias em uma única fatia, se você gostaria de tentar isso primeiro com dados de exemplo.
+ O [Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) explica como reunir fatias pequenas em uma única fatia, caso você deseje experimentar isso com os dados de exemplo primeiro.
  
- ![Report-Builder-Pie-Chart-Other-Slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  Também é possível coletar pequenas fatias em um segundo gráfico de pizza que é retirado de uma fatia coletada do primeiro gráfico de pizza. O segundo gráfico de pizza é desenhado à direita do gráfico de pizza original.  
   
@@ -58,7 +57,7 @@ Gráficos de pizza com muitas fatias pode parecer clusterizados. Saiba como cole
          Defina a propriedade CollectedThreshold como **10**.  
   
         > [!NOTE]  
-        >  Se você definir CollectedStyle como **SingleSlice**, CollectedThreshold para um valor maior que **100**e CollectedThresholdUsePercent para **True**, o gráfico gerará uma exceção porque não é possível calcular uma porcentagem. Para resolver esse problema, defina CollectedThreshold como um valor menor que **100**.  
+        >  Se você definir CollectedStyle como **SingleSlice**, CollectedThreshold com um valor maior que **100** e CollectedThresholdUsePercent como **True**, o gráfico gerará uma exceção porque não é possível calcular um percentual. Para resolver esse problema, defina CollectedThreshold com um valor menor que **100**.  
   
     -   **Por valor de dados.** Por exemplo, para coletar qualquer fatia no gráfico de pizza que seja menor do que 5000 em uma única fatia:  
   
@@ -93,4 +92,3 @@ Gráficos de pizza com muitas fatias pode parecer clusterizados. Saiba como cole
 *  [Exibir rótulos de pontos de dados fora de um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
 *  [Exibir valores de porcentagem em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)     
   
-

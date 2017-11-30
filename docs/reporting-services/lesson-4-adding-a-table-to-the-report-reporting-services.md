@@ -5,23 +5,21 @@ ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: c073de93cfb1abee01a05e207fbce087ec44ade0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lição 4: Adicionando uma tabela ao relatório (Reporting Services)
 Depois de definir o conjunto de dados, você pode começar a criar o relatório. Um layout de relatório é criado arrastando e soltando regiões de dados, caixas de texto, imagens e outros itens que você deseja incluir no relatório na superfície de design.  
@@ -30,7 +28,7 @@ Itens que contêm linhas de dados repetidas de conjuntos de dados subjacentes s�
   
 ### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>Para adicionar uma região de dados de Tabela e campos ao layout de um relatório  
   
-1.  Na **Caixa de Ferramentas**, clique em **Tabela**, clique na superfície de design e arraste o mouse. O Designer de Relatórios desenha uma região de dados de tabela com três colunas no centro da superfície de design. A **Caixa de Ferramentas** pode aparecer como uma guia no lado esquerdo do painel **Dados do Relatório** . Para abrir a **Caixa de Ferramentas**, mova o ponteiro sobre a guia **Caixa de Ferramentas** . Se a **Caixa de Ferramentas** não estiver visível, no menu **Exibir** , clique em **Caixa de Ferramentas**.
+1.  Na **Caixa de Ferramentas**, clique em **Tabela**, clique na superfície de design e arraste o mouse. O Designer de Relatórios desenha uma região de dados de tabela com três colunas no centro da superfície de design. A **Caixa de Ferramentas** pode aparecer como uma guia no lado esquerdo do painel **Dados do Relatório** . Para abrir a **Caixa de Ferramentas**, mova o ponteiro sobre a guia **Caixa de Ferramentas** . Se a **Caixa de Ferramentas** não estiver visível, no menu **Exibir**, clique em **Caixa de Ferramentas**.
   
      ![ssrs_ssdt_addtable](../reporting-services/media/ssrs-ssdt-addtable.png) 
   
@@ -64,7 +62,7 @@ A visualização de um relatório permite exibir o relatório renderizado sem qu
   
     O diagrama a seguir mostra parte do relatório na exibição Visualização.  
   
-    ![Visualização, linhas de detalhes de tabela com 5 colunas](../reporting-services/media/rs-basictabledetailspreview.png "visualização, linhas de detalhes de tabela com 5 colunas")  
+    ![Visualização, linhas de detalhes da tabela com 5 colunas](../reporting-services/media/rs-basictabledetailspreview.png "Visualização, linhas de detalhes da tabela com 5 colunas")  
   
     Observe que a moeda (na coluna Total da Linha) tem seis casas decimais e a data inclui um carimbo de data/hora. Você vai corrigir essa formatação na próxima lição.  
   
@@ -72,9 +70,8 @@ A visualização de um relatório permite exibir o relatório renderizado sem qu
 > No menu **Arquivo** , clique em **Salvar Tudo** para salvar o relatório.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-Você adicionou uma região de dados de Tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Em seguida, você formatará cabeçalhos de colunas e valores de data e de moeda. Consulte [lição 5: formatando um relatório &#40; Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+Você adicionou uma região de dados de Tabela ao relatório, adicionou campos à região de dados e visualizou o relatório com êxito. Em seguida, você formatará cabeçalhos de colunas e valores de data e de moeda. Consulte [Lição 5: Formatando um relatório &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
 [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
 [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
-

@@ -5,8 +5,7 @@ ms.date: 08/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2849b5a4570c4ce4c2633c13522c66d04b4c47fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Recursos de pesquisa de texto completo preteridos no SQL Server 2016
   Este tópico descreve os recursos de pesquisa de texto completo preteridos que ainda estão disponíveis no SQL Server. Esses recursos estão programados para serem removidos em uma versão futura. Não use recursos preteridos em novos aplicativos.  
@@ -62,4 +60,3 @@ Monitore seu uso de recursos preteridos usando o contador de desempenho do objet
  *O objeto **SQL Server:Deprecated Features** não monitora ocorrências do *grupo de arquivos* CREATE FULLTEXT CATLOG ON FILEGROUP.  
   
   
-

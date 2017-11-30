@@ -1,5 +1,5 @@
 ---
-title: "Visão geral de extensões de entrega | Microsoft Docs"
+title: "Visão geral das extensões de entrega | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,35 +10,33 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - subscriptions [Reporting Services], delivery extensions
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 07f9b2fcb366ecf1b433917852462766d6cd0951
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delivery-extensions-overview"></a>Visão geral de extensões de entrega
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite que os usuários criem e publiquem relatórios que, uma vez criados e publicados, podem ser entregues em vários locais. Além disso, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui várias extensões de entrega e uma API de entrega que permite que os desenvolvedores criem extensões de entrega adicionais para estender ainda mais a funcionalidade de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite que os usuários criem e publiquem relatórios que, uma vez criados e publicados, podem ser entregues em vários locais. Além disso, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui várias extensões de entrega e uma API de entrega que permite que os desenvolvedores criem extensões de entrega adicionais para estender ainda mais a funcionalidade de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  A tabela a seguir lista as extensões de entrega incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extensão de entrega|Description|  
+|Extensão da entrega|Description|  
 |------------------------|-----------------|  
 |Email do servidor de relatório|Usa um servidor SMTP para enviar relatórios de email a usuários individuais ou a grupos.|  
 |Compartilhamento de arquivos do servidor de relatórios|Usado para distribuir relatórios em sua organização para o compartilhamentos de arquivos de rede. Oferece a capacidade de copiar um relatório automaticamente para um compartilhamento de arquivo em uma agenda designada.|  
   
- ![Arquitetura de extensão de entrega de serviços de emissão de relatórios](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "arquitetura de extensão de entrega do Reporting Services")  
+ ![Arquitetura de extensão de entrega do Reporting Services](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Arquitetura de extensão de entrega do Reporting Services")  
 Arquitetura da extensão de entrega do Reporting Services  
   
  As extensões de entrega são emparelhadas com as assinaturas. Durante a criação de uma assinatura, um usuário pode escolher uma das extensões de entrega disponíveis para determinar como o relatório será entregue. No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], as assinaturas estão localizadas no banco de dados do servidor de relatório. Quando ocorre um evento, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] corresponde o evento às assinaturas contidas no banco de dados do servidor de relatório. Para cada assinatura ligada ao evento, o servidor de relatório criará uma notificação. Para assinaturas controladas por dados, uma notificação será criada para cada destinatário. Depois que a notificação for criada, o servidor de relatório invocará uma determinada extensão de entrega e passará valores para as configurações de extensão especificadas na notificação. A extensão de entrega envia a notificação ao usuário como especificado pela extensão de entrega selecionada.  
@@ -55,17 +53,16 @@ Arquitetura da extensão de entrega do Reporting Services
   
 -   Um computador de implantação com um servidor de relatório instalado.  
   
--   Um computador de desenvolvimento com [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) instalado.  
+-   Um computador de desenvolvimento com o [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] ou o SDK (Software Development Kit) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] instalado.  
   
 -   Uma compreensão detalhada dos recursos e das capacidades do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], especificamente de assinatura e de entrega.  
   
 -   Uma compreensão detalhada do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] e de controles da Web se estiver planejando implementar a sua própria interface do usuário de assinatura para o Gerenciador de Relatórios.  
   
--   Experiência de desenvolvimento em um [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] linguagem, como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual c# ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Experiência de desenvolvimento em uma linguagem do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ## <a name="see-also"></a>Consulte também  
  [Implementando uma extensão de entrega](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Biblioteca de extensões do Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: add18839976ae919686cbd488385531de3bf684e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Usando um conjunto de dados externo com o Reporting Services
-  O **DataSet** objeto é central para o suporte desconectado, distribuído cenários de dados com [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. O **DataSet** objeto é uma representação residente na memória de dados que fornece um modelo de programação relacional consistente, independentemente da fonte de dados. Pode ser usado com várias fontes de dados diferentes, com dados XML ou para gerenciar dados locais ao aplicativo. O **DataSet** objeto representa um conjunto completo de dados, incluindo tabelas relacionadas, restrições e relações entre as tabelas. Devido a **DataSet** versatilidade do objeto de armazenamento e a exposição de dados, os dados geralmente pode ser processada e transformada em um **DataSet** antes que ocorra qualquer relatório sobre os dados do objeto.  
+  O objeto **DataSet** é central para o suporte a cenários de dados desconectados e distribuídos com o [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. O objeto **DataSet** é uma representação residente na memória dos dados que fornece um modelo de programação relacional consistente, seja qual for a fonte de dados. Pode ser usado com várias fontes de dados diferentes, com dados XML ou para gerenciar dados locais ao aplicativo. O objeto **DataSet** representa um conjunto completo de dados, incluindo tabelas relacionadas, restrições e relacionamentos entre as tabelas. Por causa da versatilidade do objeto **DataSet** em armazenar e expor dados, com frequência, os dados poderão ser processados e transformados em um objeto **DataSet** antes da ocorrência de qualquer relatório sobre os dados.  
   
- Com [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensões de processamento de dados, você pode integrar qualquer **DataSet** objetos que são criados por aplicativos externos. Para fazer isso, você cria uma extensão de processamento de dados personalizadas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que atua como uma ponte entre o **DataSet** objeto e o servidor de relatório. A maior parte do código para o processamento desse **DataSet** objeto está contido no **DataReader** classe que você criar.  
+ Com as extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você pode integrar qualquer objeto **DataSet** personalizado criado por aplicativos externos. Para conseguir isso, crie uma extensão de processamento de dados personalizada no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que atua como uma ponte entre o objeto **DataSet** e o servidor de relatório. A maior parte do código para o processamento desse objeto **DataSet** está contido na classe **DataReader** que você criou.  
   
- A primeira etapa na exposição de sua **conjunto de dados** objeto para o servidor de relatório é implementar um método específico de provedor na sua **DataReader** classe pode preencher uma **conjunto de dados** objeto. O exemplo a seguir mostra como carregar dados estáticos em uma **DataSet** objeto usando um método específico do provedor em sua **DataReader** classe.  
+ A primeira etapa na exposição do objeto **DataSet** ao servidor de relatório é implementar um método específico ao provedor na classe **DataReader** que pode popular um objeto **DataSet**. O exemplo a seguir mostra como carregar dados estáticos em um objeto **DataSet** usando um método específico ao provedor na classe **DataReader**.  
   
 ```vb  
 'Private members of the DataReader class  
@@ -168,7 +166,7 @@ public int GetOrdinal(string name)
 }  
 ```  
   
- Quando você cria ou recuperar o conjunto de dados, você pode usar o **conjunto de dados** objeto em suas implementações do **leitura**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType**, e **FieldCount** membros o **DataReader** classe.  
+ Depois de criar e recuperar o conjunto de dados, use o objeto **DataSet** nas implementações dos membros **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType** e **FieldCount** da classe **DataReader**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões do Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
@@ -176,4 +174,3 @@ public int GetOrdinal(string name)
  [Biblioteca de extensões do Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

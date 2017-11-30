@@ -1,5 +1,5 @@
 ---
-title: "Ajuda F1 do Designer de relatórios | Microsoft Docs"
+title: "Ajuda F1 do Designer de Relatórios | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Report Designer [Reporting Services], dialog boxes
+helpviewer_keywords: Report Designer [Reporting Services], dialog boxes
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b896408bc673dfd1d88d9e037b8f1942e23ba01c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a3629ab42cef5cceeaccb8a969b003667808936f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-designer-f1-help"></a>Ajuda F1 do Designer de Relatórios
   Esta seção fornece Ajuda F1 para os assistentes, as exibições e as caixas de diálogo do Designer de Relatórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. Como alternativa, você pode abrir a Ajuda F1 ao trabalhar na caixa de diálogo, com o pressionamento de F1 ou com um clique no botão Ajuda exibido na caixa de diálogo.  
@@ -35,4 +33,3 @@ ms.lasthandoff: 08/09/2017
    
   
   
-

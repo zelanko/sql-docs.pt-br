@@ -1,5 +1,5 @@
 ---
-title: "Relatório de peças (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Partes de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10543"
+f1_keywords: "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 817f519ef87ae764f41634f467a554cbae04baed
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4b2b6d82d897af5f41163257bd129df1ef538ecd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Partes de relatório (Construtor de Relatórios e SSRS)
   Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como *partes de relatório*. Partes de relatório são itens de relatório paginados que foram publicados separadamente em um servidor de relatório e que podem ser reutilizados em outros relatórios paginados. As partes de relatório têm uma extensão de arquivo .rsc.  
@@ -100,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="what-comes-with-a-report-part"></a>O que vem com uma parte de relatório  
  Quando você adiciona uma parte de relatório a seu relatório, também está adicionando tudo que ele deve ter para funcionar. Por exemplo, qualquer objeto que exiba dados depende de um conjunto de dados: uma consulta e uma conexão com uma fonte de dados. Também pode ter um ou mais parâmetros. Todos os itens dos quais ele depende são suas *dependências*e todos eles, ou ponteiros para eles, serão incluídos com a parte de relatório quando você adicioná-lo ao relatório. O conjunto de dados e os parâmetros são listados no painel de dados do relatório do seu relatório.  
   
- O conjunto de dados para a parte de relatório pode ser inserido na parte de relatório, ou pode ser um conjunto de dados separado e compartilhado para o qual a parte de relatório aponta. Se for inserido na parte de relatório, você talvez possa modificá-lo. Se for um conjunto de dados compartilhado, será um objeto separado para o qual você precisaria de permissões. Para obter mais informações sobre compartilhadas e conjuntos de dados inseridos, consulte [conjuntos de dados de relatório &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
+ O conjunto de dados para a parte de relatório pode ser inserido na parte de relatório, ou pode ser um conjunto de dados separado e compartilhado para o qual a parte de relatório aponta. Se for inserido na parte de relatório, você talvez possa modificá-lo. Se for um conjunto de dados compartilhado, será um objeto separado para o qual você precisaria de permissões. Para obter mais informações sobre conjuntos de dados compartilhados e inseridos, consulte [Conjuntos de dados de relatórios &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Resolvendo conflitos de nomenclatura  
  Quando você adiciona uma parte de relatório, o Construtor de Relatórios corrige os conflitos de nome. Por exemplo, se você já tiver um Chart1 em seu relatório e adicionar uma parte de relatório chamada Chart1, o Construtor de Relatórios renomeará automaticamente a nova parte de relatório como Chart2. Se você já tiver um Dataset1 em seu relatório e adicionar uma parte de relatório que refere-se a um conjunto de dados diferente que também é chamado Dataset1, o Construtor de Relatórios renomeará o novo conjunto de dados como Dataset2 e atualizará as referências.  
@@ -152,4 +150,3 @@ ms.lasthandoff: 08/09/2017
  [Gerenciar partes de relatório](../../reporting-services/report-design/managing-report-parts.md)  
   
   
-

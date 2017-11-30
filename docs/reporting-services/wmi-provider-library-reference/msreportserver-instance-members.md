@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_Instance Members
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_Instance Members
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- MSReportServer_Instance class
+helpviewer_keywords: MSReportServer_Instance class
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4858da330363297a88c6bcde441b26e5eb384a57
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1ad1fe599e0311c9bf448d3ae341e220efe798da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverinstance-members"></a>Membros MSReportServer_Instance
   A classe MSReportServer_Instance fornece informações básicas necessárias para um cliente se conectar a um servidor de relatório instalado.  
@@ -51,4 +47,3 @@ ms.lasthandoff: 08/09/2017
 |[Método GetReportServerUrls &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Lista as URLs que os usuários podem usar para acessar o servidor de relatório e o gerenciador de relatórios.|  
   
   
-

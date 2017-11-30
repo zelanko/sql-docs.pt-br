@@ -1,5 +1,5 @@
 ---
-title: "Agregar funções referência (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Referência de funções de agregação (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f7f78e643a5ed5e8874cf2f8dda867c3edac70d0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8e5fec757d51ced0226c57a76c9117ba752177e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---aggregate-functions-reference"></a>Funções do construtor de relatórios - referência de funções de agregação
+# <a name="report-builder-functions---aggregate-functions-reference"></a>Funções do Construtor de Relatórios – Referência de funções de agregação
   Para incluir valores agregados no relatório, é possível usar funções de agregação internas em expressões. A função de agregação padrão para campos numéricos é SUM. É possível editar a expressão e usar uma função de agregação interna diferente ou especificar outro escopo. O escopo identifica qual conjunto de dados deve ser usado no cálculo.  
   
  À medida que o processador de relatório combina os dados e o layout do relatório, as expressões de cada item do relatório são avaliadas. Ao exibir cada página do relatório, você vê os resultados de cada expressão nos itens de relatório renderizados.  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/09/2017
 |[Var](../../reporting-services/report-design/report-builder-functions-var-function.md)|Retorna a variação de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.|  
 |[VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)|Retorna a variação da população de todos os valores numéricos não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.|  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ##  <a name="Restrictions"></a> Restrições em campos internos, coleções e funções de agregação  
  A tabela a seguir resume as restrições em locais no relatório em que é possível adicionar expressões que contêm referências a coleções internas globais.  
@@ -109,7 +108,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Observação 8.** O tipo de dados de todas as agregações - exceto Count e CountDistinct - deve ser o mesmo, ou nulo, para todos os valores.  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ##  <a name="NestedRestrictions"></a> Restrições em agregações aninhadas  
  A tabela a seguir resume as restrições nas quais as funções de agregação podem especificar outras funções de agregação como agregações aninhadas.  
@@ -126,7 +125,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Observação 1.** As funções de agregação só serão permitidas na expressão *Source* de uma função Lookup se a função Lookup não estiver contida em uma agregação. As funções de agregação não são permitidas nas expressões *Destination* ou *Result* de uma função Lookup.  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ##  <a name="CalculatingRunningValues"></a> Calculando valores em uso  
  As funções internas a seguir calculam os valores em uso de um conjunto de dados. **RowNumber** é semelhante a **RunningValue** pois retorna o valor em uso de uma contagem que é incrementada para cada linha no escopo contentor. O parâmetro do escopo dessas funções deve especificar um escopo de contenção que controle quando a contagem é reiniciada.  
@@ -136,7 +135,7 @@ ms.lasthandoff: 08/09/2017
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|Retorna uma contagem contínua do número de linhas para o escopo especificado. A função **RowNumber** reinicia a contagem em 1, não em 0.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|Retorna uma agregação contínua de todos os valores numéricos não nulos especificados pela expressão, avaliados para o escopo fornecido.|  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ##  <a name="RetrievingRowCounts"></a> Recuperando contagens de linhas  
  A função interna a seguir calcula o número de linhas no escopo fornecido. Use esta função para contar todas as linhas, inclusive as linhas com valores nulos.  
@@ -145,7 +144,7 @@ ms.lasthandoff: 08/09/2017
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Retorna o número de linhas no escopo especificado, inclusive as linhas com valores nulos.|  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ##  <a name="LookupFunctions"></a> Procurando valores de outro conjunto de dados  
  As funções de pesquisa a seguir recuperam valores de um conjunto de dados especificado.  
@@ -156,7 +155,7 @@ ms.lasthandoff: 08/09/2017
 |[Função LookupSet](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|Retorna um conjunto de valores de um conjunto de dados para uma expressão especificada.|  
 |[Função Multilookup](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|Retorna o conjunto de primeiros valores correspondentes para um conjunto de nomes de um conjunto de dados que contém pares de nome/valor.|  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ##  <a name="RetrievingPostsortValues"></a> Recuperando valores dependentes de classificação  
  As funções internas a seguir retornam o primeiro, o último ou o valor anterior de um escopo fornecido. Estas funções dependem da ordem de classificação dos valores dos dados. Use estas funções, por exemplo, para localizar o primeiro e o último valor em uma página para criar um cabeçalho de página em estilo de dicionário. Use **Previous** para comparar um valor em uma linha com o valor da linha anterior dentro de um escopo específico, por exemplo, para localizar valores de porcentagem ano a ano em uma tabela.  
@@ -167,7 +166,7 @@ ms.lasthandoff: 08/09/2017
 |[Last](../../reporting-services/report-design/report-builder-functions-last-function.md)|Retorna o último valor no escopo fornecido da expressão especificada.|  
 |[Previous](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Retorna o valor ou o valor de agregação especificado para a instância anterior de um item do escopo especificado.|  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ##  <a name="RetrievingServerAggregates"></a> Recuperando agregações do servidor  
  A função interna a seguir recupera agregações personalizadas do provedor de dados. Por exemplo, usando um tipo de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , é possível recuperar agregações calculadas no servidor de fonte de dados para uso em um cabeçalho de grupo.  
@@ -176,7 +175,7 @@ ms.lasthandoff: 08/09/2017
 |------------------|---------------------|  
 |[Agregado](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Retorna uma agregação personalizada da expressão especificada, conforme definido pelo provedor de dados.|  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ##  <a name="TestingforScope"></a> Testando para escopo  
  A função interna a seguir testa o contexto atual de um item de relatório para verificar se ele é membro de um escopo específico.  
@@ -185,7 +184,7 @@ ms.lasthandoff: 08/09/2017
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Indica se a instância atual de um item está dentro do escopo especificado.|  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ##  <a name="RetrievingRecursiveLevel"></a> Recuperando nível recursivo  
  A função interna a seguir recupera o nível atual quando uma hierarquia recursiva é processada. Use o resultado dessa função com a propriedade **Padding** em uma caixa de texto para controlar o nível de recuo de uma hierarquia visual para um grupo recursivo. Para obter mais informações, consulte [Criar grupos de hierarquias recursivas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
@@ -194,12 +193,11 @@ ms.lasthandoff: 08/09/2017
 |--------------|-----------------|  
 |[Nível](../../reporting-services/report-design/report-builder-functions-level-function.md)|Retorna o nível atual de profundidade em uma hierarquia recursiva.|  
   
- ![Ícone de seta usado com de volta para o link superior](../../analysis-services/instances/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior")voltar ao início  
+ ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
 ## <a name="see-also"></a>Consulte também  
- [Uso de expressões em relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Exemplos de expressões &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

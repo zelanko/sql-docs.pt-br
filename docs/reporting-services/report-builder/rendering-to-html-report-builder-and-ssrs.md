@@ -1,5 +1,5 @@
 ---
-title: "Renderizando para HTML (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Renderizando para HTML (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a431b5b8c988b981f217353c366bbbe1f1f68699
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 13d54a271ce3889f0fe3e9c86c2a44b9889529c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Renderizando para HTML (Construtor de Relatórios e SSRS)
   A extensão de renderização HTML renderiza um relatório paginado no formato HTML. A extensão de renderização também pode produzir páginas HTML totalmente formadas ou fragmentos de HTML a serem inseridos em outras páginas HTML. Todo o HTML é gerado com a codificação UTF-8.  
@@ -81,13 +80,13 @@ ms.lasthandoff: 08/09/2017
  Os rótulos do mapa do documento são renderizados e podem ser navegados usando o mapa do documento no controle do visualizador. Para cabeçalhos de região de dados omitidos, os rótulos são renderizados na primeira célula filho. Se não houver nenhuma célula filho presente, o rótulo será renderizado na filho que a antecede.  
   
 ### <a name="bookmarks"></a>Indicadores  
- Links de indicadores são renderizados e são exibidos como hyperlinks. Destinos de indicadores são renderizados e podem ser navegados, clicando nos links de indicadores. Quando um link de indicador é clicado, o relatório vai para a primeira ocorrência do rótulo do indicador de destino e, quando possível, o navegador é rolado para que o link do indicador fique na parte superior da janela. Âncora HTML (\<um >) marcas são usadas para marcar destinos de indicadores.  
+ Links de indicadores são renderizados e são exibidos como hyperlinks. Destinos de indicadores são renderizados e podem ser navegados, clicando nos links de indicadores. Quando um link de indicador é clicado, o relatório vai para a primeira ocorrência do rótulo do indicador de destino e, quando possível, o navegador é rolado para que o link do indicador fique na parte superior da janela. As marcações de âncora de HTML (\<a>) são usadas para marcar destinos de indicadores.  
   
 ### <a name="interactive-sorting"></a>Classificação interativa  
  Se uma caixa de texto tiver uma classificação de usuário definida, a extensão de renderização HTML renderizará os ícones de classificação na caixa de texto à direita do conteúdo. Se um relatório contiver qualquer caixa de texto na qual a classificação do usuário está definida, o JavaScript será renderizado, gerando um “postback” para o servidor quando a imagem de classificação for clicada.  
   
 ### <a name="hyperlinks-and-drillthrough"></a>Hyperlinks e detalhamento  
- Hiperlinks e links de detalhamento são renderizados como hiperlinks em itens de relatório usando a âncora HTML (\<um >) marcas ao redor do item no qual eles são definidos.  
+ Os hiperlinks e links de detalhamento são renderizados como hiperlinks em itens de relatório usando as marcações de âncora HTML (\<a>) ao redor do item no qual elas estão definidas.  
   
 ### <a name="search"></a>Pesquisa  
  O recurso Pesquisar permite que os usuários procurem uma cadeia de caracteres de texto no relatório.  
@@ -100,11 +99,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>Consulte também  
- [Paginação no Reporting Services &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamentos de renderização &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões &#40; de renderização de relatório diferente Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Renderizando itens de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

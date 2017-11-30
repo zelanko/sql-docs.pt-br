@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetDatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetDatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetDatabaseLogonTimeout method
+helpviewer_keywords: SetDatabaseLogonTimeout method
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4b9cb3569867b2e6cda8a42c3860c65337ad8cbe
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6362913c89187ba66ede8ee15c578ffe7d5d69e2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setdatabaselogontimeout"></a>Método ConfigurationSetting - SetDatabaseLogonTimeout
+# <a name="configurationsetting-method---setdatabaselogontimeout"></a>Método de ConfigurationSetting – SetDatabaseLogonTimeout
   Especifica o valor de tempo limite padrão para as conexões do banco de dados do servidor de relatório.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -62,4 +58,3 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
  [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

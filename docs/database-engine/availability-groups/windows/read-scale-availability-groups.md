@@ -1,26 +1,26 @@
 ---
 title: Grupos de disponibilidade de escala de leitura | Microsoft Docs
 ms.custom: 
-ms.date: 04/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7c607ab320a7deb80fb140ee9f4cc25b798b7fc4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6dfa046a07b9fd5a3eddbe474b5ea63c1163c26c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="read-scale-availability-groups"></a>Grupos de disponibilidade de escala de leitura
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
@@ -35,10 +35,12 @@ Os aplicativos cliente que executam cargas de trabalho de análise ou relatório
 
 No [!INCLUDE[sssql15-md](..\..\..\includes\sssql15-md.md)] e anterior, todos os grupos de disponibilidade exigiam um cluster. O cluster fornecia continuidade dos negócios – HADR (alta disponibilidade e recuperação de desastre). Além disso, as réplicas secundárias podiam ser configuradas para operações de leitura. A configuração e operação de um cluster implicava muita sobrecarga operacional, caso o HA não fosse a meta. O SQL Server 2017 introduz grupos de disponibilidade de escala de leitura sem um cluster. 
 
-Se o requisito de negócios é conservar recursos para cargas de trabalho críticas executadas na primária, os usuários agora podem usar o roteamento somente leitura ou se conectar diretamente às réplicas secundárias legíveis, sem depender da integração com uma tecnologia de clustering. Essas novas funcionalidades estão disponíveis para o SQL Server 2017 em execução em plataformas Windows e Linux.
+Se o requisito de negócios é conservar recursos para cargas de trabalho críticas executadas na réplica primária, os usuários agora podem usar o roteamento somente leitura ou se conectar diretamente às réplicas secundárias legíveis, sem depender da integração a uma tecnologia de clustering. Essas novas funcionalidades estão disponíveis para o SQL Server 2017 em execução em plataformas Windows e Linux.
 
 >[!IMPORTANT]
->Essa não é uma configuração de alta disponibilidade. Não há nenhuma infraestrutura para monitorar e coordenar a detecção de falhas e o failover automático. Para os usuários que precisam das funcionalidades de HADR, use um gerenciador de cluster (WSFC no Windows ou Pacemaker no Linux). 
+>Essa não é uma configuração de alta disponibilidade. Não há nenhuma infraestrutura para monitorar e coordenar a detecção de falhas e o failover automático. Sem um cluster, o SQL Server não pode fornecer o RTO (objetivo de tempo de recuperação) baixo fornecido por uma solução de HA automatizada. Para os usuários que precisam das funcionalidades de HA, use um gerenciador de cluster (WSFC no Windows ou Pacemaker no Linux). 
+>
+>O grupo de disponibilidade de escala de leitura pode fornecer a funcionalidade de recuperação de desastre. Quando as réplicas somente leitura estão no modo de confirmação síncrona, elas fornecem um RPO (objetivo de ponto de recuperação) igual a zero. Para fazer failover de um grupo de disponibilidade de escala de leitura, consulte [Fazer failover da réplica primária no grupo de disponibilidade de escala de leitura](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly)
 
 ## <a name="use-distributed-availability-groups-for-geographic-read-scale"></a>Usar grupos de disponibilidade distribuídos para a escala de leitura geográfica
 
@@ -57,4 +59,3 @@ Um único grupo de disponibilidade distribuído pode ter até 17 réplicas secun
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

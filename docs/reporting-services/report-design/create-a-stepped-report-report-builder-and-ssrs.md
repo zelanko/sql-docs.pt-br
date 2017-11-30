@@ -1,5 +1,5 @@
 ---
-title: "Criar um relatório de nível (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Criar um relatório de nível (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c78e1a3998673851e9860a6e6a6e295cde2d7f3e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Criar um novo relatório de nível (Construtor de Relatórios e SSRS)
 Um relatório de nível é um tipo de relatório paginado do  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que mostra as linhas ou grupos filho de detalhes recuados sob um grupo pai na mesma coluna, conforme ilustrado no seguinte exemplo:  
   
- ![Relatório de nível renderizado](../../reporting-services/report-design/media/steppedreportrendered.gif "renderizados escalonada relatório")  
+ ![Relatório de nível renderizado](../../reporting-services/report-design/media/steppedreportrendered.gif "Relatório de nível renderizado")  
   
  Os relatórios de tabela tradicionais colocam o grupo pai em uma coluna adjacente no relatório. A nova região de dados tablix permite adicionar um grupo e linhas ou grupos filho de detalhe à mesma coluna. Para diferenciar as linhas de grupo de linhas de detalhes ou de grupos filho, você pode aplicar uma formatação, como cor da fonte, ou recuar as linhas de detalhes.  
   
@@ -54,15 +53,15 @@ Um relatório de nível é um tipo de relatório paginado do  [!INCLUDE[ssRSnove
   
      Você tem agora, um relatório tabular básico. Quando ele for renderizado, você poderá ver uma coluna com o valor da instância do grupo, e uma ou mais colunas com os dados dos detalhes agrupados. A figura a seguir mostra como pode ser a aparência da região de dados na superfície de design.  
   
-     ![Região de dados de tabela com grupo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "região de dados de tabela com grupo")  
+     ![Região de dados de tabela com grupo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Região de dados de tabela com grupo")  
   
      A figura a seguir mostra como pode ser a aparência da região de dados renderizada quando você visualizar o relatório.  
   
-     ![Relatório agrupado renderizado](../../reporting-services/report-design/media/tablereportrendered.gif "renderizados agrupados relatório")  
+     ![Relatório agrupado renderizado](../../reporting-services/report-design/media/tablereportrendered.gif "Relatório agrupado renderizado")  
   
 3.  Em um relatório de nível, você não precisa da primeira coluna que mostra a instância de grupo. Em vez disso, copie o valor na célula de cabeçalho do grupo, exclua a coluna do grupo e cole na primeira caixa de texto na linha de cabeçalho do grupo. Para remover a coluna de grupo, clique com o botão direito do mouse na coluna de grupo ou na célula e clique em **Excluir Colunas**. A figura a seguir mostra como pode ser a aparência da região de dados na superfície de design.  
   
-     ![Região de dados com a linha de cabeçalho de grupo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "região de dados com a linha de cabeçalho de grupo")  
+     ![Região de dados com linha de cabeçalho de grupo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Região de dados com linha de cabeçalho de grupo")  
   
 4.  Para recuar as linhas de detalhes sob a linha de cabeçalho do grupo na mesma coluna, altere o preenchimento da célula de dados de detalhes.  
   
@@ -84,7 +83,7 @@ Um relatório de nível é um tipo de relatório paginado do  [!INCLUDE[ssRSnove
   
      Sua região de dados será semelhante ao exemplo a seguir.  
   
-     ![Região de dados para o relatório de nível](../../reporting-services/report-design/media/steppedreportdataregion.gif "região de dados para o relatório de nível")  
+     ![Região de dados para o relatório de nível](../../reporting-services/report-design/media/steppedreportdataregion.gif "Região de dados para o relatório de nível")  
   
      **Região de dados para layout de relatório de nível**  
   
@@ -110,13 +109,12 @@ Um relatório de nível é um tipo de relatório paginado do  [!INCLUDE[ssRSnove
 3.  Altere o preenchimento da célula que exibe os dados do grupo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatando itens de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Região de dados Tablix &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tabelas &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrizes &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

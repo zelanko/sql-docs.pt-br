@@ -1,5 +1,5 @@
 ---
-title: "Ativar o servidor de relatório e recursos de integração do Power View no SharePoint | Microsoft Docs"
+title: "Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,35 +14,34 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: e97378914a59fab938fc3e4c7926847effcffc94
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 462f77f127f9add617ad95e8d5bd21830c87dd6e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Ativar o servidor de relatório e recursos de integração do Power View no SharePoint
+# <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Os recursos de coleta de site do Reporting Services são ativados por padrão, depois de instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] suplemento para produtos do SharePoint. Em algumas situações, você precisa ativar manualmente os recursos.  
+  Os recursos do conjunto de sites do Reporting Services são ativados por padrão após a instalação do Suplemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] para produtos do SharePoint. Em algumas situações, você precisa ativar os recursos manualmente.  
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
- Se você instalar o suplemento Reporting Services para produtos do SharePoint 2010 depois da instalação do produto do SharePoint, em seguida, o recurso de integração do servidor de relatório e o recurso de integração do Power View só serão ativados para coleções de sites raiz. Para outras coleções de sites, você precisa ativar manualmente os recursos. Por exemplo, se você tiver um conjunto de sites **http://[my o nome do servidor] /sites/ [nome de coleção do site]** você precisará ativar manualmente os recursos de coleta de site do Reporting Services.  
+ Se você instalar o suplemento Reporting Services para Produtos do SharePoint 2010 após a instalação do produto do SharePoint, os recursos de integração do Servidor de Relatório e do Power View só serão ativados para conjuntos de sites raiz. Para outros conjuntos de sites, você precisa ativar os recursos manualmente. Por exemplo, se você tiver um conjunto de sites **http://[my server name]/sites/[site collection name]**, precisará ativar os recursos do conjunto de sites do Reporting Services manualmente.  
   
- Quando não há nenhum conjunto de sites raiz, o suplemento Reporting Services registrará uma mensagem semelhante à seguinte.  
+ Quando não houver nenhum conjunto de sites raiz, o suplemento Reporting Services registrará uma mensagem semelhante à mostrada a seguir.  
   
  "O aplicativo Web SharePoint 80 não tem a coleção de sites raiz"  
   
- A mensagem é encontrada no log de instalação do suplemento, denominado "RS_SP_ #. log" em que # é um número incrementado. O arquivo de log for encontrado na pasta Temp de usuários atual, por exemplo C:\Users\\[nome do usuário] \AppData\Local\Temp.. Para obter mais informações sobre como registrar opções em log com o suplemento, consulte [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ A mensagem é encontrada no log de instalação do suplemento, chamada “RS_SP_#.log”, em que # é um número de incremento. O arquivo de log é encontrado na pasta Temp de usuários atuais, por exemplo, C:\Users\\[user name]\AppData\Local\Temp. Para obter mais informações sobre como registrar opções em log com o suplemento, consulte [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
 
-## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>Ativar os recursos de coleção de sites de integração de servidor de relatório e o Power View
+## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>Ativar os recursos de integração de conjunto de sites do Servidor de Relatório e do Power View
   
-1.  Abra seu navegador para o site onde você deseja que os recursos do Reporting Services ativo.  
+1.  Abra o navegador no site em que deseja que os recursos do Reporting Services fiquem ativos.  
   
 2.  Clique em **Ações do Site**.  
   
@@ -56,7 +55,7 @@ ms.lasthandoff: 10/06/2017
   
  Para desativar os recursos, é possível usar o mesmo procedimento, mas clique em **Desativar** em vez de **Ativar**.  
   
-## <a name="activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a>Ativar ou recurso de coleção do site de administração central de desativar o Reporting Services
+## <a name="activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a>Ativar ou desativar o recurso de conjunto de sites da administração central do Reporting Services
   
 1.  Abra seu navegador na Administração Central do SharePoint.  
   
@@ -77,4 +76,3 @@ ms.lasthandoff: 10/06/2017
 Depois que o recurso for ativado, será possível continuar com a integração do servidor.
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

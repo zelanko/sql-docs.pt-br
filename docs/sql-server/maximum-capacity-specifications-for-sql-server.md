@@ -1,11 +1,14 @@
 ---
 title: "Especificações de capacidade máxima do SQL Server | Microsoft Docs"
-ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.date: 11/6/2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.custom: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 3e1a3a30b7018a3c31fa6cd2d97ffda10e43fcaa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Especificações de capacidade máxima do SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
 
   As tabelas a seguir especificam os tamanhos e números máximos de vários objetos definidos nos componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para navegar até a tabela de uma tecnologia do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique no respectivo link:  
@@ -81,12 +83,12 @@ ms.lasthandoff: 08/11/2017
 |Arquivos por banco de dados||32,767||  
 |Tamanho de arquivo (dados)||16 terabytes||  
 |Tamanho de arquivo (log)||2 terabytes||  
-|Arquivos de dados para dados com otimização de memória por banco de dados||4.096||  
+|Arquivos de dados para dados com otimização de memória por banco de dados||4.096 no [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. As versões posteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não impõem um limite estrito como esse.||  
 |Arquivo delta por arquivo de dados para dados com otimização de memória||1||  
 |Referências de tabela de chave estrangeira por tabela||Saída = 253. Entrada= 10.000.|Para restrições, consulte [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Comprimento de identificador (em caracteres)||128||  
 |Instâncias por computador||50 instâncias em um servidor autônomo.<br /><br /> 25 instâncias em um cluster de failover ao usar um disco de cluster compartilhado como a opção de armazenamento para sua instalação de cluster. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dará suporte a 50 instâncias de um cluster de failover se você escolher compartilhamentos de arquivos SMB como a opção de armazenamento para seu cluster de failover.||  
-|Índices por tabela com otimização de memória||8||  
+|Índices por tabela com otimização de memória||999 a partir do [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] e no [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 no [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] e [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]||  
 |Comprimento de uma cadeia de caracteres que contém instruções SQL (tamanho do lote)||65.536 * Tamanho do pacote de rede|Tamanho do pacote de rede é o tamanho dos pacotes do protocolo TDS usados para comunicação entre aplicativos e o [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|  
 |Bloqueios por conexão||Máximo de bloqueios por servidor||  
 |Bloqueios por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limitado somente por memória|Esse valor é para alocação de bloqueio estático. Os bloqueios dinâmicos são limitados somente por memória.|  
@@ -159,4 +161,3 @@ ms.lasthandoff: 08/11/2017
  [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

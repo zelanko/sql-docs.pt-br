@@ -13,17 +13,16 @@ helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 111e6d65b6c74156b39e81a1b7d9af0cb45501d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fd4d18001040d87959d8529266724341d9e8fc44
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
 A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  
@@ -33,7 +32,7 @@ A tabela a seguir lista as configurações de informações de dispositivos para
   
 |Configuração|Value|  
 |-------------|-----------|  
-|**AccessibleTablix**|Indica se a renderização será realizada com metadados de acessibilidade adicionais para uso com leitores de tela. Os metadados de acessibilidade adicionais tornam o relatório renderizado compatível com os seguintes padrões técnicos da seção "Informações e Aplicativos de Intranet e Internet na Web" (1194.22) do documento de Normas de Acessibilidade Eletrônica e de Tecnologia da Informação (Seção 508):<br /><br /> (g) Os cabeçalhos de linhas e colunas das tabelas de dados serão identificados.<br /><br /> (h) A marcação será usada para associar células de dados e células de cabeçalho de tabelas de dados que tenham dois ou mais níveis lógicos de cabeçalhos de linha ou coluna.<br /><br /> (i) Os quadros levarão um título cujo texto facilite a identificação e a navegação do quadro.<br /><br /> <br /><br /> Este parâmetro só se aplica a relatórios que contenham estruturas simples de tabela ou matriz com agrupamento simples. O valor padrão é **false**.<br /><br /> Este parâmetro tem suporte no [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)], mas não no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)].|  
+|**AccessibleTablix**|Indica se a renderização será realizada com metadados de acessibilidade adicionais para uso com leitores de tela. Os metadados de acessibilidade adicionais tornam o relatório renderizado compatível com os seguintes padrões técnicos da seção "Informações e Aplicativos de Intranet e Internet na Web" (1194.22) do documento de Normas de Acessibilidade Eletrônica e de Tecnologia da Informação (Seção 508):<br /><br /> (g) Os cabeçalhos de linhas e colunas das tabelas de dados serão identificados.<br /><br /> (h) A marcação será usada para associar células de dados e células de cabeçalho de tabelas de dados que tenham dois ou mais níveis lógicos de cabeçalhos de linha ou coluna.|  
 |**ActionScript(\*)**|Especifica o nome da função JavaScript a usar quando um evento de ação ocorre, como detalhar ou clicar no indicador. Se esse parâmetro for especificado, um evento de ação disparará a função JavaScript nomeada em vez de um postback para o servidor.|  
 |**BookmarkID**|A ID de indicador para ir para o relatório.|  
 |**DocMap**|Indica se você deve mostrar ou ocultar o mapa do documento do relatório. O valor padrão desse parâmetro é **true**.|  
@@ -51,7 +50,7 @@ A tabela a seguir lista as configurações de informações de dispositivos para
 |**ReplacementRoot(\*)**|A cadeia de caracteres que precede todos os links de detalhamento, alternância e indicadores no relatório quando forem renderizados fora do controle ReportViewer. Por exemplo, este é usado para redirecionar um clique do usuário a uma página personalizada.|  
 |**ResourceStreamRoot(\*)**|A cadeia de caracteres a ser pré-demarcada na URL para todos os recursos de imagem, como imagens para alternância ou classificação.|  
 |**Seção**|O número da página do relatório para renderizar. Um valor **0** indica que todas as seções do relatório serão renderizadas. O valor padrão é **1**.|  
-|**StreamRoot (\*)**|O caminho usado para prefixar o valor do atributo **src** do elemento IMG no relatório de HTML retornado pelo servidor de relatório. Por padrão, o servidor de relatório fornece o caminho. Você pode usar essa configuração para especificar um caminho raiz para as imagens em um relatório (por exemplo, **http://\<servername >/recursos/companyimages**).|  
+|**StreamRoot (\*)**|O caminho usado para prefixar o valor do atributo **src** do elemento IMG no relatório de HTML retornado pelo servidor de relatório. Por padrão, o servidor de relatório fornece o caminho. Você pode usar essa configuração para especificar um caminho raiz para as imagens em um relatório (por exemplo, **http://\<servername>/resources/companyimages**).|  
 |**StyleStream**|Indica se os estilos e scripts são criados como um fluxo separado em vez de no documento. O valor padrão é **false**.|  
 |**Barra de Ferramentas**|Indica se deve mostrar ou ocultar a barra de ferramentas. O padrão desse parâmetro é **true**. Se o valor desse parâmetro for **false**, todas as demais opções (menos o mapa do documento) serão ignoradas. Se você omitir esse parâmetro, a barra de ferramentas será exibida automaticamente para renderizar formatos que dão suporte a ele.<br /><br /> A barra de ferramentas do Visualizador de Relatório é renderizada quando você usa o acesso de URL para renderizar um relatório. A barra de ferramentas não é renderizada por meio da API SOAP. Entretanto, a configuração de informações de dispositivo **Toolbar** afeta o modo como o relatório é exibido ao usar o método de SOAP **Render** . Se o valor desse parâmetro for **true** ao usar o SOAP para renderizar para HTML, somente a primeira seção do relatório será renderizada. Se o valor for **false**, o relatório HTML inteiro será renderizado como uma única página HTML.|  
 |**UserAgent**|A cadeia de caracteres **user-agent** do navegador que faz a solicitação, a qual é encontrada na solicitação HTTP.|  
@@ -60,8 +59,7 @@ A tabela a seguir lista as configurações de informações de dispositivos para
   
 ## <a name="see-also"></a>Consulte também  
  [Passando configurações de informações de dispositivos para extensões de renderização](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em rsreportserver. config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Referência técnica &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Personalizar parâmetros de extensão de renderização em RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Referência técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Adicionar um failover de banco de dados avançado a um grupo de disponibilidade (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
+ms.reviewer: mikeray
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +20,14 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Adicionar um failover de banco de dados avançado a um grupo de disponibilidade (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 No SQL Server 2012 e 2014, se um banco de dados que faz parte de um grupo de disponibilidade na réplica primária perder a capacidade de gravar as transações, ele não disparará um failover, mesmo se as réplicas estiverem sincronizadas e configuradas para failover automático.
 
@@ -44,7 +45,7 @@ Isso tem a mesma configuração de grupo de disponibilidade do Cenário 1. Em ve
 
 Um grupo de disponibilidade é configurado entre a Instância A e a Instância B, que contém dois bancos de dados: DB1 e DB2. O modo de disponibilidade é definido como confirmação síncrona com um modo de failover automático e o failover de banco de dados avançado está habilitado. O acesso ao disco que contém dados e os arquivos de log de transações do DB2 é perdido. Quando o problema for detectado, o grupo de disponibilidade fará failover automaticamente para a Instância B.
 
-## <a name="configuring-and-viewing-the-enhanced-database-failover-option"></a>Configurando e exibindo a opção de failover de banco de dados avançado
+## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Configurar e exibir a opção de failover de banco de dados avançado
 
 O failover de banco de dados avançado pode ser configurado com o SQL Server Management Studio ou o Transact-SQL. Atualmente, os cmdlets do PowerShell não têm essa capacidade. Por padrão, o failover de banco de dados avançado está desabilitado.
 
@@ -63,17 +64,18 @@ Use as instruções encontradas no tópico [Usar o Assistente de Grupo de Dispon
 ### <a name="transact-sql"></a>Transact-SQL
 
 Para configurar o comportamento de failover de banco de dados avançado durante a criação de um grupo de disponibilidade, DB_FAILOVER deve ser definido como ON, da seguinte maneira:
-```
+
+```SQL
 CREATE AVAILABILITY GROUP [AGNAME]
 WITH ( DB_FAILOVER = ON)
 ...
 ```
 Para adicionar esse comportamento depois que um grupo de disponibilidade for configurado, use o comando ALTER AVAILABILITY GROUP:
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ```
 Para desabilitar esse comportamento, emita o seguinte comando ALTER AVAILABILITY GROUP:
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>Exibição de gerenciamento dinâmico
@@ -88,5 +90,4 @@ Para ver se um grupo de disponibilidade foi habilitado para o failover de banco 
 - [Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Criar um grupo de disponibilidade com o Transact-SQL](create-an-availability-group-transact-sql.md)
-
 

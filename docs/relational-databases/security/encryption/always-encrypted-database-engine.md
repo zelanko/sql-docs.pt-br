@@ -1,13 +1,11 @@
 ---
 title: Always Encrypted (mecanismo de banco de dados) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
+ms.openlocfilehash: 874cea214cb14c0dbfb5cffdff3035970a6e259d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ Para acessar dados armazenados em uma coluna criptografada em texto não criptog
 
 Em seguida, o driver contata o repositório de chaves que contém a chave mestra de coluna para descriptografar o valor da chave de criptografia de coluna criptografada e usa a chave de criptografia da coluna de texto não criptografado para criptografar o parâmetro. A chave de criptografia de coluna de texto não criptografado resultante é armazenado em cache para reduzir o número de idas e voltas para o repositório de chaves em usos subsequentes da mesma chave de criptografia de coluna. O driver substitui os valores de texto não criptografado dos parâmetros de direcionamento colunas criptografadas com seus valores criptografados e envia a consulta para o servidor para processamento.
 
-O servidor calcula o conjunto de resultados e, para qualquer criptografia no conjunto de resultados, o driver anexa os metadados de criptografia para a coluna, incluindo as informações sobre o algoritmo de criptografia e as chaves correspondentes. O driver primeiro tenta encontrar a chave de criptografia da coluna de texto não criptografado no cache local e faz apenas uma rodada para a chave mestra de coluna, se não for possível encontrar a chave no cache. Em seguida, o driver descriptografa os resultados e retorna valores de texto não criptografado para o aplicativo.
+O servidor calcula o conjunto de resultados e, para as colunas criptografadas incluídas no conjunto de resultados, o driver anexa os metadados de criptografia da coluna, incluindo as informações sobre o algoritmo de criptografia e as chaves correspondentes. O driver primeiro tenta encontrar a chave de criptografia da coluna de texto não criptografado no cache local e faz apenas uma rodada para a chave mestra de coluna, se não for possível encontrar a chave no cache. Em seguida, o driver descriptografa os resultados e retorna valores de texto não criptografado para o aplicativo.
 
  Um driver cliente interage com um repositório de chaves que contém uma chave mestra de coluna usando um provedor de repositório de chaves mestras de coluna, que é um componente de software do cliente que encapsula um repositório de chaves que contém a chave mestra de coluna. Os provedores para tipos comuns de repositório de chaves estão disponíveis em bibliotecas de drivers do lado do cliente da Microsoft ou como um download autônomo. Você também pode implementar seu próprio provedor. Recursos Always Encrypted, incluindo provedores de repositório de chaves mestras de coluna internas, variam de acordo com uma biblioteca de drivers e sua versão. 
 
@@ -254,4 +251,3 @@ GO
 [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

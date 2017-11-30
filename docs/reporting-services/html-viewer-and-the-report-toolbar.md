@@ -1,5 +1,5 @@
 ---
-title: "Visualizador de HTML e a barra de ferramentas relatório | Microsoft Docs"
+title: "Visualizador de HTML e a barra de ferramentas de relatório | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -13,17 +13,16 @@ helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d42edc002d7dffe1747c0219e4da4dd48e9ba00
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizador de HTML e a barra de ferramentas de relatório
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um Visualizador de HTML que é usado para exibir relatórios sob demanda à medida que são solicitados no servidor de relatório. O Visualizador de HTML fornece uma estrutura para exibir relatórios em HTML. Ele inclui uma barra de ferramentas de relatório, uma seção de parâmetros, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório no Visualizador de HTML inclui recursos que você pode usar para trabalhar com seu relatório, incluindo opções de exportação para que seja possível exibir seu relatório em formatos diferentes de HTML. A seção de parâmetros e o mapa do documento aparecem somente quando você abre relatórios configurados para usar parâmetros e um controle do mapa do documento.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="report-toolbar"></a>Barra de ferramentas de relatório  
  A barra de ferramentas de relatório fornece as funcionalidades de navegação na página, zoom, atualização, pesquisa, exportação, impressão e feed de dados para relatórios renderizados na extensão de renderização HTML.  
   
- A funcionalidade de impressão é opcional. Quando disponível, um ícone Impressora é exibido na barra de ferramentas de relatório. No primeiro uso, quando você clicar no ícone Impressora, um controle ActiveX será baixado e deverá ser instalado. Quando o controle estiver instalado e você clicar no ícone Impressora, a caixa de diálogo Imprimir será aberta para a seleção das impressoras configuradas para seu computador. A disponibilidade de impressão é determinada pelas configurações do servidor e navegador. Para obter mais informações, consulte [imprimir relatórios em um navegador com o controle de impressão &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) e [habilitar e desabilitar a impressão do lado do cliente para o Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ A funcionalidade de impressão é opcional. Quando disponível, um ícone Impressora é exibido na barra de ferramentas de relatório. No primeiro uso, quando você clicar no ícone Impressora, um controle ActiveX será baixado e deverá ser instalado. Quando o controle estiver instalado e você clicar no ícone Impressora, a caixa de diálogo Imprimir será aberta para a seleção das impressoras configuradas para seu computador. A disponibilidade de impressão é determinada pelas configurações do servidor e navegador. Para obter mais informações, consulte [Imprimir relatórios em um navegador com o controle de impressão &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) e [Habilitar e desabilitar a impressão do lado do cliente para o Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  A barra de ferramentas de relatório é semelhante à ilustração a seguir. A barra de ferramentas de relatório exibida pode ser diferente da ilustração com base nos recursos do relatório ou nas opções de renderização disponíveis.  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
 |![Ícone do mapa do documento](../reporting-services/media/htmlviewer-docmap.GIF "Ícone do mapa do documento")|**Ícone do mapa do documento**|Mostrar ou ocultar o painel de mapa do documento em um relatório que inclui um mapa do documento. Um mapa do documento é um controle de navegação de relatório semelhante ao painel de navegação em um site da Web. Você pode clicar em itens no mapa do documento navegar até um grupo específico, uma página ou um sub-relatório.|  
 |![Ícone de impressora](../reporting-services/media/printer-icon.gif "Ícone de impressora")|**Ícone de impressora**|Abrir uma caixa de diálogo de impressão para que você possa especificar opções de impressão e imprimir um relatório. No primeiro uso, ao clicar nesse ícone você deverá baixar o controle de impressão.|  
 ||**Mostrar e ocultar ícones**|Mostrar ou ocultar campos de valor de parâmetro e o botão **Exibir Relatório** em um relatório que inclui parâmetros.|  
-|![Botão Atualizar do navegador na barra de ferramentas relatório](../reporting-services/media/htmlviewer-refresh.GIF "botão Atualizar do navegador na barra de ferramentas de relatório")|**Ícone de atualização de relatório**|Atualizar o relatório. Os dados de relatórios dinâmicos serão atualizados. Os relatórios armazenados em cache serão recarregados de onde estão armazenados.|  
+|![Botão Atualizar do navegador na barra de ferramentas de relatório](../reporting-services/media/htmlviewer-refresh.GIF "Botão Atualizar do navegador na barra de ferramentas de relatório")|**Ícone de atualização de relatório**|Atualizar o relatório. Os dados de relatórios dinâmicos serão atualizados. Os relatórios armazenados em cache serão recarregados de onde estão armazenados.|  
 |![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Ícone de feed de dados**|Feeds de dados gerados de relatórios.|  
 |![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Fixar ao Painel do Power BI**|Fixar itens de relatório de suporte a um [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Se o botão não está visível, o servidor de relatório não foi integrado ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  Para obter mais informações, consulte [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).|  
   
@@ -80,8 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

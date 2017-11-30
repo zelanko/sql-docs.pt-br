@@ -1,5 +1,5 @@
 ---
-title: "Visualizando relatórios no construtor de relatórios | Microsoft Docs"
+title: "Visualizando relatórios no Construtor de Relatórios | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f28003b3e3460e2450c17f68ab944ae2aeab55e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="previewing-reports-in-report-builder"></a>Visualizando relatórios no Construtor de Relatórios
   Durante a criação de um relatório paginado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é útil visualizar o relatório frequentemente para verificar se o relatório exibe o que você deseja. Para visualizar o relatório, clique em **Executar**. O relatório é renderizado no modo de visualização.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
  Outros benefícios das sessões de edição são os recursos de edição de relatórios que usam fontes de dados inseridas ou itens de referência, como imagens ou sub-relatórios armazenados no servidor de relatório.  
   
 > [!NOTE]  
-> Há algumas diferenças entre a visualização no construtor de relatórios e exibir em um navegador. Por exemplo, um controle de calendário, que é adicionado a um relatório quando você especificar um parâmetro de tipo de data/hora, é diferente no construtor de relatórios e em um navegador. 
+> Há algumas diferenças entre a visualização no Construtor de Relatórios e em um navegador. Por exemplo, um controle de calendário, que é adicionado a um relatório quando você especifica um parâmetro de tipo Data/Hora, é diferente no Construtor de Relatórios e em um navegador. 
   
 ## <a name="improving-preview-performance"></a>Aprimorando o desempenho da visualização  
  O modo como você cria e atualiza relatórios afeta a rapidez com que o relatório é renderizado na visualização. A primeira vez que você visualiza um relatório que depende de uma referência de servidor, uma sessão de edição é criada e os dados usados durante a execução do relatório são adicionados a um cache de dados armazenado no servidor de relatório. Quando você fizer alterações no relatório que não afetem os dados, a cópia armazenada em cache dos dados será usada pelo relatório. Isso significa que você não visualizará a alteração de dados cada vez que visualiza o relatório. Se você desejar novos dados, clique no botão **Atualizar** na faixa de opções.  
@@ -82,11 +82,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Formatando itens de relatório &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tabelas, matrizes e listas de &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Salvando relatórios &#40; Construtor de relatórios &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+ [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Salvando relatórios &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
-

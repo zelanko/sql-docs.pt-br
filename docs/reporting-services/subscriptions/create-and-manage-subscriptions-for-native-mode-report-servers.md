@@ -1,5 +1,5 @@
 ---
-title: "Criar e gerenciar assinaturas de servidores de relatório do modo nativo | Microsoft Docs"
+title: "Criar e gerenciar assinaturas de servidores de relatório no modo Nativo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a7fcc5f8b3d9e64990327a6709b5e36cfd23904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
   A assinatura padrão é criada por usuários individuais que desejam entregar um relatório por email ou em uma pasta compartilhada. Este tópico fornece informações sobre assinaturas padrão que são criadas e gerenciadas por usuários individuais. As assinaturas controladas por dados têm requisitos e etapas diferentes e são discutidas em um tópico separado. Para obter mais informações, consulte [Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Navegue até o relatório que você deseja assinar. Clique no menu de relatório e clique em **Assinar**.  
   
-     ![menu relatório](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu relatório")  
+     ![menu do relatório](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu do relatório")  
   
 3.  **Descrição**: digite uma descrição para o relatório com no máximo 512 caracteres.  
   
@@ -72,13 +71,13 @@ ms.lasthandoff: 08/09/2017
   
 7.  **Adicionar uma extensão de arquivo quando o arquivo é criado**: essa opção adiciona uma extensão de arquivo de três caracteres ao nome do arquivo. A extensão de arquivo é determinada pelo formato de saída do relatório selecionado.  
   
-8.  **Caminho**: digite um caminho de convenção de nomenclatura Universal (UNC) para uma pasta existente onde você deseja entregar os relatórios (por exemplo, \\ \\< servername\>\\< myreports\>). Inclua caracteres de barra invertida dupla no começo do caminho. Não especifique barras invertidas à direita.  
+8.  **Caminho**: digite um caminho UNC para uma pasta existente na qual você deseja entregar os relatórios (por exemplo, \\\\<servername\>\\<myreports\>). Inclua caracteres de barra invertida dupla no começo do caminho. Não especifique barras invertidas à direita.  
   
      ![assinatura de compartilhamento de arquivos](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "assinatura de compartilhamento de arquivos")  
   
 9. **Formato de Renderização**: selecione um formato de saída de relatório para entrega de arquivo. Escolha um formato que corresponda ao aplicativo de desktop que será usado para abrir o relatório. Evite formatos que não renderizam um relatório em um único fluxo ou que introduzam interatividade não compatível com um arquivo estático (por exemplo, HTML 4.0).  
   
-10. **Credenciais**: selecione para usar a conta de compartilhamento de arquivos ou uma credencial de usuário específica do Windows. O **Usar conta de compartilhamento de arquivos** estará desabilitado se o administrador de relatórios não tiver configurado uma conta de compartilhamento de arquivos. Para obter mais informações, consulte [Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). No **nome de usuário** e **senha** caixas de texto, especifique as credenciais necessárias para acessar o compartilhamento de arquivo, usando o formato  *\<domínio >*\\*\<nome de usuário >* para o nome de usuário.  
+10. **Credenciais**: selecione para usar a conta de compartilhamento de arquivos ou uma credencial de usuário específica do Windows. O **Usar conta de compartilhamento de arquivos** estará desabilitado se o administrador de relatórios não tiver configurado uma conta de compartilhamento de arquivos. Para obter mais informações, consulte [Configurações de Assinatura e uma Conta de Compartilhamento de Arquivos &#40;Gerenciador de Configurações&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Nas caixas de texto **Nome de usuário** e **Senha**, especifique as credenciais necessárias para acessar o compartilhamento de arquivos, usando o formato *\<domain>*\\*\<user name>* para o nome de usuário.  
   
 11. **Opções de substituição**:  
   
@@ -107,7 +106,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Navegue até o relatório que você deseja assinar. Clique no menu de relatório e clique em **Assinar**.  
   
-     ![menu relatório](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu relatório")  
+     ![menu do relatório](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu do relatório")  
   
 3.  **Descrição**: digite uma descrição para o relatório com no máximo 512 caracteres.  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  Dependendo de suas permissões, você pode digitar o endereço de email no qual deseja entregar o relatório. Para especificar vários endereços de email, separe-os com um ponto-e-vírgula (;). Você também pode digitar endereços de email adicionais nas caixas de texto **Cc**, **Cco**e **Responder** . Você precisa ter permissão para gerenciar todas as assinaturas.  
   
-7.  **Entidade**: padrão é "@ReportName foi executado em @ExecutionTime". Você pode editar o assunto, mas observe que o @ReportName e @ExecutionTime são as únicas variáveis globais com suporte no **assunto** campo.  
+7.  **Assunto**: usa como padrão “@ReportName foi executado em @ExecutionTime”. Você pode editar o assunto, mas observe que o @ReportName e @ExecutionTime são as únicas variáveis globais com suporte no campo **Assunto**.  
   
 8.  Selecione as opções de entrega do seguinte modo:  
   
@@ -157,7 +156,7 @@ ms.lasthandoff: 08/09/2017
   
  Um usuário que cria uma assinatura possui essa assinatura. Cada usuário pode modificar ou excluir as assinaturas que possui. Você pode alterar o proprietário do relatório na página de propriedades de assinatura ou pode alterar a propriedade programaticamente. Para obter mais informações, consulte o seguinte:  
   
--   [Usar o PowerShell para alterar e listar proprietários de assinatura do Reporting Services e executar uma assinatura](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+-   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
@@ -177,7 +176,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Abra no menu de relatório e clique em **Excluir**  
   
-     ![menu relatório](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu relatório")  
+     ![menu do relatório](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu do relatório")  
   
  Para cancelar uma assinatura atualmente em processamento no servidor de relatórios, consulte [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -187,11 +186,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Usar o PowerShell para alterar e listar proprietários de assinatura do Reporting Services e executar uma assinatura](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Assinaturas controladas por dados](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Assinaturas e entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gerenciador de relatórios &#40; Modo nativo do SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Usar minhas assinaturas &#40; Servidor de relatório do modo nativo &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Usar Minhas Assinaturas &#40;Servidor de Relatório no modo Nativo&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Designer de alertas de dados | Microsoft Docs
+title: Designer de Alertas de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-designer"></a>Designer de Alertas de Dados
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 Você cria e edita definições de alerta de dados no Designer de Alertas de Dados. Uma definição de alerta é uma coleção de metadados, incluindo os dados de relatório nos quais você está interessado, as regras que os dados de relatório devem atender para criar instâncias de alerta de dados e enviar mensagens de alerta de dados, os destinatários da mensagem de alerta, e assim sucessivamente.  
 
 > [!NOTE]
-> Integração do Reporting Services com o SharePoint não está mais disponível após o SQL Server 2016.
+> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
 
  Para criar uma definição de alerta você executa várias tarefas relacionadas:  
   
@@ -64,7 +64,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 ##  <a name="AlertDesigner"></a> Interface de usuário do Designer de Alertas de Dados  
  O Designer de Alerta de Dados divide-se em áreas. A área onde você seleciona o feed de dados de relatório, a área onde você cria condições simples ou complexas com a adição de regras a condições e assim por diante. A imagem a seguir mostra as áreas do Designer de Alerta de Dados.  
   
- ![Áreas dentro da interface de usuário do Designer de alertas](../reporting-services/media/rs-alertdesigner.gif "áreas dentro da interface de usuário do Designer de alertas")  
+ ![Áreas da interface do usuário do Designer de Alertas](../reporting-services/media/rs-alertdesigner.gif "Áreas da interface do usuário do Designer de Alertas")  
   
   
 ### <a name="alert-data"></a>Dados do alerta  
@@ -74,7 +74,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
   
  Se o relatório estiver parametrizados e não forem exibidos os dados e as colunas esperados no feed de dados de relatório, execute novamente o relatório usando os valores de parâmetro apropriados. As colunas e os valores devem estar presentes no relatório a ser incluído no feed de dados.  
   
- Dependendo do layout do relatório, a quantidade de feeds de dados de um relatório talvez não seja intuitiva, nem quais dados estão incluídos em quais feeds de dados. A extensão de renderização Atom do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]gera os feeds de dados que são usados com alertas. A extensão de renderização Atom fornece dados de relatório como conjuntos de linhas bidimensionais, um formato tabular no qual todas as colunas têm o mesmo número de linhas. Esses conjuntos de linhas são o conteúdo dos feeds de dados. Como o layout de relatório normalmente é complexo e contém várias regiões de dados pares e aninhadas, vários feeds de dados são necessários para disponibilizar todos os dados do relatório. Para obter mais informações sobre como os feeds de dados são gerados com base nos relatórios, consulte [Gerando feeds de dados de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) e [Gerar feeds de dados de um relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ Dependendo do layout do relatório, a quantidade de feeds de dados de um relatório talvez não seja intuitiva, nem quais dados estão incluídos em quais feeds de dados. A extensão de renderização Atom do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]gera os feeds de dados que são usados com alertas. A extensão de renderização Atom fornece dados de relatório como conjuntos de linhas bidimensionais, um formato tabular no qual todas as colunas têm o mesmo número de linhas. Esses conjuntos de linhas são o conteúdo dos feeds de dados. Como o layout de relatório normalmente é complexo e contém várias regiões de dados pares e aninhadas, vários feeds de dados são necessários para disponibilizar todos os dados do relatório. Para obter mais informações sobre como os feeds de dados são gerados com base em relatórios, consulte [Gerando feeds de dados com base em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) e [Gerar feeds de dados com base em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
  Quando você escolher um feed de dados, os dados do feed serão exibidos em uma tabela com linhas e colunas no painel de dados de alerta do Designer de Alertas de Dados. Os metadados da fonte de dados usada pelo relatório ou o próprio relatório especifica os nomes das colunas e o feed de dados popula a lista de campos que você usa para definir regras na condição dos dados. O feed de dados também fornece metadados, como os tipos de dados de colunas da tabela que restringem os valores, e os operadores de comparação que você pode usar com campos ao criar as regras.  
   
@@ -177,7 +177,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 ### <a name="email-settings"></a>Configurações de email  
  Você especifica os endereços de email de destinatários para receber mensagens de alerta de dados por email na opção **Destinatário(s)** . Vários endereços de email são separados por ponto-e-vírgulas, da mesma maneira que você faz com mensagens de email do Microsoft Office Outlook. Você também pode especificar grupos de distribuição como destinatários, o que torna o gerenciamento da lista de destinatários mais fácil e eficiente. Se o SharePoint puder determinar seu endereço de email quando você estiver criando uma definição de alerta, seu endereço de email será adicionado automaticamente à lista de destinatários. Caso contrário, você precisará adicionar-se explicitamente como um destinatário.  
   
- O assunto padrão do email é **de alertas de dados para \<nome do alerta >**. Você pode alterar o assunto para que se ajuste às suas necessidades.  
+ O assunto padrão do email é **Alerta de dados para \<alert name>**. Você pode alterar o assunto para que se ajuste às suas necessidades.  
   
  Você também pode fornecer uma descrição a ser incluída na mensagem de alerta de dados na opção **Descrição** . A inclusão de uma descrição, principalmente se você tiver dados de alerta similares, ajudará você a diferenciar e compreender rapidamente as mensagens de alerta. Além da mensagem de alerta enviada quando os dados de relatório atenderem às regras especificadas, uma mensagem de alerta será enviada a todos os destinatários quando ocorrer um erro. Para obter mais informações, consulte [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   
@@ -186,7 +186,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 ##  <a name="CreateAlert"></a> Criar uma definição de alerta de dados  
  Se você tiver recebido as permissões Exibir Itens e Criar Alertas do SharePoint, poderá criar uma definição de alerta de dados para qualquer relatório que você tenha permissão para exibir, contanto que o relatório use credenciais armazenadas ou nenhuma credencial. Você executa o relatório em uma biblioteca do SharePoint. Os dados disponíveis para uso no Designer de Alertas de Dados são provenientes do relatório. Se o relatório estiver parametrizado, poderá ser necessário executar o relatório com valores de parâmetros diferentes para garantir que os dados nos quais você está interessado apareçam no relatório. Após abrir o relatório, clique na opção **Novo Alerta de Dados** no menu **Ações** , na barra de ferramentas de relatório, para abrir o Designer de Alertas de Dados. A imagem a seguir mostra como abrir o Designer de Alertas de Dados.  
   
- ![Abra o Designer de alertas de biblioteca do SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "abrir o Designer de alertas de biblioteca do SharePoint")  
+ ![Abrir o Designer de Alertas por meio da biblioteca do SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Abrir o Designer de Alertas por meio da biblioteca do SharePoint")  
   
  Para obter mais informações, consulte [Criar um Alerta de Dados no Designer de Alertas de Dados](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
@@ -205,7 +205,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
   
  Para editar uma definição de alerta de dados, clique com o botão direito do mouse no Gerenciador de Alerta de Dados e clique em **Editar**. A imagem a seguir mostra o menu de contexto em um alerta de dados no Gerenciador de Alertas de Dados.  
   
- ![Abra o Designer de alerta de dados clicando em Editar](../reporting-services/media/rs-alertmanageriwopendesigner.gif "abrir Designer de alerta de dados clicando em Editar")  
+ ![Abrir o Designer de Alerta de Dados clicando em Editar](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Abrir o Designer de Alerta de Dados clicando em Editar")  
   
  Para obter mais informações, consulte [Editar um Alerta de Dados no Designer de Alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
@@ -213,7 +213,7 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 ##  <a name="HowTo"></a> Tarefas relacionadas  
  Esta seção lista procedimentos que mostram como criar e editar alertas.  
   
--   [Editar um alerta de dados no Designer de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Editar um Alerta de Dados no Designer de Alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Criar um Alerta de Dados no Designer de Alertas de Dados](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
@@ -222,4 +222,4 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
 [Alertas de dados do Reporting Services](../reporting-services/reporting-services-data-alerts.md)   
 [Gerenciador de alertas de dados para os administradores de alerta](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

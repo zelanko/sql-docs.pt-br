@@ -13,17 +13,16 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80f13a760e8176eb0d0bafbac29cf162f473caf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>Help Viewer e conteúdo offline para o SQL Server
   
@@ -66,7 +65,7 @@ A tabela a seguir lista as ferramentas que instalam o Help Viewer, com base na v
   
    >[!IMPORTANT] 
    >No SQL Server Management Studio e no Visual Studio, o aplicativo Help Viewer poderá congelar (parar de responder) durante o processo de adição da documentação. Para resolver esse problema, tente o seguinte. Para obter mais informações sobre esse problema, confira [O Visual Studio Help Viewer congela](https://msdn.microsoft.com/library/mt654096.aspx).  
-   >>Abra o arquivo %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings no Bloco de Notas e altere a data no código a seguir para alguma data no futuro. Esse arquivo está disponível no computador local apenas após você instalar o Visual Studio. 
+   >>Abra o arquivo %LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settingsno Bloco de notas e altere a data no código a seguir para alguma data no futuro. Esse arquivo está disponível no computador local apenas após você instalar o Visual Studio. 
    >>>Cache LastRefreshed="12/31/2017 00:00:00"  
   
     O sumário no painel esquerdo é atualizado automaticamente para incluir a documentação que você adicionou.  
@@ -139,7 +138,5 @@ Quando você pressiona F1, o tópico correspondente aparece online. O tópico n�
 Além disso, o Help Viewer não dá suporte a configurações de proxy, nem ao formato ISO. 
 
 ## <a name="additional-information"></a>Informações adicionais
-[Microsoft Help Viewer – Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Microsoft Help Viewer – Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

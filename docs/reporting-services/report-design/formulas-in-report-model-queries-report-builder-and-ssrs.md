@@ -1,5 +1,5 @@
 ---
-title: "As fórmulas no relatório de modelo consultas (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Fórmulas em consultas de modelo de relatório (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10151"
+f1_keywords: "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310d2eefcf253371e488f9e6fe5707a89b6f7ab6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Fórmulas em consultas de modelo de relatório (Construtor de Relatórios e SSRS)
   Fórmulas são cálculos executados em valores em um relatório que usam um modelo de relatório como uma fonte de dados. Você define fórmulas na **Caixa de Diálogo Definir Forma** no Designer de Consultas de Modelo de Relatório quando define uma consulta para uma fonte de dados de modelo de relatório. Uma fórmula pode conter funções, operadores, constantes e referências a campos ou entidades. As fórmulas permitem combinar, agregar, filtrar e avaliar dados numéricos e de texto. É possível criar fórmulas e salvá-las como novos campos ou modificar as fórmulas de campos existentes.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  Elas podem ser utilizadas para realizar cálculos simples ou complexos. A estrutura de uma função começa com seu nome, seguido de um parêntese de abertura, dos argumentos da função separados por vírgulas e de um parêntese de fechamento.  
   
- ![Um exemplo de uma função. ] (../../reporting-services/report-design/media/functionexample.gif "Um exemplo de uma função.")  
+ ![Um exemplo de uma função.] (../../reporting-services/report-design/media/functionexample.gif "Um exemplo de uma função.")  
   
  Os argumentos podem ser referências de campo, números, texto e valores lógicos, como **TRUE** ou **FALSE**. Eles também podem ser constantes, fórmulas ou outras funções. Os argumentos que você digita devem gerar um valor válido para o argumento. Por exemplo, se a fórmula multiplica dois inteiros, o resultado não pode ser uma cadeia de caracteres de texto.  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 08/09/2017
 |Funções de texto|**CONCAT**, **FIND**, **LEFT**, **LENGTH**, **LOWER**, **LTRIM**, **REPLACE**, **RIGHT**, **RTRIM**, **SUBSTRING**, **UPPER**|  
   
   
-

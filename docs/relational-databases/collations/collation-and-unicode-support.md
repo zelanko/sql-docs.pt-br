@@ -1,12 +1,11 @@
 ---
 title: Suporte a agrupamentos e a Unicode | Microsoft Docs
 ms.custom: 
-ms.date: 08/04/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +26,16 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b165344ccc0f06c8de77633069ff4bd59ad8d4a5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: 03e346a8f89d923525951ec8b8683527b611d8f5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a agrupamentos e a Unicode
   Os agrupamentos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. Os agrupamentos utilizados com tipos de dados de caractere, como **char** e **varchar** , determinam a página de código e os caracteres correspondentes que podem ser representados para esse tipo de dados. Independentemente de você estar instalando uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurando um backup de banco de dados ou conectando o servidor a bancos de dados cliente, é importante estar ciente dos requisitos de localidade, ordem de classificação e distinção de maiúsculas e minúsculas e de acentos dos dados com os quais está trabalhando. Para listar os agrupamentos disponíveis na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -133,7 +131,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  Você também pode tentar usar um agrupamento diferente para os dados no servidor. Escolha um agrupamento que mapeia para uma página de código no cliente.    
     
- Para usar agrupamentos UTF-16 disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], selecione um do agrupamentos `_SC` de caracteres suplementares (somente agrupamentos do Windows) para melhorar a pesquisa e a classificação de alguns caracteres Unicode.    
+ Para usar os agrupamentos UTF-16 disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para melhorar a pesquisa e classificação de alguns caracteres Unicode (somente agrupamentos do Windows), selecione um dos agrupamentos _SC (caracteres suplementares) ou um dos agrupamentos da versão 140.    
     
  Para avaliar os problemas relacionados ao uso de tipos de dados Unicode ou não Unicode, teste seu cenário para medir as diferenças de desempenho em seu ambiente. Uma boa prática é padronizar o agrupamento usado nos sistemas de sua organização e implantar servidores e clientes Unicode sempre que possível.    
     
@@ -155,35 +153,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> Caracteres complementares    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece tipos de dados como **nchar** e **nvarchar** para armazenar dados Unicode. Esses tipos de dados codificam texto em um formato chamado *UTF-16*. O Consórcio Unicode aloca para cada caractere um ponto de código exclusivo, que é um valor no intervalo de 0x0000 a 0x10FFFF. Os caracteres mais frequentemente usados têm valores de ponto de código que se ajustam em uma palavra de 16 bits na memória e no disco, mas os caracteres com ponto de código maiores que 0xFFFF exigem duas palavras de 16 bits consecutivas. Esses caracteres são chamados de *caracteres suplementares*e as duas palavras de 16 bits consecutivas são chamadas de *pares substitutos*.    
     
+ Introduzida no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], uma nova família de agrupamentos de _SC (caracteres suplementares) pode ser usada com os tipos de dados **nchar**, **nvarchar** e **sql_variant**. Por exemplo: `Latin1_General_100_CI_AS_SC`ou, ao usar um agrupamento japonês, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
+
+ A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], todos os novos agrupamentos dão suporte a caracteres suplementares automaticamente.
+
  Se você usar caracteres suplementares:    
     
 -   Caracteres suplementares podem ser usados apenas em operações de comparação e ordenação em versões de agrupamento 90 ou superior.    
     
--   Todos os agrupamentos de nível _100 oferecem suporte à classificação linguística com caracteres suplementares.    
+-   Todos os agrupamentos de versão 100 dão suporte à classificação linguística com caracteres suplementares.    
     
 -   Os caracteres suplementares não têm suporte para uso em metadados, como em nomes de objetos de banco de dados.    
     
--   Introduzida no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], uma nova família de agrupamentos de SC (caracteres suplementares) pode ser usada com os tipos de dados **nchar**, **nvarchar** e **sql_variant**. Por exemplo: `Latin1_General_100_CI_AS_SC`ou, ao usar um agrupamento japonês, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
-  > [!NOTE]    
-  >  Bancos de dados que usam agrupamentos com caracteres suplementares (\_SC), não podem ser habilitados para replicação de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso ocorre porque algumas das tabelas do sistema e procedimentos armazenados que são criados para replicação usam o tipo de dados **ntext** herdado que não oferece suporte a caracteres suplementares.  
+-   Bancos de dados que usam agrupamentos com caracteres suplementares (\_SC), não podem ser habilitados para replicação de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso ocorre porque algumas das tabelas do sistema e procedimentos armazenados que são criados para replicação usam o tipo de dados **ntext** herdado que não oferece suporte a caracteres suplementares.  
     
-     O sinalizador de SC pode ser aplicado a:    
+-   O sinalizador de SC pode ser aplicado a:    
     
-    -   Agrupamentos do Windows na versão 90    
+    -   Agrupamentos da versão 90    
     
-    -   Agrupamentos do Windows na versão 100    
+    -   Agrupamentos da versão 100    
     
-     O sinalizador de SC não pode ser aplicado a:    
+-   O sinalizador de SC não pode ser aplicado a:    
     
     -   Agrupamentos do Windows sem versão na versão 80    
     
     -   Os agrupamentos primários BIN ou BIN2    
     
-    -   Os agrupamento do SQL*    
+    -   Os agrupamento do SQL\*    
     
- A tabela a seguir compara o comportamento de alguns operadores e funções de cadeia de caracteres quando eles usam caracteres suplementares com e sem um agrupamento de SC.    
+    -   Agrupamentos da versão 140 (eles não precisam do sinalizador de SC pois já dão suporte a caracteres suplementares)    
     
-|Função ou operador de cadeia de caracteres|Com um agrupamento de SC|Sem um agrupamento de SC|    
+ A seguinte tabela compara o comportamento de alguns operadores e funções de cadeia de caracteres quando eles usam caracteres suplementares com e sem um agrupamento SCA (reconhecimento de caracteres suplementares):    
+    
+|Função ou operador de cadeia de caracteres|Com um agrupamento SCA (Reconhecimento de Caracteres Suplementares)|Sem um agrupamento de SCA|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|O par substituto UTF-16 é contado como um único ponto de código.|O par substituto UTF-16 é contado como dois pontos de código.|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|Essas funções tratam cada par substituto como um único ponto de código e funcionam conforme o esperado.|Essas funções podem dividir qualquer par substituto e levar a resultados inesperados.|    
@@ -205,13 +207,15 @@ Aplicativos de banco de dados que interagem com o [!INCLUDE[ssNoVersion](../../i
 
 ##  <a name="Japanese_Collations"></a> Agrupamentos em japonês adicionados no  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]em diante, há suporte para duas novas famílias de agrupamento em japonês, com as permutações de várias opções (_CS, _AS, _KS, _WS, _VSS etc.). 
+A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], há suporte para duas novas famílias de agrupamento em japonês, com as permutações de várias opções (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
-Para listar esses agrupamentos, você poderá consultar o Mecanismo de Banco de Dados do SQL Server:
+Para listar esses agrupamentos, você pode consultar o Mecanismo de Banco de Dados do SQL Server:
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
+
+Todos os novos agrupamentos têm suporte interno para caracteres suplementares, de modo que nenhum dos novos agrupamentos tem (ou precisa) do sinalizador de SC.
 
 Esses agrupamentos têm suporte em índices de Mecanismo de Banco de Dados, tabelas com otimização de memória, índices columnstore e módulos compilados nativamente.
     
@@ -239,5 +243,4 @@ Esses agrupamentos têm suporte em índices de Mecanismo de Banco de Dados, tabe
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
-
 

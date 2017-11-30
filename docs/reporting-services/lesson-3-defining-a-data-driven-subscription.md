@@ -5,24 +5,21 @@ ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c092a13ee59f483a993810e558be4e11f88c3716
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você usa as páginas da assinatura controlada por dados dos portais da Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
@@ -88,7 +85,7 @@ Parâmetro  |Origem do valor  | Valor/campo
 **Formato de renderização** | Obter valor do conjunto de dados | Formato
 **Modo de gravação**| Inserir valor| Incremento automático    
 **Extensão do arquivo** |Inserir valor |Verdadeiro
-**Nome de Usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira neste formato: \<domínio >\\\<conta >. A conta de usuário precisa ter permissões para o caminho configurado. 
+**Nome de Usuário** | Inserir valor | Digite sua conta de usuário de domínio. Insira-o neste formato: \<domain>\\\<account>. A conta de usuário precisa ter permissões para o caminho configurado. 
 **Senha** | Inserir valor | Digite sua senha
 
 ## <a name="report-parameters"></a>Parâmetros de relatório
@@ -98,12 +95,12 @@ Parâmetro  |Origem do valor  | Valor/campo
 ## <a name="next-steps"></a>Próximas etapas  
 Quando a assinatura é executada, quatro arquivos de relatórios são entregues no compartilhamento de arquivos especificado, um para cada pedido na fonte de dados *Assinantes* . Cada entrega deve ser exclusiva em termos de dados (os dados devem ser específicos do pedido), formato de renderização e formato de arquivo. Você pode abrir cada relatório da pasta compartilhada para verificar se cada versão está personalizada com base nas opções de assinatura definidas.  
   
-![Lista de arquivos criados pela assinatura](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "lista de arquivos criados pela assinatura")  
+![Lista de arquivos criados pela assinatura](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Lista de arquivos criados pela assinatura")  
   
 A página de assinatura no portal da Web conterá a data da **Última Execução** e o **Status** da assinatura. 
 **Observação:** atualize a página depois que a assinatura for executada para ver as informações atualizadas.  
     
-![Assinatura resulta no Gerenciador de relatórios](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "assinatura resulta no Gerenciador de relatórios")  
+![Resultados da assinatura no Gerenciador de Relatórios](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Resultados da assinatura no Gerenciador de Relatórios")  
   
 Esta etapa conclui o tutorial “Definir uma assinatura controlada por dados”.   
   
@@ -115,5 +112,4 @@ Esta etapa conclui o tutorial “Definir uma assinatura controlada por dados”.
   
   
   
-
 

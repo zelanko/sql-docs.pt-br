@@ -1,5 +1,5 @@
 ---
-title: Criar, modificar e excluir agendas | Microsoft Docs
+title: Criar, modificar e excluir agendamentos | Microsoft Docs
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 86ca460b5fe669e9fe9e9c0130c883325f988b50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-schedules"></a>Criar, modificar e excluir agendas
   Use este tópico para aprender a criar, modificar e excluir agendas compartilhadas do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Para gerenciar agendas programadas para modo nativo, use a página Agendas no portal da Web ou a pasta Agendas Compartilhadas no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para o modo do SharePoint, use as páginas de gerenciamento para o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -146,9 +145,8 @@ clique em **Cancelar**
   
 ## <a name="see-also"></a>Consulte também  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Pausar e retomar agendas compartilhadas](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [Armazenar em cache um relatório &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [Adicionar um instantâneo para o relatório histórico de &#40; Gerenciador de relatórios &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Pausar e retomar agendamentos compartilhados](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
+ [Armazenar um relatório em cache &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [Adicionar um instantâneo ao histórico de relatórios &#40;Gerenciador de Relatórios&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
-

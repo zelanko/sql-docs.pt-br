@@ -5,23 +5,21 @@ ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a59d1082e60e358e1447838997192791950c41ed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e168601f761a966d494168cd79d3724fc4342b63
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 Agora que já adicionou uma região de dados e alguns campos ao relatório de ordens de venda, você pode formatar os campos de data e moeda, além dos cabeçalhos da coluna.  
@@ -83,7 +81,7 @@ Também é possível alterar a formatação da linha do cabeçalho para diferenc
   
 4.  Para visualizar o relatório, clique na guia **Visualizar** . O resultado deve ser algo como:  
   
-    ![Visualização de tabela com cabeçalhos de coluna em negrito](../reporting-services/media/rs-basictabledetailsformattedpreview.png "visualização da tabela com cabeçalhos de colunas em negrito")  
+    ![Visualização de tabela com cabeçalhos de coluna em negrito](../reporting-services/media/rs-basictabledetailsformattedpreview.png "Visualização de tabela com cabeçalhos de coluna em negrito")  
   
 5.  No menu **Arquivo** , clique em **Salvar Tudo** para salvar o relatório.  
   
@@ -96,5 +94,4 @@ Você formatou cabeçalhos de coluna e valores de data e moeda com êxito. Agora
   
   
   
-
 

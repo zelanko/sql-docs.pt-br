@@ -1,5 +1,5 @@
 ---
-title: "Localizando e exibindo relatórios no portal da web (construtor de relatórios e SSRS) | Microsoft Docs"
+title: "Localizando e exibindo relatórios no portal da Web (Construtor de Relatórios e SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85eda9497d17c2e5e7bb7fecf15e1d214d24ca11
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7ee4e423989bca7db3e23d7791b3f089c0ab1721
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Localizando e exibindo relatórios no Portal da Web (Construtor de Relatórios e SSRS)
   O Gerenciador de Relatórios é uma ferramenta com base na Web que inclui recursos para exibir e gerenciar relatórios. Faz parte de uma instalação do servidor de relatórios. Para abrir o Gerenciador de Relatórios, digite uma URL do Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações sobre os requisitos de navegador, veja [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Para obter mais informações sobre como uma URL do Gerenciador de Relatórios deve ser configurada no servidor de relatório, contate o administrador de sistema. Para obter mais informações, consulte [Configurar o Gerenciador de Relatórios &#40;Modo Nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>Navegando na hierarquia de pasta no Gerenciador de Relatórios  
  Para procurar os relatórios que deseja executar, você poderá usar a página inicial, que é exibida automaticamente quando você inicia o Gerenciador de Relatórios e quando abre qualquer pasta na hierarquia de pastas. A página inicial só mostra os itens que você tem permissão de exibir. O caminho da pasta é exibido como uma linha de links na parte superior da página inicial. Os nomes de pasta são listados em sequência, começando com a pasta raiz (Base). A medida que você abre cada pasta adicional, o nome da pasta é adicionado ao caminho da pasta na parte superior da página. **(1)** na imagem abaixo. Quando você abre um relatório, o nome dele também é adicionado ao caminho da pasta.  
   
- ![Faixa de opções do Gerenciador de relatórios e navegação](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "faixa de opções do Gerenciador de relatórios e navegação")  
+ ![Faixa de opções e navegação do Gerenciador de Relatórios](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Faixa de opções e navegação do Gerenciador de Relatórios")  
 Faixa de Opções do Gerenciador de Relatórios  
   
  Use as seguintes técnicas para navegar por uma hierarquia de pasta:  
@@ -48,7 +47,7 @@ Faixa de Opções do Gerenciador de Relatórios
 ## <a name="opening-a-report"></a>Abrindo um relatório  
  Depois que localizar um relatório, clique no nome de relatório para abri-lo. O relatório é renderizado em HTML e é exibido na página Conteúdo no Gerenciador de Relatórios. Os relatórios são sempre armazenados em cache pela sessão do navegador para que você possa geralmente retornar a ele, clicando no botão **Voltar** . Isso é verdade mesmo que você tenha que fornecer um nome de usuário e uma senha para executar o relatório. Você não pode totalmente fechar um relatório renderizado até fechar navegador.  
   
- Nem todos os relatórios visíveis na hierarquia de pasta estão imediatamente acessíveis. Alguns relatórios podem solicitar seu nome de usuário e sua senha para determinar se você pode acessar a fonte de dados do relatório. Para obter mais informações sobre como abrir relatórios no Gerenciador de relatórios, consulte [abrir e fechar um relatório &#40; Gerenciador de relatórios &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ Nem todos os relatórios visíveis na hierarquia de pasta estão imediatamente acessíveis. Alguns relatórios podem solicitar seu nome de usuário e sua senha para determinar se você pode acessar a fonte de dados do relatório. Para obter mais informações sobre como abrir relatórios no Gerenciador de Relatórios, consulte [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Você pode navegar até um relatório e abri-lo diretamente do servidor de relatório do Construtor de Relatórios. Para obter mais informações, consulte [Pesquisando relatórios e outros itens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
@@ -62,7 +61,6 @@ Faixa de Opções do Gerenciador de Relatórios
   
 ## <a name="see-also"></a>Consulte também  
  [Pesquisando relatórios e outros itens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Localizando, exibindo e Gerenciando relatórios &#40; Construtor de relatórios e SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

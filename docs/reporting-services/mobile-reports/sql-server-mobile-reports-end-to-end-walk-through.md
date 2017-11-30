@@ -1,29 +1,26 @@
 ---
-title: "Relatórios móveis do SQL Server: Noções básicas de ponta a ponta | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/30/2017
+title: "Relatórios móveis do SQL Server: Passo a passo completo | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: dde88a1ef8453a7a45410163e8c79bc20fe2df5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Noções básicas de ponta a ponta
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Passo a passo completo
 Realize a criação de relatórios móveis para qualquer tamanho de tela com o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , e exiba-os nos aplicativos móveis do Power BI.
 
 Crie relatórios móveis em uma superfície de design com linhas de grade e colunas ajustáveis e elementos flexíveis de relatório móvel. Conectar-se a várias fontes de dados locais ou carregar pastas de trabalho do Excel para criar relatórios móveis. Salve seus relatórios em um portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] e exiba-os em um navegador ou em aplicativos móveis do Power BI.  
@@ -38,11 +35,11 @@ Este artigo orienta você pela:
 ## <a name="before-we-start"></a>Antes de começar  
 Para acompanhar, você precisa destes produtos:  
   
-* Para criar KPIs e fontes de dados e publicar os conjuntos de dados e relatórios móveis, você precisa acessar um [! INCLUIR[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* Para criar fontes de dados e KPIs e publicar relatórios móveis e conjuntos de dados, você precisa ter acesso a um [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * Para [criar conjuntos de dados compartilhados](../install-windows/install-report-builder.md).  
 * Para criar relatórios móveis, [instale o Publicador de Relatórios Móveis do SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
-* [Bancos de dados e scripts de exemplo do AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
-*  OR: Dados de exemplo World Wide Importers, disponível no [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) página.
+* [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
+*  OU: banco de dados de exemplo do World Wide Importers, disponível na página [Amostras do Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Para exibir o resultado: 
   *   [Inscreva-se no serviço do Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) e
   *  [Baixe o aplicativo móvel do Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) em seu dispositivo móvel: iOS, telefone com Android ou dispositivo com Windows 10.  
@@ -50,12 +47,12 @@ Para acompanhar, você precisa destes produtos:
   
 ## <a name="create-a-shared-data-source"></a>Criar uma fonte de dados compartilhados  
   
-Você pode criar uma fonte de dados compartilhada para seus relatórios móveis a partir de qualquer uma das fontes de dados com suporte do Reporting Services. Consulte o [lista de fontes de dados com suporte de](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Você pode criar uma fonte de dados compartilhada para seus relatórios móveis a partir de qualquer uma das fontes de dados com suporte do Reporting Services. Consulte a [lista de fontes de dados com suporte](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. De seu portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , clique em **Nova** > **Fonte de Dados**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Insira suas informações de fonte de dados > **Okey**.  
+3. Insira as informações da fonte de dados > **OK**.  
   
     Por padrão, as fontes de dados não são exibidas no portal.    
    
@@ -236,7 +233,7 @@ As listas de seleção atuam como segmentações de dados no Power BI e Excel. P
   
 Agora que você criou elementos visuais no layout mestre, poderá criar um relatório móvel com um layout otimizado especificamente para os usuários de telefones.    
   
-1. No canto superior direito, clique no ícone de tela > **telefone**.  
+1. No canto superior direito, clique no ícone da tela > **Telefone**.  
   
 2. Na guia Layout, em **Instâncias de Controle**, veja os dois gráficos que você criou.   
   
@@ -313,5 +310,4 @@ Os KPIs e os relatórios móveis são exibidos nas mesmas pastas que estão no p
 -  Exibir [KPIs e relatórios móveis do Reporting Services no aplicativo do Power BI para dispositivos Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
-
 

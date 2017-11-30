@@ -1,37 +1,33 @@
 ---
-title: "Instalar o Reporting e serviços de informações da Internet lado a lado | Microsoft Docs"
+title: "Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- deploying [Reporting Services], IIS
+helpviewer_keywords: deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d45e32e12a3f9a4e87afd6557a9c292ea1a26b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Instalar o Reporting e serviços de informações da Internet lado a lado
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Você pode instalar e executar o SQL Server Reporting Services (SSRS) e serviços de informações da Internet (IIS) no mesmo computador. A versão do IIS utilizada determina os problemas de interoperabilidade a serem resolvidos.  
+Você pode instalar e executar o SSRS (SQL Server Reporting Services) e o IIS (Serviços de Informações da Internet) no mesmo computador. A versão do IIS utilizada determina os problemas de interoperabilidade a serem resolvidos.  
   
 |Versão do IIS|Problemas|Descrição|  
 |-----------------|------------|-----------------|  
@@ -50,9 +46,9 @@ Você pode instalar e executar o SQL Server Reporting Services (SSRS) e serviço
   
 |Exemplo|Solicitação|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|Recebe todas as solicitações enviadas a `http://123.234.345.456/reports` ou `http://\<computername>/reports` se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
+|`http://123.234.345.456:80/reports`|Recebe todas as solicitações enviadas a `http://123.234.345.456/reports` ou `http://\<computername>/reports` se um serviço de nomes de domínio pode resolver o endereço IP para o nome do host.|  
 |`http://+:80/reports`|Recebe todas as solicitações enviadas a qualquer endereço IP ou nome do host válido para esse computador desde que a URL contenha o nome do diretório virtual “reports”.|  
-|`http://123.234.345.456:80`|Recebe qualquer solicitação que especifique `http://123.234.345.456` ou `http://\<computername>` se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
+|`http://123.234.345.456:80`|Recebe qualquer solicitação que especifica `http://123.234.345.456` ou `http://\<computername>` se um serviço de nomes de domínio pode resolver o endereço IP para esse nome do host.|  
 |`http://+:80`|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Atribuídos**.|  
 |`http://*:80`|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Não Atribuídos**.|  
   
@@ -63,19 +59,19 @@ Você pode instalar e executar o SQL Server Reporting Services (SSRS) e serviço
   
 |Aplicativo|Reserva de URL|Descrição|Recebimento de solicitação|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Servidor de relatório|`http://+:80/ReportServer`|Curinga forte na porta 80, com diretório virtual de servidor de relatório.|Recebe todas as solicitações na porta 80 que especificam o diretório virtual de servidor de relatório. O serviço Web do servidor de relatórios recebe todas as solicitações para http://\<computername > / reportserver.|  
-|Portal da Web|`http://+:80/Reports`|Curinga forte na porta 80, com o diretório virtual Reports.|Recebe todas as solicitações na porta 80 que especificam o diretório virtual de relatórios. O [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] recebe todas as solicitações para http://\<computername > / reports.|  
+|Servidor de relatório|`http://+:80/ReportServer`|Curinga forte na porta 80, com diretório virtual de servidor de relatório.|Recebe todas as solicitações na porta 80 que especificam o diretório virtual de servidor de relatório. O serviço Web Servidor de Relatórios recebe todas as solicitações para http://\<computername>/reportserver.|  
+|Portal da Web|`http://+:80/Reports`|Curinga forte na porta 80, com o diretório virtual Reports.|Recebe todas as solicitações na porta 80 que especificam o diretório virtual de relatórios. O [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] recebe todas as solicitações para http://\<computername>/reports.|  
 |IIS|`http://*:80/`|Curinga fraco na porta 80.|Recebe todas as solicitações restantes na porta 80 não recebidas por outro aplicativo.|  
 
-## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Implantações lado a lado do SQL Server Reporting Services no IIS 8.0, 8.5
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Implantações lado a lado do SQL Server Reporting Services no IIS 8.0 a 8.5
 
  Os problemas de interoperabilidade entre o ISS e o Reporting Services ocorrem quando sites do IIS têm nomes de diretório virtual idênticos aos usados pelo Reporting Services. Por exemplo, suponha que você tenha a seguinte configuração:  
   
 -   Um site no IIS atribuído à porta 80 e um diretório virtual chamado "Reports".  
   
--   Uma instância de servidor de relatório instalada na configuração padrão, onde a reserva de URL também especifica a porta 80 e o [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] aplicativo também usa "Reports" para o nome do diretório virtual.  
+-   Uma instância do servidor de relatório instalada na configuração padrão, em que a reserva de URL também especifica a porta 80 e o aplicativo [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] também usa “Reports” como o nome do diretório virtual.  
   
- Dada essa configuração, uma solicitação que é enviada para http://\<computername >: 80/reports serão recebidas pelo [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. O aplicativo acessado por meio do diretório virtual Reports no IIS não receberá mais solicitações depois que a instância do servidor de relatório está instalada.  
+ Devido a essa configuração, uma solicitação enviada para http://\<computername>:80/reports será recebida pelo [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. O aplicativo acessado por meio do diretório virtual Reports no IIS não receberá mais solicitações depois que a instância do servidor de relatório for instalada.  
   
  Se você estiver executando implantações lado a lado de versões mais antigas e mais recentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é provável que encontre o problema de roteamento descrito. Isso porque todas as versões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usam “ReportServer” e “Reports” como nomes de diretório virtual para os aplicativos de servidor de relatório e do [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , aumentando a probabilidade de haver um diretório virtual "reports" e "reportserver" no IIS.  
   
@@ -87,9 +83,8 @@ Você pode instalar e executar o SQL Server Reporting Services (SSRS) e serviço
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Configurar as URLs do servidor de relatório](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[Configurar as URLs do Servidor de Relatório](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Configurar uma URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-[Instalar o servidor de relatório de modo nativo do Reporting Services](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
+[Instalar o servidor de relatórios de modo nativo do Reporting Services](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

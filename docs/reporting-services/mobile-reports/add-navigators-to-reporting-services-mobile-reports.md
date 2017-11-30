@@ -1,28 +1,26 @@
 ---
-title: "Adicionar navegadores para relatórios móveis do Reporting Services | Microsoft Docs"
+title: "Adicionar navegadores a relatórios móveis do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Adicionar navegadores para relatórios móveis do Reporting Services
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 Em [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], adicione os *navegadores* para filtrar os dados nas visualizações por hora ou por seleção. 
 
 Navegadores são semelhantes às segmentações no Power BI e Tabelas Dinâmicas do Excel, mas os navegadores também têm algumas características exclusivas.
@@ -38,7 +36,7 @@ Os**navegadores baseados em seleção** filtram tabelas selecionando linhas em q
 Como o nome sugere, o filtro de navegador por tempo para filtrar um intervalo de dados limitado por um intervalo de tempo.   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*Os gráficos de quatro linha à esquerda são definidos nas predefinições de intervalo de tempo. O gráfico de linha à direita é o filtro.*  
+*Os gráficos de quatro linhas à esquerda são definidos nas Predefinições de Intervalo de Tempo. O gráfico de linha à direita é o filtro.*  
   
 Ao exibir o relatório na Visualização ou no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , arraste as setas no navegador de tempo para filtrar o restante do relatório.  
   
@@ -132,4 +130,3 @@ Os filtros também podem ser colocados em cascata para que o valor selecionado e
 * [Visualizações nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Medidores nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Grades de dados nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
-

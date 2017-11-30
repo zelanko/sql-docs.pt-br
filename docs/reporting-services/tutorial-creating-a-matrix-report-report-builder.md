@@ -1,27 +1,25 @@
 ---
-title: "Tutorial: Criando um relatório de matriz (construtor de relatórios) | Microsoft Docs"
+title: "Tutorial: Criando um relatório de matriz (Construtor de Relatórios) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ee61088e30c0c2be4caa7a6989e56812c77fe0e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com uma matriz de dados de vendas de exemplo em grupos de linhas e colunas aninhados. 
@@ -57,7 +55,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 5.  Clique em **Avançar**.  
   
-6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40; Construtor de relatórios &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -162,7 +160,7 @@ Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo
   
 2.  Pressione a tecla Ctrl e, em seguida, selecione as nove células que contenham `[Sum(Sales)]`.  
   
-3.  Sobre o **início** guia > **número** > **moeda**. As células são alteradas para mostrar a moeda formatada.  
+3.  Na guia **Início** > **Número** > **Moeda**. As células são alteradas para mostrar a moeda formatada.  
   
     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
     
@@ -170,7 +168,7 @@ Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo
   
 4.  Clique na célula que contém `[SalesDate]`.  
   
-5.  No **número** grupo > **data**.  
+5.  No grupo **Número** > **Data**.  
   
     A célula exibe a data de exemplo **[1/31/2000]**. Se uma data de exemplo não estiver visível, clique em **Estilos de Espaço Reservado** no grupo **Números** e clique em **Valores de Exemplo**.  
   
@@ -268,7 +266,7 @@ A área de canto está no canto superior esquerdo da matriz. Dependendo do núme
   
 5.  Clique com o botão direito do mouse na nova célula mesclada e clique em **Propriedades da Caixa de Texto**.  
   
-6.  Sobre o **borda** guia > **predefinições** > **nenhum**.
+6.  Na guia **Borda** > **Predefinições** > **Nenhuma**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +283,7 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 2.  Selecione a caixa de texto na parte superior do corpo do relatório que contém **Clique para adicionar título**e pressione a tecla Delete.  
   
-3.  Sobre o **inserir** guia > **cabeçalho** > **Adicionar cabeçalho**.  
+3.  Na guia **Inserir** > **Cabeçalho** > **Adicionar Cabeçalho**.  
   
     Um cabeçalho é adicionado à parte superior do corpo do relatório.  
   
@@ -335,7 +333,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
 ## <a name="RotateTextBox"></a>9. (Opcional) Girar caixa de texto em 270 graus  
 Um relatório com matrizes pode se expandir horizontal e verticalmente quando executado. Girando-se caixas de texto verticalmente, ou em 270 graus, é possível economizar espaço horizontal. Em seguida, o relatório renderizado é estreitado e, se exportado para um formato como o Microsoft Word, será mais provável o ajuste em uma página impressa.  
   
-Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima para baixo). Para obter mais informações, consulte [caixas de texto &#40; Construtor de relatórios e SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima para baixo). Para obter mais informações, consulte [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>Para girar caixa de texto em 270 graus  
   
@@ -371,5 +369,4 @@ Isso conclui o tutorial sobre como criar um relatório de matriz. Para obter mai
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

@@ -1,12 +1,11 @@
 ---
-title: "Provisionar assinaturas e alertas para aplicativos de serviço SSRS | Microsoft Docs"
+title: "Provisionar assinaturas e alertas para aplicativos de serviço do SSRS | Microsoft Docs"
 ms.custom: 
 ms.date: 06/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Reporting Services Service Application
 - SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 43a5b233f39e52555696d2b6f3e08ce9077581b6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a96245405f8f13de983215100cde3b189e2b0f17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisionar Assinaturas e Alertas para aplicativos de serviço SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] as assinaturas e os alertas de dados exigem o SQL Server Agent e a configuração de permissões para o SQL Server Agent. Se você visualizar mensagens de erro que indicam que um SQL Server Agent é necessário e tiver verificado que o SQL Server Agent está em execução; em seguida, atualize ou verifique as permissões. O escopo deste tópico é [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint e o tópico descreve três maneiras de atualizar as permissões do SQL Server Agent com assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As credenciais que você usa para as etapas neste tópico precisam ter permissões suficientes para conceder permissões execute a RSExecRole para objetos nos bancos de dados de aplicativos de serviço, msdb e mestre.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
- ![Permissões do SQL Agent para bancos de dados de aplicativo de serviço](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "permissões do SQL Agent para bancos de dados de aplicativo de serviço")  
+ ![Permissões do SQL Agent para BDs do Aplicativo de Serviço](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Permissões do SQL Agent para BDs do Aplicativo de Serviço")  
   
 ||Description|  
 |------|-----------------|  
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/09/2017
 5.  Clique em **Executar**.  
   
   
-

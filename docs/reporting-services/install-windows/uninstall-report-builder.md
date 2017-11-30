@@ -1,5 +1,5 @@
 ---
-title: "Desinstalar o construtor de relatórios | Microsoft Docs"
+title: "Desinstalar o Construtor de Relatórios | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 87d8e248cb143322c06570092ca3afc380827356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="uninstall-report-builder"></a>Desinstalar o Construtor de Relatórios
 
 É possível desinstalar a versão autônoma do Construtor de Relatórios no painel de controle ou na linha de comando.
@@ -37,7 +36,7 @@ Se as pastas usadas pelo Construtor de Relatórios incluírem arquivos personali
   
 2.  No Painel de Controle, clique em **Programas e Recursos**.  
   
-3.  Localize [!INCLUDE[msCoName](../../includes/msconame-md.md)] construtor de relatórios do SQL Server 2016 no **nome** lista e clique nele.  
+3.  Localize o Construtor de Relatórios do [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 na lista **Name** e clique nele.  
   
 4.  Clique em **Desinstalar**.  
   
@@ -65,4 +64,4 @@ Se as pastas usadas pelo Construtor de Relatórios incluírem arquivos personali
 
 [Instalar o Construtor de Relatórios](../../reporting-services/install-windows/install-report-builder.md)  
 
-Mais perguntas? [Tente fazer o fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
