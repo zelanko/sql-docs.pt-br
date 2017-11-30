@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Defina permissões de processamento em uma estrutura de mineração de dados  
  Você pode criar uma função que conceda permissão para processar estruturas de mineração de dados. Isso inclui o processamento de todos os modelos de mineração.  
   
- As permissões**Detalhar** e **Ler Definição** permissions used for browsing a mining model e structure are atomic e can be added to the same role, or separated out into a different role.  
+ As permissões **Detalhar** e **Ler Definição** usadas para navegar em um modelo e estrutura de mineração são atômicas e podem ser adicionadas à mesma função ou separados em uma função diferente.  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra a pasta Bancos de Dados e selecione um banco de dados.  
   

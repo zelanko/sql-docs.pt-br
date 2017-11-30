@@ -28,7 +28,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Dimensões - Assistente de BI no Designer de dimensão do banco de dados
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you create custom rollup operators and custom member formulas and configure dimensions for writeback by using the Business Notelligence Wizard or Dimension Designer. Você pode iniciar o Assistente de Business Intelligence por meio do Gerenciador de Soluções ou do Designer de Cubo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O Designer de Dimensão pode ser acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], crie operadores de rollup personalizado e fórmulas de membro personalizado e configure dimensões para write-back usando o Assistente de Business Intelligence ou o Designer de Dimensão. Você pode iniciar o Assistente de Business Intelligence por meio do Gerenciador de Soluções ou do Designer de Cubo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O Designer de Dimensão pode ser acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>Iniciar o Assistente de Business Intelligence  
   

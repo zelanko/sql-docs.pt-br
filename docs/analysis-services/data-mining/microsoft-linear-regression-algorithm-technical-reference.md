@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |Atributo previsível|Contínuo, cíclico e ordenado|  
   
 > [!NOTE]  
->  Os tipos de conteúdo**Cíclico** e **Ordenado** content types are supported, but the algorithm treats them as discrete values e does not perform special processing.  
+>  Os tipos de conteúdo**Cíclico** e **Ordenado** têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo Regressão Linear da Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
