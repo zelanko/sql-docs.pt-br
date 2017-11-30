@@ -2,7 +2,7 @@
 title: "ALTERAR as opções de conjunto de banco de dados (Transact-SQL) | Microsoft Docs"
 description: "Saiba mais sobre como definir opções de banco de dados, como criptografia automática e ajuste, o repositório de consultas em um SQL Server e banco de dados do SQL Azure"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,17 +26,19 @@ helpviewer_keywords:
 - checksums [SQL Server]
 - automatic tuning
 - SQL plan regression correction
+- auto_create_statistics
+- auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 caps.latest.revision: "159"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b460ca1e3f662ea59c0b7bcd4b1fc0e0e059e236
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 Espelhamento de banco de dados, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], e níveis de compatibilidade são `SET` opções mas são descritas em tópicos separados por causa de sua extensão. Para obter mais informações, consulte [ALTER do espelhamento de banco de dados do banco de dados &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), e [alterar o nível de compatibilidade do banco de dados &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  Muitas opções de conjunto de banco de dados podem ser configuradas para a sessão atual usando [instruções SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md) e normalmente são configuradas por aplicativos quando eles se conectam. As opções definidas no nível de sessão substituem os valores de **ALTER DATABASE SET** . As opções de banco de dados descritas abaixo são os valores que podem ser definidos para as sessões que não fornecem explicitamente outros valores de definição de conjunto.  
+> Muitas opções de conjunto de banco de dados podem ser configuradas para a sessão atual usando [instruções SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md) e normalmente são configuradas por aplicativos quando eles se conectam. As opções definidas no nível de sessão substituem os valores de **ALTER DATABASE SET** . As opções de banco de dados descritas abaixo são os valores que podem ser definidos para as sessões que não fornecem explicitamente outros valores de definição de conjunto.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -276,8 +278,7 @@ SET
  **\<auto_option >:: =**  
   
  Controla opções automáticas.  
-  
- AUTO_CLOSE { ON | OFF }  
+ <a name="auto_close"></a>AUTO_CLOSE {ON | OFF}  
  ON  
  O banco de dados é desligado corretamente e seus recursos são liberados depois da saída do último usuário.  
   
@@ -300,8 +301,8 @@ SET
 >  O espelhamento do banco de dados requer AUTO_CLOSE OFF.  
   
  Quando o banco de dados é definido como AUTOCLOSE = ON, uma operação que inicia o desligamento automático do banco de dados limpa o cache do plano da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e superior, para cada armazenamento em cache eliminado do cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrência(s) de liberação de armazenamento em cache '% s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.  
-  
- AUTO_CREATE_STATISTICS { ON | OFF }  
+ 
+ <a name="auto_create_statistics"></a>AUTO_CREATE_STATISTICS {ON | OFF}  
  ON  
  O otimizador de consulta cria estatísticas em colunas únicas em predicados de consulta, conforme necessário, para melhorar planos e desempenho de consulta. Estas estatísticas de coluna única são criadas quando o otimizador de consulta compila consultas. As estatísticas de coluna única só são criadas em colunas que ainda não são a primeira de um objeto de estatísticas existente.  
   
@@ -319,7 +320,7 @@ SET
   
  **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- AUTO_SHRINK {ON | OFF}  
+ <a name="auto_shrink"></a>AUTO_SHRINK {ON | OFF}  
  ON  
  Os arquivos de banco de dados são candidatos à redução periódica.  
   
@@ -335,9 +336,9 @@ SET
  O status dessa opção pode ser determinado examinando-se a coluna is_auto_shrink_on na exibição do catálogo sys.databases ou a propriedade IsAutoShrink da função DATABASEPROPERTYEX.  
   
 > [!NOTE]  
->  A opção AUTO_SHRINK não está disponível em um banco de dados independente.  
+> A opção AUTO_SHRINK não está disponível em um banco de dados independente.  
   
- AUTO_UPDATE_STATISTICS { ON | OFF }  
+ <a name="auto_update_statistics"></a>AUTO_UPDATE_STATISTICS {ON | OFF}  
  ON  
  Especifica que o otimizador de consultas atualiza estatísticas quando são usadas por uma consulta e quando podem estar desatualizadas. As estatísticas ficam desatualizadas depois que operações de inserção, atualização, exclusão ou mesclagem alteram a distribuição de dados na tabela ou na exibição indexada. O otimizador de consulta determina quando estatísticas podem estar desatualizadas contando o número de modificações de dados desde a última atualização das estatísticas e comparando o número de modificações a um limite. O limite se baseia no número de linhas na tabela ou na exibição indexada.  
   
@@ -356,7 +357,7 @@ SET
   
  Para obter mais informações, consulte a seção "Usando as opções de estatísticas de todo o banco de dados" em [estatísticas](../../relational-databases/statistics/statistics.md).  
   
- AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
+ <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC {ON | OFF}  
  ON  
  Especifica que atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são assíncronas. O otimizador de consulta não aguarda a conclusão das atualizações de estatísticas para compilar consultas.  
   
@@ -373,7 +374,7 @@ SET
   
  Para obter mais informações que descreve quando usar atualizações de estatísticas síncronas ou assíncronas, consulte a seção "Usando as opções de estatísticas de todo o banco de dados" em [estatísticas](../../relational-databases/statistics/statistics.md).  
   
- **\<automatic_tuning_option >:: =**  
+ <a name="auto_tuning"></a> **\<automatic_tuning_option >:: =**  
  **Aplica-se a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
 
  Habilita ou desabilita `FORCE_LAST_GOOD_PLAN` [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) opção.  
@@ -387,7 +388,7 @@ SET
 
  **\<change_tracking_option >:: =**  
   
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controla as opções de controle de alterações. É possível habilitar o controle de alterações, definir opções, alterar opções e desabilitar o controle de alterações. Para obter exemplos, consulte a seção Exemplos mais adiante neste tópico.  
   
@@ -425,7 +426,7 @@ SET
  O banco de dados é um banco de dados independente. Haverá falha na configuração da contenção do banco de dados como parcial, se o banco de dados tiver replicação, Change Data Capture ou controle de alterações habilitados. A verificação de erros é interrompida depois de uma falha. Para obter mais informações sobre bancos de dados independentes, consulte [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 > [!NOTE]  
->  Confinamento não pode ser configurado no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Contenção não esteja designada explicitamente, mas [!INCLUDE[ssSDS](../../includes/sssds-md.md)] pode usar recursos contidos contidos, como usuários de banco de dados.  
+> Confinamento não pode ser configurado no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Contenção não esteja designada explicitamente, mas [!INCLUDE[ssSDS](../../includes/sssds-md.md)] pode usar recursos contidos contidos, como usuários de banco de dados.  
   
  **\<cursor_option >:: =**  
   
@@ -443,7 +444,7 @@ SET
  O status dessa opção pode ser determinado examinando-se a coluna is_cursor_close_on_commit_on na exibição do catálogo sys.databases ou a propriedade IsCloseCursorsOnCommitEnabled da função DATABASEPROPERTYEX.  
   
  CURSOR_DEFAULT { LOCAL | GLOBAL }  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controla se o escopo do cursor usa LOCAL ou GLOBAL.  
   
@@ -459,13 +460,13 @@ SET
   
  **\<database_mirroring >**  
   
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Para obter descrições de argumentos, consulte [ALTER do espelhamento de banco de dados do banco de dados &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **\<date_correlation_optimization_option >:: =**  
   
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controla a opção date_correlation_optimization.  
   
@@ -493,7 +494,7 @@ SET
   
  **\<db_state_option >:: =**  
   
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controla o estado do banco de dados.  
   
@@ -507,7 +508,7 @@ SET
  O banco de dados está marcado como READ_ONLY, o log está desabilitado e o acesso é limitado aos membros da função de servidor fixa sysadmin. EMERGENCY é usado principalmente para a solução de problemas. Por exemplo, um banco de dados marcado como suspeito devido a um arquivo de log corrompido pode ser definido com o estado EMERGENCY. Isso permite habilitar o acesso somente leitura do administrador do sistema ao banco de dados. Apenas membros da função de servidor fixa sysadmin podem definir um banco de dados com o estado EMERGENCY.  
   
 > [!NOTE]  
->  **Permissões:** permissão ALTER DATABASE para o banco de dados de assunto é necessária para alterar um banco de dados para o estado offline ou emergência. A permissão ALTER ANY DATABASE no nível do servidor é necessária para mover um banco de dados de offline para online.  
+> **Permissões:** permissão ALTER DATABASE para o banco de dados de assunto é necessária para alterar um banco de dados para o estado offline ou emergência. A permissão ALTER ANY DATABASE no nível do servidor é necessária para mover um banco de dados de offline para online.  
   
  O status dessa opção pode ser determinado examinando-se as colunas state e state_desc no [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo ou a propriedade Status o [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) função. Para obter mais informações, consulte [Database States](../../relational-databases/databases/database-states.md).  
   
@@ -529,14 +530,14 @@ SET
  Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados. Para obter mais informações, consulte a cláusula SINGLE_USER.  
   
 > [!NOTE]  
->  Nos bancos de dados federados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SET { READ_ONLY | READ_WRITE } é desabilitado.  
+> Nos bancos de dados federados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SET { READ_ONLY | READ_WRITE } é desabilitado.  
   
  **\<db_user_access_option >:: =**  
   
  Controla o acesso de usuários ao banco de dados.  
   
  SINGLE_USER  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Especifica que somente um usuário por vez pode acessar o banco de dados. Se SINGLE_USER for especificado e houver outros usuários conectados ao banco de dados, a instrução ALTER DATABASE será bloqueada até que todos os usuários se desconectem do banco de dados especificado. Para substituir esse comportamento, consulte o WITH \<terminação > cláusula.  
   
@@ -575,7 +576,7 @@ MULTI_USER
   
  **\<external_access_option >:: =**  
   
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controla se o banco de dados pode ser acessado por recursos externos, como objetos de outro banco de dados.  
   
@@ -587,7 +588,7 @@ MULTI_USER
  O banco de dados não pode participar do encadeamento de propriedades de bancos de dados.  
   
 > [!IMPORTANT]  
->  A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconhecerá essa configuração quando a opção do servidor Encadeamento de Propriedades de Bancos de Dados for 0 (OFF). Quando Encadeamento de Propriedades de BD for 1 (ON), todos os bancos de dados de usuário poderão participar de cadeias de propriedades de bancos de dados, independentemente do valor dessa opção. Essa opção é definida usando [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+> A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconhecerá essa configuração quando a opção do servidor Encadeamento de Propriedades de Bancos de Dados for 0 (OFF). Quando Encadeamento de Propriedades de BD for 1 (ON), todos os bancos de dados de usuário poderão participar de cadeias de propriedades de bancos de dados, independentemente do valor dessa opção. Essa opção é definida usando [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  Para definir essa opção requer a permissão CONTROL SERVER no banco de dados.  
   
@@ -659,7 +660,7 @@ MULTI_USER
   
  **\<HADR_options >:: =**  
   
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Consulte [ALTER DATABASE SET HADR &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
@@ -692,7 +693,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Controla se o repositório de consultas está habilitado neste banco de dados, além de controlar a remoção de conteúdo do repositório de consultas.  
@@ -762,7 +763,7 @@ OPERATION_MODE
  Uma estratégia simples de backup que usa um espaço de log mínimo é fornecida. O espaço de log poderá ser reutilizado automaticamente quando não for mais necessário à recuperação de falha de servidor. Para obter mais informações, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
 > [!IMPORTANT]  
->  O modelo de recuperação simples é mais fácil de gerenciar que os outros dois modelos, mas às custas de uma exposição maior à perda de dados se um arquivo de dados for danificado. Todas as alterações desde o backup mais recente do banco de dados ou diferencial serão perdidas e terão que ser reinseridas manualmente.  
+> O modelo de recuperação simples é mais fácil de gerenciar que os outros dois modelos, mas às custas de uma exposição maior à perda de dados se um arquivo de dados for danificado. Todas as alterações desde o backup mais recente do banco de dados ou diferencial serão perdidas e terão que ser reinseridas manualmente.  
   
  O modelo de recuperação padrão é determinado pelo modelo de recuperação do banco de dados **model** . Para obter mais informações sobre como selecionar o modelo de recuperação apropriado, consulte [modelos de recuperação &#40; SQL Server &#41; ](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -776,9 +777,9 @@ OPERATION_MODE
  Páginas incompletas não podem ser detectadas pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!IMPORTANT]  
->  A estrutura de sintaxe TORN_PAGE_DETECTION ON | OFF será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar essa estrutura de sintaxe em novos trabalhos de desenvolvimentos e planeje modificar os aplicativos que a utilizam atualmente. Use a opção PAGE_VERIFY em seu lugar.  
+> A estrutura de sintaxe TORN_PAGE_DETECTION ON | OFF será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar essa estrutura de sintaxe em novos trabalhos de desenvolvimentos e planeje modificar os aplicativos que a utilizam atualmente. Use a opção PAGE_VERIFY em seu lugar.  
   
- PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
+<a name="page_verify"></a>PAGE_VERIFY {CHECKSUM | TORN_PAGE_DETECTION | NONE}  
  Descobre páginas de banco de dados danificadas por erros de caminho de E/S do disco. Os erros de caminho de E/S do disco podem ser a causa de problemas de corrompimento de banco de dados e, em geral, são causados por quedas de energia ou falhas no disco que ocorrem no momento da gravação no disco.  
   
  CHECKSUM  
@@ -797,7 +798,7 @@ OPERATION_MODE
 -   Quando um usuário ou banco de dados do sistema é atualizado para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, o valor de PAGE_VERIFY (NONE ou TORN_PAGE_DETECTION) é retido. Recomendamos o uso de CHECKSUM.  
   
     > [!NOTE]  
-    >  Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção de banco de dados PAGE_VERIFY é definida como NONE para o banco de dados tempdb e não pode ser modificada. Em [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores, o valor padrão para o banco de dados tempdb é CHECKSUM para novas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao atualizar uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o valor padrão permanece como NONE. A opção pode ser modificada. É recomendável usar CHECKSUM para o banco de dados tempdb.  
+    > Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção de banco de dados PAGE_VERIFY é definida como NONE para o banco de dados tempdb e não pode ser modificada. Em [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores, o valor padrão para o banco de dados tempdb é CHECKSUM para novas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao atualizar uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o valor padrão permanece como NONE. A opção pode ser modificada. É recomendável usar CHECKSUM para o banco de dados tempdb.  
   
 -   TORN_PAGE_DETECTION pode usar menos recursos, mas fornece um subconjunto mínimo da proteção CHECKSUM.  
   
@@ -809,9 +810,9 @@ OPERATION_MODE
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repetirá mais quatro vezes qualquer leitura que falhe com uma soma de verificação, página interrompida ou outro erro de E/S. Se a leitura tiver êxito em qualquer uma das novas tentativas, uma mensagem será gravada no log de erros e o comando que disparou a leitura continuará. Se as novas tentativas falharem, o comando falhará com a mensagem de erro 824.  
   
- Para obter mais informações sobre soma de verificação, página interrompida, nova tentativa de leitura, mensagens de erro 823 e 824 e outros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos de auditoria de e/s, consulte este [site da Microsoft](http://go.microsoft.com/fwlink/?LinkId=47160).  
+ Para obter mais informações sobre mensagens de erro 823, 824 e 825, consulte [como solucionar uma mensagem de erro 823 no SQL Server](http://support.microsoft.com/help/2015755), [como solucionar a mensagem de erro 824 no SQL Server](http://support.microsoft.com/help/2015756) e [como solucionar a mensagem de erro 825 &#40; repetição de leitura &#41; no SQL Server](http://support.microsoft.com/help/2015757).
   
- A configuração atual dessa opção pode ser determinada examinando a coluna page_verify_option no [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo ou a propriedade IsTornPageDetectionEnabled o [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)função.  
+ A configuração atual dessa opção pode ser determinada examinando o *page_verify_option* coluna o [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo ou *IsTornPageDetectionEnabled*propriedade o [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) função.  
   
 **\<remote_data_archive_option >:: =**  
   
@@ -1250,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Habilitando o repositório de consultas  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  O exemplo a seguir habilita o repositório de consultas e configura os parâmetros do repositório de consultas.  
   
@@ -1258,11 +1259,11 @@ SET CHANGE_TRACKING = OFF;
 ALTER DATABASE AdventureWorks2012  
 SET QUERY_STORE = ON   
     (  
-      OPERATION_MODE = READ_ONLY   
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 5 )  
-    , DATA_FLUSH_INTERVAL_SECONDS = 2000   
-    , MAX_STORAGE_SIZE_MB = 10   
-    , INTERVAL_LENGTH_MINUTES = 10   
+      OPERATION_MODE = READ_WRITE   
+    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )  
+    , DATA_FLUSH_INTERVAL_SECONDS = 900   
+    , MAX_STORAGE_SIZE_MB = 1024   
+    , INTERVAL_LENGTH_MINUTES = 60   
     );  
 ```  
   
@@ -1278,6 +1279,6 @@ SET QUERY_STORE = ON
  [Definir nível de ISOLAMENTO da transação &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
+ [data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   

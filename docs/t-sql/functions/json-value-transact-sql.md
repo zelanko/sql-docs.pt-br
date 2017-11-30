@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5762af5115dd65b819bc74c3585cfc8275a516b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab4c14769dc51c6d5b97a6ad2fe6f0cb06fad4e0
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -107,10 +107,13 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="example-1"></a>Exemplo 1  
- O exemplo a seguir usa os valores das propriedades JSON `town` e `state` nos resultados da consulta. Como **JSON_VALUE** preserva o agrupamento de origem, a ordem de classificação dos resultados depende do agrupamento do `jsonInfo` coluna.  
+ O exemplo a seguir usa os valores das propriedades JSON `town` e `state` nos resultados da consulta. Como **JSON_VALUE** preserva o agrupamento de origem, a ordem de classificação dos resultados depende do agrupamento do `jsonInfo` coluna. 
+
+> [!NOTE]
+> (Este exemplo assume que uma tabela denominada `Person.Person` contém um `jsonInfo` colunas de texto JSON, e esta coluna tem a estrutura mostrada anteriormente na discussão de modo incerto e modo estrito. O banco de dados de exemplo AdventureWorks, o `Person` a tabela de fato não contém um `jsonInfo` coluna.)
   
 ```sql  
-SELECT FirstName,LastName,
+SELECT FirstName, LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'

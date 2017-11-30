@@ -2,9 +2,12 @@
 title: "Função Aggregate (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -17,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 109d8dc31ba0847cd7c1d0ff605e56d18ae13d52
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6e0905531658202c86ef5deac9e20d4db36fd9d6
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="aggregate-mdx"></a>Função Aggregate (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna um número que é calculado com a agregação nas células retornadas pela expressão de conjunto. Se uma expressão numérica não for fornecida, essa função agregará cada medida no contexto atual de consulta usando o operador padrão de agregação especificado para cada medida. Se uma exressão numérica for fornecida, essa função primeiro avalia e, em seguida, soma a expressão numérica de cada célula no conjunto especificado.  
   

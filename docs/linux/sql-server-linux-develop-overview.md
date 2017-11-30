@@ -4,7 +4,7 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,19 +13,20 @@ ms.component: linux
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: ed4f34bf3e08897ab13cae24f47fc74292ce38bc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aa5b8ecf8b9801874d0af342d268073a09e4812c
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Como começar a desenvolver aplicativos para o SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Você pode criar aplicativos que se conectam ao 2017 do SQL Server no Linux de uma variedade de linguagens de programação, como c#, Java, Node.js, PHP, Python, Ruby e C++. Você também pode usar as estruturas de sites populares e estruturas de mapeamento relacional objeto (ORM).
+
+> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > Essas mesmas opções de desenvolvimento também habilitar destino do SQL Server em outras plataformas. Aplicativos podem direcionar o SQL Server em execução no local ou na nuvem, no Docker, Windows ou Linux em macOS. Ou você pode direcionar o banco de dados do SQL Azure e o Azure SQL Data Warehouse.

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  Há vários tipos de objetos de banco de dados gerenciados de integração CLR. Para obter informações gerais sobre esses objetos, consulte [criando objetos de banco de dados com integração de Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Sempre que esses objetos são executados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um **AppDomain** sob o qual ele pode carregar e executar o código exigido. O nível de isolamento para um **AppDomain** é um **AppDomain** por banco de dados por proprietário. Ou seja, todos os objetos de propriedade de um usuário são sempre executados no mesmo **AppDomain** por banco de dados (se um usuário registra objetos de banco de dados CLR em bancos de dados diferentes, o banco de dados CLR objetos serão executado em diferentes domínios de aplicativo). Um **AppDomain** não é destruído depois que o código de conclusão da execução. Em vez disso, ele é colocado na memória para execuções futuras. Isso melhora o desempenho.  
   
  Para obter mais informações, consulte [domínios de aplicativo](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299659)).|  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  

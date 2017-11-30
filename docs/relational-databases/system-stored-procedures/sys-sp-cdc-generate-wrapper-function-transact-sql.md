@@ -26,20 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbadba2128bad803f56d3b1665332c48eb999beb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b32fc0848943814052a72e4b3f91eb4f5556a4bc
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gera scripts para criar funções de wrapper para as funções de consulta de captura de dados de alteração disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A API suportada nos wrappers gerados permite que o intervalo de consulta a ser especificado como um intervalo de data e hora. Isso torna a função adequada para uso em vários aplicativos de warehousing, incluindo aqueles que são desenvolvidas pela [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tecnologia para determinar carga incremental de captura de designers de pacotes que estão usando dados de alteração.  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

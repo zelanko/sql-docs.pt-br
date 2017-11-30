@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6da5bc97801329871d6b433ecf8f049f4b0eb742
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4f83721eacaed868a60b5035bd9342aaafabc04d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
   Este procedimento do sistema remove uma associação existente entre um banco de dados e um pool de recursos para fins de controlar o uso de memória do [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  Se não houver um pool associado no momento ao banco de dados especificado, o sucesso será retornado. Quando o banco de dados não está associado, a memória alocada anteriormente para objetos com otimização de memória permanece alocada para o pool de recursos anterior. Você precisa reiniciar o banco de dados para liberar a memória alocada. Quando um banco de dados é desassociado do pool de recursos, a associação recorre ao pool de recursos DEFAULT.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-||  
-|-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## <a name="syntax"></a>Sintaxe  
   

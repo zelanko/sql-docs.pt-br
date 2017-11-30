@@ -1,7 +1,7 @@
 ---
 title: Instalando o SSMA para SAP ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 11/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,27 +17,27 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 41931c08813cb4836b799b97f2fba0fbbc645a8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 282dacb356df5a7956e9f30852193b54f37961e7
+ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>Instalando o SSMA para SAP ASE (SybaseToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA (Migration Assistant) para SAP ASE consiste em um aplicativo cliente que você usa para executar uma migração do SAP Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou banco de dados do SQL Azure. Ele também contém um pacote de extensão que oferece suporte à migração de dados e o uso das funções do sistema ASE em seus bancos de dados migrados.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA (Migration Assistant) para o SAP Adaptive Server Enterprise (ASE) consiste em um aplicativo cliente que você usa para realizar uma migração do SAP ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou banco de dados do SQL Azure. Ele também contém um pacote de extensão que oferece suporte à migração de dados e o uso das funções do sistema ASE em seus bancos de dados migrados.  
   
-Você pode instalar o aplicativo cliente no computador do qual você executará as etapas de migração. Você deve instalar os arquivos de pacote de extensão no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] onde os bancos de dados migrados serão hospedados.  
+Instale o aplicativo cliente no computador do qual você planeja executar as etapas de migração. Instalar os arquivos de pacote de extensão no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no qual os bancos de dados migrados devem ser hospedadas.  
   
-## <a name="upgrading-ssma-for-sybase"></a>Atualizando o SSMA para Sybase  
-Se você quiser atualizar para uma versão posterior do SSMA para SAP ASE, você deve primeiro desinstalar o cliente e o pacote de extensão do servidor e, em seguida, instale a versão mais recente.  
+## <a name="upgrading-ssma-for-sap-ase"></a>Atualizando o SSMA para SAP ASE  
+Se você quiser atualizar para uma versão posterior do SSMA para SAP ASE, primeiro você deve desinstalar o cliente e o pacote de extensão do servidor. Em seguida, instale a versão mais recente.  
   
-Se você abrir um projeto de uma versão anterior do SSMA para SAP ASE, SSMA perguntará se você deseja converter o projeto para a versão mais recente. Você deve clicar em **Sim** para trabalhar com o projeto na versão mais recente do SSMA.  
+Se você abrir um projeto de uma versão anterior do SSMA para SAP ASE, SSMA perguntará se você deseja converter o projeto para a versão mais recente. Clique em **Sim** para trabalhar com o projeto na versão mais recente do SSMA.  
   
 ## <a name="contents"></a>Sumário  
   
-|Tópico|Description|  
+|Artigo|Description|  
 |---------|---------------|  
-|[Instalando o SSMA para SAP ASE cliente &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|Fornece informações sobre e instruções para instalar o cliente do SSMA.|  
+|[Instalando o SSMA para SAP ASE cliente &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|Fornece informações sobre e instruções para instalar o SSMA para cliente SAP ASE.|  
 |[Instalando componentes do SSMA SQL Server &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Fornece informações e instruções para instalar o pacote de extensão em instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Removendo o SSMA para componentes do SAP ASE &#40; SybaseToSQL &#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|Fornece instruções para desinstalar o cliente do pacote de programa e a extensão.|  
   
