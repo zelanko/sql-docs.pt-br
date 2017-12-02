@@ -177,7 +177,7 @@
 ## Siga o blog
 ### [Blog da equipe do SSIS](https://blogs.msdn.microsoft.com/ssis/)
 ## Obter ajuda
-### [Fórum do SSIS no MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Fórum do SSIS no MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Marca do SSIS no Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
 ## Faça comentários
 ### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
