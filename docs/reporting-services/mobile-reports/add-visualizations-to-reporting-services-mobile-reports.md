@@ -121,7 +121,7 @@ Em gráficos de comparação, você pode optar por ter as mesmas cores do gráfi
 ## <a name="pie-and-funnel-charts"></a>Gráficos de pizza e de funil  
   
 Gráficos de pizza e funil estão entre as visualizações mais simples. Você pode estruturar os dados por linhas ou colunas. 
-* Os**gráficos de pizza** nos relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total nos relatórios móveis do the center. Os gráficos de pizza são úteis para mostrar o tamanho relativo das diferentes partes de um todo. Um número excessivo de fatias dificulta a leitura.
+* Os **gráficos de pizza** nos relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] podem ser pizza, rosca ou rosca com um total no centro. Os gráficos de pizza são úteis para mostrar o tamanho relativo das diferentes partes de um todo. Um número excessivo de fatias dificulta a leitura.
 * Em geral, os**gráficos de funil** são usados para mostrar os estágios de um processo, como vendas.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
