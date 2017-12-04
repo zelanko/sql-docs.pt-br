@@ -2,9 +2,12 @@
 title: Recursos de pesquisa de texto completo preteridos no SQL Server 2016 | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2849b5a4570c4ce4c2633c13522c66d04b4c47fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7492b1c26c21a2cbc831c2bed39be165310bf51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Recursos de pesquisa de texto completo preteridos no SQL Server 2016
-  Este tópico descreve os recursos de pesquisa de texto completo preteridos que ainda estão disponíveis no SQL Server. Esses recursos estão programados para serem removidos em uma versão futura. Não use recursos preteridos em novos aplicativos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve os recursos de pesquisa de texto completo preteridos que ainda estão disponíveis no SQL Server. Esses recursos estão programados para serem removidos em uma versão futura. Não use recursos preteridos em novos aplicativos.  
   
 Monitore seu uso de recursos preteridos usando o contador de desempenho do objeto e eventos de rastreamento do **SQL Server: recursos preteridos**. Para obter mais informações, confira o artigo [Usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   

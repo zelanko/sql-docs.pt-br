@@ -2,9 +2,12 @@
 title: Importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure | Microsoft Docs
 ms.custom: 
 ms.date: 10/27/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,14 +15,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ab07b5c374b20ce815c16f5346969d3517bbc26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure
-Use uma variedade de métodos para importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure. Esses métodos incluem instruções Transact-SQL, ferramentas de linha de comando e assistentes.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use uma variedade de métodos para importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure. Esses métodos incluem instruções Transact-SQL, ferramentas de linha de comando e assistentes.
 
 Também importe e exporte dados em uma variedade de formatos. Esses formatos incluem arquivos simples, Excel, os principais bancos de dados relacionais e vários serviços de nuvem.
 

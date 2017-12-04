@@ -2,9 +2,12 @@
 title: "Computar limites de capacidade por edição do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 11/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef30b71b10c44d8e09a543e75e7c19e5e85fec02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 02a5a436fdae6d9196359b36e72af3ffc11d2a87
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Computar limites de capacidade por edição do SQL Server
-  Esse tópico discute os limites de capacidade de computação para edições diferentes do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e como elas podem diferir em ambientes físicos e virtualizados com processadores hyper-threaded.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este artigo discute os limites de capacidade de computação das edições diferentes do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e quais suas diferenças em ambientes físicos e virtualizados com processadores com hyperthreading.  
   
  ![Mapeamentos para calcular limites de capacidade](../sql-server/media/compute-capacity-limits.gif "Mapeamentos para calcular limites de capacidade")  
   
- A tabela a seguir descreve as notações que são usadas no diagrama acima:  
+ Esta tabela descreve as notações do diagrama anterior:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -42,60 +45,62 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 > Para elaborar mais:  
 >   
-> - Uma máquina virtual é alocada um ou mais processadores virtuais.  
+> - Uma VM (máquina virtual) tem um ou mais processadores virtuais.  
 > - Uma ou mais processadores virtuais são alocados a exatamente uma máquina virtual.  
-> - Zero ou um processador virtual é mapeado para zero ou mais processadores lógicos. Quando o mapeamento do processador virtual para o processador lógico é: 
->     -   Um para zero representa um processador lógico não associado não usado pelos sistemas operacionais convidados.  
->     -   Um para muitos representa uma superconfirmação.  
->     -   Zero para muitos representa a ausência de máquina virtual no sistema host, de modo que nenhum processador lógico seja usado por máquinas virtuais.  
-> - Um soquete é mapeado para zero ou mais núcleos. Quando o soquete para o mapeamento de núcleo é:  
->     -   Um para zero representa um soquete vazio (nenhum chip instalado).  
->     -   Um para um representa um chip de núcleo único instalado no soquete (muito raro estes dias).  
->     -   Um para muitos representa um chip de núcleo múltiplo instalado no soquete (os valores típicos são 2,4,8).  
-> - Um núcleo é mapeado para um ou dois processadores lógicos. Quando o mapeamento do núcleo para o processador lógico é:  
->     -   O hyperthreading de um para um está desativado.  
->     -   O hyperthreading de um para dois está ativado.  
+> - Zero ou um processador virtual é mapeado para zero ou mais processadores lógicos. Quando o mapeamento dos processadores virtuais para os processadores lógicos é: 
+>     -   Um para zero, representa um processador lógico não associado não usado pelos sistemas operacionais convidados.  
+>     -   Um para muitos, representa uma superconfirmação.  
+>     -   Zero para muitos, representa a ausência de máquina virtual no sistema host. Portanto, as VMs não usam nenhum processador lógico.  
+> - Um soquete é mapeado para zero ou mais núcleos. Quando o mapeamento do soquete para núcleo é:  
+>     -   Um para zero, representa um soquete vazio. Não há chip instalado.  
+>     -   Um para um, representa um chip de núcleo único instalado no soquete. Esse mapeamento é raro nos dias atuais.  
+>     -   Um para muitos, representa um chip de vários núcleos instalado no soquete. Os valores típicos são 2, 4 e 8.  
+> - Um núcleo é mapeado para um ou dois processadores lógicos. Quando o mapeamento dos núcleos cores para os processadores lógicos é:  
+>     -   Um para um, o hyperthreading está desativado.  
+>     -   Um para dois, o hyperthreading está ativado.  
   
- As definições a seguir se aplicam às condições usadas ao longo deste tópico:  
+ As definições a seguir aplicam-se aos termos usados neste artigo:  
   
--   Um thread ou processador lógico é um mecanismo de computação lógico da perspectiva do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o sistema operacional, um aplicativo ou driver.  
+-   Um thread ou processador lógico é um mecanismo de computação lógico da perspectiva do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], do sistema operacional, de um aplicativo ou de um driver.  
   
--   Um núcleo é uma unidade de processador que pode consistir em um ou mais processadores lógicos.  
+-   Um núcleo é uma unidade de processador. Ele pode consistir em um ou mais processadores lógicos.  
   
--   Um processador físico pode consistir em um ou mais núcleos. Um processador físico é o mesmo que um pacote de processador ou um soquete.  
+-   Um processador físico pode consistir em um ou mais núcleos. Um processador físico é o mesmo que um pacote de processadores ou um soquete.  
   
-Os sistemas com mais de um processador físico ou sistemas com processadores físicos que têm vários núcleos e/ou hyperthreads permitem que o sistema operacional execute várias tarefas simultaneamente. Cada thread de execução aparece como um processador lógico. Por exemplo, se você tiver um computador com dois processadores com núcleo quad com hyper-threading habilitado e dois threads por núcleo, terá 16 processadores lógicos: 2 processadores x 4 núcleos por processador x 2 threads por núcleo. Vale observar que:  
+Os sistemas com mais de um processador físico ou sistemas com processadores físicos que têm vários núcleos e/ou hyperthreads permitem que o sistema operacional execute várias tarefas simultaneamente. Cada thread de execução aparece como um processador lógico. Por exemplo, se você tiver um computador com dois processadores com núcleo quádruplo, hyperthreading habilitado e dois threads por núcleo, você terá 16 processadores lógicos: 2 processadores x 4 núcleos por processador x 2 threads por núcleo. Vale observar que:  
   
 -   A capacidade de computação de um processador lógico de um único thread de um núcleo hyper-threaded é menor que a capacidade de computação de um processador lógico daquele mesmo núcleo com hyperthreading desabilitado.  
   
--   Mas a capacidade de computação dos 2 processadores lógicos no núcleo hyper-threaded é maior que a capacidade de computação do mesmo núcleo com hyperthreading desabilitado.  
+-   A capacidade de computação dos dois processadores lógicos no núcleo com hyperthreading é maior que a capacidade de computação do mesmo núcleo com o hyperthreading desabilitado.  
   
 Cada edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem dois limites de capacidade de computação:  
   
-- Um número máximo de soquetes (o mesmo que o processador Físico, soquete ou pacote de Processador).  
+- Um número máximo de soquetes (ou de processadores físicos ou de pacotes de processadores)  
   
-- Um número máximo de núcleos como relatado pelo sistema operacional.  
+- Um número máximo de núcleos como relatado pelo sistema operacional  
   
-Esses limites se aplicam a uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Eles representam a capacidade máxima de computação que uma única instância usará. Eles não restringem o servidor no qual a instância pode ser implantada. De fato, implantar várias instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no mesmo servidor físico é um modo eficiente de usar a capacidade de computação de um servidor físico com mais soquetes e/ou núcleos que os limites de capacidade a seguir.  
+Esses limites se aplicam a uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Eles representam a capacidade máxima de computação que uma única instância usará. Eles não restringem o servidor em que a instância pode ser implantada. Na verdade, implantar várias instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no mesmo servidor físico é um modo eficiente de usar a capacidade de computação de um servidor físico com mais soquetes e/ou núcleos que os permitidos pelos limites de capacidade.  
   
 A tabela a seguir especifica os limites de capacidade de computação para uma única instância de cada edição do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edição|Capacidade máxima de computação usada por uma única instância ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidade máxima de computação usada por uma única instância (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edição|Capacidade máxima de computação para uma única instância ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidade máxima de computação para uma única instância (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: licenciamento baseado em núcleo\*|Máximo do sistema operacional|Máximo do sistema operacional|  
 |Desenvolvedor|Máximo do sistema operacional|Máximo do sistema operacional|  
 |Standard|Limitado a menos de 4 soquetes ou 24 núcleos|Limitado a menos de 4 soquetes ou 24 núcleos|  
 |Express|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|  
 
-\*O Enterprise Edition com Servidor + licenciamento baseado em CAL (Licença de Acesso para Cliente) (não disponível para novos contratos) é limitado ao máximo de 20 núcleos por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo.  
+\*O licenciamento Enterprise Edition com servidor + CAL (licença de acesso para cliente) limita-se a 20 núcleos por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. (Esse licenciamento não está disponível para novos contratos.) Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo.  
   
-Em um ambiente virtualizado, o limite da capacidade de computação é baseado no número de processadores lógicos, não núcleos, porque a arquitetura de processador não é visível aos aplicativos convidados.  Por exemplo, um servidor com quatro soquetes populados com processadores com núcleo quad e a capacidade para habilitar dois hyperthreads por núcleo contém 32 processadores lógicos com hyperthreading habilitado, mas só 16 processadores lógicos com hyperthreading desabilitado. Estes processadores lógicos podem ser mapeados para máquinas virtuais no servidor com a carga de computação das máquinas virtuais nesse processador lógico mapeado em um thread de execução no processador físico no servidor de host.  
+Em um ambiente virtualizado, o limite de capacidade de computação é baseado no número de processadores lógicos, e não de núcleos. O motivo é que a arquitetura dos processadores não é visível aos aplicativos convidados. 
+
+Por exemplo, um servidor com quatro soquetes preenchidos com processadores com núcleo quádruplo e com a capacidade para habilitar dois hyperthreads por núcleo contém 32 processadores lógicos com o hyperthreading habilitado. No entanto, ele contém só 16 processadores lógicos com o hyperthreading desabilitado. Esses processadores lógicos podem ser mapeados para máquinas virtuais no servidor. A carga de computação das máquinas virtuais nesse processador lógico é mapeada para um thread de execução no processador físico no servidor host.  
   
-Você poderá querer desabilitar hyperthreading quando o desempenho por processador virtual for importante. A pessoa pode habilitar ou desabilitar hyperthreading usando uma configuração de BIOS para o processador durante a instalação da BIOS, mas é geralmente uma operação no escopo do servidor, que afetará todas as cargas de trabalho que estão sendo executadas no servidor. Isto pode sugerir separar cargas de trabalho que serão executadas em ambientes virtualizados dos que se beneficiariam do aumento de desempenho de hyperthreading em um ambiente de sistema operacional físico.  
+Quando o desempenho de cada processador virtual for importante, você poderá desabilitar o hyperthreading. Você pode habilitar ou desabilitar o hyperthreading usando uma configuração do BIOS para o processador durante a instalação do BIOS. No entanto, isso normalmente é uma operação com escopo do servidor que afetará todas as cargas de trabalho em execução no servidor. Isso pode sugerir separar as cargas de trabalho que serão executadas em ambientes virtualizados daquelas que se beneficiariam do aumento de desempenho do hyperthreading em um ambiente de sistema operacional físico.  
   
 ## <a name="see-also"></a>Consulte também  
  [Edições e componentes do SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Recursos compatíveis nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Especificações de capacidade máxima do SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [Instalação de Início Rápido do SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   

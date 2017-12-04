@@ -14,11 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 347e737c378f79ec1bdd0de42d78c896c3c44f7a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32a2cc64cb54fda7244a07ad8aff8463899f0b3d
+ms.sourcegitcommit: 4286dddf27dcdf1c8ef3ef134474e72559c2f65c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implantar a web part do Visualizador de Relatórios do SQL Server Reporting Services em um site do SharePoint
 
@@ -76,7 +76,7 @@ Esta seção mostra como implantar o pacote de solução no farm do SharePoint. 
 
 ## <a name="activate-feature"></a>Ativar recurso
 
-1. No site do SharePoint, selecione o ícone de **engrenagem** no canto superior esquerdo e **Configurações de Site*.
+1. No site do SharePoint, selecione o ícone de **engrenagem** no canto superior esquerdo e selecione **Configurações de Site**.
 
     ![Configurações de site no ícone de engrenagem.](media/sharepoint-site-settings.png)
 
@@ -116,7 +116,7 @@ Embora a Administração Central do SharePoint forneça o cancelamento da soluç
 
 O cancelamento da solução não remove a web part do Visualizador de Relatórios da lista de web parts no site do SharePoint. Para remover a web part do Visualizador de Relatórios, realize o procedimento a seguir.
 
-1. No site do SharePoint, selecione o ícone de **engrenagem** no canto superior esquerdo e **Configurações de Site*.
+1. No site do SharePoint, selecione o ícone de **engrenagem** no canto superior esquerdo e selecione **Configurações de Site**.
 
     ![Configurações de site no ícone de engrenagem.](media/sharepoint-site-settings.png)
 

@@ -2,9 +2,12 @@
 title: Tutoriais do SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,15 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9e7eec3322fecf2df16624ce63f0188c526108d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriais do SQL Server
-
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornece tutoriais para ajudar você a aprender novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um tutorial aborda um recurso mais recente, ele indicará a versão mínima para concluir o tutorial.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O 
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornece tutoriais para ajudar você a conhecer novas tecnologias e recursos. Tutoriais para versões anteriores normalmente podem ser usados com as versões mais recentes. Quando um tutorial aborda um recurso mais recente, ele indicará a versão mínima para concluir o tutorial.  
      
 -   Se um tutorial usar um dos bancos de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], baixe e use a versão mais recente do CodePlex. Para obter mais informações, consulte [Bancos de dados e scripts do AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Baixe uma pasta de trabalho do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e os relatórios do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] a serem usados com os tutoriais do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] : vá para [Amostras do Power View para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
