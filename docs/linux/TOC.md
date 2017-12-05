@@ -3,7 +3,7 @@
 # Visão geral
 ## [Notas de versão](sql-server-linux-release-notes.md)
 ## [O que há de novo nesta versão?](sql-server-linux-whats-new.md)
-## [Artigos novos e atualizados recentemente](new-updated-linux.md)
+## [Artigos novos e atualizados](new-updated-linux.md)
 ## [Edições e recursos com suporte](sql-server-linux-editions-and-components-2017.md)
 
 # Guias de início rápido

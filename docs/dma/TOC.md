@@ -1,6 +1,7 @@
 # [Visão geral do Assistente de Migração de Dados](dma-overview.md)
 
 # [Novidades do Assistente de Migração de Dados](dma-whatsnew.md)
+# [Artigos novos e atualizados](new-updated-dma.md)
 # [Avaliar a migração do SQL Server](dma-assesssqlonprem.md)
 # [Consolidar relatórios de avaliação](dma-consolidatereports.md)
 # [Relatórios do Power BI para avaliações consolidadas](dma-powerbiassesreport.md)

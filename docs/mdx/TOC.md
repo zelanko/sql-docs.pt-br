@@ -1,5 +1,5 @@
 # [Visão geral](analysis-services-language-reference.md)  
-# [Artigos novos e atualizados recentemente](new-updated-mdx.md)
+# [Artigos novos e atualizados](new-updated-mdx.md)
 
 # [Referência de linguagem MDX (Multidimensional Expressions)](multidimensional-expressions-mdx-reference.md)  
 ## [Elementos de sintaxe MDX](mdx-syntax-elements-mdx.md)  
