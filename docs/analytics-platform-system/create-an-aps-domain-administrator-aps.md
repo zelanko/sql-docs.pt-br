@@ -30,7 +30,7 @@ Ter permissões suficientes para configurar todos os nós de pontos de acesso, o
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Para adicionar um usuário ao grupo Admins. do domínio  
   
-1.  Faça logon no nó ativo do AD  **(*appliance_domain*-AD01 * * ou  ***appliance_domain*-AD02**) usando um domínio existente do dispositivo conta de administrador.  
+1.  Faça logon no nó ativo do AD **(*appliance_domain*-AD01** ou ***appliance_domain*-AD02**) usando um domínio existente do dispositivo conta de administrador.  
   
 2.  No menu Iniciar, clique em **Executar**. No **abrir** , digite **dsa.msc**. Clique em **OK**.  
   

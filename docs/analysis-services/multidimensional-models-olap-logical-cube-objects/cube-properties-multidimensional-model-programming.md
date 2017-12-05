@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**ScriptErrorHandlingMode**|Determina o tratamento de erros. Opções são **IgnoreNone** ou **IgnoreAll**|  
 |**Origem**|Mostra a exibição da fonte de dados usada para o cubo.|  
 |**StorageLocation**|Especifica o local de armazenamento do sistema de arquivos para o cubo. Se nenhum for especificado, o local será herdado do banco de dados que contém o objeto de cubo.|  
-|**StorageMode**|Especifica o modo de armazenamento para o cubo. Os valores são **MOLAP**, **ROLAP**, ou **HOLAP *.**|  
+|**StorageMode**|Especifica o modo de armazenamento para o cubo. Os valores são **MOLAP**, **ROLAP**, ou **HOLAP.**|  
 |**Visível**|Determina a visibilidade do cubo.|  
   
 > [!NOTE]  

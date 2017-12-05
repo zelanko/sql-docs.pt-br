@@ -1,5 +1,5 @@
 # [Microsoft ODBC (Open Database Connectivity)](microsoft-open-database-connectivity-odbc.md)
-# [Artigos novos e atualizados recentemente](new-updated-odbc.md)
+# [Artigos novos e atualizados](new-updated-odbc.md)
 
 # [Drivers do Microsoft ODBC +](../odbc/microsoft/microsoft-supplied-odbc-drivers.md)
 # [Administração do ODBC +](../odbc/admin/odbc-data-source-administrator.md)
