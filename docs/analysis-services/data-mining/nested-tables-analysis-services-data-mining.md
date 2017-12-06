@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelas aninhadas (Analysis Services - Mineração de Dados)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os dados devem ser alimentados com um algoritmo de mineração de dados como uma série de casos contidos em uma tabela de casos. No entanto, nem todos os casos podem ser descritos por uma única linha de dados. Por exemplo, um caso pode ser derivado de duas tabelas: uma contendo informações sobre o cliente e outra as compras do cliente. Um único cliente na tabela de informações de clientes pode ter vários itens na tabela de compras do cliente, o que dificulta a descrição dos dados em uma única linha. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um método exclusivo para tratar desses casos, com o uso de *tabelas aninhadas*. O conceito de uma tabela aninhada é demonstrado na ilustração a seguir.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  Por exemplo, se a tabela aninhada contiver as colunas **Product**, **ProductQuantity**e **ProductPrice**, você poderá escolher **Product** como chave da tabela aninhada, mas adicione **ProductQuantity** à estrutura de mineração para usar como entrada.  
   
 ## <a name="filtering-nested-table-data"></a>Filtrando os dados da tabela aninhada  
- No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar filtros para os dados que são usados para treinar ou testar um modelo de mineração de dados. É possível usar um filtro para afetar a composição do modelo ou testar o modelo em um subconjunto de casos. Filtros também podem ser se aplicados a tabelas aninhadas. Porém, há limitações na sintaxe que pode ser usada com tabelas aninhadas.  
+ No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar filtros para os dados que são usados para treinar ou testar um modelo de mineração de dados. Um filtro pode ser usado para afetar a composição do modelo, ou para testar o modelo em um subconjunto de casos. Filtros também podem ser se aplicados a tabelas aninhadas. Porém, há limitações na sintaxe que pode ser usada com tabelas aninhadas.  
   
  Frequentemente, ao aplicar um filtro a uma tabela aninhada, você está testando a existência ou não de um atributo. Por exemplo, você pode aplicar um filtro que restringe os casos usados no modelo somente aos casos que têm um valor especificado na tabela aninhada. Ou poderia restringir os casos usados no modelo a clientes que não compraram um determinado item.  
   

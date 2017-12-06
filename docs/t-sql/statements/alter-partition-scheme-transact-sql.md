@@ -27,18 +27,22 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16b15945c8e6f56621516f16707d61be908e9972
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: df341bb5d66c8f88e5090e31014a5db5a1ff75c0
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Adiciona um grupo de arquivos a um esquema de partição ou altera a designação do grupo de arquivos NEXT USED para o esquema de partição.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  Adiciona um grupo de arquivos a um esquema de partição ou altera a designação do grupo de arquivos NEXT USED para o esquema de partição. 
+
+[!NOTE]
+Banco de dados do SQL Azure têm suporte apenas grupos de arquivos primários.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "ícone de link do artigo") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,7 +69,7 @@ NEXT USED [ filegroup_name ] [ ; ]
  Qualquer grupo de arquivos afetado por ALTER PARTITION SCHEME deve estar online.  
   
 ## <a name="permissions"></a>Permissões  
- Seção permissões a seguir podem ser usadas para executar ALTER PARTITION SCHEME:  
+ As seguintes permissões podem ser usadas para executar ALTER PARTITION SCHEME:  
   
 -   Permissão ALTER ANY DATASPACE. Essa permissão tem como padrão os membros da função de servidor fixa **sysadmin** e das funções de banco de dados fixas **db_owner** e **db_ddladmin** .  
   

@@ -2,9 +2,12 @@
 title: "Utilitário osql | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: osql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="osql-utility"></a>Utilitário osql
-  O utilitário **osql** permite inserir instruções [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos de sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]O **osql** utilitário permite que você insira [!INCLUDE[tsql](../includes/tsql-md.md)] instruções, procedimentos do sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
   
 > [!IMPORTANT]  
 >  Esse recurso será removido em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Evite usar esse recurso em novo trabalho de desenvolvimento e planeje modificar os aplicativos que utilizam o recurso atualmente. Use **sqlcmd** em vez disso. Para saber mais, confira [sqlcmd Utility](../tools/sqlcmd-utility.md).  

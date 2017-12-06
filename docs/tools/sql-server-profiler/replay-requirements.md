@@ -2,9 +2,12 @@
 title: "Requisitos para repetição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5000a910eb0868ed2113b71c698e7de5ec7163ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5fdf69fad3a8b7aaa337715ac2e32f92cb22e93a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="replay-requirements"></a>Requisitos para repetição
-  Para reproduzir dados de rastreamento com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou o Distributed Replay Utility, um conjunto específico de colunas e classes de evento deve ser capturado no rastreamento. Essas configurações serão habilitadas por padrão se o modelo de rastreamento **TSQL_Replay** for usado para configurar um rastreamento que será usado posteriormente para reprodução. Este tópico descreve estas configurações e outros requisitos de reprodução.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para reproduzir dados de rastreamento com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou o Distributed Replay Utility, um conjunto específico de classes de evento e colunas devem ser capturados no rastreamento. Essas configurações serão habilitadas por padrão se o modelo de rastreamento **TSQL_Replay** for usado para configurar um rastreamento que será usado posteriormente para reprodução. Este tópico descreve estas configurações e outros requisitos de reprodução.  
   
 > [!NOTE]  
 >  É recomendável usar o Distributed Replay Utility para reproduzir um aplicativo OLTP intensivo (com muitas conexões simultâneas ativas ou alta taxa de transferência). O Distributed Replay Utility pode reproduzir dados de rastreamento de vários computadores, com uma simulação melhor de uma carga de trabalho de missão crítica. Para obter mais informações, consulte [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  

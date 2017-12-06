@@ -2,9 +2,12 @@
 title: "Propriedades de TCP/IP (guia de endereços IP) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 495e934aacbe30c4692a242bc44a10f809122c29
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 018d6474b242e80cfb483fc4ebea76d777af77e0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriedades do TCP/IP (Guia Endereços IP)
-  Use a caixa de diálogo **Propriedades do TCP/IP (Guia Endereços IP)** para configurar as opções do protocolo TCP/IP de um endereço IP específico. Somente as **Portas TCP Dinâmicas** e a **Porta TCP** podem ser configuradas para todos os endereços de uma só vez com a seleção de **IP Tudo**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o **propriedades de TCP/IP (guia de endereços IP)** caixa de diálogo para configurar as opções de protocolo TCP/IP para um endereço IP específico. Somente as **Portas TCP Dinâmicas** e a **Porta TCP** podem ser configuradas para todos os endereços de uma só vez com a seleção de **IP Tudo**.  
   
  As alterações terão efeito quando o SQL Server for reiniciado. Para obter informações sobre como iniciar e interromper o serviço SQL Server Browser, consulte [Iniciar e interromper o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

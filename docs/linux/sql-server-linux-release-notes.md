@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: f625cbf53c25dd097efb6619a47069be7873320f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
-ms.translationtype: HT
+ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 
@@ -55,7 +55,7 @@ A tabela a seguir lista o histórico de versão do SQL Server 2017.
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <a name="how-to-install-cumulative-updates"></a>Como instalar atualizações cumulativas
+## <a id="cuinstall"></a>Como instalar atualizações cumulativas
 
 Se você tiver configurado o repositório de atualização cumulativa, em seguida, você obterá a atualização cumulativa mais recente dos pacotes do SQL Server quando você executar novas instalações. O repositório de atualização cumulativa é o padrão para todos os artigos de instalação do pacote para o SQL Server no Linux. Para obter mais informações sobre a configuração do repositório, consulte [repositórios de origem](sql-server-linux-setup.md#repositories).
 

@@ -2,9 +2,12 @@
 title: Salvar rastreamentos e modelos de rastreamento | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 515c034ba96c93101ea8346dd0207e17143d2e80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 613946c9986edf5cbb2cb95f9e483bdb5bed50e6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-traces-and-trace-templates"></a>Salvar rastreamentos e modelos de rastreamento
-  É importante distinguir entre salvar arquivos de rastreamento e salvar modelos de rastreamento. Salvar um arquivo de rastreamento envolve salvar, em um local especificado, os dados de evento capturados. Salvar um modelo de rastreamento envolve salvar a definição do rastreamento, como as colunas de dados, as classes de evento ou os filtros especificados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]É importante distinguir entre salvar arquivos de rastreamento de salvar modelos de rastreamento. Salvar um arquivo de rastreamento envolve salvar, em um local especificado, os dados de evento capturados. Salvar um modelo de rastreamento envolve salvar a definição do rastreamento, como as colunas de dados, as classes de evento ou os filtros especificados.  
   
 ## <a name="saving-traces"></a>salvando rastreamentos  
  Salve os dados de evento capturados em um arquivo ou tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando for preciso analisá-los ou reproduzi-los mais tarde. Use um arquivo de rastreamento para fazer o seguinte:  

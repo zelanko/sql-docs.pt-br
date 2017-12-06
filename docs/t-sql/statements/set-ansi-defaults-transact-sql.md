@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a06170bd4a52708c5a3a88cfc12fe56204a6ddc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 53cf9bcaa8ca044ea53becea4d1bf0bb701f62f5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -38,21 +38,21 @@ ms.lasthandoff: 11/21/2017
   Controla um grupo de configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que coletivamente especificam algum comportamento padrão ISO.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_DEFAULTS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_DEFAULTS ON;  
-```  
-  
+
+## <a name="syntax"></a>Sintaxe
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_DEFAULTS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_DEFAULTS ON
+```
+
 ## <a name="remarks"></a>Comentários  
  SET ANSI_DEFAULTS é uma configuração do lado do servidor que o cliente não modifica. O cliente gerencia suas próprias configurações. Por padrão, essas configurações são o oposto da configuração de servidor. Os usuários não devem modificar a configuração de servidor. Para alterar o comportamento do cliente, os usuários devem usar SQL_COPT_SS_PRESERVE_CURSORS. Para obter mais informações, consulte [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   

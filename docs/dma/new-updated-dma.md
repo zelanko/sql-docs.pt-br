@@ -1,32 +1,28 @@
 ---
-title: Atualizado - XQuery para documentos do SQL Server | Microsoft Docs
-description: "Trechos de código de exibição de conteúdo atualizado para alterados recentemente na documentação para o XQuery para o Microsoft SQL Server."
+title: Atualizado - DMA para documentos do SQL Server | Microsoft Docs
+description: "Trechos de código de exibição de conteúdo atualizado para alterados recentemente na documentação, para dados Migration Assistant (DMA) para o Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: 
-ms.component: xquery
-ms.suite: sql
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: 
+ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
 ms.author: genemi
-ms.workload: xquery
-ms.openlocfilehash: 1e251c8af1ceceda5490c85de7ee71197d1aa5d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.workload: dma-data-migration-assistant
+ms.openlocfilehash: 3d542535f92107266e841f72168257cc9a64a9b4
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/04/2017
 ---
-# <a name="new-and-recently-updated-xquery-for-sql-server"></a>Novos e atualizados recentemente: XQuery para o SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>Novos e atualizados recentemente: o Assistente de migração de dados (DMA) para o SQL Server
+
 
 
 A Microsoft atualiza alguns de seus artigos existentes no site de documentação [Docs.Microsoft.com](http://docs.microsoft.com/) todos os dias. Este artigo exibe trechos de artigos atualizados recentemente. Links para novos artigos também podem ser listados.
@@ -38,7 +34,7 @@ Atualizações recentes são relatadas para o intervalo de datas e o assunto a s
 
 
 - *Intervalo de datas das atualizações:* &nbsp; **2017-09-28** &nbsp; - para - &nbsp; **2017-12-02**
-- *Área de assunto:* &nbsp; **XQuery para o SQL Server**.
+- *Área de assunto:* &nbsp; **dados Migration Assistant (DMA) para o SQL Server**.
 
 
 

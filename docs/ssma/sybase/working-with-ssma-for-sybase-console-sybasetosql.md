@@ -3,8 +3,11 @@ title: Trabalhando com o SSMA para Sybase Console (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f6a9725743ecd274e9ecf70c5a72e6a347b6101
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3f2e07c869e1562a2fc563646eac8b69890557dd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Trabalhando com o SSMA para Sybase Console (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA (Migration Assistant), versão para Sybase Adaptive Server Enterprise (ASE), agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script de entrada para o aplicativo para executar os comandos de formulário. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  

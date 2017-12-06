@@ -1,8 +1,8 @@
 ---
 title: Usando o R no banco de dados SQL do Azure | Microsoft Docs
 ms.custom: 
-ms.date: 11/16/2017
-ms.prod: sql-server-2017
+ms.date: 12/04/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,20 +13,20 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 4562dc3490f4790a31b4b32e06b9e5133a151c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ef6573ca1d682ae4b4f4336ad6f809f1e094e9fc
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-r-in-azure-sql-database"></a>Usando o R no banco de dados SQL do Azure
 
-Em outubro de 2017, a equipe de desenvolvimento do SQL Server anunciou planos para permitir a execução de R código no banco de dados usando procedimentos armazenados, semelhantes aos serviços do R no SQL Server 2016.
+Em outubro de 2017, a equipe de desenvolvimento do SQL Server anunciou planos para permitir a execução de R código no banco de dados usando procedimentos armazenados, semelhantes aos serviços do R no SQL Server 2016. Este recurso ainda está em desenvolvimento.
+
+Para manter atualizado sobre o agendamento de lançamento e eventos futuros, consulte o [blog do SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/) ou [blog do Microsoft R Server](https://blogs.msdn.microsoft.com/rserver/).
 
 > [!IMPORTANT]
-> A versão de visualização inicial que foi anunciada foi criada para teste e exploração apenas. Atualmente, o recurso é **desabilitado** no banco de dados SQL Azure para dar suporte a desenvolvimento adicional. 
-
-Para manter atualizado sobre o público agenda e eventos futuros de versão, consulte o [blog do SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/) ou o [blog do Microsoft R Server](https://blogs.msdn.microsoft.com/rserver/).
+> A versão de visualização inicial que foi anunciada foi criada para teste e exploração apenas. Atualmente, o recurso está disponível no banco de dados SQL Azure em regiões limitados apenas e recursos são limitados em comparação com os recursos com suporte no SQL Server 2016 ou 2017.
 
 **Recursos do Azure**
 

@@ -2,9 +2,12 @@
 title: "Utilitário SQLdiag | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sqldiag
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -33,14 +36,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1dbfd36d6761c539176165653bd2e3484c07d5c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2533811a2ccc47ac836079c4a4972bfc1f9e5bd7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sqldiag-utility"></a>Utilitário SQLdiag
-  O utilitário **SQLdiag** é um utilitário de coleta de diagnósticos para fins gerais que pode ser executado como um aplicativo do console ou um serviço. É possível usar o **SQLdiag** para coletar logs e arquivos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e de outros tipos de servidores, e usá-lo para monitorar os servidores ao longo do tempo ou para solucionar problemas específicos com seus servidores. O**SQLdiag** foi criado para agilizar e simplificar a coleta de informações de diagnóstico para os Serviços de Atendimento ao Cliente da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **SQLdiag** utilitário é um utilitário de coleta de diagnósticos de propósito geral que pode ser executado como um aplicativo de console ou um serviço. É possível usar o **SQLdiag** para coletar logs e arquivos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e de outros tipos de servidores, e usá-lo para monitorar os servidores ao longo do tempo ou para solucionar problemas específicos com seus servidores. O**SQLdiag** foi criado para agilizar e simplificar a coleta de informações de diagnóstico para os Serviços de Atendimento ao Cliente da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 > [!NOTE]  
 >  Esse utilitário pode ser alterado e os aplicativos ou scripts que dependem dos seus argumentos de linha de comando ou comportamento podem não funcionar corretamente em versões futuras.  

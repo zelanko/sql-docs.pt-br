@@ -2,9 +2,12 @@
 title: Elemento DTAInput (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01ce41754770e58ae35e5c1ca6c1d94dab4d5fb1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 909d363e64a0f71cea0f52d1a716bba2f1c37070
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dtainput-element-dta"></a>Elemento DTAInput (DTA)
-  Contém a definição de entrada XML para o Orientador de Otimização do Mecanismo de Banco de Dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contém a definição de entrada XML para o orientador de otimização do mecanismo de banco de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   

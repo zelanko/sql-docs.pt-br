@@ -1,10 +1,13 @@
 ---
 title: "Identificar bancos de dados e tabelas do Stretch Database com o Assistente de Migração de Dados | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d945060845495143f209f53e6bbb2bc2e224f4f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3fe01369c0dc9ab2f8556cafd932d6c624ed9554
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identificar bancos de dados e tabelas do Stretch Database com o Assistente de Migração de Dados
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Para identificar bancos de dados e tabelas que são candidatos ao Stretch Database, juntamente com os possíveis problemas de bloqueio, baixe e execute o Assistente de Migração de Dados da Microsoft.
   

@@ -2,10 +2,10 @@
 title: Novidades no SQL Server 2017 | Microsoft Docs
 ms.custom: 
 ms.date: 10/19/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.technology: server-general
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: db5dd719e105809acbd5e4bc925a94af94df902e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 445de7e87daf3d7e083532a06269d810f574fa96
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] O SQL Server 2017 é uma etapa importante para transformar o SQL Server em uma plataforma que oferece opções de linguagens de desenvolvimento, de tipos de dados, de implantação local ou em nuvem e de sistemas operacionais, aproveitando a capacidade do SQL Server no Linux, em contêineres do Docker baseados em Linux e no Windows. Este tópico resume o que há de novo para áreas de recurso específico e inclui links para obter detalhes adicionais. Para obter mais informações relacionadas ao SQL Server no Linux, consulte [Documentação do SQL Server no Linux](https://docs.microsoft.com/sql/linux/)

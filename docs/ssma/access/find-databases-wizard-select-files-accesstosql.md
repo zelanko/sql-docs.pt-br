@@ -1,10 +1,13 @@
 ---
 title: Localizar o Assistente de bancos de dados (Selecione arquivos) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9f9283dddd98208c1eb25990fa228e2287793615
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 98f799138330399da6b4f96bbf10574b3878763d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Localizar o Assistente de bancos de dados (Selecione arquivos) (AccessToSQL)
 A página Selecionar arquivos do Assistente para localizar os bancos de dados lista os arquivos que foram encontrados durante a pesquisa. Para selecionar um arquivo para adicionar a SSMA, selecione a linha que contém o nome do arquivo. Quando você terminar de selecionar os arquivos, clique em **próximo** para exibir a página seleção de verificar.  

@@ -2,9 +2,12 @@
 title: SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bb9273ea8ba74345962f824764a3a025f719c4db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 79f385d0644ace59d7c972d452a0cdbfefc8a086
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager)
-  Este é o serviço que dá suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para exibir as propriedades do serviço, clique nele com o botão direito do mouse no painel de detalhes e clique em **Propriedades**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este é o serviço que dá suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Para exibir as propriedades do serviço, clique nele com o botão direito do mouse no painel de detalhes e clique em **Propriedades**.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é um serviço do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que executa tarefas administrativas agendadas, chamadas *trabalhos*. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte "Sobre o SQL Server Agent" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f8b30f6fcef4a0091871a5a1c4639143671197cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f352dcf0f646cd259a1163a5c752f233ed16393
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Exemplo: De script de instalação autônoma do SQL Server para Red Hat Enterprise Linux
 
@@ -31,7 +31,7 @@ Esse exemplo de script de Bash instala 2017 do SQL Server no Red Hat Enterprise 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- É necessário pelo menos 3,25 GB de memória para executar o SQL Server no Linux.
+- Você precisa de pelo menos 2 GB de memória para executar o SQL Server no Linux.
 - O sistema de arquivos deve ser **XFS** ou **EXT4**. Outros sistemas de arquivos, como **BTRFS**, não têm suporte.
 - Para outros requisitos de sistema, consulte [requisitos de sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
 

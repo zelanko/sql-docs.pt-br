@@ -2,9 +2,12 @@
 title: "Exibindo relatórios de ajuste | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d270a34d882cbe4c5ffd458e52a9033db1b16c26
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Lição 1-3 - exibindo relatórios de ajuste
-Na prática anterior desta lição, você exibiu os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que criam ou cancelam objetos de banco de dados nas recomendações do Orientador de Otimização do Mecanismo de Banco de Dados que foram geradas como resultado da sessão de ajuste MySession. A sessão de ajuste MySession foi criada no [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Na prática anterior desta lição, você exibiu o [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts que criam ou cancelam objetos de banco de dados nas recomendações do Orientador de otimização do mecanismo de banco de dados que foram geradas como resultado da sessão de ajuste MySession. A sessão de ajuste MySession foi criada no [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
 Além de ser muito útil para exibir os scripts que podem ser usados para implementar os resultados de ajuste, o Orientador de Otimização do Mecanismo de Banco de Dados fornece muitos relatórios úteis que você pode exibir. Esses relatórios fornecem informações sobre as estruturas de design físico existentes no banco de dados que você está ajustando, e sobre as estruturas recomendadas. Os relatórios de ajuste podem ser exibidos clicando na guia **Relatórios** , como descrito na prática abaixo. Esta prática usa as sessões de ajuste MySession e EvaluateMySession que você criou no [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md) e no [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md).  
   

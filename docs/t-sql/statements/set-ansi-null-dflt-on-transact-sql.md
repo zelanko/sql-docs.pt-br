@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7554117baca628a135a23561bdfe36c1254926b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 82532accfe14729a0e3ccbfa7bd3f1b55d2aaa01
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansinulldflton-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,21 +42,21 @@ ms.lasthandoff: 11/21/2017
   Modifica o comportamento da sessão para substituir a possibilidade de nulidade de novas colunas quando a **padrão ANSI null** para o banco de dados é a opção **false**. Para obter mais informações sobre como definir o valor de **padrão ANSI null**, consulte [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET ANSI_NULL_DFLT_ON {ON | OFF}  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULL_DFLT_ON ON;  
-```  
-  
+
+## <a name="syntax"></a>Sintaxe
+
+```
+-- Syntax for SQL Server and Azure SQL Database
+
+SET ANSI_NULL_DFLT_ON {ON | OFF}
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULL_DFLT_ON ON
+```
+
 ## <a name="remarks"></a>Comentários  
  Esta configuração somente afetará a capacidade de nulidade de novas colunas quando a capacidade de nulidade da coluna não estiver especificada nas instruções CREATE TABLE e ALTER TABLE. Quando SET ANSI_NULL_DFLT_ON for ON, novas colunas criadas com o uso das instruções ALTER TABLE e CREATE TABLE permitirão valores nulos se o status da capacidade de nulidade da coluna não for especificado explicitamente. SET ANSI_NULL_DFLT_ON não afeta colunas criadas com um NULL ou NOT NULL explícito.  
   

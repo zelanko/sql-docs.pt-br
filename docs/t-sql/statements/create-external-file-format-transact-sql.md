@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 037f9e0da637b872298d3859499858620570bc41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6db9730d5e0905d464a57151365a9413f61a86eb
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-external-file-format-transact-sql"></a>CRIAR um formato de arquivo externo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -158,7 +158,7 @@ WITH (
 -   STRING_DELIMITER = '0x7E0x7E' – dois tildas (por exemplo, ~ ~)
   
  DATE_FORMAT = *datetime_format*  
- Especifica um formato personalizado para todos os dados de data e hora que podem aparecer em um arquivo de texto delimitado. Se o arquivo de origem usa formatos de datefime padrão, essa opção não é necessária. Apenas um formato de data e hora personalizado é permitido por arquivo. Não é possível especificar vários formatos de data e hora personalizado por arquivo. No entanto, você pode usar vários formatos de data e hora se cada um deles é o formato padrão para seu tipo de dados do respectivos na definição da tabela externa.
+ Especifica um formato personalizado para todos os dados de data e hora que podem aparecer em um arquivo de texto delimitado. Se o arquivo de origem usa os formatos de data e hora padrão, essa opção não é necessária. Apenas um formato de data e hora personalizado é permitido por arquivo. Não é possível especificar vários formatos de data e hora personalizado por arquivo. No entanto, você pode usar vários formatos de data e hora se cada um deles é o formato padrão para seu tipo de dados do respectivos na definição da tabela externa.
  
  
 PolyBase só usa o formato de data personalizada para importar os dados. Ele não usa o formato personalizado para gravar dados em um arquivo externo.

@@ -1,10 +1,13 @@
 ---
 title: Bancos de dados DB2 migrando para o SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 17531f8b6b7dab8e5afe75203f73e946c46129af
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c51a0a4af9efbda569585a8ac60264035baa4fd4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>Migrando bancos de dados do DB2 para o SQL Server (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA (Migration Assistant) for DB2 é um ambiente abrangente que ajuda a migrar rapidamente bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou banco de dados de SQL do Azure. Usando o SSMA para DB2, você pode examinar os dados e objetos de banco de dados, avaliar bancos de dados para migração, migrar objetos de banco de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou banco de dados de SQL do Azure, e, em seguida, migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou banco de dados de SQL do Azure. Observe que você não pode migrar esquemas SYS e sistema DB2.  
@@ -31,7 +34,7 @@ Para migrar com êxito os objetos e dados de bancos de dados do DB2 para [!INCLU
   
 1.  [Novo projeto SSMA](http://msdn.microsoft.com/en-us/66437b45-4686-4fc7-a91b-ebde45e0f1b0).  
   
-    Depois de criar o projeto, você pode definir opções de mapeamento de tipo, a migração e a conversão de projeto. Para obter informações sobre configurações de projeto, consulte [configurações de projeto &#40; Conversão de &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md) e seções relacionadas. Para obter informações sobre como personalizar mapeamentos de tipo de dados, consulte [mapeamento DB2 e tipos de dados do SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
+    Depois de criar o projeto, você pode definir opções de mapeamento de tipo, a migração e a conversão de projeto. Para obter informações sobre configurações de projeto, consulte [configurações de projeto & #40; Conversão de & #41; & #40; DB2ToSQL & #41; ](../../ssma/db2/project-settings-conversion-db2tosql.md) e seções relacionadas. Para obter informações sobre como personalizar mapeamentos de tipo de dados, consulte [mapeamento DB2 e tipos de dados do SQL Server & #40; DB2ToSQL & #41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
 2.  [Conecte-se ao banco de dados DB2](http://msdn.microsoft.com/en-us/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
   
@@ -56,6 +59,6 @@ Para migrar com êxito os objetos e dados de bancos de dados do DB2 para [!INCLU
 9. Se necessário, atualize os aplicativos de banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  
-[Instalando o SSMA para DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)  
-[Guia de Introdução com o SSMA para DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
+[Instalando o SSMA para DB2 & #40; DB2ToSQL & #41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)  
+[Guia de Introdução com o SSMA para DB2 & #40; DB2ToSQL & #41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
   

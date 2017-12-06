@@ -2,9 +2,12 @@
 title: "Examine os resultados da repetição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44e055d7a3da857a1be798ae5b5222a4a8a35713
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
-  Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay conclui uma reprodução distribuída, a atividade de reprodução para cada cliente pode ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir**. Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Após o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso Distributed Replay conclui uma reprodução distribuída, a atividade de reprodução para cada cliente pode ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir** . Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  O local onde os arquivos de rastreamento de resultado são armazenados é especificado pelo elemento XML `<ResultDirectory>` no arquivo de configuração de cliente, `DReplayClient.xml`, situado em cada cliente. Os arquivos de rastreamento no diretório de resultados do cliente são substituídos em cada reprodução.  
   

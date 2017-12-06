@@ -2,9 +2,12 @@
 title: Analisar consultas com resultados de SHOWPLAN no SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7cf597a585e7fa47f63a7680fb24d76f4bff0331
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analisar consultas com resultados do Plano de Execução no SQL Server Profiler
-  Você pode adicionar classes de eventos de Plano de Execução a uma definição de rastreamento para fazer com que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] reúna e exiba informações do plano de consulta no rastreamento. Também é possível extrair eventos de Plano de Execução de outros eventos coletados no rastreamento e salvá-los em um arquivo XML separado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode adicionar classes de evento do plano de execução para uma definição de rastreamento que causam [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para coletar e exibir informações do plano de consulta no rastreamento. Também é possível extrair eventos de Plano de Execução de outros eventos coletados no rastreamento e salvá-los em um arquivo XML separado.  
   
  Pode-se extrair eventos de Plano de Execução do rastreamento de uma das seguintes maneiras:  
   

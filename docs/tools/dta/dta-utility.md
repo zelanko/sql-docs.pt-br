@@ -2,9 +2,12 @@
 title: "Utilitário DTA | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3600ea7d01e3dfd7963198433c37ad05a9b68315
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dta-utility"></a>utilitário dta
-  O utilitário **dta** é a versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **dta** utilitário é a versão do prompt de comando do Orientador de otimização do mecanismo de banco de dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
   
  Assim como o Orientador de Otimização do Mecanismo de Banco de Dados, o utilitário **dta** analisa uma carga de trabalho e recomenda estruturas de design físico para melhorar o desempenho do servidor para a carga de trabalho. A carga de trabalho pode ser um cache de plano, um arquivo de rastreamento ou tabela do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , ou um script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Estruturas de design físico incluem índices, exibições indexadas e particionamento. Depois de analisar uma carga de trabalho, o utilitário **dta** produz uma recomendação para o design físico de bancos de dados e gera o script necessário para implementar a recomendação. Podem ser especificadas cargas de trabalho no prompt de comando com o argumento **-if** ou **-it** . Também é possível especificar um arquivo de entrada XML no prompt de comando com o argumento **-ix** . Nesse caso, a carga de trabalho é especificada no arquivo de entrada XML.  
   
