@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
@@ -75,21 +75,36 @@ Os seguintes recursos não estão disponíveis nesta versão do driver ODBC no m
 
 ## <a name="character-set-support"></a>Suporte de conjunto de caracteres
 
-O cliente codificação pode ser um dos seguintes:
+Os dados SQLCHAR em um dos seguintes conjuntos de caracteres compatível com o driver:
+
   -  UTF-8
-  -  ISO 8859-1
-  -  ISO 8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO 8859-1 / CP1252
+  -  ISO 8859-2 / CP1250
   -  ISO 8859-3
   -  ISO 8859-4
   -  ISO 8859-5
   -  ISO-8859-6
   -  ISO-8859-7
-  -  ISO-8859-8
-  -  ISO-8859-9
+  -  ISO-8859-8 / CP1255
+  -  ISO-8859-9 / CP1254
   -  ISO-8859-13
   -  ISO 8859-15
-  
-Os dados SQLCHAR devem ser um dos conjuntos de caracteres com suporte. Os dados SQLWCHAR devem ser UTF-16LE (Little Endian).  
+
+Após a conexão, o driver detecta a localidade atual do processo, que ele é carregado no. Se for uma das codificações com suporte acima, o driver usará a codificação para os dados SQLCHAR (caractere estreito); Caso contrário, o padrão é UTF-8. Como todos os processos de iniciar na localidade "C" por padrão (e, portanto, fazer com que o driver padrão para UTF-8), se um aplicativo precisar usar uma das codificações acima, ele deve usar o **setlocale** função para definir a localidade adequadamente antes conexão; especificando o local desejado explicitamente ou usar uma cadeia de caracteres vazia, por exemplo `setlocale(LC_ALL, "")`, para usar as configurações de localidade do ambiente.
+
+Os dados SQLWCHAR devem ser UTF-16LE (Little Endian).
 
 Se o SQLDescribeParameter não especificar um tipo SQL no servidor, o driver usará o tipo SQL especificado no parâmetro *ParameterType* do SQLBindParameter. Se um tipo SQL de caractere estreito, como SQL_VARCHAR, for especificado em SQLBindParameter, o driver converte os dados fornecidos da página de código de cliente para o padrão [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] página de código. (O padrão [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] página de código geralmente é 1252.) Se não há suporte para a página de código do cliente, ele será definido como UTF-8. Nesse caso, o driver converte os dados UTF-8 para a página de código padrão. Porém, é possível haver perda de dados. Se a página de código 1252 não puder representar um caractere, o driver converterá o caractere em um ponto de interrogação (“?”). Para evitar essa perda de dados, especifique um tipo de caractere SQL Unicode, como SQL_NVARCHAR, no SQLBindParameter. Nesse caso, o driver converte os dados Unicode fornecidos em codificação UTF-8 em UTF-16 sem perda de dados.
 

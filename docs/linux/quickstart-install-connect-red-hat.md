@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 213cabec248c9f293944904a1909f51484fcdf4a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42bcabc32c3a47c09bc8c3dd116403163faa2071
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Instalar o SQL Server e criar um banco de dados no Red Hat
 
@@ -32,7 +32,7 @@ Neste tutorial de início rápido, você primeiro instalar 2017 do SQL Server no
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve ter um 7.3 RHEL ou máquina 7.4 com **pelo menos 3,25 GB** de memória.
+Você deve ter um 7.3 RHEL ou máquina 7.4 com **pelo menos 2 GB** de memória.
 
 Para instalar o Red Hat Enterprise Linux em seu próprio computador, vá para [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Você também pode criar máquinas virtuais RHEL no Azure. Consulte [criar e gerenciar máquinas virtuais Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e usar `--image RHEL` na chamada para `az vm create`.
 

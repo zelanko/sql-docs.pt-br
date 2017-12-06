@@ -2,7 +2,7 @@
 title: "Configuração do SQL Server (R Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bb91c23d7890fdd92cbe949e468cbad5d1dc143
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuração do SQL Server para uso com R
 
@@ -70,7 +70,7 @@ O sistema operacional Windows usa um arquivo de paginação para gerenciar os de
 
 A velocidade do disco no qual o arquivo de paginação está armazenado também pode afetar o desempenho. Armazenar o arquivo de paginação em um SSD ou usar vários arquivos de paginação em vários SSDs pode melhorar o desempenho.
 
-Para obter informações sobre o dimensionamento de arquivo de paginação, consulte [como determinar o tamanho do arquivo de página apropriada para versões de 64 bits do Windows](https://support.microsoft.com/en-us/kb/2860880).
+Para obter informações sobre o dimensionamento de arquivo de paginação, consulte [como determinar o tamanho do arquivo de página apropriada para versões de 64 bits do Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Otimizações de nível de instância ou banco de dados
 
@@ -167,7 +167,7 @@ Para obter detalhes, incluindo o código de exemplo, consulte este tutorial: [SQ
 
 **Outros recursos:**
 
-+ [Soft-no SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-no SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Como mapear nós de software para CPUs
 
