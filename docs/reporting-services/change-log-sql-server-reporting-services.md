@@ -2,7 +2,7 @@
 title: "Log de alterações do SQL Server Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 11/07/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,11 +14,11 @@ author: casualoak
 ms.author: deliant
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 267476e515fb91399d313bb3b334f490dfcbcad2
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: ef823d2e633438262bd0f2dbbe19337d0e1fa4ef
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>Log de alterações do SQL Server Reporting Services
 
@@ -33,6 +33,7 @@ Este artigo descreve as alterações do [!INCLUDE[ssRSnoversion](../includes/ssr
 
   - *Versão 14.0.600.451 Lançamento: 30 de setembro de 2017* 
     - Versão inicial
+
 ## <a name="next-steps"></a>Próximas etapas
 
 [Novidades do Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   

@@ -2,7 +2,10 @@
 title: "Solução de problemas de usuários órfãos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: 
 ms.technology: dbe-high-availability
@@ -22,14 +25,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9ff0d42bc753de6e179e0cd4c7882bdfd9626cba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1780f563d2e4f9533ebe1f82deefe7b785b6ec8c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Solução de problemas de usuários órfãos (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Os usuários órfãos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ocorrem quando um usuário de banco de dados tem base em um logon no banco de dados **mestre** , mas o logon não existe mais no **mestre**. Isso pode ocorrer quando o logon é excluído, ou quando o banco de dados é movido para outro servidor onde o logon não existe. Este tópico descreve como localizar usuários órfãos e remapeá-los para logons.  
   

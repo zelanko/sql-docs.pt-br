@@ -2,9 +2,12 @@
 title: "Estrutura de tópicos do documento | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0d2e671ec8553abfe3b96d5fafa4dd639823d7e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b91ff4f78091405ebdf47e8d164e1f8c70cef37d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="document-outline"></a>Estrutura de Tópicos do Documento
   Use a janela Estrutura de Tópicos do Documento para exibir a hierarquia de itens em um relatório. As regiões de dados Tablix exibem todas as caixas de texto e outros itens de relatório que são contidos em células Tablix. Quando você seleciona um item de relatório na superfície de design, o item de relatório correspondente é selecionado na janela Estrutura de Tópicos do Documento. Use essa exibição para localizar itens de relatório na superfície de design. Por exemplo, quando você visualiza um relatório com erros de expressão, a janela Saída exibe uma mensagem para cada erro. A mensagem inclui o nome da caixa de texto que contém a expressão com o erro. Você poderá clicar no nome da caixa de texto na janela Estrutura de Tópicos do Documento, vê-la selecionada na superfície de design e exibir a expressão que continha o erro.  

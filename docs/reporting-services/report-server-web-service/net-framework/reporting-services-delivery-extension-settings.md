@@ -2,9 +2,12 @@
 title: "Configurações de extensão de entrega do Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -29,11 +32,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2f1e2c16fa9a9d72a2dd9743127348296cce3f9d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1487873422f2c5e0725583d952de3304d0056355
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configurações da extensão de entrega do Reporting Services
   O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email e uma extensão de entrega de compartilhamento de arquivos. A entrega de email oferece um modo de enviar um relatório a usuários individuais ou a grupos por email. A entrega de compartilhamento de arquivo permite que você envie automaticamente relatórios renderizados para um compartilhamento em sua rede. Você pode usar qualquer uma das duas extensões de entrega suportadas com assinaturas padrão ou assinaturas controladas por dados. Você passa as configurações de entrega específicas ao tipo de extensão de entrega sempre que chama os métodos <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>, <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>, <xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> e <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Para recuperar uma lista de configurações de entrega programaticamente, use o método <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  
