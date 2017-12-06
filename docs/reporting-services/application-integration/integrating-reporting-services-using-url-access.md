@@ -2,9 +2,12 @@
 title: "Integrando o Reporting Services usando o acesso à URL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e0e4d5c1ade93a1b14f4a365e2af542570a201b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1706d9ad033ccb1517e73ebee6d13f0d749b9f9e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrando o Reporting Services por meio do acesso à URL
   Com o acesso de URL, você acessa relatórios por uma URL do servidor de relatório. Uma solicitação de URL permite que você acesse um servidor de relatório específico bem como relatórios, recursos e outros itens no banco de dados do servidor de relatório. Você também pode personalizar a exibição de relatório e a experiência de navegação por seus usuários. A cadeia de caracteres da consulta do URL contém configurações de informações de dispositivo, como também parâmetros de relatório destinados a seu relatório e à saída de renderização escolhida. A forma que o servidor de relatório trata das solicitações de URL dependerá dos parâmetros, prefixos de parâmetro e tipo de item que você está acessando por meio da URL.  

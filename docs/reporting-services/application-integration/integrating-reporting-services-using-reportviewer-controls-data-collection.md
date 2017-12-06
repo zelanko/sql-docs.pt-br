@@ -2,9 +2,12 @@
 title: Coleta de dados no controle ReportViewer 2016 | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b2f5f4743b838598aeb5f74271fa063af9bb60f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6249d0a0b8b13c47479130c1f981b6756989c4c7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Integrando o Reporting Services usando os controles ReportViewer – coleta de dados
 Por padrão, o controle ReportViewer coleta informações de uso anônimas para que a Microsoft entenda melhor como os clientes estão fazendo uso do controle. Ao criar uma melhor compreensão de como os clientes estão implantando e usando o Controle do Visualizador, o desenvolvimento futuro pode se concentrar em melhorias que entregam o maior valor aos clientes.

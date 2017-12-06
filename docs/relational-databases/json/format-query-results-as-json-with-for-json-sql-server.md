@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a3264d10535196e245ca9f5e0e59366667cf3fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5ea8b666dead9d4a23255fe9eecda64258a9f8a
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formatar os resultados da consulta como JSON com o FOR JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ A saída da cláusula **FOR JSON** tem as seguintes características:
     -   Um conjunto de resultados pequeno pode conter uma única linha.
     -   Um conjunto de resultados grande divide a cadeia de caracteres JSON longa em várias linhas.
         -   Por padrão, o SSMS (SQL Server Management Studio) concatena os resultados em uma única linha quando a configuração de saída é **Resultados em Grade**. A barra de status do SSMS exibe a contagem de linhas real.
-        -   Outros aplicativos cliente podem exigir o código para recombinar os resultados longos em uma cadeia de caracteres JSON única e válida, concatenando os conteúdos de várias linhas. Para obter um exemplo do código em um aplicativo C#, consulte [Usar a saída FOR JSON em um aplicativo cliente C#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+        -   Outros aplicativos cliente podem exigir o código para recombinar os resultados longos em uma cadeia de caracteres JSON única e válida, concatenando os conteúdos de várias linhas. Para obter um exemplo do código em um aplicativo C#, consulte [Usar a saída FOR JSON em um aplicativo cliente C#](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app).
   
      ![Exemplo de saída PARA JSON](../../relational-databases/json/media/forjson-example2.png)  
   
