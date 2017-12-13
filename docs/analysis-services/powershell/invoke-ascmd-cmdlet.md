@@ -2,12 +2,12 @@
 title: Cmdlet Invoke-ASCmd | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6e5d1fba56fd4cee4c736a583d8af2fe8ec6f986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5ead98887f8773a1bdb26d1b7f6a2f2cb5447bc6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Cmdlet Invoke-ASCmd
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Permite que um administrador de banco de dados execute um script XMLA, MDX (Multidimensional Expressions), instruções ou script TMSL (Tabular Model Scripting Language).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Permite que um administrador de banco de dados executar um script XMLA, MDX (Multidimensional Expressions), instruções de extensões DMX (Data Mining) ou o script de linguagem de script de modelo Tabular (TMSL).  
   
  O TMSL só tem suporte para o modo de servidor Tabular em uma instância do SQL Server 2016 Analysis Services.  
   

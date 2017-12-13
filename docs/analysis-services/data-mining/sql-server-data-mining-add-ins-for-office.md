@@ -2,12 +2,12 @@
 title: SQL Server Data Mining suplementos do Office | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2682484f535bbc98e75c072e1a75243ab78ccd3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be2255a512f04cd23b8f9d6717d6ec63ab2b2f16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Suplementos de Mineração de Dados do SQL Server para Office
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de Mineração de Dados do para Office é um conjunto de ferramentas leve para análise preditiva que permite a você usar dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de mineração de dados para Office é um conjunto de ferramentas para análise preditiva que permite que você use dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração leve.  
   
  Os assistentes e as ferramentas de gerenciamento de dados nos suplementos fornecem instruções passo a passo para essas tarefas de mineração de dados comuns:  
   

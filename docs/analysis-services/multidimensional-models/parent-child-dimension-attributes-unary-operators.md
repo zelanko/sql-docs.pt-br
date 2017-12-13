@@ -2,12 +2,12 @@
 title: "Operadores unários em dimensões pai-filho | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ceea7fc4a5d84d571a45c00f2e6291405544f3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae826437d790e807998d223f9c8999582311fe7a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>Atributos de dimensão pai-filho - operadores unários
-  Em uma dimensão que contém uma relação pai-filho no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você especifica um operador unário (ou rollup personalizado) que determina o rollup personalizado para todos os membros não calculados do atributo pai. O operador unário é aplicado aos membros sempre que os valores dos membros pai são avaliados. A **UnaryOperatorColumn** em um atributo pai (**Usage**=Pai) especifica a coluna de uma tabela da exibição da fonte de dados que contém operadores unários. Os valores dos operadores de acúmulo personalizado armazenados nessa coluna são aplicados a cada membro do atributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em uma dimensão que contém uma relação pai-filho em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], especifique um unário (ou acúmulo personalizado) coluna de operador que determina o acúmulo personalizado para todos os membros não calculados do atributo pai. O operador unário é aplicado aos membros sempre que os valores dos membros pai são avaliados. A **UnaryOperatorColumn** em um atributo pai (**Usage**=Pai) especifica a coluna de uma tabela da exibição da fonte de dados que contém operadores unários. Os valores dos operadores de acúmulo personalizado armazenados nessa coluna são aplicados a cada membro do atributo.  
   
  Você pode criar e especificar um cálculo nomeado em uma tabela de dimensões da exibição da fonte de dados como coluna de operador unário. A expressão mais simples, como '+', retorna o mesmo operador para todos os membros. Mas é possível usar qualquer expressão desde que ela retorne um operador para cada membro.  
   

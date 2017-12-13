@@ -2,12 +2,12 @@
 title: "Dimensões pai-filho | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6835612c0b7ea9a6e42217366e8d745897300bfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 982fbe970e85718c943ab0c8e31077f90d291606
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension"></a>Dimensão pai-filho
-  Uma hierarquia pai-filho é uma hierarquia em uma dimensão padrão que contém um atributo pai. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. A posição de um membro em uma hierarquia pai-filho é determinada pelas propriedades **KeyColumns** e **RootMemberIf** do atributo pai, enquanto a posição de um membro em um nível é determinada pela propriedade **OrderBy** do atributo pai. Para obter mais informações sobre as propriedades de atributo, consulte [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma hierarquia pai-filho é uma hierarquia em uma dimensão padrão que contém um atributo pai. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. A posição de um membro em uma hierarquia pai-filho é determinada pelas propriedades **KeyColumns** e **RootMemberIf** do atributo pai, enquanto a posição de um membro em um nível é determinada pela propriedade **OrderBy** do atributo pai. Para obter mais informações sobre as propriedades de atributo, consulte [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
  Devido às relações pai-filho entre níveis de uma hierarquia pai-filho, alguns membros não folha também podem ter dados extraídos de fontes de dados subjacentes, além dos dados agregados dos membros filho.  
   

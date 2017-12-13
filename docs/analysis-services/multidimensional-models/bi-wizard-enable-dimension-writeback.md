@@ -2,12 +2,12 @@
 title: "Habilitar write-back de dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 015ecb28286589516d78476caf0f12938980ad5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f8f2ddac65e4ffbb24118a498f96dad83c2c138d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>Assistente de BI - habilitar write-back
-  Adicione o aprimoramento de write-back de dimensão a um cubo ou dimensão para que os usuários possam modificar manualmente a estrutura e os membros da dimensão. Atualizações em uma dimensão habilitada para gravação são registradas diretamente na tabela de dimensões. Esse aprimoramento altera a configuração de propriedade **WriteEnabled** de uma dimensão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Adicione o aprimoramento de write-back de dimensão a um cubo ou dimensão para permitir que os usuários possam modificar manualmente a estrutura de dimensão e membros. Atualizações em uma dimensão habilitada para gravação são registradas diretamente na tabela de dimensões. Esse aprimoramento altera a configuração de propriedade **WriteEnabled** de uma dimensão.  
   
  Para adicionar o write-back da dimensão, use o Assistente de Business Intelligence e selecione a opção **Habilitar o write-back de dimensão** na página **Escolher Aprimoramento** . Esse assistente orientará você durante as etapas para selecionar a dimensão à qual você deseja aplicar um write-back de dimensão e para configurar essa opção para a dimensão selecionada.  
   

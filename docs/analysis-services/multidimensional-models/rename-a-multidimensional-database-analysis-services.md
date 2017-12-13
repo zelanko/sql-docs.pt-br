@@ -2,12 +2,12 @@
 title: Renomear um banco de dados Multidimensional (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98a777845371724e215ac0cf58fa5d1ec916f7c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c56fc4d10e29e377b1b55330ec3badce57723f6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>Renomear um bancos de dados multidimensional (Analysis Services)
-  A maneira como você altera o nome de um banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende de como você se conecta ao banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para alterar o nome de um banco de dados existente, conecte-se em modo online. Para alterar o nome do banco de dados no qual os objetos de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] serão instanciados, conecte-se em modo de projeto.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A maneira na qual você pode alterar o nome de um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados depende de como você se conecta ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados. Para alterar o nome de um banco de dados existente, conecte-se em modo online. Para alterar o nome do banco de dados no qual os objetos de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] serão instanciados, conecte-se em modo de projeto.  
   
 ### <a name="to-change-the-database-name-in-online-mode"></a>Alterar o nome do banco de dados em modo online  
   

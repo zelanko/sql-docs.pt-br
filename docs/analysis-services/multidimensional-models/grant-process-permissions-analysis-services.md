@@ -2,12 +2,12 @@
 title: "Conceder permissões de processo (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 33582b08bd8579d7c2c3318594dcbf877c186757
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccb2f4ebb1db848d62f470ed2e37230a95916cb9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Conceder permissões de processo (Analysis Services)
-  Como administrador, você pode criar uma função dedicada às operações de processamento do Analysis Services, o que lhe permitirá delegar essa tarefa específica a outros usuários ou a aplicativos usados para o processamento autônomo agendado. As permissões de processo podem ser concedidas nos níveis de banco de dados, cubo, dimensão e estrutura de mineração. A menos que você esteja trabalhando com um grande cubo ou banco de dados de tabelas, recomendamos a concessão de direitos de processamento no nível de banco de dados, incluindo aqueles que apresentem dependências entre si.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Como administrador, você pode criar uma função dedicada às operações de processamento do Analysis Services, que lhe permitirá delegar essa tarefa específica a outros usuários ou a aplicativos usados para processamento autônomo agendado. As permissões de processo podem ser concedidas nos níveis de banco de dados, cubo, dimensão e estrutura de mineração. A menos que você esteja trabalhando com um grande cubo ou banco de dados de tabelas, recomendamos a concessão de direitos de processamento no nível de banco de dados, incluindo aqueles que apresentem dependências entre si.  
   
  As permissões são concedidas por meio de funções que associam objetos com permissões e contas de usuário ou de grupo do Windows. Lembre-se de que as permissões são aditivas. Se uma função concede permissão para processar um cubo, enquanto uma segunda função dá permissão ao mesmo usuário para processar uma dimensão, as permissões das duas diferentes funções se combinam para dar ao usuário permissão para processar o cubo e processar a dimensão especificada nesse banco de dados.  
   

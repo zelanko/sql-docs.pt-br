@@ -2,12 +2,12 @@
 title: "Definindo uma relação muitos-para-muitos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5943b62c11c717ce9e3ccf29b4b1c3fe98489cc2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c36bae9436786544f9d11ebcea289faac9de5687
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lição 5-3-definir uma relação muitos-para-muitos
-Ao definir uma dimensão, cada fato normalmente se une a somente um membro de dimensão, apesar de um único membro de dimensão poder ser associado a vários fatos diferentes. Por exemplo, cada cliente pode ter muitos pedidos, mas cada pedido pertence a somente um cliente. Na terminologia de banco de dados relacional, isso é chamado de *relação um-para-muitos*. Porém, algumas vezes, um único fato pode se unir a vários membros de dimensão. Na terminologia de banco de dados relacional, isso é chamado de *relação muitos-para-muitos*. Por exemplo, um cliente tem vários motivos para efetuar uma compra, e um motivo de compra pode ser associado a várias compras. Uma tabela de junção é usada para definir os motivos de vendas relacionados a cada compra. Uma dimensão Motivo de Vendas formada por tais relações pode ter, então, vários membros relacionados a uma única transação de vendas. As dimensões muitos para muitos expandem o modelo dimensional além do esquema em estrela clássico e oferecem suporte a análises complexas quando as dimensões não estão relacionadas diretamente a uma tabela de fatos.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Quando você define uma dimensão, cada fato normalmente se une a somente um membro de dimensão, enquanto que um único membro de dimensão pode ser associado a vários fatos diferentes. Por exemplo, cada cliente pode ter muitos pedidos, mas cada pedido pertence a somente um cliente. Na terminologia de banco de dados relacional, isso é chamado de *relação um-para-muitos*. Porém, algumas vezes, um único fato pode se unir a vários membros de dimensão. Na terminologia de banco de dados relacional, isso é chamado de *relação muitos-para-muitos*. Por exemplo, um cliente tem vários motivos para efetuar uma compra, e um motivo de compra pode ser associado a várias compras. Uma tabela de junção é usada para definir os motivos de vendas relacionados a cada compra. Uma dimensão Motivo de Vendas formada por tais relações pode ter, então, vários membros relacionados a uma única transação de vendas. As dimensões muitos para muitos expandem o modelo dimensional além do esquema em estrela clássico e oferecem suporte a análises complexas quando as dimensões não estão relacionadas diretamente a uma tabela de fatos.  
   
 No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você define uma relação muitos para muitos entre uma dimensão e um grupo de medidas especificando uma tabela de fatos intermediária que se une à tabela de dimensão. Uma tabela de fatos intermediária é unida, por sua vez, à tabela de dimensão intermediária à qual a tabela de fatos é unida. As relações muitos para muitos entre uma tabela de fatos intermediária e ambas as tabelas de dimensão na relação e a dimensão intermediária criam relações muitos para muitos entre membros da dimensão primária e medidas do grupo de medidas especificado pela relação. Para definir uma relação muitos para muitos entre uma dimensão e um grupo de medidas usando um grupo de medidas intermediário, esse grupo de medidas intermediário deve compartilhar uma ou mais dimensões com o grupo de medidas original.  
   
@@ -120,7 +120,7 @@ Nas tarefas deste tópico, você definirá a dimensão Motivos de Vendas e o gru
   
 11. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
-12. No painel **Atributos** do Designer de Dimensão da dimensão **Motivo de Vendas** , selecione **Motivo de Vendas Key**e depois altere a propriedade **Name** na janela Propriedades para **Motivo de Vendas.**.  
+12. No painel **Atributos** do Designer de Dimensão da dimensão **Motivo de Vendas** , selecione **Motivo de Vendas Key**e depois altere a propriedade **Name** na janela Propriedades para **Motivo de Vendas**.  
   
 13. No painel **Hierarquias** do Designer de Dimensão, crie uma hierarquia de usuário **Motivos de Vendas** que contenha os níveis **Tipo do Motivo de Vendas** e **Motivo de Vendas** , nessa ordem.  
   

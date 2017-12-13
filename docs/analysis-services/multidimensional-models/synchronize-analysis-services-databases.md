@@ -2,12 +2,12 @@
 title: Sincronizar bancos de dados do Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53478ba4aace42f97beb00eb50d5f48fc7aecb6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8824ea31de1d2dc2774f57ac70af05a30f442408
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalentes copiando os dados e os metadados de um banco de dados em um servidor de origem para um banco de dados de um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bancos de dados equivalentes copiando os dados e metadados de um banco de dados em um servidor de origem para um banco de dados em um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
   
 -   Implantar um banco de dados de um servidor de preparo em um servidor de produção.  
   

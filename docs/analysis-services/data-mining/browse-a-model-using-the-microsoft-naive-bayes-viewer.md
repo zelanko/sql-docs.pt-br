@@ -2,12 +2,12 @@
 title: Procurar um modelo usando o visualizador Microsoft Naive Bayes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0dd79b27089f73b537969889cf78f1d86ba57526
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0a36102a6075f3382fa8e285b5e753765ab09d63
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Procurar um modelo usando o Visualizador do Microsoft Naive Bayes
-  O Visualizador Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração criados com o algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de classificação altamente adaptável para tarefas de modelagem com previsão. Para obter mais informações sobre esse algoritmo, consulte [Referência técnica do algoritmo Naive Bayes da Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] visualizador Naive Bayes na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe os modelos de mineração criados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Naive Bayes. O algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de classificação altamente adaptável para tarefas de modelagem com previsão. Para obter mais informações sobre esse algoritmo, consulte [Referência técnica do algoritmo Naive Bayes da Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
   
  Como um dos principais objetivos de um modelo Naive Bayes é fornecer uma maneira de explorar rapidamente os dados em um conjunto de dados, o Visualizador Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] fornece vários métodos para exibir a interação entre atributos previsíveis e os atributos de entrada.  
   

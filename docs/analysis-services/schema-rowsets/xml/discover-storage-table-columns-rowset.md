@@ -2,12 +2,12 @@
 title: Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMNS | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 126a0f1c261cc13f5a3673a67c87d12aac5faece
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6ca81b54546e3ff69c42ea60484e462513443c5e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMNS
-  Fornece informações em nível de coluna sobre tabelas de armazenamento usadas por um banco de dados do Analysis Services executado no modo de Tabela ou SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações em nível de coluna sobre tabelas de armazenamento usado por um banco de dados do Analysis Services em execução no modo Tabular ou SharePoint.  
   
  **Aplica-se a:** modelos tabulares  
   

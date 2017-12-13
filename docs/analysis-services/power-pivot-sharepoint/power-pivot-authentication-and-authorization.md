@@ -2,12 +2,12 @@
 title: Power Pivot Authentication and Authorization | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81357b2e0baec6545a6fec8aedf5d2c635d0c9da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticação e autorização do Power Pivot
-  Uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, executada dentro de um farm do SharePoint 2010, usa o subsistema de autenticação e o modelo de autorização fornecidos pelos servidores do SharePoint. A infraestrutura de segurança do SharePoint se estende ao conteúdo e às operações do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] porque todo o conteúdo relacionado ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]é armazenado nos bancos de dados de conteúdo do SharePoint, e todas as operações relacionadas ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]são executadas pelos serviços compartilhados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Os usuários que solicitam uma pasta de trabalho que contém dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são autenticados, usando uma identidade de usuário do SharePoint que é baseada na respectiva identidade de usuário do Windows. As permissões de exibição na pasta de trabalho determinam se a solicitação é concedida ou negada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint a implantação é executado em um farm do SharePoint 2010 usa o modelo de autenticação subsistema e autorização fornecidos pelos servidores do SharePoint. A infraestrutura de segurança do SharePoint se estende ao conteúdo e às operações do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] porque todo o conteúdo relacionado ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]é armazenado nos bancos de dados de conteúdo do SharePoint, e todas as operações relacionadas ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]são executadas pelos serviços compartilhados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Os usuários que solicitam uma pasta de trabalho que contém dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são autenticados, usando uma identidade de usuário do SharePoint que é baseada na respectiva identidade de usuário do Windows. As permissões de exibição na pasta de trabalho determinam se a solicitação é concedida ou negada.  
   
  Como a integração com os Serviços do Excel é necessária para análises de dados de autoatendimento, a proteção de um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] exige que você também compreenda a segurança dos Serviços do Excel. Quando um usuário consulta um Tabela Dinâmica que tem uma conexão de dados a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , os Serviços do Excel encaminham uma solicitação de conexão de dados a um servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm para carregar os dados. Essa interação entre os servidores exige que você compreenda como configurar parâmetros de segurança para ambos os servidores.  
   

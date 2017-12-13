@@ -2,12 +2,12 @@
 title: "Executando comandos em uma fonte de dados analíticos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 450d3553509ee3358711705bbc3f5e8a10874820
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 810c6e8bd489bac42a3f4d90d4dbe9990f5ca038
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>Executando comandos em uma fonte de dados analíticos
-  Depois de estabelecer uma conexão com uma fonte de dados analíticos, você poderá usar um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> para executar comandos nessa fonte de dados e retornar resultados dela. Esses comandos podem recuperar dados usando MDX (Multidimensional Expressions), DMX (Data Mining Extensions) ou até mesmo uma sintaxe limitada de SQL. Além disso, você poderá usar comandos ASSL (Analysis Services Scripting Language) para modificar o banco de dados subjacente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois de estabelecer uma conexão a uma fonte de dados analíticos, você pode usar um <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> objeto para executar comandos e retornar os resultados dessa fonte de dados. Esses comandos podem recuperar dados usando MDX (Multidimensional Expressions), DMX (Data Mining Extensions) ou até mesmo uma sintaxe limitada de SQL. Além disso, você poderá usar comandos ASSL (Analysis Services Scripting Language) para modificar o banco de dados subjacente.  
   
 ## <a name="creating-a-command"></a>Criando um comando  
  Antes de executar um comando, você deverá criá-lo. Você pode criar um comando usando um destes métodos:  

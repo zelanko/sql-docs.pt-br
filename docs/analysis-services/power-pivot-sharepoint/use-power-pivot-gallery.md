@@ -2,12 +2,12 @@
 title: Usar a Galeria Power Pivot | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2baeb4233fc9c8c8121e468c7d9111a52a66ba7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e56bbb1285683d0328b9ca64092d075406ccabf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-power-pivot-gallery"></a>Usar Galeria do Power Pivot
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] A Galeria é uma biblioteca de documentos do SharePoint que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galeria é uma biblioteca de documentos do SharePoint especial que fornece visualização avançada e documento de gerenciamento para pastas de trabalho do Excel publicadas e relatórios do Reporting Services que contêm [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dados.  
   
 > [!NOTE]  
 >  Dependendo de como seu servidor está configurado, talvez você veja mensagens de erro ou aviso na área de visualização para documentos específicos. As mensagens podem ser exibidas quando uma pasta de trabalho do Excel estiver definida para atualizar automaticamente os dados sempre que for aberta. As mensagens de aviso de atualização de dados serão exibidas como a imagem de visualização se os Serviços do Excel forem configurados para mostrar mensagens de erro Aviso em atualização de dados. Os administradores de farm ou serviço podem modificar parâmetros de configuração para permitir que uma visualização da planilha real seja exibida. Para obter mais informações, consulte [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  

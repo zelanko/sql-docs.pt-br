@@ -2,12 +2,12 @@
 title: "Lição 5: Definindo relações entre dimensões e grupos de medidas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a36c57ed912ec93c52d0f3316d0ac7ba421e4966
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lição 5: Definindo relações entre grupos de medidas e dimensões
-Nas lições anteriores neste tutorial, você aprendeu que as dimensões de banco de dados adicionadas a um cubo podem ser usadas como base para uma ou mais dimensões de cubo. Nesta lição, você aprenderá a definir diferentes tipos de relações entre dimensões de cubo e grupos de medidas, além de especificar as propriedades dessas relações.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nas lições anteriores neste tutorial, você aprendeu que dimensões de banco de dados adicionados a um cubo podem ser usados como base para uma ou mais dimensões de cubo. Nesta lição, você aprenderá a definir diferentes tipos de relações entre dimensões de cubo e grupos de medidas, além de especificar as propriedades dessas relações.  
   
 Para obter mais informações, consulte [Relações de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

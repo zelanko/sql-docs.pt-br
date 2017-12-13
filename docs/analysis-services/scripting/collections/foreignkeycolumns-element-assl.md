@@ -2,12 +2,12 @@
 title: Elemento ForeignKeyColumns (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cd5ca2e63ead853814d1f2d9ab8ad24a7c73d33
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cac758cbd601462d819331e04813372f2a1f042b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="foreignkeycolumns-element-assl"></a>Elemento ForeignKeyColumns (ASSL)
-  Contém a coleção das colunas que identificam a junção à tabela pai de uma fonte de dados relacional.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém a coleção de colunas que identificam a junção à tabela pai de uma fonte de dados relacional.  
   
 ## <a name="syntax"></a>Sintaxe  
   

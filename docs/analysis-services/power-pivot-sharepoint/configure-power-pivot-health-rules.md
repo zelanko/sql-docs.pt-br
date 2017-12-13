@@ -2,12 +2,12 @@
 title: Configurar regras de integridade do Power Pivot | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09a92c74c31247541767258e30b9d61d62cd567d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d18bf49c81bbd296160d21e90e59d6cce68a163d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configurar regras de integridade do Power Pivot
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint inclui regras de integridade do SharePoint que o ajudam a monitorar e solucionar problemas de disponibilidade e configuração do servidor. Regras de integridade que se aplicam ao [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint aparecem na página Examinar definições de regra.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]para SharePoint inclui regras de integridade do SharePoint que ajudarão-lo a monitoram e solucionar problemas de disponibilidade e configuração do servidor. Regras de integridade que se aplicam ao [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint aparecem na página Examinar definições de regra.  
   
  Regras de integridade fornecem a detecção de problemas de servidor que podem acabar resultando em interrupções de serviço. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint fornece vários regras para ajudá-lo a identificar e corrigir problemas antes que afetem seus usuários. Você pode personalizar muitas destas regras para ajustá-las às características exclusivas de sua implantação. Por exemplo, se você desejar mais tempo para tratar de avisos sobre espaço em disco, poderá aumentar o percentual de espaço disponível em disco de 5% para 10% de forma que receba o aviso mais cedo.  
   

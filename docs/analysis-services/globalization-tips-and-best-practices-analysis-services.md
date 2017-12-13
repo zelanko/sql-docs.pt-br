@@ -2,12 +2,12 @@
 title: "Dicas de globalização e práticas recomendadas (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4c7d23f5c48505bb91db780ee2aaf742c7c1e22
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 596601d9cc3ddc0ef4b799d7beb1c6e9b6f1af1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Dicas de globalização e práticas recomendadas (Analysis Services)
-  [!INCLUDE[applies](../includes/applies-md.md)] Somente multidimensional  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Multidimensional somente  
   
  Essas diretrizes e dicas podem ajudar a aumentar a portabilidade das soluções de business intelligence e evitar os erros diretamente relacionados às configurações de idioma e agrupamento.  
   

@@ -2,12 +2,12 @@
 title: "Totais visuais e totais não visuais | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 822e1f7e496b3c6fb74fff558b37b244e2b41512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f966f4108f3ad029b6c069216cd7713f3b4ac7e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totais visuais e totais não visuais
-  Totais visuais são totais no final de uma coluna ou linha que somam todos os itens visíveis na coluna ou linha. Esse é o comportamento padrão da maioria das tabelas ao serem exibidas. Porém, ocasionalmente o usuário desejará exibir somente certas colunas em uma tabela, mas manter os totais da linha inteira, inclusive das colunas que não são exibidas. Esses são chamados de **Totais não visuais**, porque o total provém de valores tanto visíveis como não visíveis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Totais visuais são totais no final de uma coluna ou linha que somam todos os itens visíveis na coluna ou linha. Esse é o comportamento padrão da maioria das tabelas ao serem exibidas. Porém, ocasionalmente o usuário desejará exibir somente certas colunas em uma tabela, mas manter os totais da linha inteira, inclusive das colunas que não são exibidas. Esses são chamados de **Totais não visuais**, porque o total provém de valores tanto visíveis como não visíveis.  
   
  O cenário a seguir demonstra o comportamento dos totais Não Visuais. A primeira etapa mostra o comportamento padrão dos Totais Visuais.  
   

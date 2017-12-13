@@ -2,12 +2,12 @@
 title: "Determinar o modo de servidor de análise de uma instância de serviços | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 05e11407da93e269ca8766d94df4820e54e43ecc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7242643ec7ac3869f245b069218205ad425692a8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determina o Modo de Servidor de uma instância do Analysis Services.
-  O Analysis Services pode ser instalado em um dos três modos de servidor: Multidimensional e Mineração de Dados (padrão), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint e Tabular. O modo de servidor de uma instância do Analysis Services é determinado durante a instalação quando você escolhe opções para instalar o servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services pode ser instalado em um dos três modos de servidor: Multidimensional e mineração de dados (padrão), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint e Tabular. O modo de servidor de uma instância do Analysis Services é determinado durante a instalação quando você escolhe opções para instalar o servidor.  
   
  O modo de servidor determina o tipo de solução que você cria e implanta. Se você não instalou o software de servidor e deseja saber em qual modo o servidor foi instalado, pode usar as informações neste tópico para determinar o modo. Para obter mais informações sobre disponibilidade de recursos em um modo específico, consulte [Comparando soluções tabulares e multidimensionais &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

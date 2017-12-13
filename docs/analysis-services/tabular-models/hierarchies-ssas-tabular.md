@@ -2,12 +2,12 @@
 title: Hierarquias | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7604fe65427b5744cb0b34689a98f7fc6cd809b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 11112104f624c3594a99e867d03bfaaab28ac37c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchies"></a>Hierarquias
-  Hierarquias, em modelos de tabela, são metadados que definem relações entre duas ou mais colunas em uma tabela. As hierarquias podem parecer separadas de outras colunas em uma lista de campo de cliente de relatório, facilitando para usuários clientes navegarem e incluírem em um relatório.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Hierarquias em modelos de tabela, são metadados que definem relações entre duas ou mais colunas em uma tabela. As hierarquias podem parecer separadas de outras colunas em uma lista de campo de cliente de relatório, facilitando para usuários clientes navegarem e incluírem em um relatório.  
   
 ##  <a name="bkmk_benefits"></a> Benefícios  
  As tabelas podem incluir dúzias ou até mesmo centenas de colunas com nomes de coluna incomuns em nenhuma ordem aparente. Isto pode levar a uma aparência não ordenada ao reportar listas de campo de cliente, dificultando aos usuários localizarem e incluírem dados em um relatório. As hierarquias podem fornecer uma exibição simples e intuitiva de uma estrutura de dados que, de outra maneira, seria complexa.  

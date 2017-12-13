@@ -2,12 +2,12 @@
 title: Bancos de dados de modelo multidimensional (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dae9c7f18acbf630b7b8780498e06465085822b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c3e78f2941cd7729576647eb96bf21c717664fcf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bancos de dados de modelo multidimensional (SSAS)
-  Um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma coleção de fontes de dados, exibições da fontes de dados, cubos, dimensões e funções. Opcionalmente, um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode incluir estruturas para mineração de dados e assemblies personalizados que fornecem um modo de você adicionar funções definidas pelo usuário ao banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados é uma coleção de fontes de dados, exibições da fonte de dados, cubos, dimensões e funções. Opcionalmente, um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode incluir estruturas para mineração de dados e assemblies personalizados que fornecem um modo de você adicionar funções definidas pelo usuário ao banco de dados.  
   
  Os cubos são os objetos de consulta fundamentais no Analysis Services. Ao se conectar a um banco de dados do Analysis Services, via um aplicativo cliente, você se conecta a um cubo dentro desse banco de dados. Um banco de dados poderá conter vários cubos se você estiver reutilizando dimensões, assemblies, funções ou estruturas de mineração em vários contextos.  
   

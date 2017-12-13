@@ -2,12 +2,12 @@
 title: "Adicionar inteligência de conta a uma dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9507044c972401407aadf80dddfe164ec4a3617c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d91930309e865b84f4d6e763a46026879bdc47c5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Assistente de BI - adicionar inteligência de conta a uma dimensão
-  Adicione o aprimoramento da inteligência de conta a um cubo ou a uma dimensão para atribuir classificações de conta padrão, como receita e despesa, a membros de um atributo de conta. Esse aprimoramento também identifica os tipos de conta (como Ativo e Passivo) e atribui a agregação apropriada a cada tipo de conta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode usar as classificações para agregar contas ao longo do tempo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Adicione o aprimoramento de inteligência de conta a um cubo ou uma dimensão para atribuir classificações de conta padrão, como receita e despesa, para membros de um atributo de conta. Esse aprimoramento também identifica os tipos de conta (como Ativo e Passivo) e atribui a agregação apropriada a cada tipo de conta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode usar as classificações para agregar contas ao longo do tempo.  
   
 > [!NOTE]  
 >  A inteligência de conta está disponível somente para dimensões baseadas nas fontes de dados existentes. Para dimensões que foram criadas sem usar uma fonte de dados, execute o Assistente de Geração de Esquema para criar uma exibição da fonte de dados antes de adicionar a inteligência de conta.  

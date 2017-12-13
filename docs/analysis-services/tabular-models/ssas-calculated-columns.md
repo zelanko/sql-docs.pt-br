@@ -2,12 +2,12 @@
 title: Calculado colunas (SSAS Tabular) | Microsoft Docs
 ms.custom: 
 ms.date: 10/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c7fe8e5ad97a1955160bf2f8f953c85971f66b09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcd2e415214ca310f2f53a71f04e58306bec4a63
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculated-columns"></a>Colunas calculadas
-  Colunas calculadas, em modelos tabulares, permitem que você adicionar novos dados a seu modelo. Em vez de colar ou importar valores para a coluna, você cria uma fórmula DAX que define os valores do nível de linha da coluna. A coluna calculada pode então ser usada em um relatório, Tabela Dinâmica ou Gráfico Dinâmico como você faria com qualquer outra coluna.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Colunas calculadas, em modelos tabulares, permitem que você adicionar novos dados a seu modelo. Em vez de colar ou importar valores para a coluna, você cria uma fórmula DAX que define os valores do nível de linha da coluna. A coluna calculada pode então ser usada em um relatório, Tabela Dinâmica ou Gráfico Dinâmico como você faria com qualquer outra coluna.  
  
   
   

@@ -2,12 +2,12 @@
 title: Tipo de dados TimeAttributeBinding (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 291187fb730a416dbc8d48cb4a90f0f94b7bf808
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4420e452b3c15088c628a86cc6d3a35e100c1ec2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="timeattributebinding-data-type-assl"></a>Tipo de dados TimeAttributeBinding (ASSL)
-  Define um tipo de dados derivado que representa uma associação de “espaço reservado” para os itens de dados gerados, como as colunas de chave de um atributo, em uma dimensão de tempo de servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define um tipo de dados derivado que representa uma associação "espaço reservado" para itens de dados gerados, como as colunas de chave de um atributo, em uma dimensão de tempo do servidor.  
   
 ## <a name="syntax"></a>Sintaxe  
   

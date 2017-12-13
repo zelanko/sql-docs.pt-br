@@ -2,12 +2,12 @@
 title: "Partições em modelos multidimensionais | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partições em modelos multidimensionais
-  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma *partição* fornece o armazenamento físico de dados de fatos carregados em um grupo de medidas. Uma única partição é criada para cada grupo de medidas automaticamente, mas é comum criar partições adicionais que segmentam mais os dados, resultando em processamento mais eficiente e em desempenho mais rápido das consultas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um *partição* fornece o armazenamento físico dos dados de fatos carregados em um grupo de medidas. Uma única partição é criada para cada grupo de medidas automaticamente, mas é comum criar partições adicionais que segmentam mais os dados, resultando em processamento mais eficiente e em desempenho mais rápido das consultas.  
   
  O processamento é mais eficiente porque as partições podem ser processados de forma independente e em paralelo, em um ou mais servidores. As consultas são executadas mais rápido porque cada partição pode ser configurada para ter os modos de armazenamento e as otimizações de agregação que resultam em tempos de resposta mais curtos. Por exemplo, o armazenamento MOLAP para partições contendo dados mais recentes costuma ser mais rápido do que o ROLAP. Da mesma forma, se você particionar por data, as partições contendo dados mais recentes poderão ter mais otimizações do que as partições contendo dados mais antigos que são acessados com menos frequência. Observe que a variação no design de armazenamento e agregação por partição terá um impacto negativo sobre operações futuras de mesclagem. Verifique se a mesclagem é de fato um componente essencial de sua estratégia de gerenciamento de partição antes de otimizar partições individuais.  
   

@@ -2,12 +2,12 @@
 title: "Criando no escopo da sessão conjuntos nomeados (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 87be5fc0a7e1c1afd663d70371342035ac0d1d1b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b3970440812f0866d08e99bb195308a1780afbc6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Conjuntos nomeados de MDX denominado conjuntos - criando no escopo da sessão
-  Para criar um conjunto nomeado que esteja disponível por meio de uma sessão da linguagem MDX, use a instrução [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) . Um conjunto nomeado criado com a instrução CREATE SET não será removido até que a sessão MDX seja encerrada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Para criar um conjunto nomeado que estará disponível durante uma sessão de MDX (Multidimensional Expressions), use o [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) instrução. Um conjunto nomeado criado com a instrução CREATE SET não será removido até que a sessão MDX seja encerrada.  
   
  Como discutido neste tópico, a sintaxe da palavra-chave WITH é direta e fácil usar.  
   

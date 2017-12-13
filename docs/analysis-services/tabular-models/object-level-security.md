@@ -2,12 +2,12 @@
 title: "Segurança de nível de objeto de modelo de tabela | Microsoft Docs"
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc44742d56d744e9d0d4c1f1697d0bcd4e40488c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d86f5ce95ce359f5955e974f7f57012721c3dcb5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-level-security"></a>Segurança em nível de objeto
-
-[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
-
-Segurança do modelo de dados começa com efetivamente implementando [funções](../../analysis-services/tabular-models/roles-ssas-tabular.md) e filtros de nível de linha para definir permissões de usuário nos dados e objetos de modelo de dados. Começando com modelos de tabela 1400, você também pode definir segurança em nível de objeto, que inclui a segurança em nível de tabela e segurança em nível de coluna a [objeto funções](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Segurança do modelo de dados começa com efetivamente implementando [funções](../../analysis-services/tabular-models/roles-ssas-tabular.md) e filtros de nível de linha para definir permissões de usuário nos dados e objetos de modelo de dados. Começando com modelos de tabela 1400, você também pode definir segurança em nível de objeto, que inclui a segurança em nível de tabela e segurança em nível de coluna a [objeto funções](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
 
 ## <a name="table-level-security"></a>Segurança em nível de tabela
 

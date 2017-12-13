@@ -2,12 +2,12 @@
 title: "Gerenciar funções usando SSMS (SSAS Tabular) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 968ba8cc261343d659600ef0dde08de37d10dbde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: af36d37d9cbbaa0554719fd97e22e193d08b696a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gerenciar funções usando SSMS (SSAS tabular)
-  Você pode criar, editar e gerenciar funções para um modelo de tabela implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Você pode criar, editar e gerenciar funções para um modelo tabular implantado usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Tarefas neste tópico:  
   

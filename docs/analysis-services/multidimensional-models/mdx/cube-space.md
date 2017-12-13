@@ -2,12 +2,12 @@
 title: "Espaço de cubo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 724bf10bb30f2f64a34db8f02b984d051ce525a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a9e9eab17c37cee31e0155af8fcb0d2e092e56b3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-space"></a>Espaço de cubo
-  Espaço de cubo é o produto dos membros das hierarquias de atributo de um cubo com as medidas do cubo. Portanto, o espaço de cubo é determinado pelo produto combinatório de todos os membros de hierarquia de atributo no cubo e as medidas do cubo e define o tamanho máximo do cubo. É importante observar que esse espaço inclui todas as possíveis combinações de membros de hierarquia de atributo, inclusive combinações que poderiam ser consideradas impossíveis no mundo real, como combinações onde a cidade é Paris e os países são Inglaterra, Espanha, Japão, Índia ou qualquer outro.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Espaço de cubo é o produto dos membros de hierarquias de atributo de um cubo com as medidas do cubo. Portanto, o espaço de cubo é determinado pelo produto combinatório de todos os membros de hierarquia de atributo no cubo e as medidas do cubo e define o tamanho máximo do cubo. É importante observar que esse espaço inclui todas as possíveis combinações de membros de hierarquia de atributo, inclusive combinações que poderiam ser consideradas impossíveis no mundo real, como combinações onde a cidade é Paris e os países são Inglaterra, Espanha, Japão, Índia ou qualquer outro.  
   
 ## <a name="autoexists-and-cube-space"></a>Autoexists e espaço de cubo  
  O conceito de *autoexists* limita esse espaço de cubo às células que realmente existem. É possível que membros de uma hierarquia de atributo em uma dimensão não existam com membros de outra hierarquia de atributo na mesma dimensão.  

@@ -2,12 +2,12 @@
 title: Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21fdb446b1d2c8475969cbc89050260d0e09f6b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 66d86e3583b81069f2c1f77a616dac91a022ff9c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
-  Fornece informações em nível de coluna e segmento sobre tabelas de armazenamento usado por um banco de dados do Analysis Services em execução tabela ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo. Este conjunto de linhas é usado principalmente para solução e análise de problemas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações em nível de coluna e segmento sobre tabelas de armazenamento usado por um banco de dados do Analysis Services em execução tabela ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo. Este conjunto de linhas é usado principalmente para solução e análise de problemas.  
   
  **Aplica-se a:** modelos tabulares  
   

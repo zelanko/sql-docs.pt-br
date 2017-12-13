@@ -2,12 +2,12 @@
 title: "Visão geral da arquitetura lógica (Analysis Services - dados multidimensionais) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 356eff5190638e3ac2086b1839649b99dc788699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Visão geral da arquitetura lógica (Analysis Services – Dados Multidimensionais)
-  O Analysis Services funciona em um modo de implantação de servidor que determina a arquitetura de memória e o ambiente de tempo de execução usados pelos diferentes tipos de modelos do Analysis Services. O modo de servidor é determinado durante a instalação. **Modo multidimensional e mineração de dados** oferece suporte a OLAP tradicional e mineração de dados. **Modo de tabela** dá suporte a modelos de tabela. **Modo integrado do SharePoint** refere-se a uma instância do Analysis Services que foi instalado como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, usado para carregar e consultar o Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de dados dentro de uma pasta de trabalho.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O Analysis Services funciona em um modo de implantação de servidor que determina o ambiente de tempo de execução e arquitetura de memória usado pelos diferentes tipos de modelos do Analysis Services. O modo de servidor é determinado durante a instalação. **Modo multidimensional e mineração de dados** oferece suporte a OLAP tradicional e mineração de dados. **Modo de tabela** dá suporte a modelos de tabela. **Modo integrado do SharePoint** refere-se a uma instância do Analysis Services que foi instalado como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, usado para carregar e consultar o Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de dados dentro de uma pasta de trabalho.  
   
  Este tópico explica a arquitetura básica do Analysis Services no modo Multidimensional e de Mineração de Dados. Para obter mais informações sobre outros modos, consulte [modelagem de tabela &#40; SSAS &#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) e [comparando soluções tabulares e multidimensionais &#40; SSAS &#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

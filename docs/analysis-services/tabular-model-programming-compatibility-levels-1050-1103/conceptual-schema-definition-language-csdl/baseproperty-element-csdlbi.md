@@ -2,12 +2,12 @@
 title: Elemento BaseProperty (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79d391ef3ac0388187c91dac96859172a347effc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c0dfb628e7c70edf6e5daf197e3f0d48d4cc9b20
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="baseproperty-element-csdlbi"></a>Elemento BaseProperty (CSDLBI)
-  O elemento BaseProperty é um tipo complexo que serve como base para outros elementos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O elemento BaseProperty é um tipo complexo que serve como base para outros elementos.  
   
  Seus atributos podem aparecer em colunas e em medidas.  
   

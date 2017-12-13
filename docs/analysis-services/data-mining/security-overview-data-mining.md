@@ -2,12 +2,12 @@
 title: "Visão geral de segurança (mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e41132d9c98186073c67799bea6e9d677f5b3c82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1292f8fc828d938d59bd9ceafe8cbc467da8e02d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="security-overview-data-mining"></a>Visão geral de segurança (mineração de dados)
-  O processo de proteção do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ocorre em vários níveis. É necessário proteger cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e suas fontes de dados para garantir que somente os usuários autorizados tenham permissões de leitura ou de leitura/gravação nas dimensões, células, modelos de mineração e fontes de dados selecionadas. Você também tem que proteger as fontes de dados subjacentes para impedir que usuários não autorizados comprometam de modo mal-intencionado as informações de negócios confidenciais. O processo de proteção de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é descrito nos tópicos a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O processo de proteção [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ocorre em vários níveis. É necessário proteger cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e suas fontes de dados para garantir que somente os usuários autorizados tenham permissões de leitura ou de leitura/gravação nas dimensões, células, modelos de mineração e fontes de dados selecionadas. Você também tem que proteger as fontes de dados subjacentes para impedir que usuários não autorizados comprometam de modo mal-intencionado as informações de negócios confidenciais. O processo de proteção de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é descrito nos tópicos a seguir.  
   
 ##  <a name="bkmk_Architecture"></a> Arquitetura de segurança  
  Veja os seguintes recursos para saber sobre a arquitetura de segurança básica de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluindo como o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa a autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para autenticar o acesso do usuário.  

@@ -2,12 +2,12 @@
 title: Usar Feeds de dados (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Use feeds de dados (Power Pivot para SharePoint)
-  Feeds de dados são um ou mais fluxos de dados gerados de uma fonte de dados online e transmitidos para um documento ou aplicativo de destino. Se você estiver usando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, os feeds de dados poderão ajudá-lo a obter dados corporativos ou de negócios existentes de fontes de dados arbitrárias dentro da janela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na pasta de trabalho do Excel 2010. Depois de importar um feed de dados para uma pasta de trabalho, você poderá referenciá-lo posteriormente em qualquer operação de atualização de dados agendada em um servidor do SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Feeds de dados são um ou mais fluxos de dados que são gerados a partir de uma fonte de dados online e transmitidos para um documento de destino ou o aplicativo. Se você estiver usando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, os feeds de dados poderão ajudá-lo a obter dados corporativos ou de negócios existentes de fontes de dados arbitrárias dentro da janela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na pasta de trabalho do Excel 2010. Depois de importar um feed de dados para uma pasta de trabalho, você poderá referenciá-lo posteriormente em qualquer operação de atualização de dados agendada em um servidor do SharePoint.  
   
  A maneira como você usa um feed de dados depende de você estar usando recursos de exportação internos em aplicativos que dão suporte a feeds de dados Atom ou estar criando e usando serviços de dados personalizados. Aplicativos que podem publicar e ler dados XML do Atom fornecem transferência de dados transparente que oculta as mecânicas dos feeds de dados e serviços de dados de usuários. Para um usuário, os dados são simplesmente movidos de um aplicativo para outro.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
     1.  A**URL base** é opcional. Você deve especificar isto se um documento de serviço de dados fornecer vários feeds. A URL base deve especificar a parte da URL que é comum a todos os feeds (por exemplo, o nome do servidor e o site). Se você estiver criando um documento de serviço de dados para um relatório do Reporting Services, a URL de base será a URL do servidor de relatório e o relatório.  
   
-    2.  A**URL do Serviço Web** é obrigatória. Sem a URL Base, esse valor deve incluir `http://` ou `https://` no endereço. Se você especificou uma URL base, a URL de serviço Web é a parte que segue a URL base. Por exemplo, se a URL completa é `http://adventure-works/inventory/today.aspx`, a URL Base seria `http://adventure-works/inventory`, e a URL do serviço Web seria /Today.aspx..  
+    2.  A**URL do Serviço Web** é obrigatória. Sem a URL Base, esse valor deve incluir `http://` ou `https://` no endereço. Se você especificou uma URL base, a URL de serviço Web é a parte que segue a URL base. Por exemplo, se a URL completa é `http://adventure-works/inventory/today.aspx`, a URL Base seria `http://adventure-works/inventory`, e a URL do serviço Web seria /Today.aspx.  
   
          A URL de serviço Web pode incluir parâmetros que filtram ou selecionam um subconjunto de dados. O aplicativo ou serviço que fornecem o feed devem oferecer suporte a parâmetros que você especifica na URL.  
   

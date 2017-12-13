@@ -2,12 +2,12 @@
 title: "Exibir histórico (PowerPivot para SharePoint) de atualização de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43dce2aa27cfda6251eeca52eba4f74f722f4ced
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c2347b4bf7a02f61599f0a318ab1660dff50e4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Exibir o Histórico de Atualização de Dados (Power Pivot para SharePoint)
-  O histórico de atualização de dados é um registro de toda a atividade de atualização de dados para os dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em uma pasta de trabalho do Excel. As operações da atualização de dados são executadas em uma instância de servidor do Analysis Services em um farm do SharePoint em uma agenda fornecida por você. Por padrão, o histórico de atualização de dados é mantido durante um ano. No entanto, um administrador de farm pode especificar uma política de retenção diferente para o histórico de uso e de eventos que determine por quanto tempo os registros de atualização de dados são mantidos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Histórico de atualização de dados é um registro de todas as atividades de atualização de dados de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dados em uma pasta de trabalho do Excel. As operações da atualização de dados são executadas em uma instância de servidor do Analysis Services em um farm do SharePoint em uma agenda fornecida por você. Por padrão, o histórico de atualização de dados é mantido durante um ano. No entanto, um administrador de farm pode especificar uma política de retenção diferente para o histórico de uso e de eventos que determine por quanto tempo os registros de atualização de dados são mantidos.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   

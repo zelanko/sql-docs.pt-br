@@ -2,12 +2,12 @@
 title: "Sequência de comando (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fe2e7416c4c86b926f30295b6fe2f75a334751f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41e12acf7e785ecb65629ff89a5cfbaf7875f07d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sequence-command-tmsl"></a>Comando de sequência (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Use o **sequência** comando para executar um conjunto consecutivo de operações no modo de lote em uma instância do Analysis Services.  O comando inteiro e todos os seus componentes devem concluir para que a transação tenha êxito.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Use o **sequência** comando para executar um conjunto consecutivo de operações no modo de lote em uma instância do Analysis Services.  O comando inteiro e todos os seus componentes devem concluir para que a transação tenha êxito.  
   
  Os seguintes comandos podem ser executados em sequência, exceto para o **atualização** comando que é executado em paralelo para processar vários objetos ao mesmo tempo.  
   

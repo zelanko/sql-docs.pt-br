@@ -2,12 +2,12 @@
 title: Usando DRILLTHROUGH para recuperar dados de origem (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d7eecd743e66ad33e029e5d575b9ab4a8b2a988
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 30587e46a4ac54d2ac2825649f25cb321c05eba4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>Manipulação de dados MDX - recuperar dados de origem usando o DETALHAMENTO
-  As expressões multidimensionais (MDX) usam a instrução [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)para recuperar um conjunto de linhas dos dados de origem de uma célula de cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Expressões multidimensionais (MDX) usam o [DETALHAMENTO](../../../mdx/mdx-data-manipulation-drillthrough.md)instrução para recuperar um conjunto de linhas de dados de origem para uma célula de cubo.  
   
  Para executar uma instrução **DRILLTHROUGH** em um cubo, uma ação de drillthrough deve ser definida para esse cubo. Para definir a ação de drillthrough, no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], no Designer de Cubo, no painel **Ações** , na barra de ferramentas, clique em **Nova Ação de Drillthrough**. Na nova ação de drillthrough, especifique o nome da ação, o destino, a condição e as colunas que serão retornadas pela instrução **DRILLTHROUGH** .  
   

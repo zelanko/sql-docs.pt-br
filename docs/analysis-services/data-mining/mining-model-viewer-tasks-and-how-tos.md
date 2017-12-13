@@ -2,12 +2,12 @@
 title: "Tarefas do Visualizador do modelo e instruções de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae59c83e386be1eb222a24cd3ef7a9c9b070444f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 61bcf404f76a25b4003bbf96be87a2191c903b0f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tarefas e instruções do visualizador do modelo de mineração
-  O Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém várias ferramentas que você pode utilizar para explorar modelos de mineração. Os tópicos a seguir fornecem instruções passo a passo sobre como concluir tarefas específicas do uso da guia **Visualizador do Modelo de Mineração** no designer.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Designer de mineração de dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém várias ferramentas que você pode usar para explorar modelos de mineração. Os tópicos a seguir fornecem instruções passo a passo sobre como concluir tarefas específicas do uso da guia **Visualizador do Modelo de Mineração** no designer.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

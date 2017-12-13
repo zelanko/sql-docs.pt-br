@@ -2,12 +2,12 @@
 title: Indicadores chave de desempenho (KPIs) em modelos multidimensionais | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 326f2bd9d1ca70ff025e0b9cdf27ce167474d7be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>KPIs (indicadores chave de desempenho) em modelos multidimensionais
-  Na terminologia empresarial, um KPI (indicador chave de desempenho) é uma medida quantificável para medir o sucesso empresarial.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Na terminologia empresarial, um indicador chave de desempenho (KPI) é uma medida quantificável para medir o sucesso nos negócios.  
   
  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um KPI é uma coleção de cálculos associada a um grupo de medidas em um cubo usado para avaliar o sucesso nos negócios. Normalmente, esses cálculos são uma combinação de MDX ou membros calculados. Os KPIs também contêm metadados adicionais que fornecem informações sobre como os aplicativos cliente devem exibir os resultados de cálculos de KPIs.  
   

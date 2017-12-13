@@ -2,12 +2,12 @@
 title: "Tutoriais de mineração de dados (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -19,14 +19,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f7375fc22170ffa3f0f11455af619d62f42df50c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Tutoriais de Mineração de Dados (Analysis Services)
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facilita a criação de soluções de mineração de dados usando os assistentes e as visualizações integradas. Especialmente se você não está familiarizado com o aprendizado de máquina, as ferramentas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] são uma maneira fácil de projetar, treinar e explorar modelos de mineração de dados. Os dados nos modelos podem ser armazenados em um cubo, banco de dados relacional ou em qualquer outra fonte com suporte no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Depois de criar um modelo, você pode colocá-lo em produção acessando o modelo para criar previsões usando vários clientes de previsão, incluindo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e ASP.NET.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] torna mais fácil criar soluções de mineração de dados usando os assistentes e as visualizações integradas. Especialmente se você não está familiarizado com o aprendizado de máquina, as ferramentas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] são uma maneira fácil de projetar, treinar e explorar modelos de mineração de dados. Os dados nos modelos podem ser armazenados em um cubo, banco de dados relacional ou em qualquer outra fonte com suporte no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Depois de criar um modelo, você pode colocá-lo em produção acessando o modelo para criar previsões usando vários clientes de previsão, incluindo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e ASP.NET.  
   
 > [!NOTE]  
 >Os tutoriais descritos aqui não foram atualizados para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Você pode usar os tutoriais criados para o SQL Server 2014. Funcionalmente, não há nenhuma alteração nos recursos de Mineração de Dados do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. As etapas devem ser idênticas.  

@@ -2,12 +2,12 @@
 title: Elemento Goal (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9cc5c6a411b1f874b6f79b8dcdec4ffbec75536f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c12cbbb34b04dd1c27fb617ad74576790cd678e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="goal-element-assl"></a>Elemento Goal (ASSL)
-  Identifica a meta desejada em uma [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifica a meta desejada em uma [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -2,12 +2,12 @@
 title: "Mineração de dados (SSAS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 08014cb37823ce3f2bbdec7d89647d685f6a7684
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ac8390ebf0ffd45388d4fcea1dfbf846146b3b0d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-ssas"></a>Mineração de dados (SSAS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem sido o líder em análise preditiva desde a versão 2000, fornecendo a mineração de dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A combinação de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining fornece uma plataforma integrada para análise preditiva que abrange a preparação e a limpeza de dados, aprendizado de máquina e relatórios. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Data Mining inclui vários algoritmos padrão, incluindo modelos de clustering EM e K-means, redes neurais, regressão logística e linear, árvores de decisão e classificadores naive bayes. Todos os modelos integraram visualizações para ajudá-lo a desenvolver, refinar e avaliar os modelos.  Integrar a mineração de dados na solução de business intelligence ajuda a tomar decisões inteligentes sobre problemas complexos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem sido líder na análise de previsão desde a versão 2000, fornecendo a mineração de dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A combinação de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining fornece uma plataforma integrada para análise preditiva que abrange a preparação e a limpeza de dados, aprendizado de máquina e relatórios. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Data Mining inclui vários algoritmos padrão, incluindo modelos de clustering EM e K-means, redes neurais, regressão logística e linear, árvores de decisão e classificadores naive bayes. Todos os modelos integraram visualizações para ajudá-lo a desenvolver, refinar e avaliar os modelos.  Integrar a mineração de dados na solução de business intelligence ajuda a tomar decisões inteligentes sobre problemas complexos.  
   
 ## <a name="benefits-of-data-mining"></a>Benefícios da mineração de dados  
  A mineração de dados (também chamada de análise preditiva e aprendizado de máquina) usa princípios estatísticos bem pesquisados para descobrir padrões nos dados. Ao aplicar os algoritmos de mineração de dados a seus dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você pode prever tendências, identificar padrões, criar regras e recomendações, analisar a sequência de eventos em conjuntos de dados complexos e ter novas ideias.  

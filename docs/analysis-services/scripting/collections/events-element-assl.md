@@ -2,12 +2,12 @@
 title: Elemento Events (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8503b64150d65bbe27f87e04fd451630b91c63e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7fb5421596d38a01418efccfa1fdfbe97ed2c9b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="events-element-assl"></a>Elemento Events (ASSL)
-  Define a coleção de elementos [Event](../../../analysis-services/scripting/objects/event-element-assl.md) a serem capturados por um elemento [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define a coleção de [evento](../../../analysis-services/scripting/objects/event-element-assl.md) elementos a serem capturados por um [rastreamento](../../../analysis-services/scripting/objects/trace-element-assl.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

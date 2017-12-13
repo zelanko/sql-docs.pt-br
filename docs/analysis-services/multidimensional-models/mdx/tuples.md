@@ -2,12 +2,12 @@
 title: Tuplas | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4720db7c001c17a99016e9d81b32ee46d990e06f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 15dfc7f0ef9690acb208acd17eb6c4b5f27778bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tuples"></a>Tuplas
-  Uma tupla identifica exclusivamente uma fatia de dados de um cubo. A tupla é formada por uma combinação de membros de dimensão, contanto que não haja dois ou mais membros pertencentes à mesma hierarquia.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Uma tupla identifica exclusivamente uma fatia de dados de um cubo. A tupla é formada por uma combinação de membros de dimensão, contanto que não haja dois ou mais membros pertencentes à mesma hierarquia.  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>Membros de atributo implícitos ou padrão em uma tupla  
  Ao definir uma tupla em uma consulta ou expressão MDX, você não precisa explicitamente incluir o membro de atributo de cada hierarquia de atributo. Se um membro de uma hierarquia de atributo não for explicitamente incluído em uma consulta ou em uma expressão, o membro padrão para aquela hierarquia de atributo será o membro de atributo implicitamente incluso na tupla. Salvo indicação contrária explicitamente definida em um cubo, o membro padrão para cada hierarquia de atributo é o membro (All), se houver um membro (All). Se não houver um membro (All) em uma hierarquia de atributo, o membro padrão será um membro do nível superior da hierarquia de atributo. A medida padrão é a primeira medida especificada no cubo, salvo se uma medida padrão estiver explicitamente definida. Para obter mais informações, consulte [Definir um membro padrão](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md) e [DefaultMember &#40;MDX&#41;](../../../mdx/defaultmember-mdx.md).  

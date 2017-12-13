@@ -2,12 +2,12 @@
 title: Power Pivot Usage Data Collection | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5fab455ddd2ea659f2269512a81c93df2962df2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7f443e4ecb0d6bb16eaf582c89b98af9eb35a25a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-usage-data-collection"></a>Coleta de dados de uso do PowerPivot
-  A coleta de dados de uso é um recurso do SharePoint em nível de farm. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que mostram como os dados e serviços do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Coleta de dados de uso é um recurso no nível do farm do SharePoint. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que mostram como os dados e serviços do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento do [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   
  Para obter informações sobre os dados de uso no Painel de Gerenciamento [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , consulte [Painel de Gerenciamento Power Pivot e dados de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   

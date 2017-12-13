@@ -2,12 +2,12 @@
 title: "Monitorar uma instância do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69cc17afa5a35844a76f838993630cecf49b0bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Monitorar uma instância do Analysis Services
-  Você pode monitorar o desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Monitor de Desempenho, um aplicativo às vezes chamado de **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite criar e gerenciar rastreamentos e analisar e repetir resultados de rastreamento. O Monitor de Desempenho reporta em um status de servidor, como indexado por certos contadores, que são discutidos na próxima seção.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode monitorar o desempenho de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou o Monitor de desempenho, um aplicativo às vezes chamado de **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite criar e gerenciar rastreamentos e analisar e repetir resultados de rastreamento. O Monitor de Desempenho reporta em um status de servidor, como indexado por certos contadores, que são discutidos na próxima seção.  
   
 > [!NOTE]  
 >  Para obter mais informações sobre monitoramento, consulte o [Guia de operações do SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  

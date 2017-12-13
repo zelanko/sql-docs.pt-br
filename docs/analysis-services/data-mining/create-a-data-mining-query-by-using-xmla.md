@@ -2,12 +2,12 @@
 title: "Criar uma consulta de mineração de dados usando o XMLA | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78037aa620ae5a0ed6861d55503e96fd5bb2fb18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c2f5e3fd04ae0552ef9e8c7cae54e98bc7e46981
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Criar uma consulta de mineração de dados usando XMLA
-  Você pode criar várias consultas referentes a objetos de mineração de dados usando AMO, DMX ou XML/A.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode criar várias consultas em objetos de mineração de dados usando o AMO, DMX ou XML/a.  
   
  O XML é usado para comunicação entre o servidor Analysis Services e todos os clientes. Assim, embora geralmente seja muito mais fácil criar consultas de conteúdo usando DMX, você pode escrever consultas usando as instruções DISCOVER e COMMAND em XML/A, com um cliente que dê suporte a protocolo SOAP ou criando uma consulta XML/A no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

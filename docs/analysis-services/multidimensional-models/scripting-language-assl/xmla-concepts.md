@@ -2,12 +2,12 @@
 title: Conceitos de XMLA | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3defefc1088b24e386f797ba4b97b4eacb5cee33
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5dca0d0e247a985194109651ad14810d98a570e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xmla-concepts"></a>Conceitos de XMLA
-  O padrão XMLA (XML for Analysis) oferece suporte a acesso a dados para fontes de dados que residem na World Wide Web. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] implementa XMLA por especificação XMLA 1.1.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O padrão XML for Analysis (XMLA) dá suporte a acesso a dados para fontes de dados que residem na World Wide Web. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] implementa XMLA por especificação XMLA 1.1.  
   
  O XMLA (XML for Analysis) é um protocolo XML baseado em SOAP, criado especificamente para acesso a dados universal para qualquer fonte de dados multidimensional padrão residente na Web. XMLA também elimina a necessidade de implantar um componente de cliente que expõe um modelo de objeto de componente (COM) ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] interfaces do .NET Framework. O XMLA é otimizado para a Internet, quando viagens de ida e volta ao servidor são onerosas em termos de tempo e de recursos e quando conexões com estado para uma fonte de dados podem limitar conexões do usuário no servidor.  
   

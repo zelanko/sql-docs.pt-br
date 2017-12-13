@@ -2,12 +2,12 @@
 title: "Referência técnica do algoritmo de regressão logística de Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cfb1b20bed865c750ed5a29ff94fd4136830c18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41ce8bab5404398328cef0a769c2163805940e44
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referência técnica do algoritmo Regressão Logística da Microsoft
-  O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , no qual o parâmetro *HIDDEN_NODE_RATIO* é definido como 0. Essa configuração criará um modelo de rede neural que não contém uma camada oculta e, portanto, é equivalente à regressão logística.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Regressão logística é uma variação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo rede Neural, onde o *HIDDEN_NODE_RATIO* parâmetro for definido como 0. Essa configuração criará um modelo de rede neural que não contém uma camada oculta e, portanto, é equivalente à regressão logística.  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementação do algoritmo Regressão Logística da Microsoft  
  Suponha que a coluna previsível contenha apenas dois estados, mas você deseja executar uma análise de regressão, relacionando as colunas de entrada com a probabilidade de que a coluna previsível contenha um estado específico. O diagrama a seguir ilustra os resultados que você obterá se atribuir 1 e 0 aos estados da coluna previsível, calcular a probabilidade de que a coluna previsível contenha um estado específico e executar uma regressão linear em uma variável de entrada.  

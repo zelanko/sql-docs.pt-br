@@ -2,12 +2,12 @@
 title: "Arquitetura física (Analysis Services - dados multidimensionais) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,13 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fae70906f334e1c66d1def385fb875eb45d13b42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c6ae41adbf6e7b2ed51f7ed66ed2bd30bfdf8ad6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-microsoft-olap-physical-architecture"></a>Noções básicas sobre a arquitetura física do OLAP da Microsoft
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos a seguir fornecem mais informações sobre a arquitetura de um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solução.  

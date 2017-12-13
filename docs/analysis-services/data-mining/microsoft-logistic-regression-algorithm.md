@@ -2,12 +2,12 @@
 title: "Algoritmo de regressão logística da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a62e3bad1e9bfcae6c929061000ebcc8d3b7af7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b267fa74daf5c8ea83501eb3daadd5b84dc9cb7f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Regressão Logística da Microsoft
-  A regressão logística é uma técnica estatística conhecida, usada para modelar resultados binários.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Regressão logística é uma técnica estatística conhecida que é usada para modelar resultados binários.  
   
  Há várias implementações de regressão logística em pesquisa de estatísticas, usando técnicas de aprendizagem diferentes. O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] foi implementado usando uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este algoritmo compartilha muitas das qualidades de redes neurais mas é mais fácil treinar.  
   

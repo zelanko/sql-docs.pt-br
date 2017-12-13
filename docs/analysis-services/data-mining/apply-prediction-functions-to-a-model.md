@@ -2,12 +2,12 @@
 title: "Aplicar funções de previsão em um modelo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c36ab1bbdb5f2f11b81ddc43fb79b5f073ec9b9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funções de previsão a um modelo
-  Para criar uma consulta de previsão no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, você primeiro deve selecionar o modelo de mineração no qual a consulta será baseada. Você pode selecionar qualquer modelo de mineração existente no projeto atual.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para criar uma consulta de previsão em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mineração de dados, primeiro você deve selecionar o modelo de mineração no qual a consulta será baseada. Você pode selecionar qualquer modelo de mineração existente no projeto atual.  
   
  Depois de selecionar um modelo, adicione uma *função de previsão* à consulta. Uma função de previsão pode ser usada para obter uma previsão, mas você também pode adicionar funções de previsão que retornam estatísticas relacionadas, como uma probabilidade do valor previsto, ou as informações que foram usadas para gerar a previsão.  
   

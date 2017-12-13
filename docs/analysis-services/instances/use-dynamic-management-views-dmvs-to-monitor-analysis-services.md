@@ -2,12 +2,12 @@
 title: "Usar exibições de gerenciamento dinâmico (DMVs) para monitorar o Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5df4b77f4a373a69360c8e51f9c3f1362a4bf904
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6969869d6f4a7c10303838d2e3e696ae577fe180
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar DMVs (Exibições de Gerenciamento Dinâmico) para monitorar o Analysis Services
-  As DMVs (Exibições de Gerenciamento Dinâmico) do Analysis Services são estruturas de consulta que expõem informações sobre as operações do servidor local e a integridade do servidor. A estrutura da consulta é uma interface para conjuntos de linhas de esquema que retornam metadados e informações de monitoramento sobre uma instância do Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services dinâmico gerenciamento DMVS (exibições) são estruturas de consulta que expõem informações sobre operações do servidor local e a integridade do servidor. A estrutura da consulta é uma interface para conjuntos de linhas de esquema que retornam metadados e informações de monitoramento sobre uma instância do Analysis Services.  
   
  Para a maioria das consultas DMV, use uma instrução **SELECT** e o esquema **$System** com um conjunto de linhas de esquema XML/A.  
   

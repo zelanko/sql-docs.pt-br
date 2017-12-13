@@ -2,12 +2,12 @@
 title: "Modificando a dimensão de produto | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd334585da2a88fd8dbdbd5fdad9ba2d8f403cb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a6ff0c5e509a40c84850e281d2ab9f41246c4880
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lição 3-3-modificando a dimensão produto
-Nas tarefas deste tópico, você usará um cálculo nomeado para fornecer nomes mais descritivos às linhas de produto, definir uma hierarquia na dimensão Produto e especificar o nome do membro (Todos) para a hierarquia. Você também agrupará atributos nas pastas de exibição.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nas tarefas deste tópico, você usa um cálculo nomeado para fornecer nomes mais descritivos às linhas de produto, definir uma hierarquia na dimensão produto e especifique o nome do membro (All) para a hierarquia. Você também agrupará atributos nas pastas de exibição.  
   
 ## <a name="adding-a-named-calculation"></a>Adicionando um cálculo nomeado  
 Você pode adicionar um cálculo nomeado a uma tabela em uma exibição de fonte de dados. Na tarefa a seguir, você criará um cálculo nomeado que exibirá o nome completo da linha de produto.  

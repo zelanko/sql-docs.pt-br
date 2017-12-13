@@ -2,12 +2,12 @@
 title: "Recuperando metadados de uma fonte de dados analíticos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7c280b4b4a996d68bb403ea6210322604452e5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c432c699cd0a924b0624d98b0e7f97323718f3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Retrieving Metadata from an Analytical Data Source
-  Os metadados são importantes para aplicativos que recuperam dados analíticos e que trabalham com eles. Na recuperação de dados de uma fonte relacional, a dimensionalidade de tais dados será previsível, até mesmo com conjuntos de dados aninhados. Os conjuntos de resultados de um banco de dados relacional são tipicamente bidimensionais ou escalares em estrutura. No entanto, os dados recuperados de fontes de dados analíticos podem ser de dimensionalidade variável, organizados em hierarquias potencialmente profundas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Os metadados são importantes para aplicativos que recuperam e trabalham com dados analíticos. Na recuperação de dados de uma fonte relacional, a dimensionalidade de tais dados será previsível, até mesmo com conjuntos de dados aninhados. Os conjuntos de resultados de um banco de dados relacional são tipicamente bidimensionais ou escalares em estrutura. No entanto, os dados recuperados de fontes de dados analíticos podem ser de dimensionalidade variável, organizados em hierarquias potencialmente profundas.  
   
  Para manipular a complexidade de recuperação de metadados de fontes de dados analíticos, ADOMD.NET oferece dois formulários de recuperação de metadados:  
   

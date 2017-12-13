@@ -2,12 +2,12 @@
 title: Conecte-se a um banco de dados do modelo de tabela (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 69878a319fb5b061e712bcf96e094356b558553e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b4848d36fffe5d7b6e70b5be937874bbfe6537cb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a um banco de dados de modelo de tabela (SSAS)
-  Após criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisará definir permissões que o disponibilizem para aplicativos cliente. Este tópico explica como conceder permissões e como conectar-se a um banco de dados de aplicativos cliente.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Depois de criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisa definir permissões que disponibilizam para aplicativos cliente. Este tópico explica como conceder permissões e como conectar-se a um banco de dados de aplicativos cliente.  
   
 > [!NOTE]  
 >  Por padrão, conexões remotas ao Analysis Services não estarão disponíveis até que você configure o firewall. Verifique se abriu a porta apropriada se estiver configurando uma instância nomeada ou padrão para conexões de cliente. Para obter mais informações, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  

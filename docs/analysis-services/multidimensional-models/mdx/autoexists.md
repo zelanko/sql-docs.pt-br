@@ -2,12 +2,12 @@
 title: Autoexists | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d7f38c656ff153989d16844fccf13e6598c69008
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a3f930db51b869d4f504ee282aeaae6e4a12061c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="autoexists"></a>Autoexists
-  O conceito de *autoexists* limita o espaço de cubo a células que, de fato, existem no cubo em contraposição às que podem existir em decorrência da criação de todas as combinações possíveis de membros de hierarquia de atributos da mesma hierarquia. Isso porque os membros de uma hierarquia de atributo não podem existir com membros de outra hierarquia de atributo na mesma dimensão. Quando duas ou mais hierarquias de atributo da mesma dimensão são usadas em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para verificar se os membros desses atributos sejam corretamente confinados para atender aos critérios de todos os outros atributos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O conceito de *autoexists* limita o espaço de cubo às células que realmente existem no cubo em contraposição às que podem existir em decorrência da criação de todas as combinações possíveis de atributo de membros da hierarquia da mesma hierarquia. Isso porque os membros de uma hierarquia de atributo não podem existir com membros de outra hierarquia de atributo na mesma dimensão. Quando duas ou mais hierarquias de atributo da mesma dimensão são usadas em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para verificar se os membros desses atributos sejam corretamente confinados para atender aos critérios de todos os outros atributos.  
   
  Por exemplo, vamos supor que você esteja trabalhando com atributos da dimensão Geografia. Se houver uma expressão que retorne todos os membros do atributo City e outra que confine os membros do atributo Country a todos os países da Europa, isso resultará no confinamento dos membros de City apenas às cidades que pertençam a países da Europa. Isso por conta da característica autoexists do Analysis Services. Autoexists somente se aplica a atributos da mesma dimensão porque tenta impedir que os registros da dimensão excluídos em uma expressão do atributo sejam incluídos pelas outras expressões do atributo. Autoexists também pode ser considerado a interseção resultante das diferentes expressões de atributo em relação às linhas de dimensão.  
   

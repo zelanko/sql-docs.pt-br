@@ -2,12 +2,12 @@
 title: "Escolha a coluna para usar para testar um modelo de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b5b70b350d54987869c77ced1cebfbd8f7b00ec1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dfefbe59b4adc99b675f2735b86346062b172315
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Escolha a coluna para usar para teste em um modelo de mineração
-  Antes de poder medir a exatidão de um modelo de mineração, você deverá decidir qual resultado deseja avaliar. A maioria dos modelos de mineração de dados exige que você escolha pelo menos uma coluna para usar como o atributo previsível ao criar o modelo. Portanto, quando você testar a exatidão do modelo, geralmente terá que selecionar esse atributo para testar.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Antes de poder medir a precisão de um modelo de mineração, você deve decidir qual resultado é que você deseja avaliar. A maioria dos modelos de mineração de dados exige que você escolha pelo menos uma coluna para usar como o atributo previsível ao criar o modelo. Portanto, quando você testar a exatidão do modelo, geralmente terá que selecionar esse atributo para testar.  
   
  A lista a seguir descreve algumas considerações adicionais para escolher o atributo previsível para usar no teste:  
   

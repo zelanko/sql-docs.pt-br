@@ -2,12 +2,12 @@
 title: XML for Analysis conjuntos de linhas de esquema | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0f3527abc7fcd12757b4fdc4abd02d97c79d2ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f5cb613a916f2cff4ec8aca3bb67fc9c14d1b10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-  O provedor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) inclui conjuntos de linhas de esquema que retornam metadados sobre estado de servidor, atividade e objetos. Recuperar metadados será necessário se você estiver desenvolvendo um aplicativo cliente que se conecta a um modelo do Analysis Services cujas características e estrutura sejam variáveis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML para o provedor de análise (XMLA) inclui conjuntos de linhas de esquema que retornam metadados sobre o estado do servidor, atividade e objetos. Recuperar metadados será necessário se você estiver desenvolvendo um aplicativo cliente que se conecta a um modelo do Analysis Services cujas características e estrutura sejam variáveis.  
   
  Os conjuntos de linhas de esquema também proporcionam uma perspectiva de processos internos e operações que podem lhe ajudar a monitorar o servidor e solucionar problemas. Para oferecer melhor suporte a tarefas administrativas ad hoc, você pode executar uma consulta DMV (Exibição de Gerenciamento Dinâmico) na maioria dos conjuntos de linhas de esquema. As consultas DMV retornam resultados em um formato tabular legível que você pode exibir no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   

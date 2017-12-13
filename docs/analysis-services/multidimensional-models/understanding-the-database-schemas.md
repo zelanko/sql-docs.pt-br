@@ -2,12 +2,12 @@
 title: Entendendo os esquemas de banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b996209ee964fc476f87e1b064e6cb62a585e131
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 90ec951bb5666f28167e0ce704e63ba3bb0972d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
-  O Assistente de Geração de Esquema gera um esquema relacional não normalizado para o banco de dados da área de assunto com base nas dimensões e nos grupos de medidas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O Assistente de geração de esquema gera um esquema relacional não normalizado para o banco de dados de área de assunto com base nas dimensões e grupos de medidas em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
   
 ## <a name="validation"></a>Validação  
  Antes de começar a gerar o esquema relacional subjacente, o Assistente de Geração de Esquema valida os cubos e dimensões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se detectar erros, o assistente parará e os reportará na janela Lista de Tarefas do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. São exemplos de erros que impedem a geração:  

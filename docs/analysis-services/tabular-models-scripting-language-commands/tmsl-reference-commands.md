@@ -1,12 +1,12 @@
 ---
 title: Linguagem de script (TMSL) de comandos na tabela modelo | Microsoft Docs
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71b44ae1e5f8e5db2859bb4d3b2457c752de4dc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e041aa751bc2d54713cb996dde321c21231bf608
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tmsl-reference---commands"></a>Referência TMSL - comandos
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Você pode executar comandos em um ponto de extremidade do XMLA, formular definições de objeto em JSON usando o modelo de script TMSL (linguagem tabela), nos bancos de dados de modelo de tabela.   Consulte [definições de objeto na tabela de linguagem de scripts &#40; modelo TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) para obter uma lista de objetos usados com os comandos a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Você pode executar comandos em um ponto de extremidade do XMLA, formular definições de objeto em JSON usando o modelo de script TMSL (linguagem tabela), nos bancos de dados de modelo de tabela.   Consulte [definições de objeto na tabela de linguagem de scripts &#40; modelo TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) para obter uma lista de objetos usados com os comandos a seguir.  
   
 ## <a name="object-operations"></a>Operações de objeto  
   

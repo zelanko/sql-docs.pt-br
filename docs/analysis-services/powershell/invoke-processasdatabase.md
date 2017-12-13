@@ -2,12 +2,12 @@
 title: Chamar ProcessASDatabase | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72c96cddc1d505906164aa3d634871ba0ae30072
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 711ab57846b862479c946dae4ad50402a5876f48
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="invoke-processasdatabase"></a>ProcessASDatabase Invoke
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Conduz a operação **Processo** em um **banco de dados** especificado com um **ProcessType** ou **RefreshType** específico dependendo do tipo de metadados subjacentes.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Conduz a **processo** operação em um site FTP **banco de dados** com um determinado **ProcessType** ou **RefreshType** dependendo da tipo subjacente de metadados.  
   
  Use **ProcessType** para banco de dados com os metadados multidimensionais (isso inclui bancos de dados tabulares com compatibilidade nível 1050, 1100 ou 1103).  
   

@@ -2,12 +2,12 @@
 title: Criar ou personalizar uma biblioteca de Feed de dados (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678847e195c1b75744569088049cb957dacc46fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4304b6b25595bab37df01bdada4a046411cc3f4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Criar ou personalizar uma biblioteca de feed de dados (Power Pivot para SharePoint)
-  Uma *biblioteca de feed de dados* é uma biblioteca do SharePoint com finalidade especial que permite registrar e compartilhar documentos do serviço de dados Atom (.atomsvc). Esses documentos fornecem feeds de dados XML a pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou outros aplicativos cliente que oferecem suporte ao formato de feed de dados Atom. Uma biblioteca de feeds de dados é diferente de outras bibliotecas do SharePoint porque oferece a capacidade de:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um *biblioteca de feed de dados* é uma biblioteca do SharePoint com finalidade especial que permite registrar e compartilhar documentos do serviço de dados Atom (. atomsvc). Esses documentos fornecem feeds de dados XML a pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou outros aplicativos cliente que oferecem suporte ao formato de feed de dados Atom. Uma biblioteca de feeds de dados é diferente de outras bibliotecas do SharePoint porque oferece a capacidade de:  
   
 -   Criar ou editar um *documento do serviço de dados*usado para especificar uma conexão HTTP com um feed específico.  
   

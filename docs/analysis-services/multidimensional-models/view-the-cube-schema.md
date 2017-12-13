@@ -2,12 +2,12 @@
 title: Exibir o esquema do cubo | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2489ce5465afcbbb42ffaa9403d75a7d42d68ca4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-cube-schema"></a>Exibir o esquema do cubo
-  O painel **Exibição da Fonte de Dados** da guia **Estrutura do Cubo** no **Designer do Cubo** exibe o esquema do cubo. O esquema é o conjunto de tabelas das quais são derivadas as medidas e as dimensões para um cubo. Todo esquema de cubo consiste em uma ou mais tabelas de fato e uma ou mais tabelas de dimensão nas quais são baseadas as medidas e as dimensões no cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O **exibição da fonte de dados** painel do **estrutura do cubo** guia **Designer de cubo** exibe o esquema do cubo. O esquema é o conjunto de tabelas das quais são derivadas as medidas e as dimensões para um cubo. Todo esquema de cubo consiste em uma ou mais tabelas de fato e uma ou mais tabelas de dimensão nas quais são baseadas as medidas e as dimensões no cubo.  
   
  O painel **Exibição da Fonte de Dados** da guia **Estrutura do Cubo** exibe um diagrama da exibição da fonte de dados na qual o cubo está baseado. Este diagrama é um subconjunto do diagrama principal da exibição da fonte de dados. Você pode ocultar e mostrar tabelas no painel **Exibição da Fonte de Dados** e exibir qualquer diagrama existente. Porém, você não pode fazer alterações (como adicionar novas relações ou consultas nomeadas) ao esquema subjacente. Para fazer alterações ao esquema, use o Designer de Exibição da Fonte de Dados.  
   

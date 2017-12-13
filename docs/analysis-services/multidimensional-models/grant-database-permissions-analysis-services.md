@@ -2,12 +2,12 @@
 title: "Conceder permissões de banco de dados (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae21903694c80a5f919374e4e367dc82b4cec09e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d313637275d28a83b8a0f79e23bfc46bd972ae2a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Conceder permissões de banco de dados (Analysis Services)
-  Se você estiver acessando a administração de banco de dados do Analysis Services com experiência em bancos de dados relacionais, a primeira coisa que você precisa entender é que, em termos de acesso a dados, o banco de dados não é o principal objeto protegível no Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se você estiver acessando a administração de banco de dados do Analysis Services com experiência em bancos de dados relacionais, a primeira coisa que você precisa entender é que, em termos de acesso a dados, o banco de dados não é o principal objeto protegível no Analysis Services.  
   
  A estrutura de consulta primária no Analysis Services é um cubo (ou um modelo de tabela), com permissões de usuário definidas nesses objetos particulares. Contrastando com o mecanismo de banco de dados relacional ─ em que os logons do banco de dados e as permissões de usuário (normalmente **db_datareader**) são definidas no próprio banco de dados ─ um banco de dados do Analysis Services é principalmente um contêiner dos principais objetos de consulta em um modelo de dados. Se o objetivo imediato é permitir o acesso a dados para um modelo de cubo ou de tabela, você pode ignorar as permissões de banco de dados agora e ir direto para este tópico: [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   

@@ -2,12 +2,12 @@
 title: Linhas de DBSCHEMA_COLUMNS | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce502f05dbbb701f694f4699f2867b92c0b3158c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1a653f5191f3017c499631851184c70b5d854161
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dbschemacolumns-rowset"></a>Conjunto de linhas de DBSCHEMA_COLUMNS
-  Oferece informações de coluna por todas as colunas que atendem aos critérios de restrição fornecidos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações de coluna para todas as colunas que atendem aos critérios de restrição fornecidos.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **DBSCHEMA_COLUMNS** linhas contém as seguintes colunas.  

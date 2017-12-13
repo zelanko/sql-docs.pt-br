@@ -2,12 +2,12 @@
 title: Comando elemento (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78c4e799838d347e99555d25bcbb27bb5f9f7da1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 62763e99a5e2a2a9d6cc6e082f1a90deec49895f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="command-element-assl"></a>Elemento Command (ASSL)
-  Define um comando que está disponível para uso dentro do contexto do elemento pai do [comandos](../../../analysis-services/scripting/collections/commands-element-assl.md) coleção.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define um comando que está disponível para uso dentro do contexto do elemento pai do [comandos](../../../analysis-services/scripting/collections/commands-element-assl.md) coleção.  
   
 ## <a name="syntax"></a>Sintaxe  
   

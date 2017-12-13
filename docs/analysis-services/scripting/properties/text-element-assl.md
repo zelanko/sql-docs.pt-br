@@ -2,12 +2,12 @@
 title: Elemento de texto (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3a33c603168a8a6858e2381220dbc1f5b4c4de9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b29cec590540efb11150c5b277b591e789626de
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="text-element-assl"></a>Elemento Text (ASSL)
-  Contém o texto de um [comando](../../../analysis-services/scripting/objects/command-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém o texto de um [comando](../../../analysis-services/scripting/objects/command-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

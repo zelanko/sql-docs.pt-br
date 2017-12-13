@@ -2,12 +2,12 @@
 title: Conjunto de linhas DISCOVER_MEMORYUSAGE | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d5fbb9282e35ff9d6c4a2e18b155f5a884a8f538
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7d1f0c2dd179e54760eeff4254c19265105e08f3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovermemoryusage-rowset"></a>Conjunto de linhas DISCOVER_MEMORYUSAGE
-  Retorna as estatísticas DISCOVER_MEMORYUSAGE de vários objetos alocados pelo servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna as estatísticas DISCOVER_MEMORYUSAGE de vários objetos alocados pelo servidor.  
   
 > [!WARNING]  
 >  Este conjunto de linhas pode gerar conjuntos de resultados muito grandes. Se não for possível exibir os resultados porque eles exigem mais memória de exibição do que o permitido pelo SQL Server Management Studio, os resultados serão gravados em um arquivo temporário, no seguinte local padrão:  

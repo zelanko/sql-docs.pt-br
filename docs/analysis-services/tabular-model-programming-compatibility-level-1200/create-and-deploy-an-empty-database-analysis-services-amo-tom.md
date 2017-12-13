@@ -2,12 +2,12 @@
 title: Criar e implantar um banco de dados vazio (Analysis Services AMO-TOM) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fd42cdbd8eae5bada2c169a601c801a6e619afe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9581f7eb39fe0a6f8979ce09fde4233e800bef8d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>Criar e implantar um banco de dados vazio (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Um cenário comum de programação para TOM AMO é gerar modelos em tempo real e bancos de dados. Este artigo orienta você pelas etapas de criação de um banco de dados. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Um cenário comum de programação para TOM AMO é gerar modelos em tempo real e bancos de dados. Este artigo orienta você pelas etapas de criação de um banco de dados. 
 
 Para soluções tabulares, há uma correspondência entre um banco de dados e o modelo, com um modelo para cada banco de dados. Normalmente você pode especificar um ou outro, e o mecanismo deduzirá do objeto ausente. 
 

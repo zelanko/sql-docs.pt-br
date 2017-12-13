@@ -2,12 +2,12 @@
 title: "Tipo de dados de ação (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 73003aafb063182adf165cd75b43c2191c818b78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f64e47da4c5f17f0e020040af7d95fec150826ef
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="action-data-type-assl"></a>Tipo de dados da ação (ASSL)
-  Define um tipo de dados primitivo abstrato que representa uma ação em um [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento ou um [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define um tipo de dados primitivo abstrato que representa uma ação em um [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento ou um [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

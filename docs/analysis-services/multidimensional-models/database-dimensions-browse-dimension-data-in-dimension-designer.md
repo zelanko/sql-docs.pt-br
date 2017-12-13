@@ -2,12 +2,12 @@
 title: "Procurar dados de dimensão no Designer de dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12705a8050d395925dd5345802b9c6b11d9925b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5c0793ab5c70b7003e936961bf527e8642ca58d9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Dimensões de banco de dados - procurar dados de dimensão no Designer de dimensão
-  Você pode procurar dados em uma dimensão usando a exibição **Navegador** do Designer de Dimensão, acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode procurar os dados em uma dimensão usando o **navegador** exibição no Designer de dimensão, que é acessada de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Para que os dados de dimensão apareçam na exibição **Navegador**, o estado da dimensão deve ser processado. Para obter mais informações, consulte [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Para que os dados de dimensão apareçam na exibição **Navegador** , o estado da dimensão deve ser processado. Para obter mais informações, consulte [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-browse-a-dimension-in-sql-server-data-tools"></a>Para procurar uma dimensão nas Ferramentas de Dados do SQL Server  
   

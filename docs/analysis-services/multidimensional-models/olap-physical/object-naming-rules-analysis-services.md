@@ -2,12 +2,12 @@
 title: As regras de nomenclatura (Analysis Services) do objeto | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1493d5236d4c44fe4a496a67a2c435aab703daa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
-  Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras reservadas e caracteres que não podem ser usados em nomes de objetos, no código ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a>Convenções de nomenclatura  
  Todo objeto tem as propriedades **Name** e **ID** que devem ser exclusivas no escopo da coleção pai. Por exemplo, duas dimensões podem ter o mesmo nome, desde que cada uma resida em um banco de dados diferente.  

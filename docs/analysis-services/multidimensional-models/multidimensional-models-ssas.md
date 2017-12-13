@@ -2,12 +2,12 @@
 title: Modelos multidimensionais (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73a6a2986bd06354ccb1443424ce2aaa31715a72
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c03d39261ff288832dbbeedc5e2a5cc90175d735
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modelagem multidimensional (SSAS)
-  Uma solução multidimensional do Analysis Services usa estruturas de cubo para analisar dados comerciais em várias dimensões. O modo multidimensional é o modo de servidor padrão do Analysis Services. Ele inclui um mecanismo de consulta e de cálculo para dados OLAP, com modos de armazenamento MOLAP, ROLAP e HOLAP para equilibrar o desempenho com requisitos de dados escalonáveis. O mecanismo OLAP do Analysis Services é um servidor OLAP líder da indústria que funciona bem com um intervalo amplo de ferramentas de BI. A maioria das implantações do Analysis Services são instaladas como servidores OLAP clássicos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma solução multidimensional do Analysis Services usa estruturas de cubo para analisar dados comerciais em várias dimensões. O modo multidimensional é o modo de servidor padrão do Analysis Services. Ele inclui um mecanismo de consulta e de cálculo para dados OLAP, com modos de armazenamento MOLAP, ROLAP e HOLAP para equilibrar o desempenho com requisitos de dados escalonáveis. O mecanismo OLAP do Analysis Services é um servidor OLAP líder da indústria que funciona bem com um intervalo amplo de ferramentas de BI. A maioria das implantações do Analysis Services são instaladas como servidores OLAP clássicos.  
   
 ## <a name="benefits-of-using-multidimensional-solutions"></a>Benefícios do uso de soluções multidimensionais  
  O principal motivo para criar um modelo multidimensional do Analysis Services é atingir um desempenho rápido de consultas ad hoc em dados comerciais. Um modelo multidimensional é composto de cubos e dimensões que podem ser anotados e estendidos para oferecer suporte a construções de consultas complexas. Desenvolvedores de BI criam cubos para oferecer suporte a tempos de resposta rápidos e fornecer uma única fonte de dados para relatórios de negócios. Em função da crescente importância do business intelligence em todos os níveis de uma organização, a existência de uma única fonte de dados analíticos garante uma discrepância mínima, ou mesmo sua total eliminação.  

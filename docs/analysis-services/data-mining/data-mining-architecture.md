@@ -2,12 +2,12 @@
 title: "Arquitetura de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be637286bda9a3d2a6f39115357603bf03eec81c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-architecture"></a>Arquitetura de mineração de dados
-  Esta seção descreve a arquitetura de soluções de mineração de dados que são hospedadas em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os tópicos desta seção descrevem a arquitetura lógica e física de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que oferece suporte à mineração de dados, e também fornecem informações sobre os clientes, provedores e protocolos que podem ser usados na comunicação com servidores de mineração de dados e para trabalhar local ou remotamente com objetos de mineração de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta seção descreve a arquitetura de soluções de mineração de dados que são hospedados em uma instância de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os tópicos desta seção descrevem a arquitetura lógica e física de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que oferece suporte à mineração de dados, e também fornecem informações sobre os clientes, provedores e protocolos que podem ser usados na comunicação com servidores de mineração de dados e para trabalhar local ou remotamente com objetos de mineração de dados.  
   
  Em geral, a Mineração de Dados do SQL Server opera como um serviço que é fornecido como parte de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executada em modo multidimensional; portanto, é recomendável analisar as seções a seguir de Manuais Online que descrevem a operação, a manutenção e a configuração de soluções multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   

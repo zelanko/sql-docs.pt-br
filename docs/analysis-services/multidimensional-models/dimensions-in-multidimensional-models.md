@@ -2,12 +2,12 @@
 title: "Dimensões em modelos multidimensionais | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73d367008bc1b3be6f4e3f6f5885adf79437f4c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 33c9c09cdcfae67f469585fa69fda626696f1856
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensões em modelos multidimensionais
-  Uma dimensão do banco de dados é uma coleção de objetos relacionados, chamados atributos, que podem ser usados para fornecer informações sobre dados de fatos de um ou mais cubos. Por exemplo, seriam atributos comuns de uma dimensão de produto o nome do produto, sua categoria, linha de produtos, tamanho e preço. Esses objetos são vinculados a uma ou mais colunas de uma ou mais tabelas de uma exibição da fonte de dados. Por padrão, esses atributos são visíveis como hierarquias de atributo e podem ser usados no entendimento dos dados de fatos de um cubo. Os atributos podem ser organizados em hierarquias definidas pelo usuário que fornecem os caminhos de navegação para ajudar os usuários durante pesquisas dos dados de um cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma dimensão de banco de dados é uma coleção de objetos relacionados, chamados atributos, que podem ser usados para fornecer informações sobre dados de fatos de um ou mais cubos. Por exemplo, seriam atributos comuns de uma dimensão de produto o nome do produto, sua categoria, linha de produtos, tamanho e preço. Esses objetos são vinculados a uma ou mais colunas de uma ou mais tabelas de uma exibição da fonte de dados. Por padrão, esses atributos são visíveis como hierarquias de atributo e podem ser usados no entendimento dos dados de fatos de um cubo. Os atributos podem ser organizados em hierarquias definidas pelo usuário que fornecem os caminhos de navegação para ajudar os usuários durante pesquisas dos dados de um cubo.  
   
  Os cubos contêm todas as dimensões que servem de base para os usuários realizarem análises dos dados de fatos. Uma instância de uma dimensão do banco de dados de um cubo é chamada dimensão do cubo e se relaciona a um ou mais grupos de medidas do cubo. Uma dimensão do banco de dados pode ser usada várias vezes em um cubo. Por exemplo, uma tabela de fatos pode ter diversos fatos relacionados ao tempo, sendo possível definir uma dimensão de cubo separada para auxiliar na análise de cada um deles. No entanto, é preciso haver apenas uma dimensão do banco de dados relacionada ao tempo, ou seja, também é necessário que haja somente uma tabela do banco de dados relacional associada ao tempo para oferecer suporte a várias dimensões do cubo baseadas no tempo.  
   

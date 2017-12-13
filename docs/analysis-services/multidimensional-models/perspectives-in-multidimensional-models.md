@@ -2,12 +2,12 @@
 title: Perspectivas em modelos multidimensionais | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9961af8c7f6edef8ed330d70df42dc63ff5b9d9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 65c85b108905cbfecd1f52234af7d33745e8e681
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Perspectivas em modelos multidimensionais
-  Uma perspectiva é um subconjunto de um cubo criado para um determinado aplicativo ou grupo de usuários. O próprio cubo é a perspectiva padrão. Uma perspectiva é exposta a um cliente como um cubo. Quando um usuário exibe uma perspectiva, ela aparece como outro cubo. Toda alteração feita nos dados do cubo por meio de write-back da perspectiva é aplicada ao cubo original. Para obter mais informações sobre exibições no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Perspectivas](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma perspectiva é um subconjunto de um cubo criado para um determinado aplicativo ou grupo de usuários. O próprio cubo é a perspectiva padrão. Uma perspectiva é exposta a um cliente como um cubo. Quando um usuário exibe uma perspectiva, ela aparece como outro cubo. Toda alteração feita nos dados do cubo por meio de write-back da perspectiva é aplicada ao cubo original. Para obter mais informações sobre exibições no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Perspectivas](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
   
  Use a guia **Perspectivas** do Designer de Cubo para criar ou modificar perspectivas em um cubo. A primeira coluna da guia **Perspectivas** é **Objetos Cubo** , que lista todos os objetos do cubo. Corresponde à perspectiva padrão do cubo, que é o próprio cubo.  
   

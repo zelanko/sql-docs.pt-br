@@ -2,12 +2,12 @@
 title: Conjunto de linhas DISCOVER_DATASOURCES | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 88fede87c305afd15819a9379999806ec39eeb49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdatasources-rowset"></a>Conjunto de linhas DISCOVER_DATASOURCES
-  Retorna uma lista das fontes de dados de provedor de XMLA (XML for Analysis) disponível no servidor ou no serviço Web. As fontes dos dados publicados são retornadas de uma URL do servidor da Web de aplicativo. O cliente pode conectar a uma das fontes de dados desta lista.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna uma lista de XML para fontes de dados do provedor Analysis (XMLA) que estão disponíveis no servidor ou serviço da Web. As fontes dos dados publicados são retornadas de uma URL do servidor da Web de aplicativo. O cliente pode conectar a uma das fontes de dados desta lista.  
   
  Se você chamar o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método com o **DISCOVER_DATASOURCES** valor de enumeração no [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento, o **Discover** método retorna o **DISCOVER_DATASOURCES** conjunto de linhas.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||A descrição da fonte de dados inserida pelo editor.<br /><br /> Pode retornar **NULL**.|  
 |**URL**|**DBTYPE_WSTR**|Sim|O caminho exclusivo que mostra onde invocar os métodos XMLA (XML for Analysis para a fonte de dados.<br /><br /> Pode retornar **NULL**.|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||Uma cadeia de caracteres que contém informações adicionais necessárias para a conexão à fonte de dados.<br /><br /> Pode retornar **NULL**.|  
-|**ProviderName**|**DBTYPE_WSTR**|Sim|O o nome do provedor para a fonte de dados.<br /><br /> Exemplo:`"MSOLAP"`<br /><br /> Pode retornar **NULL**.|  
+|**ProviderName**|**DBTYPE_WSTR**|Sim|O o nome do provedor para a fonte de dados.<br /><br /> Exemplo: `"MSOLAP"`<br /><br /> Pode retornar **NULL**.|  
 |**ProviderType**|**DBTYPE_WSTR**|Sim|Os tipos de dados suportados pelo provedor. Esta matriz pode incluir um ou mais dos seguintes tipos:<br /><br /> **MDP**: provedor de dados multidimensional.<br /><br /> **TDP**: provedor de dados tabular.<br /><br /> **DMP**: provedor de mineração de dados (implementa a especificação OLE DB para mineração de dados).|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|Sim|Uma especificação do tipo de modo de segurança usado pela fonte de dados. Pode conter um dos seguintes valores:<br /><br /> **Unauthenticated**: nenhuma ID de usuário ou senha deve ser enviada.<br /><br /> **Authenticated**: a ID de usuário e a senha devem ser incluídas nas informações necessárias para a conexão à fonte de dados.<br /><br /> **Integrado**: A fonte de dados usa a segurança subjacente para determinar a autorização, como segurança integrada fornecida pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] serviços de informações da Internet (IIS).|  
   

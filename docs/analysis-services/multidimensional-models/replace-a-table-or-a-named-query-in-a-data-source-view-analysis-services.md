@@ -2,12 +2,12 @@
 title: "Substituir uma tabela ou uma consulta nomeada em uma exibição da fonte de dados (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7ef8b35a810411ed5f035e8cc7ba69d737bf8df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7feb626cf3a632c4c125935d4a13de5f70213d4b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Substituir uma tabela ou uma consulta nomeada em uma exibição da fonte de dados (Analysis Services)
-  No Designer de Exibição da Fonte de Dados, é possível substituir uma tabela, exibição ou consulta nomeada de uma DSV (exibição da fonte de dados) por outra tabela ou exibição da mesma fonte de dados ou de outra ou ainda por uma consulta nomeada definida na DSV. Quando você substitui uma tabela, as referências existentes para essa tabela em todos os outros objetos do banco de dados ou projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são preservadas porque a identificação do objeto para a tabela na DSV não é alterada. Todas as relações que ainda são relevantes (com base no nome e na correspondência coluna-tipo) são mantidas. Diferentemente, se você excluir e, em seguida, adicionar uma tabela, as referências e relações serão perdidas e terão de ser recriadas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]No Designer de exibição da fonte de dados, você pode substituir uma tabela, exibição ou consulta nomeada em uma exibição da fonte de dados (DSV) com outra tabela ou exibição da mesma ou de outra fonte de dados, ou com uma consulta nomeada definida no DSV. Quando você substitui uma tabela, as referências existentes para essa tabela em todos os outros objetos do banco de dados ou projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são preservadas porque a identificação do objeto para a tabela na DSV não é alterada. Todas as relações que ainda são relevantes (com base no nome e na correspondência coluna-tipo) são mantidas. Diferentemente, se você excluir e, em seguida, adicionar uma tabela, as referências e relações serão perdidas e terão de ser recriadas.  
   
  Para substituir uma tabela por outra, é necessária uma conexão ativa com a fonte de dados no Designer de Exibição da Fonte de Dados em modo de projeto.  
   

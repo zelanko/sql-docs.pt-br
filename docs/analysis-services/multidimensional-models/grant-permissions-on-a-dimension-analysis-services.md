@@ -2,12 +2,12 @@
 title: "Conceder permissões em uma dimensão (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 415bb6a484edafc091f091c2e572a05155a561fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccf0f7d014bfd85f3368633058984089005101ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Conceder permissões em uma dimensão (Analysis Services)
-  A segurança de dimensão é usada para definir permissões em um objeto de dimensão, e não em seus dados. Normalmente, permitir ou negar acesso a operações de processamento é o principal objetivo ao definir as permissões em uma dimensão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Segurança de dimensão é usada para definir permissões em um objeto de dimensão, não em seus dados. Normalmente, permitir ou negar acesso a operações de processamento é o principal objetivo ao definir as permissões em uma dimensão.  
   
  No entanto, seu objetivo, talvez, não seja controlar as operações de processamento, mas sim o acesso a dados de uma dimensão ou aos atributos e hierarquias nela contidos. Por exemplo, uma empresa com divisões regionais de vendas pode querer disponibilizar as informações de desempenho de vendas para os que estão fora da divisão. Para permitir ou negar acesso a partes de dados de dimensão para diferentes constituintes, você pode definir as permissões em atributos de dimensão e membros de dimensão. Observe que você não pode negar acesso a um objeto de dimensão individual em si, apenas a seus dados. Se o seu objetivo imediato é permitir ou negar acesso a membros de uma dimensão, incluindo os direitos de acesso a hierarquias de atributo individuais, consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) para obter mais informações.  
   

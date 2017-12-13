@@ -2,12 +2,12 @@
 title: Definir propriedades de fonte de dados (SSAS Multidimensional) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 654337a578f1852e2e2fcdb452d62bfbe46747f9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Definir propriedades da fonte de dados (SSAS multidimensional)
-  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um objeto de fonte de dados especifica uma conexão com um data warehouse externo ou um banco de dados relacional que fornece dados a um modelo multidimensional. As propriedades na fonte de dados determinam a cadeia de conexão, um intervalo de tempo limite, o número máximo de conexões e o nível de isolamento da transação.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um objeto de fonte de dados especifica uma conexão para um data warehouse externo ou o banco de dados relacional que fornece dados para um modelo multidimensional. As propriedades na fonte de dados determinam a cadeia de conexão, um intervalo de tempo limite, o número máximo de conexões e o nível de isolamento da transação.  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>Definir propriedades de fonte de dados no SQL Server Data Tools  
   

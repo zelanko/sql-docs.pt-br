@@ -2,12 +2,12 @@
 title: Criar e executar um Script MDX no SQL Server Data Tools | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8f496189909d7f6b7801c642eea2e4830ce239f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 097d318ddf841e09f53ca90b0266bbd3806f59dc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Criar e executar um script MDX nas Ferramentas de Dados do SQL Server
-  Para criar e executar um script MDX no  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é necessário estar no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] com um cubo já criado e pronto para edição.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para criar e executar um Script MDX no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você precisa estar em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] com um cubo já criado e pronto para edição.  
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>Para criar um script MDX  
   

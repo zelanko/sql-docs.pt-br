@@ -2,12 +2,12 @@
 title: "Configuração de erro para o cubo, partição e processamento de dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuração de erro para o cubo, partição e processamento de dimensão
-  As propriedades de configuração de erro no cubo, na partição ou nos objetos de dimensão determinam como o servidor responde quando ocorrem erros de integridade de dados durante o processamento. As chaves duplicadas, chaves ausentes e os valores nulos em uma coluna de chave normalmente disparam esses erros, e embora o registro que cause o erro não seja adicionado ao banco de dados, você pode definir propriedades que determinam o que acontece em seguida. Por padrão, o processamento para. No entanto, durante o desenvolvimento do cubo, talvez você queira que o processamento continue quando ocorrerem os erros de forma que você possa testar comportamentos do cubo com dados importados, mesmo se estiverem incompletos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Propriedades de configuração de erro no cubo, partição ou objetos de dimensão determinam como o servidor responde quando ocorrem erros de integridade de dados durante o processamento. As chaves duplicadas, chaves ausentes e os valores nulos em uma coluna de chave normalmente disparam esses erros, e embora o registro que cause o erro não seja adicionado ao banco de dados, você pode definir propriedades que determinam o que acontece em seguida. Por padrão, o processamento para. No entanto, durante o desenvolvimento do cubo, talvez você queira que o processamento continue quando ocorrerem os erros de forma que você possa testar comportamentos do cubo com dados importados, mesmo se estiverem incompletos.  
   
  Este tópico inclui as seguintes seções:  
   

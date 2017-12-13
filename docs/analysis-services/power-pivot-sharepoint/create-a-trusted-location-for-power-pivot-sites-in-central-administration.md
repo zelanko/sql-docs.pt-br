@@ -2,12 +2,12 @@
 title: "Criar um local confiável para sites do Power Pivot na Administração Central | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcfb1bb5f17a912178b20c9ff96ef8feaed76e2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 91e058351ec0314dced6586c98cde4ca9f781be7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Criar um local confiável para sites do Power Pivot na Administração Central
-  Os Serviços do Excel permitem especificar quais locais são repositórios válidos para pastas de trabalho que você abrir em um servidor do SharePoint. Esses locais são chamados de "locais confiáveis" e você pode usar diferentes definições de configuração para cada local confiável que você criar. Para uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, você pode considerar criar um local confiável para sites que tenham pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de forma que você possa aplicar as configurações que funcionam melhor para acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , enquanto preserva valores padrão para o resto do farm.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Os serviços do Excel permite que você especifique quais locais são repositórios válidos para pastas de trabalho que você abrir em um servidor do SharePoint. Esses locais são chamados de "locais confiáveis" e você pode usar diferentes definições de configuração para cada local confiável que você criar. Para uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, você pode considerar criar um local confiável para sites que tenham pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de forma que você possa aplicar as configurações que funcionam melhor para acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , enquanto preserva valores padrão para o resto do farm.  
   
   
 ## <a name="prerequisites"></a>Pré-requisitos  

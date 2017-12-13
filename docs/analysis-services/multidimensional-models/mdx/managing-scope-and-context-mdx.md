@@ -2,12 +2,12 @@
 title: Gerenciando escopo e contexto (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 388156b160cbc63c2a101bf9f7c7e39f8f6baa36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ceb78ab6b4ee006784660dbeeaa71558c565aa6c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="managing-scope-and-context-mdx"></a>Gerenciando escopo e contexto (MDX)
-  No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], um script de expressões multidimensionais (MDX) pode ser aplicado ao cubo inteiro ou a partes específicas dele, a pontos específicos da execução do script. O script MDX pode adotar uma abordagem em camadas dos cálculos em um cubo usando passagens de cálculo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], um script MDX (Multidimensional Expressions) pode aplicar ao cubo inteiro ou a partes específicas do cubo, em pontos específicos da execução do script. O script MDX pode adotar uma abordagem em camadas dos cálculos em um cubo usando passagens de cálculo.  
   
 > [!NOTE]  
 >  Para obter mais informações sobre como as passagens de cálculo podem afetar os cálculos, consulte [Noções básicas sobre a ordem de passagem e a ordem de resolução &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  

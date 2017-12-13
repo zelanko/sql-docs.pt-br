@@ -2,12 +2,12 @@
 title: "Conceder acesso personalizado a dados de dimensão (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acesso personalizado a dados da dimensão (Analysis Services)
-  Após habilitar o acesso de leitura a um cubo, você pode definir permissões adicionais que permitem ou negam explicitamente o acesso a membros de dimensão (incluindo as medidas contidas na dimensão de medidas que contém todas as medidas usadas em um cubo). Por exemplo, considerando várias categorias de revendedores, você pode querer definir as permissões para excluir dados de um tipo de negócio específico. A ilustração a seguir mostra o antes e o depois da negação de acesso ao tipo de negócio Depósito na dimensão do Revendedor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois de habilitar o acesso de leitura a um cubo, você pode definir permissões adicionais que explicitamente permitem ou negam acesso a membros de dimensão (incluindo as medidas contidas na dimensão de medidas que contém todas as medidas usadas em um cubo). Por exemplo, considerando várias categorias de revendedores, você pode querer definir as permissões para excluir dados de um tipo de negócio específico. A ilustração a seguir mostra o antes e o depois da negação de acesso ao tipo de negócio Depósito na dimensão do Revendedor.  
   
  ![Tabelas dinâmicas com e sem um membro de dimensão](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "tabelas dinâmicas com e sem um membro de dimensão")  
   

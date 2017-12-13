@@ -2,12 +2,12 @@
 title: Implantar o PowerPivot e Power View - Farm multicamadas do SharePoint 2016 | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 290c8d09fbb59ec8b7c6db580946fa7ee6f45806
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e17d5872e57af56e895f5879d9b8dd194576cd3e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>Implantar o PowerPivot e Power View - Farm multicamadas do SharePoint 2016
-  **Resumo:** este white paper fornece aos administradores e arquitetos do SharePoint instruções passo a passo detalhadas para implantar e configurar um ambiente de demonstração de BI da Microsoft em um farm do SharePoint com vários servidores, com base em versões de Preview do SharePoint Server 2016, Servidor do Office Online e a pilha de BI do SQL Server 2016 para SharePoint 2016. A seguir uma breve introdução às importantes alterações de arquitetura e dependências correspondentes do sistema, descreve os requisitos de configuração e de software e um caminho de implantação recomendada para habilitar e verificar os recursos de BI em três etapas principais. Este white paper também aborda problemas conhecidos que existem nas versões SharePoint Server 2016 Beta 2, visualização do servidor online do Office e SQL Server 2016 CTP 3.1 e sugere soluções alternativas apropriadas. Essas soluções alternativas não serão mais necessárias as nas versões finais dos produtos. Procure uma versão atualizada deste white paper ao implantar versões de RTM.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**Resumo:** resumo: Este white paper fornece aos administradores e arquitetos instruções detalhadas para implantar e configurar um ambiente de demonstração de BI da Microsoft em um farm do SharePoint com vários servidores, com base em versões de visualização do SharePoint Server 2016, servidor do Office Online e a pilha de BI do SQL Server 2016 para SharePoint 2016. A seguir uma breve introdução às importantes alterações de arquitetura e dependências correspondentes do sistema, descreve os requisitos de configuração e de software e um caminho de implantação recomendada para habilitar e verificar os recursos de BI em três etapas principais. Este white paper também aborda problemas conhecidos que existem nas versões SharePoint Server 2016 Beta 2, visualização do servidor online do Office e SQL Server 2016 CTP 3.1 e sugere soluções alternativas apropriadas. Essas soluções alternativas não serão mais necessárias as nas versões finais dos produtos. Procure uma versão atualizada deste white paper ao implantar versões de RTM.  
   
  **Autor:**Kay Unkroth, Jason Haak  
   

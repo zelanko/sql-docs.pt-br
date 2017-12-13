@@ -2,12 +2,12 @@
 title: Contadores de desempenho (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7da59897426d459371d44b637dfda97183cca3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="performance-counters-ssas"></a>Contadores de desempenho (SSAS)
-  Usando o Monitor de Desempenho, você pode monitorar o desempenho de uma instância do Microsoft SQL Server Analysis Services (SSAS) usando contadores de desempenho.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Usando o Monitor de desempenho, você pode monitorar o desempenho de uma instância do Microsoft SQL Server Analysis Services (SSAS) usando contadores de desempenho.  
   
  O Monitor de Desempenho é um snap-in do Controle de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MMC) que controla o uso de recursos. Você pode iniciar este snap-in de MMC digitando **PerfMon** no prompt de comando ou, no Painel de Controle, clicando em **Ferramentas Administrativas**e, em seguida, **Monitor de Desempenho**. O Monitor de Desempenho permite o monitoramento de atividade e desempenho do servidor e dos processos usando objetos e contadores predefinidos, bem como o monitoramento de eventos usando contadores definidos pelo usuário. O Monitor de Desempenho coleta as contagens em vez de dados sobre os eventos, por exemplo, uso de memória, número de transações ativas ou atividade de CPU. Você também pode definir limites em contadores específicos para gerar alertas que notificam operadores.  
   

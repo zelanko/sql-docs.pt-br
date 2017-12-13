@@ -2,12 +2,12 @@
 title: Elemento Hierarchy (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: acffabef75c9d62bc0f28c993c12577c03bbb434
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 53d88729411c0a353b82923d3f4a3337647902ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchy-element-csdlbi"></a>Elemento Hierarchy (CSDLBI)
-  O elemento Hierarchy é um contêiner lógico para os campos em uma tabela que podem ser vinculados entre si para formar uma hierarquia. O elemento Hierarchy é derivado do elemento CSDL Member e foi estendido para oferecer suporte às hierarquias criadas em modelos de dados de business intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O elemento Hierarchy é um contêiner lógico para os campos em uma tabela que podem ser vinculados entre si para formar uma hierarquia. O elemento Hierarchy é derivado do elemento CSDL Member e foi estendido para oferecer suporte às hierarquias criadas em modelos de dados de business intelligence.  
   
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela a seguir lista os elementos e atributos que definem o elemento Hierarchy.  

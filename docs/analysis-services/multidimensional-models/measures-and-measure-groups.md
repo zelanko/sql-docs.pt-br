@@ -2,12 +2,12 @@
 title: Grupos de medidas e | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a800041d5a0f98760e1359c5eee93c706859e020
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-and-measure-groups"></a>Medidas e Grupos de Medidas
-  Um cubo inclui *medidas* em *grupos de medidas*, lógica de negócios, além de um conjunto de dimensões que fornecem contexto para avaliar os dados numéricos que uma medida fornece. Medidas e grupos de medidas são um componente essencial de um cubo. Um cubo não pode existir sem pelo menos uma delas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um cubo inclui *medidas* na *grupos de medidas*, lógica de negócios, além de uma coleção de dimensões que fornecem contexto para avaliar os dados numéricos que fornece uma medida. Medidas e grupos de medidas são um componente essencial de um cubo. Um cubo não pode existir sem pelo menos uma delas.  
   
  Este tópico descreve [medidas](#bkmk_measure) e [grupos de medidas](#bkmk_mg). Ele também contém a tabela a seguir, com links para procedimentos para medidas de criação e configuração e grupos de medidas.  
   

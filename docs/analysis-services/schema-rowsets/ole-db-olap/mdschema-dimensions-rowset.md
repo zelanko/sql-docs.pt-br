@@ -2,12 +2,12 @@
 title: Conjunto de linhas MDSCHEMA_DIMENSIONS | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d6e6179a6d3538282dbbc125f8e8865ad3c560a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f715672e7e5aa4c72ee149e3c335aa82c7e1aaf1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdschemadimensions-rowset"></a>Conjunto de linhas MDSCHEMA_DIMENSIONS
-  Descreve as dimensões compartilhadas e privadas dentro de um banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve as dimensões compartilhadas e privadas dentro de um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O **MDSCHEMA_DIMENSIONS** linhas contém as seguintes colunas:  

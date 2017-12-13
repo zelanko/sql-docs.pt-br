@@ -2,12 +2,12 @@
 title: "Especificando o conteúdo de um eixo do Slicer (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c88d724873a7e2a7e811a4a28c9b76b5c9b12ccd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Consulta MDX e o eixo da segmentação de dados - especificar o conteúdo de um eixo do Slicer
-  O eixo de slicer filtra os dados retornados pela instrução MDX SELECT, restringindo os dados retornados para que somente os dados da intersecção com os membros especificados sejam retornados. Pode ser considerado como um eixo adicional invisível em uma consulta. O eixo de slicer é definido na cláusula WHERE da instrução MDX SELECT.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O eixo do slicer filtra os dados retornados da instrução SELECT MDX (Multidimensional Expressions), restringindo os dados retornados para que somente os dados da intersecção com os membros especificados serão retornados. Pode ser considerado como um eixo adicional invisível em uma consulta. O eixo de slicer é definido na cláusula WHERE da instrução MDX SELECT.  
   
 ## <a name="slicer-axis-syntax"></a>Sintaxe de eixo de slicer  
  Para especificar um eixo de slicer explicitamente, use a `<SELECT slicer axis clause>` no formato MDX, como descrita na sintaxe a seguir:  

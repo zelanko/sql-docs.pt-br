@@ -2,12 +2,12 @@
 title: Gerenciamento de Assemblies de modelo multidimensional | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62bd92bbfc8c0bf4cb3278186ee27a55e8e6aea0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 73dfb81f267fea0d246ff1f7c7e48abb8d1dcccc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gerenciamento de assemblies de modelo multidimensional
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX e extensões DMX (extensões DMX) projetadas para obter tudo desde cálculos estatísticos padrão até passar membros em uma hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX (Multidimensional Expressions) e extensões DMX (Data Mining) projetadas para obter tudo desde cálculos estatísticos padrão para desvio de membros em uma hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
   
  Portanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite adicionar assemblies a uma instância ou banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os assemblies permitem criar funções externas definidas pelo usuário usando qualquer CLR (Common Language Runtime), como o Microsoft Visual Basic .NET ou o Microsoft Visual C#. Você também pode usar linguagens de automação COM (Component Object Model), como o Microsoft Visual Basic ou o Microsoft Visual C++.  
   

@@ -2,12 +2,12 @@
 title: "Exportar e importar objetos de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 494f808919d4cc82ecdb91536e79b60976e74565
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d62dc8db6debd9b930c81abb4130a45543010e41
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="export-and-import-data-mining-objects"></a>Exportar e importar objetos de mineração de dados
-  Além da funcionalidade fornecida no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para soluções de backup, restauração e migração, a Mineração de Dados do SQL Server fornece a capacidade de transferir rapidamente estruturas e modelos de mineração de dados entre servidores diferentes usando extensões DMX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Além da funcionalidade fornecida no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fazer backup, restauração e migração de soluções, a mineração de dados do SQL Server fornece a capacidade de transferir rapidamente modelos e estruturas de mineração de dados entre servidores diferentes usando a mineração de dados Extensions (DMX).  
   
  Se sua solução de mineração de dados usar dados relacionais em vez de um banco de dados multidimensional, a transferência de modelos com o uso de **EXPORT** e **IMPORT** será muito mais rápida e fácil do que com o uso da restauração do banco de dados ou da implantação de uma solução inteira.  
   

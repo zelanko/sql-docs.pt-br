@@ -2,12 +2,12 @@
 title: Elemento ReadDefinition (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7596e2bbd2c560f9e3c47f7be3f60ab133ff5714
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ef99635dbd551769bb5a7af6b510ac664509a80f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="readdefinition-element-assl"></a>Elemento ReadDefinition (ASSL)
-  Determina se os membros podem ler a definição do banco de dados ou a definição de objetos no banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Determina se os membros podem ler a definição do banco de dados ou a definição de objetos no banco de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -2,12 +2,12 @@
 title: "Requisitos e considerações para Analysis Services implantação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca6771f8ea74bdff21f67704a1d45915b6d73cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos e considerações sobre a implantação do Analysis Services
-  O desempenho e disponibilidade de uma solução dependem de muitos fatores, inclusive os recursos do hardware subjacente, a topologia de sua implantação de servidor, as características de sua solução (por exemplo, tendo partições distribuídas por vários servidores ou usando armazenamento de ROLAP que requer acesso direto ao mecanismo relacional), acordos de nível de serviço e a complexidade de seu modelo de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O desempenho e a disponibilidade de uma solução depende de muitos fatores, incluindo os recursos do hardware subjacente, a topologia de implantação do seu servidor, as características de sua solução (por exemplo, tendo partições distribuídas por vários servidores ou usando o armazenamento ROLAP que requer acesso direto ao mecanismo relacional), os contratos de nível de serviço e a complexidade do seu modelo de dados.  
   
 ## <a name="memory-and-processor-requirements"></a>Requisitos de memória e processador  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa de mais recursos de memória e processador nos seguintes casos:  

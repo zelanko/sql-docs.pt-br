@@ -2,12 +2,12 @@
 title: "Configurar contas de serviço do Power Pivot | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aae3f818de4936974dd53f14c2b3fdbbea0b369f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurar contas de serviço Power Pivot
-  Uma [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]instalação inclui dois serviços que oferecem suporte a operações de servidor. O **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** é um serviço Windows que fornece processamento de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e suporte a consultas em um servidor de aplicativos. A conta de logon desse serviço sempre é especificada durante a Instalação do SQL Server, quando você instala o Analysis Services no modo integrado do SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]instalação inclui dois serviços que oferecem suporte a operações de servidor. O **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** é um serviço Windows que fornece processamento de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e suporte a consultas em um servidor de aplicativos. A conta de logon desse serviço sempre é especificada durante a Instalação do SQL Server, quando você instala o Analysis Services no modo integrado do SharePoint.  
   
  Uma segunda conta deve ser especificada para o aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , um serviço Web compartilhado executado sob uma identidade de pool de aplicativos em um farm do SharePoint. Essa conta é especificada quando você configura uma [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]instalação usando a Ferramenta de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou o PowerShell.  
   

@@ -2,12 +2,12 @@
 title: "Configurações de segurança para procedimentos armazenados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2865051f8689620a5a9df1b450ea74fb6eff8c7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ae76fbe9c09366f0a9177de901e8c08ca5ffe15
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="setting-security-for-stored-procedures"></a>Definindo a segurança para procedimentos armazenados
-  A segurança dos procedimentos armazenados é definida pela propriedade **PermissionSet** de um procedimento armazenado para uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (nível servidor), um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Segurança para procedimentos armazenados é definida com o **PermissionSet** propriedade em um procedimento armazenado para uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (nível de servidor), um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados, ou um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Assemblies de modelo multidimensional](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   

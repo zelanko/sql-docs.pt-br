@@ -2,12 +2,12 @@
 title: Criar uma tabela calculada (SSAS Tabular) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: adeaa21b5bf9a70f52dc6442b5e453b99ad6721b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 61ad9b1d13918bd6d172c7670b20b127d0713b67
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-calculated-table-ssas-tabular"></a>Criar uma tabela calculada (SSAS tabular)
-  Um *tabela calculada* é um objeto computado baseado em uma expressão ou consulta DAX, derivado do todo ou de parte de outras tabelas no mesmo modelo.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Um *tabela calculada* é um objeto computado baseado em uma expressão, ou consulta DAX derivado do todo ou parte de outras tabelas no mesmo modelo.  
   
  Um problema de design comum que as tabelas calculadas podem resolver é ter uma interface com uma dimensão com função múltipla em um contexto específico para que você possa expô-la como uma estrutura de consulta em aplicativos cliente.  Você deve se lembrar que uma dimensão com função múltipla é simplesmente uma tabela com interface em vários contextos — um exemplo clássico é a tabela Data, incluída no manifesto como OrderDate, ShipDate ou DueDate, dependendo da relação de chave estrangeira. Ao criar uma tabela calculada para ShipDate explicitamente, você obtém uma tabela autônoma que é disponibilizada para consultas, tão completamente operável quanto qualquer outra tabela.  
   

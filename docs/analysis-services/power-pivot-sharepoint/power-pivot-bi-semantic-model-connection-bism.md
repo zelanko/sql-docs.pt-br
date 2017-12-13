@@ -2,12 +2,12 @@
 title: "Power Pivot BI Semantic Model Conexão (. bism) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 48c902ba8427101083d1f9e6d012fb15a86d9491
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3cfc29f3a8c23252afdbcee1a1487f32c2aa88f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Conexão de modelo semântico de BI (.bism) do Power Pivot
-  Uma conexão de modelo semântico de BI (.bism) é uma conexão portátil que conecta relatórios do Excel ou do Power View a um banco de dados do modelo Tabular do Analysis Services ou uma instância do Analysis Services no modo multidimensional. Se você estiver familiarizado com arquivos de conexão de dados (.odc) do Office, observará uma semelhança em como um arquivo de conexão .bism é definido e usado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma conexão de modelo semântico de BI (. bism) é uma conexão portátil que conecta o Excel ou relatórios do Power View para um banco de dados de modelo de tabela do Analysis Services ou uma instância do Analysis Services no modo multidimensional. Se você estiver familiarizado com arquivos de conexão de dados (.odc) do Office, observará uma semelhança em como um arquivo de conexão .bism é definido e usado.  
   
  Uma conexão de modelo semântico de BI é criada e acessada pelo SharePoint. A criação de conexões de modelo semântico de BI habilita comandos de início rápido em uma conexão de modelo semântico de BI em uma biblioteca. Os comandos de início rápido abrem uma nova pasta de trabalho do Excel ou opções para editar o arquivo de conexão. Se os Reporting Services estiverem instalados, você também verá um comando para criar um relatório do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   

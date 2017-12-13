@@ -2,12 +2,12 @@
 title: "A consulta básica de MDX (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 46373fffaba2935a6faa9efa6deddebd6ce66ceb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 91f450be525f7ec0d019a3f17f28ee25886c44aa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query---the-basic-query"></a>Consulta MDX - a consulta básica
-  A consulta básica das expressões multidimensionais (MDX) é a instrução SELECT, a consulta MDX mais usada. Entendendo como a instrução MDX SELECT deve especificar um conjunto de resultados, como é sua sintaxe e como criar uma consulta simples usando a instrução SELECT, você terá uma compreensão sólida de como usar a linguagem MDX para consultar dados multidimensionais.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A consulta básica de MDX (Multidimensional Expressions) é a instrução SELECT — usados com mais frequência consulta em MDX. Entendendo como a instrução MDX SELECT deve especificar um conjunto de resultados, como é sua sintaxe e como criar uma consulta simples usando a instrução SELECT, você terá uma compreensão sólida de como usar a linguagem MDX para consultar dados multidimensionais.  
   
 ## <a name="specifying-a-result-set"></a>Especificando um conjunto de resultados  
  Na linguagem MDX, a instrução SELECT especifica um conjunto de resultados que contém um subconjunto de dados multidimensionais retornados a partir de um cubo. Para especificar um conjunto de resultados, a consulta MDX deve conter as seguintes informações:  

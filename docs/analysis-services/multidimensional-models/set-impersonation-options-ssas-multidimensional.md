@@ -2,12 +2,12 @@
 title: "Definir opções de representação (SSAS - Multidimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b448d78a897c6e7c6aa6973b6e61b92ff7a9aade
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Definir opções de representação (SSAS multidimensional)
-  Ao criar um objeto **data source** em um modelo do Analysis Services, uma das configurações que você deve configurar é uma opção de representação. Esta opção determina se o Analysis Services assume a identidade de uma conta de usuário do Windows específica ao executar operações locais relacionadas à conexão, como carregar um provedor de dados OLE DB ou resolver informações de perfil de usuário em ambientes que dão suporte a perfis móveis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ao criar um **fonte de dados** do objeto em um modelo do Analysis Services, uma das configurações que você deve configurar é uma opção de representação. Esta opção determina se o Analysis Services assume a identidade de uma conta de usuário do Windows específica ao executar operações locais relacionadas à conexão, como carregar um provedor de dados OLE DB ou resolver informações de perfil de usuário em ambientes que dão suporte a perfis móveis.  
   
  Para conexões que usam a autenticação do Windows, a opção de representação também determina a identidade de usuário sob a qual as consultas são executadas na fonte de dados externa. Por exemplo, se você definir a opção de representação como **contoso\dbuser**, as consultas usadas para recuperar os dados durante o processamento serão executadas como **contoso\dbuser** no servidor de banco de dados.  
   

@@ -2,12 +2,12 @@
 title: Conjunto de linhas DISCOVER_XML_METADATA | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53ac5b9c24da68c50fa06644e80389ac53f509
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae0b5c6375fe196d780a8b13b13178157161ebfb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverxmlmetadata-rowset"></a>Conjunto de linhas DISCOVER_XML_METADATA
-  Retorna um documento XML que descreve um objeto solicitado. O conjunto de linhas que sempre é retornado consiste em uma linha e em uma coluna.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna um documento XML que descreve um objeto solicitado. O conjunto de linhas que sempre é retornado consiste em uma linha e em uma coluna.  
   
  Se você chamar o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método com o **DISCOVER_XML_METATDATA** valor de enumeração no [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento, o **Discover**método retorna o **DISCOVER_XML_METATDATA** conjunto de linhas.  
   

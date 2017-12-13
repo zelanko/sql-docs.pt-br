@@ -2,12 +2,12 @@
 title: "Implantar soluções Power Pivot para SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 206b31adec86e7ea2213746687d535d56ca3b617
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 685e5d9b0586d0c97fa686507bc1934f8fb31c1e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Implantar soluções Power Pivot para SharePoint
-  Use as instruções a seguir para implantar manualmente dois pacotes de solução que adicionam recursos do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a um ambiente do SharePoint Server 2010. Implantar as soluções é uma etapa necessária para configurar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint em um servidor do SharePoint 2010. Para exibir a lista completa de etapas necessárias, consulte [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use as instruções a seguir para implantar manualmente dois pacotes de solução que adicionam [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] recursos em um ambiente do SharePoint Server 2010. Implantar as soluções é uma etapa necessária para configurar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint em um servidor do SharePoint 2010. Para exibir a lista completa de etapas necessárias, consulte [Administração e configuração de servidor do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Como alternativa, você pode usar a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para implantar as soluções. Usar a ferramenta de configuração é mais fácil e mais eficiente para uma única instalação de servidor, mas você pode querer usar a Administração Central e o PowerShell se preferir usar uma ferramenta familiar ou se estiver configurando vários recursos ao mesmo tempo. Para obter mais informações sobre a ferramenta de configuração, consulte [Ferramentas de Configuração do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

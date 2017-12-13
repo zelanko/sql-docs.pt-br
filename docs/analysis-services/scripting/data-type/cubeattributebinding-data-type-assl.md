@@ -2,12 +2,12 @@
 title: Tipo de dados CubeAttributeBinding (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4496205dca5947ec164162f68be2d3143b3ff024
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3854f8e94347ec508edbbaabb6ade14a9013f4b5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cubeattributebinding-data-type-assl"></a>Tipo de dados CubeAttributeBinding (ASSL)
-  Define um tipo de dados derivado que representa a associação de um atributo em uma dimensão de cubo a uma ação ou coluna de estrutura de mineração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define um tipo de dados derivado que representa a associação de um atributo em uma dimensão de cubo para uma ação ou uma coluna de estrutura de mineração.  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -2,12 +2,12 @@
 title: "Definir a granularidade da dimensão dentro de um grupo de medidas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fbdacd6a82296b08d0f395502df71f0a9e65eb8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lição 5-4-Definindo granularidade da dimensão dentro de um grupo de medidas
-Os usuários podem dimensionar dados de fatos em diferentes granularidades ou especificidades para diversas finalidades. Por exemplo, dados de vendas de revendedores ou pela Internet podem ser gravados diariamente, enquanto que informações sobre cotas de vendas podem ser registradas apenas mensal ou trimestralmente. Nesses cenários, os usuários terão uma dimensão de tempo com granulação ou nível de detalhes diferente para cada uma dessas tabelas de fatos diferentes. Apesar de ser possível definir uma nova dimensão de banco de dados como uma dimensão de tempo com essa granulação diferente, há uma forma mais fácil de fazer isso com o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Os usuários desejam dimensionar dados de fatos em diferentes granularidades ou especificidades para finalidades diferentes. Por exemplo, dados de vendas de revendedores ou pela Internet podem ser gravados diariamente, enquanto que informações sobre cotas de vendas podem ser registradas apenas mensal ou trimestralmente. Nesses cenários, os usuários terão uma dimensão de tempo com granulação ou nível de detalhes diferente para cada uma dessas tabelas de fatos diferentes. Apesar de ser possível definir uma nova dimensão de banco de dados como uma dimensão de tempo com essa granulação diferente, há uma forma mais fácil de fazer isso com o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 Por padrão no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], quando uma dimensão é usada dentro de um grupo de medidas, a granulação dos dados dentro daquela dimensão tem como base o atributo de chave da dimensão. Por exemplo, quando uma dimensão de tempo é incluída em um grupo de medidas e a granulação padrão da dimensão de tempo é diária, a granulação padrão dessa dimensão dentro do grupo de medidas é diária. Isso é apropriado em diversas ocasiões, como para os grupos de medidas **Vendas pela Internet** e **Vendas do Revendedor** deste tutorial. Porém, quando tal dimensão é incluída em outros tipos de grupos de medidas, como em um grupo de cotas de vendas ou de medidas de orçamento, uma granulação mensal ou trimestral é geralmente mais apropriada.  
   

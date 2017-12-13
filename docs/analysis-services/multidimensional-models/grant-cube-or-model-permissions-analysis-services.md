@@ -2,12 +2,12 @@
 title: "Conceder permissões de cubo ou modelo (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b57c8f78162dbfcfe414ed8bc4fcdcedd04c85d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb36f978c414a1ef5916cb0ebd78971c001940e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Conceder permissões de cubo ou modelo (Analysis Services)
-  Um cubo ou modelo de tabela é o objeto de consulta principal em um modelo de dados do Analysis Services. Ao se conectarem a dados multidimensionais ou de tabela do Excel para exploração de dados ad hoc, normalmente os usuários começam ao selecionar um cubo ou modelo de tabela específico como a estrutura de dados por trás do objeto de relatório dinâmico. Este tópico explica como conceder as permissões necessárias para acesso de dados de cubo ou de tabela.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um cubo ou modelo de tabela é o objeto de consulta principal em um modelo de dados do Analysis Services. Ao se conectarem a dados multidimensionais ou de tabela do Excel para exploração de dados ad hoc, normalmente os usuários começam ao selecionar um cubo ou modelo de tabela específico como a estrutura de dados por trás do objeto de relatório dinâmico. Este tópico explica como conceder as permissões necessárias para acesso de dados de cubo ou de tabela.  
   
  Por padrão, ninguém além do administrador do servidor ou do banco de dados tem permissão para consultar cubos em um banco de dados. O acesso ao cubo por um não administrador requer associação a uma função criada para o banco de dados que contém o cubo. A associação tem suporte para contas de usuário ou de grupo do Windows, que pode ser definida no Active Directory ou em um computador local. Antes de iniciar, identifique a quais contas serão atribuídas associações nas funções que você vai criar.  
   

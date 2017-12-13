@@ -2,12 +2,12 @@
 title: "Conteúdo de FORMAT_STRING (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propriedades de célula MDX - conteúdo de FORMAT_STRING
-  A propriedade de célula **FORMAT_STRING** formata a propriedade de célula **VALUE** , criando o valor da propriedade de célula **FORMATTED_VALUE** . A propriedade de célula **FORMAT_STRING** lida com valores numéricos e cadeias de caracteres, aplicando a expressão de formato ao valor para retornar um valor formatado para a propriedade de célula **FORMATTED_VALUE** . As tabelas a seguir detalham a sintaxe e os caracteres de formatação usados para lidar com valores de cadeia de caracteres e numéricos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O **FORMAT_STRING** formatos de propriedade de célula a **valor** propriedade de célula, o valor para a criação de **FORMATTED_VALUE** propriedade de célula. A propriedade de célula **FORMAT_STRING** lida com valores numéricos e cadeias de caracteres, aplicando a expressão de formato ao valor para retornar um valor formatado para a propriedade de célula **FORMATTED_VALUE** . As tabelas a seguir detalham a sintaxe e os caracteres de formatação usados para lidar com valores de cadeia de caracteres e numéricos.  
   
 ## <a name="string-values"></a>Valores de cadeia de caracteres  
  Uma expressão de formato para cadeias de caracteres pode ter uma seção ou duas seções separadas por ponto-e-vírgula (;).  

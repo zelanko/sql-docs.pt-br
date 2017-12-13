@@ -2,12 +2,12 @@
 title: Vincular grupos de medidas | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d83878543d1c749757b2603a3fe3001fb6b1581
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cc306874fed195a649dd0cc18d43db4a426cefa4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="linked-measure-groups"></a>Grupos de medidas vinculados
-  Um grupo de medidas vinculado se baseia em outro grupo de medidas em um cubo diferente no mesmo banco de dados ou em um banco de dados diferente do Analysis Services. Você poderá usar um grupo de medidas vinculado se quiser reutilizar um conjunto de medidas, e os valores de dados correspondentes, em vários cubos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um grupo de medidas vinculado baseia-se em outro grupo de medidas em um cubo diferente no mesmo banco de dados ou outro banco de dados do Analysis Services. Você poderá usar um grupo de medidas vinculado se quiser reutilizar um conjunto de medidas, e os valores de dados correspondentes, em vários cubos.  
   
  A Microsoft recomenda que os grupos de medidas vinculados e originais residam em soluções executadas no mesmo servidor. Vincular a um grupo de medidas em um servidor remoto está agendada para substituição em uma versão futura (consulte [Recursos do Analysis Services preteridos no SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)).  
   

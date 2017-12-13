@@ -2,12 +2,12 @@
 title: Elemento roles (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 02cdd944e2d369716435b9450994d7eb65047f36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4d125df9535303152449ad54ef577995a1da9b6d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="roles-element-assl"></a>Elemento Roles (ASSL)
-  Contém a coleção de elementos [Role](../../../analysis-services/scripting/objects/role-element-assl.md) definidos sob o elemento pai.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém a coleção de [função](../../../analysis-services/scripting/objects/role-element-assl.md) elementos definidos no elemento pai.  
   
 ## <a name="syntax"></a>Sintaxe  
   

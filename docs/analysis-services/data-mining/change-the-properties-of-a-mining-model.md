@@ -2,12 +2,12 @@
 title: "Alterar as propriedades de um modelo de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a0b40837b81326e63821e4f46f360f79b5940280
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccfd17eb10b11052f24cf18f9b0e94649b5030af
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Alterar as propriedades de um modelo de mineração
-  Algumas propriedades de modelo de mineração se aplicam ao modelo como um todo, enquanto outras propriedades de modelo se aplicam a colunas individuais. Exemplos de propriedades que se aplicam ao modelo inteiro seriam a propriedade **Drillthrough** , que especifica se os dados de caso devem estar disponíveis para consulta, e a propriedade **Description** . Propriedades que se aplicam à coluna incluem **Usage** e **ModelingFlags**, que controlam como os dados na coluna são usados no modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Algumas propriedades de modelo de mineração se aplicam ao modelo como um todo, e outras propriedades de modelo se aplicam a colunas individuais. Exemplos de propriedades que se aplicam ao modelo inteiro seriam a propriedade **Drillthrough** , que especifica se os dados de caso devem estar disponíveis para consulta, e a propriedade **Description** . Propriedades que se aplicam à coluna incluem **Usage** e **ModelingFlags**, que controlam como os dados na coluna são usados no modelo.  
   
  As propriedades modelo a seguir têm editores avançados que você pode usar para criar expressões ou configurar propriedades de modelo complexas. Estas propriedades oferecem:  
   

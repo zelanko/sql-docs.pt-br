@@ -2,12 +2,12 @@
 title: Conjunto de linhas DISCOVER_KEYWORDS (OLE DB para OLAP) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0c6c6830cce7534b3c69bb115699f20a6c5a5ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b823585d3bb9af2e72cfeefa49e1ecb5a3240daf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverkeywords-rowset-ole-db-for-olap"></a>Conjunto de linhas DISCOVER_KEYWORDS (OLE DB para OLAP)
-  Enumera uma lista de palavras reservadas pelo provedor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera uma lista de palavras reservadas pelo provedor.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas DISCOVER_KEYWORDS contém as colunas a seguir.  

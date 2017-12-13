@@ -2,12 +2,12 @@
 title: "Power Pivot disponibilidade e recuperação de desastres | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa0bd590b7eeea51fa12627488215067cb46ecf6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7b2cfe66cc530881a848d7f3d8850c62c0af1486
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Recuperação de desastre e disponibilidade do Power Pivot
-  Os planos de recuperação de desastres e disponibilidade para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependem principalmente do design do seu farm do SharePoint, o tempo de inatividade aceitável para componentes diferentes, além de ferramentas e práticas recomendadas implementadas para disponibilidade do SharePoint. Este tópico resume as tecnologias e inclui diagramas de topologia de exemplo a serem considerados ao planejar a disponibilidade e a recuperação de desastres para a implantação de um [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Planos de recuperação de desastres e disponibilidade para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependem principalmente do design do seu farm do SharePoint, o tempo de inatividade aceitável para componentes diferentes e as ferramentas e práticas recomendadas implementadas para disponibilidade do SharePoint. Este tópico resume as tecnologias e inclui diagramas de topologia de exemplo a serem considerados ao planejar a disponibilidade e a recuperação de desastres para a implantação de um [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
 ||  
 |-|  

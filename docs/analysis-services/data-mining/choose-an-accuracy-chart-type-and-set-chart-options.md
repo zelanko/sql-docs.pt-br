@@ -2,12 +2,12 @@
 title: "Escolha um tipo de gráfico de precisão e definir opções de gráfico | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f440a7cd7770f1412480e19304af4efcf17b1fba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9c31d9d409e3dee18e7121dcc42e9d9546235294
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>Escolher um tipo de gráfico de precisão e definir opções de gráfico
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece vários métodos para determinar a validade de seus modelos de mineração. O tipo de gráfico de precisão que você pode criar para cada modelo ou estrutura depende destes fatores:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece vários métodos para determinar a validade dos modelos de mineração. O tipo de gráfico de precisão que você pode criar para cada modelo ou estrutura depende destes fatores:  
   
 -   O tipo de algoritmo que foi usado na criação do modelo  
   

@@ -2,12 +2,12 @@
 title: Elemento CellData (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ca30896c998b10fd948cc3dccb1a07132d579fb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ee3c480458f793903bedd3ac3833e26a8546fcb8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="celldata-element-xmla"></a>Elemento CellData (XMLA)
-  Contém uma coleção de elementos Cell que representam os dados de célula contidos por um elemento [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) que usa o tipo de dados [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) .  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém uma coleção de elementos Cell que representam os dados de célula contidos por um [raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que usa o [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   

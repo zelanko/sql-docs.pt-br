@@ -2,12 +2,12 @@
 title: Ferramentas e aplicativos usados no Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d286657c8264cc0b1fa82b87a2978cd60387506
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cedca243acc9608e2d3855b2ee7ee2aa183c1d73
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Ferramentas e aplicativos usados no Analysis Services
-  Encontre as ferramentas e aplicativos que você precisa para criar modelos do Analysis Services e gerenciamento de bancos de dados implantados.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Encontre as ferramentas e aplicativos que você precisa para criar modelos do Analysis Services e gerenciamento de bancos de dados implantados.  
   
 ## <a name="analysis-services-model-designers"></a>Designers de modelos do Analysis Services  
  Modelos são criados usando modelos de projeto no SQL Server dados Tools (SSDT), um shell do Visual Studio. Modelos de projeto fornecem designers de modelo para criar os objetos de modelo de dados que compõem uma solução do Analysis Services. O SSDT é um download gratuito da web atualizado mensalmente.

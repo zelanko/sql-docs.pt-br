@@ -2,12 +2,12 @@
 title: "Criar uma consulta de conteúdo em um modelo de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cff8211d13fe5ddf5fd1128f0fd53a0ab013ae1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecd15e1d0fd84c1a359d49c70f736b6c44856c1e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Criar uma consulta de conteúdo em um modelo de mineração
-  Você pode consultar o conteúdo do modelo de mineração via programação usando AMO ou XML/A, mas é mais fácil criar consultas usando DMX. Também é possível criar consultas nos conjuntos de linhas de esquema de mineração de dados estabelecendo uma conexão com a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e criando uma consulta usando os DMVs fornecidos pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode consultar o conteúdo do modelo de mineração programaticamente usando AMO ou XML/A, mas é mais fácil criar consultas usando DMX. Também é possível criar consultas nos conjuntos de linhas de esquema de mineração de dados estabelecendo uma conexão com a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e criando uma consulta usando os DMVs fornecidos pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Os procedimentos a seguir demonstram como criar consultas em um modelo de mineração usando DMX e como consultar os conjuntos de linhas de esquema de mineração de dados.  
   

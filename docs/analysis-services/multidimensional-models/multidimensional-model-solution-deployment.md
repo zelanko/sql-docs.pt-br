@@ -2,12 +2,12 @@
 title: "Implantação de solução de modelo multidimensional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cba427cba20a443179621758dabc8d56b1104152
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4ea62c1e36451be1c18362073bd917e2376e1e51
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Implantação de solução de modelo multidimensional
-  Depois de você ter concluído o desenvolvimento de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , poderá implantar o banco de dados em um servidor do Analysis Services. O Analysis Services fornece seis métodos de implantação possíveis que podem ser usados para mover o banco de dados para um servidor de teste ou produção. Os métodos estão listados aqui em ordem de eficiência: automatização AMO, XMLA, Assistente para Implantação, Utilitário de Implantação, Assistente para Sincronizar, backup e restauração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois de concluir o desenvolvimento de um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto, você pode implantar o banco de dados em um servidor do Analysis Services. O Analysis Services fornece seis métodos de implantação possíveis que podem ser usados para mover o banco de dados para um servidor de teste ou produção. Os métodos estão listados aqui em ordem de eficiência: automatização AMO, XMLA, Assistente para Implantação, Utilitário de Implantação, Assistente para Sincronizar, backup e restauração.  
   
  Este tópico inclui as seguintes seções:  
   

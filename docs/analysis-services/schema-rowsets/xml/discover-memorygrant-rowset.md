@@ -2,12 +2,12 @@
 title: Conjunto de linhas DISCOVER_MEMORYGRANT | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68bbbbcebe6c3f47f8b3868ba7a67b79f75503cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 38eb6dae47c01758b3ca3b5c04794014b247b495
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovermemorygrant-rowset"></a>Conjunto de linhas DISCOVER_MEMORYGRANT
-  Retorna uma lista de concessões de cota de memória interna que são usadas por trabalhos atualmente em execução no servidor. Para descobrir se um trabalho está sendo executado no servidor, use `Select * from $System.Discover_Jobs`.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna uma lista de memória interna concessões de cota que são usadas por trabalhos que estão sendo executados no servidor. Para descobrir se um trabalho está sendo executado no servidor, use `Select * from $System.Discover_Jobs`.  
   
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   

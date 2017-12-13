@@ -2,12 +2,12 @@
 title: "Conjuntos de linhas do esquema de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35f4df3e7e01a8f0987e955a180842efde5793e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcde375ccb8186f0ef5d38dca2c7f88aefaaf4b7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-schema-rowsets"></a>Conjuntos de linhas de esquema de mineração de dados
-  Um servidor que está executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] suporta os seguintes conjuntos de linhas do esquema de mineração de dados. Para verificar se um determinado provedor XML/A oferece suporte a um conjunto de linhas específico, use o [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) conjunto de linhas com o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Um servidor que está executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] suporta os seguintes conjuntos de linhas do esquema de mineração de dados. Para verificar se um determinado provedor XML/A oferece suporte a um conjunto de linhas específico, use o [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) conjunto de linhas com o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
   
  No [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], os conjuntos de linhas de esquema de mineração de dados são exibidos como tabelas na linguagem Transact-SQL, no esquema $SYSTEM. Por exemplo, a consulta a seguir, feita em uma instância do Analysis Services, retorna uma lista dos esquemas disponíveis na instância atual.  
   

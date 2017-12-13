@@ -2,12 +2,12 @@
 title: "4-6-especificando relações de atributo na hierarquia definida pelo usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8db9cd243cb27505bfda4eb2342802b8bb588ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-especificando relações de atributo na hierarquia definida pelo usuário
-Como você já aprendeu neste tutorial, é possível organizar as hierarquias de atributo em níveis dentro das hierarquias de usuário para fornecer caminhos de navegação aos usuários em um cubo. Uma hierarquia de usuário pode representar uma hierarquia natural, como cidade, estado e país, ou um caminho de navegação, como nome do funcionário, cargo e nome do departamento. Para o usuário que navega pela hierarquia, esses dois tipos de hierarquias de usuário são os mesmos.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Como você já aprendeu neste tutorial, você pode organizar hierarquias de atributo em níveis nas hierarquias de usuário para fornecer caminhos de navegação para os usuários em um cubo. Uma hierarquia de usuário pode representar uma hierarquia natural, como cidade, estado e país, ou um caminho de navegação, como nome do funcionário, cargo e nome do departamento. Para o usuário que navega pela hierarquia, esses dois tipos de hierarquias de usuário são os mesmos.  
   
 Em uma hierarquia natural, ao definir relações de atributo entre os atributos que criam os níveis, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode usar a agregação de um atributo para obter resultados a partir de um atributo relacionado. Se não houver nenhuma relação definida entre atributos, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agregará todos os atributos que não forem atributos de chave do atributo de chave. Portanto, se os dados subjacentes permitirem, você também poderá definir relações de atributo entre atributos. Definir as relações de atributo melhora a dimensão, a partição e o desempenho do processamento de consulta. Para obter mais informações, consulte [Definir relações de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md) e [Relações de atributo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   

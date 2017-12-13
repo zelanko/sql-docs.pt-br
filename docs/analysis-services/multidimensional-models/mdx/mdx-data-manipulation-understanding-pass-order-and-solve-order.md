@@ -2,12 +2,12 @@
 title: "Entendendo a ordem de passagem e resolução Order (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9c3b028eb658f2f75d6e70ec9057f3f156ca5f05
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulação de dados MDX - Noções básicas sobre a fase de ordem e a ordem de resolução
-  Quando um cubo é calculado como resultado de um script MDX, ele pode passar por várias fases de cálculo dependendo do uso de diversos recursos relacionados ao cálculo. Cada uma dessas fases é chamada de fase de cálculo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Quando um cubo é calculado como o resultado de um script MDX, ele pode passar por várias fases de cálculo dependendo do uso de diversos recursos relacionados ao cálculo. Cada uma dessas fases é chamada de fase de cálculo.  
   
  Uma fase de cálculo pode ser denominada por uma posição ordinal, chamada número de fase de cálculo. A quantidade de fases de cálculo necessária para computar por completo todas as células de um cubo é conhecida como profundidade de fase de cálculo do cubo.  
   

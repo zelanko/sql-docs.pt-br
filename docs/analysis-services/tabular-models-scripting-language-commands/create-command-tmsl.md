@@ -2,12 +2,12 @@
 title: Criar um comando (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae07d8b17fc659bb8a8bc2bef1cdcb6421606c29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc53ca0e029bd4873ea5ff408ed30472640c9959
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-command-tmsl"></a>Criar um comando (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Cria o objeto especificado e todos os objetos descendentes especificados. Se o objeto já existe, o comando gera um erro.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cria o objeto especificado e todos os objetos descendentes especificados. Se o objeto já existe, o comando gera um erro.  
   
 ## <a name="request"></a>Solicitação  
  A estrutura da solicitação varia com base no objeto. Um objeto que é um pai deve incluir todos os seus filhos, embora as definições de objeto completo de irmãos e pais não são necessárias.  

@@ -2,12 +2,12 @@
 title: "Processando opções e configurações (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Processando opções e configurações (Analysis Services)
-  Ao processar objetos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode selecionar uma opção de processamento para controlar o tipo de processamento que ocorre para cada objeto. Os tipos de processamento variam de um objeto para outro e por alterações ocorridas no objeto desde que ele foi processado pela última vez. Se você habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para selecionar automaticamente um método de processamento, ele usará o método que retornar o objeto a um estado inteiramente processado no menor tempo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você processar objetos em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode selecionar uma opção de processamento para controlar o tipo de processamento que ocorre para cada objeto. Os tipos de processamento variam de um objeto para outro e por alterações ocorridas no objeto desde que ele foi processado pela última vez. Se você habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para selecionar automaticamente um método de processamento, ele usará o método que retornar o objeto a um estado inteiramente processado no menor tempo.  
   
  As configurações de processamento permitem controlar os objetos que são processados e os métodos usados para processar esses objetos. Algumas configurações de processamento são usadas principalmente para trabalhos de processamento em lotes. Para obter mais informações sobre processamento em lote, consulte [Processamento em lote &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   

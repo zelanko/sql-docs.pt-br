@@ -2,12 +2,12 @@
 title: "Implantação de soluções de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e40b686c7aa60b023600e17170c33e2ba7b776be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa0664275dd45cb5cccdef8a9f93d3b4da697be0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Implantação de soluções de mineração de dados
-  A última etapa no processo de mineração de dados é implantar os modelos para um ambiente de produção. A implantação é importante porque torna os modelos disponíveis para usuários, para que você possa executar qualquer uma das tarefas a seguir:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A última etapa no processo de mineração de dados é implantar os modelos em um ambiente de produção. A implantação é importante porque torna os modelos disponíveis para usuários, para que você possa executar qualquer uma das tarefas a seguir:  
   
 -   Use os modelos para criar previsões e tomar decisões comerciais. Para obter informações sobre as ferramentas que você pode usar para criar consultas, consulte [Ferramentas de Consulta de Data Mining](../../analysis-services/data-mining/data-mining-query-tools.md).  
   

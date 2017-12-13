@@ -2,12 +2,12 @@
 title: "Documentação do desenvolvedor do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Documentação do desenvolvedor do Analysis Services
-No Analysis Services, quase todos os objetos e carga de trabalho são programável e geralmente não há mais de uma abordagem para escolher.  Opções incluem escrever um código gerenciado, script ou usando os padrões abertos como XMLA e MSOLAP se seus requisitos de solução impedirem usando o .NET framework.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]No Analysis Services, quase todos os objetos e carga de trabalho são programável e geralmente não há mais de uma abordagem para escolher.  Opções incluem escrever um código gerenciado, script ou usando os padrões abertos como XMLA e MSOLAP se seus requisitos de solução impedirem usando o .NET framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>O que você pode fazer no código
 Cenários de programação típicos incluem o servidor e implantação de banco de dados, administração, modelo e criação de banco de dados e acesso a dados de seus aplicativos personalizados e relatórios que consomem dados do Analysis Services. Comum a todos esses cenários é uma fixa arquitetura e o objeto de definição hierarquia, com operações bem compreendidas que abrangem a definição de dados, processamento e cargas de trabalho de consulta.

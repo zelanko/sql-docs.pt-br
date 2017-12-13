@@ -2,12 +2,12 @@
 title: Conecte-se ao Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 45b056f7b2d109396a114a7d8459bcc4db95c1ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683474e873b45eca2fc39d0b8f254da06d205cf2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-analysis-services"></a>Conectar ao Analysis Services
-  Utilize as informações desta seção para saber mais sobre as propriedades de cadeia de conexão, as bibliotecas de cliente utilizadas para conexões, os métodos de autenticação com suporte pelo Analysis Services e como definir ou limpar conexões antes de colocar um servidor offline.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use as informações desta seção para saber mais sobre as propriedades de cadeia de caracteres de conexão, as bibliotecas de cliente usadas para conexões, os métodos de autenticação são suportados pelo Analysis Services e como definir ou limpar conexões antes de colocar um servidor offline.  
   
 ## <a name="analysis-services-connections"></a>Conexões do Analysis Services  
  O Analysis Services usa o TCP como protocolo de rede e o XMLA como protocolo de comunicação. No nível inferior, todas as bibliotecas de cliente fornecidas com o Analysis Services implementam o XMLA sobre TCP. Embora seja possível criar aplicativos com base no XMLA bruto, a maioria dos aplicativos e desenvolvedores de aplicativos usam bibliotecas de cliente para tirar proveito dos modelos de objeto e das eficiências de codificação que eles fornecem. Para conexões de cliente com o Analysis Services, é possível utilizar o IIS como uma conexão intermediária se não for possível utilizar o TCP em toda a pilha. Uma vantagem de utilizar o acesso HTTP por meio do IIS é a capacidade de conexão de aplicativos que passam credenciais na cadeia de conexão.  

@@ -2,12 +2,12 @@
 title: Hierarquias desbalanceadas | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: df06dbfc368310427d1359f78de557c910b94af9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4b3ffa23cdd185c57a86bc34921c3e489870cd2d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Hierarquias definidas pelo usuário - hierarquias desbalanceadas
-  Uma hierarquia desbalanceada é uma hierarquia definida pelo usuário que tem um número irregular de níveis. Exemplos comuns incluem o organograma, onde um gerente de alto nível tem os gerentes departamentais e funcionários não gerentes como subordinados diretos, ou hierarquias geográficas constituídas de País-Região-Cidades, onde algumas cidades não têm um estado ou província pai, como Washington D.C., a Cidade do Vaticano ou Nova Délhi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma hierarquia desbalanceada é uma hierarquia definida pelo usuário que possui um número ímpar de níveis. Exemplos comuns incluem o organograma, onde um gerente de alto nível tem os gerentes departamentais e funcionários não gerentes como subordinados diretos, ou hierarquias geográficas constituídas de País-Região-Cidades, onde algumas cidades não têm um estado ou província pai, como Washington D.C., a Cidade do Vaticano ou Nova Délhi.  
   
  Na maioria das hierarquias em uma dimensão, cada nível tem o mesmo número de membros acima dele, como qualquer outro membro no mesmo nível. Uma hierarquia desbalanceada é diferente porque o pai lógico de pelo menos um membro não está no nível imediatamente acima do membro. Quando isso acontece, a hierarquia desce a níveis diferentes para caminhos de busca detalhada diferentes. Em um aplicativo cliente, isso pode tornar os caminhos de busca detalhada desnecessariamente complicados.  
   

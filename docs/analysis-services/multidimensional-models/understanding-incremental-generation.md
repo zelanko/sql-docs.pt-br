@@ -2,12 +2,12 @@
 title: "Noções básicas sobre geração Incremental | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9a3cd3a86660e9c5ed818a0751deef36218a812
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-incremental-generation"></a>Entendendo a geração com incremento
-  Após a geração de esquema inicial, você pode alterar as definições do cubo e das dimensões usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e, em seguida, executar novamente o Assistente de Geração de Esquema. O assistente atualiza o esquema do banco de dados da área de assunto e da exibição da fonte de dados associada para refletir as mudanças, mantendo, na medida do possível, os dados que já existem nas tabelas que serão geradas novamente. Se você alterou as tabelas depois da geração inicial, o Assistente de Geração de Esquema preservará essas alterações sempre que possível usando as seguintes regras:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Após a geração de esquema inicial, você pode alterar as definições de cubo e dimensão usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e, em seguida, execute novamente o Assistente de geração de esquema. O assistente atualiza o esquema do banco de dados da área de assunto e da exibição da fonte de dados associada para refletir as mudanças, mantendo, na medida do possível, os dados que já existem nas tabelas que serão geradas novamente. Se você alterou as tabelas depois da geração inicial, o Assistente de Geração de Esquema preservará essas alterações sempre que possível usando as seguintes regras:  
   
 -   Se uma tabela foi previamente gerada pelo assistente, ela será substituída. Você pode evitar que a tabela gerada pelo assistente seja substituída alterando a propriedade **AllowChangesDuringGeneration** da tabela da exibição da fonte de dados para **false**. Quando você assume o controle de uma tabela, ela passa a ser tratada como qualquer outra tabela definida pelo usuário e não é afetada durante a nova geração. Depois de remover uma tabela da nova geração, você pode alterar a propriedade **AllowChangesDuringGeneration** da tabela da exibição da fonte de dados para **true** e reabri-la para fazer as alterações do assistente. Para obter mais informações, consulte [Alterar propriedades em uma exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   

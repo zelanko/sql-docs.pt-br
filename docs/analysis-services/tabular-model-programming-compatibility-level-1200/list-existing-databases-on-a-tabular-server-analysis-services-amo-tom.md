@@ -2,12 +2,12 @@
 title: Lista de bancos de dados existentes em um servidor de tabela (Analysis Services AMO-TOM) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25b6f8ef54de536c47b3a5df4a6d8ed3b6d627de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79563e4a6bcbcbf5aa52e903b81cb9c3fcb9639c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>Lista de bancos de dados existentes em um servidor de tabela (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Quando você tiver um **servidor** do objeto que é conectado a uma instância do Analysis Services, você pode iterar **Server.Databases** coleção para listar todos os bancos de dados hospedados pela instância de serviços de análise. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Quando você tiver um **servidor** do objeto que é conectado a uma instância do Analysis Services, você pode iterar **Server.Databases** coleção para listar todos os bancos de dados hospedados pela instância de serviços de análise. 
 
 O **Server.Databases** coleção contém um **banco de dados** objeto para cada banco de dados hospedado no servidor, independentemente do modo de servidor (Multidimensional ou Tabular) ou o tipo de banco de dados (Multidimensional, Pré-1200 tabular, ou Tabular 1200 e superior). 
 

@@ -2,12 +2,12 @@
 title: Propriedades (SSAS Tabular) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: efb844dd4888a93bf805a7b22a278366bdf5d388
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8c17ebbb2e4e2e7d128c866ad9f38284a3166e1a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-ssas-tabular"></a>Propriedades (SSAS tabular)
-  Os projetos de modelo tabular no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] têm várias propriedades que definem comportamentos para o projeto, o modelo, a relação e a implantação. As configurações de propriedades são armazenadas em formato XML no arquivo Model.bim, porém, todas as propriedades descritas nesta seção podem ser configuradas nas janelas de **Propriedades** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Projetos de modelo tabular no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] têm várias propriedades que definem comportamentos para o projeto, modelo, relatórios e implantação. As configurações de propriedades são armazenadas em formato XML no arquivo Model.bim, porém, todas as propriedades descritas nesta seção podem ser configuradas nas janelas de **Propriedades** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
   

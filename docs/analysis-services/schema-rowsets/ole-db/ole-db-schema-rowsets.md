@@ -2,12 +2,12 @@
 title: Conjuntos de linhas do esquema OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-schema-rowsets"></a>Conjuntos de linhas do esquema OLE DB
-  Os conjuntos de linhas do esquema OLE DB a seguir são suportados pelo provedor de XMLA (XML for Analysis) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Use o **DISCOVER_ENUMERATORS** conjunto de linhas com o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método para verificar se um provedor de fonte de dados específico oferece suporte a um conjunto de linhas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Os seguintes conjuntos de linhas de esquema de OLE DB com suporte a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML para o provedor de análise (XMLA). Use o **DISCOVER_ENUMERATORS** conjunto de linhas com o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método para verificar se um provedor de fonte de dados específico oferece suporte a um conjunto de linhas.  
   
  Você também poderá encontrar informações detalhadas sobre esses conjuntos de linhas pesquisando o tópico (Conjuntos de linhas do esquema" na parte de referência do programador de OLE DB da MSDN® Library, no site do [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   

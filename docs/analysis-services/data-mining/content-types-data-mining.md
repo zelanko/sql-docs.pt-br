@@ -2,12 +2,12 @@
 title: "Tipos (mineração de dados) de conteúdo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-types-data-mining"></a>Tipos de conteúdo (mineração de dados)
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode definir o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usada em um modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode definir ambos os o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usada em um modelo.  
   
  O *tipo de dados* determina como os algoritmos processarão os dados nessas colunas quando você criar modelos de mineração. A definição do tipo de dados de uma coluna dá ao algoritmo informações sobre o tipo de dados nas colunas e como processar os dados. Cada tipo de dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a um ou mais tipos de conteúdo de mineração de dados.  
   

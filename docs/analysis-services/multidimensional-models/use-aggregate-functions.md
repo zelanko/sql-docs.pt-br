@@ -2,12 +2,12 @@
 title: "Use as funções de agregação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-aggregate-functions"></a>Usar funções de agregação
-  Quando uma dimensão é usada para fatiar uma medida, a medida é resumida juntamente com hierarquias contidas nessa dimensão. O comportamento da soma depende da função de agregação especificada para a medida. Para mais medidas contendo dados numéricos, a função de agregação é **Soma**. O valor da medida totalizará valores diferentes, dependendo de qual nível da hierarquia está ativo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando uma dimensão é usada para fatiar uma medida, a medida é resumida juntamente com hierarquias contidas nessa dimensão. O comportamento da soma depende da função de agregação especificada para a medida. Para mais medidas contendo dados numéricos, a função de agregação é **Soma**. O valor da medida totalizará valores diferentes, dependendo de qual nível da hierarquia está ativo.  
   
  No Analysis Services, cada medida que você cria é apoiada por uma função de agregação que determina a operação da medida. Os tipos de agregação predefinidos incluem **Soma**, **Mín**, **Máx**, **Contagem**, **Contagem Distinta**e várias outras funções mais especializadas. Como alternativa, se você precisar de agregações com base em fórmulas complexas ou personalizadas, poderá criar um cálculo de MDX em vez de usar uma função de agregação pré-compilada. Por exemplo, se você quiser definir uma medida para um valor de porcentagem, faria isso no MDX, usando uma medida calculada. Consulte [Instrução CREATE MEMBER &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md).  
   

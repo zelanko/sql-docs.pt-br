@@ -2,12 +2,12 @@
 title: "Conecte-se o aplicativo de serviço do Power Pivot para o aplicativo Web do SharePoint na autoridade de certificação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 673a35deddae2b67e6dfcdee51ecb1d9ca666cdc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7eacb900494941994ff38fd01f8b58e8939c1ebf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Conecte-se o aplicativo de serviço do Power Pivot para o aplicativo Web do SharePoint na autoridade de certificação
-  Um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pode ser usado por qualquer número de aplicativos Web do SharePoint no farm. Para disponibilizar um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , adicione-o a uma lista de associações de serviço.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicativo de serviço pode ser usado por qualquer número de aplicativos Web do SharePoint no farm. Para disponibilizar um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , adicione-o a uma lista de associações de serviço.  
   
 > [!IMPORTANT]  
 >  Deve haver apenas um aplicativo do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no grupo padrão para garantir o funcionamento correto do Painel de Gerenciamento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Não adicione mais de um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ao grupo padrão. A adição de várias entradas do mesmo tipo de aplicativo do serviço não é uma configuração compatível e pode causar erros. Se você estiver criando aplicativos de serviço adicionais, adicione-os a listas personalizadas.  

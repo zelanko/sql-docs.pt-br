@@ -2,12 +2,12 @@
 title: "Ocorreu um erro durante uma tentativa de estabelecer uma conexão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbc70ccf710772ba1b32abe5b65858d95ef2b38e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0f5cf8de15fdbb9eed6fae4cf4ccd17c3d99e56d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection"></a>Ocorreu um erro durante uma tentativa de estabelecer uma conexão
-  Esse erro ocorrerá se você consultar dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um servidor que não tenha o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint instalado. Isso também ocorrerá se o serviço SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) for interrompido, ou se você estiver tentando exibir dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de uma versão anterior.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esse erro ocorre se você consultar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dados em um servidor que não tenha [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint instalado. Isso também ocorrerá se o serviço SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) for interrompido, ou se você estiver tentando exibir dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de uma versão anterior.  
   
 ## <a name="details"></a>Detalhes  
   

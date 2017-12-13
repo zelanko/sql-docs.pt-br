@@ -2,12 +2,12 @@
 title: "Conteúdo do modelo de mineração (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52e0108a90e47ae9868b450375be26ffdf563c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
-  Depois de projetar e processar um modelo de mineração usando dados da estrutura de mineração subjacente, o modelo de mineração é concluído e contém o *conteúdo do modelo de mineração*. Você pode usar este conteúdo para fazer previsões ou analisar seus dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois que você tenha criado e processado um modelo de mineração usando dados da estrutura de mineração subjacente, o modelo de mineração é concluído e contém *conteúdo do modelo de mineração*. Você pode usar este conteúdo para fazer previsões ou analisar seus dados.  
   
  O conteúdo do modelo de mineração inclui metadados sobre o modelo, estatísticas sobre os dados e padrões descobertos pelo algoritmo de mineração. Dependendo do algoritmo usado, o conteúdo do modelo pode incluir fórmulas de regressão, as definições das regras e dos conjuntos de itens ou pesos e outras estatísticas.  
   

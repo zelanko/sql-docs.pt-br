@@ -2,12 +2,12 @@
 title: "Definir o write-back de partição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-partition-writeback"></a>Definir o write-back de partições
-  Se você habilitar um grupo de medidas para gravação, os usuários finais poderão alterar dados de cubo enquanto procuram por ele. As alterações são salvas em uma tabela separada chamada tabela de write-back e não nos dados de cubo ou na fonte de dados. Os usuários finais que procuram uma partição habilitada para gravação observam o efeito líquido de todas as alterações na tabela de write-back da partição.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se você habilitar um grupo de medidas, os usuários finais podem alterar dados de cubo enquanto procuram por ele, as alterações são salvas em uma tabela separada chamada tabela de write-back, não em dados de cubo ou fonte de dados. Os usuários finais que procuram uma partição habilitada para gravação observam o efeito líquido de todas as alterações na tabela de write-back da partição.  
   
  Os dados de write-back podem ser procurados ou excluídos. Também é possível converter os dados de write-back em uma partição. Em uma partição habilitada para gravação, é possível usar funções de cubo para conceder acesso de leitura/gravação a usuários e grupos de usuários e para limitar o acesso a células ou grupos de células específicos da partição.  
   

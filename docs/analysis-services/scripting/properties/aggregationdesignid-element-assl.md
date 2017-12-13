@@ -2,12 +2,12 @@
 title: Elemento AggregationDesignID (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52035a2ae555767586d0db95d1aa90b094935551
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2fbbbcf6e5fc9c5641ad9fc2bdbc8de8e4aa6119
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="aggregationdesignid-element-assl"></a>Elemento AggregationDesignID (ASSL)
-  Identifica o [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) elemento associado a [partição](../../../analysis-services/scripting/objects/partition-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifica o [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) elemento associado a [partição](../../../analysis-services/scripting/objects/partition-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
