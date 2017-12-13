@@ -2,9 +2,12 @@
 title: Estados de espelhamento (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 62690acf5d9e89f1d89aece14514385193057c1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4321216ddefa8ac3a3e6335a2432244f342c12da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mirroring-states-sql-server"></a>Estados de espelhamento (SQL Server)
-  Durante uma sessão de espelhamento de banco de dados, o banco de dados espelho está sempre em um estado específico (o *estado de espelhamento*). O estado do banco de dados reflete o status de comunicação, o fluxo de dados e a diferença nos dados entre os parceiros. A sessão de espelhamento de banco de dados adota o mesmo estado que o banco de dados principal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durante uma sessão de espelhamento de banco de dados, o banco de dados espelho está sempre em um estado específico (o *estado de espelhamento*). O estado do banco de dados reflete o status de comunicação, o fluxo de dados e a diferença nos dados entre os parceiros. A sessão de espelhamento de banco de dados adota o mesmo estado que o banco de dados principal.  
   
  Ao longo de uma sessão de espelhamento de banco de dados, as instâncias de servidor monitoram umas às outras. Os parceiros usam o estado de espelhamento para monitorar o banco de dados. Com exceção do estado PENDING_FAILOVER, os bancos de dados principal e espelho estão sempre no mesmo estado. Se uma testemunha for definida para a sessão, cada parceiro monitorará a testemunha que usar seu estado de conexão (CONNECTED ou DISCONNECTED).  
   

@@ -2,12 +2,12 @@
 title: Elemento DatabaseName (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9cb6983d3a978a2ec538a8cdc6bbf776271e1c16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 950aaf494e9fcda18210e3510838d570f2a268af
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="databasename-element-xmla"></a>Elemento DatabaseName (XMLA)
-  Identifica o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados a ser restaurado pelo pai [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) comando.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Identifica o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados a ser restaurado pelo pai [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   

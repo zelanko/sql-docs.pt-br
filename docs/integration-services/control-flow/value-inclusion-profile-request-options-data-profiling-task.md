@@ -1,5 +1,5 @@
 ---
-title: "Opções de solicitação de perfil de inclusão (tarefa criação de perfil de dados) do valor | Microsoft Docs"
+title: "Opções da solicitação do perfil Inclusão de Valor (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db75039979f7c0e4d6d17beeef4bf4457607290e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 65a3a26b41981e6dc4c67219a52b76f822e78610
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Inclusão de Valor (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação do Perfil de Inclusão de Valor** selecionada no painel de solicitações. Um perfil de Inclusão de Valor computa a sobreposição nos valores entre duas colunas ou conjuntos de colunas. Portanto, esse perfil também pode determinar se uma coluna ou conjunto de colunas é apropriado para servir como uma chave estrangeira entre as tabelas selecionadas. Esse perfil também pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você usa um perfil de inclusão de valor para criar um perfil para a coluna ProductID de uma tabela de vendas. O perfil descobre que a coluna contém valores que não são encontrados na coluna ProductID da tabela Produtos.  
@@ -162,8 +159,7 @@ ms.lasthandoff: 08/03/2017
  Especifique o número máximo de violações de inclusão a serem informadas na saída. O valor padrão dessa propriedade é 100. Esta opção é desabilitada quando **Exato** é selecionado como **InclusionThresholdSetting**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

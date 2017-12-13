@@ -2,9 +2,12 @@
 title: Janela Pilha de Chamadas| Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c0f984d7e59d71f46843dc8a2bef1295943fb3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 403dbe97619340a3075792b999b54500ab79d4fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Depurador do Transact-SQL – Janela Pilha de Chamadas
-  A janela **Pilha de Chamadas** exibe os módulos da pilha de chamadas e os valores e tipos de dados de quaisquer parâmetros que passaram para os módulos. [!INCLUDE[tsql](../../includes/tsql-md.md)] os módulos incluem procedimentos armazenados, funções e gatilhos. Para exibir a pilha de chamadas, você deve estar no modo de depuração.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela **Pilha de Chamadas** exibe os módulos da pilha de chamadas e os valores e tipos de dados de quaisquer parâmetros que passaram para os módulos. [!INCLUDE[tsql](../../includes/tsql-md.md)] os módulos incluem procedimentos armazenados, funções e gatilhos. Para exibir a pilha de chamadas, você deve estar no modo de depuração.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para acessar a janela Pilha de Chamadas**  

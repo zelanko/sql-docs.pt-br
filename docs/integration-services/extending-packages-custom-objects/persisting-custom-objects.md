@@ -1,5 +1,5 @@
 ---
-title: "Objetos personalizados de persistência | Microsoft Docs"
+title: Persistir objetos personalizados | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom objects [Integration Services], persisting
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7b43f65b19f3dd4804ba1f7c18a81b640ed277d5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 27b800182751ea40ad827c77ea71c6f2815eecc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="persisting-custom-objects"></a>Persistência de objetos personalizados
-  Você não precisa implementar a persistência personalizada para os objetos personalizados que você cria, desde que suas propriedades usem somente tipos de dados simples, como **inteiro** e **cadeia de caracteres**. A implementação padrão de persistência salva os metadados para seu objeto junto com os valores de todas as suas propriedades.  
+  Você não precisa implementar a persistência personalizada para os objetos personalizados que você criar, desde que suas propriedades usem somente tipos de dados simples como **integer** e **string**. A implementação padrão de persistência salva os metadados para seu objeto junto com os valores de todas as suas propriedades.  
   
  Entretanto, se o seu objeto tiver propriedades que usem tipos de dados complexos ou se você desejar realizar o processamento personalizado nos valores da propriedade conforme forem carregados e salvos, poderá implementar a interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> e seus métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A>. Nesses métodos, você carrega da (ou salva na) definição XML do pacote um fragmento XML que contém as propriedades do seu objeto e os respectivos valores atuais. O formato desse fragmento de XML não é definido; deve ser somente XML bem formado.  
   
@@ -38,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 >  Quando você implementar a persistência personalizada, deverá persistir em todas as propriedades do objeto, incluindo as propriedades herdadas e as personalizadas que você adicionou.  
   
 ## <a name="example"></a>Exemplo  
- Embora o exemplo do Gerenciador de Conexão personalizado do Sql Server não exija persistência personalizada para suas três propriedades do tipo **cadeia de caracteres**, o código a seguir mostra um exemplo de código personalizado que seria necessário para persistir o Gerenciador de conexão e suas propriedades. A classe que contém esse código deve implementar a interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>.  
+ Embora o exemplo do Gerenciador de Conexões Personalizado do SQL Server não exija persistência personalizada para suas três propriedades do tipo **string**, o código a seguir mostra um exemplo do código personalizado que seria necessário para persistir o gerenciador de conexões e suas propriedades. A classe que contém esse código deve implementar a interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>.  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  
@@ -167,4 +163,3 @@ public void SaveToXML(System.Xml.XmlDocument doc,
  [Compilando, implantando e depurando objetos personalizados](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   
   
-

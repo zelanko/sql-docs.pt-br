@@ -2,9 +2,12 @@
 title: Classe de evento Data File Auto Shrink | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b30109dc3f7ea8eed7e819c3fb7654aff5fc9ea1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 47c05cf969cf8b76f8905b097bd07d86fc0baa4b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-file-auto-shrink-event-class"></a>classe de evento Data File Auto Shrink
-  A classe de evento **Data File Auto Shrink** indica que o arquivo de dados pode ser reduzido. Esse evento não será acionado se o arquivo de dados for reduzido devido a uma instrução ALTER DATABASE explícita. Inclua a classe de evento **Data File Auto Shrink** nos rastreamentos que monitoram as alterações de tamanho do arquivo de dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Data File Auto Shrink** indica que o arquivo de dados pode ser reduzido. Esse evento não será acionado se o arquivo de dados for reduzido devido a uma instrução ALTER DATABASE explícita. Inclua a classe de evento **Data File Auto Shrink** nos rastreamentos que monitoram as alterações de tamanho do arquivo de dados.  
   
  Quando a classe de evento **Data File Auto Shrink** é incluída no rastreamento, a quantidade de sobrecarga incorrida é baixa, a menos que o arquivo de dados seja reduzido frequentemente.  
   

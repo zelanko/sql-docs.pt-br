@@ -2,12 +2,12 @@
 title: "Processar banco de dados, tabela ou partição (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77ae5703b9a45a9f15eddfd4eb933fed62a9ab1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bd4457fefbd0afa6caaf1402e961a4604a58d855
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="process-database-table-or-partition-analysis-services"></a>Processar banco de dados, tabela ou partição (Analysis Services)
-  As tarefas neste tópico descrevem como processar um banco de dados de modelo de tabela, tabela ou partições manualmente usando o **processo \<objeto >** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]As tarefas neste tópico descrevem como processar um banco de dados de modelo de tabela, tabela ou partições manualmente usando o **processo \<objeto >** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Para obter mais informações sobre o processamento de modelos de tabela, veja [Processar dados &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   

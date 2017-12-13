@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: daf64f88220832573485701883921ad575e789bc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b2299c726ac0f34556b0b95126573d584193b93c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Como criar e editar um Serviço CDC
   Estes procedimentos descrevem como criar e editar um novo Serviço Oracle CDC a partir do Console de Configuração do Serviço CDC.  
@@ -69,8 +67,7 @@ ms.lasthandoff: 08/03/2017
 5.  Clique em **OK** na caixa de diálogo Conectar ao Oracle. Ambas as caixas de diálogo fecham e o serviço é atualizado e registrado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Change Data Capture Designer para Oracle da attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Change Data Capture Designer para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Criar e editar um serviço Oracle CDC](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
-

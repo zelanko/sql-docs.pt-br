@@ -2,9 +2,12 @@
 title: "Obter informações sobre gatilhos DML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0cafdf4bc0fb8fcc9fdb8465b77f8c5dc757698
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a122a5b17171241742d9f573fa8840360957ba12
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-information-about-dml-triggers"></a>Obter informações sobre gatilhos DML
-  Este tópico descreve como obter informações sobre os gatilhos DML no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Essas informações podem incluir os tipos de gatilhos em uma tabela, o nome de um gatilho, seu proprietário e a data em que foi criado ou modificado. Se o gatilho não tiver sido criptografado quando foi criado, você obterá a definição do gatilho. A definição ajudará a entender como um gatilho afeta a tabela na qual está definido. Além disso, você pode descobrir os objetos que um gatilho específico usa. Com essas informações, você pode identificar os objetos que afetam o gatilho se eles são alterados ou excluídos do banco de dados.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Este tópico descreve como obter informações sobre os gatilhos DML no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Essas informações podem incluir os tipos de gatilhos em uma tabela, o nome de um gatilho, seu proprietário e a data em que foi criado ou modificado. Se o gatilho não tiver sido criptografado quando foi criado, você obterá a definição do gatilho. A definição ajudará a entender como um gatilho afeta a tabela na qual está definido. Além disso, você pode descobrir os objetos que um gatilho específico usa. Com essas informações, você pode identificar os objetos que afetam o gatilho se eles são alterados ou excluídos do banco de dados.  
   
  **Neste tópico**  
   

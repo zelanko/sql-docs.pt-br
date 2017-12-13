@@ -2,9 +2,12 @@
 title: "Envio de logs e replicação (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fc7c67f47d535a639f1862cc1bc8be92855f6567
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 074a97f74e322b75030d5a921ba4e2b453a59a49
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Replicação e envio de logs (SQL Server)
-  O envio de logs envolve duas cópias de um único banco de dados que, normalmente, residem em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados primário. As atualizações feitas pelos clientes no banco de dados primário são propagadas por meio do envio de logs para a outra cópia do banco de dados, conhecida como banco de dados secundário. O envio de logs envolve a aplicação de um log de transações de todas as inserções, atualizações ou exclusões feitas no banco de dados primário para o banco de dados secundário.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O envio de logs envolve duas cópias de um único banco de dados que, normalmente, residem em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados primário. As atualizações feitas pelos clientes no banco de dados primário são propagadas por meio do envio de logs para a outra cópia do banco de dados, conhecida como banco de dados secundário. O envio de logs envolve a aplicação de um log de transações de todas as inserções, atualizações ou exclusões feitas no banco de dados primário para o banco de dados secundário.  
   
  O envio de logs pode ser usado em combinação com a replicação, com o seguinte comportamento:  
   

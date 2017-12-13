@@ -2,12 +2,12 @@
 title: Conecte-se em modo Online a um banco de dados do Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 40d9f0516485989d7791046c197732bdab103a4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d27d9188f45f2ac2e2afe9be1b8f28b1ed6d62e6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Conectar em Modo Online a um Banco de Dados do Analysis Services
-  Você pode se conectar diretamente a um banco de dados existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e modificar seus objetos. Quando você se conecta diretamente a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , as alterações feitas nos objetos ocorrem de imediato e nenhum projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode se conectar diretamente a um existente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados e modificar diretamente objetos no banco de dados. Quando você se conecta diretamente a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , as alterações feitas nos objetos ocorrem de imediato e nenhum projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-connect-directly-to-an-analysis-services-database-by-using-sql-server-data-tools"></a>Conectar-se diretamente a um banco de dados do Analysis Services usando as Ferramentas de Dados do SQL Server  
   

@@ -1,5 +1,5 @@
 ---
-title: Origem do SAP BW | Microsoft Docs
+title: Origem SAP BW | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe41cbbd7a58fe50e6dbfaa2c85b9f5f22cea0b5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e7a2f3ea58e0237ce5e037306223c6231fd12fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-source"></a>Origem SAP BW
   A fonte SAP BW é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW. Assim, a origem do SAP BW extrai dados de um sistema SAP Netweaver BW versão 7 e torna estes dados disponíveis para o fluxo de dados em um pacote do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -127,13 +125,13 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Usando o Designer SSIS para configurar a origem  
  Para obter mais informações sobre as propriedades da origem do SAP BW que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor de origem do SAP BW &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Editor de Origem SAP BW &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Editor de origem do SAP BW &#40; Página colunas &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Editor de Origem SAP BW &#40;Página Colunas&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Editor de origem do SAP BW &#40; Página de saída de erro &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Editor de Origem SAP BW &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Editor de origem do SAP BW &#40; Página Avançado &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Editor de Origem SAP BW &#40;Página Avançado&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  Quando você estiver configurando a origem do SAP BW, também poderá usar várias caixas de diálogo para pesquisar objetos do SAP Netweaver BW ou visualizar os dados da origem. Para obter mais informações sobre essas caixas de diálogo, clique em um dos seguintes tópicos:  
   
@@ -149,4 +147,3 @@ ms.lasthandoff: 08/03/2017
  [Componentes do Microsoft Connector 1.1 para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

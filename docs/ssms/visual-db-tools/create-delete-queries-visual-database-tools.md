@@ -3,8 +3,11 @@ title: "Criar consultas de exclusão (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad9076f8acb0236ce85bb0b72b6890174d54d04e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 393e4cefa030f868ead38f0dbf94ee9908f561d9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>Criar consultas de exclusão (Visual Database Tools)
-Você pode excluir todas as linhas em uma tabela usando uma consulta Exclusão.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode excluir todas as linhas em uma tabela usando uma consulta Delete.  
   
 > [!NOTE]  
 > A exclusão de todas as linhas da tabela limpa os dados na tabela, mas não exclui a tabela em si. Para excluir uma tabela de um banco de dados, clique com o botão direito do mouse na tabela no Pesquisador de Objetos e clique em **Excluir**.  

@@ -3,8 +3,11 @@ title: "Caixa de diálogo Definições de Consulta Diferem (Visual Database Tool
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7ddf380e1e740f1704ac89ef59b93f7f939fe90
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8f350cc4cc985ca672cfc571f98b9adb04db935a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>Caixa de diálogo Definições de Consulta Diferem (Visual Database Tools)
-A caixa de diálogo notifica que a consulta não pode ser representada graficamente nos painéis de Diagrama e de Critério e que será possível editar a consulta apenas no painel SQL.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Essa caixa de diálogo notifica que a consulta não pode ser representada graficamente nos painéis de Diagrama e de Critério e que será possível editar a consulta apenas no painel SQL.  
   
 A caixa de diálogo pode aparecer ao digitar ou editar uma instrução SQL no painel SQL; depois você irá para outro painel, verificará a consulta ou tentará executar a consulta, e uma das seguintes condições é aplicada:  
   

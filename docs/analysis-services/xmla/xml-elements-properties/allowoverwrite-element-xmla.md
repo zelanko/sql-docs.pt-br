@@ -2,12 +2,12 @@
 title: Elemento AllowOverwrite (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8a65790ff5e85497fcff60551c4bc38d1fab75b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e13ee21a956848f5e8da9b203af42d3f42d07ce
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="allowoverwrite-element-xmla"></a>Elemento AllowOverwrite (XMLA)
-  Determina se o pai [Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) ou [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) comando tenta substituir o arquivo de destino ou o banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Determina se o pai [Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) ou [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) comando tenta substituir o arquivo de destino ou o banco de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -2,12 +2,12 @@
 title: "Programação do servidor do ADOMD.NET | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd825c22b7b6b4436d57c0baaeaf6abdb416cd91
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ec1460930df27e1111d17b6c5692f82186348153
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-server-programming"></a>Programando o servidor no ADOMD.NET
-  Os componentes de servidor do ADOMD.NET residem dentro de **adomdserver** namespace (em msmgdsrv.dll). Use estes componentes do servidor para criar funções personalizadas de MDX (Multidimensional Expressions) e procedimentos armazenados que são executados em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os objetos de servidor oferecem os recursos para a consulta de cubos e de modelos de mineração e para a avaliação de expressões em um determinado contexto. Os benefícios da criação de funções e de procedimentos armazenados personalizados incluem execução rápida, implantação centralizada e maior facilidade de manutenção.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Os componentes de servidor do ADOMD.NET residem dentro de **adomdserver** namespace (em msmgdsrv.dll). Use estes componentes do servidor para criar funções personalizadas de MDX (Multidimensional Expressions) e procedimentos armazenados que são executados em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os objetos de servidor oferecem os recursos para a consulta de cubos e de modelos de mineração e para a avaliação de expressões em um determinado contexto. Os benefícios da criação de funções e de procedimentos armazenados personalizados incluem execução rápida, implantação centralizada e maior facilidade de manutenção.  
   
  Os tópicos da tabela a seguir ajudarão você a desenvolver aplicativos de servidor com o ADOMD.NET.  
   

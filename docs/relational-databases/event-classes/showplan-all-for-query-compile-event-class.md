@@ -2,9 +2,12 @@
 title: Classe de evento Showplan All for Query Compile | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ae3b7c3f1711ff1987628ef7bf4f9f0a8513451
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c57d6ba87f0333b8436ad7135d1c789c460a65d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Classe de evento Showplan All for Query Compile
-  A classe de evento Showplan All for Query Compile ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila uma instrução SQL. Inclua essa classe de evento para identificar os operadores Showplan. As informações incluídas são um subconjunto das informações disponíveis na classe de evento Showplan XML For Query Compile.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento Showplan All for Query Compile ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila uma instrução SQL. Inclua essa classe de evento para identificar os operadores Showplan. As informações incluídas são um subconjunto das informações disponíveis na classe de evento Showplan XML For Query Compile.  
   
  A classe de evento Showplan All for Query Compile exibe dados de tempo de compilação completos e, portanto, os rastreamentos que contêm Showplan All for Query Compile podem provocar sobrecarga de desempenho significativa. Para minimizar isso, limite o uso dessa classe de evento a rastreamentos que monitorem problemas específicos por períodos breves de tempo.  
   

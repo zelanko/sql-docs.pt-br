@@ -2,9 +2,12 @@
 title: Classe de evento Deprecation Final Support | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17095ce06acb9ed65e30c38bd71bb966fe6bc76d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cdf73d4ccb8d8ccfaa366f599368cce51fa310c8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecation-final-support-event-class"></a>Classe de evento Deprecation Final Support
-  A classe de evento **Deprecation Final Support** ocorre quando é usado um recurso que será removido da próxima versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que seus aplicativos tenham tempo de vida mais longo, não use recursos que provoquem a classe de evento **Deprecation Final Support** ou **Deprecation Announcement** . Modifique os aplicativos que usam recursos de substituição final o mais rápido possível.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Deprecation Final Support** ocorre quando é usado um recurso que será removido da próxima versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que seus aplicativos tenham tempo de vida mais longo, não use recursos que provoquem a classe de evento **Deprecation Final Support** ou **Deprecation Announcement** . Modifique os aplicativos que usam recursos de substituição final o mais rápido possível.  
   
 ## <a name="deprecation-final-support-event-class-data-columns"></a>Colunas de dados da classe de evento Deprecation Final Support  
   

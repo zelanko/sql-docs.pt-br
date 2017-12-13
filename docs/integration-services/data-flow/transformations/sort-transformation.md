@@ -1,5 +1,5 @@
 ---
-title: "Transformação classificação | Microsoft Docs"
+title: "Transformação Classificação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: bcffbef3e370183c6e37726e23d058d342d252e2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: d7bd6daad055d9fd72d0f67c219499084940501b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sort-transformation"></a>Transformação Classificação
   A transformação Classificação ordena os dados de entrada de modo crescente ou decrescente e os copia na saída da transformação. Você pode aplicar várias classificações a uma entrada. Cada classificação é identificada por um numeral que determina a ordem de classificação. A coluna com o número mais baixo é classificada primeiro, a com o segundo número mais baixo é classificada em seguida e assim por diante. Por exemplo, se uma coluna denominada **CountryRegion** tiver uma ordem de classificação 1 e uma coluna denominada **City** tiver uma ordem de classificação 2, a saída será ordenada por país/região e depois por cidade. Um número positivo indica que a classificação está aumentando, e um negativo que está diminuindo. As colunas que não forem classificadas terão a ordem de classificação 0. As colunas que não forem selecionadas para classificação serão automaticamente copiadas para a saída de transformação junto com as colunas classificadas.  
@@ -100,4 +98,3 @@ ms.lasthandoff: 08/19/2017
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

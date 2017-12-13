@@ -1,5 +1,5 @@
 ---
-title: Componente de fluxo de log e definindo entradas de Log em um dado | Microsoft Docs
+title: Registrar em log e definir entradas de log em um componente de fluxo de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,36 +8,33 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - logs [Integration Services], custom
 - custom log entries [Integration Services]
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a0cbdbb818c7299221172f5ceb9b4ee5c54bddcb
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dbe113aad9e86802378eec1b24cc6539d758a5ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Registrando em log e definindo entradas de log em um componente de fluxo de dados
   Os componentes de fluxo de dados personalizados podem postar mensagens em uma entrada de log existente por meio do método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Eles também podem apresentar informações ao usuário através do método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> ou de métodos semelhantes da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Entretanto, essa abordagem leva à sobrecarga pois eventos adicionais são gerados e manipulados, e força o usuário a examinar mensagens informativas detalhadas em busca de mensagens que possam ser do seu interesse. Você pode usar uma entrada de log personalizada, conforme descrito a seguir, para fornecer informações de log personalizadas com rótulos distintos a usuários de seu componente.  
   
 ## <a name="registering-and-using-a-custom-log-entry"></a>Registrando e usando uma entrada de log personalizada  
   
-### <a name="registering-a-custom-log-entry"></a>Registrar uma entrada de Log personalizado  
+### <a name="registering-a-custom-log-entry"></a>Registrar uma entrada de log personalizada  
  Para registrar uma entrada de log personalizada a ser usada por seu componente, substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterLogEntries%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>. O exemplo a seguir registra uma entrada de log personalizada e fornece um nome e uma descrição.  
   
 ```csharp  
@@ -77,7 +74,7 @@ End Sub
   
  O exemplo anterior usa o <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT> pois o componente espera registrar uma só entrada em cada execução.  
   
- Depois de registrar a entrada de log personalizada e adicionar uma instância do seu componente personalizado para a superfície de designer de fluxo de dados, o **log** caixa de diálogo no designer exibe uma nova entrada de log com o nome "My personalizado Component Log Entry" na lista de entradas de log disponíveis.  
+ Depois de registrar a entrada de log personalizada e adicionar uma instância do seu componente personalizado na superfície do designer de fluxo de dados, a caixa de diálogo **Log** do designer exibe uma nova entrada de log com o nome "My Custom Component Log Entry" na lista de entradas de log disponíveis.  
   
 ### <a name="logging-to-a-custom-log-entry"></a>Registrando uma entrada de log personalizada  
  Depois do registro da entrada de log personalizada, o componente pode registrar mensagens personalizadas. O exemplo a seguir escreve uma entrada de log personalizada durante o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> que contém o texto de uma instrução SQL usado pelo componente.  
@@ -105,10 +102,9 @@ Public  Overrides Sub PreExecute()
 End Sub  
 ```  
   
- Agora quando o usuário executa o pacote, depois de selecionar o "My Custom Component Log Entry" no **log** caixa de diálogo, o log conterá uma entrada claramente rotulada como "User:: My Custom Component Log Entry". Essa nova entrada de log contém o texto da instrução SQL, o carimbo de data/hora e quaisquer dados adicionais registrados pelo desenvolvedor.  
+ Agora, quando o usuário executar o pacote, depois de selecionar "My Custom Component Log Entry" na caixa de diálogo **Log**, o log conterá uma entrada claramente rotulada como "User::My Custom Component Log Entry". Essa nova entrada de log contém o texto da instrução SQL, o carimbo de data/hora e quaisquer dados adicionais registrados pelo desenvolvedor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Integration Services &#40; SSIS &#41; Registro em log](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registro em Log do SSIS &#40;Integration Services&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

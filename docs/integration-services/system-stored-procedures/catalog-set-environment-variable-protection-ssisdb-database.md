@@ -1,5 +1,5 @@
 ---
-title: Catalog. set_environment_variable_protection (banco de dados SSISDB) | Microsoft Docs
+title: catalog.set_environment_variable_protection (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6d282ca675a35e84f2d283d3ad85b15039a15e52
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ba92aca58744a652314630f786ea6783e51b1cbb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +38,17 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
- O nome da pasta que contém o ambiente. O *nome_da_pasta* é **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ O nome da pasta que contém o ambiente. O *folder_name* é **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- O nome do ambiente. O *environment_name* é **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ O nome do ambiente. O *environment_name* é **nvarchar(128)**.  
   
- [ @variable_name =] *variable_name*  
- O nome da variável de ambiente. O *variable_name* é **nvarchar (128)**.  
+ [ @variable_name = ] *variable_name*  
+ O nome da variável de ambiente. O *variable_name* é **nvarchar(128)**.  
   
- [ @sensitive =] *confidenciais*  
- Indica se a variável contém um valor confidencial ou não. Use um valor de `1` para indicar que o valor da variável de ambiente é confidencial ou um valor de `0` para indicar que não é. Um valor confidencial é criptografado quando é armazenado. Um valor que não é confidencial é armazenado em texto não criptografado. O *confidenciais* parâmetro é **bit**.  
+ [ @sensitive = ] *sensitive*  
+ Indica se a variável contém um valor confidencial ou não. Use um valor de `1` para indicar que o valor da variável de ambiente é confidencial ou um valor de `0` para indicar que não é. Um valor confidencial é criptografado quando é armazenado. Um valor que não é confidencial é armazenado em texto não criptografado. O parâmetro *sensitive* é **bit**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
@@ -63,9 +61,9 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
   
 -   Permissões READ e MODIFY no ambiente  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
@@ -79,4 +77,3 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
 -   O usuário não tem as permissões apropriadas  
   
   
-

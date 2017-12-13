@@ -2,12 +2,12 @@
 title: Navegando no cubo | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 00dee701e3bea7e30924352e136c6202d6a10ced
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0dbee75cc8ac8550df25d47265796d4526442787
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>Lição 2-6-navegando no cubo
-Depois de implantar um cubo, os dados do cubo poderão ser vistos na guia **Navegador** no Designer de Cubo e os dados de dimensão poderão ser vistos na guia **Navegador** no Designer de Dimensão. Navegar dados de cubo e de dimensão é uma maneira de verificar seu trabalho incrementalmente. Você pode verificar se as pequenas alterações em propriedades, relações e outros objetos têm o efeito desejado quando o objeto é processado. Embora a guia Navegador seja usada para exibir os dados de cubo e de dimensão, a guia fornece recursos diferentes com base no objeto que você está procurando.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Depois de implantar um cubo, os dados do cubo são visíveis no **navegador** guia no Designer de cubo e os dados de dimensão possa ser exibido o **navegador** guia no Designer de dimensão. Navegar dados de cubo e de dimensão é uma maneira de verificar seu trabalho incrementalmente. Você pode verificar se as pequenas alterações em propriedades, relações e outros objetos têm o efeito desejado quando o objeto é processado. Embora a guia Navegador seja usada para exibir os dados de cubo e de dimensão, a guia fornece recursos diferentes com base no objeto que você está procurando.  
   
 Para dimensões, a guia Navegador fornece um modo de exibir os membros ou navegar em uma hierarquia até o nó folha. Você pode procurar dados de dimensão em idiomas diferentes, supondo que tenha adicionado as traduções a seu modelo.  
   

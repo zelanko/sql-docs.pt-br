@@ -2,9 +2,12 @@
 title: Otimizando a tabela NewOrg | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7765d8f8a4953f428cae4843d0f89aaa92678a8a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1bef7b50cb8f67baeca6e17c9406fc542a8e73fd
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-3---optimizing-the-neworg-table"></a>Lição 1-3 – Otimizando a tabela NewOrg
-A tabela **NewOrd** criada na tarefa [Populando uma tabela com dados hierárquicos existentes](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contém todas as informações de funcionários e representa a estrutura hierárquica usando um tipo de dados **hierarchyid** . Essa tarefa adiciona índices novos para dar suporte às pesquisas na coluna **hierarchyid** .  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] A tabela **NewOrd** criada na tarefa [Populando uma tabela com os dados hierárquicos existentes](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contém todas as informações de funcionários e representa a estrutura hierárquica usando um tipo de dados **hierarchyid**. Essa tarefa adiciona índices novos para dar suporte às pesquisas na coluna **hierarchyid** .  
   
 ## <a name="clustered-index"></a>Índice clusterizado  
 A coluna **hierarchyid** (**OrgNode**) é a chave primária da tabela **NewOrg** . Quando a tabela foi criada, ela continha um índice clusterizado chamado **PK_NewOrg_OrgNode** para impor a exclusividade da coluna **OrgNode** . Esse índice clusterizado também oferece suporte a uma pesquisa primária detalhada da tabela.  

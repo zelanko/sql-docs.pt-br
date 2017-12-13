@@ -1,5 +1,5 @@
 ---
-title: "Opções de solicitação do perfil dependência funcional (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Opções da solicitação do perfil Dependência Funcional (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4efcec555b59668145cd2b998c77a9cc1f8feb54
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0958bc22c6ed4a6790145a430fefbe68312cd634
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Dependência Funcional (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Dependência Funcional** selecionada no painel de solicitações. Um perfil de Dependência Funcional informa até que ponto os valores em uma coluna (a coluna dependente) dependem dos valores em outra coluna ou conjunto de colunas (a coluna determinante). Esse perfil também pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você perfila a dependência entre uma coluna Código Postal e uma coluna estado dos Estados Unidos. Nesse perfil, o mesmo Código Postal deve sempre ter o mesmo estado, mas o perfil descobre violações da dependência.  
@@ -128,8 +125,7 @@ ms.lasthandoff: 08/03/2017
  Especifique o número máximo de violações de dependência funcional a ser informado na saída. O valor padrão dessa propriedade é 100. Esta opção é desabilitada quando **Exato** é selecionado como **ThresholdSetting**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

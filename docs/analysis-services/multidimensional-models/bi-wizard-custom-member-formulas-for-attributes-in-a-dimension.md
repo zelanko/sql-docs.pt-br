@@ -2,12 +2,12 @@
 title: "Definir fórmulas de membro personalizado para os atributos em uma dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f6cd6ca41dab2aa9d213281de94882c03f50db2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10b6f8e3daf8a5b13bee1bef87454dfc40096804
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>Assistente de BI - fórmulas de membro personalizado para os atributos em uma dimensão
-  Adicione um aprimoramento de fórmula de membro personalizado a um cubo ou a uma dimensão para substituir as agregações padrão associadas a um membro da dimensão pelos resultados de uma expressão MDX. (Esse aprimoramento define a propriedade **CustomRollupColumn** em um atributo especificado de uma dimensão.)  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Adicione um aprimoramento de fórmula de membro personalizado a um cubo ou dimensão para substituir a agregação padrão associada um membro de dimensão com os resultados de uma expressão MDX (Multidimensional Expressions). (Esse aprimoramento define a propriedade **CustomRollupColumn** em um atributo especificado de uma dimensão.)  
   
 > [!NOTE]  
 >  Uma fórmula de membro personalizado estará disponível somente para dimensões baseadas em fontes de dados existentes. Para dimensões que foram criadas sem usar uma fonte de dados, execute o Assistente de Geração de Esquema para criar uma exibição da fonte de dados antes de adicionar a fórmula de membro personalizado.  

@@ -2,9 +2,12 @@
 title: "Caixa de diálogo Exibição Detalhada de Resultados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08577691b503c3d5b013593980d599744d5f224d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: df78363c57e6ba59b4ff2878144c4e99b221e0a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="results-detailed-view-dialog-box"></a>Caixa de diálogo Exibição Detalhada de Resultados
-  Esta caixa de diálogo mostra os resultados da avaliação da política após você ter executado uma política usando a caixa de diálogo **Avaliar Políticas** e ter clicado em **Avaliar**. Esta caixa de diálogo é somente leitura e ajuda a entender qual parte de uma expressão de propriedade poderia estar falhando.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta caixa de diálogo mostra os resultados da avaliação da política após você ter executado uma política usando a caixa de diálogo **Avaliar Políticas** e ter clicado em **Avaliar**. Esta caixa de diálogo é somente leitura e ajuda a entender qual parte de uma expressão de propriedade poderia estar falhando.  
   
 ## <a name="options"></a>Opções  
  **AndOr**  

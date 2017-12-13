@@ -1,12 +1,13 @@
 ---
 title: "Backups de instantâneo de arquivo para arquivos de banco de dados no Azure | Microsoft Docs"
-ms.custom:
-- IAAS
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 51364693e9385333392ea96258e547b2c8fbea96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6546a08f4d45f8104a752ed8ba578b3b82f97be9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backups de instantâneo de arquivo para arquivos de banco de dados no Azure
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O backup de instantâneo de arquivo usa os instantâneos do Azure para fornecer backups quase imediatos e restaurações mais rápidas para os arquivos de banco de dados armazenados usando o serviço de Armazenamento de Blobs do Azure. Esse recurso permite que você simplifique as políticas de backup e restauração. Para uma demonstração ao vivo, confira [Demonstração da recuperação pontual](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). Para saber mais sobre como armazenar arquivos de banco de dados usando o serviço de armazenamento de Blog do Azure, consulte [Arquivos de dados do SQL Server no Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O backup de instantâneo de arquivo usa os instantâneos do Azure para fornecer backups quase imediatos e restaurações mais rápidas para os arquivos de banco de dados armazenados usando o serviço de Armazenamento de Blobs do Azure. Esse recurso permite que você simplifique as políticas de backup e restauração. Para uma demonstração ao vivo, confira [Demonstração da recuperação pontual](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). Para saber mais sobre como armazenar arquivos de banco de dados usando o serviço de armazenamento de Blog do Azure, consulte [Arquivos de dados do SQL Server no Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
  ![diagrama de arquitetura de backup de instantâneo](../../relational-databases/backup-restore/media/snapshotbackups.PNG "diagrama de arquitetura de backup de instantâneo")  
   

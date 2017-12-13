@@ -2,12 +2,12 @@
 title: "Configurar conjunto de campo padrão para relatórios do Power View (SSAS Tabular) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b357d75c87cc9a2a086382bbbf65079b31b59b52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5a36f650081d5932e7100abc923b627a4aa47c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View - Configure o conjunto de campo padrão para relatórios
-  Um conjunto de campo padrão é uma lista predefinida de colunas e medidas que são adicionadas automaticamente a uma tela de relatório do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] quando a tabela é selecionada na lista de campos de relatório. Os autores de modelo de tabela podem criar um campo padrão definido para eliminar etapas redundantes para autores de relatório que usam o modelo para os seus relatórios. Por exemplo, se você souber que a maioria dos autores de relatório que trabalham com informações de contato de cliente sempre querem ver um nome de contato, um número de telefone principal, um endereço de email e um nome de empresa, poderá pré-selecionar essas colunas para que elas sempre sejam adicionadas à tela de relatório quando o autor clicar na tabela Contato do Cliente.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Um conjunto de campo padrão é uma lista predefinida de colunas e medidas que são automaticamente adicionadas a um [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] tela de relatório quando a tabela é selecionada na lista de campos de relatório. Os autores de modelo de tabela podem criar um campo padrão definido para eliminar etapas redundantes para autores de relatório que usam o modelo para os seus relatórios. Por exemplo, se você souber que a maioria dos autores de relatório que trabalham com informações de contato de cliente sempre querem ver um nome de contato, um número de telefone principal, um endereço de email e um nome de empresa, poderá pré-selecionar essas colunas para que elas sempre sejam adicionadas à tela de relatório quando o autor clicar na tabela Contato do Cliente.  
   
 > [!NOTE]  
 >  Um conjunto de campo padrão só se aplica a um modelo de tabela como um modelo de dados no [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Os conjuntos de campo padrão não têm suporte em relatórios dinâmicos do Excel.  

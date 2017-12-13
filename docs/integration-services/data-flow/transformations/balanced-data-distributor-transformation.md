@@ -1,5 +1,5 @@
 ---
-title: "Balanceamento de transformação do distribuidor de dados | Microsoft Docs"
+title: "Transformação Distribuidor de Dados Equilibrado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.balanceddatadistributor.f1
+f1_keywords: sql13.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a148470ac38ee6168d5c6a245899d629a0e3250
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c625840d537599994213b51cfd0d53601f904ed6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformação de BDD (Balanced Data Distributor)
   A transformação de BDD (Balanced Data Distributor) aproveita o recurso de processamento simultâneo de CPUs modernas. Ela distribui buffers de linhas de entrada uniformemente em saídas em threads separados. Usando threads separados para cada caminho de saída, o componente de BDD melhora o desempenho de um pacote SSIS em computadores de vários núcleos ou de vários processadores.  
   
  O diagrama a seguir mostra um exemplo simples de como usar a transformação de BDD. Neste exemplo, a transformação de BDD escolhe um buffer de pipeline de cada vez a partir dos dados de entrada de uma fonte de arquivo simples, e envia-o a um dos três caminhos de saída em uma forma round robin. No SQL Server Data Tools, você pode verificar os valores de um <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>(tamanho padrão do buffer de pipeline) e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(número máximo de linhas padrão em um buffer de pipeline) na janela **Propriedades** que exibe as propriedades de uma tarefa de fluxo de dados.  
   
- ![Balanced Data Distributor](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "balanceada distribuidor de dados")  
+ ![Distribuidor de Dados Equilibrado](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "Distribuidor de Dados Equilibrado")  
   
  A transformação de BDD ajuda a melhorar o desempenho de um pacote em um cenário que satisfaça as seguintes condições:  
   
@@ -48,4 +45,3 @@ ms.lasthandoff: 08/03/2017
 >  Consulte o vídeo [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278) na biblioteca do TechNet para obter uma apresentação com uma demonstração sobre o uso da transformação.  
   
   
-

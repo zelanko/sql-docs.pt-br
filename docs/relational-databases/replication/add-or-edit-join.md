@@ -2,9 +2,12 @@
 title: "Adicionar ou editar junção | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ef3cc313a76a26f075ab295a5559792dd872e32
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 09a75529623523ea12d51263ef6fede558840410
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-or-edit-join"></a>Adicionar ou Editar Junção
-  As caixas de diálogo **Adicionar Junção** e **Editar Junção** permitem adicionar e editar filtros de junção para publicações de mesclagem.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] As caixas de diálogo **Adicionar Junção** e **Editar Junção** permitem adicionar e editar filtros de junção para publicações de mesclagem.  
   
 > [!NOTE]  
 >  Editar um filtro em uma publicação existente requer um novo instantâneo para a publicação. Se uma publicação tiver assinaturas, as assinaturas deverão ser reiniciadas. Para obter mais informações sobre alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

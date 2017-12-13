@@ -2,12 +2,12 @@
 title: "Propriedades de estrutura de mineração e colunas de estrutura | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriedades para estruturas de mineração e colunas de estrutura
-  Você pode definir ou alterar as propriedades de uma estrutura de mineração e das colunas associadas e tabelas aninhadas usando a guia **Estrutura de Mineração** do Designer de Data Mining. As propriedades que você estabelece nesta guia se propagam para todo o modelo de mineração associado à estrutura.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode definir ou alterar as propriedades para uma estrutura de mineração e colunas associadas e tabelas aninhadas usando a **estrutura de mineração** guia do Designer de mineração de dados. As propriedades que você estabelece nesta guia se propagam para todo o modelo de mineração associado à estrutura.  
   
 > [!NOTE]  
 >  Se você alterar o valor de qualquer propriedade na estrutura de mineração, até mesmo metadados, como, por exemplo, um nome ou uma descrição, a estrutura de mineração e seus modelos deverão ser reprocessados para que você possa exibir ou consultar o modelo.  
@@ -75,8 +75,8 @@ ms.lasthandoff: 11/17/2017
 |**ModelingFlags**|Define parâmetros adicionais disponibilizados pelo algoritmo.|  
 |**Name**|O nome da coluna.|  
 |**NameColumn**|Identifica a coluna que fornece o nome do elemento pai.|  
-|**Origem**|Exibe a origem da coluna.<br /><br /> Para fontes de dados relacionais, o valor é sempre **(nenhum)**.<br /><br /> Para estruturas baseadas em um cubo OLAP, o valor é a instrução MDX que define a fatia usada como a origem da tabela aninhada..|  
-|**SourceMeasureGroup**|Exibe a origem do grupo de medidas.<br /><br /> Para fontes de dados relacionais, o valor é sempre **(nenhum)**.<br /><br /> Para estruturas baseadas em um cubo OLAP, o valor é a instrução MDX que define a fatia usada como a origem da tabela aninhada..|  
+|**Origem**|Exibe a origem da coluna.<br /><br /> Para fontes de dados relacionais, o valor é sempre **(nenhum)**.<br /><br /> Para estruturas baseadas em um cubo OLAP, o valor é a instrução MDX que define a fatia usada como a origem da tabela aninhada.|  
+|**SourceMeasureGroup**|Exibe a origem do grupo de medidas.<br /><br /> Para fontes de dados relacionais, o valor é sempre **(nenhum)**.<br /><br /> Para estruturas baseadas em um cubo OLAP, o valor é a instrução MDX que define a fatia usada como a origem da tabela aninhada.|  
 |**Tipo**|O tipo de dados para o conteúdo na coluna.|  
   
  Para obter mais informações sobre a definição ou alteração de propriedades, consulte [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md).  

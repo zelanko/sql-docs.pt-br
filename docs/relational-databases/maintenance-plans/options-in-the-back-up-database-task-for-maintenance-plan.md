@@ -2,9 +2,12 @@
 title: "Tarefa Backup de Banco de Dados (plano de manutenção) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd325a83874a12581143e7bf634c3b7348c28ce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: df4f47031ab68912a67a3ca66c4d738c69a25b3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Opções da tarefa Fazer Backup do Banco de Dados no plano de manutenção
-  Use a caixa de diálogo **Tarefa Fazer Backup de Banco de Dados** para adicionar uma tarefa de backup ao plano de manutenção. O backup do banco de dados é importante no caso de falha do sistema ou hardware (ou erros do usuário) que levem o banco de dados a ser danificado de alguma forma, exigindo assim que uma cópia de backup seja restaurada. Essa tarefa lhe permite executar arquivos completos, diferenciais, e grupos de arquivos e backups de log de transações.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Tarefa Fazer Backup de Banco de Dados** para adicionar uma tarefa de backup ao plano de manutenção. O backup do banco de dados é importante no caso de falha do sistema ou hardware (ou erros do usuário) que levem o banco de dados a ser danificado de alguma forma, exigindo assim que uma cópia de backup seja restaurada. Essa tarefa lhe permite executar arquivos completos, diferenciais, e grupos de arquivos e backups de log de transações.  
   
  **Para criar uma tarefa de banco de dados de backup**  
   

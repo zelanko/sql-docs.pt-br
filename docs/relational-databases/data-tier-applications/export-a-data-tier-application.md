@@ -1,10 +1,13 @@
 ---
 title: Exportar um aplicativo da camada de dados | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,14 +31,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6beea9c0d1803ea930cc8880412ec1a5fb89aa8a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3342065c2af974fffc5e4a6d33c338362deb4a55
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
-  A exportação de um aplicativo de camada de dados implantado (DAC) ou de um banco de dados cria um arquivo de exportação que contém as definições dos objetos no banco de dados e todos os dados contidos nas tabelas. O arquivo de exportação pode ser importado para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC entre instâncias, criar um arquivo morto ou criar uma cópia local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A exportação de um banco de dados ou DAC (aplicativo da camada de dados) implantado cria um arquivo de exportação que contém as definições dos objetos no banco de dados e todos os dados contidos nas tabelas. O arquivo de exportação pode ser importado para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC entre instâncias, criar um arquivo morto ou criar uma cópia local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de exportação compila um arquivo de exportação DAC em duas fases.  

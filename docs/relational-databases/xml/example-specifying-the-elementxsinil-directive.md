@@ -2,9 +2,12 @@
 title: 'Exemplo: especificando a diretiva ELEMENTXSINIL | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc7da5b0e66592b6d7c8f2f7318cc79483188571
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 10744e4aef7ad4283329aff574001105544c4588
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Exemplo: Especificando a diretiva ELEMENTXSINIL
-  Quando você especifica a política ELEMENT para recuperar o XML centrado em elemento, se a coluna tiver um valor NULL, o elemento correspondente não será gerado pelo modo EXPLICIT. Opcionalmente, é possível especificar a diretiva ELEMENTXSINIL para solicitar o elemento gerador de valores NULL em que o atributo **xsi:nil** está definido com o valor TRUE.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Quando você especifica a política ELEMENT para recuperar o XML centrado em elemento, se a coluna tiver um valor NULL, o elemento correspondente não será gerado pelo modo EXPLICIT. Opcionalmente, é possível especificar a diretiva ELEMENTXSINIL para solicitar o elemento gerador de valores NULL em que o atributo **xsi:nil** está definido com o valor TRUE.  
   
  A consulta a seguir constrói XML que inclui um endereço de funcionário. Para colunas `AddressLine2` e `City` , os nomes das colunas especificam a diretiva `ELEMENTXSINIL` . Isso gera o elemento para valores NULL nas colunas `AddressLine2` e `City` do conjunto de linhas.  
   

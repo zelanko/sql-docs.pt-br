@@ -3,8 +3,11 @@ title: Criar um trabalho | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8e6f537cc4ece5789b7e44720e3bc66e8fabf131
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b6260fe8358eb135667c16560d7fba1e9935fe51
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-job"></a>Criar um trabalho
-Este tópico descreve como criar um trabalho do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)]ou SMO (SQL Server Management Objects).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar um trabalho do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], o [!INCLUDE[tsql](../../includes/tsql_md.md)] ou SMO (SQL Server Management Objects).  
   
 Para adicionar etapas de trabalho, agendas, alertas e notificações que podem ser enviadas a operadores, consulte os tópicos na seção Consulte também.  
   

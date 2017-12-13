@@ -2,9 +2,12 @@
 title: Criar uma assinatura pull | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b57d0f93c4dc7f93e020024941eb1c42307b2e81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bca4071c25a248b235b59e71957f7ecbe0149de1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-pull-subscription"></a>Criar uma assinatura pull
-  Este tópico descreve como criar uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou RMO (Replication Management Objects).  
   
  A configuração de uma assinatura pull para a replicação de P2P é possível por script, mas não está disponível por meio do assistente.  
  

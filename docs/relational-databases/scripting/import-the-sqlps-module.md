@@ -2,9 +2,12 @@
 title: "Importar o módulo SQLPS | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cbd6691bf8fab45e58b41ad8e78166dd425ba605
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 360350a7b8e051bcab2e24df508ea97b742c52a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-the-sqlps-module"></a>Importar o módulo SQLPS
-  A maneira recomendada para gerenciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no PowerShell é importar o módulo **sqlps** para um ambiente do Windows PowerShell. O módulo carrega e registra os snap-ins do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e assemblies de capacidade de gerenciamento.  A partir do Windows PowerShell 3.0, os módulos são importados automaticamente quando qualquer cmdlet ou função do módulo é usada em um comando. Esse recurso funciona em qualquer módulo em um diretório incluído no valor da variável de ambiente PSModulePath.  Para obter mais informações, consulte [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)(Importando um módulo do PowerShell)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A maneira recomendada para gerenciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no PowerShell é importar o módulo **sqlps** para um ambiente do Windows PowerShell. O módulo carrega e registra os snap-ins do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e assemblies de capacidade de gerenciamento.  A partir do Windows PowerShell 3.0, os módulos são importados automaticamente quando qualquer cmdlet ou função do módulo é usada em um comando. Esse recurso funciona em qualquer módulo em um diretório incluído no valor da variável de ambiente PSModulePath.  Para obter mais informações, consulte [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)(Importando um módulo do PowerShell)
   
 1.  **Antes de começar:**  [Segurança](#Security)  
   

@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc690b6318c3e9fea27fbbba74b1f1b7289a3d32
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 819dc582a8c30c4758399c3d7d07184a65b72b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   Em expressões, identificadores são colunas e variáveis, que estão disponíveis para a operação. Expressões podem usar identificadores regulares e qualificados.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 08/03/2017
 >  Se ambos os elementos na notação pontilhada estiverem entre colchetes, o avaliador de expressão interpretará o par como um único identificador, não como uma combinação origem-coluna.  
   
 ## <a name="variables-in-expressions"></a>Variáveis em expressões  
- Variáveis, quando referenciadas em expressões, devem incluir o prefixo @. Por exemplo, o **contador** variável é referenciada usando @Counter. O caractere @ não faz parte do nome de variável; só identifica a variável para o avaliador de expressão. Se você construir expressões utilizando as caixas de diálogo que o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer fornece, o caractere @ será automaticamente adicionado ao nome da variável. Ele não é válido para incluir espaços entre o caractere @ e o nome de variável.  
+ Variáveis, quando referenciadas em expressões, devem incluir o prefixo @. Por exemplo, a variável **Contador** é referenciada usando @Counter. O caractere @ não faz parte do nome de variável; só identifica a variável para o avaliador de expressão. Se você construir expressões utilizando as caixas de diálogo que o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer fornece, o caractere @ será automaticamente adicionado ao nome da variável. Ele não é válido para incluir espaços entre o caractere @ e o nome de variável.  
   
  Nomes de variável seguem as mesmas regras que esses para outros identificadores regulares:  
   
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/03/2017
  Artigo técnico, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), em pragmaticworks.com  
   
   
-

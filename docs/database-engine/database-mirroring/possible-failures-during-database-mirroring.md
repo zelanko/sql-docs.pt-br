@@ -2,9 +2,12 @@
 title: "Possíveis falhas durante o espelhamento de banco de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fbc7cc9abcbfb1e0608104000bab04e56b5ea86d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 69059bd6bc4a095b8f046d58c63762b5af4deba9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possíveis falhas durante espelhamento de banco de dados
-  Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem causar uma falha em uma sessão de espelhamento de banco de dados. O espelhamento de banco de dados não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas que de outra forma passariam despercebidas, o espelhamento de banco de dados implementa seu próprio mecanismo de tempo limite. Quando ocorre um tempo limite de espelhamento, o espelhamento de banco de dados assume que ocorreu uma falha e declara um *erro de software*. Porém, algumas falhas que acontecem no nível da instância do SQL Server não causam espelhamento para tempo limite e podem não ser detectadas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem causar uma falha em uma sessão de espelhamento de banco de dados. O espelhamento de banco de dados não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas que de outra forma passariam despercebidas, o espelhamento de banco de dados implementa seu próprio mecanismo de tempo limite. Quando ocorre um tempo limite de espelhamento, o espelhamento de banco de dados assume que ocorreu uma falha e declara um *erro de software*. Porém, algumas falhas que acontecem no nível da instância do SQL Server não causam espelhamento para tempo limite e podem não ser detectadas.  
   
 > [!IMPORTANT]  
 >  Falhas em bancos de dados diferentes do banco de dados espelho não são detectáveis em uma sessão de espelhamento de banco de dados. Além disso, é improvável que uma falha de disco de dados seja detectável, a menos que o banco de dados seja reiniciado por causa de uma falha no disco de dados.  

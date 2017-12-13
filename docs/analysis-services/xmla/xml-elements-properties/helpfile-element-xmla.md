@@ -2,12 +2,12 @@
 title: Elemento HelpFile (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffaf04b7e71e993d926e151aa4855c4872698df2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7296a011a7bd02110a5ad7702a24dfdac704a918
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="helpfile-element-xmla"></a>Elemento HelpFile (XMLA)
-  Contém o caminho ou URL até o arquivo ou tópico de Ajuda que descreve o elemento pai [Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) .  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém o caminho ou URL para o arquivo de Ajuda ou tópico que descreve o pai [erro](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

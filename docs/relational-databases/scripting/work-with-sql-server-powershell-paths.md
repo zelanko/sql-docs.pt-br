@@ -2,9 +2,12 @@
 title: Trabalhar com caminhos do SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a6f1ac20142830ba91edc3835879bead8549f797
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8e42b8172f1993b22a50c53e61b93ff8223da063
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Trabalhar com caminhos do SQL Server PowerShell
-  Depois de navegar para um nó em um caminho de provedor do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , pode executar trabalho ou recuperar informações usando os métodos e as propriedades do objeto de gerenciamento do [!INCLUDE[ssDE](../../includes/ssde-md.md)] associado com o nó.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Depois de navegar para um nó em um caminho de provedor do [!INCLUDE[ssDE](../../includes/ssde-md.md)], pode executar trabalho ou recuperar informações usando os métodos e as propriedades do objeto de gerenciamento do [!INCLUDE[ssDE](../../includes/ssde-md.md)] associado com o nó.  
   
 1.  [Antes de começar](#BeforeYouBegin)  
   

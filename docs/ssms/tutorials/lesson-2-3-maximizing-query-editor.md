@@ -2,9 +2,12 @@
 title: Maximizando o Editor de Consultas | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d265d008c019ccc03aed0a212bf632962d04ab2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2abd1efbec2221c9f909a79b21df27b6869e828e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-3---maximizing-query-editor"></a>Lição 2-3 – Maximizando o Editor de Consultas
-Os programadores muitas vezes perguntam: "Como posso ter mais espaço para escrever código?" Existem dois modos, ambos fáceis: maximizar a janela do Editor de Consultas e ocultar as janelas de ferramenta não usadas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os programadores muitas vezes perguntam: "Como posso ter mais espaço para escrever meu código?" Existem dois modos, ambos fáceis: maximizar a janela do Editor de Consultas e ocultar as janelas de ferramenta não usadas.  
   
 ## <a name="maximizing-the-query-editor-window"></a>Maximizando a janela do Editor de Consultas  
   

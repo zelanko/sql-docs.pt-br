@@ -2,12 +2,12 @@
 title: "Executando transações no ADOMD.NET | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c78445de3ed3b17805bc458ce6078e0d9587eed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: abe2e4bcc48a86e26e9a70e4f39e6bfbf7ba13ee
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Conexões no ADOMD.NET - executando transações
-  No ADOMD.NET, você usa o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> para gerenciar contexto de transação para um determinado objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>. Essa funcionalidade permite que você execute vários comandos dentro do mesmo contexto. Cada comando lerá os mesmos dados sem que os dados lidos sejam alterados entre cada execução de comando.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]No ADOMD.NET, você usa o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> objeto para gerenciar o contexto de transação para um determinado <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objeto. Essa funcionalidade permite que você execute vários comandos dentro do mesmo contexto. Cada comando lerá os mesmos dados sem que os dados lidos sejam alterados entre cada execução de comando.  
   
 > [!NOTE]  
 >  O <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> classe é a implementação do **System.Data.IDbTransaction** interface, a parte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] biblioteca de classes do .NET Framework e implementada por todos os provedores de dados .NET Framework que dão suporte a transações.  

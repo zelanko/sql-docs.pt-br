@@ -2,12 +2,12 @@
 title: Procurar um modelo usando o Visualizador de rede Neural da Microsoft | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cc0dddf9fd02a618cbc687e2f9cab385ab9d9f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bf3960aa4308b921cb0c9da01ddfdb1bb52e6f0d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Procurar um modelo usando o Visualizador de Rede Neural da Microsoft
-  O Visualizador de Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração criados com o algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo de Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] cria modelos de mineração para classificação e regressão que podem analisar várias entradas e saídas, e é muito útil para análises abertas e exploração. Para obter mais informações sobre esse algoritmo, consulte [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizador de rede Neural em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe os modelos de mineração criados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo rede Neural. O algoritmo de Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] cria modelos de mineração para classificação e regressão que podem analisar várias entradas e saídas, e é muito útil para análises abertas e exploração. Para obter mais informações sobre esse algoritmo, consulte [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md).  
   
  Ao explorar um modelo usando o Visualizador de Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , você costuma obter um atributo e um estado de destino e, depois, usa o visualizador para ver como os atributos de entrada afetam o resultado  
   

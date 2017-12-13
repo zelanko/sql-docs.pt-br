@@ -2,9 +2,12 @@
 title: Executar o depurador Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d633d2f9a2e1a9ab407384338b4e9e0da34557b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e081ce40af97789870b1ed63ff705db8113fb809
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>Executar o depurador Transact-SQL
-  Você pode iniciar o depurador do [!INCLUDE[tsql](../../includes/tsql-md.md)] depois de abrir uma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Em seguida, você pode executar seu código [!INCLUDE[tsql](../../includes/tsql-md.md)] em modo de depuração até parar o depurador. Você pode definir opções para personalizar como o depurador é executado.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode iniciar o depurador do [!INCLUDE[tsql](../../includes/tsql-md.md)] depois de abrir uma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Em seguida, você pode executar seu código [!INCLUDE[tsql](../../includes/tsql-md.md)] em modo de depuração até parar o depurador. Você pode definir opções para personalizar como o depurador é executado.  
   
 ## <a name="starting-and-stopping-the-debugger"></a>Iniciando e parando o depurador  
  Os requisitos para iniciar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] são os seguintes:  

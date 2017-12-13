@@ -1,5 +1,5 @@
 ---
-title: Origem de OLE DB | Microsoft Docs
+title: Origem OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-source"></a>Origem de OLE DB
   A origem de OLE DB extrai dados de uma variedade de bancos de dados relacionais compatíveis com OLE DB usando uma tabela de banco de dados, uma exibição ou um comando SQL. Por exemplo, a origem de OLE DB pode extrair dados de tabelas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -132,7 +130,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  A propriedade **CommandTimeout** da origem OLE DB não está disponível no **Editor de Origem OLE DB**, mas pode ser definida usando o **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Propriedades personalizadas do OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Abra o Editor de origem OLE DB (página Gerenciador de Conexão)  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Abrir o Editor de Origem OLE DB (Página do Gerenciador de Conexões)  
   
 1.  Adicione a origem OLE DB ao pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/17/2017
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A**visualização** pode exibir até 200 linhas.  
   
 > [!NOTE]  
->  Quando você visualiza os dados, as colunas com um tipo de dado CLR definido pelo usuário não contêm dados. Em vez disso, os valores de \<valor muito grande para ser exibida > ou System. Byte []. O primeiro é exibido quando a fonte de dados é acessada usando o provedor SQL OLE DB e o segundo, usando o provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+>  Quando você visualiza os dados, as colunas com um tipo de dado CLR definido pelo usuário não contêm dados. Em vez disso, o valor \<valor muito grande para ser exibido> ou System.Byte[] é exibido. O primeiro é exibido quando a fonte de dados é acessada usando o provedor SQL OLE DB e o segundo, usando o provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
   
@@ -235,8 +233,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Destino OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services &#40; SSIS &#41; Variáveis](../../integration-services/integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Excluindo arquivos de blob de backup com concessões ativas | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ae43fad64b94bbafe034ed8b67f8b062d110a4f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: feb8bb22579b8ed7c1c6c62e193ae5bce910269c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Excluir arquivos de blob de backup com concessões ativas
-  Ao fazer backup para o armazenamento do Microsoft Azure ou restaurar nele, o SQL Server adquirirá uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob não poderá ser gravado ou excluído até que a concessão seja liberada. Este tópico descreve como liberar (interromper) a concessão e excluir o blob. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao fazer backup para o Armazenamento do Microsoft Azure ou restaurar nele, o SQL Server adquirirá uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob não poderá ser gravado ou excluído até que a concessão seja liberada. Este tópico descreve como liberar (interromper) a concessão e excluir o blob. 
   
  Para obter mais informações sobre tipos de concessão, leia este [artigo](http://go.microsoft.com/fwlink/?LinkId=275664).  
   

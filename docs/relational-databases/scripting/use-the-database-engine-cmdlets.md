@@ -2,9 +2,12 @@
 title: Usar cmdlets do Mecanismo de Banco de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f73610b00bc4c7dd6e68128f841a3c7a1e6ed691
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3833567185c16097983cfce99fca2e33d61d88e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Usar cmdlets do Mecanismo de Banco de Dados
-  Os cmdlets Windows PowerShell são comandos de função única que normalmente contêm uma convenção de nomenclatura formada por verbo-substantivo, como **Get-Help** ou **Set-MachineName**. O provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell fornece cmdlets específicos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os cmdlets Windows PowerShell são comandos de função única que normalmente contêm uma convenção de nomenclatura formada por verbo-substantivo, assim como **Get-Help** ou **Set-MachineName**. O provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell fornece cmdlets específicos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="database-engine-cmdlets"></a>cmdlets do Mecanismo de Banco de Dados  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa alguns cmdlets para o [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Estes cmdlets são usados para executar principalmente scripts Transact-SQL existentes de novos scripts PowerShell, avaliar políticas de gerenciamento baseadas em política e ajudar a especificar identificadores do SQL Server em caminhos do provedor do SQL Server.  

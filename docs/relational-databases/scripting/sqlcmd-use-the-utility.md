@@ -2,9 +2,12 @@
 title: "Usar o utilitário sqlcmd | Microsoft Docs"
 ms.custom: 
 ms.date: 06/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f0db4cc8c1888e53735579e82699a1471d432b18
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0969b3f39f94ec3832cc762ec9419425e099000f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd – Usar o utilitário
-  O **sqlcmd** é um utilitário de linha de comando para execução interativa ad hoc dos scripts e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , bem como para automatização das tarefas de script do [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para usar o **sqlcmd** de forma interativa ou para criar arquivos de script a serem executados com o **sqlcmd**, os usuários devem entender o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O utilitário **sqlcmd** normalmente é usado das seguintes maneiras:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O **SQLCMD** é um utilitário de linha de comando para execução interativa ad hoc dos scripts e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], bem como para automatização das tarefas de script do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para usar o **sqlcmd** de forma interativa ou para criar arquivos de script a serem executados com o **sqlcmd**, os usuários devem entender o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O utilitário **sqlcmd** normalmente é usado das seguintes maneiras:  
   
 -   Os usuários inserem instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de forma semelhante ao trabalho no prompt de comando. Os resultados são exibidos no prompt de comando. Para abrir uma janela de prompt de comando, digite “cmd” na caixa de pesquisa do Windows e clique em **Prompt de comando** para abrir. No prompt de comando, digite **sqlcmd** seguido por uma lista de opções que você deseja. Para obter uma lista completa das opções compatíveis com o **sqlcmd**, consulte [Utilitário sqlcmd](../../tools/sqlcmd-utility.md).  
   

@@ -2,9 +2,12 @@
 title: "Visão geral da interface do Replication Monitor | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58dd67c03b3df116914c4f03cbb336136b251e3f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 977bcf0ef4265e3864fee580dd2a8bced177b334
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Visão geral da interface do Replication Monitor
-  O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor apresenta uma exibição voltada para o Publicador ou para o Distribuidor de todas as atividades de replicação em um formato de dois painéis. Você adiciona um Publicador ao monitor no painel esquerdo e, no painel direito, o monitor exibe informações sobre o Publicador, suas publicações, as assinaturas para essas publicações e os diversos agentes de replicação. Além de apresentar informações sobre a topologia de replicação, o Replication Monitor permite que você execute várias tarefas, como iniciar e interromper agentes e validar dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor apresenta uma exibição, voltada para o Publicador ou para o Distribuidor, de todas as atividades de replicação em um formato de dois painéis. Você adiciona um Publicador ao monitor no painel esquerdo e, no painel direito, o monitor exibe informações sobre o Publicador, suas publicações, as assinaturas para essas publicações e os diversos agentes de replicação. Além de apresentar informações sobre a topologia de replicação, o Replication Monitor permite que você execute várias tarefas, como iniciar e interromper agentes e validar dados.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Exibindo informações para toda a topologia  
  O painel esquerdo da exibição do Replication Monitor  

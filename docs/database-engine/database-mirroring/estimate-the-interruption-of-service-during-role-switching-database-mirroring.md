@@ -2,9 +2,12 @@
 title: "Estimar a interrupção do serviço para a troca de função (Espelhamento de Banco de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86103fe23292df96c1ef11dafd0e3b5d70196e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2083d1c82e4557e4de96cd8841ce043563b25f90
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estime a interrupção do serviço durante troca de função (Espelhamento de Banco de Dados)
-  Durante uma troca de função, a quantidade de tempo que o espelhamento de banco de dados fica fora de serviço depende do tipo de função trocada e da causa da troca de função.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durante uma mudança de função, a quantidade de tempo que o espelhamento de banco de dados fica fora de serviço depende do tipo da função modificada e da causa da mudança de função.  
   
 -   Para failover automático, dois fatores contribuem para a interrupção do serviço de tempo: o tempo necessário para o servidor espelho reconhecer que a instância de servidor principal falhou, ou seja, detecção de erros, mais o tempo necessário para o failover do banco de dados, isto é, tempo de failover.  
   

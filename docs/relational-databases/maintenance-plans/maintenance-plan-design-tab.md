@@ -2,9 +2,12 @@
 title: "Plano de manutenção (Guia Design) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 64e01a02225d6849bd38def9f00b8a5003752e5e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e2c7e920b4f0a4ca5933efafce3dc09b2b5924b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
-  Use o **Plano de Manutenção (Guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o **Plano de Manutenção (Guia Design)** para especificar as propriedades de um plano de manutenção e seus subplanos. Arraste tarefas da caixa de ferramentas para o designer de plano. Clique com o botão direito do mouse em grupos de tarefas para criar caminhos de execução de ramificação. Os planos de manutenção são salvos como pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e são executados pelos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opções  
  **Adicionar Subplano**  

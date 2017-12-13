@@ -2,9 +2,12 @@
 title: Classe de evento Execution Warnings | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0f3903f3bcf19915b962f95e413ccee492ae34c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execution-warnings-event-class"></a>classe de evento Execution Warnings
-  A classe de evento Execution Warnings indica que ocorreram avisos de concessão de memória durante a execução de uma instrução ou um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa classe de evento pode ser monitorada para determinar se as consultas tiveram que esperar por memória por um segundo ou mais antes de continuar ou se a tentativa inicial de obter memória falhou. As informações sobre períodos de espera de consulta podem ajudar a revelar problemas de contenção no sistema que podem afetar o desempenho.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento Execution Warnings indica que ocorreram avisos de concessão de memória durante a execução de uma instrução ou um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa classe de evento pode ser monitorada para determinar se as consultas tiveram que esperar por memória por um segundo ou mais antes de continuar ou se a tentativa inicial de obter memória falhou. As informações sobre períodos de espera de consulta podem ajudar a revelar problemas de contenção no sistema que podem afetar o desempenho.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Colunas de dados da classe de evento Execution Warnings  
   

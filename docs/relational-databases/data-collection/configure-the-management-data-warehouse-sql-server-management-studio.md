@@ -2,9 +2,12 @@
 title: Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4165c8b8e8e11b281a31e04a3b0fd402146d4e71
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1fee53d75e2c41949d1e07f30b2ab751bb6ca322
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
-  Este tópico descreve como configurar o data warehouse de gerenciamento para oferecer suporte de armazenamento de dados em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o coletor de dados. Essas instâncias podem estar no mesmo servidor ou em servidores diferentes. Este tópico também fornece descrições da interface do usuário para a caixa de diálogo [Assistente para Configurar Data Warehouse de Gerenciamento](#Wizard) . Para obter informações sobre como configurar um coletor de dados, consulte [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como configurar o data warehouse de gerenciamento para oferecer suporte de armazenamento de dados em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o coletor de dados. Essas instâncias podem estar no mesmo servidor ou em servidores diferentes. Este tópico também fornece descrições da interface do usuário para a caixa de diálogo [Assistente para Configurar Data Warehouse de Gerenciamento](#Wizard) . Para obter informações sobre como configurar um coletor de dados, consulte [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent estiver configurado para ser executado usando uma das contas de serviço do Sistema (Sistema Local, Serviço de Rede ou Serviço Local) e o data warehouse de gerenciamento for criado em uma instância diferente do coletor de dados, você deverá configurar os conjuntos de coleta para usar um proxy para carregar dados no data warehouse de gerenciamento.  

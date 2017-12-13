@@ -2,9 +2,12 @@
 title: "Tarefa de limpeza de manutenção (plano de manutenção) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3934b29a7067cda0cd74656c2f6fa38f0748e658
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a2339a873b593f3c9fc689212739ab1f66adfba7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarefa de limpeza de manutenção (plano de manutenção)
-  Use a **Tarefa de Limpeza de Manutenção** para remover arquivos antigos relacionados a planos de manutenção, inclusive relatórios de texto criados por planos de manutenção e arquivos de backup de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a **Tarefa de Limpeza de Manutenção** para remover arquivos antigos relacionados a planos de manutenção, inclusive relatórios de texto criados por planos de manutenção e arquivos de backup de banco de dados.  
   
 > [!NOTE]  
 >  A tarefa Limpeza de Manutenção não exclui automaticamente os arquivos nas subpastas do diretório especificado. Esse recurso reduz a possibilidade de um ataque mal-intencionado que use a tarefa de Limpeza de Manutenção para excluir arquivos. Se quiser excluir arquivos em subpastas de primeiro nível, você deverá selecionar **Incluir subpastas de primeiro nível**.  

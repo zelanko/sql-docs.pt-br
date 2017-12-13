@@ -2,9 +2,12 @@
 title: Gerenciar indicadores | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ae054743dcdf57727fd94a55ccf1ba78b0875fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-bookmarks"></a>Gerenciar indicadores
-  Quando estiver trabalhando em um editor de códigos, a janela **Indicadores** permite criar links com linhas específicas de código dentro de seu documento. Você pode exibir essa janela no menu **Exibir** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Enquanto você está trabalhando em um editor de códigos, a janela **Indicadores** permite criar links com linhas de código específicas dentro de seu documento. Você pode exibir essa janela no menu **Exibir** .  
   
  Para criar e navegar pelos indicadores, clique nos botões localizados na barra de ferramentas **TextEditor** na parte superior da janela **Indicadores** . Você pode adicionar e remover indicadores, pode ativá-los ou desabilitá-los e organizá-los em pastas. Alguns comandos também estão disponíveis no menu de atalho na janela **Indicadores** . Para adicionar ou remover um indicador, posicione o ponto de inserção na linha desejada do Editor e clique em **Alternar um indicador**. Para ativar um indicador, marque sua caixa de seleção na janela **Indicadores** ; para desabilitar (sem remover) um indicador, desmarque sua caixa de seleção.  
   

@@ -2,9 +2,12 @@
 title: "Exibir as dependências de um procedimento armazenado| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8c5e1da112ed5cb2f39c96fc0f570128e1c3d77c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 94060ddfad3ab3d757213615add3d415f667319b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Exibir as dependências de um procedimento armazenado
-  Este tópico descreve como exibir dependências de procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como exibir dependências de procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##  <a name="Top"></a>   
 -   **Antes de começar:**  [Limitações e restrições](#Restrictions), [Segurança](#Security)  

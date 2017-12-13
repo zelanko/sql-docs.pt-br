@@ -2,12 +2,12 @@
 title: "Teste e validação (mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38ef15322528bfae0dbd1b134d80fb7d1a56a734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e20e18e5f2a41150a74b54575b582fd4e9dc3492
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="testing-and-validation-data-mining"></a>Teste e validação (mineração de dados)
-  A validação é o processo de avaliar como seus modelos de mineração são executados nos dados reais. É importante validar seus modelos de mineração entendendo suas qualidades e características antes de implantá-los em um ambiente de produção.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A validação é o processo de avaliar como seus modelos de mineração executam nos dados reais. É importante validar seus modelos de mineração entendendo suas qualidades e características antes de implantá-los em um ambiente de produção.  
   
  Esta seção apresenta alguns conceitos básicos relacionados à qualidade do modelo e descreve as estratégias para a validação de modelo fornecidas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter uma visão geral de como a validação de modelo funciona no processo de mineração de dados mais amplo, consulte [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md).  
   

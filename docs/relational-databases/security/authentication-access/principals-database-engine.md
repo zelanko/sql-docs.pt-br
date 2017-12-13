@@ -35,11 +35,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5e80781c23b8b3f1667e17d7ffb1376be71aa888
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ab67ccf5240ad3797bf744b56e615a92fa95d9bd
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 
 ## <a name="dbo-user-and-dbo-schema"></a>Usuário dbo e esquema dbo
 
-O uso de `dbo` é uma entidade de segurança do usuário especial em cada banco de dados. Todos os administradores do SQL Server, os membros da função de servidor fixa `sysadmin`, o logon `sa` e os proprietários do banco de dados, entram nos bancos de dados como o usuário `dbo`. O usuário `dbo` tem todas as permissões no banco de dados e não pode ser limitado ou descartado. `dbo` representa o proprietário do banco de dados, mas a conta de usuário `dbo` não é igual à função de banco de dados fixa `db_owner` e a função de banco de dados fixa `db_owner` não é o mesmo que a conta de usuário registrada como o proprietário do banco de dados.     
+O usuário do `dbo` é uma entidade de usuário especial em cada banco de dados. Todos os administradores do SQL Server, os membros da função de servidor fixa `sysadmin`, o logon `sa` e os proprietários do banco de dados, entram nos bancos de dados como o usuário `dbo`. O usuário `dbo` tem todas as permissões no banco de dados e não pode ser limitado ou descartado. `dbo` representa o proprietário do banco de dados, mas a conta de usuário `dbo` não é igual à função de banco de dados fixa `db_owner` e a função de banco de dados fixa `db_owner` não é o mesmo que a conta de usuário registrada como o proprietário do banco de dados.     
 O usuário `dbo` tem o esquema `dbo`. O esquema `dbo` é o esquema padrão para todos os usuários, a menos que algum outro esquema seja especificado.  O esquema `dbo` não pode ser descartado.
   
 ## <a name="public-server-role-and-database-role"></a>Função de servidor e a função de banco de dados pública  

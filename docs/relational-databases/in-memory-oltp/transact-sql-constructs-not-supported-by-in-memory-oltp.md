@@ -1,29 +1,27 @@
 ---
 title: "Construções do Transact-SQL sem suporte no OLTP in-memory | Microsoft Docs"
 ms.custom: 
-ms.date: 04/24/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: cf96fd29ed4e215739297281d3b0edd77654c3a6
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,13 +58,13 @@ ms.lasthandoff: 07/31/2017
 |----------|----------|----------------|  
 |Recurso|ON|As tabelas com otimização de memória não podem ser colocadas em um grupo de arquivos ou esquema de partição. Remova a cláusula ON da instrução **CREATE TABLE** .<br /><br /> Todas as tabelas com otimização de memória são mapeadas para um grupo de arquivos com otimização de memória.|  
 |Tipo de dados|*Nome do tipo de dados*|Não há suporte para o tipo de dados indicado. Substitua o tipo por um dos tipos de dados com suporte. Para obter mais informações, veja [Tipos de dados com suporte no OLTP in-memory](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Recurso|Colunas computadas|As colunas computadas não têm suporte para tabelas com otimização de memória. Remova as colunas computadas da instrução **CREATE TABLE** .<br/><br/>**Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para colunas computadas em índices e tabelas com otimização de memória.|  
+|Recurso|Colunas computadas|**Aplica-se ao:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>As colunas computadas não têm suporte para tabelas com otimização de memória. Remova as colunas computadas da instrução **CREATE TABLE** .<br/><br/>O [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e o SQL Server a partir do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] dão suporte a colunas computadas em tabelas com otimização de memória e índices.|  
 |Recurso|Replicação|Não há suporte para a replicação nas tabelas com otimização de memória.|  
 |Recurso|FILESTREAM|O armazenamento FILESTREAM não tem suporte para colunas de tabelas com otimização de memória. Remova a palavra-chave **FILESTREAM** da definição de coluna.|  
 |Recurso|SPARSE|As colunas de tabelas com otimização de memória não podem ser definidas como SPARSE. Remova a palavra-chave **SPARSE** da definição de coluna.|  
 |Recurso|ROWGUIDCOL|A opção ROWGUIDCOL não tem suporte para colunas de tabelas com otimização de memória. Remova a palavra-chave **ROWGUIDCOL** da definição de coluna.|  
-|Recurso|FOREIGN KEY|Para tabelas com otimização de memória, as restrições FOREIGN KEY só têm suporte para chaves estrangeiras referenciando chaves primárias. Remova a restrição da definição de tabela se a chave estrangeira referenciar uma restrição exclusiva.|  
-|Recurso|índice clusterizado|Especifique um índice não clusterizado. No caso de um índice de chave primária, não se esqueça de especificar **PRIMARY KEY NONCLUSTERED [HASH]**.|  
+|Recurso|FOREIGN KEY|**Aplica-se ao:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partir do [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Para tabelas com otimização de memória, há suporte para as restrições de FOREIGN KEY apenas em chaves estrangeiras que referenciam chaves primárias de outras tabelas com otimização de memória. Remova a restrição da definição de tabela se a chave estrangeira referenciar uma restrição exclusiva.<br/><br/>No [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)], não há suporte para as restrições de FOREIGN KEY em tabelas com otimização de memória.|  
+|Recurso|índice clusterizado|Especifique um índice não clusterizado. No caso de um índice de chave primária, especifique **PRIMARY KEY NONCLUSTERED**.|  
 |Recurso|DDL em transações|As tabelas com otimização de memória e os procedimentos armazenados nativamente compilados não podem se criadas nem descartadas no contexto de uma transação de usuário. Não inicie uma transação e garanta que a configuração da sessão IMPLICIT_TRANSACTIONS esteja OFF antes de executar a instrução CREATE ou DROP.|  
 |Recurso|gatilhos DDL|As tabelas com otimização de memória e os procedimentos armazenados nativamente compilados não poderão ser criadas nem descartadas se houver um gatilho de servidor ou banco de dados para a operação DDL. Remover os gatilhos de servidor e banco de dados em CREATE/DROP TABLE e CREATE/DROP PROCEDURE.|  
 |Recurso|EVENT NOTIFICATION|As tabelas com otimização de memória e os procedimentos armazenados compilados de modo nativo não poderão ser criados nem removidos se houver uma notificação de evento de servidor ou de banco de dados para essa operação DDL. Remova as notificações de eventos de servidor e de banco de dados em CREATE TABLE ou DROP TABLE e em CREATE PROCEDURE ou DROP PROCEDURE.|  
@@ -74,15 +72,15 @@ ms.lasthandoff: 07/31/2017
 |Operação|Atualização de colunas de chave primária|As colunas de chave primária nas tabelas com otimização de memória e em tipos de tabela não podem ser atualizadas. Se a chave primária precisar ser atualizada, exclua a linha antiga e insira a nova linha com a chave primária atualizada.|  
 |Operação|CREATE INDEX|Os índices nas tabelas com otimização de memória devem ser especificados embutidos com a instrução **CREATE TABLE** , ou com a instrução **ALTER TABLE** .|  
 |Operação|CREATE FULLTEXT INDEX|Os índices de texto completo não têm suporte para tabelas com otimização de memória.|  
-|Operação|alteração de esquema|As tabelas com otimização de memória e os procedimentos armazenados compilados de modo nativo não dão suporte a alterações de esquema, por exemplo, **sp_rename**.<br /><br /> Tentar fazer determinadas alterações de esquema resultará no erro 12320. As operações que exigem uma alteração da versão do esquema, por exemplo, por meio da mudança do nome, não têm suporte tabelas com otimização de memória.<br /><br /> Determinadas alterações de esquema usando ALTER TABLE e ALTER PROCEDURE são permitidas.<br/><br/>**Aplica-se ao:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partir do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], há suporte para o sp_rename.| 
+|Operação|alteração de esquema|Tabelas com otimização de memória e procedimentos armazenados compilados nativamente não dão suporte a algumas alterações de esquema:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: há suporte para as operações ALTER TABLE, ALTER PROCEDURE e sp_rename. Não há suporte para outras alterações de esquema, por exemplo, adição de propriedades estendidas.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: há suporte para operações ALTER TABLE e ALTER PROCEDURE. Não há suporte para outras alterações de esquema, incluindo sp_rename.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: não há suporte para alterações de esquema. Para alterar a definição de uma tabela com otimização de memória ou um procedimento armazenado compilado nativamente, primeiro remova o objeto e, em seguida, recrie-o com a definição desejada.| 
 |Operação|TRUNCATE TABLE|A operação TRUNCATE não tem suporte para tabelas com otimização de memória. Para remover todas as linhas de uma tabela, exclua todas as linhas usando **DELETE FROM***table* ou remova e recrie a tabela.|  
 |Operação|ALTER AUTHORIZATION|Não há suporte para alteração do proprietário de uma tabela com otimização de memória ou procedimentos armazenados nativamente compilados existentes. Descarte e recrie a tabela ou o procedimento para alterar a propriedade.|  
-|Operação|ALTER SCHEMA|Transferindo um protegível entre esquemas.|  
-|Operação|DBCC CHECKTABLE|Não há suporte para DBCC CHECKTABLE nas tabelas com otimização de memória.|  
+|Operação|ALTER SCHEMA|Não há suporte para a transferência de uma tabela ou de um procedimento armazenado compilado nativamente existente para outro esquema. Remova e recrie o objeto para fazer a transferência entre esquemas.|  
+|Operação|DBCC CHECKTABLE|Não há suporte para DBCC CHECKTABLE em tabelas com otimização de memória. Para verificar a integridade dos arquivos de ponto de verificação em disco, faça um backup do grupo de arquivos MEMORY_OPTIMIZED_DATA.|  
 |Recurso|ANSI_PADDING OFF|A opção de sessão **ANSI_PADDING** deve estar ON na criação de tabelas com otimização de memória ou procedimentos armazenados compilados de modo nativo. Execute **SET ANSI_PADDING ON** antes de executar a instrução CREATE.|  
 |Opção|DATA_COMPRESSION|A compactação de dados não tem suporte para tabelas com otimização de memória. Remova a opção da definição de tabela.|  
 |Recurso|DTC|As tabelas com otimização de memória e os procedimentos armazenados nativamente compilados não podem ser acessados de transações distribuídas. Em vez disso, use transações SQL.|  
-|Operação|Tabelas com otimização de memória como destino de MERGE|As tabelas com otimização de memória não podem ser o destino de uma operação **MERGE** . Em vez disso, use as instruções **INSERT**, **UPDATE**ou **DELETE** .|  
+|Operação|Tabelas com otimização de memória como destino de MERGE|As tabelas com otimização de memória não podem ser o destino de uma operação **MERGE** . Em vez disso, use as instruções **INSERT**, **UPDATE** e **DELETE**.|  
   
 ## <a name="indexes-on-memory-optimized-tables"></a>Índices em tabelas com otimização de memória  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve um índice em uma tabela com otimização de memória, bem como a ação corretiva para resolver o erro.  
@@ -114,16 +112,16 @@ ms.lasthandoff: 07/31/2017
 |Recurso|INSERT de várias linhas... Instruções VALUES|Não é possível inserir várias linhas que usam a mesma instrução **INSERT** em um procedimento armazenado compilado de modo nativo. Crie instruções **INSERT** para cada linha.|  
 |Recurso|CETs (expressões de tabela comum)|As CTEs (expressões de tabela comuns) não têm suporte em procedimentos armazenados nativamente compilados. Regravar a consulta.|  
 |Recurso|COMPUTE|Não há suporte para a cláusula **COMPUTE** . Remova-a da consulta.|  
-|Recurso|SELECT INTO|Não há suporte para a cláusula **INTO** na instrução **SELECT** . Reescreva a consulta como **p INTO***Table***SELECT**.|  
+|Recurso|SELECT INTO|Não há suporte para a cláusula **INTO** na instrução **SELECT** . Reescreva a consulta como **INSERT INTO** *Tabela* **SELECT**.|  
 |Recurso|lista de colunas de inserção incompleta|Em geral, os valores das instruções INSERT devem ser especificados para todas as colunas na tabela.<br /><br /> No entanto, damos suporte a restrições DEFAULT e colunas IDENTITY(1,1) em tabelas com otimização de memória. Essas colunas podem ser (no caso colunas IDENTITY, devem ser) omitidas da lista de colunas INSERT.|  
 |Recurso|*Função*|Algumas funções internas ainda não têm suporte em procedimentos armazenados nativamente compilados. Remova a função rejeitada do procedimento armazenado. Para obter mais informações sobre funções internas com suporte, veja<br />[Recursos com suporte para módulos T-SQL compilados de modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)ou<br />[Procedimentos armazenados compilados de modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
-|Recurso|CASE|Não há suporte para a instrução **CASE** em consultas dentro de procedimentos armazenados compilados de modo nativo. Crie consultas para cada caso. Para obter mais informações,veja [Implementando uma expressão CASE em um procedimento armazenado compilado de modo nativo](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).|  
+|Recurso|CASE|**Aplica-se ao:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e SQL Server a partir do [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**Não** há suporte para expressões CASE em procedimentos armazenados compilados nativamente. Crie consultas para cada caso. Para obter mais informações,veja [Implementando uma expressão CASE em um procedimento armazenado compilado de modo nativo](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>O [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e o SQL Server a partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] dão suporte a expressões CASE.|  
 |Recurso|INSERT EXECUTE|Remova a referência.|  
 |Recurso|Execute|Com suporte somente para executar funções definidas pelo usuário e procedimentos armazenados compilados nativamente.|  
 |Recurso|agregações definidas pelo usuário|As funções de agregação definidas pelo usuário não podem ser usadas em procedimentos armazenados nativamente compilados. Remova a referência à função do procedimento.|  
 |Recurso|metadados do modo de procura|Os procedimentos armazenados nativamente compilados não oferecem suporte aos metadados do modo de procura. Verifique se a opção de sessão **NO_BROWSETABLE** está definida como OFF.|  
 |Recurso|DELETE com a cláusula FROM|Não há suporte para a cláusula **FROM** em instruções **DELETE** com uma fonte de tabela em procedimentos armazenados compilados de modo nativo.<br /><br /> **DELETE** com a cláusula **FROM** tem suporte quando ela é usada para indicar a tabela do local em que haverá exclusão.|  
-|Recurso|UPDATE com a cláusula FROM|Não há suporte para a cláusula **FROM** em instruções **UPDATE** em procedimentos armazenados compilados de modo nativo.|  
+|Recurso|UPDATE com a cláusula FROM|Não há suporte para a cláusula **FROM** em instruções **UPDATE** em procedimentos armazenados compilados de modo nativo.| 
 |Recurso|procedimentos temporários|Os procedimentos armazenados temporários não podem ser compilados nativamente. Crie um procedimento armazenado nativamente compilado permanente ou um procedimento armazenado do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado temporário.|  
 |Nível de isolamento|READ UNCOMMITTED|O nível de isolamento READ UNCOMMITTED não tem suporte para procedimentos armazenados nativamente compilados. Use um nível de isolamento com suporte, como SNAPSHOT.|  
 |Nível de isolamento|READ COMMITTED|O nível de isolamento READ COMMITTED não tem suporte para procedimentos armazenados nativamente compilados. Use um nível de isolamento com suporte, como SNAPSHOT.|  
@@ -145,7 +143,7 @@ ms.lasthandoff: 07/31/2017
 |Operador|OFFSET|Não há suporte para esse operador. Remova **OFFSET** do procedimento armazenado compilado de modo nativo.|  
 |Operador|INTERSECT|Não há suporte para esse operador. Remova **INTERSECT** do procedimento armazenado compilado de modo nativo. Em alguns casos, um INNER JOIN pode ser usado para obter o mesmo resultado.|  
 |Operador|EXCEPT|Não há suporte para esse operador. Remova **EXCEPT** do procedimento armazenado compilado de modo nativo.|  
-|Operador|APPLY|Não há suporte para esse operador. Remova **APPLY** do procedimento armazenado compilado de modo nativo.<br/><br/>**Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há suporte para o operador APPLY em módulos compilados nativamente.|  
+|Operador|APPLY|**Aplica-se ao:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e SQL Server a partir do [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Não há suporte para esse operador. Remova **APPLY** do procedimento armazenado compilado de modo nativo.<br/><br/>O [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e o SQL Server a partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] dão suporte ao operador APPLY em módulos compilados nativamente.|  
 |Operador|PIVOT|Não há suporte para esse operador. Remova **PIVOT** do procedimento armazenado compilado de modo nativo.|  
 |Operador|UNPIVOT|Não há suporte para esse operador. Remova **UNPIVOT** do procedimento armazenado compilado de modo nativo.|  
 |Operador|CONTAINS|Não há suporte para esse operador. Remova **CONTAINS** do procedimento armazenado compilado de modo nativo.|  
@@ -163,11 +161,11 @@ ms.lasthandoff: 07/31/2017
 |Dica de junção|HASH, MERGE|Os procedimentos armazenados nativamente compilados oferecem suporte somente a junções de loops aninhados. Não há suporte para junções de hash e mesclagem. Remova a dica de junção.|  
 |Dica de consulta|*Dica de consulta*|Essa dica de consulta não está dentro de procedimentos armazenados nativamente compilados. Para obter dicas de consulta com suporte, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Opção|PERCENT|Essa opção não tem suporte com cláusulas **TOP** . Remova **PERCENT** da consulta no procedimento armazenado compilado de modo nativo.|  
-|Opção|WITH TIES|Essa opção não tem suporte com cláusulas **TOP** . Remova **WITH TIES** da consulta no procedimento armazenado compilado de modo nativo.|  
-|Função de agregação|*Função de agregação*|Não há suporte para essa cláusula. Para obter mais informações sobre procedimentos armazenados compilados de modo nativo, veja [Procedimentos armazenados compilados de modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Opção|WITH TIES|**Aplica-se ao:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Essa opção não tem suporte com cláusulas **TOP** . Remova **WITH TIES** da consulta no procedimento armazenado compilado de modo nativo.<br/><br/>O [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e o SQL Server a partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] dão suporte a opção **TOP WITH TIES**.|  
+|Função de agregação|*Função de agregação*|Não há suporte para todas as funções de agregação. Para obter mais informações sobre as funções de agregação com suporte em módulos T-SQL compilados nativamente, consulte [Recursos com suporte em módulos T-SQL compilados nativamente](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
 |Função de classificação|*Função de classificação*|As funções de classificação não têm suporte em procedimentos armazenados nativamente compilados. Remova-as da definição de procedimento.|  
-|Função|*Função*|Não há suporte para essa função. Remova-a do procedimento armazenado nativamente compilado.|  
-|de|*Instrução*|Não há suporte para essa instrução. Remova-a do procedimento armazenado nativamente compilado.|  
+|Função|*Função*|Não há suporte para essa função. Para obter mais informações sobre as funções com suporte em módulos T-SQL compilados nativamente, consulte [Recursos com suporte em módulos T-SQL compilados nativamente](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
+|de|*Instrução*|Não há suporte para essa instrução. Para obter mais informações sobre as funções com suporte em módulos T-SQL compilados nativamente, consulte [Recursos com suporte em módulos T-SQL compilados nativamente](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
 |Recurso|MIN e MAX usados com cadeias de caracteres e binários|As funções de agregação **MIN** e **MAX** não podem ser usadas para valores de cadeias de caracteres binários e caracteres dentro de procedimentos armazenados compilados de modo nativo.|  
 |Recurso|GROUP BY ALL|ALL não pode ser usado com cláusulas GROUP BY em procedimentos armazenados compilados de modo nativo. Remova ALL da cláusula GROUP BY.|  
 |Recurso|GROUP BY ()|Não suporte para o agrupamento por uma lista vazia. Remova a cláusula GROUP BY ou inclua colunas na lista de agrupamentos.|  
@@ -178,9 +176,9 @@ ms.lasthandoff: 07/31/2017
 |Recurso|Declarações de variável de tabela embutidas.|As variáveis de tabela devem referenciar explicitamente os tipos de tabela com otimização de memória definidos. Você deve criar um tipo de tabela com otimização de memória e usar esse tipo para a declaração variável, em vez de especificar o tipo embutido.|  
 |Recurso|Tabelas baseadas em disco|As tabelas baseadas em disco não podem ser acessadas nos procedimentos armazenados compilados de modo nativo. Remova as referências a tabelas baseadas em disco dos procedimentos armazenados compilados de modo nativo. Ou migre as tabelas baseadas em disco para tabelas com otimização de memória.|  
 |Recurso|Exibições|As exibições não podem ser acessadas nos procedimentos armazenados compilados de modo nativo. Em vez das exibições, referencie as tabelas base subjacentes.|  
-|Recurso|Funções com valor de tabela|As funções com valor de tabela não podem ser acessadas nos procedimentos armazenados compilados de modo nativo. Remova as referências a funções com valor de tabela do procedimento armazenado compilado de modo nativo.|  
+|Recurso|Funções com valor de tabela|**Aplica-se ao:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partir do [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Funções com valor de tabela com várias instruções não podem ser acessadas em módulos T-SQL compilados nativamente. Há suporte para funções com valor de tabela embutidas, mas elas devem ser criadas WITH NATIVE_COMPILATION.<br/><br/>**Aplica-se ao**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>As funções com valor de tabela não podem ser referenciadas em módulos T-SQL compilados nativamente.|  
 |Opção|PRINT|Remover referência|  
-|Recurso|DDL|Não há suporte para nenhum DDL.|  
+|Recurso|DDL|Não há suporte para DDL em módulos T-SQL compilados nativamente.|  
 |Opção|STATISTICS XML|Sem suporte. Quando você executa uma consulta com STATISTICS XML habilitado, o conteúdo XML é retornado sem a parte do procedimento armazenado compilado nativamente.|  
   
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transações que acessam tabelas com otimização de memória  
@@ -196,4 +194,3 @@ ms.lasthandoff: 07/31/2017
  [Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

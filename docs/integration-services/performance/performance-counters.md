@@ -8,8 +8,7 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a079ca03c21823aa8a3308bccc92cc71e92930c5
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1906bfa062b4c38c00c708bbbb9d09cbf0612071
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="performance-counters"></a>Contadores de desempenho
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala um conjunto de contadores de desempenho que podem ser usados para monitorar o desempenho do mecanismo de fluxo de dados. Por exemplo, é possível observar o contador "Buffers em spool" para determinar se os buffers de dados estão sendo gravados temporariamente no disco durante a execução de um pacote. Essa troca reduz o desempenho e indica que o computador não tem memória suficiente.  
@@ -125,5 +123,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  Você deve iniciar o serviço Logs e Alertas de Desempenho usando uma conta local ou uma conta de domínio que seja um membro do grupo Administradores.  
 
 ## <a name="see-also"></a>Consulte também  
- [Execução de projetos e pacotes](../packages/run-integration-services-ssis-packages.md) [eventos registrados por um pacote do Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-
+ [Execução de projetos e pacotes](../packages/run-integration-services-ssis-packages.md) [Eventos registrados por um pacote do Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

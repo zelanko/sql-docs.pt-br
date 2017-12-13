@@ -2,9 +2,12 @@
 title: Senha administrativa | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 592f3db3d5340f29832c29e1fcca7a2d46a7033f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e197fb3bcaee9bba96de0dc6dd6519a01e5a13b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administrative-password"></a>Senha Administrativa
-  Se na página **Distribuidores** deste assistente você selecionou um Distribuidor remoto para esse Publicador, terá de inserir uma senha para a conexão que a replicação faz entre o Publicador e o Distribuidor, usando o logon **distributor_admin** . A senha deve corresponder à senha especificada na página **Senha do Distribuidor** do Assistente para Configurar Distribuição ou da página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se na página **Distribuidores** deste assistente você selecionou um Distribuidor remoto para esse Publicador, terá de inserir uma senha para a conexão que a replicação faz entre o Publicador e o Distribuidor, usando o logon **distributor_admin**. A senha deve corresponder à senha especificada na página **Senha do Distribuidor** do Assistente para Configurar Distribuição ou da página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor** .  
   
 ## <a name="options"></a>Opções  
  **Senha**  

@@ -2,9 +2,12 @@
 title: Classe de evento Audit Database Object Access | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70a8262bd1520d61c20e8c860df286ed14329be9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83167fa58ad37859e109a9bad85d90906cd5d062
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-database-object-access-event-class"></a>Classe de evento Audit Database Object Access
-  A classe de evento **Audit Database Object Access** ocorre quando são acessados objetos de banco de dados, como esquemas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Audit Database Object Access** ocorre quando objetos de banco de dados, assim como esquemas, são acessados.  
   
 ## <a name="audit-database-object-access-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Database Object Access  
   

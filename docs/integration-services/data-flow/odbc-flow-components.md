@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-flow-components"></a>Componentes de fluxo ODBC
   Este tópico descreve os conceitos necessários para criar um fluxo de dados ODBC usando [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -144,4 +142,3 @@ Não há nenhum suporte de tipo de dados para tipos C extensíveis conforme desc
 -   [Destino ODBC](../../integration-services/data-flow/odbc-destination.md)  
   
  
-

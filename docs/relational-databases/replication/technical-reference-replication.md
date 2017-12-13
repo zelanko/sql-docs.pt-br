@@ -2,9 +2,12 @@
 title: "Referência técnica (Replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c40b1a86fd793fe9151d05948b3fe68b19a3a521
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 29ccc0bdbee741895cc0d7e752681aff66958ff6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="technical-reference-replication"></a>Referência técnica (replicação)
-  Esta seção contém links para documentação de referência técnica para replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Esta seção contém links para documentação de referência técnica para replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Ícone da pasta de arquivos pequenos](../../analysis-services/media/filefolder-small.png "Ícone da pasta de arquivos pequenos") **Erros e eventos**  
  [Referência de erros e eventos &#40;Replicação&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

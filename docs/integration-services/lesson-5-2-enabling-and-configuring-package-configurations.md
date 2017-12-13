@@ -1,5 +1,5 @@
 ---
-title: "Etapa 2: Habilitar e configurar as configurações do pacote | Microsoft Docs"
+title: "Etapa 2: configurar e habilitar configurações de pacote | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5cf47715b998a7f09b6d90772a2b456872eebed
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lição 5-2-Configurando e habilitando configurações de pacote
+# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lição 5-2 – configurar e habilitar configurações de pacote
 Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e habilitará configurações de pacote usando o Assistente de Configuração de Pacotes. Você usará esse assistente para gerar um arquivo de configuração XML que contém definições de configuração da propriedade **Directory** do contêiner Loop Foreach. O valor da propriedade de diretório é fornecido por uma nova variável de nível de pacote que você pode atualizar no tempo de execução. Adicionalmente, você populará uma pasta de dados de exemplo para usar durante o teste.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Para criar uma nova variável de nível de pacote mapeada para a propriedade de diretório  
@@ -117,4 +114,3 @@ Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 3: Modificando o valor de configuração da propriedade de diretório](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
-

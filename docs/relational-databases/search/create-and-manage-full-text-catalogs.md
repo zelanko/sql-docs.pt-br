@@ -2,9 +2,12 @@
 title: "Criar e gerenciar catálogos de texto completo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8b4b38c2aac9a5d960f84f2b9d6f7b32762aa862
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Criar e gerenciar catálogos de texto completo
-Um catálogo de texto completo é um contêiner lógico para um grupo de índices de texto completo. É necessário criar um catálogo de texto completo antes de criar um índice de texto completo.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Um catálogo de texto completo é um contêiner lógico para um grupo de índices de texto completo. É necessário criar um catálogo de texto completo antes de criar um índice de texto completo.
 
 Um catálogo de texto completo é um objeto virtual que não pertence a nenhum grupo de arquivos.
   

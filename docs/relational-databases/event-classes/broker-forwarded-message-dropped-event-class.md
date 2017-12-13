@@ -2,9 +2,12 @@
 title: Classe de evento Broker:Forwarded Message Dropped | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ee4d1edd96ee99a8d2ce93513b7d1423811d5b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d2ea5b1fbb62dc332dc04e4262d474eeb0980eed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>classe de evento Broker:Forwarded Message Dropped
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento Broker:Forwarded Message Dropped quando o Service Broker remove uma mensagem que deveria ser encaminhada.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento Broker:Forwarded Message Dropped quando o Service Broker remove uma mensagem destinada a ser encaminhada.  
   
 ## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Forwarded Message Dropped  
   

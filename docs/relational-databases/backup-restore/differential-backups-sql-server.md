@@ -2,9 +2,12 @@
 title: Backups diferenciais (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eba06fb9a5537477a0b0ed5ef143ac33f9bd2867
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 127eed1b2970254accdfc83a795e3b0a66d9f08a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="differential-backups-sql-server"></a>Backups diferenciais (SQL Server)
-  Este tópico de backup e restauração é relevante para todos os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico de backup e restauração é relevante para todos os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Um backup diferencial baseia-se no backup de dados completo anterior mais recente. Um backup diferencial captura apenas os dados que foram alterados desde o backup completo. O backup completo no qual um backup diferencial se baseia é conhecido como a *base* do diferencial. Os backups completos, com exceção dos backups somente cópia, podem servir como base para uma série de backups diferenciais, inclusive backups de banco de dados, backups parciais e backups de arquivo. O backup de base para um backup diferencial de arquivo pode ser contido dentro de um backup completo, um backup de arquivo ou um backup parcial.  
   

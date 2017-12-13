@@ -1,30 +1,28 @@
 ---
-title: Catalog.update_master_address (banco de dados SSISDB) | Microsoft Docs
+title: catalog.update_master_address (banco de dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5e560d6011370b3d56ba13c86608d2be3d0dc6e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 84ded0f503e83b20a65997238a9086ddad3dbf21
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="catalogupdatemasteraddress-ssisdb-database"></a>Catalog.update_master_address (banco de dados SSISDB)
+# <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address (banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-Atualização de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ponto de extremidade de escala Out mestre.
+Atualize o ponto de extremidade do Mestre do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,8 +31,8 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>Argumentos
-[ @MasterAddress =] *masterAddress*  
-O ponto de extremidade de escala Out mestre. O *masterAddress* é **nvarchar**.  
+[ @MasterAddress = ] *masterAddress*  
+O ponto de extremidade do Mestre do Scale Out. O *masterAddress* é **nvarchar**.  
 
  ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
@@ -45,8 +43,7 @@ O ponto de extremidade de escala Out mestre. O *masterAddress* é **nvarchar**.
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
    
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
  
-

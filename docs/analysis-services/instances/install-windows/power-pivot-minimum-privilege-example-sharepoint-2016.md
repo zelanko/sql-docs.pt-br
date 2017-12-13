@@ -2,12 +2,12 @@
 title: "Power Pivot privilégios mínimos exemplo - SharePoint 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae8b2b882204fa6940a5e4827ca3a5a0b1344dbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f86e52576c3a145042741c1a1ecc012b7c4941f3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot privilégios mínimos exemplo - SharePoint 2016
-  Este tópico descreve um exemplo da configuração do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 com privilégios mínimos. A configuração utiliza uma conta diferente para cada um dos três componentes e cada conta tem o nível mínimo de privilégios.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve um exemplo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para a configuração do SharePoint 2016 com privilégios mínimos. A configuração utiliza uma conta diferente para cada um dos três componentes e cada conta tem o nível mínimo de privilégios.  
   
 ||  
 |-|  

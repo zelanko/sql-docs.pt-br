@@ -2,9 +2,12 @@
 title: "O log de transações (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5c2b3a5bd97800d958c04bbc11a509d0db15cdc3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4126d98d24184164618bad5601c3c6301ce77d2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
-  Todo banco de dados do SQL Server tem um log de transações que registra todas as transações e as modificações feitas no banco de dados por cada transação.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Todo banco de dados do SQL Server tem um log de transações que registra todas as transações e as modificações feitas no banco de dados por cada transação.
   
 O log de transações é um componente crítico do banco de dados. Se houver uma falha no sistema, você precisará que o log retorne o seu banco de dados a um estado consistente. 
 

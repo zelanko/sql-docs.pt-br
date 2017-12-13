@@ -2,9 +2,12 @@
 title: 'Classe de evento TM: Begin Tran Completed | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56903efd0380f130a68779a7520ba5d7aaa7b51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aac5d12fa7ed9ec6c22d5585313419bd732baf90
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>classe de evento TM: Begin Tran Completed
-  A classe de evento TM: Begin Tran Completed indica que uma solicitação BEGIN TRANSACTION foi concluída. A solicitação foi enviada do cliente pela interface de gerenciamento de transações.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento TM: Begin Tran Completed indica que uma solicitação BEGIN TRANSACTION foi concluída. A solicitação foi enviada do cliente pela interface de gerenciamento de transações.  
   
 ## <a name="tm-begin-tran-completed-event-class-data-columns"></a>Colunas de dados de classe de evento TM: Begin Tran Completed  
   

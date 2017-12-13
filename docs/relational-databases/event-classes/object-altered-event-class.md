@@ -2,9 +2,12 @@
 title: Classe de evento Object:Altered | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd36a75d1672a25cd2a8571d0b9d6c240088065f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8a7c43fda5f0543e51a835f70dbee5be6b94ad1a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objectaltered-event-class"></a>classe de evento Object:Altered
-  A classe de evento Object:Altered indica que um objeto foi alterado; por exemplo, pelas instruções ALTER INDEX e ALTER TABLE ou ALTER DATABASE. Essa classe de evento pode ser usada para determinar se objetos estão sendo alterados, por exemplo, por aplicativos ODBC, que geralmente criam procedimentos armazenados temporários.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento Object:Altered indica que um objeto foi alterado; por exemplo, pelas instruções ALTER INDEX e ALTER TABLE ou ALTER DATABASE. Essa classe de evento pode ser usada para determinar se objetos estão sendo alterados, por exemplo, por aplicativos ODBC, que geralmente criam procedimentos armazenados temporários.  
   
  A classe de evento Object:Altered sempre ocorre como dois eventos. O primeiro evento indica a fase Iniciar. O segundo evento indica a fase de Reversão ou de Confirmação.  
   

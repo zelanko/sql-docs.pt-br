@@ -2,9 +2,12 @@
 title: Janelas Localizar Resultados | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 739ebc9657fa81650ab57a95d057dc3cc674ebf9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ca6d03068225909a645b05059a3da15893604821
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-results-windows"></a>Janelas Localizar Resultados
-  As duas janelas Localizar Resultados exibem correspondências encontradas usando a guia **Localizar em Arquivos** ou **Substituir em Arquivos** de caixa de diálogo **Localizar e Substituir** . O comando **Opções de Resultados** para **Localizar em Arquivos** e **Substituir em Arquivos** permite que você escolha a janela Localizar Resultados onde serão listadas as correspondências encontradas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As duas janelas Localizar Resultados exibem correspondências encontradas usando a guia **Localizar em Arquivos** ou **Substituir em Arquivos** da caixa de diálogo **Localizar e Substituir**. O comando **Opções de Resultados** para **Localizar em Arquivos** e **Substituir em Arquivos** permite que você escolha a janela Localizar Resultados onde serão listadas as correspondências encontradas.  
   
  A janela Localizar Resultados selecionada abre automaticamente sempre que são encontradas correspondências. Para exibir uma janela Localizar Resultados manualmente, clique em **Outras Janelas** no menu **Exibir** e clique em **Localizar Resultados 1** ou **Localizar Resultados 2**.  
   

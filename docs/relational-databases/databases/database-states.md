@@ -2,9 +2,12 @@
 title: Estados de banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 997df06a840d50669a643dd4d662d00ec896eaa2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d4743b5a903630f267c48c42aced53776e8bc073
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-states"></a>Estados de banco de dados
-  Um banco de dados sempre está em um estado específico. Por exemplo, esses estados incluem ONLINE, OFFLINE ou SUSPECT. Para verificar o estado atual de um banco de dados, selecione a coluna **state_desc** na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou a propriedade **Status** da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um banco de dados sempre está em um estado específico. Por exemplo, esses estados incluem ONLINE, OFFLINE ou SUSPECT. Para verificar o estado atual de um banco de dados, selecione a coluna **state_desc** na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou a propriedade **Status** da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) .  
   
 ## <a name="database-state-definitions"></a>Definições de estado de banco de dados  
  A tabela a seguir define os estados de banco de dados.  

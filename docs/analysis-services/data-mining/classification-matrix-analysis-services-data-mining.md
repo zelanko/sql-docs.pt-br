@@ -2,12 +2,12 @@
 title: "Matriz de classificação (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8882fb1235b4d8beeb819833c76c872f1a4df76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matriz de classificação (Analysis Services - Mineração de dados)
-  Uma *matriz de classificação* é criada classificando-se todos os casos do modelo em categorias, determinando se o valor previsto correspondeu ao valor real. Todos os casos em cada categoria são contabilizados e os totais são exibidos na matriz. A matriz de classificação é uma ferramenta padrão para avaliação de modelos estatísticos e é muitas vezes chamada de *matriz de confusão*.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um *matriz de classificação* classifica todos os casos do modelo em categorias, determinando se o valor previsto correspondeu ao valor real. Todos os casos em cada categoria são contabilizados e os totais são exibidos na matriz. A matriz de classificação é uma ferramenta padrão para avaliação de modelos estatísticos e é muitas vezes chamada de *matriz de confusão*.  
   
  O gráfico que é criado quando você escolhe a opção **Matriz de Classificação** compara valores reais com previstos para cada estado previsto que você especifica. As linhas na matriz representam os valores previstos para o modelo, sendo que as colunas representam os valores atuais. As categorias usadas na análise são *falsos positivos*, *verdadeiros positivos*, *falsos negativos*e *verdadeiros negativos*  
   

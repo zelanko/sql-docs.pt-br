@@ -1,5 +1,5 @@
 ---
-title: Fonte de arquivo HDFS | Microsoft Docs
+title: Origem do arquivo HDFS | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hdfsfilesrc.f1
+f1_keywords: sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b7ed3c3789b7c28476719422f600106a73bfebd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b51169029f95c084907d614fae60ea6b78acb502
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hdfs-file-source"></a>Origem do arquivo HDFS
   O componente de origem do arquivo HDFS permite que um pacote do SSIS leia dados de um arquivo HDFS. Os formatos de arquivo com suporte são texto e Avro. (Não há suporte para fontes de dados ORC.)  
   
  Para configurar a origem do arquivo HDFS, arraste e solte o arquivo de origem HDFS no designer de fluxo de dados e clique duas vezes no componente para abrir o editor.  
   
- ![Editor de fonte de arquivo HDFS](../../integration-services/data-flow/media/hdfs-file-source.png "Editor de fonte de arquivo HDFS")  
+ ![Editor de origem do arquivo HDFS](../../integration-services/data-flow/media/hdfs-file-source.png "Editor de origem do arquivo HDFS")  
   
 ## <a name="options"></a>Opções  
  Configure as seguintes opções na guia **Geral** da caixa de diálogo **Editor de Origem de Arquivo Hadoop** .  
@@ -49,7 +46,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciador de conexões do Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Destino de arquivo HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
+ [Destino de Arquivo HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
   
   
-

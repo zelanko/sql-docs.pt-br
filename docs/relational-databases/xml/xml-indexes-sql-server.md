@@ -2,9 +2,12 @@
 title: "Índices XML (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -37,14 +40,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89cddd8c4eabe6b8c1888df909da934350dfae09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b9dccca2e644bf5d02d47165b02d75241e40695
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
-  Índices XML podem ser criados em colunas de tipo de dados **xml** . Eles indexam todas as marcas, valores e caminhos através das instâncias XML na coluna e se beneficiam do desempenho das consultas. Seu aplicativo pode se beneficiar de um índice XML nas seguintes situações:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Índices XML podem ser criados em colunas de tipo de dados **xml**. Eles indexam todas as marcas, valores e caminhos através das instâncias XML na coluna e se beneficiam do desempenho das consultas. Seu aplicativo pode se beneficiar de um índice XML nas seguintes situações:  
   
 -   Consultas em colunas XML são comuns em sua carga de trabalho. O custo da manutenção de índices XML durante a modificação de dados deve ser considerado.  
   

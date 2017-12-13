@@ -2,9 +2,12 @@
 title: Monitorar o envio de logs (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d1ed3b2823e6de0f4afe534398c40ec461e59850
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8655f18aec310a10ac133fb79ee2230cc119f712
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Monitorar envio de logs (Transact-SQL)
-  Depois que você configurar o envio de logs, você poderá monitorar as informações sobre o status de todos os servidores de envio de logs. O histórico e status de operações de envio de logs são sempre salvos localmente pelos trabalhos de envio de log. O histórico e status da operação de backup são armazenados no servidor primário e o histórico e status de operações de cópia e restauração são armazenados no servidor secundário. Se você implementou um servidor monitor remoto, estas informações também serão armazenadas no servidor monitor.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Depois que você configurar o envio de logs, você poderá monitorar as informações sobre o status de todos os servidores de envio de logs. O histórico e status de operações de envio de logs são sempre salvos localmente pelos trabalhos de envio de log. O histórico e status da operação de backup são armazenados no servidor primário e o histórico e status de operações de cópia e restauração são armazenados no servidor secundário. Se você implementou um servidor monitor remoto, estas informações também serão armazenadas no servidor monitor.  
   
  Você pode configurar alertas que serão acionados se as operações de envio de logs não acontecerem como programado. Os erros são encontrados por um trabalho de alerta que observa o status de operações de backup e restauração. Você pode definir os alertas que notificam um operador quando estes erros forem gerados. Se um servidor monitor estiver configurado, um trabalho de alerta gerado pelos erros de todas as operações da configuração de envio de logs é executado no servidor monitor. Se um servidor monitor não for especificado, um trabalho de alerta é executado na instância primária do servidor que monitora a operação de backup. Se um servidor monitor não for especificado, um trabalho de alerta também será executado em cada instância secundária de servidor para monitorar as operações locais de cópia e restauração.  
   

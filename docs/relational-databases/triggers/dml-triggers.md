@@ -2,9 +2,12 @@
 title: Gatilhos DML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a6cbad16ee3ca0db8c5506810e62ac869b518823
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: afb92fc71dcb3581024950cfaac84c5b2dac7968
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dml-triggers"></a>Gatilhos DML
-  Os gatilhos DML são um tipo especial de procedimento armazenado que entra em vigor automaticamente quando um evento DML (linguagem de manipulação de dados) ocorre e afeta a tabela ou exibição definida no gatilho. Os eventos DML são instruções INSERT, UPDATE ou DELETE. Os gatilhos DML podem ser usados para impor regras de negócios e integridade de dados, consultar outras tabelas e incluir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] complexas. O gatilho e a instrução que o dispara são tratados como uma transação simples, que pode ser revertida dentro do gatilho. Se um erro grave for detectado (espaço em disco insuficiente, por exemplo), toda a transação será revertida automaticamente.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Os gatilhos DML são um tipo especial de procedimento armazenado que entra em vigor automaticamente quando um evento DML (linguagem de manipulação de dados) ocorre e afeta a tabela ou exibição definida no gatilho. Os eventos DML são instruções INSERT, UPDATE ou DELETE. Os gatilhos DML podem ser usados para impor regras de negócios e integridade de dados, consultar outras tabelas e incluir instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] complexas. O gatilho e a instrução que o dispara são tratados como uma transação simples, que pode ser revertida dentro do gatilho. Se um erro grave for detectado (espaço em disco insuficiente, por exemplo), toda a transação será revertida automaticamente.  
   
 ## <a name="dml-trigger-benefits"></a>Benefícios do gatilho DML  
  Os gatilhos DML são semelhantes a restrições, pois podem impor integridade de entidade ou integridade de domínio. Em geral, a integridade da entidade sempre deve ser imposta no menor nível por índices que fazem parte das restrições PRIMARY KEY e UNIQUE ou que são criados independentemente de restrições. A integridade de domínio deve ser imposta por restrições CHECK e a RIN (integridade referencial) deve ser imposta por restrições FOREIGN KEY. Os gatilhos DML são muito úteis quando os recursos suportados por restrições não atendem às necessidades funcionais do aplicativo.  

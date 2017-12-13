@@ -2,9 +2,12 @@
 title: Classe de Evento CursorOpen| Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef99bb8938a8a565d98fe624567a08502a2d2f0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 276c1b736886099672a38b85e48f982291e8ae1e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursoropen-event-class"></a>Classe de evento CursorOpen
-  A classe de evento **CursorOpen** descreve eventos de cursor aberto que ocorrem em cursores da API (interface de programação de aplicativos). Os eventos de cursor aberto ocorrem quando o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] define a instrução SQL a ser associada ao cursor e às opções de cursor e, então, popula o cursor.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **CursorOpen** descreve eventos de cursor aberto que ocorrem em cursores da API (interface de programação de aplicativos). Os eventos de cursor aberto ocorrem quando o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] define a instrução SQL a ser associada ao cursor e às opções de cursor e, então, popula o cursor.  
   
  Inclua a classe de evento **CursorOpen** em rastreamentos que estão gravando o desempenho de cursores. Quando a classe de evento **CursorOpen** é incluída no rastreamento, a quantidade de sobrecarga criada depende da frequência de uso dos cursores em relação ao banco de dados durante o rastreamento. Se os cursores forem usados extensivamente, o rastreamento poderá diminuir significativamente o desempenho.  
   

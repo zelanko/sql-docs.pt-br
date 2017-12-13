@@ -2,9 +2,12 @@
 title: "Reverter os separadores de palavras usados por pesquisa à versão anterior | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4380c25d02f6fd6d05f41c030691738f3715d6e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 932ac3a8337af5871910c9aabd7a906508b1455d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Reverter os separadores de palavras usados por pesquisa à versão anterior
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala e habilita uma versão dos separadores de palavras e lematizadores para todos os idiomas com suporte de Pesquisa de Texto Completo com a exceção de coreano. Este tópico descreve como alternar deste nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala e habilita uma versão dos separadores de palavras e lematizadores para todos os idiomas compatíveis com a Pesquisa de Texto Completo, com a exceção do coreano. Este tópico descreve como alternar deste nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão.  
   
  Este tópico não discute os seguintes idiomas:  
   

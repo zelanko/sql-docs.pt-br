@@ -3,8 +3,11 @@ title: "Caixa de diálogo Configurar Página | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 857a8a1331b49273ff82dd459c65da983c60dc4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5e52e80a2de50c69ecc6349a3666e9da5a71f742
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="page-setup-dialog-box"></a>Caixa de diálogo Configurar Página
-Você pode personalizar o layout da sua página selecionando opções na caixa de diálogo **Configurar Página** . A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode personalizar o design da sua página selecionando opções na caixa de diálogo **Configurar Página**. A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  
   
 ## <a name="paper"></a>Papel  
 **Tamanho**  

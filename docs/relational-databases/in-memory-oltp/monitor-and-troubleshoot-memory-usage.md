@@ -2,9 +2,12 @@
 title: "Monitorar e solucionar problemas de uso de memória | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e08358859b04559b2ed2f010887fd4166ebc6196
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d5606c5733472e462b74d32a8ff4598f52ebcf90
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorar e solucionar problemas de uso da memória
-  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consome memória em padrões diferentes comparado a tabelas baseadas em disco. Você pode monitorar a quantidade de memória alocada e usada pelas tabelas e índices com otimização de memória em seu banco de dados, usando as DMVs ou os contadores de desempenho fornecidos para a memória e o subsistema de coleta de lixo.  Isso oferece visibilidade em nível de sistema e banco de dados, e permite que você evite problemas devido ao esgotamento de memória.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consome memória em padrões diferentes comparado a tabelas baseadas em disco. Você pode monitorar a quantidade de memória alocada e usada pelas tabelas e índices com otimização de memória em seu banco de dados, usando as DMVs ou os contadores de desempenho fornecidos para a memória e o subsistema de coleta de lixo.  Isso oferece visibilidade em nível de sistema e banco de dados, e permite que você evite problemas devido ao esgotamento de memória.  
   
  Este tópico abrange o monitoramento do uso de memória de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   

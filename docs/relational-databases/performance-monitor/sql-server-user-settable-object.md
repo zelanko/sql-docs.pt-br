@@ -2,9 +2,12 @@
 title: "SQL Server, objeto Definível pelo usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 45572538424d2aa6898428d94435637a821dccd9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 97c5a83f9a773f2d0894ed0ed7e4b11e3c7384d9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, objeto User Settable
-  O objeto **User Settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **User Settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
   
  O objeto **User Settable** contém 10 instâncias do contador de consultas: de **Contador do usuário 1** a **Contador do usuário 10**. Esses contadores são mapeados para os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sp_user_counter1** a **sp_user_counter10**. À medida que esses procedimentos armazenados são executados por aplicativos do usuário, os valores definidos por eles são exibidos no Monitor do Sistema. Um contador pode monitorar qualquer valor inteiro individual (por exemplo, um procedimento armazenado que conta quantos pedidos de um produto em particular ocorreram em um dia).  
   

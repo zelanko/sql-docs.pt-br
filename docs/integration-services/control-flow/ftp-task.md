@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
 - sql13.dts.designer.ftptask.general.f1
 - sql13.dts.designer.ftptask.filetransfer.f1
-helpviewer_keywords:
-- FTP task [Integration Services]
+helpviewer_keywords: FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: fe5fd069ec931c3eee57b2ef46da35437dd81875
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ftp-task"></a>Tarefa FTP
   A tarefa FTP carrega e baixa arquivos de dados, bem como gerencia diretórios em servidores. Por exemplo, um pacote pode baixar arquivos de dados de um servidor remoto ou de um local de Internet como parte de um fluxo de trabalho de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Você pode usar a tarefa FTP para os seguintes propósitos:  
@@ -89,7 +86,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opções  
  **FtpConnection**  
- Selecione um Gerenciador de conexão de FTP existente ou clique em \< **nova conexão...** > para criar uma conexão Gerenciador.  
+ Selecione um gerenciador de conexões FTP existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões de FTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
@@ -152,13 +149,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Selecione uma variável existente definido pelo usuário, ou clique em \< **nova variável...** > para criar uma variável definida pelo usuário.  
+ Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável definida pelo usuário.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Adicionar variável  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Selecione um Gerenciador de conexão de FTP existente ou clique em \< **nova conexão...** > para criar uma conexão Gerenciador.  
+ Selecione um gerenciador de conexões FTP existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de Conexões de FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexões de FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -166,19 +163,18 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Selecione uma variável existente definido pelo usuário, ou clique em \< **nova variável...** > para criar uma variável.  
+ Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Adicionar variável  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Selecione um Gerenciador de conexão de arquivo existente ou clique em \< **nova conexão...** > para criar uma conexão Gerenciador.  
+ Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
   
- **Tópicos relacionados**: [simples Gerenciador de Conexão de arquivo](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ **Tópicos relacionados**: [Adicionar gerenciador de conexões de arquivo simples](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
   
-

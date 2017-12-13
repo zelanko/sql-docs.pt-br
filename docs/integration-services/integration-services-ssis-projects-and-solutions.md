@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) projetos e soluções | Microsoft Docs"
+title: "Projetos e soluções do SSIS (Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.importprojectwizard.f1
+f1_keywords: sql13.ssis.importprojectwizard.f1
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 246a6df702e323d57d21e9e014aa059db31b300e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Projetos e soluções do Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para o desenvolvimento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]pacotes residem em projetos. Para criar e trabalhar com projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você deve instalar o ambiente do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obter mais informações, consulte [Instalar o Integration Services](../integration-services/install-windows/install-integration-services.md).  
+Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem em projetos. Para criar e trabalhar com projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você deve instalar o ambiente do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obter mais informações, consulte [Instalar o Integration Services](../integration-services/install-windows/install-integration-services.md).  
   
  Quando você cria um novo projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], a caixa de diálogo **Novo Projeto** inclui um modelo do **Integration Services Project** . Este modelo de projeto cria um novo projeto que contém um único pacote.  
   
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/26/2017
  Projetos são armazenados em soluções. Você pode primeiro criar uma solução e, então, adicionar um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à solução. Se não existir uma solução, ela será criada automaticamente pelo [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] quando o projeto for criado pela primeira vez. Uma solução pode conter vários projetos de tipos diferentes.  
   
 > [!TIP]  
->  Por padrão, quando você cria um novo projeto no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], a solução não é mostrada em **Solution Explorer** painel. Para alterar este comportamento padrão, no menu **Ferramentas** , clique em **Opções**. Na caixa de diálogo **Opções** , expanda **Projetos e Soluções**e clique em **Geral**. Na página **Geral** , selecione **Sempre mostrar solução**.  
+>  Por padrão, quando você cria um novo projeto no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], a solução não é mostrada no painel **Gerenciador de Soluções**. Para alterar este comportamento padrão, no menu **Ferramentas** , clique em **Opções**. Na caixa de diálogo **Opções** , expanda **Projetos e Soluções**e clique em **Geral**. Na página **Geral** , selecione **Sempre mostrar solução**.  
 
 ## <a name="solutions-contain-projects"></a>As soluções contêm projetos  
  Uma solução é um contêiner que agrupa e gerencia os projetos que você usa quando desenvolve soluções empresariais completas. Uma solução permite que você manipule vários projetos como uma unidade e una um ou mais projetos relacionados que contribuam para uma solução empresarial.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="folders-in-integration-services-projects"></a>Pastas nos projetos do Integration Services  
  O diagrama a seguir mostra as pastas em um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- ![Pastas em um projeto do Integration Services](../integration-services/media/solutionexplorer.gif "pastas em um projeto do Integration Services")  
+ ![Pastas em um projeto do Integration Services](../integration-services/media/solutionexplorer.gif "Pastas em um projeto do Integration Services")  
   
  A tabela a seguir descreve as pastas que aparecem em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -92,7 +89,7 @@ ms.lasthandoff: 09/26/2017
   
  No Gerenciador de Soluções, clique com o botão direito do mouse em um projeto do Integration Services e selecione **Propriedades** para abrir as páginas de propriedades do projeto. Na guia **Geral** de **Propriedades de Configuração**, selecione a propriedade **TargetServerVersion** e, em seguida, escolha o SQL Server 2012, SQL Server 2014 ou SQL Server 2016.  
   
- ![A propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto](../integration-services/media/targetserverversion2.png "propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto")  
+ ![Propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto](../integration-services/media/targetserverversion2.png "Propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto")  
  
 ## <a name="create-a-new-integration-services-project"></a>Criar um novo projeto do Integration Services  
   
@@ -124,11 +121,11 @@ ms.lasthandoff: 09/26/2017
   
 2.  Na guia **Geral** de **Propriedades de Configuração**, selecione a propriedade **TargetServerVersion** e, em seguida, escolha o SQL Server 2012, SQL Server 2014 ou SQL Server 2016.  
   
-     ![A propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto](../integration-services/media/targetserverversion2.png "propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto")  
+     ![Propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto](../integration-services/media/targetserverversion2.png "Propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto")  
   
  Você pode criar, manter e executar pacotes que se destinam ao SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
 
-## <a name="import-an-existing-project-with-the-import-project-wizard"></a>Importar um projeto existente com o Assistente para importação de projeto
+## <a name="import-an-existing-project-with-the-import-project-wizard"></a>Importar um projeto existente com o Assistente para Importação de Projeto
   
 1.  No [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], clique em **Novo** > **Projeto** no menu **Arquivo** .  
   
@@ -211,7 +208,7 @@ ms.lasthandoff: 09/26/2017
 3.  O novo item será exibido na pasta apropriada no Gerenciador de Soluções.  
 
 ## <a name="copy-project-items"></a>Copiar itens do projeto  
-Você pode copiar objetos em um [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projeto ou entre [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projetos. Você também pode copiar objetos entre os outros tipos de projetos do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para copiar entre projetos, o projeto deve fazer parte da mesma solução [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .
+Você pode copiar objetos em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou entre projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Você também pode copiar objetos entre os outros tipos de projetos do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para copiar entre projetos, o projeto deve fazer parte da mesma solução [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .
 
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto ou solução [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com que deseja trabalhar.  
   
@@ -223,4 +220,3 @@ Você pode copiar objetos em um [!INCLUDE[ssISnoversion](../includes/ssisnoversi
   
      Os itens são copiados automaticamente na pasta correta. Se você copiar itens que não são pacotes no projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , os itens serão copiados na pasta **Diversos** .  
      
-

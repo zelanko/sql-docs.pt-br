@@ -1,97 +1,99 @@
 ---
-title: "Solução de problemas do SQL Server Integration Services (SSIS) de expansão | Microsoft Docs"
+title: "Solução de problemas do SSIS (SQL Server Integration Services) Scale Out | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 41bb853dd08591596f6f5baa918e174d0c26a6b5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 56d61bc6ba76514ba2291243002a7423ec8e265c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="troubleshooting-scale-out"></a>Solução de problemas de expansão
+# <a name="troubleshooting-scale-out"></a>Solução de problemas do Scale Out
 
-SSIS expansão envolve communtication entre SSISDB, escala Out mestre serviço e escala fora do trabalho. Às vezes, a comunicação é interrompida devido a erros de configuração, falta de permissões de acesso e outros motivos. Este documento ajuda você a solucionar problemas de sua configuração de expansão.
+O SSIS Scale Out envolve comunicação entre SSISDB, serviço Mestre do Scale Out e serviço de Trabalho do Scale Out. Às vezes, a comunicação é interrompida devido a erros de configuração, falta de permissões de acesso e outros motivos. Este documento ajuda você a solucionar problemas de sua configuração do Scale Out.
 
-Para investigar os sintomas que você encontrar, siga as etapas abaixo uma até que o problema seja resolvido.
+Para investigar os sintomas que você encontrar, siga as etapas abaixo uma a uma até que o problema seja resolvido.
 
 ### <a name="symptoms"></a>**Sintomas** 
-Escala Out mestre não pode se conectar ao SSISDB. 
+O Mestre do Scale Out não é capaz de se conectar ao SSISDB. 
 
-Não é possível mostrar propriedades principais no Gerenciador de fora da escala.
+Não é possível mostrar as propriedades do Mestre Gerenciador do Scale Out.
 
-Propriedades mestres não são preenchidas [SSISDB]. [catalog]. [master_properties]
+As propriedades do Mestre não estão preenchidas em [SSISDB].[catalog].[master_properties]
 
 ### <a name="solution"></a>**Solução**
-Etapa 1: Verificar se expandir está habilitado.
+Etapa 1: verifique se o Scale Out está habilitado.
 
-Clique com botão direito **SSISDB** nó no Pesquisador de objetos do SSMS e marque **expansão está ativado**.
+Clique com o botão direito do mouse no nó **SSISDB** no Pesquisador de Objetos do SSMS e marque **O recurso Scale Out está habilitado**.
 
-![Expansão esteja](media\isenabled.PNG)
+![O Scale Out está habilitado](media\isenabled.PNG)
 
-Se o valor da propriedade é False, habilite expansão chamando o procedimento armazenado [SSISDB]. [catalog]. [enable_scaleout].
+Se o valor da propriedade é False, habilite o Scale Out chamando o procedimento armazenado [SSISDB].[catalog].[enable_scaleout].
 
-Etapa 2: Verifique se o nome do Sql Server especificado no arquivo de configuração de escala Out mestre está correto e reinicie o serviço de escala Out mestre.
+Etapa 2: verifique se o nome do SQL Server especificado no arquivo de configuração do Mestre do Scale Out está correto e reinicie o serviço do Mestre do Scale Out.
 
 ### <a name="symptoms"></a>**Sintomas** 
-Escala Out trabalho não pode se conectar a escala Out mestre
+O Trabalho do Scale Out não é capaz de se conectar ao Mestre do Scale Out
 
-Escala Out trabalhador não mostrar após adicioná-lo no Gerenciador de fora da escala
+O Trabalho do Scale Out não aparece após ser adicionado ao Gerenciador do Scale Out
 
-Escala Out trabalhador não mostrar em [SSISDB]. [catalog]. [worker_agents]
+O Trabalho do Scale Out não aparece em [SSISDB].[catalog].[worker_agents]
 
-Serviço de escala Out trabalho está em execução, enquanto o escala Out trabalhador está offline
+O serviço de Trabalho do Scale Out está em execução, enquanto o Trabalho do Scale Out está offline
 
 ### <a name="solutions"></a>**Soluções** 
-Verifique as mensagens de erro no log do serviço de escala Out trabalhador em \<driver\>: \Users\\*[conta que está executando o serviço do trabalhador]*\AppData\Local\SSIS\Cluster\Agent.
+Verifique as mensagens de erro no log do serviço do Trabalho de Scale Out em \<unidade\>:\Users\\*[conta executando o serviço de trabalho]*\AppData\Local\SSIS\Cluster\Agent.
 
 **Caso** 
 
-System.ServiceModel.EndpointNotFoundException: não houve nenhum ponto de extremidade escutando em https://*[nome_do_computador]: [porta]*/ClusterManagement/ pode aceitar a mensagem.
+System.ServiceModel.EndpointNotFoundException: não houve nenhum ponto de extremidade escutando em https://*[NomeDoComputador]:[Porta]*/ClusterManagement/ que pudesse aceitar a mensagem.
 
-Etapa 1: Verifique se o número da porta especificado no arquivo de configuração de serviço de escala Out mestre está correto e reinicie o serviço de escala Out mestre. 
+Etapa 1: verifique se o número da porta especificado no arquivo de configuração de serviço do Mestre do Scale Out está correto e reinicie o serviço do Mestre do Scale Out. 
 
-Etapa 2: Verifique se o ponto de extremidade mestre especificado na configuração do serviço de escala Out trabalhador está correto e reinicie o serviço de escala fora do trabalho.
+Etapa 2: verifique se o ponto de extremidade mestre especificado no arquivo de configuração de serviço de Trabalho do Scale Out está correto e reinicie o serviço do Trabalho do Scale Out.
 
-Etapa 3: Verificar se a porta de firewall está aberta no nó de escala Out mestre.
+Etapa 3: verifique se a porta de firewall está aberta no nó Mestre do Scale Out.
 
-Etapa 4: Resolver quaisquer outros problemas de conexão entre o nó de escala Out mestre e escala fora do trabalho.
+Etapa 4: resolva quaisquer outros problemas de conexão entre o nó Mestre do Scale Out e o nó do Trabalho do Scale Out.
 
 **Caso**
 
-System.ServiceModel.Security.SecurityNegotiationException: Não foi possível estabelecer relação de confiança para o canal seguro de SSL/TLS com autoridade '*[nome do computador]: [porta]*'. ---> System.NET. WebException: A conexão subjacente estava fechada: não foi possível estabelecer relação de confiança para o canal seguro de SSL/TLS. ---> System.Security.Authentication.AuthenticationException: O certificado remoto é inválido de acordo com o procedimento de validação.
+System.ServiceModel.Security.SecurityNegotiationException: não foi possível estabelecer relação de confiança para o canal seguro de SSL/TLS com autoridade '*[Nome do Computador]:[Porta]*'. ---> System.Net.WebException: a conexão subjacente estava fechada: não foi possível estabelecer relação de confiança para o canal seguro de SSL/TLS. ---> System.Security.Authentication.AuthenticationException: o certificado remoto é inválido de acordo com o procedimento de validação.
 
-Etapa 1: Escala Out mestre de instalação de certificado ao repositório de certificados raiz da máquina local no nó de escala Out trabalho se não ainda instalado e reinicie o serviço de escala fora do trabalho.
+Etapa 1: instale o certificado do Mestre do Scale Out no repositório de certificados raiz do computador local no nó de Trabalho do Scale Out se ainda não tiver sido instalado e reinicie o serviço de Trabalho do Scale Out.
 
-Etapa 2: Verifique se o nome do host no ponto de extremidade mestre está incluído no certificado CNs de escala Out mestre. Caso contrário, redefina o ponto de extremidade mestre no arquivo de configuração de escala fora do trabalho e reinicie o serviço de escala fora do trabalho. 
+Etapa 2: verifique se o nome do host no ponto de extremidade mestre está incluído nos CNs do certificado do Mestre do Scale Out. Caso contrário, redefina o ponto de extremidade mestre no arquivo de configuração de Trabalho do Scale Out e reinicie o serviço de Trabalho do Scale Out. 
 
 > [!Note]
-> Se não for possível alterar o nome do host do ponto de extremidade mestre devido a configurações de DNS, você precisa alterar o certificado de escala Out mestre. Consulte [lidar com certificados no SSIS expansão](deal-with-certificates-in-ssis-scale-out.md).
+> Se não for possível alterar o nome do host do ponto de extremidade mestre devido a configurações de DNS, você precisará alterar o certificado do Mestre do Scale Out. Veja [Lidar com certificados no SSIS Scale Out](deal-with-certificates-in-ssis-scale-out.md).
 
-Etapa 3: Verifique se a impressão digital do mestre especificada na configuração de escala Out trabalho corresponde a impressão digital do certificado de escala Out mestre. 
+Etapa 3: verifique se a impressão digital do mestre especificada na configuração do Trabalho do Scale Out corresponde à impressão digital do certificado do Mestre do Scale Out. 
 
 **Caso**
 
-System.ServiceModel.Security.SecurityNegotiationException: Não foi possível estabelecer um canal seguro para SSL/TLS com autoridade '*[nome do computador]: [porta]*'. ---> System.NET. WebException: A solicitação foi anulada: não foi possível criar o canal seguro de SSL/TLS.
+System.ServiceModel.Security.SecurityNegotiationException: não foi possível estabelecer um canal seguro para SSL/TLS com autoridade '*[Nome do Computador]:[Porta]*'. ---> System.Net.WebException: a solicitação foi anulada: não foi possível criar um canal seguro de SSL/TLS.
 
-Etapa 1: Verificar se a conta que executa o serviço de escala Out trabalho tem acesso ao certificado de escala fora do trabalho, o comando a seguir.
+Etapa 1: verifique se a conta que executa o serviço de Trabalho do Scale Out tem acesso ao certificado de Trabalho do Scale Out usando o comando a seguir.
 
 ```dos
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
-Se a conta não tem acesso, conceda o comando abaixo e reinicie o serviço de escala fora do trabalho.
+Se a conta não tem acesso, conceda-o usando o comando abaixo e reinicie o serviço de Trabalho do Scale Out.
 
 ```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}
@@ -99,33 +101,33 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 **Caso**
 
-System.ServiceModel.Security.MessageSecurityException: A solicitação HTTP está proibida com o esquema de autenticação de cliente 'Anonymous'. ---> System.NET. WebException: O servidor remoto retornou um erro: proibido (403).
+System.ServiceModel.Security.MessageSecurityException: a solicitação HTTP foi proibida com um esquema de autenticação de cliente 'Anônimo'. ---> System.Net.WebException: o servidor remoto retornou um erro: (403) Proibido.
 
-Etapa 1: Instalar escala Out trabalho certificado ao repositório de certificados raiz do computador local no nó de escala Out mestre se não ainda instalado e reinicie o serviço de escala fora do trabalho.
+Etapa 1: instale o certificado do Trabalho do Scale Out no repositório de certificados raiz do computador local no nó Mestre do Scale Out se ainda não tiver sido instalado e reinicie o serviço de Trabalho do Scale Out.
 
-Etapa 2: Limpe inútil certificados no repositório de certificados raiz do computador local no nó de escala Out mestre.
+Etapa 2: limpe certificados inúteis no repositório de certificados raiz do computador local no nó Mestre do Scale Out.
 
-Etapa 3: Configure o Schannel para não enviar mais a lista de autoridades de certificação raiz confiáveis durante o processo de handshake TLS/SSL, adicionando a entrada de registro abaixo no nó de escala Out mestre.
+Etapa 3: configure o Schannel para não enviar mais a lista de autoridades de certificação confiáveis durante o processo de handshake TLS/SSL, adicionando a entrada do Registro abaixo no nó Mestre do Scale Out.
 
-Hkey_local_machine\system\currentcontrolset\control\securityproviders\schannel.
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 Nome do valor: SendTrustedIssuerList 
 
 Tipo de valor: REG_DWORD 
 
-Dados do valor: 0 (FALSO)
+Dados do valor: 0 (False)
 
 **Caso**
 
-System.ServiceModel.CommunicationException: Erro ao fazer a solicitação HTTP para https://*[nome do computador]: [porta]*  /ClusterManagement /. Isso pode ser devido ao fato de que o certificado do servidor não está configurado corretamente com HTTP. SYS no caso HTTPS. Isso também pode ser causado por uma incompatibilidade da associação de segurança entre o cliente e o servidor. 
+System.ServiceModel.CommunicationException: ocorreu um erro ao fazer a solicitação HTTP para https://*[Nome do computador]:[Porta]*/ClusterManagement/. Isso pode ser devido ao fato de que o certificado do servidor não está configurado corretamente com HTTP.SYS no caso HTTPS. Isso também pode ser causado por uma incompatibilidade da associação de segurança entre o cliente e o servidor. 
 
-Etapa 1: Verificar se escala Out mestre certificado está associado à porta no ponto de extremidade mestre corretamente no nó principal com o comando a seguir. Verifique se o hash de certificado exibido é correspondido com impressão digital do certificado escala Out mestre.
+Etapa 1: verifique se o certificado do Mestre do Scale Out está associado à porta no ponto de extremidade mestre corretamente no nó mestre com o comando abaixo. Verifique se o hash de certificado exibido é correspondido à impressão digital do certificado do Mestre do Scale Out.
 
 ```dos
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
-Se a associação não estiver correta, redefini-lo com os comandos a seguir e reinicie o serviço de escala fora do trabalho.
+Se a associação não estiver correta, redefina-a com os comandos a seguir e reinicie o serviço de Trabalho do Scale Out.
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
@@ -133,33 +135,42 @@ netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate
 ```
 
 ### <a name="symptoms"></a>**Sintomas**
-Não iniciar a execução em expansão.
+Falha na validação ao conectar o Trabalho do Scale Out ao Mestre do Scale Out no Gerenciador do Scale Out com a mensagem de erro "Não é possível abrir o repositório de certificados no computador".
 
 ### <a name="solution"></a>**Solução**
 
-Verifique o status das máquinas selecionadas para executar o pacote em [SSISDB]. [catalog]. [worker_agents]. Pelo menos um trabalho deve estar online e habilitada.
+Etapa 1: execute o Gerenciador do Scale Out como administrador. Se você abri-lo com o SSMS, você precisará executar o SSMS como administrador.
 
-### <a name="symptoms"></a>**Sintomas** 
-Pacotes executados com êxito, mas não há nenhuma mensagem registrada.
-
-### <a name="solution"></a>**Solução**
-
-Verifique se a autenticação do SQL Server é permitida pelo Sql Server hospeda o SSISDB.
-
-> [!Note]  
-> Se você alterou a conta para o log de expansão, consulte [alterar a conta para escala Out log](change-logdb-account.md) e verifique se a cadeia de conexão usada para registro em log.
+Etapa 2: inicie o Serviço Registro Remoto no computador se ele não estiver em execução.
 
 ### <a name="symptoms"></a>**Sintomas**
-As mensagens de erro no relatório de execução do pacote não são suficientes para solução de problemas.
+A execução no Scale Out não inicia.
 
 ### <a name="solution"></a>**Solução**
-Mais logs de execução podem ser encontrados em TasksRootFolder configurado no WorkerSettings.config. Por padrão, ele é \<driver\>: \Users\\*[conta]*\AppData\Local\SSIS\ScaleOut\Tasks. O *[conta]* é a conta que executa o serviço de escala fora do trabalho com o valor padrão SSISScaleOutWorker140.
 
-Para localizar o log para a execução do pacote com *[id de execução]*, execute o comando T-SQL abaixo para obter o *[id da tarefa]*. Em seguida, localize a subpasta denominada com *[id da tarefa]* em TasksRootFolder.<sup> 1<sup>
+Verifique o status das máquinas selecionadas para executar o pacote em [SSISDB].[catalog].[worker_agents]. Pelo menos um trabalho deve estar online e habilitado.
+
+### <a name="symptoms"></a>**Sintomas** 
+Os pacotes são executados com êxito, mas não há nenhuma mensagem registrada em log.
+
+### <a name="solution"></a>**Solução**
+
+Verifique se a autenticação do SQL Server é permitida pelo SQL Server que hospeda o SSISDB.
+
+> [!Note]  
+> Se você alterou a conta para registro em log do Scale Out, consulte [Alterar a conta para registro em log do Scale Out](change-logdb-account.md) e verifique a cadeia de conexão usada para registro em log.
+
+### <a name="symptoms"></a>**Sintomas**
+As mensagens de erro no relatório de execução do pacote não são suficientes para solucionar os problemas.
+
+### <a name="solution"></a>**Solução**
+Mais logs de execução podem ser encontrados em TasksRootFolder, configurado no WorkerSettings.config. Por padrão, ele é \<unidade\>:\Users\\*[conta]*\AppData\Local\SSIS\ScaleOut\Tasks. *[conta]* é a conta que executa o serviço do Trabalho do Scale Out com o valor padrão SSISScaleOutWorker140.
+
+Para localizar o log para a execução do pacote com a *[ID de execução]*, execute o comando T-SQL abaixo para obter a *[ID da tarefa]*. Em seguida, localize a subpasta nomeada com *[ID da tarefa]* em TasksRootFolder.<sup>1<sup>
 
 ```sql
 SELECT [TaskId]
 FROM [SSISDB].[internal].[tasks] tasks, [SSISDB].[internal].[executions] executions 
 WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions.job_id
 ```
-<sup>1</sup> essa consulta é para solucionar problemas de finalidade única e abra alterar quando o cenário de log/diagnóstico escala Out trabalhador foi aprimorado no futuro. 
+<sup>1</sup> Essa consulta é para a finalidade exclusiva de solucionar problemas e estará aberta a alterações quando o cenário de registro em log/diagnóstico do Trabalho do Scale Out for aprimorado no futuro. 

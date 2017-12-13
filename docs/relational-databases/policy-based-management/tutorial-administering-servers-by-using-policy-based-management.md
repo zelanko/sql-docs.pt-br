@@ -2,9 +2,12 @@
 title: "Tutorial: administrando servidores com o gerenciamento baseado em políticas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a58c12e4a33510f2fc9242f0d762dfb877b84750
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4bda7d7ffbd562dc27acad4ee8eb5d427d3f542f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administrando servidores com o uso do Gerenciamento Baseado em Políticas
-Bem-vindo ao tutorial Administrando servidores com o uso do Gerenciamento Baseado em Políticas. Este tutorial é dirigido a usuários que estão familiarizado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas ainda não conhecem o Gerenciamento Baseado em Políticas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bem-vindo ao tutorial Administrando servidores com o uso do Gerenciamento Baseado em Políticas. Este tutorial é dirigido a usuários que estão familiarizado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas ainda não conhecem o Gerenciamento Baseado em Políticas.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
 Este tutorial cria uma política para administrar seu servidor e outra que se aplica a um único banco de dados. Uma política é executada sob demanda para testar a conformidade. A outra política aplica conformidade futura.  

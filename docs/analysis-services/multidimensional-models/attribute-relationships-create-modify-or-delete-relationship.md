@@ -2,12 +2,12 @@
 title: "Criar, modificar ou excluir uma relação de atributo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1824a9c8c4632c0875890463b8f44ae2dec93308
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 641c28accfd11b5d973d49707afd7a02e3380a48
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Atributo relações - criar, modificar ou excluir relação
-  Você pode criar, modificar ou excluir uma relação de atributo entre atributos em uma dimensão usando a guia **Relações de Atributo** do Designer de Dimensão em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode criar, modificar ou excluir uma relação de atributo entre atributos em uma dimensão usando o **relações de atributo** guia do Designer de dimensão em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-create-an-attribute-relationship"></a>Para criar uma relação de atributo  
   

@@ -1,5 +1,5 @@
 ---
-title: "Criar e implantar um Cache para a transformação pesquisa | Microsoft Docs"
+title: "Criar e implantar um cache para a transformação Pesquisa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b859cc7f282c2e1ef5ed095ee8c7326cb7dcf382
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Criar e implantar um cache para a Transformação Pesquisa
   Você pode criar e implementar um arquivo de cache (.caw) para uma transformação Pesquisa. O conjunto de dados de referência é armazenado no arquivo de cache.  
@@ -94,7 +92,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  Configure o projeto para criar um utilitário de implantação e, em seguida, crie o projeto. Para obter mais informações, consulte [Criar um utilitário de implantação](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Um arquivo de manifesto, \< *nome do projeto*>. &Gt;.ssisdeploymentmanifest.XML é criado que lista os arquivos diversos no projeto, os pacotes e as configurações de pacote.  
+     Um arquivo de manifesto, \<*nome do projeto*>.SSISDeploymentManifest.xml é criado e lista os arquivos diversos no projeto, os pacotes e as configurações de pacote.  
   
 5.  Implemente os pacotes no sistema de arquivos Para obter mais informações, consulte [Implantar pacotes por meio do utilitário de implantação](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -102,4 +100,3 @@ ms.lasthandoff: 08/03/2017
  [Criar um utilitário de implantação](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   
-

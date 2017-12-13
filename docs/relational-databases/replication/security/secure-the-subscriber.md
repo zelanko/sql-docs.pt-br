@@ -2,9 +2,12 @@
 title: Proteger o assinante | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a589852adf45de4200a87fe99c3fbc087f74479c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eab9cb8f16911076421ac1c230de2a7d3f176f84
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="secure-the-subscriber"></a>Proteger o Assinante
-  Agentes de mesclagem e agentes de distribuição que conectam ao assinante. Essas conexões podem ser feitas no contexto de um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou de um logon do Windows. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos, e, também proteger o armazenamento de todas as senhas. Para obter informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Agentes de Mesclagem e Agentes de Distribuição que conectam ao assinante. Essas conexões podem ser feitas no contexto de um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou de um logon do Windows. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos, e, também proteger o armazenamento de todas as senhas. Para obter informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="distribution-agent"></a>Agente de Distribuição  
  Há um Agente de Distribuição por assinatura (um agente independente, o padrão para publicações criadas no Assistente para Nova Publicação) ou um Agente de Distribuição por par composto por banco de dados de publicação e banco de dados de assinatura (um agente compartilhado). T  

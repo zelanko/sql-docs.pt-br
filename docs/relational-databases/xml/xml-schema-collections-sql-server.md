@@ -2,9 +2,12 @@
 title: "Coleções de esquema XML (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 90af09f6d1ce768405c824e76e9ad746624b2245
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 581c46bbb59d9339bc91712a4e100d922e76813f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
-  Como descrito no tópico [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), o SQL Server fornece armazenamento nativo de dados XML por meio do tipo de dados **xml**. Opcionalmente, é possível associar esquemas XSD a uma variável ou a uma coluna do tipo **xml** por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), o SQL Server fornece armazenamento nativo de dados XML por meio do tipo de dados **xml**. Opcionalmente, é possível associar esquemas XSD a uma variável ou a uma coluna do tipo **xml** por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
   
 -   Validar instâncias XML  
   

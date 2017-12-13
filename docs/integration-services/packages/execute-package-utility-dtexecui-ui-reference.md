@@ -1,5 +1,5 @@
 ---
-title: "Execute o utilitário de pacotes (dtexecui) | Microsoft Docs"
+title: "Utilitário de Execução de Pacotes (dtexecui) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,22 +22,20 @@ f1_keywords:
 - sql13.dts.dtexecui.executionoptions.f1
 - sql13.dts.dtexecui.commandline.f1
 - sql13.dts.dtexecui.configuration.f1
-helpviewer_keywords:
-- DTExecUI utility
+helpviewer_keywords: DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9491e2857cabef1c8aa15bdac1b6fd3628790c2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="execute-package-utility-dtexecui"></a>Execute o utilitário de pacotes (dtexecui)
+# <a name="execute-package-utility-dtexecui"></a>Utilitário de Execução de Pacotes (dtexecui)
   Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos Essa interface do usuário, que pode ser aberta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando **dtexecui** em um prompt de comando, é uma alternativa à execução de pacotes por meio da ferramenta de prompt de comando **DTExec** .  
   
  Os pacotes são executados no mesmo processo que o utilitário **dtexecui.exe** . Como esse utilitário é uma ferramenta de 32 bits, os pacotes são executados por meio do **dtexecui.exe** em um ambiente de 64 bits no Windows on Win32 (WOW). Ao desenvolver e testar comandos por meio do utilitário dtexecui.exe em um computador de 64 bits, será necessário testar os comandos no modo de 64 bits com a versão de 64 bits do **dtexec.exe** antes de implantar ou agendar os comandos em um servidor de produção.  
@@ -378,7 +375,6 @@ ms.lasthandoff: 08/03/2017
  Clique para fechar a caixa de diálogo **Utilitário do Pacote de Execução** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Utilitário DTExec](../../integration-services/packages/dtexec-utility.md)  
+ [Utilitário dtexec](../../integration-services/packages/dtexec-utility.md)  
   
   
-

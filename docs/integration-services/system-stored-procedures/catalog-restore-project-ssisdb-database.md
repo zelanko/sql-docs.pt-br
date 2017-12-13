@@ -1,5 +1,5 @@
 ---
-title: Catalog. restore_project (banco de dados SSISDB) | Microsoft Docs
+title: catalog.restore_project (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 23074fc664591411666315036e3493e1b7b26134
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 55b42783b60fbdb748a9102c2a703a9a6fa35d2d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,31 +38,31 @@ catalog.restore_project [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
- O nome da pasta que contém o projeto. O *nome_da_pasta* é **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ O nome da pasta que contém o projeto. O *folder_name* é **nvarchar(128)**.  
   
- [ @project Name =] *project_name*  
- O nome do projeto. O *project_name* é **nvarchar (128)**.  
+ [ @project _name = ] *project_name*  
+ O nome do projeto. O *project_name* é **nvarchar(128)**.  
   
- [ @object_version_lsn =] *object_version_lsn*  
+ [ @object_version_lsn = ] *object_version_lsn*  
  A versão do projeto. O *object_version_lsn* é **bigint**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Detalhes do projeto são retornados como **varbinary (max)** como parte do conjunto de resultados se o *project_name* foi encontrado.  
+ Os detalhes do projeto são retornados como **varbinary(MAX)** como parte do conjunto de resultados se o *project_name* é localizado.  
   
- **Nenhum conjunto de resultados** será retornado se o projeto não pode ser restaurado para a pasta especificada.  
+ **NO RESULT SET** será retornado se o projeto não puder ser restaurado na pasta especificada.  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões READ e MODIFY no projeto  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
@@ -76,10 +74,9 @@ catalog.restore_project [ @folder_name = ] folder_name
 -   O usuário não tem as permissões apropriadas  
   
 ## <a name="remarks"></a>Comentários  
- Quando um projeto é restaurado, a todos os parâmetros são atribuídos valores padrão e todas as referências ao ambiente permanecem inalteradas. O número máximo de versões do projeto que são mantidas no catálogo é determinado pela propriedade do catálogo **MAX_VERSIONS_PER_PROJECT**, conforme o [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) exibição.  
+ Quando um projeto é restaurado, a todos os parâmetros são atribuídos valores padrão e todas as referências ao ambiente permanecem inalteradas. O número máximo de versões de projeto que são retidas no catálogo é determinado pela propriedade do catálogo **MAX_VERSIONS_PER_PROJECT**, conforme mostrado na exibição [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 > [!WARNING]  
 >  Referências de ambiente podem não mais ser válidas depois que um projeto é restaurado.  
   
   
-

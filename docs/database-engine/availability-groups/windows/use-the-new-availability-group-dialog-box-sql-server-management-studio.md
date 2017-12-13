@@ -2,9 +2,12 @@
 title: "Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6d9afd42fdaf6bf989449d17b7c1836d30b3ff2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b271bde546790e05ebf7f5e66627d90c99066b5e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)
-  Este tópico contém informações sobre como usar a caixa de diálogo **Novo Grupo de Disponibilidade** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para criar um grupo de disponibilidade AlwaysOn em instâncias do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que são habilitadas para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico contém informações sobre como usar a caixa de diálogo **Novo Grupo de Disponibilidade** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para criar um grupo de disponibilidade Always On em instâncias do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que são habilitadas para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
   
 > [!NOTE]  
 >  Para obter uma introdução aos grupos de disponibilidade, confira [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

@@ -2,12 +2,12 @@
 title: Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c153dbc0b85271f175c86b37ee2b165957e926c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e38e3ac4af9df6a512ee26809dedf1d4fc21d839
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores de banco de dados do podem alterar o modo de leitura/gravação de um banco de dados Tabular ou Multidimensional como parte do esforço maior que distribui uma carga de trabalho de consulta entre vários servidores somente consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administradores de banco de dados podem alterar o modo de leitura/gravação de um banco de dados de tabela ou Multidimensional como parte do esforço maior que distribui uma carga de trabalho de consulta entre vários servidores somente consulta.  
   
  Um modo de banco de dados pode ser alternado de várias formas. Este documento explica os cenários comuns a seguir:  
   

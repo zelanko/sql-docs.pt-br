@@ -2,12 +2,12 @@
 title: "Fórmulas de validação cruzada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 041206471791fe8be8b06e407854f96fc021eedd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cross-validation-formulas"></a>Fórmulas de validação cruzada
-  Quando você gera um relatório de validação cruzada, ele contém medidas de exatidão para cada modelo, dependendo do tipo de modelo de mineração (ou seja, o algoritmo que foi usado para criar o modelo), o tipo de dados do atributo previsível, e o valor do atributo previsível, se qualquer.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você gerar um relatório de validação cruzada, ele contém medidas de precisão para cada modelo, dependendo do tipo de modelo de mineração (ou seja, o algoritmo que foi usado para criar o modelo), o tipo de dados do atributo previsível e o atributo previsível valor, se houver.  
   
  Esta seção lista as medidas usadas no relatório de validação cruzada e descrevem o método de cálculo.  
   

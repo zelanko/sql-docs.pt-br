@@ -2,12 +2,12 @@
 title: O que &#39; s New in Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>O que &#39; s no Analysis Services
-SQL Server 2016 Analysis Services inclui vários novos aprimoramentos fornecer melhor desempenho, criação de solução mais fácil, gerenciamento de banco de dados automatizada, relações aprimoradas com bidirecional entre a filtragem, paralelo processamento da partição, e muito mais. O cerne da maioria dos aprimoramentos para esta versão é o novo nível de compatibilidade 1200 para bancos de dados de modelo tabular.     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services inclui vários novos aprimoramentos fornecer melhor desempenho, criação de solução mais fácil, gerenciamento de banco de dados automatizada, relações aprimoradas com bidirecional entre a filtragem, paralelo processamento da partição, e muito mais. O cerne da maioria dos aprimoramentos para esta versão é o novo nível de compatibilidade 1200 para bancos de dados de modelo tabular.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 Anunciado na conferência 2016 SQL PASSA, o Analysis Services agora está disponível na nuvem como um serviço do Azure. **Serviços de análise do Azure** dá suporte a modelos de tabela nos níveis de compatibilidade 1200 e superior. DirectQuery, partições, segurança de nível de linha, relações bidirecionais e traduções todas têm suporte. Para saber mais e experimentar gratuitamente, consulte [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 

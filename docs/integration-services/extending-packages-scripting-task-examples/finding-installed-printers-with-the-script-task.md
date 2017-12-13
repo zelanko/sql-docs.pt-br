@@ -1,5 +1,5 @@
 ---
-title: Localizando impressoras instaladas com a tarefa Script | Microsoft Docs
+title: Localizar impressoras instaladas com a tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - System.Drawing.Printing namespace
 - printers [Integration Services]
@@ -26,36 +23,35 @@ helpviewer_keywords:
 - finding printers [SQL Server]
 - Script task [Integration Services], printers
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1de1fae5c30648eba7cb62840ef3ff9f9aac13f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e811cdb3f704307c642335e7017775c5f4b5d129
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Localizando impressoras instaladas com a tarefa Script
-  Os dados que são transformados por pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] costumam ter um relatório impresso como seu destino final. O **Printing** namespace o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece classes para trabalhar com impressoras.  
+  Os dados que são transformados por pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] costumam ter um relatório impresso como seu destino final. O namespace **System.Drawing.Printing** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece classes para trabalhar com impressoras.  
   
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- O exemplo a seguir localiza impressoras instaladas no servidor que oferece suporte a papel de tamanho válido (conforme usado nos Estados Unidos). O código para verificar tamanhos de papel suportados é encapsulado em uma função particular. Para permitir que você rastreie o progresso do script enquanto ele verifica as definições de cada impressora, o script usa o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para gerar uma mensagem informativa para impressoras com tamanho de papel válido e também para gerar um aviso para impressoras sem tamanho de papel válido. Essas mensagens aparecem no **saída** janela do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE quando você executa o pacote no designer.  
+ O exemplo a seguir localiza impressoras instaladas no servidor que oferece suporte a papel de tamanho válido (conforme usado nos Estados Unidos). O código para verificar tamanhos de papel suportados é encapsulado em uma função particular. Para permitir que você rastreie o progresso do script enquanto ele verifica as definições de cada impressora, o script usa o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para gerar uma mensagem informativa para impressoras com tamanho de papel válido e também para gerar um aviso para impressoras sem tamanho de papel válido. Essas mensagens aparecem na janela de **Saída** do VSTA ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE quando você executa o pacote no designer.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
   
-1.  Crie a variável nomeada `PrinterList` com tipo **objeto**.  
+1.  Crie a variável nomeada `PrinterList` com o tipo **Object**.  
   
-2.  Sobre o **Script** página do **Editor da tarefa Script**, adicionar essa variável para a propriedade ReadWriteVariables.  
+2.  Na página **Script** do **Editor da Tarefa Script**, adicione essa variável à propriedade ReadWriteVariables.  
   
-3.  No projeto de script, adicione uma referência para o **System. Drawing** namespace.  
+3.  No projeto de script, adicione uma referência ao namespace **System.Drawing**.  
   
-4.  No seu código, use **Imports** instruções para importar o **System. Collections** e **Printing** namespaces.  
+4.  No seu código, use instruções **Imports** para importar os namespaces **System.Collections** e **System.Drawing.Printing**.  
   
 ### <a name="code"></a>Código  
   
@@ -152,7 +148,6 @@ public void Main()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de tarefa de script](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
+ [Exemplos de tarefa Script](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f01d18033764d683871cbc8d5883e25c78b7d958
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-roles"></a>Funções de usuário
   Esta seção descreve as funções de usuário para o Serviço Change Data Capture para Oracle da Attunity. As funções descritas são funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , funções do Windows ou funções de banco de dados Oracle.  
@@ -147,7 +145,7 @@ ms.lasthandoff: 08/03/2017
   
  A lista a seguir descreve os privilégios necessários que devem ser concedidos ao usuário de mineração de logs:  
   
--   Selecione em \<any-tabela capturada >  
+-   SELECT em \<qualquer-tabela-capturada>  
   
 -   SELECT ANY TRANSACTION  
   
@@ -181,4 +179,3 @@ ms.lasthandoff: 08/03/2017
  As credenciais para este usuário nunca são armazenadas. Elas são solicitadas pelo console de Designer CDC toda vez em que são necessárias e são mantidas para o restante das sessões da interface do usuário.  
   
   
-

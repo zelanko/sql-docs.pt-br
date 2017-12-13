@@ -2,9 +2,12 @@
 title: "Gerenciar o tamanho do arquivo de log de transações | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3b0a01269443e7d2c66f200c165409bb72404849
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a77aa280acd7a8b6525ac5c17d209b384a7fbed8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
-Este tópico aborda como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações de **tempdb** e controlar o crescimento de um arquivo de log de transações.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico aborda como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações de **tempdb** e controlar o crescimento de um arquivo de log de transações.  
 
   ##  <a name="MonitorSpaceUse"></a> Monitorar o uso do espaço de log  
 Monitore o uso do espaço de log usando [DBCC SQLPERF (LOGSPACE)](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql). Esse comando retorna informações sobre a quantidade de espaço de log usada atualmente e indica quando o log de transações precisa ser truncado. Para obter mais informações, consulte [DBCC SQLPERF Transact-SQL](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). Para obter informações sobre o tamanho do arquivo de log atual, seu tamanho máximo e a opção de crescimento automático para o arquivo, você também pode usar as colunas **size**, **max_size** e **growth** para esse arquivo de log em **sys.database_files**. Para obter mais informações, consulte [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  

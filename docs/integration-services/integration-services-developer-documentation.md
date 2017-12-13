@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4f1568b369673d68051ecccf19484f80b6094087
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-developer-documentation"></a>Documentação do desenvolvedor do Integration Services
   O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui um modelo de objeto totalmente reescrito, que foi aprimorado com vários recursos que tornam a extensão e a programação mais fáceis, flexíveis e eficientes. Desenvolvedores podem estender e programar quase todos os aspectos de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Você pode criar, configurar e executar pacotes programaticamente a partir de seus próprios aplicativos.  
   
- Se você achar que os componentes internos no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não atenderem às suas necessidades, você pode ampliar a capacidade de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] codificando suas próprias extensões. Nessa abordagem, você tem duas opções distintas:  
+ Se você considerar que os componentes internos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não atendem aos seus requisitos, você poderá ampliar a capacidade do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] codificando suas próprias extensões. Nessa abordagem, você tem duas opções distintas:  
   
 -   Para uso ad hoc em um único pacote, você pode criar uma tarefa personalizada, escrevendo código na tarefa Script, ou um componente de fluxo de dados personalizado, escrevendo código no componente Script, que pode ser configurado como uma origem, transformação ou destino. Esses wrappers avançados escrevem o código de infraestrutura para você e permitem focar exclusivamente o desenvolvimento da sua funcionalidade personalizada; entretanto, não é fácil reutilizá-los em outros locais.  
   
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/26/2017
  Descreve a diferença importante entre saídas síncronas e assíncronas e os componentes que usam essas saídas no fluxo de dados.  
   
  [Trabalhando programaticamente com gerenciadores de conexões](../integration-services/working-with-connection-managers-programmatically.md)  
- Lista os gerenciadores de conexão que você pode usar a partir do código gerenciado e os valores retornados os gerenciadores de conexão quando o código chama o **AcquireConnection** método.  
+ Lista os gerenciadores de conexões que você pode usar por meio do código gerenciado e os valores que os gerenciadores de conexões retornam quando o código chama o método **AcquireConnection**.  
   
  [Estender pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Descreve como estender o fluxo de controle por meio da tarefa Script ou o fluxo de dados por meio do componente Script.  
@@ -98,4 +95,3 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

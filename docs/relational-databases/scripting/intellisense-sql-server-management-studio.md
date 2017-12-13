@@ -2,9 +2,12 @@
 title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b749035286507e3ee2a8a05af82d9da9d1e7b4c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8c9b1806be022d0391cb19cc03a81a039927e923
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
-  Os editores no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oferecem suporte a opções do [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reduzem a digitação, fornecem acesso rápido a informações de sintaxe ou facilitam a exibição dos delimitadores de expressões complexas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os editores no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dão suporte a opções do [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reduzem a digitação, fornecem acesso rápido a informações de sintaxe ou facilitam a exibição dos delimitadores de expressões complexas.  
   
 ## <a name="benefits-of-intellisense"></a>Benefícios do IntelliSense  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense fornece uma série de opções que tornam as referências à linguagem facilmente acessíveis. Ao codificar, você não precisa sair do editor para efetuar pesquisas nos elementos de linguagem. Você pode manter seu contexto, encontrar as informações que precisa, inserir elementos de linguagem diretamente em seu código, e até fazer o IntelliSense concluir a digitação para você.  

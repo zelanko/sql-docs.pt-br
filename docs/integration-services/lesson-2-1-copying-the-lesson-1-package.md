@@ -1,5 +1,5 @@
 ---
-title: "Etapa 1: Copiando o pacote da lição 1 | Microsoft Docs"
+title: "Etapa 1: copiar o pacote da Lição 1 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b3b601049b8904d439136a1fdc9af7cd84a86b5b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cc1fd5b193fa9b9a2da8931ad290b7f2612bd76f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lição 2-1: copiando o pacote da lição 1
+# <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lição 2-1 – copiar o pacote da Lição 1
 Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição 1. Se você não completou a lição 1, poderá adicionar o pacote completo da lição 1 incluído com o tutorial do projeto e, então, copiar esse pacote. Você usará essa cópia nova durante toda a Lição 2.  
   
 ### <a name="to-create-the-lesson-2-package"></a>Para criar o pacote da lição 2  
@@ -73,4 +70,3 @@ Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 2: adicionando e configurando o contêiner Loop Foreach](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
-

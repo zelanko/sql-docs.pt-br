@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 4b765081a3897553bef2791bf72631908b5adc2c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3ead74161f0527901680d4495e0feb4056c17011
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-destination"></a>Destino OLE DB
   O destino OLE DB carrega os dados em uma variedade de bancos de dados compatíveis com OLE DB usando uma tabela ou exibição de banco de dados ou um comando SQL. Por exemplo, a fonte OLE DB pode carregar dados em tabelas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -99,9 +97,9 @@ ms.lasthandoff: 08/17/2017
   
 |Opção de carregamento rápido|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Especifica o tamanho em quilobytes a ser inserido. A opção tem o formato **KILOBYTES_PER_BATCH** = \<valor inteiro positivo**>**.|  
+|KILOBYTES_PER_BATCH|Especifica o tamanho em quilobytes a ser inserido. Esta opção tem o formato **KILOBYTES_PER_BATCH** = \<valor inteiro positivo**>**.|  
 |FIRE_TRIGGERS|Especifica se os gatilhos devem ser disparados na tabela de inserção. A opção tem o formato **FIRE_TRIGGERS**. A presença da opção indica que os gatilhos irão disparar.|  
-|ORDER|Especifica como os dados de entrada são classificados. A opção tem o formato ordem \<nome da coluna > ASC &#124; DESC. Qualquer número de colunas pode ser listado e a inclusão da ordem de classificação é opcional. Se a ordem de classificação for omitida, a operação de inserção assumirá que os dados não estão classificados.<br /><br /> Observação: o desempenho pode ser otimizado se você usar a opção ORDER para classificar os dados de entrada de acordo com o índice clusterizado da tabela.|  
+|ORDER|Especifica como os dados de entrada são classificados. A opção tem o formato ORDER \<nome da coluna> ASC&#124;DESC. Qualquer número de colunas pode ser listado e a inclusão da ordem de classificação é opcional. Se a ordem de classificação for omitida, a operação de inserção assumirá que os dados não estão classificados.<br /><br /> Observação: o desempenho pode ser otimizado se você usar a opção ORDER para classificar os dados de entrada de acordo com o índice clusterizado da tabela.|  
   
  As palavras-chave [!INCLUDE[tsql](../../includes/tsql-md.md)] são normalmente digitadas em letras maiúsculas, mas não fazem distinção entre maiúsculas e minúsculas.  
   
@@ -272,7 +270,7 @@ ms.lasthandoff: 08/17/2017
  Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis na tabela para as colunas de entrada.  
   
  **Coluna de Entrada**  
- Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando  **\<ignorar >** para excluir colunas de saída.  
+ Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando **\<ignorar>** para excluir colunas da saída.  
   
  **Coluna de Destino**  
  Visualize cada coluna de destino disponível, esteja ela mapeada ou não.  
@@ -312,4 +310,3 @@ ms.lasthandoff: 08/17/2017
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   
-

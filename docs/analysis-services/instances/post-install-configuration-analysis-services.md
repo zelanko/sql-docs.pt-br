@@ -2,12 +2,12 @@
 title: "(Analysis Services) de configuração de pós-instalação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a87a4995e5b7776012e81f9cf908949dbc9339a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c35dfdbf2dd4eb9e9cae0c99bfc405fbca27380
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuração de pós-instalação (Analysis Services)
-  Após a instalação do Analysis Services, será necessário definir uma configuração adicional para tornar o servidor totalmente operacional e disponível para uso geral. Esta seção apresenta as tarefas adicionais que concluem a instalação. Dependendo dos requisitos de conexão, talvez você também precise configurar a autenticação (consulte [Conectar-se ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois de instalar o Analysis Services, ainda mais configuração é necessária para tornar o servidor totalmente operacional e disponível para uso geral. Esta seção apresenta as tarefas adicionais que concluem a instalação. Dependendo dos requisitos de conexão, talvez você também precise configurar a autenticação (consulte [Conectar-se ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
  Posteriormente, será necessário realizar outras tarefas quando houver bancos de dados prontos para serem implantados. Basicamente, você precisará configurar as associações de função no banco de dados para conceder ao usuário acesso aos dados, criar uma estratégia de backup e recuperação de banco de dados, e determinar se você precisa de uma carga de trabalho de processamento agendado para atualizar dados em intervalos regulares. Mais informações sobre a administração e a implantação de bancos de dados podem ser encontradas nestes links: [Bancos de dados de modelo multidimensional &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [Bancos de dados de modelo de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   

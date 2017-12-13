@@ -2,9 +2,12 @@
 title: "Administração de logons e trabalhos depois de troca de funções (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d08e404267babd8fcc17ad6863ebf9c1ca71d93
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8b5bbfbacb9bd395900143ba0a70b628ec915cec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administração de logons e trabalhos depois de troca de funções (SQL Server)
-  Ao implantar uma solução de alta disponibilidade ou de recuperação de desastres para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é importante reproduzir informações relevantes que são armazenadas para o banco de dados nos bancos de dados **master** ou **msdb** . Normalmente, as informações relevantes incluem os trabalhos do banco de dados principal/primário e os logons de usuários ou de processos que precisam se conectar ao banco de dados. É necessário duplicar essas informações em qualquer instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda um banco de dados secundário/espelho. Se for possível, após a troca de funções, o melhor é reproduzir de forma programática as informações do banco de dados primário/principal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao implantar uma solução de alta disponibilidade ou de recuperação de desastre para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é importante reproduzir informações relevantes que são armazenadas para o banco de dados nos bancos de dados **master** ou **msdb**. Normalmente, as informações relevantes incluem os trabalhos do banco de dados principal/primário e os logons de usuários ou de processos que precisam se conectar ao banco de dados. É necessário duplicar essas informações em qualquer instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda um banco de dados secundário/espelho. Se for possível, após a troca de funções, o melhor é reproduzir de forma programática as informações do banco de dados primário/principal.  
   
 ## <a name="logins"></a>Logons  
  Em cada instância de servidor que hospeda uma cópia do banco de dados, você precisa reproduzir os logons que têm permissão para acessar o banco de dados principal. Quando a função principal/primária for alternada, somente os usuários cujos logons existirem na nova instância de servidor principal/primária poderão acessar o novo banco de dados principal/primário. Os usuários cujos logons não estão definidos na nova instância de servidor principal/primária ficam órfãos e não podem acessar o banco de dados.  

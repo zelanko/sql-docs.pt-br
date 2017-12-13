@@ -1,5 +1,5 @@
 ---
-title: "Consulta de mineração de dados | Microsoft Docs"
+title: "Consulta de Mineração de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataminingquery.f1
+f1_keywords: sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4509a3b7838e112bbd002c7efe4b6782a772f7d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query"></a>Consulta de mineração de dados
   O painel de design contém o construtor de consultas de previsão de mineração de dados, que pode ser usado para construir consultas de previsão de mineração de dados. Você pode criar tanto consultas de previsão baseadas em tabelas de entrada como consultas de previsão singleton. Alterne para a exibição de resultados para executar a consulta e exibir os resultados. A exibição de consulta exibe a consulta DMX (Data Mining Extensions) criada pelo construtor de consultas de previsão.  
@@ -34,9 +31,9 @@ ms.lasthandoff: 08/03/2017
  Botão para alternar a exibição  
  Clique em um ícone para alternar entre o painel de design e o painel de consulta. Por padrão, é aberto o painel de design.  
   
- Para alternar para o painel de design, clique o ![ícone Design](../../integration-services/control-flow/media/ssis-designicon.gif "ícone Design") ícone.  
+ Para mudar para o painel de design, clique no ícone ![ícone Design](../../integration-services/control-flow/media/ssis-designicon.gif "ícone Design").  
   
- Para alternar para o painel consulta, clique o ![ícone SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "ícone SQL") ícone.  
+ Para mudar para o painel de consulta, clique no ícone ![ícone SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "ícone SQL").  
   
  **Modelo de mineração**  
  Exibe o modelo de mineração selecionado no qual você deseja basear as previsões.  
@@ -72,7 +69,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de Consulta de Mineração de Dados](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Extensões de mineração de dados &#40; DMX &#41; Referência de instrução](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

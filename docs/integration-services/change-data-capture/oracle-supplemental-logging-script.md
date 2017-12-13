@@ -1,5 +1,5 @@
 ---
-title: Script de registro em log suplementar Oracle | Microsoft Docs
+title: Script de log suplementar Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16e3c1b59550236eaa1716d7251e55c0cee6b919
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a4e4c40eac6c055684cb3fb302861febbd512934
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script de log suplementar Oracle
   Essa caixa de diálogo mostra o script suplementar de registro em log do Oracle.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 08/03/2017
  [Gerenciar uma instância CDC](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   
-

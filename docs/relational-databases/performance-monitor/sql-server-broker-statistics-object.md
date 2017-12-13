@@ -2,9 +2,12 @@
 title: "SQL Server, objeto Estatísticas de Agente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 261b9a59cc8ba61b7ad2b2dbadbfd252b1474255
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9c0829d863a9f42516385ac8f50c12813ed4524
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, objeto Broker Statistics
-  O objeto de desempenho SQLServer:Broker Statistics inclui contadores de desempenho que relatam informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seguinte tabela lista os contadores incluídos nesse objeto:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho SQLServer:Estatísticas do Broker inclui contadores de desempenho que relatam informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seguinte tabela lista os contadores incluídos nesse objeto:  
   
 |Contadores do SQL Server Broker Statistics|Descrição|  
 |-------------------------------------------|-----------------|  

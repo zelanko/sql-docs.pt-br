@@ -2,9 +2,12 @@
 title: "Restauração de backups armazenados no Microsoft Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 78d2478bd6946134cad847c653c7cdfe35e4326f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2ec144412cdbf8207ad318b39aefcbe2a39fcba4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Restaurando de backups armazenados no Microsoft Azure
-  Este tópico descreve o que você deve considerar ao restaurar um banco de dados usando um backup armazenado no serviço de armazenamento de Blob do Windows Azure. Isso se aplica aos backups criados através do Backup do SQL Server para URL ou pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve o que você deve considerar ao restaurar um banco de dados usando um backup armazenado no serviço de Armazenamento de Blobs do Microsoft Azure. Isso se aplica aos backups criados através do Backup do SQL Server para URL ou pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  É recomendável analisar este tópico se você tiver backups armazenados no serviço de armazenamento de Blob do Windows Azure que pretende restaurar e, em seguida, analisar os tópicos que descrevem as etapas de restauração de um banco de dados, que é o mesmo para backups locais e do Windows Azure.  
   

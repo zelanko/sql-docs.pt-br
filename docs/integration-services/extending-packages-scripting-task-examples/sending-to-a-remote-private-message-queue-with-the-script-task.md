@@ -1,5 +1,5 @@
 ---
-title: Enviando a uma fila de mensagens particular remota com a tarefa Script | Microsoft Docs
+title: Enviar a uma fila de mensagens particular remota com a tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,26 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], remote private message queues
 - Message Queue task [Integration Services]
 - Script task [Integration Services], examples
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ab9314ef0825486914d1801bfa2b9613883b43e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 2736526eed551bf1756911b007f64b92a124d50b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Enviando a uma fila de mensagens particular remota com a tarefa Script
   O serviço de enfileiramento de mensagens (também conhecido como MSMQ) facilita a comunicação rápida e confiável de desenvolvedores com programas aplicativos, enviando e recebendo mensagens. Uma fila de mensagens pode estar localizada no computador local ou em um computador remoto, e pode ser pública ou particular. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o gerenciador de conexões do MSMQ e a tarefa Fila de Mensagens não dão suporte ao envio para uma fila privada em um computador remoto. Porém, a tarefa Script facilita o envio de uma mensagem a uma fila particular remota.  
@@ -40,7 +36,7 @@ ms.lasthandoff: 09/26/2017
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- O exemplo a seguir usa um Gerenciador de conexão de MSMQ existente, junto com objetos e métodos do namespace System. Messaging, para enviar o texto contido em uma variável de pacote a uma fila de mensagens particular remota. A chamada para o método M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) do Gerenciador de conexão do MSMQ retorna um **MessageQueue** do objeto cuja **enviar** método realiza essa tarefa.  
+ O exemplo a seguir usa um gerenciador de conexões MSMQ existente, junto com objetos e métodos do namespace System.Messaging, para enviar o texto contido em uma variável de pacote a uma fila de mensagens particular remota. A chamada ao método M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) do gerenciador de conexões do MSMQ retorna um objeto **MessageQueue** cujo método **Send** realiza essa tarefa.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
   
@@ -50,13 +46,13 @@ ms.lasthandoff: 09/26/2017
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  Criar um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variável chamada **MessageText** do tipo **cadeia de caracteres** para passar o texto da mensagem para o script. Digite uma mensagem padrão como o valor da variável.  
+2.  Crie uma variável do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] denominada **MessageText** do tipo **String** para passar o texto da mensagem para o script. Digite uma mensagem padrão como o valor da variável.  
   
-3.  Adicione uma tarefa Script à superfície de design e edite-a. No **Script** guia do **Editor da tarefa Script**, adicione o `MessageText` variável para o **ReadOnlyVariables** propriedade para disponibilizar a variável dentro do script .  
+3.  Adicione uma tarefa Script à superfície de design e edite-a. Na guia **Script** do **Editor da Tarefa Script**, adicione a variável `MessageText` à propriedade **ReadOnlyVariables** para disponibilizar a variável dentro do script.  
   
-4.  Clique em **Editar Script** para abrir o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ferramentas para o editor de script Applications (VSTA).  
+4.  Clique em **Editar Script** para abrir o editor de script VSTA ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications).  
   
-5.  Adicione uma referência no projeto de script para o **Messaging** namespace.  
+5.  Adicione uma referência do projeto de script ao namespace **System.Messaging**.  
   
 6.  Substitua o conteúdo da janela de script pelo código da seção a seguir.  
   
@@ -116,4 +112,3 @@ public class ScriptMain
  [Tarefa Fila de Mensagens](../../integration-services/control-flow/message-queue-task.md)  
   
   
-

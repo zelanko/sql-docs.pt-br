@@ -3,8 +3,11 @@ title: "Selecionar uma conta para o Serviço do SQL Server Agent | Microsoft Doc
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c4caa940800f07f91adbb6472b1221c6aa35234e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef5922992da36377ad46ab4f76a3a8fb6b310edb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selecionar uma conta para o Serviço do SQL Server Agent
-A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é executado, bem como suas permissões de rede. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é executado como uma conta de usuário especificada. Selecione uma conta para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager, no qual estão disponíveis as seguintes opções:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é executado, bem como suas permissões de rede. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é executado como uma conta de usuário especificada. Selecione uma conta para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager, no qual estão disponíveis as seguintes opções:  
   
 -   **Conta interna**. Em uma lista, você pode escolher uma das seguintes contas de serviço Windows internas:  
   
@@ -89,7 +92,7 @@ A tabela a seguir lista os tipos de conta do Windows que podem ser usadas para o
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitação 1: Usando contas não administrativas para administração multisservidor  
 A inscrição de servidores de destino para um servidor mestre pode falhar com a seguinte mensagem de erro: "Falha na operação de inscrição".  
   
-Para resolver esse erro, reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Para obter mais informações, veja [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6).  
+Para resolver esse erro, reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Para obter mais informações, veja [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](http://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6).  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitação 2: Usando a conta Sistema Local para administração multisservidor  
 Quando o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é executado com a conta Sistema Local, só haverá suporte para administração multisservidor se o servidor mestre e o servidor de destino residirem no mesmo computador. Se você usar essa configuração, será retornada a seguinte mensagem quando você inscrever servidores de destino para o servidor mestre:  
@@ -115,13 +118,13 @@ Para resolver isso, reinicie o computador em que está sendo executado o [!INCLU
   
 **Para especificar o perfil de email do SQL Server Agent**  
   
--   [Como configurar o SQL Server Agent Mail para usar o Database Mail (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Como configurar o SQL Server Agent Mail para usar o Database Mail (SQL Server Management Studio)](http://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Use o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para especificar que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent deve ser iniciado quando o sistema operacional for iniciado.  
   
 ## <a name="see-also"></a>Consulte também  
-[Configurando as contas de serviço do Windows](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
-[Gerenciamento de serviços usando o Gerenciador de Computador SQL](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+[Configurando as contas de serviço do Windows](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
+[Gerenciamento de serviços usando o Gerenciador de Computador SQL](http://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   

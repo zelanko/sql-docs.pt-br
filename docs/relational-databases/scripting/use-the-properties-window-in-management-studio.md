@@ -2,9 +2,12 @@
 title: Usar a janela Propriedades no Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff486f96a72f465b94ddcf9b0c6752e3759f0fed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b99df9358de8b26efb064587af391ff901418c24
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Usar a janela Propriedades no Management Studio
-  A janela Propriedades descreve o estado de um item no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como uma conexão ou um operador de plano de execução, e informações sobre objetos de banco de dados, como tabelas, exibições e designers.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela Propriedades descreve o estado de um item no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], tal como uma conexão ou um operador de plano de execução, bem como informações sobre objetos de banco de dados como tabelas, exibições e designers.  
   
  Você pode usar a janela Propriedades para exibir as propriedades da conexão atual. Muitas propriedades são somente leitura na janela Propriedades, mas podem ser alteradas em outros lugares no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Por exemplo, a propriedade Database de uma consulta é somente leitura na janela Propriedades, mas pode ser alterada na barra de ferramentas.  
   

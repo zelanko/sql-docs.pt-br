@@ -2,9 +2,12 @@
 title: "Fazer failover manual de uma sessão de espelhamento de banco de dados (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a58ce664cd4eca3ef84ceb8549c74d58030753aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f4000d8f7c14b3a3a2cf601411117b1c6479a4ba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Realizar failover manualmente de uma sessão de espelhamento de banco de dados (SQL Server Management Studio)
-  Quando o banco de dados espelho for sincronizado (ou seja, quando o banco de dados estiver no estado SYNCHRONIZED), o proprietário do banco de dados poderá iniciar failover manual para o servidor espelho.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando o banco de dados espelho for sincronizado (ou seja, quando o banco de dados estiver no estado SYNCHRONIZED), o proprietário do banco de dados poderá iniciar failover manual para o servidor espelho.  
   
  Durante um failover manual, as funções do servidor principal e espelho são trocadas para o banco de dados no qual ocorre o failover. O banco de dados espelho torna-se o banco de dados principal, o espelho. Por exemplo, a tabela a seguir mostra como um failover manual troca as funções de dois parceiros de espelhamento: `SQLDBENGINE0_1` e `SQLDBENGINE0_2`.  
   

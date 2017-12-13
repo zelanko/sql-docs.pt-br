@@ -2,9 +2,12 @@
 title: "Mover bancos de dados de usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,14 +31,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2818e3c3008d6c10190d55278feeeb90cef598e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8ec85fee12e6cefb7020d02a96a21d54d630d6dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="move-user-databases"></a>Mover bancos de dados de usuário
-  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível mover os dados, o log e os arquivos de catálogo de texto completo de um banco de dados de usuário para um novo local, especificando o novo local do arquivo na cláusula FILENAME da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Esse método é aplicado para mover arquivos do banco de dados dentro da mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover um banco de dados para uma outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou para um outro servidor, use as operações de [backup e restauração](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) ou [anexar e desanexar](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível mover os dados, o log e os arquivos de catálogo de texto completo de um banco de dados de usuário para um novo local, especificando o novo local do arquivo na cláusula FILENAME da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Esse método é aplicado para mover arquivos do banco de dados dentro da mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover um banco de dados para uma outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou para um outro servidor, use as operações de [backup e restauração](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) ou [anexar e desanexar](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
   
 ## <a name="considerations"></a>Considerações  
  Ao mover um banco de dados para outra instância do servidor, para oferecer uma experiência consistente aos usuários e aplicativos, talvez seja necessário recriar alguns ou todos os metadados do banco de dados. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  

@@ -2,9 +2,12 @@
 title: Monitorar o uso da CPU | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9ea3b676f94ee1f2cb90fd2725281d55e432248c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad8ff221557c1ecbfe1d8fe5cf453c7b99e96203
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-cpu-usage"></a>Monitorar o uso da CPU
-  Monitore uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente para determinar se as taxas de uso de CPU estão dentro dos intervalos normais. Uma taxa de uso de CPU continuamente alta pode indicar a necessidade de atualizar a CPU ou de adicionar vários processadores. Alternativamente, uma taxa de uso de CPU alta pode indicar um aplicativo mal-ajustado ou malprojetado. Otimizar o aplicativo pode baixar a utilização de CPU.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Monitore uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente para determinar se as taxas de uso de CPU estão dentro dos intervalos normais. Uma taxa de uso de CPU continuamente alta pode indicar a necessidade de atualizar a CPU ou de adicionar vários processadores. Alternativamente, uma taxa de uso de CPU alta pode indicar um aplicativo mal-ajustado ou malprojetado. Otimizar o aplicativo pode baixar a utilização de CPU.  
   
  Um modo eficiente de determinar o uso de CPU é usar o contador **Processador: %tempo de processador** do Monitor do Sistema. Esse contador monitora o tempo gasto pela CPU para executar um thread que não está ocioso. Um estado consistente de 80 a 90 por cento pode indicar a necessidade de atualizar a CPU ou de adicionar mais processadores. Para sistemas com vários processadores, monitore uma instância separada desse contador para cada processador. Esse valor representa a soma do tempo de processador em um processador específico. Para determinar a média de todos os processadores, use o contador **Sistema: %tempo total de processador** .  
   

@@ -2,9 +2,12 @@
 title: Identificadores do SQL Server no PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdc0185b9ac8564a47ca6e4e51b8fdb76e63a653
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 95ead7b5686d23d3318d30b84abe868d00fb1622
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificadores do SQL Server no PowerShell
-  O provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell usa identificadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em caminhos do Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identificadores podem conter caracteres sem suporte pelo Windows PowerShell em caminhos. É necessário substituir esses caracteres ou usar codificação especial quando usar os identificadores em caminhos do Windows PowerShell.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell usa identificadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em caminhos do Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identificadores podem conter caracteres sem suporte pelo Windows PowerShell em caminhos. É necessário substituir esses caracteres ou usar codificação especial quando usar os identificadores em caminhos do Windows PowerShell.  
   
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Identificadores do SQL Server em caminhos do Windows PowerShell  
  Os provedores Windows PowerShell expõem as hierarquias de dados usando uma estrutura de caminho semelhante àquela usada no sistema de arquivos do Windows. O provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows PowerShell implementa caminhos para objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No [!INCLUDE[ssDE](../../includes/ssde-md.md)], a unidade é definida como SQLSERVER:, a primeira pasta é definida como \SQL e os objetos de banco de dados são considerados como contêineres e itens. Este é o caminho para a tabela Vendor no esquema Purchasing do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] na instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  

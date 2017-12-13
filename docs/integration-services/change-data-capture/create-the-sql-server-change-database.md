@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- oraIns
+f1_keywords: oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6934f245f0878e3491a7d1751e764dcf3db7bb46
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8faa5b7ed377f91fd64d1e7dcde0cea22e84062d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-the-sql-server-change-database"></a>Criar o banco de dados de alteração do SQL Server
   Quando você inicia o assistente Nova Instância, a página Criar Banco de Dados CDC é aberta. Use a página Criar Banco de Dados CDC para fornecer informações sobre a nova instância CDC e criar um novo banco de dados de alteração.  
@@ -63,4 +60,3 @@ ms.lasthandoff: 08/03/2017
  [O serviço Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   
   
-

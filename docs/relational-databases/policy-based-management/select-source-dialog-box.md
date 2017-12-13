@@ -2,9 +2,12 @@
 title: "Caixa de diálogo Selecionar fonte | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b6c950ffee0e282194659b3640abad24617f519
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1dba73f7bbfa6cb1ffee7d24a9f283e29e4649b0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-source-dialog-box"></a>Caixa de diálogo Selecionar Origem
-  Use esta caixa de diálogo para selecionar a origem das políticas a serem executadas. Para selecionar um ou mais arquivos XML que contêm políticas, selecione **Arquivos**. Para executar as políticas que são encontradas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Servidor**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta caixa de diálogo para selecionar a origem das políticas a serem executadas. Para selecionar um ou mais arquivos XML que contêm políticas, selecione **Arquivos**. Para executar as políticas que são encontradas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Servidor**.  
   
  Você pode abrir esta caixa de diálogo de vários modos.  
   

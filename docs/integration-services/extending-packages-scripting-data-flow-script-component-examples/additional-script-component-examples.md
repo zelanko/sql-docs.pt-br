@@ -8,33 +8,28 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
-helpviewer_keywords:
-- Script component [Integration Services], examples
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
+helpviewer_keywords: Script component [Integration Services], examples
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a5cf91bb82b66247aa100f8ada13693c409183a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fb41338dff0e0ae09f6ae7b6b84106af4c9bc42a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="additional-script-component-examples"></a>Exemplos de componentes Script adicionais
   O componente de Script é uma ferramenta configurável que pode ser usada no fluxo de dados de um pacote para atender a quase todos os requisitos não atendidos pelas fontes, transformações e destinos incluídos no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Essa seção contém amostras de código do componente Script que demonstram os vários tipos de funcionalidade disponíveis.  
   
- Para obter exemplos que demonstram como configurar o componente Script como uma origem básico, transformação ou destino, consulte [desenvolvendo específico Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ Para obter amostras de como configurar o componente Script de forma básica como origem, transformação ou destino, consulte [Desenvolver tipos específicos de componentes Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 > [!NOTE]  
 >  Para criar componentes com maior facilidade de reutilização em várias tarefas de Fluxo de Dados e em vários pacotes, procure utilizar o código desses exemplos de componentes Script como o ponto inicial de componentes de fluxo de dados personalizados. Para obter mais informações, consulte [Desenvolvendo um componente de fluxo de dados personalizado](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
@@ -53,4 +48,3 @@ ms.lasthandoff: 09/26/2017
  Explica e demonstra como analisar dois formatos diferentes de arquivo de texto não padronizados em tabelas de destino.  
   
   
-

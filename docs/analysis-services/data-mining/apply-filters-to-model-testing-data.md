@@ -2,12 +2,12 @@
 title: Aplicar filtros de modelo de dados de teste | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39d35b7421b9d3ddeff5cede6e1539b34b7012c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0a9ffaeaeaffb9a93e36f865a6b3e7a0647befa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a dados de testes de modelo
-  Quando você especifica uma fonte de dados externa a ser usada para testar um modelo, pode opcionalmente aplicar um filtro para restringir os dados de entrada. Por exemplo, talvez queira testar o modelo especificamente para previsões sobre clientes com determinada faixa de renda.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você especificar uma fonte de dados externa para usar ao testar um modelo, você pode opcionalmente aplicar um filtro para restringir os dados de entrada. Por exemplo, talvez queira testar o modelo especificamente para previsões sobre clientes com determinada faixa de renda.  
   
  Por exemplo, no cenário de email direcionado do Adventure Works, é possível criar uma expressão de filtro como esta em ProspectiveBuyer, que é a tabela contendo os dados de teste, bem como restringir casos de teste por faixa de renda:  
   

@@ -1,5 +1,5 @@
 ---
-title: Gerar e executar o Script de registro em log suplementar | Microsoft Docs
+title: Gerar e executar o script de log suplementar | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- supLog
+f1_keywords: supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 736b11e79235b38659e9fa4c13f06369bd8b335d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 74f002669b4e18ac16b8c29ffd8848635255ae4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>Gerar e executar scripts de log suplementares
   Use a página Configurar tabelas para capturar alterações para executar um script no banco de dados de origem Oracle que configura o registro em log suplementar.  
@@ -46,7 +43,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Como criar a instância de banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Revisar e gerar Scripts de log suplementares](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+ [Examinar e gerar scripts de log suplementares](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
   
-

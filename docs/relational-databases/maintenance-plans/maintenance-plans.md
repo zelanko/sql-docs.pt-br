@@ -2,9 +2,12 @@
 title: "Planos de manutenção | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: abd4882c905f18643da40892c4cbf200091d5363
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7db2ba76a3be5099075ef56871794b59066eb538
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-plans"></a>Planos de manutenção
-  Os planos de manutenção criam um fluxo de trabalho das tarefas necessárias para garantir que o banco de dados seja otimizado, armazenado regularmente em backup e livre de inconsistências. O Assistente de Plano de Manutenção também cria os planos principais de manutenção, mas criar planos de forma manual pode oferecer uma flexibilidade bem maior.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] s planos de manutenção criam um fluxo de trabalho das tarefas necessárias para garantir que o banco de dados seja otimizado, armazenado regularmente em backup e livre de inconsistências. O Assistente de Plano de Manutenção também cria os planos principais de manutenção, mas criar planos de forma manual pode oferecer uma flexibilidade bem maior.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Benefícios de planos de manutenção  
  No [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)], os planos de manutenção criam um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que é executado por um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Os planos de manutenção podem ser executados de forma manual ou automática em intervalos agendados.  

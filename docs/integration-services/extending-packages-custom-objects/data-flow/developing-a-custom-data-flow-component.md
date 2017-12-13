@@ -1,5 +1,5 @@
 ---
-title: Desenvolvendo um componente de fluxo de dados personalizado | Microsoft Docs
+title: Desenvolver um componente de fluxo de dados personalizado | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,23 +21,22 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f25c74b52eaccb6c7b0e92cb7dace3d56f3cdd83
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 015f4a6df784666e03203790aca090f6fc2eb39a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Desenvolvendo um componente de fluxo de dados personalizado
-  A tarefa de fluxo de dados consiste em componentes que se conectam a uma variedade de fontes de dados e, em seguida, transformam e roteiam esses dados em alta velocidade. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um modelo de objeto extensível que permite aos desenvolvedores criar fontes personalizadas, transformações e destinos que você pode usar em [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e em pacotes implantados. Esta seção contém tópicos com orientações para desenvolvimento de componentes de fluxo de dados personalizados.  
+  A tarefa de fluxo de dados consiste em componentes que se conectam a uma variedade de fontes de dados e, em seguida, transformam e roteiam esses dados em alta velocidade. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um modelo de objeto extensível que permite que os desenvolvedores criem origens, transformações e destinos personalizados que você pode usar no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e em pacotes implantados. Esta seção contém tópicos com orientações para desenvolvimento de componentes de fluxo de dados personalizados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Criando um componente de fluxo de dados personalizados](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
+ [Criar um componente de fluxo de dados personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
  Descreve as etapas iniciais de criação de um componente de fluxo de dados personalizado.  
   
  [Métodos de tempo de design de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/03/2017
  [Métodos de tempo de execução de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
  Descreve os métodos de tempo de execução para implementar em um componente de fluxo de dados personalizado.  
   
- [Plano de execução e alocação de Buffer](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
+ [Plano de execução e alocação de buffer](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
  Descreve o plano de execução de fluxo de dados e a alocação de buffers de dados.  
   
  [Trabalhando com tipos de dados no fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
@@ -60,22 +57,22 @@ ms.lasthandoff: 08/03/2017
  [Implementando metadados externos](../../../integration-services/extending-packages-custom-objects/data-flow/implementing-external-metadata.md)  
  Explica como usar colunas de metadados externas para validação de dados.  
   
- [Gerando e definindo eventos em dados de um componente de fluxo](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
+ [Gerando e definindo eventos em um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
  Explica como gerar eventos predefinidos e personalizados.  
   
- [Componente de fluxo de log e definindo entradas de Log em dados](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
+ [Registrando em log e definindo entradas de log em um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
  Explica como criar e gravar em entradas de log personalizadas.  
   
  [Usando saídas de erro em um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
  Explica como redirecionar linhas de erro a uma saída alternativa.  
   
- [Atualizar a versão de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  
+ [Atualizando a versão de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  
  Explica como atualizar metadados de componentes salvos quando uma versão nova de seu componente é usada pela primeira vez.  
   
- [Desenvolvendo uma Interface de usuário para um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
+ [Desenvolvendo uma interface do usuário para um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
  Explica como implementar um editor personalizado para um componente.  
   
- [Desenvolvendo tipos específicos de dados de componentes de fluxo](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
+ [Desenvolvendo tipos específicos de componentes de fluxo de dados](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  Contém informações sobre como desenvolver os três tipos de componentes de fluxo de dados: origens, transformações e destinos.  
   
 ## <a name="reference"></a>Referência  
@@ -106,23 +103,22 @@ ms.lasthandoff: 08/03/2017
  Descreve as técnicas para compilar, assinar, implantar e depurar objetos personalizados.  
   
 ### <a name="information-about-other-custom-objects"></a>Informações sobre outros objetos personalizados  
- Para obter informações sobre os outros tipos de objetos personalizados que você pode criar em [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte os seguintes tópicos:  
+ Para obter informações sobre os outros tipos de objetos personalizados que você pode criar no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte os tópicos a seguir:  
   
- [Desenvolvendo uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Desenvolver uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Aborda como programar tarefas personalizadas.  
   
- [Desenvolvendo um Gerenciador de Conexão personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
+ [Desenvolver um gerenciador de conexões personalizado](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
  Aborda como programar gerenciadores de conexões personalizados.  
   
- [Desenvolvendo um provedor de Log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
+ [Desenvolver um provedor de log personalizado](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
  Aborda como programar provedores de log personalizados.  
   
- [Desenvolvendo um enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
+ [Desenvolver um enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Aborda como programar enumeradores personalizados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Estendendo o fluxo de dados com o componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
- [Comparando soluções de script e objetos personalizados](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
+ [Estender o fluxo de dados com o componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
+ [Comparar soluções de script e objetos personalizados](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Tarefa fila de mensagens | Microsoft Docs
+title: Tarefa Fila de Mensagens | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: cc23a330f63d67cef6a5e12df9bf3b6ca82dcff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="message-queue-task"></a>Tarefa Fila de Mensagens
   A Tarefa Fila de Mensagens permite usar o serviço de Enfileiramento de Mensagens (também conhecido como MSMQ) para enviar e receber mensagens entre pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou enviar mensagens a uma fila de aplicativos processada por um aplicativo personalizado. Essas mensagens podem adotar a forma de texto simples, arquivos ou variáveis e seus valores.  
@@ -124,7 +122,7 @@ ms.lasthandoff: 08/11/2017
  Indique se deseja usar o formato 2000 do serviço de enfileiramento de mensagens (também conhecido como MSMQ). O padrão é **False**.  
   
  **MSMQConnection**  
- Selecione um Gerenciador de conexão do MSMQ existente ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Selecione um gerenciador de conexões de MSMQ existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados**: [Gerenciador de conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor do Gerenciador de Conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -234,7 +232,7 @@ ms.lasthandoff: 08/11/2017
 |**Do pacote**|A mensagem recebe somente mensagens do pacote especificado. Selecionar este valor faz com que seja exibida a opção dinâmica **Identifier**.|  
   
  **Variável**  
- Digite o nome da variável ou clique \< **nova variável...** > e, em seguida, configure uma nova variável.  
+ Digite o nome da variável ou clique em \<**Nova variável...**> e configure uma variável nova.  
   
  **Tópicos relacionados:** [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -279,7 +277,7 @@ ms.lasthandoff: 08/11/2017
  A menos que a opção **Comparar** esteja definida como **Nenhum**, forneça a cadeia de caracteres com a qual a mensagem é comparada.  
   
  **Variável**  
- Digite o nome da variável para manter a mensagem recebida ou clique em \< **nova variável...** > e, em seguida, configure uma nova variável.  
+ Digite o nome da variável para manter a mensagem recebida ou clique em \<**Nova variável...**> e configure uma variável nova.  
   
  **Tópicos relacionados:** [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -308,4 +306,3 @@ ms.lasthandoff: 08/11/2017
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
   
-

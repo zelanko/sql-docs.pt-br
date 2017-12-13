@@ -2,12 +2,12 @@
 title: "Tabelas aninhadas (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
-ms.translationtype: HT
+ms.openlocfilehash: e561111342531d5e390111282d1ca64f0b05fe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelas aninhadas (Analysis Services - Mineração de Dados)
-  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os dados devem ser alimentados com um algoritmo de mineração de dados como uma série de casos contidos em uma tabela de casos. No entanto, nem todos os casos podem ser descritos por uma única linha de dados. Por exemplo, um caso pode ser derivado de duas tabelas: uma contendo informações sobre o cliente e outra as compras do cliente. Um único cliente na tabela de informações de clientes pode ter vários itens na tabela de compras do cliente, o que dificulta a descrição dos dados em uma única linha. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um método exclusivo para tratar desses casos, com o uso de *tabelas aninhadas*. O conceito de uma tabela aninhada é demonstrado na ilustração a seguir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], dados devem ser alimentados com um algoritmo de mineração de dados como uma série de casos contidos em uma tabela de casos. No entanto, nem todos os casos podem ser descritos por uma única linha de dados. Por exemplo, um caso pode ser derivado de duas tabelas: uma contendo informações sobre o cliente e outra as compras do cliente. Um único cliente na tabela de informações de clientes pode ter vários itens na tabela de compras do cliente, o que dificulta a descrição dos dados em uma única linha. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um método exclusivo para tratar desses casos, com o uso de *tabelas aninhadas*. O conceito de uma tabela aninhada é demonstrado na ilustração a seguir.  
   
  ![Duas tabelas combinadas com uma tabela aninhada](../../analysis-services/data-mining/media/nested-tables.gif "duas tabelas combinadas com uma tabela aninhada")  
   

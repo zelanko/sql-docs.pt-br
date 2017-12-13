@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c3be5273bd31a2a812c96fac458b8b173e14b3b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29f3820518e10bf0b4066d7cf3e8e11d9e50ce3c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="null-ssis-expression"></a>NULL (Expressão SSIS)
   Retorna um valor nulo de um tipo de dados solicitado.  
@@ -69,8 +67,7 @@ NULL(DT_BOOL)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ISNULL &#40; Expressão do SSIS &#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [ISNULL &#40;Expressão SSIS&#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

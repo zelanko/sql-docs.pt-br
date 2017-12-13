@@ -2,12 +2,12 @@
 title: "Representação em modelos de tabela do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ad8bc6b19ab93a75a62134b8b8b9ec51cdb5fdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="impersonation"></a>Representação 
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Este tópico fornece a autores de modelo de tabela uma compreensão de como as credenciais de logon são usadas pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (Atualizar) dados.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tópico fornece a autores de modelo de tabela uma compreensão de como as credenciais de logon são usadas pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (Atualizar) dados.  
 
 ##  <a name="bkmk_conf_imp_info"></a>Configurando a representação  
  Onde e o contexto existe um modelo determina como as informações de representação são configuradas. Ao criar um novo projeto de modelo, a representação está configurada no SQL Server Data Tools (SSDT) quando você se conectar a uma fonte de dados para importar dados. Depois que um modelo é implantado, representação pode ser configurada na propriedade de cadeia de caracteres de conexão de banco de dados de modelo usando o SQL Server Management Studio (SSMS). Para modelos de tabela no Azure Analysis Services, você pode usar o SSMS ou o **exibir como: Script** modo no designer e baseada em navegador para editar o arquivo Model.bim em JSON.

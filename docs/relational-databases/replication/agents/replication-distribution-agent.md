@@ -2,9 +2,12 @@
 title: "Agente de Distribuição de Replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2e028fb7c3c1849bd65495725bcf9edf66c0a81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32e48df7831764259bd9f05d53a2d8b4e3ca29d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
-  O Replication Agente de Distribuição é um executável que move o instantâneo (para replicação de instantâneo e replicação transacional) e as transações mantidas nas tabelas do banco de dados de distribuição (para replicação transacional) para as tabelas de destino nos Assinantes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Agente de Distribuição de Replicação é um executável que move o instantâneo (para replicação de instantâneo e replicação transacional) e as transações mantidas nas tabelas do banco de dados de distribuição (para replicação transacional) para as tabelas de destino nos Assinantes.  
   
 > [!NOTE]  
 >  Os parâmetros podem ser especificados em qualquer ordem. Quando não são especificados parâmetros opcionais, são usados valores de configurações de registro predefinidos no computador local.  

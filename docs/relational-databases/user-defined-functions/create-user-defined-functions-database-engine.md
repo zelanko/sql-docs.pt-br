@@ -2,9 +2,12 @@
 title: "Criar funções definidas pelo usuário (Mecanismo de Banco de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 27986a4c2f9533574bbd38d925973b0f4f47aa6e
-ms.sourcegitcommit: 44c106616462f50ce3f4df1a2371d181eff8f405
-ms.translationtype: MT
+ms.openlocfilehash: b90ec3cc6932d9487dd339041fc1f580f63a8db6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)
-  Este tópico descreve como criar uma UDF (função definida pelo usuário) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Este tópico descreve como criar uma UDF (função definida pelo usuário) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  

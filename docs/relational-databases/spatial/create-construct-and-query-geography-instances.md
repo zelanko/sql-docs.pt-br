@@ -2,9 +2,12 @@
 title: "Criar, construir e consultar instâncias de geografia | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6c2e82fe7f8bf955b8283f204f60549268ac6f85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9f981407068d6a1d526581de6c2250f71825c64b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Criar, construir e consultar instâncias de geografia
-  O tipo de dados espacial de geografia, **geography**, representa dados em um sistema de coordenadas de terra redonda. Este tipo é implementado como um tipo de dados CLR (Common Language Runtime) .NET no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O tipo de dados de geografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** armazena dados elipsoidais (terra redonda), como coordenadas de latitude e longitude de GPS.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O tipo de dados espacial de geografia, **geography**, representa dados em um sistema de coordenadas de globo terrestre. Este tipo é implementado como um tipo de dados CLR (Common Language Runtime) .NET no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O tipo de dados de geografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** armazena dados elipsoidais (terra redonda), como coordenadas de latitude e longitude de GPS.  
   
  O tipo **geography** é predefinido e está disponível em cada banco de dados. É possível criar colunas de tabelas do tipo **geography** e operar em dados de **geography** da mesma maneira como outros tipos fornecidos pelo sistema são usados.  
   

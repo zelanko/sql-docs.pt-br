@@ -2,12 +2,12 @@
 title: "Consultas (mineração de dados) de conteúdo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45a912354d122eadb7008c2ff260366fa46770fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c32111e19274ecd744f968c7ce128a924487f22c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-queries-data-mining"></a>Consultas de conteúdo (mineração de dados)
-  Uma consulta de conteúdo é um modo de extrair informações sobre as estatísticas internas e a estrutura do modelo de mineração propriamente dito. Às vezes uma consulta de conteúdo pode fornecer detalhes que não estão prontamente disponível no visualizador. Você também pode usar os resultados de uma consulta de conteúdo para extrair informações programaticamente por outros usos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma consulta de conteúdo é uma maneira de extrair informações sobre as estatísticas internas e a estrutura do modelo de mineração. Às vezes uma consulta de conteúdo pode fornecer detalhes que não estão prontamente disponível no visualizador. Você também pode usar os resultados de uma consulta de conteúdo para extrair informações programaticamente por outros usos.  
   
  Esta seção fornece informações gerais sobre os tipos de informações que podem ser recuperadas com uma consulta de conteúdo e a sintaxe DMX geral para consultas de conteúdo.  
   

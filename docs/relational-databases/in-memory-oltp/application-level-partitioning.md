@@ -2,9 +2,12 @@
 title: "Particionamento no nível de aplicativo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0133e07a063589deeae9cf1d1cb9e05fe480437
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 10623fc1a5c493dc0fd5f03f730bf712f6c3b893
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="application-level-partitioning"></a>Particionamento de nível de aplicativo
-  Esse aplicativo processa ordens. Há muito processamento em ordens recentes. Não há muito processamento em ordens antigas. As ordens recentes estão em uma tabela com otimização de memória. As ordens antigas estão em uma tabela baseada em disco. Todas as ordens depois do *hotDate* estão na tabela com otimização de memória. Todas as ordens antes do *hotDate* estão na tabela baseada em disco. Suponha uma carga de trabalho OLTP extrema com várias transações simultâneas. Essa regra de negócio (ordens recentes em uma tabela com otimização de memória) deve ser imposta mesmo que várias transações simultâneas estejam tentando alterar o *hotDate*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Esse aplicativo processa ordens. Há muito processamento em ordens recentes. Não há muito processamento em ordens antigas. As ordens recentes estão em uma tabela com otimização de memória. As ordens antigas estão em uma tabela baseada em disco. Todas as ordens depois do *hotDate* estão na tabela com otimização de memória. Todas as ordens antes do *hotDate* estão na tabela baseada em disco. Suponha uma carga de trabalho OLTP extrema com várias transações simultâneas. Essa regra de negócio (ordens recentes em uma tabela com otimização de memória) deve ser imposta mesmo que várias transações simultâneas estejam tentando alterar o *hotDate*.  
   
  Este exemplo não usa uma tabela particionada para a tabela com base em disco, mas acompanha um ponto explícito de divisão entre as duas tabelas, usando uma terceira tabela. O ponto de divisão pode ser usado para garantir que os dados recém-inseridos sejam sempre inseridos na tabela apropriada com base na data. Ele também pode ser usado para determinar onde procurar dados. Os dados tardios ainda entram na tabela apropriada.  
   

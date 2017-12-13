@@ -2,9 +2,12 @@
 title: Monitorar aplicativos da camada de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d5760acc8966ee698f20e7aa714abbe7d2e691f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3cb93f6f2644966696f7d7c48f2dac7f72cde06b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-data-tier-applications"></a>Monitorar aplicativos da camada de dados
-  Um DAC (aplicativo da camada de dados) pode ser monitorado no **Gerenciador do Utilitário** e no **Pesquisador de Objetos** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), junto com exibições e tabelas do sistema. Além disso, todos os objetos no banco de dados contidos no DAC podem ser monitorados usando técnicas padrão de monitoração de banco de dados e [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um DAC (aplicativo da camada de dados) pode ser monitorado no **Gerenciador do Utilitário** e no **Pesquisador de Objetos** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), junto com exibições e tabelas do sistema. Além disso, todos os objetos no banco de dados contidos no DAC podem ser monitorados usando técnicas padrão de monitoração de banco de dados e [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Se você implantar um DAC em uma instância gerenciada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], as informações sobre o DAC implantado serão incorporadas no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle de utilitário. Você pode exibir informações de integridade básicas sobre o DAC usando o Gerenciador do Utilitário [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Gerenciador do Utilitário**.  

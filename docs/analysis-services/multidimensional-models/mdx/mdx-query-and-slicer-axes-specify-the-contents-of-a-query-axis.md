@@ -2,12 +2,12 @@
 title: "Especificando o conteúdo de um eixo de consulta (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c58b048b5452719382c45c9c160293d5d7b6918f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9b7100066015b84fafb6ed11428b318ef79fc78d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Consulta MDX e o eixo da segmentação de dados - especificar o conteúdo de um eixo de consulta
-  Eixos de consulta especificam as extremidades de um conjunto de células retornadas por uma instrução MDX SELECT. Especificar as extremidades de um conjunto de células permitir restringir os dados retornados que ficam visíveis ao cliente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Eixos de consulta especificam as extremidades de um conjunto de células retornado por uma instrução SELECT MDX (Multidimensional Expressions). Especificar as extremidades de um conjunto de células permitir restringir os dados retornados que ficam visíveis ao cliente.  
   
  Para especificar eixos de consulta, use a `<SELECT query axis clause>` para atribuir um conjunto a um eixo de consulta em particular. Cada valor da `<SELECT query axis clause>` define um eixo de consulta. O número de eixos do conjunto de dados é igual ao número de valores da `<SELECT query axis clause>` na instrução SELECT.  
   

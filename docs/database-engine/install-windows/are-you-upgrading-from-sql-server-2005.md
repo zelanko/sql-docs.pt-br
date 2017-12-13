@@ -1,12 +1,13 @@
 ---
 title: "Você está atualizando do SQL Server 2005? | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 930b38a7cf74f6f5fca26ec97fb5510a1ad31b6f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0d0f68c51cfc99f8ff6b6af2e048fbbb7f951ae9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Você está atualizando do SQL Server 2005?
- O fim do suporte estendido para o SQL Server 2005 é um motivo para atualizar agora para uma versão mais recente do SQL Server e do Banco de Dados SQL do Microsoft Azure. A atualização permite manter a segurança e a conformidade, alcançar um desempenho inovador e otimizar a infraestrutura da plataforma de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O fim do suporte estendido para o SQL Server 2005 é um motivo para atualizar agora para uma versão mais recente do SQL Server e do Banco de Dados SQL do Microsoft Azure. A atualização permite manter a segurança e a conformidade, alcançar um desempenho inovador e otimizar a infraestrutura da plataforma de dados.  
   
  Para obter mais informações, diretrizes e ferramentas para planejar e automatizar sua migração ou atualização, consulte [Fim do suporte do SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   

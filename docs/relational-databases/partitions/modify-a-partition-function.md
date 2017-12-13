@@ -2,9 +2,12 @@
 title: "Modificar uma função de partição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f802feafcd209656d53224c62d2aa6a55addf460
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e6951b2a5363c78238c38956fa90d0cfd107f919
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-a-partition-function"></a>Modificar uma função de partição
-  Você pode alterar o modo como uma tabela ou um índice é particionado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] adicionando ou subtraindo o número de partições especificadas, em incrementos de 1, na função de partição da tabela ou do índice particionado usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao adicionar uma partição, você “divide” em duas uma partição existente e redefine os limites das novas partições. Ao descartar uma partição, você "funde" os limites das duas partições criando uma só. Esta última ação repopula uma partição e deixa a outra partição não atribuída.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode alterar o modo como uma tabela ou um índice é particionado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] adicionando ou subtraindo o número de partições especificadas, em incrementos de 1, na função de partição da tabela ou do índice particionado usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao adicionar uma partição, você “divide” em duas uma partição existente e redefine os limites das novas partições. Ao descartar uma partição, você "funde" os limites das duas partições criando uma só. Esta última ação repopula uma partição e deixa a outra partição não atribuída.  
   
 > [!CAUTION]  
 >  Mais de uma tabela ou índice podem usar a mesma função de partição. Quando modifica uma função de partição, você afeta todas elas em uma única transação. Verifique as dependências da função de partição antes de modificá-la.  

@@ -1,5 +1,5 @@
 ---
-title: Transferir tarefa de objetos do SQL Server | Microsoft Docs
+title: Tarefa Transferir Objetos SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfersqlserverobjectstask.f1
 - sql13.dts.designer.transfersqlserverobjects.general.f1
 - sql13.dts.designer.transfersqlserverobjects.objects.f1
-helpviewer_keywords:
-- Transfer SQL Server Objects task [Integration Services]
+helpviewer_keywords: Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: fd7916034970aba3a64d66ee2b59a1661d8a9515
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 05b3013e4e0328766b0131d41d0fd9b6cd38148b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarefa Transferir Objetos do SQL Server
   A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfere um ou mais tipos de objetos para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por exemplo, a tarefa pode copiar tabelas e procedimentos armazenados. Dependendo da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado como fonte, tipos diferentes de objetos estarão disponíveis para cópia. Por exemplo, só um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui esquemas e agregações definidos pelo usuário.  
@@ -152,13 +149,13 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>Opções estáticas  
  **SourceConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de origem.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
   
  **SourceDatabase**  
  Selecione o banco de dados no servidor de origem do qual serão copiados os objetos.  
   
  **DestinationConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de destino.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
   
  **DestinationDatabase**  
  Selecione o banco de dados no servidor de destino para o qual serão copiados os objetos.  
@@ -334,8 +331,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Transferência de Editor de tarefa de objetos do SQL Server &#40; Página geral &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
- [Página expressões](../../integration-services/expressions/expressions-page.md)   
+ [Editor da Tarefa Transferir Objetos SQL Server &#40;Página Geral&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Página Expressões](../../integration-services/expressions/expressions-page.md)   
  [Formatos de dados para importação ou exportação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
-

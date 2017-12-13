@@ -2,9 +2,12 @@
 title: Classe de evento Audit App Role Change Password | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6b4c39f29d6f7b86b7b35d500cfe73e23c8225cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 407e6c56ccd71319d264f85accb088ceaf91b52d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Classe de evento Audit App Role Change Password
-  A classe de evento **Audit App Role Change Password** ocorre sempre que uma senha é alterada para uma função de aplicativo.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Audit App Role Change Password** ocorre sempre que uma senha é alterada para uma função de aplicativo.  
   
 ## <a name="audit-app-role-change-password-event-class-data-columns"></a>Colunas de dados da classe de evento Audit App Role Change Password  
   

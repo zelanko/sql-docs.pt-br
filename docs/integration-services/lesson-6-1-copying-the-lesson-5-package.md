@@ -1,5 +1,5 @@
 ---
-title: "Etapa 1: Copiando o pacote da lição 5 | Microsoft Docs"
+title: "Etapa 1: copiar o pacote da Lição 5 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6de5c21ac26411f39ae6d46a1fd1824f73d5c3b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 92e846a42325d0c30388e7524e86a3ad715fa8fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-6-1---copying-the-lesson-5-package"></a>Lição 6-1: copiando o pacote da lição 5
+# <a name="lesson-6-1---copying-the-lesson-5-package"></a>Lição 6-1 – copiar o pacote da Lição 5
 Nesta tarefa, você criará uma cópia do pacote Lesson 5.dtsx criado na lição 5. Como alternativa, é possível adicionar o pacote concluído da Lição 5 incluído com o tutorial do projeto e copiá-lo. Você usará esta cópia nova ao longo de toda a lição 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>Para copiar o pacote da Lição 5  
@@ -75,4 +72,3 @@ Nesta tarefa, você criará uma cópia do pacote Lesson 5.dtsx criado na lição
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 2: Convertendo o projeto para o modelo de implantação de projetos](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-

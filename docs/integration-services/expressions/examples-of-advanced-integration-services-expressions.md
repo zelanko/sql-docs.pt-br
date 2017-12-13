@@ -1,5 +1,5 @@
 ---
-title: "Exemplos de integração avançada serviços expressões | Microsoft Docs"
+title: "Exemplos de expressões avançadas do Integration Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 819cf75cbfe7dba1bbd0c81d18ecc8db138b01f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e8bcc03027fcb965979e557e97afb186069fd51
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Exemplos de expressões avançadas do Integration Services
   Esta seção fornece exemplos de expressões avançadas que combinam múltiplos operadores e funções. Se uma expressão for usada em uma restrição precedente ou na transformação Divisão Condicional, ela deve ser avaliada como uma expressão Booleana. No entanto, essa restrição não se aplica a expressões usadas em expressões de propriedades, variáveis, na transformação Coluna Derivada ou no contêiner Loop For.  
@@ -114,4 +112,3 @@ ms.lasthandoff: 08/03/2017
  Artigo técnico, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), em pragmaticworks.com  
   
   
-

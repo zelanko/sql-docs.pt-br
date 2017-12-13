@@ -2,9 +2,12 @@
 title: Cluster DTC para grupos de disponibilidade do SQL Server 2016 | Microsoft Docs
 ms.custom: 
 ms.date: 08/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9291f9ce4659e022652078a9f1fadb3502c0e6e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b912f3496847bc915e62b616638a39d51218574d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>Cluster DTC para Grupos de Disponibilidade do SQL Server 2016
-Este tópico descreve os requisitos e as etapas para agrupar em cluster o serviço DTC (Coordenador de Transações Distribuídas) da Microsoft do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações sobre transações distribuídas e o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Transações entre bancos de dados e transações distribuídas para Grupos de Disponibilidade AlwaysOn e Espelhamento de Banco de Dados (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve os requisitos e as etapas para agrupar em cluster o serviço DTC (Coordenador de Transações Distribuídas) da Microsoft do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações sobre transações distribuídas e o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Transações entre bancos de dados e transações distribuídas para Grupos de Disponibilidade AlwaysOn e Espelhamento de Banco de Dados (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
  ## <a name="checklist-preliminary-requirements"></a>Lista de verificação: Requisitos preliminares
 ||Tarefa|Referência|  

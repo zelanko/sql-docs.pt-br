@@ -2,12 +2,12 @@
 title: Elemento AssociationSet (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae30edd006aa425ddd4f574ceb67f0534674f93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="associationset-element-csdlbi"></a>Elemento AssociationSet (CSDLBI)
-  O elemento **AssociationSet** é um tipo complexo que define uma associação. Em um modelo de dados da CSDLBI, uma associação é uma relação entre duas tabelas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O **AssociationSet** elemento é um tipo complexo que define uma associação. Em um modelo de dados da CSDLBI, uma associação é uma relação entre duas tabelas.  
   
  Um **AssociationSet** deve ser especificado para cada relação exclusiva em um modelo. O **AssociationSet** define os pontos de extremidade usando o elemento **Association** . O elemento **AssociationSet** também define os metadados sobre a relação e seu uso no modelo de dados.  
   

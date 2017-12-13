@@ -3,8 +3,11 @@ title: Renomear consultas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95c9219c6ee69d72900853ef3f63c1db78231bec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5fa7b55c00212c09d3d6203552488a813f33cf8d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rename-queries-visual-database-tools"></a>Renomear consultas (Visual Database Tools)
-Você pode renomear qualquer consulta que não esteja aberta atualmente para edição. O procedimento a seguir presume que a consulta que você deseja renomear está fechada.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode renomear qualquer consulta que não esteja aberta no momento para edição. O procedimento a seguir presume que a consulta que você deseja renomear está fechada.  
   
 ### <a name="to-rename-a-query"></a>Para renomear uma consulta  
   

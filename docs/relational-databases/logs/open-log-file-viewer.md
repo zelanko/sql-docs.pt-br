@@ -2,9 +2,12 @@
 title: Abrir o Visualizador do Arquivo de Log | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6857f86877632a3efa5c3d1ce67d96070da64a26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 58798cfeb515819c081be5fe24261209d96f18fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-log-file-viewer"></a>Abrir o Visualizador do Arquivo de Log
-  É possível usar o Visualizador do Arquivo de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para acessar informações sobre erros e eventos capturados nos seguintes logs:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] É possível usar o Visualizador do Arquivo de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para acessar informações sobre erros e eventos capturados nos seguintes logs:  
   
 -   Coleta de Auditoria  
   

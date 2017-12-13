@@ -2,9 +2,12 @@
 title: "Fechar uma topologia de replicação para novas sessões (programação Transact-SQL de replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 229eb94b4ee1bb49f8b3b58ca5bb5e66de9ff463
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 828609b3acc355bb6b4a553304cdd1ee5fb810d2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Confirmar uma topologia de replicação (Programação Transact-SQL de replicação)
-  *Confirmar* um sistema inclui interromper as atividades em tabelas publicadas em todos os nós, e assegurar que todos eles tenham recebido todas as alterações de todos os demais nós. Esse tópico explica como confirmar a topologia de replicação, necessária para um número de tarefas administrativas, e como garantir que um nó tenha recebido todas as alterações dos demais nós.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] *Confirmar* um sistema inclui interromper as atividades em tabelas publicadas em todos os nós e assegurar que todos eles tenham recebido todas as alterações de todos os demais nós. Esse tópico explica como confirmar a topologia de replicação, necessária para um número de tarefas administrativas, e como garantir que um nó tenha recebido todas as alterações dos demais nós.  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>Para confirmar uma topologia de replicação transacional com assinaturas somente leitura  
   

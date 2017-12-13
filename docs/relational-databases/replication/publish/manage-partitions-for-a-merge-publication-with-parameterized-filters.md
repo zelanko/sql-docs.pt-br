@@ -2,9 +2,12 @@
 title: "Gerenciar partições de uma publicação de mesclagem com filtros com parâmetros | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84fffaafd009e08730d08e5ea10ec69197a61171
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5cb96ad51fb17a57c9296f508406a2aaad4f5b29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros
-  Este tópico descreve como gerenciar partições para uma publicação de mesclagem com filtros com parâmetros no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). Filtros de linha com parâmetros podem ser usados para gerar partições não sobrepostas. Essas partições podem ser restringidas de forma que só uma assinatura receba uma determinada partição. Nesses casos, um grande número de assinantes resultará em um grande número de partições, que por sua vez, exige um número igual de instantâneos particionados. Para obter mais informações, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como gerenciar partições para uma publicação de mesclagem com filtros com parâmetros no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o RMO (Replication Management Objects). Filtros de linha com parâmetros podem ser usados para gerar partições não sobrepostas. Essas partições podem ser restringidas de forma que só uma assinatura receba uma determinada partição. Nesses casos, um grande número de assinantes resultará em um grande número de partições, que por sua vez, exige um número igual de instantâneos particionados. Para obter mais informações, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Neste tópico**  
   

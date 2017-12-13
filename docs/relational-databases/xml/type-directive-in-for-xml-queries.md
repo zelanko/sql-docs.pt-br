@@ -2,9 +2,12 @@
 title: Diretiva TYPE em consultas FOR XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9c7c87b5ab05ac170f9c6291c8b8147e20e71762
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e30226fae64fab358a113ba82abefca113b2a2ca
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Diretiva TYPE em consultas FOR XML
-  O suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) permite solicitar opcionalmente que o resultado de uma consulta XML FOR seja retornado como o tipo de dados **xml**, especificando a diretiva TYPE. Isso permite processar o resultado de uma consulta FOR XML no servidor. Por exemplo, é possível especificar um XQuery nela, atribuir o resultado a uma variável de tipo **xml** ou gravar [Consultas FOR XML aninhadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] O suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) permite solicitar opcionalmente que o resultado de uma consulta XML FOR seja retornado como o tipo de dados **xml**, especificando a diretiva TYPE. Isso permite processar o resultado de uma consulta FOR XML no servidor. Por exemplo, é possível especificar um XQuery nela, atribuir o resultado a uma variável de tipo **xml** ou gravar [Consultas FOR XML aninhadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna dados da instância de tipo de dados XML ao cliente como resultado das diferentes construções pelo servidor como consultas FOR XML que usam a diretiva TYPE ou nos casos em que o tipo de dados **xml** é usado para retornar valores de dados da instância XML das colunas da tabela e dos parâmetros de saída SQL. No código do aplicativo cliente, o provedor ADO.NET solicita que essas informações de tipo de dados sejam enviadas em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML. Observe que FOR XML de nível superior sem a diretiva TYPE não pode ser usado com cursores.  

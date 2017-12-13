@@ -3,8 +3,11 @@ title: Trabalhar com os dados no painel de resultados (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7b1a7f29bcba95aeb1af83746df29a5bee8ebff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7493784bc506c454ab0c230d549d0accae58c7c4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabalhar com dados no painel de resultados (Visual Database Tools)
-Depois que você executa ou exibe uma consulta, os resultados são mostrados no painel Resultados. Em seguida, você pode trabalhar com esses resultados. Por exemplo, você pode adicionar e excluir linhas, inserir ou alterar dados e navegar facilmente por grandes conjuntos de resultados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Depois que você executa ou exibe uma consulta, os resultados são mostrados no painel Resultados. Em seguida, você pode trabalhar com esses resultados. Por exemplo, você pode adicionar e excluir linhas, inserir ou alterar dados e navegar facilmente por grandes conjuntos de resultados.  
   
 As informações a seguir podem ajudá-lo a evitar problemas e a trabalhar de maneira eficaz com os seus conjuntos de resultados.  
   

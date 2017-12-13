@@ -2,9 +2,12 @@
 title: Modelo de banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8a4023cf2ac4d0176d421a262f13b9a4603fcc5a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0f012597cacaf7058b8463183c5c20c1fa042a37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-database"></a>Banco de dados modelo
-  O banco de dados **modelo** é usado como modelo para todos os bancos de dados criados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** é criado toda vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, o banco de dados **modelo** deve sempre existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo o conteúdo do banco de dados **modelo** , incluindo as opções, é copiado para o novo banco de dados. Algumas configurações do **modelo** também são usadas para criar um novo **tempdb** durante a inicialização, de modo que um banco de dados **modelo** sempre deve existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O **modelo** de banco de dados é usado como modelo para todos os bancos de dados criados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** é criado toda vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, o banco de dados **modelo** deve sempre existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo o conteúdo do banco de dados **modelo** , incluindo as opções, é copiado para o novo banco de dados. Algumas configurações do **modelo** também são usadas para criar um novo **tempdb** durante a inicialização, de modo que um banco de dados **modelo** sempre deve existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Bancos de dados de usuários recém-criados usam o mesmo [modelo de recuperação](../../relational-databases/backup-restore/recovery-models-sql-server.md) do banco de dados modelo. O padrão é configurável pelo usuário. Para saber mais sobre o modelo de recuperação atual do modelo, veja [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   

@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - TRIM function
 - trailing blanks
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b543848947186903eddfe6bad310697fb513ad24
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 48ed42d0e12ed6b3d80c61a392b50a529813899e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="trim-ssis-expression"></a>TRIM (Expressão SSIS)
   Retorna uma expressão de caractere depois de remover espaços em branco à esquerda e direita.  
@@ -68,9 +66,8 @@ TRIM(FirstName + " "+ LastName)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [LTRIM &#40; Expressão do SSIS &#41;](../../integration-services/expressions/ltrim-ssis-expression.md)   
- [RTRIM &#40; Expressão do SSIS &#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [LTRIM &#40;Expressão SSIS&#41;](../../integration-services/expressions/ltrim-ssis-expression.md)   
+ [RTRIM &#40;Expressão SSIS&#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

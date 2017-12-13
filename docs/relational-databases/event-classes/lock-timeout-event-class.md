@@ -2,9 +2,12 @@
 title: Classe de evento Lock:Timeout | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db75a1766177f5aa96600249289f1eb97dd9c19c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2523de44f225c1429453362067c7a859e6a17b56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locktimeout-event-class"></a>Classe de evento Lock:Timeout
-  A classe de evento Lock:Timeout indica que uma solicitação para um bloqueio em um recurso, como uma página, expirou porque outra transação está segurando uma fechadura de bloqueio no recurso exigido. O tempo limite é determinado pela função de sistema @@LOCK_TIMEOUT e pode ser definido com a instrução SET LOCK_TIMEOUT.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento Lock:Timeout indica que uma solicitação de um bloqueio em um recurso, tal como uma página, expirou porque outra transação está mantendo um bloqueio no recurso necessário. O tempo limite é determinado pela função de sistema @@LOCK_TIMEOUT e pode ser definido com a instrução SET LOCK_TIMEOUT.  
   
  Use a classe de evento Lock:Timeout para monitorar quando as condições de tempo limite acontecerem. Essas informações são úteis para determinar se os tempos limite estão afetando significativamente o desempenho de seu aplicativo, e quais são os objetos envolvidos. Você pode examinar o código do aplicativo que modifica esses objetos para determinar se podem ser efetuadas alterações para minimizar os intervalos.  
   

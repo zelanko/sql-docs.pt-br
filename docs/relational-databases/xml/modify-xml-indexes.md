@@ -2,9 +2,12 @@
 title: "Modificar índices XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc7c43b45d06cd1ad56abb040db671a76549fcf3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fe2635b7d5a9fd8bb95d1531093e1baa823fcf55
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-xml-indexes"></a>Modificar índices XML
-  A instrução DDL [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] pode ser usada para modificar o XML existente e índices não XML. Porém, nem todas as opções de ALTER INDEX estão disponíveis para índices XML. As opções a seguir não são válidas ao modificar índices XML:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] A instrução DDL [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] pode ser usada para modificar o XML existente e índices não XML. Porém, nem todas as opções de ALTER INDEX estão disponíveis para índices XML. As opções a seguir não são válidas ao modificar índices XML:  
   
 -   A opção de recriação e definição IGNORE_DUP_KEY não é válida para índices XML. O opção de reconstrução ONLINE deve ser definida como OFF para índices XML secundários. O opção DROP_EXISTING não é permitida na instrução ALTER INDEX.  
   

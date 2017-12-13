@@ -2,9 +2,12 @@
 title: "Salvar eventos de perfil de estatísticas do Plano de Execução XML separadamente (SQL Server Profiler) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,53 +21,53 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71d33fbb533d741acf02a1b3194d0c1905c2f3e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c54c389d97e750b42d782314f01ec2cb5bedd352
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Salvar eventos de perfil de estatísticas do Plano de Execução XML separadamente (SQL Server Profiler)
-  Esse tópico descreve como salvar eventos **Showplan XML Statistics Profile** que são capturados nos rastreamentos em arquivos .SQLPlan separados, por meio do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Você pode abrir os arquivos de eventos **Showplan XML Statistics Profile** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o que permite ver o plano de execução gráfico de cada evento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esse tópico descreve como salvar eventos de **perfil de estatísticas do Plano de Execução XML** que são capturados nos rastreamentos em arquivos .SQLPlan separados, por meio do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Você pode abrir os arquivos de eventos de **perfil de estatísticas do Plano de Execução XML** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o que permite exibir o plano de execução gráfico de cada evento.  
   
-### <a name="to-save-showplan-xml-statistics-events-separately"></a>Para salvar eventos de estatísticas do Plano de Execução XML separadamente  
+## <a name="save-showplan-xml-statistics-profile-events-separately"></a>Salvar eventos de perfil de estatísticas do Plano de Execução XML separadamente  
   
-1.  No menu **Arquivo** , clique em **Novo Rastreamento**e conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1. No menu **Arquivo**, selecione **Novo Rastreamento** e conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      É exibida a caixa de diálogo **Propriedades do Rastreamento** .  
   
     > [!NOTE]  
-    >  Se **Iniciar rastreamento imediatamente após estabelecer a conexão**estiver selecionado, a caixa de diálogo **Propriedades do Rastreamento**não será exibida e o rastreamento será iniciado. Para desabilitar essa configuração, no menu **Ferramentas**, clique em **Opções**e desmarque a caixa de seleção **Iniciar rastreamento imediatamente após estabelecer a conexão** .  
+    >  Se você selecionar **Iniciar rastreamento imediatamente após estabelecer a conexão**, a caixa de diálogo **Propriedades do Rastreamento** não será exibida e, em vez disso, o rastreamento será iniciado. Para desligar essa configuração, no menu **Ferramentas**, selecione **Opções** e desmarque a caixa de seleção **Iniciar rastreamento imediatamente após estabelecer a conexão**.  
   
-2.  Na caixa de diálogo **Propriedades do Rastreamento** , digite um nome para o rastreamento na caixa **Nome do rastreamento** .  
+2. Na caixa de diálogo **Propriedades do Rastreamento** , digite um nome para o rastreamento na caixa **Nome do rastreamento** .  
   
-3.  Na lista **Usar o modelo** , selecione um modelo como base para o rastreamento ou **Em branco** , se não quiser usar um modelo.  
+3. Na lista **Usar o modelo**, selecione um modelo de rastreamento no qual esse rastreamento deve ser baseado. Se você não quiser usar um modelo, selecione **Em branco**.  
   
-4.  Siga um destes procedimentos:  
+4. Siga um destes procedimentos:  
   
-    -   Clique em**Salvar em arquivo**para capturar o rastreamento em um arquivo. Especifique um valor para **Definir tamanho máximo do arquivo**.  
+    -   Selecione a caixa de seleção **Salvar em arquivo** para capturar o rastreamento em um arquivo. Especifique um valor para **Definir tamanho máximo do arquivo**.  
   
-         Opcionalmente, selecione **Habilitar substituição de arquivo** e **Dados de rastreamento de processos do servidor**.  
+         Opcionalmente, marque as caixas de seleção **Habilitar substituição de arquivo** e **Dados de rastreamento de processos do servidor** . 
   
-    -   Clique em**Salvar em tabela** para capturar o rastreamento em uma tabela de banco de dados.  
+    -   Marque a caixa de seleção **Salvar em tabela** para capturar o rastreamento em uma tabela de banco de dados.  
   
-         Opcionalmente, clique em **Definir máximo de linhas**e especifique um valor.  
+         Opcionalmente, selecione **Definir máximo de linhas** e especifique um valor.  
   
-5.  Opcionalmente, marque a caixa de seleção **Habilitar horário de parada do rastreamento** e especifique uma data e hora de parada.  
+5. Opcionalmente, marque a caixa de seleção **Habilitar horário de parada do rastreamento** e especifique uma data e hora de parada. 
   
-6.  Clique na guia **Seleção de Eventos**.  
+6. Selecione a guia **Seleção de Eventos**.  
   
-7.  Na coluna de dados **Eventos**, expanda a categoria de evento **Desempenho**e marque a caixa de seleção **Showplan XML Statistics Profile**. Se a categoria de evento **Performance** não estiver disponível, marque **Mostrar todos os eventos** para exibi-la.  
+7. Na coluna de dados **Eventos**, expanda a categoria de evento **Desempenho** e marque a caixa de seleção **Perfil de estatísticas do Plano de Execução XML**. Se a categoria de evento **Performance** não estiver disponível, marque **Mostrar todos os eventos** para exibi-la.  
   
-     A guia **Configurações de Extração de Eventos**é adicionada à caixa de diálogo **Propriedades do Rastreamento**.  
+     A guia **Configurações de Extração de Eventos** é adicionada à caixa de diálogo **Propriedades do Rastreamento**.  
   
-8.  No menu **Configurações de Extração de Eventos**, clique em **Salvar eventos de Plano de Execução XML separadamente**.  
+8. Na guia **Configurações de Extração de Eventos**, clique em **Salvar eventos de Plano de Execução XML separadamente**.  
   
 9. Na caixa de diálogo **alvar como** , digite o nome do arquivo para armazenar os eventos **Showplan XML Statistics Profile** .  
   
-10. Clique em **Todos os lotes em um único arquivo** para salvar todos os eventos **Showplan XML Statistics Profile** em um único arquivo XML ou clique em **Cada lote de Plano de Execução XML em um arquivo distinto**para criar um novo arquivo XML para cada evento **Showplan XML Statistics Profile** .  
+10. Selecione **Todos os lotes em um único arquivo** para salvar todos os eventos de **perfil de estatísticas do Plano de Execução XML** em um único arquivo XML. Ou selecione **Cada lote de Plano de Execução XML em um arquivo distinto** para criar um novo arquivo XML para cada evento de **perfil de estatísticas do Plano de Execução XML**.  
   
-11. Para ver o arquivo do evento **Showplan XML Statistics Profile** no SQL Server Management Studio, no menu **Arquivo** , aponte para **Abrir**e clique em **Arquivo**. Navegue até o diretório em que você salvou o arquivo (ou arquivos) de evento **Showplan XML Statistics Profile** para selecioná-lo e abri-lo. Arquivos de evento**Showplan XML Statistics Profile** têm a extensão .SQLPlan.  
+11. Para exibir o arquivo do evento de **perfil de estatísticas do Plano de Execução XML** no SQL Server Management Studio, no menu **Arquivo**, aponte para **Abrir** e clique em **Arquivo**. Navegue até o diretório em que você salvou o arquivo (ou arquivos) de evento de **perfil de estatísticas do Plano de Execução XML** para selecioná-lo e abri-lo. Arquivos de evento**Showplan XML Statistics Profile** têm a extensão .SQLPlan.  
   
 ## <a name="see-also"></a>Consulte também  
  [Analisar consultas com resultados do Plano de Execução no SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

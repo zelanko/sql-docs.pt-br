@@ -3,8 +3,11 @@ title: Abrir e configurar o Pesquisador de Objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 245c775659b064815e64f5f10a0d56314ecb49b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5a3731819860d5936242f6db45383117f503c448
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir e configurar o Pesquisador de Objetos
-Abra o Pesquisador de Objetos usando o menu **Exibir** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Configure as opções do Pesquisador de Objetos usando **Opções** no menu **Ferramentas** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Abra o Pesquisador de Objetos usando o menu **Exibir** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Configure as opções do Pesquisador de Objetos usando **Opções** no menu **Ferramentas** .  
   
 ## <a name="viewing-object-explorer"></a>Exibindo o Pesquisador de Objetos  
 O Pesquisador de Objetos fica visível no [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] por padrão. Se você não puder ver o Pesquisador de Objetos, no menu **Exibir** , clique em **Pesquisador de Objetos**.  

@@ -2,12 +2,12 @@
 title: "Traduções em modelos de tabela (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traduções em modelos de tabela (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Adiciona suporte a tradução de strings para modelos de tabela. Um único objeto no modelo pode ter várias traduções de um nome ou descrição, possibilitando o suporte a versões de vários idiomas na definição de modelo.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] adiciona suporte a tradução de strings para modelos de tabela. Um único objeto no modelo pode ter várias traduções de um nome ou descrição, possibilitando o suporte a versões de vários idiomas na definição de modelo.  
   
  Strings traduzidas destinam-se apenas a metadados de objetos (nomes e descrições de tabelas e colunas) que aparecem em uma ferramenta de cliente, como uma lista de Tabela Dinâmica do Excel.  Para usar strings traduzidas, a conexão do cliente especifica a cultura. No recurso **Análise no Excel** , você pode escolher o idioma em uma lista suspensa. Para outras ferramentas, você precisará especificar a cultura na string de conexão.  
   

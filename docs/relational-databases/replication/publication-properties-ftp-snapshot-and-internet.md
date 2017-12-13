@@ -2,9 +2,12 @@
 title: "Propriedades da publicação, instantâneo de FTP e Internet | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39e7279dafbfbcf8f1442c99597817b4f1ce3a92
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c0b26714f4f8c95e8e92cec71662ef3f46aff37f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>Propriedades da Publicação, Instantâneo de FTP e Internet
-  Essa página permite:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Essa página permite:  
   
 -   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md). Para usar o FTP para entrega de instantâneo, você deve configurar um servidor de FTP. Consulte a documentação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para obter mais informações.  
   

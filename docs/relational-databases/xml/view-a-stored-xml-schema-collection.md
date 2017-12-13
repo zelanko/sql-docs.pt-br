@@ -2,9 +2,12 @@
 title: "Exibir uma coleção de esquema XML armazenada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c460246b6849a83ac096c8f37c001f2d9a1e83f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 60d143e53c01fb90e4c8c73c42f20463739d185c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Exibir uma coleção de esquema XML armazenada
-  Depois de você importar uma coleção de esquema XML usando [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), os componentes do esquema são armazenados nos metadados. É possível usar a função intrínseca [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)para reconstruir a coleção de esquemas XML. Essa função retorna uma instância de tipo de dados **xml** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Depois de você importar uma coleção de esquema XML usando [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), os componentes do esquema são armazenados nos metadados. É possível usar a função intrínseca [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)para reconstruir a coleção de esquemas XML. Essa função retorna uma instância de tipo de dados **xml** .  
   
  Por exemplo, a consulta a seguir recupera uma coleção de esquema XML (`ProductDescriptionSchemaCollection`) do esquema relacional de produção no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   

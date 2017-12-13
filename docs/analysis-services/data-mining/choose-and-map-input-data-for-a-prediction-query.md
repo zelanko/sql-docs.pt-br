@@ -2,12 +2,12 @@
 title: "Escolher e mapear dados de entrada para uma consulta de previsão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e055a4ef5a23e08a7b8147cfd746c48b304aa3b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Escolher e mapear dados de entrada para uma consulta de previsão
-  Quando você cria previsões de um modelo de mineração, geralmente o faz alimentando novos dados no modelo. (A exceção são modelos de série temporal, que só podem fazer previsões com base em dados históricos.) Para oferecer novos dados ao modelo, verifique se os dados estão disponíveis como parte de uma exibição da fonte de dados. Se souber antecipadamente os dados que serão usados na previsão, você poderá incluí-los na exibição de fonte de dados usada para criar o modelo. Caso contrário, talvez precise criar uma nova exibição da fonte de dados. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria previsões de um modelo de mineração, geralmente o faz alimentando novos dados no modelo. (A exceção são modelos de série temporal, que só podem fazer previsões com base em dados históricos.) Para oferecer novos dados ao modelo, verifique se os dados estão disponíveis como parte de uma exibição da fonte de dados. Se souber antecipadamente os dados que serão usados na previsão, você poderá incluí-los na exibição de fonte de dados usada para criar o modelo. Caso contrário, talvez precise criar uma nova exibição da fonte de dados. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Às vezes, os dados de que você precisa podem estar contidos em mais de uma tabela em uma junção um-para-muitos. Este é o caso de dados usados em modelos de associação ou modelos de clustering de sequência, que usam uma tabela de casos vinculada a uma tabela aninhada que contém detalhes do produto ou da transação. Se o seu modelo usa uma estrutura de tabela aninhada de caso, os dados usados para previsão também precisam ter uma estrutura de tabela aninhada de caso.  
   

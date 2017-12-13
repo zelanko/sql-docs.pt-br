@@ -1,5 +1,5 @@
 ---
-title: "Operadores (expressão SSIS) | Microsoft Docs"
+title: "Operadores (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 9da14210c667942ff97d30e74402b011cb167a0a
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: 9aa6d1c99a46dfaaa4742ebf048a422f6256660d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operators-ssis-expression"></a>Operadores (Expressão SSIS)
   Esta seção descreve os operadores que a linguagem de expressão fornece e a precedência e a associação de operadores usados pelo avaliador de expressão.  
@@ -44,29 +42,28 @@ ms.lasthandoff: 10/05/2017
 |[+ &#40;Subtrair&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/subtract-ssis-expression.md)|Subtrai a segunda expressão numérica da primeira.|  
 |[+ &#40;Negar&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/negate-ssis-expression.md)|Nega uma expressão numérica.|  
 |[&#42; &#40;Multiplicar&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/multiply-ssis-expression.md)|Multiplica duas expressões numéricas.|  
-|[/ (Divisão) &#40; Expressão do SSIS &#41;](../../integration-services/expressions/divide-ssis-expression.md)|Divide a primeira expressão numérica pela segunda.|  
-|[% &#40; Módulo &#41; &#40; Expressão do SSIS &#41;](../../integration-services/expressions/modulo-ssis-expression.md)|Fornece o resto inteiro após dividir a primeira expressão numérica pela segunda.|  
+|[/ (Dividir) &#40;Expressão SSIS&#41;](../../integration-services/expressions/divide-ssis-expression.md)|Divide a primeira expressão numérica pela segunda.|  
+|[% &#40;Módulo&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|Fornece o resto inteiro após dividir a primeira expressão numérica pela segunda.|  
 |[&#124;&#124; &#40;OR lógica&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|Executa uma operação OR lógica.|  
 |[&& &#40;AND lógico&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)|Executa uma operação AND lógica.|  
-|[\!&#40; Não lógico &#41; &#40; Expressão do SSIS &#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Nega um operando booliano.|  
+|[\! &#40;Não lógico&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Nega um operando booliano.|  
 |[&#124; &#40;OR inclusivo de bit a bit&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|Executa uma operação OR de bit a bit de dois valores de inteiro.|  
 |[^ &#40;OR exclusivo de bit a bit&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|Executa uma operação OR de bit a bit exclusiva de dois valores inteiros.|  
 |[& &#40;AND bit a bit&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)|Executa uma operação AND de bit a bit de dois valores de inteiro.|  
 |[~ &#40;Not bit a bit&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|Executa uma negação bit a bit de um inteiro.|  
 |[== &#40;Igual&#41; &#40;Expressão do SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)|Executará uma comparação para determinar se duas expressões são iguais.|  
-|[\!= &#40; Diferente de &#41; &#40; Expressão do SSIS &#41;](../../integration-services/expressions/unequal-ssis-expression.md)|Executará uma comparação para determinar se duas expressões não forem iguais.|  
+|[\!= &#40;Diferente&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|Executará uma comparação para determinar se duas expressões não forem iguais.|  
 |[&#62; &#40;Maior que&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é maior que a segunda.|  
 |[&#60; &#40;Menor que&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/less-than-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é menor que a segunda.|  
 |[&#62;= &#40;Maior que ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é maior que ou igual à segunda.|  
 |[&#60;= &#40;Menor que ou igual a&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)|Executa uma comparação para determinar se a primeira expressão é menor que ou igual à segunda.|  
-|[? : &#40; Condicional &#41; &#40; Expressão do SSIS &#41;](../../integration-services/expressions/conditional-ssis-expression.md)|Retorna uma de duas expressões baseadas na avaliação de uma expressão booliana.|  
+|[? : &#40;Condicional&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/conditional-ssis-expression.md)|Retorna uma de duas expressões baseadas na avaliação de uma expressão booliana.|  
   
  Para obter informações sobre a colocação de cada operador na hierarquia de precedência, consulte [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)   
- [Exemplos de expressões de serviços de integração avançada](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
- [Integration Services &#40; SSIS &#41; Expressões](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Exemplos de expressões avançadas do Integration Services](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
+ [Expressões do SSIS &#40;Integration Services&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

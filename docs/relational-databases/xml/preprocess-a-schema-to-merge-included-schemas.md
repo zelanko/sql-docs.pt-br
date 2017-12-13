@@ -2,9 +2,12 @@
 title: "Pré-processar um esquema para mesclar esquemas incluídos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08a839ccc5aae2426af36dc5bcef27e33406a343
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d74cb58d143170bcef3c0e976ef786d87e92d1f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pré-processar um esquema para mesclar esquemas incluídos
-  O elemento **include** do W3C XSD dá suporte à modularidade de esquema na qual um esquema XML pode ser particionado em mais de um arquivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atualmente, não dá suporte a esse elemento. Esquemas XML que incluem esse elemento serão rejeitados pelo servidor.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] O elemento **include** do W3C XSD dá suporte à modularidade de esquema na qual um esquema XML pode ser particionado em mais de um arquivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atualmente, não dá suporte a esse elemento. Esquemas XML que incluem esse elemento serão rejeitados pelo servidor.  
   
  Como uma solução, os esquemas XML que incluem a diretiva \<xsd:include> podem ser pré-processados para copiar e mesclar o conteúdo dos esquemas incluídos em um único esquema para upload no servidor. O código C# a seguir pode ser usado para pré-processamento. Os comentários na parte anterior do código fornecem informações sobre como usar isso.  
   

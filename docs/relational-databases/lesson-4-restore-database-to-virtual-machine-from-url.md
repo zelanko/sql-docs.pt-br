@@ -1,10 +1,13 @@
 ---
 title: "Lição 4: Restaurar o banco de dados na máquina virtual por meio da URL | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f641f3df1010396d54a655beaaf982a7bff63972
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Lição 4: Restaurar o banco de dados na máquina virtual por meio da URL
-Nesta lição, você aprenderá a restaurar o banco de dados AdventureWorks2014 na instância do SQL Server 2016 na máquina virtual do Azure do banco de dados AdventureWorks2014.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nesta lição, você aprenderá a restaurar o banco de dados AdventureWorks2014 na instância do SQL Server 2016 na máquina virtual do Azure do banco de dados AdventureWorks2014.  
   
 > [!NOTE]  
 > Para fins de simplicidade neste tutorial, estamos usando o mesmo contêiner para os arquivos de log e de dados que foram usados para o backup do banco de dados. Em um ambiente de produção, provavelmente, você usará vários contêineres e, com frequência, vários arquivos de dados também. Com o SQL Server 2016, você poderá também considerar a distribuição do backup em vários blobs, a fim de aumentar o desempenho do backup ao fazer backup de um banco de dados grande.  

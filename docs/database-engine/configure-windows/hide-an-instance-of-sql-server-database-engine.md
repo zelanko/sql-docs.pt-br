@@ -2,9 +2,12 @@
 title: "Ocultar uma instância do Mecanismo de Banco de Dados do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65d5c63e66ed3e75fd57b74a9de26a6346811aff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 343740304ad02460baea28da74e65b4298d8c0ba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Ocultar uma instância do Mecanismo de Banco de Dados do SQL Server
-  Este tópico descreve como ocultar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o serviço de navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enumerar instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] instaladas no computador. Isso permite que aplicativos cliente naveguem por um servidor e ajuda os clientes a distinguirem entre várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Você pode usar o procedimento a seguir para evitar que o serviço SQL Server Browser exponha uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] a computadores cliente que tentam localizar a instância usando o botão **Procurar** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como ocultar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o serviço de navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enumerar instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] instaladas no computador. Isso permite que aplicativos cliente naveguem por um servidor e ajuda os clientes a distinguirem entre várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Você pode usar o procedimento a seguir para evitar que o serviço SQL Server Browser exponha uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] a computadores cliente que tentam localizar a instância usando o botão **Procurar** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
   

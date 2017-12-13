@@ -2,9 +2,12 @@
 title: "Informações do depurador Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Depurador do Transact-SQL – Informações
-  Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  
   
 ## <a name="debugger-windows"></a>Janelas do depurador  
  Em modo de depurador, o depurador abre duas janelas na parte inferior da janela principal do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . O depurador exibe toda as suas informações nessas duas janelas. Cada uma das janelas de depurador tem guias que você pode selecionar para controlar o conjunto de informações exibido na janela. A janela esquerda do depurador contém as guias **Locais**, **Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3**e **Inspecionar 4** . A janela direita do depurador contém as guias **Pilha de Chamadas**, **Threads**, **Pontos de Interrupção**, **Janela de Comando**e **Saída** .  

@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com imagens com a tarefa Script | Microsoft Docs
+title: Trabalhar com imagens com a tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - graphics [Integration Services]
 - Script task [Integration Services], images
@@ -28,53 +25,52 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c86c8f11ec6351882ccb4b152b4254bad70210f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabalhando com imagens com a tarefa Script
-  Um banco de dados de produtos ou usuários costuma incluir imagens além de texto e dados numéricos. O **System. Drawing** namespace no Microsoft .NET Framework fornece classes para manipulação de imagens.  
+  Um banco de dados de produtos ou usuários costuma incluir imagens além de texto e dados numéricos. O namespace **System.Drawing** no Microsoft .NET Framework fornece classes para manipular imagens.  
   
- [Exemplo 1: Converta imagens no formato JPEG](#example1)  
+ [Exemplo 1: converter imagens para o formato JPEG](#example1)  
   
- [Exemplo 2: Criar e salvar imagens em miniatura](#example2)  
+ [Exemplo 2: criar e salvar imagens em miniatura](#example2)  
   
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a>Descrição do exemplo 1: Converta imagens no formato JPEG  
+##  <a name="example1"></a> Descrição do exemplo 1: converter imagens para o formato JPEG  
  O exemplo a seguir abre um arquivo de imagem especificado por uma variável e salva-o como um arquivo JPEG compactado usando um codificador. O código para recuperar informações de codificador é encapsulado em uma função particular.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar esse exemplo de tarefa Script para uso com um único arquivo de imagem  
   
 1.  Crie uma variável de cadeia de caracteres nomeada `CurrentImageFile` e defina seu valor com o caminho e nome de arquivo de um arquivo de imagem existente.  
   
-2.  No **Script** página do **Editor da tarefa Script**, adicionar o `CurrentImageFile` variável para o **ReadOnlyVariables** propriedade.  
+2.  Na página **Script** do **Editor da Tarefa Script**, adicione a variável `CurrentImageFile` à propriedade **ReadOnlyVariables**.  
   
-3.  No projeto de script, defina uma referência o **System. Drawing** namespace.  
+3.  No projeto de script, defina uma referência ao namespace **System.Drawing**.  
   
-4.  No seu código, use **Imports** instruções para importar o **System. Drawing** e **System.IO** namespaces.  
+4.  No seu código, use instruções **Imports** para importar os namespaces **System.Drawing** e **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>Para configurar esse exemplo de tarefa Script para uso com vários arquivos de imagem  
   
 1.  Coloque a tarefa Script dentro de um contêiner do Loop Foreach.  
   
-2.  No **coleção** página do **Editor de Loop Foreach**, selecione o **enumerador de arquivo Foreach** como o enumerador e especifique a máscara de arquivo e caminho da fonte de arquivos, como como "*.bmp".  
+2.  Na página **Coleção** do **Editor de Loop Foreach**, selecione o **Enumerador de Arquivo Foreach** como o enumerador e especifique o caminho e a máscara de arquivo dos arquivos de origem, tais como "*.bmp".  
   
-3.  Sobre o **mapeamentos de variáveis** página, mapeie o `CurrentImageFile` variável para o índice 0. Essa variável passa o nome de arquivo atual para a tarefa Script em cada iteração do enumerador.  
+3.  Na página **Mapeamentos de Variáveis**, mapeie a variável `CurrentImageFile` para o Índice 0. Essa variável passa o nome de arquivo atual para a tarefa Script em cada iteração do enumerador.  
   
     > [!NOTE]  
     >  Essas etapas são adicionais às etapas listadas no procedimento para uso com um único arquivo de imagem.  
   
-### <a name="example-1-code"></a>Código de exemplo 1  
+### <a name="example-1-code"></a>Código do exemplo 1  
   
 ```vb  
 Public Sub Main()  
@@ -159,7 +155,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>Descrição do exemplo 2: Criar e salvar imagens em miniatura  
+##  <a name="example2"></a> Descrição do exemplo 2: criar e salvar imagens em miniatura  
  O exemplo a seguir abre um arquivo de imagem especificado por uma variável, cria uma miniatura da imagem, mantendo uma taxa de proporção constante e salva a miniatura com um nome de arquivo modificado. O código que calcula a altura e largura da miniatura, mantendo uma taxa de proporção constante, é encapsulado em uma sub-rotina particular.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar esse exemplo de tarefa Script para uso com um único arquivo de imagem  
@@ -168,24 +164,24 @@ End Function
   
 2.  Também crie a variável de inteiro `MaxThumbSize` e atribua um valor em pixels, como 100.  
   
-3.  No **Script** página do **Editor da tarefa Script**, adicione as duas variáveis para o **ReadOnlyVariables** propriedade.  
+3.  Na página **Script** do **Editor da Tarefa Script**, adicione ambas as variáveis à propriedade **ReadOnlyVariables**.  
   
-4.  No projeto de script, defina uma referência o **System. Drawing** namespace.  
+4.  No projeto de script, defina uma referência ao namespace **System.Drawing**.  
   
-5.  No seu código, use **Imports** instruções para importar o **System. Drawing** e **System.IO** namespaces.  
+5.  No seu código, use instruções **Imports** para importar os namespaces **System.Drawing** e **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>Para configurar esse exemplo de tarefa Script para uso com vários arquivos de imagem  
   
 1.  Coloque a tarefa Script dentro de um contêiner do Loop Foreach.  
   
-2.  No **coleção** página do **Editor de Loop Foreach**, selecione o **enumerador de arquivo Foreach** como o **enumerador**e especificar o máscara de arquivo e caminho dos arquivos de origem, como "jpg".  
+2.  Na página **Coleção** do **Editor de Loop Foreach**, selecione o **Enumerador de Arquivo Foreach** como o **Enumerador** e especifique o caminho e a máscara de arquivo dos arquivos de origem, tais como "*.jpg".  
   
-3.  Sobre o **mapeamentos de variáveis** página, mapeie o `CurrentImageFile` variável para o índice 0. Essa variável passa o nome de arquivo atual para a tarefa Script em cada iteração do enumerador.  
+3.  Na página **Mapeamentos de Variáveis**, mapeie a variável `CurrentImageFile` para o Índice 0. Essa variável passa o nome de arquivo atual para a tarefa Script em cada iteração do enumerador.  
   
     > [!NOTE]  
     >  Essas etapas são adicionais às etapas listadas no procedimento para uso com um único arquivo de imagem.  
   
-### <a name="example-2-code"></a>Código de exemplo 2  
+### <a name="example-2-code"></a>Código do exemplo 2  
   
 ```vb  
 Public Sub Main()  
@@ -300,4 +296,3 @@ bool ThumbnailCallback()
 ```  
   
   
-

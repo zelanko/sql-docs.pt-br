@@ -2,9 +2,12 @@
 title: Navegar em caminhos do PowerShell SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2912bbd9a87e03d261f128ce64af60bcc0905f39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4caf4b8db104a553904213319d58fb4ea558d40a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar em caminhos do SQL Server PowerShell
-  O provedor do [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell expõe o conjunto de objetos em uma instância do SQL Server em uma estrutura semelhante a um caminho de arquivo. Você pode usar cmdlets do Windows PowerShell para navegar até o caminho do provedor e criar unidades personalizadas para encurtar o caminho que você tem que digitar.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O provedor do [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell expõe o conjunto de objetos em uma instância do SQL Server em uma estrutura semelhante a um caminho de arquivo. Você pode usar cmdlets do Windows PowerShell para navegar até o caminho do provedor e criar unidades personalizadas para encurtar o caminho que você tem que digitar.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O Windows PowerShell implementa cmdlets para navegar na estrutura do caminho que representa a hierarquia de objetos por um provedor do PowerShell. Ao navegar até um nó do caminho, você pode usar outros cmdlets para executar operações básicas no objeto atual. Como os cmdlets são usados com frequência, eles têm aliases pequenos e canônicos. Também existe um conjunto de aliases que mapeia os cmdlets para comandos semelhantes do prompt de comando e outro conjunto para comandos shell do UNIX.  

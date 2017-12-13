@@ -2,9 +2,12 @@
 title: Replicar dados em colunas criptografadas (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a79d1b73f6bcd621f2b4e67215cca20187c204d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4b3c900a757a6d298194866d1f7d59d95585cc70
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicar dados em colunas criptografadas (SQL Server Management Studio)
-  A replicação permite que você publique dados criptografados em coluna. Para descriptografar e usar esses dados no Assinante, a chave usada para criptografar os dados no Publicador também deve estar presente no Assinante. A replicação não fornece um mecanismo seguro para transportar chaves de criptografia. Você deve recriar a chave de criptografia manualmente no Assinante. Este tópico mostra como criptografar uma coluna no Publicador e certificar-se de que a chave de criptografia está disponível no Assinante.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação permite que você publique dados criptografados em coluna. Para descriptografar e usar esses dados no Assinante, a chave usada para criptografar os dados no Publicador também deve estar presente no Assinante. A replicação não fornece um mecanismo seguro para transportar chaves de criptografia. Você deve recriar a chave de criptografia manualmente no Assinante. Este tópico mostra como criptografar uma coluna no Publicador e certificar-se de que a chave de criptografia está disponível no Assinante.  
   
  As etapas básicas são as seguintes:  
   

@@ -2,12 +2,12 @@
 title: "Criar uma consulta de previsão Singleton a partir de um modelo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b455a9f4c8996ec2dd9e6d255f4e9f282d58df4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ddcf7a176fd619ffb3140b8bbeea390b3532b2e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Criar uma consulta de previsão singleton a partir de um modelo
-  Uma consulta singleton é útil quando você tem um modelo a ser usado para previsão, mas não deseja mapeá-lo para um conjunto de dados de entrada externo ou fazer previsões em massa. Uma consulta singleton permite oferecer um valor ou valores ao modelo e ver instantaneamente o valor previsto.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma consulta singleton é útil quando você tem um modelo que você deseja usar para previsão, mas não deseja mapeá-la para um conjunto de dados de entrada externo ou fazer previsões em massa. Uma consulta singleton permite oferecer um valor ou valores ao modelo e ver instantaneamente o valor previsto.  
   
  Por exemplo, a consulta DMX a seguir representa uma consulta singleton no modelo de email de destino, TM_Decision_Tree.  
   

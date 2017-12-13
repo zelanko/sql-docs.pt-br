@@ -2,9 +2,12 @@
 title: "Criar exibições indexadas | Microsoft Docs"
 ms.custom: 
 ms.date: 05/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 89123d1083729da9ec8f23f5ed34eb2b10c2f9d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e72f863a4746bf091c15e48349943906e172c616
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
-  Este tópico descreve como criar uma exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] Este tópico descreve como criar uma exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  As seguintes etapas são necessárias para criar uma exibição indexada e são essenciais para o êxito da implementação da exibição indexada:  

@@ -2,9 +2,12 @@
 title: "Propriedades do servidor (página Configurações do Banco de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a987f6e504b531e406e063e5a0853b8cee8a29a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b0c02cc5137e018b41cd5220a4bbe84046d39e19
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="server-properties---database-settings-page"></a>Propriedades do servidor – página Configurações do Banco de Dados
-  Use esta página para exibir ou modificar suas configurações de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para exibir ou modificar suas configurações de banco de dados.  
   
 ## <a name="options"></a>Opções  
  **Fator de preenchimento padrão do índice**  

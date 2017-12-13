@@ -3,8 +3,11 @@ title: Administrar servidores com o SQL Server Management Studio | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,13 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 078241a1d79e1836c7779e9f82c5aeeca7647435
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d96924c3c4cbe0819016039bcd7867d7d798e97c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Gerenciar servidores com o SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] é um cliente administrativo rico e integrado, projetado para satisfazer os requisitos de gerenciamento de servidor do administrador do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e do Banco de Dados SQL do Azure. No [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)], as tarefas administrativas são realizadas com o Pesquisador de Objetos, que permite conectar-se a qualquer servidor da família [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e procurar conteúdo de forma gráfica. Um servidor pode ser uma instância do [!INCLUDE[ssDE](../includes/ssde_md.md)], do [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)], do [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] ou do Banco de Dados SQL do Azure.  
   
 Os componentes de ferramentas do [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] incluem os Servidores Registrados, o Pesquisador de Objetos, o Gerenciador de Soluções, o Explorador de Modelos, a página Detalhes do Pesquisador de Objetos e a janela de documentos. Para exibir uma ferramenta, no menu **Exibir** , clique no nome da ferramenta. Para exibir a ferramenta Editor de Consultas, clique no botão **Nova Consulta** na barra de ferramentas.  

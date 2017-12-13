@@ -1,5 +1,5 @@
 ---
-title: Catalog.rename_customized_logging_level | Microsoft Docs
+title: catalog.rename_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00c2cd8fa5f8423a7791d663d02aecbf27b8ab41
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 345b424bd4404af4cc2f52aee4fc9ce174aee983
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogrenamecustomizedlogginglevel"></a>Catalog.rename_customized_logging_level
+# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Renomeia um nível de log personalizado existente. Para obter mais informações sobre níveis de log personalizados, consulte [Integration Services &#40; SSIS &#41; Registro em log](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Renomeia um nível de log personalizado existente. Para obter mais informações sobre níveis de registro em log personalizados, consulte [Registro em Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,15 +36,15 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @old_name =] *nome_antigo*  
- O nome do existente personalizado de nível de log para renomear.  
+ [ @old_name = ] *old_name*  
+ O nome do nível de log personalizado existente a ser renomeado.  
   
- O *nome_antigo* é **nvarchar (128)**.  
+ O *old_name* é **nvarchar(128)**.  
   
- [ @new_name =] *novo_nome*  
- O novo nome para o nível de log personalizado.  
+ [ @new_name = ] *new_name*  
+ O novo nome para o nível de log personalizado especificado.  
   
- O *novo_nome* é **nvarchar (128)**.  
+ O *new_name* é **nvarchar(128)**.  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -71,4 +69,3 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 -   O usuário não tem as permissões necessárias.  
   
   
-

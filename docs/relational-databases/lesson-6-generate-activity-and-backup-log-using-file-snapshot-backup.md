@@ -1,10 +1,13 @@
 ---
 title: "Lição 6: Gerar log de atividade e de backup usando o backup de instantâneo de arquivo | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef160e0b0bce71d437e7dd83809a31185ec94767
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5ba32c2a03abab77de366687c5e4fe3e72834204
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Lição 6: Gerar log de atividade e de backup usando o backup de instantâneo de arquivo
-Nesta lição, você aprenderá a gerar atividade no banco de dados AdventureWorks2014 e criar periodicamente backups de log de transações usando backups de instantâneo de arquivo. Para obter mais informações sobre como usar backups de instantâneo de arquivo, veja [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nesta lição, você aprenderá a gerar atividade no banco de dados AdventureWorks2014 e criar periodicamente backups de log de transações usando backups de instantâneo de arquivo. Para obter mais informações sobre como usar backups de instantâneo de arquivo, veja [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Para gerar atividade no banco de dados AdventureWorks2014 e criar periodicamente backups de log de transações usando backups de instantâneo de arquivo, siga estas etapas:  
   

@@ -1,5 +1,5 @@
 ---
-title: Balanceamento de carga pacotes em servidores remotos usando o SQL Server Agent | Microsoft Docs
+title: Realizar o balanceamento de carga de pacotes em servidores remotos usando o SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e94e2a9341651198f556022e4cd20cb257b2c6ce
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Pacotes de balanceamento de carga em servidores remotos usando o SQL Server Agent
   Quando for necessário executar muitos pacotes, será conveniente usar outros servidores que estejam disponíveis. Este método de usar outros servidores para executar pacotes quando os pacotes estão sob o controle de um pacote pai é chamado balanceamento de carga. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o balanceamento de carga é um procedimento manual que deve ser projetado pelos proprietários dos pacotes. Balanceamento de carga não é executado automaticamente pelos servidores. Além disso, os pacotes que estão em execução nos servidores remotos devem ser pacotes completos, não tarefas individuais em outros pacotes.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>Ilustração do balanceamento de carga  
  O diagrama a seguir mostra um pacote pai em um servidor. O pacote pai contém várias tarefas Executar Trabalho do SQL Agent. Cada tarefa no pacote pai chama um SQL Server Agent em um servidor remoto. Esses servidores remotos contêm trabalhos do SQL Server Agent que incluem uma etapa que chama um pacote naquele servidor.  
   
- ![Visão geral da arquitetura de balanceamento de carga SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "arquitetura de balanceamento de carga de visão geral do SSIS")  
+ ![Visão geral da arquitetura de balanceamento de carga do SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "Visão geral da arquitetura de balanceamento de carga do SSIS")  
   
  As etapas exigidas para balanceamento de carga nesta arquitetura não são conceitos novos. Em vez disso, o balanceamento de carga é alcançado usando conceitos existentes e objetos SSIS comuns em uma nova maneira.  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="listing-child-packages"></a>Listando pacotes filho  
  Se você implantar o projeto que contém o pacote pai e os pacotes filhos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , poderá ver uma lista dos pacotes filho executados pelo pacote pai. Quando você executa o pacote pai, um relatório **Visão geral** do mesmo é gerado automaticamente no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. O relatório lista os pacotes filho que foram executados pela tarefa Executar Pacote contida no pacote pai, como mostrado na imagem a seguir.  
   
- ![Relatório de visão geral com lista de pacotes filho](../../integration-services/packages/media/overviewreport-childpackagelisting.png "relatório de visão geral com lista de pacotes filho")  
+ ![Relatório de visão geral com lista de pacotes filho](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Relatório de visão geral com lista de pacotes filho")  
   
  Para obter mais informações sobre como acessar o relatório **Visão geral** , confira [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
@@ -125,17 +123,16 @@ ms.lasthandoff: 08/03/2017
 >  Você pode usar uma tarefa Executar SQL que contém uma instrução Transact-SQL de **sp_start_job N'nome_do_pacote'**. Para obter mais informações, consulte [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Ambiente de depuração  
- Durante o teste do pacote pai, use o ambiente de depuração do designer para executá-lo usando Depurar / Iniciar depuração (F5). Como alternativa, você pode usar o utilitário de prompt de comando, **dtexec**. Para obter mais informações, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Durante o teste do pacote pai, use o ambiente de depuração do designer para executá-lo usando Depurar / Iniciar depuração (F5). Como alternativa, você pode usar o utilitário de prompt de comando, **dtexec**. Para saber mais, veja [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>Log para carga de pacotes balanceados em servidores remotos
   É mais fácil para um administrador gerenciar os logs de todos os pacotes filho que estão sendo executados em vários servidores quando todos os pacotes filho usam o mesmo provedor de log e todos gravam no mesmo destino. Um modo para criar um arquivo de log comum para todos os pacotes filho é configurar os pacotes filho para registrar os seus eventos em um provedor de log SQL Server. Você pode configurar todos os pacotes para usarem o mesmo banco de dados, o mesmo servidor e a mesma instância do servidor.  
   
  Para exibir os arquivos de log, o administrador precisa apenas fazer logon em um único servidor para exibir os arquivos de log de todos os pacotes filho.  
   
- Para obter informações sobre como habilitar o log em um pacote, consulte [log do Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Para obter informações sobre como habilitar o log em um pacote, consulte [Log do SSIS (Integration Services)](../../integration-services/performance/integration-services-ssis-logging.md).  
 
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  [Trabalhos do SQL Server Agent para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

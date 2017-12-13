@@ -3,8 +3,11 @@ title: "Opções (Designers – Designers do Analysis Services – Geral) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5059827ffb027d0397863b2076da4bbe8507fccc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fabfd5ea9993155d3d4516f80779032c96de42a7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>Opções (Designers – Designers do Analysis Services – Geral)
-Use a página **Designers**, **Planos de Manutenção**, **Analysis Services**, **Geral** para determinar o comportamento padrão dos Designers dos Analysis Services.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a página **Designers**, **Planos de Manutenção**, **Analysis Services**, **Geral** para determinar o comportamento padrão dos Designers dos Analysis Services.  
   
 ## <a name="connectivity"></a>Conectividade  
 Tempo-limite da consulta  

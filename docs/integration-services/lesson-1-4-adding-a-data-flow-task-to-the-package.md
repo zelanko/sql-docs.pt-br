@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: Adicionando uma tarefa de fluxo de dados para o pacote | Microsoft Docs'
+title: 'Etapa 4: adicionar uma tarefa de fluxo de dados ao pacote | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 870216159af6caf2bff04631d954cd4bb56cd7fa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4e715f7bc147e790afa9f737a0b5e9d1231a2b60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Lição 1-4-adicionar uma tarefa de fluxo de dados para o pacote
+# <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Lição 1-4 – adicionar uma tarefa de fluxo de dados ao pacote
 Depois de criar os gerenciadores de conexões para os dados de origem e destino, a próxima tarefa é adicionar a tarefa Fluxo de Dados ao seu pacote. Essa tarefa encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, além de fornecer funcionalidade para transformar, limpar e modificar os dados à medida que são movidos. A tarefa Fluxo de Dados é onde a maioria do trabalho de um processo de extração, transformação e carregamento (ETL) acontece.  
   
 > [!NOTE]  
@@ -56,4 +53,3 @@ Depois de criar os gerenciadores de conexões para os dados de origem e destino,
   
   
   
-

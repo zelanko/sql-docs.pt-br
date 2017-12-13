@@ -1,5 +1,5 @@
 ---
-title: "Fazer alterações às tabelas selecionadas para capturar alterações | Microsoft Docs"
+title: "Fazer alterações nas tabelas selecionadas para capturar alterações | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- makChanToTab
+f1_keywords: makChanToTab
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 962b3a3690bd8a0bf62de762509c4398773578ca
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4d6df6c0e20cb81a1525998da5934637d6ad6c29
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>Fazer alterações às tabelas selecionadas para capturar alterações
   Nesta caixa de diálogo, você pode selecionar colunas específicas da tabela selecionada da qual capturar alterações. Você também pode editar as informações de **Função de Segurança** e **Instância de Captura** .  
@@ -62,4 +59,3 @@ ms.lasthandoff: 08/03/2017
  [Selecionar tabelas e colunas Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   
-

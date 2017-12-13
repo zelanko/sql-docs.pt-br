@@ -1,12 +1,13 @@
 ---
 title: "Planejando uma instalação do SQL Server | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -16,14 +17,14 @@ caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 21f4d7344c22a3426e343ff6e3682029a863369f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f45fe1c93f33f8f4666791c9014c1ca3f4a5aec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="planning-a-sql-server-installation"></a>Planejando uma instalação do SQL Server
-  Para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siga estas etapas:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siga estas etapas:  
   
 -   Examine os requisitos de instalação, as verificações de configuração do sistema e as considerações sobre segurança da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

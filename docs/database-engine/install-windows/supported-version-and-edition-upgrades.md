@@ -2,9 +2,12 @@
 title: "Upgrades de versão e edição com suporte | Microsoft Docs"
 ms.custom: 
 ms.date: 06/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7ca4efe4610487f96b0092cac9a9c070dd3eebb2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eda664aa9c3c69f8c4d515143b5aa38819ddc31a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Atualizações de versão e edição com suporte
-  Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
 ## <a name="pre-upgrade-checklist"></a>Lista de verificação anterior à atualização  
   

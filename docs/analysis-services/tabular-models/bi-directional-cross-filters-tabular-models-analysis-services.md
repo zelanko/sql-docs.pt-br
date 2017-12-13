@@ -2,12 +2,12 @@
 title: Os filtros cruzados bidirecionais - modelos tabulares - Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>Os filtros cruzados bidirecionais - modelos tabulares - Analysis Services
-  Novo método interno do SQL Server 2016 para habilitação de *filtros cruzados bidirecionais* em modelos de tabela, que elimina a necessidade de soluções alternativas manuais de DAX para a propagação de contextos de filtro em relações da tabela.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Novo no SQL Server 2016 é um método interno para habilitar *bidirecional filtros cruzados* em modelos tabulares, eliminando a necessidade de soluções DAX manuais para propagar o contexto de filtro em relações de tabela.  
   
  Dividindo o conceito pelas respectivas partes componentes: *filtragem cruzada* é a capacidade de definir um contexto de filtro em uma tabela com base nos valores de uma tabela relacionada; *bidirecional* se refere à transferência de um contexto de filtro para uma segunda tabela relacionada do outro lado de uma relação de tabela. Como o próprio nome sugere, você pode fatiar nas duas direções da relação em vez de usar apenas uma.  Internamente, a filtragem bidirecional expande o contexto do filtro para consultar um superconjunto dos dados.  
   

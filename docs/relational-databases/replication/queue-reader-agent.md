@@ -2,9 +2,12 @@
 title: Queue Reader Agent | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5525abd1716e7eb896d9cfe7fa846abd62dd7778
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2bf6f3f133c480315373f73665858c21088cfa37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="queue-reader-agent"></a>Queue Reader Agent
-  A caixa de diálogo **Queue Reader Agent** exibe informações detalhadas sobre o Queue Reader Agent, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Queue Reader Agent** exibe informações detalhadas sobre o Queue Reader Agent, incluindo status, histórico, mensagens informativas e eventuais mensagens de erro.  
   
 ## <a name="options"></a>Opções  
  Selecione as sessões do Queue Reader Agent a serem exibidas no menu **Exibir** e depois selecione uma sessão específica na grade rotulada **Sessões do Queue Reader Agent**. Informações detalhadas sobre essa sessão são exibidas na grade rotulada **Ações na sessão selecionada**. Se a sessão selecionada terminou em erro, a área de texto rotulada **Detalhes ou mensagem de erro da sessão selecionada** também será exibida.  

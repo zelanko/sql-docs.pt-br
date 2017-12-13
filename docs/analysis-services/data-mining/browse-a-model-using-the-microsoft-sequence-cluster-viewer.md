@@ -2,12 +2,12 @@
 title: "Procurar um modelo usando o Visualizador de Cluster de sequência da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8b0c7196664eab72688e79e8625cfb2eb50eb8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5de5490ccd81bc62103ea451041bb93011f6426e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft
-  O Visualizador de Cluster de Sequência da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração criados com o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC. O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC é um algoritmo de análise de sequência para uso na exploração de dados que contêm eventos que podem ser vinculados de acordo com caminhos ou *sequências*. Para obter mais informações sobre esse algoritmo, consulte [Algoritmo MSC](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Cluster Viewer do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe os modelos de mineração criados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo msc. O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC é um algoritmo de análise de sequência para uso na exploração de dados que contêm eventos que podem ser vinculados de acordo com caminhos ou *sequências*. Para obter mais informações sobre esse algoritmo, consulte [Algoritmo MSC](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
 > [!NOTE]  
 >  Para exibir informações detalhadas sobre as equações usadas no modelo e os padrões identificados, use o Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de Dados&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  

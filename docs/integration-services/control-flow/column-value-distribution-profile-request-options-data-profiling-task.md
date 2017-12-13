@@ -1,5 +1,5 @@
 ---
-title: "Opções de solicitação de perfil para distribuição de valor coluna (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Opções de solicitação de perfil de distribuição de valor de coluna (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79ce587ac6e1f0da8bf0c2ae237b6b9c3ae2623f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 261a970e305400a70f784057a700b5e262618896
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opções de solicitação do perfil Distribuição de Valor de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Distribuição de Valor de Coluna** selecionada no painel de solicitações. Um Perfil de Distribuição de Valor de Coluna reporta todos os valores distintos na coluna selecionada e a porcentagem de linhas na tabela que cada valor representa. O perfil também pode informar valores que representam mais que uma porcentagem especificada de linhas na tabela. O perfil também pode ajudar a identificar problemas em seus dados, como um número incorreto de valores distintos em uma coluna. Por exemplo, você cria um perfil para uma coluna Estado dos Estados Unidos da América e descobre mais de 50 valores distintos.  
@@ -110,8 +107,7 @@ ms.lasthandoff: 08/03/2017
  Especifique o limite (um valor entre 0 e 1) a partir do qual o valor de coluna deve ser informado. Esta opção é desabilitada se **AllValues** for selecionado como **ValueDistributionOption**. O valor padrão desta opção é 0.001.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

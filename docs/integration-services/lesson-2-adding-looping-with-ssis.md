@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 96194edec70f67e9db45265de11d735e09fead30
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Lição 2: Adicionando um loop com o SSIS
 Na [Lição 1: Criar um projeto e pacote básico com o SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), você criou um pacote que extraiu dados de uma única fonte de arquivo simples, transformou os dados usando transformações Pesquisa e, por fim, carregou os dados na tabela de fatos **FactCurrency** do banco de dados de exemplo **AdventureWorksDW2012** .  
@@ -57,7 +54,7 @@ Nesta lição, você modificará o pacote ETL simples criado na lição 1 para a
 Nesta lição, você não modificará o fluxo de dados, apenas o fluxo de controle.  
   
 > [!IMPORTANT]  
-> Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, consulte [Reporting Services Product Samples on CodePlex (Amostras de produto do Reporting Services no CodePlex)](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> Este tutorial requer o banco de dados de exemplo **AdventureWorksDW2012** . Para obter mais informações sobre como instalar e implantar o **AdventureWorksDW2012**, consulte [Amostras de produto do Reporting Services no CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  
@@ -78,4 +75,3 @@ Esta lição contém as seguintes tarefas:
   
   
   
-

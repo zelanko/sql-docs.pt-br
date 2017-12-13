@@ -2,9 +2,12 @@
 title: "Tarefa Notificar Operador (plano de manutenção) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ea1e759deceda040ef243e89c998651b5e23577
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e8e10a98a1d2ee8328d4124b9949abf33943821
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Tarefa de Notificação do Operador (Plano de Manutenção)
-  Use a caixa de diálogo **Tarefa de Notificação do Operador** para adicionar uma notificação automática a este plano de manutenção. Para usar a tarefa deve-se ter o Database Mail habilitado e configurado de forma adequada, com o MSDB como um Banco de dados host de correio, e ter um operador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com um endereço de email válido.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo **Tarefa de Notificação do Operador** para adicionar uma notificação automática a este plano de manutenção. Para usar a tarefa deve-se ter o Database Mail habilitado e configurado de forma adequada, com o MSDB como um Banco de dados host de correio, e ter um operador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com um endereço de email válido.  
   
  Esta tarefa usa o procedimento armazenado sp_notify_operator.  
   

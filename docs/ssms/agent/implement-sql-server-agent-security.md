@@ -3,8 +3,11 @@ title: "Implementar a segurança do SQL Server Agent | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b82fd4956df797854f8f2c1508ab4ae528d7c817
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 073b8b2d9702db561bd7c81dda80edf6276be612
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementar a segurança do SQL Server Agent
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent permite que o administrador do banco de dados execute cada etapa de trabalho em um contexto de segurança que tem apenas as permissões necessárias para executá-la, as quais são determinadas por um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Para definir as permissões para uma etapa de trabalho em particular, crie um proxy com as permissões necessárias e atribua-o à etapa de trabalho. Um proxy pode ser especificado para mais de uma etapa de trabalho. Para etapas de trabalho que requerem as mesmas permissões, use o mesmo proxy.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent permite que o administrador do banco de dados execute cada etapa de trabalho em um contexto de segurança que tem apenas as permissões necessárias para executá-la, o que é determinado por um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Para definir as permissões para uma etapa de trabalho em particular, crie um proxy com as permissões necessárias e atribua-o à etapa de trabalho. Um proxy pode ser especificado para mais de uma etapa de trabalho. Para etapas de trabalho que requerem as mesmas permissões, use o mesmo proxy.  
   
 A seção a seguir explica qual função de banco de dados deve ser concedida aos usuários para que eles possam criar ou executar trabalhos usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Etapa 2: Executando o Assistente de instalação do pacote | Microsoft Docs"
+title: "Etapa 2: executar o Assistente de Instalação de Pacotes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lição 3-2-executar o Assistente de instalação do pacote
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lição 3-2 – executar o Assistente de Instalação de Pacotes
 Nesta tarefa, você executará o Assistente de Instalação de Pacotes para implantar os pacotes do projeto Tutorial de Implantação em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Somente pacotes podem ser instalados na tabela sysssispackages no banco de dados msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os arquivos que dão suporte incluídos no pacote de implantação serão implantados no sistema de arquivos.  
   
 O Assistente de Instalação de Pacotes o guiará pelas etapas para instalar e configurar os pacotes. Você instalará os pacotes em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador de destino (o computador em que você copiou o pacote de implantação). Você também criará uma pasta, C:\DeploymentTutorialInstall, em que o assistente instalará os arquivos que não são pacotes.  
@@ -113,4 +110,3 @@ Em uma lição anterior, você modificou os pacotes no tutorial para usar as con
   
 ## <a name="see-also"></a>Consulte também  
 [Serviço Integration Services &#40;Serviço SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  
-

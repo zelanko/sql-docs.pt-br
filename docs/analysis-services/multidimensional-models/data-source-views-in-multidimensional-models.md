@@ -2,12 +2,12 @@
 title: "Modos de exibição em modelos multidimensionais da fonte de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa655c5c761d4ba943bad6c7f8c188b50c45a275
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Exibições de fontes de dados em modelos multidimensionais
-  Uma DSV (exibição da fonte de dados) é uma abstração de uma fonte de dados relacional que se torna a base dos cubos e das dimensões que você cria em um projeto multidimensional. A finalidade de uma DSV é conceder o controle sobre as estruturas de dados usadas em seu projeto e funcionar independentemente das fontes de dados subjacentes (por exemplo, a capacidade de renomear ou concatenar colunas sem modificar diretamente a fonte de dados original).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma exibição da fonte de dados (DSV) é uma abstração de uma fonte de dados relacional que se torna a base dos cubos e dimensões que você cria em um projeto multidimensional. A finalidade de uma DSV é conceder o controle sobre as estruturas de dados usadas em seu projeto e funcionar independentemente das fontes de dados subjacentes (por exemplo, a capacidade de renomear ou concatenar colunas sem modificar diretamente a fonte de dados original).  
   
  Você pode compilar várias exibições de fontes de dados em um projeto ou banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em uma ou mais fontes de dados e construir cada uma delas para atender aos requisitos de uma solução diferente.  
   

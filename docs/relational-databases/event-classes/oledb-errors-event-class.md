@@ -2,9 +2,12 @@
 title: Classe de evento OLEDB Errors | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b574cbcd6f8c6f93a87cb7bd9f1223808e508a2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c10abdfd9ab278115d8f82e84e21036249de7558
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-errors-event-class"></a>classe de evento OLEDB Errors
-  A classe de evento OLEDB Errors ocorre no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando uma chamada para um provedor OLE DB retorna um erro. Inclua esta classe de evento em rastreamentos para exibir uma falha de HRESULT de um provedor OLE DB.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento OLEDB Errors ocorre no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando uma chamada para um provedor OLE DB retorna um erro. Inclua esta classe de evento em rastreamentos para exibir uma falha de HRESULT de um provedor OLE DB.  
   
  Quando a classe de evento OLEDB Errors é incluída no rastreamento, a quantidade de sobrecarga criada depende da frequência com que os erros do provedor OLE DB ocorrem em relação ao banco de dados durante o rastreamento. Se tais erros ocorrerem com frequência, o rastreamento poderá impedir desempenho de forma significativa.  
   

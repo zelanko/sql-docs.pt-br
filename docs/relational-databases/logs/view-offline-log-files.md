@@ -2,9 +2,12 @@
 title: Exibir arquivos de log offline | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2fbac24caac2af64ba28178a1cfebd9bd860581d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 225e2dafcaac744ed1ecd67ec928d13490472c7a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
-  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode exibir arquivos de log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância local ou remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando a instância de destino for offline ou não inicia.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] em diante, você pode exibir arquivos de log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância local ou remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando a instância de destino for offline ou não inicia.  
   
  Você pode acessar os arquivos de log offline de Servidores Registrados, ou programaticamente por WMI e o WQL (Linguagem WQL) consulta.  
   

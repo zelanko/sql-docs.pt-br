@@ -1,5 +1,5 @@
 ---
-title: Aplicar regras de qualidade de dados para a fonte de dados | Microsoft Docs
+title: "Aplicar regras de qualidade de dados à fonte de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: aab3d6859df95dff080fe93aa686ee70b3c5c13a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: c1e9e5a453e60f0ff44e78af2d1a41e61f73231f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>Aplicar regras de qualidade de dados à fonte de dados
   Você pode usar o DQS (Data Quality Services) para corrigir dados no fluxo de dados de pacote conectando a transformação de limpeza DQS à fonte de dados. Para obter mais informações sobre DQS, consulte [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md). Para obter mais informações sobre a transformação, consulte [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/27/2017
 3.  Conecte a transformação Limpeza DQS a uma fonte de dados.  
   
   
-

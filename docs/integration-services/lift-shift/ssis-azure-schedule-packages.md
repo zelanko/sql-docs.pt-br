@@ -1,5 +1,5 @@
 ---
-title: "Agendar a execução de pacotes do SSIS no Azure | Microsoft Docs"
+title: "Agendar execução de pacote SSIS no Azure | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,44 +8,42 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Agendar a execução de um pacote do SSIS no Azure
-Você pode agendar a execução de pacotes armazenados no banco de dados de catálogo do SSISDB em um servidor de banco de dados SQL, escolhendo uma das seguintes opções de agendamento:
+Você pode agendar a execução de pacotes armazenados no banco de dados de catálogo do SSISDB em um servidor de Banco de Dados SQL do Azure, escolhendo uma das seguintes opções de agendamento:
 -   [SQL Server Agent](#agent)
--   [Trabalhos Elásticos de banco de dados SQL](#elastic)
+-   [Trabalhos Elásticos de Banco de Dados SQL](#elastic)
 -   [A atividade de procedimento armazenado do Azure Data Factory SQL Server](#sproc)
 
-## <a name="agent"></a>Agendar um pacote com o SQL Server Agent
+## <a name="agent"></a> Agendar um pacote com o SQL Server Agent
 
 ### <a name="prerequisite"></a>Pré-requisito
 
-Antes de usar o SQL Server Agent no local para agendar a execução de pacotes armazenados em um servidor de banco de dados SQL, você precisa adicionar o servidor de banco de dados SQL como um servidor vinculado. Para obter mais informações, consulte [criar servidores vinculados](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) e [servidores vinculados](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+Antes de usar o SQL Server Agent local para agendar a execução de pacotes armazenados em um servidor de Banco de Dados SQL do Azure, você precisa adicionar o servidor de Banco de Dados SQL como um servidor vinculado. Para obter mais informações, consulte [Criar servidores vinculados](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) e [Servidores vinculados](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ### <a name="create-a-sql-server-agent-job"></a>Criar um trabalho do SQL Server Agent
 
-Para agendar um pacote com o SQL Server Agent no local, crie um trabalho com uma etapa de trabalho que chama o catálogo do SSIS procedimentos armazenados `[catalog].[create_execution]` e `[catalog].[start_execution]`. Para obter mais informações, consulte [trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).
+Para agendar um pacote com o SQL Server Agent local, crie um trabalho com uma etapa de trabalho que chama os procedimentos armazenados do catálogo SSIS `[catalog].[create_execution]` e depois `[catalog].[start_execution]`. Para obter mais informações, consulte [Trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).
 
-1.  No SQL Server Management Studio, conecte-se para o banco de dados local do SQL Server no qual você deseja criar o trabalho.
+1.  No SQL Server Management Studio, conecte-se ao banco de dados do SQL Server local no qual você deseja criar o trabalho.
 
-2.  Clique com botão direito no **do SQL Server Agent** nó, selecione **novo**e, em seguida, selecione **trabalho** para abrir o **novo trabalho** caixa de diálogo.
+2.  Clique com o botão direito do mouse no nó **SQL Server Agent**, selecione **Novo** e, em seguida, selecione **Trabalho** para abrir a caixa de diálogo **Novo Trabalho**.
 
-3.  No **novo trabalho** caixa de diálogo, selecione o **etapas** página e, em seguida, selecione **novo** para abrir o **nova etapa de trabalho** caixa de diálogo.
+3.  Na caixa de diálogo **Novo Trabalho**, selecione a página **Etapas** e, em seguida, selecione **Novo** para abrir a caixa de diálogo **Nova Etapa do Trabalho**.
 
-4.  No **nova etapa de trabalho** caixa de diálogo, selecione `SSISDB` como o **banco de dados.**
+4.  Na caixa de diálogo **Nova Etapa do Trabalho**, selecione `SSISDB` como o **Banco de dados**.
 
-5.  No campo de comando, digite um script Transact-SQL, semelhante ao mostrado no exemplo a seguir:
+5.  No campo de comando, insira um script Transact-SQL semelhante ao mostrado no exemplo a seguir:
 
     ```sql
     DECLARE @return_value int, @exe_id bigint 
@@ -60,23 +58,23 @@ Para agendar um pacote com o SQL Server Agent no local, crie um trabalho com uma
     GO
     ```
 
-6.  Conclua configuração e agendar o trabalho.
+6.  Conclua a configuração e o agendamento do trabalho.
 
-## <a name="elastic"></a>Agendar um pacote com trabalhos Elástico de banco de dados SQL
+## <a name="elastic"></a> Agendar um pacote com trabalhos elásticos de Banco de Dados SQL
 
-Para obter mais informações sobre trabalhos Elásticos no banco de dados SQL, consulte [Gerenciando bancos de dados de nuvem expansíveis](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+Para obter mais informações sobre trabalhos elásticos no Banco de Dados SQL, consulte [Gerenciando bancos de dados de nuvem expandidos](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-Antes de usar trabalhos Elásticos para agendar pacotes do SSIS no banco de dados de catálogo do SSISDB em um servidor de banco de dados SQL, você deve fazer o seguinte:
+Antes que você possa usar trabalhos elásticos para agendar pacotes do SSIS armazenados no banco de dados de catálogo do SSISDB em um servidor de Banco de Dados SQL do Azure, você deverá fazer o seguinte:
 
-1.  Instalar e configurar os componentes de trabalhos do banco de dados Elástico. Para obter mais informações, consulte [visão geral da instalação do banco de dados Elástico trabalhos](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Instale e configure os componentes de trabalhos de banco de dados elástico. Para obter mais informações, consulte [Visão geral da instalação de trabalhos de Banco de Dados Elástico](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
-2. Crie credenciais no escopo do banco de dados que os trabalhos podem usar para enviar comandos para o banco de dados de catálogo do SSIS. Para obter mais informações, consulte [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+2. Crie credenciais no escopo do banco de dados que os trabalhos possam usar para enviar comandos para o banco de dados de catálogo do SSIS. Para obter mais informações, veja [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-### <a name="create-an-elastic-job"></a>Criar um trabalho Elástico
+### <a name="create-an-elastic-job"></a>Criar um trabalho elástico
 
-Crie o trabalho usando um script Transact-SQL, semelhante ao mostrado no exemplo a seguir:
+Crie o trabalho usando um script Transact-SQL semelhante ao mostrado no exemplo a seguir:
 
 ```sql
 -- Create Elastic Jobs target group 
@@ -108,25 +106,25 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a>Agendar um pacote com a atividade de procedimento armazenado do Azure Data Factory SQL Server
+## <a name="sproc"></a> Agende um pacote com a atividade de procedimento armazenado do Azure Data Factory SQL Server
 
 > [!IMPORTANT]
-> Use os scripts de JSON no exemplo a seguir com a versão 1 do Azure Data Factory atividade de procedimento armazenado.
+> Use os scripts JSON no exemplo a seguir com a atividade de procedimento armazenado da versão 1 do Azure Data Factory.
 
 Para agendar um pacote com a atividade de procedimento armazenado do Azure Data Factory SQL Server, faça o seguinte:
 
-1.  Crie uma fábrica de dados.
+1.  Crie um data factory.
 
-2.  Criar um serviço vinculado do banco de dados do SQL que hospeda o SSISDB.
+2.  Crie um serviço vinculado do Banco de Dados SQL que hospede um SSISDB.
 
-3.  Crie um conjunto de dados de saída que orienta o agendamento.
+3.  Crie um conjunto de dados de saída que conduza o agendamento.
 
-4.  Crie um pipeline da fábrica de dados que usa a atividade de procedimento armazenado do SQL Server para executar o pacote do SSIS.
+4.  Crie um pipeline do data factory que use a atividade de procedimento armazenado do SQL Server para executar o pacote SSIS.
 
-Esta seção fornece uma visão geral dessas etapas. Um tutorial completo de fábrica de dados está além do escopo deste artigo. Para obter mais informações, consulte [a atividade de procedimento armazenado do SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
+Esta seção fornece uma visão geral dessas etapas. Um tutorial completo de data factory está além do escopo deste artigo. Para obter mais informações, consulte [Atividade de procedimento armazenado do SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
 
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Criar um serviço vinculado do banco de dados SQL que hospeda o SSISDB
-O serviço vinculado permite que a fábrica de dados se conectar ao SSISDB.
+### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Um serviço vinculado do Banco de Dados SQL que hospeda um SSISDB foi criado
+O serviço vinculado permite que o data factory se conecte ao SSISDB.
 
 ```json
 {
@@ -160,8 +158,8 @@ O conjunto de dados de saída contém as informações de agendamento.
     }
 }
 ```
-### <a name="create-a-data-factory-pipeline"></a>Criar um pipeline da fábrica de dados
-O pipeline usa a atividade de procedimento armazenado do SQL Server para executar o pacote do SSIS.
+### <a name="create-a-data-factory-pipeline"></a>Criar um pipeline do data factory
+O pipeline usa a atividade de procedimento armazenado do SQL Server para executar o pacote SSIS.
 
 ```json
 {
@@ -191,7 +189,7 @@ O pipeline usa a atividade de procedimento armazenado do SQL Server para executa
 }
 ```
 
-Você não precisa criar um novo procedimento armazenado para encapsular os comandos Transact-SQL necessários para criar e iniciar a execução de pacote SSIS. Você pode fornecer todo o script como o valor da `stmt` parâmetro no exemplo anterior de JSON. Aqui está um exemplo de script:
+Você não precisa criar um novo procedimento armazenado para encapsular os comandos Transact-SQL necessários para criar e iniciar a execução de pacote SSIS. Você pode fornecer todo o script como o valor do parâmetro `stmt` na amostra de JSON anterior. Aqui está um exemplo de script:
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
@@ -227,10 +225,9 @@ END
 GO
 ```
 
-Para obter mais informações sobre o código nesse script, consulte [implantar e executar pacotes SSIS usando procedimentos armazenados](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
+Para obter mais informações sobre o código nesse script, consulte [Implantar e executar pacotes SSIS usando procedimentos armazenados](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
 
 ## <a name="next-steps"></a>Próximas etapas
-Para obter mais informações sobre o SQL Server Agent, consulte [trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).
+Para obter mais informações sobre o SQL Server Agent, consulte [Trabalhos do SQL Server Agent para pacotes](../packages/sql-server-agent-jobs-for-packages.md).
 
-Para obter mais informações sobre trabalhos Elásticos no banco de dados SQL, consulte [Gerenciando bancos de dados de nuvem expansíveis](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
-
+Para obter mais informações sobre trabalhos elásticos no Banco de Dados SQL, consulte [Gerenciando bancos de dados de nuvem expandidos](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).

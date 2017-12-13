@@ -2,12 +2,12 @@
 title: Algoritmo rede Neural da Microsoft | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Algoritmo Rede Neural da Microsoft
-  O algoritmo de Rede Neural do [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação da popular e adaptável arquitetura de rede neural para aprendizado de máquina.  O algoritmo funciona testando cada estado possível do atributo de entrada com cada estado possível do atributo previsível e calculando probabilidades para cada combinação com base nos dados de treinamento. Essas probabilidades podem ser usadas para tarefas de classificação ou regressão e também para a previsão de um resultado com base em alguns atributos de entrada. Uma rede neural também pode ser usada para análise de associação.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo rede Neural é uma implementação da arquitetura de rede neural populares e adaptável para aprendizado de máquina.  O algoritmo funciona testando cada estado possível do atributo de entrada com cada estado possível do atributo previsível e calculando probabilidades para cada combinação com base nos dados de treinamento. Essas probabilidades podem ser usadas para tarefas de classificação ou regressão e também para a previsão de um resultado com base em alguns atributos de entrada. Uma rede neural também pode ser usada para análise de associação.  
   
  Quando cria um modelo de mineração usando o algoritmo de Rede Neural do [!INCLUDE[msCoName](../../includes/msconame-md.md)] , você pode incluir várias saídas e o algoritmo criará várias redes. O número de redes contidas em um único modelo de mineração depende do número de estados (ou valores de atributo) nas colunas de entrada, bem como do número de colunas previsíveis que o modelo de mineração usa e o número de estados nessas colunas.  
   

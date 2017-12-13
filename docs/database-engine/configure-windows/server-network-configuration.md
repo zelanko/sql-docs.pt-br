@@ -2,9 +2,12 @@
 title: "Configuração de rede do servidor | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c4ed91e4fd96fde43f87f25d351597b875df4550
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="server-network-configuration"></a>Configuração de rede do servidor
-  Tarefas de configuração de rede do servidor incluem habilitação de protocolos, modificação de porta ou pipe usado por um protocolo, criptografia de configuração, configuração do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exposição ou ocultação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na rede e registro do Nome do Principal do Servidor. Na maioria das vezes, não é necessário alterar a configuração de rede do servidor. Só reconfigure os protocolos de rede do servidor se houver requisitos de rede especiais.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Tarefas de configuração de rede do servidor incluem habilitação de protocolos, modificação de porta ou pipe usado por um protocolo, criptografia de configuração, configuração do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, exposição ou ocultação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na rede e registro do Nome da Entidade do Servidor. Na maioria das vezes, não é necessário alterar a configuração de rede do servidor. Só reconfigure os protocolos de rede do servidor se houver requisitos de rede especiais.  
   
  A configuração da rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é realizada usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o Utilitário de Rede do Servidor fornecido com esses produtos.  
   

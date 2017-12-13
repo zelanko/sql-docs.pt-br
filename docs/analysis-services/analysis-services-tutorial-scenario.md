@@ -2,12 +2,12 @@
 title: "Cenário do Tutorial do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: deb268dde13782f6ffe6d3481e004d6b8cae17b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 332b9e9e84ac25637186655de533624449ac3a01
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Cenário do tutorial de Analysis Services
-Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde a empresa emprega 500 trabalhadores. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Este tutorial baseia-se em [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde a empresa emprega 500 trabalhadores. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
   
 Nos últimos anos, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] adquiriu uma fábrica pequena, a Importadores Neptuno, situada no México. A Importadores Neptuno fabrica vários subcomponentes importantes para a linha de produtos da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Esses subcomponentes são transportados para as instalações de Bothell para o assembly de produto final. Em 2005, a Importadores Neptuno se tornou o fabricante e o distribuidor exclusivo do grupo de produtos de bicicleta de passeio.  
   

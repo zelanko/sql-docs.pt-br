@@ -2,9 +2,12 @@
 title: "Práticas recomendadas para administração de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 51964c5ce8e4753147724bcd97a8c0a53a8f0c0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2d98762b93d118bb7b8f03839440ca799500defd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practices-for-replication-administration"></a>Práticas recomendadas para administração de replicação
-  Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além das seguintes diretrizes de práticas recomendadas apresentadas neste tópico, considere ler o tópico de perguntas frequentes para familiarizar-se com as questões e problemas mais comuns: [Perguntas frequentes para administradores de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Depois de configurar a replicação, é importante entender como administrar uma topologia de replicação. Este tópico fornece diretrizes básicas de práticas recomendadas em várias áreas com links para mais informações para cada área. Além das seguintes diretrizes de práticas recomendadas apresentadas neste tópico, considere ler o tópico de perguntas frequentes para familiarizar-se com as questões e problemas mais comuns: [Perguntas frequentes para administradores de replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  É útil dividir as diretrizes de prática recomendada em duas áreas:  
   

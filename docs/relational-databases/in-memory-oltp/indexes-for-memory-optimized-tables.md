@@ -1,32 +1,30 @@
 ---
 title: "Índices para tabelas com otimização de memória | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 11/6/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.component: in-memory-oltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1679cf30077600cbff38aea1869bc7c8c9edc53e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>Índices para tabelas com otimização de memória
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Este artigo descreve os tipos de índices que estão disponíveis para uma tabela com otimização de memória. O artigo:  
@@ -44,7 +42,7 @@ Os índices de*hash* são abordados mais detalhadamente em um [artigo estreitame
   
 ## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintaxe para índices com otimização de memória  
   
-Cada instrução CREATE TABLE para uma tabela com otimização de memória deve incluir entre uma e oito cláusulas para declarar índices. O índice deve ser um dos seguintes:  
+Cada instrução CREATE TABLE para uma tabela com otimização de memória deve incluir e indexar, seja explicitamente por meio de um índice ou implicitamente através de uma restrição PRIMAY KEY ou UNIQUE. O índice deve ser um dos seguintes:  
   
 - Índice de hash.  
 - Índice não clusterizado (ou seja, a estrutura interna padrão de uma árvore B).  
@@ -66,7 +64,9 @@ Para ser declarada com DURABILITY = SCHEMA_AND_DATA padrão, a tabela com otimiz
         WITH (  
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
-  
+> [!NOTE]  
+>  [!INCLUDE[ssSQL15](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] têm um limite de 8 índices por tabela com otimização de memória ou tipo de tabela. Começando [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], não há um limite no número de índices específicos para tabelas com otimização de memória e tipos de tabela.
+
   
   
 ### <a name="a1-code-sample-for-syntax"></a>A.1 Exemplo de código de sintaxe  
@@ -232,4 +232,3 @@ A tabela a seguir lista todas as operações com suporte dos diferentes tipos de
   
   
 Na tabela, Sim significa que o índice pode atender à solicitação com eficiência e Não significa que o índice não pode satisfazer a solicitação com eficiência.  
-

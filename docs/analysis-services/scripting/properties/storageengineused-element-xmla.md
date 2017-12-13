@@ -2,12 +2,12 @@
 title: Elemento StorageEngineUsed (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83d79027913faff48098fb7e7d1daaa2fdf407ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 45ee32b55f9f799648082b0d7533b13ad1d2b2b9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="storageengineused-element-xmla"></a>Elemento StorageEngineUsed (XMLA)
-  Contém um valor somente leitura que descreve o tipo do banco de dados atual.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém um valor somente leitura que descreve o tipo de banco de dados atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   

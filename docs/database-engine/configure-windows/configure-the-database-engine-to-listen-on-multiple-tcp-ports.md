@@ -2,9 +2,12 @@
 title: "Configurar o Mecanismo de Banco de Dados para escutar em várias portas TCP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f14e9edb0a6cad559ab0032e3daccb3df0bc329f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ee0dc1c49fd1bb0b61729614bb4ba87d1683a60c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurar o Mecanismo de Banco de Dados para escuta em várias portas TCP
-  Este tópico descreve como configurar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para escutar em diversas portas TCP no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Quando TCP/IP está habilitado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssDE](../../includes/ssde-md.md)] escutará conexões de entrada em um ponto de conexão que consiste em um endereço IP e número de porta TCP. Os procedimentos a seguir criam um ponto de extremidade de protocolo TDS, de forma que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escutará em uma porta TCP adicional.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como configurar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para escutar em diversas portas TCP no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Quando TCP/IP está habilitado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssDE](../../includes/ssde-md.md)] escutará conexões de entrada em um ponto de conexão que consiste em um endereço IP e número de porta TCP. Os procedimentos a seguir criam um ponto de extremidade de protocolo TDS, de forma que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escutará em uma porta TCP adicional.  
   
  Possíveis razões para criar um segundo ponto de extremidade de protocolo TDS são:  
   

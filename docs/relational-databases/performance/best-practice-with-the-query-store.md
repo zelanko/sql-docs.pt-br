@@ -1,10 +1,13 @@
 ---
 title: "Práticas recomendadas com o repositório de consultas | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve as práticas recomendadas para usar o Repositório de Consultas com sua carga de trabalho.  
   
-##  <a name="SSMS"></a> Usar o SQL Server Management Studio mais recente  
+##  <a name="SSMS"></a> Use a versão mais recente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem um conjunto de interfaces do usuário projetadas para configurar o Repositório de Consultas, bem como para consumir os dados sobre sua carga de trabalho coletados.  
 Baixe a versão mais recente do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [aqui](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados no Pesquisador de Objetos de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para abrir modos de exibição de solução de problemas para cenários específicos.   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Os modos de exibição do Repositório de Consultas operam com o conjunto de métricas de execução, cada uma expressa em qualquer uma das seguintes funções de estatística:  
   
-|Métrica de execução|Função estatística|  
-|----------------------|------------------------|  
-|Tempo de CPU, Duração, Contagem de Execução, Leituras Lógicas, Gravações Lógicas, Consumo de memória e Leituras Físicas|Média, Máximo, Mínimo, Desvio Padrão, Total|  
+|Versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Métrica de execução|Função estatística|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Tempo de CPU, Duração, Contagem de Execução, Leituras Lógicas, Gravações Lógicas, Consumo de memória, Leituras Físicas, tempo de CLR, DOP (Grau de Paralelismo) e Contagem de Linhas|Média, Máximo, Mínimo, Desvio Padrão, Total|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|Tempo de CPU, Duração, Contagem de Execução, Leituras Lógicas, Gravações Lógicas, Consumo de memória, Leituras Físicas, tempo de CLR, DOP (Grau de Paralelismo), Contagem de Linhas, Memória de log, Memória TempDB e Tempos de espera|Média, Máximo, Mínimo, Desvio Padrão, Total|
   
  O gráfico a seguir mostra como localizar os modos de exibição do Repositório de Consultas:  
   
@@ -200,7 +204,7 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- Você pode aplicar uma destas etapas ou ambas executando a seguinte instrução que altera explicitamente o modo de operação para leitura-gravação:  
+Você pode aplicar uma destas etapas ou ambas executando a seguinte instrução que altera explicitamente o modo de operação para leitura-gravação:  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -234,7 +238,7 @@ FROM sys.database_query_store_options;
  
  O Repositório de Consultas poderia ser recuperado executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado.
  
- Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura / gravação.  
+ Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura/gravação.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -252,7 +256,7 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
-## <a name="set-the-optimal-query-capture-mode"></a>Definir o Modo de Captura de Consulta Ideal  
+## <a name="set-the-optimal-query-capture-mode"></a>Definir o modo de captura de consulta ideal  
  Mantenha os dados mais relevantes no Repositório de Consultas. A tabela a seguir descreve os cenários típicos para cada Modo de Captura de Consulta:  
   
 |Modo de Captura de Consulta|Cenário|  

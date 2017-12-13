@@ -1,5 +1,5 @@
 ---
-title: "Etapa 1: Copiando o pacote da lição 2 | Microsoft Docs"
+title: "Etapa 1: copiar o pacote da Lição 2 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 827e86f490522ea9df0f53bbe55836f6ca3bc385
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6ce7b3f530f92bed2a50fc498dec9c4667020862
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-1---copying-the-lesson-2-package"></a>Lição 3-1: copiando o pacote da lição 2
+# <a name="lesson-3-1---copying-the-lesson-2-package"></a>Lição 3-1 – copiar o pacote da Lição 2
 Nesta tarefa, você criará uma cópia do pacote Lesson 2.dtsx criado na Lição 2. Como alternativa, é possível adicionar o pacote concluído da Lição 2 incluído no tutorial do projeto e copiá-lo. Você usará essa cópia nova durante toda a Lição 3.  
   
 ### <a name="to-create-the-lesson-3-package"></a>Para criar o pacote da Lição 3  
@@ -73,4 +70,3 @@ Nesta tarefa, você criará uma cópia do pacote Lesson 2.dtsx criado na Lição
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Etapa 2: Adicionando e configurando registro em log](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
-

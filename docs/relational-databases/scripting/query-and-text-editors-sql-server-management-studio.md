@@ -2,9 +2,12 @@
 title: Editores de Consultas e de Texto (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a59b16fa58991062b137ce94fe5fcab82571a600
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b54b922643b184ccc19a3cdead0cec7d06503fea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de Consultas e de Texto (SQL Server Management Studio)
-  Você pode usar um dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para editar e testar interativamente um script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou para editar um arquivo de texto XML ou sem-formatação. Cada editor tem o suporte de um serviço específico de linguagem que colore palavras-chave e verifica a sintaxe e os erros no uso. O Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] inclui um depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] que você pode usar para ajudar a corrigir problemas em código [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode usar um dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para editar e testar interativamente um script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou então para editar um arquivo de texto XML ou sem formatação. Cada editor tem o suporte de um serviço específico de linguagem que colore palavras-chave e verifica a sintaxe e os erros no uso. O Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] inclui um depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] que você pode usar para ajudar a corrigir problemas em código [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ## <a name="sql-server-management-studio-editors"></a>Editores do SQL Server Management Studio  
  Os quatro editores do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] compartilham uma arquitetura comum. O editor de texto implementa o nível base da funcionalidade e pode ser usado como um editor básico para arquivos de texto. Os outros três editores ou editores de consulta estendem essa base de funcionalidade incluindo um serviço de idioma que define a sintaxe de um dos idiomas com suporte no SQL Server. Os editores de consulta também implementam vários níveis de suporte para recursos de editor, como o IntelliSense e a depuração. Os editores de consulta incluem o Editor de Consultas do Mecanismo de Banco de Dados para uso na compilação de scripts que contêm instruções Transact-SQL e XQuery, o editor MDX para a linguagem MDX, o editor DMX para a linguagem DMX e o editor XML/A para a linguagem XML for Analysis.  

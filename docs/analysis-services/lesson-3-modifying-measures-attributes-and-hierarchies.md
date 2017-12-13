@@ -2,12 +2,12 @@
 title: "Lição 3: Modificando medidas, atributos e hierarquias | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a4d500a76930c46f15b36f352787edf4e01199f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a65107e5281bfa85e92a1c1ca27f9213fdd69ded
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lição 3: Modificando medidas, atributos e hierarquias
-Depois de definir o cubo inicial, você poderá melhorar a utilidade e a facilidade de uso do cubo. Você pode fazer isto adicionando hierarquias que dão suporte à navegação e agregação em vários níveis, aplicando formatos a medidas específicas, e definindo cálculos e relações.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Depois de definir o cubo inicial, você está pronto para melhorar a utilidade e a facilidade de uso do cubo. Você pode fazer isto adicionando hierarquias que dão suporte à navegação e agregação em vários níveis, aplicando formatos a medidas específicas, e definindo cálculos e relações.  
   
 > [!NOTE]  
 > Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](http://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  

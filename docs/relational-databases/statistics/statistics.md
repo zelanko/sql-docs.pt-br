@@ -1,10 +1,13 @@
 ---
 title: "Estatísticas | Microsoft Docs"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,21 +30,63 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b64fe249a6fb8d1c619f9e63ecb2cd7af4494c17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 39ed8dd07bab5c83f60eaee420bb0e494f5dda85
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="statistics"></a>Estatísticas
-  O otimizador de consulta usa estatísticas para criar planos de consulta que melhoram o desempenho das consultas. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade. Em alguns casos, é necessário criar estatísticas adicionais ou modificar o design da consulta para obter melhores resultados. Este tópico aborda os conceitos de estatísticas e fornece diretrizes para o uso eficiente de estatísticas de otimização de consultas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Otimizador de Consulta usa estatísticas para criar planos de consulta que melhoram o desempenho das consultas. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade. Em alguns casos, é necessário criar estatísticas adicionais ou modificar o design da consulta para obter melhores resultados. Este tópico aborda os conceitos de estatísticas e fornece diretrizes para o uso eficiente de estatísticas de otimização de consultas.  
   
 ##  <a name="DefinitionQOStatistics"></a> Componentes e conceitos  
 ### <a name="statistics"></a>Estatísticas  
  As estatísticas de otimização de consulta são objetos que contêm informações estatísticas sobre a distribuição de valores em uma ou mais colunas de uma tabela ou exibição indexada. O otimizador de consulta usa essas estatísticas para estimar a *cardinalidade* ou o número de linhas no resultado de consulta. Essas *estimativas de cardinalidade* permitem ao otimizador de consulta criar um plano de consulta de alta qualidade. Por exemplo, dependendo dos predicados, o otimizador de consulta pode usar estimativas de cardinalidade para escolher o operador Index Seek em vez de o operador Index Scan, que utiliza mais recursos, melhorando com isso o desempenho das consultas.  
   
- Cada objeto de estatísticas é criado em uma lista de uma ou mais colunas de tabela e inclui um histograma que exibe a distribuição de valores na primeira coluna. Os objetos de estatísticas em várias colunas também armazenam informações estatísticas sobre a correlação de valores entre as colunas. Essas estatísticas de correlação, ou *densidades*, são derivadas do número de linhas distintas de valores de coluna. Para obter mais informações sobre objetos de estatísticas, veja [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ Cada objeto de estatísticas é criado em uma lista de uma ou mais colunas de tabela e inclui um *histograma* que exibe a distribuição de valores na primeira coluna. Os objetos de estatísticas em várias colunas também armazenam informações estatísticas sobre a correlação de valores entre as colunas. Essas estatísticas de correlação, ou *densidades*, são derivadas do número de linhas distintas de valores de coluna. 
+
+#### <a name="histogram"></a>Histograma  
+Um **histograma** mede a frequência de ocorrência de cada valor distinto em um conjunto de dados. O otimizador de consulta calcula um histograma com base nos valores de coluna na primeira coluna de chave do objeto de estatísticas, selecionando os valores de coluna por amostragem estatística das linhas ou pela execução de uma verificação completa de todas as linhas na tabela ou na exibição. Se o histograma for criado com base em um conjunto amostrado de linhas, os totais armazenados para o número de linhas e o número de valores distintos são estimativas e não precisam ser números inteiros.
+
+> [!NOTE]
+> Os histogramas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são criados apenas para uma única coluna – a primeira coluna do conjunto de colunas de chave do objeto de estatísticas.
   
+Para criar o histograma, o otimizador de consulta classifica os valores de colunas, calcula o número de valores que correspondem a cada valor de coluna distinta e agrega os valores de colunas em um máximo de 200 etapas de histograma contíguas. Cada etapa do histograma inclui uma gama de valores de coluna seguidos por um valor de coluna associada superior. O intervalo inclui todos os possíveis valores de coluna entre valores de limite, excluindo-se os próprios valores de limite em si. O mais baixo dos valores de coluna classificados é o valor do limite superior da primeira etapa do histograma.
+
+Mais detalhadamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria o **histograma** com base no conjunto classificado de valores de coluna em três etapas:
+
+- **Inicialização do histograma**: na primeira etapa, uma sequência de valores que começa no início do conjunto classificado é processada e até 200 valores de *range_high_key*, *equal_rows*, *range_rows* e *distinct_range_rows* são coletados (*range_rows* e *distinct_range_rows* são sempre zero durante essa etapa). A primeira etapa termina quando toda a entrada foi esgotada ou quando 200 valores foram encontrados. Para obter mais informações sobre isso, consulte [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md). 
+- **Examinar com a mesclagem de bucket**: cada valor adicional da coluna inicial da chave de estatísticas é processado na segunda etapa, em ordem classificada; cada valor sucessivo é adicionado ao último intervalo ou um novo intervalo no final é criado (isso é possível pois os valores de entrada são classificados). Se um novo intervalo é criado, um par dos intervalos vizinhos existentes é recolhido em um único intervalo. Esse par de intervalos é selecionado para minimizar a perda de informações. Esse método usa um algoritmo de *diferença máxima* para minimizar o número de etapas no histograma, enquanto maximiza a diferença entre os valores de limite. O número de etapas após o recolhimento dos intervalos permanece 200 durante esta etapa.
+- **Consolidação do histograma**: na terceira etapa, mais intervalos podem ser recolhidos se uma quantidade significativa de informações não é perdida. O número de etapas do histograma pode ser menor do que o número de valores distintos, até mesmo para colunas com menos de 200 pontos de limite. Portanto, mesmo se a coluna tiver mais de 200 valores exclusivos, o histograma poderá ter menos de 200 etapas. Para uma coluna que consiste apenas em valores exclusivos, o histograma consolidado terá um mínimo de três etapas.
+
+> [!NOTE]
+> Se o histograma foi criado com uma amostra em vez de com a opção fullscan, os valores de *equal_rows*, *range_rows*, *distinct_range_rows* e *average_range_rows* são estimados e, portanto, não precisam ser inteiros.
+
+O diagrama a seguir mostra um histograma com seis etapas: A área à esquerda do primeiro valor do limite superior corresponde à primeira etapa.
+  
+![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+  
+Para cada etapa do histograma acima:
+-   A linha em negrito representa o valor do limite superior (*range_high_key*) e o número de vezes que ele ocorre (*equal_rows*)  
+  
+-   A área sólida à esquerda de *range_high_key* representa o intervalo de valores de coluna e o número médio de vezes que cada valor de coluna ocorre (*average_range_rows*). As *average_range_rows* da primeira etapa do histograma são sempre 0.  
+  
+-   As linhas pontilhadas representam os valores amostrados usados para estimar o número total de valores distintos no intervalo (*distinct_range_rows*) e o número total de valores no intervalo (*range_rows*). O otimizador de consulta usa *range_rows* e *distinct_range_rows* para calcular *average_range_rows* e não armazena os valores amostrados.   
+  
+#### <a name="density-vector"></a>Vetor de densidade  
+**Densidade** são informações sobre o número de duplicatas em determinada coluna ou em uma combinação de colunas e ele é calculada como 1/(número de valores distintos). O otimizador de consulta usa densidades para aprimorar as estimativas de cardinalidade de consultas que retornam várias colunas da mesma tabela ou exibição indexada. O vetor de densidade contém uma densidade para cada prefixo de colunas no objeto de estatísticas. 
+
+> [!NOTE]
+> Frequência são informações sobre a ocorrência de cada valor distinto na primeira coluna de chave do objeto de estatísticas e é calculada como a contagem de linhas * densidade. Uma frequência máxima igual a 1 pode ser encontrada em colunas com valores exclusivos.
+
+Por exemplo, se um objeto de estatísticas tiver as colunas de chave `CustomerId`, `ItemId` e `Price`, a densidade será calculada em cada um dos prefixos de coluna a seguir.
+  
+|Prefixo de coluna|Densidade calculada em|  
+|---|---|
+|(CustomerId)|Linhas com valores correspondentes para CustomerId.|  
+|(CustomerId, ItemId)|Linhas com valores correspondentes para CustomerId e ItemId|  
+|(CustomerId, ItemId, Price)|Linhas com valores correspondentes para CustomerId, ItemId e Price| 
+
 ### <a name="filtered-statistics"></a>Estatísticas filtradas  
  As estatísticas filtradas podem melhorar o desempenho de consultas selecionadas em subconjuntos bem definidos de dados. As estatísticas filtradas usam um predicado do filtro para selecionar o subconjunto de dados incluído nas estatísticas. Estatísticas filtradas bem projetadas podem aprimorar o plano de execução de consultas em comparação com as estatísticas de tabela completa. Para obter mais informações sobre o predicado de filtro, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Para obter mais informações sobre quando criar estatísticas filtradas, consulte a seção [Quando criar estatísticas](#CreateStatistics) neste tópico.  
   
@@ -53,7 +98,7 @@ ms.lasthandoff: 11/09/2017
   
  Quando o otimizador de consulta cria estatísticas como resultado do uso da opção AUTO_CREATE_STATISTICS, os nomes das estatísticas começam com `_WA`. Você pode usar a consulta a seguir para determinar se o otimizador de consulta criou estatísticas para uma coluna de predicado de consulta.  
   
-```tsql  
+```t-sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -147,7 +192,7 @@ Considere a criação de estatísticas com a instrução CREATE STATISTICS quand
   
  Para criar densidades úteis para estimativas de cardinalidade, as colunas no predicado de consulta devem corresponder a um dos prefixos de colunas na definição do objeto de estatísticas. O exemplo a seguir cria um objeto de estatísticas multicolunas nas colunas `LastName`, `MiddleName`e `FirstName`.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -174,7 +219,7 @@ GO
   
  O otimizador de consulta pode usar as estatísticas filtradas de `BikeWeights` para aprimorar o plano da consulta a seguir, que seleciona todas as bicicletas que pesam mais de `25`.  
   
-```tsql  
+```t-sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -268,7 +313,7 @@ Para melhorar as estimativas de cardinalidade para variáveis e funções, siga 
   
      Por exemplo, o procedimento armazenado `Sales.GetRecentSales` a seguir altera o valor do parâmetro `@date` quando `@date` é NULL.  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -287,7 +332,7 @@ Para melhorar as estimativas de cardinalidade para variáveis e funções, siga 
   
      Se a primeira chamada do procedimento armazenado `Sales.GetRecentSales` transmitir NULL para o parâmetro `@date`, o otimizador de consulta compilará o procedimento armazenado com a estimativa de cardinalidade para `@date = NULL`, embora o predicado de consulta não seja chamado com `@date = NULL`. Essa estimativa de cardinalidade pode ser significativamente diferente do número de linhas no resultado de consulta real. Como resultado, o otimizador de consulta pode escolher um plano de consulta de qualidade inferior. Para evitar isso, você pode reescrever o procedimento armazenado em dois procedimentos da seguinte maneira:  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -317,7 +362,7 @@ Para melhorar as estimativas de cardinalidade para variáveis e funções, siga 
   
  Para alguns aplicativos, a recompilação da consulta toda vez que ela é executada pode levar muito tempo. A dica de consulta `OPTIMIZE FOR` poderá ajudar, mesmo que você não use a opção `RECOMPILE`. Por exemplo, você poderia adicionar uma opção `OPTIMIZE FOR` ao procedimento armazenado Sales.GetRecentSales para especificar uma data. O exemplo a seguir adiciona a opção `OPTIMIZE FOR` ao procedimento Sales.GetRecentSales.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -349,6 +394,6 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md)   
- [Controlando o comportamento das atualizações automáticas de estatísticas (AUTO_UPDATE_STATISTICS) no SQL Server](http://support.microsoft.com/help/2754171)
-  
+ [Controlando o comportamento das atualizações automáticas de estatísticas (AUTO_UPDATE_STATISTICS) no SQL Server](http://support.microsoft.com/help/2754171) [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  

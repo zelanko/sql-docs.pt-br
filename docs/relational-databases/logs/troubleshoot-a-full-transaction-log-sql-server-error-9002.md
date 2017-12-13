@@ -2,9 +2,12 @@
 title: "Solução de problemas em um log de transação completa (SQL Server Erro 9002) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: eef4f8e2e3007ec1b5f19bf8176bd7ac6349edfc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 42620b8d28d8a2663d5cb4ddc66f551c8801084d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solução de problemas em um log de transação completa (SQL Server Erro 9002)
-  Este tópico aborda as respostas possíveis a um log de transações completo e sugere como evitar isso no futuro. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico aborda as respostas possíveis a um log de transações completo e sugere como evitar isso no futuro. 
   
   Quando o log de transações fica completo, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] emite um **erro 9002**. O log pode ficar completo quando o banco de dados estiver online ou em recuperação. Se o log ficar completo enquanto o banco de dados estiver online, o banco de dados permanecerá online, mas só poderá ser lido e não atualizado. Se o log ficar completo durante uma recuperação, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] marcará o banco de dados como RESOURCE PENDING. Em qualquer caso, é necessária a ação do usuário para liberar espaço no log.  
   

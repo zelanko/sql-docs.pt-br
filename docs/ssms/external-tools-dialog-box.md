@@ -3,8 +3,11 @@ title: "Caixa de diálogo de Ferramentas Externas | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e12118fa71031a2ff44f0d6d0fb1b9372fb13500
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d60bec587daeae84382166194d75db22b0a38a61
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="external-tools-dialog-box"></a>Caixa de diálogo Ferramentas Externas
-Use a caixa de diálogo **Ferramentas Externas** para adicionar ferramentas externas como SQLCMD ou o Bloco de Notas ao menu **Ferramentas** . Adicionar ferramentas externas permite a inicialização de outros aplicativos facilmente enquanto você trabalha no ambiente do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] . Você pode especificar argumentos e um diretório de trabalho na execução da ferramenta. Além disso, a saída de algumas ferramentas pode ser exibida na janela **Saída** . A caixa de diálogo **Ferramentas Externas** está disponível no menu **Ferramentas** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Ferramentas Externas** para adicionar ferramentas externas como SQLCMD ou o Bloco de Notas ao menu **Ferramentas**. Adicionar ferramentas externas permite a inicialização de outros aplicativos facilmente enquanto você trabalha no ambiente do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] . Você pode especificar argumentos e um diretório de trabalho na execução da ferramenta. Além disso, a saída de algumas ferramentas pode ser exibida na janela **Saída** . A caixa de diálogo **Ferramentas Externas** está disponível no menu **Ferramentas** .  
   
 ## <a name="options"></a>Opções  
 **Conteúdos de menu**  

@@ -1,5 +1,5 @@
 ---
-title: "Instalação dos dados de tarefa criação de perfil | Microsoft Docs"
+title: "Configuração da Tarefa Criação de Perfil de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling task [Integration Services], configuring
+helpviewer_keywords: Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b6b75462db3e9245644c2ee0f0c667183ea9ace9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuração da tarefa Criação de Perfil de Dados
   Antes de rever um perfil dos dados de origem, a primeira etapa é configurar e executar a tarefa Criação de Perfil de Dados. Você cria esta tarefa dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para configurar a tarefa Criação de Perfil de Dados, use o Editor da Tarefa Criação de Perfil de Dados. Este editor permite selecionar onde produzir os perfis e quais perfis devem ser calculados. Depois de configurar a tarefa, você executa o pacote para calcular os perfis de dados.  
@@ -111,4 +108,3 @@ ms.lasthandoff: 08/03/2017
  [Visualizador de Perfil de Dados](../../integration-services/control-flow/data-profile-viewer.md).  
   
   
-

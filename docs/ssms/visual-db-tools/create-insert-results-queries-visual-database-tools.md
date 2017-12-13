@@ -3,8 +3,11 @@ title: Criar consultas Inserir Resultados (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7728baf26863015b323cd3841b0f9dfb898ea897
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ddef4fd36ca72c473b480c31e7cd46c7e710d295
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Criar consultas Inserir Resultados (Visual Database Tools)
-Você pode copiar linhas de uma tabela para outra ou em uma tabela utilizando uma consulta Inserir Resultados. Por exemplo, em uma tabela `titles` , é possível utilizar uma consulta Inserir Resultados para copiar informações sobre todos os títulos de um publicador para uma segunda tabela que você pode disponibilizar para esse publicador. Uma consulta Inserir Resultados é semelhante às Consultas de Criar Tabela, mas copia linhas para uma tabela existente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode copiar linhas de uma tabela para outra ou em uma tabela utilizando uma consulta Inserir Resultados. Por exemplo, em uma tabela `titles` , é possível utilizar uma consulta Inserir Resultados para copiar informações sobre todos os títulos de um publicador para uma segunda tabela que você pode disponibilizar para esse publicador. Uma consulta Inserir Resultados é semelhante às Consultas de Criar Tabela, mas copia linhas para uma tabela existente.  
   
 > [!TIP]  
 > Você também pode copiar linhas de uma tabela para outra utilizando recortar e colar. Crie uma consulta para cada tabela e execute as consultas. Copie as linhas que você deseja de uma grade de resultados para outra.  

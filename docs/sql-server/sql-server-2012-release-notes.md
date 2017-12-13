@@ -1,11 +1,14 @@
 ---
 title: "Notas de versão do SQL Server 2012 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Release Notes, SQL Server
@@ -15,14 +18,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a84e08ccbb7806dafe0549b5825192dfd6e33565
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de Versão do SQL Server 2012
-Este documento Notas de versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do Microsoft SQL Server 2012 ([clique aqui para baixá-lo](http://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de Notas de versão está disponível somente online, não em mídia de instalação, e é atualizado periodicamente.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Este documento de Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do Microsoft SQL Server 2012 ([clique aqui para baixá-lo](http://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de Notas de versão está disponível somente online, não em mídia de instalação, e é atualizado periodicamente.  
   
 Para obter informações sobre como iniciar e instalar o SQL Server 2012, consulte o Leiame do SQL Server 2012. O documento Leiame está disponível na mídia de instalação e na página de download [Leiame](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Você também pode encontrar mais informações em [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?LinkId=190948) e nos [Fóruns do SQL Server](http://go.microsoft.com/fwlink/?LinkId=213599).  
   

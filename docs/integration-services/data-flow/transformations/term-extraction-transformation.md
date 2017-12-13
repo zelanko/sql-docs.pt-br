@@ -1,5 +1,5 @@
 ---
-title: "Transformação extração de termos | Microsoft Docs"
+title: "Transformação Extração de Termos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 4282ad429a54af716010bc8b0463551477a771fb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
@@ -157,7 +155,7 @@ ms.lasthandoff: 08/19/2017
   
 -   Combinações de números, sinais de pontuação e caracteres alfabéticos. Por exemplo, *A23B#99* retorna o termo *A23B*.  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   Os caracteres %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
   
     > [!NOTE]  
     >  Acrônimos que contêm um ou mais pontos (.) não são separados em várias sentenças.  
@@ -261,6 +259,5 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Transformação de pesquisa de termo](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
+ [Transformação Pesquisa de Termos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
 

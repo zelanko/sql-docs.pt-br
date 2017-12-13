@@ -4,8 +4,8 @@ description: "Saiba como configurar um Data Warehouse e um Banco de dados SQL do
 keywords: 
 services: sql-database
 documentationcenter: 
-author: becczhang
-manager: cguyer
+author: aliceku
+manager: craigg
 editor: 
 ms.assetid: 
 ms.service: sql-database
@@ -15,13 +15,12 @@ ms.tgt_pltfrm:
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
-ms.author: rebeccaz
+ms.author: aliceku
+ms.openlocfilehash: f8de7e653a925e04dbcab9efbd5b5c8e5354b611
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: cf8f46ab01c08e68fa22f65a4f86f4ff16f16ba3
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: habilitar a Transparent Data Encryption usando sua própria chave do Azure Key Vault
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ Se você estiver criando um servidor, use o cmdlet [New-AzureRmSqlServer](/power
 
 ## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>Etapa 2. Conceder permissões do Key Vault para seu servidor
 
-Use o cmdlet [Set-AzureRmKeyValutAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) para conceder acesso ao seu servidor para o cofre de chaves antes de usar uma chave dele para a TDE.
+Use o cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) para conceder acesso ao servidor ao cofre de chaves antes de usar uma chave dele para a TDE.
 
    ```powershell
    Set-AzureRmKeyVaultAccessPolicy  `
@@ -190,6 +189,5 @@ Verifique o seguinte se ocorrer um problema:
 
 - Saiba como girar o Protetor de TDE de um servidor para atender aos requisitos de segurança: [Girar o Protetor de Transparent Data Encryption usando o PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md).
 - No caso de um risco de segurança, saiba como remover um Protetor de TDE potencialmente comprometido: [Remover uma chave potencialmente comprometida](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). 
-
 
 

@@ -1,5 +1,5 @@
 ---
-title: Criando um pacote programaticamente | Microsoft Docs
+title: Criar um pacote programaticamente | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 58a8201d68cb6d942bd98ca3c53b6cf98336284e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b16b2cc623c44884e088168e3c16ccb412dd88b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-package-programmatically"></a>Criando um pacote programaticamente
   O objeto <xref:Microsoft.SqlServer.Dts.Runtime.Package> é o contêiner de alto nível para todos os outros objetos em uma solução de projeto do [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Como contêiner de alto nível, o pacote é o primeiro objeto criado, e os objetos subsequentes são adicionados a ele e executados dentro do contexto do pacote. O próprio pacote não move nem transforma dados. O pacote confia nas tarefas que contém para executar o trabalho. As tarefas executam a maioria do trabalho executado por um pacote e definem a funcionalidade de um pacote. Um pacote é criado e executado com apenas três linhas de código, mas várias tarefas e objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> são adicionados para acrescentar funcionalidades ao seu pacote. Esta seção discute como criar um pacote programaticamente. Ela não fornece informações sobre como criar as tarefas ou o <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Essas informações são discutidas em seções posteriores.  
@@ -73,15 +70,15 @@ Module Module1
 End Module  
 ```  
   
- Para compilar e executar o exemplo, pressione F5 no Visual Studio. Para compilar o código usando o compilador c#, **csc.exe**, no prompt de comando para compilar, use o seguinte comando e arquivo referências, substituindo o  *\<filename >* com o nome do arquivo. cs ou. vb e dando a ele um  *\<outputfilename >* de sua escolha.  
+ Para compilar e executar o exemplo, pressione F5 no Visual Studio. Para compilar o código usando o compilador C#, **csc.exe**, no prompt de comando para compilar, use o comando e as referências de arquivo a seguir, substituindo o *\<nomedoarquivo>* pelo nome do arquivo .cs ou .vb e dando a ele um *\<nomedoarquivodesaída>* de sua escolha.  
   
- **CSC /target: Library /out: \<outputfilename >. dll \<filename >. cs /r:Microsoft.SqlServer.Managed DTS.dll "/r:System.dll**  
+ **csc /target:library /out: \<nomedoarquivodesaída>.dll \<nomedoarquivo>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Para compilar o código usando o compilador do Visual Basic .NET, **vbc.exe**, no prompt de comando para compilar, use o seguinte comando e referências de arquivo.  
+ Para compilar o código usando o compilador do Visual Basic .NET, **vbc.exe**, no prompt de comando para compilar, use o comando e as referências de arquivo a seguir.  
   
- **/Target Vbc /out: \<outputfilename >. dll \<filename >. vb /r:Microsoft.SqlServer.Managed DTS.dll "/r:System.dll**  
+ **vbc /target:library /out: \<nomedoarquivodesaída>.dll \<nomedoarquivo>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Você também pode criar um pacote carregando um pacote existente que foi salvo em disco, no sistema de arquivos, ou no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A diferença é que o <xref:Microsoft.SqlServer.Dts.Runtime.Application> objeto é criado pela primeira vez e, em seguida, o objeto de pacote é preenchido por um dos métodos sobrecarregados do aplicativo: **LoadPackage** para arquivos simples, **LoadFromSQLServer** para pacotes salvos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> para pacotes salvos no sistema de arquivos. O exemplo seguinte carrega um pacote existente do disco e exibe várias propriedades no pacote.  
+ Você também pode criar um pacote carregando um pacote existente que foi salvo em disco, no sistema de arquivos, ou no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A diferença é que o objeto <xref:Microsoft.SqlServer.Dts.Runtime.Application> é criado primeiro e depois o objeto do pacote é preenchido por um dos métodos sobrecarregados do aplicativo: **LoadPackage** para arquivos simples, **LoadFromSQLServer** para pacotes salvos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> para pacotes salvos no sistema de arquivos. O exemplo seguinte carrega um pacote existente do disco e exibe várias propriedades no pacote.  
   
 ```csharp  
 using System;  
@@ -160,12 +157,11 @@ End Module
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de blog, [API Sample - OleDB origem e destino de OleDB](http://go.microsoft.com/fwlink/?LinkId=220824), em blogs.msdn.com.  
+-   Entrada de blog, [API Sample – OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824), (Amostra de API – origem e destino de OleDB) em blogs.msdn.com.  
   
--   Entrada de blog, [EzAPI – atualizado para o SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), em blogs.msdn.com.  
+-   Entrada de blog, [EzAPI – Atualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) em blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionando tarefas programaticamente](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
+ [Adicionar tarefas programaticamente](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Opções de atributo histórico (Assistente para dimensões de alteração lenta) | Microsoft Docs"
+title: "Opções de Atributo Histórico (Assistente para Dimensões de Alteração Lenta) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.loaddimwizard.histattriboption.f1
+f1_keywords: sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2867e5173235520c521ca70952f50d1fa7bc8487
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 37d6347b09e879c5a7df9d01ce5441d19f3fdcf7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Opções de Atributo Histórico (Assistente para Dimensões de Alteração Lenta)
   Use a caixa de diálogo **Opções de Atributo Histórico** para mostrar atributos históricos por datas de início e de término ou para registrar atributos históricos em uma coluna criada especialmente para este propósito.  
@@ -52,7 +49,6 @@ ms.lasthandoff: 08/03/2017
 |**Variável para definir valores de data**|Selecione uma variável de data na lista.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar saídas por meio do Assistente para dimensões de alteração lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
-

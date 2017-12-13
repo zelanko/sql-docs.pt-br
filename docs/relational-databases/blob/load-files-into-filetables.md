@@ -2,9 +2,12 @@
 title: Carregar arquivos em FileTables | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fb882532e2c368c085b3834a0332e3c716ffd1c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9c1a12ddc536837a805d1d6b9da117e5a2d7087
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="load-files-into-filetables"></a>Carregar arquivos em FileTables
-  Descreve como carregar ou migrar arquivos para FileTables.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Descreve como carregar ou migrar arquivos para FileTables.  
   
 ##  <a name="BasicsLoadNew"></a> Carregando ou migrando arquivos para um FileTable  
  O método que você escolhe para carregar ou migrar arquivos para uma FileTable depende em onde os arquivos estão armazenados atualmente.  

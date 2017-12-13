@@ -2,12 +2,12 @@
 title: Algoritmo msc | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 375e6c59c38d7bcf4eb270c6b007d2fca16d119c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo MSC
-  O algoritmo de Clustering de Sequência do [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo exclusivo que combina a análise de sequência com o cluster. Você pode usá-lo para explorar dados que contêm eventos que podem ser vinculados em uma *sequência*. O algoritmo localiza as sequências mais comuns e realiza clustering para encontrar sequências que são similares. Os exemplos a seguir ilustram os tipos de sequências das quais você pode capturar dados de aprendizado de máquina para fornecer informações sobre problemas comuns ou cenários comerciais:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo msc é um algoritmo exclusivo que combina a análise de sequência com o cluster. Você pode usá-lo para explorar dados que contêm eventos que podem ser vinculados em uma *sequência*. O algoritmo localiza as sequências mais comuns e realiza clustering para encontrar sequências que são similares. Os exemplos a seguir ilustram os tipos de sequências das quais você pode capturar dados de aprendizado de máquina para fornecer informações sobre problemas comuns ou cenários comerciais:  
   
 -   Fluxos ou caminhos de cliques gerados quando os usuários navegam em um site  
   

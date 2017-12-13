@@ -2,9 +2,12 @@
 title: Fazer upgrade do Power Pivot para SharePoint | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b75ca97fc91e1637b082a44240d7fd4f61a2b6e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9f4ff9921b0965fdd57620a29298688f4604b0f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Atualizar Power Pivot para SharePoint
-  Este tópico resume as etapas necessárias para atualizar uma implantação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para o [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. As etapas específicas dependem da versão do SharePoint que seu ambiente estiver executando e inclui o suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico resume as etapas necessárias para atualizar uma implantação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para o [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. As etapas específicas dependem da versão do SharePoint que seu ambiente estiver executando e inclui o suplemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   

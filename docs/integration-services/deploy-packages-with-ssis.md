@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0dd4e2e79166b803cc70220bcad12dc422eed337
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 26a983c967941ef068600cd6b7efc115aba14515
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-packages-with-ssis"></a>Implantar pacotes com o SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece ferramentas que facilitam a implantação de pacotes em outro computador. As ferramentas de implantação também gerenciam qualquer dependência, como configurações e arquivos que o pacote precisa. Neste tutorial, você aprenderá a usar essas ferramentas para instalar pacotes e suas dependências em um computador de destino.    
@@ -90,5 +88,4 @@ Nesta lição, você compilará um utilitário de implantação e verificará se
 [Lição 3: Instalar os pacotes SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 Nesta lição, você copiará o grupo de implantação para o computador de destino, instalará os pacotes e executará os pacotes.    
     
-
 

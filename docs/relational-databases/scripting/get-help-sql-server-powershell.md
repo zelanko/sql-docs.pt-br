@@ -2,9 +2,12 @@
 title: Ajuda do SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0a1c7d0f50f672bedd2f3c4d375bfef983f7a5e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 815fab8fa577dad6ee4ef34388c65a1ed3c4b63d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-help-sql-server-powershell"></a>Obter Ajuda do SQL Server PowerShell
-  Há várias origens de informações sobre como usar o provedor e os cmdlets do provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell. Isso inclui a ajuda que está disponível no ambiente Windows PowerShell.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Há várias origens de informações sobre como usar os cmdlets e o provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell. Isso inclui a ajuda que está disponível no ambiente Windows PowerShell.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Para saber mais sobre o Windows PowerShell, consulte o [Guia de Introdução do Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=217083).  

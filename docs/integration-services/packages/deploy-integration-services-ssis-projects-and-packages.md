@@ -1,12 +1,14 @@
 ---
-title: Implantar o Integration Services (SSIS) projetos e pacotes | Microsoft Docs
+title: Implantar projetos e pacotes do SSIS (Integration Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +20,16 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a dois modelos de implantação, o modelo de implantação de projeto e o modelo de implantação de pacote herdado. O modelo de implantação de projeto permite que você implante seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/27/2017
 Para obter mais informações sobre o modelo de implantação de pacote herdado, consulte [Implantação de pacote herdado &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Ao usar esse modelo, você não conseguia implantar um ou mais pacotes sem implantar o projeto inteiro. O [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduziu o recurso de Implantação Incremental de Pacotes que permite implantar um ou mais pacotes, sem implantar o projeto inteiro.  
+>  O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Ao usar esse modelo, você não conseguia implantar um ou mais pacotes sem implantar o projeto inteiro. O [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduziu o recurso de Implantação Incremental de Pacotes que permite implantar um ou mais pacotes, sem implantar o projeto inteiro.  
   
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Compare o modelo de implantação de projeto e o modelo de implantação de pacote herdado  
  O tipo de modelo de implantação que você escolhe para um projeto determina quais opções de desenvolvimento e administrativas estão disponíveis para aquele projeto. A tabela a seguir mostra as diferenças e as semelhanças entre o uso do modelo de implantação de projeto e o uso do modelo de implantação de pacote.  
@@ -55,7 +56,7 @@ Para obter mais informações sobre o modelo de implantação de pacote herdado,
 |Os pacotes são executados em um processo separado do Windows.|Os pacotes são executados em um processo separado do Windows.|  
 |O SQL Server Agent é usado para agendar a execução do pacote.|O SQL Server Agent é usado para agendar a execução do pacote.|  
   
- O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Ao usar esse modelo, você não conseguia implantar um ou mais pacotes sem implantar o projeto inteiro. O [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduziu o recurso de Implantação Incremental de Pacotes que permite implantar um ou mais pacotes, sem implantar o projeto inteiro.   
+ O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Ao usar esse modelo, você não conseguia implantar um ou mais pacotes sem implantar o projeto inteiro. O [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduziu o recurso de Implantação Incremental de Pacotes que permite implantar um ou mais pacotes, sem implantar o projeto inteiro.   
   
 ## <a name="features-of-project-deployment-model"></a>Recursos do modelo de implantação de projeto  
  A tabela a seguir lista os recursos que estão disponíveis para projetos desenvolvidos apenas para o modelo de implantação de projeto.  
@@ -71,25 +72,25 @@ Para obter mais informações sobre o modelo de implantação de pacote herdado,
 ## <a name="project-deployment"></a>Implantação de projeto  
  No centro do modelo de implantação do projeto está o arquivo de implantação do projeto (extensão .ispac). O arquivo de implantação do projeto é uma unidade independente de implantação que inclui apenas as informações essenciais sobre os pacotes e parâmetros do projeto. O arquivo de implantação do projeto não captura todas as informações contidas no arquivo do projeto do Integration Services (extensão .dtproj). Por exemplo, arquivos de texto adicionais que você usa para escrever observações não são armazenados no arquivo de implantação do projeto e, portanto, não são implantados no catálogo.  
 
-## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Permissões necessárias para implantar o SSIS projetos e pacotes
+## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Permissões necessárias para implantar projetos e pacotes do SSIS
 
-Se você alterar a conta de serviço do SSIS do padrão, você precisará conceder permissões adicionais para a conta de serviço não padrão antes de implantar pacotes com êxito. Se a conta de serviço não padrão não tem as permissões necessárias, você poderá ver a seguinte mensagem de erro.
+Se você alterar a conta de serviço do SSIS do padrão, precisará conceder permissões adicionais para a conta de serviço não padrão antes de implantar pacotes com êxito. Se a conta de serviço não padrão não tiver as permissões necessárias, você poderá ver a mensagem de erro a seguir.
 
-*Ocorreu um erro do .NET Framework durante execução da rotina definida pelo usuário ou agregação "deploy_project_internal": System.ComponentModel.Win32Exception: não é possível possui o privilégio exigido pelo cliente.*
+*Erro do .NET Framework durante a execução da rotina definida pelo usuário ou da agregação “deploy_project_internal”: System.ComponentModel.Win32Exception: o cliente não tem um privilégio obrigatório.*
 
-Esse erro normalmente é o resultado da falta de permissões DCOM. Para corrigir o erro, siga estas etapas.
+Esse erro normalmente é o resultado de permissões DCOM ausentes. Para corrigir o erro, execute as etapas a seguir.
 
-1.  Abra o **serviços de componentes** console (ou execute Dcomcnfg.exe).
-2.  No **serviços de componentes** de console, expanda **serviços de componentes** > **computadores** > **meu computador** > **DCOM Config**.
-3.  Na lista, localize **xx.0 do Microsoft SQL Server Integration Services** para a versão do SQL Server que você está usando. Por exemplo, o SQL Server 2016 é a versão 13.
-4.  Clique com botão direito e selecione **propriedades**.
-5.  No **propriedades do Microsoft SQL Server Integration Services 13.0** caixa de diálogo, selecione o **segurança** guia.
-6.  Para cada um dos três conjuntos de permissões - selecione inicialização e ativação, acesso e configuração - **personalizar**, em seguida, selecione **editar** para abrir o **permissão** caixa de diálogo.
-7.  No **permissão** caixa de diálogo caixa, adicione a conta de serviço não padrão e conceder **permitir** permissões conforme necessário. Normalmente, tem uma conta **Início Local** e **Ativação Local** permissões.
-8.  Clique em **Okey** duas vezes, em seguida, feche o **serviços de componentes** console.
+1.  Abra o console **Serviços de Componentes** (ou execute Dcomcnfg.exe).
+2.  No console **Serviços de Componentes**, expanda **Serviços de Componentes** > **Computadores** > **Meu Computador** > **Configuração do DCOM**.
+3.  Na lista, localize **Microsoft SQL Server Integration Services xx.0** na versão do SQL Server que está sendo usada. Por exemplo, o SQL Server 2016 é a versão 13.
+4.  Clique com o botão direito do mouse e selecione **Propriedades**.
+5.  Na caixa de diálogo **Propriedades do Microsoft SQL Server Integration Services 13.0**, selecione a guia **Segurança**.
+6.  Para cada um dos três conjuntos de permissões – Inicialização e Ativação, Acesso e Configuração – selecione **Personalizar** e, em seguida, **Editar** para abrir a caixa de diálogo **Permissão**.
+7.  Na caixa de diálogo **Permissão**, adicione a conta de serviço não padrão e conceda permissões **Permitir**, conforme necessário. Normalmente, uma conta tem as permissões **Inicialização Local** e **Ativação Local**.
+8.  Clique em **OK** duas vezes e, em seguida, feche o console **Serviços de Componentes**.
 
-Para obter mais informações sobre o erro descrito nesta seção e as permissões exigidas para a conta de serviço do SSIS, consulte a postagem do blog a seguir.  
-[System.ComponentModel.Win32Exception: Um privilégio necessário não é mantido pelo cliente durante a implantação de projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+Para obter mais informações sobre o erro descrito nesta seção e sobre as permissões necessárias para a conta de serviço do SSIS, consulte a postagem no blog a seguir.  
+[System.ComponentModel.Win32Exception: o cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no Servidor do Integration Services
   Na versão atual do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de tempo de execução para pacotes por meio de ambientes.  
@@ -99,11 +100,11 @@ Para obter mais informações sobre o erro descrito nesta seção e as permissõ
   
  Para implantar um projeto no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , conclua as tarefas a seguir:  
   
-1.  Criar um catálogo do SSISDB, se ainda não tiver criado. Para obter mais informações, consulte [catálogo do SSIS](../../integration-services/service/ssis-catalog.md).  
+1.  Criar um catálogo do SSISDB, se ainda não tiver criado. Para obter mais informações, consulte [Catálogo do SSIS](../../integration-services/service/ssis-catalog.md).  
   
 2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, consulte as instruções abaixo: [Para converter um projeto no modelo de implantação de projeto](#convert).  
   
-    -   Se você criou o projeto no [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], por padrão o projeto usará o modelo de implantação de projeto.  
+    -   Se você criou o projeto no [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] ou posterior, por padrão, o projeto usa o modelo de implantação de projeto.  
   
     -   Se você criou o projeto em uma versão anterior do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], depois que abrir o arquivo de projeto no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], converta o projeto no modelo de implantação de projeto.  
   
@@ -157,7 +158,7 @@ Para obter mais informações sobre o erro descrito nesta seção e as permissõ
 3.  Conclua o assistente. 
 
 ## <a name="deploy-packages-to-integration-services-server"></a>Implantar pacotes no Servidor do Integration Services
-  O recurso de implantação de pacotes incremental introduzido no  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] permite que você implante um ou mais pacotes para um projeto novo ou existente, sem implantar o projeto inteiro.  
+  O recurso de implantação de pacotes incremental introduzido no  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] permite que você implante um ou mais pacotes para um projeto novo ou existente, sem implantar o projeto inteiro.  
   
 ###  <a name="DeployWizard"></a> Implantar pacotes usando o Assistente de implantação do Integration Services  
   
@@ -310,7 +311,7 @@ Inicie o assistente:
  A página permite revisar as configurações que você selecionou. Você pode alterar suas seleções clicando em **Anterior**ou clicando em qualquer uma das etapas no painel esquerdo. Clique em **Implantar** para começar o processo de implantação.  
   
 #### <a name="results"></a>Resultados  
- Depois que o processo de implantação estiver concluído, você deverá ver a página **Resultados** . Essa página exibe o êxito ou a falha de cada ação. Se a ação falhar, clique em **Com falha** na coluna **Resultado** para exibir uma explicação do erro. Clique em **Salvar relatório...**  para salvar os resultados em um arquivo XML ou clique em **fechar** para sair do assistente.
+ Depois que o processo de implantação estiver concluído, você deverá ver a página **Resultados** . Essa página exibe o êxito ou a falha de cada ação. Se a ação falhar, clique em **Com falha** na coluna **Resultado** para exibir uma explicação do erro. Clique em **Salvar Relatório...** para salvar os resultados em um arquivo XML ou clique em **Fechar** para sair do assistente.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -729,4 +730,3 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **Salvar relatório**  
  Clique para salvar um resumo da conversão de projeto em um arquivo .xml.  
-

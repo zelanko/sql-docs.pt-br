@@ -2,12 +2,12 @@
 title: Alterar o comando (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da8bc8b79cf500686f7ce955132af426376f0a97
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7faa6ff90852512d0ee737f45ee1ae7269920a5b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="alter-command-tmsl"></a>Comando ALTER (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Altera um objeto existente, mas não seus filhos em uma instância do Analysis Services no modo de tabela.  Se o objeto não existir, o comando gera um erro.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Altera um objeto existente, mas não seus filhos em uma instância do Analysis Services no modo de tabela.  Se o objeto não existir, o comando gera um erro.  
   
  Use **Alter** comando para atualizações de destino, como definir uma propriedade em uma tabela sem a necessidade de especificar todas as colunas também. Esse comando é semelhante a **CreateOrReplace**, mas sem a necessidade de ter que fornecer uma definição completa do objeto.  
   

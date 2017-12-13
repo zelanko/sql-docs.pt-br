@@ -2,9 +2,12 @@
 title: Criar um grupo de disponibilidade (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55c02efaeb34ba7f452708f4ca286849385df18e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 446a47fcf08111ba390f17c1a2844b639a4678f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Criar um grupo de disponibilidade (Transact-SQL)
-  Este tópico descreve como usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar e configurar um grupo de disponibilidade em instâncias de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] no qual o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é habilitado. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar e configurar um grupo de disponibilidade em instâncias de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nas quais o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] está habilitado. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
   
 > [!NOTE]  
 >  Para obter uma introdução aos grupos de disponibilidade, confira [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

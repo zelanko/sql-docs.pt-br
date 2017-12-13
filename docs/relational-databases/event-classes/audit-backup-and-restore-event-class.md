@@ -2,9 +2,12 @@
 title: Classe de evento Audit Backup and Restore | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 040560c02f78f24a7cda6aa7889a59de8a0dc15b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 09d1b5a4a902637be75b84b68c6e3c9d827fe83f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Classe de evento Audit Backup e Restore
-  A classe de evento **Audit Backup/Restore** ocorre quando um comando de backup ou restauração é emitido.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Audit Backup/Restore** ocorre quando um comando de backup ou de restauração é emitido.  
   
 ## <a name="audit-backuprestore-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Backup/Restore  
   

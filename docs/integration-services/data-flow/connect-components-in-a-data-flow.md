@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b7690c6550e11f8a3c35aeeec3f18533916ee467
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-components-in-a-data-flow"></a>Conectar componentes em um fluxo de dados
   Este procedimento descreve como conectar a saída dos componentes em um fluxo de dados para outros componentes dentro do mesmo fluxo de dados.  
@@ -58,8 +56,7 @@ Você constrói o fluxo de dados em um pacote na superfície de design da guia *
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar ou excluir um componente de fluxo de dados](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Depurando o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md) [fluxo de dados](../../integration-services/data-flow/data-flow.md)  
+ [Adicionar ou excluir um componente em um fluxo de dados](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
+ [Depurar o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md) [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   
-

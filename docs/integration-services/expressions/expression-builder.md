@@ -1,5 +1,5 @@
 ---
-title: "Construtor de expressões | Microsoft Docs"
+title: "Construtor de Expressões | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.expressionbuilder.f1
-helpviewer_keywords:
-- Expression Builder dialog box
+f1_keywords: sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords: Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 820179477a33b18a634c509d2793d8f0bac79ddd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5d1f46b2833246dde0cd95eb8c815ae9cca69ab5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expression-builder"></a>Construtor de Expressões
   Use a caixa de diálogo **Construtor de Expressões** para criar e editar uma expressão de propriedade ou para gravar a expressão que define o valor de uma variável usando uma interface gráfica do usuário que lista as variáveis e oferece uma referência interna às funções, às conversões de tipo e aos operadores que a linguagem de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui.  
@@ -55,10 +51,9 @@ ms.lasthandoff: 08/03/2017
 |**Avaliar Expressão**|Clique em **Avaliar Expressão** para exibir o resultado de avaliação da expressão.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Página expressões](../../integration-services/expressions/expressions-page.md)   
- [Editor de expressões de propriedade](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services &#40; SSIS &#41; Variáveis](../../integration-services/integration-services-ssis-variables.md)   
+ [Página Expressões](../../integration-services/expressions/expressions-page.md)   
+ [Editor de expressões de propriedades](../../integration-services/expressions/property-expressions-editor.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variáveis do sistema](../../integration-services/system-variables.md)  
   
   
-

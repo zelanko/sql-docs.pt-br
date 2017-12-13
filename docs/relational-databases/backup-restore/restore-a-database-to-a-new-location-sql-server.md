@@ -2,9 +2,12 @@
 title: Restaurar um banco de dados em um novo local (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1d66683d848709cb100454909ee2e99e755315f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4fa39b24f9e57e335f6b1f01efebb4e741cdcd0d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
-  Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS (SQL Server Management Studio) ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS (SQL Server Management Studio) ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  
     
 ##  <a name="BeforeYouBegin"></a> Antes de começar.  
   

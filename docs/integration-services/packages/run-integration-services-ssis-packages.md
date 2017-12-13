@@ -1,12 +1,14 @@
 ---
-title: "Execução do Integration Services pacotes (SSIS) | Microsoft Docs"
+title: Executar pacotes do SSIS (Integration Services) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,21 +23,21 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f9c69107d378b8a49c02cfebd04d09e76f5c6e8a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fa8080adf06263de7a3055d790b9c5fe89633e20
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-integration-services-ssis-packages"></a>Executar pacotes do SSIS (Integration Services)
   Para executar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode usar uma de várias ferramentas dependendo de onde esses pacotes estão armazenados. As ferramentas estão listadas na tabela abaixo.  
   
- Para armazenar um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você usa o modelo de implantação do projeto para implantar o projeto no servidor. Para obter informações, consulte [implantar Integration Services (SSIS) projetos e pacotes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Para armazenar um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você usa o modelo de implantação do projeto para implantar o projeto no servidor. Para obter informações, consulte [Implantar projetos e pacotes do SSIS (Integration Services)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Para armazenar um pacote no repositório de Pacotes SSIS, o banco de dados msdb, ou no sistema de arquivos, você usa o modelo de implantação de pacote. Para obter mais informações, consulte [Implantação de pacote herdado &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
@@ -49,8 +51,8 @@ ms.lasthandoff: 08/03/2017
 |**dtexecui**<br /><br /> Para obter mais informações, consulte [Utilitário Executar Pacote &#40;DtExecUI&#41; Referência de interface do usuário](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|Não|Sim|Sim|  
 |**SQL Server Agent**<br /><br /> Você usa um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar um pacote.<br /><br /> Para obter mais informações, consulte [SQL Server Agent Job para Pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Sim|Sim|Sim|  
 |**Procedimento armazenado interno**<br /><br /> Para obter mais informações, consulte [catalog.start_execution &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|Sim|Não|Não|  
-|**API gerenciada, usando tipos e membros de** <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace|Sim|Não|Não|  
-|**API gerenciada, usando tipos e membros de** <xref:Microsoft.SqlServer.Dts.Runtime> namespace|Não atualmente|Sim|Sim|  
+|**API gerenciada, usando tipos e membros no namespace** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sim|Não|Não|  
+|**API gerenciada, usando tipos e membros no namespace** <xref:Microsoft.SqlServer.Dts.Runtime>|Não atualmente|Sim|Sim|  
 
 ## <a name="execution-and-logging"></a>Execução e registro em log  
  Os pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] podem ser habilitados para registro e você pode capturar informações em tempo de execução nos arquivos de log. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -80,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  No Gerenciador de Soluções, clique com o botão direito do mouse na pasta de projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote que você deseja executar e clique em **Propriedades**.  
   
-2.  No  **\<nome do projeto > páginas de propriedade** caixa de diálogo, clique em **criar**.  
+2.  Na caixa de diálogo **Página de Propriedades do \<project name>**, clique em **Compilar**.  
   
 3.  Atualize o valor na propriedade OutputPath para especificar a pasta que você deseja usar para a implantação em tempo de design e clique em **OK**.  
 
@@ -171,4 +173,3 @@ ms.lasthandoff: 08/03/2017
 [Iniciar o Assistente de Importação e Exportação do SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   
   
-

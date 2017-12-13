@@ -3,8 +3,11 @@ title: Excluir linhas no painel de resultados (Ferramentas de Banco de Dados Vis
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 806a4af5df592567fbcec5ed087f7e1bdf15104e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3084fd3358aa359ddd16a20c344078a5933dabd3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Excluir linhas do painel de Resultados (Visual Database Tools)
-Exclua linhas no painel Resultados para excluir registros do banco de dados. Para excluir todas as linhas, use uma consulta de exclusão. Para obter mais informações, consulte [Criar consultas Exclusão &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Para remover linhas somente do painel Resultados, altere os critérios da consulta. Para obter mais informações, consulte [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Exclua linhas no painel Resultados para excluir registros do banco de dados. Para excluir todas as linhas, use uma consulta de exclusão. Para obter mais informações, consulte [Criar consultas Exclusão &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Para remover linhas somente do painel Resultados, altere os critérios da consulta. Para obter mais informações, consulte [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
 ### <a name="to-delete-a-row-or-rows"></a>Para excluir uma linha ou linhas  
   

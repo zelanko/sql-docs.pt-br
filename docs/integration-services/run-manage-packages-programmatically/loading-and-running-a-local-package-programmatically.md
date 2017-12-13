@@ -1,5 +1,5 @@
 ---
-title: Carregando e executando um pacote Local programaticamente | Microsoft Docs
+title: "Carregando e executando um pacote local de forma programática | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Integration Services packages, running
 - events [Integration Services], capturing
@@ -25,20 +22,19 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 07ceb460488ca1973295b6b8e991948efe8b9d2a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7a017f2d0b04df41b25e093bdeccd53036aa5710
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Carregando e executando um pacote local programaticamente
-  Você pode executar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes conforme necessário ou em horários predeterminados usando os métodos descritos no [pacotes em execução](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Entretanto, bastam algumas linhas de código para executar um pacote de um aplicativo personalizado, como, por exemplo, um aplicativo Windows Forms, um aplicativo do console, um formulário/serviço da Web ASP.NET ou um serviço do Windows.  
+  É possível executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] conforme necessário ou em horários predeterminados por meio dos métodos descritos em [Executando pacotes](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Entretanto, bastam algumas linhas de código para executar um pacote de um aplicativo personalizado, como, por exemplo, um aplicativo Windows Forms, um aplicativo do console, um formulário/serviço da Web ASP.NET ou um serviço do Windows.  
   
  Esse tópico discute:  
   
@@ -46,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Executando um pacote programaticamente  
   
- Todos os métodos usados neste tópico para carregar e executar pacotes exigem uma referência para o **manageddts** assembly. Depois de adicionar a referência em um novo projeto, importe o <xref:Microsoft.SqlServer.Dts.Runtime> namespace com um **usando** ou **Imports** instrução.  
+ Todos os métodos usados nesse tópico para carregar e executar pacotes exigem uma referência ao assembly **Microsoft.SqlServer.ManagedDTS**. Após adicionar a referência em um novo projeto, importe o namespace <xref:Microsoft.SqlServer.Dts.Runtime> com uma instrução **using** ou **Imports**.  
   
 ## <a name="loading-a-package-programmatically"></a>Carregando um pacote programaticamente  
  Para carregar um pacote programaticamente no computador local, se o pacote for armazenado local ou remotamente, chame um destes métodos:  
@@ -67,9 +63,9 @@ ms.lasthandoff: 08/03/2017
   
 1.  Inicie o ambiente de desenvolvimento do Visual Studio e crie um aplicativo novo no idioma de desenvolvimento de sua preferência. Esse exemplo usa um aplicativo de console; contudo, você também pode executar um pacote de um aplicativo Windows Forms, de um formulário/serviço da Web ASP.NET ou de um serviço do Windows.  
   
-2.  No **projeto** menu, clique em **adicionar referência** e adicione uma referência a **Microsoft.SqlServer.ManagedDTS.dll**. Clique em **OK**.  
+2.  No menu **Projeto**, clique em **Adicionar Referência** e adicione uma referência a **Microsoft.SqlServer.ManagedDTS.dll**. Clique em **OK**.  
   
-3.  Usar o Visual Basic **Imports** instrução ou c# **usando** instrução para importar o **Runtime** namespace.  
+3.  Usar a instrução **Imports** do Visual Basic ou a instrução **using** do C# para importar o namespace **Microsoft.SqlServer.Dts.Runtime**.  
   
 4.  Adicione o código a seguir na rotina principal. O aplicativo de console completo deve ter a aparência do exemplo a seguir.  
   
@@ -234,9 +230,8 @@ namespace RunFromClientAppWithEventsCS
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre as diferenças entre execução Local e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [Carregando e executando um pacote remoto programaticamente](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
- [Carregando a saída de um pacote Local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
+ [Compreender as diferenças entre execução local e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Carregar e executar um pacote remoto programaticamente](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
+ [Carregar a saída de um pacote local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

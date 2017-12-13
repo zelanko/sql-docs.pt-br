@@ -2,9 +2,12 @@
 title: "Logon para assinaturas atualizáveis | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 906d464c7e3f345c21034cffcd51e1494c0724c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0ae8beff6dc6f55ea6db9ce23c9f582e1fa108be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
-  Para a atualização imediata, se você selecionou **Replicar** na página **Assinaturas Atualizáveis** desse assistente, terá de especificar uma conta no Assinante na qual as conexões com o Publicador são feitas. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para a atualização imediata, se você selecionou **Replicar** na página **Assinaturas Atualizáveis** desse assistente, terá de especificar uma conta no Assinante na qual as conexões com o Publicador são feitas. 
   
  Conexões são usadas pelos gatilhos acionados no Assinante e propagam as alterações no Publicador. Essa conta é necessária mesmo que você selecionou **Colocar alterações na fila e confirmar quando possível** na página **Assinaturas Atualizáveis**. Por padrão, o Assistente para Nova Assinatura configura a atualização na fila com a capacidade de alternar para a atualização imediata, se necessário.  
   

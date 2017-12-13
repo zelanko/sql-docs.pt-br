@@ -1,5 +1,5 @@
 ---
-title: Criando uma tarefa personalizada | Microsoft Docs
+title: Criar uma tarefa personalizada | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom tasks [Integration Services], creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom tasks [Integration Services], creating
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3d804ae69154913f4c5239a6bec304f14c4b856d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 35352549dbbd4e91a18826a771a09ec6d689de3a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-custom-task"></a>Criando uma tarefa personalizada
   As etapas envolvidas na criação de uma tarefa personalizada são semelhantes às etapas de criação de qualquer outro objeto personalizado do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -36,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Aplique o atributo que identifica o tipo de objeto para a classe. Para uma tarefa, o atributo é <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
--   Substitua a implementação de propriedades e métodos da classe base. Para uma tarefa, isso inclui os métodos <xref:Microsoft.SqlServer.Dts.Runtime.Task.Validate%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
+-   Substitua a implementação dos métodos e propriedades da classe base. Para uma tarefa, isso inclui os métodos <xref:Microsoft.SqlServer.Dts.Runtime.Task.Validate%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
   
 -   Opcionalmente, desenvolva uma interface de usuário personalizada. Para uma tarefa, isso requer uma classe que implementa a interface <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>.  
   
@@ -52,7 +48,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="applying-the-dtstask-attribute"></a>Aplicando o atributo DtsTask  
  Aplique o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> à classe que você criou para identificar isso como uma tarefa. Esse atributo fornece informações de tempo de design como o nome, a descrição e o tipo da tarefa.  
   
- Use a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A> para vincular a tarefa à sua interface de usuário personalizada. Para obter o token de chave pública é necessário para essa propriedade, você pode usar **sn.exe -t** para exibir o token de chave pública do arquivo de par de chaves (. snk) que você pretende usar para assinar o assembly de interface do usuário.  
+ Use a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A> para vincular a tarefa à sua interface de usuário personalizada. Para obter o token de chave pública exigido para essa propriedade, você pode usar o **sn.exe -t** para exibir o token de chave pública por meio do arquivo de par de chaves (.snk) a ser usado para assinar o assembly da interface do usuário.  
   
 ```csharp  
 using System;  
@@ -99,12 +95,11 @@ End Class 'MyTask
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-task"></a>Compilando, implantando e depurando uma tarefa personalizada  
- As etapas para compilar, implantar e depurar uma tarefa personalizada no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] são semelhantes às etapas necessárias para outros tipos de objetos personalizados. Para obter mais informações, consulte [compilando, implantando e Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
+ As etapas para compilar, implantar e depurar uma tarefa personalizada no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] são semelhantes às etapas necessárias para outros tipos de objetos personalizados. Para obter mais informações, consulte [Compilar, implantar e depurar objetos personalizados](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
- [Codificando uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
- [Desenvolvendo uma Interface de usuário para uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [Criar uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
+ [Codificar uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
+ [Desenvolver uma interface do usuário para uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

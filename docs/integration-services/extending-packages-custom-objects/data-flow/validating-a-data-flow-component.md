@@ -1,5 +1,5 @@
 ---
-title: Validando um componente de fluxo de dados | Microsoft Docs
+title: Validar um componente de fluxo de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 937d904f7139e03655177b4544d573da7cc35e14
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c3953a6c1fbf676d82b3057df2eb9a61f9cc6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="validating-a-data-flow-component"></a>Validando um componente de fluxo de dados
   O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> é fornecido para impedir a execução de um componente que não está configurado corretamente. Utilize esse método para verificar se um componente possui o número esperado de objetos de entrada e saída, se as propriedades personalizadas do componente possuem valores aceitáveis e se há conexões especificadas, caso necessário. Utilize esse método também para verificar se as colunas nas coleções de entrada e saída possuem os tipos de dados corretos e se o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> de cada coluna está definido adequadamente para o componente. A implementação da classe base ajuda no processo de validação pois verifica a coleção de colunas de entrada do componente e se cada coluna da coleção se refere a uma coluna do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> do componente upstream.  
@@ -48,9 +45,9 @@ ms.lasthandoff: 08/03/2017
   
  O valor <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> indica que o componente tem um erro que pode ser retificado editando o componente no designer. O erro costuma ser causado por uma propriedade personalizada ou uma conexão exigeida que não foi especificada ou foi definida incorretamente.  
   
- O valor de erro final é <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, que indica que o componente descobriu erros que só devem ocorrer quando a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> é modificada diretamente, através da edição do pacote XML ou do uso do modelo de objeto. Por exemplo, esse tipo de erro ocorre quando um componente adiciona uma única entrada, mas a validação descobre que existe mais de uma entrada no <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Retornam de erros que geram esse valor só pode ser reparado, redefinindo o componente usando o **redefinir** no botão de **Editor Avançado** caixa de diálogo.  
+ O valor de erro final é <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, que indica que o componente descobriu erros que só devem ocorrer quando a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> é modificada diretamente, através da edição do pacote XML ou do uso do modelo de objeto. Por exemplo, esse tipo de erro ocorre quando um componente adiciona uma única entrada, mas a validação descobre que existe mais de uma entrada no <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Erros que geram esse valor retornado só podem ser reparados através da redefinição do componente utilizando o botão **Redefinir** na caixa de diálogo **Editor Avançado**.  
   
- Além de retornar valores de erro, componentes fornecem comentários postando avisos ou erros durante a validação. Os métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> fornecem esse mecanismo. Quando esses métodos são chamados, esses eventos são postados no **lista de erros** janela de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Desenvolvedores de componente podem fornecer comentários diretos a usuários sobre os erros que ocorreram e, se apropriado, como corrigi-los.  
+ Além de retornar valores de erro, componentes fornecem comentários postando avisos ou erros durante a validação. Os métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> fornecem esse mecanismo. Quando esses métodos são chamados, esses eventos são postados na janela **Lista de Erros** do [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Desenvolvedores de componente podem fornecer comentários diretos a usuários sobre os erros que ocorreram e, se apropriado, como corrigi-los.  
   
  O exemplo de código a seguir mostra uma implementação substituída de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>.  
   
@@ -199,4 +196,3 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-

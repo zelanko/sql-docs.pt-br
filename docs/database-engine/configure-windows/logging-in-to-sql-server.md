@@ -2,9 +2,12 @@
 title: Fazendo logon no SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7d7c2aa416af62d1ffba8af688f2fbabf8a2aa3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-to-sql-server"></a>Fazendo o logon no SQL Server
-  Você pode fazer o logon para uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando qualquer uma das ferramentas de administração gráficas ou em um prompt de comando.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode fazer o logon para uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando qualquer uma das ferramentas de administração gráficas ou em um prompt de comando.  
   
  Quando você faz o logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando uma ferramenta de administração gráfica, como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é solicitado que você forneça o nome do servidor, um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma senha, se necessário. Se você fizer logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a Autenticação do Windows, não precisará fornecer um logon do SQL Server cada vez que acessar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em vez, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa sua conta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para fazer o logon automaticamente. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução na autenticação de modo misto ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Modo de Autenticação do Windows) e você optar por fazer o logon usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será necessário fornecer um logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma senha. Quando possível, use a Autenticação do Windows.  
   

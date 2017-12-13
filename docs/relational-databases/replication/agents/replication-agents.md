@@ -2,9 +2,12 @@
 title: "Agentes de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a33faa1680d0636755ddae406600485cec0a7ba2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a7babcda35d372a5b3eee67919f6884dd7b12de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-agents"></a>Agentes de replicação
-  A replicação usa muitos programas autônomos, chamados agentes, para efetuar as tarefas associadas ao controle de alterações e dados de distribuição. Esta seção da documentação contém referências de parâmetro para os agentes de replicação a seguir.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação usa muitos programas autônomos, chamados agentes, para efetuar as tarefas associadas ao controle de alterações e dados de distribuição. Esta seção da documentação contém referências de parâmetro para os agentes de replicação a seguir.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral dos agentes de replicação](../../../relational-databases/replication/agents/replication-agents-overview.md)  

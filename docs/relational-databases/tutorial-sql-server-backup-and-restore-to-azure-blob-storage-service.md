@@ -2,9 +2,12 @@
 title: "Tutorial: backup e restauração do SQL Server para o Serviço de Armazenamento de Blobs do Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 02/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a59c1224d71e9c8a8626c325dbef600c19078e38
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 87ab0fafc43294cd0d9178f966fd7e819a2416d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
-Este tutorial ajudará você a compreender como gravar backups e executar restaurações no serviço de Armazenamento de Blobs do Azure.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tutorial ajudará você a compreender como gravar backups e executar restaurações no serviço de Armazenamento de Blobs do Azure.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
 Este tutorial mostra como criar uma conta de armazenamento, um contêiner de blobs, como criar credenciais para acessar a conta de armazenamento, como gravar um backup do serviço Blob e como executar uma restauração simples. Este tutorial é dividido em quatro lições:  

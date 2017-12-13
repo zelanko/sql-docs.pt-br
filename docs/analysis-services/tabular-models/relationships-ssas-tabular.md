@@ -2,12 +2,12 @@
 title: "Relações (SSAS Tabular) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="relationships-ssas-tabular"></a>Relações (SSAS tabular)
-  Em modelos tabulares, uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados. Por exemplo, podem ser relacionadas às tabelas Customers e Orders para mostrar o nome do cliente associado a cada ordem.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Em modelos de tabela, uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados. Por exemplo, podem ser relacionadas às tabelas Customers e Orders para mostrar o nome do cliente associado a cada ordem.  
   
  Ao usar o Assistente de Importação de Tabela para importar da mesma fonte de dados, as relações que já existem nas tabelas (na fonte de dados) que você escolhe importar serão recriadas no modelo. Você pode exibir relações que foram detectadas e recriadas automaticamente usando o designer de modelos na Exibição de Diagrama ou usando a caixa de diálogo Gerenciar Relações. Você também pode criar manualmente novas relações entre tabelas usando o designer de modelos na Exibição de Diagrama ou usando a caixa de diálogo Criar Relação ou Gerenciar Relações.  
   

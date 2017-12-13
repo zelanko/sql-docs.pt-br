@@ -1,5 +1,5 @@
 ---
-title: "FINDSTRING (expressão SSIS) | Microsoft Docs"
+title: "FINDSTRING (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FINDSTRING function
+helpviewer_keywords: FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abadf6c9ce8d97a6aa1d1c4e649ccbdf69f4f8f4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fe1b65f8df06863490757513bd4520ee9ed925cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (Expressão SSIS)
   Retorna o local da ocorrência especificada de uma cadeia de caracteres dentro de uma expressão de caractere. O resultado de retorno é o índice da ocorrência. O parâmetro de cadeia de caracteres deve ser avaliado como uma expressão de caractere e o parâmetro de ocorrência deve ser avaliado como um inteiro. Se a cadeia de caracteres não for localizada, o valor de retorno será 0. Se a cadeia de caracteres acontecer menos vezes que o argumento de ocorrência especifica, o valor de retorno será 0.  
@@ -85,8 +82,7 @@ FINDSTRING(Name,Size,1)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Substituir &#40; Expressão do SSIS &#41;](../../integration-services/expressions/replace-ssis-expression.md)   
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [REPLACE &#40;Expressão SSIS&#41;](../../integration-services/expressions/replace-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Janela Inspeção | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fd2fb6a5e923661dbcb4a406abe25c230ff506a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8ce89bd43189b4d873fd6a827b7fc9bd28726349
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Depurador do Transact-SQL – janela Inspeção
-  A janela **Inspecionar** exibe informações sobre as expressões que você selecionou. Pode haver até quatro janelas Inspecionar: **Inspecionar 1**, **Inspecionar 2, Inspecionar 3**e **Inspecionar 4**. As expressões são avaliadas dentro do escopo do quadro de pilha de chamadas atual selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para inspecionar variáveis e expressões.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela **Inspeção** exibe informações sobre as expressões que você selecionou. Pode haver até quatro janelas Inspecionar: **Inspecionar 1**, **Inspecionar 2, Inspecionar 3**e **Inspecionar 4**. As expressões são avaliadas dentro do escopo do quadro de pilha de chamadas atual selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para inspecionar variáveis e expressões.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para acessar as janelas Inspecionar**  

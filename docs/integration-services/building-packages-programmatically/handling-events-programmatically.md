@@ -1,5 +1,5 @@
 ---
-title: Manipulando eventos programaticamente | Microsoft Docs
+title: Manipular eventos programaticamente | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,27 +27,26 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 7235703f494bd1fb50e696aef537391ba23d1749
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dadff8ac9d513c998dbe8f019e00e4fd84983344
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="handling-events-programmatically"></a>Manipulando eventos programaticamente
-  O tempo de execução [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece uma coleção de eventos que ocorrem antes, durante e depois da validação e execução de um pacote. Esses eventos podem ser capturados de duas formas. O primeiro método é através da implementação de <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> em uma classe de interface e fornecendo a classe como um parâmetro para o **Execute** e **validar** métodos do pacote. O segundo método é através da criação de objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, que podem conter outros objetos [!INCLUDE[ssIS](../../includes/ssis-md.md)], tais como tarefas e loops, que são executados quando ocorre um evento em <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Essa seção descreve esses dois métodos e fornece exemplos de código para demonstrar o seu uso.  
+  O tempo de execução [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece uma coleção de eventos que ocorrem antes, durante e depois da validação e execução de um pacote. Esses eventos podem ser capturados de duas formas. O primeiro método é através da implementação da interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> em uma classe e do fornecimento da classe como um parâmetro para os métodos **Execute** e **Validate** do pacote. O segundo método é através da criação de objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, que podem conter outros objetos [!INCLUDE[ssIS](../../includes/ssis-md.md)], tais como tarefas e loops, que são executados quando ocorre um evento em <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Essa seção descreve esses dois métodos e fornece exemplos de código para demonstrar o seu uso.  
   
 ## <a name="receiving-idtsevents-callbacks"></a>Recebendo retornos de chamada de IDTSEvents  
- Desenvolvedores que criam e executam pacotes programaticamente podem receber notificações de eventos durante o processo de validação e execução através da interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Isso é feito criando uma classe que implementa o <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> interface e o fornecimento dessa classe como um parâmetro para o **validar** e **Execute** métodos de um pacote. Os métodos da classe são chamados, então, pelo mecanismo de tempo de execução quando os eventos ocorrem.  
+ Desenvolvedores que criam e executam pacotes programaticamente podem receber notificações de eventos durante o processo de validação e execução através da interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Isso é feito através da criação de uma classe que implementa a interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> e do fornecimento dessa classe como um parâmetro para os métodos **Validate** e **Execute** de um pacote. Os métodos da classe são chamados, então, pelo mecanismo de tempo de execução quando os eventos ocorrem.  
   
- A classe <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> é uma classe que já implementa a interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>; portanto, outro alternativa à implementação direta de <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> é derivar de <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> e substituir os eventos específicos aos quais você deseja responder. Forneça sua classe como um parâmetro para o **validar** e **Execute** métodos do <xref:Microsoft.SqlServer.Dts.Runtime.Package> para receber retornos de chamada do evento.  
+ A classe <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> é uma classe que já implementa a interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>; portanto, outro alternativa à implementação direta de <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> é derivar de <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> e substituir os eventos específicos aos quais você deseja responder. Depois, você fornece sua classe como um parâmetro para os métodos **Validate** e **Execute** do <xref:Microsoft.SqlServer.Dts.Runtime.Package> para receber retornos de chamada de eventos.  
   
- O exemplo de código a seguir demonstra uma classe que deriva de <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>e substitui o método <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. A classe é fornecida como aparameter para o **validar** e **Execute** métodos do pacote.  
+ O exemplo de código a seguir demonstra uma classe que deriva de <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>e substitui o método <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. Portanto, a classe é fornecida como um parâmetro para os métodos **Validate** e **Execute** do pacote.  
   
 ```csharp  
 using System;  
@@ -118,7 +115,7 @@ End Class
 ## <a name="creating-dtseventhandler-objects"></a>Criando objetos DtsEventHandler  
  O mecanismo de tempo de execução fornece um sistema de tratamento e notificação de eventos robusto, altamente flexível através do objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Esses objetos permitem que você crie fluxos de trabalho inteiros dentro do manipulador de eventos, que só são executados quando ocorre o evento ao qual pertence o manipulador de eventos. O objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> é um contêiner que é executado quando o evento correspondente de seu objeto pai dispara. Essa arquitetura permite criar fluxos de trabalho isolados que são executados em resposta a eventos que ocorrem em um contêiner. Como objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> são síncronos, a execução só retoma quando os manipuladores de eventos anexados ao evento retornam.  
   
- O código a seguir demonstra como criar um objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. O código adiciona um <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> à coleção <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> do pacote e, depois, cria um objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> para o evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> da tarefa. Um <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> é adicionado ao manipulador de eventos, que é executado quando o evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> ocorre para o primeiro <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>. Esse exemplo pressupõe que você tem um arquivo chamado C:\Windows\Temp\DemoFile.txt para teste. Na primeira execução do exemplo, o arquivo é copiado com êxito e o manipulador de eventos não é chamado. Na segunda vez que você executar o exemplo, a primeira <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> Falha ao copiar o arquivo (porque o valor de <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> é **false**), o manipulador de eventos é chamado, o segundo <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> exclui o arquivo de origem e o pacote relata falha devido ao erro que ocorreu.  
+ O código a seguir demonstra como criar um objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. O código adiciona um <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> à coleção <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> do pacote e, depois, cria um objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> para o evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> da tarefa. Um <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> é adicionado ao manipulador de eventos, que é executado quando o evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> ocorre para o primeiro <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>. Esse exemplo pressupõe que você tem um arquivo chamado C:\Windows\Temp\DemoFile.txt para teste. Na primeira execução do exemplo, o arquivo é copiado com êxito e o manipulador de eventos não é chamado. Na segunda execução do exemplo, o <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> não consegue copiar o arquivo (pois o valor de <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> é **false**), o manipulador de eventos é chamado, o segundo <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> exclui o arquivo de origem e o pacote relata falha em função do erro ocorrido.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -258,8 +255,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Integration Services &#40; SSIS &#41; Manipuladores de eventos](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-event-handlers.md)   
  [Adicionar um manipulador de eventos a um pacote](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Etapa 9: Testando o pacote de Tutorial da lição 1 | Microsoft Docs"
+title: "Etapa 9: testar o pacote de tutoriais da Lição 1 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca45e8e1ba02246eb5429bd7bfea125663f69f41
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c8cd5718bca93ff1384a2f2df15dac5c80627414
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Lição 1-9-testar o pacote de Tutorial da lição 1
+# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Lição 1-9 – testar o pacote de tutoriais da Lição 1
 Nesta lição, você executou as seguintes tarefas:  
   
 -   Criou um novo projeto do [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
@@ -43,11 +40,11 @@ Antes de testar o pacote, é recomendável verificar se os fluxos de controle e 
   
 **Fluxo de Controle**  
   
-![Controlar o fluxo do pacote](../integration-services/media/task9lesson1control.gif "controlar o fluxo do pacote")  
+![Fluxo de controle no pacote](../integration-services/media/task9lesson1control.gif "Fluxo de controle no pacote")  
   
 **Fluxo de Dados**  
   
-![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "no pacote de fluxo de dados")  
+![Fluxo de dados no pacote](../integration-services/media/task9lesson1data.gif "Fluxo de dados no pacote")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>Para executar o pacote de tutorial da Lição 1  
   
@@ -65,4 +62,3 @@ Antes de testar o pacote, é recomendável verificar se os fluxos de controle e 
   
   
   
-

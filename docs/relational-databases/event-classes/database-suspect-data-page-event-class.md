@@ -2,9 +2,12 @@
 title: Classe de evento Database Suspect Data Page | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2984420c1a3106b88187af17a9d9babbc106b44b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5b6882a854d3cb6ea7f4febf7d66ecf09f20e9e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-suspect-data-page-event-class"></a>classe de evento Database Suspect Data Page
-  A classe do evento **Database Suspect Data Page** indica quando uma página é acrescentada à tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) no [msdb](../../relational-databases/databases/msdb-database.md). Inclua esta classe de evento em rastreamentos que estiverem monitorando a ocorrência de páginas suspeitas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe do evento **Database Suspect Data Page** indica quando uma página é acrescentada à tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) no [msdb](../../relational-databases/databases/msdb-database.md). Inclua esta classe de evento em rastreamentos que estiverem monitorando a ocorrência de páginas suspeitas.  
   
 > [!NOTE]  
 >  Esse evento é gerado de forma assíncrona por meio da inserção de uma linha correspondente na tabela **suspect_pages** . Portanto, uma tarefa escutando esse evento pode não encontrar a entrada **suspect_pages** correspondente imediatamente.  

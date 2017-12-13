@@ -2,9 +2,12 @@
 title: 'Classe de evento TM: Promote Tran Starting | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff83c99f495b174024bf8279512c2e429ae959a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b0fc0cfd0a310ef798fbdf5e148bc943ce22fde
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tm-promote-tran-starting-event-class"></a>classe de evento TM: Promote Tran Starting
-  A classe de evento TM: Promote Tran Starting indica que uma solicitação PROMOTE TRANSACTION está sendo iniciada. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento TM: Promote Tran Starting indica que uma solicitação PROMOTE TRANSACTION está sendo iniciada. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
   
 ## <a name="tm-promote-tran-starting-event-class-data-columns"></a>Colunas de dados da classe de evento TM: Promote Tran Starting  
   

@@ -2,9 +2,12 @@
 title: Criar um arquivo de formato (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fee14b47a0d667d593257f356776291407a1955f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c3aa7d6569f8a4390f249c032641978fb5382313
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
-  Quando você importa em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exporta em massa dados de uma tabela, pode usar um arquivo de formato para um sistema flexível para gravar arquivos de dados que exigem pouca ou nenhuma edição para ficar em conformidade com outros formatos de dados ou para ler arquivos de dados de outros programas de software.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando você importa em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exporta em massa dados de uma tabela, pode usar um arquivo de formato para um sistema flexível para gravar arquivos de dados que exigem pouca ou nenhuma edição para ficar em conformidade com outros formatos de dados ou para ler arquivos de dados de outros programas de software.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a dois tipos de arquivo de formato: XML e não XML. O formato não XML é o formato original com suporte em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -2,9 +2,12 @@
 title: "Propriedades da publicação, partições de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 51d6d1d5622cc9f26e016055585ed9d6966a8fd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1dc966241dc6f6f5bea09f8d691690d777296393
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-data-partitions"></a>Propriedades de Publicação, Partições de Dados
-  A página **Partições de Dados** da caixa de diálogo **Propriedades de Publicação** permite definir partições de dados para publicações de mesclagem que usam filtragem com parâmetros. Depois de definir as partições, você pode gerar instantâneos para essas partições, fornecendo conjuntos de dados iniciais diferentes para Assinantes diferentes, com base nas propriedades de conexão (logon e/ou nome de computador) dos Assinantes. Você pode também selecionar para permitir aos Assinantes solicitarem a entrega e a geração de instantâneo, se não tiverem um instantâneo disponível para a partição, na primeira vez em que sincronizarem. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Partições de Dados** da caixa de diálogo **Propriedades de Publicação** permite definir partições de dados para publicações de mesclagem que usam filtragem com parâmetros. Depois de definir as partições, você pode gerar instantâneos para essas partições, fornecendo conjuntos de dados iniciais diferentes para Assinantes diferentes, com base nas propriedades de conexão (logon e/ou nome de computador) dos Assinantes. Você pode também selecionar para permitir aos Assinantes solicitarem a entrega e a geração de instantâneo, se não tiverem um instantâneo disponível para a partição, na primeira vez em que sincronizarem. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="options"></a>Opções  
  **Adicionar**  

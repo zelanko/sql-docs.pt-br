@@ -2,11 +2,12 @@
 title: "Preparar um banco de dados secundário manualmente para um grupo de disponibilidade (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +24,14 @@ caps.latest.revision: "47"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 63ef60586a8fd776cc31a331c677760705974f21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b5a8152042d85f7e3025c0f1cdfc5acc534bfbad
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>Preparar um banco de dados manualmente para um grupo de disponibilidade (SQL Server)
-Este tópico descreve como preparar um banco de dados para um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. A preparação de um banco de dados exige duas etapas: 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como preparar um banco de dados para um grupo de disponibilidade Always On no [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. A preparação de um banco de dados exige duas etapas: 
 
 1. Restaurar um backup de banco de dados recente do banco de dados primário e os backups de log posteriores em cada instância de servidor que hospeda a réplica secundária, usando RESTORE WITH NORECOVERY
 2. Ingressar o banco de dados restaurado no grupo de disponibilidade.  

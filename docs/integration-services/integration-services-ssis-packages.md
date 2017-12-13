@@ -1,5 +1,5 @@
 ---
-title: (SSIS) pacotes do Integration Services | Microsoft Docs
+title: Pacotes do SSIS (Integration Services) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Pacotes do SSIS (Integration Services)
   Um pacote é uma coleção organizada de conexões, elementos de fluxo de controle, elementos de fluxo de dados, manipuladores de eventos, variáveis, parâmetros e configurações que você agrupa usando as ferramentas de design gráfico fornecidas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou cria programaticamente.  Você salva o pacote concluído no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no armazenamento de pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] ou no sistema de arquivos, ou pode implantar o projeto ssISnoversion para o servidor do [!INCLUDE[ssIS](../includes/ssis-md.md)] . O pacote é a unidade de trabalho que é recuperada, executada e salva.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/03/2017
   
  O diagrama a seguir mostra um pacote simples que contém um fluxo de controle com uma tarefa de Fluxo de Dados, que, por sua vez, contém um fluxo de dados.  
   
- ![Um pacote com um fluxo de controle e um fluxo de dados](../integration-services/media/ssis-package.gif "um pacote com um fluxo de controle e um fluxo de dados")  
+ ![Um pacote com um fluxo de controle e um fluxo de dados](../integration-services/media/ssis-package.gif "Um pacote com um fluxo de controle e um fluxo de dados")  
   
  Depois de criar o pacote básico, você pode adicionar recursos avançados como registro e variáveis para estender a funcionalidade do pacote. Para obter mais informações, consulte a seção sobre Objetos que estendem a funcionalidade de pacotes.  
   
@@ -115,11 +113,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Tarefas relacionadas  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui duas ferramentas gráficas, o Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] e o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , além do modelo de objeto do [!INCLUDE[ssIS](../includes/ssis-md.md)] para criar pacotes. Consulte os tópicos a seguir para obter detalhes.  
   
--   [Importar e exportar dados com o Assistente de exportação e importação do SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [Importar e exportar dados com o Assistente de Importação e Exportação do SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
--   [Criar pacotes no SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [Criar pacotes nas Ferramentas de Dados do SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   Consulte [compilando pacotes programaticamente](../integration-services/building-packages-programmatically/building-packages-programmatically.md) no guia do desenvolvedor. 
+-   Consulte [Compilando pacotes de forma programática](../integration-services/building-packages-programmatically/building-packages-programmatically.md) no Guia do Desenvolvedor. 
   
   
-

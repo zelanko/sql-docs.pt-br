@@ -3,8 +3,11 @@ title: "Caixa de diálogo Erros de Sintaxe SQL Encontrados (Visual Database Tool
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b39dcefcef74a5d652b7e4acb5195b68b0ebad05
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b59d9f9ce4768a5cabb6c763b99a029f7720e7c9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>Caixa de diálogo Erros de Sintaxe SQL Encontrados (Visual Database Tools)
-Essa caixa de diálogo o notifica que o designer não pode analisar a instrução SQL no painel SQL.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Essa caixa de diálogo o notifica que o designer não pode analisar a instrução SQL no painel SQL.  
   
 Essa caixa de diálogo aparece quando você digita ou edita uma instrução SQL no painel SQL; então, você pode alterar para outro painel, verificar a consulta ou tentar executar a consulta e uma das seguintes condições é aplicada:  
   

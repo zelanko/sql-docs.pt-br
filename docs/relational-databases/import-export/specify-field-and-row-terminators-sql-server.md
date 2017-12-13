@@ -2,9 +2,12 @@
 title: Especificar terminadores de campo e linha (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 63039f63f52131c942f76e069514fa90d46a1701
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b6239b8e7ad2f4383eac1764a211880325eedf3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
-  Para campos de dados de caracteres, caracteres de terminação opcionais permitem marcar o término de cada campo em um arquivo de dados com um *terminador de campo* e o término de cada linha com um *terminador de linha*. Os caracteres terminadores são um modo de indicar aos programas que leem o arquivo de dados onde um campo ou uma linha termina, e onde outro campo ou outra linha começa.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para campos de dados de caractere, caracteres de terminação opcionais permitem marcar o término de cada campo em um arquivo de dados com um *terminador de campo* e o término de cada linha com um *terminador de linha*. Os caracteres terminadores são um modo de indicar aos programas que leem o arquivo de dados onde um campo ou uma linha termina, e onde outro campo ou outra linha começa.  
   
 > [!IMPORTANT]  
 >  Quando você usa formato nativo ou nativo Unicode, usa prefixos de comprimento em vez de terminadores de campo. Dados de formato nativo podem conflituar com terminadores, pois um arquivo de dados de formato nativo é armazenado no formato de dados binário interno do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

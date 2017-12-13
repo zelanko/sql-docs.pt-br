@@ -2,9 +2,12 @@
 title: Classe de evento FT:Crawl Started | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df5d03ee4b23beb694d0303cf79d479a112511d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 552cb6f1fad9fc69923756fa048de88ea08c1063
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ftcrawl-started-event-class"></a>Classe de evento FT:Crawl Started
-  A classe de evento **FT:Crawl Started** indica que um rastreamento de texto completo (população) foi iniciado. Use essa classe de evento para verificar se uma solicitação de rastreamento está sendo atualmente acolhida por tarefas de trabalho.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **FT:Crawl Started** indica que um rastreamento de texto completo (população) foi iniciado. Use essa classe de evento para verificar se uma solicitação de rastreamento está sendo atualmente acolhida por tarefas de trabalho.  
   
 ## <a name="ft-crawl-started-event-class-data-columns"></a>Colunas de dados da classe de evento FT:Crawl Started  
   

@@ -2,9 +2,12 @@
 title: Compatibilidade de FileTable com outros recursos do SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 86f6d9c9792edd42d1ad5ea9513c6bc790e5df0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0f1d34f1aef0eddb13a57860fa8eb9f4219ec577
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidade do FileTable com outros recursos do SQL Server
-  Descreve como as FileTables funcionam com outros recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Descreve como as FileTables funcionam com outros recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> Grupos de disponibilidade AlwaysOn e FileTables  
  Quando o banco de dados que contém dados FILESTREAM ou FileTable pertence a um grupo de disponibilidade AlwaysOn:  

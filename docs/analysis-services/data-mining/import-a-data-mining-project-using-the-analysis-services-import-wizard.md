@@ -2,12 +2,12 @@
 title: "Importar um projeto de mineração de dados usando o Assistente de importação do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5111073e53da22a27edfe9d3f3c13985236c0b15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b90ffa3645d844d066542e0c2cd8ac7e6999250d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services
-  Este tópico descreve como criar um novo projeto de mineração de dados importando os metadados de projetos existentes de mineração de dados em outro servidor, usando o modelo **Projeto Importar do Servidor (Multidimensional ou Mineração de dados)**, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve como criar um novo projeto de mineração de dados importando os metadados de um projeto de mineração de dados existente em outro servidor, usando o modelo **projeto importar do servidor (Multidimensional e mineração de dados)**, em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importar fontes de dados, estruturas de mineração de dados e modelos de mineração de projetos existentes de mineração de dados.  
  Quando você usa o modelo **Projeto Importar do Servidor (Multidimensional ou Mineração de dados)**, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria um novo projeto de mineração de dados e copiar os metadados do projeto de mineração de dados especificado. O novo projeto contém as mesmas fontes de dados, exibições de fontes de dados, estruturas de mineração e modelos de mineração que o banco de dados do ssASnoversion do qual você importou. Porém, o projeto não pode ser usado até que você tenha atualizado determinadas propriedades e processado os objetos como descrito:  

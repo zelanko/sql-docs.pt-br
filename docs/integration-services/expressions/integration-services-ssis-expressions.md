@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) expressões | Microsoft Docs"
+title: "Expressões do SSIS (Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 14b6c80d59f3f302e2beef26a03d95b2bf6f8294
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressões do SSIS (Integration Services)
   Uma expressão é uma combinação de símbolos (identificadores, literais, funções e operadores) gera um único valor de dados. Expressões simples podem ser uma única constante, variável ou função. Na maioria das vezes, as expressões são complexas, usando diversos operadores e funções e consultando diversas colunas e variáveis. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], as expressões podem ser usadas para definir condições para instruções CASE, criar e atualizar valores em colunas de dados, atribuir valores às variáveis, atualizar ou preencher propriedades em tempo de execução, definir restrições em restrições de precedência e fornecem as expressões usadas pelo contêiner Loop For.  
@@ -80,4 +78,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

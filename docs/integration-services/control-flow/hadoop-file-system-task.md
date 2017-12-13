@@ -1,5 +1,5 @@
 ---
-title: Tarefas do sistema de arquivos Hadoop | Microsoft Docs
+title: Tarefa do Sistema de Arquivos Hadoop | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hadoopfiletask.f1
+f1_keywords: sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e86c35bf891b0e83a74c6e9b7cd30295b5e52d5f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9cc77b27b5e2b53b8790cdbd99324166f4ca659
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hadoop-file-system-task"></a>Tarefas do Sistema de Arquivos Hadoop
   A Tarefa do Sistema de Arquivos Hadoop habilita um pacote do SSIS a copiar arquivos de, para ou dentro de um cluster Hadoop.  
@@ -49,7 +46,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciador de conexões do Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Gerenciador de Conexão de arquivo](../../integration-services/connection-manager/file-connection-manager.md)  
+ [Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
   
   
-

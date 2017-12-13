@@ -3,8 +3,11 @@ title: Personalizar menus e teclas de atalho | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34aac044681d6ba558799ed7bcbedbd2fde1411e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar menus e teclas de atalho
-Um acelerador de teclado permite selecionar um comando de menu ou botão pressionando ALT+*<single letter>*. Por exemplo, para abrir o menu **Editar** , pressione ALT+E. Você pode reorganizar e modificar os botões da barra de ferramentas, menus e comandos de menu usando a caixa de diálogo **Personalizar** . São fornecidas instruções para alterar as configurações usando o mouse e usando apenas o teclado.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um acelerador de teclado permite selecionar um comando de menu ou botão pressionando ALT+*<single letter>*. Por exemplo, para abrir o menu **Editar** , pressione ALT+E. Você pode reorganizar e modificar os botões da barra de ferramentas, menus e comandos de menu usando a caixa de diálogo **Personalizar** . São fornecidas instruções para alterar as configurações usando o mouse e usando apenas o teclado.  
   
 Podem ser criados aceleradores de teclado para procedimentos armazenados usando a tecla Ctrl na página **Teclado** da caixa de diálogo **Ferramentas**/**Opções** .  
   

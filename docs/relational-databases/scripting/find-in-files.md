@@ -2,9 +2,12 @@
 title: Localizar em arquivos | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f22b8bfc5abf0a4556f8221e9892b0a431d1175c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f1dfff51fc9ff9be167aee8263ede15e944eb1bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-in-files"></a>Localizar em Arquivos
-  A guia **Localizar nos Arquivos** da janela Localizar e Substituir permite pesquisar uma cadeia de caracteres ou expressão no código de um conjunto de arquivos específico. As correspondências encontradas e as ações tomadas são listadas na janela Localizar Resultados selecionada nas **Opções de Resultados**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A guia **Localizar nos Arquivos** da janela Localizar e Substituir permite pesquisar por uma cadeia de caracteres ou expressão no código de um conjunto de arquivos específico. As correspondências encontradas e as ações tomadas são listadas na janela Localizar Resultados selecionada nas **Opções de Resultados**.  
   
  Também há botões da barra de ferramentas e teclas de atalho disponíveis para abrir a caixa de diálogo **Localizar e Substituir** .  
   

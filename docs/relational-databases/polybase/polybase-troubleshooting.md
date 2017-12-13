@@ -8,31 +8,27 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
-helpviewer_keywords:
-- PolyBase, troubleshooting
+helpviewer_keywords: PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea89e4192c833ce569c336f5f2eb5f7382c136ab
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-troubleshooting"></a>Solucionando problemas do PolyBase
-
-  Para solucionar problemas do PolyBase, use as técnicas encontradas neste tópico.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para solucionar problemas do PolyBase, use as técnicas encontradas neste tópico.  
   
 ## <a name="catalog-views"></a>Exibições do catálogo  
  Use as exibições do catálogo listadas aqui para gerenciar as operações de PolyBase.  
@@ -248,4 +244,3 @@ Para solucionar erros de tabela externa, confira o blog de Murshed Zaman [https:
 
 ## <a name="see-also"></a>Consulte também
 [Solucionar problemas de conectividade do PolyBase Kerberos](polybase-troubleshoot-connectivity.md)
-

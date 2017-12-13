@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e9f115f318366e743e0a933239b55ccda16b5171
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d3be6cd239d59bbed67e335ddc7f828567535c2e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-change-a-property-expression"></a>Adicionar ou alterar uma expressão de propriedade
   Você pode criar expressões de propriedade para pacotes, tarefas contêineres Loop Foreach, contêineres Loop For, contêineres de Sequência, manipuladores de eventos, gerenciadores de conexões de nível de pacote e projeto, e provedores de logs.  
@@ -73,14 +71,13 @@ ms.lasthandoff: 08/03/2017
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Integration Services &#40; SSIS &#41; Expressões](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40; SSIS &#41; Pacotes](../../integration-services/integration-services-ssis-packages.md)   
+ [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services &#40; SSIS &#41; Manipuladores de eventos](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40; SSIS &#41; Conexões](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Integration Services &#40; SSIS &#41; Registro em log](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Registro em Log do Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

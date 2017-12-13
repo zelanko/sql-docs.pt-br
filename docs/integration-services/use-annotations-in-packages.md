@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dabeecf1a4e2715bf4ccd214ac21ff3311f27411
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 639f7d012dd750cdbee0c1e523af38c25b4c2d93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-annotations-in-packages"></a>Usar anotações em pacotes
   O [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer fornece anotações, que você pode usar para fazer pacotes de autodocumentação e mais fáceis de entender e manter. Você pode adicionar anotações ao fluxo de controle, fluxo de dados e superfícies de design do manipulador de eventos do [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. As anotações podem conter qualquer tipo de texto e são úteis para adicionar rótulos, comentários e outras informações descritivas para um pacote. As anotações são um recurso de tempo de design apenas. Por exemplo, elas não são gravadas nos logs.  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/26/2017
 7.  Para adicionar uma anotação a um grupo, clique com o botão direito do mouse na anotação e clique em **Grupo**.  
   
 8.  Para salvar o pacote atualizado, no menu **Arquivo** , clique em **Salvar Tudo**.  
-

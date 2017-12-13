@@ -2,9 +2,12 @@
 title: "Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c14be83d174694f31f5a8cc42fea054b250daf10
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2f586f008a1a646698e01e75f3175f7b56f8a311
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server
-  O Gerenciador do Utilitário, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecta-se a instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para fornecer uma exibição de árvore de todos os objetos no Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O painel de conteúdo do Gerenciador do Utilitário oferece várias formas de exibir dados resumidos e detalhados sobre o estado de integridade de instâncias gerenciadas do SQL Server. O Gerenciador do Utilitário também oferece uma interface do usuário para exibir e gerenciar definições de políticas. Os recursos de Gerenciador do Utilitário variam ligeiramente, dependendo dos objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, mas em geral incluem objetos, dados e políticas gerenciados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Gerenciador do Utilitário, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecta-se a instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para fornecer um modo de exibição de árvore de todos os objetos no Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O painel de conteúdo do Gerenciador do Utilitário oferece várias formas de exibir dados resumidos e detalhados sobre o estado de integridade de instâncias gerenciadas do SQL Server. O Gerenciador do Utilitário também oferece uma interface do usuário para exibir e gerenciar definições de políticas. Os recursos de Gerenciador do Utilitário variam ligeiramente, dependendo dos objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, mas em geral incluem objetos, dados e políticas gerenciados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Criar ponto de controle do utilitário  
  Para que você possa usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, deve criar um ponto de controle do utilitário. Para obter mais informações, veja [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md) ou [Criar um ponto de controle do utilitário do SQL Server &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  

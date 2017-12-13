@@ -1,5 +1,5 @@
 ---
-title: execution_data_taps | Microsoft Docs
+title: catalog.execution_data_taps | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc949b9b6111c65d6faa43a118efd03068630fe0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d3002a66a51f97540b0ca5ef8f11f10636f84885
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 09/26/2017
 |package_path|**nvarchar(max)**|O caminho do pacote da tarefa de fluxo de dados, onde os dados são tocados.|  
 |dataflow_path_id_string|**nvarchar(4000)**|A cadeia de caracteres de identificação do caminho de fluxo de dados.|  
 |dataflow_task_guid|**uniqueidentifier**|O ID da tarefa de fluxo de dados.|  
-|max_rows|**int**|O número de linhas a serem capturadas. Se esse valor não for especificado, em seguida, todas as linhas serão capturadas.|  
+|max_rows|**int**|O número de linhas a serem capturadas. Se esse valor não for especificado, todas as linhas serão capturadas.|  
 |filename|**nvarchar(4000)**|O nome do arquivo de despejo de dados. Para obter mais informações, consulte [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).|  
   
 ## <a name="permissions"></a>Permissões  
@@ -45,9 +43,9 @@ ms.lasthandoff: 09/26/2017
   
 -   Permissão READ na instância de execução  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Quando você tem permissão para executar uma operação no servidor, também tem permissão para exibir informações sobre a operação. A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/26/2017
  [Gerar arquivos de despejo para execução de pacote](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

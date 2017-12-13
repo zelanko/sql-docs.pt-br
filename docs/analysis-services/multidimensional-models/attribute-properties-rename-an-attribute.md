@@ -2,12 +2,12 @@
 title: Renomear um atributo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6a77edcfe011502f3c863c873135f86163e9eb11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: da652fbd1c97f09e35c67fba4c7bec798f67a38f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---rename-an-attribute"></a>Propriedades de atributo - renomear um atributo
-  O nome de um atributo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é definido pela sua propriedade **Name** . Para renomear um atributo, clique nele com o botão direito do mouse no painel **Atributos** da guia **Estrutura da Dimensão** do Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e clique em **Renomear**. Se o painel **Atributos** estiver em exibição de grade, clique no nome do atributo e o edite diretamente na grade. Você também pode selecionar um atributo e configurar a propriedade **Name** na janela **Propriedades** .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O nome de um atributo em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é definida por seu **nome** propriedade. Para renomear um atributo, clique nele com o botão direito do mouse no painel **Atributos** da guia **Estrutura da Dimensão** do Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e clique em **Renomear**. Se o painel **Atributos** estiver em exibição de grade, clique no nome do atributo e o edite diretamente na grade. Você também pode selecionar um atributo e configurar a propriedade **Name** na janela **Propriedades** .  
   
  Para obter mais informações sobre como renomear um atributo, consulte [Associar um atributo a uma coluna de chave](../../analysis-services/multidimensional-models/attribute-properties-bind-an-attribute-to-a-key-column.md).  
   

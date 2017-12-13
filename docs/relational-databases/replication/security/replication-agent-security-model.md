@@ -2,9 +2,12 @@
 title: "Modelo de segurança do agente de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 10/07/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c8739960446f19d805de7b716ed2270c64afe3e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b677b08f0643a4e37ca217338187302bae4f1b8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-agent-security-model"></a>Modelo de segurança do agente de replicação
-  O modelo de segurança do agente de replicação proporciona um controle refinado nas contas sob as quais os agentes de replicação executam e fazem conexões: uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O modelo de segurança do agente de replicação proporciona um controle refinado nas contas sob as quais os agentes de replicação executam e fazem conexões: uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   
 > [!IMPORTANT]  
 >  Quando um membro da função fixa do servidor **sysadmin** configura a replicação, os agentes de replicação podem ser configurados para representar a conta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Isso é realizado não especificando um logon nem uma senha para um agente de replicação, contudo, não recomendamos essa abordagem. Em vez disso, como a melhor prática de segurança, recomendamos especificar uma conta para cada agente que tenha as permissões mínimas descritas na seção "Permissões exigidas pelos agentes", mais adiante nesse tópico.  

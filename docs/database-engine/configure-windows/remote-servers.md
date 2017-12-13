@@ -2,9 +2,12 @@
 title: Servidores remotos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2508d809528cd73f5e478b4ad76cf987918d9d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4c4d0ac2fa7d02ed8b0e75a1f0ab6347b1e5506a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="remote-servers"></a>Servidores remotos
-  Os servidores remotos só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidade com versões anteriores. Os novos aplicativos devem usar servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os servidores remotos só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidade com versões anteriores. Os novos aplicativos devem usar servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Uma configuração de servidor remoto permite que um cliente conectado a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execute um procedimento armazenado em outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem estabelecer uma conexão separada. Em vez disso, o servidor ao qual o cliente está conectado aceita a solicitação do cliente e envia a solicitação para o servidor remoto em nome do cliente. O servidor remoto processa a solicitação e retorna todos os resultados ao servidor original. Esse servidor, por sua vez, passa esses resultados para o cliente. Quando você define uma configuração de servidor remoto, deve considerar também como estabelecer a segurança.  
   

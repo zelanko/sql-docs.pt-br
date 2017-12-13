@@ -3,8 +3,11 @@ title: "Opções (página Designers – Designers de Tabela e Banco de Dados) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed7c206ee79b83a0ece0be6976aa74b0e27e7394
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b938451572de3aebe5176b6b4a6d8973614dd4ca
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Opções (Designers – página de Designers de Tabela e Banco de Dados)
-Use esta página para determinar o comportamento padrão do designer. Para acessar as configurações, no menu **Ferramentas** , clique em **Opções**, expanda  a pasta **Designers** e clique em **Designer de Tabela**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta página para determinar o comportamento padrão do designer. Para acessar as configurações, no menu **Ferramentas** , clique em **Opções**, expanda  a pasta **Designers** e clique em **Designer de Tabela**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
 **Substituir valor de tempo limite da cadeia de caracteres da conexão para atualizações do designer de tabela**  

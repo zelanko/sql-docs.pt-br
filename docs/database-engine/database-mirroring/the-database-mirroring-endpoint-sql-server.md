@@ -2,9 +2,12 @@
 title: O ponto de extremidade de espelhamento de banco de dados (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b369c57edac0fed4ef8d64aa7aba0f364557aef7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c8d42834b9e77e626c860d54c2548eda64fba43e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>O ponto de extremidade de espelhamento de banco de dados (SQL Server)
-  Para participar do espelhamento de banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , uma instância de servidor requer seu *ponto de extremidade de espelhamento de banco de dados*próprio, dedicado. Esse ponto de extremidade é um ponto de extremidade com finalidade especial usado exclusivamente para receber conexões de outras instâncias de servidor. Em uma determinada instância de servidor, toda conexão de espelhamento do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de banco de dados com qualquer outra instância de servidor usa um único ponto de extremidade de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Participar do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou fazer o espelhamento de banco de dados de uma instância de servidor requer seu próprio *ponto de extremidade de espelhamento de banco de dados* dedicado. Esse ponto de extremidade é um ponto de extremidade com finalidade especial usado exclusivamente para receber conexões de outras instâncias de servidor. Em uma determinada instância de servidor, toda conexão de espelhamento do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de banco de dados com qualquer outra instância de servidor usa um único ponto de extremidade de espelhamento de banco de dados.  
   
  Os pontos de espelhamento de banco de dados usam o Protocolo de Controle de Transmissão (TCP) para enviar e receber mensagens entre as instâncias de servidor que participam das sessões do espelhamento de banco de dados ou hospedam réplicas de disponibilidade. O ponto de extremidade de espelhamento de banco de dados escuta em um exclusivo número de porta TCP.  
   

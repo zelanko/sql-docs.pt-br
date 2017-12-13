@@ -1,5 +1,5 @@
 ---
-title: "Plano de execução e alocação de Buffer | Microsoft Docs"
+title: "Plano de execução e alocação de buffer | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,27 +23,26 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0beb223eec74e28e70614f324203a0d2d47637e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plano de execução e alocação de buffer
   Antes da execução, a tarefa de fluxo de dados examina seus componentes e gera um plano de execução para cada sequência de componentes. Essa seção fornece detalhes sobre o plano de execução, como visualizá-lo e como buffers de entrada e saída são alocados com base no plano de execução.  
   
 ## <a name="understanding-the-execution-plan"></a>Compreendendo o plano de execução  
- Um plano de execução contém threads de origem e threads de trabalho, e cada thread contém listas de trabalho que especificam listas de trabalho de saída para threads de origem ou listas de trabalho de entrada e saída para threads de trabalho. Os threads de origem em um plano de execução representam os componentes de origem no fluxo de dados e são identificados no plano de execução por *SourceThread**n*, onde  *n*  é o número com base em zero do thread de origem.  
+ Um plano de execução contém threads de origem e threads de trabalho, e cada thread contém listas de trabalho que especificam listas de trabalho de saída para threads de origem ou listas de trabalho de entrada e saída para threads de trabalho. Os threads de origem em um plano de execução representam os componentes de origem no fluxo de dados e são identificados no plano de execução por *SourceThread**n*, em que *n* é o número com base em zero do thread de origem.  
   
  Cada thread de origem cria um buffer, define um ouvinte e chama o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> no componente de origem. É nesse ponto que a execução é iniciada e dados são gerados, pois o componente de origem começa a adicionar linhas aos buffers de saída fornecidos pela tarefa de fluxo de dados. Depois do início da execução dos threads de origem, o balanço do trabalho é distribuído entre os threads de trabalho.  
   
- Um thread de trabalho pode conter as duas listas de trabalho de entrada e saída e é identificado no plano de execução como *WorkThread**n*, onde  *n*  é o número com base em zero do thread de trabalho. Esses threads contêm listas de trabalho de saída quando o gráfico contém um componente com saídas assíncronas.  
+ Um thread de trabalho pode conter listas de trabalho de entrada e saída e é identificado no plano de execução como *WorkThread**n*, em que *n* é o número com base em zero do thread de trabalho. Esses threads contêm listas de trabalho de saída quando o gráfico contém um componente com saídas assíncronas.  
   
  O exemplo de plano de execução a seguir representa um fluxo de dados que contém um componente de origem conectado a uma transformação com uma saída assíncrona conectada a um componente de destino. Nesse exemplo, o WorkThread0 contém uma lista de trabalho de saída porque o componente de transformação possui uma saída assíncrona.  
   
@@ -83,7 +80,7 @@ End WorkThread1
 ```  
   
 > [!NOTE]  
->  O plano de execução é gerado sempre que um pacote é executado e pode ser capturado com a adição de um provedor de log para o pacote, habilitando o registro em log e selecionando o **PipelineExecutionPlan** eventos.  
+>  O plano de execução é gerado toda vez que um pacote é executado. Para capturá-lo, adicione um provedor de logs ao pacote, habilite o registro em log e selecione o evento **PipelineExecutionPlan**.  
   
 ## <a name="understanding-buffer-allocation"></a>Compreendendo a alocação de buffers  
  Com base no plano de execução, a tarefa de fluxo de dados cria buffers contendo as colunas definidas nas saídas dos componentes de fluxo de dados. O buffer é reutilizado como os fluxos de dados pela sequência de componentes, até ser encontrado um componente com saídas assíncronas. Portanto, é criado um buffer novo, que contém as colunas de saída da saída assíncrona e as colunas de saída de componentes downstream.  
@@ -92,6 +89,5 @@ End WorkThread1
   
  Os componentes de transformação com saídas assíncronas recebem o buffer de entrada existente do método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> e recebem o novo buffer de saída do método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. Um componente de transformação com saídas assíncronas é o único tipo de componente de fluxo de dados que recebe um buffer de entrada e saída.  
   
- Porque o buffer fornecido a um componente é provavelmente contêm mais colunas do que o componente possui em suas coleções de coluna de entrada ou saída, os desenvolvedores de componentes podem chamar o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> método para localizar uma coluna no buffer, especificando seu **LineageID**.  
+ Já que é provável que o buffer fornecido a um componente contenha mais colunas do que o componente tem em suas coleções de colunas de entrada ou saída, desenvolvedores de componentes podem chamar o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> para localizar uma coluna no buffer, especificando seu **LineageID**.  
   
-

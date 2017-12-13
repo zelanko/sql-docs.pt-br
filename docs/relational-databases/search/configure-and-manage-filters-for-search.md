@@ -2,9 +2,12 @@
 title: Configurar e gerenciar filtros para pesquisa | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 810fabaeed3a7144b969ccae9e2b7745079f996f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cca26f3d6479fb798806d5e6ed0cbcbf8b991272
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar e gerenciar filtros para pesquisa
-  A indexação de documentos em uma coluna de tipo de dados **varbinary**, **varbinary(max)**, **image**ou **xml** exige processamento extra. Esse processamento deve ser realizado por um filtro. O filtro extrai as informações textuais do documento (removendo a formatação). Em seguida, o filtro envia o texto para o componente separador de palavras do idioma associado à coluna da tabela.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A indexação de documentos em uma coluna de tipo de dados **varbinary**, **varbinary(max)**, **image** ou **xml** exige processamento extra. Esse processamento deve ser realizado por um filtro. O filtro extrai as informações textuais do documento (removendo a formatação). Em seguida, o filtro envia o texto para o componente separador de palavras do idioma associado à coluna da tabela.  
   
  Um determinado filtro é específico a um determinado tipo de documento (.doc, .pdf, .xls, .xml e assim por diante). Estes filtros implementam a interface IFilter. Para obter mais informações sobre estes tipos de documento, veja a exibição de catálogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   

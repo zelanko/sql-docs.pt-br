@@ -2,9 +2,12 @@
 title: Configurando o espelhamento de banco de dados (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c58560ad5e38c77e2c1d147fb4ab727823eba96c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d7056cfd99338221679acbb9eee74de203546a72
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configurando o espelhamento de banco de dados (SQL Server)
-  Esta seção descreve os pré-requisitos, as recomendações e as etapas para configuração do espelhamento de banco de dados. Para obter uma introdução ao espelhamento de banco de dados, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta seção descreve os pré-requisitos, as recomendações e as etapas para configuração do espelhamento de banco de dados. Para obter uma introdução ao espelhamento de banco de dados, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 > [!IMPORTANT]  
 >  É recomendável configurar um espelhamento de banco de dados fora do horário de pico, pois a configuração pode afetar o desempenho.  

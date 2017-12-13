@@ -2,9 +2,12 @@
 title: "Propriedades do Artigo – &lt;Artigo&gt; | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e023115d959322e0e870d6ef43c7ffcdcc82f21f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
-  A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação**. Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
   
 > [!NOTE]  
 >  Depois que uma publicação é criada, algumas alterações de propriedade requerem um novo instantâneo. Se uma publicação tiver assinaturas, algumas alterações também exigirão que todas as assinaturas sejam reiniciadas. Para obter mais informações, consulte [Alterar propriedade da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

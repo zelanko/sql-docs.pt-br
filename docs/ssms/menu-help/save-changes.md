@@ -3,8 +3,11 @@ title: "Salvar alterações | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbfd36d42ca6843bf061bf6427554f631ab009d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 132a5f61c658d410af36efe597bb48d64c4f3da8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-changes"></a>Salvar alterações
-Avisa que as alterações nos itens listados não serão salvas a menos que você clique em **Sim**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Avisa que as alterações nos itens listados não serão salvas a menos que você clique em **Sim**.  
   
 Esta caixa de diálogo pode aparecer quando você estiver fechando soluções, planos de manutenção ou outros arquivos abertos.  
   

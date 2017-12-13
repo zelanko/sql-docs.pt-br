@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 16ca0d08413ba75b7603596e8e4c5340715cb1a3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f6ab758ecd32d4d9bdb39d9157cbba9b38e73ba
+ms.sourcegitcommit: b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>Baixar o módulo do SQL Server PowerShell
 Como parte da versão 17.0 do SQL Server Management Studio, o módulo do SQL Server PowerShell agora é fornecido por meio da Galeria do PowerShell.  O módulo não está mais incluído no pacote de instalação do SSMS. Para usar o PowerShell com o SSMS 17.0 e versões mais recentes, o módulo do SQL Server deve ser instalado no computador como uma etapa adicional.

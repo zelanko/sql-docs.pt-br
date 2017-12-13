@@ -2,9 +2,12 @@
 title: "Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8257ba0c95d4c0eadb1230902a6674086352c7dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2a06664255adcadccb6e5d16373ab097916e5026
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
-  Para definir uma testemunha para um banco de dados, o proprietário do banco de dados nomeia uma instância do Mecanismo de Banco de Dados para a função de servidor testemunha. A instância do servidor testemunha pode ser executada no mesmo computador que a instância do servidor principal ou espelho, mas isso reduz a robustez de failover automático substancialmente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para definir uma testemunha para um banco de dados, o proprietário do banco de dados nomeia uma instância do Mecanismo de Banco de Dados para a função de servidor testemunha. A instância do servidor testemunha pode ser executada no mesmo computador que a instância do servidor principal ou espelho, mas isso reduz a robustez de failover automático substancialmente.  
   
  A localização da testemunha em um computador separado é altamente recomendável. Uma determinada instância do servidor pode participar de várias sessões de espelhamento de banco de dados simultâneos com os mesmos ou diferentes parceiros. Um determinado servidor pode ser um parceiro em algumas sessões e uma testemunha em outras sessões.  
   

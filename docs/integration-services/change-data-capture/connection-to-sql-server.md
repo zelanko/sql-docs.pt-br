@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f2c0ec017651177fe6bb78d7aef5df35a27b5b6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ec5be00d83b0630754456bc3cde7a20678959496
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-to-sql-server"></a>Conexão com o SQL Server
   Quando um logon sem uma função de banco de dados que inclui permissão de gravação (por exemplo a função **db_owner** ) ao banco de dados MSXDBCDC tenta criar uma instância Oracle CDC, a caixa de diálogo Conecte-se ao SQL Server é exibida.  
@@ -54,7 +52,6 @@ ms.lasthandoff: 08/03/2017
 -   **Avançado**: clique em **Avançado** e digite as propriedades de conexão adicionais na caixa de diálogo Propriedades Avançadas da Conexão, se necessário.  
   
 ## <a name="see-also"></a>Consulte também  
- [Permissões necessárias para Conexão do SQL Server para o serviço CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
+ [Permissões necessárias para conexão do SQL Server para o Serviço CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
   
-

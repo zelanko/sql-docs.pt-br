@@ -2,9 +2,12 @@
 title: "Especificar a URL de ponto de extremidade – adicionando ou modificando uma réplica de disponibilidade | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 43bfc29045efc22d72becb20dbd4d4441c97baa2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 338525d93093788e60c208f2f8351836aaab9c04
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Especificar a URL de ponto de extremidade – adicionando ou modificando uma réplica de disponibilidade
-  Para hospedar uma réplica de disponibilidade para um grupo de disponibilidade, uma instância de servidor deve ter um ponto de extremidade de espelhamento de banco de dados. A instância de servidor usa este ponto de extremidade para escutar mensagens de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de réplicas de disponibilidade hospedadas por outras instâncias de servidor. Para definir uma réplica de disponibilidade para um grupo de disponibilidade, você deve especificar a URL de ponto de extremidade da instância de servidor que hospedará a réplica. A *URL de ponto de extremidade* identifica o protocolo de transporte do ponto de extremidade de espelhamento de banco de dados — TCP, o endereço do sistema da instância de servidor e o número de porta associado ao ponto de extremidade.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para hospedar uma réplica de disponibilidade para um grupo de disponibilidade, uma instância de servidor deve ter um ponto de extremidade de espelhamento de banco de dados. A instância de servidor usa este ponto de extremidade para escutar mensagens de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de réplicas de disponibilidade hospedadas por outras instâncias de servidor. Para definir uma réplica de disponibilidade para um grupo de disponibilidade, você deve especificar a URL de ponto de extremidade da instância de servidor que hospedará a réplica. A *URL de ponto de extremidade* identifica o protocolo de transporte do ponto de extremidade de espelhamento de banco de dados — TCP, o endereço do sistema da instância de servidor e o número de porta associado ao ponto de extremidade.  
   
 > [!NOTE]  
 >  O termo "URL de ponto de extremidade" é sinônimo do termo "endereço de rede de servidor" usado pela interface do usuário e pela documentação de espelhamento de banco de dados.  

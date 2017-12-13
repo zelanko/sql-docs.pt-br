@@ -3,8 +3,11 @@ title: 'Passo a passo: adicionando e alterando um diagrama de banco de dados | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: adc91396fd49a546217d28f970a0eb3156c0fae7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d202d485b27b19a0d7b3461e0f427d996567b4f4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
-Este passo a passo ilustra como criar e modificar um diagrama de banco de dados e fazer alterações no banco de dados por meio do componente de diagramas de banco de dados. Você verá como adicionar tabelas a diagramas, criar relações entre tabelas, criar restrições e índices em colunas, e alterar o nível das informações exibidas em cada tabela.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este passo a passo ilustra como criar e modificar um diagrama de banco de dados e fazer alterações ao banco de dados por meio do componente de diagramas de banco de dados. Você verá como adicionar tabelas a diagramas, criar relações entre tabelas, criar restrições e índices em colunas, e alterar o nível das informações exibidas em cada tabela.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
 Para concluir este passo a passo, você precisará de:  

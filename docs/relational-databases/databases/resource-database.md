@@ -2,9 +2,12 @@
 title: Banco de dados de recursos| Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9b4f0692805ac968b52a4a9de05b5a205f03748e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 28c3a118942874c2c68ec22ae1b0574cd35def34
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-database"></a>Banco de dados de recursos
-  O banco de dados Recurso é um banco de dados somente leitura que contém todos os objetos de sistema inclusos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos do sistema como sys.objects, são fisicamente persistentes no banco de dados Resource, mas aparecem logicamente no esquema sys de cada banco de dados. O banco de dados Recurso não contém dados de usuário ou metadados de usuário.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O banco de dados Recurso é um banco de dados somente leitura que contém todos os objetos de sistema inclusos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos do sistema como sys.objects, são fisicamente persistentes no banco de dados Resource, mas aparecem logicamente no esquema sys de cada banco de dados. O banco de dados Recurso não contém dados de usuário ou metadados de usuário.  
   
  O banco de dados Recurso torna a atualização para uma nova versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um procedimento mais fácil e mais rápido. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a atualização exigia remover e criar objetos do sistema. Como o arquivo de banco de dados Recurso contém todos os objetos de sistema, agora, uma atualização é obtida simplesmente pela cópia do único arquivo de banco de dados Recurso no servidor local.  
   

@@ -2,9 +2,12 @@
 title: Classe de evento OLEDB Call | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0d6544c97f10b3132e69ffbfa89023e1e1bf12c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 52b44fe50eac1dfbab29aeeebe9cc5f82107bcd5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-call-event-class"></a>classe de evento OLEDB Call
-  A classe de evento **OLEDB Call** ocorre quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chama um provedor OLE DB para consultas distribuídas e procedimentos armazenados remotamente.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **OLEDB Call** ocorre quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chama um provedor OLE DB para consultas distribuídas e procedimentos armazenados remotamente.  
   
  Inclua a classe de evento **OLEDB Call** em rastreamentos para monitorar apenas as chamadas que não requerem dados ou chamadas que não são feitas pelo método **QueryInterface** . Quando a classe de evento **OLEDB Call** é incluída no rastreamento, a quantidade de sobrecarga gerada depende da frequência com que as chamadas do provedor OLE DB ocorrem em relação ao banco de dados durante o rastreamento. Se chamadas ocorrerem com frequência, o rastreamento poderá impedir significativamente o desempenho.  
   

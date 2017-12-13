@@ -2,9 +2,12 @@
 title: Classe de evento Database Mirroring State Change | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c9c5f47027665959d5c4a3de973b5d2d9906323d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 121371d0836b3cdfa47eb5d0e9efd4363b7eba23
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-mirroring-state-change-event-class"></a>classe de evento Database Mirroring State Change
-  A classe de evento **Database Mirroring State Change** indica quando muda o estado de um banco de dados espelho. Inclua esta classe de evento em rastreamentos que monitorem as condições de bancos de dados espelhados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Database Mirroring State Change** indica quando muda o estado de um banco de dados espelhado. Inclua esta classe de evento em rastreamentos que monitorem as condições de bancos de dados espelhados.  
   
  Quando a classe de evento **Database Mirroring State Change** é incluída em um rastreamento, a sobrecarga relativa é baixa. A sobrecarga poderá ser maior se o estado dos bancos de dados espelhados aumentar.  
   

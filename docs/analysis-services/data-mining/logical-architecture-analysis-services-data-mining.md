@@ -2,12 +2,12 @@
 title: "Arquitetura lógica (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ccd3748b3190fc3d2ff55c850ae94f2244738dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 67c8c404bfcf499957fefd0470d7cc3f9caeeb9d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitetura lógica (Analysis Services – Mineração de Dados)
-  A mineração de dados é um processo que envolve a interação de vários componentes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mineração de dados é um processo que envolve a interação de vários componentes.  
   
 -   Você acessa fontes de dados em um banco de dados SQL Server ou em qualquer outra fonte de dados para usá-los para treinamento, teste e previsão.  
   

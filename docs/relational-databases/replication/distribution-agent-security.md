@@ -2,9 +2,12 @@
 title: "Segurança do agente de distribuição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99a7a8bf76bd997b85ff7b44f01733b2928b441d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 708baa252fdde4493c515be65f80229618e65508
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="distribution-agent-security"></a>Segurança do Distribution Agent
-  A caixa de diálogo **Segurança do Distribution Agent** permite especificar a conta do Windows na qual o Distribution Agent é executado. O Distribution Agent é executado no Distribuidor para assinaturas push e no Assinante para assinaturas pull. A conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows é também referida como *conta do processo*, porque o processo do agente é executado nessa conta. Opções adicionais disponíveis na caixa de diálogo dependem de como você a acessa:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Segurança do Agente de Distribuição** permite especificar a conta do Windows na qual o Distribution Agent é executado. O Distribution Agent é executado no Distribuidor para assinaturas push e no Assinante para assinaturas pull. A conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows é também referida como *conta do processo*, porque o processo do agente é executado nessa conta. Opções adicionais disponíveis na caixa de diálogo dependem de como você a acessa:  
   
 -   Se a caixa de diálogo for acessada do Assistente para Nova Assinatura, também permitirá que você especifique o contexto no qual o Distribution Agent fará conexões com o Assinante (para assinaturas push) ou com o Publicador e o Distribuidor (para assinaturas pull). A conexão pode ser feita representando a conta do Windows ou no contexto de uma conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada por você.  
   

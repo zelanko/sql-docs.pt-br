@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,24 +18,23 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a19014f742ea4be55028bd93d07b0c388159e0a0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1b955ca40730e07da0b0532ee42b0820116ad14f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="advanced-editor"></a>Editor Avançado
   Use a caixa de diálogo **Editor Avançado** para configurar propriedades para o objeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] selecionado.  
   
  O **Editor Avançado** está disponível para a maioria dos objetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que têm propriedades configuráveis. É o único editor disponível para os objetos que não expõem uma interface de usuário personalizada.  
   
- Os objetos de fluxo de dados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] têm propriedades que podem ser definidas no nível de componente, no nível de entrada e saída e no nível de coluna de entrada e saída. O **Editor Avançado** enumera todas as propriedades comuns e personalizadas do objeto selecionado, e as exibe em até quatro das cinco guias a seguir, conforme aplicável:  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] têm propriedades que podem ser definidas no nível de componente, no nível de entrada e saída e no nível de coluna de entrada e saída. O **Editor Avançado** enumera todas as propriedades comuns e personalizadas do objeto selecionado, e as exibe em até quatro das cinco guias a seguir, conforme aplicável:  
   
 -   **Gerenciadores de Conexões** – use esta guia para definir propriedades de conexão  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Propriedades personalizadas de Transformação](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Propriedades de caminho](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [Propriedades do caminho](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  Para obter mais informações sobre o componente específico que você está editando, consulte a descrição do componente na seção Data Flow Elements da documentação [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Objects and Concepts:  
   
@@ -64,4 +62,3 @@ ms.lasthandoff: 08/03/2017
  [Referência de mensagens e erros do Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

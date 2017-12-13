@@ -1,5 +1,5 @@
 ---
-title: Catalog. Environments (banco de dados SSISDB) | Microsoft Docs
+title: catalog.environment (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e7ba1ba0bd8a444e4609a2f3d011da9cd233b73
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: edb3360d05e44131d6f30b510ed5dd120e2aeae7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +33,9 @@ ms.lasthandoff: 09/26/2017
 |environment_id|**bigint**|O ID (identificador exclusivo) do ambiente.|  
 |name|**sysname**|O nome do ambiente.|  
 |folder_id|**bigint**|O ID exclusivo da pasta na qual o ambiente reside.|  
-|descrição|**nvarchar (1024)**|A descrição do ambiente. Esse valor é opcional.|  
+|descrição|**nvarchar(1024)**|A descrição do ambiente. Esse valor é opcional.|  
 |created_by_sid|**varbinary(85)**|O SID (identificador de segurança) do usuário que criou o ambiente.|  
-|created_by_name|**nvarchar (128)**|O nome de usuário que criou o ambiente.|  
+|created_by_name|**nvarchar(128)**|O nome de usuário que criou o ambiente.|  
 |created_time|**datetimeoffset**|A data e hora em que o ambiente foi criado.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -48,12 +46,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Permissão READ no ambiente  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 > [!NOTE]  
 >  A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
   
   
-

@@ -2,12 +2,12 @@
 title: Perspectivas | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a892a571a70b3f5bff5fb16496c2fee5d18f151
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 21b3d6af2d4a6248926773e78dbf366b6c6d9ee5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives"></a>Perspectivas
-  Uma perspectiva é uma definição que permite os usuários visualizem um cubo de um modo mais simples. Uma perspectiva é um subconjunto dos recursos de um cubo. Uma perspectiva permite que os administradores criem exibições do cubo, ajudando outros usuários a se concentrarem nos dados mais relevantes. Uma perspectiva contém subconjuntos de todos os objetos de um cubo. Uma perspectiva não pode incluir elementos que não estão definidos no cubo pai.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma perspectiva é uma definição que permite que os usuários vejam um cubo de forma mais simples. Uma perspectiva é um subconjunto dos recursos de um cubo. Uma perspectiva permite que os administradores criem exibições do cubo, ajudando outros usuários a se concentrarem nos dados mais relevantes. Uma perspectiva contém subconjuntos de todos os objetos de um cubo. Uma perspectiva não pode incluir elementos que não estão definidos no cubo pai.  
   
  Um simples objeto <xref:Microsoft.AnalysisServices.Perspective> está composto de: informações básicas, dimensões, grupos de medidas, cálculos, KPIs e ações. As informações básicas incluem o nome e a medida padrão da perspectiva. As dimensões são um subconjunto das dimensões do cubo. Os grupos de medidas são um subconjunto dos grupos de medidas do cubo. Os cálculos são um subconjunto dos cálculos do cubo. Os KPIs são um subconjunto dos KPIs do cubo. As ações são um subconjunto das ações do cubo.  
   

@@ -2,9 +2,12 @@
 title: "Exportar informações de servidor registrado (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e58cdf697a3bc2dc1f34eb4c3a486afcf33820e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95c412ae01c469a19bf5548c20c441c18957639a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exportar informações de servidor registrado (SQL Server Management Studio)
-  Este tópico descreve como salvar e exportar informações de servidor registrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e distribuí-las para outros empregados ou servidores. É possível usar esse recurso de exportação para apresentar uma interface com o usuário consistente em computadores múltiplos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como salvar e exportar informações de servidor registrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e distribuí-las para outros empregados ou servidores. É possível usar esse recurso de exportação para apresentar uma interface com o usuário consistente em computadores múltiplos.  
   
  Exportar e, depois, importar os arquivos de Servidores Registrados permite que você configure facilmente vários computadores com os mesmos servidores em Servidores Registrados. Isso é útil quando se gerencia um grande número de servidores de computadores em diversos locais ou quando você deseja configurar um usuário menos experiente com configurações de conexão básica.  
   

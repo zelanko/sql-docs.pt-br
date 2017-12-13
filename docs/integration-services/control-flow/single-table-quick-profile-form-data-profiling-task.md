@@ -1,5 +1,5 @@
 ---
-title: "Um único formulário de perfil rápido de tabela (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Formulário de Perfil Rápido de Tabela Única (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.quickprofile.f1
-helpviewer_keywords:
-- Data Profiling Task Editor
+f1_keywords: sql13.dts.designer.dataprofilingtask.quickprofile.f1
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76de0987bec5d7886b41d2d415af2bd00e187f87
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: aa61ac73fbc2ec86424728393e9ff9651b502e60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Single Table Quick Profile Form (Data Profiling Task)
   Use o **Formulário de Perfil Rápido de Tabela Única** para configurar a tarefa Criação de Perfil de Dados para criar um perfil de uma tabela ou exibição única usando as configurações padrão.  
@@ -60,8 +56,7 @@ ms.lasthandoff: 08/03/2017
 >  O tipo de perfil Valor Inclusão não está disponível no **Formulário de Perfil Rápido de Tabela Única**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Editor da tarefa &#40; de criação de perfil de dados Página de solicitações de perfil &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Solicitações de Perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
-

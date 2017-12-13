@@ -2,9 +2,12 @@
 title: "Configuração de modos de quorum WSFC e votação (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/03/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53ff3b74ec6e818f91b92f7b968362c1f9a8bb7e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3ee025e1435ea03fb5e9a9402eda86932268b84d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuração de modos de quorum WSFC e votação (SQL Server)
-  Tanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] quanto as FCIs (Instâncias de Cluster de Failover) AlwaysOn utilizam o WSFC (Windows Server Failover Clustering) como uma tecnologia de plataforma.  O WSFC usa uma abordagem baseada em quorum para monitorar integridade de cluster geral e maximizar a tolerância a falhas no nível do nó. Um entendimento fundamental dos modos de quorum do WSFC e a configuração de votação de nó são muito importantes para o design, a operação e a solução de problemas da sua solução de alta disponibilidade e recuperação de desastre AlwaysOn.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Tanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] quanto as FCIs (Instâncias de Cluster de Failover) Always On utilizam o WSFC (Cluster de Failover do Windows Server) como uma tecnologia de plataforma.  O WSFC usa uma abordagem baseada em quorum para monitorar integridade de cluster geral e maximizar a tolerância a falhas no nível do nó. Um entendimento fundamental dos modos de quorum do WSFC e a configuração de votação de nó são muito importantes para o design, a operação e a solução de problemas da sua solução de alta disponibilidade e recuperação de desastre AlwaysOn.  
   
  **Neste tópico:**  
   

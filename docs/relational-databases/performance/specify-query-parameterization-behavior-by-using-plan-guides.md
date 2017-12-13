@@ -2,9 +2,12 @@
 title: "Especificar o comportamento de parametrização de consulta usando guias de plano | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2714f2ec176ddcd94641c8c365945063c53faa0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1f6b291b99b40b320872ccbe8939fbd73699de5b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Especificar comportamento de parametrização de consulta usando guias de plano
-  Quando a opção de banco de dados PARAMETERIZATION está definida como SIMPLE, o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode optar por parametrizar as consultas. Isso significa que qualquer valor literal contido em uma consulta é substituído por parâmetros. Esse processo é denominado parametrização simples. Quando a parametrização SIMPLE está em vigor, você não pode controlar quais consultas são parametrizadas e quais não são. No entanto, você pode especificar que todas as consultas em um banco de dados sejam parametrizadas definindo a opção de banco de dados PARAMETERIZATION como FORCED. Esse processo é denominado parametrização forçada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando a opção de banco de dados PARAMETERIZATION está definida como SIMPLE, o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode optar por parametrizar as consultas. Isso significa que qualquer valor literal contido em uma consulta é substituído por parâmetros. Esse processo é denominado parametrização simples. Quando a parametrização SIMPLE está em vigor, você não pode controlar quais consultas são parametrizadas e quais não são. No entanto, você pode especificar que todas as consultas em um banco de dados sejam parametrizadas definindo a opção de banco de dados PARAMETERIZATION como FORCED. Esse processo é denominado parametrização forçada.  
   
  Você pode substituir o comportamento de parametrização de um banco de dados usando guias de plano das seguintes formas:  
   

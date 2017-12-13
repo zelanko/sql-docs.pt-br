@@ -2,9 +2,12 @@
 title: Coleta de dados | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d554a001c8375a6ad619f4ed00e362a64fa279b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e2ba0a8ac11577590da78a5975a9447f3478709b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-collection"></a>Coleta de dados
-  O Coletor de Dados é um componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que coleta diferentes conjuntos de dados. A coleta de dados é executada constantemente ou em uma agenda definida pelo usuário. O coletor de dados armazena os dados coletados em um banco de dados relacional conhecido como data warehouse de gerenciamento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Coletor de Dados é um componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que coleta diferentes conjuntos de dados. A coleta de dados é executada constantemente ou em uma agenda definida pelo usuário. O coletor de dados armazena os dados coletados em um banco de dados relacional conhecido como data warehouse de gerenciamento.  
   
 ## <a name="what-is-data-collector"></a>O que é o Coletor de Dados? 
  O coletor de dados é um componente importante da plataforma de coleta de dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e para as ferramentas fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O coletor de dados fornece um ponto central para coleta de dados em seus servidores de banco de dados e aplicativos. Esse ponto de coleta pode obter dados de várias fontes e não se limita apenas aos dados de desempenho, ao contrário do Rastreamento do SQL.  

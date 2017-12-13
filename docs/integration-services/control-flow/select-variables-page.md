@@ -1,5 +1,5 @@
 ---
-title: "Página Selecionar variáveis | Microsoft Docs"
+title: "Página Selecionar Variáveis | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.vstahostingui.variablepickermodaldialog.f1
+f1_keywords: sql13.dts.designer.vstahostingui.variablepickermodaldialog.f1
 helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 98e0cdc9e81497aafb35ca3b0dfed662d06bac28
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b0d25b5656f2fe8b0dc00ff5333231ea1118cb85
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-variables-page"></a>Página Selecionar Variáveis
   Use a caixa de diálogo **Selecionar variáveis** para selecionar uma ou mais variáveis para as propriedades **ReadOnlyVariables** e **ReadWriteVariables** ao configurar uma tarefa Script ou um componente Script.  
@@ -46,7 +43,6 @@ ms.lasthandoff: 08/03/2017
  Especifica o tipo de dados de uma variável.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa script &#40; Script de página &#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+ [Editor da Tarefa Script &#40;Página Script&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   
-

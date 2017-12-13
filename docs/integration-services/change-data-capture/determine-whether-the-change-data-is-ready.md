@@ -1,5 +1,5 @@
 ---
-title: "Determinar se os dados de alteração estão prontos | Microsoft Docs"
+title: "Determinar se os dados de alterações estão prontos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],determining readiness
+helpviewer_keywords: incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dff547a6882d13763b471185f9ac486facc946b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar se os dados de alteração estão prontos
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a segunda tarefa serve para garantir que os dados de alteração para o intervalo selecionado estejam prontos. Esta etapa é necessária, pois o processo de captura assíncrono pode ainda não ter processado todas as alterações até o ponto de extremidade selecionado.  
@@ -345,4 +342,3 @@ ms.lasthandoff: 08/03/2017
  **Próximo tópico:** [Preparar para consultar os dados de alteração](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   
-

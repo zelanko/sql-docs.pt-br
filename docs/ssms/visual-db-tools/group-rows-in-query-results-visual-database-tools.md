@@ -3,8 +3,11 @@ title: Agrupar linhas em resultados da consulta (Ferramentas de Banco de Dados V
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a879bdc95cda0812fcc7d3f43f4d7e99c183337f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bff62f024fd85b326213197f7f79ea43ed0a0f37
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Agrupar linhas em resultados da consulta (Visual Database Tools)
-Para criar subtotais ou para mostrar outro resumo informativo de subconjuntos de uma tabela, crie grupos usando uma consulta de agregação. Cada grupo resume os dados de todas as linhas da tabela que possuem o mesmo valor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para criar subtotais ou para mostrar outro resumo informativo de subconjuntos de uma tabela, crie grupos usando uma consulta de agregação. Cada grupo resume os dados de todas as linhas da tabela que possuem o mesmo valor.  
   
 Por exemplo, pode ser necessário exibir o preço médio de um livro na tabela `titles` , mas classifique os resultados por editora. Para isso, agrupe a consulta por publicador (por exemplo, `pub_id`). A saída da consulta resultante poderá ter a seguinte aparência:  
   

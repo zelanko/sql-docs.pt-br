@@ -3,8 +3,11 @@ title: "Permissões e Visual Database Tools (Visual Database Tools) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 232491b14f93a24416f1d5704b5d627ca6d1358b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ceb8a15b4f480c2f2a075928787d86803f567187
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Permissões e Visual Database Tools (Visual Database Tools)
-As permissões, que permitem aos usuários acesso aos objetos de fonte de dados, são concedidas na fonte de dados, não no Visual Database Tools. As permissões de acesso concedidas em objetos de fonte de dados são controladas pela política de segurança da instalação. Se você não tiver permissão para acessar certos objetos de banco de dados, entre em contato com seu administrador de banco de dados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As permissões, que dão aos usuários acesso aos objetos de fonte de dados, são concedidas na fonte de dados, não no Visual Database Tools. As permissões de acesso concedidas em objetos de fonte de dados são controladas pela política de segurança da instalação. Se você não tiver permissão para acessar certos objetos de banco de dados, entre em contato com seu administrador de banco de dados.  
   
 Se as permissões de banco de dados permitem que você visualize, mas não modifique a estrutura de banco de dados, use scripts de alteração sem transmiti-los para o banco de dados.  
   

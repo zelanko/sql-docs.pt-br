@@ -2,9 +2,12 @@
 title: "Monitor de Atividade do Trabalho (configurações de filtro) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6bafbf3db207d6ef185a6866de2b66015236c0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ff338e1a2fd9fa170d880d6f7719ce3a08ac599
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de atividade do trabalho (Configurações de Filtro)
-  Use esta página para reduzir o número de linhas visíveis no Monitor de Atividade do Trabalho. Insira critérios em uma ou em várias das caixas disponíveis, para exibir apenas as linhas correspondentes aos valores especificados. Algumas das caixas, como **Status** ou **Tipo de Bloqueio** , oferecem um número limitado de valores possíveis em uma lista suspensa. Outras, como a caixa **Aplicativo,** permitem inserir qualquer valor e quantos valores você desejar em uma lista separada por vírgula. Ícones da barra de ferramentas permitem ordenar as caixas disponíveis por categoria ou em ordem alfabética. Clique nos critérios para mostrar uma breve descrição de cada um.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para reduzir o número de linhas visíveis no Monitor de Atividade do Trabalho. Insira critérios em uma ou em várias das caixas disponíveis, para exibir apenas as linhas correspondentes aos valores especificados. Algumas das caixas, como **Status** ou **Tipo de Bloqueio** , oferecem um número limitado de valores possíveis em uma lista suspensa. Outras, como a caixa **Aplicativo,** permitem inserir qualquer valor e quantos valores você desejar em uma lista separada por vírgula. Ícones da barra de ferramentas permitem ordenar as caixas disponíveis por categoria ou em ordem alfabética. Clique nos critérios para mostrar uma breve descrição de cada um.  
   
  Para filtrar o Monitor de Atividade do Trabalho, forneça quantos critérios de filtragem desejar, clique em **Aplicar filtro**e em **OK**.  
   

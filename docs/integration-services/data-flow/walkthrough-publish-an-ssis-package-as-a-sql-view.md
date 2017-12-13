@@ -1,5 +1,5 @@
 ---
-title: "Passo a passo: Publicar um pacote do SSIS como uma exibição SQL | Microsoft Docs"
+title: "Passo a passo: publicar um pacote SSIS como uma exibição SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.packagepublishwizard.f1
+f1_keywords: sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f0e5fa598ce47a95aafe11fd3f05c82eca79c064
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: publicar um Pacote SSIS como um modo SQL
   Este passo a passo fornece as etapas detalhadas para publicar um pacote SSIS como um modo SQL em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -77,7 +74,7 @@ ms.lasthandoff: 09/27/2017
   
     5.  Configurar o componente para extrair dados da tabela **Funcionário** no banco de dados **TestDB** . Selecione **(local).TestDB** para **Gerenciador de conexões OLE DB**, **Tabela ou exibição** para **Modo de acesso a dados**e **[dbo].[Funcionário]** para **Nome da tabela ou exibição**.  
   
-         ![Destino - Conexão do OLE DB do fluxo de dados](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "destino - Conexão do OLE DB do fluxo de dados")  
+         ![Destino do Streaming de Dados – Conexão OLE DB](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Destino do Streaming de Dados – Conexão OLE DB")  
   
 6.  Agora, arraste o **Destino do Streaming de Dados** da caixa de ferramentas para o fluxo de dados. Você deve encontrar este componente na seção Comum da caixa de ferramentas.  
   
@@ -100,17 +97,17 @@ ms.lasthandoff: 09/27/2017
   
 2.  Clique em **Avançar** na página **Introdução** .  
   
-     ![Assistente de página de introdução de publicação de Feed de dados](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Assistente de página de introdução de publicação de Feed de dados")  
+     ![Assistente de Publicação de Feed de Dados – Página Introdução](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Assistente de Publicação de Feed de Dados – Página Introdução")  
   
 3.  Na página **Configurações de Pacote** , execute as seguintes tarefas:  
   
     1.  Digite o **nome** da instância do SQL Server que contém o catálogo do SSIS ou clique em **Procurar** para selecionar o servidor.  
   
-         ![Assistente - página Configurações do pacote de publicação de Feed de dados](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "assistente - página Configurações do pacote de publicação de Feed de dados")  
+         ![Assistente de Publicação de Feed de Dados – Página Configurações do Pacote](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Assistente de Publicação de Feed de Dados – Página Configurações do Pacote")  
   
     2.  Clique em **Procurar** ao lado do campo Caminho, procure o catálogo do SSIS, selecione o pacote do SSIS que deseja publicar (por exemplo: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), e clique em **OK**.  
   
-         ![Assistente - procurar pacote de publicação de Feed de dados](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Assistente - procurar pacote de publicação de Feed de dados")  
+         ![Assistente de Publicação de Feed de Dados – Procurar Pacote](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Assistente de Publicação de Feed de Dados – Procurar Pacote")  
   
     3.  Usando as guias Parâmetros de Pacote, Parâmetros de Projeto e Gerenciadores de Conexões na parte inferior da página, insira valores para quaisquer parâmetros de pacote, parâmetros de projeto ou configurações do gerenciador de conexões para o pacote. Você também pode indicar uma referência de ambiente a ser usado para a execução do pacote e associar parâmetros de pacote/projeto a variáveis de ambiente.  
   
@@ -122,7 +119,7 @@ ms.lasthandoff: 09/27/2017
   
     1.  Selecione o **banco de dados** para o modo de exibição a ser criado.  
   
-         ![Dados Assistente publicação Feed - página Configurações de publicação](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Feed de dados de publicação assistente - página Configurações de publicação")  
+         ![Assistente de Publicação de Feed de Dados – Página Configurações de Publicação](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Assistente de Publicação de Feed de Dados – Página Configurações de Publicação")  
   
     2.  Digite um **nome** para o **modo de exibição**. Você também pode selecionar um modo de exibição existente na lista suspensa.  
   
@@ -144,7 +141,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  Na página **Validação** , examine os resultados da validação de valores para todas as configurações. No exemplo a seguir, você vê um **aviso** sobre a existência de servidor vinculado porque o servidor vinculado não existe na instância do SQL Server selecionada. Se você vir **Erro** para **Resultado**, passe o mouse sobre **Erro** e você verá os detalhes sobre o erro. Por exemplo, caso você não tenha habilitado a opção Permitir inprocess para o provedor SSISOLEDB, você obterá um erro na ação de Configuração do Servidor Vinculado.  
   
-     ![Assistente de página de validação de publicação de Feed de dados](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Assistente de página de validação de publicação de Feed de dados")  
+     ![Assistente de Publicação de Feed de Dados – Página de Validação](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Assistente de Publicação de Feed de Dados – Página de Validação")  
   
 6.  Para salvar esse relatório como um arquivo XML, clique em Salvar Relatório.  
   
@@ -152,7 +149,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  Examine sua seleção na página **Resumo** e clique em **Publicar** para iniciar o processo de publicação, que criará o servidor vinculado se não existir no servidor e, em seguida, criará o modo de exibição usando o servidor vinculado.  
   
-     ![Assistente de página de resumo de publicação de Feed de dados](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Assistente de página de resumo de publicação de Feed de dados")  
+     ![Assistente de Publicação de Feed de Dados – Página de Resumo](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Assistente de Publicação de Feed de Dados – Página de Resumo")  
   
      Os dados de saída do pacote agora podem ser consultados, executando a instrução SQL a seguir no banco de dados TestDB: SELECT * FROM [SSISPackageView].  
   
@@ -168,9 +165,9 @@ ms.lasthandoff: 09/27/2017
   
 1.  Inicie o SQL Server Management Studio.  
   
-2.  Expanda \< **nome da máquina**>, **bancos de dados**, \< **banco de dados selecionadas no assistente**>, e **exibições**.  
+2.  Expanda \<**nome do computador**>, **Bancos de dados**, \<**banco de dados selecionado por você no assistente**> e **Exibições**.  
   
-3.  Com o botão direito do \< **exibição criada pelo Assistente de**> criado pelo assistente e clique em **selecione primeiras 1000 linhas**.  
+3.  Clique com o botão direito do mouse na \<**exibição criada pelo assistente**> criada pelo assistente e clique em **Selecionar as 1.000 primeiras linhas**.  
   
 4.  Confirme que você vê os resultados do pacote do SSIS.  
   
@@ -278,4 +275,3 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
  [Configurar destino do streaming de dados](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   
-

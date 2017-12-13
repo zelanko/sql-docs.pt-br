@@ -2,9 +2,12 @@
 title: Filtrar linhas da tabela | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6dcb77e0afba0aaf1947ec7d5d150c9c2281370
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8b78b311ea716abd5ca52a1f561f648a29a27199
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-table-rows"></a>Filtrar Linhas da Tabela
-  A página **Filtrar Linhas da Tabela** permite:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Filtrar Linhas da Tabela** permite:  
   
 -   Aplicar filtros de linhas estáticos a artigos de tabela em publicações de instantâneo, transacional e de mesclagem.  
   

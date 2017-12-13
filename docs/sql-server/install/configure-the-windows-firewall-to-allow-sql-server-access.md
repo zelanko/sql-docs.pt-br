@@ -2,10 +2,10 @@
 title: Configurar o Firewall do Windows para permitir acesso ao SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology: setup-install
@@ -30,11 +30,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b3474499df5f06198377ff824c14358a86900b68
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 90d281884a092adda6f50777dd5403e275611bf4
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ Defina as configurações do Firewall do Windows com o **Console de Gerenciament
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executando em um ponto de extremidade HTTP.|Pode ser especificada quando um ponto de extremidade HTTP é criado. O padrão é a porta TCP 80 para tráfego CLEAR_PORT e 443 para tráfego SSL_PORT.|Usada para uma conexão HTTP por meio de uma URL.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executando sobre um ponto de extremidade HTTPS|Porta TCP 443|Usada para uma conexão HTTPS por meio de uma URL. HTTPS é uma conexão HTTP que usa o protocolo SSL.|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Porta TCP 4022. Para verificar a porta usada, execute a seguinte consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Não existe uma porta padrão para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], mas esta é a configuração convencional usada nos exemplos dos Manuais Online.|  
-|Espelhamento de Banco de Dados|Porta escolhida pelo administrador. Para determinar a porta, execute a seguinte consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Não existe uma porta padrão para o espelhamento de banco de dados, mas os exemplos dos Manuais Online usam a porta TCP 7022. É muito importante evitar interromper um ponto de extremidade de espelhamento em uso, principalmente no modo de alta segurança com failover automático. Sua configuração de firewall deve evitar dividir o quorum. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
+|Espelhamento de Banco de Dados|Porta escolhida pelo administrador. Para determinar a porta, execute a seguinte consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Não existe uma porta padrão para o espelhamento de banco de dados, mas os exemplos dos Manuais Online usam a porta TCP 5022 ou 7022. É muito importante evitar interromper um ponto de extremidade de espelhamento em uso, principalmente no modo de alta segurança com failover automático. Sua configuração de firewall deve evitar dividir o quorum. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Replicação|As conexões de replicação com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam as portas normais típicas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] (porta TCP 1433 para a instância padrão etc.)<br /><br /> A sincronização da Web e o acesso FTP/UNC para instantâneo de replicação exigem a abertura de portas adicionais no firewall. Para transferir o esquema e os dados iniciais de um local para outro, a replicação pode usar o FTP (porta TCP 21) ou sincronizar via HTTP (porta TCP 80) ou Compartilhamento de Arquivos. O compartilhamento de arquivos usa a porta UDP 137 e 138, e a porta TCP 139 caso esteja usando o NetBIOS. O compartilhamento de arquivos usa a porta TCP 445.|Para sincronização por HTTP, a replicação usa o ponto de extremidade do IIS (portas configuráveis, mas o padrão é a porta 80), mas o processo do IIS se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] back-end através das portas padrão (1433 para a instância padrão).<br /><br /> Durante a sincronização da Web usando FTP, a transferência por FTP ocorre entre o IIS e o publicador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e não entre o assinante e o IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] depurador|Porta TCP 135<br /><br /> Consulte [Considerações especiais sobre a porta 135](#BKMK_port_135)<br /><br /> A exceção [IPsec](#BKMK_IPsec) também pode ser necessária.|Se estiver usando [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], no computador host [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , você também deverá adicionar **Devenv.exe** à lista Exceções e abrir a porta TCP 135.<br /><br /> Se estiver usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], no computador host [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , você também deverá adicionar **ssms.exe** à lista Exceções e abrir a porta TCP 135. Para obter mais informações, veja [Configurar regras de firewall antes de executar o Depurador TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   

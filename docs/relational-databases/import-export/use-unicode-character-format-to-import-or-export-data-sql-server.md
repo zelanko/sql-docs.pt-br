@@ -2,9 +2,12 @@
 title: Usar o formato de caractere Unicode para importar ou exportar dados (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 09/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44f3402f2ba874e741c3d191a96535e8204ec368
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5fd105a2da0e4822ee3da0b2f8929f70d0185cb5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere Unicode para importar ou exportar dados (SQL Server)
-O formato de caractere Unicode é recomendado para transferir em massa dados entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados com caracteres estendidos DBCS. O formato de dados de caractere Unicode permite exportar dados de um servidor usando uma página de código que difere da página de código usada pelo cliente que está executando a operação. Em tais casos, o uso do formato de caractere Unicode tem as seguintes vantagens:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O formato de caractere Unicode é recomendado para transferir em massa dados entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados com caracteres estendidos DBCS. O formato de dados de caractere Unicode permite exportar dados de um servidor usando uma página de código que difere da página de código usada pelo cliente que está executando a operação. Em tais casos, o uso do formato de caractere Unicode tem as seguintes vantagens:  
   
 * Se os dados de origem e destino forem tipos de dados Unicode, o uso do formato de caractere Unicode preservará todos os dados de caractere.  
   

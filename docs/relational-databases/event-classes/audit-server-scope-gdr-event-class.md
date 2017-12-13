@@ -2,9 +2,12 @@
 title: Classe de evento Audit Server Scope GDR | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e76dfb8308b5e7da549b7180dc565f9941f38ffb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3460395a9e7937525c604f93f118c86324a62e82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Classe de evento Audit Server Scope GDR
-  A classe de evento **Audit Server Scope GDR** ocorre quando um GRANT, REVOKE ou DENY é emitido para permissões no escopo do servidor como, por exemplo, criar um logon.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Audit Server Scope GDR** ocorre quando um GRANT, REVOKE ou DENY é emitido para permissões no escopo do servidor como, por exemplo, criar um logon.  
   
 ## <a name="audit-server-scope-gdr-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Server Scope GDR  
   

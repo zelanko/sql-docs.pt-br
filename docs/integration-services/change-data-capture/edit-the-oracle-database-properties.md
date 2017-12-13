@@ -1,5 +1,5 @@
 ---
-title: Editar as propriedades de banco de dados Oracle | Microsoft Docs
+title: Editar as propriedades do banco de dados Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- oraProp
+f1_keywords: oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3519bfc323bc4a9b19e32a171b5aa08f719062fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="edit-the-oracle-database-properties"></a>Editar as propriedades do banco de dados Oracle
   Use a guia Oracle no editor de Propriedades para fazer alterações na descrição fornecida na página Create CDC database no assistente de Nova Instância e fazer alterações nas informações de conexão de banco de dados de mineração de logs do Oracle.  
@@ -52,8 +49,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Como gerenciar um serviço CDC no CDC Designer Console](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Conecte-se a um banco de dados de origem do Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
- [Conecte-se ao Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
+ [Conectar-se a um banco de dados de origem Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
+ [Conectar-se ao Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
   
-

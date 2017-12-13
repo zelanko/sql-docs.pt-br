@@ -2,9 +2,12 @@
 title: "Propriedades da réplica de disponibilidade (página Geral) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48bfcf284819b39dfd4db022933d232da04191b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 876f9013b4213af366363c8c6a84a6233b5fb79c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-replica-properties-general-page"></a>Propriedades de réplica de disponibilidade (página Geral)
-  Use esta caixa de diálogo para exibir as propriedades de uma réplica de disponibilidade.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta caixa de diálogo para exibir as propriedades de uma réplica de disponibilidade.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
  **Para exibir as propriedades da réplica de disponibilidade**  

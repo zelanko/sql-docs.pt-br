@@ -2,12 +2,12 @@
 title: "Propriedades de memória | Microsoft Docs"
 ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3c8b8f8e94f95174b2d4038454d834b1427cb56c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bcf950fc7219996bfc60f56797f52a5ed6d49fc8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="memory-properties"></a>Propriedades de memória
-  O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-aloca um volume modesto de memória na inicialização para que solicitações possam ser manipuladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preallocates uma pequena quantidade de memória no início do backup para que as solicitações podem ser controladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
   
   Ao especificar definições de configuração, você pode controlar os limites nos quais a memória é liberada. Por exemplo, a configuração **HardMemoryLimit** especifica uma condição de falta de memória imposta automaticamente (por padrão, esse limite não é habilitado), em que novas solicitações são rejeitadas totalmente até que mais recursos estejam disponíveis.
   

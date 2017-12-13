@@ -2,9 +2,12 @@
 title: Backups da parte final do log (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 697a6b7db5513165db073bf70954499dc95503e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3396d9d6ec351550509300f760db8e5fc58836d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tail-log-backups-sql-server"></a>Backups da parte final do log (SQL Server)
-  Este tópico é relevante apenas para o backup e a restauração dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão usando modelos de recuperação completa ou bulk-logged.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico é relevante apenas para o backup e a restauração dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão usando modelos de recuperação completa ou bulk-logged.  
   
  Um *backup da parte final do log* captura qualquer registro de log que ainda não foi submetido a backup (a *parte final do log*) para impedir a perda de trabalho e manter a cadeia de logs intacta. Para que você possa recuperar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até seu momento determinado mais recente, você deve fazer backup da parte final do log de transações. O backup da parte final do log será o último backup de interesse no plano de recuperação do banco de dados.  
   

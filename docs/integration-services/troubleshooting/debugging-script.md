@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - debugging [Integration Services], scripts
 - scripts [Integration Services], debugging
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 338484d5f437833ecdcaffb39ce3b5bc5ec8ea8f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c1a5495f077a6710ccdadeadd97129848ceb9e89
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-script"></a>Depurando script
   Os scripts usados pela tarefa Script e um componente Script são gravados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA (Tools for Applications).  
@@ -48,4 +46,3 @@ ms.lasthandoff: 08/03/2017
  [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: Usar o formato de caractere para importar ou exportar dados (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 09/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d5dd9155a7cc669a5f7a62036bb42410dced9c48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere para importar ou exportar dados (SQL Server)
-Formato de caractere é recomendado quando você exporta dados em massa para um arquivo de texto que será usado em outro programa ou quando você importa dados em massa de um arquivo de texto que é gerado por outro programa.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Formato de caractere é recomendado quando você exporta dados em massa para um arquivo de texto que será usado em outro programa ou quando você importa dados em massa de um arquivo de texto que é gerado por outro programa.  
 
 Formato de caractere usa o formato de dados de caractere para todas as colunas. Armazenar informações em formato de caractere é útil quando os dados são usados com outro programa, como uma planilha, ou quando os dados precisam ser copiados em uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de outro fornecedor de banco de dados como Oracle.  
   

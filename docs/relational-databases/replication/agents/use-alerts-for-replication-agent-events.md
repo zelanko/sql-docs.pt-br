@@ -2,9 +2,12 @@
 title: "Usar Alertas para eventos do agente de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67c68cfcba51bcd9bd2dfb8512108766fe1240e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e6eb5aeb5cf36a9c93259f6ee216a76c5ef4634
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar Alertas para eventos do agente de replicação
-  Os Agentes [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionam um modo para monitorar eventos, como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proporcionam um modo de monitorar eventos, tais como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  
   
  Os alertas a seguir são instalados quando um computador é configurado como um Distribuidor:  
   

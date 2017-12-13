@@ -3,8 +3,11 @@ title: Compreender o gerenciamento de janelas do SQL Server Management Studio | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6517b160d9cf14fa89230e7ba8fa43d35ed66022
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e0980dce7cf984c6abd364b6e206800411a1b1b9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Compreender o gerenciamento de janelas do SQL Server Management Studio
-As janelas de ferramenta do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] são um sistema altamente funcional, flexível e eficiente que permite que você:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As janelas de ferramenta do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] são um sistema altamente funcional, flexível e eficiente que permite que você:  
   
 -   Maximize a área de trabalho de usuário para desenvolvimento e administração.  
   

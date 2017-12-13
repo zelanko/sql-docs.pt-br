@@ -2,9 +2,12 @@
 title: "Criar tabelas e índices particionados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -32,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f674dc211dd8c4611234cca4cdb6755a577f0a5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6f3f7e6d9f23ccebb49ac1f2c4bbc70acdff12d2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Criar tabelas e índices particionados
-  Você pode criar uma tabela ou um índice particionado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os dados das tabelas e dos índices particionados são divididos horizontalmente em unidades que podem ser disseminadas por mais de um grupo de arquivos em um banco de dados. O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode criar uma tabela ou um índice particionado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os dados das tabelas e dos índices particionados são divididos horizontalmente em unidades que podem ser disseminadas por mais de um grupo de arquivos em um banco de dados. O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  
   
  A criação de uma tabela ou um índice particionado ocorre normalmente em quatro partes:  
   

@@ -2,9 +2,12 @@
 title: "Outros modos de exibir a Janela de Código | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5419967dca2b9602d477acfcdd2bab1037db3fb7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dae743368f92cb4b274629ac66e727b07639d38b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-5---other-ways-of-viewing-the-code-window"></a>Lição 2-5 – Outros modos de exibir a Janela de Código
-A janela de código pode ser configurada para exibir múltiplas janelas de código de vários modos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A janela de código pode ser configurada para exibir diversas janelas de código de vários modos.  
   
 ## <a name="using-multiple-code-windows"></a>Usando múltiplas janelas de código  
   

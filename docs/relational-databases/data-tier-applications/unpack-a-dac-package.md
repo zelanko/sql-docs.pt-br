@@ -2,9 +2,12 @@
 title: Desempacotar um pacote de DAC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc4498e01b9f72d8ef2cd9f13b137c67f48d63ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5599ea686d99afa78e0ef12f89765e889746f723
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unpack-a-dac-package"></a>Desempacotar um pacote de DAC
-  Use a caixa de diálogo Desempacotar Aplicativo da Camada de Dados para descompactar os scripts e arquivos de um pacote de DAC (aplicativo da camada de dados). Os scripts e arquivos são colocados em uma pasta onde podem ser examinados antes do pacote ser usado para implantar o DAC em um sistema de produção. O conteúdo de um DAC também pode ser comparado com o conteúdo de outro pacote desempacotado em outra pasta.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use a caixa de diálogo Desempacotar Aplicativo da Camada de Dados para descompactar os scripts e arquivos de um pacote de DAC (aplicativo da camada de dados). Os scripts e arquivos são colocados em uma pasta onde podem ser examinados antes do pacote ser usado para implantar o DAC em um sistema de produção. O conteúdo de um DAC também pode ser comparado com o conteúdo de outro pacote desempacotado em outra pasta.  
   
 1.  **Antes de começar:**  [Segurança](#Security)  
   

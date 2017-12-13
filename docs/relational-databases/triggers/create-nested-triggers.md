@@ -2,9 +2,12 @@
 title: Criar gatilhos aninhados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0e1320a9a1e3670c6d5cfc04d4b56f9d3ba51cc6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c00fc71fb0d0bd5dadd986b14d140e1293bcafba
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-nested-triggers"></a>Criar gatilhos aninhados
-  Os gatilhos DML e DDL são aninhados quando um gatilho executa uma ação que inicia outro gatilho. Essas ações podem iniciar outros gatilhos, e assim por diante. Os gatilhos DML e DDL podem ser aninhados em até 32 níveis. Você pode controlar se os gatilhos AFTER podem ser aninhados pela opção de configuração do servidor **nested triggers** . Os gatilhos INSTEAD OF (apenas gatilhos DML podem ser gatilhos INSTEAD OF) podem ser aninhados, independentemente dessa configuração.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Os gatilhos DML e DDL são aninhados quando um gatilho executa uma ação que inicia outro gatilho. Essas ações podem iniciar outros gatilhos, e assim por diante. Os gatilhos DML e DDL podem ser aninhados em até 32 níveis. Você pode controlar se os gatilhos AFTER podem ser aninhados pela opção de configuração do servidor **nested triggers** . Os gatilhos INSTEAD OF (apenas gatilhos DML podem ser gatilhos INSTEAD OF) podem ser aninhados, independentemente dessa configuração.  
   
 > [!NOTE]  
 >  Qualquer referência a um código gerenciado de um gatilho [!INCLUDE[tsql](../../includes/tsql-md.md)] conta como um nível em relação ao limite de 32 níveis de aninhamento. Os métodos invocados a partir do código gerenciado não são contados em relação a esse limite.  

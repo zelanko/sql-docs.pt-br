@@ -3,8 +3,11 @@ title: Janela Propriedades (Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d07665d3efb0e44d7d8314bc9be01276dbebb6e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f31c5197f6b4767c91c85b042caf418c4c2b2ad7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="properties-window-management-studio"></a>Janela de Propriedades (Management Studio)
-Use essa janela para exibir as propriedades dos elementos selecionados. Você também pode usar a janela Propriedades para exibir o arquivo, o projeto e as propriedades da solução. A janela Propriedades está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta janela para exibir as propriedades dos elementos selecionados. Você também pode usar a janela Propriedades para exibir o arquivo, o projeto e as propriedades da solução. A janela Propriedades está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  
   
 A janela Propriedades exibe tipos diferentes de campos de edição, dependendo das necessidades de uma propriedade em particular. As propriedades mostradas em cinza são somente leitura.  
   

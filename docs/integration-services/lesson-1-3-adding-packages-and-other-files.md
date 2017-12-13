@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Adicionando pacotes e outros arquivos | Microsoft Docs'
+title: 'Etapa 3: adicionar pacotes e outros arquivos | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f8cf4eedc8930492e28f41cee67f0c25a382bacd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 43f5f8e693aac51bee20a4ca7b29a5cb0676cf92
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-3---adding-packages-and-other-files"></a>Lição 1-3 - adicionar pacotes e outros arquivos
+# <a name="lesson-1-3---adding-packages-and-other-files"></a>Lição 1-3 – adicionar pacotes e outros arquivos
 Nesta tarefa, você adicionará pacotes existentes, arquivos auxiliares, que oferecem suporte a pacotes individuais, e um Leiame para o projeto do Tutorial de Implantação criado na tarefa anterior. Por exemplo, você adicionará um arquivo de dados XML que contém os dados para um pacote e um arquivo de texto que fornece as informações do Leiame sobre todos os pacotes do projeto.  
   
 Quando você implanta pacotes em um ambiente de teste ou de produção, normalmente não inclui os arquivos de dados na implantação, em vez disso, usa as configurações para atualizar os caminhos das fontes de dados para acessar testes ou versões de produção dos arquivos de dados ou de bancos de dados. Para fins instrutivos, esse tutorial inclui arquivos de dados na implantação do pacote.  
@@ -82,4 +79,3 @@ Na próxima tarefa, você adicionará configurações aos pacotes DataTransfer e
   
   
   
-

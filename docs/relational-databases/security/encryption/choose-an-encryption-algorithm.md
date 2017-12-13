@@ -1,10 +1,13 @@
 ---
 title: Escolha um algoritmo de criptografia | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: "36"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d54be210c6a9d791bc27afbad436c2ea5f69fee
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b0c946ccc0547e3efadf26f78bb66fcdd3feb517
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choose-an-encryption-algorithm"></a>Escolher um algoritmo de criptografia
-  A criptografia é um dos muitos recursos de proteção que estão disponíveis para o administrador que deseja oferecer segurança a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A criptografia é um dos muitos recursos de proteção avançada que estão disponíveis para o administrador que deseja proteger uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Algoritmos de criptografia definem transformações de dados que não podem ser invertidas facilmente por usuários não autorizados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que administradores e desenvolvedores escolham entre diversos algoritmos, incluindo DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits e AES de 256 bits.  
   

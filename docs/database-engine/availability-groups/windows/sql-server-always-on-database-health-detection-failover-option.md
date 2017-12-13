@@ -3,8 +3,11 @@ title: "Opção de failover de detecção de integridade do banco de dados | Mic
 ms.custom: 
 ms.date: 04/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade
-
-A partir do SQL Server 2016, a opção (DB_FAILOVER) de detecção de integridade no nível do banco de dados está disponível ao configurar um grupo de disponibilidade AlwaysOn. A detecção de integridade no nível do banco de dados informa quando um banco de dados não está mais no status online e quando algo deu errado e disparará o failover automático do grupo de disponibilidade. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Do SQL Server 2016 em diante, a opção (DB_FAILOVER) de detecção de integridade no nível do banco de dados está disponível ao configurar um grupo de disponibilidade Always On. A detecção de integridade no nível do banco de dados informa quando um banco de dados não está mais no status online e quando algo deu errado e disparará o failover automático do grupo de disponibilidade. 
 
 A detecção de integridade no nível do banco de dados está habilitada no grupo de disponibilidade como um todo e, portanto, a detecção de integridade no nível do banco de dados monitora cada banco de dados no grupo de disponibilidade. Ela não pode ser habilitada seletivamente em bancos de dados específicos no grupo de disponibilidade. 
 

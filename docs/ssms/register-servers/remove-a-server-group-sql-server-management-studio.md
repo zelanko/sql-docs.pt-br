@@ -2,9 +2,12 @@
 title: Remover um grupo de servidores (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0cb0a74caa92ed03822c8115096e8030e1e7b7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f605faa9711e014f94325bb86414ee849f2f7ad6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Remover um grupo de servidores (SQL Server Management Studio)
-  Este tópico descreve como remover um grupo de servidores de Servidores Registrados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode excluir um grupo do servidor a qualquer hora. Se o grupo de servidores não estiver vazio, também serão excluídos quaisquer servidores ou grupos de servidores contidos no grupo excluído. Antes de excluir um grupo de servidores, mova para um grupo de servidores novo quaisquer servidores ou grupos de servidores que você queira reter.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como remover um grupo de servidores em Servidores Registrados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode excluir um grupo do servidor a qualquer hora. Se o grupo de servidores não estiver vazio, também serão excluídos quaisquer servidores ou grupos de servidores contidos no grupo excluído. Antes de excluir um grupo de servidores, mova para um grupo de servidores novo quaisquer servidores ou grupos de servidores que você queira reter.  
   
 ##  <a name="SSMSProcedure"></a>  
   

@@ -2,12 +2,12 @@
 title: "Referência técnica do Microsoft Naive Bayes algoritmo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 812ca4b26ed14645bbd84094077f24f44d8784cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f467621594b3ed81793d0925b600650dfa1e3599
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Naive Bayes
-  O algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de classificação fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para uso em modelagem de previsão. O algoritmo calcula a probabilidade condicional entre as colunas de entrada e as previsíveis e assume que as colunas são independentes. Esta pressuposição de independência leva ao nome Naive Bayes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes é um algoritmo de classificação fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para uso em modelagem de previsão. O algoritmo calcula a probabilidade condicional entre as colunas de entrada e as previsíveis e assume que as colunas são independentes. Esta pressuposição de independência leva ao nome Naive Bayes.  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implementação do algoritmo Naive Bayes da Microsoft  
  Esse algoritmo é computacionalmente menos intenso de que outros algoritmos da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e, portanto, é útil para gerar modelos de mineração rapidamente para descobrir as relações entre as colunas de entrada e as colunas previsíveis. O algoritmo considera cada par de valores de atributo de entrada e valores de atributo de saída.  

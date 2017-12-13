@@ -2,12 +2,12 @@
 title: Medidas | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures"></a>Medidas
-  Em modelos de tabela, uma medida é um cálculo criado usando uma fórmula DAX para uso em um cliente de relatório. As medidas são avaliadas com base em campos, filtros e usuários de segmentações de dados selecionados no aplicativo cliente de relatório.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Em modelos de tabela, uma medida é um cálculo criado usando uma fórmula DAX para uso em um cliente de relatório. As medidas são avaliadas com base em campos, filtros e usuários de segmentações de dados selecionados no aplicativo cliente de relatório.  
   
 ##  <a name="bkmk_understanding"></a> Benefícios  
  As medidas podem se basear em funções de agregação padrão, como AVERAGE, COUNT ou SUM, ou é possível definir sua própria fórmula usando-se o DAX. Além da fórmula, cada medida tem propriedades, definidas pelo tipo de dados de medida, como Nome, Detalhe da Tabela, Formato e Casas Decimais.  

@@ -2,9 +2,12 @@
 title: "Clustering de várias sub-redes do SQL Server (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/01/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 18bd85894c8dcb43d97b6d0a50ad6f7d1754d65b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 46c0f7963cf82e80b5c60309aab2369805931c09
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de várias sub-redes do SQL Server (SQL Server)
-  Um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma configuração em que cada nó de cluster de failover é conectado a uma sub-rede diferente ou a um conjunto diferente de sub-redes. Essas sub-redes podem estar no mesmo local ou em sites geograficamente dispersos. O clustering em sites geograficamente dispersos é às vezes chamado de clusters expansíveis. Como não há um armazenamento compartilhado que todos os nós possam acessar, os dados devem ser replicados entre o armazenamento de dados nas várias sub-redes. Com a replicação de dados, há mais de uma cópia dos dados disponíveis. Portanto, um cluster de failover de várias sub-redes fornece uma solução de recuperação de desastres além de alta disponibilidade.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma configuração em que cada nó de cluster de failover é conectado a uma sub-rede diferente ou a um conjunto diferente de sub-redes. Essas sub-redes podem estar no mesmo local ou em sites geograficamente dispersos. O clustering em sites geograficamente dispersos é às vezes chamado de clusters expansíveis. Como não há um armazenamento compartilhado que todos os nós possam acessar, os dados devem ser replicados entre o armazenamento de dados nas várias sub-redes. Com a replicação de dados, há mais de uma cópia dos dados disponíveis. Portanto, um cluster de failover de várias sub-redes fornece uma solução de recuperação de desastres além de alta disponibilidade.  
   
    
 ##  <a name="VisualElement"></a> Cluster de Failover de Várias Sub-redes do SQL Server (Dois Nós, Duas Sub-redes)  

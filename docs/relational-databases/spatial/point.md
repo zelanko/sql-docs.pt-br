@@ -2,9 +2,12 @@
 title: Ponto | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0727e0266873cbb94af62a96a8a6c96e3c7bec55
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5f2c30f6eafa9e645c192ab62790290d12ccd40e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="point"></a>Ponto
-  Em dados espaciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um **Point** é um objeto dimensional zero que representa um único local e pode conter valores Z (elevação) e M (medida).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Em dados espaciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um **Point** é um objeto adimensional que representa um único local e pode conter valores Z (elevação) e M (medida).  
   
 ## <a name="geography-data-type"></a>Tipo de dados de geografia  
  O tipo de Ponto para o tipo de dados geography representa um único local em que *Lat* representa latitude e *Long* representa longitude. Os valores de latitude e longitude são medidos em graus. Valores para latitude sempre estão no intervalo [-90, 90] e os valores inseridos fora desse intervalo gerarão uma exceção. Os valores de longitude estão sempre no intervalo (-180, 180]; e os valores inseridos fora desse intervalo são ajustados para caberem nesse intervalo. Por exemplo, se 190 for inserido para longitude, ele será ajustado para o valor -170. *SRID* representa a ID de referência espacial da instância **geography** que você deseja retornar.  

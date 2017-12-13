@@ -2,9 +2,12 @@
 title: SQL Server Management Studio atalhos de teclado | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b42d5ff8c209d4df06abbf8c85b0edee8883a868
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fc409c7b1028a2e8b34eecc1485bffb0b53c023
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Atalhos de teclado do SQL Server Management Studio
-  O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , com atalhos de teclado com base no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. O [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , com atalhos de teclado com base no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. O [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  
   
 > [!NOTE]  
 >  Para exibir somente os cabeçalhos, clique em **Recolher Tudo** na parte superior dessa página.  

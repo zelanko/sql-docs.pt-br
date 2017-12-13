@@ -3,8 +3,11 @@ title: "Caixa de diálogo Local (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6534a08d327b7cd88cdf86320daea2c4a6b78cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e909d68acae61d209d8d5c9be569b6d76c88b892
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Caixa de diálogo Local (Visual Database Tools)
-Use essa caixa de diálogo para localizar e selecionar a pasta que contém os arquivos de interesse. Essa caixa de diálogo retorna o caminho da pasta selecionada à caixa de diálogo de chamada. Você pode acessar essa caixa de diálogo da seguinte forma:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use essa caixa de diálogo para localizar e selecionar a pasta que contém os arquivos de interesse. Essa caixa de diálogo retorna o caminho da pasta selecionada à caixa de diálogo de chamada. Você pode acessar essa caixa de diálogo da seguinte forma:  
   
 -   Escolha **Novo** no menu **Arquivo** e selecione **Projeto**. Quando a caixa de diálogo **Novo Projeto** for exibida, escolha **Procurar**. A caixa de diálogo **Local** abre com o título **Local do Projeto**.  
   

@@ -2,11 +2,12 @@
 title: "Locais de arquivos para instâncias padrão e nomeadas do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: e4466a00945b2cc919ed9c2332ccf42f536f89bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4209e4270df9c7af22e79fb3b8700db4be992524
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Locais de arquivos para instâncias padrão e nomeadas do SQL Server
-  Uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste em uma ou mais instâncias separadas. Uma instância, seja padrão ou nomeada, tem seu próprio conjunto de arquivos de programas e de dados, bem como um conjunto de arquivos comuns compartilhados entre todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste em uma ou mais instâncias separadas. Uma instância, seja padrão ou nomeada, tem seu próprio conjunto de arquivos de programas e de dados, bem como um conjunto de arquivos comuns compartilhados entre todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador.  
   
  Para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que inclui o [!INCLUDE[ssDE](../../includes/ssde-md.md)], o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], cada componente tem um conjunto completo de arquivos executáveis e de dados, além de arquivos comuns compartilhados por todos os componentes.  
   

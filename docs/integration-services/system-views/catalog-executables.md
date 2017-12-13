@@ -1,5 +1,5 @@
 ---
-title: Executables | Microsoft Docs
+title: catalog.executables | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa0d2d5df7c3c39b1ad33794ae11c1a34ffe72d4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 490f6ae4a2c849baa8da2ca799b39beac1a4ebda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutables"></a>catalog.executables
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/26/2017
 |execution_id|**bigint**|O identificador exclusivo da instância de execução.|  
 |executable_name|**nvarchar(4000)**|O nome do executável.|  
 |executable_guid|**nvarchar(38)**|O GUID do executável.|  
-|package_name|**nvarchar (260)**|O nome do pacote.|  
+|package_name|**nvarchar(260)**|O nome do pacote.|  
 |package_path|**nvarchar(max)**|O caminho do pacote.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -46,13 +44,12 @@ ms.lasthandoff: 09/26/2017
   
 -   Permissão READ na instância de execução  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Quando você tem permissão para executar uma operação no servidor, também tem permissão para exibir informações sobre a operação. A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
   
 ## <a name="remarks"></a>Comentários  
   
-

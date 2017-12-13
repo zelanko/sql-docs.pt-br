@@ -2,9 +2,12 @@
 title: Visualizador do Arquivo de Log | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dfd00aef3ab0c91f2acd55c6cb8e1596a70d1df0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4ec6cadb76a448fd54db16cef55dcf2019d9b6a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="log-file-viewer"></a>Visualizador do Arquivo de Log
-  O Visualizador do Arquivo de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é usado para acessar informações sobre erros e eventos capturados em arquivos de log.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Visualizador do Arquivo de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é usado para acessar informações sobre erros e eventos capturados em arquivos de log.  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>Benefícios do uso do Visualizador do Arquivo de Log  
  Você pode exibir arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância local ou remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando a instância de destino estiver offline ou não iniciar. Você pode acessar os arquivos de log offline de Servidores Registrados, ou programaticamente por WMI e o WQL (Linguagem WQL) consulta. Para obter mais informações, veja [Exibir arquivos de log offline](../../relational-databases/logs/view-offline-log-files.md). Estes são tipos de arquivos de log que você pode acessar usando o Visualizador do Arquivo de Log:  

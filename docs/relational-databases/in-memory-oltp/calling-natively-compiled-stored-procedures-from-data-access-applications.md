@@ -2,9 +2,12 @@
 title: Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9edea4b9fa85c59f41a48b299e2693fcfc00c9e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 312212105d28ac732ca8ad39c3cb73ef4839cfa2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados
-  Este tópico oferece diretrizes sobre como chamar procedimentos armazenados compilados nativamente nos aplicativos de acesso a dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico oferece diretrizes sobre como chamar procedimentos armazenados compilados nativamente nos aplicativos de acesso a dados.  
   
  Os cursores não podem iterar por um procedimento armazenado compilado nativamente.  
   

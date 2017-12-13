@@ -2,9 +2,12 @@
 title: Data warehouse de gerenciamento | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4f31923e866b45951e3758d3f1e35aa542117ad2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 107ccdd35c7ba36b74af7121b67b6c17e009cfb6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="management-data-warehouse"></a>data warehouse de gerenciamento
-  O data warehouse de gerenciamento é um banco de dados relacional que contém os dados coletados de um servidor representa o destino da coleta de dados. Esses dados são usados para gerar os relatórios dos conjuntos de coleta de Dados do Sistema e também podem ser usados para criar relatórios personalizados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O data warehouse de gerenciamento é um banco de dados relacional que contém os dados coletados de um servidor que é um destino de coleta de dados. Esses dados são usados para gerar os relatórios dos conjuntos de coleta de Dados do Sistema e também podem ser usados para criar relatórios personalizados.  
   
  A infraestrutura do coletor de dados define os trabalhos e os planos de manutenção necessários para implementar as políticas de retenção definidas pelo administrador do banco de dados.  
   

@@ -2,12 +2,12 @@
 title: "Lição 6: Definindo cálculos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 124ccfaa310ac6bc356cfaf30a7dc5c331b563a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6ad53ac85c3ea996714684d4cc0fb114f5317697
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-defining-calculations"></a>Lição 6: Definindo cálculos
-Nesta lição, você aprenderá a definir cálculos, que são scripts ou expressões MDX (Multidimensional Expressions). Os cálculos permitem que você defina membros calculados, conjuntos nomeados ou execute outros comandos de script para aumentar os recursos de um cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Por exemplo, você pode executar um comando de script para definir um subcubo e depois atribuir um cálculo às células no subcubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nesta lição, você aprenderá a definir cálculos, que são expressões MDX (Multidimensional Expressions) ou scripts. Os cálculos permitem que você defina membros calculados, conjuntos nomeados ou execute outros comandos de script para aumentar os recursos de um cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Por exemplo, você pode executar um comando de script para definir um subcubo e depois atribuir um cálculo às células no subcubo.  
   
 Ao definir um novo cálculo no Designer de Cubo, o cálculo é adicionado ao painel **Organizador de Script** da guia **Cálculos** do Designer de Cubo, e os campos deste tipo específico de cálculo são exibidos em um formulário de cálculos no painel **Expressões de Cálculo** . Os cálculos são executados na ordem em que estão listados no painel **Organizador de Script** . Você pode reordenar os cálculos clicando com o botão direito do mouse em um cálculo específico e selecionando **Mover para Cima** ou **Mover para Baixo**, ou clicando em cálculo específico e usando os ícones **Mover para Cima** ou **Mover para Baixo** na barra de ferramentas da guia **Cálculos** .  
   

@@ -2,12 +2,12 @@
 title: Objetos (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678eabca49558ed4ff9a933433a97f5ed308dcb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e05ba70d4d1593e444cd8735196ddb04e4ef7ae7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="objects-assl"></a>Objetos (ASSL)
-  Esta seção de referência contém informações de sintaxe e uso de cada elemento que age como um objeto no esquema ASSL (Analysis Services Scripting Language).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Esta seção de referência contém informações de sintaxe e uso para cada elemento que age como um objeto no esquema do Analysis Services Scripting Language (ASSL).  
   
  Embora o esquema ASSL contenha somente elementos XML, do ponto de vista do desenvolvedor, os elementos descritos nessa seção correspondem a objetos, como **banco de dados**, **cubo**, e  **Dimensão** objetos na hierarquia de objetos contidos em uma instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   

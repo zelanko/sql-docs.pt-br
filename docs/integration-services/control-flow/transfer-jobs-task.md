@@ -1,5 +1,5 @@
 ---
-title: Tarefa transferir trabalhos | Microsoft Docs
+title: Tarefa Transferir Trabalhos | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferjobstask.f1
 - sql13.dts.designer.transferjobstask.general.f1
 - sql13.dts.designer.transferjobstask.jobs.f1
-helpviewer_keywords:
-- Transfer Jobs task [Integration Services]
+helpviewer_keywords: Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 985e707cf0865a012076a1161a3eff9a7e73b032
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos
   A tarefa Transferir Trabalhos transfere um ou mais trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -107,10 +104,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de origem.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de destino.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
   
  **TransferAllJobs**  
  Selecione se a tarefa deve copiar todas ou apenas os trabalhos de Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados do servidor de origem para o servidor de destino.  
@@ -156,4 +153,3 @@ ms.lasthandoff: 08/11/2017
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
   
-

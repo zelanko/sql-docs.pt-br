@@ -3,8 +3,11 @@ title: "Caixa de diálogo Abrir Arquivo | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
-Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
   
 Para acessar essa caixa de diálogo, selecione **Abrir** no menu **Arquivo** e escolha **Arquivo**. Essa caixa de diálogo também é exibida quando você abre arquivos de outros elementos, como a caixa de diálogo **Ferramentas Externas** . No menu **Arquivo** , selecione **Abrir**e escolha **Projeto/Solução** para abrir a caixa de diálogo **Abrir Projeto** semelhante.  
   

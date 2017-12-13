@@ -2,9 +2,12 @@
 title: "Usar as tabelas inseridas e excluídas | Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4b9d0889e9e42fc76e1293fe011edbb118be055c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a285b7ece1c5f8c84c7cfc1292f4e5a4dffdc6f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
-  As instruções de gatilho DML usam duas tabelas especiais: a tabela excluída e as tabelas inseridas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. É possível usar essas tabelas temporárias, residentes na memória, para testar os efeitos de algumas modificações de dados e para definir critérios para ações de gatilhos DML. Você não pode modificar diretamente os dados nas tabelas nem executar operações DDL (linguagem de definição de dados) nas tabelas, como CREATE INDEX.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] As instruções de gatilho DML usam duas tabelas especiais: a tabela excluída e as tabelas inseridas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. É possível usar essas tabelas temporárias, residentes na memória, para testar os efeitos de algumas modificações de dados e para definir critérios para ações de gatilhos DML. Você não pode modificar diretamente os dados nas tabelas nem executar operações DDL (linguagem de definição de dados) nas tabelas, como CREATE INDEX.  
   
  Nos gatilhos DML, as tabelas inseridas e excluídas são usadas principalmente para executar o seguinte:  
   

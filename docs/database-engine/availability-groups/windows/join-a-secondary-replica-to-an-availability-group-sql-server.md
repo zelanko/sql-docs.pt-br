@@ -2,9 +2,12 @@
 title: "Ingressar uma réplica secundária em um grupo de disponibilidade (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9476eb8c1f2af81f6f3a7c649dce9b8c328fdc28
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2bd5a9bd83a0ca5575621c78f102472423c08ab7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>Unir uma réplica secundária a um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como unir uma réplica secundária a um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Depois que uma réplica secundária é adicionada a um grupo de disponibilidade AlwaysOn, a réplica secundária deve ser unida ao grupo de disponibilidade. A operação para unir réplica deve ser executada na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando a réplica secundária.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como unir uma réplica secundária a um grupo de disponibilidade Always On usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Depois que uma réplica secundária é adicionada a um grupo de disponibilidade AlwaysOn, a réplica secundária deve ser unida ao grupo de disponibilidade. A operação para unir réplica deve ser executada na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando a réplica secundária.  
   
 -   **Antes de começar:**  
   

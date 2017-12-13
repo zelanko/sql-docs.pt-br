@@ -2,9 +2,12 @@
 title: Banco de dados mestre | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ caps.latest.revision: "50"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 69ac660e66f9d997d2b7227d13f9c007dc68d7ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="master-database"></a>Banco de dados mestre
-  O banco de dados **master** registra todas as informações no nível de sistema para um sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isto inclui metadados de ampla instância como contas de logon, pontos de extremidade, servidores vinculados e parâmetros de configuração de sistema. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os objetos de sistema não são mais armazenados no banco de dados **mestre** ; em vez disso, eles são armazenados no [Banco de dados de recurso](../../relational-databases/databases/resource-database.md). Além disso, **mestre** é o banco de dados que registra a existência de todos os outros bancos de dados e o local desses arquivos de bancos de dados, e registra as informações de inicialização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá iniciar se o banco de dados **mestre** não estiver disponível.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O banco de dados **mestre** registra todas as informações no nível de sistema para um sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isto inclui metadados de ampla instância como contas de logon, pontos de extremidade, servidores vinculados e parâmetros de configuração de sistema. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os objetos de sistema não são mais armazenados no banco de dados **mestre** ; em vez disso, eles são armazenados no [Banco de dados de recurso](../../relational-databases/databases/resource-database.md). Além disso, **mestre** é o banco de dados que registra a existência de todos os outros bancos de dados e o local desses arquivos de bancos de dados, e registra as informações de inicialização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá iniciar se o banco de dados **mestre** não estiver disponível.  
   
 ## <a name="physical-properties-of-master"></a>Propriedades físicas de mestre  
  A tabela a seguir lista os valores iniciais de configuração dos dados **mestre** e dos arquivos de log. Os tamanhos desses arquivos podem variar um pouco em diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

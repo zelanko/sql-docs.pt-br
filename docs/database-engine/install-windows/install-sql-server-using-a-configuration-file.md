@@ -2,11 +2,12 @@
 title: "Instalar o SQL Server usando um arquivo de configuração | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: home-page
@@ -15,14 +16,14 @@ caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 01513b22956771f125ccb010d41eef45028dc0d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9120e19773602e9d7bd462318a702ac5c6507a0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar o SQL Server usando um arquivo de configuração
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação fornece a capacidade de gerar um arquivo de configuração baseado no padrão do sistema e em entradas de tempo de execução. É possível usar o arquivo de configuração para implantar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em toda a empresa com a mesma configuração. Também é possível padronizar instalações manuais em toda a empresa criando um arquivo em lotes que inicie o Setup.exe. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação fornece a capacidade de gerar um arquivo de configuração baseado no padrão do sistema e em entradas de tempo de execução. É possível usar o arquivo de configuração para implantar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em toda a empresa com a mesma configuração. Também é possível padronizar instalações manuais em toda a empresa criando um arquivo em lotes que inicie o Setup.exe. 
  
 Este artigo foi especificamente atualizado para o SQL Server 2016 e o SQL Server 2017. Para versões anteriores do SQL Server, consulte [Instalar o SQL Server 2014 usando um arquivo de configuração](http://msdn.microsoft.com/library/dd239405(v=sql.120).aspx).
  

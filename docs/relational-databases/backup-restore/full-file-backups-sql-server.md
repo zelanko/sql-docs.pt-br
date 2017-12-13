@@ -2,9 +2,12 @@
 title: Backups completos de arquivos (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05d90a6c48c8841a03d276efe1da2ced2d20336c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 68298d631d672ffc5752762612864bb96e88eecf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="full-file-backups-sql-server"></a>Backups completos de arquivos (SQL Server)
-  Este tópico é relevante para bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contêm vários arquivos ou grupos de arquivos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico é relevante para bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contêm vários arquivos ou grupos de arquivos.  
   
  Pode ser feito backup dos arquivos em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restaurá-los individualmente. Além disso, você pode especificar um grupo de arquivos inteiro em vez de especificar cada arquivo constituinte separadamente. Note que, se qualquer arquivo de um grupo de arquivos estiver offline (por exemplo, porque o arquivo está sendo restaurado), o grupo de arquivos inteiro ficará offline e não poderá ter backup.  
   

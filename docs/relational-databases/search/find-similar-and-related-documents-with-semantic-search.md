@@ -2,9 +2,12 @@
 title: "Localizar documentos semelhantes e relacionados com a pesquisa semântica | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 947b4905c97a2c286cefc6baed8d1456276e1a10
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 941eb6554c42dc85a39e7b76b70dd3aa2c9c8837
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Localizar documentos semelhantes e relacionados com a pesquisa semântica
-  Descreve como localizar documentos ou valores de texto semelhantes ou relacionados, e informações sobre como eles são semelhantes ou relacionados, em colunas configuradas para indexação semântica estatística.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Descreve como localizar documentos ou valores de texto semelhantes ou relacionados, além de informações sobre como eles são semelhantes ou relacionados, em colunas configuradas para indexação semântica estatística.  
    
 ##  <a name="HowToQuerySimilar"></a> Localizar documentos semelhantes ou relacionados com SEMANTICSIMILARITYTABLE  
  Para identificar documentos semelhantes ou relacionados em uma coluna específica, consulte a função [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  

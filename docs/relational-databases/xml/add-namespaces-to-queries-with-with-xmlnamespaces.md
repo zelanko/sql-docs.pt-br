@@ -2,9 +2,12 @@
 title: Adicionar namespaces a consultas com WITH XMLNAMESPACES | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 32c90d2d2f06e259d3a363b8dbc758ee6aee8b64
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6730eac672d4803c3f50a200e83acb214b2986da
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Adicionar namespaces a consultas com WITH XMLNAMESPACES
-  [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) fornece suporte a URI de namespace da seguinte maneira:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) dá suporte a URI de namespace da seguinte maneira:  
   
 -   Ele torna o mapeamento do prefixo do namespace para URI disponível ao [Construir consultas XML usando FOR XML](../../relational-databases/xml/for-xml-sql-server.md) .  
   

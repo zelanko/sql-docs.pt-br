@@ -2,9 +2,12 @@
 title: Configurar e gerenciar separadores de palavras e lematizadores de pesquisa | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,15 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29c3477e0a53e78727eb95423158e550328cbfe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ba873b9ae0f29caa7acc85e5d5daed8dcbfd22a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar e gerenciar separadores de palavras e lematizadores de pesquisa
-
-Os separadores de palavras e os lematizadores executam a análise linguística em todos os dados indexados de texto completo. Análise linguística faz as duas coisas a seguir:
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Os separadores de palavras e os lematizadores executam a análise linguística em todos os dados indexados de texto completo. Análise linguística faz as duas coisas a seguir:
 
 -   **Localizar os limites de palavra (quebra de palavras)**. O *separador de palavras* identifica palavras individuais determinando onde existem limites de palavra com base nas regras lexicais do idioma. Cada palavra (também conhecida como *token*) é inserida no índice de texto completo usando uma representação compactada para reduzir seu tamanho.
 

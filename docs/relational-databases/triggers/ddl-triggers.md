@@ -2,9 +2,12 @@
 title: Gatilhos DDL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ebc22f2c34fbfa6e45874ee90cfb1fd8344e5c31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6e2dea1e93b07c728120c9043b41ab9e03596420
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ddl-triggers"></a>Gatilhos DDL
-  Os gatilhos DDL são disparados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem principalmente a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que começam com as palavras-chave CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Determinados procedimentos armazenados do sistema que executam operações do tipo DDL também podem disparar gatilhos DDL.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Os gatilhos DDL são disparados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem principalmente a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que começam com as palavras-chave CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Determinados procedimentos armazenados do sistema que executam operações do tipo DDL também podem disparar gatilhos DDL.  
   
  Use gatilhos DDL quando quiser fazer o seguinte:  
   

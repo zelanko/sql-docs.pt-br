@@ -3,8 +3,11 @@ title: "Ajuda de F1 das caixas de diálogo Opções | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f3de179a12e96a00f701b6aaa423902c7403886
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a8af76afab17affc70b5d8ed6478be09cda02120
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Ajuda de F1 das caixas de diálogo opções
-Esta seção contém a ajuda de F1 para as caixas de diálogo disponíveis quando se clica em **Opções** no menu **Ferramentas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta seção contém a ajuda de F1 para as caixas de diálogo disponíveis quando se clica em **Opções** no menu **Ferramentas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 [Opções &#40;Designers – Designers do Analysis Services – Geral&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

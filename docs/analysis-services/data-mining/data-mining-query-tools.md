@@ -2,12 +2,12 @@
 title: "Ferramentas de consulta de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3979e01644bbec77b71a93b7a20cfc9bc4276402
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tools"></a>Ferramentas de Consulta de Mineração de Dados
-  Todas as consultas de mineração de dados são baseadas na linguagem DMX (Extensões DMX). A DMX é usada para criar modelos para todos os tipos de tarefa de aprendizado de máquina, inclusive classificação, análise de risco, geração de recomendações e regressão linear. Você também pode gravar consultas DMX para obter informações sobre os padrões e as estatísticas que foram geradas após processar o modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Todas as consultas de mineração de dados usam a linguagem de extensões DMX (Data Mining). A DMX é usada para criar modelos para todos os tipos de tarefa de aprendizado de máquina, inclusive classificação, análise de risco, geração de recomendações e regressão linear. Você também pode gravar consultas DMX para obter informações sobre os padrões e as estatísticas que foram geradas após processar o modelo.  
   
  Você pode escrever sua própria DMX ou criar uma DMX básica usando uma ferramenta como o **Construtor de Consultas de Previsão** e depois modificá-la. Tanto o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quanto o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornecem ferramentas que o ajudam a criar consultas de previsão em DMX. Este tópico descreve como criar e executar consultas de mineração de dados usando essas ferramentas.  
   

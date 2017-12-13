@@ -2,12 +2,12 @@
 title: "Implantar uma solução de mineração de dados em versões anteriores do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6abe08512e8ff66299a7d50e0fcc90b7355a54ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 834b8ceae72e00eea7bf989ea9583068551bfc92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Implantar uma solução de mineração de dados em versões anteriores do SQL Server
-  Esta seção descreve problemas de compatibilidade conhecidos que podem surgir durante a tentativa de implantação de um modelo ou estrutura de mineração de dados criado em uma instância do [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] para um banco de dados que usa o SQL Server 2005 Analysis Services, ou quando você implanta modelos criados no SQL Server 2005 em uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta seção descreve problemas de compatibilidade conhecidos que podem surgir quando você tentar implantar um modelo de mineração de dados ou a estrutura de mineração de dados que foi criada em uma instância de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] para um banco de dados que usa o SQL Server 2005 Analysis Services, ou quando você implanta modelos criados no SQL Server 2005 em uma instância de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  A implantação em uma instância do SQL Server 2000 Analysis Services não é suportada.  
   

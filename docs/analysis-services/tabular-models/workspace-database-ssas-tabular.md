@@ -2,12 +2,12 @@
 title: "Banco de dados do espaço de trabalho (SSAS Tabular) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0d10c2fab9cb3a613446015e8bd3dbe3dbdce868
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae2e26606a2f84abea1caed7032a80d2e2de7e45
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="workspace-database-ssas-tabular"></a>Banco de dados do espaço de trabalho (SSAS tabular)
-  O banco de dados de espaço de trabalho modelo de tabela, usado durante a criação de modelos, é criado quando você cria um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]O banco de dados de espaço de trabalho do modelo de tabela, usado durante a criação do modelo, é criado quando você cria um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## <a name="specifying-a-workspace-instance"></a>Especificar uma instância do espaço de trabalho  
   Quando você cria um novo projeto de modelo de tabela no SSDT, você pode especificar uma instância do Analysis Services para usar ao criar seu projeto. Começando com a versão de setembro de 2016 (14.0.60918.0) de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], introduz dois modos para especificar uma instância do espaço de trabalho quando você cria um novo projeto de modelo de tabela. 

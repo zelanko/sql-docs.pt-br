@@ -2,12 +2,12 @@
 title: "Iniciar o Assistente de Business Intelligence no Designer de dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a916b45036a24d812594b5478efb1d33f06a2c62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ef434312b7c70784acdd5d65c1cda5a964c444fd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Dimensões - Assistente de BI no Designer de dimensão do banco de dados
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], crie operadores de rollup personalizado e fórmulas de membro personalizado e configure dimensões para write-back usando o Assistente de Business Intelligence ou o Designer de Dimensão. Você pode iniciar o Assistente de Business Intelligence por meio do Gerenciador de Soluções ou do Designer de Cubo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O Designer de Dimensão pode ser acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], crie operadores de acúmulo personalizado e de membro personalizado fórmulas e configure dimensões para write-back usando o Assistente de Business Intelligence ou o Designer de dimensão. Você pode iniciar o Assistente de Business Intelligence por meio do Gerenciador de Soluções ou do Designer de Cubo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O Designer de Dimensão pode ser acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>Iniciar o Assistente de Business Intelligence  
   

@@ -2,9 +2,12 @@
 title: Consulta XML FOR comparada com consulta XML FOR aninhada | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 26e2fb52bc52ff9f00fb70f20385533104cb8924
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c58715813c4369258d5244e517e2e1753a9046c7
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Consulta FOR XML comparada com consulta FOR XML aninhada
-  Este tópico compara uma consulta FOR XML de nível único com uma consulta FOR XML aninhada. Um dos benefícios do uso de consultas FOR XML aninhadas é que é possível especificar uma combinação de XML centrado em atributo e em elemento para resultados da consulta. O exemplo demonstra isso.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este tópico compara uma consulta XML FOR de nível único com uma consulta XML FOR aninhada. Um dos benefícios do uso de consultas FOR XML aninhadas é que é possível especificar uma combinação de XML centrado em atributo e em elemento para resultados da consulta. O exemplo demonstra isso.  
   
 ## <a name="example"></a>Exemplo  
  A consulta `SELECT` a seguir recupera informações de categoria e subcategoria de produtos no banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Não há FOR XML aninhado na consulta.  

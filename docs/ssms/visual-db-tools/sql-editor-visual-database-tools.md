@@ -3,8 +3,11 @@ title: Editor SQL (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5b5c0c123950f5314a0f6fce46c92d64b20821df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8d12d926366ece3db66b9edb950a0ec579e33f7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-editor-visual-database-tools"></a>Editor SQL (Visual Database Tools)
-Use o Editor SQL para editar procedimentos armazenados, funções, gatilhos e scripts SQL existentes. Esta janela é aberta quando você abre qualquer um dos objetos. Se quiser criar uma nova instrução SQL para executar sua fonte de dados, use o [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) do Designer de Consultas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use o Editor SQL para editar procedimentos armazenados, as funções, os gatilhos e os scripts SQL existentes. Esta janela é aberta quando você abre qualquer um dos objetos. Se quiser criar uma nova instrução SQL para executar sua fonte de dados, use o [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) do Designer de Consultas.  
   
 O Editor SQL fornece muitos recursos úteis de edição de texto do SQL , inclusive:  
   

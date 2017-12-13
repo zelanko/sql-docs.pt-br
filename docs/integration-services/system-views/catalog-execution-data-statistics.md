@@ -1,5 +1,5 @@
 ---
-title: execution_data_statistics | Microsoft Docs
+title: catalog.execution_data_statistics | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: fa1d87489ff6d0a10d95bf160ded3d038ca39d81
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: bd542c253583fe1513947475dfca65db686fab5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 08/03/2017
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|A ID (identificador exclusivo) dos dados.|  
 |execution_id|**bigint**|ID exclusivo da instância de execução.|  
-|package_name|**nvarchar (260)**|O nome do primeiro pacote que foi iniciado durante a execução.|  
+|package_name|**nvarchar(260)**|O nome do primeiro pacote que foi iniciado durante a execução.|  
 |task_name|**nvarchar(4000)**|O nome da tarefa de fluxo de dados.|  
 |dataflow_path_id_string|**nvarchar(4000)**|A cadeia de caracteres de identificação do caminho de fluxo de dados.|  
 |dataflow_path_name|**nvarchar(4000)**|Nome do caminho de fluxo de dados.|  
@@ -50,19 +48,18 @@ ms.lasthandoff: 08/03/2017
   
 -   Por padrão, quando uma execução é iniciada, as informações sobre o número de linhas que são enviadas não são registradas em log.  
   
--   Para exibir esses dados para uma determinada execução do pacote, defina o nível de log como **detalhado**. Para saber mais, veja [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
+-   Para exibir esses dados para uma execução específica de pacote, defina o nível de log como **Detalhado**. Para saber mais, veja [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
 ## <a name="permissions"></a>Permissões  
  Esta exibição requer uma das seguintes permissões:  
   
 -   Permissão READ na instância de execução  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Quando você tem permissão para executar uma operação no servidor, também tem permissão para exibir informações sobre a operação. A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
   
   
-

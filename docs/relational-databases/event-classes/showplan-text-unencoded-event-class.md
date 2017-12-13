@@ -2,9 +2,12 @@
 title: Classe de evento Showplan Text (Unencoded) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdbd698b1ee7ac3273a2ecc4c52e0c8b5659e41a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8b5d4d061f83114b9b1d5eb31f1a09e6901f565f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-text-unencoded-event-class"></a>classe de evento Showplan Text (Unencoded)
-  A classe de evento Showplan Text (Sem-Codificação) ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. Essa classe de evento é a mesma que a classe de evento Showplan Text, exceto pelo fato de que as informações do evento são formatadas como uma cadeia de caracteres ao invés de dados binários.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento Showplan Text (Unencoded) ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. Essa classe de evento é a mesma que a classe de evento Showplan Text, exceto pelo fato de que as informações do evento são formatadas como uma cadeia de caracteres ao invés de dados binários.  
   
  As informações incluídas são um subconjunto das informações disponíveis nas classes de evento Showplan All, Showplan XML ou Showplan XML Statistics Profile.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Selecione uma tabela de dimensão e chaves (Assistente para dimensões de alteração lenta) | Microsoft Docs"
+title: "Selecionar uma Tabela e Chaves de Dimensão (Assistente para Dimensões de Alteração Lenta) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.loaddimwizard.selecttableandkeys.f1
+f1_keywords: sql13.dts.loaddimwizard.selecttableandkeys.f1
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24413b539223f32d8ee808d584bb1a629f3f7e23
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b1806a2951e8d2cb41a44a428fe182d14c5999f0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>Selecionar uma Tabela e Chaves de Dimensão (Assistente para Dimensões de Alteração Lenta)
   Use a página **Selecionar uma Tabela e Chaves de Dimensão** para selecionar uma tabela de dimensões a ser carregada. Mapeie colunas do fluxo de dados para as colunas que serão carregadas.  
@@ -55,7 +52,6 @@ ms.lasthandoff: 08/03/2017
  Selecione uma das colunas de dimensão para servir de chave de negócio. É necessário possuir uma chave de negócio.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar saídas por meio do Assistente para dimensões de alteração lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
-

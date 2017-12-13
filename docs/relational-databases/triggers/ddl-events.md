@@ -2,9 +2,12 @@
 title: Eventos DDL | Microsoft Docs
 ms.custom: 
 ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3da22dbb1f2887bf25690ea96fd0dcfcdf3cb8a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1a9d0788789ff16b6f3fad859c13d690f87220a9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ddl-events"></a>Eventos DDL
-  As tabelas seguintes listam os eventos DDL que podem ser usados para um gatilho DDL ou notificação de eventos. Observe que cada evento corresponde a uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou procedimento armazenado, com a sintaxe de instrução modificada para incluir um caractere sublinhado (_) entre palavras-chave.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] As tabelas seguintes listam os eventos DDL que podem ser usados para um gatilho DDL ou notificação de eventos. Observe que cada evento corresponde a uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou procedimento armazenado, com a sintaxe de instrução modificada para incluir um caractere sublinhado (_) entre palavras-chave.  
   
 > [!IMPORTANT]  
 >  Os procedimentos armazenados do sistema que executam operações similares a DDL também podem acionar gatilhos DDL e notificações de eventos. Teste seus gatilhos e notificações de eventos DDL para determinar suas respostas aos procedimentos armazenados do sistema que são executados. Por exemplo, a instrução CREATE TYPE e o procedimento armazenado **sp_addtype** acionarão um gatilho DDL ou uma notificação de eventos que tenham sido criados em um evento CREATE_TYPE.  

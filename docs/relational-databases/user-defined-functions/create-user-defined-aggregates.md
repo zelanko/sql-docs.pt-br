@@ -2,9 +2,12 @@
 title: "Criar agregações definidas pelo usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89b3e7ef61770563f49a8eb59974c55dcffd6086
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 48ec74f09990f3ace92feb25605c256d69166e32
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-user-defined-aggregates"></a>Criar agregações definidas pelo usuário
-  Você pode criar um objeto de banco de dados dentro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é programado em um assembly CLR. Os objetos do banco de dados que podem alavancar o modelo de programação avançado fornecido pelo CLR incluem gatilhos, procedimentos armazenados, funções, funções de agregação e tipos.  
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Você pode criar um objeto de banco de dados dentro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é programado em um assembly CLR. Os objetos do banco de dados que podem alavancar o modelo de programação avançado fornecido pelo CLR incluem gatilhos, procedimentos armazenados, funções, funções de agregação e tipos.  
   
  Assim como as funções de agregação internas fornecidas em [!INCLUDE[tsql](../../includes/tsql-md.md)], as funções de agregação definidas pelo usuário executam o cálculo de um conjunto de valores e retornam um único valor.  
   

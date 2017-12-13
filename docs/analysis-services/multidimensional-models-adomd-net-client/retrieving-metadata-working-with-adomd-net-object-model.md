@@ -2,12 +2,12 @@
 title: Trabalhando com o modelo de objeto do ADOMD.NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fac5e4a825c4b30e7b9f102d03c5793438e2a2d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e4b99f710a79115233d3872db2bb36a5671ee69
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>Recuperando metadados - trabalhando com o modelo de objeto do ADOMD.NET
-  O ADOMD.NET oferece um modelo de objeto para a exibição dos cubos e dos objetos subordinados contidos em uma fonte de dados analíticos. No entanto, nem todos os metadados de uma determinada fonte de dados analíticos estarão disponíveis por meio do modelo de objeto. O modelo de objeto só fornece acesso às informações mais úteis para que um aplicativo cliente as exiba e permita que um usuário crie comandos de forma interativa. Por causa da complexidade reduzida dos metadados em apresentar, o modelo de objeto do ADOMD.NET é mais fácil usar.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O ADOMD.NET fornece um modelo de objeto para exibição dos cubos e objetos subordinados contidos em uma fonte de dados analíticos. No entanto, nem todos os metadados de uma determinada fonte de dados analíticos estarão disponíveis por meio do modelo de objeto. O modelo de objeto só fornece acesso às informações mais úteis para que um aplicativo cliente as exiba e permita que um usuário crie comandos de forma interativa. Por causa da complexidade reduzida dos metadados em apresentar, o modelo de objeto do ADOMD.NET é mais fácil usar.  
   
  No modelo de objeto do ADOMD.NET, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> fornece acesso a informações nos cubos OLAP (processamento analítico online) e nos modelos de mineração definidos em uma fonte de dados analíticos e objetos relacionados, como dimensões, conjuntos nomeados e algoritmos de mineração.  
   

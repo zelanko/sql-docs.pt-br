@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f25c00406ce375a2a7a380859ca0eaa5031b54d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f5a7d1211c5b3451b353a579551931e5e3cf538
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="look-up-infoobject"></a>Pesquisar InfoObject
   Use a caixa de diálogo **Pesquisar InfoObject** para pesquisar um InfoObject definido no sistema SAP Netweaver BW. Quando a lista de InfoObjects disponível é exibida, selecione o InfoObject que você quer e o destino do SAP BW preencherá as opções associadas com os valores necessários.  
@@ -87,13 +85,12 @@ ms.lasthandoff: 08/03/2017
  Quando a lista de InfoObjects disponível é exibida, selecione o InfoObject que você quer e o destino preencherá as opções associadas com os valores necessários.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar InfoCube para os dados da transação](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
+ [Criar InfoCube para os Dados da Transação](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Criar InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Criar InfoSource para dados de transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
- [Criar InfoSource para dados mestres](../../integration-services/data-flow/create-infosource-for-master-data.md)   
+ [Criar InfoSource para os dados da transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [Criar InfoSource para dados mestre](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Criar novo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
- [Editor de destino do SAP BW &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Editor de Destino SAP BW &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Ajuda F1 do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

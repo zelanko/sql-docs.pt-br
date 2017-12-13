@@ -2,9 +2,12 @@
 title: Arrastar e soltar texto | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 286ad84499dec5341ed3757d00eb7badcb56732c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9b55cb9cab0176d4d6e58870c087e75d2626822a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="drag-and-drop-text"></a>Arrastar e soltar texto
-  Você pode selecionar texto e depois arrastá-lo e soltá-lo em outro local. É possível arrastar e soltar texto:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode selecionar texto e depois arrastá-lo e soltá-lo em outro local. É possível arrastar e soltar texto:  
   
 -   Do Pesquisador de Objetos para o editor para criar uma consulta.  
   

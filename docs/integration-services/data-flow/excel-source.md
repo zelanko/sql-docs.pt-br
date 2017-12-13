@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 61e28171171a822f25da6979340785bc5c114e1c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="excel-source"></a>Origem do Excel
   A origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -107,7 +105,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [Loop por meio do Excel arquivos e tabelas usando um contêiner Loop Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
 ## <a name="excel-source-editor-connection-manager-page"></a>Editor de Origem do Excel (página Gerenciador de Conexões)
   Use o nó **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem do Excel** para selecionar a pasta de trabalho do [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para a origem que será usada. A origem do Excel lê os dados de uma planilha ou intervalo nomeado em uma pasta de trabalho existente.  
@@ -216,4 +214,3 @@ ms.lasthandoff: 08/17/2017
 -   Entrada de blog, [O Excel no Integration Services, parte 3 de 3: problemas e alternativas](http://go.microsoft.com/fwlink/?LinkId=217676), no site dougbert.com.  
   
   
-

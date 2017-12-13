@@ -2,11 +2,12 @@
 title: Fazer upgrade do Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +26,14 @@ caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
-  As instâncias do Analysis Services podem ser atualizadas para uma versão do SQL Server do mesmo modo de servidor para aproveitar os recursos introduzidos na versão atual, conforme descrito em [Novidades do Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] As instâncias do Analysis Services podem ser atualizadas para uma versão do SQL Server do mesmo modo de servidor para aproveitar os recursos introduzidos na versão atual, conforme descrito em [Novidades do Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Você pode fazer uma atualização in-loco de cada instância, mesmo se houver outras instâncias em execução no mesmo hardware. No entanto, a maioria dos administradores opta por instalar uma nova instância da nova versão para teste de aplicativos, antes de transferir cargas de trabalho de produção para o novo servidor. Mas, para servidores de desenvolvimento ou de teste, pode ser mais prático fazer uma atualização in-loco.  
   

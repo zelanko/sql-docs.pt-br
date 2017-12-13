@@ -1,12 +1,14 @@
 ---
-title: Tarefa do detector de eventos WMI | Microsoft Docs
+title: Tarefa Detector de Eventos do WMI | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +19,16 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e46d2c926ecd1dd381d358ea6e779bc427116444
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 5fcd6a9dedff32597209c837d4aa5d9471ff6d37
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wmi-event-watcher-task"></a>Tarefa Detector de Eventos do WMI
   A tarefa Detector de Eventos do WMI detecta um evento de Instrumentação de Gerenciamento do Windows (WMI) por meio de uma consulta de evento WQL (Management Instrumentation Query Language, Linguagem de Consulta de Instrumentação de Gerenciamento) para especificar eventos de interesse. É possível utilizar a tarefa Detector de Eventos do WMI para as seguintes finalidades:  
@@ -130,7 +132,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 ### <a name="static-options"></a>Opções estáticas  
  **WMIConnectionName**  
- Selecione um Gerenciador de conexão WMI na lista ou clique em \< **nova Conexão de WMI...** > para criar uma nova conexão Gerenciador.  
+ Selecione um gerenciador de conexões WMI na lista ou clique em \<**Nova Conexão WMI…**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de Conexões WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de Conexões WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -169,14 +171,13 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 #### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Conexão do arquivo  
  **WQLQuerySource**  
- Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variável  
  **WQLQuerySource**  
- Selecione uma variável na lista ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-

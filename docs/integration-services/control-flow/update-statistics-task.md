@@ -1,5 +1,5 @@
 ---
-title: "Tarefa atualizar estatísticas | Microsoft Docs"
+title: "Tarefa Atualizar Estatísticas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.updatestatisticstask.f1
+f1_keywords: sql13.dts.designer.updatestatisticstask.f1
 helpviewer_keywords:
 - updating statistics
 - Update Statistics task [Integration Services]
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2bc31c420204eb13766ef54f63bb6852dfffe0fe
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: daae142be528b1918f7f77cab89650efd807cb40
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="update-statistics-task"></a>Tarefa Atualizar Estatísticas
   A tarefa Atualizar Estatísticas atualiza informações sobre a distribuição de valores de chaves para um ou mais grupos de estatísticas (coleções) na tabela ou na exibição indexada especificada. Para obter mais informações, consulte [Statistics](../../relational-databases/statistics/statistics.md).  
@@ -67,4 +64,3 @@ ms.lasthandoff: 08/03/2017
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
   
-

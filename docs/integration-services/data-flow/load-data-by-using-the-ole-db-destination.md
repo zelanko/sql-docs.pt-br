@@ -1,5 +1,5 @@
 ---
-title: Carregar dados usando o destino OLE DB | Microsoft Docs
+title: Carregar dados por meio do destino OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eada84a10a9163c3a5bf0757def7948e18bf35da
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e97279231fbdefb263d071d6b6f0a2d975104247
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Carregar dados por meio do destino OLE DB
   Para adicionar e configurar um destino OLE DB, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  
@@ -73,7 +71,6 @@ ms.lasthandoff: 08/03/2017
  [Destino OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Transformações do Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de fluxo de dados](../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de Fluxo de Dados](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

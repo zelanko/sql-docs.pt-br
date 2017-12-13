@@ -1,5 +1,5 @@
 ---
-title: "Constantes em expressões de propriedade enumeradas | Microsoft Docs"
+title: "Constantes enumeradas em expressões de propriedade | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d6de3f50f2a0630e2488b33c6fe98c1fe20c1b0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
   Se as expressões de propriedade incluírem valores de uma lista de membros de enumerador, a expressão deverá usar o valor numérico do membro de enumerador em vez do nome amigável do membro. Por exemplo, se uma expressão definir a propriedade **LoggingMode** , use o valor numérico 2 em vez do nome amigável Desabilitada.  
@@ -611,10 +609,9 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40; SSIS &#41; Pacotes](../../integration-services/integration-services-ssis-packages.md)   
+ [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md)  
   
   
-

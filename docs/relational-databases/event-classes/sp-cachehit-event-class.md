@@ -2,9 +2,12 @@
 title: Classe de evento SP:CacheHit | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6815ca39fad5833eaf054b05037ffb8dd1f8a783
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 030d3b119bb61232863cbcf765807a2cc4e7175b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spcachehit-event-class"></a>classe de evento SP:CacheHit
-  A classe de evento SP:CacheHit indica que um procedimento armazenado está no cache de plano.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento SP:CacheHit indica que um procedimento armazenado está no cache de plano.  
   
 ## <a name="spcachehit-event-class-data-columns"></a>Colunas de dados da classe de evento SP:CacheHit  
   

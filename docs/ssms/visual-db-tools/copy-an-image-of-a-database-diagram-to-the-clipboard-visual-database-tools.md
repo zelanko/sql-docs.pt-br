@@ -3,8 +3,11 @@ title: "Copiar uma imagem de um diagrama de banco de dados para a área de trans
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 820ffd353a057d3d265ad887a0d5e1ef35c99852
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4ba6900ccb07dbe01b675444b05faf5cb53fc93c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>Copiar uma imagem de um diagrama de banco de dados na área de transferência (Visual Database Tools)
-Você pode criar uma imagem de um diagrama de banco de dados e copiá-lo em outro aplicativo.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode criar uma imagem de um Diagrama de Banco de Dados e copiá-la para outro aplicativo.  
   
 ### <a name="to-copy-a-diagram-image-to-the-clipboard"></a>Para copiar a imagem do diagrama para a área de transferência.  
   

@@ -2,9 +2,12 @@
 title: Ajuda de F1 do componente Caixa de Ferramentas | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6ee1d17314517b3115f594d36f781bd778585e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7d1295c3b760386380c626e1afde9b98401ef3bd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="toolbox-component-f1-help"></a>Ajuda de F1 do componente Caixa de Ferramentas
-  A**Caixa de Ferramentas** exibe uma série de itens para serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A **Caixa de Ferramentas** exibe uma série de itens para serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  
   
  Os ícones da**Caixa de Ferramentas** podem ser arrastados e soltos ou copiados e colados em editores de códigos ou superfícies de modo exibição de design no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

@@ -2,9 +2,12 @@
 title: "Conectar-se ao Mecanismo de Banco de Dados usando a Proteção Estendida | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e132f07a9bfa81c2eae226f2ce3d63ba3c65826
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0cdc286f5ab945e2897e69dcfe7f1a98dec1c4b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte para a **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida para Autenticação** é um recurso dos componentes de rede implementado pelo sistema operacional. Há suporte para a**Proteção Estendida** no Windows 7 e no Windows Server 2008 R2. **Proteção Estendida** é incluída em pacotes de serviço para sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] mais antigos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à **Proteção Estendida** desde o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. A**Proteção Estendida para Autenticação** é um recurso dos componentes de rede implementado pelo sistema operacional. Há suporte para a**Proteção Estendida** no Windows 7 e no Windows Server 2008 R2. **Proteção Estendida** é incluída em pacotes de serviço para sistemas operacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] mais antigos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**.  
   
 > [!IMPORTANT]  
 >  O Windows não habilita a **Proteção Estendida** por padrão. Para obter informações sobre como habilitar a **Proteção Estendida** no Windows, consulte [Proteção Estendida para Autenticação](http://support.microsoft.com/kb/968389).  

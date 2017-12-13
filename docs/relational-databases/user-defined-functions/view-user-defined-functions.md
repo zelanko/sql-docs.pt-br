@@ -2,9 +2,12 @@
 title: "Exibir funções definidas pelo usuário | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2efd88ad0a4b88d24a929b0e79e0e53333b2c1e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a71d45d8d304c52592b8ee693525950c3bfed28
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-user-defined-functions"></a>Exibir funções definidas pelo usuário
-  Você pode obter informações sobre a definição ou as propriedades de uma função definida pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da função para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela função.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Você pode obter informações sobre a definição ou as propriedades de uma função definida pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da função para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela função.  
   
 > [!IMPORTANT]  
 >  Se você alterar o nome de um objeto referenciado por uma função, deverá modificar essa função, de modo que seu texto reflita o novo nome. Portanto, antes de renomear um objeto, exiba primeiramente as dependências do objeto para determinar se alguma função é afetada pela mudança proposta.  

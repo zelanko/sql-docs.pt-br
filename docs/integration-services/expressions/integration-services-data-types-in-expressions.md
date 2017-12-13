@@ -1,28 +1,30 @@
 ---
-title: "Tipos de dados em expressões do Integration Services | Microsoft Docs"
+title: "Tipos de dados do Integration Services em expressões | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44b5829a581f0e0a0c2ff67eabe4a2a4fae3885e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
   O avaliador de expressão usa tipos de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando dados são inseridos pela primeira vez em um fluxo de dados em um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o mecanismo de fluxo de dados converte todos os dados de coluna para um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , e os dados da coluna que uma expressão usa já têm um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As expressões usadas nas transformações Divisão Condicional e Coluna Derivada podem fazer referência a colunas porque elas fazem parte de um fluxo de dados que inclui dados de coluna.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  Considere as expressões na captura de tela a seguir.  
   
- ![Tipos de dados em expressões do SSIS da cadeia de caracteres](../../integration-services/expressions/media/stringsinssisexpressions.png "tipos de dados em expressões do SSIS da cadeia de caracteres")  
+ ![Tipos de dados String em expressões SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Tipos de dados String em expressões SSIS")  
   
 1.  A primeira expressão é executada sem erro, porque a função NULL(DT_STR, ...) está no nível raiz da expressão.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
  Os exemplos a seguir demonstram os efeitos da conversão.  
   
- ![Convertendo cadeias de caracteres em expressões do SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "converter cadeias de caracteres em expressões do SSIS")  
+ ![Cadeias de caracteres de conversão em expressões SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Cadeias de caracteres de conversão em expressões SSIS")  
   
 1.  Na primeira expressão, a conversão não é no nível raiz da expressão. O avaliador de expressão trata dessa conversão de modo inteligente e converte em DT_WSTR, não em DT_STR. A expressão retorna DT_WSTR.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  O diagrama a seguir mostra o tipo de resultado de conversões implícitas de operações BINARY. A intersecção da coluna e da linha nesta tabela é o tipo de resultado de uma operação binário com operandos dos tipos à esquerda (De) e à direita (Para).  
   
- ![Conversão entre tipos de dados de tipo de dados implícita](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "conversão entre tipos de dados de tipo de dados implícita")  
+ ![Conversão de tipos de dados implícitos entre tipos de dados](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Conversão de tipos de dados implícitos entre tipos de dados")  
   
  A intersecção de um inteiro assinado e não assinado é um inteiro assinado potencialmente maior do que o argumento.  
   

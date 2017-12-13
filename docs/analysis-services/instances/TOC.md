@@ -15,7 +15,7 @@
 ## [Autenticação Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)  
 ## [Registro de SPN](spn-registration-for-an-analysis-services-instance.md)  
 ## [Acesso à HTTP](configure-http-access-to-analysis-services-on-iis-8-0.md)  
-## [Provedores de dados](data-providers-used-for-analysis-services-connections.md)  
+## [Bibliotecas de clientes (provedores de dados)](data-providers-used-for-analysis-services-connections.md)  
 ## [Desconectar usuários e sessões](disconnect-users-and-sessions-on-analysis-services-server.md)  
 # [Monitorar uma instância do Analysis Services](monitor-an-analysis-services-instance.md)  
 ## [SQL Server Profiler](use-sql-server-profiler-to-monitor-analysis-services.md)  

@@ -1,5 +1,5 @@
 ---
-title: Propriedades personalizadas do destino ODBC | Microsoft Docs
+title: Propriedades personalizadas de destino ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20a4e0f425cbd5d4d7fe7c3da4a17c2efe59d9e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4dacb3a2eea675e85b23fc2b05443d14a95983c6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-destination-custom-properties"></a>Propriedades personalizadas de destino ODBC
   A tabela a seguir descreve as propriedades personalizadas do destino ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 08/03/2017
 |LobChunkSize|Integer|A alocação de tamanho de parte para colunas LOB.|  
   
   
-

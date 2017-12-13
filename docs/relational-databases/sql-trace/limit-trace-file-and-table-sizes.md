@@ -2,9 +2,12 @@
 title: Limitar o tamanho de tabelas e arquivos de rastreamento | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9827287ecea08ca547c2b371c8e0696e37c7d02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cb3a4845d48fb24d5ca97823b2844e1c3ca369cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitar o tamanho de arquivos e tabelas de rastreamento
-  Os resultados do Rastreamento do SQL variam em tamanho, dependendo das classes de evento incluídas e da forma com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] é usado. Se você rastreia classes de evento que ocorrem com frequência, é possível minimizar a quantidade de dados coletados pelo rastreamento definindo o tamanho máximo de arquivo ou o número máximo de linhas. Especificando o tamanho máximo de arquivo ou de linhas, garante-se que o arquivo ou tabela de rastreamento não ultrapassem esse limite.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os resultados do Rastreamento do SQL variam em tamanho, dependendo das classes de evento incluídas e da forma com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] é usado. Se você rastreia classes de evento que ocorrem com frequência, é possível minimizar a quantidade de dados coletados pelo rastreamento definindo o tamanho máximo de arquivo ou o número máximo de linhas. Especificando o tamanho máximo de arquivo ou de linhas, garante-se que o arquivo ou tabela de rastreamento não ultrapassem esse limite.  
   
 > [!NOTE]  
 >  Se os dados do rastreamento forem salvos em um arquivo que já existe, é possível adicionar dados ao arquivo ou substituir os que ele contém. Se optar por acrescentar os dados ao arquivo e o arquivo de rastreamento atingir ou exceder o tamanho máximo especificado, você será notificado e terá a oportunidade de aumentar o tamanho máximo de arquivo ou especificar um novo arquivo. O mesmo vale para tabelas de rastreamento.  

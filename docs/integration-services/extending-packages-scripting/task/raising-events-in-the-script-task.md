@@ -1,5 +1,5 @@
 ---
-title: Gerando eventos na tarefa Script | Microsoft Docs
+title: Acionar eventos na tarefa Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - events [Integration Services], scripts
 - warnings [Integration Services]
@@ -25,22 +22,21 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 80f16c8d4fa5d4eb27eefe76b2dcf811e21cfaab
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f89d065e802cf37ddbca5ef173e3cd3004a00bbb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raising-events-in-the-script-task"></a>Gerando eventos na tarefa Script
-  Os eventos fornecem um modo de relatar erros, avisos e outras informações, como o progresso ou status da tarefa, ao pacote que os contém. O pacote fornece manipuladores de eventos para gerenciar notificações de eventos. A tarefa Script pode gerar eventos chamando métodos no <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> propriedade o **Dts** objeto. Para obter mais informações sobre como [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tratar eventos de pacotes, consulte [Integration Services &#40; SSIS &#41; Manipuladores de eventos](../../../integration-services/integration-services-ssis-event-handlers.md).  
+  Os eventos fornecem um modo de relatar erros, avisos e outras informações, como o progresso ou status da tarefa, ao pacote que os contém. O pacote fornece manipuladores de eventos para gerenciar notificações de eventos. A tarefa Script pode gerar eventos chamando métodos na propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> do objeto **Dts**. Para obter mais informações sobre como pacotes [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] manipulam eventos, consulte [Manipuladores de Eventos do SSIS &#40;Integration Services&#41;](../../../integration-services/integration-services-ssis-event-handlers.md).  
   
- Os eventos podem ser registrados em qualquer provedor de log que esteja habilitado no pacote. Provedores de logs armazenam informações sobre eventos em um repositório de dados. A tarefa Script também pode usar o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para registrar informações para um provedor de logs sem gerar um evento. Para obter mais informações sobre como usar o <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> método, consulte [log na tarefa Script](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).  
+ Os eventos podem ser registrados em qualquer provedor de log que esteja habilitado no pacote. Provedores de logs armazenam informações sobre eventos em um repositório de dados. A tarefa Script também pode usar o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para registrar informações para um provedor de logs sem gerar um evento. Para obter mais informações sobre como usar o método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>, consulte [Registro em log na tarefa Script](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).  
   
  Para gerar um evento, a tarefa Script chama um dos métodos expostos pela propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>. A tabela a seguir lista os métodos expostos pela propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>.  
   
@@ -153,8 +149,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Integration Services &#40; SSIS &#41; Manipuladores de eventos](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Adicionar um manipulador de eventos a um pacote](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

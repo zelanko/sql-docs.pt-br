@@ -1,5 +1,5 @@
 ---
-title: "Mesclar dados por meio da união transformação All | Microsoft Docs"
+title: "Mesclar dados por meio da transformação Unir Tudo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2f9933f48083b0849ba01312979911bacb4fd86
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 21fe86b697f0790488abc0b7f8b730dbc831f881
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Mesclar dados por meio da transformação Unir Tudo
   Para adicionar e configurar uma transformação Union All, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e duas fontes de dados.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  Clique duas vezes na transformação Union All.  
   
-5.  No **Editor da Transformação Union All**, mapeie uma coluna de uma entrada para uma coluna na lista **Nome da Coluna de Saída** clicando uma linha e selecionando uma coluna na lista de entrada. Selecione  **\<ignorar >** na lista de entrada para ignorar o mapeamento da coluna.  
+5.  No **Editor da Transformação Union All**, mapeie uma coluna de uma entrada para uma coluna na lista **Nome da Coluna de Saída** clicando uma linha e selecionando uma coluna na lista de entrada. Selecione **\<ignore>** na lista de entrada para ignorar o mapeamento da coluna.  
   
     > [!NOTE]  
     >  O mapeamento entre duas colunas requer que seus metadados tenham correspondência.  
@@ -66,7 +64,6 @@ ms.lasthandoff: 08/03/2017
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de fluxo de dados](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

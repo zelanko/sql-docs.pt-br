@@ -2,9 +2,12 @@
 title: "Publicando a execução de procedimento armazenado na replicação transacional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d92bf7d6279cc367e3ea2d67d19e78d362a39151
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 935ef9f319559ee9e021e9cedbb6150c7334d1f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicando execução de procedimento armazenado em replicação transacional
-  Caso haja um ou mais procedimentos armazenados executados no Publicador e que afetem as tabelas publicadas, considere excluir esses procedimentos armazenados na publicação como artigos de execução de procedimentos armazenados. A definição do procedimento (instrução CREATE PROCEDURE) será replicada para o Assinante quando a inscrição for inicializada. Quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor nos casos em que são executadas grandes operações em lote, pois apenas a execução do procedimento é replicada, ignorando-se a necessidade de replicar as alterações individuais de cada linha. Por exemplo, supondo que o procedimento armazenado a seguir seja criado no banco de dados de publicação:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Caso haja um ou mais procedimentos armazenados que sejam executados no Publicador e afetem as tabelas publicadas, considere excluir esses procedimentos armazenados na publicação como artigos de execução de procedimentos armazenados. A definição do procedimento (instrução CREATE PROCEDURE) será replicada para o Assinante quando a inscrição for inicializada. Quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor nos casos em que são executadas grandes operações em lote, pois apenas a execução do procedimento é replicada, ignorando-se a necessidade de replicar as alterações individuais de cada linha. Por exemplo, supondo que o procedimento armazenado a seguir seja criado no banco de dados de publicação:  
   
 ```  
 CREATE PROC give_raise AS  

@@ -2,9 +2,12 @@
 title: Gerar filtros | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2aa276ac1c58809cb97ef0ce002de76db32e1fa3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d3e86760f99dd98a405ec4e0efcdf0516485a09b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="generate-filters"></a>Gerar Filtros
-  A caixa de diálogo **Gerar Filtros** permite definir um filtro de linha em uma tabela em uma publicação de mesclagem; a replicação, então, estende automaticamente o filtro para outras tabelas relacionadas por relações de chave estrangeira. Por exemplo, se você definir um filtro em uma tabela de cliente para que contenha apenas dados de clientes franceses, a replicação estenderá esse filtro para que as tabelas de pedidos relacionadas e detalhes do pedidos contenham somente informações relacionadas aos clientes franceses.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A caixa de diálogo **Gerar Filtros** permite definir um filtro de linha em uma tabela em uma publicação de mesclagem; a replicação, então, estende automaticamente o filtro para outras tabelas relacionadas por relações de chave estrangeira. Por exemplo, se você definir um filtro em uma tabela de cliente para que contenha apenas dados de clientes franceses, a replicação estenderá esse filtro para que as tabelas de pedidos relacionadas e detalhes do pedidos contenham somente informações relacionadas aos clientes franceses.  
   
 ## <a name="options"></a>Opções  
  Essa caixa de diálogo envolve um processo de três etapas para criar um filtro de linha em uma tabela. O filtro é então estendido para as tabelas relacionadas à tabela filtrada por relações de chave primária e chave estrangeira. Por exemplo, nas três tabelas **Customer**, **SalesOrderHeader**e **SalesOrderDetail**, com uma relação entre **Customer** e **SalesOrderHeader**, e uma relação entre **SalesOrderHeader** e **SalesOrderDetail**, aplique um filtro de linha em **Customer**e a replicação estenderá esse filtro a **SalesOrderHeader** e **SalesOrderDetail**.  

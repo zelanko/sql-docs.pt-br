@@ -2,12 +2,12 @@
 title: "Referência técnica para anotações de BI para CSDL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 525b00678272347473f0cf845689be6d691c8ace
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be086d8e2a61ffbf5871c12b73cb628f656414ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Referência técnica para anotações de BI em CSDL
-  Esta seção lista os elementos, o atributo e as propriedades em CSDL usadas para representar modelos tabulares do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Alguns elementos são novos; outros foram anotados ou estendidos para oferecer suporte à modelagem de business intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Esta seção lista os elementos, atributos e propriedades em CSDL que são usadas para representar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modelos de tabela. Alguns elementos são novos; outros foram anotados ou estendidos para oferecer suporte à modelagem de business intelligence.  
   
  Para obter uma visão geral de modelos de tabela e como as entidades, relações e fórmulas são representadas na CSDL, consulte [anotações CSDL para Business Intelligence &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   

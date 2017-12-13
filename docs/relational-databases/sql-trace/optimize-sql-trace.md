@@ -2,9 +2,12 @@
 title: Otimizar o rastreamento do SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 385a5a642b5554f42d4d40bea712bfd6181ee18b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b8994a4c12de53e82ff45dd5c587b00390a4ac0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimize-sql-trace"></a>Otimizar o Rastreamento do SQL
-  Embora a execução do Rastreamento do SQL imponha custos ao desempenho, por usar recursos do sistema para coletar os dados, há diversos procedimentos que podem minimizar esse efeito. Para minimizar os custos ao desempenho devidos a um rastreamento, tente o seguinte:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Embora a execução do Rastreamento do SQL reduza o desempenho por usar recursos do sistema para coletar os dados, há diversos procedimentos que podem minimizar esse efeito. Para minimizar os custos ao desempenho devidos a um rastreamento, tente o seguinte:  
   
 -   Considere o uso do prompt de comando para executar os rastreamentos: Usar uma interface gráfica do usuário atrapalha o desempenho. Para obter mais informações, veja [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
   

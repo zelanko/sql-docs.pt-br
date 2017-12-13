@@ -2,9 +2,12 @@
 title: 'Exemplos: usando OPENXML | Microsoft Docs'
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9817efb82a4b0cc7ec2beb2954b252513858064f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9e77b2c648517d2d48d3537dd5f180b77bc0e979
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="examples-using-openxml"></a>Exemplos: usando OPENXML
-  Os exemplos neste tópico mostram como o OPENXML é usado para criar uma exibição de conjunto de linhas de um documento XML. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Os exemplos mostram todos os aspectos do OPENXML, mas não especificam metapropriedades no OPENXML. Para obter mais informações sobre como especificar metapropriedades no OPENXML, veja [Especificar metapropriedades no OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Os exemplos neste tópico mostram como o OPENXML é usado para criar uma exibição de conjunto de linhas de um documento XML. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Os exemplos mostram todos os aspectos do OPENXML, mas não especificam metapropriedades no OPENXML. Para obter mais informações sobre como especificar metapropriedades no OPENXML, veja [Especificar metapropriedades no OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Exemplos  
  Ao recuperar dados, *rowpattern* é usado para identificar os nós no documento XML que determinam as linhas. Além disso, *rowpattern* é expressado na linguagem padrão XPath que é usada na implementação do MSXML XPath. Por exemplo, se o padrão terminar em um elemento ou atributo, uma linha será criada para cada elemento ou atributo selecionado por *rowpattern*.  

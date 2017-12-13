@@ -3,8 +3,11 @@ title: Visual Database Tools | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 01307073945c07130691d3cf69ea5b9fc5f51a33
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5079ad8ff9f7a1569ecc90954ccbcb494784c93e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] inclui os designers visuais para compilar consultas [!INCLUDE[tsql](../../includes/tsql_md.md)] , tabelas e bancos de dados de diagramação.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] inclui os designers visuais para compilar consultas [!INCLUDE[tsql](../../includes/tsql_md.md)], tabelas e bancos de dados de diagramação.  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
 Execute as seguintes tarefas para começar a usar o Visual Database Tools:  

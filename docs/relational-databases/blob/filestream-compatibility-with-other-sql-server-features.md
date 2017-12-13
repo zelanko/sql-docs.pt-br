@@ -2,9 +2,12 @@
 title: Compatibilidade do FILESTREAM com outros recursos do SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4986633a3dffd04b49610a64b3bf31d99ba221ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0fa07febaa2096db25b4b29152a089462deccae1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidade do FILESTREAM com outros recursos do SQL Server
-  Como dados FILESTREAM estão no sistema de arquivos, este tópico fornece algumas considerações, diretrizes e limitações para o uso de FILESTREAM com os seguintes recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Como dados FILESTREAM estão no sistema de arquivos, este tópico fornece algumas considerações, diretrizes e limitações para o uso de FILESTREAM com os seguintes recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  
   

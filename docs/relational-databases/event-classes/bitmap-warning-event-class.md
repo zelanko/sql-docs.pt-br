@@ -2,9 +2,12 @@
 title: Classe de evento Bitmap Warning | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e7272051a221476822c4d3d92c2f7b4ceaaeaa2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4ba36dc40681c3aa007672c42be3e8b1ca1be0da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bitmap-warning-event-class"></a>classe de evento Bitmap Warning
-  A classe de evento **Bitmap Warning** pode ser usada para monitorar o uso de filtro de bitmap em consultas. A subclasse de evento pode ser usada para informar quando filtros de bitmap forem desabilitados em uma consulta.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Bitmap Warning** pode ser usada para monitorar o uso de filtro de bitmap em consultas. A subclasse de evento pode ser usada para informar quando filtros de bitmap forem desabilitados em uma consulta.  
   
 ## <a name="bitmap-warning-event-class-data-columns"></a>Colunas de dados de classe de evento Bitmap Warning  
   

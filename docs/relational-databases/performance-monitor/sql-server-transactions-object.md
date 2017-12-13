@@ -2,9 +2,12 @@
 title: "SQL Server, objeto Transações| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a3c085266a6f4d14f0c7881289ebea15347675de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 711aaff1e0692bcf377117026692f508fd881798
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objeto Transactions
-  O objeto **Transactions** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar o número de transações ativas em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], e os efeitos dessas transações em recursos como o repositório de versões de linhas de isolamento de instantâneo em **tempdb**. As transações são unidades de trabalho lógicas; um conjunto de operações que devem ter êxito ou ser apagadas de um banco de dados para manter a integridade lógica dos dados. Todas as modificações de dados nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são feitas em transações.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **Transactions** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar o número de transações ativas em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e os efeitos dessas transações em recursos como o repositório de versões de linhas de isolamento de instantâneo em **tempdb**. As transações são unidades de trabalho lógicas; um conjunto de operações que devem ter êxito ou ser apagadas de um banco de dados para manter a integridade lógica dos dados. Todas as modificações de dados nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são feitas em transações.  
   
  Quando um banco de dados é definido para permitir o nível de isolamento do instantâneo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve manter um registro das modificações feitas para cada linha em um banco de dados. Sempre que uma linha é modificada, uma cópia dela, como estava antes das modificações, é registrada em um repositório de versão de linha em **tempdb**. Muitos dos contadores no objeto **Transactions** podem ser utilizados para monitorar o tamanho e a taxa de crescimento do repositório de versão de linha em **tempdb**.  
   

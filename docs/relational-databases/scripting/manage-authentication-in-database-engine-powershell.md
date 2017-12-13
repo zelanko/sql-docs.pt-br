@@ -2,9 +2,12 @@
 title: "Gerenciar a autenticação no PowerShell do Mecanismo de Banco de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: af9fceccdaf20b579255e74b032fcb643fa49a6b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2f25118386ef075d6e6b769def7b06c6908a9e4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gerenciar a autenticação no Mecanismo de Banco de Dados com o PowerShell
-  Por padrão, os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell usam a Autenticação do Windows ao conectar a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Você pode usar a Autenticação do SQL Server definindo uma unidade virtual do PowerShell ou especificando os parâmetros **–Username** e **–Password** para **Invoke-Sqlcmd**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Por padrão, os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell usam a Autenticação do Windows ao se conectar a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Você pode usar a Autenticação do SQL Server definindo uma unidade virtual do PowerShell ou especificando os parâmetros **–Username** e **–Password** para **Invoke-Sqlcmd**.  
   
 1.  **Antes de começar:**  [Permissões](#Permissions)  
   

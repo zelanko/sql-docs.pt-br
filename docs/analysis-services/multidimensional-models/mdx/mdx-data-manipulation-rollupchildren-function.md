@@ -2,12 +2,12 @@
 title: "Trabalhando com a função RollupChildren (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2b5133c23454a8281e028a848403e18f5d89eae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c913406650e267cb715267f4a2a91235b6259b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipulação de dados MDX - função RollupChildren
-  A função MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md) acumula os filhos de um membro, aplicando um operador unário diferente a cada um deles, e retorna o valor desse rollup como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O MDX (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) função acumula os filhos de um membro, aplicando um operador unário diferente para cada filho e retorna o valor desse acúmulo como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
   
 ## <a name="rollupchildren-function-examples"></a>Exemplos da função RollupChildren  
  O uso da função **RollupChildren** em instruções MDX é simples de explicar, mas seu efeito sobre as consultas MDX pode ser bem abrangente.  

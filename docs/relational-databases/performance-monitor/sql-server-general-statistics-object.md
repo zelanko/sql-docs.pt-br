@@ -2,9 +2,12 @@
 title: "SQL Server, objeto Estatísticas Gerais | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd44f59d6fe693dbf8695830240ba1a16453d123
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1cce63071cd5e87dee3558df803da4388b2af90a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, objeto General Statistics
-  O objeto **SQLServer:General Statistics** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a atividade geral em todo o servidor, como o número de conexões atuais e o número de usuários que se conectam e se desconectam, por segundo, dos computadores que executam uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso pode ser útil ao trabalhar com sistemas do tipo OLTP, em que há muitos clientes conectando-se e desconectando-se de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **SQLServer:General Statistics** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a atividade geral em todo o servidor, como o número de conexões atuais e o número de usuários que se conectam e se desconectam, por segundo, dos computadores que executam uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso pode ser útil ao trabalhar com sistemas do tipo OLTP, em que há muitos clientes conectando-se e desconectando-se de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Esta tabela descreve os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** .  
   

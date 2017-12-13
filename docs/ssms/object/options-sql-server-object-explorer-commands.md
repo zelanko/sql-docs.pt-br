@@ -3,8 +3,11 @@ title: "Opções (Pesquisador de Objetos do SQL Server – Comandos) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e32d7fe35d1a6322e902e07c866d952cdccb1411
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 69ada91ed2c98151d052a14604786ece9e27f059
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Opções (Pesquisador de Objetos – Comandos do SQL Server)
-Quando você clica com o botão direito do mouse em uma tabela ou exibição no Pesquisador de Objetos, existem as seguintes duas opções para exibição de linhas na tabela:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando você clica com o botão direito do mouse em uma tabela ou exibição no Pesquisador de Objetos, existem as duas opções a seguir para exibição de linhas na tabela:  
   
 -   **Selecionar 1000 Linhas Superiores**  
   

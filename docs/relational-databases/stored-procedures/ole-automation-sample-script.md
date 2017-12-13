@@ -2,9 +2,12 @@
 title: "Script de exemplo de automação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea466e1a827b90ebbe55f7e62469beecbc8a9a28
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99b9e3c7e3bd0e75e80418f26cfbc9f9bafb8562
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-sample-script"></a>Script de exemplo de automação OLE
-  Esse tópico contém um exemplo de lote de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa os procedimentos armazenados da Automação OLE para criar e usar um objeto SQL-DMO SQLServer na instância local do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Partes do código são usadas como exemplos nos tópicos de referência para os procedimentos armazenados do sistema de Automação OLE.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esse tópico contém um exemplo de lote de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa os procedimentos armazenados da Automação de OLE para criar e usar um objeto SQL-DMO SQLServer na instância local do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Partes do código são usadas como exemplos nos tópicos de referência para os procedimentos armazenados do sistema de Automação OLE.  
   
 ```  
 USE AdventureWorks2012;  

@@ -3,8 +3,11 @@ title: Procurar por objetos (Pesquisador de Objetos) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e6e65cd3b8a6f9120f2e20872eacb8fd40f2b7e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f995e8f75cd25b006c89480bd1f5efece9e08d9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="browse-for-objects-object-explorer"></a>Procurar por objetos (Pesquisador de Objetos)
-Exibe uma lista de objetos do tipo selecionado. Selecione um ou mais objetos desta lista marcando a caixa de seleção correspondente. A caixa **Procurar por Objetos** só exibe itens apropriados para a ação e só exibe itens que você tem permissão para exibir.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Exibe uma lista de objetos do tipo selecionado. Selecione um ou mais objetos desta lista marcando a caixa de seleção correspondente. A caixa **Procurar por Objetos** só exibe itens apropriados para a ação e só exibe itens que você tem permissão para exibir.  
   
 ## <a name="options"></a>Opções  
 **Caixa de seleção**  

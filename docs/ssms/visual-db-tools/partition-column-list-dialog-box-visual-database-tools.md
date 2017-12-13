@@ -3,8 +3,11 @@ title: "Caixa de diálogo Lista de Colunas de Partição (Visual Database Tools)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a23fcd46b6f3619695e6e192376214591925786c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bf4032ba86ee8cdb2b2ee32d787f8aa505f34a60
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Caixa de diálogo Lista de Colunas de Partição (Visual Database Tools)
-Se uma tabela tiver um esquema de partição associado, você poderá usar esta caixa de diálogo para escolher a coluna (ou colunas) à qual será aplicada a função de partição. Para a função funcionar direito, o tipo de dados da coluna que você vai trocar deve ser igual ao tipo de dados da coluna definido na função de partição.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se uma tabela tiver um esquema de partição associado, você poderá usar esta caixa de diálogo para escolher a coluna (ou colunas) à qual será aplicada a função de partição. Para a função funcionar direito, o tipo de dados da coluna que você vai trocar deve ser igual ao tipo de dados da coluna definido na função de partição.  
   
 Para obter mais informações sobre esquemas de partição e funções consulte os Manuais Online do SQL Server.  
   

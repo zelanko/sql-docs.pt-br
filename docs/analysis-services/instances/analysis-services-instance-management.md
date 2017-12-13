@@ -2,12 +2,12 @@
 title: "Gerenciamento de instância do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7768246432f2711f7e3d99c046493e39b7e4ecf9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6bdd35da02c1679607ce89002a6a2c3edc569c0c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-instance-management"></a>Gerenciamento de instância do Analysis Services
-  Uma instância do Analysis Services é uma cópia do executável **msmdsrv.exe** que é executada como um serviço do sistema operacional. Cada instância é completamente independente de outras instâncias no mesmo servidor, tendo seus próprios parâmetros de configuração, permissões, portas, contas de inicialização, armazenamento de arquivo e propriedades de modo de servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma instância do Analysis Services é uma cópia do **msmdsrv.exe** executável que é executado como um serviço de sistema operacional. Cada instância é completamente independente de outras instâncias no mesmo servidor, tendo seus próprios parâmetros de configuração, permissões, portas, contas de inicialização, armazenamento de arquivo e propriedades de modo de servidor.  
   
  Cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executada como um serviço do Windows, Msmdsrv.exe, no contexto de segurança de uma conta de logon definida.  
   

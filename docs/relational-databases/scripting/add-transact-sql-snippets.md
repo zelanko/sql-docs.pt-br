@@ -2,9 +2,12 @@
 title: Adicionar trechos de Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: be592feef35a8cf875d9dce783f5843979d4f835
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd782cbd60c23d139a980bbf943b158cb38561b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-transact-sql-snippets"></a>Adicionar trechos de Transact-SQL
-  Você pode adicionar seus próprios trechos de código Transact-SQL ao conjunto de trechos predefinidos incluídos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode adicionar seus próprios trechos de código Transact-SQL ao conjunto de trechos predefinidos incluídos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>Criando um arquivo de trecho Transact-SQL  
  A primeira parte da criação de um trecho de código do [!INCLUDE[tsql](../../includes/tsql-md.md)] é criar um arquivo XML com o texto do seu trecho de código. O arquivo deve ter uma extensão .snippet e atender as requisitos do [Esquema de trechos de código](http://go.microsoft.com/fwlink/?LinkId=207504). Defina a linguagem do trecho como SQL.  

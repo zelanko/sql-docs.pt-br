@@ -18,6 +18,7 @@
 ### [Adicionar a Web Part do Visualizador de Relatórios a uma página da Web](add-report-viewer-web-part-to-page.md)
 ### [Conectar a Web Part de filtro ou documentos](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  
 ### [Personalizar a Web Part do Visualizador de Relatórios](customize-the-report-viewer-web-part.md)  
+### [Configurações do site do SharePoint para a Web Part do Visualizador de Relatórios](report-viewer-web-part-sharepoint-site-settings.md)
 # [Alta disponibilidade](high-availability-reporting-services.md)  
 # [Habilitar e desabilitar o RDL Sandboxing](enable-and-disable-rdl-sandboxing.md)  
 # [Configurar o Reporting Services para usar um nome alternativo da entidade](configure-reporting-services-to-use-a-subject-alternative-name.md)  

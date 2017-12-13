@@ -2,9 +2,12 @@
 title: Invoke-Sqlcmd cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7afb1a8a23055df89c0a446e2d4be3255311b5b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** é um cmdlet do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que executa scripts que contêm instruções de linguagem ([!INCLUDE[tsql](../includes/tsql-md.md)] e XQuery) e de comandos com suporte no utilitário **sqlcmd** .  
@@ -114,14 +117,14 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ID de logon para Autenticação.|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Senha de autenticação.|-P|-Password|  
 |Definição de variável.|-v|-Variable|  
-|Intervalo de tempo limite da consulta.|-t|-QueryTimeout|  
+|Intervalo (segundos) de tempo limite da consulta.|-t|-QueryTimeout|  
 |Interromper a execução em um erro|-b|-AbortOnError|  
 |Conexão de Administrador Dedicada.|-A|-DedicatedAdministratorConnection|  
 |Desabilitar comandos interativos, script de inicialização e variáveis de ambiente.|-X|-DisableCommands|  
 |Desabilitar substituição de variável.|-X|-DisableVariables|  
 |Nível de severidade mínimo a ser informado.|-v|-SeverityLevel|  
 |Nível de erro mínimo a ser informado.|-m|-ErrorLevel|  
-|Intervalo de tempo limite de logon.|-l|-ConnectionTimeout|  
+|Intervalo (segundos) de tempo limite de logon.|-l|-ConnectionTimeout|  
 |Hostname.|-H|-HostName|  
 |Alterar senha e sair.|-Z|-NewPassword|  
 |Arquivo de entrada que contém uma consulta|-i|-InputFile|  

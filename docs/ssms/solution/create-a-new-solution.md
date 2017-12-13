@@ -3,8 +3,11 @@ title: "Criar uma nova solução | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08c16387a7b73b26a2c9448623e9a2799c04e476
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8e0e4034f71fa1a6a6c4a9fbad967fd0bc419af9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-new-solution"></a>Criar uma nova solução
-Quando você cria um projeto, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] cria uma solução para contê-lo. Você só pode abrir uma solução de cada vez. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] não permite a criação de pastas dentro de projetos. Para organizar seu trabalho, crie vários projetos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando você cria um projeto, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] cria uma solução para contê-lo. Você só pode abrir uma solução de cada vez. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] não permite a criação de pastas dentro de projetos. Para organizar seu trabalho, crie vários projetos.  
   
 Para acessar o Gerenciador de Soluções, clique em **Gerenciador de Soluções** no menu **Exibir** .  
   

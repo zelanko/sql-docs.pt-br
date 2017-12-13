@@ -1,11 +1,14 @@
 ---
 title: "Notas de Versão do SQL Server 2012 SP3 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 05/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8562a0c6e653822263df58844b3b5093acf8d46
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 960803406d9dcf81e49b08ecf23c21fdb6e76645
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>Notas de Versão do SQL Server 2012 SP3
-Estas Notas de Versão descrevem os problemas que você precisa conhecer antes de instalar ou solucionar problemas do SQL Server 2012 Service Pack 3. As Notas de Versão listadas aqui estão disponíveis somente online, e não em mídia de instalação. Elas são atualizadas periodicamente, conforme os problemas são descobertos. Para obter uma lista de melhorias e correções, consulte [Informações da versão do SQL Server 2012 Service Pack 3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information) para obter mais informações.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Estas Notas de Versão descrevem os problemas que você precisa conhecer antes de instalar ou solucionar problemas do SQL Server 2012 Service Pack 3. As Notas de Versão listadas aqui estão disponíveis somente online, e não em mídia de instalação. Elas são atualizadas periodicamente, conforme os problemas são descobertos. Para obter uma lista de melhorias e correções, consulte [Informações da versão do SQL Server 2012 Service Pack 3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information) para obter mais informações.  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>Escolha o arquivo correto para baixar e instalar  
 Use a tabela abaixo para identificar o local e o nome do arquivo a ser baixado com base em sua versão atualmente instalada. As páginas de download têm requisitos de sistema e instruções básicas de instalação.  

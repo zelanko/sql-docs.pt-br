@@ -2,9 +2,12 @@
 title: "Dados hierárquicos (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a353346cd6cf9abe094f839b1396bdadac93c7e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2127532c0e60feba9cff8f2f986260ac8179e6d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
-  O tipo de dados interno **hierarchyid** facilita o armazenamento e a consulta de dados hierárquicos. **hierarchyid** foi otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O tipo de dados interno **hierarchyid** facilita o repositório e a consulta de dados hierárquicos. **hierarchyid** foi otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
   
  Os dados hierárquicos são definidos como um conjunto de itens de dados mutuamente relacionados por relações hierárquicas. As relações hierárquicas existem onde um item de dados é o pai de outro item. Exemplos dos dados hierárquicos que geralmente são armazenados em bancos de dados incluem o seguinte:  
   

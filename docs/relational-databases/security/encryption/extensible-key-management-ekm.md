@@ -2,9 +2,12 @@
 title: "EKM (Gerenciamento extensível de chaves) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 33c468cb6c8f2a8437e9922203afb14ae513f2c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c642ca8448624c79b77f84c71619439918856767
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extensible-key-management-ekm"></a>Gerenciamento extensível de chaves (EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece funcionalidades de criptografia de dados com o *EKM* (Gerenciador Extensível de Chaves), usando o provedor *Microsoft Cryptographic API* (MSCAPI) para criptografia e geração de chave. As chaves de criptografia de dados e a criptografia da chave são criadas em contêineres chaves e devem ser exportadas por um provedor antes de serem armazenadas no banco de dados. Essa abordagem habilita o gerenciamento de chave, que inclui uma hierarquia de chave de criptografia e backup da chave, para ser tratado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+O [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece funcionalidades de criptografia de dados com o *EKM* (Gerenciador Extensível de Chaves), usando o provedor *MSCAPI* (Microsoft Cryptographic API) para criptografia e geração de chave. As chaves de criptografia de dados e a criptografia da chave são criadas em contêineres chaves e devem ser exportadas por um provedor antes de serem armazenadas no banco de dados. Essa abordagem habilita o gerenciamento de chave, que inclui uma hierarquia de chave de criptografia e backup da chave, para ser tratado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Com a crescente demanda de conformidade reguladora e referente à privacidade dos dados, as organizações estão tirando vantagem da criptografia como meio de oferecer uma solução de "defesa aprofundada". Essa abordagem geralmente não é muito prática se usar só as ferramentas de gerenciamento de criptografia do banco de dados. Os fornecedores de hardware fornecem produtos que corrigem o gerenciamento de chave empresarial, usando o *HSM* (módulos de segurança do hardware). Os dispositivos HSM armazenam chaves de criptografia em módulos de software ou hardware. É uma solução mais segura porque as chaves de criptografia não estão com dados de criptografia.  
   

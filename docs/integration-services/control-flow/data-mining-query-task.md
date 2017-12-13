@@ -1,5 +1,5 @@
 ---
-title: "Tarefa consulta de mineração de dados | Microsoft Docs"
+title: "Tarefa Consulta de Mineração de Dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 72ed17f506e2da78c972c54e19e98c8deacc287c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query-task"></a>Tarefa Consulta de Mineração de Dados
   A tarefa Consulta de Mineração de Dados executa consultas de previsão com base em modelos internos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A consulta de previsão cria uma previsão para novos dados usando modelos de mineração. Por exemplo, uma consulta de previsão pode prever quantos veleiros serão vendidos durante os meses de verão ou gerar uma lista de possíveis clientes para a compra de um veleiro.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Descrição**  
+ **Description**  
  Digite uma descrição para a tarefa Consulta de Mineração de Dados.  
   
 ### <a name="mining-model-tab-options"></a>Opções da guia Modelo de Mineração  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Descrição**  
+ **Description**  
  Digite uma descrição para a tarefa Consulta de Mineração de Dados.  
   
 ### <a name="build-query-tab-options"></a>Opções da guia Construir Consulta  
@@ -172,7 +170,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Os nomes das tarefas devem ser exclusivos em um pacote.  
   
- **Descrição**  
+ **Description**  
  Digite uma descrição para a tarefa Consulta de Mineração de Dados.  
   
 ### <a name="output-tab-options"></a>Opções da guia Saída  
@@ -185,7 +183,6 @@ ms.lasthandoff: 08/11/2017
  **Tabela de saída**  
  Especifique a tabela na qual a consulta de previsão deve gravar seus resultados.  
   
- **Descartar e recriar a tabela de saída**  
+ **Ignorar e recriar tabela de saída**  
  Indique se a consulta de previsão deve substituir o conteúdo na tabela de destino, ignorando e, em seguida, recriando a tabela.  
   
-

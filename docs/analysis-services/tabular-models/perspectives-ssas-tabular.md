@@ -2,12 +2,12 @@
 title: Perspectivas (SSAS Tabular) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 36e28c1211017a46a66ce7c7ef519eb887248c8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fdbede4868884656f3dbf9e7ff8d37e3019ed12
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives"></a>Perspectivas
-  As perspectivas, em modelos tabulares, definem subconjuntos visíveis de um modelo que fornece pontos de vista concentrados, específicos à empresa ou específicos ao aplicativo.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Perspectivas, em modelos tabulares, definem subconjuntos visíveis de um modelo que fornecem pontos de vista concentrados, específicos à empresa ou específicos de aplicativo do modelo.  
   
 ##  <a name="bkmk_understanding"></a> Benefícios  
  Os modelos tabulares podem ser muito complexos para usuários explorarem. Um único modelo pode representar o conteúdo de um data warehouse completo com muitas tabelas, medidas e dimensões. Essa complexidade pode ser difícil para usuários que precisam apenas interagir com uma pequena parte do modelo para satisfazer seus requisitos de Business Intelligence e geração de relatórios.  

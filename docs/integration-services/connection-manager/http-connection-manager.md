@@ -1,5 +1,5 @@
 ---
-title: "Gerenciador de Conexão HTTP | Microsoft Docs"
+title: "Gerenciador de conexões HTTP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 7dbd165b8d94247365697fe3b9e0cbb372becd8c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d5f6c0a872ae043e8550dc541d3c0e0f706e388a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="http-connection-manager"></a>Gerenciador de conexões HTTP
   Uma conexão HTTP permite que um pacote acesse um servidor Web usando o HTTP para enviar ou receber arquivos. A tarefa Serviço da Web incluída no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa esse gerenciador de conexões.  
@@ -138,7 +136,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefa Serviços Web](../../integration-services/control-flow/web-service-task.md)   
- [Integration Services &#40; SSIS &#41; Conexões](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

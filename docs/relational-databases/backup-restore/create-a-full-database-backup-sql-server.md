@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d6049d82cb551c1614f4ea9f76528e53cd29942c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   À medida que um banco de dados aumenta de tamanho, os backups completos do banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Para um banco de dados grande, considere complementar um backup de banco de dados completo com uma série de [backups de banco de dados diferencial]((../../relational-databases/backup-restore/differential-backups-sql-server.md). Para saber mais, confira [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   À medida que um banco de dados aumenta de tamanho, os backups completos do banco de dados levam mais tempo para serem concluídos e exigem mais espaço de armazenamento. Para um banco de dados grande, considere complementar um backup de banco de dados completo com uma série de [backups de bancos de dados diferenciais](../../relational-databases/backup-restore/differential-backups-sql-server.md). Para saber mais, confira [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Estime o tamanho de um backup de banco de dados completo usando o procedimento armazenado do sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   

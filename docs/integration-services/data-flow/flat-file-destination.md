@@ -1,5 +1,5 @@
 ---
-title: Simples de destino do arquivo | Microsoft Docs
+title: Destino de arquivo simples | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 14de99532df85ad2d65d28bdeeccfcbd8fa3d039
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flat-file-destination"></a>Destino de arquivo simples
   O destino de Arquivo Simples grava dados em um arquivo de texto. O arquivo de texto pode ser em formato delimitado, de largura fixa, largura fixa com delimitador de linha ou com imperfeição à direita.  
@@ -95,7 +93,7 @@ ms.lasthandoff: 08/17/2017
  Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis para colunas de entrada.  
   
  **Coluna de Entrada**  
- Exiba as colunas de entrada selecionadas anteriormente neste tópico. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**. Selecione  **\<ignorar >** para excluir a coluna da saída.  
+ Exiba as colunas de entrada selecionadas anteriormente neste tópico. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**. Selecione **\<ignorar>** para excluir a coluna da saída.  
   
  **Coluna de Destino**  
  Exiba cada coluna de destino disponível, seja ela mapeada ou não.  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/17/2017
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   
-

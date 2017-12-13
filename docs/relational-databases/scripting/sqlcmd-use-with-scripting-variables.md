@@ -2,9 +2,12 @@
 title: "Usar sqlcmd com variáveis de script | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c538749543f55e0f78485f7bbd2d801275aeb82b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 165c7c1cac15f641c44c0d2f4ce4e7327fd514c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd – Usar com variáveis de script
-  As variáveis usadas em scripts normalmente são chamadas de variáveis de script. As variáveis de script habilitam um script ser usado em vários cenários. Por exemplo, se você desejar executar um script em vários servidores, em vez de modificar o script para cada servidor, pode usar uma variável de script para o nome do servidor. Alterando o nome do servidor fornecido para a variável de script, o mesmo script pode ser executado em diferentes servidores.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As variáveis usadas em scripts normalmente são chamadas de variáveis de script. As variáveis de script habilitam um script ser usado em vários cenários. Por exemplo, se você desejar executar um script em vários servidores, em vez de modificar o script para cada servidor, pode usar uma variável de script para o nome do servidor. Alterando o nome do servidor fornecido para a variável de script, o mesmo script pode ser executado em diferentes servidores.  
   
  As variáveis de script podem ser definidas explicitamente usando o comando **setvar** , ou implicitamente, usando a opção **sqlcmd-v** .  
   

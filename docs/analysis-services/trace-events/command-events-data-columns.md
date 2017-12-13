@@ -2,12 +2,12 @@
 title: Colunas de dados de eventos de comando | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 56c47bd0dc279176ee56a31a6ee06ae3c6f1ca82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4ca478c82617a39b311e0f627320e363a5f7127f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="command-events-data-columns"></a>Colunas de dados de eventos de comando
-  A tabela a seguir lista as colunas de dados de cada classe de evento na categoria **Eventos de Comando** .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A tabela a seguir lista as colunas de dados para cada classe de evento no **eventos de comando** categoria de evento.  
   
  A categoria **Eventos de Comando** tem as seguintes classes de evento:  
   

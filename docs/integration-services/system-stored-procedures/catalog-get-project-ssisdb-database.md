@@ -1,5 +1,5 @@
 ---
-title: Catalog. get_project (banco de dados SSISDB) | Microsoft Docs
+title: catalog.get_project (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: adb3542d50db426d5908aa8786145406d7263ad6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 82aeb62f5c160ef11d3a815b73212910e9fe016e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,29 +35,29 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
- O nome da pasta que contém o projeto. *nome_da_pasta* é **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ O nome da pasta que contém o projeto. *folder_name* é **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- O nome do projeto. *project_name* é **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ O nome do projeto. *project_name* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- O fluxo binário do projeto é retornado como **varbinary (max)**. Nenhum resultado será retornado se a pasta ou o projeto não for localizado.  
+ O fluxo binário do projeto é retornado como **varbinary(MAX)**. Nenhum resultado será retornado se a pasta ou o projeto não for localizado.  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
 -   Permissões READ no projeto  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
- A lista a seguir descreve algumas condições que podem fazer com que o procedimento armazenado de get_project gerar um erro:  
+ A lista a seguir descreve algumas condições que podem fazer com que o procedimento armazenado get_project gere um erro:  
   
 -   O projeto não existe  
   
@@ -68,4 +66,3 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 -   O usuário não tem as permissões apropriadas  
   
   
-

@@ -2,9 +2,12 @@
 title: Configurar um computador multihomed para acesso ao SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 153525785a354d9a730bee4fff48d0562a2e48e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 64c02e1d3e2c0304acebd9d8c8c9a60982841c10
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar um computador multihomed para acesso ao SQL Server
-  Quando um servidor deve fornecer uma conexão a duas ou mais redes ou sub-redes de rede, um cenário típico usa um computador multihomed. Frequentemente este computador está localizado em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada ou sub-rede filtrada). Este tópico descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando um servidor deve fornecer uma conexão a duas ou mais redes ou sub-redes de rede, um cenário típico usa um computador multihomed. Frequentemente este computador está localizado em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada ou sub-rede filtrada). Este tópico descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.  
   
 > [!NOTE]  
 >  Um computador multihomed tem vários adaptadores de rede ou foi configurado para usar vários endereços IP para um único adaptador de rede. Um computador dualhomed tem dois adaptadores de rede ou foi configurado para usar dois endereços IP para um único adaptador de rede.  

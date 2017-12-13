@@ -2,9 +2,12 @@
 title: "Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Geral) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a9d2fa593bc36151226c5f345c8e8ac0f9b731dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 49b34cb2867b26be38f9d6c9086f5ea038d8cbdc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Propriedades do Grupo de Disponibilidade: Novo Grupo de Disponibilidade (página geral)
-  Este tópico se aplica à guia **Geral** da caixa de diálogo **Novo Grupo de Disponibilidade** e da caixa de diálogo **Propriedades do Grupo de Disponibilidade** .  A caixa de diálogo **Novo Grupo de Disponibilidade** permite criar um novo grupo de disponibilidade sem usar o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. A caixa de diálogo **Propriedades do Grupo de Disponibilidade** permite exibir e alterar a configuração de um grupo de disponibilidade existente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico se aplica à guia **Geral** da caixa de diálogo **Novo Grupo de Disponibilidade** e da caixa de diálogo **Propriedades do Grupo de Disponibilidade**.  A caixa de diálogo **Novo Grupo de Disponibilidade** permite criar um novo grupo de disponibilidade sem usar o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. A caixa de diálogo **Propriedades do Grupo de Disponibilidade** permite exibir e alterar a configuração de um grupo de disponibilidade existente.  
   
  **Para exibir as propriedades do grupo de disponibilidade**  
   

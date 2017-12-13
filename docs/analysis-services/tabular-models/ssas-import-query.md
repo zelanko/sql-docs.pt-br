@@ -2,12 +2,12 @@
 title: Importar dados usando uma consulta nativa (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 10/26/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,17 +16,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b4d0672b30747729d324386e1f761a377e15ad2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50db699cc1db1af428524c3f9c263569d7a7bbc1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importar dados usando uma consulta nativa
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-1400 para modelos de tabela, a nova experiência de obter dados em projetos do Visual Studio Analysis Services fornece enorme flexibilidade em como você pode mashup seus dados durante a importação. Este artigo descreve a criação de uma conexão a uma fonte de dados e, em seguida, criar uma consulta SQL nativa para especificar a importação de dados.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]1400 para modelos de tabela, a nova experiência de obter dados em projetos do Visual Studio Analysis Services fornece enorme flexibilidade em como você pode mashup seus dados durante a importação. Este artigo descreve a criação de uma conexão a uma fonte de dados e, em seguida, criar uma consulta SQL nativa para especificar a importação de dados.
 
 Para concluir as tarefas descritas neste artigo, verifique se que você estiver usando a versão mais recente do SSDT. Se você estiver usando o Visual Studio de 2017, verifique se você baixou e instalou o de 2017 setembro ou posterior VSIX de projetos Microsoft Analysis Services.
 

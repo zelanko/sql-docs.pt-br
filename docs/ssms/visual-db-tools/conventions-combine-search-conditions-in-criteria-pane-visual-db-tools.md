@@ -3,8 +3,11 @@ title: "Convenções para combinar condições de pesquisa no painel Critérios 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b40c9f61780760655373d160e3c6c9ee52545d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7b0d8e0ec4d73c564b9cd9db14fac961c310f48
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenções para combinar critérios de pesquisa no painel de Critérios (Visual Database Tools)
-Você pode criar consultas que incluam qualquer número de critérios de pesquisa, interligadas com qualquer número de operadores AND e OR. Uma consulta com uma combinação de cláusulas AND e OR pode se tornar complexa, então é útil entender como tal consulta é interpretada quando você a executa, e como tal consulta é representada no [Painel Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) e no [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode criar consultas que incluam qualquer número de critérios de pesquisa, interligadas com qualquer número de operadores AND e OR. Uma consulta com uma combinação de cláusulas AND e OR pode se tornar complexa, então é útil entender como tal consulta é interpretada quando você a executa, e como tal consulta é representada no [Painel Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) e no [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 > [!NOTE]  
 > Para obter detalhes sobre os critérios de pesquisa que contêm apenas um operador AND ou OR, consulte [Especificar vários critérios de pesquisa para uma coluna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) e [Especificar vários critérios de pesquisa para várias colunas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md).  

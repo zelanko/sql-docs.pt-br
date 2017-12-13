@@ -2,9 +2,12 @@
 title: "Propriedades do banco de dados (página Espelhamento) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47f75acd0677fb838304de87cd9216671d019131
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 267091bc845fdcbfa1c2eafd49bca20c673f966b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-properties-mirroring-page"></a>Propriedades do banco de dados (página Espelhamento)
-  Acesse esta página do banco de dados principal e use-a para configurar e modificar as propriedades de espelhamento de banco de dados de um banco de dados. Nela é possível também iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados, exibir o status de uma sessão de espelhamento e pausar ou remover a sessão de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Acesse esta página do banco de dados principal e use-a para configurar e modificar as propriedades de espelhamento de banco de dados de um banco de dados. Nela é possível também iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados, exibir o status de uma sessão de espelhamento e pausar ou remover a sessão de espelhamento de banco de dados.  
   
 > **IMPORTANTE!** A segurança deve ser configurada para você poder começar o espelhamento. Se o espelhamento não tiver sido iniciado, você deve começar usando o assistente. As caixas de texto da página **Espelhamento** ficam desabilitadas até que o assistente seja encerrado.  
   

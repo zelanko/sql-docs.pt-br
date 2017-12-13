@@ -2,9 +2,12 @@
 title: "Criar um plano de manutenção (superfície de design do plano de manutenção) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 039e306af582e2bc56559557eea3a5d6d57ec819
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9368c1af9cc0288868523d413d698816c7babc18
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
-  Este tópico descreve como criar um plano de manutenção de servidor único ou vários servidores usando a Superfície de Design do Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Embora o **Assistente de Plano de Manutenção** seja melhor para criar planos de manutenção básicos, a criação de planos usando a superfície de design permite utilizar o fluxo de trabalho aprimorado.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar um plano de manutenção de servidor único ou vários servidores usando a Design Surface do Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Embora o **Assistente de Plano de Manutenção** seja melhor para criar planos de manutenção básicos, a criação de planos usando a superfície de design permite utilizar o fluxo de trabalho aprimorado.  
   
  **Neste tópico**  
   

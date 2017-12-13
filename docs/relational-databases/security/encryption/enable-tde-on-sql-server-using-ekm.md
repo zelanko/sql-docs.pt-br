@@ -2,9 +2,12 @@
 title: Habilitar TDE no SQL Server usando EKM | Microsoft Docs
 ms.custom: 
 ms.date: 04/15/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: "26"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2185924293d02b3333f4dd76e1070455a8845470
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 37e79c1a6d2b4525ae3bb7e55db44d72a941202e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Habilitar TDE no SQL Server usando EKM
-  Este tópico descreve como habilitar TDE (criptografia de dados transparente) no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para proteger uma chave de criptografia de banco de dados usando uma chave assimétrica armazenada em um módulo EKM (gerenciamento de chave extensível) com [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como habilitar a TDE (Transparent Data Encryption) no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para proteger uma chave de criptografia de banco de dados usando uma chave assimétrica armazenada em um módulo EKM (gerenciamento extensível de chaves) com o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Ela criptografa o armazenamento de um banco de dados inteiro usando uma chave simétrica chamada de chave de criptografia de banco de dados. Também é possível proteger a chave de criptografia do banco de dados através do uso de um certificado protegido pela chave mestra do banco de dados mestre. Para obter mais informações sobre como proteger a chave de criptografia do banco de dados usando a chave mestra de banco de dados, veja [TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Para obter informações sobre como configurar a TDE quando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está em execução em uma VM do Azure, veja [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Para obter informações sobre como configurar a TDE usando uma chave no Cofre de Chaves do Azure, veja [Usar o Conector do SQL Server com recursos de criptografia do SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
 

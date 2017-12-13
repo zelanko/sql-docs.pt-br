@@ -1,5 +1,5 @@
 ---
-title: "Criação de perfil de tarefa e Visualizador de dados | Microsoft Docs"
+title: "Visualizador e tarefa criação de perfil de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7738775f08124a54765b3597af992a74d63aaf33
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b092926fc7354192293ccdbd7371998354fb626a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tarefa e visualizador da tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados fornece a funcionalidade de criação de perfil de dados dentro do processo de extração, transformação e carga de dados. Usando a tarefa Criação de Perfil de Dados, você pode alcançar os seguintes benefícios:  
@@ -80,4 +78,3 @@ ms.lasthandoff: 08/03/2017
  [Esquema do criador de perfil de dados](http://go.microsoft.com/fwlink/?LinkId=251524)  
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7d198fce5bdc57a21083ea063522f73cc9dde22
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-data"></a>Análise de dados
   Os fluxos de dados em pacotes extraem e carregam dados entre armazenamentos de dados heterogêneos, que podem usar uma variedade de tipos de dados padrão e personalizados. Em um fluxo de dados, as fontes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fazem o trabalho de extração dos dados, análise dos dados da cadeia de caracteres e conversão de dados para um tipo de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . As transformações subsequentes podem analisar os dados para convertê-los em um tipo diferente de dados ou para criar cópias de coluna com tipos diferentes de dados. As expressões usadas em componentes também podem lançar argumentos e operandos para os tipos diferentes de dados. Finalmente, quando os dados são carregados no repositório de dados, o destino pode analisar os dados para convertê-los em um tipo de dados usado pelo destino. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -55,7 +53,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
 ## <a name="numeric-data-formats-fast-parse"></a>Formatos de dados numéricos (análise rápida)
 A análise rápida fornece uma análise de dados rápida e simples a um conjunto de rotinas sem diferenciação de localidade. A análise rápida suporta apenas um conjunto limitado de formatos para tipos de dados de números inteiros.  
   
-### <a name="integer-data-type"></a>Tipo de dados inteiro
+### <a name="integer-data-type"></a>Tipo de dados Integer
  Os tipos de dados de números inteiros que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece são DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 e DT_UI8. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  A análise rápida suporta os seguintes formatos para tipos de dados de números inteiros:  
@@ -116,7 +114,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
  Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="time-data-type"></a>Tipo de dados de tempo
+### <a name="time-data-type"></a>Tipo de dados de hora
  A análise rápida oferece suporte aos seguintes formatos de cadeia de caracteres para dados de hora:  
   
 -   Formatos de hora que incluem espaços em branco à esquerda. Por exemplo, o valor " 10:24" é válido.  
@@ -192,7 +190,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
  Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="enable-fast-parse"></a>Habilitar a análise rápida
+## <a name="enable-fast-parse"></a>Habilitar análise rápida
 A propriedade de análise rápida deve ser definida para cada coluna da origem ou transformação que use a análise rápida. Para definir a propriedade, use o Editor avançado da fonte Flat File e da transformação de Conversão de Dados.  
   
 1.  Clique com o botão direito do mouse na fonte Arquivo Simples ou na transformação de Conversão de Dados e clique em **Mostrar Editor Avançado**.  
@@ -210,4 +208,3 @@ A análise padrão é um conjunto de rotinas de análise com diferenciação de 
   
  Ela oferece suporte para a conversão de tipo de dados de dados internacionais e pode ser usada caso o formato de dados não seja suportado pela análise rápida. Para obter mais informações sobre a API de conversão de tipo de dados de Automação, consulte "APIs de conversão de tipos de sados" na [Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
-

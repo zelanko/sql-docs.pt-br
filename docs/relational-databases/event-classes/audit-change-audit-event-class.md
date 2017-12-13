@@ -2,9 +2,12 @@
 title: Classe de evento Audit Change Audit | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c311e6899508ce797a4365047046ba9ba2e5a782
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bf510cafd676d6e0f362ba06f2853c61361c3e58
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-change-audit-event-class"></a>Classe de evento Audit Change Audit
-  A classe de evento **Audit Change Audit** ocorre sempre que uma modificação de rastreamento de auditoria é feita.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Audit Change Audit** ocorre sempre que uma modificação de rastreamento de auditoria é feita.  
   
 ## <a name="audit-change-audit-event-class-data-columns"></a>Coluna de dados da classe de evento Audit Change Audit  
   

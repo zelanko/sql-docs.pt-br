@@ -2,12 +2,12 @@
 title: Funcionalidade de cliente ADOMD.NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4573834d025c7afb066c4e363c476e8fb18c4ab7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8010335c897b279ead050e34a25b2f2833d63021
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-functionality"></a>Funcionalidade de cliente do ADOMD.NET
-  O ADOMD.NET, assim como com outros provedores de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, serve como uma ponte entre um aplicativo e uma fonte de dados. No entanto, ao contrário de outros provedores de dados do .NET Framework, o ADOMD.NET trabalha com dados analíticos. Para isso, o ADOMD.NET dá suporte à funcionalidade que é muito diferente de outros provedores de dados do .NET Framework. O ADOMD.NET não só permite que você recupere dados, como permite a recuperação de metadados e a alteração da estrutura do repositório de dados analíticos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET, assim como com outros [!INCLUDE[msCoName](../../includes/msconame-md.md)] provedores de dados do .NET Framework, serve como uma ponte entre um aplicativo e uma fonte de dados. No entanto, ao contrário de outros provedores de dados do .NET Framework, o ADOMD.NET trabalha com dados analíticos. Para isso, o ADOMD.NET dá suporte à funcionalidade que é muito diferente de outros provedores de dados do .NET Framework. O ADOMD.NET não só permite que você recupere dados, como permite a recuperação de metadados e a alteração da estrutura do repositório de dados analíticos:  
   
  **Recuperando metadados**  
  Os aplicativos podem aprender mais sobre os dados que podem ser recuperados da fonte de dados por meio da recuperação de metadados, usando conjunto de linhas do esquema ou o modelo de objeto. As informações como os tipos de cada KPI (indicador chave de desempenho) disponíveis, as dimensões de um cubo e os parâmetros necessários aos modelos de mineração são descobríveis. Os metadados são mais importantes para *dinâmico* aplicativos que exigem entrada do usuário para determinar o tipo, a profundidade e o escopo dos dados a serem recuperados. Exemplos incluem o Analisador de Consultas, o Microsoft Excel e outras ferramentas de consulta. Metadados são menos críticos para *estático* aplicativos que executam um conjunto predefinido de ações.  

@@ -2,9 +2,12 @@
 title: "Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9961dc03ba9e6e98abb63136cfc4accce8caca4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9ef5b39e2192d0e5814c3b3ab5525eb69330cf51
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server)
-  **Este tópico apresenta a terminologia básica de mídia de backup da restauração e do backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e destina-se a leitores que não têm experiência com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Este tópico apresenta a terminologia básica de mídia de backup da restauração e do backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e destina-se a leitores que não têm experiência com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
   
   Este tópico descreve o formato que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa na mídia de backup, a correspondência entre mídia de backup e dispositivos de backup, a organização dos backups na mídia de backup, e as várias considerações sobre conjuntos de mídias e famílias de mídia. O tópico também descreve as etapas de inicialização ou formatação de mídia de backup antes que você use isso pela primeira vez ou substitua um conjunto de mídias antigo por um novo conjunto de mídias, como substituir conjuntos de backup antigos em um conjunto de mídias, e como acrescentar novos conjuntos de backup a um conjunto de mídias.  
   

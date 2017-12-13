@@ -1,5 +1,5 @@
 ---
-title: "Modo de Cache cheio de transformação de pesquisa - Gerenciador de Conexão OLE DB | Microsoft Docs"
+title: "Transformação Pesquisa em modo de cache cheio – Gerenciador de conexões OLE DB | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Lookup transformation [Integration Services]
+helpviewer_keywords: Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e038db8132d3c57a16af2a68ba9e6b57e890a444
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25e4840c5fa2b9ae98c172549467811150ec0217
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Modo de Cache cheio de transformação de pesquisa - Gerenciador de Conexão do OLE DB
+# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformação Pesquisa em modo de cache cheio – Gerenciador de conexões OLE DB
   Você pode configurar a transformação Pesquisa para usar o modo cache cheio e um gerenciador de conexões OLE DB. No modo cache cheio, o conjunto de dados de referência é carregado no cache antes que a transformação Pesquisa seja executada.  
   
  A transformação Pesquisa executa pesquisas ao unir dados em colunas de entradas através de uma fonte de dados conectada com colunas em um conjunto de dados de referência. Para obter mais informações, consulte [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
@@ -90,9 +87,8 @@ ms.lasthandoff: 08/03/2017
 13. Clique em **OK** para salvar suas alterações na transformação Pesquisa e, então, execute o pacote.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implementar uma transformação pesquisa em modo de Cache cheio usando o Gerenciador de Conexão de Cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implementar uma pesquisa no modo sem Cache ou Cache parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementar uma Transformação Pesquisa em modo de Cache cheio usando o Gerenciador de Conexões do Cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [Implementar uma pesquisa no modo Sem cache ou Cache parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformações do Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

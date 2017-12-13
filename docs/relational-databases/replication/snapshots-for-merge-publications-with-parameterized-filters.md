@@ -2,9 +2,12 @@
 title: "Instantâneos para publicações de mesclagem com filtros com parâmetros | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f358f84d2dbcec345a160d9fafb660bbebc01be7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83e1c3bcb6cc4a435f3db4b3e96812a0c308c8b9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>Instantâneos para publicações de mesclagem com filtros com parâmetros
-  Quando são usados filtros de linha com parâmetros em publicações de mesclagem, a replicação inicializa cada assinatura com um instantâneo de duas partes. Em primeiro lugar, um instantâneo do esquema é criado contendo todos os objetos exigidos pela replicação e o esquema dos objetos publicados, mas não os dados. Em seguida, cada assinatura é inicializada com um instantâneo que inclui os objetos e o esquema do instantâneo do esquema e os dados que pertencem à partição de assinatura. Se mais de uma assinatura receber uma dada partição (ou seja, receber o mesmo esquema e dados), o instantâneo para aquela partição é criado apenas uma vez; várias assinaturas são inicializadas do mesmo instantâneo. Para obter mais informações sobre filtros de linha com parâmetros, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando filtros de linha com parâmetros são usados em publicações de mesclagem, a replicação inicializa cada assinatura com um instantâneo de duas partes. Em primeiro lugar, um instantâneo do esquema é criado contendo todos os objetos exigidos pela replicação e o esquema dos objetos publicados, mas não os dados. Em seguida, cada assinatura é inicializada com um instantâneo que inclui os objetos e o esquema do instantâneo do esquema e os dados que pertencem à partição de assinatura. Se mais de uma assinatura receber uma dada partição (ou seja, receber o mesmo esquema e dados), o instantâneo para aquela partição é criado apenas uma vez; várias assinaturas são inicializadas do mesmo instantâneo. Para obter mais informações sobre filtros de linha com parâmetros, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  É possível criar instantâneos para publicações com filtros com parâmetros usando-se uma das três maneiras:  
   

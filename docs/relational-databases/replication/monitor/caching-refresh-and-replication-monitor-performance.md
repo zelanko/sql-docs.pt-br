@@ -2,9 +2,12 @@
 title: "Cache, atualização e desempenho do Replication Monitor | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a14000889013e94cdf73a1ee88009f898021ecd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a564b6b253365200f1cfeeee61750f945c84bc88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Cache, atualização e desempenho do Replication Monitor
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor é projetado para monitorar um número grande de computadores em um sistema de produção de forma eficaz. As consultas que o Replication Monitor usa para executar cálculos e reunir dados são armazenadas em cache e atualizadas periodicamente. O armazenamento em cache reduz o número de consultas e cálculos necessários conforme diferentes páginas são exibidas no Replication Monitor, e permite que a monitoração seja bem-escalonada para usuários múltiplos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor é projetado para monitorar um número grande de computadores em um sistema de produção de forma eficaz. As consultas que o Replication Monitor usa para executar cálculos e reunir dados são armazenadas em cache e atualizadas periodicamente. O armazenamento em cache reduz o número de consultas e cálculos necessários conforme diferentes páginas são exibidas no Replication Monitor, e permite que a monitoração seja bem-escalonada para usuários múltiplos.  
   
  A atualização do cache é controlada por um trabalho do Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o **Atualizador de monitoração de replicação para distribuição**. O trabalho é executado continuamente, mas a agenda para a atualização de cache é baseada na espera de certo tempo após a atualização anterior:  
   

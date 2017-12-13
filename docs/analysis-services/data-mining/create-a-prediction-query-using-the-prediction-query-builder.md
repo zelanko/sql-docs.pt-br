@@ -2,12 +2,12 @@
 title: "Criar uma consulta de previsão usando o construtor de consultas de previsão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e788f53ac41de8cdecdfbc88f61afacc0bfbad16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c7d6511a36b9a59e20908feffdb0f61a907377ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Criar uma consulta de previsão usando o construtor de consultas de previsão
-  Você pode criar consultas de previsão enquanto estiver criando uma solução de mineração de dados no BI Development Studio, ou clicar com o botão direito em um modelo de mineração existente no SQL Server Management Studio e, em seguida, escolher a opção **Criar Consulta de Previsão**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode criar consultas de previsão enquanto você estiver criando uma solução de mineração de dados no BI Development Studio, ou um modelo de mineração existente no SQL Server Management Studio e, em seguida, escolher a opção **criar consulta de previsão**.  
   
  O **Construtor de Consultas de Previsão** tem os três modos de design a seguir, os quais você pode alternar clicando nos ícones no canto superior esquerdo.  
   

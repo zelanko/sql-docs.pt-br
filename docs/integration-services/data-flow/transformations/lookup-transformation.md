@@ -1,5 +1,5 @@
 ---
-title: "Transformação pesquisa | Microsoft Docs"
+title: "Transformação Pesquisa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,19 +25,18 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
+caps.latest.revision: "106"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 316fa73c7acd3e66a21ae285217c8ec917c7afbc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation"></a>Transformação Pesquisa
+# <a name="lookup-transformation"></a>transformação Pesquisa
   A transformação Pesquisa executa pesquisas unindo dados em colunas de entrada com colunas em um conjunto de dados de referência. Você usa a pesquisa para acessar informações adicionais em uma tabela relacionada que tem como base valores de colunas comuns.  
   
  O conjunto de dados de referência pode ser um arquivo de cache, uma tabela ou uma exibição existente, uma nova tabela ou o resultado de uma consulta SQL. A transformação Pesquisa usa um gerenciador de conexões OLE DB ou um gerenciador de conexões de cache para se conectar ao conjunto de dados de referência. Para obter mais informações, consulte [Gerenciador de Conexões do OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) e [Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
@@ -283,9 +281,8 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Transformação Pesquisa Difusa](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
- [Transformação de pesquisa de termo](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
- [Fluxo de dados](../../../integration-services/data-flow/data-flow.md)   
+ [Transformação Pesquisa de Termos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
+ [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

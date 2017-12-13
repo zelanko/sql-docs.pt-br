@@ -2,9 +2,12 @@
 title: "Proteger uma topologia de replicação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c7637dd9fb2e9f827c1d0d0f5d222ce8b7bbf5c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a7e832901034529888457e021d753e0c3fb2e11a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="secure-a-replication-topology"></a>Proteger uma topologia de replicação
-  Contas de segurança, logons e senhas necessárias à replicação são fornecidas quando a replicação é configurada e quando as publicações e as assinaturas são criadas. Essas configurações de segurança podem ser alteradas depois usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], procedimentos armazenados de replicação e RMO (Replication Management Objects). Os tópicos a seguir descrevem como modificar as configurações de segurança da replicação.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Contas de segurança, logons e senhas necessárias à replicação são fornecidas quando a replicação é configurada e quando as publicações e as assinaturas são criadas. Essas configurações de segurança podem ser alteradas depois usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], procedimentos armazenados de replicação e RMO (Replication Management Objects). Os tópicos a seguir descrevem como modificar as configurações de segurança da replicação.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

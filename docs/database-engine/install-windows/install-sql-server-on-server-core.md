@@ -2,11 +2,12 @@
 title: Instalar o SQL Server 2016 no Server Core | Microsoft Docs
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: d6ba2f29d8c6c21a6f96c575dbebc354e0885f8d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 701ae800a3f3d91429db8726359032f34c9991e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar o SQL Server no Server Core
-Instale o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core.   
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core.   
   
 A opção de instalação do Server Core oferece um ambiente mínimo para a execução de funções de servidor específicas. Isso ajuda a reduzir os requisitos de manutenção e gerenciamento e a superfície de ataque para essas funções de servidor. Para obter mais informações sobre o Server Core, consulte [Instalar o Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Para obter mais informações sobre a implementação do Server Core no [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consulte [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (Server Core para Windows Server 2012) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   

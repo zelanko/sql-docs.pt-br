@@ -2,11 +2,12 @@
 title: Arquivos de dados do SQL Server no Microsoft Azure | Microsoft Docs
 ms.custom: 
 ms.date: 10/02/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "26"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: d70ab69a1779e19c66fadb1044e0fc6af38a4129
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9fca2543543bc508d3fc232ba75c05f19a561ebb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Arquivos de dados do SQL Server no Microsoft Azure
-  ![Arquivos de dados no Azure](../../relational-databases/databases/media/data-files-on-azure.png "Arquivos de dados no Azure")  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Arquivos de dados no Azure](../../relational-databases/databases/media/data-files-on-azure.png "Arquivos de dados no Azure")  
   
  Arquivos de dados do SQL Server no Microsoft Azure permitem o suporte nativo para os arquivos de banco de dados do SQL Server armazenados como Blobs do Microsoft Azure. Ele permite que você crie um banco de dados do SQL Server executado localmente ou em uma máquina virtual no Microsoft Azure com um local de armazenamento dedicado a seus dados no Armazenamento de Blobs do Microsoft Azure. Esse aprimoramento simplifica especialmente a movimentação de bancos de dados entre computadores usando operações de anexação e desanexação. Além disso, ele fornece um local de armazenamento alternativo para os arquivos de backup de banco de dados ao permitir que você restaure de ou para o Armazenamento do Microsoft Azure. Em virtude disso, ele permite várias soluções híbridas ao fornecer vários benefícios para virtualização de dados, movimentação de dados, segurança e disponibilidade, baixo custo e facilidade de manutenção, o que proporciona alta disponibilidade e dimensionamento elástico.
  

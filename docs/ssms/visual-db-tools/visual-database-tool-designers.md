@@ -3,8 +3,11 @@ title: Designers do Visual Database Tool | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0dd9803b8a53023baa09ec8d05e075a642105388
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 206d464ab885728f270c81d9bb527b9c5f2a98ec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="visual-database-tool-designers"></a>Designers do Visual Database Tool
-O Visual Database Tools é uma combinação de ferramentas de design que podem ser usadas para trabalhar com uma fonte de dados. Você pode usá-lo para criar consultas, criar ou modificar uma estrutura de banco de dados ou atualizar dados. As ferramentas são o Designer de Diagrama de Banco de Dados, o Designer de Tabelas e os Designers de Consulta e Exibição.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Visual Database Tools é uma combinação de ferramentas de design que podem ser usadas para trabalhar com uma fonte de dados. Você pode usá-lo para criar consultas, criar ou modificar uma estrutura de banco de dados ou atualizar dados. As ferramentas são o Designer de Diagrama de Banco de Dados, o Designer de Tabelas e os Designers de Consulta e Exibição.  
   
 ## <a name="properties-window"></a>Janela Propriedades  
 A janela de propriedades não é específica do Visual Database Tools, mas é onde muitas modificações podem ser feitas. Ela mostra as propriedades atuais do item selecionado (como uma tabela) e permite a edição dessas propriedades (tudo, do nome das propriedades até o agrupamento de uma coluna). Algumas propriedades podem ser observadas na janela de propriedades, mas devem ser modificadas em outra ferramenta.  

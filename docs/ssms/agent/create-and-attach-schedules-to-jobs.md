@@ -3,8 +3,11 @@ title: Criar e anexar agendas a trabalhos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 85ad28993e894bc45ad25e5db296777c66d36328
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc61a3323ae24d1c571b743fa4d0d2bed3278585
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Criar e anexar agendas para trabalhos
-Agendar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent significa definir as condições que fazem com que o trabalho comece a ser executado sem interação com o usuário. Você pode agendar um trabalho para execução automática criando uma nova agenda para ele ou anexando uma agenda existente para o trabalho.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Agendar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent significa definir as condições que fazem com que o trabalho comece a ser executado sem interação com o usuário. Você pode agendar um trabalho para execução automática criando uma nova agenda para ele ou anexando uma agenda existente para o trabalho.  
   
 Há dois modos de criar um agenda:  
   

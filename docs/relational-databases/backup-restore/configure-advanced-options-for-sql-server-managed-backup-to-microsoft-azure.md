@@ -2,9 +2,12 @@
 title: "Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e968aad24d2d1ac529028eb39f64b2a842e1712b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f4c2bb5ecc63c0168989e6ae23c0d85d5a22dea3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure
-  O tutorial a seguir descreve como definir opções avançadas para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esses procedimentos só serão necessários se você precisar dos recursos que oferecem. Caso contrário, você pode habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e depender do comportamento padrão.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O tutorial a seguir descreve como definir opções avançadas para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esses procedimentos só serão necessários se você precisar dos recursos que oferecem. Caso contrário, você pode habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e depender do comportamento padrão.  
   
  Em cada cenário, o backup é especificado usando o parâmetro `database_name` . Quando `database_name` é NULL ou *, as alterações afetam as configurações padrão no nível da instância. Configurações de nível de instância também afetam os novos bancos de dados criados após a alteração.  
   

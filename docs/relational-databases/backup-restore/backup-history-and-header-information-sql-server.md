@@ -2,9 +2,12 @@
 title: "Informações de histórico e cabeçalho de backup (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -37,14 +40,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a7f37ca2ef38feed107028015ce8dc6ffd60c77c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c7f10d27faf1c0fc658550f962c71c2419ff8607
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informações de histórico e cabeçalho de backup (SQL Server)
-  Um histórico completo de todas as operações de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor é armazenado no banco de dados **msdb** . Este tópico apresenta as tabelas de histórico de backup e restauração e também as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] usadas para acessar o histórico de backup. O tópico também discute quando a listagem de banco de dados e de arquivos de log de transação é útil e quando usar informações do cabeçalho de mídia comparado a quando usar informações do cabeçalho de backup.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um histórico completo de todas as operações de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do servidor é armazenado no banco de dados **msdb**. Este tópico apresenta as tabelas de histórico de backup e restauração e também as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] usadas para acessar o histórico de backup. O tópico também discute quando a listagem de banco de dados e de arquivos de log de transação é útil e quando usar informações do cabeçalho de mídia comparado a quando usar informações do cabeçalho de backup.  
   
 > [!IMPORTANT]  
 >  Para gerenciar o risco de perder alterações recentes no seu histórico de backup e restauração, faça backup do **msdb** com frequência. Para obter informações sobre de quais bancos de dados do sistema você deve fazer backup, veja [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  

@@ -1,5 +1,5 @@
 ---
-title: Catalog.deploy_packages | Microsoft Docs
+title: catalog.deploy_packages | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1839430dd7fb83ab16c4de46011819e3ce28e835
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a19a301fab52b0373eadb673d17e7436d0ffc1e2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogdeploypackages"></a>Catalog.deploy_packages
+# <a name="catalogdeploypackages"></a>catalog.deploy_packages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Implanta um ou mais pacotes para uma pasta de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catálogo ou atualiza um pacote existente que tenha sido implantado anteriormente.  
+  Implanta um ou mais pacotes em uma pasta no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou atualiza um pacote existente que foi implantado anteriormente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,16 +35,16 @@ ms.lasthandoff: 09/26/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name =] *nome_da_pasta*  
- O nome da pasta. O *nome_da_pasta* é **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ O nome da pasta. O *folder_name* é **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- O nome do projeto na pasta. O *project_name* é **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ O nome do projeto na pasta. O *project_name* é **nvarchar(128)**.  
   
- [ @packages_table =] *packages_table*  
- O conteúdo binário de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacote (. dtsx) arquivo (s). O *packages_table* é **[catalog]. [ Package_Table_Type]**  
+ [ @packages_table = ] *packages_table*  
+ O conteúdo binário de arquivos de pacote de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (.dtsx). O *packages_table* é **[catalog].[Package_Table_Type]**  
   
- [ @operation_id =] *operation_id*  
+ [ @operation_id = ] *operation_id*  
  Retorna o identificador exclusivo da operação de implantação. O *operation_id* é **bigint**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
@@ -58,11 +56,11 @@ ms.lasthandoff: 09/26/2017
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
--   Permissões CREATE_OBJECTS no projeto ou modificar permissões no pacote para atualizar um pacote.  
+-   Permissões CREATE_OBJECTS no projeto ou MODIFY no pacote para atualizar um pacote.  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem levar este procedimento armazenado a gerar um erro:  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/26/2017
 -   O usuário não tem permissões suficientes  
   
   
-

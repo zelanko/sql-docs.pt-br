@@ -2,9 +2,12 @@
 title: SQL Server, objeto Banco de Dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a54b7a036e38d1a34649bf25f9e0b4cb670bf71d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 03d12d8216ce6b92251355c41b1f0bdc90303003
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
-  O objeto **SQLServer:Databases** no SQL Server fornece contadores para monitorar a taxa de transferência de operações de cópia em massa, backup e restauração, e atividades de log de transações. Ele monitora as transações e o log de transações para determinar quanta atividade de usuário está ocorrendo no banco de dados e o quanto o log de transações está ficando completo. A quantidade de atividade de usuário pode determinar o desempenho do banco de dados e pode afetar o tamanho de log, o bloqueio e a replicação. O monitoramento da atividade de log de baixo nível para medir a atividade de usuário e uso de recursos pode ajudá-lo a identificar gargalos no desempenho.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto **SQLServer:Databases** no SQL Server fornece contadores para monitorar a taxa de transferência de operações de cópia em massa, backup e restauração, além de atividades de log de transações. Ele monitora as transações e o log de transações para determinar quanta atividade de usuário está ocorrendo no banco de dados e o quanto o log de transações está ficando completo. A quantidade de atividade de usuário pode determinar o desempenho do banco de dados e pode afetar o tamanho de log, o bloqueio e a replicação. O monitoramento da atividade de log de baixo nível para medir a atividade de usuário e uso de recursos pode ajudá-lo a identificar gargalos no desempenho.  
   
  Diversas instâncias do objeto **Databases** , cada uma representando um único banco de dados, podem ser monitoradas ao mesmo tempo.  
   

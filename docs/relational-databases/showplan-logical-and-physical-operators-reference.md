@@ -2,9 +2,12 @@
 title: "Referência de operadores físicos e lógicos de plano de execução | Microsoft Docs"
 ms.custom: 
 ms.date: 10/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -139,14 +142,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 85c04a4e1322476be6181e09e6c3a6873955ec37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referência de operadores físicos e lógicos de plano de execução
-  Os operadores descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executa uma consulta ou uma instrução DML (Linguagem de Manipulação de Dados). O otimizador de consultas usa os operadores para criar um plano de consulta a fim de criar o resultado especificado na consulta ou para executar a operação especificada na instrução DML. O plano de consulta é uma árvore que consiste em operadores físicos. Você pode exibir o plano de consulta usando as instruções SET SHOWPLAN, as opções de plano de execução gráfica no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou as classes de evento do Plano de Execução do SQL Server Profiler.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Os operadores descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executa uma consulta ou uma instrução DML (Linguagem de Manipulação de Dados). O otimizador de consultas usa os operadores para criar um plano de consulta a fim de criar o resultado especificado na consulta ou para executar a operação especificada na instrução DML. O plano de consulta é uma árvore que consiste em operadores físicos. Você pode exibir o plano de consulta usando as instruções SET SHOWPLAN, as opções de plano de execução gráfica no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou as classes de evento do Plano de Execução do SQL Server Profiler.  
   
  Os operadores são classificados como lógicos e físicos.  
   

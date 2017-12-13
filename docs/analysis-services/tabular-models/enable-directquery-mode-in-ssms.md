@@ -2,12 +2,12 @@
 title: Habilitar o modo DirectQuery no SSMS | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 209ab16c43e8d90e47dd9c4758c45af9d7eb8b62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Habilitar o modo DirectQuery no SSMS
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Você pode alterar as propriedades de acesso a dados de um modelo de tabela que já tenha sido implantado, habilitando o modo DirectQuery, em que consultas são executadas em uma fonte de dados relacional de back-end em vez de nos dados em cache residentes na memória.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Você pode alterar as propriedades de acesso de dados de um modelo de tabela que já tenha sido implantado, habilitando o modo DirectQuery, onde consultas são executadas em uma fonte de dados relacional de back-end em vez de em cache dados residentes na memória.  
   
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], as etapas de configuração do DirectQuery diferem de acordo com o nível de compatibilidade do modelo. Veja a seguir etapas que funcionam para todos os níveis de compatibilidade.  
   

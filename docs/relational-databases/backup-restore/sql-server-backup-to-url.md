@@ -1,32 +1,30 @@
 ---
 title: Backup para URL do SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3358baeca572cb8894eb31798932221d1809a77a
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d0fea4f1ffe507d0b410a16a668a138a7f0dee2e
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tópico apresenta os conceitos, os requisitos e os componentes necessários para usar o serviço de Armazenamento de Blobs do Microsoft Azure como um destino de backup. A funcionalidade de backup e restauração tem o mesmo efeito de DISK ou TAPE, com algumas diferenças. Essas diferenças e alguns exemplos de código estão incluídos neste tópico.  
   
@@ -116,12 +114,12 @@ ms.lasthandoff: 09/27/2017
   
 |Instrução de backup/restauração|Tem suporte|Exceções|Comentários|
 |-|-|-|-|
-|BACKUP|√|Há suporte para BLOCKSIZE e MAXTRANSFERSIZE para blobs de bloco. Eles não têm suporte em blobs de página. | BACKUP para um blob de blocos requer uma assinatura de acesso compartilhado salva em uma credencial do SQL Server. BACKUP para um blob de páginas requer que a chave de conta de armazenamento seja salva em uma credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e requer que o argumento WITH CREDENTIAL seja especificado.|  
-|RESTORE|√||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
-|RESTORE FILELISTONLY|√||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
-|RESTORE HEADERONLY|√||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
-|RESTORE LABELONLY|√||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
-|RESTORE VERIFYONLY|√||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
+|BACKUP|S|Há suporte para BLOCKSIZE e MAXTRANSFERSIZE para blobs de bloco. Eles não têm suporte em blobs de página. | BACKUP para um blob de blocos requer uma assinatura de acesso compartilhado salva em uma credencial do SQL Server. BACKUP para um blob de páginas requer que a chave de conta de armazenamento seja salva em uma credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e requer que o argumento WITH CREDENTIAL seja especificado.|  
+|RESTORE|S||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
+|RESTORE FILELISTONLY|S||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
+|RESTORE HEADERONLY|S||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
+|RESTORE LABELONLY|S||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
+|RESTORE VERIFYONLY|S||Exige a definição de uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exige a especificação do argumento WITH CREDENTIAL se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
 |RESTORE REWINDONLY|−|||  
   
  Para obter a sintaxe e informações gerais sobre as instruções de backup, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -132,36 +130,36 @@ ms.lasthandoff: 09/27/2017
 
 |Argumento|Tem suporte|Exceção|Comentários|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
+|DATABASE|S|||  
+|LOG|S|||  
 ||  
-|TO (URL)|√|Diferente de DISK e TAPE, a URL não oferece suporte para a especificação ou criação de um nome lógico.|Esse argumento é usado para especificar o caminho da URL para o arquivo de backup.|  
-|MIRROR TO|√|||  
+|TO (URL)|S|Diferente de DISK e TAPE, a URL não oferece suporte para a especificação ou criação de um nome lógico.|Esse argumento é usado para especificar o caminho da URL para o arquivo de backup.|  
+|MIRROR TO|S|||  
 |**Opções WITH:**||||  
-|CREDENTIAL|√||Só há suporte para WITH CREDENTIAL ao usar a opção BACKUP TO URL para o serviço de Armazenamento de Blobs do Microsoft Azure, e apenas se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
-|FILE_SNAPSHOT|√|||  
-|ENCRYPTION|√||Quando o argumento **WITH ENCRYPTION** é especificado, o backup do instantâneo de arquivo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegura que todo o banco de dados tenha sido criptografado com TDE antes de executar o backup e, em caso afirmativo, criptografa o próprio arquivo de backup do instantâneo do arquivo usando o algoritmo especificado para TDE no banco de dados. Se todos os dados no banco de dados, no banco de dados inteiro, não estiverem criptografados, o backup falhará (por exemplo, o processo de criptografia ainda não estará completo).|  
-|DIFFERENTIAL|√|||  
-|COPY_ONLY|√|||  
-|COMPRESSION&#124;NO_COMPRESSION|√|Não há suporte para backup de instantâneo de arquivo||  
-|DESCRIPTION|√|||  
-|NAME|√|||  
+|CREDENTIAL|S||Só há suporte para WITH CREDENTIAL ao usar a opção BACKUP TO URL para o serviço de Armazenamento de Blobs do Microsoft Azure, e apenas se a credencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for definida usando a chave da conta de armazenamento como o segredo|  
+|FILE_SNAPSHOT|S|||  
+|ENCRYPTION|S||Quando o argumento **WITH ENCRYPTION** é especificado, o backup do instantâneo de arquivo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegura que todo o banco de dados tenha sido criptografado com TDE antes de executar o backup e, em caso afirmativo, criptografa o próprio arquivo de backup do instantâneo do arquivo usando o algoritmo especificado para TDE no banco de dados. Se todos os dados no banco de dados, no banco de dados inteiro, não estiverem criptografados, o backup falhará (por exemplo, o processo de criptografia ainda não estará completo).|  
+|DIFFERENTIAL|S|||  
+|COPY_ONLY|S|||  
+|COMPRESSION&#124;NO_COMPRESSION|S|Não há suporte para backup de instantâneo de arquivo||  
+|DESCRIPTION|S|||  
+|NAME|S|||  
 |EXPIREDATE &#124; RETAINDAYS|−|||  
 |NOINIT &#124; INIT|−||Não é possível anexar aos blobs. Para substituir um backup, use o argumento **WITH FORMAT** . No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup original.|  
 |NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||Um backup executado em um blob existente falhará, a menos que **WITH FORMAT** seja especificado. O blob existente será substituído quando **WITH FORMAT** for especificado. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento FORMAT não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup de instantâneo de arquivo original. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup original.|  
-|MEDIADESCRIPTION|√|||  
-|MEDIANAME|√|||  
-|BLOCKSIZE|√|Sem suporte para blobs de páginas. Com suporte para blobs de blocos.| Recomendamos BLOCKSIZE=65536 para otimizar o uso dos 50.000 blocos permitidos em um blob de blocos. |  
-|BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|√|Sem suporte para blobs de páginas. Com suporte para blobs de blocos.| O padrão é 1048576. O valor pode variar a até 4 MB em incrementos de 65536 bytes.</br> Recomendamos MAXTRANSFERSIZE=4194304 para otimizar o uso dos 50.000 blocos permitidos em um blob de blocos. |  
-|NO_CHECKSUM &#124; CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|STATS|√|||  
+|NOFORMAT &#124; FORMAT|S||Um backup executado em um blob existente falhará, a menos que **WITH FORMAT** seja especificado. O blob existente será substituído quando **WITH FORMAT** for especificado. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento FORMAT não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup de instantâneo de arquivo original. No entanto, ao usar backups de instantâneo de arquivo (usando o argumento **WITH FILE_SNAPSHOT** ), o argumento **WITH FORMAT** não recebe permissão, a fim de evitar deixar órfãos os instantâneos de arquivos que foram criados com o backup original.|  
+|MEDIADESCRIPTION|S|||  
+|MEDIANAME|S|||  
+|BLOCKSIZE|S|Sem suporte para blobs de páginas. Com suporte para blobs de blocos.| Recomendamos BLOCKSIZE=65536 para otimizar o uso dos 50.000 blocos permitidos em um blob de blocos. |  
+|BUFFERCOUNT|S|||  
+|MAXTRANSFERSIZE|S|Sem suporte para blobs de páginas. Com suporte para blobs de blocos.| O padrão é 1048576. O valor pode variar a até 4 MB em incrementos de 65536 bytes.</br> Recomendamos MAXTRANSFERSIZE=4194304 para otimizar o uso dos 50.000 blocos permitidos em um blob de blocos. |  
+|NO_CHECKSUM &#124; CHECKSUM|S|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
+|STATS|S|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|NORECOVERY &#124; STANDBY|√|||  
-|NO_TRUNCATE|√|||  
+|NORECOVERY &#124; STANDBY|S|||  
+|NO_TRUNCATE|S|||  
   
  Para obter mais informações sobre os argumentos de backup, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -169,35 +167,35 @@ ms.lasthandoff: 09/27/2017
   
 |Argumento|Tem suporte|Exceções|Comentários|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
-|FROM (URL)|√||O argumento FROM URL é usado para especificar o caminho da URL do arquivo de backup.|  
+|DATABASE|S|||  
+|LOG|S|||  
+|FROM (URL)|S||O argumento FROM URL é usado para especificar o caminho da URL do arquivo de backup.|  
 |**WITH Options:**||||  
-|CREDENTIAL|√||Há suporte para WITH CREDENTIAL somente quando a opção RESTORE FROM URL for usada para realizar a restauração no serviço de Armazenamento de Blobs do Microsoft Azure.|  
-|PARTIAL|√|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
-|LOADHISTORY|√|||  
-|MOVE|√|||  
-|REPLACE|√|||  
-|RESTART|√|||  
-|RESTRICTED_USER|√|||  
+|CREDENTIAL|S||Há suporte para WITH CREDENTIAL somente quando a opção RESTORE FROM URL for usada para realizar a restauração no serviço de Armazenamento de Blobs do Microsoft Azure.|  
+|PARTIAL|S|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|S|||  
+|LOADHISTORY|S|||  
+|MOVE|S|||  
+|REPLACE|S|||  
+|RESTART|S|||  
+|RESTRICTED_USER|S|||  
 |FILE|−|||  
-|PASSWORD|√|||  
-|MEDIANAME|√|||  
-|MEDIAPASSWORD|√|||  
-|BLOCKSIZE|√|||  
+|PASSWORD|S|||  
+|MEDIANAME|S|||  
+|MEDIAPASSWORD|S|||  
+|BLOCKSIZE|S|||  
 |BUFFERCOUNT|−|||  
 |MAXTRANSFERSIZE|−|||  
-|CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|FILESTREAM|√|Não há suporte para backup de instantâneos||  
-|STATS|√|||  
+|CHECKSUM &#124; NO_CHECKSUM|S|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
+|FILESTREAM|S|Não há suporte para backup de instantâneos||  
+|STATS|S|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|KEEP_REPLICATION|√|||  
-|KEEP_CDC|√|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+|KEEP_REPLICATION|S|||  
+|KEEP_CDC|S|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|S|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|S|||  
   
  Para obter mais informações sobre os argumentos de restauração, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -280,10 +278,12 @@ A tarefa Restaurar Banco de Dados inclui **URL** como um dispositivo do qual res
 >  Para obter um tutorial sobre como usar o SQL Server 2016 com o serviço de Armazenamento de Blobs do Microsoft Azure, confira [Tutorial: usando o serviço de Armazenamento de Blobs do Microsoft Azure com bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Criar uma Assinatura de Acesso Compartilhado  
- O exemplo a seguir cria Assinaturas de Acesso Compartilhado que podem ser usadas para criar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credencial em um contêiner recém-criado. O script cria uma Assinatura de Acesso Compartilhado que está associada a uma Política de Acesso Armazenado. Para saber mais, confira [Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). O exemplo exige o Microsoft Azure PowerShell. Para obter informações sobre como instalar e usar o Azure PowerShell, consulte [Como instalar e configurar o Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ O exemplo a seguir cria Assinaturas de Acesso Compartilhado que podem ser usadas para criar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credencial em um contêiner recém-criado. O script cria uma Assinatura de Acesso Compartilhado que está associada a uma Política de Acesso Armazenado. Para saber mais, confira [Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). O script também grava o comando T-SQL necessário para criar a credencial no SQL Server. 
 
 > [!NOTE] 
->  Esses scripts foram escritos usando o Azure PowerShell 5.0.10586.
+> O exemplo exige o Microsoft Azure PowerShell. Para obter informações sobre como instalar e usar o Azure PowerShell, consulte [Como instalar e configurar o Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+> Esses scripts foram verificados com o Azure PowerShell 5.1.15063. 
+
 
 **Assinatura de Acesso Compartilhado que está associada uma Política de Acesso Armazenada**  
   
@@ -316,21 +316,16 @@ New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resource
 $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Key1 
+$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
 $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$permissions = $cbc.GetPermissions();  
-$policyName = $policyName  
-$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-$policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
-$policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
-$policy.Permissions = "Read,Write,List,Delete"  
-$permissions.SharedAccessPolicies.Add($policyName, $policy)  
-$cbc.SetPermissions($permissions);  
+$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+
 
 # Gets the Shared Access Signature for the policy  
 $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
@@ -343,51 +338,59 @@ $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET
 $tSql | clip  
 Write-Host $tSql  
 ```  
-  
+
+Depois de executar o script com êxito, copie o comando `CREATE CREDENTIAL` para uma ferramenta de consulta, conecte-se a uma instância do SQL Server e execute o comando para criar a credencial com a Assinatura de Acesso Compartilhado. 
+
 ###  <a name="credential"></a> Criar uma credencial  
- Os exemplos a seguir criam credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para autenticação no serviço de Armazenamento de Blobs do Microsoft Azure.  
+ Os exemplos a seguir criam credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para autenticação no serviço de Armazenamento de Blobs do Microsoft Azure. Execute uma delas. 
   
-1.  **Usando a chave de acesso e a identidade da conta de armazenamento**  
+1.  **Usando a Assinatura de Acesso Compartilhado**  
+
+   Se você executou o script para criar a Assinatura de Acesso Compartilhado acima, copie o `CREATE CREDENTIAL` para um editor de consultas conectado à instância do SQL Server e execute o comando. 
+
+   O T-SQL a seguir é um exemplo que cria a credencial para usar uma Assinatura de Acesso Compartilhado. 
+
+   ```sql  
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
+   CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      WITH IDENTITY = 'SHARED ACCESS IGNATURE',  
+      SECRET = '<SAS_TOKEN>';  
+   ```  
   
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = '<mycredentialname>')  
-    CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
-    ,SECRET = '<mystorageaccountaccesskey>';  
-    ```  
+2.  **Usando a chave de acesso e a identidade da conta de armazenamento**  
   
-2.  **Usando a Assinatura de Acesso Compartilhado**  
-  
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] WITH IDENTITY = 'SHARED ACCESS SIGNATURE'  
-    ,SECRET = '<SAS_TOKEN>';  
-    ```  
+   ```sql 
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = '<mycredentialname>')  
+   CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
+   ,SECRET = '<mystorageaccountaccesskey>';  
+   ```  
   
 ###  <a name="complete"></a> Executar um backup completo do banco de dados.  
- Os exemplos a seguir executam um backup completo do banco de dados AdventureWorks2016 no serviço de Armazenamento de Blobs do Microsoft Azure.  
+ Os exemplos a seguir executam um backup completo do banco de dados AdventureWorks2016 no serviço de Armazenamento de Blobs do Microsoft Azure. Siga um destes procedimentos:   
   
-1.  **Para URL usando a chave de acesso e a identidade da conta de armazenamento**  
-  
-    ```Transact-SQL
-    BACKUP DATABASE AdventureWorks2016  
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
-          WITH CREDENTIAL = '<mycredentialname>'   
-         ,COMPRESSION  
-         ,STATS = 5;  
-    GO   
-    ```  
   
 2.  **Para URL usando uma Assinatura de Acesso Compartilhado**  
   
-    ```Transact-SQL  
-    BACKUP DATABASE AdventureWorks2016   
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
-    GO   
-    ```  
+   ```sql  
+   BACKUP DATABASE AdventureWorks2016   
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
+   GO   
+   ```  
+
+1.  **Para URL usando a chave de acesso e a identidade da conta de armazenamento**  
+  
+   ```sql
+   BACKUP DATABASE AdventureWorks2016  
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+         WITH CREDENTIAL = '<mycredentialname>'   
+        ,COMPRESSION  
+        ,STATS = 5;  
+   GO   
+   ```  
   
 
   
@@ -397,21 +400,21 @@ Write-Host $tSql
   
 1.  **De URL usando uma Assinatura de Acesso Compartilhado**  
   
-    ```Transact-SQL
-    RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
-    WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
-    ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
-    ,NORECOVERY  
-    ,REPLACE  
-    ,STATS = 5;  
-    GO   
+   ```sql
+   RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
+   WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
+   ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
+   ,NORECOVERY  
+   ,REPLACE  
+   ,STATS = 5;  
+   GO   
   
-    RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
-    WITH   
-    RECOVERY   
-    ,STOPAT = 'May 18, 2015 5:35 PM'   
-    GO  
-    ```  
+   RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+   WITH   
+   RECOVERY   
+   ,STOPAT = 'May 18, 2015 5:35 PM'   
+   GO  
+   ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
@@ -419,4 +422,3 @@ Write-Host $tSql
  [Tutorial: usando o serviço de Armazenamento de Blobs do Microsoft Azure com bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
-

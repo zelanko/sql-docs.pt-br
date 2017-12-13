@@ -2,9 +2,12 @@
 title: Classe de evento Lock:Acquired | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f96b334e4c722b456bad9a043d753b18cca5495b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 707749c893523d6db48220d4223bf29bb8680ef0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockacquired-event-class"></a>Classe de evento Lock:Acquired
-  A classe de evento Lock:Acquired indica que foi obtida a aquisição de um bloqueio em um recurso, como página de dados.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento Lock:Acquired indica que o bloqueio de um recurso, tal como uma página de dados, foi alcançado.  
   
  As classes de evento Lock:Acquired e Lock: Released podem ser usadas para monitorar quando os objetos estão sendo bloqueados, o tipo de bloqueio obtido, e por quanto tempo os bloqueios foram retidos. Os bloqueios retidos por longos períodos de tempo podem causar problemas de contenção e devem ser investigados. Por exemplo, um aplicativo pode estar adquirindo bloqueios em linhas em uma tabela, e em seguida esperando por uma entrada do usuário. Como a entrada do usuário pode levar muito tempo, os bloqueios podem bloquear outros usuários. Nesta instância, o aplicativo deveria ser reprojetado para fazer solicitações de bloqueios somente quando necessário e não exigir uma entrada do usuário quando forem adquiridos os bloqueios.  
   

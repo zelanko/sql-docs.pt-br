@@ -2,9 +2,12 @@
 title: "Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 57159f0ede29b93628b75fe4fa9b1707784b2f7b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c592601cb86184e7ed47bab2e77ed61c9f3a3c24
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL)
-  Este tópico descreve como criar um ponto de extremidade de espelhamento de banco de dados que usa a Autenticação do Windows no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para oferecer suporte ao espelhamento de banco de dados ou ao [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige um ponto de extremidade de espelhamento de banco de dados. Uma instância do servidor só pode ter em um ponto de extremidade do espelhamento de banco de dados, que tem uma porta única. Um ponto de extremidade do espelhamento de banco de dados poderá usar qualquer porta que estiver disponível no sistema local quando o ponto de extremidade for criado. Todas as sessões de espelhamento de banco de dados em uma instância do servidor escutam aquela porta e todas as conexões que chegam para o espelhamento de banco de dados usam aquela porta.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como criar um ponto de extremidade de espelhamento de banco de dados que usa a Autenticação do Windows no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para oferecer suporte ao espelhamento de banco de dados ou ao [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige um ponto de extremidade de espelhamento de banco de dados. Uma instância do servidor só pode ter em um ponto de extremidade do espelhamento de banco de dados, que tem uma porta única. Um ponto de extremidade do espelhamento de banco de dados poderá usar qualquer porta que estiver disponível no sistema local quando o ponto de extremidade for criado. Todas as sessões de espelhamento de banco de dados em uma instância do servidor escutam aquela porta e todas as conexões que chegam para o espelhamento de banco de dados usam aquela porta.  
   
 > [!IMPORTANT]  
 >  Se um ponto de extremidade do espelhamento de banco de dados existe e já está em uso, é recomendável usar esse ponto de extremidade. O descarte de um ponto de extremidade em uso interrompe sessões existentes.  

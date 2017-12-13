@@ -2,9 +2,12 @@
 title: "Espaço em disco do log de transações para operações de índice | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79660939000858a97f6af5fa9c69ce041a010878
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e9b1a0e72a794e702428cbadc9a813cca17447c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Espaço em disco de log de transações para operações de índice
-  Operações de índice de larga escala podem gerar grandes carregamentos de dados que podem fazer com que o log da transação seja preenchido rapidamente. Para assegurar a reversão da operação de índice, o log da transação não pode ser truncado até que a operação de índice se complete. Durante a operação, no entanto, poderá ser feito backup do log. Portanto, o log de transações deve ter espaço suficiente para armazenar as transações da operação de índice e todas as transações simultâneas de usuário pelo período da operação de índice. Isso é verdade para operações de índice offline e online. Como as tabelas subjacentes não podem ser acessadas durante a operação de índice offline, pode haver poucas transações de usuário e o log pode não crescer na mesma proporção. As operações de índice online não impedem atividades simultâneas de usuário. Por isso, as operações de índice online de larga escala, combinadas com transações simultâneas significativas de usuário, podem causar o crescimento contínuo do log de transações sem opção para truncar o log.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Operações de índice de larga escala podem gerar carregamentos de dados grandes que podem fazer com que o log da transação seja preenchido rapidamente. Para assegurar a reversão da operação de índice, o log da transação não pode ser truncado até que a operação de índice se complete. Durante a operação, no entanto, poderá ser feito backup do log. Portanto, o log de transações deve ter espaço suficiente para armazenar as transações da operação de índice e todas as transações simultâneas de usuário pelo período da operação de índice. Isso é verdade para operações de índice offline e online. Como as tabelas subjacentes não podem ser acessadas durante a operação de índice offline, pode haver poucas transações de usuário e o log pode não crescer na mesma proporção. As operações de índice online não impedem atividades simultâneas de usuário. Por isso, as operações de índice online de larga escala, combinadas com transações simultâneas significativas de usuário, podem causar o crescimento contínuo do log de transações sem opção para truncar o log.  
   
 ## <a name="recommendations"></a>Recomendações  
  Durante a execução de operações de índice de grande escala, considere estas recomendações:  

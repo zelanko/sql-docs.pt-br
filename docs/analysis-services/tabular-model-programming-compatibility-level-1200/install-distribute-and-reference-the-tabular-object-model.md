@@ -2,12 +2,12 @@
 title: Instalar, distribuir e referenciar o modelo de objeto Tabular | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Instalar, distribuir e referenciar o modelo de objeto de tabela
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Este artigo explica como fazer o download, referência e redistribuir o Analysis Services Tabular objeto modelo (TOM), uma biblioteca do c# para criar e gerenciar modelos de tabela e bancos de dados em código gerenciado.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este artigo explica como fazer o download, referência e redistribuir o Analysis Services Tabular objeto modelo (TOM), uma biblioteca do c# para criar e gerenciar modelos de tabela e bancos de dados em código gerenciado.  
   
 TOM é uma extensão da biblioteca de cliente do AMO (Microsoft.AnalysisServices.dll) que acompanha o SQL Server 2016. Ele funciona com o mecanismo de metadados de tabela na versão do SQL Server 2016 de direcionamento de modelos de tabela. Para usar o TOM, o modelo e o banco de dados devem estar no nível de compatibilidade 1200 ou superior.  
 

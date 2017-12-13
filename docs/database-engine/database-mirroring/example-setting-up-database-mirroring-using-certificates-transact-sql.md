@@ -2,9 +2,12 @@
 title: 'Exemplo: configurar o espelhamento de banco de dados usando certificados (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8e59dc131a6632bb36da92d6d3d3f6e5f6226485
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 369df35942080871a30d478de180b15fe49a7326
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)
-  Este exemplo mostra todos os estágios necessários para criar uma sessão de espelhamento de banco de dados com uma autenticação baseada em certificado. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este exemplo mostra todos os estágios necessários para criar uma sessão de espelhamento de banco de dados usando autenticação baseada em certificado. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
   
  Ao copiar um certificado para outro sistema, use um método de cópia seguro. Seja extremamente cauteloso para manter todos os seus certificados em segurança.  
   

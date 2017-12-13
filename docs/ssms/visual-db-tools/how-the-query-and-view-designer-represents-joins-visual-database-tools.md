@@ -3,8 +3,11 @@ title: "Como o Designer de Consulta e Exibição representa junções | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2231538d858cf69c6275c00458ebfa97561bd303
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d112b8edd88c1d5b34f63206dc3c69a1e2e89652
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Como o Designer de Consulta e Exibição representa junções (Visual Database Tools)
-Se as tabelas forem unidas, o [Designer de Consulta e Exibição](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) representará a junção graficamente no [painel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) e pelo uso da sintaxe SQL no [painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se as tabelas forem unidas, o [Designer de Exibição e Consulta](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) representará a junção graficamente no [painel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) e pelo uso da sintaxe SQL no [painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
-## <a name="diagram-pane"></a>painel Diagrama  
+## <a name="diagram-pane"></a>Painel Diagrama  
 No painel Diagrama, o Designer de Consulta e Exibição exibe uma linha de junção entre as colunas de dados envolvidas na junção. O Designer de Consulta e Exibição exibe uma linha de junção para cada condição de junção. Por exemplo, a ilustração seguinte mostra uma linha de junção entre duas tabelas unidas:  
   
 ![A linha de junção mostra a relação entre duas tabelas](../../ssms/visual-db-tools/media/dv3wbig.gif "A linha de junção mostra a relação entre duas tabelas")  

@@ -2,9 +2,12 @@
 title: "Monitor de Espelhamento de Banco de Dados (página Avisos) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da1fb8bd1af9fee7be317e940eae7fc9bc2db455
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c99baee0acea3b6a05f15b5c2ae33cdb347ee1bb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitor de Espelhamento de Banco de Dados (página Avisos)
-  Exibe uma lista somente leitura de avisos com suporte em eventos de espelhamento de banco de dados e dos valores limite de aviso especificados, se houver.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Exibe uma lista somente leitura de avisos com suporte em eventos de espelhamento de banco de dados e dos valores limite de aviso especificados, se houver.  
   
  **Para usar o SQL Server Management Studio para monitorar o espelhamento de banco de dados**  
   

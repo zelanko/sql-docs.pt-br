@@ -2,9 +2,12 @@
 title: Classe de Evento CursorPrepare| Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978867c63089538ad4d02c92058fa147560e7ee3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6fcbca475c65b6fb1b3aed42f49bfa7dace3cea8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorprepare-event-class"></a>classe de evento CursorPrepare
-  A classe de evento **CursorPrepare** descreve os eventos de preparação do cursor que acontecem nos cursores da API (interface de programação de aplicativos). Os eventos de preparação do cursor ocorrem quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila uma instrução SELECT associada a um cursor em um plano de execução, mas não cria o cursor.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **CursorPrepare** descreve os eventos de preparação do cursor que acontecem nos cursores da API (interface de programação de aplicativos). Os eventos de preparação do cursor ocorrem quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila uma instrução SELECT associada a um cursor em um plano de execução, mas não cria o cursor.  
   
  Inclua a classe de evento **CursorPrepare** em rastreamentos que estão registrando o desempenho de cursores. Quando a classe de evento **CursorPrepare** está incluída no rastreamento, a quantidade de sobrecarga criada dependerá da frequência de uso dos cursores em relação ao banco de dados durante o rastreamento. Se os cursores forem usados extensivamente, o rastreamento poderá diminuir significativamente o desempenho.  
   

@@ -1,10 +1,13 @@
 ---
 title: "Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3ee451e1af1df985f99281008c6e5fbf4147e11b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9d87679a2775450c37feedec713f00c077145d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
-Bem-vindo ao tutorial “Trabalhando com o SQL Server 2016 no serviço de Armazenamento de Blobs do Microsoft Azure”. Este tutorial o ajudará a entender como usar o serviço de armazenamento de Blobs do Microsoft Azure para arquivos de dados e backups do SQL Server.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bem-vindo ao tutorial Trabalhando com o SQL Server 2016 no serviço de Armazenamento de Blobs do Microsoft Azure. Este tutorial o ajudará a entender como usar o serviço de armazenamento de Blobs do Microsoft Azure para arquivos de dados e backups do SQL Server.  
   
 O suporte da integração do SQL Server no serviço de armazenamento de Blobs do Microsoft Azure começou como uma melhoria do SQL Server 2012 Service Pack 1 CU2 e foi aprimorado ainda mais com o SQL Server 2014 e SQL Server 2016. Para obter uma visão geral da funcionalidade e dos benefícios do uso dessa funcionalidade, consulte [Arquivos de dados do SQL Server no Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Para uma demonstração ao vivo, confira [Demonstração da recuperação pontual](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
   

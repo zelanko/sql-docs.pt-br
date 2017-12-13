@@ -2,9 +2,12 @@
 title: Consulta com a pesquisa de texto completo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bfded7d067ded1dacaffede2f36f261451cd59c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-with-full-text-search"></a>Consulta com pesquisa de texto completo
-
-Escreva consultas de texto completo usando os predicados de texto completo **CONTAINS** e **FREETEXT** e as funções com valor de conjunto de linhas **CONTAINSTABLE** e **FREETEXTTABLE** com a instrução **SELECT**. Este tópico fornece exemplos de cada predicado e função e ajuda você a escolher o melhor a ser usado.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Escreva consultas de texto completo usando os predicados de texto completo **CONTAINS** e **FREETEXT** e as funções com valor de conjunto de linhas **CONTAINSTABLE** e **FREETEXTTABLE** com a instrução **SELECT**. Este tópico fornece exemplos de cada predicado e função e ajuda você a escolher o melhor a ser usado.
 
 -   Use **CONTAINS** e **CONTAINSTABLE** para fazer a correspondência de palavras e frases.
 -   Use **FREETEXT** e **FREETEXTTABLE** para fazer a correspondência de significado, mas não de palavras exatas.

@@ -2,9 +2,12 @@
 title: Classe de evento Performance Statistics | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1822de581220e2544ab14622b8a5784cc9cabc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 952bad5b2f70ce0d1c22579ea50708cd48e6b9a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="performance-statistics-event-class"></a>classe de evento Performance Statistics
-  A classe de evento Performance Statistics pode ser usada para monitorar o desempenho de consultas, procedimentos armazenados e gatilhos que são executados. Cada uma das seis subclasses de evento indica um evento no tempo de vida de consultas, procedimentos armazenados e gatilhos no sistema. Usando a combinação dessas subclasses de evento e as exibições de gerenciamento dinâmico sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associadas, você pode reconstituir o histórico de desempenho de qualquer consulta, procedimento armazenado ou gatilho específico.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento Performance Statistics pode ser usada para monitorar o desempenho de consultas, procedimentos armazenados e gatilhos que são executados. Cada uma das seis subclasses de evento indica um evento no tempo de vida de consultas, procedimentos armazenados e gatilhos no sistema. Usando a combinação dessas subclasses de evento e as exibições de gerenciamento dinâmico sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associadas, você pode reconstituir o histórico de desempenho de qualquer consulta, procedimento armazenado ou gatilho específico.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Colunas de dados da classe de evento Performance Statistics  
  As tabelas a seguir descrevem as colunas de dados da classe de evento associada a cada uma das seguintes subclasses de evento: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 e EventSubClass 5.  

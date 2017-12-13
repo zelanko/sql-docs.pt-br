@@ -2,12 +2,12 @@
 title: Importar do PowerPivot (SSAS Tabular) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddea709433a76faae800615c0a974ad14d153c8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 66ca9811b808ac3ef6b282479972482e78a083e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-from-power-pivot-ssas-tabular"></a>Importar do PowerPivot (SSAS de tabela)
-  Este tópico descreve como criar um novo projeto de modelo tabular importando os metadados e dados de uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usando o modelo de projeto Importar do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tópico descreve como criar um novo projeto de modelo tabular importando os metadados e dados de um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pasta de trabalho usando a importação de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelo de projeto em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Criar um novo Modelo Tabular de um arquivo PowerPivot para Excel  
  Ao criar um novo projeto de modelo tabular importando de uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , os metadados que definem a estrutura da pasta de trabalho são usados para criar e definir a estrutura do projeto de modelo de tabela no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Objetos como tabelas, colunas, medidas e relações são mantidos e aparecerão no projeto de modelo tabular tal como estão na pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Nenhuma alteração é feita ao arquivo da pasta de trabalho .xlsx.  

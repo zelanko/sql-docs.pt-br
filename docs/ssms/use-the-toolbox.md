@@ -3,8 +3,11 @@ title: Usar a caixa de ferramentas | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3190646ab3eb434e2b7ad17aa6ca3914857c6690
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3f8899fed233516fce93277a48f2ceb652212ff8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-the-toolbox"></a>Usar a Caixa de Ferramentas
-Você pode selecionar e arrastar itens, texto e controles da Caixa de Ferramentas sobre formulários, páginas e designers, e arrastar itens dessas fontes para a Caixa de Ferramentas para uso posterior. Por exemplo, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] você pode arrastar uma tarefa para um Plano de Manutenção.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode selecionar e arrastar itens, texto e controles da Caixa de Ferramentas sobre formulários, páginas e designers, e arrastar itens dessas fontes para a Caixa de Ferramentas para uso posterior. Por exemplo, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] você pode arrastar uma tarefa para um Plano de Manutenção.  
   
 Os itens da Caixa de Ferramentas são agrupados em seções denominadas guias. A seguir é apresentada uma lista de referências de tarefas comuns da Caixa de Ferramentas e como executá-las:  
   

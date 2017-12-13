@@ -2,9 +2,12 @@
 title: "Administração e manutenção de instância de cluster de failover | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47c315cf1899dc2b0ac24fe8ccc52e6b7487fad9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 964ce2dcfcff3edb1de4822ee01982583062f958
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administração e manutenção da instância de cluster de failover
-  Tarefas de manutenção como adicionar ou remover nós de uma FCI (instância de cluster de failover) AlwaysOn são realizadas usando o programa de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Outras tarefas de administração como alterar o recurso de endereço IP e recuperar de certos cenários de FCI são realizadas com o uso do snap-in Gerenciador de Cluster de Failover, que é o snap-in de gerenciamento do serviço WSFC (Windows Server Failover Clustering).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Tarefas de manutenção como adicionar ou remover nós de uma FCI (instância de cluster de failover) Always On existente são realizadas usando o programa de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Outras tarefas de administração como alterar o recurso de endereço IP e recuperar de certos cenários de FCI são realizadas com o uso do snap-in Gerenciador de Cluster de Failover, que é o snap-in de gerenciamento do serviço WSFC (Windows Server Failover Clustering).  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Mantendo uma instância de cluster de failover  
  Depois que você instalar uma FCI, poderá alterá-la ou repará-la usando o programa de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, você também pode adicionar mais nós a uma FCI, executar uma FCI como uma instância autônoma ou remover um nó de uma configuração de FCI.  

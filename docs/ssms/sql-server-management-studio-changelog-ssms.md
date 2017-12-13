@@ -3,8 +3,11 @@ title: "SQL Server Management Studio – Changelog (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6a1531fb335269f3b02b512a75750ebb188c82c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dde2d7831a7bc75f9873efedcddb0bf6134669d9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-
-Este artigo fornece detalhes sobre atualizações, aprimoramentos e correções de bug para as versões atuais e anteriores do SSMS. Baixe [versões anteriores do SSMS abaixo](#previous-ssms-releases).
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este artigo fornece detalhes sobre atualizações, aprimoramentos e correções de bug para as versões atuais e anteriores do SSMS. Baixe [versões anteriores do SSMS abaixo](#previous-ssms-releases).
 
 
 ## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)

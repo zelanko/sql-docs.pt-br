@@ -2,9 +2,12 @@
 title: "Restaurações por etapas (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f5ff052d1d6981fe0383ac75c38fc643565d4430
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 74cd98740e15437e44fc782cf71389daccd1beea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurações por etapas (SQL Server)
-  Este tópico é relevante apenas para os bancos de dados na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contêm vários arquivos ou grupos de arquivos. No modelo simples, ele é relevante apenas para grupos de arquivos somente leitura.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico é relevante apenas para os bancos de dados na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contêm vários arquivos ou grupos de arquivos. No modelo simples, ele é relevante apenas para grupos de arquivos somente leitura.  
   
  Para obter informações sobre a restauração por etapas e as tabelas com otimização de memória, consulte [Restauração por etapas de bancos de dados com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   

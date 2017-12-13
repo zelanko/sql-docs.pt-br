@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 87cdbcf3158e3bbcc76233ff48f0ec90d5372c64
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expressões de propriedade em pacotes
   Uma expressão de propriedade é uma expressão atribuída a uma propriedade para ativar uma atualização dinâmica da propriedade no tempo de execução. Por exemplo, uma expressão de propriedade pode atualizar a linha Para se uma tarefa Enviar Email usar a inserção de emails que já estão armazenados em uma variável.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  O diagrama a seguir mostra as interfaces de usuário usadas para adicionar, alterar e remover as expressões de propriedade.  
   
- ![A interface do usuário para expressões de propriedade](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "a interface do usuário para expressões de propriedade")  
+ ![A interface do usuário para expressões de propriedade](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "A interface do usuário para expressões de propriedade")  
   
  Na janela **Propriedades** e na página **Expressões** , clique no botão Procurar **(…)** no nível de coleção **Expressões** para abrir a caixa de diálogo **Editor de Expressões de Propriedade** . O Editor de Expressões de Propriedade permite mapear uma propriedade para uma expressão e digitar uma expressão de propriedade. Se desejar usar ferramentas gráficas de expressão para criar e validar uma expressão, clique no botão Procurar **(…)** no nível de expressão para abrir a caixa de diálogo **Construtor de Expressões** e crie ou modifique (e, se desejar, avalie) a expressão.  
   
@@ -183,4 +181,3 @@ ms.lasthandoff: 08/03/2017
  [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

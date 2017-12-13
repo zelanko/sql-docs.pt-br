@@ -1,10 +1,13 @@
 ---
 title: "Lição 8: Restaurar como um novo banco de dados por meio do backup de log | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd973fc07c6849a1e211f77be4a995bdada4b271
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 65e5464a1a3ee36420d92b23268ab9aa7cb88c02
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>Lição 8: Restaurar como um novo banco de dados por meio do backup de log
-Nesta lição, você aprenderá a restaurar o banco de dados AdventureWorks2014 como um novo banco de dados por meio de um backup de log de transações de instantâneo de arquivo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nesta lição, você aprenderá a restaurar o banco de dados AdventureWorks2014 como um novo banco de dados por meio de um backup de log de transações de instantâneo de arquivo.  
   
 Nesse cenário, você está realizando uma restauração de uma instância do SQL Server em outra máquina virtual para fins de análise de negócios e relatório. A restauração em uma instância diferente em outra máquina virtual descarrega a carga de trabalho em uma máquina virtual dedicada e dimensionada para essa finalidade, removendo os requisitos de recursos do sistema transacional.  
   

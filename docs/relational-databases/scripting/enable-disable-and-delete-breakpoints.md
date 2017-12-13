@@ -2,9 +2,12 @@
 title: "Habilitar, desabilitar e excluir pontos de interrupção | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e0fe1a775a1a786234308dce7056f20edaecb63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38a596f36d68cc6efd8b21450aaddf5f0a293ab0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, desabilitar e excluir pontos de interrupção
-  Para exibir e gerenciar todos os pontos de interrupção abertos, você pode usar a janela **Pontos de Interrupção** . Use a janela para exibir informações de ponto de interrupção e executar ações como excluir, desabilitar ou habilitar pontos de interrupção.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Para exibir e gerenciar todos os pontos de interrupção abertos, você pode usar a janela **Pontos de Interrupção**. Use a janela para exibir informações de ponto de interrupção e executar ações como excluir, desabilitar ou habilitar pontos de interrupção.  
   
 ## <a name="the-breakpoints-window"></a>Janela Pontos de Interrupção  
  A janela **Pontos de Interrupção** lista informações como a linha de código em que o ponto de interrupção é localizado. Na janela **Pontos de Interrupção** , você também pode excluir, desabilitar e habilitar pontos de interrupção. Para obter mais informações sobre a janela **Pontos de Interrupção** , consulte [Pontos de Interrupção Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  

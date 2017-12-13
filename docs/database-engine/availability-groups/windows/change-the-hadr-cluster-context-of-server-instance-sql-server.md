@@ -2,9 +2,12 @@
 title: "Alterar o contexto do cluster HADR da instância de servidor (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 756e9af84a88e6cdb0e3e411167928cd1eed12c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 296d664edfdbf31110aab41c140735271920c832
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Alterar o contexto do cluster HADR da instância de servidor (SQL Server)
-  Este tópico descreve como alternar o contexto do cluster HADR de uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)] no [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] e em versões posteriores. O *contexto do cluster HADR* determina qual cluster do WSFC (Clustering de Failover de Windows Server) gerencia os metadados das réplicas de disponibilidade hospedadas pela instância de servidor.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como mudar o contexto do cluster HADR de uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)] no [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] e em versões posteriores. O *contexto do cluster HADR* determina qual cluster do WSFC (Clustering de Failover de Windows Server) gerencia os metadados das réplicas de disponibilidade hospedadas pela instância de servidor.  
   
  Alterne o contexto do cluster HADR somente durante uma migração entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para uma instância do [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] em um novo cluster WSFC. A migração entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] oferece suporte à atualização do sistema operacional para o [!INCLUDE[win8](../../../includes/win8-md.md)] ou o [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] com tempo de inatividade mínimo de grupos de disponibilidade. Para obter mais informações, veja [Migração entre clusters de grupos de disponibilidade AlwaysOn para atualização do sistema operacional](http://msdn.microsoft.com/library/jj873730.aspx).  
   

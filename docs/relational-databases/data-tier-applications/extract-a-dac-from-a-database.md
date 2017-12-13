@@ -2,9 +2,12 @@
 title: Extrair um DAC de um banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a25c49cf828566501c9220bbf8c4c6637e5130e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a3fe80df8624968a5bf71f3fd7976bc838a0abf4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
-  Use o **Assistente para Extrair um Aplicativo da Camada de Dados** ou um script do Windows PowerShell para extrair um pacote de DAC (aplicativo da camada de dados) de um banco de dados do SQL Server existente. O processo de extração cria um arquivo de pacote de DAC que contém definições dos objetos de banco de dados e os elementos em nível de instância relacionados. Por exemplo, um arquivo de pacote de DAC contém as tabelas do banco de dados, os procedimentos armazenados, as exibições e os usuários junto com os logons que mapeiam para os usuários de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o **Assistente para Extrair um Aplicativo da Camada de Dados** ou um script do Windows PowerShell para extrair um pacote de DAC (aplicativo da camada de dados) de um banco de dados do SQL Server existente. O processo de extração cria um arquivo de pacote de DAC que contém definições dos objetos de banco de dados e os elementos em nível de instância relacionados. Por exemplo, um arquivo de pacote de DAC contém as tabelas do banco de dados, os procedimentos armazenados, as exibições e os usuários junto com os logons que mapeiam para os usuários de banco de dados.  
   
  
 ## <a name="before-you-begin"></a>Antes de começar  

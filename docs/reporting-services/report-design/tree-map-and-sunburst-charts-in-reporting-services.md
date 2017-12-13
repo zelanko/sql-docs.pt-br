@@ -1,10 +1,13 @@
 ---
 title: "Gráficos de mapa de árvore e explosão solar no SQL Server Reporting Services | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 50224e926c08951887a6423ab1c95eb7ac23a944
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ece2ccbf6f9c67789d5d248a9ad92b2acf0a7f36
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de mapa de árvore e explosão solar no Reporting Services
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-As visualizações de mapa de árvore e explosão solar do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são ótimas para representar dados hierárquicos visualmente. Este artigo é uma visão geral de como adicionar um gráfico de mapa de árvore ou explosão solar a um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. O artigo também inclui uma consulta de exemplo do AdventureWorks para ajudá-lo a começar.  
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] As visualizações de mapa de árvore e explosão solar do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são ótimas para representar dados hierárquicos visualmente. Este artigo é uma visão geral de como adicionar um gráfico de mapa de árvore ou explosão solar a um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. O artigo também inclui uma consulta de exemplo do AdventureWorks para ajudá-lo a começar.  
   
 ##  <a name="bkmk_treemap_chart"></a> Gráfico de mapa de árvore  
 

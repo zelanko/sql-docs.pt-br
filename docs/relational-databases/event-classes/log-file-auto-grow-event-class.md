@@ -2,9 +2,12 @@
 title: Classe de evento Log File Auto Grow | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06f40386c647c7ade6a7e5c1ecf6e520e1baf35a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4db9822ea9dc2c9d748f4bb25e5543cc62f6cb52
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="log-file-auto-grow-event-class"></a>classe de evento Log File Auto Grow
-  A classe de evento **Log File Auto Grow** indica que o arquivo de log pode se expandir automaticamente. Esse evento não será acionado se o arquivo de log crescer explicitamente por meio de ALTER DATABASE.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Log File Auto Grow** indica que o arquivo de log se expandiu automaticamente. Esse evento não será acionado se o arquivo de log crescer explicitamente por meio de ALTER DATABASE.  
   
  Inclua a classe de evento **Log File Auto Grow** nos rastreamentos que monitoram o crescimento do arquivo de log. Quando essa classe de evento é incluída no rastreamento, a quantidade de sobrecarga incorrida é baixa, a menos que o arquivo de log tenha crescimento automático frequentemente.  
   

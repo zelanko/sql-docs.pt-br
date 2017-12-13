@@ -2,12 +2,12 @@
 title: Adicione dados de exemplo para um modelo DirectQuery no modo de Design | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff618d97a65c7143dda513d38d66dd72d1459022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 962cadeac40c4cd450265d6c617a2bdcf1afa9ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Adicionar dados de exemplo a um modelo DirectQuery no Modo de Design
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
- No modo DirectQuery, as partições de tabela são usadas para criar subconjuntos de dados de exemplo usados durante a criação do modelo, ou para criar alternativas de uma exibição de dados completa.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]No modo DirectQuery, as partições de tabela são usadas para criar subconjuntos de dados de exemplo usados durante o design do modelo, ou criar alternativas de uma exibição de dados completo.
  
  Quando você implanta um modelo de tabela do DirectQuery, somente uma partição é permitida por tabela, e essa partição obrigatoriamente deve ser a exibição de dados completa. Qualquer partição adicional é um substituto da exibição de dados completa ou dados de exemplo. Neste tópico, vamos descrever como criar uma partição de exemplo, com um subconjunto de dados.
  

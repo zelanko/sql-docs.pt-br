@@ -2,9 +2,12 @@
 title: Limitar os resultados da pesquisa com RANK | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f82c1bfe30401d60de557c79ad7fd95be78496c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aec9bea3dabdf53867f6346ac10ee42d7b2e297a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="limit-search-results-with-rank"></a>Limite resultados de pesquisa com RANK
-  As funções [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) retornam uma coluna denominada RANK que contém valores ordinais de 0 a 1000 (valores de classificação). Esses valores são usados para classificar as linhas retornadas de acordo com o grau de correspondência com os critérios de seleção. Os valores de classificação indicam apenas uma ordem relativa de relevância das linhas no conjunto de resultados, sendo que um valor inferior indica menor relevância. Os valores reais não são importantes e geralmente são diferentes em cada execução da consulta.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] As funções [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) retornam uma coluna denominada RANK que contém valores ordinais de 0 a 1000 (valores de classificação). Esses valores são usados para classificar as linhas retornadas de acordo com o grau de correspondência com os critérios de seleção. Os valores de classificação indicam apenas uma ordem relativa de relevância das linhas no conjunto de resultados, sendo que um valor inferior indica menor relevância. Os valores reais não são importantes e geralmente são diferentes em cada execução da consulta.  
   
 > [!NOTE]  
 >  Os predicados CONTAINS e FREETEXT não retornam valores de classificação.  

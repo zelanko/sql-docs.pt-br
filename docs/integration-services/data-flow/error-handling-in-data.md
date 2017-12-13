@@ -1,5 +1,5 @@
 ---
-title: Tratamento de erros em dados | Microsoft Docs
+title: Tratamento de erro em dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.configureerroroutput.f1
+f1_keywords: sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb565db8a68cb12e8c8a0ab5976c37ea76e183ea
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling-in-data"></a>Tratamento de erros em dados
   Quando um componente de fluxo de dados aplica uma transformação aos dados da coluna, extrai dados de fontes ou carrega dados nos destinos, podem ocorrer erros. Frequentemente, os erros ocorrem por causa de valores de dados inesperados. Por exemplo, uma conversão de dados falha porque uma coluna contém uma cadeia de caracteres em vez de um número, uma inserção em uma coluna de banco de dados falha porque os dados são uma data e a coluna tem um tipo de dados numéricos, ou uma expressão não é avaliada porque o valor de uma coluna é zero, resultando em uma operação matemática que não é válida.  
@@ -57,11 +54,11 @@ ms.lasthandoff: 09/26/2017
   
  O diagrama a seguir mostra um fluxo de dados simples incluindo uma saída de erro.  
   
- ![Fluxo de dados com a saída de erro](../../integration-services/data-flow/media/mw-dts-11.gif "com saída de erro de fluxo de dados")  
+ ![Fluxo de dados com saída de erro](../../integration-services/data-flow/media/mw-dts-11.gif "Fluxo de dados com saída de erro")  
   
  Para obter mais informações, consulte [Fluxo de Dados](../../integration-services/data-flow/data-flow.md) e [Caminhos do Integration Services](../../integration-services/data-flow/integration-services-paths.md).  
 
-## <a name="configure-error-output-dialog-box"></a>Configurar a caixa de diálogo de saída de erro
+## <a name="configure-error-output-dialog-box"></a>Caixa de diálogo Configurar Saída de Erro
 Use a caixa de diálogo **Configurar Saída de Erro** para configurar opções de tratamento de erros em transformações de fluxo de dados com suporte a saída de erros.  
   
  Para saber mais sobre como trabalhar com saídas de erro, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).  
@@ -154,10 +151,9 @@ Use a caixa de diálogo **Configurar Saída de Erro** para configurar opções d
 
 ## <a name="see-also"></a>Consulte também  
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)   
- [Transformar dados com transformações](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
+ [Transformar Dados com Transformações](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Conectar componentes com caminhos](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
- [Tarefa de fluxo de dados](../../integration-services/control-flow/data-flow-task.md)   
+ [Tarefa de Fluxo de Dados](../../integration-services/control-flow/data-flow-task.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   
-

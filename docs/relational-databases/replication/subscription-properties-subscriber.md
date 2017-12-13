@@ -2,9 +2,12 @@
 title: "Propriedades da Assinatura – Assinante | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 348b0b2b95f433f5c186fa71addbf418432198d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5fe9f215218bc84d3b3f1d5bb5c22d1a2ee980d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-properties---subscriber"></a>Propriedades da Assinatura - Assinante
-  A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e definir propriedades para assinaturas pull.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e definir propriedades para assinaturas pull.  
   
  Cada propriedade na caixa de diálogo **Propriedades da Assinatura** inclui uma descrição. Clique em uma propriedade para ver sua descrição exibida na parte inferior da caixa de diálogo. Este tópico fornece informações adicionais sobre várias propriedades. As propriedades são agrupadas nas categorias seguintes:  
   

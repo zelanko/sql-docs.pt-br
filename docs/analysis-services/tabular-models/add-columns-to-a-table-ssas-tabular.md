@@ -2,12 +2,12 @@
 title: Adicionar colunas a uma tabela (SSAS Tabular) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef9aaa80dba9212e9fb22af7a1701bb6b3f17eb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Adicionar colunas a uma tabela (SSAS tabular)
-  Este tópico descreve como adicionar colunas a uma tabela existente.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tópico descreve como adicionar colunas a uma tabela existente.  
   
 ## <a name="add-columns-from-the-data-source"></a>Adicionar colunas da fonte de dados  
  Ao usar o Assistente de Importação de Tabela para importar dados de uma tabela de fonte de dados, uma nova tabela é criada no modelo que inclui todas as colunas na tabela de origem. Ou, se você escolher filtrar determinadas colunas usando o recurso Visualizar e Filtrar, somente essas colunas e os dados filtrados que você selecionar. Você também pode escrever uma Consulta SQL que especifica somente algumas colunas para importar. Você pode, no entanto, determinar posteriormente uma tabela de origem tem colunas adicionais que você deseja adicionar à tabela modelo ou precisa adicionar uma coluna calculada com valores derivados de uma fórmula DAX.  

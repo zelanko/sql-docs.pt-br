@@ -2,9 +2,12 @@
 title: Monitorando o desempenho de procedimentos armazenados compilados nativamente | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8db102af60a736dd0e971a1799508188a8332dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b49994a3167ad8639b537279085e16ef2c7ccb1a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitorando o desempenho de procedimentos armazenados compilados nativamente
-  Este tópico discute como você pode monitorar o desempenho de procedimentos armazenados compilados de modo nativo  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico discute como você pode monitorar o desempenho de procedimentos armazenados compilados de modo nativo  
   
 ## <a name="using-extended-events"></a>Usando eventos estendidos  
  Use o evento estendido **sp_statement_completed** para rastrear a execução de uma consulta. Crie uma sessão de evento estendido com esse evento, opcionalmente com um filtro no object_id para um procedimento armazenado específico compilado nativamente. O evento estendido é ativado depois da execução de cada consulta. O tempo de CPU e a duração relatados pelo evento estendido indicam a quantidade de CPU usada pela consulta e o tempo de execução. Um procedimento armazenado compilado de modo nativo que usa muito tempo da CPU pode ter problemas de desempenho.  

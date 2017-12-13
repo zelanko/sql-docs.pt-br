@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - containers [Integration Services], grouping
 - grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1162e9b3617c16dc057e899515b9125da35e070b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: af643174ce7a9b4e7a9b0748429af2351287e953
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="group-or-ungroup-components"></a>Agrupa ou desagrupa componentes
   As guias **Fluxo de Controle**, **Fluxo de dados**e **Manipuladores de Eventos** no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] dão suporte a agrupamento recolhível. Se um pacote tem muitos componentes, as guias podem ficar cheias, tornando difícil visualizar todos os componentes ao mesmo tempo e localizar o item com o qual você quer trabalhar. O recurso de agrupamento desmontável, que pode conservar espaço na superfície de trabalho, e assim tornar mais fácil o trabalho com pacotes grandes.  
@@ -69,7 +67,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Conecte tarefas e contêineres usando uma restrição de precedência padrão](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   
-

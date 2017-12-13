@@ -2,12 +2,12 @@
 title: "Configurar propriedades de comportamento de tabela para relatórios do Power View (SSAS Tabular) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View - configurar propriedades de comportamento de tabela para relatórios
-  Se você estiver usando um modelo de tabela como um modelo de dados para o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], poderá definir propriedades de comportamento de tabela que exponham linhas de detalhes em um mais nível granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Se você estiver usando um modelo de tabela como um modelo de dados para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], você pode definir propriedades de comportamento de tabela que exponham linhas de detalhes em um nível mais granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] difere de outros aplicativos de relatório porque agrupará itens automaticamente durante o design do relatório, avaliando quais colunas colocou você na lista de campos de relatório em relação ao formato de apresentação que você está usando. Na maioria dos casos, o agrupamento padrão gera um resultado ótimo. Mas, para algumas tabelas, principalmente as que contêm dados de detalhes, o comportamento de agrupamento padrão às vezes agrupará linhas que não deveriam ser agrupadas. Para essas tabelas, você pode definir propriedades que alteram como os grupos são avaliados.  
   

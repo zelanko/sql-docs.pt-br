@@ -2,9 +2,12 @@
 title: "Página Especificar Réplicas (Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: daabab1d4122ce132579f399a4ea6c923477da35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9e6deec0c8993271ec1c5bf02101516585faeaf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar Réplicas (Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica)
-  Este tópico descreve as opções da página **Especificar Réplicas** . Essa página aplica-se ao **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** e ao **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve as opções da página **Especificar Réplicas**. Essa página aplica-se ao **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** e ao **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
   
 |Tab|Descrição breve|  
 |---------|-----------------------|  

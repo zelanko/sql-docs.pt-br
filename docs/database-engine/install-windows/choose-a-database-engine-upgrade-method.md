@@ -2,11 +2,12 @@
 title: "Escolher um método de upgrade do mecanismo de banco de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 07/19/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 418cb013fddfa58783babbee63e00524f411a39c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c568ec23e5f64e65afb794a7e0c60a0eeb693622
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
-  Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados")  
   

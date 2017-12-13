@@ -2,12 +2,12 @@
 title: "Tipos de dados (mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 380a7208eceb9468e4bca2490f04c79149d4665d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 275fddacc7d5d24be9581613863e81d2a061c92d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-types-data-mining"></a>Tipos de dados (Mineração de Dados)
-  Quando você cria um modelo ou uma estrutura de mineração no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], deve definir os tipos de dados para cada uma das colunas na estrutura de mineração. O tipo de dados informa ao mecanismo de análise se os dados na fonte de dados são numéricos ou de texto, e como devem ser processados. Por exemplo, se a fonte de dados contiver dados numéricos, você poderá especificar se os números serão tratados como inteiros ou com o uso de casas decimais.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria um modelo de mineração ou uma estrutura de mineração em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você deve definir os tipos de dados para cada uma das colunas na estrutura de mineração. O tipo de dados informa ao mecanismo de análise se os dados na fonte de dados são numéricos ou de texto, e como devem ser processados. Por exemplo, se a fonte de dados contiver dados numéricos, você poderá especificar se os números serão tratados como inteiros ou com o uso de casas decimais.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte aos seguintes tipos de dados para colunas de estrutura de mineração:  
   

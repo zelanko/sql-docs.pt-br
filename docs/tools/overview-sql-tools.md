@@ -17,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba7958a1b5b9398dec3cb07630ee84b72970d2ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7662fe90dc6f90c4437f200086e4d96b486a20b
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL ferramentas e utilitários para o SQL Server, o banco de dados SQL do Azure e o Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>Ferramentas para executar consultas e gerenciar bancos de dados  
@@ -37,7 +36,12 @@ ms.lasthandoff: 12/05/2017
 | [SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | Ative o Visual Studio em um ambiente de desenvolvimento sofisticado para SQL Server, o banco de dados do SQL Azure e o Azure SQL Data Warehouse. **O SSDT é executado no Windows**.|
 | [Código do Visual Studio](https://code.visualstudio.com/)| Após instalar o código do Visual Studio, o [mssql extensão](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) para o desenvolvimento do Microsoft SQL Server, banco de dados do SQL Azure e SQL Data Warehouse. **Código do Visual Studio é executado no Linux, Windows e macOS**.|
 
+## <a name="which-tool-should-i-choose"></a>Qual ferramenta devo escolher?
 
+- Você deseja gerenciar uma instância do SQL Server ou banco de dados em um editor leve no Windows, Linux ou Mac? Escolha[[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
+- Você deseja gerenciar uma instância do SQL Server ou banco de dados no Windows com suporte total a interface gráfica do usuário? Escolha [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- Você deseja criar ou manter o código de banco de dados, incluindo a validação em tempo de compilação, designer e refatoração suportam no Windows? Escolha [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- Você deseja gravar scripts T-SQL em um editor de leve no Windows, Linux ou Mac? Escolha [código do Visual Studio](https://code.visualstudio.com/) e [mssql extensão](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>Ferramentas adicionais
 

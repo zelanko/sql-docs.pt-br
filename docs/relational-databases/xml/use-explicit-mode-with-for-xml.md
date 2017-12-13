@@ -2,9 +2,12 @@
 title: Usar o modo EXPLICIT com FOR XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4972860dbfc2eaa8d0b04da88f304a95b17a4bd6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eb42524c0b75942739eef545b01caab76d21c3f4
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
-  Conforme descrito no tópico [Construindo XML usando FOR XML](../../relational-databases/xml/for-xml-sql-server.md), os modos RAW e AUTO não fornecem muito controle sobre a forma do XML gerado de um resultado da consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Conforme descrito no tópico [Construindo XML usando FOR XML](../../relational-databases/xml/for-xml-sql-server.md), os modos RAW e AUTO não fornecem muito controle sobre a forma do XML gerado de um resultado da consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
   
  A consulta em modo EXPLICIT deve ser escrita de uma maneira específica para que as informações adicionais sobre o XML necessário, como aninhamento esperado no XML, sejam especificadas explicitamente como parte da consulta. Dependendo do XML solicitado, pode ser trabalhoso escrever consultas em modo EXPLICIT. Você pode descobrir que [Usando o modo PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) com aninhamento é uma alternativa mais simples para escrever consultas em modo EXPLICIT.  
   

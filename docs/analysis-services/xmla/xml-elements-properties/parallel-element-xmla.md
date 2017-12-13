@@ -1,12 +1,12 @@
 ---
 title: Paralelo elemento (XMLA) | Microsoft Docs
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ecdec84b7701a849134e8315c27085ea167ac66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 458e53464bdcb30d928ad2d752545f5cb8fd3f18
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
-  Especifica o número de trabalhos de processamento pode ser executado em paralelo usando o pai [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Especifica o número de trabalhos de processamento pode ser executado em paralelo usando o pai [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   

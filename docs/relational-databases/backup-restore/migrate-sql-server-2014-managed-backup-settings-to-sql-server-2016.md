@@ -2,9 +2,12 @@
 title: "Migrar as configurações de backup gerenciado do SQL Server 2014 para o SQL Server 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6df945737348bf0f8e158b375d6af1ebcbfb6784
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8c6ea2379e393deb918330f87fb35be109dddc8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>Migrar as Configurações de Backup Gerenciado do SQL Server 2014 para o SQL Server 2016
-  Este tópico aborda considerações sobre a migração para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] durante a atualização do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico aborda considerações sobre a migração para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ao atualizar do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
  Os procedimentos e o comportamento subjacente do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] foram alterados no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. As seções a seguir descrevem as alterações funcionais e suas implicações.  
   

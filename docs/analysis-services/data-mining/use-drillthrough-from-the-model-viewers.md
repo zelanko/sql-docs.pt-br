@@ -2,12 +2,12 @@
 title: Usar o detalhamento dos visualizadores do modelo | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 548c2c51dc0df576e5334dba2f7b17a838b19cb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb23accde5d3711a97d67aab6750a6a16a6a8b3d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Usar detalhamento dos visualizadores do modelo
-  Dependendo do tipo de modelo, você pode usar o detalhamento dos visualizadores de procura na guia **Visualizador de Modelo de Mineração** de Designer de Mineração de Dados para explorar os casos usados no modelo de mineração ou consultar colunas adicionais na estrutura de mineração. Embora muitos tipos de modelos não ofereçam suporte ao detalhamento porque os padrões no modelo não podem ser vinculados diretamente a casos específicos, os tipos de modelos a seguir oferecem suporte ao detalhamento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dependendo do tipo de modelo, você pode usar o detalhamento dos visualizadores de procura no **Visualizador do modelo de mineração** guia do Designer de mineração de dados para explorar os casos usados no modelo de mineração ou consultar colunas adicionais na estrutura de mineração. Embora muitos tipos de modelos não ofereçam suporte ao detalhamento porque os padrões no modelo não podem ser vinculados diretamente a casos específicos, os tipos de modelos a seguir oferecem suporte ao detalhamento.  
   
  Note que esse detalhamento deve ter sido habilitado no modelo e você deve ter as permissões apropriadas. A opção de detalhamento também pode ser desabilitada se o estado do modelo é não processado, independentemente de o modelo ter sido processado anteriormente e de ter conteúdo. Para recuperar dados de caso de modelo usando o detalhamento, o cache da estrutura e o modelo devem ser atuais.  
   

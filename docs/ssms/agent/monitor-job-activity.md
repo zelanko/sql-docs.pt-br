@@ -3,8 +3,11 @@ title: Monitorar a Atividade de Trabalho | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 469142ab52bedda92cba1650982afbc6809b77ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ddc5235281231c8d1aa08a22e7f55fe4131480d5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="monitor-job-activity"></a>Monitorar Atividade do Trabalho
-É possível monitorar a atividade atual de todos os trabalhos definidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando o Monitor de Atividade do Trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] É possível monitorar a atividade atual de todos os trabalhos definidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando o Monitor de Atividade do Trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 ## <a name="sql-server-agent-sessions"></a>Sessões do SQL Server Agent  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent cria uma nova sessão toda vez que o serviço é iniciado. Quando uma nova sessão é criada, a tabela **sysjobactivity** do banco de dados **msdb** é preenchida com todos os trabalhos definidos existentes. Essa tabela preserva a última atividade dos trabalhos quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent é reiniciado. Cada sessão registra a atividade normal de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent do começo ao fim do trabalho. Informações sobre essas sessões são armazenadas na tabela **syssessions** do banco de dados **msdb** .  

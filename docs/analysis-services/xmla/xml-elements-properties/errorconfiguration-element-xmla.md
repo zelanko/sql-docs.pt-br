@@ -2,12 +2,12 @@
 title: Elemento ErrorConfiguration (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 562e80a617f2a09da5f6eb3b1b85670ef906140c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 473ca582b834dc2e9a0eca2ccbafaf5b7a0165ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="errorconfiguration-element-xmla"></a>Elemento ErrorConfiguration (XMLA)
-  Especifica as configurações de manipulação de erros que podem ocorrer durante uma [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) ou [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) operação.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Especifica as configurações de manipulação de erros que podem ocorrer durante uma [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) ou [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) operação.  
   
 ## <a name="syntax"></a>Sintaxe  
   

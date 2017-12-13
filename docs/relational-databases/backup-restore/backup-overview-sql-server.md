@@ -2,9 +2,12 @@
 title: "Visão geral de backup (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/15/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4889445404ebce0a1d3ac74a4e8f49d9fe73f980
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7563bdbb6c7fb75f0200a05675198d93ed7341c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-  Este tópico apresenta o componente de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O backup do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é essencial para proteger seus dados. Esta discussão abrange tipos de backup e restrições de backup. O tópico também apresenta dispositivos de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e mídia de backup.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico apresenta o componente de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O backup do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é essencial para proteger seus dados. Esta discussão abrange tipos de backup e restrições de backup. O tópico também apresenta dispositivos de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e mídia de backup.  
   
   
 ## <a name="terms"></a>Termos

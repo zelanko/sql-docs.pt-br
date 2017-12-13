@@ -2,9 +2,12 @@
 title: Classe de evento Showplan XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 813e54cf56af7b0d0b465e474582ea16d9fea16a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38dd57838cab286714f85716e71b617e493c551c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-xml-event-class"></a>classe de evento Showplan XML
-  A classe de evento Showplan XML ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. Inclua a classe do evento Showplan XML para identificar os operadores de plano de execução. Essa classe de evento armazena cada evento como um documento XML bem definido.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento Showplan XML ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. Inclua a classe do evento Showplan XML para identificar os operadores de plano de execução. Essa classe de evento armazena cada evento como um documento XML bem definido.  
   
  Quando a classe de evento Showplan XML estiver incluída em um rastreamento, a quantidade de sobrecarga será um obstáculo significativo ao desempenho. O Showplan XML armazena um plano de consulta que é criado quando a consulta é otimizada. Para minimizar a sobrecarga gerada, limite o uso dessa classe de evento para rastreamentos que monitorem problemas específicos em breves períodos de tempo.  
   

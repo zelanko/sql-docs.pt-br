@@ -2,9 +2,12 @@
 title: Espelhamento de banco de dados e envio de logs (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c9b4e97b5da12b98fc6d1a4ee362a4a7cb00e70b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 55051d755bb2fb2abec5668fb21328905c0dbf82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Espelhamento de banco de dados e envio de logs (SQL Server)
-  Um determinado banco de dados pode ser espelhado ou ter o log enviado; ou ter os dois processos realizados simultaneamente. Para escolher o método a ser usado, considere o seguinte:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um determinado banco de dados pode ser espelhado ou ter o respectivo log enviado ou pode ainda ter os dois processos realizados simultaneamente. Para escolher o método a ser usado, considere o seguinte:  
   
 -   Você precisa de quantos servidores de destino?  
   

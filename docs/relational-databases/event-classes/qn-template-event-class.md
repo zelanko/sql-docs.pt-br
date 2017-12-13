@@ -2,9 +2,12 @@
 title: Classe de evento QN:Template | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c8cb69f8146567bb93fd1892d165422b78a9bea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6351cab3f6b1316f1e7128b593f19ee421230d2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="qntemplate-event-class"></a>Classe de evento QN:Template
-  O evento QN:Template fornece informações sobre o uso interno de modelos de consulta. Os modelos de consulta são o mecanismo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa para compartilhar definições de uma consulta para notificação. Esses modelos são criados junto com tabelas de parâmetros. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria um evento desse tipo quando um modelo de consulta é criado, usado ou destruído.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] O evento QN:Template fornece informações sobre o uso interno de modelos de consulta. Os modelos de consulta são o mecanismo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa para compartilhar definições de uma consulta para notificação. Esses modelos são criados junto com tabelas de parâmetros. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria um evento desse tipo quando um modelo de consulta é criado, usado ou destruído.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>Coluna de dados de classe de evento QN:Template  
   

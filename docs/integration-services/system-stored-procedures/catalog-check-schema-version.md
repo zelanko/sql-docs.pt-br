@@ -1,5 +1,5 @@
 ---
-title: Catalog.check_schema_version | Microsoft Docs
+title: catalog.check_schema_version | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 56eacb6ed209f34f65ae406fe4dd520284b79e5b
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ac266609952f0e2995dde7a8f7882bbeb50a822c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +39,8 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @use32bitruntime=] *use32bitruntime*  
- Quando o parâmetro for definido como **True**, a versão de 32 bits do dtexec é chamada. O *use32bitruntime* é um **Bool**.  
+ [ @use32bitruntime= ] *use32bitruntime*  
+ Quando o parâmetro estiver definido para **True**, a versão de 32 bits de dtexec será chamada. O *use32bitruntime* é **Bool**.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
  Nenhuma  
@@ -50,7 +48,6 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige a seguinte permissão:  
   
--   Associação de **ssis_admin** função de banco de dados.  
+-   Associação à função de banco de dados **ssis_admin**.  
   
   
-

@@ -2,9 +2,12 @@
 title: "Funções determinísticas e não determinísticas | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0a9aeecbec7487e9d750fabb7e2374366f41678a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5001421d7cc477ea02ba128396796683f2a8b44b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funções determinísticas e não determinísticas
-  As funções determinísticas sempre retornam o mesmo resultado quando são chamadas com o uso de um conjunto específico de valores de entrada e quando recebem o mesmo estado do banco de dados. As funções não determinísticas podem retornar resultados diferentes cada vez que são chamadas com um conjunto específico de valores de entrada, mesmo que o estado do banco de dados que elas acessam permaneça o mesmo. Por exemplo, a função AVG sempre retorna o mesmo resultado, dadas as qualificações declaradas acima, mas a função GETDATE, que retorna o valor datetime atual, sempre retorna um resultado diferente.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] As funções determinísticas sempre retornam o mesmo resultado quando são chamadas com o uso de um conjunto específico de valores de entrada e quando recebem o mesmo estado do banco de dados. As funções não determinísticas podem retornar resultados diferentes cada vez que são chamadas com um conjunto específico de valores de entrada, mesmo que o estado do banco de dados que elas acessam permaneça o mesmo. Por exemplo, a função AVG sempre retorna o mesmo resultado, dadas as qualificações declaradas acima, mas a função GETDATE, que retorna o valor datetime atual, sempre retorna um resultado diferente.  
   
  Há várias propriedades de funções definidas pelo usuário que determinam a capacidade do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de indexar os resultados da função, tanto por meio de índices em colunas computadas que chamam a função como por meio de exibições indexadas que referenciam a função. O determinismo de uma função é uma dessas propriedades. Por exemplo, um índice clusterizado não poderá ser criado em uma exibição se ela referenciar qualquer função não determinística. Para obter mais informações sobre propriedades de funções, inclusive determinismo, consulte [Funções definidas pelo usuário](../../relational-databases/user-defined-functions/user-defined-functions.md).  
   

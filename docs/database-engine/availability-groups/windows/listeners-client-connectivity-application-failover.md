@@ -2,9 +2,12 @@
 title: Ouvintes, conectividade de cliente e failover de aplicativo | Microsoft Docs
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: af6a6732a78007d51221cff6c6fb386e3abe48f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7b83e4fedf8ee39ceb90b2156852de4698ae273a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Ouvintes, conectividade de cliente e failover de aplicativo
-  Este tópico contém informações sobre considerações de conectividade de cliente [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico contém informações sobre considerações de conectividade de cliente [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  
   
 > [!NOTE]  
 >  Para a maioria das configurações comuns de ouvinte, você pode criar o primeiro ouvinte de grupo de disponibilidade simplesmente usando instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou cmdlets PowerShell. Para obter mais informações, consulte [Tarefas relacionadas](#RelatedTasks), mais adiante neste tópico.  

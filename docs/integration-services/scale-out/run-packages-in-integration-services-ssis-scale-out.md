@@ -1,5 +1,5 @@
 ---
-title: "Expansão de executar pacotes no SQL Server Integration Services (SSIS) | Microsoft Docs"
+title: Executar pacotes no SSIS (SQL Server Integration Services) Scale Out | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-f1_keywords:
-- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88537ff52ada042d642b8915342e374ecca3246e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-
-# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Executar pacotes no Integration Services (SSIS) expansão
+# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Executar pacotes no SSIS (Integration Services) Scale Out
 Depois que os pacotes são implantados no servidor Integration Services, você pode executá-los em Expansão.
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Executar pacotes com a caixa de diálogo Executar pacote em expansão 
+## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Executar pacotes com a caixa de diálogo Executar Pacote no Scale Out 
 
 1. Abra a caixa de diálogo Executar pacote em Expansão
 
@@ -43,7 +39,7 @@ Depois que os pacotes são implantados no servidor Integration Services, você p
     Na guia **Avançado** , você define uma opção de Expansão chamada **Contagem de repetição**. Isso define o número de vezes que uma execução de pacote tentará executar novamente se a execução falhar.
 
     > [!Note]
-    > O **despejar quando ocorrerem erros** opção só entrará em vigor quando a conta que executa o serviço de escala fora do trabalho é um administrador do computador local.
+    > A opção **Despejar quando ocorrerem erros** só entrará em vigor quando a conta que executar o serviço de Trabalho do Scale Out for um administrador do computador local.
 
 3. Selecionar computadores
 
@@ -53,7 +49,7 @@ Depois que os pacotes são implantados no servidor Integration Services, você p
    > Os pacotes são executados com a credencial das contas de usuário dos serviços Trabalho de Expansão, que são mostrados na página de **Seleção de Computador** . Por padrão, a conta é NT Service\SSISScaleOutWorker140. Você talvez queira alterar para suas próprias contas de laboratório.
 
    >[!WARNING]
-   >Execuções de pacote disparadas por usuários diferentes no mesmo trabalhador são executadas com a mesma conta. Não há nenhum limite de segurança entre eles. 
+   >Execuções de pacote disparadas por usuários diferentes no mesmo trabalho são executadas com a mesma conta. Não há nenhum limite de segurança entre eles. 
 
 4. Executar os pacotes e exibir os relatórios 
 
@@ -109,16 +105,15 @@ A execução de pacotes na Expansão exige uma das seguintes permissões:
   
 -   Associação na função de servidor **sysadmin**  
 
-## <a name="set-default-execution-mode"></a>Modo de execução do conjunto de padrão
-Para definir o modo de execução padrão para "Expansão", com o botão direito do **SSISDB** nó no Pesquisador de objetos do SSMS e selecione **propriedades**.
-No **propriedades de catálogo** caixa de diálogo, defina **modo de execução de todo o servidor padrão** para **expansão**.
+## <a name="set-default-execution-mode"></a>Definir modo de execução padrão
+Para definir o modo de execução padrão para "Scale Out", clique com o botão direito do mouse no nó **SSISDB** no Pesquisador de Objetos do SSMS e selecione **Propriedades**.
+Na caixa de diálogo **Propriedades de Catálogo**, defina **Modo de execução padrão de todo o servidor** para **Scale Out**.
 
-Após essa configuração, não é necessário especificar o  **@runinscaleout**  parâmetro [catalog]. [ create_execution]. Execuções são executadas automaticamente em expansão. 
+Após essa configuração, não é necessário especificar o parâmetro **@runinscaleout** para [catalog].[create_execution]. Execuções são executadas no Scale Out automaticamente. 
 
 ![Modo de exe](media\exe-mode.PNG)
 
-Para alternar o modo de execução padrão para o modo de não - expansão, basta definir **modo de execução de todo o servidor padrão** para **Server**.
+Para mudar o modo de execução padrão de volta para o modo não Scale Out, basta definir o **Modo de execução padrão de todo o servidor** para **Servidor**.
 
-## <a name="run-package-in-sql-agent-job"></a>Executar o pacote no trabalho do SQL agent
-No trabalho do Sql agent, você pode optar por executar um pacote SSIS como uma etapa do trabalho. Para executar o pacote de expansão, você pode aproveitar o modo de execução padrão acima. Depois de configurar o modo de execução de padrão de "Expansão", pacotes em trabalhos do Sql agent serão executados em expansão.
-
+## <a name="run-package-in-sql-agent-job"></a>Executar o pacote no trabalho do SQL Agent
+No trabalho do SQL Agent, você pode optar por executar um pacote SSIS como uma etapa do trabalho. Para executar o pacote no Scale Out, você pode aproveitar o modo de execução padrão acima. Depois de configurar o modo de execução padrão para "Scale Out", pacotes em trabalhos do SQL Agent serão executados no Scale Out.

@@ -8,12 +8,10 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.precedenceconstraint.f1
+f1_keywords: sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -22,30 +20,29 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 380c7e4c06b4baec2efcbad54000a009a93b93e1
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="precedence-constraints"></a>Restrições de precedência
   As restrições de precedência vinculam executáveis, contêineres e tarefas em pacotes em um fluxo de controle e especificam condições que determinam a execução de executáveis. Um executável pode ser um contêiner Loop For, Loop Foreach ou Sequência; uma tarefa; ou um manipulador de eventos. Os manipuladores de eventos também usam restrições de precedência para vincular os seus executáveis a um fluxo de controle.  
   
  Uma restrição de precedência vincula dois executáveis: o de precedência e o restrito. O executável de precedência é executado antes do executável restrito e o resultado da execução do executável de precedência poderá determinar se o executável restrito será executado. O diagrama a seguir mostra dois executáveis vinculados por uma restrição de precedência.  
   
- ![Executáveis conectados por uma restrição de precedência](../../integration-services/control-flow/media/ssis-pcsimple.gif "executáveis conectados por uma restrição de precedência")  
+ ![Executáveis conectados por uma restrição de precedência](../../integration-services/control-flow/media/ssis-pcsimple.gif "Executáveis conectados por uma restrição de precedência")  
   
  Em um fluxo de controle linear, ou seja, aquele sem-ramificação, as restrições de precedência orientam sozinhas a sequência na qual a tarefa é executada. Se um fluxo de controle se ramifica, o mecanismo de tempo de execução [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] determina a ordem de execução dentre as tarefas e contêineres que vêm logo após a ramificação. O mecanismo de tempo de execução também determina a ordem de execução entre fluxos de trabalho não conectados em um fluxo de controle.  
   
  A arquitetura de contêiner aninhado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] habilita todos os contêineres, com exceção do contêiner host da tarefa que encapsula somente uma única tarefa, a incluírem outros contêineres, cada um com seu próprio fluxo de controle. Os contêineres Loop For, Loop Foreach e Sequência podem incluir várias tarefas e outros contêineres que, por sua vez, podem incluir várias tarefas e contêineres. Por exemplo, um pacote com uma tarefa Script e um contêiner Sequência tem uma restrição de precedência que vincula a tarefa Script e o contêiner Sequência. O contêiner Sequência inclui três tarefas Script e suas restrições de precedência vinculam as três tarefas Script em um fluxo de controle. O diagrama a seguir mostra as restrições de precedência em um pacote com dois níveis de aninhamento.  
   
- ![Restrições de precedência em um pacote](../../integration-services/control-flow/media/mw-dts-12.gif "restrições de precedência em um pacote")  
+ ![Restrições de precedência em um pacote](../../integration-services/control-flow/media/mw-dts-12.gif "Restrições de precedência em um pacote")  
   
  Como o pacote está no topo da hierarquia de contêineres do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vários pacotes não podem ser vinculados por restrições de precedência; entretanto, é possível adicionar uma tarefa Executar Pacote a um pacote e, indiretamente, vincular outro pacote ao fluxo de controle.  
   
@@ -86,7 +83,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  Somente as restrições de precedência que forem membros da mesma coleção **Restrição de Precedência** poderão ser agrupadas em uma condição AND lógica. Por exemplo, você não pode combinar restrições de precedência de dois contêineres Loop Foreach.  
   
-## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>Definir as propriedades de uma restrição de precedência com o Editor de restrição de precedência  
+## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>Definir as propriedades de uma restrição de precedência com o Editor de Restrição de Precedência  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -168,7 +165,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
 
-## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Defina o valor de uma restrição de precedência com o menu de atalho  
+## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Definir o valor de uma restrição de precedência com o menu de atalho  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -187,11 +184,11 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
   
  Na ilustração a seguir, as tarefas A e B estão vinculadas por uma restrição de precedência que usa um resultado de execução e uma expressão. O valor da restrição é definido como **Sucesso** e a expressão é  `@X >== @Z`. A tarefa B, a tarefa de restrição, só será executada se a tarefa A for concluída com sucesso e o valor da variável **X** for maior que ou igual ao valor da variável **Z**.  
   
- ![Restrição de precedência entre duas tarefas](../../integration-services/control-flow/media/mw-dts-03.gif "restrição de precedência entre duas tarefas")  
+ ![Restrição de precedência entre duas tarefas](../../integration-services/control-flow/media/mw-dts-03.gif "Restrição de precedência entre duas tarefas")  
   
  Os executáveis também podem ser vinculados usando múltiplas restrições de precedência que contenham expressões diferentes. Por exemplo, na ilustração a seguir, as tarefas B e C estão vinculadas à tarefa A por restrições de precedência que usam resultados de execução e expressões. Ambos os valores de restrição são definidos como **Sucesso.** Uma restrição de precedência inclui a expressão `@X >== @Z`e a outra restrição de precedência inclui a expressão `@X < @Z`. Dependendo dos valores da variável **X** e da variável **Z**, uma das tarefas C ou B será executada.  
   
- ![Expressões em restrições de precedência](../../integration-services/control-flow/media/mw-dts-04.gif "expressões em restrições de precedência")  
+ ![Expressões em restrições de precedência](../../integration-services/control-flow/media/mw-dts-04.gif "Expressões em restrições de precedência")  
   
  Você pode adicionar ou modificar uma expressão usando o **Editor de Restrição de Precedência** no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)], e a janela Propriedades que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornece. Entretanto, a janela Propriedades não fornece verificação da sintaxe de expressão.  
   
@@ -215,7 +212,7 @@ Use a caixa de diálogo **Editor de Restrição de Precedência** para configura
   
 8.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
  
-### <a name="combine-execution-values-and-expressions"></a>Combinar expressões e valores de execução  
+### <a name="combine-execution-values-and-expressions"></a>Combinar valores de execução e expressões  
  A tabela a seguir descreve os efeitos de combinar uma restrição de valor de execução e uma expressão em uma restrição de precedência.  
   
 |Operação de avaliação|A restrição avalia como|A expressão avalia como|O executável restrito executa|  
@@ -239,14 +236,14 @@ Uma restrição de precedência conecta dois executáveis: duas tarefas, dois co
   
  Reunir cenários de restrição complexos por agrupamento de restrições permite que você implemente o fluxo de controle complexo em pacotes. Por exemplo, na ilustração a seguir, a Tarefa D está vinculada à Tarefa A por uma restrição **Êxito** , a Tarefa D está vinculada à Tarefa B por uma restrição **Falha** e a Tarefa D está vinculada à Tarefa C por uma restrição **Êxito** . As restrições de precedência entre as Tarefas D e A, entre as Tarefas D e B e entre as Tarefas D e C participam de uma relação lógica *and* . Portanto, para que a Tarefa D seja executada, a Tarefa A deve ser executada com êxito, a Tarefa B deve falhar e a Tarefa C deve ser executada com êxito.  
   
- ![Tarefas vinculadas por restrições de precedência](../../integration-services/control-flow/media/precedenceconstraints.gif "tarefas vinculadas por restrições de precedência")  
+ ![Tarefas vinculadas por restrições de precedência](../../integration-services/control-flow/media/precedenceconstraints.gif "Tarefas vinculadas por restrições de precedência")  
   
 ### <a name="logicaland-property"></a>Propriedade LogicalAnd  
  Se uma tarefa ou contêiner tiver múltiplas restrições, a propriedade **LogicalAnd** especificará se uma restrição de precedência é avaliada isoladamente ou junto com outras restrições.  
   
  Você pode definir a propriedade **LogicalAnd** usando o **Editor de Restrição de Precedência** no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer ou na janela Propriedades que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fornece.  
 
-## <a name="set-the-default-value-for-precedence-constraints"></a>Definir o valor padrão para as restrições de precedência  
+## <a name="set-the-default-value-for-precedence-constraints"></a>Definir o valor padrão de restrições de precedência  
 Quando você usa o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer pela primeira vez, o valor padrão de uma restrição de precedência é **Success**. Siga estas etapas para configurar o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer para usar um valor padrão diferente para restrições de precedência.
   
 1.  Abra o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -272,4 +269,3 @@ Quando você usa o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer pela pri
 4.  Na superfície de design da guia **Fluxo de Controle** , clique na tarefa ou no contêiner e arraste seu conector para o executável em que você deseja aplicar a restrição de precedência.  
   
 5.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
-

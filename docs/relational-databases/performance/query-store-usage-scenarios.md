@@ -1,31 +1,27 @@
 ---
 title: "Cenários de uso do Repositório de Consultas | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, usage scenarios
+helpviewer_keywords: Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ ms.lasthandoff: 09/27/2017
   
 4.  Passe para o nível de compatibilidade do banco de dados mais recente: exponha sua carga de trabalho para as últimas alterações do otimizador de consulta e deixe-o possivelmente criar novos planos.  
   
-5.  Use o Repositório de Consultas para correções de regressão e análise: geralmente, as novas alterações do otimizador de consulta geram planos melhores. No entanto, o Repositório de Consultas fornecerá uma maneira fácil de identificar as regressões de escolha do plano e corrigi-las usando um mecanismo para forçar plano.  
+5.  Use o Repositório de Consultas para correções de regressão e análise: geralmente, as novas alterações do otimizador de consulta geram planos melhores. No entanto, o Repositório de Consultas fornecerá uma maneira fácil de identificar as regressões de escolha do plano e corrigi-las usando um mecanismo para forçar plano. Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], ao usar o recurso de [Correção automática de plano](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction), essa etapa se torna automática.  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificar e melhorar cargas de trabalho ad hoc  
  Algumas cargas de trabalho não têm consultas dominantes que você possa ajustar a fim de melhorar o desempenho geral do aplicativo. Geralmente, essas cargas de trabalho são caracterizadas por um número relativamente grande de consultas diferentes, cada uma delas consumindo parte dos recursos do sistema. Sendo exclusivas, essas consultas são executadas muito raramente (em geral, apenas uma vez, por isso, ad hoc), de modo que o respectivo consumo do tempo de execução não é crítico. Por outro lado, considerando que esse aplicativo está gerando novas consultas o tempo todo, uma parte significativa dos recursos do sistema é gasto na compilação de consulta, o que não é ideal. Essa não é uma situação ideal para o Repositório de Consultas, uma vez que o número grande de consultas e planos enchem o espaço que você reservou, o que significa que o Repositório de Consultas provavelmente acabará no modo somente leitura muito rapidamente. Se você ativou a **Política de Limpeza Baseada em Tamanho** ([altamente recomendado](best-practice-with-the-query-store.md) para manter o Repositório de Consultas sempre funcionando), o processo em segundo plano limpará as estruturas do Repositório de Consultas na maior parte do tempo, também usando recursos significativos do sistema.  
@@ -229,4 +225,3 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
  [Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   
-

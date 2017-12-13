@@ -1,10 +1,13 @@
 ---
 title: "Estatísticas de consulta dinâmica | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/28/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5381ceb39baa1e81001d9d80c9171545038a09b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e81e49b14a91f809c4c3452369069ff4d856a99f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="live-query-statistics"></a>Estatísticas de Consulta ao Vivo
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece a capacidade de exibir o plano de execução ao vivo de uma consulta ativa. Esse plano de consulta ao vivo fornece visões em tempo real sobre o processo de execução da consulta, conforme os controles são transmitidos de um operador de plano de consulta para outro. O plano de consulta ao vivo exibe o progresso geral da consulta e as estatísticas de tempo de execução do nível de operador, como o número de linhas produzido, tempo decorrido, progresso do operador, etc. Como esses dados estão disponíveis em tempo real sem a necessidade de aguardar a conclusão da consulta, essas estatísticas de execução são extremamente úteis para depurar problemas de desempenho de consulta. Este recurso está disponível do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] em diante; no entanto, ele pode funcionar com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece a capacidade de exibir o plano de execução ao vivo de uma consulta ativa. Esse plano de consulta ao vivo fornece visões em tempo real sobre o processo de execução da consulta, conforme os controles são transmitidos de um operador de plano de consulta para outro. O plano de consulta ao vivo exibe o progresso geral da consulta e as estatísticas de tempo de execução do nível de operador, como o número de linhas produzido, tempo decorrido, progresso do operador, etc. Como esses dados estão disponíveis em tempo real sem a necessidade de aguardar a conclusão da consulta, essas estatísticas de execução são extremamente úteis para depurar problemas de desempenho de consulta. Este recurso está disponível do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] em diante; no entanto, ele pode funcionar com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

@@ -2,9 +2,12 @@
 title: "Revogar permissões em uma coleção de esquemas XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db10bb0d69106c3263c01a6762a0685a3cd721d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3daaadf50d221b5f5b4fc2f580990a3e849a0c60
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revogar permissões em uma coleção de esquemas XML
-  A permissão para criar uma coleção de esquema XML pode ser revogada usando uma das seguintes opções:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] A permissão para criar uma coleção de esquema XML pode ser revogada usando uma das seguintes opções:  
   
 -   Revogar a permissão ALTER para o esquema relacional. Em seguida, a entidade de segurança não pode criar uma coleção de esquema XML no esquema relacional. Porém a entidade de segurança ainda pode fazer isso em outros esquemas relacionais no mesmo banco de dados.  
   

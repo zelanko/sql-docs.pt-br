@@ -2,12 +2,12 @@
 title: "Exibir a fórmula para uma série temporal (mineração de dados) do modelo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a84f9cefb4793cd03536b228c52db3452d7937b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb044b96eecbbb5c6eb18dcc33eae1807b2fe8b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Exibir a fórmula para um modelo de série temporal (mineração de dados)
-  Se você tiver criado um modelo de série temporal usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, a maneira mais fácil de ver a equação de regressão para o modelo será usar a **Legenda de Mineração** do [Visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), que apresenta todas as constantes em um formato legível.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se você tiver criado um modelo de série de tempo usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mineração de dados, a maneira mais fácil para ver a equação de regressão para o modelo usar o **legenda de mineração** do [visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), que apresenta todas as constantes em um formato legível.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Para exibir a fórmula de regressão ARTXP para um modelo de série temporal  
   

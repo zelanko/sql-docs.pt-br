@@ -2,9 +2,12 @@
 title: Carregar assemblies SMO no Windows PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9a5a1ff7d13fd4ee2052a71f0caf444e5a4a6648
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7d6fda25fad6d9973ffa43a08053e32bad28548e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Carregar os assemblies SMO no Windows PowerShell
-  Este tópico descreve como carregar os assemblies SMO (SQL Server Management Object) em scripts do Windows PowerShell que não usam o provedor do SQL Server PowerShell.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como carregar os assemblies SMO (SQL Server Management Object) em scripts do Windows PowerShell que não usam o provedor do SQL Server PowerShell.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O mecanismo preferido para carregar os assemblies SMO é carregar o módulo **sqlps** . O provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluído automaticamente no módulo carrega os assemblies SMO e também implementa recursos que estendem a utilidade dos objetos SMO em scripts do PowerShell.  Para obter mais informações, consulte [Importar o módulo SQLPS](../../relational-databases/scripting/import-the-sqlps-module.md).

@@ -8,32 +8,30 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpblobdest.f1
 - sql14.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 152d92859c2f4ce96d0cc1ba9b02ffb412d18fde
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e74108f39d2d7b64cae124592d9c30345207853c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-blob-destination"></a>Destino de Blob do Azure
  O componente **Destino de Blob do Azure** permite que um pacote SSIS grave dados de um blob do Azure. Os formatos de arquivo com suporte são: CSV e AVRO. 
    
  Arraste e solte **Destino de Blob do Azure** para o designer de fluxo de dados e clique duas vezes nele para ver o editor).  
   
- O **destino de Blob do Azure** é um componente do [SQL Server Integration Services (SSIS) Feature Pack para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ O **Destino de Blob de Azure** é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
 1.  Para o campo **Gerenciador de conexões do armazenamento do Azure** , especifique um Gerenciador de Conexões do Armazenamento do Azure existente ou crie um novo referindo-se a uma Conta de Armazenamento do Azure.  
   
@@ -48,4 +46,3 @@ ms.lasthandoff: 08/03/2017
 6.  Depois de especificar as informações de conexão, alterne para a página **Colunas** para mapear colunas de origem para colunas de destino para o fluxo de dados do SSIS.  
   
   
-

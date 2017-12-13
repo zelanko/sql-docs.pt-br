@@ -3,8 +3,11 @@ title: "Painel Critérios (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0292f05a00e1937ce5b7640e414939cb3332f01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3470e686b03adba5a1258c60a855e71a6d83931a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Painel de Critérios (Visual Database Tools)
-O painel Critérios permite que sejam especificadas as opções de consulta – tais como colunas de dados a exibir, como ordenar os resultados e quais linhas selecionar – inserindo as seleções em uma grade de planilha. No painel Critérios você pode especificar o seguinte:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O painel Critérios permite que sejam especificadas as opções de consulta – como colunas de dados a exibir, como ordenar os resultados e quais linhas selecionar – inserindo as seleções em uma grade de planilha. No painel Critérios você pode especificar o seguinte:  
   
 -   Colunas a serem exibidas e aliases de nome de coluna.  
   

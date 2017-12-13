@@ -2,8 +2,8 @@
 title: "Instalação autônoma do SQL Server no Red Hat Enterprise Linux | Microsoft Docs"
 description: "Exemplo de Script do SQL Server - instalação autônoma no Red Hat Enterprise Linux"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8f352dcf0f646cd259a1163a5c752f233ed16393
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Exemplo: De script de instalação autônoma do SQL Server para Red Hat Enterprise Linux
 
@@ -39,7 +39,7 @@ Esse exemplo de script de Bash instala 2017 do SQL Server no Red Hat Enterprise 
 Salvar o script de exemplo em um arquivo e, em seguida, para personalizá-lo, substitua os valores das variáveis no script. Você também pode definir qualquer uma das variáveis de script como variáveis de ambiente, como você removê-los a partir do arquivo de script.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

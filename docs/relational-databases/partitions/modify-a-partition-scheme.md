@@ -2,9 +2,12 @@
 title: "Modificar um esquema de partição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a6913bf6ae2f21db5b9e83c1873e63b60624d808
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef0b8ce7c9ba0c23da4d689b37a01cff34f3f0ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar um esquema de partição
-  Você pode Modificar um esquema de partição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ao designar um grupo de arquivos para manter a partição seguinte que será adicionada à tabela particionada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Isso é feito ao atribuir a propriedade NEXT USED a um grupo de arquivos. Você pode atribuir a propriedade NEXT USED a um grupo de arquivos vazio ou para um que já mantenha uma partição. Em outras palavras, um grupo de arquivos pode manter mais de uma partição.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Você pode Modificar um esquema de partição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ao designar um grupo de arquivos para manter a partição seguinte que será adicionada à tabela particionada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Isso é feito ao atribuir a propriedade NEXT USED a um grupo de arquivos. Você pode atribuir a propriedade NEXT USED a um grupo de arquivos vazio ou para um que já mantenha uma partição. Em outras palavras, um grupo de arquivos pode manter mais de uma partição.  
   
  **Neste tópico**  
   

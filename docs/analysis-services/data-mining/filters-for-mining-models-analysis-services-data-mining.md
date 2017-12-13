@@ -2,12 +2,12 @@
 title: "Filtros para modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8bf35c6bd8086ba6fc61dce76853308c9cb34e2d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: de1d81ae0dba51e98cb8d883ca5e7ae22eb4314b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de mineração (Analysis Services - Mineração de dados)
-  A filtragem de modelos com base em dados ajuda na criação de modelos de mineração que usam subconjuntos de dados em uma estrutura de mineração. A filtragem proporciona flexibilidade quando você projeta suas estruturas de mineração e fontes de dados porque você pode criar uma única estrutura de mineração, com base em uma exibição da fonte de dados abrangente. Em seguida, é possível criar filtros que serão usados somente como parte dos dados para treinar e testar uma variedade de modelos, em vez de criar uma estrutura diferente e um modelo relacionado para cada subconjunto de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Filtragem do modelo com base em dados ajuda a criar modelos de mineração que usam subconjuntos de dados em uma estrutura de mineração. A filtragem proporciona flexibilidade quando você projeta suas estruturas de mineração e fontes de dados porque você pode criar uma única estrutura de mineração, com base em uma exibição da fonte de dados abrangente. Em seguida, é possível criar filtros que serão usados somente como parte dos dados para treinar e testar uma variedade de modelos, em vez de criar uma estrutura diferente e um modelo relacionado para cada subconjunto de dados.  
   
  Por exemplo, você define a exibição da fonte de dados na tabela Clientes e nas tabelas relacionadas. Em seguida, define uma única estrutura de mineração que inclui todos os campos necessários. Finalmente, você cria um modelo filtrado em um atributo de cliente particular, como Região. Você pode fazer facilmente uma cópia desse modelo e alterar apenas a condição de filtro para gerar um novo modelo com base em uma região diferente.  
   

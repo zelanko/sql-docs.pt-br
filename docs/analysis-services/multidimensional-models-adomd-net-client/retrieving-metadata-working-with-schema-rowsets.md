@@ -2,12 +2,12 @@
 title: Trabalhando com conjuntos de linhas de esquema no ADOMD.NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7086db056d4d5ac61349546b8748cdd19ee318c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4045c7b677129bcc7b72b8ed46fa84aed95e49f5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Recuperando metadados - trabalhando com conjuntos de linhas de esquema
-  Quando você precisa de mais metadados do que os que estão disponíveis no modelo de objeto do ADOMD.NET, o ADOMD.NET oferece o recurso de recuperação de todo o intervalo de conjuntos de linhas do esquema XMLA (XML for Analysis), OLE DB, OLE DB for OLAP e OLE DB for Data Mining:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você precisar de mais metadados do que está disponível no modelo de objeto do ADOMD.NET, o ADOMD.NET oferece a capacidade de recuperar o intervalo completo de XML para Analysis (XMLA), OLE DB, OLE DB para OLAP e OLE DB para mineração de dados conjuntos de linhas de esquema:  
   
  **Metadados XML for Analysis**  
  Os conjuntos de linhas do esquema do XML for Analysis oferecem um método para a recuperação de informações de baixo nível sobre o servidor. As informações disponíveis incluem as fontes de dados disponíveis no servidor, as palavras-chave reservadas pelo provedor, o literais suportados pelo provedor e mais. Você pode até usar um conjunto de linhas do esquema do XML for Analysis para descobrir todos os conjuntos de linhas do esquema suportados pelo provedor.  

@@ -2,9 +2,12 @@
 title: Anexar dicas de consulta a um guia de plano | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd35ba37fceeee68531e23b2ee2caabae4e81cfc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3f5704e1b8ec2f45d178bc4327006c8a9278798a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>Anexar dicas de consulta para um guia de plano
-  Pode ser usada qualquer combinação de dicas de consulta válidas em um guia de plano. Quando um guia de plano corresponde a uma consulta, a cláusula OPTION especificada na cláusula de dicas de um guia de plano é adicionada à consulta antes da compilação e otimização. Se uma consulta que está de acordo com um guia de plano já tem uma cláusula de OPTION, as dicas especificadas no guia substituem aquelas na consulta. Porém, para que um guia de plano corresponda a uma consulta que já tenha uma cláusula OPTION, deve-se incluir a cláusula OPTION da consulta ao especificar o texto da consulta, para que corresponda à instrução sp_create_plan_guide. Se você quiser que as dicas especificadas no guia de plano sejam adicionadas às dicas que já existem na consulta, em vez de substituí-las, é necessário especificar tanto as dicas originais como as dicas adicionais na cláusula OPTION do guia de plano.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pode ser usada qualquer combinação de dicas de consulta válidas em um guia de plano. Quando um guia de plano corresponde a uma consulta, a cláusula OPTION especificada na cláusula de dicas de um guia de plano é adicionada à consulta antes da compilação e otimização. Se uma consulta que está de acordo com um guia de plano já tem uma cláusula de OPTION, as dicas especificadas no guia substituem aquelas na consulta. Porém, para que um guia de plano corresponda a uma consulta que já tenha uma cláusula OPTION, deve-se incluir a cláusula OPTION da consulta ao especificar o texto da consulta, para que corresponda à instrução sp_create_plan_guide. Se você quiser que as dicas especificadas no guia de plano sejam adicionadas às dicas que já existem na consulta, em vez de substituí-las, é necessário especificar tanto as dicas originais como as dicas adicionais na cláusula OPTION do guia de plano.  
   
 > [!CAUTION]  
 >  Guias de plano que usam dicas de consulta de forma indevida podem causar problemas de compilação, execução ou de desempenho. Guias de plano devem ser usados apenas por desenvolvedores e administradores de banco de dados experientes.  

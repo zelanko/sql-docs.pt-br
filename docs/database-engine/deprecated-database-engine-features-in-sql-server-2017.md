@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cff5b201eee23cad7d5f8a6d6fe7748e4441f400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 256a8f2456c5d5f728322e80d03629c75d921161
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Níveis de compatibilidade|Nível de compatibilidade 110 e 120 do banco de dados.|Planeje atualizar o banco de dados e o aplicativo para uma versão futura.|Nível de compatibilidade 110 do banco de dados<br /><br /> Nível de compatibilidade 120 do banco de dados||  
 |XML|Geração de esquema XDR embutido|A diretiva XMLDATA para a opção FOR XML foi preterida. Use geração de XSD no caso dos modos RAW e AUTO. Não há substituição para a diretiva XMLDATA no modo EXPLICIT.|XMLDATA|181|  
 |Backup e restauração|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE ou LOG TO TAPE|235|  
-|Backup e restauração|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|Backup e restauração|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |Backup e restauração|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |Agrupamentos|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Nenhum. Estes agrupamentos existem no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], mas não são visíveis por meio de fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |Agrupamentos|Híndi<br /><br /> Macedônio|Estes agrupamentos existem no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e superior, mas não são visíveis por meio de fn_helpcollations. Em vez disso, use Macedonian_FYROM_90 e Indic_General_90.|Híndi<br /><br /> Macedônio|190<br /><br /> 193|  

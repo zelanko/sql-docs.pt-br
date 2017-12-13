@@ -2,12 +2,12 @@
 title: "Usado em traços de códigos de tipo de objeto de Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e6daef93ce07609173a3595adbb409c4b13607e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Códigos de tipo de objeto de Analysis Services usados em traços
-  Esta página exibe o tipo de objeto (um número com seis dígitos) de cada objeto em um modelo de dados do Analysis Services. Estes códigos aparecem em logs de rastreamento e são usados para identificar o tipo de objeto associado a um bloqueio específico. Por exemplo, um tempo limite de bloqueio em um banco de dados indicará o tipo de objeto 100002, que é o tipo de objeto de banco de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta página lista o tipo de objeto (um número com seis dígitos) de cada objeto em um modelo de dados do Analysis Services. Estes códigos aparecem em logs de rastreamento e são usados para identificar o tipo de objeto associado a um bloqueio específico. Por exemplo, um tempo limite de bloqueio em um banco de dados indicará o tipo de objeto 100002, que é o tipo de objeto de banco de dados.  
   
 > [!NOTE]  
 >  Há mais códigos listados abaixo do que realmente aparecerá em um log de rastreamento. A lista abaixo é uma lista abrangente dos códigos de tipo para cada objeto, mas apenas objetos que fazem um bloqueio apresentará um código de tipo de objeto em um log de rastreamento.  

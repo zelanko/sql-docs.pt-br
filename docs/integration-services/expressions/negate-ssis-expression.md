@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf561a2e4533f47e7bf6219e141c995ad4c2e60e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d6471c613697e083efef7a72db41dee58e7573ee
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="--negate-ssis-expression"></a>- (Negação) (Expressão SSIS)
   Nega uma expressão numérica.  
@@ -54,8 +52,7 @@ ms.lasthandoff: 08/03/2017
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

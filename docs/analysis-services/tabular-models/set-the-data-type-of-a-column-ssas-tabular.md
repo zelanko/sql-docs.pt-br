@@ -2,12 +2,12 @@
 title: Defina o tipo de dados de uma coluna (SSAS Tabular) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff4bf9de4a232561d813ae304aa3ae660ff9041
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca2bd5f49f3d8a756e213f9e8ae46dcd5a25f6a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Definir o tipo de dados de uma coluna (SSAS tabular)
-  Quando você importa ou cola dados em um modelo, o designer de modelo detectará automaticamente e aplicará os tipos dos dados. Depois que adicionar dados ao modelo, você poderá modificar manualmente o tipo de dados de uma coluna para alterar o modo como os dados são armazenados. Se você deseja apenas alterar o formato de exibição dos dados sem alterar o modo como são armazenados, faça isso.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Quando você importa dados ou cola dados em um modelo, o designer de modelo detectará automaticamente e aplicará tipos de dados. Depois que adicionar dados ao modelo, você poderá modificar manualmente o tipo de dados de uma coluna para alterar o modo como os dados são armazenados. Se você deseja apenas alterar o formato de exibição dos dados sem alterar o modo como são armazenados, faça isso.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>Para alterar o tipo de dados ou o formato de exibição de uma coluna  
   

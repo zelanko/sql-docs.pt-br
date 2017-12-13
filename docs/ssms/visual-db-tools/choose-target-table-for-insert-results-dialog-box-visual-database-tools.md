@@ -3,8 +3,11 @@ title: "Caixa de diálogo Escolher Tabela de Destino para Inserir Resultados | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca30f09731a84855aeb7d2857d13f6a6a06cf886
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3ab56a5548e59cac0f7f2d6f84d35453942ce1f6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Caixa de diálogo Escolher Tabela de Destino para Inserir Resultados (Visual Database Tools)
-Permite especificar a tabela à qual serão adicionadas linhas de dados como o resultado de uma consulta INSERT RESULTS. Essa caixa de diálogo é exibida quando você inicia uma consulta INSERT RESULTS.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permite especificar a tabela à qual serão adicionadas linhas de dados como o resultado de uma consulta INSERT RESULTS. Essa caixa de diálogo é exibida quando você inicia uma consulta INSERT RESULTS.  
   
 ## <a name="options"></a>Opções  
 **Escolha um destino**  

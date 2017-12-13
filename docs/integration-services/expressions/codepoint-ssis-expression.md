@@ -1,5 +1,5 @@
 ---
-title: "CODEPOINT (expressão SSIS) | Microsoft Docs"
+title: "CODEPOINT (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af56c3de2d4e285960b9e6631084b20440396eb3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 19af45b2e69490b3573dde39a81fabe103bcf4a0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (Expressão SSIS)
   Retorna o ponto de código Unicode do caractere da extrema esquerda de uma expressão de caracteres.  
@@ -64,7 +62,6 @@ CODEPOINT(@Name)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

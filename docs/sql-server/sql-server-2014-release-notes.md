@@ -2,10 +2,13 @@
 title: "Notas de versão do SQL Server 2014 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2014
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c507363ad05be7410ae69fc6d5f6748ad1738cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b147cc3121dae17a8c5cffe1162a2d998567cdd8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
-Este documento Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] Este documento Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ## <a name="top"></a>Conteúdo  
 [1.0 Antes da instalação](#BeforeInstall)  

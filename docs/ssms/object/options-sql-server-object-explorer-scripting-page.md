@@ -3,8 +3,11 @@ title: "Opções (página Pesquisador de Objetos do SQL Server – Scripts) | Mi
 ms.custom: 
 ms.date: 08/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd98889c12d8a292e0f1fe64d390fc9f51578ce5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b49bce06a339326d1458827f2712130c725453d3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opções (página Pesquisador de Objetos do SQL Server – Scripts)
-Use esta página para definir opções de script que se aplicam aos seguintes comandos nos menus de contexto de objeto no **Pesquisador de Objetos**:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta página para definir opções de script que se aplicam aos seguintes comandos nos menus de contexto de objeto no **Pesquisador de Objetos**:  
   
 -   Comandos **Editar** para tabelas de usuário e exibições.  
   

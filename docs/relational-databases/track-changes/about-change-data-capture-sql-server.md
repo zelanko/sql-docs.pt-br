@@ -2,9 +2,12 @@
 title: Sobre o Change Data Capture (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b2cd9bcb4b9d2c4e9a657e88d46193a60309db20
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b839baf4614d89b29d5244859735f1b3ccf1df19
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
-  Os registros do Change Data Capture inserem, atualizam e excluem atividades aplicadas a uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele também disponibiliza os detalhes das mudanças em um formato relacional facilmente utilizável. As informações de coluna e os metadados exigidos para a aplicação de alterações em um ambiente de destino são capturados para as linhas modificadas e armazenados nas tabelas de alteração que espelham a estrutura da coluna das tabelas de origem rastreadas. As funções avaliadas da tabela são fornecidas para permitir acesso sistemático aos dados de alteração pelos consumidores.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Os registros do Change Data Capture inserem, atualizam e excluem atividades aplicadas a uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também disponibiliza os detalhes das mudanças em um formato relacional facilmente utilizável. As informações de coluna e os metadados exigidos para a aplicação de alterações em um ambiente de destino são capturados para as linhas modificadas e armazenados nas tabelas de alteração que espelham a estrutura da coluna das tabelas de origem rastreadas. As funções avaliadas da tabela são fornecidas para permitir acesso sistemático aos dados de alteração pelos consumidores.  
   
  Um bom exemplo de um consumidor de dados visado por esta tecnologia é uma extração, transformação e aplicativo de carregamento (ETL). Um aplicativo ETL carrega incrementalmente dados de alteração das tabelas de origem de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um data warehouse ou data mart. Embora a representação das tabelas de fonte dentro do data warehouse deva refletir as alterações nessas tabelas de origem, uma tecnologia ponta-a-ponta que atualize uma réplica da origem não é apropriada. Em vez disso, é necessário um fluxo seguro de dados de alteração, estruturado de forma que consumidores possam aplicá-lo às representações dos dados de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a captura de dados de alterações fornece essa tecnologia.  
   

@@ -2,9 +2,12 @@
 title: "Lição 2: Conectando em outro computador | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e860fc71d2f9e5efcf68324040d267d9de6fce9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: Conectando de outro computador
-Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
   
 Esta lição contém as seguintes tarefas:  
   

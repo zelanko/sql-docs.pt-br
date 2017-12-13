@@ -2,9 +2,12 @@
 title: 'Exemplo: especificando as diretivas ID e IDREF | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4b89d5f459f68a0a69c8f8aeb1f8d053efadaf0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 07d914dcef815b50aeafc6e278d025f28df09bb6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Exemplo: Especificando as diretivas ID e IDREF
-  Este exemplo é quase igual ao exemplo [Especificando a diretiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . A única diferença é que a consulta especifica as diretivas **ID** e **IDREF**. Essas diretivas substituem os tipos do atributo **SalesPersonID** nos elementos <`OrderHeader`> e <`OrderDetail`>. Isso forma vínculos intradocumento. Você precisa do esquema para ver os tipos substituídos. Portanto, a consulta especifica a opção **XMLDATA** na cláusula FOR XML para recuperar o esquema.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este exemplo é quase igual ao exemplo [Especificando a diretiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md). A única diferença é que a consulta especifica as diretivas **ID** e **IDREF** . Essas diretivas substituem os tipos do atributo **SalesPersonID** nos elementos <`OrderHeader`> e <`OrderDetail`>. Isso forma vínculos intradocumento. Você precisa do esquema para ver os tipos substituídos. Portanto, a consulta especifica a opção **XMLDATA** na cláusula FOR XML para recuperar o esquema.  
   
 ```  
 USE AdventureWorks2012;  

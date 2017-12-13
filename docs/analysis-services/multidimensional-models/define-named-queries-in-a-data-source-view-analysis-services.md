@@ -2,12 +2,12 @@
 title: "Definir consultas nomeadas em uma exibição da fonte de dados (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a6db35f9ab119025bf5b7d60aed0b27747adaa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6d83f1264b7eb9f3b306c4540dca9f1407eff0b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definir consultas nomeadas em uma exibição da fonte de dados (Analysis Services)
-  Uma consulta nomeada é uma expressão SQL representada como uma tabela. Em uma consulta nomeada, você pode especificar uma expressão SQL para selecionar linhas e colunas retornadas de uma ou mais tabelas em uma ou mais fontes de dados. Uma consulta nomeada é como qualquer outra tabela em uma DSV (exibição da fonte de dados) com linhas e relações, exceto que a consulta nomeada baseia-se em uma expressão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma consulta nomeada é uma expressão SQL representada como uma tabela. Em uma consulta nomeada, você pode especificar uma expressão SQL para selecionar linhas e colunas retornadas de uma ou mais tabelas em uma ou mais fontes de dados. Uma consulta nomeada é como qualquer outra tabela em uma DSV (exibição da fonte de dados) com linhas e relações, exceto que a consulta nomeada baseia-se em uma expressão.  
   
  Uma consulta nomeada permite que você estenda o esquema relacional das tabelas existentes em uma DSV sem modificar as tabelas ou exibições da fonte de dados subjacente. Por exemplo, uma série de consultas nomeadas pode ser usada para dividir uma tabela de dimensões complexa em tabelas de dimensões menores e mais simples para uso nas dimensões do banco de dados. A consulta nomeada também pode ser usada para unir várias tabelas do banco de dados de uma ou mais fontes de dados em uma única tabela de exibição da fonte de dados.  
   

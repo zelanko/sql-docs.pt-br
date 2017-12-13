@@ -2,9 +2,12 @@
 title: "SQL Server, Réplica de Disponibilidade | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f02d1bce1c2c66520e382334cedd00e292c524e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc4dcd3455fad661db47fd4935fb9d9c37fcd213
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, Réplica de Disponibilidade
-  O objeto de desempenho **SQLServer:Availability Replica** contém contadores de desempenho que relatam informações sobre as réplicas de disponibilidade em grupos de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Todos os contadores de desempenho de réplica de disponibilidade aplicam-se às réplicas primária e secundárias, com contadores de envio/recebimento refletindo a réplica local. Para a maior parte, a réplica primária envia a maioria dos dados e as réplicas secundárias recebem os dados. Porém, as réplicas secundárias enviam ACKs e algum outro tráfego em segundo plano para as réplicas primárias. Observe que, em uma determinada réplica de disponibilidade, alguns contadores mostrarão um valor igual a zero, dependendo da função atual, primária ou secundária, da réplica local.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O objeto de desempenho **SQLServer:Availability Replica** contém contadores de desempenho que relatam informações sobre as réplicas de disponibilidade em grupos de disponibilidade Always On no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Todos os contadores de desempenho de réplica de disponibilidade aplicam-se às réplicas primária e secundárias, com contadores de envio/recebimento refletindo a réplica local. Para a maior parte, a réplica primária envia a maioria dos dados e as réplicas secundárias recebem os dados. Porém, as réplicas secundárias enviam ACKs e algum outro tráfego em segundo plano para as réplicas primárias. Observe que, em uma determinada réplica de disponibilidade, alguns contadores mostrarão um valor igual a zero, dependendo da função atual, primária ou secundária, da réplica local.  
   
 |Nome do contador|Descrição|  
 |------------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: "Opções de solicitação de perfil de razão nula de coluna (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Opções da solicitação do perfil Razão Nula de Coluna (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0cfbec0b81d1a80a813d8fc2c7e7212b33b77a4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6a5c596bcff44f87086e26bb7a263af1f421636c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Razão Nula de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Razão Nula de Coluna** selecionada no painel de solicitações. O perfil Razão Nula de Coluna informa a porcentagem de valores nulos na coluna selecionada. Este perfil pode ajudar a identificar problemas em seus dados, como uma inesperada razão alta de valores nulos em uma coluna. Por exemplo, um perfil Razão Nula de Coluna pode criar um perfil de uma coluna Código Postal/CEP e descobrir uma porcentagem excessivamente elevada de códigos postais ausentes.  
@@ -78,8 +75,7 @@ ms.lasthandoff: 08/03/2017
  Digite um nome descritivo para identificar esta solicitação de perfil. Normalmente, não é necessário alterar o valor gerado automaticamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

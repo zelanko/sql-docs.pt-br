@@ -3,8 +3,11 @@ title: "Definir um alias do SQL Server para o serviço do SQL Server Agent | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cab13165bdf564af1b7d369875bc0889d2d4dfd9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 78edcd258efdc5649819c9966ec662fa7abd34fc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Para definir um Alias do SQL Server para o Serviço do SQL Server Agent usando o SQL Server Management Studio
-Este tópico descreve como definir um alias do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a ser usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent para se conectar ao [!INCLUDE[ssDE](../../includes/ssde_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Por padrão, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] em pipes nomeados usando nomes dinâmicos de servidor que não exigem configuração adicional de cliente. Só será necessário configurar um alias de conexão com o servidor se você não estiver usando o transporte de rede padrão ou se estiver se conectando a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que escute em um pipe nomeado alternativo.  
+# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como definir um alias do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a ser usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent para se conectar ao [!INCLUDE[ssDE](../../includes/ssde_md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Por padrão, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] em pipes nomeados usando nomes dinâmicos de servidor que não exigem configuração adicional de cliente. Só será necessário configurar um alias de conexão com o servidor se você não estiver usando o transporte de rede padrão ou se estiver se conectando a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que escute em um pipe nomeado alternativo.  
   
 **Neste tópico**  
   

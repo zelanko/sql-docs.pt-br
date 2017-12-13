@@ -2,9 +2,12 @@
 title: Classe de evento QN:Dynamics | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1eb7fec0864c49a646261b1881cda825f5884a7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0bfd4e0a9a27173b5242c999bd85d17d9a9ec55f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="qndynamics-event-class"></a>Classe de evento QN:Dynamics
-  A classe de evento QN:Dynamics fornece informações sobre a atividade de segundo plano que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa para dar suporte a notificações de consulta. Dentro do [!INCLUDE[ssDE](../../includes/ssde-md.md)], um thread em segundo plano monitora tempos-limite de assinatura, assinaturas pendentes a serem acionadas e destruição de tabela de parâmetros.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento QN:Dynamics fornece informações sobre a atividade em segundo plano que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa para dar suporte a notificações de consulta. Dentro do [!INCLUDE[ssDE](../../includes/ssde-md.md)], um thread em segundo plano monitora tempos-limite de assinatura, assinaturas pendentes a serem acionadas e destruição de tabela de parâmetros.  
   
 ## <a name="qndynamics-event-class-data-columns"></a>Coluna de dados de classe de evento QN:Dynamics  
   

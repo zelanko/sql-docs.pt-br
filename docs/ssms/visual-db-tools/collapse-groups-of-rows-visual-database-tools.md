@@ -3,8 +3,11 @@ title: Recolher grupos de linhas (Ferramentas de Banco de Dados Visual) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11ab34e9c5651be1dc771d71a738f49bb230262a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c6afdaa463c3a7e1ac427af43156343e7ab7dcee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Recolher grupos de linhas (Visual Database Tools)
-Você pode criar um resultado de consulta no qual cada linha de resultado corresponda a um grupo inteiro de linhas dos dados originais. Existem várias coisas a serem levadas em consideração ao recolher linhas:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode criar um resultado de consulta no qual cada linha de resultado corresponde a um grupo inteiro de linhas dos dados originais. Existem várias coisas a serem levadas em consideração ao recolher linhas:  
   
 -   **Você pode eliminar linhas duplicadas** Algumas consultas podem criar conjuntos de resultados nos quais são exibidas várias linhas idênticas. Por exemplo, você pode criar um conjunto de resultados no qual cada linha contém o nome da cidade e do estado de uma cidade que contém um autor – mas se uma cidade contiver vários autores, haverá várias linhas idênticas. O SQL resultante pode ter esta aparência:  
   

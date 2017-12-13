@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- createSrv
+f1_keywords: createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Criar e editar um Serviço Oracle CDC
   Você cria e edita um novo Serviço do Windows do Oracle CDC a partir do Console de Configuração do Serviço CDC.  
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
  Insira as informações a seguir na caixa de diálogo Novo Serviço do Windows do Oracle CDC ou na caixa de diálogo Propriedades de Serviço CDC.  
   
-* * Nome de serviço * *  
+** Nome do Serviço**  
  Digite o nome do novo Serviço do Windows do Oracle CDC. Você não deve usar nomes longos, se possível. Os caracteres / e \ não podem ser usados no nome de serviço.  
   
 > [!NOTE]  
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
      Você pode usar uma conta do Windows local ou de domínio para a conta de serviço. Neste caso, você deve inserir a **Senha** para essa conta. Esta conta pode ser para o host local ou uma conta de domínio. Atualize a senha quando ela for alterada usando os Serviços Locais no Painel de Controle do Windows.  
   
- **Nome do servidor**: selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância se conectar (por exemplo,  **\\ \\< nome_do_computador >\\< nome_da_instância >**). Por padrão, é exibida a instância de servidor usada na última conexão.  
+ **Nome do servidor**: selecione a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino para se conectar (por exemplo, **\\\\<nome_do_computador>\\<nome_da_instância>**). Por padrão, é exibida a instância de servidor usada na última conexão.  
   
  **Autenticação**  
  Selecione uma destas opções:  
@@ -99,4 +96,3 @@ ms.lasthandoff: 09/26/2017
  [Como criar e editar um Serviço CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
-

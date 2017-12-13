@@ -2,9 +2,12 @@
 title: Configurar editores (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 490371ad28d81368a3cd4fad5246285094545c54
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1a6b2127ade3299cab4ae71a42f9601c4742f9d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurar editores (SQL Server Management Studio)
-  Você pode personalizar a operação dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurando as opções para cada editor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode personalizar a operação dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurando as opções para cada editor.  
   
 ## <a name="settng-editor-options"></a>Opções do Editor de Configurações  
  A maioria das opções de editor é definida no menu **Ferramentas** e selecionando **Opções...** para exibir uma caixa de diálogo **Opções** . Na caixa de diálogo **Opções** , abra o nó **Editor de Texto** no painel esquerdo para definir opções de edição de código e texto. Os nós sob Editor de Texto se aplicam a editores específicos:  

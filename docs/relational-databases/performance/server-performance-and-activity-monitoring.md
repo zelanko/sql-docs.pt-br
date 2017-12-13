@@ -2,9 +2,12 @@
 title: Monitoramento de desempenho e atividade de servidor | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5aeca6e00e90e2c9fdfc307864a2ca44a2e1607b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 48bf1603c3c695f9822f46d1345d28faa03e5861
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Monitoramento de desempenho e atividade de servidor
-  A meta do monitoramento de bancos de dados é avaliar o desempenho do servidor. Um monitoramento eficaz envolve a criação de instantâneos periódicos do desempenho atual para isolar processos que estão ocasionando problemas, e a coleta contínua de dados para o controle das tendências de desempenho. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows fornecem utilitários que permitem exibir a condição atual do banco de dados e controlar o desempenho à medida que as condições vão mudando.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A meta do monitoramento de bancos de dados é avaliar o desempenho do servidor. Um monitoramento eficaz envolve a criação de instantâneos periódicos do desempenho atual para isolar processos que estão ocasionando problemas, e a coleta contínua de dados para o controle das tendências de desempenho. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows fornecem utilitários que permitem exibir a condição atual do banco de dados e controlar o desempenho à medida que as condições vão mudando.  
   
  A seção a seguir contém tópicos que descrevem como usar as ferramentas de monitoramento de desempenho e atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows. Ela contém os seguintes tópicos:  
   

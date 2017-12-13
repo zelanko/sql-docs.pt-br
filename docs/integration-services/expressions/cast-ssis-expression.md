@@ -1,5 +1,5 @@
 ---
-title: "Cast (expressão SSIS) | Microsoft Docs"
+title: "Cast (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a4954ea582309732be9b911abc4a272a379a2227
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cast-ssis-expression"></a>Cast (Expressão SSIS)
   Converte explicitamente uma expressão de um tipo de dados em um tipo de dados diferente. O operador cast também pode funcionar como um operador de truncamento.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="remarks"></a>Comentários  
  O diagrama a seguir mostra operações de conversão legais.  
   
- ![Conversões legais e não legais entre tipos de dados](../../integration-services/expressions/media/data-conversion.gif "conversões legais e não legais entre tipos de dados")  
+ ![Conversões legais e não legais entre tipos de dados](../../integration-services/expressions/media/data-conversion.gif "Conversões legais e não legais entre tipos de dados")  
   
  A conversão para alguns tipos de dados requer parâmetros. A tabela a seguir lista esses tipos de dados e seus parâmetros.  
   
@@ -151,10 +149,9 @@ ms.lasthandoff: 08/03/2017
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expressão do SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Integration Services &#40; SSIS &#41; Expressões](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Tipos de dados em expressões do Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Tipos de dados do Integration Services em expressões](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   
-

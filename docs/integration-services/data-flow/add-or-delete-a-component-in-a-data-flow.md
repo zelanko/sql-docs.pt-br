@@ -1,5 +1,5 @@
 ---
-title: Adicionar ou excluir um componente de fluxo de dados | Microsoft Docs
+title: Adicionar ou excluir um componente em um fluxo de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - adding components
 - components [Integration Services], data flow
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 229fd23eb82ff7b6a1139bf1bd00554162cfc038
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 12845edc8ec0b8ddb1d419e9770bb14c24a101bb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>Adicionar ou excluir um componente em um fluxo de dados
   Os componentes de fluxo de dados são fontes, destinos e transformações em um fluxo de dados. Para adicionar componentes a um fluxo de dados, o fluxo de controle do pacote deve incluir uma tarefa Fluxo de Dados.  
@@ -61,8 +59,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Conectar componentes em um fluxo de dados](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
- [Depurando o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md)   
+ [Depurar o fluxo de dados](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
   
   
-

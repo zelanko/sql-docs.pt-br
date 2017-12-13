@@ -1,5 +1,5 @@
 ---
-title: "? : (Condicional) (expressão SSIS) | Microsoft Docs"
+title: "? : (Condicional) (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 91efcc7d11226a240f2f3b46ab1b14f57da3bbab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Condicional) (Expressão SSIS)
   Retorna uma de duas expressões baseadas na avaliação de uma expressão booliana. Se a expressão Booleana for avaliada como TRUE, a primeira expressão será avaliada e o resultado será o resultado da expressão. Se a expressão Booleana for avaliada como FALSE, a segunda expressão será avaliada e seu resultado será o resultado da expressão.  
@@ -106,8 +104,7 @@ ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Precedência do operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40; Expressão SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [Precedência de operador e capacidade de associação](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

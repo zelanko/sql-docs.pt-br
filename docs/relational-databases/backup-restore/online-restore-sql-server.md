@@ -2,9 +2,12 @@
 title: "Restauração online (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f17516a1a1ac2d07da67ee4688703ef0a5ee5611
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8a92b8a183c2975e219ef5774cd110e5f53e483a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="online-restore-sql-server"></a>Restauração online (SQL Server)
-  Somente há suporte para a restauração online no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. Nessa edição, um arquivo, uma página ou uma restauração por etapas está online por padrão. Este tópico é pertinente para bancos de dados que contêm vários arquivos ou grupos de arquivos (e, no modelo de recuperação simples, somente para grupos de arquivos somente leitura).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Somente há suporte para a restauração online no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. Nessa edição, um arquivo, uma página ou uma restauração por etapas está online por padrão. Este tópico é pertinente para bancos de dados que contêm vários arquivos ou grupos de arquivos (e, no modelo de recuperação simples, somente para grupos de arquivos somente leitura).  
   
  A restauração de dados enquanto o banco de dados está online é chamada *restauração online*. O banco de dados é considerado online sempre que o grupo de arquivos primário estiver online, até mesmo se um ou mais de seus grupos de arquivos secundários estiver offline. Em qualquer modelo de recuperação, você poderá restaurar um arquivo que estiver offline enquanto o banco de dados estiver online. No modelo de recuperação completa, você também poderá restaurar páginas enquanto o banco de dados estiver online.  
   

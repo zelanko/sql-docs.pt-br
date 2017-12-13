@@ -2,12 +2,12 @@
 title: "Criar uma nova estrutura de mineração OLAP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1aceaa55b007eaf43a9a44540284ba95786fca63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ede498333c2fa7c1967d62e2d403d09a6d50acde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Criar uma nova estrutura de mineração OLAP
-  Você pode usar o Assistente de Mineração de Dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode usar o Assistente de mineração de dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Para criar uma nova estrutura de mineração OLAP  
   

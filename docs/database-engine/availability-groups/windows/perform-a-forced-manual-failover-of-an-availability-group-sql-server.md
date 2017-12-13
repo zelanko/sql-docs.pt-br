@@ -2,9 +2,12 @@
 title: "Executar um failover manual forçado de um grupo de disponibilidade (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a6365667a087ddd408925dddbdd712cb26df3d96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef796792b50508d43361a86dd7a276990954bfdd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Executar um failover manual forçado de um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como executar um failover forçado (com possível perda de dados) em um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um failover forçado é uma forma de failover manual cujo objetivo é estritamente a recuperação de desastres, quando um [failover manual planejado](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) não é possível. Se você forçar o failover em uma réplica secundária não sincronizada, talvez ocorra alguma perda de dados. Portanto, recomendamos veementemente que você só force o failover se for necessário restaurar o serviço imediatamente para o grupo de disponibilidade e se estiver disposto a correr o risco de perder dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como executar um failover forçado (com possível perda de dados) em um grupo de disponibilidade Always On usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um failover forçado é uma forma de failover manual cujo objetivo é estritamente a recuperação de desastres, quando um [failover manual planejado](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) não é possível. Se você forçar o failover em uma réplica secundária não sincronizada, talvez ocorra alguma perda de dados. Portanto, recomendamos veementemente que você só force o failover se for necessário restaurar o serviço imediatamente para o grupo de disponibilidade e se estiver disposto a correr o risco de perder dados.  
   
  Após um failover forçado, o destino de failover no qual o grupo de disponibilidade falhou se torna a nova réplica primária. Os bancos de dados secundários nas réplicas secundárias remanescentes são suspensos e devem ser retomados manualmente. Quando a antiga réplica primária ficar disponível, ela fará a transição para a função secundária, fazendo com que os antigos bancos de dados primários se tornem bancos de dados secundários e passem para o estado SUSPENDED. Antes de retomar um banco de dados secundário específico, você poderá recuperar dados dele que foram perdidos. Entretanto, observe que o truncamento do log de transações será atrasado em um determinado banco de dados primário enquanto qualquer um de seus bancos de dados secundários esteja suspenso.  
   

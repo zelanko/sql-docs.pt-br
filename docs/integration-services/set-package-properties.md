@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-package-properties"></a>Definir as propriedades do pacote
   Ao criar um pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] usando a interface gráfica fornecida pelo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você define as propriedades do objeto do pacote na janela Propriedades.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |**CreatorComputerName**|O nome do computador no qual o pacote foi criado.|  
 |**CreatorName**|O nome da pessoa que criou o pacote.|  
 |**Description**|Uma descrição da funcionalidade do pacote.|  
-|**ID**|O GUID do pacote, que é atribuído quando o pacote é criado. Esta propriedade é somente leitura. Para gerar um novo valor aleatório para o **ID** propriedade, selecione  **\<gerar nova ID\>**  na lista suspensa.|  
+|**ID**|O GUID do pacote, que é atribuído quando o pacote é criado. Esta propriedade é somente leitura. Para gerar um novo valor aleatório para a propriedade **ID**, selecione **\<Gerar Nova ID\>** na lista suspensa.|  
 |**Nome**|O nome do pacote.|  
 |**PackageType**|O tipo do pacote. Os valores são **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**e **SQLReplication**. O valor padrão dessa propriedade é **Default**. Para saber mais, confira <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/03/2017
 |**VersionMajor**|A versão principal mais recente do pacote.|  
 |**VersionMinor**|A versão secundária mais recente do pacote.|  
 
-## <a name="set-package-properties-in-the-properties-window"></a>Definir propriedades de pacote na janela Propriedades 
+## <a name="set-package-properties-in-the-properties-window"></a>Definir as propriedades do pacote na janela Propriedades 
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote que você deseja configurar.  
   
 2.  No **Gerenciador de Soluções**, clique duas vezes no pacote para abri-lo no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] ou clique com o botão direito do mouse e selecione **Designer de Exibição**.  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  No menu **Arquivo** , clique em **Salvar Itens Selecionados** para salvar o pacote atualizado.  
   
-

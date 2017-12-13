@@ -1,5 +1,5 @@
 ---
-title: Catalog. operation_messages (banco de dados SSISDB) | Microsoft Docs
+title: catalog.operation_messages (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 235e9896cbf075bdc26e3df120b23091b8e82d6d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +35,18 @@ ms.lasthandoff: 09/26/2017
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|O ID (identificador exclusivo) da mensagem.|  
 |operation_id|**bigint**|A ID exclusiva da operação.|  
-|message_time|**DateTimeOffset(7)**|A hora em que a mensagem foi criada.|  
+|message_time|**datetimeoffset(7)**|A hora em que a mensagem foi criada.|  
 |message_type|**smallint**|O tipo da mensagem exibida.|  
 |message_source_type|**smallint**|A ID do tipo de origem da mensagem.|  
 |message|**nvarchar(max)**|O texto da mensagem.|  
-|extended_info_id|**bigint**|A ID de informações adicionais relacionadas à mensagem de operação, localizada no [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) exibição.|  
+|extended_info_id|**bigint**|A ID de informações adicionais relacionadas à mensagem da operação, localizada na exibição [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
 ## <a name="remarks"></a>Comentários  
  Essa exibição exibe uma linha para cada mensagem registrada durante uma operação no catálogo. A mensagem pode ser gerada pelo servidor, pelo processo de execução do pacote ou pelo mecanismo de execução.  
   
  Esta exibição exibe os tipos de mensagem a seguir:  
   
-|**message_type** valor|Description|  
+|Valor **message_type**|Description|  
 |-----------------------------|-----------------|  
 |-1|Unknown (desconhecido)|  
 |120|Erro|  
@@ -77,19 +75,18 @@ ms.lasthandoff: 09/26/2017
 |30|Objetos de nível de pacote|  
 |40|Tarefas de fluxo de controle|  
 |50|Contêineres de fluxo de controle|  
-|60|Tarefa de fluxo de dados|  
+|60|Tarefa de Fluxo de Dados|  
   
 ## <a name="permissions"></a>Permissões  
  Esta exibição requer uma das seguintes permissões:  
   
 -   Permissão READ na operação  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 > [!NOTE]  
 >  Quando você tem permissão para executar uma operação no servidor, também tem permissão para exibir informações sobre a operação. A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
   
   
-

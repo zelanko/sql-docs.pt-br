@@ -1,5 +1,5 @@
 ---
-title: Catalog. grant_permission (banco de dados SSISDB) | Microsoft Docs
+title: catalog.grant_permission (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 5f9bb38521631bcc60d39fba747f17b86183545d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +41,28 @@ catalog.grant_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @object_type =] *object_type*  
- O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e a operação (`4`). O *object_type* é **smallint***.*  
+ [ @object_type = ] *object_type*  
+ O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e operação (`4`). O *object_type* é **smallint***.*  
   
- [ @object_id =] *object_id*  
+ [ @object_id = ] *object_id*  
  O ID (identificador exclusivo) do objeto protegível. O *object_id* é **bigint**.  
   
- [ @principal_id =] *principal_id*  
+ [ @principal_id = ] *principal_id*  
  O ID da entidade de segurança que receberá a permissão. O *principal_id* é **int**.  
   
- [ @permission_type =] *permission_type*  
+ [ @permission_type = ] *permission_type*  
  O tipo de permissão a ser concedido. O *permission_type* é **smallint**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito)  
   
- 1 (object_class é inválida)  
+ 1 (object_class é inválido)  
   
  2 (object_id não existe)  
   
- 3 (entidade de segurança não existe)  
+ 3 (a entidade de segurança não existe)  
   
- 4 (permissão é inválida)  
+ 4 (a permissão é inválida)  
   
  5 (outro erro)  
   
@@ -76,9 +74,9 @@ catalog.grant_permission [ @object_type = ] object_type
   
 -   Permissões ASSIGN_PERMISSIONS no objeto  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
 
 Esse procedimento não pode ser chamado por logons que foram autenticados pelo SQL Server. Ele não pode ser chamado pelo logon de sa.
   
@@ -101,4 +99,3 @@ Esse procedimento não pode ser chamado por logons que foram autenticados pelo S
  Consulte a seção Valores de código de retorno para mensagens e erros relevantes.  
   
   
-

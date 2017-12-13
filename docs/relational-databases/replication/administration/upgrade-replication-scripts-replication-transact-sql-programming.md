@@ -2,9 +2,12 @@
 title: "Atualizar scripts de replicação (Programação Transact-SQL de replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c19ed05d9f7a324d8e6ae834c9c1528b3249625
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83f7b41bb5c2ad54f4b095a7d30aa2879688d2a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Atualizar scripts de replicação (Programação Transact-SQL de replicação)
-  Podem ser usados arquivos de script[!INCLUDE[tsql](../../../includes/tsql-md.md)] para configurar uma topologia de replicação programaticamente. Para obter mais informações, consulte [Conceitos de procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Arquivos de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] podem ser usados para configurar uma topologia de replicação programaticamente. Para obter mais informações, consulte [Conceitos de procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).  
   
 > [!IMPORTANT]  
 >  Embora não se exija a atualização de scripts executados por membros da função **sysadmin** , recomendamos que você modifique os scripts existentes como descrito neste tópico. Especifique uma conta que tenha permissões mínimas para cada agente de replicação como descrito na seção "Permissões exigidas por agentes" do tópico [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  

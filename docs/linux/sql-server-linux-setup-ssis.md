@@ -1,6 +1,6 @@
 ---
 title: Instalar o SQL Server Integration Services no Linux | Microsoft Docs
-description: "Este tópico descreve como instalar o SQL Server Integration Services (SSIS) no Linux."
+description: Este artigo descreve como instalar o SQL Server Integration Services (SSIS) no Linux.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 851d8dc5121eb12b7d754a95db73494adcc632b4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar o SQL Server Integration Services (SSIS) no Linux
 
@@ -117,21 +117,11 @@ sudo yum update mssql-server-is
 ### <a name="remove-ssis"></a>Remover o SSIS
 Para remover `mssql-server-is`, você pode executar o seguinte comando:
 ```bash
-sudo yum remove msssql-server-is
+sudo yum remove mssql-server-is
 ```
-
-
-
-
-## <a name="run-a-package"></a>Executar um pacote
-Copie o pacote do SSIS para o computador Linux. Em seguida, use o seguinte comando para executar o pacote.
-
-```bash
-dtexec /F <package name> /DE <protection password>
-```
-
-
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre como usar o SSIS para extrair, transformar e carregar dados no Linux, consulte [extrair, transformar e carregar dados para o SQL Server no Linux com o SSIS](sql-server-linux-migrate-ssis.md).
+Para executar pacotes SSIS no Linux, consulte [extrair, transformar e carregar dados para o SQL Server no Linux com o SSIS](sql-server-linux-migrate-ssis.md).
+
+Para definir configurações adicionais de SSIS no Linux, consulte [configurar o SQL Server Integration Services no Linux com o ssis conf](sql-server-linux-configure-ssis.md).

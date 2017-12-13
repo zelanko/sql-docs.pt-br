@@ -1,5 +1,5 @@
 ---
-title: "Janela variáveis | Microsoft Docs"
+title: "Janela Variáveis | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.variables.f1
 - sql13.dts.designer.variableoptionswindow.f1
-helpviewer_keywords:
-- Variables Window dialog box
+helpviewer_keywords: Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="variables-window"></a>Janela Variáveis
   Use a janela **Variáveis** para criar e modificar as variáveis definidas pelo usuário e para exibir as variáveis do sistema.  
@@ -86,7 +83,7 @@ ms.lasthandoff: 09/26/2017
   
  Se você atribui uma expressão a uma variável, um marcador de ícone especial é exibido ao lado da variável. Esse marcador de ícone especial também é exibido ao lado de gerenciadores de conexões e tarefas que têm expressões definidas neles.  
 
-## <a name="variable-grid-options-dialog-box"></a>Caixa de diálogo Opções de grade variável
+## <a name="variable-grid-options-dialog-box"></a>Caixa de diálogo Opções de Grade Variáveis
  Use a caixa de diálogo **Opções de Grade Variáveis** para selecionar as colunas para serem exibidas na janela **Variáveis** e para selecionar os filtros para serem aplicados na lista de variáveis. Para obter mais informações sobre as propriedades de variáveis correspondentes, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-variables.md).  
   
 ### <a name="options-for-filter"></a>Opções para filtrar  
@@ -120,8 +117,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>Consulte também  
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services &#40; SSIS &#41; Expressões](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Expressões do SSIS &#40;Integration Services&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Gerar arquivos de despejo para execução de pacote](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

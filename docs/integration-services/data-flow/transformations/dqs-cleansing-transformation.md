@@ -1,5 +1,5 @@
 ---
-title: "Transformação de limpeza do DQS | Microsoft Docs"
+title: "Transformação de Limpeza DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - data correction
 - correct data
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3071f2f7edbfd91a6819cf7a31a1986e77eca103
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ba39190db7b5cfefbb7a4624ca20d71673404093
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformação de Limpeza DQS
   A transformação de Limpeza DQS usa o DQS (Data Quality Services) para corrigir dados de uma fonte de dados conectada com a aplicação de regras aprovadas, que foram criadas para a fonte de dados conectada ou uma fonte de dados semelhante. Para obter informações sobre regras de correção de dados, consulte [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Para obter mais informações sobre o DQS, consulte [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -169,4 +167,3 @@ ms.lasthandoff: 09/27/2017
   
 3.  Clique em **Adicionar**.  
   
-

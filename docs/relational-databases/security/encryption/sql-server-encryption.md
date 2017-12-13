@@ -1,10 +1,13 @@
 ---
 title: Criptografia do SQL Server | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91f10ac9cc1e83187298d258c626c852634cf19b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3f975f11bf5a3c71b1f62109db1c68b5b25739b7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-encryption"></a>Criptografia do SQL Server
-  Criptografia é o processo de confundir dados pelo uso de uma chave ou senha. Isso pode tornar os dados inúteis sem a chave de descriptrografia correspondente ou senha. A criptografia não resolve problemas de controle de acesso. Porém, aumenta a segurança, limitando perda de dados mesmo se os controles de acesso forem ignorados. Por exemplo, se o computador host do banco de dados for malconfigurado e um hacker obtiver dados confidenciais, as informações roubadas poderão ser inúteis se estiverem criptografadas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Criptografia é o processo de ocultar dados pelo uso de uma chave ou senha. Isso pode tornar os dados inúteis sem a chave de descriptrografia correspondente ou senha. A criptografia não resolve problemas de controle de acesso. Porém, aumenta a segurança, limitando perda de dados mesmo se os controles de acesso forem ignorados. Por exemplo, se o computador host do banco de dados for malconfigurado e um hacker obtiver dados confidenciais, as informações roubadas poderão ser inúteis se estiverem criptografadas.  
   
 
 > [!IMPORTANT]  

@@ -1,5 +1,5 @@
 ---
-title: "Transformação dimensão alteração lenta | Microsoft Docs"
+title: "Transformação Dimensão de Alteração Lenta | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.slowlychangingdimtrans.f1
+f1_keywords: sql13.dts.designer.slowlychangingdimtrans.f1
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8061b07985e3d8d85656ddb85996384b5b6ee257
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="slowly-changing-dimension-transformation"></a>Transformação Dimensão de Alteração Lenta
+# <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
   A transformação Dimensão de Alteração Lenta coordena a atualização e a inserção de registros em tabelas de dimensão do data warehouse. Por exemplo, você pode usar essa transformação para configurar as saídas de transformação que inserem e atualizam registros na tabela DimProduct do banco de dados OLAP da [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] com dados da tabela Production.Products no banco de dados OLTP da AdventureWorks.  
   
 > [!IMPORTANT]  
@@ -118,4 +115,3 @@ ms.lasthandoff: 08/03/2017
 -   Entrada de blog, [Otimizando o Assistente de Dimensão Variável Lentamente](http://go.microsoft.com/fwlink/?LinkId=199481), em blogs.msdn.com.  
   
   
-

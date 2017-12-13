@@ -3,8 +3,11 @@ title: "Opções (página Ambiente – Ajuda – Geral) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 043ab8f89e389dbd940ca3e34039747e2dbf2d27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fc966f121da19eb546c9950f2f852d0d37fc9a96
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---help---general-page"></a>Opções (Ambiente – Ajuda – página Geral)
-Use a caixa de diálogo **Opções** para escolher conjuntos de documentação e decidir se serão exibidos tópicos internamente no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] ou externamente em uma janela separada. Para acessar essa caixa de diálogo, clique em **Opções** no menu **Ferramentas** , expanda a **Ajuda** no nó **Ambiente** e clique em **Geral**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Opções** para escolher conjuntos de documentação e decidir se serão exibidos tópicos internamente no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] ou externamente em uma janela separada. Para acessar essa caixa de diálogo, clique em **Opções** no menu **Ferramentas** , expanda a **Ajuda** no nó **Ambiente** e clique em **Geral**.  
   
 > [!NOTE]  
 > Alterações feitas às opções nesta página não entram em vigor enquanto o ambiente não é reiniciado.  

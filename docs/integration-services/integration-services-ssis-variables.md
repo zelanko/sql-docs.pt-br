@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) variáveis | Microsoft Docs"
+title: "Variáveis do SSIS (Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb632c5fa2242b5b607d62488b65682a0cc4b07f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
   As variáveis armazenam valores que um pacote do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Os scripts na tarefa Script e o componente de Script também podem usar variáveis. As restrições de precedência que colocam em sequência tarefas e contêineres em um fluxo de trabalho podem usar variáveis quando suas definições de restrições incluem expressões.  
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/03/2017
  Especifica o nome da variável.  
   
  **Namespace**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fornece dois namespaces, **usuário** e **sistema**. Por padrão, as variáveis personalizadas ficam no namespace **Usuário** e as variáveis de sistema no namespace **System** . Você pode criar namespaces adicionais para variáveis definidas pelo usuário e alterar o nome do namespace **Usuário** , mas não pode alterar o nome do namespace **Sistema** , adicionar variáveis no namespace **Sistema** ou atribuir variáveis de sistema para um namespace diferente.  
+ O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece dois namespaces, **User** e **System**. Por padrão, as variáveis personalizadas ficam no namespace **Usuário** e as variáveis de sistema no namespace **System** . Você pode criar namespaces adicionais para variáveis definidas pelo usuário e alterar o nome do namespace **Usuário** , mas não pode alterar o nome do namespace **Sistema** , adicionar variáveis no namespace **Sistema** ou atribuir variáveis de sistema para um namespace diferente.  
   
 **RaiseChangedEvent**  
  Quando a propriedade é definida como **True**, o evento **OnVariableValueChanged** é gerado quando o valor da variável é alterado.  
@@ -145,7 +143,7 @@ ms.lasthandoff: 08/03/2017
   
  Especifica o tipo de dados do valor da variável.  
 
-## <a name="scenarios-for-using-variables"></a>Cenários para usar variáveis  
+## <a name="scenarios-for-using-variables"></a>Cenários para o uso de variáveis  
  As variáveis são usadas de muitos modos diferentes em pacotes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Você provavelmente perceberá que o desenvolvimento do pacote não progride muito antes de você adicionar uma variável definida pelo usuário ao seu pacote para implementar a flexibilidade e a capacidade gerenciamento exigida por sua solução. Dependendo da situação, as variáveis do sistema também são usadas normalmente.  
   
  **Expressões de Propriedade** Use variáveis para fornecer valores nas expressões de propriedade que definem as propriedades de pacotes e objetos de pacote. Por exemplo, a expressão, `SELECT * FROM @varTableName` inclui a variável `varTableName` que atualiza a instrução SQL executada por uma tarefa Executar SQL. A expressão, `DATEPART("d", GETDATE()) == 1? @[User::varPackageFirst]:@[User::varPackageOther]`", atualiza o pacote executado pela tarefa Executar Pacote, executando o pacote especificado na variável `varPackageFirst` no primeiro dia do mês e executando o pacote especificado na variável `varPackageOther` nos outros dias. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../integration-services/expressions/use-property-expressions-in-packages.md).  
@@ -248,9 +246,9 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
 -   Janela Propriedades. A janela **Propriedades** lista propriedades para configurar variáveis não disponíveis na janela **Variáveis** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]também fornece um conjunto de variáveis de sistema cujas propriedades não podem ser atualizadas, com exceção de propriedade RaiseChangedEvent.  
+>  O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] também fornece um conjunto de variáveis do sistema cujas propriedades não podem ser atualizadas, com a exceção da propriedade RaiseChangedEvent.  
   
-### <a name="set-expressions-on-variables"></a>Conjunto de expressões em variáveis  
+### <a name="set-expressions-on-variables"></a>Definir expressões em variáveis  
   
  Quando você usa a janela **Propriedades** para definir as expressões em uma variável definida pelo usuário:  
   
@@ -270,11 +268,11 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
   
  Na janela **Variáveis** e **Propriedades**, se você atribuir uma expressão à variável e **EvaluateAsExpression** for definido como **True**, você não poderá alterar o tipo de dados da variável.  
   
-### <a name="set-the-namespace-and-name-properties"></a>Definir as propriedades de nome e Namespace
+### <a name="set-the-namespace-and-name-properties"></a>Definir as propriedades Namespace e Name
   
  Os valores das propriedades **Name** e **Namespace** devem começar com uma letra de caractere alfabético, conforme definido pelo Unicode Standard 2.0 ou um sublinhado (_). Os caracteres subsequentes podem ser letras ou números conforme definido no padrão Unicode Standard 2.0 ou o sublinhado (\_).  
   
-### <a name="set-variable-properties-in-the-variables-window"></a>Defina as propriedades da variável na janela variáveis   
+### <a name="set-variable-properties-in-the-variables-window"></a>Definir as propriedades de variáveis na janela Variáveis   
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -292,7 +290,7 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
   
 7.  Para salvar o pacote atualizado, no menu **Arquivo** , clique em **Salvar Itens Selecionados**.  
   
-### <a name="set-variable-properties-in-the-properties-window"></a>Defina as propriedades da variável na janela Propriedades  
+### <a name="set-variable-properties-in-the-properties-window"></a>Definir as propriedades de variáveis na janela Propriedades  
 
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
@@ -319,4 +317,3 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
  [Usar os valores de variáveis e parâmetros em um pacote filho](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-

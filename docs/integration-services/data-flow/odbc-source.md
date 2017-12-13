@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-source"></a>Origem ODBC
   A origem ODBC extrai dados de um banco de dados com suporte do ODBC usando uma tabela de banco de dados, uma exibição ou uma instrução SQL.  
@@ -200,4 +198,3 @@ ms.lasthandoff: 08/17/2017
  A linha que está causando o erro ou o truncamento é direcionada para a saída do erro da origem ODBC.  
   
   
-

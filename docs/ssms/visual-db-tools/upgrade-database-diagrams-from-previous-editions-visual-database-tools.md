@@ -3,8 +3,11 @@ title: "Atualizar diagramas de banco de dados de edições anteriores | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 877e61b351a2e3b5c0f51fc015ec59ae7bf62c78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3f225eafb6cd6b1a4518a8e98f6b657bdc385cb2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Atualizar diagramas de banco de dados de edições anteriores (Visual Database Tools)
-Os diagramas de bancos de dados criados em edições anteriores dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] são atualizados automaticamente quando a diagramação do banco de dados for configurada no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. Para obter mais etapas de configuração de diagramação, consulte [Configurar o Designer de Diagramas de Banco de Dados (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os diagramas de bancos de dados criados em edições anteriores dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] são atualizados automaticamente quando a diagramação do banco de dados for configurada no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. Para obter mais etapas de configuração de diagramação, consulte [Configurar o Designer de Diagramas de Banco de Dados (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Para atualizar diagramas de banco de dados herdados  
   

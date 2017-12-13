@@ -2,9 +2,12 @@
 title: "Fazer failover para um secundário do envio de logs (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecab7acaedde247abc727149f93942da3ea4be61
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b1e994ededa0a1316bf4edd529fc056ed3de6848
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover para um envio de logs secundário (SQL Server)
-  O failover para um envio de logs secundário será útil se a instância do servidor primário falhar ou requerer manutenção.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O failover para um envio de logs secundário será útil se a instância do servidor primário falhar ou requerer manutenção.  
   
 ## <a name="preparing-for-a-controlled-failover"></a>Preparando para um failover controlado  
  Geralmente, os bancos de dados primário e secundário não são sincronizados porque o banco de dados primário continua sendo atualizado após seu último trabalho de backup. Além disso, em alguns casos, os backups de log de transações recentes não foram copiados nas instâncias do servidor secundário ou alguns backups de log copiados talvez ainda não tenham sido aplicados ao banco de dados secundário. Recomendamos que você comece sincronizando todos os bancos de dados secundários com o banco de dados primário, se possível.  

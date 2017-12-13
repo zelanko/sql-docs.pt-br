@@ -3,8 +3,11 @@ title: "Parâmetros | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1d4e6260a060152121b7b3ec0ef9ac14b2042c3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 697268f348d50079d2d3f740ea56b9dd28944792
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameters"></a>Parâmetros
-São usados parâmetros para troca de dados entre procedimentos armazenados e funções e entre o aplicativo ou a ferramenta que chamam o procedimento armazenado ou a função: 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Parâmetros são usados para troca de dados entre procedimentos armazenados e funções e entre o aplicativo ou a ferramenta que chamou o procedimento armazenado ou a função: 
 
 *  Os parâmetros de entrada permitem que o chamador transfira valores de dados para procedimentos armazenados ou funções.
 *  Os parâmetros de entrada permitem que os procedimentos armazenados passem valores de dados ou variável de cursor de volta ao chamador. As funções definidas pelo usuário não podem especificar parâmetros de saída.

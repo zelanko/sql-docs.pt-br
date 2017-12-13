@@ -1,9 +1,13 @@
 ---
 title: "Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados (Transact-SQL) | Microsoft Docs"
 ms.date: 07/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4cac0600812b80cfab87ca61d78592611427cb14
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b6434b5e98944ee48b51d3d1c06db0ba94fbda0e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados (Transact-SQL)
-  Este tópico descreve como usar o [!INCLUDE[tsql](../../includes/tsql-md.md)] para verificar se um arquivo de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um arquivo esparso e descobrir seu tamanho real e máximo. Arquivos esparsos, que são um recurso do sistema de arquivos NTFS, são usados por instantâneos do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como usar o [!INCLUDE[tsql](../../includes/tsql-md.md)] para verificar se um arquivo de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um arquivo esparso e descobrir seu tamanho real e máximo. Arquivos esparsos, que são um recurso do sistema de arquivos NTFS, são usados por instantâneos do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Durante a criação do instantâneo do banco de dados, arquivos esparsos são criados usando os nomes de arquivo na instrução CREATE DATABASE. Esses nomes de arquivo são armazenados em **sys.master_files** na coluna **physical_name** . Em **sys.database_files** (quer seja no banco de dados de origem ou em um instantâneo), a coluna **physical_name** sempre contém os nomes dos arquivos de banco de dados de origem.  

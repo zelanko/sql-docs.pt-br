@@ -2,9 +2,12 @@
 title: Gatilhos de logon | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e3176031068ca2c60b678bde49a306bda1e7c31d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 66125703d69fd5e3bb5bba0572f47274c3bff824
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="logon-triggers"></a>Gatilhos de logon
-  Os gatilhos de logon acionam procedimentos armazenados em resposta a um evento LOGON. Esse evento ocorre quando é estabelecida uma sessão de usuário com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os gatilhos de logon são acionados após o término da fase de autenticação, mas antes da sessão de usuário ser realmente estabelecida. Logo, todas as mensagens originadas no gatilho que chegariam, normalmente, ao usuário, como mensagens de erro e mensagens da instrução PRINT, são desviadas para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os gatilhos de logon não são acionados quando a autenticação falha.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Os gatilhos de logon acionam procedimentos armazenados em resposta a um evento LOGON. Esse evento ocorre quando é estabelecida uma sessão de usuário com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os gatilhos de logon são acionados após o término da fase de autenticação, mas antes da sessão de usuário ser realmente estabelecida. Logo, todas as mensagens originadas no gatilho que chegariam, normalmente, ao usuário, como mensagens de erro e mensagens da instrução PRINT, são desviadas para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os gatilhos de logon não são acionados quando a autenticação falha.  
   
  Você pode usar gatilhos de logon para auditar e controlar sessões do servidor, por exemplo, rastreando a atividade de logon, restringindo os logons ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou limitando o número de sessões para um logon específico. Por exemplo, no código abaixo, o gatilho de logon negará as tentativas de logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciadas por *login_test* se já houver três sessões de usuário criadas pelo logon em questão.  
   

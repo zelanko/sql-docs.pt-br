@@ -2,12 +2,12 @@
 title: "Programação de cliente ADOMD.NET | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad5dc8c4f260156ef8fec7d52197f2a9137894de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f6ed705a9cd5f4084dcf6e09b619431479a23826
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-programming"></a>Programando o cliente no ADOMD.NET
-  Os componentes de cliente do ADOMD.NET residem no **Microsoft.AnalysisServices.AdomdClient** namespace (em microsoft.analysisservices.adomdclient.dll). Esses componentes de cliente fornecem a funcionalidade de cliente e aplicativos de camada intermediária para consultar facilmente os dados e metadados de um repositório de dados analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Os componentes de cliente do ADOMD.NET residem no **Microsoft.AnalysisServices.AdomdClient** namespace (em microsoft.analysisservices.adomdclient.dll). Esses componentes de cliente fornecem a funcionalidade de cliente e aplicativos de camada intermediária para consultar facilmente os dados e metadados de um repositório de dados analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="using-the-adomdnet-client-objects"></a>Usando os objetos de cliente do ADOMD.NET  
  Durante a consulta a uma fonte de dados analíticos, existe um conjunto de tarefas comuns que precisam ser executadas. A tabela a seguir representa as tarefas comuns nas quais você usa os objetos de cliente do ADOMD.NET para executar uma consulta assim.  

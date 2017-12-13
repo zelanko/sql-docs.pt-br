@@ -3,8 +3,11 @@ title: Ferramentas externas | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07746b7c20e8bed6bb71abb3c62adb6354f921dd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d0e5946c785c27dc3a3f5718de2220e50aba4b82
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="external-tools"></a>Ferramentas Externas
-Use esta caixa de diálogo para adicionar ferramentas externas, como o Gerenciador de Configurações do SQL Server ou o Bloco de Notas, ao menu **Ferramentas** . Adicionar ferramentas externas permite a execução de outros aplicativos facilmente enquanto você trabalha no ambiente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Você pode especificar argumentos e um diretório de trabalho na execução da ferramenta. Além disso, as saídas de algumas ferramentas podem ser exibidas na janela Saída. A caixa de diálogo **Ferramentas Externas** está disponível no menu **Ferramentas** .  
+# <a name="external-tools"></a>Ferramentas externas
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta caixa de diálogo para adicionar ferramentas externas, como o Gerenciador de Configurações do SQL Server ou o Bloco de Notas, ao menu **Ferramentas**. Adicionar ferramentas externas permite a execução de outros aplicativos facilmente enquanto você trabalha no ambiente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Você pode especificar argumentos e um diretório de trabalho na execução da ferramenta. Além disso, as saídas de algumas ferramentas podem ser exibidas na janela Saída. A caixa de diálogo **Ferramentas Externas** está disponível no menu **Ferramentas** .  
   
 ## <a name="options"></a>Opções  
 **Conteúdo do Menu**  

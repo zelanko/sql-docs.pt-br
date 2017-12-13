@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],processing data
+helpviewer_keywords: incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da3350dc91dff2547ca683f8c69a7160640e37da
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 689250d9870fb1c4e590f66d2736234eae2a00ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Processar inserções, atualizações e exclusões
   No fluxo de dados de um pacote do Integration Services, que executa uma carga incremental de dados de alteração, a segunda tarefa serve para separar inserções, atualizações e exclusões. Em seguida, você pode usar comandos apropriados para aplicá-los ao destino.  
@@ -79,7 +76,6 @@ select
   
 ## <a name="see-also"></a>Consulte também  
  [Transformação Divisão Condicional](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [Dividir um conjunto de dados usando a transformação divisão condicional](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Dividir um conjunto de dados por meio da transformação Divisão Condicional](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   
-

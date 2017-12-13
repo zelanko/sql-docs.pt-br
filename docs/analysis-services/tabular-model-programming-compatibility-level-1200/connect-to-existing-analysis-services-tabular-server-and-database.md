@@ -2,12 +2,12 @@
 title: Conecte-se ao servidor de tabela do Analysis Services existente e o banco de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df4fb2df60cf27c5a2f33676b9e34fdf1b255a34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e34cc306126acc431048fd93b7eab99049bc2414
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>Conecte-se ao banco de dados e servidor de tabela do Analysis Services existente
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-No SQL Server 2016, o Analysis Services Management Objects (AMO) inclui vários namespaces que pode ser usados para configurar uma conexão de servidor. Este artigo explica como estabelecer uma conexão de servidor usando o namespace AnalysisServices para modelos e bancos de dados criados em 1200 ou maior nível de compatibilidade. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]No SQL Server 2016, o Analysis Services Management Objects (AMO) inclui vários namespaces que pode ser usados para configurar uma conexão de servidor. Este artigo explica como estabelecer uma conexão de servidor usando o namespace AnalysisServices para modelos e bancos de dados criados em 1200 ou maior nível de compatibilidade. 
 
 Para se conectar a um servidor do Analysis Services, seu código deve instanciar um objeto de servidor e, em seguida, chamar o método Connect. Uma vez conectado, propriedades do objeto Server refletirão as configurações da instância do Analysis Services atual. 
 

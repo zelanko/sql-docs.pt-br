@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset destination
+helpviewer_keywords: Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f7cf8f2ed8875856da5756288c8e3fb707f1a397
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
   O destino do Conjunto de Registros não salva dados em uma fonte de dados externa. Em vez disso, o destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do tipo de dados **Objeto** . Depois que o destino do Conjunto de Registros salva os dados, geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. O enumerador ADO Foreach salva o valor de cada coluna da linha atual em uma variável de pacote separada. Em seguida, as tarefas que você configura dentro do contêiner Loop Foreach leem esses valores das variáveis e executam alguma ação com eles.  
@@ -182,4 +179,3 @@ ms.lasthandoff: 08/03/2017
      Caso tenha especificado um servidor SMTP válido e fornecido seu próprio endereço de email, você receberá recibos de impossibilidade de entrega que a tarefa Enviar Email envia aos vendedores fictícios de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
   
-

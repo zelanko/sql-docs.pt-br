@@ -1,5 +1,5 @@
 ---
-title: Tarefa executar processo | Microsoft Docs
+title: Tarefa Executar Processo | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
 - sql13.dts.designer.executeprocesstask.general.f1
 - sql13.dts.designer.executeprocesstask.process.f1
-helpviewer_keywords:
-- Execute Process task [Integration Services]
+helpviewer_keywords: Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 8beda5fb308ad93d4582bdcf947c1a1a8a9f2f71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-process-task"></a>Tarefa Executar Processo
   A tarefa Executar Processo executa um aplicativo ou arquivo de lote como parte de um fluxo de trabalho do pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Embora você possa usar a tarefa Executar Processo para abrir qualquer aplicativo padrão, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou [!INCLUDE[ofprword](../../includes/ofprword-md.md)], você geralmente o utiliza para executar aplicativos de negócios ou arquivos de lote que trabalham em uma fonte de dados. Por exemplo, você pode usar a tarefa Executar Processo para expandir um arquivo de texto compactado. Depois, o pacote pode usar o arquivo de texto como uma fonte de dados para o fluxo de dados no pacote. Como outro exemplo, você pode usar a tarefa Executar Processo para executar um aplicativo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizado que gera um relatório de vendas diário. Em seguida, você pode anexar o relatório a uma tarefa Enviar Email e encaminhar o relatório para uma lista de distribuição.  
@@ -120,15 +117,15 @@ ms.lasthandoff: 08/11/2017
  Digite o caminho da pasta que contém o executável ou clique no botão Procurar **(…)** e localize a pasta.  
   
  **StandardInputVariable**  
- Selecione uma variável para fornecer entrada para o processo ou clique em \< **nova variável...** > para criar uma nova variável:  
+ Selecione a variável para fornecer a entrada ao processo ou clique em \<**Nova variável...**> para criar uma nova variável:  
   
  **Tópicos relacionados:** [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Selecione uma variável para capturar a saída do processo ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Selecione uma variável para capturar a saída do processo ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **StandardErrorVariable**  
- Selecione uma variável para capturar a saída de erro do processador ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Selecione uma variável para capturar a saída de erro do processador ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Indique se a tarefa deve falhar caso o código de saída do processo seja diferente do valor especificado em **SuccessValue**.  
@@ -150,4 +147,3 @@ ms.lasthandoff: 08/11/2017
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
   
-

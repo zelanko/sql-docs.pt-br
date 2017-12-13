@@ -1,5 +1,5 @@
 ---
-title: Catalog. deny_permission (banco de dados SSISDB) | Microsoft Docs
+title: catalog.deny_permission (Banco de Dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5ba6cb8b0d185ce5c669fd33f563a9bb5754baa2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +38,16 @@ catalog.deny_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @object_type =] *object_type*  
- O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e a operação (`4`). O *object_type* é **smallint***.*  
+ [ @object_type = ] *object_type*  
+ O tipo de objeto protegível. Os tipos de objetos protegíveis incluem pasta (`1`), projeto (`2`), ambiente (`3`) e operação (`4`). O *object_type* é **smallint***.*  
   
- [ @object_id =] *object_id*  
+ [ @object_id = ] *object_id*  
  A ID (identificador exclusivo) ou a chave primária do objeto protegível. O *object_id* é **bigint**.  
   
- [ @principal_id =] *principal_id*  
+ [ @principal_id = ] *principal_id*  
  A ID da entidade a ser negada. O *principal_id* é **int**.  
   
- [ @permission_type =] *permission_type*  
+ [ @permission_type = ] *permission_type*  
  O tipo de permissão a ser negado. O *permission_type* é **smallint**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -59,7 +57,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
  2 (object_id não existe)  
   
- 3 (entidade de segurança não existe)  
+ 3 (a entidade de segurança não existe)  
   
  4 (permissão não é válida)  
   
@@ -73,9 +71,9 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Permissão MANAGE_PERMISSIONS no objeto  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="remarks"></a>Comentários  
  Esse procedimento armazenado permite que você negue os tipos de permissão descritos na seguinte tabela:  
@@ -95,9 +93,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
   
--   Se permission_type for especificado, o procedimento nega a permissão especificada que foi atribuída explicitamente à entidade de segurança especificada para o objeto especificado. Mesmo se não houver nenhum nesses casos, o procedimento ainda retorna um valor de código de êxito (`0`).  
+-   Se permission_type for especificado, o procedimento negará a permissão especificada que tiver sido atribuída explicitamente à entidade determinada do objeto especificado. Mesmo que não existam essas instâncias, o procedimento ainda retornará um valor de código de êxito (`0`).  
   
--   Se permission_type for omitido, o procedimento negará todas as permissões para a entidade especificada para o objeto especificado.  
+-   Se permission_type for omitido, o procedimento negará todas as permissões para a entidade especificada do objeto determinado.  
   
   
-

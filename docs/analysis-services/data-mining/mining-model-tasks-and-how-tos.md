@@ -2,12 +2,12 @@
 title: "Tarefas e instruções modelo de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b7e26f60be445adfb52db399e5f89d6a2e93315
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1a90c07acc1ac35f50f4ad1923980f0f65b57d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tarefas e instruções do modelo de mineração
-  Use a guia **Modelos de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para gerenciar e processar modelos de mineração em uma estrutura de mineração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use o **modelos de mineração** guia do Designer de mineração de dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para gerenciar e processar modelos de mineração em uma estrutura de mineração.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

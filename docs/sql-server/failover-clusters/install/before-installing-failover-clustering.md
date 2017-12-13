@@ -2,9 +2,12 @@
 title: Antes de instalar o clustering de failover | Microsoft Docs
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3ee39b07f117a70c4de03d921cf2c751913e70c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95b30dab822ab994f284c82d1408d6a222fcef45
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
-  Antes de instalar um cluster de failover do SQL Server, você deve selecionar o hardware e o sistema operacional nos quais o SQL Server será executado. Você também deve configurar o WSFC (Clustering de Failover do Windows Server) e examinar a rede, a segurança e as considerações sobre outros softwares que serão executados no cluster de failover.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Antes de instalar um cluster de failover do SQL Server, você deve selecionar o hardware e o sistema operacional nos quais o SQL Server será executado. Você também deve configurar o WSFC (Clustering de Failover do Windows Server) e examinar a rede, a segurança e as considerações sobre outros softwares que serão executados no cluster de failover.  
   
  Se um cluster do Windows tiver uma unidade de disco local e a mesma letra de unidade também for usada em um ou mais nós de cluster como uma unidade compartilhada, você não poderá instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nessa unidade.  
   

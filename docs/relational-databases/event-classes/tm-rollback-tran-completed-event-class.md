@@ -2,9 +2,12 @@
 title: 'Classe de evento TM: Rollback Tran Completed | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c10a8a2d05158ecd2a31b4ae0123bd052d86da4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b71e871f7209b402399ac186b89e35ea82459ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>classe de evento TM: Rollback Tran Completed
-  A classe de evento TM: Rollback Tran Completed indica que foi concluída uma solicitação ROLLBACK TRANSACTION. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indica se uma transação nova será iniciada depois que a transação atual for revertida.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento TM: Rollback Tran Completed indica que uma solicitação ROLLBACK TRANSACTION foi concluída. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indica se uma transação nova será iniciada depois que a transação atual for revertida.  
   
 ## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>Colunas de dados de classe de evento TM: Rollback Tran Completed  
   

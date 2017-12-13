@@ -3,8 +3,11 @@ title: Janelas de Ferramenta no SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5ad390a70e95a80bd6faf9763b5b24892e402706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 35014aa84f0b9126185016056ea4259d7ce68801
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Janelas de ferramentas no SQL Server Management Studio
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] fornece muitas janelas de ferramentas poderosas para todas as fases de desenvolvimento e administração. Algumas ferramentas podem ser usadas em qualquer componente do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e outras somente em certos tipos de componentes. A tabela a seguir identifica as ferramentas que podem ser usadas para todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] fornece muitas janelas de ferramentas eficientes para todas as fases de desenvolvimento e administração. Algumas ferramentas podem ser usadas em qualquer componente do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e outras somente em certos tipos de componentes. A tabela a seguir identifica as ferramentas que podem ser usadas para todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
   
 |||  
 |-|-|  

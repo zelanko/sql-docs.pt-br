@@ -1,5 +1,5 @@
 ---
-title: SSIS como criar um pacote ETL | Microsoft Docs
+title: "SSIS – Como criar um pacote ETL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 2005755d073f7bb4950268e0fba827860491d1c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b14d05d686b26aaad7e6de24c9b445e0c4b1abf7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS: Como criar um pacote ETL
 
- > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Tutorial do SSIS: Criando um pacote ETL simples](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx).
+ > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Tutorial do SSIS: criar um pacote ETL simples](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx).
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] O SSIS é uma plataforma para a criação de soluções para integração de dados de alto desempenho, incluindo também pacotes ETL (extração, transformação e carregamento) para armazenamento de dados. O SSIS inclui ferramentas gráficas e assistentes para criação e depuração de pacotes; tarefas para execução de funções de fluxo de trabalho como, por exemplo, operações de FTP, execução de instruções SQL e envio de mensagens de email; fontes de dados e destinos para extração e carregamento de dados; transformações para limpeza, agregação, junção e cópia de dados; um serviço de gerenciamento, o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administração de execução e armazenamento de pacotes; e APIs (interfaces de programação de aplicativo) para programação do modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -52,7 +49,7 @@ O tutorial é destinado a usuários familiarizados com operações básicas de b
   
 Para que você possa usar esse tutorial, os seguintes componentes devem estar instalados no sistema:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]com o **AdventureWorksDW2012** banco de dados. Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Para baixar o banco de dados **AdventureWorksDW2012** , consulte [Adventure Works para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o banco de dados **AdventureWorksDW2012** . Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Para baixar o banco de dados **AdventureWorksDW2012** , consulte [Adventure Works para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
   
     > [!IMPORTANT]  
     > Quando você anexa o banco de dados (arquivo\*.mdf), o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pesquisará por padrão um arquivo .ldf. Você deve remover manualmente o arquivo .ldf antes de clicar em OK na caixa de diálogo **Anexar Bancos de Dados** .  
@@ -88,4 +85,3 @@ Nesta lição, você expandirá o pacote criado na lição 5 para usar os novos 
   
   
   
-

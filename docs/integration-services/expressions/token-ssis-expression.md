@@ -1,5 +1,5 @@
 ---
-title: "TOKEN (expressão SSIS) | Microsoft Docs"
+title: "TOKEN (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 691d717b5cb5545a86fe9fbefffd0f545f77f934
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="token--ssis-expression"></a>TOKEN (expressão SSIS)
   Retorna um token (subcadeia de caracteres) de uma cadeia de caracteres com base nos delimitadores especificados, que separam os tokens na cadeia de caracteres, e o número do token que denota qual token deve ser retornado.  
@@ -48,13 +46,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>Comentários  
- Essa função divide a cadeia de caracteres < character_expression > em um conjunto de tokens separados pelos delimitadores especificados na < delimiter_string > e, em seguida, retorna o enésimo token onde N é o número de ocorrência do token especificado pelo \<ocorrência > parâmetro. Consulte a seção Exemplos para obter os usos dessa função.  
+ Essa função divide a cadeia de caracteres <character_expression> em um conjunto de tokens separados pelos delimitadores especificados na <delimiter_string> e retorna o enésimo token, em que N é o número de ocorrência do token especificado pelo parâmetro \<occurrence>. Consulte a seção Exemplos para obter os usos dessa função.  
   
  Os comentários a seguir se aplicam à função TOKEN:  
   
 -   A cadeia de caracteres delimitadores pode conter um ou mais caracteres delimitadores.  
   
--   Se o valor de \<ocorrência > parâmetro for maior do que o número total de tokens na cadeia de caracteres, a função retornará NULL.  
+-   Se o valor do parâmetro \<occurrence> for mais alto que o número total de tokens na cadeia de caracteres, a função retornará NULL.  
   
 -   Delimitadores à esquerda são ignorados.  
   
@@ -108,7 +106,6 @@ TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

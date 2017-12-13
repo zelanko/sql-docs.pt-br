@@ -1,5 +1,5 @@
 ---
-title: "Opções de solicitação de perfil de chave de candidato (tarefa criação de perfil de dados) | Microsoft Docs"
+title: "Opções da solicitação do perfil Chave de Candidato (Tarefa Criação de Perfil de Dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c1ab8c13659f0bebb3b4da68789cfa9ebebadc7b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Chave de Candidato (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Chave de Candidato** selecionada no painel de solicitações. Um perfil Chave de Candidato informa se uma coluna ou conjunto de colunas é uma chave, ou uma chave aproximada, para a tabela selecionada. Esse perfil também pode ajudar a identificar problemas em seus dados, como valores em duplicata em uma possível coluna de chave.  
@@ -136,8 +133,7 @@ ms.lasthandoff: 08/03/2017
  Especifique o número máximo de violações de chave de candidato para informar na saída. O valor padrão dessa propriedade é 100. Esta opção é desabilitada quando **Exato** é selecionada como o **KeyStrengthThresholdSetting**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa &#40; de criação de perfil de dados Página geral &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulário de perfil rápido de tabela única &#40; &#41; da tarefa de criação de perfil de dados](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

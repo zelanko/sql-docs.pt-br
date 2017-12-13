@@ -2,9 +2,12 @@
 title: Especificar metapropriedades no OPENXML | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0d2eed1cb054c76e7f6e4d816ec98ce60c36f0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1e1d8a0a29b6d92aeab9c1c6e4afa01a2665add6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropriedades no OPENXML
-  Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, tal como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  
   
  Você pode mapear essas metapropriedades para as colunas do conjunto de linhas em uma instrução OPENXML usando o parâmetro *ColPattern* . As colunas conterão os valores das metapropriedades para as quais elas são mapeadas. Para obter mais informações sobre a sintaxe do OPENXML, consulte [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   

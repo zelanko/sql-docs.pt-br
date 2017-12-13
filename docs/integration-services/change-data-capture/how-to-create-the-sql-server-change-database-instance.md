@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db156f59fe1e77bd3abb50be85ecca1f693a0b73
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ab96ff3e8139846d4af88a0bddc9f6dc36e705e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>Como criar a instância de banco de dados de alteração do SQL Server
   Este procedimento descreve como usar o CDC Designer Console para criar instâncias CDC.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 08/03/2017
 5.  Insira as informações necessárias no assistente New Instance para criar a nova instância. Para obter informações sobre as informações necessárias para este assistente, consulte [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
   
   
-

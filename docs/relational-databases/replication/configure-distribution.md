@@ -2,9 +2,12 @@
 title: "Configurar a distribuição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d918c562b15d6b6ed75f3f87d5b43fcdac7a81aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2aa81e571c53a0271b1c795198f206735abb3f32
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-distribution"></a>Configurar a distribuição
-  O Distribuidor é um servidor que contém o banco de dados de distribuição, que armazena metadados e dados de histórico para todos os tipos de replicação e transações para replicação transacional. Para configurar a replicação, deve-se configurar um Distribuidor. Cada Publicador pode ser atribuído a uma única instância do Distribuidor, mas vários publicadores podem compartilhar um Distribuidor. O Distribuidor usa esses recursos adicionais no servidor onde fica localizado:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O Distribuidor é um servidor que contém o banco de dados de distribuição, que armazena metadados e dados de histórico para todos os tipos de replicação e transações para replicação transacional. Para configurar a replicação, deve-se configurar um Distribuidor. Cada Publicador pode ser atribuído a uma única instância do Distribuidor, mas vários publicadores podem compartilhar um Distribuidor. O Distribuidor usa esses recursos adicionais no servidor onde fica localizado:  
   
 -   Espaço em disco adicional, se os arquivos de instantâneo para a publicação forem armazenados no Distribuidor (o que geralmente acontece).  
   

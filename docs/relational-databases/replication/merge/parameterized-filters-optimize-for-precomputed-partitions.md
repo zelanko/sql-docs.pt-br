@@ -2,9 +2,12 @@
 title: "Otimizar o desempenho de filtro com parâmetros com partições pré-computadas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59067f9e47c7bff8a41326da8e095e2d8d9fe94a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7bb142518ea996d1344c71aed46e06645fb0d957
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros com parâmetros – Otimizar para partições pré-computadas
-  Partições pré-computadas são uma otimização de desempenho que pode ser usada com publicações de mesclagem filtradas. Partições pré-computadas também são um requisito para usar registros lógicos em publicações filtradas. Para obter mais informações sobre registros lógicos, consulte [Agrupar alterações em linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Partições pré-computadas são uma otimização de desempenho que pode ser usada com publicações de mesclagem filtradas. Partições pré-computadas também são um requisito para usar registros lógicos em publicações filtradas. Para obter mais informações sobre registros lógicos, consulte [Agrupar alterações em linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Quando um Assinante faz a sincronização com um Publicador, este deve avaliar os filtros do Assinante para determinar quais linhas pertencem àquele Assinante ou conjunto de dados. Esse processo de determinação de associação de partição de alterações no Publicador para cada Assinante recebendo um conjunto de dados filtrado é referido como *avaliação de partição*. Sem partições pré-computadas, a avaliação de partição deve ser executada para cada alteração feita em uma coluna filtrada no Publicador desde a última vez que o Agente de Mesclagem foi executado em um Assinante específico e esse processo tem de ser repetido para cada Assinante que sincroniza com o Publicador.  
   

@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-destination"></a>Destino ODBC
   O destino ODBC carrega dados em massa em tabelas de bancos de dados com suporte ODBC. O destino ODBC usa um gerenciador de conexões ODBC para se conectar à fonte de dados.  
@@ -70,11 +68,11 @@ ms.lasthandoff: 08/17/2017
   
  Para obter mais informações, consulte um dos tópicos a seguir.  
   
--   [Editor de destino ODBC &#40; Página Gerenciador de Conexão &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino ODBC &#40; Página mapeamentos &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Editor de Destinos ODBC &#40;Página Mapeamentos&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Editor de destino ODBC &#40; Página de saída de erro &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Editor do Destino ODBC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** contém as propriedades que podem ser definidas programaticamente.  
   
@@ -86,9 +84,9 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Carregar dados usando o destino ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [Carregar dados por meio do destino ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
--   [Propriedades personalizadas do destino ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
+-   [Propriedades personalizadas de destino ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
 ## <a name="odbc-destination-editor-connection-manager-page"></a>Editor do Destino ODBC (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destino ODBC** para selecionar o gerenciador de conexões para o destino. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados  
@@ -136,7 +134,7 @@ ms.lasthandoff: 08/17/2017
  A lista de colunas de destino disponíveis. Arraste e solte uma coluna de destino em uma coluna de entrada disponível para mapear as colunas.  
   
 #### <a name="input-column"></a>Coluna de Entrada  
- Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando  **\<ignorar >** para excluir colunas de saída.  
+ Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando **\<ignorar>** para excluir colunas da saída.  
   
 #### <a name="destination-column"></a>Coluna de Destino  
  Exiba todas as colunas de destino disponíveis, mapeadas e não mapeadas.  
@@ -189,4 +187,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>Redirecionar fluxo  
  A linha que está causando o erro ou o truncamento é direcionada para a saída do erro do destino ODBC. Para obter mais informações, consulte Destino ODBC.  
   
-

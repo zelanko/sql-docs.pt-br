@@ -3,8 +3,11 @@ title: Criar um novo diagrama de banco de dados (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbffc3ea565ac6ccebcb13a4b5977f825908b541
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9138d33302135de59e1d2e862f31cf16784ae60e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Criar um novo diagrama de banco de dados (Visual Database Tools)
-Você pode utilizar o Pesquisador de Objetos para criar novos diagramas de banco de dados. Os diagramas de banco de dados exibem graficamente a estrutura do banco de dados. Com os diagramas de banco de dados você pode criar e alterar tabelas, colunas, relações e chaves. Além disso, pode alterar índices e restrições.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode utilizar o Pesquisador de Objetos para criar novos diagramas de banco de dados. Os diagramas de banco de dados exibem graficamente a estrutura do banco de dados. Com os diagramas de banco de dados você pode criar e alterar tabelas, colunas, relações e chaves. Além disso, pode alterar índices e restrições.  
   
 ### <a name="to-create-a-new-database-diagram"></a>Para criar um novo diagrama de banco de dados  
   

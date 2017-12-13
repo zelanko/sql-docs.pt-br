@@ -1,10 +1,13 @@
 ---
 title: "Registrar um nome da entidade de serviço para conexões Kerberos | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec8294a92b9c6bb3da761b84a2bae702bd85dfdd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
+ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
-  Para usar a autenticação Kerberos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é preciso satisfazer estas duas condições:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para usar a autenticação Kerberos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é preciso atender a estas duas condições:  
   
 -   Os computadores cliente e servidor devem fazer parte do mesmo domínio do Windows ou de domínios confiáveis.  
   
@@ -36,9 +39,9 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Se o servidor não puder registrar automaticamente o SPN, será necessário registrá-lo manualmente. Veja [Registro manual de SPN](#Manual).  
   
- É possível verificar se uma conexão está usando Kerberos consultando a exibição de gerenciamento dinâmico sys.dm_exec_connections. Execute a consulta a seguir e verifique o valor da coluna auth_scheme, que será "KERBEROS" se Kerberos estiver habilitado.  
+É possível verificar se uma conexão está usando Kerberos consultando a exibição de gerenciamento dinâmico sys.dm_exec_connections. Execute a consulta a seguir e verifique o valor da coluna auth_scheme, que será "KERBEROS" se Kerberos estiver habilitado.  
   
-```  
+```t-sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -72,39 +75,40 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ##  <a name="Formats"></a> Formatos de SPN  
  Começando pelo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o formato de SPN é alterado para dar suporte à autenticação Kerberos em TCP/IP, pipes nomeados e memória compartilhada. Os formatos de SPN com suporte para instâncias padrão e nomeadas são os seguintes:  
   
- **Instância nomeada**  
+**Instância nomeada**  
   
--   *MSSQLSvc/FQDN*:[*port***|***instancename*], em que:  
+-   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]**, em que:  
   
-    -   *MSSQLSvc* é o serviço que está sendo registrado.  
+    -   **MSSQLSvc** é o serviço que está sendo registrado.  
   
-    -   *FQDN* é o nome de domínio totalmente qualificado do servidor.  
+    -   **\<FQDN>** é o nome de domínio totalmente qualificado do servidor.  
   
-    -   *port* é o número da porta de TCP.  
+    -   **\<port>** é o número da porta TCP.  
   
-    -   *instancename* é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    -   **\<instancename>** é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Instância padrão**  
+**Instância padrão**  
   
--   *MSSQLSvc/FQDN*:*port***|***MSSQLSvc/FQDN*, em que:  
+-   **MSSQLSvc/\<FQDN>:\<port>** | **MSSQLSvc/\<FQDN>**, em que:  
   
-    -   *MSSQLSvc* é o serviço que está sendo registrado.  
+    -   **MSSQLSvc** é o serviço que está sendo registrado.  
   
-    -   *FQDN* é o nome de domínio totalmente qualificado do servidor.  
+    -   **\<FQDN>** é o nome de domínio totalmente qualificado do servidor.  
   
-    -   *port* é o número da porta de TCP.  
+    -   **\<port>** é o número da porta TCP.  
   
- O formato de SPN novo não requer um número de porta. Isso significa que um servidor de várias portas ou um protocolo que não usa números de porta pode usar a autenticação Kerberos.  
-  
-> [!NOTE]  
->  No caso de uma conexão TCP/IP, na qual a porta TCP é incluída no SPN, é necessário que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilite o protocolo TCP a um usuário para que ele se conecte usando a autenticação Kerberos.  
-  
+    > [!NOTE]
+    > O formato de SPN novo não requer um número de porta. Isso significa que um servidor de várias portas ou um protocolo que não usa números de porta pode usar a autenticação Kerberos.  
+   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:port*|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado. *port* é um número de porta TCP.|  
-|MSSQLSvc/*fqdn*|O SPN padrão gerado pelo provedor para uma instância padrão quando um protocolo diferente de TCP é usado. *fqdn* é um nome de domínio totalmente qualificado.|  
-|MSSQLSvc/*fqdn/InstanceName*|O SPN padrão gerado pelo provedor para uma instância nomeada quando um protocolo diferente de TCP é usado. *InstanceName* é o nome de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-  
+|MSSQLSvc/\<FQDN>:<port>|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado. \<port> é um número da porta TCP.|  
+|MSSQLSvc/\<FQDN>|O SPN padrão gerado pelo provedor para uma instância padrão quando um protocolo diferente de TCP é usado. \<FQDN> é um nome de domínio totalmente qualificado.|  
+|MSSQLSvc/\<FQDN>:\<instancename>|O SPN padrão gerado pelo provedor para uma instância nomeada quando um protocolo diferente de TCP é usado. \<instancename> é o nome de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+
+> [!NOTE]  
+> No caso de uma conexão TCP/IP, na qual a porta TCP é incluída no SPN, é necessário que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilite o protocolo TCP a um usuário para que ele se conecte usando a autenticação Kerberos. 
+
 ##  <a name="Auto"></a> Registro automático de SPN  
  Quando uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] é iniciada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta registrar o SPN para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a instância é interrompida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta cancelar o SPN. Para uma conexão TCP/IP, o SPN é registrado no formato *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Tanto as instâncias nomeadas quanto as instâncias padrão são registradas como *MSSQLSvc*, dependendo do valor *\<tcpport>* para fazer a diferenciação entre as instâncias.  
   
@@ -113,44 +117,45 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Talvez seja necessária a intervenção manual para registrar ou cancelar o SPN se a conta do serviço não tiver as permissões necessárias para essas ações.  
   
 ##  <a name="Manual"></a> Registro manual de SPN  
- Para registrar um SPN manualmente, é necessário que o administrador use a ferramenta Setspn.exe fornecida com as Ferramentas de Suporte [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] da Microsoft. Para obter mais informações, veja o artigo da Base de Dados de Conhecimento sobre [Ferramentas de suporte do Windows Server 2003 Service Pack 1](http://support.microsoft.com/kb/892777) .  
+Para registrar um SPN manualmente, é necessário que o administrador use a ferramenta Setspn.exe fornecida com as Ferramentas de Suporte [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] da Microsoft. Para obter mais informações, veja o artigo da Base de Dados de Conhecimento sobre [Ferramentas de suporte do Windows Server 2003 Service Pack 1](http://support.microsoft.com/kb/892777) .  
   
- O Setspn.exe é uma ferramenta de linha de comando que permite ao usuário ler, modificar e excluir a propriedade de diretório SPN (Nome da Entidade de Serviço). Essa ferramenta também permite ao usuário exibir os SPNs atuais, redefinir SPNs padrão da conta e adicionar ou excluir SPNs complementares.  
+O Setspn.exe é uma ferramenta de linha de comando que permite ao usuário ler, modificar e excluir a propriedade de diretório SPN (Nome da Entidade de Serviço). Essa ferramenta também permite ao usuário exibir os SPNs atuais, redefinir SPNs padrão da conta e adicionar ou excluir SPNs complementares.  
   
- O exemplo a seguir ilustra a sintaxe usada para registrar manualmente um SPN para uma conexão TCP/IP.  
-  
-```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
-```  
-  
- **Observação** Se já houver um SPN, ele deverá ser excluído antes de registrá-lo. É possível fazer isso usando o comando `setspn` juntamente com a opção `-D` . Os exemplos a seguir ilustram como registrar manualmente um novo SPN com base em instância. Para uma instância padrão, use:  
+O seguinte exemplo ilustra a sintaxe usada para registrar manualmente um SPN para uma conexão TCP/IP usando uma conta de usuário de domínio:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 redmond\accountname  
 ```  
   
- Para uma instância nomeada, use:  
+> [!NOTE]
+> Se já houver um SPN, ele deverá ser excluído antes de ser registrado novamente. É possível fazer isso usando o comando `setspn` juntamente com a opção `-D` . Os exemplos a seguir ilustram como registrar manualmente um novo SPN com base em instância. Para uma instância padrão que usa uma conta de usuário de domínio, use:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname  
+```  
+  
+Para uma instância nomeada, use:  
+  
+```  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname  
 ```  
   
 ##  <a name="Client"></a> Conexões cliente  
  Há suporte para SPNs especificados pelo usuário nos drivers cliente. Entretanto, se um SPN não for fornecido, será gerado automaticamente com base no tipo de conexão cliente. Para uma conexão TCP, um SPN no formato *MSSQLSvc*/*FQDN*:[*port*] é usado tanto para instâncias nomeadas quanto para instâncias padrão.  
   
- Para pipes nomeados e conexões de memória compartilhada, um SPN no formato *MSSQLSvc*/*FQDN*:*instancename* é usado para uma instância nomeada e *MSSQLSvc*/*FQDN* é usado para a instância padrão.  
+Para pipes nomeados e conexões de memória compartilhada, um SPN no formato *MSSQLSvc/\<FQDN>:\<instancename>* é usado para uma instância nomeada e *MSSQLSvc/\<FQDN>* é usado para a instância padrão.  
   
  **Usando uma conta de serviço como um SPN**  
   
- Contas de serviço podem ser usadas como um SPN. Elas são especificadas pelo atributo de conexão para autenticação de Kerberos e têm os seguintes formatos:  
+Contas de serviço podem ser usadas como um SPN. Elas são especificadas pelo atributo de conexão para autenticação de Kerberos e têm os seguintes formatos:  
   
 -   **username@domain** ou **domain\username** para uma conta de usuário de domínio  
   
 -   **machine$@domain** ou **host\FQDN** de uma conta de domínio de computador, como Sistema Local ou SERVIÇOS DE REDE.  
   
- Para determinar o método de autenticação de uma conexão, execute a seguinte consulta.  
+Para determinar o método de autenticação de uma conexão, execute a seguinte consulta.  
   
-```tsql  
+```t-sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -167,7 +172,7 @@ WHERE session_id = @@SPID;
 |A pesquisa de SPN falha ou não faz o mapeamento para uma conta de domínio correta, conta virtual, MSA ou conta interna ou não é uma conta de domínio correta, conta virtual, MSA ou conta interna.|Conexões locais e remotas usam NTLM.|  
   
 > [!NOTE]  
->  "Correto" significa que a conta mapeada pelo SPN registrado é a conta na qual o serviço do SQL Server está em execução.  
+> "Correto" significa que a conta mapeada pelo SPN registrado é a conta na qual o serviço do SQL Server está em execução.  
   
 ##  <a name="Comments"></a> Comentários  
  A DAC (Conexão de Administrador Dedicada) usa um SPN com base no nome da instância. A autenticação Kerberos poderá ser usada com DAC se o SPN tiver sido registrado com êxito. Como alternativa, um usuário poderá especificar o nome de conta como um SPN.  

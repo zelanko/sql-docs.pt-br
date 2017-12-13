@@ -8,18 +8,16 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: d392ac49442ef0f04961908fff7acf553fa1aa57
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 16137e7b3fe1880592afa025f324e614332d87d3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Executar um pacote do SSIS com o PowerShell
 Este tutorial de início rápido demonstra como usar um script do PowerShell para se conectar a um servidor de banco de dados e executar um pacote do SSIS.
@@ -28,7 +26,7 @@ Este tutorial de início rápido demonstra como usar um script do PowerShell par
 Forneça os valores adequados para as variáveis na parte superior do script a seguir e, em seguida, execute o script para executar o pacote do SSIS.
 
 > [!NOTE]
-> O exemplo a seguir usa a autenticação do Windows. Para usar a autenticação do SQL Server, substitua o `Integrated Security=SSPI;` argumento com `User ID=<user name>;Password=<password>;`.
+> O exemplo a seguir usa a Autenticação do Windows. Para usar a autenticação do SQL Server, substitua o argumento `Integrated Security=SSPI;` com `User ID=<user name>;Password=<password>;`.
 
 ```powershell
 # Variables
@@ -70,10 +68,9 @@ Write-Host "Done."
 ```
 
 ## <a name="next-steps"></a>Próximas etapas
-- Considere a possibilidade de outras maneiras de executar um pacote.
+- Considere outras maneiras de executar um pacote.
     - [Executar um pacote do SSIS com o SSMS](./ssis-quickstart-run-ssms.md)
-    - [Executar um pacote do SSIS com Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Executar um pacote do SSIS com Transact-SQL (VS código)](ssis-quickstart-run-tsql-vscode.md)
+    - [Executar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Executar um pacote do SSIS no prompt de comando](./ssis-quickstart-run-cmdline.md)
-    - [Executar um pacote do SSIS com c#](./ssis-quickstart-run-dotnet.md) 
-
+    - [Executar um pacote do SSIS com o C#](./ssis-quickstart-run-dotnet.md) 

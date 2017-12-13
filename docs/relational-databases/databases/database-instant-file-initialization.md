@@ -1,10 +1,13 @@
 ---
 title: "Inicialização imediata de arquivo do banco de dados | Microsoft Docs"
 ms.custom: 
-ms.date: 08/15/2017
-ms.prod: sql-server-2016
+ms.date: 11/17/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,36 +22,36 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5d1ed7065cdbf710888c6b455fc1a059ecaebbfe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c1e3fb032916c235cff2dfaf9b0bf8a88d4dec82
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-instant-file-initialization"></a>Inicialização imediata de arquivo do banco de dados
-  Arquivos de dados e de log são inicializados para substituir todos os dados existentes que foram deixados no disco por arquivos excluídos anteriormente. Primeiro, os arquivos de dados e de log são inicializados ao serem completados com zeros quando você executa uma das seguintes operações:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Arquivos de dados e de log são inicializados para substituir todos os dados existentes que foram deixados no disco por arquivos excluídos anteriormente. Primeiro, os arquivos de dados e de log são inicializados ao serem completados com zeros quando você executa uma das seguintes operações:  
   
--   Criar um banco de dados.  
+- Criar um banco de dados.  
   
--   Adicionar dados ou arquivos de log a um banco de dados existente.  
+- Adicionar dados ou arquivos de log a um banco de dados existente.  
   
--   Aumentar o tamanho de um arquivo existente (inclusive operações de aumento automático).  
+- Aumentar o tamanho de um arquivo existente (inclusive operações de aumento automático).  
   
--   Restaurar um banco de dados ou grupo de arquivos.  
+- Restaurar um banco de dados ou grupo de arquivos.  
   
- A inicialização dos arquivos faz com que essas operações demorem mais. Porém, quando os dados são gravados nos arquivos pela primeira vez, o sistema operacional não precisa completar os arquivos com zeros.  
+A inicialização dos arquivos faz com que essas operações demorem mais. Porém, quando os dados são gravados nos arquivos pela primeira vez, o sistema operacional não precisa completar os arquivos com zeros.  
   
 ## <a name="instant-file-initialization"></a>Inicialização imediata de arquivo  
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os arquivos de dados podem ser inicializados de imediato. A inicialização instantânea de arquivo permite execução rápida das operações de arquivo mencionadas anteriormente. A inicialização imediata de um arquivo recupera espaço em disco sem encher esse espaço com zeros. Em vez disso, o conteúdo do disco é substituído à medida que novos dados são gravados nos arquivos. Arquivos de log não podem ser inicializados de imediato.  
+Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os arquivos de dados podem ser inicializados de imediato. A inicialização instantânea de arquivo permite execução rápida das operações de arquivo mencionadas anteriormente. A inicialização imediata de um arquivo recupera espaço em disco sem encher esse espaço com zeros. Em vez disso, o conteúdo do disco é substituído à medida que novos dados são gravados nos arquivos. Arquivos de log não podem ser inicializados de imediato.  
   
 > [!NOTE]  
 >  A Inicialização Instantânea de Arquivo está disponível apenas no [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] ou [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ou em versões posteriores.  
   
- A inicialização imediata de arquivos estará disponível somente se a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) tiver recebido SE_MANAGE_VOLUME_NAME. Os membros do grupo administrador do Windows têm esse direito e podem atribuí-lo a outros usuários adicionando-os à política de segurança **Executar tarefas de manutenção de volume** . Para obter mais informações sobre como atribuir direitos de usuário, consulte a documentação do Windows.  
+A inicialização imediata de arquivos estará disponível somente se a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) tiver recebido SE_MANAGE_VOLUME_NAME. Os membros do grupo administrador do Windows têm esse direito e podem atribuí-lo a outros usuários adicionando-os à política de segurança **Executar tarefas de manutenção de volume** . Para obter mais informações sobre como atribuir direitos de usuário, consulte a documentação do Windows.  
   
-Algumas condições, como TDE, podem impedir a Inicialização Instantânea de Arquivo.  
+O uso de alguns recursos como o [TDE](../../relational-databases/security/encryption/transparent-data-encryption.md) pode impedir a Inicialização Instantânea de Arquivo.  
   
- Para conceder a permissão `Perform volume maintenance tasks` a uma conta:  
+Para conceder a permissão `Perform volume maintenance tasks` a uma conta:  
   
 1.  No computador em que o arquivo de backup será criado, abra o aplicativo **Política de Segurança Local** (`secpol.msc`).  
   
@@ -65,9 +68,9 @@ Algumas condições, como TDE, podem impedir a Inicialização Instantânea de A
   
  Se houver preocupação com a possível divulgação do conteúdo excluído, você deverá executar uma das seguintes ações ou ambas:  
   
--   Sempre se certifique de que todos os arquivos de dados desassociados e arquivos de backup tenham DACL restritivas.  
+- Sempre se certifique de que todos os arquivos de dados desassociados e arquivos de backup tenham DACL restritivas.  
   
--   Desabilite a inicialização de arquivo imediata para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revogando o direito SE_MANAGE_VOLUME_NAME da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+- Desabilite a inicialização de arquivo imediata para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revogando o direito SE_MANAGE_VOLUME_NAME da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Desabilitar a inicialização de arquivos imediata afeta somente os arquivos que forem criados ou tiverem seu tamanho aumentado após ser revogado o direito do usuário.  

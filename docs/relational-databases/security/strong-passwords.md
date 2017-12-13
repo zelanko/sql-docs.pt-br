@@ -2,9 +2,12 @@
 title: Senhas fortes | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 caps.latest.revision: "30"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32a3c3b28c7db5155bf75cac5aed8229694c1486
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c5b783d4899479523d0e54fda7620ad0145b642
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="strong-passwords"></a>Senhas fortes
-  As senhas podem ser o link mais fraco em uma implantação de segurança de servidor. Você sempre deveria tomar muito cuidado ao selecionar uma senha. Uma senha segura tem as seguintes características:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As senhas podem ser o link mais fraco em uma implantação de segurança de servidor. Você sempre deveria tomar muito cuidado ao selecionar uma senha. Uma senha segura tem as seguintes características:  
   
 -   Tem pelo menos 8 caracteres de extensão.  
   

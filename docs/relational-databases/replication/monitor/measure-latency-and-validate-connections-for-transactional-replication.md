@@ -2,9 +2,12 @@
 title: "Medir a latência e validar as conexões para a replicação transacional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ba3c3a7fa30209c1777bcc7ddd5b1754924fa9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f3e0a79a2e7b35f921a642f09a12290bd194efe7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
-  Este tópico descreve como medir a latência e validar conexões para replicação transacional no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o Replication Monitor, [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou RMO (Replication Management Objects). A replicação transacional fornece o recurso do token de rastreamento, que proporciona um meio adequado para medir a latência em topologias de replicação transacional e validar as conexões entre o Publicador, o Distribuidor e os Assinantes. Um token (uma quantidade pequena de dados) é gravado no log de transações do banco de dados de publicação, marcado como se fosse uma transação replicada comum e enviado pelo sistema, permitindo um cálculo de:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como medir a latência e validar conexões para replicação transacional no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o Replication Monitor, o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou RMO (Replication Management Objects). A replicação transacional fornece o recurso do token de rastreamento, que proporciona um meio adequado para medir a latência em topologias de replicação transacional e validar as conexões entre o Publicador, o Distribuidor e os Assinantes. Um token (uma quantidade pequena de dados) é gravado no log de transações do banco de dados de publicação, marcado como se fosse uma transação replicada comum e enviado pelo sistema, permitindo um cálculo de:  
   
 -   O tempo decorrido entre a confirmação de uma transação no Publicador e o comando correspondente inserido no banco de dados de distribuição no Distribuidor.  
   

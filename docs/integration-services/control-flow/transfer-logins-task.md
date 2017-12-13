@@ -1,5 +1,5 @@
 ---
-title: Tarefa transferir logons | Microsoft Docs
+title: Tarefa Transferir Logons | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
 - sql13.dts.designer.transferloginstask.general.f1
 - sql13.dts.designer.transferloginstask.logins.f1
-helpviewer_keywords:
-- Transfer Logins task [Integration Services]
+helpviewer_keywords: Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 2027b3ea760568ced8a41b72a7a2c3cf225de94f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 93192dbbae84bb86732ca8fd0a5de3bbd320aac7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-logins-task"></a>Tarefa Transferir Logons
   A tarefa Transferir Logons transfere um ou mais logons entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -110,10 +107,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de origem.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um Gerenciador de conexão do SMO na lista ou clique em  **\<nova conexão... >** para criar uma nova conexão para o servidor de destino.  
+ Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
   
  **LoginsToTransfer**  
  Selecione os logons [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para copiar da fonte para o servidor de destino. As opções desta propriedade estão listadas na seguinte tabela:  
@@ -144,4 +141,3 @@ ms.lasthandoff: 08/11/2017
  **CopySids**  
  Selecione se os identificadores de segurança associados aos logons devem ser copiados para o servidor de destino. Será necessário definir**CopySids** para **True** se a tarefa Transferir Logons for usada junto com a tarefa Transferir Banco de Dados. Caso contrário, os logons copiados não serão reconhecidos pelo banco de dados transferido.  
   
-

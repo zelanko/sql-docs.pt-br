@@ -1,5 +1,5 @@
 ---
-title: "SQUARE (expressão SSIS) | Microsoft Docs"
+title: "SQUARE (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 18be83801a35d9b3512d85f69c91256147fb81a9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 28c05c3bf5e16d2d53348575a09f2cd275d79ffe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="square-ssis-expression"></a>SQUARE (Expressão SSIS)
   Retorna o quadrado de uma expressão numérica.  
@@ -73,7 +71,6 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 >  Em expressões, nomes de variável incluem sempre o prefixo @.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

@@ -2,11 +2,12 @@
 title: Instalar o SQL Server com o armazenamento de compartilhamento de arquivo SMB | Microsoft Docs
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ca3034c2c08ac3315e9cbda4e0f76c9d817d634d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar o SQL Server com o armazenamento de compartilhamento de arquivo SMB
-A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os bancos de dados do sistema (Mestre, Modelo, MSDB e TempDB) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos SMB (protocolo SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] em diante, os bancos de dados do sistema (Mestre, Modelo, MSDB e TempDB) e os bancos de dados de usuário do [!INCLUDE[ssDE](../../includes/ssde-md.md)] podem ser instalados com um servidor de arquivos de protocolo SMB como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  O fluxo de arquivos não tem suporte em um compartilhamento de arquivos SMB.  

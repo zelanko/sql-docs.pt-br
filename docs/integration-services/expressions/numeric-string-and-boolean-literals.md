@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 149e9cb31f5e7cecfba9d0c221c1cbddb2b76cfa
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 428bdd08e35be0ebc2a3c069396f67118144b07f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="numeric-string-and-boolean-literals"></a>Literais boolianos, cadeia de caracteres e numéricos
+# <a name="numeric-string-and-boolean-literals"></a>Literais boolianos, de cadeia de caracteres e numéricos
  Expressões podem incluir literais numérico, de cadeia de caracteres e boolianos. O avaliador de expressão aceita uma variedade de literais numéricos como inteiros, decimais e constantes de ponto flutuante. O avaliador de expressão também dá suporte a sufixos longos e flutuantes, que especificam como o avaliador de expressão trata os valores, e uma notação científica em literais numéricos.  
   
 ## <a name="numeric-literals"></a>Literais numéricos  
@@ -123,4 +121,3 @@ ms.lasthandoff: 09/26/2017
 > **OBSERVAÇÃO:** Em uma expressão, um literal booliano deve ser delimitado por espaços.  
   
   
-

@@ -3,8 +3,11 @@ title: "Personalizar o volume de informações exibidas em diagramas | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4650285a2b6070bf057f114235550591f557a85c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b4e05f53f40655a5bf269db9022abd9e6e40eb09
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizar o volume de informações exibidas em diagramas (Visual Database Tools)
-Quando você adiciona uma tabela a um diagrama de banco de dados, ela aparece com um número fixo de propriedades de exibição. Você pode escolher em um menu de variações o volume de informações a ser exibido ou pode criar um conjunto de propriedades personalizado.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando você adiciona uma tabela a um diagrama de banco de dados, ela aparece com um número fixo de propriedades de exibição. Você pode escolher em um menu de variações o volume de informações a ser exibido ou pode criar um conjunto de propriedades personalizado.  
   
 As opções são:  
   

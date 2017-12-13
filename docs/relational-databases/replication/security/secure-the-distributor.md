@@ -2,9 +2,12 @@
 title: Proteger o Distribuidor | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cfaf414f203ac4d7f3788b11bb6c8038a45570d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1d4f2511d108c2e461f3ba5ec3e02e43f92ae8d9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="secure-the-distributor"></a>Proteger o distribuidor
-  Os agentes de replicação a seguir se conectam ao Distribuidor: o Agente de Leitor de Log, Agente de Instantâneo, Agente de Leitor de Fila, Agente de Distribuição e Agente de Mesclagem. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos necessários e de proteger também o armazenamento de todas as senhas:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os agentes de replicação a seguir se conectam ao Distribuidor: o Agente de Leitor de Log, Agente de Instantâneo, Queue Reader Agent, Agente de Distribuição e Agente de Mesclagem. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos necessários e de proteger também o armazenamento de todas as senhas:  
   
 -   Para obter mais informações sobre como gerenciar logons e senhas, consulte [Gerenciar logons e senhas na Replicação](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   

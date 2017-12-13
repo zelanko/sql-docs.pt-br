@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_execution_property_override_value | Microsoft Docs
+title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20f2c882a78f5e60931b0152d5877898e1972d0a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8e561e94e3dee033941c5defade34d28b1ac89c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +38,20 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @execution_id =] *execution_id*  
+ [ @execution_id = ] *execution_id*  
  O identificador exclusivo da instância de execução. O *execution_id* é **bigint**.  
   
- [ @property_path =] *property_path*  
- O caminho para a propriedade no pacote. O *property_path* é **nvarchar (4000)**.  
+ [ @property_path = ] *property_path*  
+ O caminho para a propriedade no pacote. O *property_path* é **nvarchar(4000)**.  
   
- [ @property_value =] *property_value*  
- O valor de substituição a ser atribuído à propriedade. O *property_value* é **nvarchar (max)**.  
+ [ @property_value = ] *property_value*  
+ O valor de substituição a ser atribuído à propriedade. O *property_value* é **nvarchar(max)**.  
   
- [ @sensitive =] *confidenciais*  
- Quando o valor for 1, a propriedade será confidencial e criptografada quando for armazenada. Quando o valor for 0, a propriedade não será confidencial e o valor será armazenado em texto não criptografado. O *confidenciais* argumento é **bit**.  
+ [ @sensitive = ] *sensitive*  
+ Quando o valor for 1, a propriedade será confidencial e criptografada quando for armazenada. Quando o valor for 0, a propriedade não será confidencial e o valor será armazenado em texto não criptografado. O argumento *sensitive* é **bit**.  
   
 ## <a name="remarks"></a>Comentários  
- Esse procedimento executa a mesma função que o **substituições de propriedade** seção o **avançado** guia do **executar pacote** caixa de diálogo. O caminho para a propriedade é derivado de **caminho de pacote** propriedade da tarefa de pacote.  
+ Este procedimento executa a mesma função que a seção **Substituições de propriedade** na guia **Avançado** da caixa de diálogo **Executar Pacote**. O caminho para a propriedade é derivado da propriedade **Caminho do Pacote** da tarefa de pacote.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
@@ -76,4 +74,3 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [catalog.set_execution_parameter_value &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   
-

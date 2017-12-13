@@ -3,8 +3,11 @@ title: "Opções (página Ambiente – Ajuda – Online) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e48c89f058af257e0f375e4493d3066804a7e73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cbb96fdd292aabaf655ab69d9a8f44928705f2e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---help---online-page"></a>Opções (Ambiente – Ajuda – página Online)
-A caixa de diálogo **Opções** permite especificar as fontes de Ajuda a serem usadas para as pesquisas do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , incluindo a ajuda de F1. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** , selecione **Ajuda**e, então, clique em **Online**. Se a página **Online** não aparecer na lista, marque a caixa de seleção **Exibir todas as configurações** , na caixa de diálogo **Opções** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A caixa de diálogo **Opções** permite especificar as fontes de Ajuda a serem usadas para as pesquisas do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], incluindo a ajuda de F1. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** , selecione **Ajuda**e, então, clique em **Online**. Se a página **Online** não aparecer na lista, marque a caixa de seleção **Exibir todas as configurações** , na caixa de diálogo **Opções** .  
   
 **Ao carregar o conteúdo da Ajuda**  
 Define a ordem em que as fontes de Ajuda são usadas para ajuda de F1 e especifica quais fontes de Ajuda serão usadas.  

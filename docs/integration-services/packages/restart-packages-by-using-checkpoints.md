@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c12ab9b92aa37b0e60f699fbec07e13c97cdbddc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar pacotes por meio de pontos de verificação
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode reinicializar pacotes que falharam a partir do ponto de falha, em vez de executar novamente todo o pacote. Se um pacote estiver configurado para usar pontos de verificação, serão gravadas informações sobre a execução do pacote em um arquivo de ponto de verificação. Quando o pacote com falha é executado novamente, o arquivo do ponto de verificação é usado para reiniciar o pacote a partir do ponto de falha. Se o pacote for executado com êxito, o arquivo de ponto de verificação é excluído e recriado na próxima vez que o pacote for executado.  
@@ -123,4 +121,3 @@ ms.lasthandoff: 08/03/2017
 -   Artigo técnico, [Reinicialização automática de pacotes de SSIS depois de Failover ou Falha](http://go.microsoft.com/fwlink/?LinkId=200407), em social.technet.microsoft.com (a página pode estar em inglês)  
   
 -   ARtigo de suporte, [Pontos de verificação do SSIS não são honrados para itens de contêiner Loop For ou Loop Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), em support.microsoft.com.  
-

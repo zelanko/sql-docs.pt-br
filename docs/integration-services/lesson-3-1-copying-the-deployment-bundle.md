@@ -1,5 +1,5 @@
 ---
-title: "Etapa 1: Copiando o pacote de implantação | Microsoft Docs"
+title: "Etapa 1: copiar o pacote de implantação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af7cbc058ac548c4fb86d70518ca2366f6fffd57
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fd36b536be89f5a808aba7fdb6f6f423f0322599
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-1---copying-the-deployment-bundle"></a>Lição 3-1: copiando o pacote de implantação
+# <a name="lesson-3-1---copying-the-deployment-bundle"></a>Lição 3-1 – copiar o pacote de implantação
 Nesta tarefa, você copiará o pacote de implantação no computador de destino.  
   
 O modo mais fácil de copiar o pacote de implantação no computador de destino é primeiro criar um compartilhamento público no computador de destino, mapear uma unidade para o compartilhamento público e, depois, copiar o pacote de implantação no compartilhamento. Se você não souber criar e configurar pastas públicas ou unidades de mapa, consulte a documentação do Windows.  
@@ -47,4 +44,3 @@ O modo mais fácil de copiar o pacote de implantação no computador de destino 
   
   
   
-

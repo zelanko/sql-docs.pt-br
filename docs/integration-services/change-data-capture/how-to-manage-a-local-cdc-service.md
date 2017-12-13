@@ -1,5 +1,5 @@
 ---
-title: "Como gerenciar um serviço CDC Local | Microsoft Docs"
+title: "Como gerenciar um serviço CDC local | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40678ff92e4513354db09cca42d48ed0302369ac
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: bb46bc956bfa95d58ca12ecb9278824734720e71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Como gerenciar um serviço CDC local
   Este procedimento descreve como usar o Console de Configuração do Serviço CDC para gerenciar os serviços CDC específicos.  
@@ -65,7 +63,6 @@ ms.lasthandoff: 08/03/2017
          Você também pode clicar com o botão direito do mouse no serviço CDC em que deseja editar as propriedades e selecionar **Propriedades**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciar um serviço Oracle CDC](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   
-

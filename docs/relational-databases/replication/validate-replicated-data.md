@@ -2,9 +2,12 @@
 title: Validar os dados replicados | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 257cb487ad0609a334a17604485a1941d4382373
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9834f7c0d65ab05a7dda5f68b05438760abef21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
-  A replicação transacional e de mesclagem permitem validar os dados no Assinante que correspondem aos dados no Publicador. A validação pode ser executada para assinaturas específicas ou para todas as assinaturas em uma publicação. Especifique um dos seguintes tipos de validação e o Distribution Agent ou o Merge Agent validarão os dados na próxima vez que executarem:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A replicação transacional e de mesclagem permitem validar os dados no Assinante que correspondem aos dados no Publicador. A validação pode ser executada para assinaturas específicas ou para todas as assinaturas em uma publicação. Especifique um dos seguintes tipos de validação e o Distribution Agent ou o Merge Agent validarão os dados na próxima vez que executarem:  
   
 -   Somente número de linhas. Faz a validação se a tabela no Assinante tem o mesmo número de linhas que a tabela no Publicador, mas não faz a validação da correspondência de conteúdo das linhas. A validação de número de linhas fornece uma abordagem superficial à validação que pode alertá-lo sobre problemas com seus dados.  
   

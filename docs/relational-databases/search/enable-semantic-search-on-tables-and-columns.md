@@ -2,9 +2,12 @@
 title: "Habilitar a pesquisa semântica em tabelas e colunas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: caca4cf61fe71392178f3243928888cd2ba51225
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ac05bddeb5b8ec7ddb153dc4eff000dc9747d4e0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar a pesquisa semântica em tabelas e colunas
-  Descreve como habilitar ou desabilitar a indexação semântica estatística em colunas selecionadas que contêm documentos ou texto.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Descreve como habilitar ou desabilitar a indexação semântica estatística em colunas selecionadas que contêm documentos ou texto.  
   
  A pesquisa semântica estatística usa os índices que são criados pela Pesquisa de Texto Completo e cria índices adicionais. Como resultado dessa dependência na pesquisa de texto completo, você cria um novo índice semântico ao definir um novo índice de texto completo ou ao alterar um índice de texto completo existente. Você pode criar um novo índice semântico usando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , ou usando o Assistente para Indexação de Texto Completo e outras caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conforme descrito neste tópico.  
   

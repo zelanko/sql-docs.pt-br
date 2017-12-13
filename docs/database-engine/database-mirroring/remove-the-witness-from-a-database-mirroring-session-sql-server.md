@@ -2,9 +2,12 @@
 title: "Remover a testemunha de uma sessão de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 543e8cc308723422f22a7fc572f9a829de45a482
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 21d31eaa4084dffbb4ef3110f10165709b9c4000
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Remover a testemunha de uma sessão de espelhamento de banco de dados (SQL Server)
-  Este tópico descreve como remover uma testemunha de uma sessão de espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Em qualquer momento durante uma sessão de espelhamento de banco de dados, o proprietário do banco de dados pode desativar a testemunha da sessão de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como remover uma testemunha de uma sessão de espelhamento de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Em qualquer momento durante uma sessão de espelhamento de banco de dados, o proprietário do banco de dados pode desativar a testemunha da sessão de espelhamento de banco de dados.  
   
  **Neste tópico**  
   

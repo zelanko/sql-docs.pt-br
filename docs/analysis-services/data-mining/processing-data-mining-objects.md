@@ -2,12 +2,12 @@
 title: "Processar objetos de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06346679653136a2efa0fc228405e3282078b279
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b25fae3fd5c17b93cc17ce2a3f7ea6d6059aa0fe
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-data-mining-objects"></a>Processando objetos de mineração de dados
-  Um objeto de mineração de dados é apenas um contêiner vazio até que seja processado. O*processamento* de um modelo de mineração de dados também é chamado de *treinamento*.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um objeto de mineração de dados é apenas um contêiner vazio até que ela foi processada. O*processamento* de um modelo de mineração de dados também é chamado de *treinamento*.  
   
  **Processando estruturas de mineração:** uma estrutura de mineração obtém dados de uma fonte de dados externa, conforme definido pelas associações de coluna e pelos metadados de uso, e lê esses dados. Esses dados são totalmente lidos e, depois, analisados para se extrair diversas estatísticas. O Analysis Services armazena uma representação compacta de dados, que é adequada para a análise de algoritmos de mineração de dados, em um cache local. Você pode tanto manter esse cache com excluí-lo depois do processamento de seus modelos. Por padrão, o cache é armazenado. Para obter mais informações, consulte [Processar uma estrutura de mineração](../../analysis-services/data-mining/process-a-mining-structure.md).  
   

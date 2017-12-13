@@ -3,8 +3,11 @@ title: "Definir o fluxo de êxito ou falha das etapas do trabalho | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e292b73ccee64aa9f573f9497a949ecc5e523e14
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6a9911ebe3fac4afa8de48451aa52e3597a30370
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
-Ao criar trabalhos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, você pode especificar a ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] em caso de falha durante a execução do trabalho. Determine a ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] em caso de êxito ou falha de cada etapa de trabalho. Use o procedimento a seguir para configurar a lógica do fluxo de ações da etapa de trabalho, usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ao criar trabalhos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, você pode especificar a ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] em caso de falha durante a execução do trabalho. Determine a ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] em caso de êxito ou falha de cada etapa de trabalho. Use o procedimento a seguir para configurar a lógica do fluxo de ações da etapa de trabalho, usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 -   **Antes de começar:**  
   

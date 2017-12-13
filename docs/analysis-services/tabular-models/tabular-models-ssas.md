@@ -2,12 +2,12 @@
 title: Modelos de tabela (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1d770b114a708301f884de76d7c6a4cc39227195
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 569cd3ff914f7b758fb1cfaf1a8c631e8c3d9c4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-modeling-ssas"></a>Modelagem tabular (SSAS)
-  Os modelos Tabulares são bancos de dados do Analysis Services que são executados na memória ou no modo DirectQuery, acessando os dados diretamente a partir de fontes de dados relacionais de back-end.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Modelos tabulares são bancos de dados do Analysis Services que são executados na memória ou no modo DirectQuery, acessando os dados diretamente em fontes de dados relacionais de back-end.  
   
  Na memória é o padrão. Usando algoritmos de compactação de última geração e processador de consulta multi-threaded, o mecanismo de análise na memória oferece acesso rápido a objetos e dados modelo tabular relatando aplicativos cliente como o Microsoft Excel e o Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   

@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25f7da499f4ee62a6cdc8093c92d8d9002897edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados
   Quando você configura a fonte OLE DB para usar consultas parametrizadas, pode mapear os parâmetros para variáveis.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Clique em **Parâmetros**.  
   
-8.  No **definir parâmetros de consulta** caixa de diálogo caixa, mapeie cada parâmetro no **parâmetros** lista em uma variável no **variáveis** lista ou crie uma nova variável clicando  **\<nova variável >**. Clique em **OK**.  
+8.  Na caixa de diálogo **Definir Parâmetros de Consulta**, mapeie cada parâmetro na lista **Parâmetros** para uma variável na lista **Variáveis** ou crie uma nova variável clicando em **\<Nova variável>**. Clique em **OK**.  
   
     > [!NOTE]  
     >  Apenas as variáveis do sistema e as variáveis definidas pelo usuário que estão no escopo do pacote, um contêiner pai como Loop Foreach ou a tarefa de Fluxo de Dados que contém o componente de fluxo de dados, estão disponíveis para mapeamento. A variável deve ter um tipo de dados que seja compatível com a coluna na cláusula WHERE, para a qual o parâmetro é designado.  
@@ -62,7 +60,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Origem de OLE DB](../../integration-services/data-flow/ole-db-source.md)   
- [Transformação de pesquisa](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Transformação Pesquisa](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
-

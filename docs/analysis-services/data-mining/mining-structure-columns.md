@@ -2,12 +2,12 @@
 title: "Colunas de estrutura de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11ccfc309d772d3b26a5a0e72a77c094e2624282
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 47ad74a70236b156db230ed229d2022cd6e057b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-structure-columns"></a>Colunas da estrutura de mineração
-  Você define as colunas em uma estrutura de mineração quando cria a estrutura de mineração, escolhendo colunas de dados externos e especificando como os dados serão usados na modelagem. Portanto, colunas de estrutura de mineração são mais do que cópias de dados de uma fonte de dados: elas definem como os dados da fonte serão usados pelo modelo de mineração. Você pode atribuir propriedades que determinam como os dados são discretizados, propriedades que descrevem como os valores de dados são distribuídos  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode definir as colunas em uma estrutura de mineração quando você cria a estrutura de mineração, escolhendo colunas de dados externos e especificando como os dados a serem usadas para modelagem. Portanto, colunas de estrutura de mineração são mais do que cópias de dados de uma fonte de dados: elas definem como os dados da fonte serão usados pelo modelo de mineração. Você pode atribuir propriedades que determinam como os dados são discretizados, propriedades que descrevem como os valores de dados são distribuídos  
   
  As colunas da estrutura de mineração são projetadas para serem flexíveis e extensíveis, porque cada algoritmo utilizado para criar um modelo de mineração pode utilizar diferentes colunas da estrutura para interpretar os dados. Em vez de ter um conjunto de dados para cada modelo, você pode usar uma única estrutura de mineração e usar as colunas dela para personalizar os dados para cada modelo.  
   

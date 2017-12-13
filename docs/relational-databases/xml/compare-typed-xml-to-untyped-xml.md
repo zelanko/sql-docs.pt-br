@@ -2,9 +2,12 @@
 title: "Comparar XML tipado com XML não tipado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 80233d9013231c07cb1f9236f357f2ca30622995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML digitado com XML não digitado
-  É possível criar variáveis, parâmetros e colunas do tipo **xml** . Opcionalmente, é possível associar uma coleção de esquemas XML a uma variável, parâmetro ou coluna de tipo **xml** . Nesse caso, a instância do tipo de dados **xml** é chamada *com tipo*. Caso contrário, a instância XML é chamada *sem-tipo*.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] É possível criar variáveis, parâmetros e colunas do tipo **xml**. Opcionalmente, é possível associar uma coleção de esquemas XML a uma variável, parâmetro ou coluna de tipo **xml** . Nesse caso, a instância do tipo de dados **xml** é chamada *com tipo*. Caso contrário, a instância XML é chamada *sem-tipo*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML bem formado e o tipo de dados xml  
  O tipo de dados **xml** implementa o tipo de dados **xml** padrão ISO. Portanto ele pode armazenar documentos bem formados em XML versão 1.0 e também os chamados fragmentos de conteúdo XML com nós de texto e um número arbitrário de elementos de nível superior em uma coluna XML sem-tipo. Os sistema verifica se os dados estão bem formados, se não requerem que a coluna esteja associada a esquemas XML e rejeita dados que não são bem formados no sentido estendido. Isso também é verdadeiro para variáveis e parâmetros XML sem-tipo.  

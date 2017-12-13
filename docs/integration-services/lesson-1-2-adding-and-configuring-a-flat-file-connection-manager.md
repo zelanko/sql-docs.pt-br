@@ -1,5 +1,5 @@
 ---
-title: "Etapa 2: Adicionando e configurando um Gerenciador de Conexão de arquivo simples | Microsoft Docs"
+title: "Etapa 2: adicionar e configurar um gerenciador de conexões de arquivo simples | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0b3ebf32ebaa03f1dbb1aa1c52234b56fa8de16
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lição 1-2-adicionando e configurando um Gerenciador de Conexão de arquivo simples
+# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lição 1-2 – adicionar e configurar um gerenciador de conexões de arquivo simples
 Nesta tarefa, você adiciona um gerenciador de conexões de Arquivos Simples ao pacote que acabou de criar. Um gerenciador de conexões de Arquivos Simples habilita um pacote para extrair dados de um arquivo simples. Com o gerenciador de conexões de Arquivos Simples, você pode especificar o nome e o local do arquivo, a localidade e a página de códigos e o formato do arquivo, incluindo os delimitadores de coluna, a serem aplicados quando o pacote extrai os dados do arquivo simples. Além disso, é possível especificar manualmente o tipo de dados das colunas individuais ou usar a caixa de diálogo **Sugerir Tipos de Coluna** para mapear automaticamente as colunas de dados extraídos para os tipos de dados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 Você deve criar um novo gerenciador de conexões de Arquivos Simples para cada formato de arquivo com os quais você trabalha. Como este tutorial extrai dados de vários arquivos simples que apresentam exatamente o mesmo formato de dados, será preciso adicionar e configurar apenas um gerenciador de conexões de Arquivos Simples para seu pacote.  
@@ -117,4 +114,3 @@ O gerenciador de conexões de Arquivos Simples fornece informações de localida
   
   
   
-

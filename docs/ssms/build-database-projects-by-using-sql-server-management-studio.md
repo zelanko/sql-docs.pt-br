@@ -3,8 +3,11 @@ title: Construir projetos de banco de dados usando o SQL Server Management Studi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 826f23ca1ccf0445465e5549f2bb149899a891c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 00e88a87885a2c7d1e6aec7f82525b8cf540cc50
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Construir projetos de banco de dados usando o SQL Server Management Studio
-Um projeto de script de banco de dados é um conjunto organizado de scripts, informações de conexão e modelos que são todos associados a um banco de dados ou a uma parte de um banco de dados. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] oferece o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] para administrar e criar bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] no contexto de um projeto de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] inclui os designers, editores, guias e assistentes para ajudar os usuários a desenvolver, implantar e manter bancos de dados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um projeto de script de banco de dados é um conjunto organizado de scripts, informações de conexão e modelos, todos associados a um banco de dados ou a uma parte de um banco de dados. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] oferece o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] para administrar e criar bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] no contexto de um projeto de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] inclui os designers, editores, guias e assistentes para ajudar os usuários a desenvolver, implantar e manter bancos de dados.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] é um pacote de ferramentas administrativas para gerenciar os componentes que pertencem ao [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Esse ambiente integrado permite aos usuários executar uma variedade de tarefas, como backup de dados, edição de consultas e automação de funções comuns dentro de uma única interface.  

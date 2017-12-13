@@ -2,9 +2,12 @@
 title: Mapeamento de tipo de dados para Publicadores Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d692a102043f78c7c62674843bed4228445ba7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8c754c1796f76236b5efeda3f53bb785c8daf76f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapeamento de tipo de dados para Publicadores Oracle
-  Os tipos de dados Oracle e os tipos de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nem sempre correspondem exatamente. Onde possível, o tipo de dados correspondente é selecionado automaticamente ao publicar uma tabela de Oracle. Em casos em que o mapeamento de um único tipo de dados não é claro, mapeamentos alternativos de tipo de dados são fornecidos. Para obter informações sobre como selecionar mapeamentos alternativos, consulte "Especificando Mapeamentos Alternativos de Tipos de Dados”, mais adiante neste tópico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os tipos de dados Oracle e os tipos de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nem sempre correspondem exatamente. Onde possível, o tipo de dados correspondente é selecionado automaticamente ao publicar uma tabela de Oracle. Em casos em que o mapeamento de um único tipo de dados não é claro, mapeamentos alternativos de tipo de dados são fornecidos. Para obter informações sobre como selecionar mapeamentos alternativos, consulte "Especificando Mapeamentos Alternativos de Tipos de Dados”, mais adiante neste tópico.  
   
  A tabela a seguir mostra como os tipos de dados são mapeados por padrão entre o Oracle e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando os dados são movidos de um Publicador Oracle para o Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A coluna de Alternativas indica se mapeamentos alternativos estão disponíveis.  
   

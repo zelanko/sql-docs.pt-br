@@ -1,5 +1,5 @@
 ---
-title: "Desenvolvendo um componente de transformação personalizado com saídas assíncronas | Microsoft Docs"
+title: "Desenvolver um componente de transformação personalizado com saídas assíncronas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,28 +26,27 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: de3e9e37d125e8c098fc4fd3fe8036b3c634f228
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fbd542b091316f11c17af387e0a8f735704f5e54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Desenvolvendo um componente de transformação personalizado com saídas assíncronas
-  Você usa um componente com saídas assíncronas quando uma transformação só consegue liberar linhas depois de o componente receber todas as suas linhas de saída, ou quando a transformação não gera exatamente uma linha de saída para cada linha recebida como entrada. Por exemplo, a transformação Agregação só consegue calcular uma soma em linhas depois de ler todas as linhas. Em contraste, você pode usar um componente com saídas síncronas a qualquer momento quando modifica cada linha de dados percorrida por ele. Você pode modificar os dados de cada linha estabelecida, ou criar uma ou mais colunas novas, cada qual com um valor para cada linha de entrada. Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Noções básicas sobre síncrona e transformações assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
+  Você usa um componente com saídas assíncronas quando uma transformação só consegue liberar linhas depois de o componente receber todas as suas linhas de saída, ou quando a transformação não gera exatamente uma linha de saída para cada linha recebida como entrada. Por exemplo, a transformação Agregação só consegue calcular uma soma em linhas depois de ler todas as linhas. Em contraste, você pode usar um componente com saídas síncronas a qualquer momento quando modifica cada linha de dados percorrida por ele. Você pode modificar os dados de cada linha estabelecida, ou criar uma ou mais colunas novas, cada qual com um valor para cada linha de entrada. Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Componentes de transformação com saídas assíncronas são exclusivos pois agem como componentes de destino e de origem. Esse tipo de componente recebe linhas de componentes upstream e adiciona linhas que são consumidas por componentes downstream. Nenhum outro componente de fluxo de dados executa essas duas operações.  
   
  As colunas de componentes upstream que estão disponíveis para um componente com saídas síncronas estão automaticamente disponíveis para componentes downstream. Portanto, um componente com saídas síncronas não precisa definir colunas de saída para fornecer colunas e linhas ao próximo componente. Por outro lado, componentes com saídas assíncronas precisam definir colunas de saída e fornecer linhas a componentes downstream. Portanto, um componente com saídas assíncronas precisa executar mais tarefas durante o tempo de design e execução, e o desenvolvedor de componentes precisa implementar mais códigos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém várias transformações com saídas assíncronas. Por exemplo, a transformação Classificação precisa de todas as linhas para poder classificá-las, e consegue isso através de saídas assíncronas. Depois de receber todas as linhas, ela as classifica e as adiciona à sua saída.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém várias transformações com saídas assíncronas. Por exemplo, a transformação Classificação precisa de todas as linhas para poder classificá-las, e consegue isso através de saídas assíncronas. Depois de receber todas as linhas, ela as classifica e as adiciona à sua saída.  
   
- Essa seção explica detalhadamente como desenvolver transformações com saídas assíncronas. Para obter mais informações sobre o desenvolvimento de componentes de origem, consulte [desenvolvendo um componente de origem personalizado](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
+ Essa seção explica detalhadamente como desenvolver transformações com saídas assíncronas. Para obter mais informações sobre o desenvolvimento de componentes de origem, consulte [Desenvolver um componente de origem personalizado](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
 ## <a name="design-time"></a>Tempo de design  
   
@@ -329,9 +326,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Desenvolvendo um componente de transformação personalizado com saídas síncronas](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
- [Noções básicas sobre transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
- [Criando uma transformação assíncrona com o componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
+ [Desenvolver um componente de transformação personalizado com saídas síncronas](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
+ [Compreender as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
+ [Criar uma transformação assíncrona com o componente de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

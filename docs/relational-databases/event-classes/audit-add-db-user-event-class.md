@@ -2,9 +2,12 @@
 title: Classe de evento Audit Add DB User | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c7de35de5031e404f7ac4a2ea580988bec1d981
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 25d15b25de3c25223cb2a49a62f442afc51b5603
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-add-db-user-event-class"></a>Classe de evento Audit Add DB User
-  A classe de evento **Audit Add DB User** ocorre sempre que um logon é adicionado ou removido como um usuário de banco de dados para um banco de dados. Essa classe de evento é usada para os procedimentos armazenados **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**e **sp_dropuser** .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Audit Add DB User** ocorre sempre que um logon é adicionado ou removido como um usuário de banco de dados para um banco de dados. Essa classe de evento é usada para os procedimentos armazenados **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**e **sp_dropuser** .  
   
  Essa classe de evento poderá ser removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É recomendável que, em vez disso, você use a classe de evento **Audit Database Principal Management** .  
   

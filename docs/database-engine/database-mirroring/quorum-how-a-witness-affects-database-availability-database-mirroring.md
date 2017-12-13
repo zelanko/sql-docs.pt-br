@@ -2,9 +2,12 @@
 title: 'Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d3842e229c3b8070c715dd7e215944a50711e787
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dae91182bc6cbfc48f06ebfa8b079969a088e86b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados)
-  Sempre que uma testemunha é definida para uma sessão de espelhamento de banco de dados, é necessário usar o *quorum* . Quorum é a relação criada quando duas ou mais instâncias do servidor na sessão de espelhamento de banco de dados são conectadas entre si. Normalmente, o quorum envolve três instâncias do servidor interconectadas. Quando uma testemunha é definida, o quorum é exigido para tornar o banco de dados disponível. Desenvolvido para o modo de segurança alta com failover automático, o quorum verifica o banco de dados pertence a somente um parceiro por vez.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sempre que uma testemunha é definida para uma sessão de espelhamento de banco de dados, é necessário usar o *quorum*. Quorum é a relação criada quando duas ou mais instâncias do servidor na sessão de espelhamento de banco de dados são conectadas entre si. Normalmente, o quorum envolve três instâncias do servidor interconectadas. Quando uma testemunha é definida, o quorum é exigido para tornar o banco de dados disponível. Desenvolvido para o modo de segurança alta com failover automático, o quorum verifica o banco de dados pertence a somente um parceiro por vez.  
   
  Se uma determinada instância do servidor for desconectada da sessão de espelhamento, aquela instância perderá o quorum. Se nenhuma instância do servidor estiver conectada, a sessão perderá quorum e o banco de dados ficará indisponível. Há três tipos possíveis de quorum:  
   

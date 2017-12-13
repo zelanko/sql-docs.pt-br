@@ -2,9 +2,12 @@
 title: "Espelhamento e replicação de banco de dados (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ff0a3a8086a9bd54aedcc8e10ef5254a28ada307
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3c54a32f33bb5c74218f597c04451bd4d194a980
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Espelhamento e replicação de banco de dados (SQL Server)
-  O espelhamento do banco de dados pode ser usado junto com a replicação para aprimorar a disponibilidade ao banco de dados de publicação. O espelhamento do banco de dados compreende duas cópias de um único banco de dados que geralmente reside em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados principal. As atualizações realizadas pelos clientes no banco de dados principal são aplicadas à outra cópia do banco de dados, conhecida como banco de dados espelho. O espelhamento envolve a aplicação do log de transações de cada inserção, atualização ou exclusão efetuada no banco de dados principal, para o banco de dados espelho.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O espelhamento do banco de dados pode ser usado junto com a replicação para aprimorar a disponibilidade ao banco de dados de publicação. O espelhamento do banco de dados compreende duas cópias de um único banco de dados que geralmente reside em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados principal. As atualizações realizadas pelos clientes no banco de dados principal são aplicadas à outra cópia do banco de dados, conhecida como banco de dados espelho. O espelhamento envolve a aplicação do log de transações de cada inserção, atualização ou exclusão efetuada no banco de dados principal, para o banco de dados espelho.  
   
  O failover de replicação para um espelho tem o suporte total para os bancos de dados de publicação, com suporte limitado para bancos de dados de assinatura. O espelhamento de banco de dados não tem suporte para bancos de dados de distribuição. Para obter informações sobre como recuperar um banco de dados de distribuição ou banco de dados de assinatura sem precisar reconfigurar a replicação, veja [Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md). Para obter informações sobre o espelhamento do banco de dados assinante, consulte  
   

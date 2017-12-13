@@ -2,12 +2,12 @@
 title: Suporte para propriedades XMLA (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64b2e13193dc3742f23d78473a34667bbf0fa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e29ed3613253db0f93580717f126dbc53a37c108
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>Elemento PropertyList - suporte para propriedades XMLA
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oferece suporte a propriedades listadas na tabela a seguir. Usar estas propriedades listadas no [propriedades](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) elemento o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) e [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) métodos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oferece suporte a propriedades listadas na tabela a seguir. Usar estas propriedades listadas no [propriedades](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) elemento o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) e [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) métodos.  
   
 |Nome|Description|Tipo|Valores|  
 |----------|-----------------|----------|------------|  

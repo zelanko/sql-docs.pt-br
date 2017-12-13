@@ -2,9 +2,12 @@
 title: "Backups do log de transações (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 22d43525383511ac5af79b9b356c280478c79d28
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 472cbfe4f302e349a7acf182e804756be599de35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backups de log de transações (SQL Server)
-  Este tópico é relevante apenas para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estejam usando modelos de recuperação completa ou bulk-logged. Este tópico descreve o backup do log de transações de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico é relevante apenas para bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estejam usando modelos de recuperação completa ou bulk-logged. Este tópico descreve o backup do log de transações de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Você deve ter pelo menos criado um backup completo antes de criar qualquer backup de log. Depois disso, o backup do log de transações pode ser feito a qualquer momento, exceto durante outro backup de log. 
  

@@ -3,8 +3,11 @@ title: "Consultas de parâmetros (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e27bce5dd7beddbe1ed41881c311be47aaff4c78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0a076e12d307e39188ca4d462fc1f65221066e8f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Consultas de parâmetros (Visual Database Tools)
-Em alguns casos, talvez você queira criar uma consulta que possa ser utilizada muitas vezes, mas com um valor diferente a cada vez. Por exemplo, pode ser que você execute com frequência uma consulta para localizar todos os `title_ids` escritos por um autor. Você pode executar a mesma consulta para cada solicitação, exceto se a ID ou o nome do autor forem diferentes.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Em alguns casos, talvez você queira criar uma consulta que possa ser utilizada muitas vezes, mas com um valor diferente a cada vez. Por exemplo, pode ser que você execute com frequência uma consulta para localizar todos os `title_ids` escritos por um autor. Você pode executar a mesma consulta para cada solicitação, exceto se a ID ou o nome do autor forem diferentes.  
   
 Você utilizará parâmetros na consulta para criar uma consulta que possa ter valores diferentes a cada momento. Um parâmetro é um espaço reservado para um valor fornecido quando a consulta é executada. Uma instrução SQL com um parâmetro pode se parecer com a seguinte, em que "?" representa o parâmetro da ID do autor:  
   

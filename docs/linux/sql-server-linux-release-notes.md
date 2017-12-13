@@ -4,7 +4,7 @@ description: "Este tópico contém as notas de versão e recursos com suporte pa
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 11/28/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 
@@ -178,7 +178,7 @@ As seções a seguir descrevem problemas conhecidos com a versão de disponibili
 
 - Ao restaurar um banco de dados cujo backup foi feito no SQL Server no Windows, você deve usar o **WITH MOVE** cláusula na instrução Transact-SQL.
 
-- Não há suporte para transações distribuídas exigir que o serviço Coordenador de transações distribuídas da Microsoft no SQL Server em execução no Linux. SQL Server para SQL Server, há suporte para transações distribuídas.
+- Não há suporte para transações distribuídas exigir que o serviço Coordenador de transações distribuídas da Microsoft no SQL Server em execução no Linux. SQL Server para SQL Server, servidores vinculados têm suporte, a menos que eles envolvem o DTC. Para obter mais informações, consulte [não há suporte para transações distribuídas exigir que o serviço Coordenador de transações distribuídas da Microsoft no SQL Server em execução no Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
 
 - Certos algoritmos (conjuntos de codificação) para segurança de camada de transporte (TLS) não funcionam corretamente com o SQL Server no Linux. Isso resulta em falhas de conexão ao tentar se conectar ao SQL Server, bem como problemas para estabelecer conexões entre réplicas em grupos de alta disponibilidade.
 

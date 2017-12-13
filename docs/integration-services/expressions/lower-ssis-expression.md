@@ -1,5 +1,5 @@
 ---
-title: "LOWER (expressão SSIS) | Microsoft Docs"
+title: "LOWER (Expressão SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d8887035d26ba829dae2153e4e9261836ada70d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7dae07861849917d59935aeef20ef91f8d65408e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lower-ssis-expression"></a>LOWER (Expressão SSIS)
   Retorna uma expressão character depois de converter caracteres maiúsculos em minúsculos.  
@@ -72,8 +70,7 @@ LOWER(@CityName)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [SUPERIOR &#40; Expressão do SSIS &#41;](../../integration-services/expressions/upper-ssis-expression.md)   
- [Funções &#40; Expressão do SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [UPPER &#40;Expressão do SSIS&#41;](../../integration-services/expressions/upper-ssis-expression.md)   
+ [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

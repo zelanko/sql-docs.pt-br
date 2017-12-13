@@ -2,9 +2,12 @@
 title: Classe de evento Audit Add Role | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99f91cb628e60b2646b39091f4ac53cd8d4c9a21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9b4cbc6c52d893a90251ef785f878efccf11e36b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-add-role-event-class"></a>Classe de evento Audit Add Role
-  A classe de evento **Função de Adição de Auditoria** ocorre quando uma função de banco de dados é adicionada ou removida de um banco de dados. Esta classe de evento é usada pelos procedimentos armazenados **sp_addrole** e **sp_droprole**.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] A classe de evento **Audit Add Role** ocorre quando uma função de banco de dados é adicionada ou removida de um banco de dados. Esta classe de evento é usada pelos procedimentos armazenados **sp_addrole** e **sp_droprole** .  
   
  Esta classe de evento pode ser removida de uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É recomendável que, em vez disso, você use a classe de evento **Audit Database Principal Management**.  
   

@@ -2,9 +2,12 @@
 title: Pesquisar propriedades de documento com listas de propriedades de pesquisa | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9d409de5e77c8cb684cb74d821bb9b7d6a45eef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: df8aadeeec0588b9ddd851daa97d4f31d493f228
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
-  Anteriormente, o conteúdo das propriedades de documento não podia ser diferenciado do conteúdo do corpo do documento. Essa limitação restringia as consultas de texto completo a pesquisas genéricas em documentos inteiros. No entanto, agora você pode configurar um índice de texto completo para dar suporte à pesquisa com escopo de propriedade, como Author e Title, para tipos de documento com suporte em uma coluna de dados binários **varbinary**, **varbinary(max)** (incluindo **FILESTREAM**) ou **image** . Esse formulário de pesquisa é conhecido como *pesquisa de propriedade*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Anteriormente, o conteúdo das propriedades de documento não podia ser diferenciado do conteúdo do corpo do documento. Essa limitação restringia as consultas de texto completo a pesquisas genéricas em documentos inteiros. No entanto, agora você pode configurar um índice de texto completo para dar suporte à pesquisa com escopo de propriedade, como Author e Title, para tipos de documento com suporte em uma coluna de dados binários **varbinary**, **varbinary(max)** (incluindo **FILESTREAM**) ou **image** . Esse formulário de pesquisa é conhecido como *pesquisa de propriedade*.  
   
  O [filtro](../../relational-databases/search/configure-and-manage-filters-for-search.md) associado (IFilter) determina se a pesquisa de propriedade é possível em um tipo de documento específico. Em alguns tipos de documento, o IFilter associado extrai algumas ou todas as propriedades definidas para esse tipo de documento, bem como o conteúdo do corpo do documento. É possível configurar um índice de texto completo para oferecer suporte à pesquisa de propriedade somente em propriedades que são extraídas por um IFilter durante a indexação de texto completo. Entre os IFilters que extraem várias propriedades de documento estão os IFilters para tipos de documento do Microsoft Office (como .docx, .xlsx e .pptx). Por outro lado, o IFilter de XML não emite propriedades.  
   

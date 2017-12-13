@@ -1,5 +1,5 @@
 ---
-title: Catalog. start_execution (banco de dados SSISDB) | Microsoft Docs
+title: catalog.start_execution (Banco de dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (Banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +38,14 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  [@execution_id =] *execution_id*  
  O identificador exclusivo da instância de execução. O *execution_id* é **bigint**.
  
- [@retry_count =] *contagem_novas_tentativas*  
- A contagem de repetição se a execução falhará. Ele entra em vigor somente se a execução estiver em expansão. Esse parâmetro é opcional. Se não for especificado, seu valor é definido como 0. O *contagem_de_novas_tentativas* é **int**.
+ [@retry_count =] *retry_count*  
+ A contagem de repetições se a execução falhar. Ele entra em vigor somente se a execução estiver no Scale Out. Esse parâmetro é opcional. Se o valor não for especificado, ele será definido como 0. O *retry_count* é **int**.
   
 ## <a name="remarks"></a>Comentários  
- Uma execução é usada para especificar os valores de parâmetro que é usado por um pacote durante uma única instância de execução do pacote. Depois que uma instância de execução tiver sido criada e antes que ela tenha sido iniciada, o projeto correspondente deve ser reimplantado. Nesse caso, a instância de execução faz referência a um projeto que está desatualizado. Essa referência inválida faz com que o procedimento armazenado falha.  
+ Uma execução é usada para especificar os valores de parâmetro que são usados por um pacote durante uma única instância de execução do pacote. Depois que uma instância de execução tiver sido criada e antes que ela tenha sido iniciada, o projeto correspondente deve ser reimplantado. Nesse caso, a instância de execução faz referência a um projeto que está desatualizado. Essa referência inválida faz com que o procedimento armazenado falhe.  
   
 > [!NOTE]  
->  As execuções podem ser iniciadas apenas uma vez. Para iniciar uma instância de execução, ele deve estar no estado criado (um valor de `1` no **status** coluna o [Catalog. Operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) exibição).  
+>  As execuções podem ser iniciadas apenas uma vez. Para iniciar uma instância de execução, ela deve estar no estado criado (um valor de `1` na coluna **status** da exibição [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir chama catalog.create_execution para criar uma instância de execução para o pacote Child1.dtsx. Project1 do Integration Services contém o pacote. O exemplo chama catalog.set_execution_parameter_value para definir valores para os parâmetros Parameter1, Parameter2 e LOGGING_LEVEL. O exemplo chama catalog.start_execution para iniciar uma instância de execução.  
@@ -77,9 +75,9 @@ GO
   
 -   Permissões READ e MODIFY na instância de execução, permissões READ e EXECUTE no projeto, e se aplicável, permissões READ no ambiente referenciado  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor  
+-   Associação à função de servidor **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erros e avisos  
  A lista a seguir descreve algumas condições que podem gerar um erro ou um aviso:  
@@ -97,4 +95,3 @@ GO
 -   A versão do projeto associada à instância de execução está desatualizada; somente a versão mais recente de um projeto pode ser executada  
   
   
-

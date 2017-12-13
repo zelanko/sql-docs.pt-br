@@ -1,5 +1,5 @@
 ---
-title: Tarefa sistema de arquivos | Microsoft Docs
+title: Tarefa do Sistema de Arquivos | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
 - sql13.dts.designer.filesystemtask.general.f1
-helpviewer_keywords:
-- File System task [Integration Services]
+helpviewer_keywords: File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 63fb21cae5f8df981f243035fc7b34e53fa4d0bd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a72870b1591218161de2253c65bdb6f290941481
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="file-system-task"></a>Tarefa Sistema de Arquivos
   A tarefa Sistema de Arquivos executa operações em arquivos e diretórios no sistema de arquivos. Por exemplo, ao usar a tarefa Sistema de Arquivos, um pacote pode criar, mover ou excluir diretórios e arquivos. Você também pode usar a tarefa Sistema de Arquivos para definir atributos em arquivos e diretórios. Por exemplo, a tarefa Sistema de Arquivos pode tornar os arquivos em ocultos ou somente leitura.  
@@ -148,13 +145,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- Selecione o nome da variável na lista ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Selecione o nome da variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -162,13 +159,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- Selecione o nome da variável na lista ou clique em \< **nova variável...** > para criar uma nova variável.  
+ Selecione o nome da variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Adicionar Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -196,4 +193,3 @@ ms.lasthandoff: 08/11/2017
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
   
   
-

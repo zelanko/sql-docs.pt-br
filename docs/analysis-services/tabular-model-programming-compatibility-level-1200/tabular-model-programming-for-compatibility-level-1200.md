@@ -2,12 +2,12 @@
 title: "Programação de modelo de tabela para o nível de compatibilidade 1200 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2a2b814f4944c0e135c345d8f78970a1d08c8918
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5c7a0c3c69a8d4c834cf6a44cd3e588faed2593f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Tabela de modelo de programação para 1200 de nível de compatibilidade e superior
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Começando com o nível de compatibilidade 1200, metadados de tabela é usado para descrever as construções de modelo, substituindo históricos metadados multidimensionais como descritores de objetos de modelo de tabela. Metadados de tabelas, colunas e relações são tabela, coluna e relação, em vez dos equivalentes Multidimensional (dimensão e atributo).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Começando com o nível de compatibilidade 1200, metadados de tabela é usado para descrever as construções de modelo, substituindo históricos metadados multidimensionais como descritores de objetos de modelo de tabela. Metadados de tabelas, colunas e relações são tabela, coluna e relação, em vez dos equivalentes Multidimensional (dimensão e atributo).  
   
 Você pode criar novos modelos no nível de compatibilidade 1200 ou superior usando as APIs de AnalysisServices, a versão mais recente de SQL Server Data Tools (SSDT), ou alterando o **CompatibilityLevel** de uma tabela existente modelo para atualizá-lo (feita também no SSDT). Isso associa o modelo para versões mais recentes do servidor, ferramentas e interfaces de programação.   
   

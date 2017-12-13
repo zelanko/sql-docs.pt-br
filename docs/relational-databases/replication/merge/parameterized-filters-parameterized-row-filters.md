@@ -2,9 +2,12 @@
 title: "Filtros de linha com parâmetros | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 859646732d7add898319c11193aedebb77c7239a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros com parâmetros – Filtros de linha com parâmetros
-  Os filtros de linha com parâmetros permitem que diferentes partições de dados sejam enviadas a diferentes Assinantes sem a necessidade de criar múltiplas publicações (os filtros com parâmetros foram referidos como filtros dinâmicos em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Uma partição é um subconjunto das linhas de uma tabela; dependendo das configurações escolhidas ao criar um filtro de linha com parâmetros, cada linha de uma tabela publicada pode pertencer a uma partição somente (o que produz partições que não se sobrepõem) ou a duas ou mais partições (o que produzem partições que se sobrepõem).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os filtros de linha com parâmetros permitem que diferentes partições de dados sejam enviadas a diferentes Assinantes sem a necessidade de criar múltiplas publicações (os filtros com parâmetros foram referidos como filtros dinâmicos em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Uma partição é um subconjunto das linhas de uma tabela; dependendo das configurações escolhidas ao criar um filtro de linha com parâmetros, cada linha de uma tabela publicada pode pertencer a uma partição somente (o que produz partições que não se sobrepõem) ou a duas ou mais partições (o que produzem partições que se sobrepõem).  
   
  Partições que não se sobrepõem podem ser compartilhadas entre assinaturas ou podem ser restringidas de modo que só uma assinatura receba uma determinada partição. As configurações que controlam comportamento de partição são descritas em "Usando opções de filtragem apropriadas", mais adiante neste tópico. Usando essas configurações você pode personalizar a filtragem com parâmetros de acordo com o aplicativo e os requisitos de desempenho. Em geral, partições que se sobrepõem permitem maior flexibilidade e partições que não se sobrepõem replicadas a uma única assinatura proporcionam melhor desempenho.  
   

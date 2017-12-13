@@ -2,12 +2,12 @@
 title: "Dimensões (Analysis Services - dados multidimensionais) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffb3b3a3ef069be26ff6d3812d52ff4d18a7dc9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9f876ad9e6b7627b22322604d406a189b6c03834
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensões (Analysis Services – Dados Multidimensionais)
-  Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], dimensões são um componente fundamental dos cubos. As dimensões organizam dados com relação a uma área de interesse, como clientes, lojas ou funcionários, para usuários. As dimensões no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contêm atributos que correspondem às colunas nas tabelas de dimensões. Esses atributos aparecem como hierarquias de atributo e podem ser organizados em hierarquias definidas pelo usuário, ou podem ser definidos como hierarquias pai-filho com base em colunas na tabela de dimensões subjacente. As hierarquias são usadas para organizar medidas contidas em um cubo. Os tópicos a seguir fornecem uma visão geral de dimensões, atributos e hierarquias.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], dimensões são um componente fundamental dos cubos. As dimensões organizam dados com relação a uma área de interesse, como clientes, lojas ou funcionários, para usuários. As dimensões no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contêm atributos que correspondem às colunas nas tabelas de dimensões. Esses atributos aparecem como hierarquias de atributo e podem ser organizados em hierarquias definidas pelo usuário, ou podem ser definidos como hierarquias pai-filho com base em colunas na tabela de dimensões subjacente. As hierarquias são usadas para organizar medidas contidas em um cubo. Os tópicos a seguir fornecem uma visão geral de dimensões, atributos e hierarquias.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

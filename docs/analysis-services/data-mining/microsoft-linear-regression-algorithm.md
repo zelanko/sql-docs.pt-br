@@ -2,12 +2,12 @@
 title: "Algoritmo de regressão Linear da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 455b2434c80491024b4e04ae5a807b3b2aa28b1c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 07588cbc2548028565db1f0d6da706d48bf0540b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Regressão Linear da Microsoft
-  O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] que o ajuda a calcular uma relação linear entre uma variável dependente e uma independente e, depois, a usar aquela relação para previsão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] uma variação do algoritmo Regressão Linear é a [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de árvores de decisão que ajuda a calcular uma relação linear entre uma variável dependente e independente e, em seguida, usar esse relação para previsão.  
   
  A relação assume a forma de uma equação para uma linha que melhor represente uma série de dados. Por exemplo, a linha no diagrama a seguir é a melhor representação linear possível dos dados.  
   

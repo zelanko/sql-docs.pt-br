@@ -2,12 +2,12 @@
 title: Elemento aliases (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0de2641b217b3d8d3db1756d5eb9bef0da2d3ee3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 52ee8733df1e58533a80d7a7c9f9313938bc4ae8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="aliases-element-assl"></a>Elemento Aliases (ASSL)
-  Contém a coleção de [Alias](../../../analysis-services/scripting/properties/alias-element-assl.md) elementos associados a um [conta](../../../analysis-services/scripting/objects/account-element-assl.md) elemento  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contém a coleção de [Alias](../../../analysis-services/scripting/properties/alias-element-assl.md) elementos associados a um [conta](../../../analysis-services/scripting/objects/account-element-assl.md) elemento  
   
 ## <a name="syntax"></a>Sintaxe  
   

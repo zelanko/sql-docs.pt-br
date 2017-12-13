@@ -2,9 +2,12 @@
 title: Criar um servidor central de gerenciamento e um grupo de servidores | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 712440c9f508da793757ba2f4097eef46426df91
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 03053923b6cb9ec0515131f45b1bd36a9aa50854
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Criar um servidor de gerenciamento central e grupo de servidor
-  Este tópico descreve como designar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como servidor central de gerenciamento no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os servidores de gerenciamento central armazenam uma lista de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é organizada em um ou mais grupos de servidores de gerenciamento Central. As ações executadas com um grupo de servidores de gerenciamento central afetarão todos os servidores do grupo. Isso inclui a conexão a servidores usando o Pesquisador de Objetos e a execução de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e de políticas de Gerenciamento Baseado em Política em vários servidores ao mesmo tempo.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico descreve como designar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como servidor central de gerenciamento no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os servidores de gerenciamento central armazenam uma lista de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é organizada em um ou mais grupos de servidores de gerenciamento Central. As ações executadas com um grupo de servidores de gerenciamento central afetarão todos os servidores do grupo. Isso inclui a conexão a servidores usando o Pesquisador de Objetos e a execução de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e de políticas de Gerenciamento Baseado em Política em vários servidores ao mesmo tempo.  
   
 > [!NOTE]  
 >  As versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] não podem ser designadas como um servidor de gerenciamento central.  

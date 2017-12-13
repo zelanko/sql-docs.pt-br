@@ -2,9 +2,12 @@
 title: "Consultar dados espaciais do vizinho mais próximo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d2cb970b15ae4d310f5fb835da67886a0200108a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc20a0bfe85f4e4f1a507554ec6e34e98274d624
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar dados espaciais de vizinho mais próximo
-  Uma consulta comum usada com dados espaciais é a consulta de Vizinho Mais Próximo. As consultas de Vizinho Mais Próximo são usadas para localizar os objetos espaciais mais próximos a um objeto espacial específico. Por exemplo, um localizador de lojas para um site geralmente deve localizar os locais de loja mais próximos ao local de um cliente.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Uma consulta comum usada com os dados espaciais é a consulta de Vizinho Mais Próximo. As consultas de Vizinho Mais Próximo são usadas para localizar os objetos espaciais mais próximos a um objeto espacial específico. Por exemplo, um localizador de lojas para um site geralmente deve localizar os locais de loja mais próximos ao local de um cliente.  
   
  Uma consulta de Vizinho Mais Próximo pode ser escrita em uma variedade de formatos de consulta válidos, mas, para que a consulta de Vizinho Mais Próximo use um índice espacial, a sintaxe a seguir deve ser usada.  
   

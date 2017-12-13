@@ -1,5 +1,5 @@
 ---
-title: Tarefa executar pacote | Microsoft Docs
+title: Tarefa Executar Pacote | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/11/2017
  A tarefa Executar Pacote pode executar pacotes filho contidos no mesmo projeto que contém o pacote pai. Para selecionar um pacote filho do projeto, defina a propriedade **ReferenceType** como **Referência de Projeto**e defina a propriedade **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  A opção **ReferenceType** é somente leitura e será definida como **Referência Externa** se o projeto que contém o pacote não tiver sido convertido no modelo de implantação de projeto. [Implantar o Integration Services (SSIS) projetos e pacotes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  A opção **ReferenceType** é somente leitura e será definida como **Referência Externa** se o projeto que contém o pacote não tiver sido convertido no modelo de implantação de projeto. [Implante projetos e pacotes do SSIS (Integration Services)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  A tarefa Executar Pacote pode executar pacotes armazenados no banco de dados msdb do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e pacotes armazenados no sistema de arquivos. A tarefa usa um gerenciador de conexões OLE DB para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um gerenciador de conexões de Arquivo para acessar o sistema de arquivos. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) e [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
@@ -162,7 +160,7 @@ ms.lasthandoff: 08/11/2017
  Selecione **Referência do Projeto** para pacotes filho que estão no projeto. Selecione **Referência Externa** para pacotes filho localizados fora do pacote  
   
 > [!NOTE]  
->  A opção **ReferenceType** é somente leitura e será definida como **Referência Externa** se o projeto que contém o pacote não tiver sido convertido no modelo de implantação de projeto. [Implantar o Integration Services (SSIS) projetos e pacotes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  A opção **ReferenceType** é somente leitura e será definida como **Referência Externa** se o projeto que contém o pacote não tiver sido convertido no modelo de implantação de projeto. [Implante projetos e pacotes do SSIS (Integration Services)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Senha**  
  Se o pacote filho for protegido por senha, forneça a senha para o pacote filho ou clique no botão de reticências (...) e crie uma nova senha para o pacote filho.  
@@ -195,16 +193,16 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--sql-server"></a>Local = SQL Server  
  **Conexão**  
- Selecione um Gerenciador de conexão OLE DB na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexão do OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  Digite o nome do pacote filho ou clique nas reticências (...) e localize o pacote.  
   
 ##### <a name="location--file-system"></a>Local = Sistema de arquivos  
  **Conexão**  
- Selecione um Gerenciador de conexão de arquivo na lista ou clique em \< **nova conexão...** > para criar uma nova conexão Gerenciador.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Adicionar Gerenciador de Conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -214,7 +212,7 @@ ms.lasthandoff: 08/11/2017
 ###  <a name="parameter"></a> Defina as opções na Página Associação de Parâmetros  
  Você pode passar valores do pacote pai ou do projeto para o pacote filho. O projeto deve usar o modelo de implantação de projeto e o pacote filho deve ser contido no mesmo projeto que contém o pacote pai.  
   
- Para obter informações sobre como converter projetos para o modelo de implantação de projeto, consulte [implantar Integration Services (SSIS) projetos e pacotes](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Para obter mais informações sobre conversão de um projeto para o modelo de implantação de projetos, consulte [Implantar projetos e pacotes do SSIS (Integration Services)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Parâmetro de pacote filho**  
  Insira ou selecione um nome para o parâmetro de pacote filho.  
@@ -229,4 +227,3 @@ ms.lasthandoff: 08/11/2017
  Clique para remover um mapeamento entre um parâmetro ou variável e um parâmetro de pacote filho.  
   
   
-

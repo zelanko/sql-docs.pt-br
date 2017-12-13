@@ -2,9 +2,12 @@
 title: Inserir trechos Transact-SQL com Surround | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 23dc1addf677c549e53d69c1fa8f8c15af32c3dd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7897dbf0be54e045faedae2120e961a7f0a6134f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Inserir trechos Transact-SQL com Surround
-  Um trecho com surround é um modelo que você pode usar como ponto de partida ao colocar um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um trecho com surround é um modelo que você pode usar como ponto de partida ao colocar um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.  
   
 ## <a name="inserting-surround-with-snippets"></a>Inserindo trechos com surround  
  Trechos com surround podem ser iniciados por uma das três maneiras: por meio de um atalho de teclado, menu **Editar** e menu de contexto.  

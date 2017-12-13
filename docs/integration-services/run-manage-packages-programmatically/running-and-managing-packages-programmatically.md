@@ -1,5 +1,5 @@
 ---
-title: Executando e Gerenciando pacotes programaticamente | Microsoft Docs
+title: Executar e gerenciar pacotes programaticamente | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 206411bed262d99b043cf667b9699a6fbeb85981
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6affcd02d932b1e382268f328a6e5c6abf8b177b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Executando e gerenciando pacotes programaticamente
   Se precisar gerenciar e executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fora do ambiente de desenvolvimento, você poderá manipular pacotes programaticamente. Nesta abordagem, você tem uma série de opções:  
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
  Você pode carregar e executar um pacote existente de um aplicativo cliente com a escrita de apenas algumas linhas de código.  
   
- Esta seção descreve e demonstra como executar um pacote existente programaticamente e como acessar a saída do fluxo de dados de outros aplicativos. Como uma opção de programação avançada, você pode criar programaticamente um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacote linha por linha conforme descrito no tópico [compilando pacotes programaticamente](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
+ Esta seção descreve e demonstra como executar um pacote existente programaticamente e como acessar a saída do fluxo de dados de outros aplicativos. Como opção de programação avançada, você pode criar programaticamente um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linha por linha conforme descrito no tópico [Criar pacotes programaticamente](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
   
  Esta seção também discute outras tarefas administrativas que você pode executar programaticamente para gerenciar pacotes armazenados, pacotes em execução e funções do pacote.  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
  [Gerenciar de pacotes em execução programaticamente](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
  Descreve como listar pacotes que estão em execução atualmente, examinar suas propriedades e interromper um pacote em execução.  
   
- [Gerenciando funções de pacote programaticamente &#40; Serviço do SSIS &#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
+ [Gerenciar funções de pacote programaticamente &#40;Serviço SSIS&#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  Descreve como obter ou definir informações sobre as funções atribuídas a um pacote ou pasta.  
   
 ## <a name="reference"></a>Referência  
@@ -90,4 +87,3 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

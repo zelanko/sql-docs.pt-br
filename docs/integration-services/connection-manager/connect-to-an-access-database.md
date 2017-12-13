@@ -1,5 +1,5 @@
 ---
-title: Conecte-se a um banco de dados | Microsoft Docs
+title: Conectar-se a um banco de dados Microsoft Access | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access [Integration Services]
 - Access databases [Integration Services]
 ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: b5e60880b40a66a6f669bcfd53dcc59e497bbf0a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: cbd98ef05bc8c6de066f72a9aded9243c1636f70
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-an-access-database"></a>Conectar-se a um banco de dados do Access
   Para conectar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a uma fonte de dados do Microsoft Office Access, um gerenciador de conexões OLE DB e um provedor de dados são necessários. O provedor de dados usado depende da versão do Access que criou a fonte de dados:  
@@ -40,15 +38,15 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  Em um computador de 64 bits, você deve executar pacotes que se conectam a fontes de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access no modo de 32 bits. O provedor OLE DB para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet e o provedor OLE DB para Mecanismo de Banco de Dados do Microsoft Office 12.0 Access estão disponíveis somente em versões de 32 bits.  
 
-## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Componentes de conectividade para os arquivos do Microsoft Excel e Access
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Componentes de conectividade para arquivos do Microsoft Excel e Access
   
-Você precisará baixar os componentes de conectividade para arquivos do Microsoft Office se eles ainda não estiverem instalados. Baixar a versão mais recente dos componentes de conectividade para acessar e Excel arquivos aqui: [redistribuível de 2016 do mecanismo de banco de dados Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920).
+Talvez seja preciso baixar os componentes de conectividade para arquivos do Microsoft Office se eles ainda não estiverem instalados. Baixe a versão mais recente dos componentes de conectividade para arquivos do Excel e do Access aqui: [Mecanismo de Banco de Dados do Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
   
-A versão mais recente dos componentes pode abrir arquivos criados por versões anteriores do Access.
+A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Access.
 
-Se o computador tiver uma versão de 32 bits do Office, em seguida, você precisa instalar a versão de 32 bits dos componentes e você também precisa garantir que você execute o pacote no modo de 32 bits.
+Se o computador tiver uma versão de 32 bits do Office, você precisará instalar a versão de 32 bits dos componentes e precisará também certificar-se de executar o pacote no modo de 32 bits.
 
-Se você tiver uma assinatura do Office 365, certifique-se de que você baixe o redistribuível de 2016 do mecanismo de banco de dados de acesso e não o Microsoft Access 2016 Runtime. Quando você executar o instalador, você verá uma mensagem de erro que você não pode instalar a download lado a lado com componentes do Office clique para executar. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de comando e executando o. Arquivo EXE baixado com o `/quiet` alternar. Por exemplo:
+Se você tem uma assinatura do Office 365, verifique se você baixou o Mecanismo de Banco de Dados do Access 2016 Redistribuível e não o Tempo de Execução do Microsoft Access 2016. Quando você executar o instalador, você verá uma mensagem de erro dizendo que você não pode instalar o download lado a lado com componentes do tipo clique para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
@@ -104,7 +102,6 @@ Se você tiver uma assinatura do Office 365, certifique-se de que você baixe o 
      Ao selecionar **Microsoft Office 12.0 Access Database Engine OLE DB Provider** como a **Fonte de Dados**, o assistente cria automaticamente o gerenciador de conexões OLE DB necessário com o provedor de dados correto. Para obter mais informações, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conecte-se para uma pasta de trabalho do Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
+ [Conectar-se a uma pasta de trabalho do Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
   
-

@@ -3,8 +3,11 @@ title: Criar um ambiente multisservidor | Microsoft Docs
 ms.custom: 
 ms.date: 01/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 502763ce7527a31ade9e35cffeaad67e6fae9590
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 364a16b8cc7f25fba918fc51c06652781ba7c17e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
-A administração multisservidor requer a configuração de um servidor mestre (MSX) e de um ou mais servidores de destino (TSX). Os trabalhos a serem processados em todos os servidores de destino são definidos primeiramente no servidor mestre e depois são baixados nos servidores de destino.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A administração multisservidor requer a configuração de um MSX (servidor mestre) e de um ou mais TSX (servidores de destino). Os trabalhos a serem processados em todos os servidores de destino são definidos primeiramente no servidor mestre e depois são baixados nos servidores de destino.  
   
 Por padrão, a criptografia SSL completa e a validação de certificado são habilitadas para conexões entre servidores mestres e servidores de destino. Para obter mais informações, veja [Definir opções de criptografia em servidores de destino](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   

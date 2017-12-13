@@ -2,11 +2,12 @@
 title: "Renomear um computador que hospeda uma instância autônoma do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 09/08/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +25,14 @@ caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 3409cf7906f37569763ac2277ea82fe1d0fe4c82
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fdac38824bdab5723c42435e5321f1a124fc397c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renomear um computador que hospeda uma instância autônoma do SQL Server
-Quando você altera o nome do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o novo nome será reconhecido durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não é necessário executar novamente a Instalação para redefinir o nome do computador. Em vez disso, use as etapas a seguir para atualizar os metadados do sistema armazenados em sys.servers e relatados pela função de sistema @@SERVERNAME. Atualize os metadados do sistema para que reflitam as alterações de nome do computador de conexões remotas e aplicativos que usam @@SERVERNAME ou que consultam o nome do servidor em sys.servers.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando você altera o nome do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o novo nome é reconhecido durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não é necessário executar novamente a Instalação para redefinir o nome do computador. Em vez disso, use as etapas a seguir para atualizar os metadados do sistema armazenados em sys.servers e relatados pela função de sistema @@SERVERNAME. Atualize os metadados do sistema para que reflitam as alterações de nome do computador de conexões remotas e aplicativos que usam @@SERVERNAME ou que consultam o nome do servidor em sys.servers.  
   
 As etapas a seguir não podem ser usadas para renomear uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elas só podem ser usadas para renomear a parte do nome de instância que corresponde ao nome do computador. Por exemplo, você pode alterar um computador denominado MB1 que hospede uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada Instance1 para outro nome, como MB2. Entretanto, a parte de instância do nome, Instance1, permanecerá inalterada. Neste exemplo, \\\\*ComputerName*\\*InstanceName* seria alterado de \\\MB1\Instance1 para \\\MB2\Instance1.  
   

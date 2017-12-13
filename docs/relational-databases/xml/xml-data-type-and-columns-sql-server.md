@@ -2,9 +2,12 @@
 title: Colunas e tipos de dados XML (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cfc290578e784712d372008aae777fee9d08b0d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 401b870e8a40b2d451bf7b17aa0eb7c4f7a304f0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipos e colunas de dados XML (SQL Server)
-  Este tópico discute as vantagens e as limitações do tipo de dados **xml** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e o ajuda a escolher como armazenar dados XML.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este tópico discute as vantagens e as limitações do tipo de dados **xml** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e lhe ajuda a escolher como armazenar dados XML.  
   
 ## <a name="relational-or-xml-data-model"></a>Modelo de dados relacional ou XML  
  Se os dados estiverem altamente estruturados com esquema conhecido, o modelo relacional provavelmente funcionará melhor para armazenamento de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece a funcionalidade exigida e ferramentas que podem ser necessárias. Por outro lado, se a estrutura estiver semiestruturada, desestruturada ou desconhecida, será necessário considerar a modelagem desses dados.  

@@ -2,12 +2,12 @@
 title: "Criar um relatório de validação cruzada | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08431f6a1eb5e2ed7ae82ea732fd2cdb466c6d70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 47368a14a07f9ab0a42df11d29dbca6404b19463
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cross-validation-report"></a>Criar um relatório de validação cruzada
-  Este tópico mostra passo-a-passo a criação de um relatório de validação cruzada usando a guia Gráfico de Precisão no Designer de Mineração de Dados. Para obter informações gerais sobre a aparência de um relatório de validação cruzada e as medidas estatísticas que ele inclui, consulte [Validação cruzada &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico orienta você na criação de um relatório de validação cruzada usando a guia gráfico de precisão no Designer de mineração de dados. Para obter informações gerais sobre a aparência de um relatório de validação cruzada e as medidas estatísticas que ele inclui, consulte [Validação cruzada &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Um relatório de validação cruzada é bem diferente de um gráfico de precisão, como um gráfico de comparação de precisão ou uma matriz de classificação.  
   

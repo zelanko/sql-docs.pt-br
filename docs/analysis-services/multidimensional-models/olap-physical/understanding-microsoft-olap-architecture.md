@@ -2,12 +2,12 @@
 title: "Noções básicas sobre a arquitetura Microsoft OLAP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77fae4f9fd4b057a5388029b1544aa72842d91ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c0158fb2175ff279e1a405b580c6add273a72b1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Entendendo a arquitetura Microsoft OLAP
-  Use estes tópicos para compreender os bancos de dados multidimensionais do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e como planejar a implementação dos bancos de dados multidimensionais em sua solução de Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Use estes tópicos para entender melhor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] bancos de dados multidimensionais e planejar a implementação de bancos de dados multidimensionais em sua solução de business intelligence.  
   
  ![Ícone de pasta do arquivo pequeno](../../../analysis-services/media/filefolder-small.png "arquivo pequeno ícone da pasta") **arquitetura lógica**  
  [Objetos de servidor &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  

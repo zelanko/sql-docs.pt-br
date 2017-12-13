@@ -2,12 +2,12 @@
 title: Elemento Row (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b38517cea700ac5fab6cdccbef77aaeea0dc969
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 31ce205d17095d2a6df40adb7ce0be64f883b5f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="row-element-xmla"></a>Elemento row (XMLA)
-  Contém uma única linha de dados para um [raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que contém dados tabulares retornados por uma [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém uma única linha de dados para um [raiz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que contém dados tabulares retornados por uma [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
   
 ## <a name="syntax"></a>Sintaxe  
   

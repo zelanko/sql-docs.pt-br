@@ -2,9 +2,12 @@
 title: Configurar o roteamento somente leitura para um grupo de disponibilidade (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 08/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: bd8372397bb6e33250456a8a617aa4f8e4cf45be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f0fd76a64d46d8d4cd1efbdfa86e3f4b8c4b97c0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurar o roteamento somente leitura para um grupo de disponibilidade (SQL Server)
-  Para configurar um grupo de disponibilidade AlwaysOn para oferecer suporte ao roteamento somente leitura no [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], você pode usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. *Roteamento somente leitura* refere-se à capacidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de encaminhar solicitações de conexão somente leitura para uma [réplica secundária legível](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn disponível (ou seja, uma réplica que é configurada para permitir cargas de trabalho somente leitura ao ser executada sob a função secundária). Para dar suporte ao roteamento somente leitura, o grupo de disponibilidade deve ter um [ouvinte do grupo de disponibilidade](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Clientes somente leitura devem direcionar suas solicitações de conexão para este ouvinte e as cadeias de conexão do cliente devem especificar a intenção do aplicativo como "somente leitura." Ou seja, elas devem ser *solicitações de conexão de intenção de leitura*.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para configurar um grupo de disponibilidade AlwaysOn para oferecer suporte ao roteamento somente leitura no [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], você pode usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. *Roteamento somente leitura* refere-se à capacidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de encaminhar solicitações de conexão somente leitura para uma [réplica secundária legível](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn disponível (ou seja, uma réplica que é configurada para permitir cargas de trabalho somente leitura ao ser executada sob a função secundária). Para dar suporte ao roteamento somente leitura, o grupo de disponibilidade deve ter um [ouvinte do grupo de disponibilidade](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Clientes somente leitura devem direcionar suas solicitações de conexão para este ouvinte e as cadeias de conexão do cliente devem especificar a intenção do aplicativo como "somente leitura." Ou seja, elas devem ser *solicitações de conexão de intenção de leitura*.  
 
 O roteamento somente leitura está disponível no [!INCLUDE[sssql15](../../../includes/sssql15-md.md)] e posterior.
 

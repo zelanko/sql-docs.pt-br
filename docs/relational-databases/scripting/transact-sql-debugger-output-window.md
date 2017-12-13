@@ -2,9 +2,12 @@
 title: "Janela Saída | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e68c1da086ab3fdc2cc1885939d84687887bc99b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 234b8119ae9d1ed11d67a537cd4eab1a56bd7854
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---output-window"></a>Depurador do Transact-SQL – janela de Saída
-  Esta janela exibe mensagens de status para vários recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. A saída é fornecida em painéis especiais da janela **Saída** no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] , em recursos de ferramentas externas ou em comandos executados na **Janela Comando**do depurador. A saída, que normalmente é exibida na janela Prompt de Comando de ferramentas externas como arquivos .bat ou .com, também fica disponível.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Esta janela exibe mensagens de status para vários recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. A saída é fornecida em painéis especiais da janela **Saída** no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] , em recursos de ferramentas externas ou em comandos executados na **Janela Comando**do depurador. A saída, que normalmente é exibida na janela Prompt de Comando de ferramentas externas como arquivos .bat ou .com, também fica disponível.  
   
  **Para acessar a janela de saída**  
   

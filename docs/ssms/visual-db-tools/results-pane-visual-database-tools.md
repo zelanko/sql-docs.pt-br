@@ -3,8 +3,11 @@ title: Painel de Resultados (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d363fd63a32e338558e67ca86d5ed155e48a72c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 72c6d376b55df42961420aacb9d768324196c21f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="results-pane-visual-database-tools"></a>Painel de Resultados (Visual Database Tools)
-O painel Resultados mostra os resultados da consulta SELECT executada mais recentemente. (Os resultados de outros tipos de consultas são exibidos em caixas de mensagens.) Para abrir o painel Resultados, abra ou crie uma consulta ou exibição ou retorne os dados de uma tabela. Se o painel Resultados não for exibido por padrão, no menu **Designer de Consulta** , aponte para **Painel**e clique em **Resultados**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O painel Resultados mostra os resultados da consulta SELECT executada mais recentemente. (Os resultados de outros tipos de consultas são exibidos em caixas de mensagens.) Para abrir o painel Resultados, abra ou crie uma consulta ou exibição ou retorne os dados de uma tabela. Se o painel Resultados não for exibido por padrão, no menu **Designer de Consulta** , aponte para **Painel**e clique em **Resultados**.  
   
 ## <a name="what-you-can-do-in-the-results-pane"></a>O que você pode fazer no painel Resultados  
   

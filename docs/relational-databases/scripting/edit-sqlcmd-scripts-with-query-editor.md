@@ -2,9 +2,12 @@
 title: Editar scripts SQLCMD com o Editor de Consultas | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cdd88c8bccec6251872c3ebd0095bd00d3e6ee72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 44b90c0b7ce2e12e973e6145551bbb3af4c16e3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Editar scripts SQLCMD com o Editor de Consultas
-  Com o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , você pode gravar e editar consultas como scripts SQLCMD. Você usa scripts SQLCMD quando precisa processar comandos de Sistema do Windows e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no mesmo script.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usando o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode gravar e editar consultas como scripts SQLCMD. Você usa scripts SQLCMD quando precisa processar comandos de Sistema do Windows e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no mesmo script.  
   
 ## <a name="sqlcmd-mode"></a>Modo SQLCMD  
  Para usar o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para gravar ou editar scripts SQLCMD, habilite o modo de script SQLCMD. Por padrão, o modo SQLCMD não é habilitado no Editor de Consultas. Você pode habilitar o modo de script clicando no ícone **Modo SQLCMD** na barra de ferramentas ou selecionando **Modo SQLCMD** no menu **Consulta** .  

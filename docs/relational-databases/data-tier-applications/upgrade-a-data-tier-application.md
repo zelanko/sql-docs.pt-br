@@ -2,9 +2,12 @@
 title: Atualizar um aplicativo da camada de dados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,14 +31,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6aa4647425ec2e9a0cc9cc05819c8db174e6f115
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d374f66debb936b1b57cb631d9e1643cc923fdc4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="upgrade-a-data-tier-application"></a>Atualizar um aplicativo da camada de dados
-  Use o Assistente para Atualizar Aplicativo da Camada de Dados ou um script do Windows PowerShell para alterar o esquema e as propriedades de um DAC (aplicativo da camada de dados) implantado no momento para coincidir com o esquema e as propriedades definidos em uma nova versão do DAC.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use o Assistente para Atualizar Aplicativo da Camada de Dados ou um script do Windows PowerShell para alterar o esquema e as propriedades de um DAC (aplicativo da camada de dados) implantado no momento para corresponder ao esquema e às propriedades definidas em uma nova versão do DAC.  
   
 -   **Antes de começar:**  [Escolhendo Opções de Atualização de DAC](#ChoseDACUpgOptions), [Limitações e Restrições](#LimitationsRestrictions), [Pré-requisitos](#Prerequisites), [Segurança](#Security), [Permissões](#Permissions)  
   

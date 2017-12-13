@@ -1,5 +1,5 @@
 ---
-title: "Simples de Gerenciador de Conexão de arquivo | Microsoft Docs"
+title: "Gerenciador de Conexões de Arquivo Simples | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 2b3f4c303b1d60cbbe23c639c36a6336ca07447f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 29a1b62455247f2ba3cbcb17fafb6f0f78865230
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
   Um gerenciador de conexões de Arquivos Simples permite que um pacote acesse dados em um arquivo simples. Por exemplo, a origem e o destino dos Arquivos Simples podem usar gerenciadores de conexões de Arquivos Simples para extrair e carregar dados.  
@@ -301,4 +299,3 @@ ms.lasthandoff: 08/09/2017
  **Visualizar linhas**  
  Exiba os dados no arquivo simples, dividido em colunas e linhas, de acordo com as opções que você selecionou.  
  
-

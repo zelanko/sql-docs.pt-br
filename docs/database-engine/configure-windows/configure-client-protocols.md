@@ -2,9 +2,12 @@
 title: Configurar protocolos de cliente | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cb93e598d20ad1622836579118d664c0e6da279
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8eb7091aa03f7666ce34a2ed6bb57477bf40281f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
-# configurar protocolos de cliente
-  Este tópico descreve como configurar protocolos de cliente usados por aplicativos cliente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à comunicação cliente com o protocolo de rede TCP/IP e o protocolo de pipes nomeados. O protocolo de memória compartilhada também estará disponível se o cliente estiver se conectando a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Há três métodos comuns de selecionar o protocolo.  
+# <a name="configure-client-protocols"></a>configurar protocolos de cliente
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico descreve como configurar protocolos de cliente usados por aplicativos cliente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à comunicação cliente com o protocolo de rede TCP/IP e o protocolo de pipes nomeados. O protocolo de memória compartilhada também estará disponível se o cliente estiver se conectando a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Há três métodos comuns de selecionar o protocolo.  
   
 -   Configure todos os aplicativos cliente para usar o mesmo protocolo de rede definindo a ordem de protocolo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/09/2017
   
  O protocolo de memória compartilhada é habilitado separadamente, marcando a caixa **Protocolo de Memória Compartilhada Habilitada**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Configurar a opção de configuração do servidor remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
   
   

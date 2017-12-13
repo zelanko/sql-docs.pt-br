@@ -1,5 +1,5 @@
 ---
-title: "Editor da tarefa (página geral) de criação de perfil de dados | Microsoft Docs"
+title: "Editor da tarefa Criação de Perfil de Dados (página Geral) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.general.f1
-helpviewer_keywords:
-- Data Profiling Task Editor
+f1_keywords: sql13.dts.designer.dataprofilingtask.general.f1
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: bed1fa78db9ee0beca66efe57f088d1d74d377f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fe778df2be9b176d95ef78d52daf1bd4ef8bd7e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor da tarefa Criação de Perfil de Dados (página Geral)
   Use a página **Geral** do **Editor da Tarefa Criação de Perfil de Dados** para configurar as seguintes opções:  
@@ -66,9 +62,9 @@ ms.lasthandoff: 08/03/2017
  **Destino**  
  Especifique qual gerenciador de conexões do Arquivo ou variável de pacote contém a saída do perfil de dados:  
   
--   Se a opção **DestinationType** for definida como **FileConnection**, a opção **Destino** exibirá os gerenciadores de conexões do Arquivo disponíveis. Selecione um desses gerenciadores de conexão, ou selecione \<conexão de arquivo novo > criar uma nova conexão de arquivo manager.  
+-   Se a opção **DestinationType** for definida como **FileConnection**, a opção **Destino** exibirá os gerenciadores de conexões do Arquivo disponíveis. Selecione um desses gerenciadores de conexões ou selecione \<Nova conexão de arquivo> para criar um novo gerenciador de conexões de arquivo.  
   
--   Se a opção **DestinationType** for definida como **Variável**, a opção **Destino** exibirá as variáveis de pacote disponíveis na lista **Destino** . Selecione uma dessas variáveis ou selecione \<nova variável > para criar uma nova variável.  
+-   Se a opção **DestinationType** for definida como **Variável**, a opção **Destino** exibirá as variáveis de pacote disponíveis na lista **Destino** . Selecione uma dessas variáveis ou selecione \<Nova Variável> para criar uma nova variável.  
   
  **OverwriteDestination**  
  Especifique se deseja substituir o arquivo de saída, se este já existir. O valor padrão é **Falso**. O valor desta propriedade é usado somente quando a opção DestinationType for definida como FileConnection. Quando a opção DestinationType é definida como Variável, a tarefa sempre substitui o valor anterior da variável.  
@@ -84,11 +80,10 @@ ms.lasthandoff: 08/03/2017
  Abra o Visualizador de Perfil de Dados. O visualizador de Perfil de Dados autônomo exibe a saída de perfil de dados da tarefa Criação de Perfil de Dados. A saída do perfil de dados pode ser exibida após a execução da tarefa Criação de Perfil de Dados no pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e a computação de perfis de dados.  
   
 > [!NOTE]  
->  Você também pode abrir o Visualizador de perfil de dados, executando o DataProfileViewer.exe na pasta,  *\<drive >*: \Program Files (x86) | O programa de Programas\Microsoft SQL Server\110\DTS\Binn.  
+>  Você também pode abrir o Visualizador de Perfil de Dados executando o DataProfileViewer.exe na pasta, *\<unidade>*:\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>Consulte também  
  [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   
- [Editor da tarefa &#40; de criação de perfil de dados Página de solicitações de perfil &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+ [Editor da tarefa Criação de Perfil de Dados &#40;Página Solicitações de Perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
-

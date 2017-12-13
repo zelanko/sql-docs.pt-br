@@ -2,9 +2,12 @@
 title: "Solução de problemas de configuração de espelhamento de banco de dados (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 23f685d4e5a32dc99fdf41e9a8db7c0deb8063a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8bbf78a982b6f0f4742722ec368119c33cbc330d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solução de problemas de configuração de espelhamento de banco de dados (SQL Server)
-  Este tópico fornece informações para ajudá-lo a solucionar problemas ao configurar uma sessão de espelhamento de banco de dados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico fornece informações para ajudá-lo a solucionar problemas ao configurar uma sessão de espelhamento de banco de dados.  
   
 > [!NOTE]  
 >  Verifique se você atende a todos os [pré-requisitos do espelhamento de banco de dados](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  

@@ -2,12 +2,12 @@
 title: "Adicionar modelos de mineração a uma estrutura (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 074fab70ac5818aeb825691d63aa511f01698c1d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Adicionar modelos de mineração a uma estrutura (Analysis Services - Mineração de dados)
-  Uma estrutura de mineração é destinada a dar suporte a diversos modelos de mineração. Portanto, após a finalização do assistente, você poderá abrir a estrutura e adicionar novos modelos de mineração. Cada vez que você cria um modelo, pode usar um algoritmo diferente, alterar os parâmetros ou aplicar filtros para usar com um subconjunto diferente dos dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma estrutura de mineração destina-se a dar suporte a vários modelos de mineração. Portanto, após a finalização do assistente, você poderá abrir a estrutura e adicionar novos modelos de mineração. Cada vez que você cria um modelo, pode usar um algoritmo diferente, alterar os parâmetros ou aplicar filtros para usar com um subconjunto diferente dos dados.  
   
 ## <a name="adding-new-mining-models"></a>Adicionando novos modelos de mineração  
  Ao usar o Assistente de Mineração de Dados para criar um novo modelo de mineração, por padrão você deve sempre criar primeiro uma estrutura de mineração. O assistente em seguida dá a você a opção de adicionar um modelo de mineração inicial à estrutura. No entanto, não é necessário criar um modelo imediatamente. Se apenas a estrutura for criada, você não precisa tomar uma decisão sobre qual coluna deve ser usada como o atributo previsível ou sobre como usar os dados em um modelo específico. Em vez disso, configure a estrutura de dados geral que deseja usar no futuro e, posteriormente, use o [Designer de Mineração de Dados](../../analysis-services/data-mining/data-mining-designer.md) para adicionar novos modelos de mineração baseados na estrutura.  

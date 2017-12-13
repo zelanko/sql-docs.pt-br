@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 26fe270767369de22f7a5b87f34a92fce2b1c2bd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Copiar pacotes nas Ferramentas de Dados do SQL Server
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você pode criar um novo pacote usando um dos métodos a seguir:  
@@ -77,9 +75,8 @@ Para instalar o SSDT (SQL Server Data Tools), consulte [Baixar o SSDT (SQL Serve
   
 2.  Na guia **Geral** de **Propriedades de Configuração**, selecione a propriedade **TargetServerVersion** e, em seguida, escolha o SQL Server 2012, SQL Server 2014 ou SQL Server 2016.  
   
-     ![A propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto](../integration-services/media/targetserverversion2.png "propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto")  
+     ![Propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto](../integration-services/media/targetserverversion2.png "Propriedade TargetServerVersion na caixa de diálogo de propriedades do projeto")  
   
  Você pode criar, manter e executar pacotes que se destinam ao SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
   
   
-

@@ -3,8 +3,11 @@ title: Criar diagramas de banco de dados (Visual Database Tools) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d2e4a40c3000ddbb7f1e06c2d5826e06073fb549
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7afa4c3169353a26660f962f84b20346fdd2680b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Criar diagramas de banco de dados (Visual Database Tools)
-O Designer de Banco de Dados é uma ferramenta visual que permite projetar e visualizar um banco de dados ao qual se está conectado. Ao criar um banco de dados, você pode usar o Designer de Banco de Dados para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições. Para visualizar um banco de dados, você pode criar um ou mais diagramas que ilustrem todas ou parte das tabelas, colunas, chaves e relações.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Designer de Banco de Dados é uma ferramenta visual que permite projetar e visualizar um banco de dados ao qual você está conectado. Ao criar um banco de dados, você pode usar o Designer de Banco de Dados para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições. Para visualizar um banco de dados, você pode criar um ou mais diagramas que ilustrem todas ou parte das tabelas, colunas, chaves e relações.  
   
 ![Diagrama de banco de dados mostrando as relações de tabela](../../ssms/visual-db-tools/media/dv3w7c1.gif "Diagrama de banco de dados mostrando as relações de tabela")  
   

@@ -3,8 +3,11 @@ title: "Soluções (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f9d66e69535af5c4811d9ac6f038d6fa0a2ee78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 506e7aec9c3c6c89d057d75f4b8b92947cc0cd50
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluções (SQL Server Management Studio)
-A solução [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] é uma coleção de um ou mais projetos relacionados. Projetos são contêineres que os desenvolvedores usam para organizar arquivos relacionados, como conjuntos de scripts de administração geralmente usados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Uma solução [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] é uma coleção de um ou mais projetos relacionados. Projetos são contêineres que os desenvolvedores usam para organizar arquivos relacionados, como conjuntos de scripts de administração geralmente usados.  
   
 ## <a name="solution-overview"></a>Visão geral da solução  
 Você pode usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] como uma plataforma de desenvolvimento de scripts para o [!INCLUDE[ssDE](../../includes/ssde_md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Use os editores de códigos do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] para desenvolver scripts e consultas para bancos de dados relacionais e multidimensionais, e coletar scripts e consultas relacionados em projetos.  

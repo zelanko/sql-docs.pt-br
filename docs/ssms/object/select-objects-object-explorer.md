@@ -3,8 +3,11 @@ title: Selecionar objetos (Pesquisador de Objetos) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-objects-object-explorer"></a>Selecionar objetos (Pesquisador de Objetos)
-Use a caixa de diálogo **Selecionar Objetos** para adicionar um objeto a uma lista em outra caixa de diálogo. O título da caixa de diálogo e as opções disponíveis na caixa de diálogo dependem de como foram abertos. Aparecerão somente opções disponíveis; por exemplo, só estão disponíveis logons quando você está selecionando um proprietário para um objeto novo.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Selecionar Objetos** para adicionar um objeto a uma lista em outra caixa de diálogo. O título da caixa de diálogo e as opções disponíveis na caixa de diálogo dependem de como foram abertos. Aparecerão somente opções disponíveis; por exemplo, só estão disponíveis logons quando você está selecionando um proprietário para um objeto novo.  
   
 ## <a name="options"></a>Opções  
 **Selecionar esses tipos de objeto**  

@@ -2,12 +2,12 @@
 title: "Criar tabelas, partições e colunas em um modelo Tabular | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ecf8c233177b283c5dc3a5601a267bdfa0c8a10f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 94bad422a63276ad130027ea77de4734571016a8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>Criar tabelas, partições e colunas em um modelo de tabela
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Em um modelo de tabela, uma tabela consiste em linhas e colunas. Linhas são organizadas em partições para dar suporte à atualização de dados incrementais. Uma solução Tabular pode dar suporte a vários tipos de tabelas, dependendo de onde os dados são provenientes de:  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Em um modelo de tabela, uma tabela consiste em linhas e colunas. Linhas são organizadas em partições para dar suporte à atualização de dados incrementais. Uma solução Tabular pode dar suporte a vários tipos de tabelas, dependendo de onde os dados são provenientes de:  
 
 * Tabelas regulares, onde os dados são originados de uma fonte de dados relacional, por meio do provedor de dados. 
 

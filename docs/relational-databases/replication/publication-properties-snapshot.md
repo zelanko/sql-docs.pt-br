@@ -2,9 +2,12 @@
 title: "Propriedades da publicação, instantâneo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c0927c53dff6dc6bd14d93029cd49c376ae46bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 26335cccf77aced43c3db73976bccde394b766d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-snapshot"></a>Propriedades da Publicação, Instantâneo
-  A página **Instantâneo** da caixa de diálogo **Propriedades de Publicação** permite que você defina o formato do instantâneo, o local da pasta de instantâneo e os scripts a serem executados antes e depois da aplicação do instantâneo. A pasta de instantâneo deve ser designada como compartilhada e ter permissões adequadas para os agentes que leem e gravam arquivos na pasta. Para obter mais informações sobre como proteger a pasta adequadamente, consulte [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md) (Proteger a pasta de instantâneo).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A página **Instantâneo** da caixa de diálogo **Propriedades de Publicação** permite que você defina o formato do instantâneo, o local da pasta de instantâneo e os scripts a serem executados antes e depois da aplicação do instantâneo. A pasta de instantâneo deve ser designada como compartilhada e ter permissões adequadas para os agentes que leem e gravam arquivos na pasta. Para obter mais informações sobre como proteger a pasta adequadamente, consulte [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md) (Proteger a pasta de instantâneo).  
   
 > [!NOTE]  
 >  As alterações exigem um novo instantâneo para a publicação. Para obter mais informações, consulte [Alterar propriedade da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

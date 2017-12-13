@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 570a7e8c6b20ea528f5980fb3ae53a60037d0243
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: fe2df40e58f7a4164655d4b7970797c697fcff37
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
   Um destino de treinamento de modelos de mineração de dados treina modelos de mineração de dados ao passar os dados que o destino recebe pelos algoritmos de modelo de mineração de dados. Vários modelos de mineração de dados poderão ser treinados por um destino se os modelos forem criados na mesma estrutura de mineração de dados. Para obter mais informações, consulte [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) e [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -92,4 +90,3 @@ ms.lasthandoff: 08/17/2017
  **Colunas da estrutura de mineração**  
  Exiba cada coluna de destino disponível, seja mapeada ou não.  
   
-

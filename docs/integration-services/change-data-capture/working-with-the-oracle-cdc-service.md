@@ -1,5 +1,5 @@
 ---
-title: "Trabalhando com o serviço Oracle CDC | Microsoft Docs"
+title: "Trabalhar com o serviço Oracle CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69eb7087530b82c7ba75a9d8ff87fd8fff815f16
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabalhando com o Serviço Oracle CDC
   Esta seção descreve alguns conceitos importantes do Serviço Oracle CDC. Os conceitos incluídos nesta seção são:  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |ref_count|Este item conta o número de computadores em que o mesmo Serviço Oracle CDC está instalado. Ele é incrementado com cada adição de serviço Oracle CDC de mesmo nome e é decrementado quando este serviço é removido. Quando o contador chegar a zero, esta linha será excluída.|  
 |active_service_node|O nome do nó de Windows que atualmente trata o serviço CDC. Quando o serviço é parado corretamente, esta coluna é definida como nulo, indicando que não há mais um serviço ativo.|  
 |active_service_heartbeat|Este item acompanha o serviço CDC atual para determinar se ele ainda está ativo.<br /><br /> Este item é atualizado com o carimbo de data/hora UTC do banco de dados atual para o serviço CDC ativo em intervalos regulares. O intervalo padrão é de 30 segundos; porém, o intervalo é configurável.<br /><br /> Quando um serviço CDC pendente detecta que a pulsação não foi atualizada depois que o intervalo configurado foi transmitido, o serviço pendente tenta assumir a função de serviço do CDC ativo.|  
-|opções|Este item especifica as opções secundárias, como rastreamento ou ajuste. Ele é gravado no formato de **nome[=value][; ]**. A cadeia de caracteres de opções usa a mesma semântica que a cadeia de conexão ODBC. Se a opção for Booliana (com um valor de sim/não), o valor só poderá incluir o nome.<br /><br /> O rastreamento tem os seguintes valores possíveis.<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<nome da classe > [, nome da classe >]**<br /><br /> <br /><br /> O valor padrão é **false**.<br /><br /> **service_heartbeat_interval** é o intervalo de tempo (em segundos) para o serviço atualizar a coluna active_service_heartbeat. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **service_config_polling_interval** é o intervalo de sondagem (em segundos) para o serviço CDC verificar as alterações de configuração. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **sql_command_timeout** é o tempo limite de comando que funciona com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor padrão é **1**. O valor máximo é **3600**.|  
+|opções|Este item especifica as opções secundárias, como rastreamento ou ajuste. Ele é gravado no formato de **nome[=value][; ]**. A cadeia de caracteres de opções usa a mesma semântica que a cadeia de conexão ODBC. Se a opção for Booliana (com um valor de sim/não), o valor só poderá incluir o nome.<br /><br /> O rastreamento tem os seguintes valores possíveis.<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<nome de classe>,[nome de classe>]**<br /><br /> <br /><br /> O valor padrão é **false**.<br /><br /> **service_heartbeat_interval** é o intervalo de tempo (em segundos) para o serviço atualizar a coluna active_service_heartbeat. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **service_config_polling_interval** é o intervalo de sondagem (em segundos) para o serviço CDC verificar as alterações de configuração. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **sql_command_timeout** é o tempo limite de comando que funciona com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor padrão é **1**. O valor máximo é **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Os procedimentos armazenados do banco de dados MSXDBCDC  
@@ -165,7 +163,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  O procedimento **dbo.xcbcdc_add_service** adiciona uma entrada à tabela **MSXDBCDC.xdbcdc_services** e adiciona um incremento de um à coluna ref_count para o nome de serviço na tabela **MSXDBCDC.xdbcdc_services** . Quando **ref_count** é 0, exclui a linha.  
   
- Para usar o **dbo. xcbcdc_add_service\<nome do serviço, nome de usuário >** procedimento, o usuário deve ser um membro do **db_owner** função de banco de dados para o banco de dados de instância CDC que está sendo nomeada ou um membro do **sysadmin** ou **serveradmin** função de servidor fixa.  
+ Para usar o procedimento **dbo.xcbcdc_add_service\<nome do serviço, nome do usuário>**, o usuário deve ser um membro da função de banco de dados **db_owner** para o banco de dados da instância CDC que está sendo nomeada ou membro da função de servidor fixa **sysadmin** ou **serveradmin**.  
   
 ###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  O procedimento **dbo.xdbcdc_start** envia uma solicitação de início ao serviço CDC que trata a instância CDC selecionada para iniciar o processamento de alteração.  
@@ -270,7 +268,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Como usar a interface de linha de comando do Serviço CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
- [A preparação do SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
+ [Como preparar o SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
   
-

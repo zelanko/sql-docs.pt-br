@@ -2,9 +2,12 @@
 title: "Especificar tipos de artigo (Programação Transact-SQL de replicação) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30aa9302585d7a7eabc8dee8e9a1cd27695e0bab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 75bdae059533adfeebac56b324a3a0c80893cc6d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Especificar tipos de artigo (Programação Transact-SQL de replicação)
-  Os tipos de artigo padrão para replicação são artigos da tabela, mas é possível publicar outros objetos de banco de dados como artigos, inclusive exibições, procedimentos armazenados, funções definidas pelo usuário e execução de procedimento armazenado. Você pode usar procedimentos armazenados de replicação para especificar um tipo de artigo programaticamente quando definir um artigo. Os procedimentos usados dependerão do tipo de replicação e do tipo de artigo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Os tipos de artigo padrão para replicação são artigos da tabela, mas é possível publicar outros objetos de banco de dados como artigos, inclusive exibições, procedimentos armazenados, funções definidas pelo usuário e execução de procedimento armazenado. Você pode usar procedimentos armazenados de replicação para especificar um tipo de artigo programaticamente quando definir um artigo. Os procedimentos usados dependerão do tipo de replicação e do tipo de artigo.  
   
 > [!NOTE]  
 >  A designação somente esquema, ao definir tabela, exibição e artigos de procedimento armazenado, indica que apenas a definição de objeto é replicada.  

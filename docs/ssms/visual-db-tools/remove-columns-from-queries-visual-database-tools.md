@@ -3,8 +3,11 @@ title: Renomear colunas de consultas (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ad39311ed0e63b93ae5b93bc97967ec913cd2d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fdffb968590c41dd6a0158c5777dad3c38483411
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Remover colunas de consultas (Visual Database Tools)
-Se você já não deseja mais utilizar uma coluna em uma consulta, remova-a. Se fizer isso, o Designer de Consulta e Exibição removerá referências à coluna na lista de seleção, a especificação de classificação, os critérios de pesquisa, o **painel SQL**e as especificações de agrupamento.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se você já não quiser mais usar uma coluna em uma consulta, remova-a. Se fizer isso, o Designer de Consulta e Exibição removerá referências à coluna na lista de seleção, a especificação de classificação, os critérios de pesquisa, o **painel SQL**e as especificações de agrupamento.  
   
 > [!NOTE]  
 > Se desejar remover uma coluna apenas da saída de uma consulta Select, pode fazê-lo sem remover a coluna da consulta de uma só vez. Para obter detalhes, consulte [Remover colunas de resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md).  

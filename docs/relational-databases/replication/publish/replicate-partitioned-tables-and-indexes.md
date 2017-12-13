@@ -2,9 +2,12 @@
 title: "Replicar tabelas e índices particionados | Microsoft Docs"
 ms.custom: 
 ms.date: 09/10/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: af0684fed880dabb06c989e9735b266b059f12b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8b4646767b43c910b0d5ca272c04594cee3740b8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replicar tabelas e índices particionados
-  O particionamento facilita o gerenciamento de grandes tabelas ou índices, permitindo o acesso e o gerenciamento de subconjuntos de dados de forma rápida e eficaz, ao mesmo tempo em que mantém a integridade geral da coleção de dados. Para obter mais informações, consulte [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). A replicação dá suporte ao particionamento fornecendo um conjunto de propriedades que especificam como tabelas e índices particionados devem ser tratados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O particionamento facilita o gerenciamento de grandes tabelas ou índices, permitindo o acesso e o gerenciamento de subconjuntos de dados de forma rápida e eficaz, ao mesmo tempo em que mantém a integridade geral da coleção de dados. Para saber mais, confira [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). A replicação dá suporte ao particionamento fornecendo um conjunto de propriedades que especificam como tabelas e índices particionados devem ser tratados.  
   
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>Propriedades de artigo para replicação transacional e de mesclagem  
  A tabela a seguir lista os objetos que são usados para particionar dados.  

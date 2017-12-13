@@ -2,9 +2,12 @@
 title: "Falha ao detectar solicitações de entrada e saída | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 964543e35a09e26822d556ef212d6da699fbed52
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4d133f1eb5be5f11727558e77e97bd5b068b57ec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="detect-failed-input-and-output-requests"></a>Detect Failed Input and Output Requests
-  Esta regra verifica o log de eventos do sistema para o EventId 50. Este erro é causado por uma falha na solicitação de E/S.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta regra verifica o log de eventos do sistema para o EventId 50. Este erro é causado por uma falha na solicitação de E/S.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  
  Revise os seguintes artigos da Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] para obter mais informações sobre como solucionar este erro:  

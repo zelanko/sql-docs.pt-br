@@ -2,9 +2,12 @@
 title: "Instalar e configurar a pesquisa semântica | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec8b6a2fd8328f1b81234fd153886e828d4ed883
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dddce1fa24fe2a9a11b01dcf53ebc0ab25eba5ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar e configurar a pesquisa semântica
-  Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
   
 ## <a name="install-semantic-search"></a>Instalar a pesquisa semântica  
   

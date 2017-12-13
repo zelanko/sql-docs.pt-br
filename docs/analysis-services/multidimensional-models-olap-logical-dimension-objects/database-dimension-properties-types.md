@@ -2,12 +2,12 @@
 title: "Tipos de dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bab78f642342cd070ecde62a37d65972a17a109f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimension-properties---types"></a>Propriedades de dimensão do banco de dados - tipos
-  O **tipo** configuração da propriedade fornece informações sobre o conteúdo de uma dimensão para aplicativos cliente e servidor. Em alguns casos, o **tipo** configuração somente fornece orientação para aplicativos cliente e é opcional. Em outros casos, como **contas** ou **tempo** dimensões, o **tipo** configurações de propriedade para a dimensão e seus atributos determinam comportamentos específicos baseados em servidor e pode ser necessário para implementar determinados comportamentos no cubo. Por exemplo, o **tipo** propriedade de uma dimensão pode ser definida como **contas** para indicar a aplicativos cliente que a dimensão padrão contém atributos de conta. Para obter mais informações sobre o tempo, a conta e a dimensão de moeda, consulte [criar uma dimensão de tipo de data](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [criar uma conta de Finanças de dimensão de tipo de pai-filho](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), e [criar uma moeda tipo de dimensão](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O **tipo** configuração da propriedade fornece informações sobre o conteúdo de uma dimensão para aplicativos cliente e servidor. Em alguns casos, o **tipo** configuração somente fornece orientação para aplicativos cliente e é opcional. Em outros casos, como **contas** ou **tempo** dimensões, o **tipo** configurações de propriedade para a dimensão e seus atributos determinam comportamentos específicos baseados em servidor e pode ser necessário para implementar determinados comportamentos no cubo. Por exemplo, o **tipo** propriedade de uma dimensão pode ser definida como **contas** para indicar a aplicativos cliente que a dimensão padrão contém atributos de conta. Para obter mais informações sobre o tempo, a conta e a dimensão de moeda, consulte [criar uma dimensão de tipo de data](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [criar uma conta de Finanças de dimensão de tipo de pai-filho](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), e [criar uma moeda tipo de dimensão](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  A configuração padrão para o tipo de dimensão é **Regular**, que não faz nenhuma suposição sobre o conteúdo da dimensão. Essa é a configuração padrão para todas as dimensões quando você define inicialmente uma dimensão a menos que você especifique **tempo** ao definir a dimensão usando o Assistente para dimensões. Você também deve deixar **Regular** como o tipo de dimensão se o Assistente para dimensões não lista um tipo apropriado para o tipo de dimensão.  
   

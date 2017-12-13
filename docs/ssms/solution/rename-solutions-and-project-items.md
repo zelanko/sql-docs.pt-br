@@ -3,8 +3,11 @@ title: "Renomear soluções e itens de projeto | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 950ee0f9e231b6776b644edf613bbd52f28a7142
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4134566cd32c4bfecc3428aff1c9a4eb2c95f9c8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rename-solutions-and-project-items"></a>Renomear soluções e itens de projeto
-Você pode renomear uma solução e seus itens de projeto no Gerenciador de Soluções.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode renomear uma solução e seus itens de projeto no Gerenciador de Soluções.  
   
 > [!NOTE]  
 > Projetos e conexões não podem ser renomeados.  

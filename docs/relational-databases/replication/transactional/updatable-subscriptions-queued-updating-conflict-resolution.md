@@ -2,9 +2,12 @@
 title: "Resolução e detecção de conflitos de atualização na fila | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30768bae36208218fc5529c64744abc7e1b12a44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b48c692d0f4992c46bcf27ffa80e2d1bf0740c39
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Assinaturas atualizáveis – Resolução de conflitos com atualização em fila
-  Como as assinaturas de atualização em fila permitem modificações nos mesmos dados em vários locais, pode haver conflitos quando os dados forem sincronizados no Publicador. A replicação detecta todos os conflitos quando alterações são sincronizadas com o Publicador, resolvendo-os por meio da política de resolução selecionada durante a criação da publicação. Podem ocorrer os seguintes conflitos:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Já que as assinaturas de atualização em fila permitem modificações nos mesmos dados em vários locais, pode haver conflitos quando os dados são sincronizados no Publicador. A replicação detecta todos os conflitos quando alterações são sincronizadas com o Publicador, resolvendo-os por meio da política de resolução selecionada durante a criação da publicação. Podem ocorrer os seguintes conflitos:  
   
 -   Conflitos de atualização e inserção. Esse conflito acontece quando os mesmos dados são alterados em dois locais. Uma alteração vence e a outra perde.  
   

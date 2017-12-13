@@ -3,8 +3,11 @@ title: Projetos (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57d972b2af70f5ffa7b7d2682ea235f062fa27c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 485a950448f582f332af028eaa2edb69fb065043
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="projects-sql-server-management-studio"></a>Projetos (SQL Server Management Studio)
-Um projeto do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] é uma coleção de scripts e arquivos logicamente relacionados que podem ser salvos em conjunto para administração e desenvolvimento de bancos de dados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um projeto do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] é uma coleção de scripts e arquivos logicamente relacionados que podem ser salvos em conjunto para administração e desenvolvimento de bancos de dados.  
   
 ## <a name="script-project-overview"></a>Visão geral de projeto de script  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] são exibidos no componente Gerenciador de Soluções do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]. Um projeto de script pode conter zero ou mais arquivos de projeto. Você pode adicionar um projeto a uma solução ou combinar mais de um projeto em uma solução.  
