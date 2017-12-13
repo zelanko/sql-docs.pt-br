@@ -2,12 +2,12 @@
 title: "Criar uma fonte de dados do relatório | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f30b38b27a56bf3af10c4f39681b160feec34fd5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e8bac4005982e113a765b59557ae4380610b03b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-report-data-source"></a>Criar uma fonte de dados de relatório
-  Para que o Power View se conecte a um modelo multidimensional, você deve criar uma definição de fonte de dados de relatório compartilhada, também conhecida como um arquivo .rsds, em uma biblioteca do SharePoint. O arquivo .rsds especifica o nome de uma instância de servidor do Analysis Services, um tipo de conexão, uma cadeia de conexão, além de credenciais usadas para se conectar ao modelo multidimensional. Quando um usuário clica no .rsds, um novo relatório em branco do Power View (um arquivo .rdlx) é aberto no navegador.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em ordem para o Power View para se conectar a um modelo multidimensional, você deve criar uma definição de fonte de dados de relatório compartilhado, também conhecido como um arquivo. rsds, em uma biblioteca do SharePoint. O arquivo .rsds especifica o nome de uma instância de servidor do Analysis Services, um tipo de conexão, uma cadeia de conexão, além de credenciais usadas para se conectar ao modelo multidimensional. Quando um usuário clica no .rsds, um novo relatório em branco do Power View (um arquivo .rdlx) é aberto no navegador.  
   
  Para criar uma conexão .rsds, você deve ter o SQL Server 2012 (ou posterior) Reporting Services e o suplemento Reporting Services para SharePoint 2010 ou SharePoint 2013 instalado.  
   

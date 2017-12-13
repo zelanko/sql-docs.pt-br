@@ -2,12 +2,12 @@
 title: "Exemplos de consulta de modelo de Clustering de sequência | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
-  Quando você cria uma consulta referente a um modelo de mineração de dados, pode criar uma consulta de conteúdo, que fornece detalhes sobre as informações armazenadas no modelo ou pode criar uma consulta de previsão, que usa os padrões no modelo para fazer previsões com base nos novos dados fornecidos. Para um modelo de clusterização de sequência, as consultas de conteúdo geralmente fornecem mais detalhes sobre os clusters encontrados ou as transições dentro desses clusters. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria uma consulta em um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes sobre as informações armazenadas no modelo, ou você pode criar uma consulta de previsão que usa os padrões no modelo para fazer previsões com base em dados novos Se você fornecer. Para um modelo de clusterização de sequência, as consultas de conteúdo geralmente fornecem mais detalhes sobre os clusters encontrados ou as transições dentro desses clusters. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
   
  As consultas de previsão em um modelo de clusterização de sequência geralmente fazem recomendações com base nas sequências e transições, em atributos não sequenciais incluídos no modelo ou em uma combinação de atributos sequenciais e não sequenciais.  
   

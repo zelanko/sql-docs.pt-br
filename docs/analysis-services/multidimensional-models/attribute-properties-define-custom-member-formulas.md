@@ -2,12 +2,12 @@
 title: "Definir fórmulas de membro personalizado | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f2d802623b470077ba46326c7650e30013d07534
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e82a27d94e0a964921bc54918e4d0e54a9eba35f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>Propriedades de atributo - definir fórmulas de membro personalizado
-  É possível definir uma expressão multidimensional (MDX), chamada fórmula de membro personalizado, para fornecer os valores aos membros de um atributo especificado. Uma coluna em uma tabela da exibição da fonte de dados fornece, para cada membro de um atributo, a expressão usada para fornecer o valor para esse membro.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode definir uma expressão MDX (Multidimensional Expressions), chamada fórmula de membro personalizado, para fornecer os valores para os membros de um atributo especificado. Uma coluna em uma tabela da exibição da fonte de dados fornece, para cada membro de um atributo, a expressão usada para fornecer o valor para esse membro.  
   
  As fórmulas de membro personalizado determinam os valores de células associados aos membros e substituem as funções de agregação de medidas. Fórmulas de membro personalizado são escritas no formato MDX. Cada fórmula de membro personalizado é válida para um único membro. As fórmulas de membro personalizado são armazenadas na tabela de dimensões ou em outra tabela que tenha uma relação de chave estrangeira com a tabela de dimensões.  
   

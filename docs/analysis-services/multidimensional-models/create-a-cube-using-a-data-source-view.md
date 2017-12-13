@@ -2,12 +2,12 @@
 title: "Criar um cubo usando uma exibição da fonte de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c5514b6ef512855ff718740fc7b7ea7342a1258
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Criar um cubo usando uma Exibição da Fonte de Dados
-  Use este método de criar um novo cubo se você pretender usar uma exibição existente de fonte de dados. Com esse método, você especifica uma exibição de fonte de dados e seleciona tabelas de fatos e dimensões que deseja usar na exibição da fonte de dados. Em seguida, escolha as dimensões e as medidas que deseja incluir no cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use esse método para criar um novo cubo se você pretende usar uma exibição da fonte de dados existente. Com esse método, você especifica uma exibição de fonte de dados e seleciona tabelas de fatos e dimensões que deseja usar na exibição da fonte de dados. Em seguida, escolha as dimensões e as medidas que deseja incluir no cubo.  
   
  Para criar um cubo com uma fonte de dados, no Gerenciador de Soluções, clique com o botão direito do mouse em **Cubos** e selecione **Novo Cubo**. O Assistente para Cubos é aberto.  
   

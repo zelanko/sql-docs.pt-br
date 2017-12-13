@@ -2,12 +2,12 @@
 title: "Cubo células (Analysis Services - dados multidimensionais) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -36,14 +36,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96d7b596c1434dce62dfd9013f277b182f5ff4c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b00c3a74eaf73e19a1665080e5ab7bc91e3b6375
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Células de cubo (Analysis Services - Dados Multidimensionais)
-  Um cubo é composto de células, organizadas por grupos de medidas e dimensões. Uma célula representa a interseção lógica exclusiva em um cubo de um membro de toda dimensão no cubo. Por exemplo, o cubo descrito pelo seguinte diagrama contém um grupo de medidas que tem duas medidas, organizadas juntamente com três dimensões chamadas Origem, Rota e Temporal.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um cubo é composto de células, organizadas por grupos de medidas e dimensões. Uma célula representa a interseção lógica exclusiva em um cubo de um membro de toda dimensão no cubo. Por exemplo, o cubo descrito pelo seguinte diagrama contém um grupo de medidas que tem duas medidas, organizadas juntamente com três dimensões chamadas Origem, Rota e Temporal.  
   
  ![Diagrama de cubo que identifica uma única célula](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro5.gif "diagrama de cubo que identifica uma única célula")  
   
@@ -85,13 +85,13 @@ ms.lasthandoff: 11/17/2017
   
  ![Diagrama de cubo que identifica células vazias](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro7.gif "diagrama de cubo que identifica células vazias")  
   
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma célula vazia é uma célula que tem qualidades especiais. Como as células vazias podem distorcer os resultados de interjunções, contagens etc., muitas funções MDX oferecem a habilidade de ignorar as células vazias para fins de cálculo. Para obter mais informações, consulte [expressões multidimensionais &#40; MDX &#41; Referência](../../mdx/multidimensional-expressions-mdx-reference.md), e [principais conceitos em MDX &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+ Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma célula vazia é uma célula que tem qualidades especiais. Como as células vazias podem distorcer os resultados de interjunções, contagens etc., muitas funções MDX oferecem a habilidade de ignorar as células vazias para fins de cálculo. Para obter mais informações, consulte [expressões multidimensionais & #40; MDX & #41; Referência](../../mdx/multidimensional-expressions-mdx-reference.md), e [principais conceitos em MDX & #40; Analysis Services & #41; ](../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
   
 ## <a name="security"></a>Segurança  
- O acesso a dados de célula é gerenciado no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no nível da função, e pode ser controlado minuciosamente pelo uso de expressões MDX. Para obter mais informações, consulte [conceder acesso personalizado a dimensão de dados &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md), e [conceder acesso personalizado a célula de dados &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
+ O acesso a dados de célula é gerenciado no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no nível da função, e pode ser controlado minuciosamente pelo uso de expressões MDX. Para obter mais informações, consulte [conceder acesso personalizado a dimensão de dados & #40; Analysis Services & #41; ](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md), e [conceder acesso personalizado a célula de dados & #40; Analysis Services & #41; ](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Armazenamento de cubo &#40; Analysis Services - dados multidimensionais &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
+ [Armazenamento de cubo & #40; Analysis Services - dados multidimensionais & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
  [Agregações e designs de agregação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

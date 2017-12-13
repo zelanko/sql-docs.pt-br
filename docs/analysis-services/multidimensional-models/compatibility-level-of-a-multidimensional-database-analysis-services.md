@@ -2,12 +2,12 @@
 title: "Nível de compatibilidade de um banco de dados Multidimensional (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f408b0bb6b2b0fbed6b53046f6ce6e70adb49040
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0055b4c33a489d13ee7feac39f179505d76d50e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Nível de compatibilidade de um banco de dados multidimensional (Analysis Services)
-  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a propriedade de nível de compatibilidade do banco de dados determina o nível funcional de um banco de dados. Os níveis de compatibilidade são exclusivos de cada tipo de modelo. Por exemplo, um nível de compatibilidade **1100** tem um significado diferente quando o banco de dados é multidimensional ou tabular.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a propriedade de nível de compatibilidade do banco de dados determina o nível funcional de um banco de dados. Os níveis de compatibilidade são exclusivos de cada tipo de modelo. Por exemplo, um nível de compatibilidade **1100** tem um significado diferente quando o banco de dados é multidimensional ou tabular.  
   
  Este tópico descreve o nível de compatibilidade apenas para bancos de dados multidimensionais. Para obter mais informações sobre soluções tabulares, consulte [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   

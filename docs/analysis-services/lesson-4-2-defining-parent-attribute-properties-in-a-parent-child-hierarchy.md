@@ -2,12 +2,12 @@
 title: Definindo propriedades de atributo pai em uma hierarquia pai-filho | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e742a280ac4828cd708a3702545e9168cf8b0f73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7d8a8e45d9785d9eb4b449ad36689aadd8e454c6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lição 4-2-definir propriedades de atributo pai em uma hierarquia pai-filho
-Uma hierarquia pai-filho é uma hierarquia em uma dimensão que se baseia em duas colunas de tabela. Juntas, essas colunas definem as relações hierárquicas entre os membros da dimensão. A primeira coluna, chamada *coluna de chave de membro*, identifica cada membro da dimensão. A outra coluna, chamada *coluna pai*, identifica o pai de cada membro da dimensão. A propriedade **NamingTemplate** de um atributo pai determina o nome de cada nível na hierarquia pai-filho e a propriedade **MembersWithData** determina se os dados dos membros pai deverão ser exibidos.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Uma hierarquia pai-filho é uma hierarquia em uma dimensão com base em duas colunas de tabela. Juntas, essas colunas definem as relações hierárquicas entre os membros da dimensão. A primeira coluna, chamada *coluna de chave de membro*, identifica cada membro da dimensão. A outra coluna, chamada *coluna pai*, identifica o pai de cada membro da dimensão. A propriedade **NamingTemplate** de um atributo pai determina o nome de cada nível na hierarquia pai-filho e a propriedade **MembersWithData** determina se os dados dos membros pai deverão ser exibidos.  
   
 Para obter mais informações, consulte [Dimensões pai-filho](../analysis-services/multidimensional-models/parent-child-dimension.md)e [Atributos em hierarquias pai-filho](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   

@@ -2,12 +2,12 @@
 title: "Criar uma estrutura de mineração relacional | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 77b40db70cf3758f76d8e1773e6388fd6a833c49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-relational-mining-structure"></a>Criar uma estrutura de mineração relacional
-  A maioria dos modelos de mineração de dados são baseados em fontes de dados relacionais. As vantagens de criar um modelo de mineração de dados relacional são que você pode montar dados ad hoc, além de treinar e atualizar um modelo sem a complexidade de criar um cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A maioria dos modelos de mineração de dados são baseados em fontes de dados relacionais. As vantagens de criar um modelo de mineração de dados relacional são que você pode montar dados ad hoc, além de treinar e atualizar um modelo sem a complexidade de criar um cubo.  
   
  Uma estrutura de mineração relacional pode tirar dados de origens distintas. Os dados brutos podem ser armazenados em tabelas, arquivos ou sistemas de banco de dados relacional, contanto que os dados possam ser definidos como parte da exibição da fonte de dados. Por exemplo, você deve usar uma estrutura de mineração relacional se seus dados estiverem no Excel, um data warehouse de SQL Server ou um banco de dados de relatório de SQL Server, ou em origens externas que são acessadas pelos provedores OLE DB ou ODBC.  
   

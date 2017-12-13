@@ -2,12 +2,12 @@
 title: "Estabelecendo conexões seguras no ADOMD.NET | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a4545dc84372ae73ba90ac0c90a8586e92afe8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 192686dd747d307163e4530c55459e2c2d814cc4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Conexões no ADOMD.NET - estabelecer conexões seguras
-  Quando você usa uma conexão no ADOMD.NET, o método de segurança que é usado para a conexão depende do valor da **ProtectionLevel** propriedade da cadeia de caracteres de conexão usada ao chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> método o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você usa uma conexão no ADOMD.NET, o método de segurança que é usado para a conexão depende do valor da **ProtectionLevel** propriedade da cadeia de caracteres de conexão usada ao chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> método o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  O **ProtectionLevel** propriedade oferece quatro níveis de segurança: não autenticado, autenticado, assinado e criptografado. A tabela a seguir descreve esses vários níveis de segurança.  
   

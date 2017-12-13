@@ -2,12 +2,12 @@
 title: Microsoft Neural Network Algorithm Technical Reference | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 46dc639d30a60ef8f332c340e3ffd685c8f4f72f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 932d04a5af5bc4631b5c0c80f0b66891eeedb6da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
-  A Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa uma rede *multicamadas Perceptron* , também denominada *rede Regra-Delta com Algoritmo Backpropagation*, composta de até três camadas de neurônios ou *perceptrons*. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] rede Neural usa um *multicamadas Perceptron* rede, também chamado de um *rede rede regra-Delta*, composta de até três camadas de neurônios ou  *perceptrons*. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
   
  Uma descrição detalhada das redes neurais de multicamadas Perceptron está fora do escopo da presente documentação. Este tópico explica a implementação básica do algoritmo, incluindo o método usado para normalizar valores de entrada e saída, e os métodos de seleção de recursos utilizados para reduzir a cardinalidade do atributo. Este tópico descreve os parâmetros e outras configurações que podem ser usadas para personalizar o comportamento do algoritmo, além de fornecer links para informações adicionais sobre como consultar o modelo.  
   

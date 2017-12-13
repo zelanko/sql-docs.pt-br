@@ -2,12 +2,12 @@
 title: "Definir uma relação muitos-para-muitos e propriedades da relação muitos-para-muitos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f9f9807ecfe195dc38d1d953092775e1b648adb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir uma relação muitos-para-muitos e propriedades da relação muitos-para-muitos
-  Este tópico explica as dimensões muitos-para-muitos no Analysis Services, incluindo quando usá-las e como criá-las.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico explica as dimensões muitos-para-muitos no Analysis Services, incluindo quando usá-las e como criá-los.  
   
 ## <a name="introduction"></a>Introdução  
  O Analysis Services dá suporte a dimensões muitos-para-muitos, permitindo uma análise mais complexa do que pode ser descrito em um esquema em estrela clássico. Em um esquema em estrela clássico, todas as dimensões têm uma relação um para muitos com uma tabela de fatos. Cada fato é associado a um membro de dimensão e um simples membro de dimensão é associado a muitos fatos.  

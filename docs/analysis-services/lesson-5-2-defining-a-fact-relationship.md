@@ -2,12 +2,12 @@
 title: "Definindo uma relação de fatos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fb3d67744b5616a031beee8ec3f329ed02f73c48
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0223be3eb321aee4ecae975fe77a776082ed495f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lição 5-2-definir uma relação de fatos
-Algumas vezes, os usuários desejam dimensionar medidas por itens de dados que estão na tabela de fatos ou consultar a tabela de fatos em busca de informações relacionadas específicas, como, por exemplo, números de faturas ou de ordens de compra relacionados a determinados fatos de vendas. Ao definir uma dimensão com base em um item da tabela de fatos, a dimensão será chamada *dimensão de fatos*. As dimensões de fatos também são conhecidas como dimensões de degeneração. Elas são úteis para agrupar em conjunto as linhas de tabelas de fatos relacionadas, como, por exemplo, todas as linhas que estiverem relacionadas a um determinado número de fatura. Embora seja possível colocar essas informações em uma tabela de dimensões separada no banco de dados relacional, criar uma tabela de dimensões separada para essas informações não fornecerá benefício algum, pois a tabela de dimensões tende a aumentar na mesma proporção que a tabela de fatos, duplicando dados e tornando maior sua complexidade.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Os usuários às vezes desejar para poder dimensionar medidas por itens de dados que estão na tabela de fatos ou consultar a tabela de fatos específicas informações adicionais relacionadas, como números de faturas ou pedidos de compra relacionados a determinados fatos de vendas. Ao definir uma dimensão com base em um item da tabela de fatos, a dimensão será chamada *dimensão de fatos*. As dimensões de fatos também são conhecidas como dimensões de degeneração. Elas são úteis para agrupar em conjunto as linhas de tabelas de fatos relacionadas, como, por exemplo, todas as linhas que estiverem relacionadas a um determinado número de fatura. Embora seja possível colocar essas informações em uma tabela de dimensões separada no banco de dados relacional, criar uma tabela de dimensões separada para essas informações não fornecerá benefício algum, pois a tabela de dimensões tende a aumentar na mesma proporção que a tabela de fatos, duplicando dados e tornando maior sua complexidade.  
   
 No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode determinar se deseja duplicar os dados da dimensão de fatos em uma estrutura de dimensão MOLAP para aumentar o desempenho da consulta ou se deseja definir a dimensão de fatos como uma dimensão ROLAP para economizar mais espaço de armazenamento reduzindo o desempenho da consulta. Ao armazenar uma dimensão com o modo de armazenamento MOLAP, todos os membros da dimensão são armazenados na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma estrutura MOLAP altamente compactada, além de serem armazenados nas partições do grupo de medidas. Ao armazenar uma dimensão com o modo de armazenamento ROLAP, apenas a definição da dimensão está armazenada na estrutura MOLAP — os próprios membros da dimensão são consultados a partir da tabela de fatos relacional adjacente no momento da consulta. O modo de armazenamento apropriado pode ser definido com base na frequência em que a dimensão de fatos é consultada, no número de linhas retornada por uma consulta comum, no desempenho da consulta e no custo de processamento. A definição de uma dimensão como ROLAP não requer que todos os cubos que usam a dimensão também sejam armazenados no modo ROLAP. O modo de armazenamento de cada dimensão pode ser configurado independentemente.  
   

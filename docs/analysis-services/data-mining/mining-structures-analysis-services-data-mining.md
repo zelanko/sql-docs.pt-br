@@ -2,12 +2,12 @@
 title: "Estruturas de mineração (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d796c274172d6fdc8402c5965b6d281cc8c4e89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c228c4db6aff3eca771e3c4e5aacbbfc3e2aa2d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estruturas de mineração (Analysis Services – Mineração de dados)
-  A estrutura de mineração define os dados a partir dos quais os modelos de mineração são criados. Ela especifica a exibição da fonte de dados, o número e tipo de colunas e uma partição opcional nos conjuntos de treinamento e teste. Uma única estrutura de mineração pode oferecer suporte a vários modelos de mineração que compartilham o mesmo domínio. O diagrama a seguir mostra a relação da estrutura de mineração de dados com a fonte de dados e com os modelos de mineração de dados que a compõe.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A estrutura de mineração define os dados do qual modelos de mineração são criados: Especifica a exibição da fonte de dados, o número e tipo de colunas, e define uma partição opcional em treinamento e teste. Uma única estrutura de mineração pode oferecer suporte a vários modelos de mineração que compartilham o mesmo domínio. O diagrama a seguir mostra a relação da estrutura de mineração de dados com a fonte de dados e com os modelos de mineração de dados que a compõe.  
   
  ![Processamento de dados: origem para estrutura para modelo](../../analysis-services/data-mining/media/dmcon-modelarch.gif "de processamento de dados: origem para estrutura para modelo")  
   

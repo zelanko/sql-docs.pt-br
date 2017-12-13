@@ -2,12 +2,12 @@
 title: "Definindo dados de um exibição da fonte | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7fa2ed565479de8dfc127ce74d769da7540ba140
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb0297f91f6a7b3cac69e262eac707cdc59040bd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>Lição 1-3-definir uma exibição da fonte de dados
-Depois de definir as fontes de dados que serão usadas em um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você normalmente define uma exibição da fonte de dados para o projeto. Uma exibição da fonte de dados é uma exibição unificada exclusiva dos metadados das tabelas e exibições especificadas que a fonte de dados define no projeto. Armazenar os metadados na exibição da fonte de dados permite que você trabalhe com os metadados durante o desenvolvimento sem ter uma conexão aberta com qualquer fonte de dados subjacente. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Depois de definir as fontes de dados que você usará um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto, a próxima etapa é geralmente definir uma exibição da fonte de dados para o projeto. Uma exibição da fonte de dados é uma exibição unificada exclusiva dos metadados das tabelas e exibições especificadas que a fonte de dados define no projeto. Armazenar os metadados na exibição da fonte de dados permite que você trabalhe com os metadados durante o desenvolvimento sem ter uma conexão aberta com qualquer fonte de dados subjacente. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 Na tarefa a seguir, você define uma exibição da fonte de dados que inclui cinco tabelas da fonte de dados **AdventureWorksDW2012** .  
   

@@ -2,12 +2,12 @@
 title: "Alterar propriedades em uma exibição de fonte de dados (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa1e0fa67c2a9dca58b4cfcff33407994810baa5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Alterar propriedades em uma exibição da fonte de dados (Analysis Services)
-  Após definir uma exibição da fonte de dados usando o Assistente de Exibição da Fonte de Dados e adicionar tabelas, exibições, cálculos nomeados e consultas nomeadas à exibição da fonte de dados, convém alterar as propriedades relacionadas a:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois de definir uma exibição da fonte de dados usando o Assistente de exibição de fonte de dados e adicionar tabelas, exibições, cálculos nomeados e exibir consultas nomeadas à fonte de dados, convém alterar as propriedades relacionadas a:  
   
 -   Critérios de correspondência da exibição da fonte de dados  
   

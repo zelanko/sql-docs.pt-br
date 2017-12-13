@@ -31,11 +31,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a3a252fced11410718d1bcdbc82d9bb199585745
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9c6489bd5ca7b8b82b7211bc77414335e6e62bd7
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Argumentos  
  *savepoint_name*  
- É o nome atribuído ao ponto de salvamento. Os nomes de ponto de salvamento devem estar de acordo com as regras para identificadores, mas são limitados a 32 caracteres. *transaction_name* é sempre maiusculas e minúsculas, mesmo quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não diferencia maiusculas de minúsculas.  
+ É o nome atribuído ao ponto de salvamento. Os nomes de ponto de salvamento devem estar de acordo com as regras para identificadores, mas são limitados a 32 caracteres. *savepoint_name* é sempre maiusculas e minúsculas, mesmo quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não diferencia maiusculas de minúsculas.  
   
  @*savepoint_variable*  
  É o nome de uma variável definida pelo usuário que contém um nome de ponto de salvamento válido. A variável deve ser declarada com uma **char**, **varchar**, **nchar**, ou **nvarchar** tipo de dados. Podem ser passados mais de 32 caracteres para a variável; porém, apenas os primeiros 32 caracteres são usados.  

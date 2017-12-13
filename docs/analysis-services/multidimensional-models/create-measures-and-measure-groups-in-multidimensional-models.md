@@ -2,12 +2,12 @@
 title: Criar medidas e grupos de medidas em modelos multidimensionais | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f10c201d936a3580ca02846f43e3592ebfbacebf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa140461d48e1059c4eed74a3308b0b70a1e6c10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Criar medidas e grupos de medidas em modelos multidimensionais
-  Uma *medida* é uma agregação de valores de dados numéricos, como soma, contagem, mínima, máxima, média ou uma expressão MDX personalizada criada por você. Um *grupo de medidas* é um contêiner para uma ou mais medidas. Todas as medidas existem em um grupo de medidas, mesmo que haja somente uma medida. Um cubo deve ter pelo menos uma medida e um grupo de medidas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um *medidas* é uma agregação de valores de dados numéricos, como soma, contagem, mínimo, máximo, média ou uma expressão MDX personalizada que você criar. Um *grupo de medidas* é um contêiner para uma ou mais medidas. Todas as medidas existem em um grupo de medidas, mesmo que haja somente uma medida. Um cubo deve ter pelo menos uma medida e um grupo de medidas.  
   
  Este tópico inclui as seguintes seções:  
   

@@ -2,12 +2,12 @@
 title: "Criar e gerenciar uma partição Local (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2e5047564e2001f87691d622a736c9ad28b87c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf08f0031c6e805b5677a0e551a20c941d0dce34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Criar e gerenciar uma partição local (Analysis Services)
-  Você pode criar mais partições para um grupo de medidas para melhorar o desempenho do processamento. Ter várias partições permite a você alocar dados de fatos em diversos arquivos de dados físicos correspondentes em servidores locais e remotos. No Analysis Services, as partições podem ser processadas de forma independente e em paralelo, permitindo maior controle sobre o processamento de cargas de trabalho no servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode criar partições adicionais para um grupo de medidas melhorar o desempenho de processamento. Ter várias partições permite a você alocar dados de fatos em diversos arquivos de dados físicos correspondentes em servidores locais e remotos. No Analysis Services, as partições podem ser processadas de forma independente e em paralelo, permitindo maior controle sobre o processamento de cargas de trabalho no servidor.  
   
  As partições podem ser criadas no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] durante o design de modelo, ou após a implantação da solução usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o XMLA. É recomendável escolher apenas uma abordagem. Se você alternar entre ferramentas, talvez descubra que alterações feitas em um banco de dados implantado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] são substituídas quando você subsequentemente reimplanta a solução do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   

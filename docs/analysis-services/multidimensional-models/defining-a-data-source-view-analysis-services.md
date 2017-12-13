@@ -2,12 +2,12 @@
 title: "Definindo dados de um fonte de exibição (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c73c6b68b7fb9f108b96732a7e30bb48f8404ba8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4331bf4de9efa68338e509976b534549bd3506d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definindo uma exibição da fonte de dados (Analysis Services)
-  Uma exibição de fonte de dados, contém o modelo lógico do esquema usado pelos objetos do banco de dados multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — ou seja, cubos, dimensões e estruturas de mineração de dados. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma exibição da fonte de dados contém o modelo lógico do esquema usado pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos de banco de dados multidimensional — ou seja, cubos, dimensões e estruturas de mineração. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
   
 -   Contém os metadados que representam os objetos selecionados, de uma ou mais fontes de dados subjacentes, ou os metadados que serão usados para gerar um armazenamento de dados relacional subjacente se você estiver seguindo a abordagem de cima para baixo para a geração de esquemas.  
   

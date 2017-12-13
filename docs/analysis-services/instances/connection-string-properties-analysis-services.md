@@ -2,12 +2,12 @@
 title: "Propriedades de cadeia de caracteres de Conexão (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriedades de cadeia de conexão (Analysis Services)
-  Este tópico documenta as propriedades da cadeia de conexão que você pode definir em uma das ferramentas de designer ou de administração, ou que você pode ver nas cadeias de conexão criadas por aplicativos cliente que se conectam aos dados do Analysis Services ou os consultam. Sendo assim, ele aborda apenas um subconjunto das propriedades disponíveis. A lista completa inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado no servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico documenta as propriedades de cadeia de caracteres de conexão podem ser definidas em uma das ferramentas de designer ou administração ou ver nas cadeias de conexão criadas por aplicativos cliente que se conectam e consultar dados do Analysis Services. Sendo assim, ele aborda apenas um subconjunto das propriedades disponíveis. A lista completa inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado no servidor.  
   
  Os desenvolvedores que criam cadeias de conexão personalizadas no código do aplicativo devem examinar a documentação da API do cliente ADOMD.NET para exibir uma lista mais detalhada: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   

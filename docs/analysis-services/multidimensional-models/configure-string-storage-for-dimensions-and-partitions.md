@@ -2,12 +2,12 @@
 title: "Configurar o armazenamento de cadeia de caracteres para dimensões e partições | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b16b14e2fb2fd703905245f9e779fd83b7f35cb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b593a2de59682d400c72d5242b078b3b7f2fadb5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar o armazenamento de cadeia de caracteres para dimensões e partições
-  Você pode reconfigurar o armazenamento de cadeia de caracteres para acomodar cadeias de caracteres muito grandes em atributos de dimensão ou partições que excedem o limite de tamanho de arquivo do 4 GB para repositórios de cadeias de caracteres. Se suas dimensões ou partições incluírem repositórios de cadeias de caracteres desse tamanho, você poderá contornar a restrição de tamanho do arquivo alterando a propriedade **StringStoresCompatibilityLevel** em nível de dimensão ou de partição para objetos locais e vinculados (locais ou remotos).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode reconfigurar o armazenamento de cadeia de caracteres para acomodar cadeias de caracteres muito grandes em atributos de dimensão ou partições que excedem o limite de tamanho de arquivo de 4 GB para repositórios de cadeia de caracteres. Se suas dimensões ou partições incluírem repositórios de cadeias de caracteres desse tamanho, você poderá contornar a restrição de tamanho do arquivo alterando a propriedade **StringStoresCompatibilityLevel** em nível de dimensão ou de partição para objetos locais e vinculados (locais ou remotos).  
   
  Observe que você pode aumentar o armazenamento de cadeia de caracteres apenas nos objetos que exigem capacidade adicional. Na maioria dos modelos multidimensionais, os dados de cadeia de caracteres são associados às dimensões. No entanto, partições que contêm medidas de contagem distintas sobre cadeias de caracteres também podem aproveitar essa configuração. Como a configuração é para cadeias de caracteres, dados numéricos não são afetados.  
   

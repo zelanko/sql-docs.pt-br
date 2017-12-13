@@ -2,12 +2,12 @@
 title: "Exemplos de consulta de modelo de árvores de decisão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1b441eb4718e5f362fb1ef6f6a3a889cf5dc812
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f38e76e522a4b062e27379533c22b540311f4c34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="decision-trees-model-query-examples"></a>Exemplos de consulta de modelo de árvores de decisão
-  Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de árvores de decisão pode fornecer estatísticas sobre o número de casos de cada nível da árvore ou as regras que diferenciam os casos. Como alternativa, uma consulta de previsão mapeia o modelo para novos dados para gerar recomendações, classificações e assim sucessivamente. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria uma consulta em um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes sobre os padrões encontrados em análises, ou você pode criar uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de árvores de decisão pode fornecer estatísticas sobre o número de casos de cada nível da árvore ou as regras que diferenciam os casos. Como alternativa, uma consulta de previsão mapeia o modelo para novos dados para gerar recomendações, classificações e assim sucessivamente. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
   
  Esta seção explica como criar consultas para modelos com base no algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

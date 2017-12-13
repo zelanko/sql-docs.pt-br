@@ -2,12 +2,12 @@
 title: "Lista de verificação: Usar o PowerShell para verificar o PowerPivot para SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +17,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c782994144077979f52eaa732618277b57c42ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 98c99d91fcbd0452f0873c32e2ef6f4fbe7d356d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de verificação: usar o PowerShell para verificar o Power Pivot para SharePoint
-  Nenhuma instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] ou operação de recuperação será completa sem um teste de verificação rigoroso que confirme o funcionamento correto dos serviços e dos dados. Neste artigo, mostramos como executar essas etapas usando o Windows PowerShell. Colocamos cada etapa em sua própria seção para que você possa ir diretamente para as tarefas específicas. Por exemplo, execute o script na seção [Bancos de dados](#bkmk_databases) deste tópico para verificar o nome dos bancos de dados de conteúdo e aplicativo de serviço se quiser agendá-los para manutenção ou backup.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Não [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] operação de instalação ou de recuperação será completa sem uma passagem de teste de verificação rigoroso que confirme seus serviços e dados estão operacionais. Neste artigo, mostramos como executar essas etapas usando o Windows PowerShell. Colocamos cada etapa em sua própria seção para que você possa ir diretamente para as tarefas específicas. Por exemplo, execute o script na seção [Bancos de dados](#bkmk_databases) deste tópico para verificar o nome dos bancos de dados de conteúdo e aplicativo de serviço se quiser agendá-los para manutenção ou backup.  
   
 |||  
 |-|-|  
-|![Conteúdo relacionado ao PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "conteúdo relacionado ao PowerShell")|Um script completo do PowerShell é incluído na parte final do tópico. Use o script completo como ponto de partida para criar um script personalizado para fazer a auditoria da implantação completa do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
+|![Conteúdo relacionado ao PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")|Um script completo do PowerShell é incluído na parte final do tópico. Use o script completo como ponto de partida para criar um script personalizado para fazer a auditoria da implantação completa do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
   
 ||  
 |-|  

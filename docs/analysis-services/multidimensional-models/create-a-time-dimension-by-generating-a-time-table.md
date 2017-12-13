@@ -2,12 +2,12 @@
 title: "Criar uma dimensão de tempo ao gerar uma tabela de tempo | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 023c54c55fde8b75af335f29c20d9d0135c905c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: efd1341424c3be0bfd3aad5cf7c216c5303e250b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Criar uma dimensão de tempo ao gerar uma tabela de tempo
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível usar o Assistente de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão de tempo quando não houver nenhuma tabela de tempo disponível no banco de dados de origem. Você faz isso selecionando uma das opções a seguir na página **Selecionar Método de Criação** :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente de dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão de tempo quando nenhuma tabela de tempo está disponível no banco de dados de origem. Você faz isso selecionando uma das opções a seguir na página **Selecionar Método de Criação** :  
   
 -   **Gerar uma tabela de tempo na fonte de dados** Selecione esta opção quando você tiver permissões para criar objetos na fonte de dados subjacente. O assistente gerará uma tabela de tempo e, em seguida, armazenará essa tabela na fonte de dados. O assistente cria a dimensão de tempo a partir dessa tabela de tempo.  
   

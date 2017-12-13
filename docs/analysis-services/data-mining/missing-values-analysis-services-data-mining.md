@@ -2,12 +2,12 @@
 title: "Valores ausentes (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1c2b1b598989965af2be43ad62c02ae4017fd42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Mineração de dados)
-  Tratar  *valores ausentes values* corretamente é uma parte importante da modelagem efetiva. Esta seção explica o que são valores ausentes, e descreve os recursos fornecidos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabalhar com valores ausentes ao criar estruturas de mineração de dados e modelos de mineração.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tratamento de *valores ausentes* corretamente é uma parte importante da modelagem efetiva. Esta seção explica o que são valores ausentes, e descreve os recursos fornecidos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabalhar com valores ausentes ao criar estruturas de mineração de dados e modelos de mineração.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definição de valores ausentes em Mineração de Dados  
  Um valor ausente pode significar várias coisas diferentes. Talvez o campo não fosse aplicável, o evento não aconteceu ou os dados não estavam disponíveis. Pode ser que a pessoa que inseriu os dados não sabia o valor certo, ou não se preocupou que um campo não foi preenchido.  

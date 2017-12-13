@@ -2,12 +2,12 @@
 title: Configurar propriedades de projeto do Analysis Services (SSDT) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 310906f7fa8ddc07f5643121e5120acf1135cb39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurar propriedades do projeto do Analysis Services (SSDT)
-  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é definido com certas propriedades padrão que afetam a construção e a implantação do projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], uma [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto é definido com certas propriedades padrão que afetam a criação e implantação de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto.  
   
  Para alterar as propriedades do projeto, clique com o botão direito do mouse no objeto de projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e em **Propriedades**. Alternativamente, você pode clicar em **Propriedades** no menu de Projeto.  
   

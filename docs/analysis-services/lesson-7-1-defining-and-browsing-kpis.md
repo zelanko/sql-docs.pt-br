@@ -2,12 +2,12 @@
 title: Definindo e procurando KPIs | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 786633c9ef5ff8c1814b1622b1349734286b2312
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8361308afe6ffabf33fd152f308ad12c9bedd479
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lição 1-7: definindo e procurando KPIs
-Para definir KPIs (indicadores chave de desempenho), você deve definir primeiramente um nome de KPI e o grupo de medidas ao qual o KPI será associado. Um KPI pode ser associado a todos ou apenas a um único grupo de medidas. Depois disso, você define os seguintes elementos do KPI:  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Para definir indicadores chave de desempenho (KPIs), primeiro você define um nome KPI e o grupo de medidas ao qual o KPI está associado. Um KPI pode ser associado a todos ou apenas a um único grupo de medidas. Depois disso, você define os seguintes elementos do KPI:  
   
 -   A expressão de valor  
   

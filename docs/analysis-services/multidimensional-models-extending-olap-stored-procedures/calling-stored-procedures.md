@@ -2,12 +2,12 @@
 title: Chamando procedimentos armazenados | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa00161709980550644f07a7330198d9369b706e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 48c35e5583369335f5d9ab6215faa4fd86d66f6a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calling-stored-procedures"></a>Chamando procedimentos armazenados
-  Procedimentos armazenados podem ser chamados no servidor ou a partir de um aplicativo cliente. Nos dois casos, os procedimentos armazenados são sempre executados no servidor, no contexto do servidor ou de um banco de dados. Não há permissões especiais necessárias para executar um procedimento armazenado. Uma vez adicionado o procedimento armazenado por um assembly ao contexto do servidor ou do banco de dados, qualquer usuário pode executá-lo desde que a função do usuário permita as ações realizadas pelo procedimento armazenado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Procedimentos armazenados podem ser chamados no servidor ou do aplicativo cliente. Nos dois casos, os procedimentos armazenados são sempre executados no servidor, no contexto do servidor ou de um banco de dados. Não há permissões especiais necessárias para executar um procedimento armazenado. Uma vez adicionado o procedimento armazenado por um assembly ao contexto do servidor ou do banco de dados, qualquer usuário pode executá-lo desde que a função do usuário permita as ações realizadas pelo procedimento armazenado.  
   
  O procedimento armazenado em formato MDX é chamado da mesma forma que se chama uma função MDX intrínseca. No caso de um procedimento armazenado sem-parâmetros, o nome do procedimento e um par de parênteses vazios são usados, como mostrado a seguir:  
   

@@ -2,12 +2,12 @@
 title: "Exemplos de consulta de modelo de série temporal | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd37cd530af23d04f98866eebcaaad824a66f150
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e72bec5f3ff9a0dbc14912fb2bba656744a678d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="time-series-model-query-examples"></a>Exemplos de consulta de um modelo de série temporal
-  Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes de padrões descobertos em análises, ou uma consulta de previsão, que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de série temporal pode fornecer detalhes adicionais sobre as estrutura periódicas encontradas, enquanto uma consulta de previsão pode informar as previsões para as próximas 5-10 frações de tempo. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria uma consulta em um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes sobre os padrões encontrados em análises, ou você pode criar uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de série temporal pode fornecer detalhes adicionais sobre as estrutura periódicas encontradas, enquanto uma consulta de previsão pode informar as previsões para as próximas 5-10 frações de tempo. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
   
  Esta seção explica como criar ambos os tipos de consultas para modelos que se baseiam no algoritmo MTS.  
   

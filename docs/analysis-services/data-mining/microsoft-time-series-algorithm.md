@@ -2,12 +2,12 @@
 title: Algoritmo MTS | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 48758d40983835289854223aa45399379f57341f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 245c39d7ff9366e43b1faad07fec64befa5aea0e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
-  O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) fornece algoritmos múltiplos que são otimizados para previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS fornece vários algoritmos que são otimizados para previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
   
  O diagrama a seguir mostra um modelo típico de previsão de vendas de um produto, em quatro regiões diferentes de vendas no decorrer do tempo. O modelo exibido no diagrama mostra as vendas efetuadas em cada região, plotadas como vermelhas, amarelas, roxas e azuis. A linha para cada região tem duas partes:  
   

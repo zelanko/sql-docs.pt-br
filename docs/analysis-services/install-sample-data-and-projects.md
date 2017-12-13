@@ -2,12 +2,12 @@
 title: Instalar dados de exemplo e projetos | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0e675845383c3e54c8477a8e0866231ac302cd1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-sample-data-and-projects"></a>Instalar dados de exemplo e projetos 
-Use as instruções e links fornecidos neste tópico para instalar todos os dados e arquivos de projeto usados nos Tutoriais do Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Use as instruções e links fornecidos neste tópico para instalar todos os arquivos de projeto e os dados usados em tutoriais do Analysis Services.  
   
 ## <a name="step-1-install-sql-server-software"></a>Etapa 1: Instalar o software do SQL Server  
 As lições neste tutorial presumem que você tenha o seguinte software instalado. Todos os softwares a seguir são instalados usando a mídia de instalação do SQL Server. Para a simplicidade de implantação, você pode instalar todos os recursos em um único computador. Para instalar estes recursos, execute a Instalação do SQL Server e selecione-os na página Seleção de Recursos. Para obter mais informações, consulte [Instalar o SQL Server 2016 por meio do Assistente de Instalação &#40;Instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  

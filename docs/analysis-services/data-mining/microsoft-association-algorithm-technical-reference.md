@@ -2,12 +2,12 @@
 title: "Referência técnica do algoritmo de associação da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e639fac7981f92f91b2beef0b57c190ce834f14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c1fcc5b1089397672226b526654f611147e81e99
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referência técnica do algoritmo de associação da Microsoft
-  O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação direta do já conhecido algoritmo Apriori.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo regras de associação é uma implementação direta do já conhecido algoritmo Apriori.  
   
  Tanto o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] como o Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] podem ser usados para analisar associações, mas as regras encontradas podem variar conforme o algoritmo. Em um modelo de árvores de decisão, as divisões que levam as regras específicas baseiam-se nas informações obtidas, enquanto no modelo de associação elas se baseiam totalmente na confiança. Assim, em um modelo de associação, um regra forte, ou aquela com mais confiança, não seria necessariamente interessante porque não fornece informações novas.  
   

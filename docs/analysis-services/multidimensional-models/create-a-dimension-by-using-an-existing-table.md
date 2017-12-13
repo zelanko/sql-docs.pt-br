@@ -2,12 +2,12 @@
 title: "Criar uma dimensão usando uma tabela existente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eeabc8b64e3d5450373fb1235a78a27a8aff5a5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b27073cb4276e73ed4e28507d2c3ae55fd956945
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Criar uma dimensão usando uma tabela existente
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente para Dimensões no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão por meio de uma tabela existente. Isso é feito selecionando a opção **Usar uma tabela existente** na página **Selecionar Método de Criação** do assistente. Se você selecionar essa opção, o assistente fornecerá a base da estrutura de dimensão nas tabelas de dimensão, suas colunas e qualquer relação entre essas colunas em uma exibição da fonte de dados existente. O assistente dá exemplos de dados na tabela de origem e nas tabelas relacionadas. Ele usa esses dados para definir as colunas de atributo baseadas nas colunas das tabelas de dimensão, e para definir hierarquias de atributos (chamadas hierarquias *definidas pelo usuário* ). Depois que você usar o Assistente para Dimensões para criar sua dimensão, é possível usar o Designer de Dimensão para adicionar, remover e configurar atributos e hierarquias na dimensão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente de dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão de uma tabela existente. Isso é feito selecionando a opção **Usar uma tabela existente** na página **Selecionar Método de Criação** do assistente. Se você selecionar essa opção, o assistente fornecerá a base da estrutura de dimensão nas tabelas de dimensão, suas colunas e qualquer relação entre essas colunas em uma exibição da fonte de dados existente. O assistente dá exemplos de dados na tabela de origem e nas tabelas relacionadas. Ele usa esses dados para definir as colunas de atributo baseadas nas colunas das tabelas de dimensão, e para definir hierarquias de atributos (chamadas hierarquias *definidas pelo usuário* ). Depois que você usar o Assistente para Dimensões para criar sua dimensão, é possível usar o Designer de Dimensão para adicionar, remover e configurar atributos e hierarquias na dimensão.  
   
  Quando você estiver usando uma tabela existente para criar uma dimensão, o Assistente para Dimensões o orientará nas seguintes etapas:  
   

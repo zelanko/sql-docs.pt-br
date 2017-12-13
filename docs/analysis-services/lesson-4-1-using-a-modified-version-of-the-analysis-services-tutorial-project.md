@@ -2,12 +2,12 @@
 title: "Usando uma versão modificada da análise de projeto do Tutorial de serviços | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd789a871d90169a726cbb1709e5de1f9275fa16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lição 4-1-usando uma versão modificada do projeto Tutorial do Analysis Services
-As demais lições neste tutorial tem como base uma versão aprimorada do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você concluiu nas três primeiras lições. Foram adicionadas outras tabelas e cálculos nomeados à exibição da fonte de dados **Adventure Works DW 2012** e outras dimensões ao projeto. Essas novas dimensões foram adicionadas ao cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Além disso, um segundo grupo de medidas foi adicionado; ele contém medidas de uma segunda tabela de fatos. Esse projeto aprimorado permitirá que você continue a aprender como adicionar funcionalidades ao seu aplicativo de inteligência empresarial sem ter que repetir as ações já aprendidas.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]As demais lições neste tutorial se baseiam em uma versão aprimorada do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto do Tutorial que você concluiu nas três primeiras lições. Foram adicionadas outras tabelas e cálculos nomeados à exibição da fonte de dados **Adventure Works DW 2012** e outras dimensões ao projeto. Essas novas dimensões foram adicionadas ao cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Além disso, um segundo grupo de medidas foi adicionado; ele contém medidas de uma segunda tabela de fatos. Esse projeto aprimorado permitirá que você continue a aprender como adicionar funcionalidades ao seu aplicativo de inteligência empresarial sem ter que repetir as ações já aprendidas.  
   
 Antes de continuar com o tutorial, você deve baixar, extrair, carregar e processar a versão aprimorada do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Use as instruções nesta lição para verificar se você realizou todas as etapas.  
   

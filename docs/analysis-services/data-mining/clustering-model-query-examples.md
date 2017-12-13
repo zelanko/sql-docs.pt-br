@@ -2,12 +2,12 @@
 title: Exemplos de consulta de modelo de clustering | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e60908ae9bba2e5f549b1f3fc57581553785938f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="clustering-model-query-examples"></a>Exemplos de consulta de modelo de clustering
-  Ao criar uma consulta em um modelo de mineração de dados, é possível recuperar metadados sobre o modelo ou criar uma consulta de conteúdo que forneça detalhes sobre os padrões descobertos na análise. Se preferir, crie uma consulta de previsão, que usa os padrões do modelo para fazer previsões para os novos dados. Cada tipo de consulta fornece informações diferentes. Por exemplo, uma consulta de conteúdo pode fornecer detalhes adicionais sobre os clusters encontrados, enquanto uma consulta de previsão pode informar a qual cluster um novo ponto de dados provavelmente pertence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria uma consulta em um modelo de mineração de dados, você pode recuperar metadados sobre o modelo ou criar uma consulta de conteúdo que fornece detalhes sobre os padrões encontrados em análises. Se preferir, crie uma consulta de previsão, que usa os padrões do modelo para fazer previsões para os novos dados. Cada tipo de consulta fornece informações diferentes. Por exemplo, uma consulta de conteúdo pode fornecer detalhes adicionais sobre os clusters encontrados, enquanto uma consulta de previsão pode informar a qual cluster um novo ponto de dados provavelmente pertence.  
   
  Esta seção explica como criar consultas para modelos baseados no algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering.  
   

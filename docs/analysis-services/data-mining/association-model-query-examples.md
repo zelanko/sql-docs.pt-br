@@ -2,12 +2,12 @@
 title: "Exemplos de consulta de modelo de associação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25c3f04c7ae61788f10cc488e5680107fb4e9a3e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b176b73816fb01ff7659e00f58dd4441bc689866
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="association-model-query-examples"></a>Exemplos de consulta de um modelo de associação
-  Ao criar uma consulta em um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes sobre as regras e os conjuntos de itens descobertos durante a análise ou criar uma consulta de previsão, que usa as associações descobertas nos dados para fazer previsões. Para um modelo de associação, normalmente, as previsões baseiam-se em regras e pode ser usadas para fazer recomendações, enquanto as consultas em conteúdo geralmente exploram a relação entre os conjuntos de itens. Você também pode recuperar metadados sobre o modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria uma consulta em um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes sobre as regras e conjuntos de itens descobertos durante a análise, ou você pode criar uma consulta de previsão que usa as associações descobertas nos dados para fazer previsões. Para um modelo de associação, normalmente, as previsões baseiam-se em regras e pode ser usadas para fazer recomendações, enquanto as consultas em conteúdo geralmente exploram a relação entre os conjuntos de itens. Você também pode recuperar metadados sobre o modelo.  
   
  Esta seção explica como criar esses tipos de consulta para modelos que se baseiam no algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

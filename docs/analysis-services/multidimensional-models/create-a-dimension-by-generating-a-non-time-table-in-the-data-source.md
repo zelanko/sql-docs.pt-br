@@ -2,12 +2,12 @@
 title: "Criar uma dimensão ao gerar uma tabela não seja de tempo na fonte de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c9ceffb0bf846992b020722a2a47ebd7106634
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente para Dimensões no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão sem usar uma fonte de dados existente. Isso é possível selecionando a opção **Gerar uma tabela que não seja de tempo na fonte de dados** da página **Selecionar Método de Criação** do assistente. Para criar uma nova tabela de dimensão na fonte de dados subjacente, você precisa ter permissão para criar objetos na fonte de dados subjacente. Ao definir uma dimensão sem uma exibição da fonte de dados predefinida, você pode definir a dimensão do zero ou pode usar um modelo de dimensão.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente de dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão sem usar uma fonte de dados. Isso é possível selecionando a opção **Gerar uma tabela que não seja de tempo na fonte de dados** da página **Selecionar Método de Criação** do assistente. Para criar uma nova tabela de dimensão na fonte de dados subjacente, você precisa ter permissão para criar objetos na fonte de dados subjacente. Ao definir uma dimensão sem uma exibição da fonte de dados predefinida, você pode definir a dimensão do zero ou pode usar um modelo de dimensão.  
   
  O Assistente para Dimensões fornece modelos de dimensão de exemplo, com os quais é possível construir um tipo de dimensão comum. Você pode selecionar a partir dos seguintes tipos de dimensão:  
   

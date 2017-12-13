@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -241,7 +241,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  *index_name*  
  É o nome do índice. Os nomes de índice devem ser exclusivos em uma tabela ou exibição, mas não precisam ser exclusivos no banco de dados. Os nomes de índice devem seguir as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- *coluna*  
+ *column*  
  É a coluna, ou colunas, em que o índice se baseia. Especifique dois ou mais nomes de coluna para criar um índice composto com os valores combinados das colunas especificadas. Lista as colunas a serem incluídas no índice composto, em ordem de prioridade de classificação, dentro dos parênteses após *table_or_view_name*.  
   
  Até 32 colunas podem ser combinadas em uma chave de índice composto único. Todas as colunas de uma chave de índice composto devem estar na mesma tabela ou exibição. O tamanho máximo permitido de valores de índice combinados é de 900 bytes para um índice clusterizado ou 1.700 para um índice não clusterizado. Os limites são 16 colunas e 900 bytes para versões anteriores [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
@@ -422,17 +422,11 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  Se as estatísticas por partição não tiverem suporte, a opção será ignorada e um aviso será gerado. As estatísticas incrementais não têm suporte para os seguintes tipos de estatísticas:  
   
 -   Estatísticas criadas com os índices que não estejam alinhados por partição com a tabela base.  
-  
 -   Estatísticas criadas em bancos de dados secundários legíveis AlwaysOn.  
-  
 -   Estatísticas criadas em bancos de dados somente leitura.  
-  
 -   Estatísticas criadas em índices filtrados.  
-  
 -   Estatísticas criadas em exibições.  
-  
 -   Estatísticas criadas em tabelas internas.  
-  
 -   Estatísticas criadas com índices espaciais ou índices XML.  
   
  DROP_EXISTING = {ON | **OFF** }  
@@ -473,15 +467,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  Índices, inclusive os índices em tabelas temporárias globais, podem ser criados online com as seguintes exceções:  
   
 -   Índice XML  
-  
 -   Índice em uma tabela temporária local.  
-  
 -   Índice clusterizado exclusivo inicial em uma exibição.  
-  
 -   Índices clusterizados desabilitados.  
-  
 -   Índice clusterizado se a tabela subjacente contiver tipos de dados LOB: **imagem**, **ntext**, **texto**e tipos espaciais.  
-  
 -   **varchar (max)** e **varbinary (max)** colunas não podem ser parte de um índice. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e, em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], quando uma tabela contiver **varchar (max)** ou **varbinary (max)** colunas, um índice clusterizado contendo outras colunas podem ser criado ou recriado usando o **ONLINE** opção. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]não permite que o **ONLINE** opção quando a tabela base contém **varchar (max)** ou **varbinary (max)** colunas.  
   
  Para obter mais informações, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -511,7 +500,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  MAXDOP = *max_degree_of_parallelism*  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Substitui o [configurar o grau máximo de paralelismo opção de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) opção de configuração para a duração da operação de índice. Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
+ Substitui o **grau máximo de paralelismo** opção de configuração para a duração da operação de índice. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   
  *max_degree_of_parallelism* pode ser:  
   

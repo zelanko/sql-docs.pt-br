@@ -2,12 +2,12 @@
 title: Alta disponibilidade e escalabilidade no Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6b6f6fa02735de056b83a3ec0216cd95c84926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1a1f8208a30e1ff24e76465fd9210a60ef1ec849
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidade e escalabilidade no Analysis Services
-  Este artigo descreve as técnicas mais usadas para fazer com que os bancos de dados do Analysis Services sejam de alta disponibilidade e escalonáveis. Embora cada objetivo possa ser atingido separadamente, na realidade, eles muitas vezes ocorrem simultaneamente: uma implantação escalável para grandes cargas de trabalho de processamento ou consulta normalmente é acompanhada por expectativas de alta disponibilidade.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este artigo descreve as técnicas mais usadas para tornar os bancos de dados do Analysis Services alta disponibilidade e escalonáveis. Embora cada objetivo possa ser atingido separadamente, na realidade, eles muitas vezes ocorrem simultaneamente: uma implantação escalável para grandes cargas de trabalho de processamento ou consulta normalmente é acompanhada por expectativas de alta disponibilidade.  
   
  No entanto, o inverso nem sempre é verdadeiro. A alta disponibilidade, sem escala, pode ser o único objetivo em casos de contratos de nível de serviço rigorosos para cargas de trabalho de consulta de missão crítica, mas moderadas.  
   

@@ -2,12 +2,12 @@
 title: Exemplos de consulta de modelo de rede neural | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13781c0cce77831d0a33553fec137f61761e5d7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4d13b5801cbf011723fa0ec9272819a83364f3f8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="neural-network-model-query-examples"></a>Exemplos de consulta de modelo de rede neural
-  Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de rede neural pode recuperar metadados de modelo, como o número de camadas ocultas. Alternativamente, uma consulta de previsão pode sugerir classificações com base em uma entrada e opcionalmente fornecer as probabilidades de cada classificação.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria uma consulta em um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes sobre os padrões encontrados em análises, ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de rede neural pode recuperar metadados de modelo, como o número de camadas ocultas. Alternativamente, uma consulta de previsão pode sugerir classificações com base em uma entrada e opcionalmente fornecer as probabilidades de cada classificação.  
   
  Esta seção explica como criar consultas para modelos com base no algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

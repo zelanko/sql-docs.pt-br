@@ -2,12 +2,12 @@
 title: "Serviços de mineração de dados e fontes de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e4e1c93a69bbf7ee54c5ea217512778f0c73eeb7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3042b80feb8f40c7f371e7b42fd7e63e86618f48
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-services-and-data-sources"></a>Serviços de mineração de dados e fontes de dados
-  A mineração de dados requer uma conexão com uma instância do SQL Server Analysis Services. Os dados de um cubo não são necessários para a mineração de dados e o uso de fontes relacionais é recomendado; porém, a mineração de dados usa componentes fornecidos pelo mecanismo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mineração de dados requer uma conexão a uma instância do SQL Server Analysis Services. Os dados de um cubo não são necessários para a mineração de dados e o uso de fontes relacionais é recomendado; porém, a mineração de dados usa componentes fornecidos pelo mecanismo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Este tópico contém informações que você deverá saber quando se conectar a uma instância do SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar, processar, implantar ou consultar modelos de mineração de dados.  
   

@@ -2,12 +2,12 @@
 title: Atributos e hierarquias de atributo | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -32,17 +32,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a86eb2f15fe0109a2e5b2492a61ca7102e662e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18621eba78a2e4c95de6373485044b5f88e1f744
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Atributos e hierarquias de atributos
-  As dimensões são coleções de atributos, vinculados a uma ou mais colunas na tabela ou exibição na exibição de fonte de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]As dimensões são coleções de atributos que estão associados a uma ou mais colunas em uma tabela ou exibição na exibição da fonte de dados.  
   
 ## <a name="key-attribute"></a>Atributo de chave  
- Cada dimensão contém um atributo de chave. Cada atributo está associado a uma ou mais colunas em uma tabela de dimensões. O atributo de chave é o atributo em uma dimensão que identifica as colunas na tabela de dimensões principal usada em relações de chave estrangeira com a tabela de fatos. Normalmente, o atributo de chave representa a coluna ou colunas de chave primária na tabela de dimensões. Você pode definir uma chave primária lógica em uma tabela na exibição de fonte de dados, que não tenha a chave primária física na fonte de dados subjacente. **Para obter mais informações**, consulte [definir chaves primárias lógicas em uma exibição da fonte de dados &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Ao definir os atributos de chave, o Assistente para Cubos e o Assistente para Dimensões tentam usar as colunas de chave primária da tabela de dimensões na exibição da fonte de dados. Se a tabela de dimensões não tem uma chave lógica primária ou uma chave física primária definida, os assistentes não definirão corretamente os atributos da chave da dimensão.  
+ Cada dimensão contém um atributo de chave. Cada atributo está associado a uma ou mais colunas em uma tabela de dimensões. O atributo de chave é o atributo em uma dimensão que identifica as colunas na tabela de dimensões principal usada em relações de chave estrangeira com a tabela de fatos. Normalmente, o atributo de chave representa a coluna ou colunas de chave primária na tabela de dimensões. Você pode definir uma chave primária lógica em uma tabela na exibição de fonte de dados, que não tenha a chave primária física na fonte de dados subjacente. **Para obter mais informações**, consulte [definir chaves primárias lógicas em uma exibição da fonte de dados & #40; Analysis Services & #41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Ao definir os atributos de chave, o Assistente para Cubos e o Assistente para Dimensões tentam usar as colunas de chave primária da tabela de dimensões na exibição da fonte de dados. Se a tabela de dimensões não tem uma chave lógica primária ou uma chave física primária definida, os assistentes não definirão corretamente os atributos da chave da dimensão.  
   
 ## <a name="binding-an-attribute-to-columns-in-data-source-view-tables-or-views"></a>Associando um atributo a colunas nas tabelas de exibição da fonte de dados ou exibições  
  Um atributo é associado às colunas em uma ou mais tabelas de exibição da fonte de dados ou exibições. Um atributo está sempre associado a uma ou mais colunas de chave, o que determina os membros contidos pelo atributo. Por padrão, essa é a única coluna à qual um atributo é associado. Um atributo também pode ser associado a uma ou mais colunas adicionais para fins específicos. Por exemplo, um atributo **NameColumn** propriedade determina o nome que aparece para o usuário para cada membro de atributo - essa propriedade do atributo pode ser associada a uma coluna de dimensão específica por meio de uma exibição da fonte de dados ou pode ser associado a uma coluna calculada na exibição da fonte de dados. Para obter mais informações, consulte [referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md).  

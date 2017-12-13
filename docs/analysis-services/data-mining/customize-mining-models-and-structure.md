@@ -2,12 +2,12 @@
 title: "Personalizar a estrutura e os modelos de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee11262f468b4163ec90927964798a00a48e728c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e01f6a837f649ec088bc0a42e3c1da7d22d9a3e8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="customize-mining-models-and-structure"></a>Personalizar os modelos de mineração e a estrutura
-  Depois de selecionar um algoritmo que atende as necessidades do seu negócio, é possível personalizar o modelo de mineração das formas a seguir para melhorar potencialmente os resultados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois de selecionar um algoritmo que atenda às suas necessidades de negócios, você pode personalizar o modelo de mineração das seguintes maneiras para melhorar potencialmente os resultados.  
   
 -   Use colunas diferentes de dados no modelo ou altere o uso, tipos de conteúdo ou método de diferenciação para as colunas.  
   

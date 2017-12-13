@@ -2,12 +2,12 @@
 title: "Backup e restauração de bancos de dados do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6f5db5fe3911767be37930fb7d195efffb826042
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f750fc5c1c991b8cf4392d427855f583c478c028
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e restauração de bancos de dados do Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui backup e restauração de forma que você possa recuperar um banco de dados e seus objetos de um ponto específico no tempo. Backup e restauração também é uma técnica válida por migrar bancos de dados para servidores atualizados, mover bancos de dados entre servidores ou implantar um banco de dados para um servidor de produção. Para fins de recuperação de dados, se você ainda não tem um plano de backup e seus dados são valiosos, deve criar e implementar um plano o mais breve possível.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui backup e restauração para que você pode recuperar um banco de dados e seus objetos de um ponto específico no tempo. Backup e restauração também é uma técnica válida por migrar bancos de dados para servidores atualizados, mover bancos de dados entre servidores ou implantar um banco de dados para um servidor de produção. Para fins de recuperação de dados, se você ainda não tem um plano de backup e seus dados são valiosos, deve criar e implementar um plano o mais breve possível.  
   
  Os comandos de backup e restauração são executados em um banco de dados implantado do Analysis Services. Para seus projetos e soluções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve usar o controle do código-fonte para garantir que possa recuperar versões específicas de seus arquivos de origem e, então, criar um plano de recuperação de dados para o repositório do sistema de controle do código-fonte que você estiver usando.  
   

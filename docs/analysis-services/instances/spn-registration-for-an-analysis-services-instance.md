@@ -2,12 +2,12 @@
 title: "Registro de SPN de uma instância do Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53dd8aa711b2d9ba4a565f86ee66572e523fa78a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registro de SPN de uma instância do Analysis Services
-  Um nome de entidade de serviço (SPN) identifica exclusivamente uma instância de serviço em um domínio do Active Directory quando a autenticação Kerberos é usada para autenticar identidades de cliente e de serviço mutuamente. Um SPN é associado à conta de logon na qual a instância do serviço é executada.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um nome de entidade de serviço (SPN) identifica exclusivamente uma instância de serviço em um domínio do Active Directory quando Kerberos é usado para autenticar identidades de cliente e de serviço mutuamente. Um SPN é associado à conta de logon na qual a instância do serviço é executada.  
   
  Para aplicativos cliente que se conectam ao Analysis Services através da autenticação Kerberos, as bibliotecas de cliente do Analysis Services criam um SPN usando o nome de host da cadeia de conexão e outras variáveis conhecidas, como a classe de serviço, que são corrigidos em qualquer versão especificada do Analysis Services.  
   

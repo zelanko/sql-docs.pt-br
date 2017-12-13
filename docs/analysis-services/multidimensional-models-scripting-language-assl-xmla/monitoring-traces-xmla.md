@@ -2,12 +2,12 @@
 title: Monitorando rastreamentos (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitoring-traces-xmla"></a>Monitorando rastreamentos (XMLA)
-  Você pode usar o [assinar](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) do XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O **assinar** comando retorna os resultados de um rastreamento como um conjunto de linhas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode usar o [assinar](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) do XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O **assinar** comando retorna os resultados de um rastreamento como um conjunto de linhas.  
   
 ## <a name="specifying-a-trace"></a>Especificando um rastreamento  
  O [objeto](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) propriedade do **assinar** comando deve conter uma referência de objeto para um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância ou um rastreamento em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. Se o **objeto** propriedade não for especificada, ou um identificador de rastreamento não está especificado no **objeto** propriedade, o **assinar** comando monitora o rastreamento de sessão padrão para a sessão explícita especificada no cabeçalho SOAP para o comando.  

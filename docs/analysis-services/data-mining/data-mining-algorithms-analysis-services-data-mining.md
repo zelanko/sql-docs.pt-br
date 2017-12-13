@@ -2,12 +2,12 @@
 title: "Algoritmos de mineração de dados (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 092ec27d421f91a1dc4484298139783df1695594
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmos de mineração de dados (Analysis Services – Mineração de Dados)
-  Um *algoritmo* na mineração de dados (ou aprendizado de máquina) é um conjunto de heurística e cálculos que cria um modelo com base nos dados. Para criar um modelo, o algoritmo primeiro analisa os dados que você fornece, procurando tipos de padrões ou tendências específicos. O algoritmo usa os resultados dessa análise em muitas iterações para definir os parâmetros ideais para criar o modelo de mineração. Esses parâmetros são aplicados pelo conjunto de dados inteiro para extrair padrões acionáveis e estatísticas detalhadas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um *algoritmo* nos dados de mineração (ou o aprendizado de máquina) é um conjunto de heurística e cálculos que cria um modelo de dados. Para criar um modelo, o algoritmo primeiro analisa os dados que você fornece, procurando tipos de padrões ou tendências específicos. O algoritmo usa os resultados dessa análise em muitas iterações para definir os parâmetros ideais para criar o modelo de mineração. Esses parâmetros são aplicados pelo conjunto de dados inteiro para extrair padrões acionáveis e estatísticas detalhadas.  
   
  O modelo de mineração que um algoritmo cria a partir de seus dados pode assumir vários formatos, incluindo:  
   

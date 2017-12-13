@@ -2,12 +2,12 @@
 title: "Projetos de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ae03bc24451bb038581c53d5830c54a49f9c7d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-projects"></a>Projetos de mineração de dados
-  Um projeto de mineração de dados faz parte de uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante o processo de design, os objetos que você cria neste projeto estão disponíveis para teste e consulta como parte de um banco de dados de espaço de trabalho. Quando você quiser que os usuários possam consultar ou procurar os objetos no projeto, deverá implantar o projeto em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado em modo multidimensional.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um projeto de mineração de dados é parte de um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solução. Durante o processo de design, os objetos que você cria neste projeto estão disponíveis para teste e consulta como parte de um banco de dados de espaço de trabalho. Quando você quiser que os usuários possam consultar ou procurar os objetos no projeto, deverá implantar o projeto em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado em modo multidimensional.  
   
  Este tópico fornece as informações básicas necessárias para entender e criar projetos de mineração de dados.  
   

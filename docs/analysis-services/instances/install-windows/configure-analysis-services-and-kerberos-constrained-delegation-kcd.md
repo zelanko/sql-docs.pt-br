@@ -2,12 +2,12 @@
 title: "Configurar o Analysis Services e delegação restrita Kerberos (KCD) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae2cafe597e5540a58cc89e28cee87516942d021
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurar o Analysis Services e a KCD (Delegação restrita de Kerberos)
-  A KCD (delegação restrita de Kerberos) é um protocolo de autenticação que você pode configurar com a autenticação do Windows a fim de delegar credenciais de cliente, de serviço para serviço, em todo o seu ambiente. A KCD exige infraestrutura adicional, por exemplo, um Controlador de Domínio, e a configuração adicional de seu ambiente. A KCD é um requisito em alguns cenários que envolvem dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] com o SharePoint 2016. No SharePoint 2016, os Serviços do Excel foram movidos para fora do farm do SharePoint para um servidor novo e separado, o **Servidor do Office Online**. Como o Servidor do Office Online é separado, há uma necessidade crescente por uma forma de delegar credenciais de cliente em cenários típicos de dois saltos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kerberos KCD (delegação restrita) é um protocolo de autenticação, de que você pode configurar com a autenticação do Windows para delegar credenciais de cliente serviço para serviço em todo o seu ambiente. A KCD exige infraestrutura adicional, por exemplo, um Controlador de Domínio, e a configuração adicional de seu ambiente. A KCD é um requisito em alguns cenários que envolvem dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] com o SharePoint 2016. No SharePoint 2016, os Serviços do Excel foram movidos para fora do farm do SharePoint para um servidor novo e separado, o **Servidor do Office Online**. Como o Servidor do Office Online é separado, há uma necessidade crescente por uma forma de delegar credenciais de cliente em cenários típicos de dois saltos.  
   
 ||  
 |-|  

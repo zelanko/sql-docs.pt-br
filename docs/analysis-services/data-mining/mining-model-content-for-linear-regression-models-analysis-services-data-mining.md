@@ -2,12 +2,12 @@
 title: "Conteúdo do modelo de regressão Linear modelos de mineração | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1fc5e735cff3a4fc79f73cf2905cf0fa28732ded
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cb289289301d3837ff2f82848b6fd183354b7e56
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão linear (Analysis Services – Mineração de Dados)
-  Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Regressão Linear. Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Entendendo a estrutura de um modelo de regressão linear  
  Um modelo de regressão linear tem uma estrutura extremamente simples. Cada modelo tem um único nó pai que representa o modelo e seus metadados e um nó de árvore de regressão (NODE_TYPE = 25) que contém uma fórmula de regressão para cada atributo previsível.  

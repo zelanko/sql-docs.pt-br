@@ -2,12 +2,12 @@
 title: Criar um projeto do Analysis Services (SSDT) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b26af390b901d6f23eacd409d919a6d1c656ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ff6e42f9b18df54afc83fe80574d79845cf78e4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Criar um Projeto de Analysis Services (SSDT)
-  Você pode definir um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o modelo de projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou Assistente para Importação de Banco de Dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ler o conteúdo de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se não houver uma solução carregada no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a criação de um novo projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará automaticamente uma nova solução. Caso contrário, o novo projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] será adicionado à solução existente. As práticas recomendadas para o desenvolvimento de soluções exigem a criação de projetos separados para tipos diferentes de dados de aplicativo, usando uma única solução se os projetos forem relacionados. Por exemplo, você pode ter uma única solução que contém projetos separados para pacotes de Integration Services, bancos de dados do Analysis Services e relatórios do Reporting Services que são todos usados pelo mesmo aplicativo de negócios.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode definir um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modelo de projeto ou usando a importação [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de banco de dados para ler o conteúdo de um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados. Se não houver uma solução carregada no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a criação de um novo projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará automaticamente uma nova solução. Caso contrário, o novo projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] será adicionado à solução existente. As práticas recomendadas para o desenvolvimento de soluções exigem a criação de projetos separados para tipos diferentes de dados de aplicativo, usando uma única solução se os projetos forem relacionados. Por exemplo, você pode ter uma única solução que contém projetos separados para pacotes de Integration Services, bancos de dados do Analysis Services e relatórios do Reporting Services que são todos usados pelo mesmo aplicativo de negócios.  
   
  Um projeto do Analysis Services contém objetos usados em um único banco de dados do Analysis Services. As propriedades de implantação do projeto especificam o servidor e o nome do banco de dados para o qual os metadados do projeto serão implantados como objetos instanciados.  
   

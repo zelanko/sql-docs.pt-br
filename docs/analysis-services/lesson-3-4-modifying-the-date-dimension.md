@@ -2,12 +2,12 @@
 title: "Modificando a dimensão data | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ce770ce3ac600e086ea0b6d1ed03ed1b26b4ee3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9f593c830dbdffe9b09b6f5e44d0957a7bb1d4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lição 3-4-modificando a dimensão de data
-Na tarefa deste tópico, você criará uma hierarquia definida pelo usuário e alterará os nomes de membro exibidos nos atributos Date, Month, Calendar Quarter e Calendar Semester. Você também definirá as chaves compostas para atributos, controlará a ordem de classificação dos membros de dimensão e definirá relações de atributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nas tarefas deste tópico, você cria uma hierarquia definida pelo usuário e alterar os nomes de membro são exibidos para os atributos de data, mês, trimestre do calendário e semestre do calendário. Você também definirá as chaves compostas para atributos, controlará a ordem de classificação dos membros de dimensão e definirá relações de atributo.  
   
 ## <a name="adding-a-named-calculation"></a>Adicionando um cálculo nomeado  
 É possível adicionar um cálculo nomeado, que é uma expressão SQL representada como uma coluna calculada, a uma tabela em uma exibição da fonte de dados. A expressão se parece e se comporta como uma coluna na tabela. Os cálculos nomeados permitem que você estenda o esquema relacional de tabelas existentes em uma exibição de fonte de dados sem modificar a tabela na fonte de dados subjacente. Para obter mais informações, consulte [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  

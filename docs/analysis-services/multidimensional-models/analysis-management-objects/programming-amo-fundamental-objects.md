@@ -2,12 +2,12 @@
 title: "Programação de objetos fundamentais AMO | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6eda664b7dbe009d5f82e0daffe0b428b26098d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 82ab6322367b9aaac757e9444d98a30401d42b06
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programando objetos AMO fundamentais
-  Os objetos fundamentais são geralmente simples e diretos. Esses objetos são normalmente criados e instanciados e, quando não são mais necessários, o usuário se desconecta deles. As classes fundamentais incluem os seguintes objetos: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>. O único objeto complexo dos objetos fundamentais AMO é o <xref:Microsoft.AnalysisServices.DataSourceView>, que exige detalhes para a criação do modelo abstrato que representa a exibição da fonte de dados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Objetos fundamentais são geralmente simples e diretos. Esses objetos são normalmente criados e instanciados e, quando não são mais necessários, o usuário se desconecta deles. As classes fundamentais incluem os seguintes objetos: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>. O único objeto complexo dos objetos fundamentais AMO é o <xref:Microsoft.AnalysisServices.DataSourceView>, que exige detalhes para a criação do modelo abstrato que representa a exibição da fonte de dados.  
   
  Os objetos <xref:Microsoft.AnalysisServices.Server> e <xref:Microsoft.AnalysisServices.Database> são normalmente necessários para o uso de objetos contidos como objetos OLAP ou objetos de mineração de dados.  
   

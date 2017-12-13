@@ -2,12 +2,12 @@
 title: "Criar uma estrutura de mineração OLAP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 011c1527e135a7326d54b0268d9e2fcb070fb6e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 75caf898ac2e79e57e8c85f8b9e5a33b44460cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-an-olap-mining-structure"></a>Criar uma estrutura de mineração OLAP
-  Há muitas vantagens na criação de um modelo de mineração de dados baseado em um cubo OLAP ou em outro repositório de dados multidimensional. Uma solução de OLAP já contém grandes volumes de dados que estão bem-organizados, limpos e corretamente formatados; contudo, a complexidade dos dados é tamanha que é pouco provável que usuários localizem padrões significativos pela exploração ad hoc. A mineração de dados permite descobrir novas correlações e apresenta ideias acionáveis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Há muitas vantagens para criar um modelo de mineração de dados com base em um cubo OLAP ou outro repositório de dados multidimensionais. Uma solução de OLAP já contém grandes volumes de dados que estão bem-organizados, limpos e corretamente formatados; contudo, a complexidade dos dados é tamanha que é pouco provável que usuários localizem padrões significativos pela exploração ad hoc. A mineração de dados permite descobrir novas correlações e apresenta ideias acionáveis.  
   
  Este tópico descreve como criar uma estrutura de mineração OLAP, com base em uma dimensão e em medidas relacionadas em uma solução multidimensional existente.  
   

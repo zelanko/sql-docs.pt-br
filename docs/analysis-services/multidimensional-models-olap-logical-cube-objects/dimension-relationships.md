@@ -2,12 +2,12 @@
 title: "Relações de dimensão | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: af8f55c0f3794f06873da3811642a75a590977c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5aab3f639f0eb38aa10cac50564c1ad18b7f4336
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimension-relationships"></a>Relações de dimensão
-  O uso de dimensões define as relações entre uma dimensão de cubo e os grupos de medidas em um cubo. Uma dimensão de cubo é uma instância de uma dimensão de banco de dados usada em um cubo específico. Um cubo pode ter, e frequentemente tem, dimensões de cubo que não estão diretamente relacionadas ao grupo de medidas, mas que podem estar indiretamente relacionadas ao grupo de medidas por meio de outra dimensão ou grupo de medidas. Quando você adiciona um grupo de medidas ou dimensões de banco de dados para um cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta determinar o uso da dimensão examinando relações entre as tabelas de dimensões e tabelas de fatos na exibição da fonte de dados do cubo e examinando as relações entre atributos em dimensões. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] define as configurações de uso de dimensão automaticamente para as relações que pode detectar.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uso da dimensão define as relações entre uma dimensão de cubo e os grupos de medidas em um cubo. Uma dimensão de cubo é uma instância de uma dimensão de banco de dados usada em um cubo específico. Um cubo pode ter, e frequentemente tem, dimensões de cubo que não estão diretamente relacionadas ao grupo de medidas, mas que podem estar indiretamente relacionadas ao grupo de medidas por meio de outra dimensão ou grupo de medidas. Quando você adiciona um grupo de medidas ou dimensões de banco de dados para um cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta determinar o uso da dimensão examinando relações entre as tabelas de dimensões e tabelas de fatos na exibição da fonte de dados do cubo e examinando as relações entre atributos em dimensões. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] define as configurações de uso de dimensão automaticamente para as relações que pode detectar.  
   
  Uma relação entre uma dimensão e um grupo de medidas consiste na dimensão e tabelas de fatos participantes da relação e um atributo de granularidade que especifica a granularidade da dimensão em um determinado grupo de medidas.  
   

@@ -2,12 +2,12 @@
 title: "Modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 91d1787e568c49d528cc030125ffdb73c0e00b28
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 36c55916f0f1b403ddf248c975151b638a7ccb86
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modelos de mineração (Analysis Services – Mineração de Dados)
-  Um *modelo de mineração* é criado aplicando-se um algoritmo a dados, mas é mais que um algoritmo ou um contêiner de metadados: é um conjunto de dados, estatísticas e padrões que podem ser aplicados a novos dados para gerar previsões e fazer inferências sobre relações.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um *modelo de mineração* é criado aplicando um algoritmo de dados, mas é mais do que um algoritmo ou um contêiner de metadados: é um conjunto de dados, estatísticas e padrões que podem ser aplicadas a novos dados para gerar previsões e fazer inferências sobre as relações.  
   
  Esta seção explica o que é um modelo de mineração de dados e para que pode ser usado: a arquitetura básica de modelos e estruturas, as propriedades de modelos de mineração de dados e as maneiras de criar e trabalhar com modelos de mineração.  
   

@@ -2,12 +2,12 @@
 title: Conecte-se de aplicativos de cliente (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0310a1012153fae8ecb364e63a270ce0846af277
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Conectar-se de aplicativos cliente (Analysis Services)
-  Se você é novato no Analysis Services, use as informações deste tópico para se conectar a uma instância existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando ferramentas e aplicativos comuns. Este tópico também explica como se conectar em identidades de usuário diferentes para fins de teste.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se você for novato no Analysis Services, use as informações neste tópico para se conectar a uma instância existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando ferramentas e aplicativos comuns. Este tópico também explica como se conectar em identidades de usuário diferentes para fins de teste.  
   
 -   [Conectar usando o SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
   

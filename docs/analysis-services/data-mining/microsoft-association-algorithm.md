@@ -2,12 +2,12 @@
 title: "Algoritmo de associação da Microsoft | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -39,14 +39,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo Associação da Microsoft
-  O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo normalmente usado pelos mecanismos de recomendação. Um mecanismo de recomendação recomenda itens aos clientes com base nos itens que eles já compraram ou pelos quais mostraram interesse. O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] também é útil para análise da cesta básica.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] associação é um algoritmo que é frequentemente usado para mecanismos de recomendação. Um mecanismo de recomendação recomenda itens aos clientes com base nos itens que eles já compraram ou pelos quais mostraram interesse. O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] também é útil para análise da cesta básica.   
   
  Modelos de associação são criados a partir de conjuntos de dados que contêm identificadores de casos individuais e de itens contidos em casos. Um grupo de itens em um caso é chamado de *conjunto de itens*. Um modelo de associação é formado por uma série de conjuntos de itens e regras que descrevem como esses itens são agrupados nos casos. As regras que o algoritmo identificar podem ser usadas para prever as prováveis compras futuras do cliente com base nos itens já existentes em seu carrinho de compras. O diagrama a seguir mostra uma série de regras em um conjunto de itens.  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Consulte também  
  [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Procurar um modelo usando o Visualizador de regras de associação da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Conteúdo do modelo de mineração para modelos de associação &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração para modelos de associação & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo de associação da Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [Exemplos de consulta de um modelo de associação](../../analysis-services/data-mining/association-model-query-examples.md)  
   

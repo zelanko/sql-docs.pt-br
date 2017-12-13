@@ -2,12 +2,12 @@
 title: Recuperando dados usando o AdomdDataReader | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,18 +24,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1e086fd6662a00e79b87a02fbaf3528b08895de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9c02bc400a7d1b3d9bec1a42f6ee43045616e3a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Recuperando dados usando o AdomdDataReader
-  Na recuperação de dados analíticos, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oferece um bom equilíbrio entre sobrecarga e interatividade. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> recupera um fluxo dados somente leitura, somente encaminhamento, bidimensional a partir de uma fonte de dados analíticos. Esse fluxo de dados não armazenado permite que a lógica procedural processe com eficiência os resultados de uma fonte de dados analíticos de forma sequencial. Isso faz do <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> uma boa opção para a recuperação de grandes quantidades de dados para fins de exibição, uma vez que os dados não são armazenados em cache em memória.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ao recuperar dados analíticos, o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> objeto fornece um bom equilíbrio entre sobrecarga e interatividade. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> recupera um fluxo dados somente leitura, somente encaminhamento, bidimensional a partir de uma fonte de dados analíticos. Esse fluxo de dados não armazenado permite que a lógica procedural processe com eficiência os resultados de uma fonte de dados analíticos de forma sequencial. Isso faz do <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> uma boa opção para a recuperação de grandes quantidades de dados para fins de exibição, uma vez que os dados não são armazenados em cache em memória.  
   
  O <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> também pode melhorar o desempenho do aplicativo ao recuperar dados assim que estiverem disponíveis, em vez de aguardar os resultados completos da consulta a ser retornada. O <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> também reduz a sobrecarga do sistema porque, por padrão, este leitor só armazena uma linha de cada vez em memória.  
   
- A desvantagem do desempenho otimizado é que o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oferece menos informações sobre os dados recuperados do que outros métodos de recuperação de dados. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> não dá suporte a um modelo de objeto grande para a representação de dados ou de metadados e esse modelo de objeto também não permite recursos analíticos mais complexos, como o write-back de célula. No entanto, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oferece um conjunto de métodos com rigidez de tipo para a recuperação de dados de conjuntos de células e um método para a recuperação de metadados de conjuntos de células em formato tabular. Além disso, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> implementa o **IDbDataReader** interface para o suporte da associação de dados e para recuperar dados usando o **SelectCommand** método, do **System. Data**  namespace da biblioteca de classe do Microsoft .NET Framework.  
+ A desvantagem do desempenho otimizado é que o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oferece menos informações sobre os dados recuperados do que outros métodos de recuperação de dados. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> não dá suporte a um modelo de objeto grande para a representação de dados ou de metadados e esse modelo de objeto também não permite recursos analíticos mais complexos, como o write-back de célula. No entanto, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oferece um conjunto de métodos com rigidez de tipo para a recuperação de dados de conjuntos de células e um método para a recuperação de metadados de conjuntos de células em formato tabular. Além disso, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> implementa o **IDbDataReader** interface para o suporte da associação de dados e para recuperar dados usando o **SelectCommand** método, do **System. Data ** namespace da biblioteca de classe do Microsoft .NET Framework.  
   
 ## <a name="retrieving-data-from-the-adomddatareader"></a>Recuperando dados do AdomdDataReader  
  Para usar o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> para recuperar dados, siga estas etapas:  

@@ -2,12 +2,12 @@
 title: "SystemGetClusterCrossValidationResults (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a741805b22296232bffdc881ba4105243ea92506
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 54b91c7abf3f9abe366d45d2579818aee1c121a5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - Data Mining)
-  Particiona a estrutura de mineração em um número especificado de seções cruzadas, treina um modelo para cada partição e retorna métricas de precisão para cada partição.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Partições que a estrutura de mineração em um número especificado de seções cruzadas, treina um modelo para cada partição e, em seguida, retorna métricas de precisão para cada partição.  
   
  **Observação** : esse procedimento armazenado só pode ser usado com uma estrutura de mineração que contém pelo menos um modelo de clustering. Para validação cruzada de modelos que não são de clustering, você deve usar [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -143,7 +143,7 @@ CALL SystemGetClusterCrossValidationResults(
   
 ## <a name="see-also"></a>Consulte também  
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   

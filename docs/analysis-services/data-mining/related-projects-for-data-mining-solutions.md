@@ -2,12 +2,12 @@
 title: "Projetos relacionados para soluções de mineração de dados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da5beda0118e0eb281a84c9d0f675b94e3a9d067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d197240962d834b3da6c6e1dbdd1fb224a995192
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
-  O mínimo que é necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O mínimo necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  
   
 -   Preparação e seleção de dados e variáveis. Inclui limpeza de dados, gerenciamento de metadados e integração de várias fontes de dados e a conversão, fusão e carregamento de dados em um data warehouse.  
   

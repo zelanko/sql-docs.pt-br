@@ -2,12 +2,12 @@
 title: "Configurar o PowerPivot e implantar soluções (SharePoint 2016) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0e3fa74aed98e00a64a155a8fb43d2cc6db3e1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6675b8338a54dca9dac4b842ec2d0f563058e1b8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configurar o PowerPivot e implantar soluções (SharePoint 2016)
-  Estes tópicos descrevem a implantação e a configuração de aprimoramentos de camada intermediária aos recursos do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , incluindo a Galeria [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , a atualização de dados agendada, o Painel de Gerenciamento e os provedores de dados. Execute a ferramenta de **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016** para concluir o seguinte:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Estes tópicos descrevem a implantação e configuração de aprimoramentos de camada intermediária para o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] os recursos da [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] incluindo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] galeria, a atualização de dados de agenda, painel de gerenciamento e provedores de dados. Execute a ferramenta de **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016** para concluir o seguinte:  
   
 -   Implantar os arquivos de solução do SharePoint.  
   

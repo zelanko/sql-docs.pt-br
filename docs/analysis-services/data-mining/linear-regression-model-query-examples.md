@@ -2,12 +2,12 @@
 title: "Exemplos de consulta de modelo de regressão linear | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25971b7df79dde58697e8c080b3c125bc6ba667e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b0f34af9c1c466f09040c7915f53b993cb04ac1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="linear-regression-model-query-examples"></a>Exemplos de consulta de modelo de regressão linear
-  Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo pode fornecer mais detalhes sobre a fórmula de regressão, enquanto uma consulta de previsão pode informar se um novo ponto de dados se ajusta ao modelo. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria uma consulta em um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes sobre os padrões encontrados em análises, ou você pode criar uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo pode fornecer mais detalhes sobre a fórmula de regressão, enquanto uma consulta de previsão pode informar se um novo ponto de dados se ajusta ao modelo. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
   
  Esta seção explica como criar consultas para modelos baseados no algoritmo Regressão Linear da Microsoft.  
   

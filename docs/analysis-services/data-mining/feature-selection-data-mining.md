@@ -2,12 +2,12 @@
 title: "Seleção (mineração de dados) de recursos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 851262d2141413487aafe45456cba7748440fde6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="feature-selection-data-mining"></a>Seleção de recursos (mineração de dados)
-  A*seleção de recursos* é uma parte importante do aprendizado de máquina. Seleção de recursos refere-se ao processo de reduzir as entradas para a análise e processamento ou de localizar as entradas mais significativas. Um termo relacionado, a *engenharia de recursos* (ou *extração de recursos*), refere-se ao processo de extração de informações úteis ou recursos dos dados existentes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Seleção de recursos* é uma parte importante de aprendizado de máquina. Seleção de recursos refere-se ao processo de reduzir as entradas para a análise e processamento ou de localizar as entradas mais significativas. Um termo relacionado, a *engenharia de recursos* (ou *extração de recursos*), refere-se ao processo de extração de informações úteis ou recursos dos dados existentes.  
   
 ## <a name="why-do-feature-selection"></a>O que significa a seleção de recursos?  
  A seleção de recursos é essencial para a criação de um bom modelo por vários motivos. Um deles é que a seleção de recursos implica um certo grau de *redução de cardinalidade*para impor um corte no número de atributos que podem ser considerados ao criar um modelo. Os dados quase sempre contém mais informações do que o necessário para criar o modelo ou o tipo errado de informações. Por exemplo, você pode ter um conjunto de dados com 500 colunas que descrevem as características dos clientes; no entanto, se os dados de algumas das colunas forem muito esparsos, não será muito benéfico adicioná-los ao modelo, e se algumas das colunas forem duplicatas de outras, usar as duas colunas poderá afetar o modelo.  

@@ -2,12 +2,12 @@
 title: Conjuntos de dados de treinamento e teste | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de dados de teste e treinamento
-  A separação de dados em conjuntos de teste e treinamento é uma parte importante da avaliação de modelos de mineração de dados. Normalmente, quando você separa um conjunto de dados em um conjunto de treinamentos e um conjunto de testes, a maior parte dos dados é usada para treinamento e uma parte menor dos dados é usada para teste. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] faz a amostra aleatória dos dados para ajudar a garantir que as partições de teste e de treinamento são similares. Usando dados semelhantes para treinamento e teste, você pode minimizar os efeitos das discrepâncias de dados e entender melhor as características do modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Separação de dados em conjuntos de teste e treinamento é uma parte importante da avaliação de modelos de mineração de dados. Normalmente, quando você separa um conjunto de dados em um conjunto de treinamentos e um conjunto de testes, a maior parte dos dados é usada para treinamento e uma parte menor dos dados é usada para teste. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] faz a amostra aleatória dos dados para ajudar a garantir que as partições de teste e de treinamento são similares. Usando dados semelhantes para treinamento e teste, você pode minimizar os efeitos das discrepâncias de dados e entender melhor as características do modelo.  
   
  Depois que um modelo for processado usando o conjunto de treinamentos, você testa o modelo fazendo previsões contra o conjunto de testes. Como os dados no conjunto de teste já contêm valores conhecidos para o atributo que você deseja prever, é fácil determinar se a precisão das previsões do modelo está correta.  
   

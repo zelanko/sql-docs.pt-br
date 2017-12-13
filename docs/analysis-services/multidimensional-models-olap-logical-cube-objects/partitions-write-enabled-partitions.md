@@ -2,12 +2,12 @@
 title: "Partições habilitadas para gravação | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e161c0c7b9456101ae4f216a78560b1fec827686
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 512e5321c0be221e06988dfc1991409a044166bb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions---write-enabled-partitions"></a>Partições - partições habilitadas para gravação
-  Os dados em um cubo geralmente são somente leitura. Porém, em determinados cenários, você pode desejar que uma partição seja gravada. As partições habilitadas para gravação são usadas para permitir que os usuários empresariais explorem cenários alterando valores de célula e analisando os efeitos das mudanças em dados de cubo. Quando você habilita uma partição para gravação, os aplicativos cliente podem registrar mudanças nos dados da partição. Essas mudanças, conhecidas como dados de write-back, são armazenadas em uma tabela separada e não sobrescrevem quaisquer dados existentes em um grupo de medidas. Porém, elas estarão incorporadas nos resultados de consulta como se elas fizessem parte dos dados de cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Os dados em um cubo são geralmente somente leitura. Porém, em determinados cenários, você pode desejar que uma partição seja gravada. As partições habilitadas para gravação são usadas para permitir que os usuários empresariais explorem cenários alterando valores de célula e analisando os efeitos das mudanças em dados de cubo. Quando você habilita uma partição para gravação, os aplicativos cliente podem registrar mudanças nos dados da partição. Essas mudanças, conhecidas como dados de write-back, são armazenadas em uma tabela separada e não sobrescrevem quaisquer dados existentes em um grupo de medidas. Porém, elas estarão incorporadas nos resultados de consulta como se elas fizessem parte dos dados de cubo.  
   
  Você pode habilitar um cubo inteiro para gravação, ou apenas determinadas partições do cubo. As dimensões habilitadas para gravação são diferentes, mas complementares. Uma partição habilitada para gravação permite aos usuários atualizarem células da partição, enquanto uma dimensão habilitada para gravação permite aos usuários atualizarem membros de dimensão. Você também pode usar esses dois recursos combinados. Por exemplo, um cubo ou uma partição habilitada para gravação não tem que incluir quaisquer dimensões habilitadas para gravação. **Tópico relacionado:**[Write-Enabled dimensões](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   

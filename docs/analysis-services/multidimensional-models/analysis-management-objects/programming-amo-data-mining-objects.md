@@ -2,12 +2,12 @@
 title: "Programando objetos de mineração de dados AMO | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef18607c859ee7894bd61305a47299836774dec9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5729dfd1411ae533c359bfdbc9867b2c453ebc1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programando objetos de mineração de dados AMO
-  A programação de objetos de mineração de dados usando AMO é simples e direta. A primeira etapa é criar o modelo de estrutura de dados para dar suporte ao projeto de mineração. Em seguida, você cria o modelo de mineração que dá suporte ao algoritmo de mineração que deseja usar para prever ou para localizar os relacionamentos despercebidos subjacentes aos seus dados. Com o seu projeto de mineração criado (incluindo a estrutura e os algoritmos), você poderá processar os modelos de mineração para obter os modelos treinados que usará mais tarde ao consultar e fazer previsões a partir do aplicativo cliente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Programar objetos de mineração de dados usando o AMO é simples e direto. A primeira etapa é criar o modelo de estrutura de dados para dar suporte ao projeto de mineração. Em seguida, você cria o modelo de mineração que dá suporte ao algoritmo de mineração que deseja usar para prever ou para localizar os relacionamentos despercebidos subjacentes aos seus dados. Com o seu projeto de mineração criado (incluindo a estrutura e os algoritmos), você poderá processar os modelos de mineração para obter os modelos treinados que usará mais tarde ao consultar e fazer previsões a partir do aplicativo cliente.  
   
  Você deve se lembrar de que o AMO não foi feito para consultas; ele foi criado para o gerenciamento e para a administração das suas estruturas e modelos de mineração. Para consultar os dados, use [desenvolvendo com ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
@@ -150,7 +150,7 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [Classes fundamentais AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [Introdução às Classes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Classes de mineração de dados AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)   
- [Arquitetura lógica &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objetos de banco de dados &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Arquitetura lógica & #40; Analysis Services - dados multidimensionais & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Objetos de banco de dados & #40; Analysis Services - dados multidimensionais & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -2,12 +2,12 @@
 title: "Partições (Analysis Services - dados multidimensionais) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eeeec758905021bfb1b352fb325810f096e3292d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dab66f2e60e602f163f3c0986719655b6f89f3a5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partições (Analysis Services – Dados Multidimensional)
-  Uma partição é um contêiner de uma parte dos dados de grupo de medidas. As partições não são vistas a partir das consultas MDX; todas as consultas refletem o conteúdo completo do grupo de medidas, independentemente de quantas partições são definidas para o grupo de medidas. O conteúdo de dados de uma partição é definido pelas associações de consulta da partição e pela divisão da expressão.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma partição é um contêiner para uma parte dos dados do grupo de medidas. As partições não são vistas a partir das consultas MDX; todas as consultas refletem o conteúdo completo do grupo de medidas, independentemente de quantas partições são definidas para o grupo de medidas. O conteúdo de dados de uma partição é definido pelas associações de consulta da partição e pela divisão da expressão.   
   
  Um objeto simples <xref:Microsoft.AnalysisServices.Partition> é composto de: informações básicas, definição de divisão, design de agregação e outros. As informações básicas incluem o nome da partição, o modo de armazenamento, o modo de processamento e outros. A definição de divisão é uma expressão MDX que especifica uma tupla ou um conjunto. A definição de divisão tem as mesmas restrições que a função MDX StrToSet. Juntamente com o parâmetro CONSTRAINED, a definição de divisão pode usar dimensão, hierarquia, nomes de nível e de membro, chaves, nomes exclusivos e outros objetos nomeados no cubo, mas não pode usar as funções MDX. O design de agregação é uma coleção de definições de agregação que podem ser compartilhadas por várias partições. O padrão é obtido do design de agregação do cubo pai.  
   

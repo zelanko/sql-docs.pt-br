@@ -2,12 +2,12 @@
 title: "SystemGetCrossValidationResults (Analysis Services – mineração de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4c3ce3fda08e216e0a476c8226b48fcf762dc552
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5818339f5bcc44770cdf728d93deb1b41b9bf618
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Data Mining)
-  Particiona a estrutura de mineração em um número especificado de seções cruzadas, treina um modelo para cada partição e retorna métricas de precisão para cada partição.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Partições que a estrutura de mineração em um número especificado de seções cruzadas, treina um modelo para cada partição e, em seguida, retorna métricas de precisão para cada partição.  
   
 > [!NOTE]  
 >  Esse procedimento armazenado não pode ser usado para fazer validação cruzada de modelos de clustering ou modelos criados usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] o algoritmo MSC. Para validação cruzada de modelos de clustering, você pode usar o procedimento armazenado separado, [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  

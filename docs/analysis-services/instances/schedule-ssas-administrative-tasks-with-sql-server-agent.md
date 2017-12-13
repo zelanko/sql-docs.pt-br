@@ -2,12 +2,12 @@
 title: Agendar tarefas administrativas do SSAS com o SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28be70a8fe43d1c22ba3e7787d507c694b09750a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4842c80e3ac4cd34ec419e1577f7a2354a2ae34a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Agendar tarefas administrativas do SSAS com o SQL Server Agent
-  Usando o serviço SQL Server Agent, você pode agendar tarefas administrativas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para executar na ordem e nos horários em que você precisa. As tarefas agendadas ajudam a automatizar os processos que são executados em ciclos regulares ou previsíveis. Você pode agendar a execução de tarefas administrativas, como o processamento de cubos, nas horas de menor atividade comercial. Pode também estabelecer a ordem em que essas tarefas devem ser executadas criando etapas em um trabalho do SQL Server Agent. Por exemplo, é possível processar um cubo e, em seguida, fazer o backup do cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Usando o serviço SQL Server Agent, você pode agendar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tarefas administrativas para executar na ordem e horários em que você precisam. As tarefas agendadas ajudam a automatizar os processos que são executados em ciclos regulares ou previsíveis. Você pode agendar a execução de tarefas administrativas, como o processamento de cubos, nas horas de menor atividade comercial. Pode também estabelecer a ordem em que essas tarefas devem ser executadas criando etapas em um trabalho do SQL Server Agent. Por exemplo, é possível processar um cubo e, em seguida, fazer o backup do cubo.  
   
  Com etapas de trabalho, você tem controle sobre o fluxo de execução. Em caso de falha de um trabalho, é possível configurar o SQL Server Agent para continuar executando as demais tarefas ou interromper a execução. Você também pode configurar o SQL Server Agent para enviar notificações sobre o sucesso ou a falha da execução do trabalho.  
   
