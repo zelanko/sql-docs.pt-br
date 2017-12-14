@@ -1,5 +1,5 @@
 ---
-title: Conecte-se a um banco de dados de origem do Oracle | Microsoft Docs
+title: Conectar a um banco de dados de origem Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- oraDb
+f1_keywords: oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1c48c856677c0b840fdeb56a683c84425d77e4a4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar a um banco de dados de origem Oracle
   Use a página do Oracle de origem para fornecer as informações necessárias para conectar-se ao banco de dados de origem Oracle. A instância CDC lerá os logs de refazer do banco de dados Oracle aos quais você está conectado.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Um usuário deve ter os privilégios a seguir concedidos no banco de dados Oracle para ser um usuário da mineração de logs.  
 >   
->  -   Selecione em \<any-tabela capturada >  
+>  -   SELECT em \<qualquer-tabela-capturada>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE em DBMS LOGMNR  
 > -   SELECT em V$LOGMNR CONTENTS  
@@ -78,4 +75,3 @@ ms.lasthandoff: 08/03/2017
  [Editar propriedades da instância](../../integration-services/change-data-capture/edit-instance-properties.md)  
   
   
-

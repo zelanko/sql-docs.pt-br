@@ -2,9 +2,12 @@
 title: "Solução de problemas do IntelliSense (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8e71773ba2cb7e49c9d76a52dbdfc96d671e9cf2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cadf7e8e4aafd5c2c6073a1406c8daa9879dcc5f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshooting-intellisense"></a>Solução de problemas do IntelliSense
-  Em certos casos, o funcionamento das opções do IntelliSense podem não ser o esperado:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Em certos casos, o funcionamento das opções do IntelliSense podem não ser o esperado.  
   
 ## <a name="conditions-that-affect-intellisense"></a>Condições que afetam o IntelliSense  
  As seguintes condições podem afetar o comportamento do IntelliSense:  

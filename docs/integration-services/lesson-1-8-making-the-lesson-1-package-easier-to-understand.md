@@ -1,5 +1,5 @@
 ---
-title: "Etapa 8: Tornando o pacote da lição 1 mais fácil de entender | Microsoft Docs"
+title: "Etapa 8: Tornando o pacote da Lição 1 mais fácil de compreender | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55bd386054f3a7d066dc8c28c13e22ae82e9f0cb
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ac8c3fa9e34de95c826c6c89a0356ac4797bd638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Lição 1-8-tornando o pacote da lição 1 mais fácil de compreender
+# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Lição 1-8 – tornando o pacote da Lição 1 mais fácil de compreender
 Agora que você concluiu a configuração do pacote da Lição 1, é uma boa ideia verificar o layout do pacote. Se as formas dos layouts de controle e dos fluxos de dados são de tamanhos aleatórias ou se as formas não estão alinhadas ou agrupadas, a funcionalidade de pacote pode ser mais difícil de ser entendida.  
   
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecem recursos que facilitam e agilizam a formatação do layout do pacote. Os recursos de formatação incluem a capacidade de criar formas do mesmo tamanho, alinhar formas e manipular o espaçamento horizontal e vertical entre os espaçamentos.  
@@ -65,4 +62,3 @@ Nesta tarefa, você utilizará os recursos de formatação nas ferramentas de da
   
   
   
-

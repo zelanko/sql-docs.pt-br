@@ -1,30 +1,30 @@
 ---
-title: "Modo de Cache cheio de transformação de pesquisa - Gerenciador de Conexão de Cache | Microsoft Docs"
+title: "Transformação Pesquisa em Modo de Cache Cheio – gerenciador de conexões do cache | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Lookup transformation [Integration Services]
+helpviewer_keywords: Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 01d518ca176ab3de156ba303221777e9cbc65207
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 804b0ab72a0e52c9ddcd10f8261998e0e8847d9f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Modo de Cache cheio de transformação de pesquisa - Gerenciador de Conexão de Cache
+# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformação Pesquisa em Modo de Cache Cheio – gerenciador de conexões do cache
   Você pode configurar a transformação Pesquisa para usar o modo cache cheio e um gerenciador de conexões de cache. No modo cache cheio, o conjunto de dados de referência é carregado no cache antes que a transformação Pesquisa seja executada.  
   
 > [!NOTE]  
@@ -58,13 +58,13 @@ ms.lasthandoff: 08/03/2017
   
 -   [Transformação Cache](../../integration-services/data-flow/transformations/cache-transform.md)  
   
--   [Gerenciador de Conexão de cache](../../integration-services/connection-manager/cache-connection-manager.md)  
+-   [Gerenciador de Conexões de Cache](../../integration-services/connection-manager/cache-connection-manager.md)  
   
 -   [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md)  
   
--   [Tarefa executar pacote](../../integration-services/control-flow/execute-package-task.md)  
+-   [Tarefa Executar Pacote](../../integration-services/control-flow/execute-package-task.md)  
   
--   [Contêiner de sequência](../../integration-services/control-flow/sequence-container.md)  
+-   [Contêiner da Sequência](../../integration-services/control-flow/sequence-container.md)  
   
  Para obter um vídeo que demonstre como implementar uma transformação Pesquisa no modo Cache Cheio usando o gerenciador de conexões de Cache, consulte [Como implementar a transformação Pesquisa no modo de Cache Cheio (vídeo do SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131031).  
   
@@ -285,9 +285,8 @@ ms.lasthandoff: 08/03/2017
 9. Execute o pacote.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implementar uma transformação pesquisa em modo Cache cheio usando o Gerenciador de Conexão OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Implementar uma pesquisa no modo sem Cache ou Cache parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementar uma Transformação Pesquisa em Modo de Cache Cheio por meio do gerenciador de conexões OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementar uma pesquisa no modo Sem cache ou Cache parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformações do Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

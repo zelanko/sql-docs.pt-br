@@ -1,5 +1,5 @@
 ---
-title: "Gerenciador de Conexão do Hadoop | Microsoft Docs"
+title: "Gerenciador de conexões do Hadoop | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hadoopconn.f1
+f1_keywords: sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c4bf82dad09b90f672e52947267ddf92fbdb984
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hadoop-connection-manager"></a>Gerenciador de conexões do Hadoop
   O gerenciador de conexões do Hadoop permite que um pacote do SSIS se conecte a um cluster Hadoop usando os valores especificados para as propriedades.  
@@ -44,9 +41,9 @@ ms.lasthandoff: 08/03/2017
   
     3.  Escolha o método de **Autenticação** para acessar o serviço WebHCat. Os valores disponíveis são **Básico** e **Kerberos**.  
   
-         ![Editor de Gerenciador de conexão do Hadoop com a autenticação básica](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop editor do Gerenciador de conexão com a autenticação básica")  
+         ![Editor de gerenciador de conexões Hadoop com a autenticação básica](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Editor de gerenciador de conexões Hadoop com a autenticação básica")  
   
-         ![Editor de Gerenciador de conexão do Hadoop com a autenticação Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop editor do Gerenciador de conexão com a autenticação Kerberos")  
+         ![Editor de gerenciador de conexões Hadoop com a autenticação Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Editor de gerenciador de conexões Hadoop com a autenticação Kerberos")  
   
     4.  Para o **Usuário WebHCat**, insira o **Usuário** autorizado a acessar o WebHCat.  
   
@@ -70,8 +67,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefa do Hive do Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
- [Tarefa de Pig do Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
- [Tarefas do sistema de arquivos Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
+ [Tarefa do Pig do Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
+ [Tarefas do Sistema de Arquivos Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   
-

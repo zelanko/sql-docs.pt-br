@@ -1,5 +1,5 @@
 ---
-title: Pacotes de mesclagem no Integration Services | Microsoft Docs
+title: MERGE em pacotes do Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MERGE statement [SQL Server]
+helpviewer_keywords: MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a3b26c9c918e1a3c59b0bd8cd688b3fff2d6a868
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE em pacotes do Integration Services
   Na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a instrução SQL em uma tarefa Executar SQL pode conter uma instrução MERGE. A instrução MERGE permite realizar várias operações INSERT, UPDATE e DELETE em uma única instrução.  
@@ -77,4 +74,3 @@ ms.lasthandoff: 08/03/2017
  O banco de dados Inventory tem uma tabela ProductsInventory que tem as colunas ProductID e StockOnHand. Uma tabela Shipments com as colunas ProductID, CustomerID e Quantity rastreia o envio de produtos para os clientes. A tabela ProductInventory deve ser atualizada diariamente com base nas informações da tabela Shipments. Uma única instrução MERGE pode reduzir o inventário na tabela ProductInventory com base nas remessas feitas. Se o inventário de um produto for reduzido a 0, a instrução MERGE também poderá excluir a linha desse produto da tabela ProductInventory.  
   
   
-

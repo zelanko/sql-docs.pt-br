@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8fa0747761ecfac4fd617096942db77a2214019d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-transactions"></a>Transações do Integration Services
   Os pacotes usam transações para associar as ações do banco de dados realizadas pelas tarefas em unidades atômicas e, ao fazer isso, a integridade dos dados é mantida. Todos os tipos de contêineres do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , pacotes, o Loop For, Loop Foreach, contêineres de Sequência, e os hosts de tarefas que encapsulam cada tarefa, podem ser configurados para usar transações. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece três opções para configurar transações: **Sem Suporte**, **Há Suporte**e **Necessário**.  
@@ -77,7 +75,7 @@ Quando você configura um pacote para usar transações, há duas opções:
   
 8.  Repita as etapas 6 e 7 para cada tarefa e contêiner que você deseja inscrever na transação.  
   
-### <a name="configure-a-package-to-use-multiple-transactions"></a>Configurar um pacote para usar várias transações  
+### <a name="configure-a-package-to-use-multiple-transactions"></a>Configurar um pacote para usar transações múltiplas  
  Nesta opção, o próprio pacote dá suporte a transações, mas não inicia uma transação. Para configurar o pacote para dar suporte a transações, defina a propriedade TransactionOption do pacote como **Com Suporte**.  
   
  Em seguida, configure as tarefas e os contêineres desejados do pacote para iniciar ou participar de transações. Para configurar uma tarefa ou um contêiner para iniciar uma transação, defina a propriedade TransactionOption da tarefa ou do contêiner como **Required**.   
@@ -108,10 +106,10 @@ Quando você configura um pacote para usar transações, há duas opções:
   
 10. Repita as etapas de 6 a 9 para cada tarefa e contêiner que iniciam uma transação.  
 
-## <a name="multiple-transactions-in-a-package"></a>Várias transações em um pacote
+## <a name="multiple-transactions-in-a-package"></a>Transações múltiplas em um pacote
 É possível que um pacote inclua transações não relacionadas em um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . A qualquer hora que um contêiner no meio de uma hierarquia de contêineres aninhada não oferecer suporte a transações, os contêineres acima ou abaixo da mesma na hierarquia começa a separar as transações, se elas estiverem configuradas para oferecem suporte às transações. As transações confirmam ou revertem na ordem da tarefa interna na hierarquia de contêineres aninhados para o pacote. Entretanto, depois que a transação interna é confirmada, ela não será revertida se uma transação externa for anulada.  
   
-### <a name="example-of-multiple-transactions-in-a-package"></a>Exemplo de várias transações em um pacote 
+### <a name="example-of-multiple-transactions-in-a-package"></a>Exemplo de transações múltiplas em um pacote 
  Por exemplo, um pacote tem um contêiner de Sequência que mantém dois contêineres Loop Foreach, e cada contêiner inclui duas tarefas Executar SQL. O contêiner Sequência oferece suporte a transações, os contêineres Loop Foreach não oferecem e as tarefas Executar SQL oferecem. Nesse exemplo, cada tarefa Executar SQL começaria sua própria transação e não reverteria se a transação da tarefa de Sequência fosse cancelada.  
   
  As propriedades TransactionOption do contêiner Sequência, do contêiner Loop Foreach e das tarefas Executar SQL são definidas da seguinte maneira:  
@@ -124,7 +122,7 @@ Quando você configura um pacote para usar transações, há duas opções:
   
  O diagrama a seguir mostra as cinco transações não relacionadas no pacote. Uma transação é iniciada pelo contêiner de Sequência e quatro transações são iniciadas pelas tarefas Executar SQL.  
   
- ![Implementação de várias transações](../integration-services/media/mw-dts-trans2.gif "implementação de várias transações")  
+ ![Implementação de transações múltiplas](../integration-services/media/mw-dts-trans2.gif "Implementation of multiple transactions")  
  
 ## <a name="inherited-transactions"></a>Transações herdadas
  Um pacote pode executar outro pacote usando a tarefa Executar Pacote. O pacote filho, que é o pacote executado pela tarefa Executar Pacote, pode criar sua própria transação de pacote ou pode herdar a transação do pacote pai.  
@@ -148,7 +146,7 @@ Quando você configura um pacote para usar transações, há duas opções:
   
 -   **TransactionOption** é definida como **NotSupported** no pacote E e nas tarefas Executar Pacote C e Executar Pacote E.  
   
- ![Fluxo de transações herdadas](../integration-services/media/mw-dts-executepack.gif "fluxo de transações herdadas")  
+ ![Fluxo de transações herdadas](../integration-services/media/mw-dts-executepack.gif "Flow of inherited transactions")  
   
  Só pacotes B, D e F podem herdar transações de seus pacotes pai.  
   
@@ -167,7 +165,6 @@ Quando você configura um pacote para usar transações, há duas opções:
   
 ## <a name="see-also"></a>Consulte também  
  [Transações herdadas](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
- [Várias transações](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
+ [Transações múltiplas](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
-

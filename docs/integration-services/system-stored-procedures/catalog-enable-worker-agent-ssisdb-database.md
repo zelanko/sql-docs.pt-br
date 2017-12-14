@@ -1,5 +1,5 @@
 ---
-title: Catalog.enable_worker_agent (banco de dados SSISDB) | Microsoft Docs
+title: catalog.enable_worker_agent (banco de dados SSISDB) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 3eb3f21b6a686c3013cdaaa3000038896edfbf94
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: de5764612b34aa44b4e41287c951b0de4d0b5ddf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogenableworkeragent-ssisdb-database"></a>Catalog.enable_worker_agent (banco de dados SSISDB)
+# <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent (banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Habilitar um trabalho de fora de escala para escala Out mestre funcionam com essa [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catálogo.
+Habilite um Trabalho do Scale Out para o Mestre do Scale Out que trabalha com este catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,7 +34,7 @@ Habilitar um trabalho de fora de escala para escala Out mestre funcionam com ess
 catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>Argumentos
-[@WorkerAgentId =] *WorkerAgentId* o agente de trabalho ID de escala Out trabalhador. O *WorkerAgentId* é **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId* A ID do agente do Trabalho do Scale Out. O *WorkerAgentId* é **uniqueidentifier**.
 
 ## <a name="example"></a>Exemplo
 Este exemplo habilita o Trabalho de Expansão no ComputadorA.
@@ -61,10 +59,9 @@ GO
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
   
--   Associação de **ssis_admin** função de banco de dados  
+-   Associação à função de banco de dados **ssis_admin**  
   
--   Associação de **sysadmin** função de servidor 
+-   Associação à função de servidor **sysadmin** 
 
 ## <a name="errors-and-warnings"></a>Erros e avisos
-Se a ID do agente de trabalho não é válida, o procedimento armazenado retornará um erro.
-
+Se a ID do agente de trabalho não é válida, o procedimento armazenado retorna um erro.

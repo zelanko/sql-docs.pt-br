@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) consultas | Microsoft Docs
+title: Consultas do SSIS (Integration Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.querybuilder.f1
+f1_keywords: sql13.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas do SSIS (Integration Services)
   A tarefa Executar SQL, a origem OLE DB, o destino OLE DB e a transformação Pesquisa podem usar consultas de SQL. Na tarefa Executar SQL, as instruções SQL podem criar, atualizar e excluir objetos de banco de dados e dados; executar procedimentos armazenados e executar instruções SELECT. Na origem OLE DB e na transformação Pesquisa, as instruções SQL são normalmente instruções SELECT ou EXEC. Esta última normalmente executa procedimentos que retornam conjuntos de resultados.  
@@ -38,9 +35,9 @@ ms.lasthandoff: 09/26/2017
  Uma consulta pode ser analisada para estabelecer se é válida. Ao analisar uma consulta que usa uma conexão com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a consulta é analisada, executada e o resultado de execução (sucesso ou falha) é atribuído ao resultado da análise. Se a consulta usar uma conexão com dados que seja diferente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a instrução só será analisada.  
   
 Você pode fornecer a instrução SQL das seguintes maneiras:
-1.   Insira-o diretamente no designer.
-2.   Especifique uma conexão para um arquivo contém a instrução.
-3.   Especifica uma variável que contém a instrução.  
+1.   Insira-a diretamente no designer.
+2.   Especifique uma conexão a um arquivo que contém a instrução.
+3.   Especifique uma variável que contém a instrução.  
   
 ## <a name="direct-input-sql"></a>SQL de entrada direta  
  O Construtor de Consultas está disponível na interface do usuário para a tarefa Executar SQL, a origem OLE DB, o destino OLE DB e a transformação Pesquisa. O Construtor de Consultas oferece as seguintes vantagens:  
@@ -100,19 +97,19 @@ Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a se
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Mostrar/ocultar painel de diagrama**|Exibe ou oculta o painel **Diagrama** .|  
-|**Mostrar/ocultar painel grade**|Exibe ou oculta o painel **Grade** .|  
-|**Mostrar/ocultar painel SQL**|Exibe ou oculta o painel **SQL** .|  
-|**Mostrar/ocultar painel de resultados**|Exibe ou oculta o painel de **Resultados** .|  
+|**Painel Mostrar/Ocultar Diagrama**|Exibe ou oculta o painel **Diagrama** .|  
+|**Painel Mostrar/Ocultar Grade**|Exibe ou oculta o painel **Grade** .|  
+|**Painel Mostrar/Ocultar SQL**|Exibe ou oculta o painel **SQL** .|  
+|**Painel Mostrar/Ocultar Resultados**|Exibe ou oculta o painel de **Resultados** .|  
 |**Executar**|Executa a consulta. Os resultados são exibidos no painel de Resultados.|  
 |**Verificar SQL**|Verifica se a instrução SQL é válida.|  
-|**Classificar em ordem crescente**|Classifica as linhas de saída na coluna selecionada no painel Grade em ordem crescente.|  
-|**Classificar em ordem decrescente**|Classifica as linhas de saída na coluna selecionada no painel Grade em ordem decrescente.|  
-|**Remover filtro**|Selecione um nome de coluna no painel de grade e clique em **Remover Filtro** para remover os critérios de classificação da coluna.|  
-|**Usar grupo por**|Adiciona a funcionalidade GROUP BY à consulta.|  
-|**Adicionar tabela**|Adiciona uma nova tabela à consulta.|  
+|**Classificar em Ordem Crescente**|Classifica as linhas de saída na coluna selecionada no painel Grade em ordem crescente.|  
+|**Classificar em Ordem Decrescente**|Classifica as linhas de saída na coluna selecionada no painel Grade em ordem decrescente.|  
+|**Remover Filtro**|Selecione um nome de coluna no painel de grade e clique em **Remover Filtro** para remover os critérios de classificação da coluna.|  
+|**Usar Agrupar Por**|Adiciona a funcionalidade GROUP BY à consulta.|  
+|**Adicionar Tabela**|Adiciona uma nova tabela à consulta.|  
   
- **Definição de consulta**  
+ **Definição da Consulta**  
  A definição de consulta fornece uma barra de ferramentas e painéis nos quais definir e testar a consulta.  
   
 |Painel|Description|  
@@ -123,4 +120,3 @@ Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a se
 |Painel**Resultados** |Exibe os resultados da consulta quando você clica em **Executar** na barra de ferramentas.| 
 
   
-

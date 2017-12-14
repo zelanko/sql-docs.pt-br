@@ -8,25 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1f2d68bc745df5c06b623a74815efa937366e8ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o change data capture oferece uma solução efetiva para o desafio de executar de forma eficiente as cargas incrementais de tabelas de origem para data marts e data warehouses.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 09/26/2017
   
  Depois que um administrador habilitar a captura de dados de alteração no banco de dados, você poderá criar um pacote que execute uma carga incremental dos dados de alteração. O diagrama a seguir mostra as etapas para a criação desse pacote que executa uma carga incremental a partir de uma única tabela:  
   
- ![Alterar etapas de criação de pacote de captura de dados](../../integration-services/change-data-capture/media/cdc-package-creation.gif "alterar etapas de criação de pacote de captura de dados")  
+ ![Etapas de criação de pacote do Change Data Capture](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Etapas de criação de pacote do Change Data Capture")  
   
  Conforme mostrado no diagrama anterior, a criação de um pacote que executa uma carga inicial de dados alterados envolve as seguintes etapas:  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Aplique as inserções, exclusões e atualizações ao destino.  
   
-     Para aplicar as alterações ao destino, use um componente de destino.. Além disso, use as transformações de Comando OLE DB com as instruções UPDATE e DELETE com parâmetros para aplicar atualizações e exclusões ao destino. Você também pode aplicar atualizações e exclusões usando componentes de destino para salvar as linhas em tabelas temporárias. Em seguida, use tarefas Executar SQL para realizar operações de atualização e exclusão em massa no destino a partir das tabelas temporárias.  
+     Para aplicar as alterações ao destino, use um componente de destino. Além disso, use as transformações de Comando OLE DB com as instruções UPDATE e DELETE com parâmetros para aplicar atualizações e exclusões ao destino. Você também pode aplicar atualizações e exclusões usando componentes de destino para salvar as linhas em tabelas temporárias. Em seguida, use tarefas Executar SQL para realizar operações de atualização e exclusão em massa no destino a partir das tabelas temporárias.  
   
      **Para obter mais informações:** [Aplicar as alterações no destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 09/26/2017
   
 -   [Processar inserções, atualizações e exclusões](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
--   [Aplicar as alterações no destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+-   [Aplicar as alterações ao destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 -   [Executar uma carga incremental de várias tabelas](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
@@ -129,4 +127,3 @@ ms.lasthandoff: 09/26/2017
  Entrada de blog, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), em sqlblog.com  
   
   
-

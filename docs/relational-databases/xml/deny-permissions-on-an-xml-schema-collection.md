@@ -2,9 +2,12 @@
 title: "Recusar permissões em uma coleção de esquemas XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 199cddd16d3ae32bc4b1c292c6adf38326abee26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5836749a63ab7f248ced0eefdfc6044567019ed7
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Recusar permissões em uma coleção de esquemas XML
-  Permissões podem ser negadas para criar uma nova coleção de esquema XML ou para usar uma coleção existente.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Permissões podem ser negadas para criar uma nova coleção de esquema XML ou para usar uma coleção existente.  
   
 ## <a name="denying-permission-to-create-an-xml-schema-collection"></a>Negando permissão para criar uma coleção de esquema XML  
  É possível negar permissão para criar uma coleção de esquema XML das seguintes maneiras:  

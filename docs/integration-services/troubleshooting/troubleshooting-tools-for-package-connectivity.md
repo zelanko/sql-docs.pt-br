@@ -1,5 +1,5 @@
 ---
-title: "Ferramentas de solução de problemas de conectividade do pacote | Microsoft Docs"
+title: "Ferramentas de solução de problemas para conectividade de pacote | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 11c80c7ecc8fc8598b1079458d83773db6e68f06
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Solucionando problemas de ferramentas para conectividade de pacote
 O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém recursos e ferramentas que você pode usar para solucionar problemas de conectividade entre pacotes e fontes de dados das quais os pacotes extraem e carregam dados.  
@@ -42,7 +40,7 @@ O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém recursos
   
     -   Gerenciador de conexões do OLE DB, origem e destino do OLE DB  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]Gerenciador de conexão e a origem do ADO NET  
+    -   Gerenciador de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e origem do ADO NET  
   
     -   Tarefa Executar SQL  
   
@@ -77,8 +75,7 @@ O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém recursos
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Solucionando problemas de ferramentas para desenvolvimento de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Ferramentas de solução de problemas para execução do pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Ferramentas de solução de problemas de execução de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

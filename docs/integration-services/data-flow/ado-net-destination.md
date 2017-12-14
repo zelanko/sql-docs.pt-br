@@ -1,5 +1,5 @@
 ---
-title: Destino ADO NET | Microsoft Docs
+title: Destino do ADO NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
-ms.contentlocale: pt-br
-ms.lasthandoff: 11/08/2017
-
+ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ado-net-destination"></a>Destino do ADO NET
   O destino ADO NET carrega dados em uma variedade de bancos de dados compatíveis com o [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que utilizam uma tabela ou exibição de banco de dados. Você tem a opção de carregar esses dados em uma tabela ou exibição existente ou de criar uma nova tabela e carregar os dados nessa tabela.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/08/2017
  Um destino ADO NET inclui mapeamentos entre as colunas de entrada e as colunas da fonte de dados de destino. Você não precisa mapear colunas de entrada para todas as colunas de destino. No entanto, as propriedades de algumas colunas de destino podem precisar do mapeamento de colunas de entrada. Caso contrário, podem ocorrer erros. Por exemplo, se uma coluna de destino não permitir valores nulos, você deve mapear uma coluna de entrada para aquela coluna de destino. Além disso, os tipos de dados de colunas mapeadas devem ser compatíveis. Por exemplo, você não poderá mapear uma coluna de entrada com um tipo de dados String para uma coluna de destino com um tipo de dados numéricos se o provedor do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] não der suporte a este mapeamento.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]não oferece suporte a inserção de texto em colunas cujo tipo de dados é definido como imagem. Para obter mais informações sobre os tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte à inserção de texto em colunas cujo tipo de dados é definido como imagem. Para obter mais informações sobre os tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 > [!NOTE]  
 >  O destino ADO NET não dá suporte ao mapeamento de uma coluna de entrada cujo tipo é definido como DT_DBTIME para uma coluna de banco de dados cujo tipo é definido como data e hora. Para obter mais informações sobre tipos de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Tipos de Dados do Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -104,12 +102,12 @@ ms.lasthandoff: 11/08/2017
  Se você selecionar **Usar a inserção em massa quando disponível**e definir a opção **Erro** como **Redirecionar a linha**, o lote de dados que o destino redireciona à saída de erro poderá incluir linhas válidas. Para obter mais informações sobre o tratamento de erro em operações em massa, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md). Para obter mais informações sobre a opção **Erro** , consulte [Editor de Destino ADO NET &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Se uma tabela de origem do SQL Server ou do Sybase incluir uma coluna de identidade, você deve usar tarefas Executar SQL para habilitar IDENTITY_INSERT antes do destino ADO NET e desabilitá-lo novamente mais tarde. (A propriedade da coluna de identidade Especifica um valor de incremento para a coluna. A instrução SET IDENTITY_INSERT permite valores explícitos da tabela de origem ser inserido na coluna de identidade na tabela de destino.)  
+>  Se uma tabela de origem do SQL Server ou do Sybase incluir uma coluna de identidade, utilize as tarefas Executar SQL para habilitar IDENTITY_INSERT antes do destino ADO NET e desabilitá-lo novamente depois. (A propriedade da coluna de identidade especifica um valor incremental para a coluna. A instrução SET IDENTITY_INSERT permite inserir valores explícitos da tabela de origem na coluna de identidade na tabela de destino.)  
 >   
->   Para executar as instruções SET IDENTITY_INSERT e com êxito do carregamento de dados, você precisa fazer o seguinte. 
->       1. Use o mesmo Gerenciador de conexão ADO.NET para as tarefas Executar SQL e para o destino do ADO.NET. 
->       2. No Gerenciador de conexão, defina o **RetainSameConnection** propriedade e o **MultipleActiveResultSets** propriedade como True. 
->       3. Definir o destino do ADO.NET, o **UseBulkInsertWhenPossible** a propriedade como False. 
+>   Para executar com êxito as instruções SET IDENTITY_INSERT e o carregamento de dados, você precisa fazer o descrito a seguir. 
+>       1. Use o mesmo gerenciador de conexões ADO.NET para as tarefas Executar SQL e para o destino ADO NET. 
+>       2. No gerenciador de conexões, defina as propriedades **RetainSameConnection** e **MultipleActiveResultSets** como True. 
+>       3. No destino ADO.NET, defina a propriedade **UseBulkInsertWhenPossible** como False. 
 >
 >  Para obter mais informações, consulte [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) e [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 11/08/2017
  Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis na tabela para as colunas de entrada.  
   
  **Coluna de Entrada**  
- Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando  **\<ignorar >** para excluir colunas de saída.  
+ Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando **\<ignorar>** para excluir colunas da saída.  
   
  **Coluna de Destino**  
  Visualize cada coluna de destino disponível, esteja ela mapeada ou não.  
@@ -176,4 +174,3 @@ ms.lasthandoff: 11/08/2017
  Aplique a opção de tratamento de erros às células selecionadas.  
   
   
-

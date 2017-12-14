@@ -1,5 +1,5 @@
 ---
-title: Em um Cluster do Integration Services (SSIS) | Microsoft Docs
+title: SSIS (Integration Services) em um cluster | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,27 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 52fb4e913a48b65544aaca84408f847af74412be
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>SSIS (Integration Services) em um cluster
   Clusterizar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não é recomendável, porque o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não é um serviço clusterizado ou que reconheça clusters e não dá suporte ao failover de um nó de cluster para outro. Portanto, em um ambiente clusterizado, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve ser instalado e iniciado como um serviço autônomo em cada nó do cluster.  
   
  Embora o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não seja um serviço clusterizado, você pode configurá-lo manualmente para operar como um recurso de cluster após instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] separadamente em cada nó do cluster.  
   
- No entanto, se seu objetivo for a alta disponibilidade ao estabelecer um ambiente de hardware clusterizado, você poderá atingi-lo sem configurar o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como um recurso de cluster.  Para gerenciar seus pacotes em qualquer nó do cluster por meio de qualquer outro nó do cluster, modifique o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em cada nó do cluster. Modifique cada um dos arquivos de configuração para que eles apontem a todas as instâncias disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nas quais os pacotes estão armazenados. Esta solução oferece a alta disponibilidade necessária para a maioria dos clientes, sem os possíveis problemas encontrados quando o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é configurado como um recurso de cluster. Para obter mais informações sobre como alterar o arquivo de configuração, consulte [serviço do Integration Services &#40; Serviço do SSIS &#41; ](../../integration-services/service/integration-services-service-ssis-service.md).  
+ No entanto, se seu objetivo for a alta disponibilidade ao estabelecer um ambiente de hardware clusterizado, você poderá atingi-lo sem configurar o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como um recurso de cluster.  Para gerenciar seus pacotes em qualquer nó do cluster por meio de qualquer outro nó do cluster, modifique o arquivo de configuração do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em cada nó do cluster. Modifique cada um dos arquivos de configuração para que eles apontem a todas as instâncias disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nas quais os pacotes estão armazenados. Esta solução oferece a alta disponibilidade necessária para a maioria dos clientes, sem os possíveis problemas encontrados quando o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é configurado como um recurso de cluster. Para obter mais informações sobre como alterar esse arquivo de configuração, consulte [Serviço SSIS &#40;Serviço Integration Services &#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
  Compreender a função do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é fundamental para tomar uma decisão sobre como configurar o serviço em um ambiente clusterizado. Para obter mais informações, veja [Serviço Integration Services &#40;Serviço SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Quando há vários grupos de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que incluem o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um cluster, um failover poderá causar resultados inesperados. Considere o cenário a seguir. O Grupo 1, que inclui o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , está em execução no Nó A. O Grupo 2, que também inclui o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , está em execução no Nó B. Ocorre um failover no Grupo 2 para o Nó A. A tentativa de iniciar outra instância do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no Nó A falha porque o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é um serviço de instância única. Saber se o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está tentando realizar failover para o Nó A também falhará depende da configuração do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no Grupo 2. Se o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] foi configurado para afetar outros serviços no grupo de recursos, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estiver em failover falhará devido a uma falha no serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se o serviço foi configurado para não afetar outros serviços no grupo de recursos, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá realizar failover para o Nó A. A menos que o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no Grupo 2 tenha sido configurado para não afetar outros serviços no grupo de recursos, a falha do serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que estiver em failover poderá fazer com que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estiver realizando failover também falhe.  
 
-## <a name="configure-the-service-as-a-cluster-resource"></a>Configurar o serviço como um recurso de Cluster
+## <a name="configure-the-service-as-a-cluster-resource"></a>Configurar o serviço como um recurso de cluster
 Para os clientes que chegaram à conclusão de que as vantagens dessa configuração do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como um recurso de cluster sobrepõem-se às desvantagens, esta seção contém as instruções de configuração necessárias. Entretanto, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] não recomenda que o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seja configurado como um recurso de cluster.  
   
  Para configurar o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como um recurso de cluster, é necessário concluir as tarefas a seguir.  
@@ -139,4 +137,3 @@ Para os clientes que chegaram à conclusão de que as vantagens dessa configura�
 -   No **Administrador de Cluster**, selecione o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , clique com o botão direito do mouse e selecione **Colocar Online** no menu pop-up. Agora, o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está online como um recurso de cluster.  
   
   
-

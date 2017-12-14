@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],creating function
+helpviewer_keywords: incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3d7a5305d9b8c5c094f27b02bdcbd9c1c7bbb4a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
   Após concluir o fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a próxima tarefa é criar uma função com valor de tabela que recupera os dados de alteração. É preciso criar esta função apenas uma vez antes da primeira carga incremental.  
@@ -124,9 +121,9 @@ deallocate #hfunctions
   
  Para simplificar a consulta a todas as linhas de uma alteração, as funções de invólucro geradas também dão suporte às seguintes convenções:  
   
--   Se o @start_time parâmetro for nulo, as funções de invólucro usam o valor LSN mais baixo na instância de captura como o limite inferior da consulta.  
+-   Se o parâmetro @start_time for nulo, as funções wrapper usarão o valor LSN mais baixo na instância de captura do limite inferior da consulta.  
   
--   Se o @end_time parâmetro for nulo, as funções de invólucro usam o valor LSN mais alto na instância de captura como o limite superior da consulta.  
+-   Se o parâmetro @end_time for nulo, as funções do wrapper usarão o valor LSN mais baixo na instância de captura do limite inferior da consulta.  
   
  A maioria dos usuários deverá poder usar as funções de invólucro que o procedimento armazenado de sistema **sys.sp_cdc_generate_wrapper_function** cria sem modificação. No entanto, para personalizar as funções de invólucro, você tem que personalizar os scripts CREATE antes de executar os scripts.  
   
@@ -220,7 +217,7 @@ go
 |**__$seqval**|**binary(10)**|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
 |**__$operation**|**int**|A operação DML (linguagem de manipulação de dados) associada à alteração. Pode ser uma destas opções:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
 |**__$update_mask**|**varbinary(128)**|Uma máscara de bits com base nos ordinais de coluna da tabela de alteração identificando as colunas que foram alteradas. Você poderia examinar este valor se você tivesse que determinar quais colunas foram alteradas.|  
-|**\<colunas da tabela de origem capturadas >**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
+|**\<colunas da tabela de origem capturada>**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
   
  Para obter mais informações, veja [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
@@ -230,4 +227,3 @@ go
  **Próximo tópico:** [Recuperar e compreender os dados de alteração](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
-

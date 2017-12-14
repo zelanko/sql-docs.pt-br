@@ -1,5 +1,5 @@
 ---
-title: "Transformação pesquisa difusa | Microsoft Docs"
+title: "Transformação Pesquisa Difusa | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,17 +35,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 81427a1ae80ddf6a3d3135e8d814dc9944413e60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformação Pesquisa Difusa
   A transformação Pesquisa Difusa executa tarefas de limpeza de dados, como padronização de dados, correção de dados e fornecimento de valores ausentes.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/19/2017
   
  Essa transformação tem uma entrada e uma saída.  
   
- Apenas colunas com os tipos de dados **DT_WSTR** e **DT_STR** podem ser usadas na correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Para obter mais informações, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido para unir uma coluna com o tipo de dados DTS **DT_WSTR** a uma coluna com o tipo de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **do** , mas inválido para unir uma coluna com o tipo de dados **DT_WSTR** a uma coluna com o tipo de dados **int** .  
+ Apenas colunas com os tipos de dados **DT_WSTR** e **DT_STR** podem ser usadas na correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Para obter mais informações, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido para unir uma coluna com o tipo de dados DTS **DT_WSTR** a uma coluna com o tipo de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** data type, but invalid to join a column with the **DT_WSTR** a uma coluna com o tipo de dados **int** data type.  
   
  Você pode personalizar essa transformação especificando a quantidade máxima de memória, o algoritmo de comparação de linha e o cache de índices e tabelas de referência que a transformação usa.  
   
@@ -223,8 +221,7 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Transformação Pesquisa](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Transformação agrupamento difuso](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

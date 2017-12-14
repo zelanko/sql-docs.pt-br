@@ -1,5 +1,5 @@
 ---
-title: Fonte OData | Microsoft Docs
+title: OData Source | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,8 +8,7 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,31 +17,30 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 1e0ef2b7cca9509a58aeadca3903e8aec3b7b9b9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-source"></a>Origem do OData
 Use o componente OData Source em um pacote do SSIS para consumir os dados do serviço do OData (Protocolo Open Data). O componente oferece suporte para os protocolos OData v3 e v4.  
   
--   Para o protocolo OData V3, o componente oferece suporte os formatos de dados ATOM e JSON.  
+-   Para o protocolo V3 do OData, o componente dá suporte aos formatos de dados ATOM e JSON.  
   
 -   Para o protocolo V4 do OData, o componente dá suporte ao formato de dados JSON.  
 
-O OData source inclui suporte para as seguintes fontes de dados:
--   Microsoft Dynamics AX Online e do Microsoft Dynamics CRM Online
--   Listas do SharePoint. Para ver todas as listas em um servidor do SharePoint, use a seguinte URL: http://\<server > / _vti_bin/ListData.svc. Para obter mais informações sobre as convenções de URL do SharePoint, consulte [Interface REST do SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
+O OData Source inclui suporte para as seguintes fontes de dados:
+-   Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online
+-   Listas do SharePoint. Para ver todas as listas em um servidor do SharePoint, use a seguinte URL: http://\<server>/_vti_bin/ListData.svc. Para obter mais informações sobre as convenções de URL do SharePoint, consulte [Interface REST do SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
   
-## <a name="odata-format-and-performance"></a>Formato do OData e desempenho
- A maioria dos serviços OData podem retornar resultados em vários formatos. Você pode especificar o formato do resultado definido usando o `$format` opção de consulta. Os formatos como JSON e JSON Light são mais eficientes do que o ATOM ou XML, e podem oferecer um melhor desempenho ao transferir grandes quantidades de dados. A tabela a seguir fornece os resultados dos testes de exemplo. Como você pode ver, houve um ganho de desempenho de 30% a 53% ao trocar do ATOM para o JSON e um ganho de desempenho de 67% ao trocar do ATOM para o novo formato JSON Light (disponível nos Serviços de Dados do WCF 5.1).  
+## <a name="odata-format-and-performance"></a>Desempenho e Formato OData
+ A maioria dos serviços do OData podem retornar resultados em vários formatos. Você pode especificar o formato do conjunto de resultados usando a opção de consulta `$format`. Os formatos como JSON e JSON Light são mais eficientes do que o ATOM ou XML, e podem oferecer um melhor desempenho ao transferir grandes quantidades de dados. A tabela a seguir fornece os resultados dos testes de exemplo. Como você pode ver, houve um ganho de desempenho de 30% a 53% ao trocar do ATOM para o JSON e um ganho de desempenho de 67% ao trocar do ATOM para o novo formato JSON Light (disponível nos Serviços de Dados do WCF 5.1).  
   
 |Linhas|ATOM|JSON|JSON (Light)|  
 |-|-|-|-|  
@@ -81,7 +79,7 @@ O OData source inclui suporte para as seguintes fontes de dados:
  Especifique as opções para a consulta. Por exemplo: `$top=5` 
   
  **Url do feed**  
- Exibe somente leitura com base nas opções que você selecionou na caixa de diálogo de URL do feed.  
+ Exibe o URL do feed somente leitura com base nas opções que você selecionou nesta caixa de diálogo.  
   
  **Visualização**  
  Visualize os resultados usando a caixa de diálogo **Visualização** . A**Visualização** pode exibir até 20 linhas.  
@@ -140,4 +138,3 @@ O OData source inclui suporte para as seguintes fontes de dados:
  [Gerenciador de Conexões OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   
-

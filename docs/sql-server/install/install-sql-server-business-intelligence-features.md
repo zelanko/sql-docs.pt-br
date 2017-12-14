@@ -1,10 +1,13 @@
 ---
 title: Instalar os recursos do Business Intelligence do SQL Server 2016 | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
@@ -16,14 +19,14 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 78f608debbe1d5dd20d593957289765924399b51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a1d7640bee958053ff4db3c87eaa4c2fce418111
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Instalar os recursos do Business Intelligence do SQL Server
-  Recursos do SQL Server que são parte da plataforma Microsoft Business Intelligence e que incluem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e vários aplicativos cliente usados para criação ou funcionamento com dados analíticos. Esta seção da documentação da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica como instalar esses recursos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Recursos do SQL Server que são parte da plataforma Microsoft Business Intelligence e que incluem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e vários aplicativos cliente usados para criação ou funcionamento usando dados analíticos. Esta seção da documentação da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica como instalar esses recursos.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser instalados como servidores autônomos, em configurações em expansão, ou como aplicativos de serviço compartilhado em um farm do SharePoint. A instalação dos serviços em um farm habilita os recursos de BI que estão disponíveis apenas no SharePoint, incluindo o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint e o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], o designer de relatórios interativos ad hoc do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que é executado nos bancos de dados de modelo de tabela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou do [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] .  
   

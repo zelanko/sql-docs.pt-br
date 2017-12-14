@@ -1,5 +1,5 @@
 ---
-title: "Classificar dados para transformações de junção de mesclagem e de mesclagem | Microsoft Docs"
+title: "Classificar dados para as transformações Mesclagem e Junção de Mesclagem | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75bcc0fbc667921debf0fa27d7cc95103fa4860c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Classificar dados para as transformações Mesclagem e Junção de Mesclagem
   No [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], as transformações Mesclagem e Junção de Mesclagem exigem dados classificados para suas entradas. Os dados de entrada devem ser classificados fisicamente e as opções de classificação devem ser definidas nas saídas e nas colunas de saída na origem ou na transformação upstream. Se as opções de classificação indicarem que os dados estão classificados, mas os dados não estiverem efetivamente classificados, os resultados da operação de mesclagem ou junção de mesclagem são imprevisíveis.  
@@ -79,7 +77,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  Clique na guia **Propriedades de Entrada e Saída** .  
   
-6.  Clique em  **\<nome do componente > saída**e defina o **IsSorted** propriedade **True**.  
+6.  Clique em **\<Saída do component name>** e defina a propriedade **IsSorted** como **True**.  
   
     > [!NOTE]  
     >  Se você definir manualmente a propriedade **IsSorted** da saída como **True** e os dados não forem classificados, poderão ocorrer ausências de dados ou comparações de dados inválidas na transformação Mesclagem ou Junção de Mesclagem de downstream durante a execução do pacote.  
@@ -115,11 +113,10 @@ ms.lasthandoff: 08/03/2017
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação de mesclagem](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Transformação junção de mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+ [Transformação Mesclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+ [Transformação Junção de Mesclagem](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarefa de fluxo de dados](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarefa de Fluxo de Dados](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

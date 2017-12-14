@@ -1,5 +1,5 @@
 ---
-title: Conecte-se a um dBASE ou outro arquivo DBF | Microsoft Docs
+title: Conectar-se a um dBASE ou a outro arquivo DBF | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - dBase files
 - DBF files
 ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b1ae38e8b7ba0a9e584a80d1c6cacc76938576a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 60fc92f8283ec9b4952152aca6b1e0a5d31a1e6d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>Conectar-se a um dBASE ou a outro arquivo DBF
   Você pode conectar-se a um dBASE ou a outro arquivo de banco de dados .DBF em um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando um gerenciador de conexões do OLE DB e selecionando a opção Microsoft OLE DB Provider for Jet 4.0.  
@@ -52,7 +50,6 @@ ms.lasthandoff: 08/03/2017
 7.  Para usar o gerenciador de conexões no fluxo de dados do pacote, selecione uma origem ou um destino de OLE DB e configure-o para usar o gerenciador de conexões que você criou usando as etapas anteriores.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de Conexão do OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ [Gerenciador de conexões OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   
-
