@@ -73,6 +73,7 @@
 # [Implantar pacotes](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
+# [Catálogo e servidor](catalog/integration-services-ssis-server-and-catalog.md)
 # [Serviço (herdado)](../integration-services/service/integration-services-service-ssis-service.md)
 # [Segurança](../integration-services/security/security-overview-integration-services.md)
 # [Desempenho](../integration-services/performance/monitor-running-packages-and-other-operations.md)
