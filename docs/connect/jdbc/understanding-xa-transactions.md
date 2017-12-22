@@ -26,10 +26,10 @@ ms.lasthandoff: 11/18/2017
 # <a name="understanding-xa-transactions"></a>Compreendendo transações XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece suporte para plataforma Java, Enterprise Edition/JDBC 2.0 as transações distribuídas opcionais. Conexões JDBC obtidas do [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) classe pode participar de ambientes, como servidores da plataforma Java, Enterprise Edition (Java EE) aplicativo de processamento de transações distribuídas padrão.  
+  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece suporte para plataforma Java, Enterprise Edition/JDBC 2.0 as transações distribuídas opcionais. Conexões JDBC obtidas através da classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) podem participar de ambientes, como servidores da plataforma Java, Enterprise Edition (Java EE) aplicativo de processamento de transações distribuídas padrão.
   
 > [!WARNING]  
->  Microsoft JDBC Driver 4.2 (e superior) para SQL inclui novas opções de tempo limite para o recurso existente para reversão automática de transações não preparadas. Consulte [definindo as configurações de tempo limite do lado do servidor para reversão automática de transações não preparadas](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) mais adiante neste tópico para obter mais detalhes.  
+>  O Microsoft JDBC Driver 4.2 (e superior) para SQL inclui novas opções de tempo limite para o recurso existente para reversão automática de transações não preparadas. Consulte [definindo as configurações de tempo limite do lado do servidor para reversão automática de transações não preparadas](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) mais adiante neste tópico para obter mais detalhes.  
   
 ## <a name="remarks"></a>Comentários  
  As classes para a implementação das transações distribuídas são as seguintes:  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Diretrizes e limitações ao usar transações XA  
  As diretrizes adicionais a seguir se aplicam a transações firmemente acopladas:  
   
--   Ao usar transações XA junto com o MS DTC, talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.  
+-   Ao usar transações XA junto com o MS DTC, talvez você observe que a versão atual do MS DTC não ofereça suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.
   
      O hotfix fornecido em [MSDTC e transações firmemente acopladas](http://support.microsoft.com/kb/938653) habilita o suporte a ramificações XA firmemente acopladas em que várias ramificações XA com a mesma transação global ID (GTRID) são mapeadas para uma única ID de transação de MS DTC. Esse suporte permite que várias ramificações XA firmemente acopladas vejam as alterações uma da outra no Gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
@@ -74,9 +74,9 @@ ms.lasthandoff: 11/18/2017
   
 4.  Clique o **segurança** guia o **propriedades de DTC Local** caixa de diálogo.  
   
-5.  Selecione o **habilitar transações XA** caixa de seleção e, em seguida, clique em **Okey**. Isso causará a reinicialização do serviço MS DTC.  
+5.  Selecione o **habilitar transações XA** caixa de seleção e, em seguida, clique em **Ok**. Isso causará a reinicialização do serviço MS DTC.  
   
-6.  Clique em **Okey** novamente para fechar o **propriedades** caixa de diálogo e, em seguida, feche **serviços de componentes**.  
+6.  Clique em **Ok** novamente para fechar o **propriedades** caixa de diálogo e, em seguida, feche **serviços de componentes**.  
   
 7.  Pare e reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para certificar-se de que ele fique sincronizado com as alterações do MS DTC.  
   
@@ -96,11 +96,11 @@ ms.lasthandoff: 11/18/2017
   
  Há três maneiras de verificar a versão de sqljdbc_xa.dll está instalada no momento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instância:  
   
-1.  Abra o diretório LOG do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] transações distribuídas do computador que participará. Selecione e abra o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] arquivo "ERRORLOG". Procure a frase "Using 'SQLJDBC_XA.dll' version ..." no arquivo "ERRORLOG".  
+1.  Abra o diretório LOG do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] do computador que participará de transações distribuídas. Selecione e abra o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] arquivo "ERRORLOG". Procure a frase "Using 'SQLJDBC_XA.dll' version ..." no arquivo "ERRORLOG".  
   
-2.  Abra o diretório Binn do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] transações distribuídas do computador que participará. Selecione o assembly sqljdbc_xa.dll.  
+2.  Abra o diretório Binn do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] do computador que participará de transações distribuídas. Selecione o assembly sqljdbc_xa.dll.  
   
-    -   No Windows Vista ou versão posterior: clique com o botão direito do mouse em sqljdbc_xa.dll e selecione Propriedades. Em seguida, clique no **detalhes** guia. O **versão do arquivo** campo mostra a versão de sqljdbc_xa.dll que está instalada no momento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instância.  
+    -   No Windows Vista ou versão posterior: clique com o botão direito do mouse em sqljdbc_xa.dll e selecione Propriedades. Em seguida, clique no **detalhes** guia. O campo **versão do arquivo** mostra a versão de sqljdbc_xa.dll que está instalada no momento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instância.  
   
 3.  Defina a funcionalidade de registro em log conforme mostrado no exemplo de código na próxima seção. Procure a frase "Server XA DLL version:..." no arquivo de log de saída.  
   
