@@ -24,18 +24,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0da3801d395420c24ebb09b8d8d746ec4d417379
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ef239563e768ee5044e07e8bca666bdd4169158
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A replicação dá suporte a um amplo intervalo de alterações de esquema para objetos publicados. Ao fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a alteração é propagada por padrão a todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
   
--   ALTER TABLE SET LOCK ESCALATION não deverá ser usado se a replicação da alteração de esquema estiver habilitada e uma topologia incluir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.ALTER VIEW  
+-   ALTER TABLE SET LOCK ESCALATION não deverá ser usado se a replicação da alteração de esquema estiver habilitada e uma topologia incluir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   

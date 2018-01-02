@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f7ce518d2588e07ae90842f92a7e9ee47cfc5543
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="polybase-guide"></a>Guia do PolyBase
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O PolyBase é uma tecnologia que acessa dados fora do banco de dados por meio da linguagem T-SQL.  No SQL Server 2016, ela permite executar consultas em dados externos no Hadoop ou importar/exportar dados do Armazenamento de Blobs do Azure. As consultas são otimizadas para enviar por push o cálculo para o Hadoop. No SQL Data Warehouse do Azure, é possível importar/exportar dados do Armazenamento de Blobs do Azure e do Azure Data Lake Store.
@@ -55,11 +55,11 @@ Para simplificar, o PolyBase não exige instalação de software adicional no am
 
 -   **Exporte dados para o Hadoop, o Armazenamento de Blobs do Azure ou o Azure Data Lake Store.** Arquive dados no Hadoop, no Armazenamento de Blobs do Azure ou no Azure Data Lake Store para obter um armazenamento econômico e mantê-los online para fácil acesso.  
   
--   **Integre com ferramentas de BI.** Use o PolyBase com a business intelligence e pilha de análise da Microsoft, ou use as ferramentas de terceiros compatíveis com o SQL Server.  
+-   **Integre com ferramentas de BI.** Use o PolyBase com a business intelligence e a pilha de análise da Microsoft ou use as ferramentas de terceiros compatíveis com o SQL Server.  
   
 ## <a name="performance"></a>Desempenho  
   
--   **Enviar por push o cálculo para o Hadoop.**O otimizador de consulta toma uma decisão baseada em custo para enviar por push o cálculo para o Hadoop quando essa ação implica uma melhoria no desempenho da consulta.  Ele usa as estatísticas de tabelas externas para tomar a decisão baseada em custo.   O envio por push do cálculo cria trabalhos MapReduce e aproveita os recursos computacionais distribuídos do Hadoop.  
+-   **Enviar por push o cálculo para o Hadoop.**O otimizador de consulta toma uma decisão baseada em custo para enviar por push o cálculo para o Hadoop quando essa ação implica uma melhoria no desempenho da consulta.  Ele usa as estatísticas de tabelas externas para tomar a decisão baseada em custo. O envio por push do cálculo cria trabalhos MapReduce e aproveita os recursos computacionais distribuídos do Hadoop.  
   
 -   **Escale os recursos de computação.** Para melhorar o desempenho da consulta, é possível usar os [grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)do SQL Server. Isso permite a transferência de dados em paralelo entre as instâncias do SQL Server e os nós do Hadoop, além de adicionar recursos de computação para operação em dados externos.  
   

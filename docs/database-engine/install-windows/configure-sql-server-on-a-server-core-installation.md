@@ -19,11 +19,11 @@ caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: f55439476e962ab97c2e29a37524854fa52d819b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 571f4f13be8ddcfaf2bd1b4d649df0ef09ba6bfc
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar o SQL Server em uma instalação do Server Core
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico abrange detalhes sobre a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core.  
@@ -115,7 +115,7 @@ Estas etapas devem ser realizadas em um computador que executa a edição de cli
   
 7. Selecione a guia **Alta Disponibilidade AlwaysOn** .  
   
-8. Verifique se o campo Nome do cluster de failover do Windows contém o nome do nó de cluster de failover local. Se esse campo estiver em branco, significa que essa instância de servidor no momento não dá suporte a Grupos de Disponibilidade AlwaysOn. Talvez o computador local não seja um nó de cluster, o cluster WSFC tenha sido desligado ou essa edição do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] não dê suporte a Grupos de Disponibilidade AlwaysOn.  
+8. Verifique se o campo Nome do cluster de failover do Windows contém o nome do nó de cluster de failover local. Se esse campo estiver em branco, significa que essa instância de servidor no momento não dá suporte a Grupos de Disponibilidade AlwaysOn. Talvez o computador local não seja um nó de cluster, o cluster WSFC tenha sido desligado ou essa edição do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] não seja compatível com os Grupos de Disponibilidade AlwaysOn.  
   
 9. Marque a caixa de seleção Habilitar Grupos de Disponibilidade AlwaysOn e clique em OK.  
   

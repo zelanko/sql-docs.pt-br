@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve algumas das causas comuns de baixo desempenho para consultas e índices de texto completo. Ele também fornece algumas sugestões para atenuar esses problemas e melhorar o desempenho.
@@ -151,7 +151,7 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
   
  `F = 8*10*8=640`  
   
- O próximo cálculo obtém o valor ideal para **memória máxima do servidor**—*M*. *O*total de memória física disponível no sistema em MB –*T*– é `8192`.  
+ O próximo cálculo obtém o valor ideal para **memória máxima do servidor**—*M*. A memória física total disponível no sistema em MB —*T*—é `8192`.  
   
  `M = 8192-640-500=7052`  
   

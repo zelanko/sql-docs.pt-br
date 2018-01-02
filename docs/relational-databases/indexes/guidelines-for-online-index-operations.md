@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ As diretrizes a seguir se aplicam ao executar a recompilação de índice online
 - Recuperação de falhas de recompilação de índice (tais como failovers de banco de dados ou ficar sem espaço em disco).
 - Quando uma operação de índice está em pausa, tanto o índice original quanto um recém-criado exigem espaço em disco e precisam ser atualizados durante as operações de DML.
 
-- Habilita o truncamento de logs durante uma operação de recompilação de índice (esta operação não pode ser realizada para uma operação de índice online regular).
+- Habilita o truncamento de logs de transação durante uma operação de recompilação de índice (esta operação não pode ser realizada para uma operação de índice online regular).
 - A opção SORT_IN_TEMPDB=ON não é compatível
 
 > [!IMPORTANT]
-> A recompilação retomável não exige que você mantenha aberto um truncamento de longa execução, permitindo o truncamento de log durante essa operação e um melhor gerenciamento do espaço de log. Com o novo design, conseguimos manter os dados necessários em um banco de dados junto com todas as referências necessárias para reiniciar a operação retomável.
+> A recompilação retomável não exige que você mantenha aberta uma transação de longa execução, permitindo o truncamento de log durante essa operação e um melhor gerenciamento do espaço de log. Com o novo design, conseguimos manter os dados necessários em um banco de dados junto com todas as referências necessárias para reiniciar a operação retomável.
 >
 
 Em geral, não há nenhuma diferença de desempenho entre a recompilação de índice online retomável e não retomável. Quando você atualiza um índice retomável enquanto uma operação de recompilação de índice está em pausa:

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ddfcca6408a64b2c2875aaa625c275899e8c85f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem
 Agora você pode mover suas cargas de trabalho e pacotes do SQL Server Integration Services (SSIS) para a nuvem do Azure.
@@ -55,7 +55,7 @@ Você só precisa provisionar o SSIS IR uma vez. Depois disso, você pode usar f
 O Data Factory também dá suporte a outros tipos de Integration Runtimes. Para saber mais sobre o SSIS IR e outros tipos de Integration Runtimes, consulte [Integration Runtime no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
 ## <a name="prerequisites"></a>Pré-requisitos
-As funcionalidades descritas neste tópico não exigem o SQL Server 2017 ou o SQL Server 2016.
+As funcionalidades descritas neste artigo não exigem o SQL Server 2017 ou o SQL Server 2016.
 
 Essas funcionalidades exigem as seguintes versões do SSDT (SQL Server Data Tools):
 -   Para o Visual Studio 2017, versão 15.3 (versão prévia) ou posterior.

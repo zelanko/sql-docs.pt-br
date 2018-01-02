@@ -1,19 +1,19 @@
 ---
 title: Armazenar e recuperar arquivos em compartilhamentos de arquivos local e no Azure | Microsoft Docs
 description: Este artigo descreve como usar o sistema de arquivos e compartilhamentos de arquivos, localmente e no Azure, com o SSIS
-ms.date: 11/10/2017
+ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4980f39deea4d70817da3650dccbff7997ba83d
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Armazenar e recuperar arquivos em compartilhamentos de arquivos local e no Azure com o SSIS
 Este artigo descreve como atualizar seus pacotes do SSIS (SQL Server Integration Services) quando você compara e desloca pacotes que usam sistemas de arquivos locais no SSIS no Azure.
@@ -22,7 +22,7 @@ Este artigo descreve como atualizar seus pacotes do SSIS (SQL Server Integration
 > Atualmente, o SSISDB (banco de dados do catálogo do SSIS) dá suporte a apenas um único conjunto de credenciais de acesso. Portanto, o Azure SSIS IR (Integration Runtime) não pode usar credenciais diferentes para se conectar a vários compartilhamentos de arquivos locais e compartilhamentos de arquivos do Azure.
 
 ## <a name="store-temporary-files"></a>Armazenar arquivos temporários
-Se você precisar armazenar e processar arquivos temporários durante a execução de um único pacote, os pacotes poderão usar a pasta temporária `(.)/temp` ou `%TEMP%` de seus nós do Azure SSIS Integration Runtime.
+Se você precisar armazenar e processar arquivos temporários durante a execução de um único pacote, os pacotes poderão usar o diretório de trabalho atual (`.`) ou a pasta temporária (`%TEMP%`) de seus nós do Azure SSIS Integration Runtime.
 
 ## <a name="store-files-across-multiple-package-executions"></a>Armazenar arquivos entre várias execuções de pacote
 Se você precisar armazenar e processar arquivos permanentes e mantê-los entre várias execuções de pacote, você poderá usar o compartilhamentos de arquivos locais ou arquivos do Azure
