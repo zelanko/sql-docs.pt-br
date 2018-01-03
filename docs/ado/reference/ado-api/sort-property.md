@@ -3,7 +3,7 @@ title: "Propriedade de classificação | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc2498f80dfc5a057eff9350ed1949ee02ee5f4f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e668f5d2644ece0fa9210bdb492fd37ca8089a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sort-property"></a>Propriedade de classificação
 Indica um ou mais nomes de campo no qual o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) é classificada, e se cada campo é classificado em ordem crescente ou decrescente.  
@@ -40,7 +40,7 @@ Indica um ou mais nomes de campo no qual o [registros](../../../ado/reference/ad
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor que indica o campo de nomes no **registros** na qual classificar. Cada nome é separado por uma vírgula e, opcionalmente, é seguido por um espaço em branco e a palavra-chave **ASC**, que classifica o campo em ordem crescente, ou **DESC**, que classifica o campo em ordem decrescente. Por padrão, se nenhuma palavra-chave for especificado, o campo é classificado em ordem crescente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esta propriedade requer o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade a ser definida **adUseClient**. Um índice temporário será criado para cada campo especificado no **classificação** propriedade se um índice já não existe.  
   
  A operação de classificação é eficiente, porque os dados não é fisicamente reorganizados, mas simplesmente são acessados na ordem especificada pelo índice.  
@@ -58,7 +58,7 @@ Indica um ou mais nomes de campo no qual o [registros](../../../ado/reference/ad
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade de classificação (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [Exemplo de propriedade de classificação (VC + +)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
  [Otimizar a propriedade dinâmica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

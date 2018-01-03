@@ -3,7 +3,7 @@ title: "Caixa de diálogo de Ferramentas Externas | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d60bec587daeae84382166194d75db22b0a38a61
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd3875e3c4dfe69fa2428ca8c348648ebd97e2a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="external-tools-dialog-box"></a>Caixa de diálogo Ferramentas Externas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Ferramentas Externas** para adicionar ferramentas externas como SQLCMD ou o Bloco de Notas ao menu **Ferramentas**. Adicionar ferramentas externas permite a inicialização de outros aplicativos facilmente enquanto você trabalha no ambiente do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] . Você pode especificar argumentos e um diretório de trabalho na execução da ferramenta. Além disso, a saída de algumas ferramentas pode ser exibida na janela **Saída** . A caixa de diálogo **Ferramentas Externas** está disponível no menu **Ferramentas** .  
@@ -43,7 +43,7 @@ Mova a ferramenta selecionada para baixo na lista de ferramentas exibida no menu
 **Adicionar**  
 Desmarque as caixas de texto para que você possa especificar uma nova ferramenta.  
   
-**Excluir**  
+**Delete (excluir)**  
 Remova a ferramenta ou o comando da lista **Conteúdo do Menu** , bem como do menu **Ferramentas** .  
   
 **Título**  
@@ -73,13 +73,13 @@ Fecha a janela aberta pela ferramenta quando ela for encerrada.
 ## <a name="example"></a>Exemplo  
 Inserir os valores a seguir na caixa de diálogo **Ferramentas Externas** criará um item de menu rotulado como "DAC" que, quando selecionado, abrirá um prompt de comando e executará o utilitário **sqlcmd** usando a conexão de administrador dedicada.  
   
-|Box|Value|  
+|Box|Valor|  
 |-------|---------|  
 |**Título**|DAC|  
 |**Comando**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
 |**Argumentos**|-A|  
   
-## <a name="see-also"></a>Consulte também  
-[Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
+## <a name="see-also"></a>Consulte Também  
+[Argumentos para ferramentas externas](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [Elementos gerais da interface de usuário](../ssms/general-user-interface-elements.md)  
   

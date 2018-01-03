@@ -3,7 +3,7 @@ title: Gerenciador de modelos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-templates
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b0ce99cc0777cc7be973fb4cf67f10ffe5ada4f3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cd3d984df93312d1eb58bbef7e4eea92dc758a1e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="template-explorer"></a>Explorador de Modelos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Crie modelos personalizados para tarefas executadas com frequência. Organize se
   
 O editor de consultas do [!INCLUDE[ssDE](../../includes/ssde_md.md)] também oferece suporte a trechos de códigos que podem ser inseridos em locais específicos em um script clicando com o botão direito do mouse nesse local.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
 Use os tópicos a seguir como introdução rápida a modelos  
   
 |**Description**|**Tópico**|  

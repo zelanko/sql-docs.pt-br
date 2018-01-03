@@ -3,7 +3,7 @@ title: "Método (ADOX índices) append | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27ddeee201dba9d1381b31023039256d9e587a1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7630383843d6d057e91c4c2ed88efb2fd0e751e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-indexes"></a>Método (ADOX índices) append
 Adiciona um novo [índice](../../../ado/reference/adox-api/index-object-adox.md) o objeto para o [índices](../../../ado/reference/adox-api/indexes-collection-adox.md) coleção.  
@@ -43,7 +43,7 @@ Indexes.Append Index [,Columns]
  *Colunas*  
  Opcional. Um **Variant** valor que especifica os nomes das colunas a serem indexados. O *colunas* parâmetro corresponde para os valores da [nome](../../../ado/reference/adox-api/name-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md) objeto ou objetos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *colunas* parâmetro pode ser o nome de uma coluna ou uma matriz de nomes de coluna.  
   
  Se o provedor não oferece suporte a criação de índices, ocorrerá um erro.  
@@ -51,7 +51,7 @@ Indexes.Append Index [,Columns]
 ## <a name="applies-to"></a>Aplica-se a  
  [Coleção Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices de acrescentar o exemplo de método (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Acrescente o método (ADOX colunas)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [(Grupos de ADOX) do método append](../../../ado/reference/adox-api/append-method-adox-groups.md)   

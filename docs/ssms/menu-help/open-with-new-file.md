@@ -3,7 +3,7 @@ title: Abrir Com (Novo Arquivo) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6dddfbff4900c77823dbe7782dd720d75f4135
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9f40b2c05b2868c83c0a80d1fab2de85fe35d381
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-with-new-file"></a>Abrir com (Novo Arquivo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode abrir um documento em um ou mais editores clicando em **Abrir** no menu **Arquivo** e, depois, clicando em **Arquivo**. Na caixa de diálogo **Abrir Arquivo** , selecione o arquivo, clique na seta **Abrir** e, depois, clique em **Abrir Com**. Na caixa de diálogo **Abrir Com** , na lista **Selecionar um programa para abrir** , clique no programa preferido e, depois, clique em **Abrir**.  
@@ -47,6 +47,6 @@ Para especificar um editor padrão (e opções de codificação de linguagem, se
 > [!NOTE]  
 > Na lista de programas sob **Selecionar um programa para abrir**, o nome do editor padrão para o tipo de arquivo selecionado é seguido por **(Padrão)**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Como associar extensões de arquivo a um Editor de Códigos](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
   

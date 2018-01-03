@@ -3,7 +3,7 @@ title: Salvar como | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f86afead1c6eca201a6669e8f64e89425f0cb1c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8957cd743dd7f358d7f451f5d6e0879d040974d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-as"></a>Salvar como
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usada para salvar uma instância do item atual em um local específico em um formato de arquivo específico. Clique em **Salvar** *<file>* **como** no menu **Arquivo** (em que *<file>* é o nome do item atual) ou pressione ALT+F, A no Editor de Códigos.  
@@ -54,7 +54,7 @@ Exibe arquivos e pastas em **Meus Projetos** ou o local mais recentemente visita
 **Meu Computador**  
 Exibe o local **Meu Computador** em seu computador.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Opções avançadas de salvar](../../ssms/menu-help/advanced-save-options.md)  
 [Gerenciar arquivos com codificação](../../ssms/solution/manage-files-with-encoding.md)  
   

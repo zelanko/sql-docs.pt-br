@@ -3,7 +3,7 @@ title: Salvar tabelas selecionadas em um diagrama (Visual Database Tools) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13e47d349680589c14f2804629c1417872f49265
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec8f86fbb4056c950cae3a7aa9e6572bb6f98ace
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Salvar tabelas selecionadas em um diagrama (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode salvar uma tabela específica ou um conjunto de tabelas se não quiser salvar todas as alterações feitas em um diagrama de banco de dados.  
@@ -42,6 +42,6 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     > A lista de tabelas pode conter tabelas além das selecionadas. Por exemplo, se você alterar o tipo de dados de uma coluna que participa de uma relação com outra tabela, ambas as tabelas serão incluídas nessa lista.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Trabalhar com diagramas de banco de dados (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

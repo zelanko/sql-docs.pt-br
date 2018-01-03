@@ -3,7 +3,7 @@ title: Propriedade RowPosition (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3e20769e324400357ea65acc21d338749987ae4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65bd34a35b48b980cd3d9b6c29dc5e297b732fa3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowposition-property-ado"></a>Propriedade RowPosition (ADO)
 Obtém ou define um banco de dados OLE **RowPosition** objeto de/em uma **ADORecordsetConstruction** objeto. Quando você usa **put_RowPosition** para definir o **RowPosition** objeto resultante **registros** objeto usa o **RowPosition** do objeto para Determine a linha atual.  
@@ -53,7 +53,7 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>Valores de retorno  
  Esse método de propriedade retorna os valores HRESULT padrão, incluindo S_OK e E_FAIL.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando essa propriedade é definida, se o **linhas** do objeto no **RowPosition** objeto é diferente do **linhas** do objeto no **Recordset**do objeto, o primeiro substitui o último. O mesmo comportamento se aplica a atual **capítulo** do **RowPosition** também.  
   
 ## <a name="applies-to"></a>Aplica-se a  

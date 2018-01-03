@@ -3,7 +3,7 @@ title: Propriedade Filter | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 22b1ee344246c2a21dc143822145ba6ca09060d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3732e0820c0c258074e2a8b76d35c4af94a8c8a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-property"></a>Propriedade de filtro
 Indica um filtro de dados em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -38,7 +38,7 @@ Indica um filtro de dados em um [registros](../../../ado/reference/ado-api/recor
   
 -   Um [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **filtro** propriedade seletivamente retire registros em um **registros** objeto. Filtradas **registros** torna-se o cursor atual. Outras propriedades que retornam valores com base na atual **cursor** são afetados, como [propriedade AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ Propriedade RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), e [propriedade PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Isso é porque a definição de **filtro** propriedade com um valor específico moverá o registro atual para o primeiro registro que satisfaz o novo valor.  
   
  A cadeia de caracteres de critérios é composta por cláusulas no formulário *valor de operador FieldName* (por exemplo, `"LastName = 'Smith'"`). Você pode criar cláusulas compostas concatenando cláusulas individuais com **AND** (por exemplo, `"LastName = 'Smith' AND FirstName = 'John'"`) ou **OR** (por exemplo, `"LastName = 'Smith' OR LastName = 'Jones'"`). Use as seguintes diretrizes para cadeias de caracteres de critérios:  
@@ -94,7 +94,7 @@ Indica um filtro de dados em um [registros](../../../ado/reference/ado-api/recor
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de RecordCount (VB) e filtro](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
  [Exemplo de propriedades de RecordCount (VC + +) e filtro](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
  [Método Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   

@@ -3,10 +3,10 @@ title: Carregar dados com INSERT
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
 caps.latest.revision: "21"
-ms.openlocfilehash: 059dc1e8601fb02aac9a91631a161bae1e995389
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625b6938ebbb2d0b753cb1a35f5c1df7372c6cca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-insert"></a>Carregar dados com INSERT
 
@@ -129,8 +129,8 @@ A tabela a seguir define os formatos aceitos e regras para inserir valores liter
   
 |Tipo de literal|Formato|Regras de conversão|  
 |------------|------|----------------|
-|Cadeia de caracteres literal no **inteiro** formato|'nnnnnnnnnnnnnn'<br /><br />Exemplo: '321312313123'| Nenhuma |  
-|Literal de inteiro|nnnnnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhuma|  
+|Cadeia de caracteres literal no **inteiro** formato|'nnnnnnnnnnnnnn'<br /><br />Exemplo: '321312313123'| Nenhum |  
+|Literal de inteiro|nnnnnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhum|  
 |Literal decimal|nnnnnn.nnnnn<br /><br />Exemplo: 123344.34455|Os valores à direita do separador decimal são truncados.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>tipos de dados Money e smallmoney  
@@ -153,14 +153,14 @@ A tabela a seguir define os formatos aceitos e regras para inserir valores liter
   
 |Tipo de literal|Formato|Regras de conversão|  
 |----------------|----------|--------------------|  
-|Literal de cadeia de caracteres|Formato: 'cadeia de caracteres'<br /><br />Exemplo: 'abc'| Nenhuma|  
-|Literal de cadeia Unicode|Formato: Cadeia de caracteres N'character'<br /><br />Exemplo: N'abc'|  Nenhuma |  
-|Literal de inteiro|Formato: nnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhuma |  
-|Literal decimal|Formato: nnnnnn.nnnnnnn<br /><br />Exemplo: 12344.34455| Nenhuma |  
+|Literal de cadeia de caracteres|Formato: 'cadeia de caracteres'<br /><br />Exemplo: 'abc'| Nenhum|  
+|Literal de cadeia Unicode|Formato: Cadeia de caracteres N'character'<br /><br />Exemplo: N'abc'|  Nenhum |  
+|Literal de inteiro|Formato: nnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhum |  
+|Literal decimal|Formato: nnnnnn.nnnnnnn<br /><br />Exemplo: 12344.34455| Nenhum |  
 |Money literal|Formato: $nnnnnn.nnnnn<br /><br />Exemplo: US $123456.99|O símbolo de moeda não é inserido com o valor. Para inserir o símbolo de moeda, insira o valor como uma cadeia de caracteres literal. Isso irá corresponder ao formato da **dwloader** ferramenta, que trata cada literal como uma cadeia de caracteres literal.<br /><br />Vírgulas não são permitidas.<br /><br />Se o número de dígitos após o ponto decimal exceder 2, o valor é arredondado para o valor mais próximo. Por exemplo, o valor 123.946789 é inserido como 123.95.<br /><br />Somente o estilo padrão 0 (sem vírgulas e 2 dígitos após o ponto decimal) é permitido ao usar a função CONVERT para inserir os literais de dinheiro.|  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  
 [Dados distribuídos](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
 [INSERT](../t-sql/statements/insert-transact-sql.md)  

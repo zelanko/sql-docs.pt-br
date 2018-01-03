@@ -2,10 +2,10 @@
 title: "Problemas comuns com a execução do script externo no SQL Server | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e1dfc244fbe77d7938853cf6c1109e190c464436
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f515ba26c4eeae70eaf9244c0eaedaa954954b4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemas comuns com a execução do script externo no SQL Server
 
@@ -191,9 +191,9 @@ Se você tiver instalado e, então, aprendizado de máquina, mas você receberá
 
 4. Reiniciar o serviço geralmente corrige o problema para que podem executar scripts de aprendizado de máquina. Se a reinicialização não resolver o problema, observe o caminho e argumentos no **caminho binário** propriedade e faça o seguinte:
 
-    a. Examine o arquivo. config do iniciador e verifique se o diretório de trabalho é válido.
+    A. Examine o arquivo. config do iniciador e verifique se o diretório de trabalho é válido.
 
-    b. Certifique-se de que o grupo do Windows que é usado pela barra inicial pode se conectar à instância do SQL Server, conforme descrito no [seção anterior](#bkmk_LaunchpadTS).
+    B. Certifique-se de que o grupo do Windows que é usado pela barra inicial pode se conectar à instância do SQL Server, conforme descrito no [seção anterior](#bkmk_LaunchpadTS).
 
     c. Se você alterar qualquer uma das propriedades do serviço, reinicie o serviço Launchpad.
 

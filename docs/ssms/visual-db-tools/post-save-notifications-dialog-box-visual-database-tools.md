@@ -3,7 +3,7 @@ title: "Caixa de diálogo notificações pós-salvamento (Visual Database Tools)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef2947ba3f63c75bef2f4f15822743b16f88d07a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe0d00e66789e1971df2db603cc90213c31067de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Caixa de diálogo Notificações Pós-salvamento (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Essa caixa de diálogo aparece quando ocorrem erros durante tentativa de salvar alterações em tabela. Essa caixa de diálogo lista os objetos salvos com êxito no banco de dados, os objetos que não foram salvos e os erros encontrados.  

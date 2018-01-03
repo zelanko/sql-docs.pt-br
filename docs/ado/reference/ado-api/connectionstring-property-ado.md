@@ -3,7 +3,7 @@ title: Propriedade ConnectionString (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 590125743d78e4c583cd22011dcf40f58eed1999
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41f887dbd21f120706e32059128227669f517ea4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectionstring-property-ado"></a>Propriedade ConnectionString (ADO)
 Indica as informações usadas para estabelecer uma conexão com uma fonte de dados.  
@@ -32,7 +32,7 @@ Indica as informações usadas para estabelecer uma conexão com uma fonte de da
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **ConnectionString** propriedade para especificar uma fonte de dados, passando uma cadeia de caracteres de conexão detalhadas que contém uma série de *argumento* *= valor* instruções separadas por ponto e vírgula.  
   
  ADO dá suporte a cinco argumentos para o **ConnectionString** propriedade; qualquer outro passo argumentos diretamente para o provedor sem nenhum processamento pelo ADO. O oferece suporte ao ADO de argumentos são da seguinte maneira.  
@@ -68,7 +68,7 @@ Indica as informações usadas para estabelecer uma conexão com uma fonte de da
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de estado (VB), ConnectionTimeout e ConnectionString](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [Exemplo de propriedades de estado (VC + +), ConnectionTimeout e ConnectionString](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -3,7 +3,7 @@ title: Organizar tabelas em diagramas (Ferramentas de Banco de Dados Visual) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a5505e26e46786a461dbf7d48538c01da6e253a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44531e1fd2aabb4b1c0a312d5fe2ba7c045e7ae5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Organizar tabelas em diagramas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode organizar as tabelas rapidamente em um diagrama de banco de dados para visualizar claramente cada tabela e relação.  
@@ -36,6 +36,6 @@ ms.lasthandoff: 12/05/2017
   
 2.  No menu de atalho, clique em **Organizar Tabelas**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

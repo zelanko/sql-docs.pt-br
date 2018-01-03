@@ -2,9 +2,11 @@
 title: Trabalhando com tipos de dados R | Microsoft Docs
 ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09ff5069864db36036685c751759cadcf66d6a02
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e72c4a984359230ace9f800e8ac4efbfcfe5f2a1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-libraries-and-r-data-types"></a>Tipos de dados de R e bibliotecas de R
 
@@ -82,7 +84,7 @@ Das categorias de tipos de dados com suporte no [sistema de tipos do SQL Server]
 
 + Tipos de dados listados no **outros** seção do tópico de sistema de tipo SQL: **cursor**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabela**
 + Todos os tipos espaciais
-+ **image**
++ **imagem**
 
 ## <a name="data-types-that-might-convert-poorly"></a>Tipos de dados que podem ser mal convertidos
 
@@ -193,6 +195,6 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Bibliotecas de Python e tipos de dados](../python/python-libraries-and-data-types.md)

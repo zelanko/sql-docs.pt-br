@@ -3,7 +3,7 @@ title: Preparado propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62f01b807c56065c61e5cf8650c15f7210df6b7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a938fcdbf5fbdbe73ca61465063ccd3622711920
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prepared-property-ado"></a>Propriedade preparado (ADO)
 Indica se é necessário salvar uma versão compilada de uma [comando](../../../ado/reference/ado-api/command-object-ado.md) antes da execução.  
@@ -32,7 +32,7 @@ Indica se é necessário salvar uma versão compilada de uma [comando](../../../
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **booliano** valor que, se definido como **True**, indica que o comando deve ser preparado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **preparado** propriedade para que o provedor de salvar uma versão preparada (ou compilada) da consulta especificada no [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade antes de um [comando](../../../ado/reference/ado-api/command-object-ado.md) do objeto primeira execução. Isso pode reduzir a primeira execução de um comando, mas depois que o provedor compila um comando, o provedor usará a versão compilada do comando para todas as execuções subsequentes, que resultarão em desempenho aprimorado.  
   
  Se a propriedade for **False**, o provedor será executado o **comando** objeto diretamente, sem criar uma versão compilada.  
@@ -42,6 +42,6 @@ Indica se é necessário salvar uma versão compilada de uma [comando](../../../
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade preparada (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Exemplo da propriedade Prepared (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

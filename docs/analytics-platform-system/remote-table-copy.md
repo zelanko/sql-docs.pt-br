@@ -3,10 +3,10 @@ title: "Cópia de tabela remota (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
 caps.latest.revision: "23"
-ms.openlocfilehash: 0da111351c260ce4908c36cacdbe9fdbcad21b70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3de6700957b48c5022c73c3d521bf6f6ed090553
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-table-copy"></a>Cópia da tabela remota
 Descreve como usar o recurso de cópia da tabela remota para copiar tabelas de bancos de dados do SQL Server PDW para bancos de dados de SMP SQL Server (não appliance) remotos. Use cópia de tabela remota para possibilita cenários de hub e spoke para SQL Server PDW.  

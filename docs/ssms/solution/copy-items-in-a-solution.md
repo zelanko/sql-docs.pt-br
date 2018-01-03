@@ -3,7 +3,7 @@ title: "Copiar itens em uma solução | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bb4d0bf1283788c0c53145f1fd92cb65913f6fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5ea37ac982e5b5c832b0f69d5257411d8b50df5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-items-in-a-solution"></a>Copiar itens em uma solução
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode copiar itens que usam o Gerenciador de Soluções ou o Windows Explorer.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > As conexões não podem ser copiadas entre projetos. Ao copiar uma consulta com uma conexão associada em outro projeto, a conexão associada não será copiada no projeto de destino. Você deve criar a conexão manualmente no projeto de destino.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
 [Mover itens em uma solução](../../ssms/solution/move-items-in-a-solution.md)  
   

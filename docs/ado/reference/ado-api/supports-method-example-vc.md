@@ -3,7 +3,7 @@ title: "Dá suporte ao método de exemplo (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc6fd5a18070a92669d2db00cabbabc01f106e05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa19d56d4fd7b7744cb1b2d3698d9b9ef9f43e5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supports-method-example-vc"></a>Dá suporte ao método de exemplo (VC + +)
 Este exemplo usa o [suporta](../../../ado/reference/ado-api/supports-method.md) método para exibir as opções de suporte por um conjunto de registros abertos com tipos diferentes de cursor. A função DisplaySupport é necessária para executar este exemplo.  
@@ -229,6 +229,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Supports](../../../ado/reference/ado-api/supports-method.md)

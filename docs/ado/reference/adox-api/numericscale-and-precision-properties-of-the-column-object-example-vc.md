@@ -3,7 +3,7 @@ title: "NumericScale e propriedades de precisão de exemplo da coluna (VC + +) |
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a9d10cb0493db6e19d8f3ee7c60beb0be5adeff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5ee47669ccadbf3fe43d8861248020244c320ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>NumericScale e propriedades de precisão de exemplo do objeto de coluna (VC + +)
 Este exemplo demonstra o [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [precisão](../../../ado/reference/adox-api/precision-property-adox.md) propriedades do [coluna](../../../ado/reference/adox-api/column-object-adox.md) objeto. Este código exibe o valor para o **Order Details** tabela do *Northwind* banco de dados.  

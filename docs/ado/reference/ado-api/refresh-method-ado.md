@@ -3,7 +3,7 @@ title: "Atualizar o método (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e7b776b5d861403909b4856406d30109ad7c6b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 100d2e917b3510f1ebdba06dbd54ef7bdfd0842b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-method-ado"></a>Atualizar o método (ADO)
 Atualiza os objetos em uma coleção para refletir os objetos disponíveis do e específico ao provedor.  
@@ -39,7 +39,7 @@ Atualiza os objetos em uma coleção para refletir os objetos disponíveis do e 
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **atualização** método realiza tarefas diferentes, dependendo da coleção na qual você chamá-lo.  
   
 ### <a name="parameters"></a>Parâmetros  
@@ -70,7 +70,7 @@ collection.Refresh
 |[Coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)|[Coleção de tabelas](../../../ado/reference/adox-api/tables-collection-adox.md)|[Coleção de usuários](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Coleção de exibições](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizar exemplo de método (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Atualizar exemplo de método (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Propriedade Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Mining suplementos do Office | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/18/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -19,14 +19,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: be2255a512f04cd23b8f9d6717d6ec63ab2b2f16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 420437152716f78a03c78e3d9a67216029751f5e
+ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Suplementos de Mineração de Dados do SQL Server para Office
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de mineração de dados para Office é um conjunto de ferramentas para análise preditiva que permite que você use dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração leve.  
+
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de Mineração de Dados do para Office é um conjunto de ferramentas leve para análise preditiva que permite a você usar dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração.  
+  
+> [!IMPORTANT]
+> O data mining suplemento do Office não tem suporte no Office 2016 ou posterior.
   
  Os assistentes e as ferramentas de gerenciamento de dados nos suplementos fornecem instruções passo a passo para essas tarefas de mineração de dados comuns:  
   
@@ -60,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
      Os usuários avançados apreciarão a funcionalidade de **rastreamento** , que permite exibir as instruções XMLA e DMX enviadas para o servidor.  
   
-## <a name="getting-started"></a>Guia de Introdução  
+## <a name="getting-started"></a>Introdução  
  Para obter mais informações, veja [O que está incluído nos Suplementos de Data Mining para o Office](http://go.microsoft.com/fwlink/p/?LinkId=616849)  
   
 ## <a name="support-and-requirements"></a>Suporte e requisitos  

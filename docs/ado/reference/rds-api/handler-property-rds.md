@@ -3,7 +3,7 @@ title: Propriedade de manipulador (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 15fa49306bf566b27f0d5e688a16050c9656032c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7b2bdaddbbf0d0cb78627567fc1efeed22593ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handler-property-rds"></a>Propriedade de manipulador (RDS)
 Indica o nome de um programa de personalização do lado do servidor (manipulador) que estende a funcionalidade do [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)e os parâmetros usados pelo *manipulador*.  
@@ -47,7 +47,7 @@ DataControl.Handler = String
  *Cadeia de caracteres*  
  Um **cadeia de caracteres** valor que contém o nome do manipulador e os parâmetros, todos separados por vírgulas (por exemplo, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa propriedade oferece suporte a [personalização](../../../ado/guide/remote-data-service/datafactory-customization.md), uma funcionalidade que exija configuração o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade **adUseClient**.  
   
  O nome do manipulador e seus parâmetros, se houver, são separados por vírgulas (","). Um comportamento imprevisível ocorrerá se um ponto e vírgula (";") é exibido em qualquer lugar na *cadeia de caracteres*. Você pode escrever seu próprio manipulador, desde que ele oferece suporte a **IDataFactoryHandler** interface.  
@@ -59,7 +59,7 @@ DataControl.Handler = String
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade manipulador (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [Personalização do DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

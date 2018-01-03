@@ -3,7 +3,7 @@ title: Evento WillConnect (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7113fadf60c58478173287f331822798df9aeb63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45e9a6fb4dcc55b836195065c279627e50c74511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
 O **WillConnect** evento é chamado antes do início de uma conexão.  
@@ -63,11 +63,11 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  O [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) de objeto para o qual esta notificação de evento se aplica. Altera para os parâmetros do **Conexão** pelo **WillConnect** manipulador de eventos não terá efeito o **Conexão**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando **WillConnect** é chamado, o *ConnectionString*, *UserID*, *senha*, e *opções* os parâmetros são definidos para os valores estabelecidos pela operação que causou este evento (a conexão pendente) e pode ser alterada antes do evento retorna. **WillConnect** pode retornar uma solicitação que a conexão pendente ser cancelada.  
   
  Quando esse evento é cancelado, **ConnectComplete** será chamada com seu *adStatus* parâmetro definido como **adStatusErrorsOccurred**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)

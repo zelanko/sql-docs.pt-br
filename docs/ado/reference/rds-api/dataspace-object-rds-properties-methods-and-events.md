@@ -3,7 +3,7 @@ title: "Propriedades do objeto de espaço de dados (RDS), métodos e eventos | M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ea33f6f9763544eeeba1e189192af293b492b78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9b2fd671b2dbaa16ae213ae1d61bcc1ed44135a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de espaço de dados (RDS)
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="events"></a>Eventos  
  Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 
 

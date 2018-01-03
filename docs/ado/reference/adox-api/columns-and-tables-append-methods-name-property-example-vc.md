@@ -3,7 +3,7 @@ title: "Tabelas e colunas acrescentar métodos, nomes de exemplo da propriedade 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a4a43b1279691142fbf8bd75ce26a608e40a8fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba80318ed651ca16b94011a09744c1ed1de1c8c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Tabelas e colunas acrescentar métodos, exemplo de nome de propriedade (VC + +)
 O código a seguir demonstra como criar uma nova tabela.  
@@ -86,7 +86,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acrescente o método (ADOX colunas)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [(Tabelas ADOX) do método append](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Propriedade Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

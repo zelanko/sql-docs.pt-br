@@ -3,7 +3,7 @@ title: WillChangeRecordset e RecordsetChangeComplete eventos (ADO) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a103d1710f01403e8e199fc308369b4a9dc82c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 188bdb13879e4229686fb725edbc190db9ea59b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset e RecordsetChangeComplete eventos (ADO)
 O **WillChangeRecordset** evento é chamado antes de uma operação pendente altera o [registros](../../../ado/reference/ado-api/recordset-object-ado.md). O **RecordsetChangeComplete** evento é chamado após o **registros** foi alterado.  
@@ -64,13 +64,13 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  Um **registros** objeto. O **registros** para que esse evento ocorreu.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **WillChangeRecordset** ou **RecordsetChangeComplete** evento pode ocorrer devido a **registros** [Requery](../../../ado/reference/ado-api/requery-method.md) ou [Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) métodos.  
   
  Se o provedor não oferece suporte a indicadores, um **RecordsetChange** notificação de evento ocorre toda vez que novas linhas são recuperadas do provedor. A frequência desse evento depende de **RecordsetCacheSize** propriedade.  
   
  Você deve definir o **adStatus** parâmetro **adStatusUnwantedEvent** para cada possível **adReason** valor pare completamente a notificação de eventos para qualquer evento que inclui um **adReason** parâmetro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)

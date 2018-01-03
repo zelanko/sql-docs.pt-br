@@ -3,7 +3,7 @@ title: Ajuda F1 do Visual Database Tools | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58c97c63b74f329e00958d833b732cc9ed1eadf9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebe883f56442fcd71e31c514b16fd8305d2a09f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-database-tools-f1-help"></a>Ajuda F1 do Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Estes tópicos discutem os comandos e opções nas caixas de diálogo e janelas de propriedades de elementos do Visual Database Tools, como a janela Propriedades de Tabela e a guia Propriedades de Coluna.  
   
 Para acessar tópicos da caixa de diálogo, pressione F1 quando você tiver uma caixa de diálogo aberta e ela possuir foco. Para acessar os tópicos da janela de propriedades, clique na janela Propriedades e pressione F1.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar tabelas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

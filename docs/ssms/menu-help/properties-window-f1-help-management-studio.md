@@ -3,7 +3,7 @@ title: Ajuda F1 da janela Propriedades (Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2c2c42f9a4e9690d9c9229ec7020e5e94c130ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e53a9ff4593a24820c6ff8f4ab0cb1540ba02a95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ajuda F1 da janela Propriedades (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a janela **Propriedades** para exibir as propriedades dos elementos selecionados. Você também pode usar a janela **Propriedades** para exibir o arquivo, o projeto e as propriedades da solução. A janela **Propriedades** está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  
@@ -57,6 +57,6 @@ Exibe as propriedades de um objeto.
 **Painel de descrição**  
 O painel de descrição é exibido na parte inferior da janela **Propriedades** e mostra o tipo e uma descrição curta da propriedade. Você pode ativar e desativar a descrição da propriedade usando o comando **Descrição** no menu de atalho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Janela Propriedades no SQL Server Management Studio](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
   

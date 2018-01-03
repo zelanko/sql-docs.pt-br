@@ -3,7 +3,7 @@ title: "Método Update | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b8d9acf6072961b1d63a691033d4c2ecd578cb4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7d416b0d132af4d2f1d2145de577ca930eaeef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update-method"></a>Método Update
 Salva as alterações feitas à linha atual de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, ou o [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto.  
@@ -38,13 +38,13 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *Campos*  
+ *Fields*  
  Opcional. Um **Variant** que representa um único nome, ou um **Variant** matriz que representa os nomes ou posições ordinais de campos que você deseja modificar.  
   
  *Valores*  
  Opcional. Um **Variant** que representa um único valor, ou um **Variant** matriz que representa valores de campos no novo registro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>Conjunto de registros  
  Use o **atualização** método para salvar as alterações feitas para o registro atual de um **registros** objeto desde a chamada a [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método ou desde alterar quaisquer valores de campo em um registro existente. O **registros** objeto deve dar suporte a atualizações.  
@@ -76,7 +76,7 @@ record.Fields.Update
 |-|-|  
 |[Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo dos métodos CancelUpdate (VB) e atualização](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Exemplo dos métodos CancelUpdate (VC + +) e atualização](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [Método AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

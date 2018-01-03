@@ -3,7 +3,7 @@ title: "Substituir parâmetros do modelo | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-templates
 ms.reviewer: 
@@ -23,13 +23,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d36529a476493920ceb74d64069d5e77e7d10e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cae991dbfcdfb2b00a3229746455c58b59f39bd5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="replace-template-parameters"></a>Substituir parâmetros do modelo
+# <a name="replace-template-parameters"></a>Substituir Parâmetros do Modelo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Modelos contêm parâmetros que podem ser substituídos por valores específicos de implementação cada vez que o modelo é usado. Depois de abrir um modelo em um editor de código, você pode substituir os parâmetros pelos valores relevantes à sua implementação.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
@@ -37,7 +37,7 @@ A caixa de diálogo **Especificar Valores para Parâmetros de Modelo** é uma gr
   
 Para usar essa caixa de diálogo, os parâmetros em seu script devem estar entre colchetes angulares (`< >`) no formato `<`*parameter_name*`,` *data_type*`,` *default_value*`>`.  
   
-## <a name="replace-template-parameters"></a>Substituir parâmetros do modelo  
+## <a name="replace-template-parameters"></a>Substituir Parâmetros do Modelo  
 Depois de abrir o modelo em uma janela de editor de código:  
   
 1.  No menu **Consulta** , clique em **Especificar Valores para Parâmetros de Modelo**.  
@@ -46,7 +46,7 @@ Depois de abrir o modelo em uma janela de editor de código:
   
 3.  Clique em **OK** para fechar a caixa de diálogo **Substituir Parâmetros do Modelo** e modificar o script no editor de consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Template Explorer](../../ssms/template/template-explorer.md)  
 [Abrir um modelo](../../ssms/template/open-a-template.md)  
   

@@ -3,7 +3,7 @@ title: "Coleção de erros (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b3fffa48412387178006c66a97a0cbd6a9f3a93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66afd514c40c646fad62d5fc0302bc486af7e653
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-collection-ado"></a>Coleção de erros (ADO)
 Contém todos os [erro](../../../ado/reference/ado-api/error-object.md) objetos criados em resposta a uma única falha de provedor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Qualquer operação que envolva objetos ADO pode gerar um ou mais erros do provedor. Como cada erro, um ou mais **erro** objetos podem ser colocados no **erros** coleção do [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Quando outra operação ADO gera um erro, o **erros** coleção é desmarcada e o novo conjunto de **erro** objetos podem ser colocados no **erros** coleção.  
   
  Cada **erro** objeto representa um erro de provedor específico, não um erro de ADO. Erros de ADO são expostos para o mecanismo de tratamento de exceções de tempo de execução. Por exemplo, no Microsoft Visual Basic, a ocorrência de um erro específico de ADO irá disparar um [onError](../../../ado/reference/rds-api/onerror-event-rds.md) evento e aparece no **Err** objeto.  
@@ -50,6 +50,6 @@ Contém todos os [erro](../../../ado/reference/ado-api/error-object.md) objetos 
   
 -   [Eventos, métodos e propriedades de coleção de erros](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Error](../../../ado/reference/ado-api/error-object.md)   
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

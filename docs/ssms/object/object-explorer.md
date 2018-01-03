@@ -3,7 +3,7 @@ title: Pesquisador de Objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 05c1ba2d0a8d223ee1d4713613b23d9d07df8241
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8c782b118587bb1b3b8596172901daf57086ef81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-explorer"></a>Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,6 +53,6 @@ O Pesquisador de Objetos fornece uma interface de usuário hierárquica e gerenc
 |Descreve como abrir o Pesquisador de Objetos e configurar as opções que definem o comportamento do pesquisador.|[Abrir e configurar o Pesquisador de Objetos](../../ssms/object/open-and-configure-object-explorer.md)|  
 |Descreve como conectar o Pesquisador de Objetos a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)].|[Conectar-se a uma instância do Pesquisador de Objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Descreve como gerenciar objetos representados como nós na hierarquia do Pesquisador de Objetos.|[Gerenciar objetos usando o Pesquisador de Objetos](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
-|Descreve o painel detalhes do Pesquisador de Objetos, uma exibição tabular de todos os objetos do servidor com uma interface de usuário para gerenciá-los.|[Painel Detalhes do Pesquisador de Objetos](../../ssms/object/object-explorer-details-pane.md)|  
+|Descreve o painel detalhes do Pesquisador de Objetos, uma exibição tabular de todos os objetos do servidor com uma interface de usuário para gerenciá-los.|[Painel de detalhes do Pesquisador de Objetos](../../ssms/object/object-explorer-details-pane.md)|  
 |Descreve modos de executar relatórios personalizados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].|[Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
   

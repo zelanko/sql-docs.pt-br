@@ -1,11 +1,13 @@
 ---
 title: Exemplo de propriedades de SourceRecordset (VBScript) e o conjunto de registros | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: VB
@@ -18,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bddde66f1e2afa1fe8e37332b282e023e534cea7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e719a6a51a7e936cf88f3c216c2335a614424931
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Exemplo de propriedades de SourceRecordset (VBScript) e o conjunto de registros
 > [!IMPORTANT]
@@ -129,7 +131,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 <!-- EndRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Conjunto de registros, propriedades SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
 

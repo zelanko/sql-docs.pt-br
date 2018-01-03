@@ -3,7 +3,7 @@ title: "Nível de objeto (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 540048b6ba889152089b39a77aa926a5c2fd61f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6bd8424c137f459fafeced07a46f0c2735a9264
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-object-ado-md"></a>Objeto de nível (ADO MD)
 Contém um conjunto de membros, cada um deles tem a mesma classificação dentro de uma hierarquia.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Com as coleções e propriedades de um **nível** do objeto, você pode fazer o seguinte:  
   
 -   Identificar o **nível** com o [nome](../../../ado/reference/ado-md-api/name-property-ado-md.md) e [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propriedades.  
@@ -66,7 +66,7 @@ Contém um conjunto de membros, cada um deles tem a mesma classificação dentro
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Objeto de hierarquia (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Coleção de níveis (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   

@@ -3,7 +3,7 @@ title: "Usar relatórios personalizados com propriedades de nó do Pesquisador d
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd4e8e45cb6002d2ede2a7ac487f9408b13e8685
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc21ac20f60dfbe503779d4ad41c47d99068259f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os relatórios personalizados poderão ser executados no contexto de um nó selecionado do Pesquisador de Objetos se eles referenciarem os parâmetros de relatório desse nó. Isso permite que um relatório personalizado use o contexto atual, por exemplo, o banco de dados atual, ou um banco de dados ou objeto de servidor  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/05/2017
 |Nome do parâmetro|Tipo de dados|  
 |------------------|-------------|  
 |**ObjectName**|**Cadeia de caracteres**|  
-|**ObjectTypeName**|**Cadeia de caracteres**|  
+|**ObjectTypeName**|**String**|  
 |**Filtrado**|**Boolean**|  
-|**ServerName**|**Cadeia de caracteres**|  
-|**FontName**|**Cadeia de caracteres**|  
-|**DatabaseName**|**Cadeia de caracteres**|  
+|**ServerName**|**String**|  
+|**FontName**|**String**|  
+|**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>Exemplo de parâmetros de relatório do nó do Pesquisador de Objetos  
 Para executar o exemplo, use o procedimento a seguir.  
@@ -533,7 +533,7 @@ O relatório criado com o código a seguir usará os parâmetros associados a um
 </Report></pre>  
 ```
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [adicionar um relatório personalizado ao Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Cancelar supressão da execução de avisos de relatório personalizado](../../ssms/object/unsuppress-run-custom-report-warnings.md)  

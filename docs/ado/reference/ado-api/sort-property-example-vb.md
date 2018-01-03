@@ -3,7 +3,7 @@ title: Classificar o exemplo da propriedade (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 653f50c01ba6850da1984b5c3bb307ce2580adcd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00bb46252596466986585565bc5dd29b972109f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sort-property-example-vb"></a>Exemplo de propriedade de classificação (VB)
 Este exemplo usa o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [classificação](../../../ado/reference/ado-api/sort-property.md) propriedade para reordenar as linhas de um **registros** derivado a ***autores*** tabela de o ***Pubs*** banco de dados. Uma rotina de utilitários secundária imprime cada linha.  
@@ -113,6 +113,6 @@ End Sub
 Attribute VB_Name = "Sort"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propriedade Sort](../../../ado/reference/ado-api/sort-property.md)

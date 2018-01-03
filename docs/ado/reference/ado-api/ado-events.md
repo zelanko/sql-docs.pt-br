@@ -3,7 +3,7 @@ title: Eventos de ADO | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e72b2c9afb9453ffec0b9371b9dad1effbda0b1b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dec529bcbc7130ea29fac793a82a5979974f396e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-events"></a>Eventos de ADO
 |||  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Chamado logo antes de um comando pendente executa nessa conexão e dá ao usuário uma oportunidade para examinar e modificar os parâmetros de execução pendente.|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|O **WillMove** é chamado de evento *antes de* uma operação pendente altera a posição atual no **registros**.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Coleções de ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

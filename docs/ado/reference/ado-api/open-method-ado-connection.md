@@ -3,7 +3,7 @@ title: "Abra o método (Conexão ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9133d8e959d1831fc1ff64ed1d8ecace96c3f882
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41850de804523a50dbf0d489e678b93c9f29b6ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-connection"></a>Método Open (Conexão ADO)
 Abre uma conexão a uma fonte de dados.  
@@ -52,7 +52,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *Opções*  
  Opcional. Um [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) valor que determina se esse método deve retornar depois (de forma síncrona) ou antes (de forma assíncrona) a conexão é estabelecida.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Usando o **abrir** método em um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto estabelece a conexão física com uma fonte de dados. Depois que esse método é concluído com êxito, a conexão está ativa e você pode executar comandos em relação a ela e processar os resultados.  
   
  Use opcional *ConnectionString* argumento para especificar uma cadeia de conexão que contém uma série de *argumento* *= valor* instruções separadas por ponto e vírgula, ou um recursos de arquivo ou diretório identificado por uma URL. O **ConnectionString** propriedade herda automaticamente o valor usado para o *ConnectionString* argumento. Portanto, você pode definir o **ConnectionString** propriedade o **Conexão** objeto antes de abri-lo ou usar o *ConnectionString* argumento para definir ou substituir os parâmetros de conexão atual durante a **abrir** chamada de método.  
@@ -70,7 +70,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo dos métodos de abertura e fechamento (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Exemplo dos métodos de abertura e fechamento (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Exemplo dos métodos de abertura e fechamento (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

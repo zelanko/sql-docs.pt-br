@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, glossary
@@ -17,11 +17,11 @@ caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-glossary"></a>Glossário do ADO
 Este tópico define condições relevantes para ADO.  
@@ -292,7 +292,7 @@ Este tópico define condições relevantes para ADO.
  Uma operação iniciada pelo código que seja concluída antes que a próxima operação pode iniciar. Consulte também operação assíncrona.  
   
 ## <a name="t-z"></a>T-Z  
- Árvore  
+ trEE  
  Uma estrutura que representa uma relação hierárquica entre elementos (nós). Há um nó de nível superior de uma árvore (raiz). Abaixo da raiz, pode haver vários filhos. Cada filho por sua vez pode ser o pai de outros filhos, assim, a ramificação como uma árvore. Uma pasta que contém outras pastas e documentos é um exemplo típico de uma estrutura de árvore. Consulte também hierarquia, nó, raiz, filho, pai.  
   
  Servidor Web  

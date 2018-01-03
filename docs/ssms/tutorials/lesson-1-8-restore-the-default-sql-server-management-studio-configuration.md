@@ -3,7 +3,7 @@ title: "Restaurar a configuração padrão do SQL Server Management Studio | Mic
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f9f8e7064ff8e3735dd31d6727c1cb8329584e89
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b17d30c9849223b3c7ef868ea1a9ca8b45a00663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-8---restore-the-default-sql-server-management-studio-configuration"></a>Lição 1-8 – Restaurar a configuração padrão do SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Usuários recentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] podem ter fechado ou ocultado janelas inadvertidamente e podem ter dificuldade em restaurar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ao seu layout original. As etapas a seguir restauram o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ao layout padrão de ambiente.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Resumo: Navegação básica](../../tools/sql-server-management-studio/lesson-1-9-summary-basic-navigation.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Usar o SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   

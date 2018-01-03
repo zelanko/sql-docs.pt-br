@@ -3,7 +3,7 @@ title: Propriedade InternetTimeout (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f30a55cbd0b80b2ed209a6c45eae2082e29f557
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a012318bccd243b7b950e28978769176de745ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internettimeout-property-rds"></a>Propriedade InternetTimeout (RDS)
 Indica o número de milissegundos de espera antes que uma solicitação expire.  
@@ -34,7 +34,7 @@ Indica o número de milissegundos de espera antes que uma solicitação expire.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **longo** valor que representa o número de milissegundos antes de uma solicitação expire.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa propriedade se aplica apenas às solicitações enviadas com os protocolos HTTP ou HTTPS.  
   
  Solicitações em um ambiente de três camadas podem levar vários minutos para ser executada. Use essa propriedade para especificar o tempo adicional para solicitações de longa execução.  
@@ -45,7 +45,7 @@ Indica o número de milissegundos de espera antes que uma solicitação expire.
 |-|-|  
 |[Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade InternetTimeout (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [Exemplo da propriedade InternetTimeout (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
  

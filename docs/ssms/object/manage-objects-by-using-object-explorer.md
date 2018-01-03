@@ -3,7 +3,7 @@ title: Gerenciar objetos usando o Pesquisador de Objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 190cdeff71f6b46b6ff2e7c6f42895137a67eda6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec883f561a30166fc824164e38ac9ba539c98553
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gerenciar objetos usando o Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode usar o Pesquisador de Objetos para gerenciar objetos como bancos de dados, tabelas e procedimentos armazenados.  
@@ -58,7 +58,7 @@ Quando o Pesquisador de Objetos estiver conectado a um servidor, você poderá a
 ### <a name="start-powershell"></a>Iniciar o PowerShell  
 Você pode iniciar uma sessão do PowerShell clicando com o botão direito do mouse na maioria das pastas e dos objetos na árvore do Pesquisador de Objetos e selecionando **Iniciar PowerShell**. Isso inicia uma sessão do PowerShell que tem o suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell habilitado e o caminho definido até o objeto quando você clicou com o botão direito do mouse no Pesquisador de Objetos. Você pode inserir comandos do PowerShell em um ambiente interativo do PowerShell. Para saber mais, confira [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Pesquisador de Objetos](../../ssms/object/object-explorer.md)  
 [Abrir e configurar o Pesquisador de Objetos](../../ssms/object/open-and-configure-object-explorer.md)  
 [Conectar-se a uma instância do Pesquisador de Objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  

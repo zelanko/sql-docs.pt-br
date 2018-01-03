@@ -2,7 +2,7 @@
 title: SSMS (SQL Server Management Studio) | Microsoft Docs
 ms.date: 02/02/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 381f25f48dbbf367b81ba7fdf95cc75f4665cff4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1319f45b9a41cf32357f4c92c3088e5dc18ade25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="sql-server-management-studio-components"></a>Componentes do SQL Server Management Studio  
   
-|Descrição|Componente|  
+|Description|Componente|  
 |---------------|---------|  
 |Use o **Pesquisador de Objetos** para exibir e gerenciar todos os objetos em uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].|[Pesquisador de Objetos](../ssms/object/object-explorer.md)|  
 |Como usar o **Gerenciador de Modelos** para criar e gerenciar arquivos de texto de boilerplate que podem ser usados para agilizar o desenvolvimento de consultas e scripts.|[Gerenciador de Modelos](../ssms/template/template-explorer.md)|  

@@ -3,7 +3,7 @@ title: "Método (conjunto de registros ADO) Delete | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4f9494c0675c39b4e6441aa62a66a7b6af7daf15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff78b2827f8bd6aa22ded6429f0468617b7a83d9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-method-ado-recordset"></a>Excluir método (conjunto de registros ADO)
 Exclui o registro atual ou um grupo de registros.  
@@ -45,7 +45,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll** e **adAffectAllChapters** não são argumentos válidos para **excluir**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Usando o **excluir** método marca o registro atual ou um grupo de registros em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto para exclusão. Se o **registros** objeto não permite exclusão do registro, ocorrerá um erro. Se você estiver no modo de atualização imediata, exclusões ocorrerem no banco de dados imediatamente. Se um registro não pode ser excluído com êxito (devido a violações de integridade de banco de dados, por exemplo), o registro permanecerá no modo de edição após a chamada a [atualização](../../../ado/reference/ado-api/update-method.md). Isso significa que você deve cancelar a atualização com [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de mover fora do registro atual (por exemplo, com [fechar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), ou [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  Se você estiver no modo de atualização em lotes, os registros marcados para exclusão do cache e a exclusão real acontece quando você chamar o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método. Use o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade para exibir os registros excluídos.  
@@ -61,7 +61,7 @@ recordset.Delete AffectRecords
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Excluir exemplo de método (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [Excluir exemplo de método (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
  [Excluir exemplo de método (VC + +)](../../../ado/reference/ado-api/delete-method-example-vc.md)   

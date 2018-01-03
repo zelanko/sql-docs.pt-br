@@ -3,7 +3,7 @@ title: "Atualizar exemplo de método (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61dd571d77fc30614a157ef96d986c9408b197ce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e8fb146b71124e65ca66b92ceb8aef525240742
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-method-example-vc"></a>Atualizar exemplo de método (VC + +)
 Este exemplo demonstra como usar o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método para atualizar o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção para um procedimento armazenado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
@@ -237,7 +237,7 @@ Authors with 25 percent royalty
   899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Coleção de parâmetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

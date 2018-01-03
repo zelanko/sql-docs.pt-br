@@ -3,7 +3,7 @@ title: Propriedade NumericScale (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d768c96b97a80a024eb007ed8ed59d4cb7df9b23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a4c162e5880176f56d30d3e973d8fa16d8cb351a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numericscale-property-ado"></a>Propriedade NumericScale (ADO)
 Indica a escala de valores numéricos em uma [parâmetro](../../../ado/reference/ado-api/parameter-object.md) ou [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
@@ -34,7 +34,7 @@ Indica a escala de valores numéricos em uma [parâmetro](../../../ado/reference
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **bytes** valor que indica o número de casas decimais para os valores numéricos serão resolvido.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **NumericScale** propriedade para determinar o número de dígitos à direita da vírgula decimal será usado para representar valores para um numérico **parâmetro** ou **campo** objeto.  
   
  Para **parâmetro** objetos, o **NumericScale** propriedade é leitura/gravação.  
@@ -47,7 +47,7 @@ Indica a escala de valores numéricos em uma [parâmetro](../../../ado/reference
 |-|-|  
 |[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Field](../../../ado/reference/ado-api/field-object.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de precisão (VB) e NumericScale](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [Exemplo de propriedades de precisão (VC + +) e NumericScale](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Propriedade Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

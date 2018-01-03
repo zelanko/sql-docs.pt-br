@@ -3,7 +3,7 @@ title: "Método (ADO) append | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 87c05e88325d3e00061ee57af80be65d9a7508ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0c0c887da52e8c91caeab582c2b1973b491e81d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-ado"></a>(ADO) do método append
 Anexa um objeto para uma coleção. Se a coleção é [campos](../../../ado/reference/ado-api/fields-collection-ado.md), um novo [campo](../../../ado/reference/ado-api/field-object.md) objeto pode ser criado antes que ele é adicionado à coleção.  
@@ -62,7 +62,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  Opcional. Um **Variant** que representa o valor para o novo campo. Se não for especificado, o campo é acrescentado com um valor nulo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="parameters-collection"></a>Coleção Parâmetros  
  Você deve definir o [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade de um [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto antes de acrescentá-lo para o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção. Se você selecionar um tipo de dados de comprimento variável, você também deve definir o [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md) propriedade para um valor maior que zero.  
@@ -94,7 +94,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 - [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Anexar e exemplo dos métodos CreateParameter (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Anexar e exemplo dos métodos CreateParameter (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   

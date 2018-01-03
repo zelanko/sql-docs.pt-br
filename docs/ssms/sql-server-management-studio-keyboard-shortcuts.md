@@ -3,7 +3,7 @@ title: SQL Server Management Studio atalhos de teclado | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1fc409c7b1028a2e8b34eecc1485bffb0b53c023
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6fe84424ba04636e1731acaded762b6b16bf47e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Atalhos de teclado do SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , com atalhos de teclado com base no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. O [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |Exibe o menu de contexto|SHIFT+F10|SHIFT+F10|  
 |Exibir a caixa de diálogo **Novo Arquivo** para criar um arquivo|CTRL+N|CTRL+N|  
 |Exibir a caixa de diálogo **Novo Projeto** para criar um novo projeto|CTRL+SHIFT+N|CTRL+SHIFT+N|  
-|Exibir a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente|CTRL+O<br /><br /> ou<br /><br /> CTRL+SHIFT+G|CTRL+O|  
+|Exibir a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente|CTRL+O<br /><br /> ou em<br /><br /> CTRL+SHIFT+G|CTRL+O|  
 |Exibir a caixa de diálogo **Abrir Projeto** para abrir um projeto existente|CTRL+SHIFT+O|CTRL+SHIFT+O|  
 |Exibir a caixa de diálogo **Adicionar Novo Item** para adicionar um arquivo novo ao projeto atual|CTRL+SHIFT+A|CTRL+SHIFT+A|  
 |Exibir a caixa de diálogo **Adicionar Item Existente** para adicionar um arquivo existente ao projeto atual|SHIFT+ALT+A|SHIFT+ALT+A|  
@@ -71,10 +71,10 @@ ms.lasthandoff: 12/05/2017
 |Move o ponto de inserção para a barra suspensa localizada na parte superior do editor de código quando o editor está na exibição Código ou na exibição Código de Servidor|CTRL+F2|Sem equivalente|  
 |Mover para a barra de ferramentas da janela da ferramenta atual|SHIFT+ALT|SHIFT+ALT|  
 |Exibir o navegador IDE com a primeira janela da ferramenta selecionada|ALT+F7|Sem equivalente|  
-|Mover para a próxima janela da ferramenta|ALT+F6<br /><br /> ou<br /><br /> F6 no Editor de Consulta do [!INCLUDE[ssDE](../includes/ssde-md.md)]|ALT+F6|  
+|Mover para a próxima janela da ferramenta|ALT+F6<br /><br /> ou em<br /><br /> F6 no Editor de Consulta do [!INCLUDE[ssDE](../includes/ssde-md.md)]|ALT+F6|  
 |Mover para a janela da ferramenta anterior|SHIFT+ALT+F7|SHIFT+ALT+F7|  
 |Mover para o próximo painel de uma exibição de painel dividida de um único documento|F6|F6|  
-|Mover para a janela selecionada anteriormente|SHIFT+ALT+F6<br /><br /> ou<br /><br /> SHIFT+F6 no Editor de Consulta do [!INCLUDE[ssDE](../includes/ssde-md.md)]|SHIFT+ALT+F6|  
+|Mover para a janela selecionada anteriormente|SHIFT+ALT+F6<br /><br /> ou em<br /><br /> SHIFT+F6 no Editor de Consulta do [!INCLUDE[ssDE](../includes/ssde-md.md)]|SHIFT+ALT+F6|  
 |Mover para o painel anterior de uma exibição de painel dividido de um único documento|SHIFT+F6|F6|  
 |Exibir o menu de encaixe|ALT+SINAL DE SUBTRAÇÃO (-)|Sem equivalente|  
 |Exibir um pop-up listando todas as janelas abertas|CTRL+ALT+SETA PARA BAIXO|Sem equivalente|  
@@ -86,14 +86,14 @@ ms.lasthandoff: 12/05/2017
 |Exibir a Janela de Resumo|F7|F7|  
 |Exibir a Janela de Propriedades|F4|F4|  
 |Exibir a janela **Saída**|CTRL+ALT+O|Sem equivalente|  
-|Exibir a janela **Lista de Tarefas**|CTRL+\\, T<br /><br /> ou<br /><br /> CTRL+\\, CTRL+T|CTRL+ALT+K|  
+|Exibir a janela **Lista de Tarefas**|CTRL+\\, T<br /><br /> ou em<br /><br /> CTRL+\\, CTRL+T|CTRL+ALT+K|  
 |Alterne entre a exibição da lista Detalhes do Pesquisador de Objetos e do painel de propriedade Detalhes do Pesquisador de Objetos.|F6|F6|  
 |Controle a barra divisória que separa a exibição da lista Detalhes do Pesquisador de Objetos e do painel de propriedade Detalhes do Pesquisador de Objetos para ajustar o tamanho do painel de exibição.|Tecla TAB e depois a seta PARA CIMA ou PARA BAIXO|Tecla TAB e depois a seta PARA CIMA ou PARA BAIXO|  
 |Exibir a Caixa de Ferramentas|CTRL+ALT+X|CTRL+ALT+X|  
 |Exibir a Janela de Marcadores|CTRL+K, CTRL+W|CTRL+K, CTRL+W|  
 |Exibir a janela do navegador|CTRL+ALT+R|CTRL+ALT+R|  
 |Exibir um menu de marca inteligente de comandos comuns para controles de servidor Web no designer de HTML|SHIFT+ALT+F10|Sem equivalente|  
-|Exibir a janela Lista de Erros (somente o Editor[!INCLUDE[tsql](../includes/tsql-md.md)] )|CRTL+\\, CTRL+E<br /><br /> ou<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
+|Exibir a janela Lista de Erros (somente o Editor[!INCLUDE[tsql](../includes/tsql-md.md)] )|CRTL+\\, CTRL+E<br /><br /> ou em<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
 |Mover para a próxima entrada na janela Lista de Erros (Editor[!INCLUDE[tsql](../includes/tsql-md.md)] somente)|CTRL+SHIFT+F12|CTRL+SHIFT+F12|  
 |Exibir a página anterior no histórico de exibição. Disponível somente na janela do navegador da Web|ALT+SETA PARA A ESQUERDA|Sem equivalente|  
 |Exibir a página seguinte no histórico de exibição Disponível somente na janela do navegador da Web|ALT+SETA PARA A DIREITA|Sem equivalente|  
@@ -186,8 +186,8 @@ ms.lasthandoff: 12/05/2017
 |Alternar a exibição de tela inteira|SHIFT+ALT+ENTER|SHIFT+ALT+ENTER|  
 |Rolar texto uma linha para cima|CTRL+SETA PARA CIMA|CTRL+SETA PARA CIMA|  
 |Rolar texto uma linha para baixo|CTRL+SETA PARA BAIXO|CTRL+ SETA PARA BAIXO|  
-|Reverter a última ação de edição|CTRL+Z<br /><br /> ou<br /><br /> ALT+BACKSPACE|CTRL+Z|  
-|Restaurar a edição desfeita anteriormente|CTRL+SHIFT+Z<br /><br /> ou<br /><br /> CTRL+Y<br /><br /> ou<br /><br /> ALT+SHIFT+BACKSPACE|CTRL+SHIFT+Z<br /><br /> ou<br /><br /> CTRL+Y<br /><br /> ou<br /><br /> ALT+SHIFT+BACKSPACE|  
+|Reverter a última ação de edição|CTRL+Z<br /><br /> ou em<br /><br /> ALT+BACKSPACE|CTRL+Z|  
+|Restaurar a edição desfeita anteriormente|CTRL+SHIFT+Z<br /><br /> ou em<br /><br /> CTRL+Y<br /><br /> ou em<br /><br /> ALT+SHIFT+BACKSPACE|CTRL+SHIFT+Z<br /><br /> ou em<br /><br /> CTRL+Y<br /><br /> ou em<br /><br /> ALT+SHIFT+BACKSPACE|  
 |Salvar o item selecionado|CTRL+S|CTRL+S|  
 |Salvar tudo|CTRL+SHIFT+S|CTRL+SHIFT+S|  
 |Fechar|CTRL+F4|CTRL+F4|  
@@ -206,7 +206,7 @@ ms.lasthandoff: 12/05/2017
 |Abrir uma nova consulta com a conexão atual|CTRL+N|CTRL+N|  
 |Abrir o banco de dados no Pesquisador de Objetos|ALT+F8|ALT+F8|  
 |Especificar valores para parâmetros de modelo|CTRL+SHIFT+M|CTRL+SHIFT+M|  
-|Executar a parte selecionada do editor de consultas ou todo o editor de consultas se nada estiver selecionado|F5<br /><br /> ou<br /><br /> CTRL+SHIFT+E|F5<br /><br /> ou<br /><br /> CTRL+E<br /><br /> ou<br /><br /> ALT+X|  
+|Executar a parte selecionada do editor de consultas ou todo o editor de consultas se nada estiver selecionado|F5<br /><br /> ou em<br /><br /> CTRL+SHIFT+E|F5<br /><br /> ou em<br /><br /> CTRL+E<br /><br /> ou em<br /><br /> ALT+X|  
 |Analisar a parte selecionada do editor de consultas ou todo o editor de consultas se nada estiver selecionado|CTRL+F5|CTRL+F5|  
 |Exibir o plano de execução estimado|CTRL+SHIFT+ALT+L|CTRL+L|  
 |Cancelar a consulta em execução|ALT+BREAK|ALT+BREAK|  
@@ -240,8 +240,8 @@ ms.lasthandoff: 12/05/2017
 |------------|-----------------------------|---------------------------------|  
 |Inserir uma linha nova|ENTER ou SHIFT+ENTER|ENTER ou SHIFT+ENTER|  
 |Trocar os caracteres nos dois lados do cursor (não se aplica ao Editor SQL)|CTRL+T|CTRL+T|  
-|Excluir um caractere à direita do cursor|DELETE|DELETE|  
-|Excluir um caractere à esquerda do cursor|BACKSPACE<br /><br /> ou<br /><br /> SHIFT+<br /><br /> BACKSPACE|BACKSPACE<br /><br /> ou<br /><br /> SHIFT+<br /><br /> BACKSPACE|  
+|Excluir um caractere à direita do cursor|Delete (excluir)|Delete (excluir)|  
+|Excluir um caractere à esquerda do cursor|BACKSPACE<br /><br /> ou em<br /><br /> SHIFT+<br /><br /> BACKSPACE|BACKSPACE<br /><br /> ou em<br /><br /> SHIFT+<br /><br /> BACKSPACE|  
 |Excluir o espaço em branco na seleção ou exclui o espaço em branco adjacente ao cursor se não houver nenhuma seleção|CTRL+K, C|Sem equivalente|  
 |Inserir o número de espaços configurados para o editor|TAB|TAB|  
 |Inserir uma linha em branco acima do cursor|CTRL+ENTER|CTRL+ENTER|  
@@ -284,7 +284,7 @@ ms.lasthandoff: 12/05/2017
 |Definir próxima instrução|Ctrl+3 0|Sem equivalente|  
 |Mostrar próxima instrução|ALT+NUM|Sem equivalente|  
 |Implementar o comando **Executar até o Cursor**|CTRL+F10|CTRL+F10|  
-|Exibir a caixa de diálogo **QuickWatch**|CTRL+ALT+Q<br /><br /> ou<br /><br /> SHIFT+F9|CTRL+ALT+Q|  
+|Exibir a caixa de diálogo **QuickWatch**|CTRL+ALT+Q<br /><br /> ou em<br /><br /> SHIFT+F9|CTRL+ALT+Q|  
 |Alterna um ponto de interrupção|F9|F9|  
 |Habilitar ponto de interrupção|CTRL+F9|Sem equivalente|  
 |Excluir ponto de interrupção. Disponível somente na janela **Pontos de Interrupção**|ALT+F9, D|Sem equivalente|  
@@ -309,8 +309,8 @@ ms.lasthandoff: 12/05/2017
   
 |Ação|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Listar os membros|CTRL+J|CTRL+SPACE<br /><br /> ou<br /><br /> CTRL+J|  
-|Completar a palavra|CTRL+SPACE<br /><br /> ou<br /><br /> ALT+SETA PARA A DIREITA|ALT+SETA PARA A DIREITA|  
+|Listar os membros|CTRL+J|CTRL+SPACE<br /><br /> ou em<br /><br /> CTRL+J|  
+|Completar a palavra|CTRL+SPACE<br /><br /> ou em<br /><br /> ALT+SETA PARA A DIREITA|ALT+SETA PARA A DIREITA|  
 |Exibir informações rápidas|CTRL+K, CTRL+I|Sem equivalente|  
 |Exibir informações de parâmetro|CTRL+SHIFT+ESPAÇO|CTRL+SHIFT+ESPAÇO|  
 |Copiar dica de parâmetro|CTRL+SHIFT+ALT+C|Sem equivalente|  
@@ -349,7 +349,7 @@ ms.lasthandoff: 12/05/2017
   
 |Ação|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Ajuda|F1<br /><br /> ou<br /><br /> SHIFT+F1|F1|  
+|Ajuda|F1<br /><br /> ou em<br /><br /> SHIFT+F1|F1|  
 |Exibir Manuais Online do SQL Server|CTRL+F1|Sem equivalente|  
 |Abrir o Gerenciador de Biblioteca de Ajuda|CTRL+ALT+F1|Sem equivalente|  
 |Exibir a página da Web Central de Recursos do SQL Server|CTRL+ALT+F2|Sem equivalente|  
@@ -387,11 +387,11 @@ ms.lasthandoff: 12/05/2017
   
 |Ação|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Recortar (exclui o item selecionado e o coloca na área de transferência)|CTRL+X<br /><br /> ou<br /><br /> SHIFTRLT+DELETE|CTRL+X<br /><br /> ou<br /><br /> SHIFT+DELETE|  
-|Recorta todas as linhas selecionadas ou a linha atual se nada for selecionada.|CTRL+L<br /><br /> ou<br /><br /> CTRL+SHIFT+L|Sem equivalente|  
-|Copiar na área de transferência|CTRL+C<br /><br /> ou<br /><br /> CTRL+INSERT|CTRL+C<br /><br /> ou<br /><br /> CTRL+INSERT|  
-|Colar da área de transferência no ponto de inserção|CTRL+V<br /><br /> ou<br /><br /> SHIFT+INSERT|CTRL+V<br /><br /> ou<br /><br /> SHIFT+INSERT|  
-|Cola um item do Anel da Área de Transferência no ponto de inserção e automaticamente seleciona o item colado|CTRL+SHIFT+V<br /><br /> ou<br /><br /> CTRL+enseSHIFT+INSERT|Sem equivalente|  
+|Recortar (exclui o item selecionado e o coloca na área de transferência)|CTRL+X<br /><br /> ou em<br /><br /> SHIFTRLT+DELETE|CTRL+X<br /><br /> ou em<br /><br /> SHIFT+DELETE|  
+|Recorta todas as linhas selecionadas ou a linha atual se nada for selecionada.|CTRL+L<br /><br /> ou em<br /><br /> CTRL+SHIFT+L|Sem equivalente|  
+|Copiar na área de transferência|CTRL+C<br /><br /> ou em<br /><br /> CTRL+INSERT|CTRL+C<br /><br /> ou em<br /><br /> CTRL+INSERT|  
+|Colar da área de transferência no ponto de inserção|CTRL+V<br /><br /> ou em<br /><br /> SHIFT+INSERT|CTRL+V<br /><br /> ou em<br /><br /> SHIFT+INSERT|  
+|Cola um item do Anel da Área de Transferência no ponto de inserção e automaticamente seleciona o item colado|CTRL+SHIFT+V<br /><br /> ou em<br /><br /> CTRL+enseSHIFT+INSERT|Sem equivalente|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>Atalhos de teclado do Visualizador de Log  
   
@@ -465,7 +465,7 @@ ms.lasthandoff: 12/05/2017
 |Move o controle anterior na página.|SHIFT+TAB|Sem equivalente|  
 |Exibe a grade na superfície de design|ENTER|Sem equivalente|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Personalizar menus e teclas de atalho](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   
   

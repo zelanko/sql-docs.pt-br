@@ -3,7 +3,7 @@ title: Propriedade OriginalValue (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: baa1b522660f2ed7d521a55ad995ed8347c0a2fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70e33fcec6571a845ee81a393e5f267cc945de5d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="originalvalue-property-ado"></a>Propriedade OriginalValue (ADO)
 Indica o valor de um [campo](../../../ado/reference/ado-api/field-object.md) que existiam no registro antes das alterações foram feitas.  
@@ -32,7 +32,7 @@ Indica o valor de um [campo](../../../ado/reference/ado-api/field-object.md) que
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **Variant** valor que representa o valor de um campo antes de qualquer alteração.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **OriginalValue** propriedade para retornar o valor do campo original de um campo do registro atual.  
   
  Em *modo de atualização imediata* (no qual o provedor grava alterações para a fonte de dados depois de chamar o [atualizar](../../../ado/reference/ado-api/update-method.md) método), o **OriginalValue** retorna de propriedade o valor do campo que existiam antes das alterações (ou seja, desde a última **atualização** chamada de método). Esse é o mesmo valor que o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) usa o método para substituir o [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade.  
@@ -45,7 +45,7 @@ Indica o valor de um [campo](../../../ado/reference/ado-api/field-object.md) que
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de UnderlyingValue (VB) e OriginalValue](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [Exemplo de propriedades de UnderlyingValue (VC + +) e OriginalValue](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [Propriedade UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

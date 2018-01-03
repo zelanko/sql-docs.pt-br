@@ -3,7 +3,7 @@ title: A propriedade de status (campo ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6db998d81ce756eb68633fb5778c4e8f3633c05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c87d755bf90398a7c15bb097499c309ec478173a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-property-ado-field"></a>Propriedade de status (campo ADO)
 Indica o status de um [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
@@ -35,7 +35,7 @@ Indica o status de um [campo](../../../ado/reference/ado-api/field-object.md) ob
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) valor. O valor padrão é **adFieldOK**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="record-field-status"></a>Status de campo do registro  
  Altera para o valor de um **campo** objeto na coleção de campos de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto são armazenados em cache até que o objeto [atualização](../../../ado/reference/ado-api/update-method.md) método é chamado. Nesse ponto, se a alteração para o valor do campo causou um erro, o OLE DB gera o erro **DB_E_ERRORSOCCURRED** (2147749409). A propriedade de Status de qualquer um do **campo** objetos no **campos** coleção que causou o erro conterá um valor da [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) que descreve a causa do o problema.  
@@ -52,6 +52,6 @@ Indica o status de um [campo](../../../ado/reference/ado-api/field-object.md) ob
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade status (campo) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Exemplo da propriedade Status (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

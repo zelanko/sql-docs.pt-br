@@ -1,36 +1,42 @@
 ---
-title: "Carregar dados em memória usando rxImport | Microsoft Docs"
+title: "Carregar dados em memória usando rxImport (SQL e R mergulho profundo) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
 caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3517ad7bb95f79dc2dec2567ecb88d64e78338bc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 71848a5bf0af5b1dcbce24dbd33ba760369f1338
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="load-data-into-memory-using-rximport"></a>Carregar dados na memória usando rxImport
+# <a name="load-data-into-memory-using-rximport-sql-and-r-deep-dive"></a>Carregar dados em memória usando rxImport (SQL e R mergulho profundo)
 
-A função **rxImport** pode ser usada para mover dados de uma fonte de dados para um quadro de dados na memória da sessão em R ou para um arquivo XDF em disco. Se você não especificar um arquivo como destino, os dados serão colocados na memória como um quadro de dados.
+Este artigo faz parte do tutorial mergulho profundo de ciência de dados, como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta etapa, você aprenderá como obter dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, em seguida, use a função rxImport para colocar os dados de interesse em um arquivo local. Dessa forma, você pode analisá-los no contexto de computação local repetidamente, sem precisar consultar o banco de dados novamente.
+O [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) função pode ser usada para mover dados de uma fonte de dados em um quadro de dados na memória de sessão ou em um arquivo XDF no disco. Se você não especificar um arquivo como destino, os dados serão colocados na memória como um quadro de dados.
+
+Nesta etapa, você aprenderá a obter dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, em seguida, use o **rxImport** função colocar os dados de interesse em um arquivo local. Dessa forma, você pode analisá-los no contexto de computação local repetidamente, sem precisar consultar o banco de dados novamente.
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Extrair um subconjunto de dados do SQL Server para a memória local
 
-Você decidiu que deseja examinar somente os indivíduos de alto risco mais detalhadamente. A tabela de origem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é grande e, portanto, você obterá as informações apenas sobre os clientes alto risco e os carregará em um quadro de dados na memória da estação de trabalho local.
+Você decidiu que você deseja examinar apenas os indivíduos de alto risco mais detalhadamente. A tabela de origem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é grande, para que você deseja obter as informações sobre clientes alto risco. Você, em seguida, carrega dados em um quadro de dados na memória da estação de trabalho local.
 
 1. Redefina o contexto de computação como a estação de trabalho local.
 
@@ -47,15 +53,15 @@ Você decidiu que deseja examinar somente os indivíduos de alto risco mais deta
         connectionString = sqlConnString)
     ```
 
-3. Use a função **rxImport** para de fato carregar os dados em um quadro de dados na sessão em R local.
+3. Chame a função [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) para ler os dados em um quadro de dados na sessão local do R.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    Se a operação for bem-sucedida, você verá uma mensagem de status: Linhas Lidas: 35, Total de Linhas Processadas: 35, Tempo Total para a Parte: 0,036 segundos
+    Se a operação foi bem-sucedida, você verá uma mensagem de status como esta: "linhas lidas: 35, processados Total de linhas: 35, tempo Total de bloco: 0.036 segundos"
 
-4. Agora que tem as observações de alto risco em um quadro de dados na memória, você pode usar várias funções de R para manipular o quadro de dados. Por exemplo, você pode ordenar os clientes pela pontuação de risco e imprimir os clientes que apresentam o maior risco.
+4. Agora que as observações de alto risco estão em um quadro de dados na memória, você pode usar várias funções de R para manipular o quadro de dados. Por exemplo, você pode ordenar os clientes por sua pontuação de risco e imprima uma lista dos clientes que apresentam o maior risco.
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -81,9 +87,9 @@ Você decidiu que deseja examinar somente os indivíduos de alto risco mais deta
 
 ## <a name="more-about-rximport"></a>Mais sobre rxImport
 
-Você pode usar rxImport não apenas para mover dados, mas para transformar dados no processo de lê-lo. Por exemplo, é possível especificar o número de caracteres para colunas de largura fixa, fornecer uma descrição das variáveis, definir níveis de colunas de fator e, até mesmo, criar novos níveis a serem usados após a importação.
+Você pode usar **rxImport** não apenas para mover os dados, mas para transformar os dados no processo de leitura. Por exemplo, é possível especificar o número de caracteres para colunas de largura fixa, fornecer uma descrição das variáveis, definir níveis de colunas de fator e, até mesmo, criar novos níveis a serem usados após a importação.
 
-A função rxImport atribui nomes de variáveis para as colunas durante o processo de importação, mas você pode indicar novos nomes de variável usando o *colInfo* parâmetro e você pode alterar os tipos de dados usando o *colClasses* parâmetro.
+O **rxImport** função atribui nomes de variáveis para as colunas durante o processo de importação, mas você pode indicar novos nomes de variável usando o *colInfo* parâmetro ou tipos de dados de alteração usando o *colClasses* parâmetro.
 
 Ao especificar outras operações no parâmetro *transforms* , você pode fazer o processamento básico em cada parte dos dados que é lida.
 
@@ -93,9 +99,5 @@ Ao especificar outras operações no parâmetro *transforms* , você pode fazer 
 
 ## <a name="previous-step"></a>Etapa anterior
 
-[Transformar dados usando R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
-## <a name="see-also"></a>Consulte também
-
-[Tutoriais de aprendizado de máquina](../../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
+[Transformar dados usando o R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
 

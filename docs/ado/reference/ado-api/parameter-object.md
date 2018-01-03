@@ -3,7 +3,7 @@ title: "Objeto de parâmetro | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7916c054b41b63b358f8330ff1a21b05689f2920
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf234fd6cee37c525533bc082f4ae6c41a7b23f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-object"></a>Objeto Parameter
 Representa um parâmetro ou um argumento associado com um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto com base em um procedimento armazenado ou uma consulta parametrizada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Muitos provedores de suportam a comandos com parâmetros. Estes são os comandos no qual a ação desejada é definida uma vez, mas variáveis (ou parâmetros) são usados para alterar alguns detalhes do comando. Por exemplo, uma instrução SQL SELECT pode usar um parâmetro para definir os critérios de correspondência de uma cláusula WHERE e outra para definir o nome de coluna para uma cláusula classificar por.  
   
  **Parâmetro** representar parâmetros associados a consultas parametrizadas ou os argumentos de entrada/saída e valores de retorno dos procedimentos armazenados. Dependendo da funcionalidade do provedor, algumas coleções, métodos ou propriedades de um **parâmetro** objeto pode não estar disponível.  
@@ -54,7 +54,7 @@ Representa um parâmetro ou um argumento associado com um [comando](../../../ado
   
 -   [Eventos, métodos e propriedades do objeto de parâmetro](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Coleção de parâmetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

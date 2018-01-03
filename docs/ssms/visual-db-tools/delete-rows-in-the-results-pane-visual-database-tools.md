@@ -3,7 +3,7 @@ title: Excluir linhas no painel de resultados (Ferramentas de Banco de Dados Vis
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3084fd3358aa359ddd16a20c344078a5933dabd3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b63dddd7dc856409e81a0b5ff62998a3eb91fd1b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Excluir linhas do painel de Resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Exclua linhas no painel Resultados para excluir registros do banco de dados. Para excluir todas as linhas, use uma consulta de exclusão. Para obter mais informações, consulte [Criar consultas Exclusão &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Para remover linhas somente do painel Resultados, altere os critérios da consulta. Para obter mais informações, consulte [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Se alguma das linhas selecionadas não puder ser excluída do banco de dados, nenhuma delas será excluída e você receberá uma mensagem contendo as linhas que não poderão ser excluídas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar consultas Exclusão &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
 [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

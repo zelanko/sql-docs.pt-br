@@ -3,7 +3,7 @@ title: "Coleções de ADOX | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cf6e9c005180502d72071635d15ca9cc5341986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a12196d776df1b34f62364938d72fbad33eebb7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-collections"></a>Coleções de ADOX
 |||  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |[Usuários](../../../ado/reference/adox-api/users-collection-adox.md)|Contém todos os armazenados **usuário** objetos de um catálogo ou grupo.|  
 |[Exibições](../../../ado/reference/adox-api/views-collection-adox.md)|Contém todos os **exibição** objetos de um catálogo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Modelo de objeto ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
  [Objetos ADOX](../../../ado/reference/adox-api/adox-objects.md)   

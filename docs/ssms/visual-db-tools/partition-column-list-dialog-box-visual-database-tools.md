@@ -3,7 +3,7 @@ title: "Caixa de diálogo Lista de Colunas de Partição (Visual Database Tools)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bf4032ba86ee8cdb2b2ee32d787f8aa505f34a60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79eb525e471b463368cb928cae0dfcf3cf1bc797
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Caixa de diálogo Lista de Colunas de Partição (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se uma tabela tiver um esquema de partição associado, você poderá usar esta caixa de diálogo para escolher a coluna (ou colunas) à qual será aplicada a função de partição. Para a função funcionar direito, o tipo de dados da coluna que você vai trocar deve ser igual ao tipo de dados da coluna definido na função de partição.  
@@ -33,9 +33,9 @@ Para obter mais informações sobre esquemas de partição e funções consulte 
 Tipo de Dados  
 Mostra os tipos de dados das colunas definidos no esquema de partição.  
   
-Coluna  
+coluna  
 Fornece uma lista suspensa onde você pode escolher a coluna em que deseja aplicar a função de partição.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Propriedades da tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   

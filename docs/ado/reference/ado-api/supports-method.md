@@ -3,7 +3,7 @@ title: "Oferece suporte ao método | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13186c130b85de50bc6cff9487d8fec11359d008
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27c415490b1193a5dcbc8ef20e5975149a8519f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supports-method"></a>Oferece suporte ao método
 Determina se um especificado [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto oferece suporte a um determinado tipo de funcionalidade.  
@@ -45,7 +45,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  Um **longo** expressão que consiste em um ou mais [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valores.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **dá suporte a** método para determinar quais tipos de funcionalidade um **registros** objeto oferece suporte. Se o **registros** objeto suporta os recursos cujos constantes correspondentes estão em *CursorOptions*, o **dá suporte a** método retorna **True**. Caso contrário, retornará **False**.  
   
 > [!NOTE]
@@ -54,7 +54,7 @@ boolean = recordset.Supports(CursorOptions )
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do método dá suporte a (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [Dá suporte ao método de exemplo (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [Propriedade CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

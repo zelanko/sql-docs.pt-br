@@ -3,7 +3,7 @@ title: "Regras para inserção de valores de pesquisa (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec0d150e6ff4d9c6e70ea4045a5557702a7e72b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4ac4ebc852260c2f682b06f9fec24a56820e4410
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Regras para inserção de valores de pesquisa (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este tópico discute as convenções que devem ser usadas para inserir os seguintes tipos de valores literais em um critério de pesquisa:  
@@ -122,7 +122,7 @@ A tabela a seguir resume o formato de data que pode ser usado em diferentes pain
   
 |**Painel**|**Formato de data**|  
 |------------|-------------------|  
-|Critério|Padrão ANSI específico de Banco de dados e específico de localidade<br /><br />As datas inseridas no [Painel Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) são convertidas em formato compatível com banco de dados no painel SQL.|  
+|Critérios|Padrão ANSI específico de Banco de dados e específico de localidade<br /><br />As datas inseridas no [Painel Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) são convertidas em formato compatível com banco de dados no painel SQL.|  
 |SQL|Padrão ANSI específico de banco de dados|  
 |Resultados|Específico de localidade|  
   
@@ -150,6 +150,6 @@ O formato de dados lógicos varia entre os bancos de dados. Muito frequentemente
     WHERE contract <> 0  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

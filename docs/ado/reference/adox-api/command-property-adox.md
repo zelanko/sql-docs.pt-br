@@ -3,7 +3,7 @@ title: Comando propriedade (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57d15d47deaa7a0c150c90b5fe6612fb0a75ffbc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66cf6a70733e4e3188e5dd490ee780d878d42174
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-property-adox"></a>Propriedade de comando (ADOX)
 Especifica o ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que pode ser usado para criar ou executar o procedimento.  
@@ -34,7 +34,7 @@ Especifica o ADO [comando](../../../ado/reference/ado-api/command-object-ado.md)
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um ADO válido **comando** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ocorrerá um erro ao obter e definir essa propriedade se o provedor não oferece suporte a comandos persistentes.  
   
 ## <a name="applies-to"></a>Aplica-se a  
@@ -43,7 +43,7 @@ Especifica o ADO [comando](../../../ado/reference/ado-api/command-object-ado.md)
 |-|-|  
 |[Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de CommandText (VB) e comando](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Coleção de parâmetros, o exemplo de comando de propriedade (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Exemplo de coleções de campos (VB) e modos de exibição](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   

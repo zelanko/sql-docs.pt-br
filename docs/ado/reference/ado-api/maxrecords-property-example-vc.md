@@ -3,7 +3,7 @@ title: Exemplo da propriedade MaxRecords (VC + +) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e69d3f3ec9b90e01593951b908441ff106bb6d4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa201c48e8b84a3edfa6f1c201c30b421451a3dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maxrecords-property-example-vc"></a>Exemplo da propriedade MaxRecords (VC + +)
 Este exemplo usa o [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriedade para abrir um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contém os títulos mais caros 10 no ***títulos*** tabela.  
@@ -180,6 +180,6 @@ void PrintComError(_com_error &e) {
 **Deprivation prolongada de dados: Estudos de caso quatro---19,99**  
 **Sushi, qualquer pessoa? ---14,99**  
 **50 anos em Palace Buckingham cozinhas---11.95**   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

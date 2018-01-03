@@ -3,7 +3,7 @@ title: Fonte de propriedade (erro de ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a0f34bfbe5c4d7fa251316658dd76878c7b53c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b237e278cc2dd082ad653687126716a2b0a7380f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-property-ado-error"></a>Propriedade Source (erro de ADO)
 Indica o nome do objeto ou aplicativo que originalmente gerou um erro.  
@@ -35,7 +35,7 @@ Indica o nome do objeto ou aplicativo que originalmente gerou um erro.
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **cadeia de caracteres** valor que indica o nome de um objeto ou o aplicativo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **fonte** propriedade em uma [erro](../../../ado/reference/ado-api/error-object.md) objeto para determinar o nome do objeto ou aplicativo que originalmente gerou um erro. Isso pode ser o nome de classe do objeto ou o ID programática. Para erros no ADO, o valor da propriedade será **ADODB.** *ObjectName*, onde *ObjectName* é o nome do objeto que disparou o erro. Para ADOX e ADO MD, o valor será **ADOX.** *ObjectName* e **ADOMD.** *ObjectName,* respectivamente.  
   
  Com base na documentação de erro do **fonte**, [número](../../../ado/reference/ado-api/number-property-ado.md), e [descrição](../../../ado/reference/ado-api/description-property.md) propriedades de **erro** objetos, você pode escrever código que manipulará o erro adequadamente.  
@@ -45,7 +45,7 @@ Indica o nome do objeto ou aplicativo que originalmente gerou um erro.
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Error](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Descrição, HelpContext, HelpFile, NativeError, número, fonte e exemplo de propriedades de SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Descrição, HelpContext, HelpFile, NativeError, número, fonte e exemplo de propriedades de SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Propriedade Description](../../../ado/reference/ado-api/description-property.md)   

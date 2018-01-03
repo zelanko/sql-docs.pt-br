@@ -3,7 +3,7 @@ title: Atributos de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a245de28b8224a9265544d2850f6fdb12dbb1c2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d62e02663cb14c83ec69c467a0fe5e02b04cfa8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-property-ado"></a>Propriedade Attributes (ADO)
 Indica uma ou mais características de um objeto.  
@@ -43,7 +43,7 @@ Indica uma ou mais características de um objeto.
   
  Para uma [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto, o **atributos** propriedade é somente leitura e seu valor pode ser a soma de uma ou mais [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) valores.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **atributos** propriedade para definir ou retornar as características de **Conexão** objetos, **parâmetro** objetos, **campo** objetos, ou **Propriedade** objetos.  
   
  Quando você definir vários atributos, você pode somar as constantes apropriadas. Se você definir o valor da propriedade como uma soma incluindo constantes incompatíveis, ocorrerá um erro.  
@@ -58,7 +58,7 @@ Indica uma ou mais características de um objeto.
 |[Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto Field](../../../ado/reference/ado-api/field-object.md)|  
 |[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de nome (VB) e de atributos](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Exemplo de propriedades de nome (VC + +) e de atributos](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
  [Método AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   

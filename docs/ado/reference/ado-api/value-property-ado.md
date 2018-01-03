@@ -3,7 +3,7 @@ title: Valor de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8be64c318d9857f847dfc82c709a7e718d4bb462
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7fe603ac5853d1cc4afa6511ea6568593feebf6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-property-ado"></a>Propriedade de valor (ADO)
 Indica o valor atribuído a um [campo](../../../ado/reference/ado-api/field-object.md), [parâmetro](../../../ado/reference/ado-api/parameter-object.md), ou [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
@@ -34,7 +34,7 @@ Indica o valor atribuído a um [campo](../../../ado/reference/ado-api/field-obje
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **Variant** valor que indica o valor do objeto. Valor padrão depende do [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **valor** propriedade para definir ou retornar dados de **campo** objetos, para definir ou retornar valores de parâmetro com **parâmetro** objetos, ou para definir ou retornar as configurações de propriedade com **Propriedade** objetos. Se o **valor** propriedade é leitura/gravação ou somente leitura depende de vários fatores??? Consulte os tópicos do respectivo objeto para obter mais informações.  
   
  ADO permite definir e retornar dados binários longos com o **valor** propriedade.  
@@ -50,6 +50,6 @@ Indica o valor atribuído a um [campo](../../../ado/reference/ado-api/field-obje
 |-|-|-|  
 |[Objeto Field](../../../ado/reference/ado-api/field-object.md)|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade de valor (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)   
  [Exemplo da propriedade Value (VC++)](../../../ado/reference/ado-api/value-property-example-vc.md)   

@@ -3,7 +3,7 @@ title: "Assistência ao usuário no SQL Server Management Studio | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6a3108ec508a859dd6b097425f27475a85c026f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af99082f7ec0d39d59c7aa20fc1f6ba1d51596ed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistência ao usuário no SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A assistência ao usuário está disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] por meio do menu Ajuda e dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. O menu Ajuda do [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] oferece várias rotas diferentes para informações sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Ele também fornece acesso à comunidade [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] e aos recursos do MSDN Online não disponíveis anteriormente no ambiente de Ajuda. Além disso, o ambiente de Ajuda agora pode ser configurado para ser executado dentro do ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ou em uma janela externa associada a um ambiente próprio.  
@@ -36,7 +36,7 @@ O **Conteúdo** e o **Índice** fornecem funcionalidade e uma interface já fami
   
     Fornece um conjunto hierárquico de páginas vinculadas que contêm tópicos úteis relacionados a tarefas comuns do [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . O conteúdo é organizado por componente e tarefa, por exemplo, tópicos de replicação etc.  
   
--   **Pesquisa**  
+-   **Pesquisar**  
   
     Pesquisa tópicos, com ou sem filtros predefinidos. A pesquisa no [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] é feita em uma página separada com guias. Os usuários podem refinar as pesquisas com um ou mais filtros predefinidos de tipo de tópico, linguagem ou tecnologia. Por padrão, a Pesquisa não usa nenhum dos filtros predefinidos, e só os tópicos são pesquisados nas coleções instaladas.  
   

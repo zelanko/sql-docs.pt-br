@@ -3,7 +3,7 @@ title: Propriedade ActiveConnection (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0e3fe0c51bb9e21cdb4cf3ef27fee3785b871c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6edb5e36a0b8da56dd1761b188427b403ad5b153
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activeconnection-property-adox"></a>Propriedade ActiveConnection (ADOX)
 Indica o ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto ao qual o [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) pertence.  
@@ -39,13 +39,13 @@ Indica o ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md)
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define uma **Conexão** objeto ou um **cadeia de caracteres** contendo a definição para uma conexão. Retorna o ativo **Conexão** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor padrão é uma referência de objeto nulo.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade ActiveConnection do catálogo (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Exemplo de propriedades de CommandText (VB) e comando](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Método Close da Conexão, exemplo de propriedade de tipo de tabela (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

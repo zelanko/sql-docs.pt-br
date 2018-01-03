@@ -3,7 +3,7 @@ title: Usar objetos de desempenho | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4f17733ed8ed29839a30da458aee281fefc8486
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34279a9ff92a6cda54ee76ebadad6bc9ed6ca5ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-performance-objects"></a>Usar objetos de desempenho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ A tabela a seguir mostra como os objetos de desempenho do serviço do [!INCLUDE[
   
 |Tipo de instância|Nome do objeto|  
 |-----------------|---------------|  
-|Default|**SQLAgent:***objeto*:*contador*|  
+|Padrão|**SQLAgent:***objeto*:*contador*|  
 |Nomeado|**SQLAgent$**<br /> **&#42;nome_da_instância&#42; :***objeto*:*contador*|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] contém os objetos de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent a seguir.  
@@ -55,7 +55,7 @@ A tabela a seguir mostra como os objetos de desempenho do serviço do [!INCLUDE[
 |[SQLAgent:Alerts](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Informações sobre o número de alertas e notificações|  
 |[SQLAgent:Statistics](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|Informações gerais do desempenho|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Monitorar e ajustar o desempenho](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
 [Como iniciar o Monitor do Sistema (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

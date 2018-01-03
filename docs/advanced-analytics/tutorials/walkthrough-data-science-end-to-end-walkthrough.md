@@ -2,12 +2,14 @@
 title: "Passo a passo de ciência de dados de ponta a ponta para R e SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
@@ -15,11 +17,11 @@ caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: f392f7366ffc2504ce2834311b941351ef4e66c2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9d6654109e3cb5ff2e2c174dc37fd02bfc02dcb3
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Passo a passo de ciência de dados de ponta a ponta para R e SQL Server
 
@@ -55,7 +57,7 @@ Este passo a passo é destinado a desenvolvedores do R ou do SQL. Ele fornece um
 + Todos os scripts SQL e R são incluídos.
 + Você precisará modificar cadeias de caracteres em scripts, para ser executado em seu ambiente. Você pode fazer isso com um editor de código, como [código do Visual Studio](https://code.visualstudio.com/Download).
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 + Você deve ter acesso a uma instância do SQL Server 2016 ou uma versão de avaliação do SQL Server 2017.
 + Pelo menos uma instância no computador do SQL Server deve ter o [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] instalado.

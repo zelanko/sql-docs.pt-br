@@ -3,7 +3,7 @@ title: Clusterizado propriedade (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 594c36ab02aed389226909e4737e2421b6b71728
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ca0871272034cb400d15268a99c471ffcbc31d8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clustered-property-adox"></a>Propriedade Clustered (ADOX)
 Indica se o índice é clusterizado.  
@@ -37,7 +37,7 @@ Indica se o índice é clusterizado.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define e retorna um **booliano** valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor padrão é **Falso**.  
   
  Essa propriedade é somente leitura no [índice](../../../ado/reference/adox-api/index-object-adox.md) objetos que já tenham sido acrescentados a uma coleção.  
@@ -45,5 +45,5 @@ Indica se o índice é clusterizado.
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade Clustered (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)

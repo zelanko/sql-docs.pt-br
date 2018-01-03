@@ -3,7 +3,7 @@ title: "A coleção de propriedades (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d955faa0e8e13b73957dbda5ea6723dfd407c94e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d07db76b9e77dd9aba0d15126a2f01d0da59f243
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-collection-ado"></a>Coleção de propriedades (ADO)
 Contém todos os [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objetos para uma instância específica de um objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Alguns objetos ADO têm um **propriedades** coleção composta de **propriedade** objetos. Cada **propriedade** objeto corresponde a uma característica do objeto ADO específica do provedor.  
   
 > [!NOTE]
@@ -44,6 +44,6 @@ Contém todos os [propriedade](../../../ado/reference/ado-api/property-object-ad
   
 -   [Propriedades de coleção de propriedades, métodos e eventos](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

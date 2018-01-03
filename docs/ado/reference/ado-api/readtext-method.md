@@ -3,7 +3,7 @@ title: "Método ReadText | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d3628847bc62ad45781442f227e709e87f52c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9915f0bfe1b70cef5cab39a058f7131ceaa44f98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readtext-method"></a>Método ReadText
 Leituras de número especificado de caracteres de um texto [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -45,7 +45,7 @@ String = Stream.ReadText ( NumChars)
 ## <a name="return-value"></a>Valor de retorno  
  O **ReadText** método lê um número especificado de caracteres, uma linha inteira ou o fluxo inteiro de um **fluxo** de objeto e retorna a cadeia de caracteres resultante.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se *NumChar* mais do que o número de caracteres for deixado no fluxo, somente os caracteres restantes são retornados. A cadeia de caracteres de leitura não está preenchida para corresponder ao comprimento especificado por *NumChar*. Se não houver nenhum caractere à esquerda para ler, uma variante cujo valor é null é retornada. **ReadText** não pode ser usado para ler com versões anteriores.  
   
 > [!NOTE]
@@ -56,5 +56,5 @@ String = Stream.ReadText ( NumChars)
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Read](../../../ado/reference/ado-api/read-method.md)

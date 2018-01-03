@@ -3,7 +3,7 @@ title: "Exibições de coleção (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11a8bad0bb61e0f0256b31a24eaf3f283d645a45
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e41c925504ec50dcb115aabbfad916994a079507
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="views-collection-adox"></a>Coleção de exibições (ADOX)
 Contém todos os [exibição](../../../ado/reference/adox-api/view-object-adox.md) objetos de um catálogo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [Append](../../../ado/reference/adox-api/append-method-adox-views.md) método para um **exibições** coleção é exclusiva para ADOX. Você pode:  
   
 -   Adicionar uma nova exibição à coleção com o **Append** método.  
@@ -50,7 +50,7 @@ Contém todos os [exibição](../../../ado/reference/adox-api/view-object-adox.m
   
 -   [Propriedades, Métodos e Eventos da coleção Views](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de coleções de campos (VB) e modos de exibição](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [Exibições de acrescentar o exemplo de método (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Coleção de modos de exibição, o exemplo da propriedade CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   

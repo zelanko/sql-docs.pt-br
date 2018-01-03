@@ -3,7 +3,7 @@ title: Objetos ADOX | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e27df1ef9208016e0772aadf98514e8fa87df4d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac969f567ce38b48d2c82218b09845e8247fea8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-objects"></a>Objetos ADOX
 ## <a name="adox-object-summary"></a>Resumo do objeto ADOX  
   
-|Objeto|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md)|Contém coleções que descrevem o catálogo de esquema de uma fonte de dados.|  
 |[Coluna](../../../ado/reference/adox-api/column-object-adox.md)|Representa uma coluna de uma tabela, índice ou chave.|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Cada objeto pode ser contido em sua coleção correspondente. Por exemplo, um **tabela** objeto pode estar contido em um [tabelas](../../../ado/reference/adox-api/tables-collection-adox.md) coleção. Para obter mais informações, consulte [ADOX coleções](../../../ado/reference/adox-api/adox-collections.md) ou um tópico de coleção específica.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Coleções de ADOX](../../../ado/reference/adox-api/adox-collections.md)   
  [Modelo de objeto ADOX](../../../ado/reference/adox-api/adox-object-model.md)   

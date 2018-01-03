@@ -3,7 +3,7 @@ title: "Método LoadFromFile (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14124cf39e58cf46c50ae367f68ca61b82bd50e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c50565a087c9323a7f4dbafb9c604a42a19e1179
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loadfromfile-method-ado"></a>Método LoadFromFile (ADO)
 Carrega o conteúdo de um arquivo existente em um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md).  
@@ -40,7 +40,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  Um **cadeia de caracteres** valor que contém o nome de um arquivo a ser carregado para o **fluxo**. *Nome de arquivo* pode conter qualquer caminho válido e um nome no formato UNC. Se o arquivo especificado não existir, ocorrerá um erro de tempo de execução.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse método pode ser usado para carregar o conteúdo de um arquivo local em um **fluxo** objeto. Isso pode ser usado para carregar o conteúdo de um arquivo local para um servidor.  
   
  O **fluxo** objeto já deve estar aberto antes de chamar **LoadFromFile**. Este método não altera a associação do **fluxo** objeto; ainda será associado ao objeto especificado pela URL ou **registro** com a qual o **fluxo** originalmente aberto.  

@@ -3,7 +3,7 @@ title: "Feche o método (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d0df46efa689fa14f178f878887722dda179a2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79b6267de87409f4b1e7d07a6b42d85e22042def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="close-method-ado"></a>Feche o método (ADO)
 Fecha um objeto e todos os objetos dependentes.  
@@ -39,7 +39,7 @@ Fecha um objeto e todos os objetos dependentes.
 object.Close  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **fechar** método para fechar um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), um [registro](../../../ado/reference/ado-api/record-object-ado.md), um [registros](../../../ado/reference/ado-api/recordset-object-ado.md), ou um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto para liberar os recursos do sistema associados. Fechar um objeto não o remove da memória; Você pode alterar suas configurações de propriedade e abri-lo novamente mais tarde. Para eliminar completamente um objeto de memória, feche o objeto e, em seguida, defina a variável de objeto para *nada* (no Visual Basic).  
   
 ## <a name="connection"></a>Conexão  
@@ -65,7 +65,7 @@ object.Close
 |[Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo dos métodos de abertura e fechamento (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Exemplo dos métodos de abertura e fechamento (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Exemplo dos métodos de abertura e fechamento (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

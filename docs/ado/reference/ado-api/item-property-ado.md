@@ -3,7 +3,7 @@ title: Item de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -51,11 +51,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b82a73846dacf2607bdd86e3b4d75609d575ebe9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bec4236ff89d27a4db3e4606ea95401e75ba2590
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="item-property-ado"></a>Propriedade item (ADO)
 Indica um membro específico de uma coleção, por nome ou número ordinal.  
@@ -73,7 +73,7 @@ Set object = collection.Item ( Index )
  *Index*  
  Um **Variant** expressão que é avaliada para o nome ou o número ordinal de um objeto em uma coleção.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **Item** propriedade para retornar um objeto específico em uma coleção. Se **Item** não é possível localizar um objeto na coleção correspondente para o *índice* argumento, um erro ocorre. Além disso, algumas coleções não oferecem suporte a objetos nomeados; para essas coleções, você deve usar referências de número ordinal.  
   
  O **Item** é a propriedade padrão para todas as coleções; portanto, são intercambiáveis formas de sintaxe a seguir:  
@@ -95,6 +95,6 @@ collection (Index)
 |[Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Coleção Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Coleção Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade item (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Exemplo da propriedade Item (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

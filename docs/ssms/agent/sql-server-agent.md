@@ -3,7 +3,7 @@ title: SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1e818b754e994c3b6b585712092e5a473ed6e11b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f475fcb1a86f61f684edb65adf637e9234d0a494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Cada ação em um trabalho é uma *etapa de trabalho*. Por exemplo, uma etapa de
   
 Cada etapa de trabalho é executada em um contexto de segurança específico. Para etapas de trabalho que usam [!INCLUDE[tsql](../../includes/tsql_md.md)], use uma instrução EXECUTE AS para definir o contexto de segurança para essa etapa. Para outros tipos de etapas de trabalho, use uma conta proxy para definir o contexto de segurança para a etapa de trabalho.  
   
-### <a name="schedules"></a>Agendas  
+### <a name="schedules"></a>Agendamentos  
 Uma *agenda* especifica quando executar um trabalho. Mais de um trabalho pode ser executado na mesma agenda, assim como mais de uma agenda pode aplicar o mesmo trabalho. Uma agenda pode definir as seguintes condições para acionar a execução de um trabalho:  
   
 -   Sempre que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent for iniciado.  
@@ -155,7 +155,7 @@ Um subsistema é um objeto predefinido que representa a funcionalidade disponív
   
 Cada proxy corresponde a uma credencial de segurança. Cada proxy pode ser associado a um conjunto de subsistemas e um conjunto de logons. O proxy só pode ser usado para etapas de trabalho que utilizem um subsistema associado ao proxy. Para criar uma etapa de trabalho que utilize um proxy específico, o proprietário do trabalho deve usar um logon associado a esse proxy ou ser membro de uma função com acesso irrestrito a proxies. Membros da função de servidor fixa **sysadmin** têm acesso irrestrito a proxies. Membros de **SQLAgentUserRole**, **SQLAgentReaderRole**ou **SQLAgentOperatorRole** só podem usar proxies para os quais detém concessão de acesso específica. Cada usuário membro de alguma dessas funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent deve ter acesso concedido a proxies específicos para poder criar etapas de trabalho que utilizem esses proxies.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
 Use as seguintes etapas para configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent para automatizar a administração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] :  
   
 1.  Estabeleça quais tarefas administrativas ou eventos de servidor ocorrem regularmente e se essas tarefas ou eventos podem ser administrados via programação. Uma tarefa é uma boa candidata para automação sempre que envolve uma sequência previsível de etapas e ocorre em um horário específico ou em resposta a um evento específico.  
@@ -181,6 +181,6 @@ Use as seguintes tarefas como introdução rápida ao [!INCLUDE[ssNoVersion](../
 |Descreve o Assistente de Plano de Manutenção, que é um utilitário a ser usado para ajudá-lo a criar trabalhos, alertas e operadores para automatizar a administração de uma instância do SQL Server.|[Usar o Assistente de Plano de Manutenção](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
 |Descreve como automatizar tarefas administrativas usando o SQL Server Agent.|[Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Configuração da Área de Superfície](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

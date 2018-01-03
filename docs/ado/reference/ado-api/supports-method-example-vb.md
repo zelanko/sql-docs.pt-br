@@ -3,7 +3,7 @@ title: "Dá suporte ao método de exemplo (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09f47061d9b99569b13ee3d5c57c713c4d0f56a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc46e19049b576ca1af9a6cbce24087b7672e501
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supports-method-example-vb"></a>Exemplo do método dá suporte a (VB)
 Este exemplo usa o [suporta](../../../ado/reference/ado-api/supports-method.md) método para exibir as opções de suporte por um conjunto de registros abertos com tipos diferentes de cursor. O procedimento DisplaySupport é necessário executar este procedimento.  
@@ -165,6 +165,6 @@ End Sub
 'EndSupports2VB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Supports](../../../ado/reference/ado-api/supports-method.md)

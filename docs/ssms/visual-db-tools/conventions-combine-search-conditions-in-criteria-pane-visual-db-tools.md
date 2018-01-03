@@ -3,7 +3,7 @@ title: "Convenções para combinar condições de pesquisa no painel Critérios 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7b0d8e0ec4d73c564b9cd9db14fac961c310f48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 611da9e69e29621c057fe93734e66d0a64168744
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenções para combinar critérios de pesquisa no painel de Critérios (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode criar consultas que incluam qualquer número de critérios de pesquisa, interligadas com qualquer número de operadores AND e OR. Uma consulta com uma combinação de cláusulas AND e OR pode se tornar complexa, então é útil entender como tal consulta é interpretada quando você a executa, e como tal consulta é representada no [Painel Critérios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) e no [Painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
@@ -171,6 +171,6 @@ O Designer de Consulta e Exibição representa essa cláusula WHERE no Painel de
   
 Se você fizer uma mudança na consulta (como alterar um dos valores no Painel de Critérios), o Designer de Consulta e Exibição recriará a instrução SQL no painel SQL. A instrução SQL recriada se assemelhará à exibição do Painel de Critérios em vez de sua instrução original. Por exemplo, se o Painel de Critérios contiver cláusulas AND distribuídas, a instrução resultante no painel SQL será recriada com cláusulas AND explicitamente distribuídas. Para detalhes, consulte "Como AND funciona com múltiplas cláusulas OR" anteriormente neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

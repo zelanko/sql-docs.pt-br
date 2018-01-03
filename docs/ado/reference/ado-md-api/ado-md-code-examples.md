@@ -3,7 +3,7 @@ title: "Exemplos de código do ADO MD | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 040fff4e37e2e8f8baec3cef717ab1b9b738079a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2bd955452d799551a8d406489d4d337def554000
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-code-examples"></a>Exemplos de código do ADO MD
 Use os exemplos de código a seguir para saber como usar os objetos, métodos e propriedades do ADO MD. Esses exemplos são um subconjunto dos aplicativos de exemplo instalado com o Microsoft SQL Server OLAP Services para SQL Server 7.0.  
@@ -33,7 +33,7 @@ Use os exemplos de código a seguir para saber como usar os objetos, métodos e 
   
 -   [Exemplos de código do ADO MD no Visual Basic, edição de script](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API do ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [Coleções do ADO MD](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [Constantes enumeradas do ADO MD](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

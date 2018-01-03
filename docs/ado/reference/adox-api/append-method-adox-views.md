@@ -3,7 +3,7 @@ title: "Método (ADOX exibições) append | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a30ccf01370b89572697917c4fbbbbf3df11a0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: acb0a9ffbf26ccb0f181e19c54ac906ae7d4754f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-views"></a>Método (ADOX exibições) append
 Cria um novo [exibição](../../../ado/reference/adox-api/view-object-adox.md) do objeto e anexa-o para o [exibições](../../../ado/reference/adox-api/views-collection-adox.md) coleção.  
@@ -45,7 +45,7 @@ Views.Append Name, Command
  *Comando*  
  ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que representa o modo de exibição para criar.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Cria uma nova exibição da fonte de dados com o nome e atributos especificados no **comando** objeto.  
   
  Se o texto do comando que especifica o usuário representa um procedimento em vez de um modo de exibição, o comportamento depende do provedor. **Acrescentar** falhará se o provedor não oferece suporte a comandos persistentes.  
@@ -56,7 +56,7 @@ Views.Append Name, Command
 ## <a name="applies-to"></a>Aplica-se a  
  [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de acrescentar o exemplo de método (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Acrescente o método (ADOX colunas)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [(Grupos de ADOX) do método append](../../../ado/reference/adox-api/append-method-adox-groups.md)   

@@ -3,7 +3,7 @@ title: "Caixa de diálogo Abrir Arquivo | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 894dcee809aac7b3d32b30f1ee5fdc988eb8b009
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
@@ -35,7 +35,7 @@ Para acessar essa caixa de diálogo, selecione **Abrir** no menu **Arquivo** e e
 > Antes de abrir um projeto ou componente no [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], determine a integridade de seu código. O ato de abrir o projeto ou componente em um [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] pode executar seu código em um processo de confiança em sua máquina local.  
   
 ## <a name="option"></a>Opção  
-**Examinar**  
+**Look in**  
 Localize a pasta de projeto existente nesse menu suspenso. A seleção de uma pasta nessa lista exibe o conteúdo da pasta no painel principal.  
   
 ## <a name="my-places-bar"></a>Barra Meus Locais  
@@ -68,13 +68,13 @@ Navega na árvore até a próxima pasta mais alta na exibição em árvore.
 **Pesquisar na Web**  
 Esse botão não está disponível.  
   
-**Delete (excluir)**  
+**Delete (excluir) (excluir)**  
 Exclui os arquivos ou pastas selecionadas do armazenamento.  
   
 **Nova Pasta**  
 Exibe a caixa de diálogo **Nova Pasta** . Use esta opção para criar uma nova pasta filho abaixo da pasta selecionada na caixa de listagem suspensa **Examinar** .  
   
-## <a name="views"></a>Exibições  
+## <a name="views"></a>exibições  
 Fornece opções para organizar e exibir o conteúdo do item selecionado na caixa de listagem suspensa **Exibições** .  
   
 **Miniaturas**  

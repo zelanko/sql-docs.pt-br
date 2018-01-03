@@ -3,7 +3,7 @@ title: Constantes enumeradas do ADO | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb606a366746b09d7ba6303b0cb11bb1b96f6164
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2bbbd8cdea692ed5ed6117ea2e3afc72b90c7b89
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-enumerated-constants"></a>Constantes enumeradas do ADO
 Para ajudar na depuração, as enumerações de ADO listam um valor para cada constante. No entanto, esse valor é somente informativo e pode alterar de uma versão do ADO para outro. Seu código deve depender apenas o nome, não o valor real de cada constante enumerada.  
@@ -82,7 +82,7 @@ Para ajudar na depuração, as enumerações de ADO listam um valor para cada co
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|Especifica o formato ao recuperar um **registros** como uma cadeia de caracteres. Especifica os atributos de transação de um **Conexão** objeto.|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|Especifica os atributos de transação de um **Conexão** objeto.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Coleções de ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

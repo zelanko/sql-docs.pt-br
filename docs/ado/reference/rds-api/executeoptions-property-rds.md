@@ -3,7 +3,7 @@ title: Propriedade ExecuteOptions (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56e631762097a140f722202a9eba6a304b66c0cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 76876c9182ccba3eab0fa8f16171a3dceabd0876
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executeoptions-property-rds"></a>Propriedade ExecuteOptions (RDS)
 Indica se a execução assíncrona está habilitada.  
@@ -42,7 +42,7 @@ Indica se a execução assíncrona está habilitada.
 > [!NOTE]
 >  Cada arquivo executável que usa constantes deve fornecer declarações para eles. Você pode recortar e colar as declarações de constantes que deseja para o arquivo Adcvbs.inc, localizado na pasta de instalação padrão para a biblioteca RDS.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se **ExecuteOptions** é definido como **adcExecAsync**, e isso executa de forma assíncrona o próximo **atualizar** ligar o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto **registros**.  
   
  Se você tentar chamar [redefinir](../../../ado/reference/rds-api/reset-method-rds.md), [atualizar](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), ou [registros](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) enquanto outra operação assíncrona que pode alterar o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto **registros** está em execução, ocorrerá um erro.  
@@ -52,7 +52,7 @@ Indica se a execução assíncrona está habilitada.
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de FetchOptions (VBScript) e ExecuteOptions](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

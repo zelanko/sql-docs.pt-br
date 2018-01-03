@@ -1,11 +1,13 @@
 ---
 title: Propriedade de servidor (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -17,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e1475b73658e9cbf5b1b1ebc393d2cf60bb6e5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9225e5184faf0087458a9e3ca3828fa75f259d6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="server-property-rds"></a>Propriedade de servidor (RDS)
 Indica o protocolo de comunicação e o nome de serviços de informações da Internet (IIS).  
@@ -117,13 +119,13 @@ DataControl.Server=""
  *DataControl*  
  Uma variável de objeto que representa um **RDS. DataControl** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O servidor é o local onde o **RDS. DataControl** (ou seja, uma consulta ou atualização) de solicitação é processada. Por padrão, todas as solicitações são processadas pelo [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto [MSDFMAP. Manipulador](../../../ado/guide/remote-data-service/datafactory-customization.md) componente, e [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) arquivo no servidor especificado. Lembre-se de que quando a alteração de servidores para reconciliar as configurações no antigo e novo **MSDFMAP. INI** arquivos. Incompatibilidades podem causar solicitações bem-sucedida em um servidor falhar em outro. Se a propriedade do servidor é definida como a cadeia de caracteres vazia "", esses objetos serão usados no computador local.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade do servidor (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [Conecte-se a propriedade (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [Propriedade SQL](../../../ado/reference/rds-api/sql-property.md)   

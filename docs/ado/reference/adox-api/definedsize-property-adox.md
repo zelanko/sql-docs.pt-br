@@ -3,7 +3,7 @@ title: Propriedade DefinedSize (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cdbe12a5aa0f1b9b2eb693b673a9371010a3dc7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1e0b3941e85a40603b9b0d10f935ad128d2a8cd7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definedsize-property-adox"></a>Propriedade DefinedSize (ADOX)
 Indica o tamanho máximo indicado da coluna.  
@@ -37,7 +37,7 @@ Indica o tamanho máximo indicado da coluna.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define e retorna um **longo** valor que é o comprimento máximo em caracteres de valores de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor padrão é zero (0).  
   
  Essa propriedade é somente leitura para [coluna](../../../ado/reference/adox-api/column-object-adox.md) já está anexados a uma coleção de objetos.  
@@ -45,5 +45,5 @@ Indica o tamanho máximo indicado da coluna.
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade DefinedSize (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)

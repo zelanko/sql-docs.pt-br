@@ -3,7 +3,7 @@ title: "O método de busca | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2e6e7d303e8cf1bad6edc21b22832ab76df5244
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d94cf588916667e2cf82992b6a3ac6b601e8f84
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seek-method"></a>O método de pesquisa
 Pesquisa o índice de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) para localizar rapidamente a linha que corresponde aos valores especificados e altera a posição da linha atual para aquela linha.  
@@ -45,7 +45,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  Um [SeekEnum](../../../ado/reference/ado-api/seekenum.md) valor que especifica o tipo de comparação a ser feita entre as colunas do índice e correspondente *KeyValues*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **busca** método junto com o [índice](../../../ado/reference/ado-api/index-property.md) propriedade se o provedor subjacente que dá suporte a índices no **registros** objeto. Use o [dá suporte a](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** método para determinar se o provedor subjacente oferece suporte a **busca**e o **Supports(adIndex)** método para determinar se o provedor oferece suporte a índices. (Por exemplo, o [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) dá suporte a **busca** e **índice**.)  
   
  Se **busca** não localizar a linha desejada, nenhum erro ocorrerá e a linha é posicionado no final do **registros**. Definir o **índice** propriedade para o índice desejada antes de executar esse método.  
@@ -57,7 +57,7 @@ recordset.Seek KeyValues, SeekOption
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade de índice (VB) e método de busca](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Exemplo de propriedade de índice (VC + +) e método de busca](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Localizar o método (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   

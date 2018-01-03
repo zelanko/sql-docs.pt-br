@@ -3,7 +3,7 @@ title: Propriedades de Coluna (Ferramentas de Banco de Dados Visual) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 647187fc56293cf1d30b2daa4150f1ad05503338
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8ef372c7a1716fe9e928b3567c52c654268f7a3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visualizado na guia **Propriedades da Coluna** no Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]) e um subconjunto que pode ser visualizado na janela Propriedades usando o Gerenciador de Servidores.  
@@ -50,7 +50,7 @@ Expande para mostrar o **Nome** e propriedades de **Banco de dados** .
 **Nome**  
 Mostra o nome da coluna.  
   
-**Banco de dados**  
+**Backup de banco de dados**  
 Mostra o nome da fonte dos dados para a coluna selecionada. (Aplica-se somente a OLE DB.)  
   
 **Categoria Misc**  
@@ -131,7 +131,7 @@ Mostra a fórmula que a coluna selecionada usa se for uma coluna computada. Ness
 **Tipo de Dados Condensado**  
 Exibe informações sobre o tipo de dados do campo, no mesmo formato que a instrução SQL CREATE TABLE. Por exemplo, um campo que contém uma cadeia de caracteres de comprimento-variável com um comprimento máximo de 20 caracteres seria representado como "varchar(20).” Para alterar essa propriedade, digite o valor diretamente.  
   
-**Description**  
+**Descrição**  
 Mostra a descrição da coluna. Para ver a descrição completa ou editá-la, clique em Descrição e, então, clique nas reticências **(…)** à direita da propriedade.  
   
 **Categoria Especificação de Texto Completo**  

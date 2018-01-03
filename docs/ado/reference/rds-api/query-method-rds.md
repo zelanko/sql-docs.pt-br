@@ -3,7 +3,7 @@ title: "Consulta de método (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32233e74eece2de258223599a682c8fb27d46fe6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ceedab6dd52492c5660165b3b1377def3a51f253
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-method-rds"></a>Método Query (RDS)
 Usa uma cadeia de caracteres de consulta SQL válida para retornar um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -51,13 +51,13 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Consulta*  
  Um **cadeia de caracteres** que contém a consulta SQL.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A consulta deve usar o dialeto SQL do servidor de banco de dados. Um status de resultado é retornado se não houver um erro com a consulta que foi executado. O **consulta** método não executa qualquer verificação de sintaxe de **consulta** cadeia de caracteres.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do método CreateObject, do método Query e objeto DataFactory (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

@@ -3,7 +3,7 @@ title: Objeto Field | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f0838ea34dbc5117c5c52ed7848e60b9bcf9ef6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 638ba9740e02ef403256b76a8fd800993b237fb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="field-object"></a>Objeto Campo
 Representa uma coluna de dados com um tipo de dados comum.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Cada **campo** objeto corresponde a uma coluna de [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Você usa o [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade **campo** objetos para definir ou retornar dados para o registro atual. Dependendo da funcionalidade de provedor expõe, algumas coleções, métodos ou propriedades de um **campo** objeto pode não estar disponível.  
   
  Com as coleções, métodos e propriedades de um **campo** do objeto, você pode fazer o seguinte:  
@@ -56,7 +56,7 @@ Representa uma coluna de dados com um tipo de dados comum.
   
 -   [Eventos, métodos e propriedades do objeto de campo](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleção de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

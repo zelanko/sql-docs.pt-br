@@ -3,7 +3,7 @@ title: Registrar o objeto (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0efb504844ac58e7889cdb768821efe95f52e0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1246dfe943ae415f7777e5924c14580fe05afbe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-object-ado"></a>Objeto de registro (ADO)
 Representa uma linha de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) ou o provedor de dados ou um objeto retornado por um provedor de dados estruturados, como um arquivo ou diretório.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **registro** objeto representa uma linha de dados e tem algumas semelhanças conceituais com uma linha **registros**. Dependendo dos recursos do seu provedor, **registro** objetos podem ser retornados diretamente do seu provedor, em vez de uma linha **registros**, por exemplo, quando uma consulta SQL que seleciona apenas uma linha está executado. Ou, um **registro** objeto pode ser obtido diretamente de um **registros** objeto. Ou, um **registro** pode ser retornado diretamente de um provedor de dados estruturados, como o Microsoft Exchange provedor OLE DB.  
   
  Você pode exibir os campos associados a **registro** objeto por meio do [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção no **registro** objeto. ADO permite que colunas com valor de objeto, incluindo **registros**, **SafeArray**e valores escalares no **campos** coleção de **registro** objetos.  
@@ -85,7 +85,7 @@ Representa uma linha de um [registros](../../../ado/reference/ado-api/recordset-
   
 -   [Propriedades, métodos e eventos do objeto Record](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleção de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Registros e fluxos](../../../ado/guide/data/records-and-streams.md)   
