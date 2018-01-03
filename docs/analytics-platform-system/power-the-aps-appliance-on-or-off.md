@@ -3,10 +3,10 @@ title: Ligar o dispositivo de APS ativado ou desativado (Analytics Platform Syst
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
 caps.latest.revision: "45"
-ms.openlocfilehash: 3264c3f97f765e9a62a38987638bdf2a8b13e82b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e96898197098556d256c46b517ea42650c4c3ac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="power-the-aps-appliance-on-or-off"></a>Ligar o dispositivo de APS ou desligar
 Este tópico descreve como ligar ou desligar o Systemappliance de plataforma de análise que esteja executando o Parallel Data Warehouse e, opcionalmente, executando uma região de HDInsight. Use este tópico quando um dispositivo Analytics Platform System é movido ou a potência em um dispositivo após uma falha catastrófica de energia.  
@@ -137,6 +137,6 @@ Antes de desligar o dispositivo, você deve encerrar todas as atividades no disp
 ### <a name="to-verify-the-appliance-health"></a>Para verificar a integridade do dispositivo  
 Depois que o dispositivo foi iniciado, abra o **Console de administração** e verificar a página de integridade para alertas que indicam as condições de falha. Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração &#40; Analytics Platform System &#41; ](monitor-the-appliance-by-using-the-admin-console.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tarefas de gerenciamento de dispositivo &#40; Analytics Platform System &#41;](appliance-management-tasks.md)  
   

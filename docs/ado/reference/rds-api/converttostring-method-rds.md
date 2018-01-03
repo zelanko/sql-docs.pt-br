@@ -3,7 +3,7 @@ title: "Método ConvertToString (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd7be0ef5fae5bd05dfa5f7c1a31b98341f30117
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d33aeb0fd8aeb93e931da0cec0ca62339df65cc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converttostring-method-rds"></a>Método ConvertToString (RDS)
 Converte um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) em uma cadeia de caracteres MIME que representa os dados do conjunto de registros.  
@@ -45,7 +45,7 @@ DataFactory.ConvertToString(Recordset)
  *Conjunto de registros*  
  Uma variável de objeto que representa um **registros** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Com arquivos. asp, use **ConvertToString** para inserir o **registros** em uma página HTML gerada no servidor para transportá-lo para um computador cliente.  
   
  **ConvertToString** carregado pela primeira vez o **registros** para o serviço de Cursor tabelas e, em seguida, gera um fluxo no formato MIME.  
@@ -58,7 +58,7 @@ DataFactory.ConvertToString(Recordset)
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do método ConvertToString (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
  [Exemplo do método ConvertToString (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
 

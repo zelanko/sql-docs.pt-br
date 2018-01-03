@@ -3,7 +3,7 @@ title: Membro de objeto (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d8e27f47e871b54aa8e7456956fc18100a5f59e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6624e44343ef680c317338ea1fe32ead2aa0d9d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-object-ado-md"></a>Membro de objeto (ADO MD)
 Representa um membro de um nível em um cubo, os filhos de um membro de um nível ou membro de uma posição em um eixo de um conjunto de células.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As propriedades de um **membro** diferem dependendo do contexto no qual ele é usado. Um **membro** de um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) em uma [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) tem um [filhos](../../../ado/reference/ado-md-api/children-property-ado-md.md) propriedade retorna o **membros** em o próximo nível inferior na hierarquia da atual **membro**. Para uma **membro** de um [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md), o **filhos** coleção sempre está vazia. Além disso, o [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) propriedade se aplica somente ao **membros** de um **nível**.  
   
  Um **membro** de **posição** tem duas propriedades que são úteis ao exibir o [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) e [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Ocorrerá um erro se essas propriedades são acessadas em uma **membro** de um **nível**.  
@@ -97,7 +97,7 @@ Representa um membro de um nível em um cubo, os filhos de um membro de um níve
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de catálogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Coleção de membros (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

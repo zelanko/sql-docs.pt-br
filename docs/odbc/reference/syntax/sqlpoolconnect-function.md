@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c21f261147d5ba814721dc2cdb6de7ca4ef748a7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd862492513daceda364205d965b1d00e6cb649f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlpoolconnect-function"></a>Função SQLPoolConnect
 **Conformidade**  
@@ -66,7 +66,7 @@ SQLRETURN  SQLPoolConnect(
 ## <a name="diagnostics"></a>diagnóstico  
  Semelhante ao [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) para qualquer erro de validação de entrada, exceto que o Gerenciador de Driver usará uma **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN e um **tratar** de *hDbcInfoToken*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O Gerenciador de Driver garante que o pai HENV tratar de *hDbc* e *hDbcInfoToken* são os mesmos.  
   
  Ao contrário de [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), não há nenhum *DriverCompletion* argumento para solicitar aos usuários inserir informações de conexão. Uma caixa de diálogo de solicitação não é permitida no cenário do pool.  
@@ -81,7 +81,7 @@ SQLRETURN  SQLPoolConnect(
   
  Inclua sqlspi.h para desenvolvimento de driver ODBC.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Pooling de Conexão com reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

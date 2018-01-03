@@ -3,7 +3,7 @@ title: "Avaliar os objetos de banco de dados do SAP ASE para conversão (SybaseT
 ms.custom: 
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9fad1e13a82077bf25422e42a390804d67358c2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e22710f19c00a846c33e1dd378e7b0de5b8526e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Avaliar os objetos de banco de dados do SAP ASE para conversão (SybaseToSQL)
 Antes de carregar objetos e migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, você deve determinar como complexidade da migração e quanto tempo deve demorar. O SSMA pode criar um relatório de avaliação que mostra o percentual de objetos e procedimentos com êxito serão convertidos em [!INCLUDE[tsql](../../includes/tsql_md.md)]. O SSMA permite exibir os problemas específicos que podem causar falhas de conversão.  
@@ -86,6 +86,6 @@ O **painéis de estatísticas de conversão** mostrar as estatísticas de conver
 ## <a name="next-steps"></a>Próximas etapas  
 [Converter objetos do SAP ASE banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando SAP ASE bancos de dados do SQL Server - banco de dados SQL do Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

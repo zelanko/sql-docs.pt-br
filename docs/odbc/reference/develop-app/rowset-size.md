@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-size"></a>Tamanho do conjunto de linhas
 O tamanho do conjunto de linhas a ser usado depende do aplicativo. Aplicativos baseados em tela comumente siga uma das duas estratégias. A primeira é para definir o tamanho do conjunto de linhas para o número de linhas exibidas na tela; Se o usuário o redimensiona a tela, o aplicativo altera o tamanho do conjunto de linhas adequadamente. A segunda é definir o tamanho do conjunto de linhas para um número maior, como 100, que reduz o número de chamadas para a fonte de dados. O aplicativo localmente rola dentro do conjunto de linhas quando possível e busca de novas linhas apenas quando ele rola fora do conjunto de linhas.  

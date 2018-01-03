@@ -1,7 +1,7 @@
 ---
 title: Conectando ao SQL Server (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -32,11 +32,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd14f32d796098393d7869f717f45f424504f7d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f7f2c52a7af7fc3f9a35585678b222d6a29e5787
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Conectando ao SQL Server (AccessToSQL)
 Para migrar bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve se conectar à instância de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Quando você se conectar, o SSMA obtém metadados sobre os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e exibe os metadados de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de metadados. O SSMA armazena informações sobre qual instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que você está conectado, mas não armazena as senhas.  
@@ -129,9 +129,9 @@ Sua conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] perman
   
 O procedimento para reconectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] é o mesmo que o procedimento para estabelecer uma conexão.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Se você deseja personalizar o mapeamento entre os bancos de dados de origem e de destino, consulte [bancos de dados de destino e origem do mapeamento de](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) caso contrário, a próxima etapa é converter objetos de banco de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando sintaxe [converter objetos de banco de dados](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

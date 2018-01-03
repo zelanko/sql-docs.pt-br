@@ -1,7 +1,7 @@
 ---
 title: Inicializando os casos de teste (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4bbaa64bd72d0d7e433b9275d8cf8142ef4a741c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9906475f74b1606ff581282544b13b2550da9e42
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Inicializando os casos de teste (OracleToSQL)
 Nesta etapa, você especificar as informações iniciais para o novo caso de teste.  
@@ -42,6 +42,6 @@ Insira informações adicionais para identificar a finalidade do caso de teste.
 ## <a name="next-step"></a>Próxima etapa  
 [Selecionando e Configurando objetos para teste &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Testando migrados objetos de banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

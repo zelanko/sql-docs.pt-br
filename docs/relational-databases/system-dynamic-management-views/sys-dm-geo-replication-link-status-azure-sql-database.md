@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0399e0ef7587a7a7cb8a7ef32419518f1b95d53e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ ms.lasthandoff: 11/17/2017
 |função|**tinyint**|Função de replicação geográfica, um de:<br /><br /> 0 = primário. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|O tipo de secundário, um de:<br /><br /> 0 não = nenhum provedor direto conexões são permitidas no banco de dados secundário e o banco de dados não está disponível para acesso de leitura.<br /><br /> 2 = todas as conexões são permitidas no banco de dados em repl o secundário; Autent para acesso somente leitura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Não<br /><br /> Todos|  
-|last_commit|**datetimeoffset**|A hora da última transação confirmada no banco de dados. Se recuperado no banco de dados secundário quando o primário do link de replicação, ele indica até que ponto o secundário tiver alcançado o.|
+|secondary_allow_connections_desc|**nvarchar(256)**|não<br /><br /> Todos|  
+|last_commit|**datetimeoffset**|A hora da última transação confirmada no banco de dados. Se recuperar o banco de dados primário, ele indica a última hora de confirmação no banco de dados primário. Se recuperado no banco de dados secundário, ele indica a última hora de confirmação no banco de dados secundário. Se recuperado no banco de dados secundário quando o primário do link de replicação, ele indica até que ponto o secundário tiver alcançado o.|
   
 > [!NOTE]  
 >  Se a relação de replicação é encerrada, removendo o banco de dados secundário (seção 4.2), a linha do banco de dados no **sys.dm_geo_replication_link_status** desaparece da exibição.  
@@ -69,7 +69,7 @@ SELECT
 FROM sys.dm_geo_replication_link_status;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40; Banco de dados SQL do Azure &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.geo_replication_links &#40; Banco de dados SQL do Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [sys.DM operation_status &#40; Banco de dados SQL do Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  

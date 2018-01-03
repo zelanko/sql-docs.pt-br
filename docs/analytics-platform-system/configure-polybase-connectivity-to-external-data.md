@@ -3,10 +3,10 @@ title: Configurar a conectividade do PolyBase para dados externos (Analytics Pla
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: "43"
-ms.openlocfilehash: 7d486992f688b5bc914508ef000f23209b4bde89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 391b088af58f7c231d9d95e6940332f8f78dd1d5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Configurar a conectividade do PolyBase para dados externos
 Explica como configurar o PolyBase no SQL Server PDW para se conectar ao Microsoft Azure ou Hadoop armazenamento blob fontes de dados externas. Use o PolyBase para executar consultas que integram dados de várias fontes, incluindo Hadoop, armazenamento de BLOBs do Azure e SQL Server PDW.  
@@ -133,7 +133,7 @@ Explica como configurar o PolyBase no SQL Server PDW para se conectar ao Microso
   
 Os usuários autorizados agora podem criar tabelas externas de fontes de dados externas e formatos de arquivo externo. Eles podem usá-los para integrar dados de várias fontes, incluindo Hadoop, armazenamento de BLOBs do Microsoft Azure e SQL Server PDW.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Configuração de dispositivo &#40; Analytics Platform System &#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

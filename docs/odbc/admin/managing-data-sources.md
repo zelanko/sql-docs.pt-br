@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8d5a80fc70b3a41c05a85fa23fb44a11f1d2e860
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea157fd72ab1cc2b37ba32e198bde5ff47eff0fb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-data-sources"></a>Gerenciar fontes de dados
 Depois de instalar um driver ODBC do programa de instalação do driver, você pode definir uma ou mais fontes de dados para ele. O nome da fonte de dados (DSN) deve fornecer uma descrição exclusiva dos dados. Por exemplo, *folha de pagamento* ou *contas a pagar*. As fontes de dados de usuário e do sistema que estão definidas para todos os drivers instalados no momento são listadas no **DSN do usuário** ou **DSN de sistema** guias do **administrador de fonte de dados ODBC**caixa de diálogo. As fontes de dados de arquivo em um diretório específico são listadas no **DSN de arquivo** guia; o diretório a ser mostrado é inserido no **examinar** caixa o **DSN de arquivo** guia.  
@@ -53,5 +53,5 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  Para obter mais informações sobre fontes de dados de arquivo, consulte [conectar fontes de dados de arquivo usando](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) ou [função SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de fonte de dados ODBC](../../odbc/admin/odbc-data-source-administrator.md)

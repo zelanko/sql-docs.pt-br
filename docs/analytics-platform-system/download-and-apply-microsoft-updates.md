@@ -3,10 +3,10 @@ title: "Baixe e aplique as atualizações da Microsoft (Analytics Platform Syste
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>Baixe e aplique as atualizações da Microsoft
 Este tópico aborda como baixar atualizações do catálogo do Microsoft Update para o Windows Server Update Services (WSUS) e aplicar as atualizações para os servidores de aplicativo Analytics Platform System. O Microsoft Update instalará todas as atualizações aplicáveis para o Windows e do SQL Server. O WSUS está instalado na máquina virtual do VMM do dispositivo.  
@@ -32,7 +32,7 @@ Este tópico aborda como baixar atualizações do catálogo do Microsoft Update 
 >   
 > Não aplique Microsoft Updates enquanto o dispositivo estiver em uso. Aplicação de atualizações pode causar nós de dispositivo a reinicialização. As atualizações devem ser aplicadas durante uma janela de manutenção quando o dispositivo não está sendo usado.  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
 Antes de executar essas etapas, você precisa:  
   
 -   Configurar o WSUS em seu dispositivo seguindo as instruções em [configurar o Windows Server Update Services &#40; O WSUS &#41; &#40; Analytics Platform System &#41; ](configure-windows-server-update-services-wsus.md).  
@@ -167,7 +167,7 @@ C:\pdwinst\media\setup.exe /action="MicrosoftUpdate" /DomainAdminPassword="<pass
 C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAdminPassword="<password>"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Desinstalar as atualizações da Microsoft &#40; Analytics Platform System &#41;](uninstall-microsoft-updates.md)  
 [Aplicar Hotfixes do sistema de plataforma de análise &#40; Analytics Platform System &#41;](apply-analytics-platform-system-hotfixes.md)  
 [Desinstalar Hotfixes do sistema de plataforma de análise &#40; Analytics Platform System &#41;](uninstall-analytics-platform-system-hotfixes.md)  

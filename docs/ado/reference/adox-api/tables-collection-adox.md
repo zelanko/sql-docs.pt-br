@@ -3,7 +3,7 @@ title: "Tabelas de coleção (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c47b8088fa5603de7bd8b17d784100170388509c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ff2e5eccc74e4fa08816531b6600f6fd0940f69
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tables-collection-adox"></a>Coleção de tabelas (ADOX)
 Contém todos os [tabela](../../../ado/reference/adox-api/table-object-adox.md) objetos de um catálogo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) método para um **tabelas** coleção é exclusiva para ADOX. Você pode:  
   
 -   Adicionar uma nova tabela à coleção com o **Append** método.  
@@ -52,7 +52,7 @@ Contém todos os [tabela](../../../ado/reference/adox-api/table-object-adox.md) 
   
 -   [Propriedades, Métodos e Eventos da coleção Tables](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade ActiveConnection do catálogo (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Tabelas e colunas acrescentar métodos, exemplo de nome de propriedade (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Método Close da Conexão, exemplo de propriedade de tipo de tabela (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

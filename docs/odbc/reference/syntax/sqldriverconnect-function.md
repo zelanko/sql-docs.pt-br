@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6c5eaaa0580d718ecfa3b57c2c4b0aa7da5cda41
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldriverconnect-function"></a>Função SQLDriverConnect
 **Conformidade**  
@@ -228,7 +228,7 @@ SQLRETURN SQLDriverConnect(
   
     -   Na nova cadeia de conexão, o **FILEDSN** palavra-chave é eliminado.  
   
-4.  Carrega o driver examinando a entrada do registro HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.. INI\\< nome do Driver\>\Driver onde \<nome do Driver > for especificado o **DRIVER** palavra-chave.  
+4.  Carrega o driver examinando a entrada do registro HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. INI\\< nome do Driver\>\Driver onde \<nome do Driver > for especificado o **DRIVER** palavra-chave.  
   
 5.  Passa o driver a nova cadeia de caracteres de conexões.  
   
@@ -368,6 +368,6 @@ int main() {
 |Liberando um identificador|[Função SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Definir um atributo de conexão|[Função SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

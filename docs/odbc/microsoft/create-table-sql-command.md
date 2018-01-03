@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c8c6d75686741d1835f46a5ad7a64ab04c6925f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-table---sql-command"></a>Criar tabela - comando SQL
 Cria uma tabela com os campos especificados.  
@@ -138,7 +138,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  DA matriz *ArrayName*  
  Especifica o nome de uma matriz existente cujo conteúdo é o nome, tipo, precisão e escala para cada campo na tabela. O conteúdo da matriz pode ser definido com o **AFIELDS**função ().  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A nova tabela é aberta na área de menor trabalho disponíveis e pode ser acessada por seu alias. A nova tabela é aberta exclusivamente, independentemente da configuração atual de um conjunto exclusivo.  
   
  Se um banco de dados está aberto e você não incluir a cláusula livre, a nova tabela será adicionada ao banco de dados. Você não pode criar uma nova tabela com o mesmo nome de uma tabela no banco de dados.  
@@ -170,7 +170,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Por exemplo, se você quiser criar uma tabela temporária, você deve criar a tabela antes de começar a instrução que requer uma transação. Se você incluir a instrução CREATE TABLE em um lote de instrução SQL que requer uma transação, o driver retornará uma mensagem de erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE - comando SQL](../../odbc/microsoft/alter-table-sql-command.md)   
  [Tipos de dados com suporte (Driver ODBC do Visual FoxPro)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [Insira - o comando SQL](../../odbc/microsoft/insert-sql-command.md)   

@@ -3,7 +3,7 @@ title: Exibir objeto (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 74f53494e11f46432b57b07ad0d9f42d6c3773f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63cce5bc12fe78ff57007a5d8531547dc6ff23e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-object-adox"></a>Objeto de exibição (ADOX)
 Representa um conjunto de registros ou uma tabela virtual filtrado. Quando usado em conjunto com o ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto, o **exibição** objeto pode ser usado para adicionar, excluir ou modificar os modos de exibição.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma exibição é uma tabela virtual, criada a partir de outras tabelas de banco de dados ou exibições. O **exibição** objeto permite que você crie um modo de exibição sem precisar saber ou usar a sintaxe de "Criar exibição" do provedor.  
   
  Com as propriedades de um **exibição** do objeto, você pode:  
@@ -44,7 +44,7 @@ Representa um conjunto de registros ou uma tabela virtual filtrado. Quando usado
   
 -   [Propriedades, Métodos e Eventos do objeto View](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de coleções de campos (VB) e modos de exibição](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [Exibições de acrescentar o exemplo de método (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Coleção de modos de exibição, o exemplo da propriedade CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   

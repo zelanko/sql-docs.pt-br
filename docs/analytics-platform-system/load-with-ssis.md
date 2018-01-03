@@ -3,10 +3,10 @@ title: Carregar dados com o Integration Services
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
 caps.latest.revision: "69"
-ms.openlocfilehash: 631f93d14670e3d9c6f03517504e059087243ca1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-integration-services"></a>Carregar dados com o Integration Services
 Fornece informações de referência e de implantação para carregar dados no SQL Server Parallel Data Warehouse usando pacotes do SQL Server Integration Services (SSIS).  
@@ -89,7 +89,7 @@ Em seguida, os dados são mapeados do Integration Services para tipos de dados d
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -251,7 +251,7 @@ Execute o pacote no computador do Integration Services.
   
 2.  O pacote será executado e o andamento, bem como quaisquer erros serão mostrados no **andamento** painel. Use um cliente SQL para confirmar a carga ou monitorar a carga por meio do Console de administração do SQL Server PDW.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar uma tarefa de script que usa o adaptador de destino do SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
 [Projetando e implementando pacotes (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  

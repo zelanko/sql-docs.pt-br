@@ -1,7 +1,7 @@
 ---
 title: "Configurações globais (log) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f349382a1a94ea621a4c7902f20ac16d381aa2fe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d5e0cab604baad282c06367e3271915329d358b7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-logging-oracletosql"></a>Configurações globais (log) (OracleToSQL)
 Use o **configurações globais** caixa de diálogo para especificar as configurações de log para o SSMA. Normalmente, altere essas configurações apenas ao trabalhar com o suporte ao produto.  

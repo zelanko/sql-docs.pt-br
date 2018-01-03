@@ -1,7 +1,7 @@
 ---
 title: "Assistente de migração (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d646e91cbf87e48bbf3e3580f0745edb4ca00ea
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b8e039ef80efd41fabbaeeddbb9e3e1e9acc2ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migration-wizard-accesstosql"></a>Assistente de migração (AccessToSQL)
 O Assistente de migração orienta você por meio da migração de um ou mais bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Usando o assistente, você cria um projeto, adicionar bancos de dados para o projeto, selecione objetos para migrar e se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Você também converter, carregar e migrar dados e esquemas de acesso. Opcionalmente, você pode vincular tabelas de acesso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tabelas ou SQL Azure.  
@@ -107,7 +107,7 @@ A página de Status de migração mostra o progresso de converter os esquemas de
   
 Para obter mais informações sobre essa página, consulte [converter, carregar e migrar](http://msdn.microsoft.com/en-us/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Introdução ao Assistente de migração do SQL Server para Access &#40; AccessToSQL &#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  

@@ -3,7 +3,7 @@ title: Nome de propriedade (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -47,11 +47,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47d95403232ef3b5a13fc5f7c30854591f837bab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 048d40c828f67a7be682dd2880cce66d6c7dd61d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-property-adox"></a>Propriedade Name (ADOX)
 Indica o nome do objeto.  
@@ -59,7 +59,7 @@ Indica o nome do objeto.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nomes não precisam ser exclusivos dentro de uma coleção.  
   
  O **nome** propriedade é leitura/gravação em [coluna](../../../ado/reference/adox-api/column-object-adox.md), [grupo](../../../ado/reference/adox-api/group-object-adox.md), [chave](../../../ado/reference/adox-api/key-object-adox.md), [índice](../../../ado/reference/adox-api/index-object-adox.md), [ Tabela](../../../ado/reference/adox-api/table-object-adox.md), e [usuário](../../../ado/reference/adox-api/user-object-adox.md) objetos. O **nome** propriedade é somente leitura no [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md), [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md), e [exibição](../../../ado/reference/adox-api/view-object-adox.md) objetos.  
@@ -77,7 +77,7 @@ Indica o nome do objeto.
 |[Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
 |[Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas e colunas acrescentar métodos, exemplo de nome de propriedade (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Exemplo da propriedade ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com projetos do SSMA (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 3fbafb9a5357092aee293b9b190156d4bcca84d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 230e3b73b1903a4a74c98fed108600ffd9d5a523
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Trabalhando com projetos do SSMA (OracleToSQL)
 Para migrar bancos de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você primeiro crie um projeto SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -127,7 +127,7 @@ Quando você abre um projeto, ele é desconectado da Oracle e do [!INCLUDE[ssNoV
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [se conectar ao banco de dados Oracle (OracleToSQL)](http://msdn.microsoft.com/en-us/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
 [Conectar-se ao banco de dados Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
 [Conectar-se ao SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  

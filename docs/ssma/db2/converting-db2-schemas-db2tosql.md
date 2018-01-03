@@ -1,7 +1,7 @@
 ---
 title: Convertendo esquemas de DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b5519b19a5ae8098016e7d9bf0daa25c8678cdd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3684380a10f371952b2461907bb36a7b13f1107
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Convertendo esquemas de DB2 (DB2ToSQL)
 Depois de se conectar ao DB2, conectado à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e o conjunto de projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de banco de dados.  
@@ -158,6 +158,6 @@ Para cada item que não puderam ser convertido, você deve determinar o que voc�
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [carregar objetos convertidos no SQL Server](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando dados do DB2 no SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

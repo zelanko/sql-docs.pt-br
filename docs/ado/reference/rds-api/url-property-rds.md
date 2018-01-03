@@ -1,11 +1,13 @@
 ---
 title: Propriedade de URL (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 85c0e3ee8fe805b0cd8a90651e9de2a0fa7f04c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0181a57f4a76985ef926d2038611c3e6bd864142
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="url-property-rds"></a>Propriedade de URL (RDS)
 Indica uma cadeia de caracteres que contém uma URL relativa ou absoluta.  
@@ -45,7 +47,7 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  Uma variável de objeto que representa um **DataControl** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Normalmente, a URL identifica um arquivo Active Server Page (. asp) que pode gerar e retornar um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Portanto, o usuário pode obter um **registros** sem a necessidade de chamar o lado do servidor [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) de objeto ou programar um objeto comercial personalizado.  
   
  Se o **URL** propriedade foi definida, [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) enviar alterações para o local especificado pela URL.  
@@ -53,7 +55,7 @@ Run time: DataControl.URL="Server"
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade URL (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

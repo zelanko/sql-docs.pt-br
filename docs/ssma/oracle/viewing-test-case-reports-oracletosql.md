@@ -1,7 +1,7 @@
 ---
 title: "Exibindo relatórios de caso de teste (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: c03500dde8c71a8cc817c4111eb0e7cc09995aca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ea0d497348f6fb146f5633d561385f44816a8871
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>Exibindo relatórios de caso de teste (OracleToSQL)
 O relatório de caso de teste mostra os resultados da verificação de teste e as informações de teste geral. Em caso de falha de teste, informações sobre quaisquer dados incompatíveis em objetos verificados também são exibidas.  
@@ -49,7 +49,7 @@ Uma comparação de resultados (sucesso ou falha) e as incompatibilidades SSMA T
 **Finalização**  
 Mostra o status de execução como **êxito** ou **falha**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Executar casos de teste &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Testando migrados objetos de banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

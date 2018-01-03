@@ -3,10 +3,10 @@ title: Certificado PDW provisionamento (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,18 +15,18 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
 caps.latest.revision: "22"
-ms.openlocfilehash: dd8daf48fc67d4325f5a76631ef2808f42a0dee3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6cbaf559e51103648a4238245d44425c4d5af77
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-certificate-provisioning"></a>Provisionamento de certificados do PDW
 O **provisionamento de certificados do PDW** página do sistema de plataforma de análise de**do Configuration Manager** importa ou remove o certificado usado pelo PDW. 
 
 Usando o, um certificado para criptografar conexões pode ajudar a comunicação segura para o nó de controle por meio de clientes do SQL Server, ferramentas que usam os drivers do SQL Server PDW o [Console de administração](monitor-the-appliance-by-using-the-admin-console.md), e carrega os serviços de integração. 
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Antes de instalar o certificado, faça o seguinte:  
   
 1.  Obtenha um certificado de seguro. Se você precisar de mais informações sobre como obter um certificado de seguro, entre em contato com o Microsoft Support.  
@@ -83,5 +83,5 @@ SQL Server PDW continuará criptografar conexões atuais, mas não usará o remo
   
 ![Certificado PDW do dispositivo DWConfig](media/dwconfig-appl-pdw-cert.png "certificado PDW do dispositivo DWConfig")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Inicie o Gerenciador de configuração &#40; Analytics Platform System &#41;](launch-the-configuration-manager.md)  

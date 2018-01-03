@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dbc86d0dd1be8ef4e8ca19f8a7f25147a35fcc6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdiagfield-function"></a>Função SQLGetDiagField
 **Conformidade**  
@@ -257,6 +257,6 @@ n-definição *|"CRIAR DOMÍNIO"|SQL_DIAG_CREATE_DOMAIN|
 |---------------------------|---------|  
 |Obter vários campos de uma estrutura de dados de diagnóstico|[Função SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

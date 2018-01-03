@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 271b4305b15be7d4af1b7a8d45a9ec5d42a1adab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c6b38eeeba42f1a24520c176fb2f49caac1712e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drop-table-command"></a>Remova o comando de tabela
 Remove uma tabela de banco de dados especificado com a fonte de dados e o exclui do disco.  
@@ -46,7 +46,7 @@ DROP TABLE TableName | FileName | ?
  ?  
  Exibe a caixa de diálogo Remover do qual você pode escolher uma tabela para remover o banco de dados especificado com a fonte de dados e excluir do disco.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando DROP TABLE é emitido, todos os índices primários, valores padrão e as regras de validação associadas à tabela também são removidas. DROP TABLE também afeta outras tabelas no banco de dados especificado com a fonte de dados se as tabelas têm regras ou relações associadas à tabela que está sendo removida. As regras e as relações não são mais válidas quando a tabela é removida do banco de dados.  
   
 ## <a name="driver-remarks"></a>Comentários de driver  

@@ -1,7 +1,7 @@
 ---
 title: Comandos de menu e outras teclas de atalho (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5080cb5af9e80651d60dbabc55249617c7d31907
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cd2d8321fb6fe50e952bf9a92ee07e1d97f29bc6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandos de menu e outras teclas de atalho (MySQLToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para aplicativos do MySQL.  
@@ -189,6 +189,6 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
 |Inicie a informações rápidas.|CTRL + SHIFT + ESPAÇO|  
 |Vá para a declaração.|F12|  
   
-## <a name="see-also"></a>Consulte também  
-[Teclas de atalho & #40; MySQLToSQL & #41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Teclas de atalho &#40; MySQLToSQL &#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

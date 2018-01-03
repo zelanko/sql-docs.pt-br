@@ -3,23 +3,23 @@ title: Carregador de linha de comando para Parallel Data Warehouse de dwloader
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "* * dwloader * * é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente."
+description: "**dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente."
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dwloader-command-line-loader"></a>Carregador de linha de comando de dwloader
 **dwloader** é uma ferramenta de linha de comando do Parallel Data Warehouse (PDW) que carrega linhas da tabela em massa em uma tabela existente. Quando o carregamento de linhas, você pode adicionar todas as linhas ao final da tabela (*modo de acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo upsert*), ou excluir todos os linhas antes do carregamento de existente e, em seguida, inserir todas as linhas em uma tabela vazia (*recarregar modo*).  
@@ -402,7 +402,7 @@ O carregador insere linhas ao final de linhas existentes na tabela de destino.
 fastappend  
 O carregador insere linhas diretamente, sem usar uma tabela temporária, ao final de linhas existentes na tabela de destino. fastappend requer que a transação de vários (– m) opção. Um banco de dados de preparo não pode ser especificado ao usar fastappend. Não há nenhuma reversão com fastappend, o que significa que a recuperação de uma falha ou anulada carga deve ser tratada pelo seu próprio processo de carregamento.  
   
-upsert **-K***merge_column* [,... *n* ]    
+upsert **-K***merge_column* [,... *n* ]  
 O carregador usa a instrução de mesclagem do SQL Server para atualizar as linhas existentes e inserir novas linhas.  
   
 A opção -K Especifica a coluna ou colunas a base de dados de mesclagem. Essas colunas formam uma chave de mesclagem, que deve representar uma linha exclusiva. Se a chave de mesclagem existir na tabela de destino, a linha é atualizada. Se a chave de mesclagem não existe na tabela de destino, a linha será acrescentada.  
@@ -556,13 +556,13 @@ O modo de acréscimo carrega dados em duas fases. A fase um carrega dados do arq
 |Tipo de tabela|Transações múltiplas<br />Modo (-m)|Tabela estiver vazia|Suportada de simultaneidade|Log|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Pilha|Sim|Sim|Sim|mínimo|  
-|Pilha|Sim|Não|Sim|mínimo|  
-|Pilha|Não|Sim|Não|mínimo|  
-|Pilha|Não|Não|Não|mínimo|  
-|Cl|Sim|Sim|Não|mínimo|  
-|Cl|Sim|Não|Sim|Completo|  
-|Cl|Não|Sim|Não|mínimo|  
-|Cl|Não|Não|Sim|Completo|  
+|Pilha|Sim|não|Sim|mínimo|  
+|Pilha|não|Sim|não|mínimo|  
+|Pilha|não|não|não|mínimo|  
+|Cl|Sim|Sim|não|mínimo|  
+|Cl|Sim|não|Sim|Completo|  
+|Cl|não|Sim|não|mínimo|  
+|Cl|não|não|Sim|Completo|  
   
 Mostra a tabela acima **dwloader** usando o modo de acréscimo carregar em um heap ou uma tabela de índice clusterizado (CI), com ou sem o sinalizador várias transacional e carregar em uma tabela vazia ou uma tabela não vazia. O bloqueio e registro em log o comportamento de cada essa combinação de carga é exibido na tabela. Por exemplo, carregando fase (2) com o modo de acréscimo em um índice clusterizado sem modo multi transacional e em vazio tabela terão PDW criar um bloqueio exclusivo na tabela e registro em log é mínimo. Isso significa que um cliente não poderá carregar (2º) fase e consulta simultaneamente em uma tabela vazia. No entanto, ao carregar com a mesma configuração em uma tabela não vazia, PDW não emitirá um bloqueio exclusivo na tabela e simultaneidade é possível. Infelizmente, registro em log completo ocorre, diminuindo o processo.  
   

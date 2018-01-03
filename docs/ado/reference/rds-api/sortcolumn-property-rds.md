@@ -1,12 +1,13 @@
 ---
 title: Propriedade SortColumn (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.topic: article
 apitype: COM
 helpviewer_keywords: SortColumn property [RDS]
@@ -16,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8cdd4d854a4328613ab0fd98e8e107e207f2e12
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3103fcf5a0ed7df6853c1d8ad2472c0c68ce9260
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sortcolumn-property-rds"></a>Propriedade SortColumn (RDS)
 Indica qual coluna para classificar os registros.  
@@ -42,7 +43,7 @@ DataControl.SortColumn = String
  *Cadeia de caracteres*  
  Um **cadeia de caracteres** valor que representa o nome ou alias da coluna pela qual classificar os registros.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **SortColumn**, [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)propriedades fornecem a classificação e filtragem de funcionalidade no cache do lado do cliente. A funcionalidade de classificação ordena os registros por valores de uma coluna. A funcionalidade de filtragem exibe um subconjunto de registros com base em critérios de localização, enquanto o completo [registros](../../../ado/reference/ado-api/recordset-object-ado.md) é mantido no cache. O [redefinir](../../../ado/reference/rds-api/reset-method-rds.md) método executará os critérios e substitua atual **registros** com um atualizável **registros**.  
   
  Para classificar uma **registros**, primeiro você deve salvar todas as alterações pendentes. Se você estiver usando o **RDS. DataControl**, você pode usar o [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) método. Por exemplo, se seu **RDS. DataControl** é denominado ADC1, seu código seria `ADC1.SubmitChanges`. Se você estiver usando o ADO **registros**, você pode usar seu [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método. Usando **UpdateBatch** é o método recomendado para **registros** objetos criados com o [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) método. Por exemplo, seu código pode ser `myRS.UpdateBatch` ou `ADC1.Recordset.UpdateBatch`.  
@@ -50,7 +51,7 @@ DataControl.SortColumn = String
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn e propriedades SortDirection e exemplo de método de redefinição (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Propriedade de classificação](../../../ado/reference/ado-api/sort-property.md)   
  [Propriedade SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc0e46ed0050300a1310bec9d83b1c0321a634a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dcb836649993ddb644006986f284f0c0a362ed81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-exact-command"></a>Comando exato do conjunto
 Especifica as regras para comparar duas cadeias de caracteres de comprimentos diferentes.  
@@ -41,7 +41,7 @@ SET EXACT ON | OFF
  OFF  
  (Padrão). Especifica que, para que seja equivalente, expressões devem corresponder caractere até que seja atingido o fim da expressão no lado direito.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A configuração definida exata não terá efeito se duas cadeias de caracteres são o mesmo comprimento.  
   
 ## <a name="string-comparisons"></a>Comparações de cadeia de caracteres  
@@ -70,5 +70,5 @@ SET EXACT ON | OFF
 |TRIM("___") = ""|Correspondência|Correspondência|Correspondência|  
 |"" = TRIM("___")|Correspondência|Correspondência|Correspondência|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comando SET ANSI](../../odbc/microsoft/set-ansi-command.md)

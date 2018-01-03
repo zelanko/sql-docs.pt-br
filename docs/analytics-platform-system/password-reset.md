@@ -3,10 +3,10 @@ title: "Redefinição de senha (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
 caps.latest.revision: "26"
-ms.openlocfilehash: 260e7ad5adc45cb19458e36d15f6f35345ea0d2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b342aca4498816e59e0fafcb882c5c039fed501
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="password-reset"></a>Redefinição de senha
 O **de redefinição de senha** página permite que você altere a senha para as contas de administrador usada pelo sistema de plataforma de análise.  
@@ -60,7 +60,7 @@ As credenciais de administrador de domínio e as credenciais de administrador de
   
     ![Senha do SQL Server DWConfig](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Definir a senha de administrador para fazer logon no AD nós nos serviços de diretório restaurar modo &#40; DSRM &#41; &#40; Analytics Platform System &#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
 [Inicie o Gerenciador de configuração &#40; Analytics Platform System &#41;](launch-the-configuration-manager.md)  
   

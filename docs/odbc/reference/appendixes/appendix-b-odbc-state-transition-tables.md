@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apêndice b: tabelas de transição de estado de ODBC
 As tabelas neste apêndice mostram como funções ODBC causam transições do ambiente, conexão, instrução e estados do descritor. O estado do ambiente, conexão, instrução ou descritor geralmente determina quando as funções que usam o tipo de identificador (ambiente, conexão, instrução ou descritor) correspondente podem ser chamadas. Os estados de ambiente, conexão, instrução e descritor se sobrepor aproximadamente conforme mostrado nas ilustrações a seguir. Por exemplo, a sobreposição exata de conexão estados C5 e C6 e estados de instrução que S1 por meio de /s12 é – dependente, da fonte de dados, pois transações começam em momentos diferentes com diferentes fontes de dados, e depende do estado de descritor D1i (descritor alocado implicitamente) sobre o estado da instrução ao qual o descritor está associado, ao estado D1e (explicitamente alocados descritor) é independente do estado de qualquer instrução. Para obter uma descrição de cada estado, consulte [ambiente transições](../../../odbc/reference/appendixes/environment-transitions.md), [Conexão transições](../../../odbc/reference/appendixes/connection-transitions.md), [transições de instrução](../../../odbc/reference/appendixes/statement-transitions.md), e [transições do descritor ](../../../odbc/reference/appendixes/descriptor-transitions.md), mais adiante neste apêndice.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e60681b7a3f30a83c2a1227c466b663b1b4d8a7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f89e4bec58810b1afb5c15e1b89b96c3193d8793
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Adicionando uma fonte de dados do Visual FoxPro
 Para acessar dados do Visual FoxPro do seu aplicativo, você deve ter uma fonte de dados. Você pode criar uma fonte de dados da seguinte maneira:  

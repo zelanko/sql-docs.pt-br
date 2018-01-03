@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 678d44bb439804246b84a7f8d60f59be45a6dce0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b96e4ef1e53fec8361bd96dee81206efdf138538
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desenvolvimento de reconhecimento de Pool de Conexão em um Driver ODBC
 Este tópico discute os detalhes do desenvolvimento de um driver ODBC que contém informações sobre como o driver deve fornecer serviços de pooling de conexão.  
@@ -151,6 +151,6 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
  ![Diagrama de estado](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pooling de Conexão com reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Referência da SPI (Interface do Provedor de Serviços) do ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

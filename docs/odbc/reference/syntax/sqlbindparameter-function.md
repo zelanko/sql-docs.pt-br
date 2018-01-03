@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 083be2fe5cda6f28cb250a3e0bc4aaef9bf30ef2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbindparameter-function"></a>Função SQLBindParameter
 **Conformidade**  
@@ -586,7 +586,7 @@ int main() {
 |Especificando vários valores de parâmetro|[Função SQLParamOptions](../../../odbc/reference/syntax/sqlparamoptions-function.md)|  
 |Envio de dados de parâmetro em tempo de execução|[Função SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Recuperando parâmetros de saída usando SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

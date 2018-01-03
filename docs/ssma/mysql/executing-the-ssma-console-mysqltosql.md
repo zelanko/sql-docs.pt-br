@@ -1,7 +1,7 @@
 ---
 title: Executar o Console do SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -28,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39b41addf566e326174a004a210a2ba2b1cdf311
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6faf8033f2210a68217fe6cf3e7021edc2b29b98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Executar o Console do SSMA (MySQLToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA.  
@@ -295,7 +295,7 @@ relatório gerar de avaliação
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <generate-assessment-report  
@@ -369,7 +369,7 @@ Converter esquema
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <convert-schema  
@@ -429,7 +429,7 @@ migrar dados
   
 </migrate-data>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <migrate-data  
@@ -517,7 +517,7 @@ Sincronizar de destino
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target  
@@ -526,7 +526,7 @@ ou
   
   object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target>  
@@ -582,7 +582,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database  
@@ -591,7 +591,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database>  
@@ -641,7 +641,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <save-as-script  
@@ -717,7 +717,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 </convert-sql-statement>  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -742,7 +742,7 @@ ou
   
 />  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  

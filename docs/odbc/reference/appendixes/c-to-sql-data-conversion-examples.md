@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d900ac7b21b75a5cecbb92f41a95dc9cbb836423
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d3270b142cb857876a558122b670bb329e08c93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C para exemplos de conversão de dados SQL
 Os exemplos a seguir ilustram como o driver converte dados de C para dados do SQL:  
   
-|Identificador de tipo C|Valor de dados C|Tipo SQL<br /><br /> identificador|Coluna<br /><br /> comprimento|Dados SQL<br /><br /> value|SQLSTATE|  
+|Identificador de tipo C|Valor de dados C|Tipo SQL<br /><br /> identificador|coluna<br /><br /> comprimento|Dados SQL<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|n/d|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  

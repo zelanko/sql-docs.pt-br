@@ -1,11 +1,13 @@
 ---
 title: "Estado de prontidão é de propriedade (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d5533fd471b6aee697825d2251c84adbcdfccfa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 52d32f6b2ba1e3a85b0d374a4d11b4e0bf3c742c
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="readystate-property-rds"></a>Estado de prontidão é de propriedade (RDS)
 Indica o progresso de uma [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto que recupera dados em seu [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -40,7 +42,7 @@ Indica o progresso de uma [DataControl](../../../ado/reference/rds-api/datacontr
 > [!NOTE]
 >  Cada arquivo executável do lado do cliente que usa constantes deve fornecer declarações para eles. Você pode recortar e colar as declarações de constantes desejado do arquivo Adcvbs.inc, localizado na pasta de instalação padrão para a biblioteca RDS.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) evento para monitorar as alterações no **estado de prontidão é** propriedade durante uma operação de consulta assíncrona. Isso é mais eficiente do que verificar periodicamente o valor da propriedade.  
   
  Se ocorrer um erro durante uma operação assíncrona, o **estado de prontidão é** alteração na propriedade **adcReadyStateComplete**, o [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade muda de **adStateExecuting** para **adStateClosed**e o **registros** objeto [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade permanece *nada* .  
@@ -48,7 +50,7 @@ Indica o progresso de uma [DataControl](../../../ado/reference/rds-api/datacontr
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de estado de prontidão é de propriedade (VBScript)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)   
  [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [Propriedade ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)

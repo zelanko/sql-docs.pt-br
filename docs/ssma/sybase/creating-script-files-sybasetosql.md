@@ -3,7 +3,7 @@ title: Criando arquivos de Script (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 056a2f6d1954d2317db2d4846e6f17eef028815b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 27c1d881b13dccecbe7d8fb66f8ea47376895f04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-sybasetosql"></a>Criando arquivos de Script (SybaseToSQL)
 A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
@@ -409,6 +409,6 @@ O usuário pode facilmente validar seu arquivo de script no arquivo de definiç�
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no operando o console é [criando arquivos de valor variável &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criando arquivos do valor da variável &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   

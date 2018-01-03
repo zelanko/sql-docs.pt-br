@@ -1,7 +1,7 @@
 ---
 title: Comandos de menu e outras teclas de atalho (Oracle para SQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 87ba66199adcb14a48a8b3782611c4828b445062
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b6bdfbc11f7e458cb93fbf0af7a159526fe29d7f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Comandos de menu e outras teclas de atalho (Oracle para SQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para aplicativo Oracle.  
@@ -203,6 +203,6 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
 |Inicie a informações rápidas.|CTRL + SHIFT + ESPAÇO|  
 |Vá para a declaração.|F12|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Teclas de atalho &#40; Oracle SQL &#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
   

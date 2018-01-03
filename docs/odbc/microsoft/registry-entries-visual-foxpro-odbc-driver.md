@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Entradas do registro (Driver ODBC do Visual FoxPro)
 Quando você instala o Driver de ODBC do Visual FoxPro, o programa de instalação atualiza o registro do sistema, na chave do registro HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, para adicionar uma nova chave chamada Microsoft Visual FoxPro Driver. Sob essa chave, valores descritos na tabela a seguir são adicionados.  
@@ -55,8 +55,8 @@ Quando você instala o Driver de ODBC do Visual FoxPro, o programa de instalaç�
 |Agrupar|REG_SQ|Nenhum suporte para a sequência de agrupamento|  
 |Description|REG_SZ|Descrição da fonte de dados do usuário|  
 |Driver||Caminho do sistema para o arquivo vfpodbc|  
-|Exclusive||Sim ou não|  
-|BackgroundFetch||Sim ou não|  
+|Exclusive||Sim ou Não|  
+|BackgroundFetch||Sim ou Não|  
 |SourceDB|REG_SZ|Caminho. Arquivo DBC|  
 |SourceType|REG_SZ|"DBC" ou "DBF"|  
   

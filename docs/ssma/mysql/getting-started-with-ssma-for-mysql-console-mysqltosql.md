@@ -1,7 +1,7 @@
 ---
 title: "Guia de Introdução com o SSMA para MySQL Console (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab719f68ed7fb2718052c5ba4816dd7be963b494
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 595d3a566f472708ced96cbc5faaf2c359474d39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Guia de Introdução com o SSMA para MySQL Console (MySQLToSQL)
 Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console do MySQL. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console SSMA típica.  
@@ -44,13 +44,13 @@ Use as etapas a seguir para iniciar o aplicativo de console SSMA:
 ## <a name="procedure-for-using-the-ssma-console"></a>Procedimento para usar o Console do SSMA  
 Depois que o console é iniciado com êxito em seu sistema Windows, você pode usar as etapas a seguir para trabalhar nela:  
   
-1.  Configure o Console do SSMA através dos arquivos de script. Para obter mais informações sobre esta seção, consulte [criando arquivos de Script & #40; MySQLToSQL & #41; ](../../ssma/mysql/creating-script-files-mysqltosql.md) .  
+1.  Configure o Console do SSMA através dos arquivos de script. Para obter mais informações sobre esta seção, consulte [criando arquivos de Script &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-script-files-mysqltosql.md) .  
   
-2.  [Criando arquivos do valor da variável & #40; MySQLToSQL & #41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+2.  [Criando arquivos do valor da variável &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   
-3.  [Criar os arquivos de Conexão do servidor & #40; MySQLToSQL & #41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+3.  [Criar os arquivos de Conexão do servidor &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
-4.  [Executar o Console SSMA & #40; MySQLToSQL & #41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) com base em suas necessidades de projeto  
+4.  [Executar o Console SSMA &#40; MySQLToSQL &#41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) com base em suas necessidades de projeto  
   
 Recursos adicionais:  
   
@@ -74,6 +74,6 @@ Interpretação de cor da saída do console na tabela a seguir:
 |Verde|Solicitar entrada do usuário|  
 |Ciano|Início, término e o resultado de uma operação|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalando o SSMA para MySQL](http://msdn.microsoft.com/en-us/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
   

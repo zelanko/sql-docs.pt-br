@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3293c302d2dc6d831b088c3999390e03a6b3bd42
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3760400f23b558c27cd70a3ecd288171cbd56534
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcancelhandle-function"></a>Função SQLCancelHandle
 **Conformidade**  
@@ -110,7 +110,7 @@ SQLRETURN SQLCancelHandle(
 |---------------------------|---------|  
 |Cancelando uma função em execução assíncrona em um identificador de instrução, cancelamento de uma função em uma instrução que precisa de dados, ou cancelar uma função em execução em uma instrução em outro thread.|[Função SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

@@ -3,7 +3,7 @@ title: Tipo de propriedade (coluna) (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d12562a4bfe6fd449009a9db029dcd1f6aab99b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c421f77641a8506da430597f15c419127085cc3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-column-adox"></a>Tipo de propriedade (coluna) (ADOX)
 Indica o tipo de dados de uma coluna.  
@@ -37,13 +37,13 @@ Indica o tipo de dados de uma coluna.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **longo** valor que pode ser uma da [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) constantes. O valor padrão é **adVarWChar**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa propriedade é somente leitura até o [coluna](../../../ado/reference/adox-api/column-object-adox.md) objeto é acrescentado a uma coleção ou outro objeto, após o qual ele é somente leitura.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Propriedade de tipo (chave) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Propriedade Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

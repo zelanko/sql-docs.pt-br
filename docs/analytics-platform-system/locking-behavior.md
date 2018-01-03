@@ -3,10 +3,10 @@ title: Comportamento de bloqueio (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
 caps.latest.revision: "27"
-ms.openlocfilehash: 6f4b213942db85b9e7171d11d6b88512d3ad7779
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1cb1b0ec346ff18d40a3ac03e7ba45b37666c98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locking-behavior"></a>Comportamento de bloqueio
 PDW do SQL Server usa bloqueio para garantir a integridade de transações e para manter a consistência de bancos de dados quando vários usuários estão acessando os dados ao mesmo tempo.  
@@ -33,7 +33,7 @@ SQL Server PDW dá suporte a quatro modos de bloqueio:
 Exclusive  
 O bloqueio exclusivo impede a gravação ou leitura do objeto bloqueado até que a transação mantendo que o bloqueio exclusivo é concluída. Não há outros bloqueios de qualquer modo são permitidos enquanto o bloqueio exclusivo está em vigor. Por exemplo, DROP TABLE e CREATE DATABASE usam um bloqueio exclusivo.  
   
-Compartilhada  
+Compartilhado  
 O bloqueio compartilhado impede a inicialização de um bloqueio exclusivo no objeto afetado, mas permite que todos os outros modos de bloqueio. Por exemplo, a instrução SELECT inicia um bloqueio compartilhado e, portanto, permite que várias consultas acessar os dados selecionados ao mesmo tempo, mas impede que atualizações para os registros sendo lidos, até que a instrução SELECT seja concluída.  
   
 ExclusiveUpdate  
@@ -101,7 +101,7 @@ SQL Server suporta os seguintes tipos de bloqueios. Nem todos os tipos de bloque
   
 -   RangeX_X (bloqueio de intervalo de chave exclusivo e de recurso exclusivo). Este é um bloqueio de conversão usado na atualização de uma chave em um intervalo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->

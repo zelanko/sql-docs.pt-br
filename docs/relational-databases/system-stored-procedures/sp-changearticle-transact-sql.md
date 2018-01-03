@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||Nome da tabela ou exibição usado para produzir um arquivo de saída de sincronização. O padrão é NULO. Sem suporte para Publicadores Oracle.|  
 |**espaço de tabela**||Identifica o espaço de tabela usado pela tabela de log para um artigo publicado de um banco de dados de Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**limite**||Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Sem suporte para replicação ponto a ponto.|  
-|**tipo**||Sem suporte para Publicadores Oracle.|  
+|**type**||Sem suporte para Publicadores Oracle.|  
 ||**logbased**|Artigo com base em log.|  
 ||**logbased manualboth**|Artigo com base em log com filtro manual e exibição manual. Essa opção requer que o *sync_object* e *filtro* propriedades também ser definidas. Sem suporte para Publicadores Oracle.|  
 ||**logbased manualfilter**|Artigo com base em log com filtro manual. Essa opção requer que o *sync_object* e *filtro* propriedades também ser definidas. Sem suporte para Publicadores Oracle.|  
@@ -178,7 +178,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **SP_CHANGEARTICLE** é usado em replicação de instantâneo e replicação transacional.  
   
  Quando um artigo pertence a uma publicação que oferece suporte à replicação transacional ponto a ponto, você só pode alterar o **descrição**, **ins_cmd**, **upd_cmd**e **del_cmd** propriedades.  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Dentro de uma publicação existente, você pode usar **sp_changearticle** para alterar um artigo, sem a necessidade de descartar e recriar a publicação inteira.  
   
 > [!NOTE]  
->  Ao alterar o valor de *schema_option*, o sistema não executará uma atualização bit a bit. Isso significa que quando você definir *schema_option* usando **sp_changearticle**existente configurações de bit poderão ser desativadas. Para manter as configurações existentes, você deve executar [& (AND bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) entre o valor que você está definindo o e o valor atual de *schema_option*, que pode ser determinado executando [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
+>  Ao alterar o valor de *schema_option*, o sistema não executará uma atualização bit a bit. Isso significa que quando você definir *schema_option* usando **sp_changearticle**existente configurações de bit poderão ser desativadas. Para manter as configurações existentes, você deve executar [| (OR bit a bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) entre o valor que você está definindo o e o valor atual de *schema_option*, que pode ser determinado executando [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## <a name="valid-schema-options"></a>Opções de esquema válidas  
  A tabela a seguir descreve os valores permitidos de *schema_option* com base no tipo de replicação (mostrados na parte superior) e o tipo de artigo (mostrado abaixo da primeira coluna).  
@@ -249,7 +249,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>Permissões  
  Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_changearticle**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de artigo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

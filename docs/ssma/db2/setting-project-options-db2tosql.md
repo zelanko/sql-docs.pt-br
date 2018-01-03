@@ -1,7 +1,7 @@
 ---
 title: "Definir as opções de projeto (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33144db25f6e444759cd8dc615106b062d9bc5f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2ffdaea48e85e53a6ba170ab34251a1d26e193f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-db2tosql"></a>Definindo opções de projeto (DB2ToSQL)
 Para cada projeto SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão do objeto, o carregamento de objeto, configurações de migração de dados e a interface do usuário. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou migrar dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], verifique se as opções de configuração são adequadas para o projeto.  
@@ -46,7 +46,7 @@ O SSMA tem cinco conjuntos de configurações de projeto:
   
 Ele também tem quatro modos para definir essas configurações:  
   
--   Default  
+-   Padrão  
   
 -   Otimistas  
   
@@ -99,13 +99,13 @@ Você também pode personalizar configurações para o projeto atual. Essas conf
   
 3.  Clique em **Okey** para salvar as configurações.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 A próxima etapa da migração depende de suas necessidades de projeto:  
   
 -   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [mapeamento DB2 e tipos de dados do SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
 -   Caso contrário, você pode converter as definições de objeto de banco de dados do DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definições de objeto. Para obter mais informações, consulte [convertendo esquemas de DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Mapeamento de DB2 e tipos de dados do SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   

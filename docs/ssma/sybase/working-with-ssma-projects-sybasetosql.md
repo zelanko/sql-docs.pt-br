@@ -3,7 +3,7 @@ title: Trabalhando com projetos do SSMA (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ec9d76459adba531e759a3a42bee0831d3cb0a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4625284beb50612c276046c139f8340b1872cfc8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Trabalhando com projetos do SSMA (SybaseToSQL)
 Para migrar bancos de dados do Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, você primeiro crie um projeto SSMA. O projeto é um arquivo que contém metadados sobre os bancos de dados ASE que você deseja migrar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure, metadados sobre a instância de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure que receberá os dados, e os objetos migrados [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou informações de conexão do SQL Azure e as configurações do projeto.  
@@ -128,7 +128,7 @@ Quando você abre um projeto, ele é desconectado da ASE e do [!INCLUDE[ssNoVers
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [conectar para Sybase ASE](http://msdn.microsoft.com/en-us/a45a2330-9175-4c9e-af38-ef920e350614).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando Sybase ASE bancos de dados do SQL Server - banco de dados SQL do Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Conectar-se para Sybase ASE &#40; SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
 [Conectar-se ao SQL Server &#40; SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  

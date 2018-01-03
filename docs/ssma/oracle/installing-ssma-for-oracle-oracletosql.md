@@ -1,7 +1,7 @@
 ---
 title: Instalando o SSMA para Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 89dbed0686ae50a6916f8c1fea1098f8a52fad79
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a7cf08071a906fbab060b6069a7cb33ff838c60e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Instalando o SSMA para Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migração (SSMA Assistant) for Oracle consiste em um aplicativo cliente que você pode usar para executar uma migração do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e banco de dados de SQL do Azure. Ele também contém um pacote de extensão que oferece suporte à migração de dados e o uso das funções do sistema Oracle em seus bancos de dados migrados.  
@@ -39,6 +39,6 @@ Se você quiser atualizar para uma versão posterior do SSMA para Oracle, você 
 |[Instalando componentes do SSMA do SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|Fornece informações e instruções para instalar o pacote de extensão em instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Removendo o SSMA para componentes do Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|Fornece instruções para desinstalar o cliente do pacote de programa e a extensão.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

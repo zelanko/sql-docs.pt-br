@@ -2,9 +2,11 @@
 title: "Instalação autônoma dos serviços de aprendizado de máquina do Python (no banco de dados) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: r-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77d9a8fcaca2aa8161d6763cda74239754da41d5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a159a3198037e21664bb9b07647a01b1d5317d22
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Instalação autônoma dos serviços de aprendizado de máquina do Python (no banco de dados)
 
@@ -27,7 +29,7 @@ Este tópico descreve como usar os argumentos de linha de comando na instalaçã
 > [!NOTE]
 > Não se esqueça de incluir os argumentos de linha de comando para os contratos de licença, uma para Python e outra para o SQL Server.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de iniciar o processo de instalação, observe estes requisitos:
 

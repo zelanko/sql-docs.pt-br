@@ -1,7 +1,7 @@
 ---
 title: Conecte-se ao banco de dados do SQL Azure (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3254d9db5c90b932e5a1fbfcf8d9821549c3b61b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54f826bd9b4bd2bdec0c7cd79c6faf20b0630639
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Conecte-se ao banco de dados do SQL Azure (AccessToSQL)
 Use a conectar-se a caixa de diálogo do SQL Azure para se conectar ao banco de dados do SQL Azure que você deseja migrar.  
@@ -37,14 +37,14 @@ Para acessar essa caixa de diálogo, no **arquivo** menu, selecione **conectar-s
   
 Selecione ou insira o nome do servidor para conectar-se ao SQL Azure.  
   
-**Banco de dados**  
+**Backup de banco de dados**  
   
 Selecione, digite ou **procurar** o nome do banco de dados.  
   
 > [!IMPORTANT]  
 > O SSMA para Access não dá suporte a conexão ao banco de dados mestre no SQL Azure.  
   
-**Nome de usuário**  
+**User name**  
   
 Insira o nome de usuário SSMA usará para se conectar ao banco de dados do SQL Azure  
   

@@ -3,7 +3,7 @@ title: "Configurações globais (Tester) (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a08108be504ebe901f6e202af2fd8c1d757c198c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b5ba92c5972df1e29bbe3c4cd3df4f093739a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Configurações globais (Tester) (SybaseToSQL)
 Use a página de teste do **configurações globais** caixa de diálogo para especificar configurações para o SSMA Tester.  
@@ -39,7 +39,7 @@ As seguintes opções estão disponíveis para essa configuração:
   
 1.  Sim  
   
-2.  Não  
+2.  não  
   
 **Modo de economia de tabelas auxiliares**  
 Essa configuração especifica como salvar tabelas auxiliares internas criadas durante a execução do caso de teste. As opções a seguir pode ser definida para essa configuração específica:  
@@ -61,7 +61,7 @@ As seguintes opções estão disponíveis para essa configuração:
   
 1.  Sim  
   
-2.  Não  
+2.  não  
   
 **Interromper a execução de teste após a primeira falha**  
 Essa configuração especifica se é preciso parar o caso de teste em execução atual, se tiver ocorrido um erro durante a execução. Conjunto de opção padrão é **Sim**.  
@@ -70,8 +70,8 @@ As seguintes opções estão disponíveis para essa configuração:
   
 1.  Sim  
   
-2.  Não  
+2.  não  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Concluindo a preparação do caso de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

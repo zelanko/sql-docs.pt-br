@@ -1,7 +1,7 @@
 ---
 title: Acessar os esquemas de estoque (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -47,11 +47,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d22835bef06693ecf2fef51240f4bd9d9607a8e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventário de acesso (AccessToSQL)
 As seções a seguir descrevem as tabelas que são criadas por SSMA quando você exportar os esquemas de acesso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -189,6 +189,6 @@ Metadados do módulo são exportados para o **SSMA_Access_InventoryModules** tab
 |**ModuleId**|**int**|Um inteiro de incremento que identifica o módulo. Essa coluna é a chave primária da tabela.|  
 |**ModuleName**|**nvarchar(4000)**|O nome do módulo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Exportar um inventário do Access](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   

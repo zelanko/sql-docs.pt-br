@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec8f2b705ca226f94f2fcea9cf79aa8a7cdc31c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86ba311eb458c1128a611b6d1cc2ed1c71329d3f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="translator-specification-subkeys"></a>Conversor especificação subchaves
 Tradutor listado na subchave conversor ODBC tem uma subchave de seu próprio. Essa subchave tem o mesmo nome que o valor correspondente na subchave conversor ODBC. Os valores sob essa subchave listam os caminhos completos do conversor e instalação de conversor DLLs e a contagem de uso. Os formatos dos valores são conforme mostrado na tabela a seguir.  

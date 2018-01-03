@@ -3,7 +3,7 @@ title: "Adicionar usuários e grupos, exemplo dos métodos ChangePassword (VB) |
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 103941f17c583a7e9245e2195e63ee4e29e94db4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e8d03cafc4120b0082f3207ef852685f7bb822d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Adicionar usuários e grupos, exemplo dos métodos ChangePassword (VB)
 Este exemplo demonstra o [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) método [grupos](../../../ado/reference/adox-api/groups-collection-adox.md), bem como a [acrescentar](../../../ado/reference/adox-api/append-method-adox-users.md) método de [usuários](../../../ado/reference/adox-api/users-collection-adox.md) adicionando um novo [Grupo](../../../ado/reference/adox-api/group-object-adox.md) e um novo [usuário](../../../ado/reference/adox-api/user-object-adox.md) no sistema. O novo **grupo** é acrescentado ao **grupos** coleção do novo **usuário**. Consequentemente, o novo **usuário** é adicionada para o **grupo**. Além disso, o [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) método é usado para especificar o **usuário** senha.  
@@ -127,7 +127,7 @@ End Sub
 ' EndGroupVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [(Grupos de ADOX) do método append](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Acrescente o método (ADOX usuários)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

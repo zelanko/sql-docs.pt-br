@@ -1,7 +1,7 @@
 ---
 title: Conectar-se ao banco de dados do DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 973d8f565fb50815c3e8c01190a08b622fadeb77
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f718f75a750d376bdae9ff7bfab10f298107822d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Conectar-se ao banco de dados do DB2 (DB2ToSQL)
 Para migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve se conectar ao banco de dados DB2 que você deseja migrar. Quando você se conectar, o SSMA obtém metadados sobre todos os esquemas do DB2 e exibe no painel Explorador de metadados do DB2. O SSMA armazena informações sobre o servidor de banco de dados, mas não armazena as senhas.  
@@ -118,6 +118,6 @@ Metadados sobre o banco de dados do DB2 não será atualizado automaticamente. O
   
 -   A próxima etapa no processo de migração é [conectando ao SQL Server](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do DB2 para SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

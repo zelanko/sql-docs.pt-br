@@ -1,7 +1,7 @@
 ---
 title: Executar o Console do SSMA (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -22,11 +22,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ce380d48c1c8af960fac1153cbde8e60ab593566
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c0109ed3c675b140cbce6d780c24256c0eb2bc9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Executar o Console do SSMA (OracleToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA. O aplicativo de console usa alguns comandos do arquivo de script padrão como enumerada nesta seção.  
@@ -167,7 +167,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <force-load>  
@@ -280,7 +280,7 @@ relatório gerar de avaliação
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <generate-assessment-report  
@@ -354,7 +354,7 @@ Converter esquema
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <convert-schema  
@@ -422,7 +422,7 @@ Migra os dados de origem para o destino.
   
 </migrate-data>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <migrate-data  
@@ -511,7 +511,7 @@ Sincronizar de destino
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target  
@@ -520,7 +520,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target>  
@@ -576,7 +576,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database  
@@ -585,7 +585,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database>  
@@ -635,7 +635,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <save-as-script  
@@ -711,7 +711,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 </convert-sql-statement>  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -734,7 +734,7 @@ ou
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  

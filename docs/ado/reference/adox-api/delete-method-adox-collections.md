@@ -3,7 +3,7 @@ title: "Método (ADOX coleções) Delete | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -36,11 +36,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aae45d1d8f6bc5eb2ab6ebf429d48426cceacf20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea1ef63c7ecf6a9a957542608ec57c057e9b40b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-method-adox-collections"></a>Excluir método (ADOX coleções)
 Remove um objeto de uma coleção.  
@@ -56,7 +56,7 @@ Collection.Delete Name
  *Nome*  
  Um **Variant** que especifica o nome ou a posição ordinal (índice) do objeto a ser excluído.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ocorrerá um erro se o *nome* não existe na coleção.  
   
  Para [tabelas](../../../ado/reference/adox-api/tables-collection-adox.md) e [usuários](../../../ado/reference/adox-api/users-collection-adox.md) coleções, ocorrerá um erro se o provedor não oferecer suporte a excluir tabelas ou usuários, respectivamente. Para [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) e [exibições](../../../ado/reference/adox-api/views-collection-adox.md) coleções, **excluir** falhará se o provedor não oferece suporte a comandos persistentes.  
@@ -69,6 +69,6 @@ Collection.Delete Name
 |[Coleção Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Coleção Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
 |[Coleção Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos de exemplo de método (VB)-excluir](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Exemplo do método Delete de exibições (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

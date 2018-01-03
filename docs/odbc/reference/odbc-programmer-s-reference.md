@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>O programador ODBC referência
 O *referência do programador de ODBC* contém as seções a seguir.  
@@ -60,7 +60,7 @@ O *referência do programador de ODBC* contém as seções a seguir.
 |**SQLEndTran**|Em negrito indica sintaxe deve ser digitada exatamente conforme mostrado, incluindo nomes de função.|  
 |&#124;|Uma barra vertical separa as duas opções mutuamente exclusivas em uma linha de sintaxe.|  
 |...|Uma elipse indica que os argumentos podem ser repetidos várias vezes.|  
-|. . .|Uma coluna de três pontos indica continuação anterior linhas de código.|  
+|para obter informações sobre a ferramenta de configuração e recursos adicionais. para obter informações sobre a ferramenta de configuração e recursos adicionais. para obter informações sobre a ferramenta de configuração e recursos adicionais.|Uma coluna de três pontos indica continuação anterior linhas de código.|  
   
 ## <a name="about-the-code-examples"></a>Sobre os exemplos de código  
  Os exemplos de código neste guia destinam-se apenas para fins ilustrativos. Porque eles são gravados principalmente para demonstrar os princípios ODBC, eficiência, às vezes, foi definida para fins de esclarecimento. Além disso, todas seções do código, às vezes, foram omitidas para fins de esclarecimento. Isso inclui as definições de funções de ODBC não (funções cujos nomes não começam com "SQL") e a maioria dos tratamento de erros.  

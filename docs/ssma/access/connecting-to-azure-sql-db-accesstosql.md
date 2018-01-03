@@ -1,7 +1,7 @@
 ---
 title: Conectar-se ao banco de dados do SQL Azure (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2573e0aa114381dc90e21ab2a871453793ddc13d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e68c4b94210234875eebbe166f83d87baebbc0e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Conectar-se ao banco de dados do SQL Azure (AccessToSQL)
 Para migrar bancos de dados do Access para o SQL Azure, você deve se conectar à instância de destino do SQL Azure. Quando você se conectar, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Azure e exibe os metadados de banco de dados no Explorador de metadados do SQL Azure. O SSMA armazena informações sobre a instância do SQL Azure está conectado, mas não armazena as senhas.  
@@ -116,6 +116,6 @@ A próxima etapa da migração depende de suas necessidades de projeto:
   
 -   Se você não precisa executar qualquer uma dessas tarefas, você pode converter as definições de objeto de banco de dados do Access em definições de objeto do SQL Azure. Para obter mais informações, consulte [convertendo bancos de dados do Access](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

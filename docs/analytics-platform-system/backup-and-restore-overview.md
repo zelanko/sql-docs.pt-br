@@ -3,10 +3,10 @@ title: "Backup e restauração"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
 caps.latest.revision: "50"
-ms.openlocfilehash: 646db87f946475ebdf427b3f4ef3ec00da0dc5f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 Descreve como os dados de backup e restauração works para SQL Server Parallel Data Warehouse (PDW). Operações de backup e restauração são usadas para recuperação de desastres. Backup e restauração também podem ser usados para copiar um banco de dados de um dispositivo para outro dispositivo.  
@@ -129,7 +129,7 @@ Por exemplo, ao restaurar um banco de dados de 60 GB de um dispositivo de 2 nós
   
 Após a redistribuição cada nó de computação contém menos dados reais e mais espaço livre do que cada nó de computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado é maior do que o necessário, você pode usar [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reduzir o tamanho dos arquivos de banco de dados.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Backup e restauração tarefas|Description|  
 |---------------------------|---------------|  

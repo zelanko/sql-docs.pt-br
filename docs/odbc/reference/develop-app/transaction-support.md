@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac759747a088f98f1426afedf8623169d91b113f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4964565ce7de30b30fa3dc4c7705c5656ebcb88b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-support"></a>Suporte a transações
 O grau de suporte para transações é definido pelo driver. ODBC foi projetado para ser implementada em um banco de dados usuário único ou de área de trabalho que não precisa gerenciar as várias atualizações para seus dados. Além disso, alguns bancos de dados que oferecem suporte a transações fazer apenas para as instruções de linguagem de manipulação de dados (DML) do SQL; há restrições ou semântica de transação especial em relação ao uso de Data Definition Language (DDL) quando uma transação está ativa. Ou seja, pode haver suporte a transações para várias atualizações simultâneas em tabelas, mas não para alterar o número e a definição das tabelas durante uma transação.  

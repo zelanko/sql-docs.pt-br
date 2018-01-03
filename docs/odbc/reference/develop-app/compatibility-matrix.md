@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 26f6b907cf81545ce8356ca7654c3779833f73aa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6c3a7fac17ed685680e71b329388e192ec1c9f97
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compatibility-matrix"></a>Matriz de compatibilidade
 A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers definidas anteriormente nesta seção.  
@@ -74,5 +74,5 @@ A tabela a seguir descreve a compatibilidade dos tipos de aplicativos e drivers 
 ## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>Usando SQLCancelHandle em um aplicativo compatível com todos os gerenciadores de Driver  
  Porque [SQLCancelHandle função](../../../odbc/reference/syntax/sqlcancelhandle-function.md) não tem suporte em gerenciadores de Driver que foram lançadas antes do Windows 7, um aplicativo não pode ser carregado em versões mais antigas do Windows se chama **SQLCancelHandle** diretamente. Para trabalhar com todas as versões do Driver de gerentes e usar **SQLCancelHandle** em novas versões do Windows, um aplicativo deve chamar **SQLCancelHandle** indiretamente usando **LoadLibrary** e **GetProcAddress.**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Novidades no ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

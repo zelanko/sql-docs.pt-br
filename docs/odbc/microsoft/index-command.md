@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40581a79d22feadb8616c021820e93a634ef94d7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1a3cd65cf38079a6d6c23cd08f371841a0463f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-command"></a>Comando de índice
 Cria um arquivo de índice para exibir e acessar os registros da tabela em uma ordem lógica.  
@@ -95,7 +95,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  ADITIVO  
  Mantém abre os arquivos de índice abertos anteriormente. Se você omitir a cláusula ADITIVO quando você cria um arquivo de índice ou de arquivos para uma tabela com índice, os arquivos de índice aberto anteriormente (exceto o índice composto estrutural) são fechados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Registros em uma tabela que tem um arquivo de índice são exibidos e acessados na ordem especificada pela expressão do índice. A ordem física dos registros na tabela não é alterada por um arquivo de índice.  
   
 ## <a name="index-types"></a>Tipos de índice  
@@ -120,7 +120,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  Se você usar uma função definida pelo usuário em uma expressão de índice, do Visual FoxPro deve ser capaz de localizar a função definida pelo usuário. Quando o Visual FoxPro cria um índice, a expressão de índice é salvo no arquivo de índice, mas apenas uma referência para a função definida pelo usuário está incluída na expressão do índice.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE - comando SQL](../../odbc/microsoft/alter-table-sql-command.md)   
  [EXCLUIR o comando marca](../../odbc/microsoft/delete-tag-command.md)   
  [Comando do conjunto COLLATE](../../odbc/microsoft/set-collate-command.md)   

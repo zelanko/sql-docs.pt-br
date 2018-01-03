@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**decimal (5,2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
 |avg_data_io_percent|**decimal (5,2)**|Média de dados utilização de e/s em porcentagem do limite da camada de serviço.|  
 |avg_log_write_percent|**decimal (5,2)**|Utilização média do recurso de gravação, em porcentagem, do limite da camada de serviço.|  
-|avg_memory_percent|**decimal (5,2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para o armazenamento de objetos OLTP na memória.|  
+|avg_memory_usage_percent|**decimal (5,2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para o armazenamento de objetos OLTP na memória.|  
 |xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatório). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: variáveis de tabela, índices e tabelas com otimização de memória. Ele também inclui a memória usada para processar operações de ALTER TABLE.<br /><br /> Retorna 0 se não for usado o OLTP na memória no banco de dados.|  
 |max_worker_percent|**decimal (5,2)**|Máximo simultâneos trabalhadores (solicitações) em porcentagem do limite da camada de serviço do banco de dados.|  
 |max_session_percent|**decimal (5,2)**|Máximo de sessões simultâneas em porcentagem do limite da camada de serviço do banco de dados.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissões  
  Essa exibição exige a permissão VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os dados retornados por **sys.DM db_resource_stats** é expresso como uma porcentagem do máximo permitido de limites DTU para o nível de desempenho/da camada de serviço que você está executando para bancos de dados Basic, Standard e Premium. Para as camadas Web e Negócios, esses números indicam as percentagens em termos da camada de desempenho Standard S2. Por exemplo, ao executar com relação a um banco de dados Web ou Business, se avg_cpu_percent retornar 70%, isso indica 70% do limite da camada S2. Além disso, para camadas Web e Negócios, as percentagens podem refletir um número além de 100%, o que também é baseado no limite da camada S2.  
   
  Se o banco de dados fez failover para outro servidor nos últimos 60 minutos, a exibição retornará apenas dados para o tempo pelo qual ele foi o banco de dados primário desde esse failover.  
@@ -103,7 +103,7 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys. resource_stats &#40; Banco de dados SQL do Azure &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Limites e recursos de nível de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  

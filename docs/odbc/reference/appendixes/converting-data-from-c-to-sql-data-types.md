@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d3f3edee7f90920ad1d3ff68ccf3057a248b3b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversão de dados de C para tipos de dados SQL
 Quando um aplicativo chama **SQLExecute** ou **SQLExecDirect**, o driver recupera os dados para todos os parâmetros associados com **SQLBindParameter** em locais de armazenamento do o aplicativo. Quando um aplicativo chama **SQLSetPos**, o driver recupera os dados para uma atualização ou operação de adição de colunas associadas a **SQLBindCol**. Para parâmetros de dados em execução, o aplicativo envia os dados de parâmetro com **SQLPutData**. Se necessário, o driver converterá os dados do tipo de dados especificado pelo *ValueType* argumento **SQLBindParameter** para o tipo de dados especificado pelo *ParameterType*argumento **SQLBindParameter**e, em seguida, envia os dados para a fonte de dados.  

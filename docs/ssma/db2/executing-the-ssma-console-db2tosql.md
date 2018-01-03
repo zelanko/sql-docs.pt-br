@@ -1,7 +1,7 @@
 ---
 title: Executar o Console do SSMA (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1346ccef45d9a8de619293da09a3d4a148bc9cf8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Executar o Console do SSMA (DB2ToSQL)
 Microsoft fornece um conjunto robusto de script de comandos do arquivo para executar e controlar as atividades do SSMA. As seções resultantes detalham os mesmos. O aplicativo de console usa alguns comandos do arquivo de script padrão como enumerada nesta seção.  
@@ -168,7 +168,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <force-load>  
@@ -281,7 +281,7 @@ relatório gerar de avaliação
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <generate-assessment-report  
@@ -353,7 +353,7 @@ Converter esquema
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <convert-schema  
@@ -419,7 +419,7 @@ migrar dados: migra os dados de origem para o destino.
   
 </migrate-data>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <migrate-data  
@@ -529,7 +529,7 @@ Sincronizar de destino
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target  
@@ -538,7 +538,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <synchronize-target>  
@@ -594,7 +594,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database  
@@ -603,7 +603,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou em  
   
 ```xml  
 <refresh-from-database>  
@@ -653,7 +653,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou em  
   
 ```xml  
 <save-as-script  
@@ -729,7 +729,7 @@ Exige um ou vários nós de metabase como parâmetro de linha de comando.
   
 </convert-sql-statement>  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  
@@ -752,7 +752,7 @@ ou
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-ou  
+ou em  
   
 ```  
 <convert-sql-statement  

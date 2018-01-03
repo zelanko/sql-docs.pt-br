@@ -3,7 +3,7 @@ title: Conecte-se para Sybase (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f565c0acba658142e0542ce2a1806d0216f4f8b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conecte-se para Sybase (SybaseToSQL)
 Use o **conectar-se ao Sybase** caixa de diálogo para se conectar à instância do Sybase Adaptive Server Enterprise (ASE) que você deseja migrar.  
@@ -44,7 +44,7 @@ Insira ou selecione o nome ou endereço IP do servidor adaptável. O nome do ser
 **Porta do servidor**  
 Se você estiver usando uma porta não padrão para conexões com ASE, insira o número da porta. O número da porta padrão é 5000. Essa é uma opção de modo padrão.  
   
-**Nome de usuário**  
+**User name**  
 Digite o nome de usuário que é usado para se conectar ao ASE. Essa é uma opção de modo padrão.  
   
 **Senha**  

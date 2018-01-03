@@ -3,7 +3,7 @@ title: Propriedade Precision (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56bec31a20963db16346b3cbe67b01182dd190e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16b8471b83283a95998ca6e58047774678d4db63
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precision-property-adox"></a>Propriedade Precision (ADOX)
 Indica a precisão máxima de valores de dados no [coluna](../../../ado/reference/adox-api/column-object-adox.md).  
@@ -37,7 +37,7 @@ Indica a precisão máxima de valores de dados no [coluna](../../../ado/referenc
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define e retorna um **longo** valor que é a precisão máxima de valores de dados na coluna quando o [tipo](../../../ado/reference/adox-api/type-property-column-adox.md) propriedade é um tipo numérico. **Precisão** é ignorado para todos os outros tipos de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor padrão é zero (**0**).  
   
  Essa propriedade é somente leitura para [coluna](../../../ado/reference/adox-api/column-object-adox.md) já está anexados a uma coleção de objetos.  
@@ -45,7 +45,7 @@ Indica a precisão máxima de valores de dados no [coluna](../../../ado/referenc
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de código ADOX: NumericScale e exemplo de propriedades de precisão (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Tipo de propriedade (coluna) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

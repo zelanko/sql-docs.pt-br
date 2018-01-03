@@ -1,7 +1,7 @@
 ---
 title: "Configurações (migração) (MySQLToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8a9e6a74fda3bfce0f18aa2d8b987d8593d225fd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Configurações de projeto (migração) (MySQLToSQL)
 A página de migração do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA migra os dados do MySQL para o SQL Server.  

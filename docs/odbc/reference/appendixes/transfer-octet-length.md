@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9a6655bde245348b3b70c3d29631be1b9caa60b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 87347932efb54c93c2439170ebf350e4fe411564
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transfer-octet-length"></a>Comprimento do octeto transferência
 O comprimento de octetos de transferência de uma coluna é o número máximo de bytes retornados para o aplicativo quando os dados são transferidos para seu tipo de dados C padrão. Para dados de caracteres, o comprimento de octetos de transferência não inclui o espaço para o caractere null de terminação. O comprimento de octetos de transferência de uma coluna pode ser diferente do número de bytes necessários para armazenar os dados na fonte de dados.  

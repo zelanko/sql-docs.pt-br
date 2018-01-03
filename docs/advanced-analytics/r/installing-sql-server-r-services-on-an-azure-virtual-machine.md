@@ -2,9 +2,11 @@
 title: "Instalando recursos de aprendizado de máquina do SQL Server em uma máquina virtual do Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0c4b8ef73f4afbc54d2fc1841e281afd0342cedf
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: af558a4792eed6d38eb03fc80d230c5ada8d7fb5
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Instalando recursos em uma máquina virtual do Azure de aprendizado de máquina do SQL Server
  

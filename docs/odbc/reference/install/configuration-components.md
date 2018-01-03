@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54ec132cd471b5622831da224ecff9bfd8f7b877
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 596c0070a522b8e96ef6674dfb8e2498f64029dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configuration-components"></a>Componentes de configuração
 > [!NOTE]  
@@ -40,5 +40,5 @@ ms.lasthandoff: 11/20/2017
   
 -   [DLL de instalação do driver](../../../odbc/reference/install/driver-setup-dll.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Componentes de instalação](../../../odbc/reference/install/installation-components.md)

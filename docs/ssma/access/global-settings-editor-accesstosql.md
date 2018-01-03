@@ -1,7 +1,7 @@
 ---
 title: "Configurações globais (Editor) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fac4a9bfc463b4e5460656e89b103a5dd3c0c56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4d592f48fa0694ca640e9c3caffb1b268c501ae3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-accesstosql"></a>Configurações globais (Editor) (AccessToSQL)
 Use a página do Editor do **configurações globais** caixa de diálogo para especificar configurações de janelas do editor de código.  

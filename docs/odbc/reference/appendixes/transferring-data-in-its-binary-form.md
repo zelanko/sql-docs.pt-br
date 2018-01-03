@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 69a47d8d74c3966ed201d89381f191fd55642345
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7241124d7297dd661c3aef08701af0cc15d77d1e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Transferência de dados em seu formato binário
 Um aplicativo com segurança pode transferir dados (no formato interno usado por um DBMS especificado) entre duas fontes de dados que usam o mesmo DBMS e a plataforma de hardware. Para uma determinada parte dos dados, os tipos de dados SQL devem ser o mesmo em fontes de dados de origem e destino. O tipo de dados C é SQL_C_BINARY.  

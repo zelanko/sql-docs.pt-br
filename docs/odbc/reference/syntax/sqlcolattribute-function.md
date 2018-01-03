@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fead7415e3cb4a951a5ab2ba90b4969682905a0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolattribute-function"></a>Função SQLColAttribute
 **Conformidade**  
@@ -131,7 +131,7 @@ SQLRETURN SQLColAttribute (
   
  ODBC 3. *x* driver deve retornar um valor para cada um dos campos de descritor. Se um campo de descritor não se aplica a uma fonte de dados ou driver e, a menos que indicado o contrário, o driver retorna 0 em \* *StringLengthPtr* ou uma cadeia de caracteres vazia **CharacterAttributePtr*.  
   
-## <a name="backward-compatibility"></a>Compatibilidade com versões anteriores  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  O ODBC 3. *x* função **SQLColAttribute** substitui o preterido ODBC 2. *x* função **SQLColAttributes**. Ao mapear **SQLColAttributes** para **SQLColAttribute** (quando um ODBC 2. *x* aplicativo estiver trabalhando com um ODBC 3. *x* driver), ou o mapeamento de **SQLColAttribute** para **SQLColAttributes** (quando um ODBC 3. *x* aplicativo estiver trabalhando com um ODBC 2. *x* driver), o Gerenciador de Driver ou passa o valor de *FieldIdentifier* , mapeia para um novo valor, ou retornar um erro, da seguinte maneira:  
   
 > [!NOTE]  
@@ -306,7 +306,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Programa ODBC de exemplo](../../../odbc/reference/sample-odbc-program.md)

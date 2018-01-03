@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursors"></a>Cursores
 Um aplicativo busca dados com um *cursor*. Um cursor é diferente de um conjunto de resultados: um conjunto de resultados é o conjunto de linhas que corresponde aos critérios de pesquisa específica, enquanto um cursor é o software que retorna as linhas para o aplicativo. O nome *cursor,* como ele se aplica aos bancos de dados, provavelmente foi originado do cursor piscando em um computador com terminal. Assim como o cursor indica a posição atual na tela e onde as palavras digitadas aparecerá próximas, um cursor em um conjunto de resultados indica a posição atual no conjunto de resultados e quais linhas serão retornadas em seguida.  

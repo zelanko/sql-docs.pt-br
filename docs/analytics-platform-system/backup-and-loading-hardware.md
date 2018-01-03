@@ -3,10 +3,10 @@ title: "Backup e carregamento de visão geral de hardware para APS PDW"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
 caps.latest.revision: "9"
-ms.openlocfilehash: 0bdf529aacf1644f55cd44da3d0a7590e509a323
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91348b3cb936556cbfe4b2c515c6d32e38913618
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-and-loading-hardware-overview"></a>Backup e carregamento de visão geral de hardware
 Para implantar seu ponta a ponta solução do data warehouse em Analytics Platform System (APS) com SQL Server Parallel Data Warehouse (PDW), você precisa criar um plano de backup do data warehouse e o carregamento de dados. Use este guia para adquirir e configurar servidores de backup e carregar que atenda às suas necessidades de negócios.  
@@ -34,7 +34,7 @@ Para fazer backup de um banco de dados PDW, você precisa de um ou mais servidor
   
 Para carregar dados, você precisa de um ou mais servidores de carregamento. Você pode usar seu próprio ETL existente ou outros servidores, ou você pode adquirir novos servidores. Para obter mais informações, consulte [adquirir e configurar um servidor de carregamento](acquire-and-configure-loading-server.md). Essas instruções incluem um [carregar planilha de planejamento de capacidade do servidor](loading-server-capacity-planning-worksheet.md) para ajudá-lo a planejar a solução certa para carregamento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Visão geral de backup e restauração](backup-and-restore-overview.md)  
 [Visão geral de carga](load-overview.md)  
   

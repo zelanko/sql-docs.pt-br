@@ -1,7 +1,7 @@
 ---
 title: Conectar-se ao banco de dados Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 848af110f61c80cc8b54b890f8754844506948f0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: df379493d026c3cc3da3bf01ea036e8f32072625
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Conectar-se ao banco de dados Oracle (OracleToSQL)
 Para migrar bancos de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve se conectar ao banco de dados Oracle que você deseja migrar. Quando você se conectar, o SSMA obtém metadados sobre todos os esquemas do Oracle e exibe no painel Explorador de metadados do Oracle. O SSMA armazena informações sobre o servidor de banco de dados, mas não armazena as senhas.  
@@ -130,6 +130,6 @@ Metadados sobre o banco de dados Oracle não será atualizado automaticamente. O
   
 -   A próxima etapa no processo de migração é [conectar-se a uma instância do SQL Server](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

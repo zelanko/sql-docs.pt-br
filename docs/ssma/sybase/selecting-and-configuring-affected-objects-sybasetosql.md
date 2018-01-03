@@ -3,7 +3,7 @@ title: Selecionando e configurando aos objetos afetados (SybaseToSQL) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 016fc9d6f7250756a098cd4b1876ca74ed67e3cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selecionando e configurando aos objetos afetados (SybaseToSQL)
 Nesta página, você pode selecionar tabelas e chaves estrangeiras, alterações em que devem ser comparadas ao SSMA verifica os resultados da execução para os objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
@@ -48,7 +48,7 @@ Na guia da tabela contém a exibição de grade da tabela selecionada. A grade c
   
 -   Regra  
   
--   Default  
+-   Padrão  
   
 -   Identidade  
   
@@ -65,7 +65,7 @@ Guia de propriedades exibe as propriedades da tabela selecionada. Os campos a se
   
 -   Criado ou modificado pela última vez  
   
--   Nome do Objeto  
+-   Object Name  
   
 ## <a name="table-comparison-settings"></a>Configurações de tabela de comparação  
 Estabelecer as regras de comparação para a tabela na **comparações de tabelas** página. Você pode fazer as seguintes configurações.  
@@ -126,7 +126,7 @@ Você pode editar essas instruções SELECT para fornecer verificação personal
 ## <a name="next-step"></a>Próxima etapa  
 [Personalizando a ordem de chamadas &#40; SybaseToSQL &#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Executar casos de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

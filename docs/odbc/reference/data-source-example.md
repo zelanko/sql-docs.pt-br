@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16217ebf7c229a47263b330e395a777716907797
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29fe9b818d34f620ededd9d07eab5cfbecfbee47
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-example"></a>Exemplo de fonte de dados
 Em computadores que executam o Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional ou Microsoft Windows® 95/98, dados de máquina, informações de origem são armazenadas no registro. Dependendo de qual registro chave as informações são armazenadas em, a fonte de dados é conhecida como um *fonte de dados de usuário* ou um *fonte de dados do sistema*. Fontes de dados do usuário são armazenadas na chave HKEY_CURRENT_USER e estão disponíveis somente para o usuário atual. Fontes de dados do sistema são armazenados na chave HKEY_LOCAL_MACHINE e podem ser usados por mais de um usuário em um computador. Eles também podem ser usados pelos serviços de todo o sistema, que podem então obter acesso à fonte de dados mesmo se nenhum usuário estiver conectado ao computador. Para obter mais informações sobre fontes de dados do sistema e de usuário, consulte [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  

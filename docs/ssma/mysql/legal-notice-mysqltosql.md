@@ -1,7 +1,7 @@
 ---
 title: Aviso legal (MySQLToSql) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1a63768a33a3d638545d75b1f37d38355889ea6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d4fab1dfdc3c55a2f4aa7c534e681754e259998
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="legal-notice-mysqltosql"></a>Aviso legal (MySQLToSql)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  

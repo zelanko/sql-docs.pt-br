@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cafac55eeca169ff83521e945f0f5e76b31f19c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 156d7a4fa40e28f2526b5ab3f5fd1a5bef19c003
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-result-set-columns"></a>Colunas do conjunto de resultados de associação
 Os aplicativos podem associar como muitas ou poucas colunas do conjunto de resultados como quiser, incluindo sem colunas de associação em todos os. Quando uma linha de dados for encontrada, o driver retorna os dados para as colunas associadas ao aplicativo. Se o aplicativo associa todas as colunas no conjunto de resultados depende do aplicativo. Por exemplo, aplicativos que geram relatórios geralmente têm um formato fixo; Esses aplicativos criar um conjunto de resultados que contém todas as colunas usadas no relatório e, em seguida, vincular e recuperam os dados de todas essas colunas. Aplicativos que exibem as telas de dados, às vezes, permitir que o usuário decidir quais colunas serão exibidas; Esses aplicativos criam um conjunto de resultados contendo todas as colunas, o usuário pode desejar, mas vincular e recuperar os dados somente para as colunas escolhidos pelo usuário.  

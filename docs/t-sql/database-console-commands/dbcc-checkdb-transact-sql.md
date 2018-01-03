@@ -1,7 +1,7 @@
 ---
 title: DBCC CHECKDB (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,10 +132,7 @@ DBCC CHECKDB
 >  Para reparar erros, recomendamos restaurar de um backup. Operações de reparo não consideram nenhuma das restrições que podem existir em tabelas ou entre tabelas. Se a tabela especificada estiver envolvida em uma ou mais restrições, recomendamos executar DBCC CHECKCONSTRAINTS após uma operação de reparo. Se for necessário usar REPAIR, execute DBCC CHECKDB sem uma opção de reparo para localizar o nível de reparo a ser usado. Se você usar o nível de REPAIR_ALLOW_DATA_LOSS, recomendamos fazer backup do banco de dados antes de executar DBCC CHECKDB com essa opção.    
     
  ALL_ERRORMSGS  
- Exibe todos os erros relatados por objeto. Todas as mensagens de erro são exibidas por padrão. Especificar ou omitir esta opção não têm nenhum efeito. Mensagens de erro são classificadas por ID de objeto, exceto as mensagens geradas de [banco de dados tempdb](../../relational-databases/databases/tempdb-database.md).  
-    
-> [!NOTE] 
-> No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o número máximo de mensagens de erro retornadas é 1000. Quando você especificar ALL_ERRORMSGS, é recomendável que você execute o comando DBCC usando o [utilitário sqlcmd](../../tools/sqlcmd-utility.md) ou Agendando um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente para executar o comando e direcionar a saída para um arquivo. Qualquer um desses métodos garantirá que uma única execução do comando relatará todas as mensagens de erro.    
+ Exibe todos os erros relatados por objeto. Todas as mensagens de erro são exibidas por padrão. Especificar ou omitir esta opção não têm nenhum efeito. Mensagens de erro são classificadas por ID de objeto, exceto as mensagens geradas de [banco de dados tempdb](../../relational-databases/databases/tempdb-database.md).     
 
  EXTENDED_LOGICAL_CHECKS  
  Se o nível de compatibilidade for 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou superior, executará verificações de consistência lógica em uma exibição indexada, índices XML e índices espaciais, quando presentes.  
@@ -182,7 +179,7 @@ Este argment sempre implica em NO_INFOMSGS e não é permitida com qualquer uma 
 > [!WARNING] 
 > Se MAXDOP estiver definido como zero, em seguida, SQL Server escolherá o grau máximo de paralelismo a ser usado.    
 
-## <a name="remarks"></a>Comentários    
+## <a name="remarks"></a>Remarks    
 O DBCC CHECKDB não examina índices desabilitados. Para obter mais informações sobre índices desabilitados, consulte [desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md).
 Se um tipo definido pelo usuário estiver marcado como sendo ordenado por byte, deverá existir apenas uma serialização do tipo definido pelo usuário. Se não houver uma serialização consistente de tipos definidos pelo usuário ordenados por byte, o erro 2537 ocorrerá quando DBCC CHECKDB for executado. Para obter mais informações, consulte [requisitos de tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).
 Porque o [banco de dados do recurso](../../relational-databases/databases/resource-database.md) pode ser modificado somente no modo de usuário único, o comando não pode ser executado diretamente do DBCC CHECKDB. No entanto, quando DBCC CHECKDB é executado em relação a [banco de dados mestre](../../relational-databases/databases/master-database.md), um segundo CHECKDB também é executado internamente no banco de dados do recurso. Isso significa que DBCC CHECKDB pode retornar resultados extras. O comando retorna conjuntos de resultados extras quando nenhuma opção está definida ou quando a opção PHYSICAL_ONLY ou ESTIMATEONLY está definida.
@@ -398,7 +395,7 @@ DBCC CHECKDB WITH NO_INFOMSGS;
 GO    
 ```    
     
-## <a name="see-also"></a>Consulte também    
+## <a name="see-also"></a>Consulte Também    
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  

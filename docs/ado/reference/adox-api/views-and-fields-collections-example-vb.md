@@ -3,7 +3,7 @@ title: "Modos de exibição e campos de exemplo de coleções (VB) | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a031d9502ab0158f175b4f329f3e631a3bfe04b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f770f0cc1801fb7181d515fff70c301865b3e394
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Exemplo de coleções de campos (VB) e modos de exibição
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade e o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto para recuperar informações de campo para o modo de exibição.  
@@ -82,7 +82,7 @@ End Sub
 ' EndViewFieldsVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Propriedade de comando (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   

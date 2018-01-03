@@ -1,7 +1,7 @@
 ---
 title: "Definir as opções de projeto (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6d54418b8a89a50773ffe3c98bb3c03a5ae955cd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0022ce5df4791ba3084507810d3490db2c7ae4dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-oracletosql"></a>Definindo opções de projeto (OracleToSQL)
 Para cada projeto SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão do objeto, o carregamento de objeto, configurações de migração de dados e a interface do usuário. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou migrar dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], verifique se as opções de configuração são adequadas para o projeto.  
@@ -44,7 +44,7 @@ O SSMA tem cinco conjuntos de configurações de projeto:
   
 Ele também tem quatro modos para definir essas configurações:  
   
--   Default  
+-   Padrão  
   
 -   Otimistas  
   
@@ -97,13 +97,13 @@ Você também pode personalizar configurações para o projeto atual. Essas conf
   
 3.  Clique em **Okey** para salvar as configurações.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 A próxima etapa da migração depende de suas necessidades de projeto:  
   
 -   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [mapeamento Oracle e tipos de dados do SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
 -   Caso contrário, você pode converter as definições de objeto de banco de dados Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definições de objeto. Para obter mais informações, consulte [convertendo esquemas de Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Mapeamento de Oracle e tipos de dados do SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
   

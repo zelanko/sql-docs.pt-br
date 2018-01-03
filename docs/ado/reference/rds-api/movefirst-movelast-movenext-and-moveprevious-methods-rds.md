@@ -3,7 +3,7 @@ title: "MoveFirst, MoveLast, MoveNext e MovePrevious métodos (RDS) | Microsoft 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 22ac6b2d67502e7563cee5338a19b311c71b68c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90615926f18d81d06084c050c73cb2dac8dc2bcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext e MovePrevious métodos (RDS)
 Move para a primeira, última, registro anterior ou seguinte em um especificado [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -46,13 +46,13 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Uma variável de objeto que representa um [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode usar o **mover** métodos com o **RDS. DataControl** objeto percorrer os registros de dados em controles associados a dados em uma página da Web. Por exemplo, suponha que você exiba um **registros** em uma grade associando um **RDS. DataControl** objeto. Em seguida, você pode incluir botões primeiro, último, próximo e anterior que os usuários podem clicar para mover para a primeira, última, em seguida, ou o registro anterior na exibido **registros**. Você pode fazer isso chamando o **MoveFirst**, **MoveLast**, **MoveNext**, e **MovePrevious** métodos do **RDS. DataControl** objeto nos procedimentos onClick para as primeira, última, botões Próximo e anterior, respectivamente. O [exemplo do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) mostra como fazer isso.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext e MovePrevious métodos (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Método MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

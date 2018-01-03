@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df2f3bfdb37ab506de3fe99d8c7d1e5e9764ef43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Sem suporte do Visual FoxPro comandos e funções (Driver ODBC do Visual FoxPro)
 A tabela a seguir lista os comandos de FoxPro e funções que não são suportadas pelo Driver ODBC para Visual FoxPro, mas são suportadas pelo Microsoft® Visual FoxPro.  

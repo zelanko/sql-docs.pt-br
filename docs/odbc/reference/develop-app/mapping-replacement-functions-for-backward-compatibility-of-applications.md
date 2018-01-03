@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapeamento de funções de substituição para compatibilidade com versões anteriores de aplicativos
 Um ODBC 3*. x* aplicativo trabalhar com o ODBC 3*. x* Gerenciador de Driver funcionam em um ODBC 2. *x* driver, desde que nenhum recurso novo é usado. Ambos duplicada funcionalidades e alterações de comportamento, no entanto, afetar a maneira que o ODBC 3. *x* aplicativo funciona em um ODBC 2. *x* driver. Ao trabalhar com um ODBC 2. *x* driver, o Gerenciador de Driver mapeia os seguintes ODBC 3. *x* funções, que a substituição de um ou mais ODBC 2. *x* funções, em correspondente ODBC 2. *x* funções.  

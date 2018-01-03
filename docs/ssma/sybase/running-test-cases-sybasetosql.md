@@ -3,7 +3,7 @@ title: Executar casos de teste (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 686e7701014a85e141fed9d4f9bbcecdb029f015
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>Casos de teste em execução (SybaseToSQL)
 Quando o SSMA Tester executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados forem idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] é determinado de acordo com as configurações de mapeamento de esquema para o projeto atual do SSMA.  
@@ -43,7 +43,7 @@ Quando o teste for concluído, o relatório de caso de teste é criado. Clique o
   
 ## <a name="test-case-execution-steps"></a>Etapas de execução do caso de teste  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
 O SSMA Tester verifica se todos os pré-requisitos são atendidos para a execução de teste antes do início do teste. Se algumas condições não forem atendidas, uma mensagem de erro é exibida.  
   
 ### <a name="initialization"></a>Inicialização  
@@ -78,7 +78,7 @@ Durante a finalização SSMA Tester limpa os objetos auxiliares criados no **ini
 ## <a name="next-step"></a>Próxima etapa  
 [Exibindo relatórios de caso de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Selecionando e Configurando objetos para teste &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
 [Selecionar e configurar os objetos afetados &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
 [Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  

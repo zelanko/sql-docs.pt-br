@@ -3,10 +3,10 @@ title: "Inicie o Gerenciador de configuração (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
 caps.latest.revision: "22"
-ms.openlocfilehash: 98ae90d198b4a1b68e1b72305721611a8efa30ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="launch-the-configuration-manager"></a>Inicie o Gerenciador de configuração
 Este tópico fornece instruções para iniciar o **do Configuration Manager** para o dispositivo Analytics Platform System.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
 O Analytics Platform System**do Configuration Manager** só pode ser executado pelo administrador de domínio do dispositivo. Para executar essa ferramenta, a senha é necessária para o administrador de domínio do dispositivo. Para criar outros administradores APS, consulte [criar um administrador de domínio APS &#40; APS &#41; ](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Inicie a ferramenta Configuration Manager  
@@ -53,6 +53,6 @@ Para fechar e encerrar **do Configuration Manager**, clique em **sair** no canto
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Monitorar o dispositivo usando o Console de administração &#40; Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

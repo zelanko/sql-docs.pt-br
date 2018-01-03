@@ -1,7 +1,7 @@
 ---
 title: Selecionando e configurando aos objetos afetados (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 54b2b1e67a0d7049b14c5f4bdd85c28d427810ca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selecionando e configurando aos objetos afetados (OracleToSQL)
 Nesta página, você pode selecionar tabelas e chaves estrangeiras, alterações em que devem ser comparadas ao SSMA verifica os resultados da execução para os objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
@@ -47,7 +47,7 @@ Na guia da tabela contém a exibição de grade da tabela selecionada. A grade c
   
 -   Regra  
   
--   Default  
+-   Padrão  
   
 -   Identidade  
   
@@ -64,7 +64,7 @@ Guia de propriedades exibe as propriedades da tabela selecionada. Os campos a se
   
 -   Criado ou modificado pela última vez  
   
--   Nome do Objeto  
+-   Object Name  
   
 ## <a name="columns-comparison-settings"></a>Configurações de comparação de colunas  
 Estabelecer as regras de comparação para colunas de tabela em **comparação de colunas** página. Você pode fazer as seguintes configurações.  
@@ -115,7 +115,7 @@ Você pode editar essas instruções SELECT para fornecer verificação personal
 ## <a name="next-step"></a>Próxima etapa  
 [Personalizando a ordem de chamadas &#40; OracleToSQL &#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Concluindo a preparação do caso de teste &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
 [Executar casos de teste &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Testando migrados objetos de banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

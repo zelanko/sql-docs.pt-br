@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33d736ccefdf92a08d5575869954ae61a043b55d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d64a08cc8e748efe984c8aa5acd7deac743c2ed3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-using-file-data-sources"></a>Conectando-se com as fontes de dados de arquivo
 As informações de conexão para uma fonte de dados de arquivo são armazenadas em um arquivo. DSN. Como resultado, a cadeia de caracteres de conexão pode ser usada repetidamente por um único usuário ou compartilhada entre vários usuários se eles tiverem a unidade apropriada instalada. O arquivo contém um nome de driver (ou outro nome de fonte de dados no caso de uma fonte de dados de arquivos não compartilháveis) e, opcionalmente, uma cadeia de conexão que pode ser usada por **SQLDriverConnect**. O Gerenciador de Driver cria a cadeia de caracteres de conexão para a chamada **SQLDriverConnect** das palavras-chave no arquivo. DSN.  
@@ -59,5 +59,5 @@ DSN = MyDataSource
   
  A cadeia de caracteres de conexão usada para uma fonte de dados de arquivo é a união das palavras-chave especificadas no arquivo. DSN e as palavras-chave especificadas na cadeia de conexão na chamada para **SQLDriverConnect**. Se qualquer uma das palavras-chave no arquivo. DSN em conflito com palavras-chave na cadeia de conexão, o Gerenciador de Driver decide qual valor de palavra-chave deve ser usado. Para obter mais informações, consulte [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)

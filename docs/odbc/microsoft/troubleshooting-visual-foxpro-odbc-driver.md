@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea6c45c362047d45275b6895d58faafe0250d26f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1074d9134e9ee0c0b1a828debd225b1462e53c4a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Solução de problemas (Driver ODBC do Visual FoxPro)
 As seções a seguir discutem como melhorar o desempenho e solucionar problemas que podem ocorrer ao usar o Driver de ODBC do Visual FoxPro.  

@@ -1,7 +1,7 @@
 ---
 title: "Concluindo a preparação do caso de teste (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 735e854e18ce25b3b45ac53c9714ed6dad39a20e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f6bf969705a049e03212500a3112e643fbe7654a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Concluindo a preparação do caso de teste (OracleToSQL)
 A página final do assistente exibe a descrição do caso de teste e informações sobre os objetos envolvidos no teste. Além disso, nessa página você pode definir o teste de opções de execução.  
@@ -62,7 +62,7 @@ Define o modo de gravação para tabelas auxiliares criados durante a execução
   
 Clique o **concluir** botão para salvar o caso de teste preparado em [usando repositórios de teste (OracleToSQL)](http://msdn.microsoft.com/en-us/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Uso de repositórios de teste &#40; OracleToSQL &#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
 [Executar casos de teste &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Testando migrados objetos de banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

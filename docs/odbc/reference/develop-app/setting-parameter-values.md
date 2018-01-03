@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c89f68450a7d4ffe65f5d7bc0e8697b5ac2cb1b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 726af8b2a7b4e9f0b630c95c45f512201fa1cf3a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-parameter-values"></a>Definir valores de parâmetro
 Para definir o valor de um parâmetro, o aplicativo simplesmente define o valor da variável associada ao parâmetro. Não é importante quando esse valor for definido, desde que ele está definido antes da instrução é executada. O aplicativo pode definir o valor antes ou depois de associação da variável, e ele pode alterar o valor de quantas vezes desejar. Quando a instrução é executada, o driver simplesmente recupera o valor atual da variável. Isso é particularmente útil quando uma instrução preparada é executada mais de uma vez; o aplicativo define novos valores para algumas ou todas as variáveis de cada vez que a instrução é executada. Para obter um exemplo disso, consulte [execução preparada](../../../odbc/reference/develop-app/prepared-execution-odbc.md)anteriormente nesta seção.  

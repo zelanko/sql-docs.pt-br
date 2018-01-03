@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32782c2fe59aaf36fa8741870a798163d923a3a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relative-and-absolute-scrolling"></a>Rolagem relativas e absolutas
 A maioria das opções de rolagem no **SQLFetchScroll** posicionar o cursor em relação à posição atual ou para uma posição absoluta. **SQLFetchScroll** dá suporte à busca o próximo, anterior, primeiro e últimos conjuntos de linhas, como busca bem como relativa (buscar o conjunto de linhas  *n*  linhas desde o início do conjunto de linhas atual) e busca absoluta (busca de conjunto de linhas começando na linha  *n* ). Se  *n*  é negativo em uma busca absoluta, as linhas são contadas do final do conjunto de resultados. Portanto, uma busca absoluta da linha -1 significa buscar o conjunto de linhas que começa com a última linha no conjunto de resultados.  

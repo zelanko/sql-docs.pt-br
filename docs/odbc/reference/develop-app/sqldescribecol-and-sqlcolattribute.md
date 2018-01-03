@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6044ca37e00d96c4a86fb5e9740ec6dfc824ca51
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a79fa6a02a5c17be0180b0593e28c7827e751bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol e SQLColAttribute
 **SQLDescribeCol** e **SQLColAttribute** são usados para recuperar metadados de conjunto de resultados. A diferença entre essas duas funções é que **SQLDescribeCol** sempre retorna as mesmo cinco peças de informação (uma coluna Nome, tipo de dados, precisão, escala e nulidade), enquanto **SQLColAttribute** retorna uma única informação solicitada pelo aplicativo. No entanto, **SQLColAttribute** pode retornar uma seleção muito mais rica de metadados, incluindo diferenciação de uma coluna, exibir o tamanho, a atualização e a capacidade de pesquisa.  

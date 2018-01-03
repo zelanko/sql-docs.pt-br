@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c302282bb88761b4e24d4e3efcd51b22ffe31c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3a2c62dc7ec2da7c8df5683feab469ecd99a22c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete---sql-command"></a>Exclua - o comando SQL
 Marca registros para exclusão.  
@@ -48,7 +48,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *FilterCondition* Especifica os critérios que os registros devem atender para ser marcado para exclusão. Você pode incluir muitas condições de filtragem você deseja conectar-se com AND ou operador OR. Você também pode usar o operador NOT para reverter o valor de uma expressão lógica, ou você pode usar **vazio**() para verificar se há um campo vazio.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se definir excluído está definido como ON, registros marcados para exclusão são ignorados por todos os comandos que incluem um escopo.  
   
  Exclua - usa SQL bloqueio de registro quando a marcação de vários registros para exclusão em tabelas aberto para acesso compartilhado. Isso reduz a contenção de registro em situações de multiusuários, mas pode diminuir o desempenho. Para obter desempenho máximo, abra a tabela para uso exclusivo.  
@@ -56,5 +56,5 @@ DELETE FROM [DatabaseName!]TableName
 ## <a name="driver-remarks"></a>Comentários de driver  
  Quando o aplicativo envia a instrução DELETE do ODBC SQL para a fonte de dados, o Driver de ODBC do Visual FoxPro converte o comando para o comando Excluir do Visual FoxPro sem conversão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comando SET DELETED](../../odbc/microsoft/set-deleted-command.md)

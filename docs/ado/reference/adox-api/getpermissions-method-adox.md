@@ -3,7 +3,7 @@ title: "Método GetPermissions (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b4b6a540955ebbe630728d9dc907059d5b648b7c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a08e4681fbdb611e94279a3a3a5b0dd4ec871ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getpermissions-method-adox"></a>Método GetPermissions (ADOX)
 Retorna as permissões para um [grupo](../../../ado/reference/adox-api/group-object-adox.md) ou [usuário](../../../ado/reference/adox-api/user-object-adox.md) em um objeto ou o contêiner do objeto.  
@@ -59,7 +59,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 |-|-|  
 |[Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de métodos de SetPermissions (VB) e GetPermissions](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Propriedade Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Método SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

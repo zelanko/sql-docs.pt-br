@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f213203e7601c79f8f5336756462d6ad344aaa8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc0aebc832ff451ab302636c7621b008bec4da1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Etapa 3: Criar e executar uma instrução SQL
 A terceira etapa é criar e executar uma instrução SQL, conforme mostrado na ilustração a seguir. Os métodos usados para executar essa etapa serão prováveis podem variar muito. O aplicativo pode solicitar que o usuário insira uma instrução SQL, crie uma instrução SQL com base na entrada do usuário, ou usar uma instrução SQL embutido. Para obter mais informações, consulte [construindo instruções de SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  

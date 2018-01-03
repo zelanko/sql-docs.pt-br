@@ -2,9 +2,11 @@
 title: "Exploração e Dados e Modelagem Preditiva com R | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 139e3c15229c3c7da11fd6ffa56993963f3caecd
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c1586c23850daa679aa6804d946ceb0d0a98ad51
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Exploração e Dados e Modelagem Preditiva com R
 
@@ -104,7 +106,7 @@ Para saber mais sobre como mover seu código para executá-lo no [!INCLUDE[ssNoV
 
 Normalmente, o processo de implantação começa com a limpeza do seu script para eliminar códigos desnecessários na produção. Como mover cálculos mais próximo para os dados, você pode encontrar formas de com mais eficiência mover, resumir ou apresentar dados do que fazer tudo no R.  É recomendável que o cientista de dados Consulte com um desenvolvedor de banco de dados sobre maneiras de melhorar o desempenho, especialmente se a solução não limpeza de dados ou o recurso de engenharia que pode ser mais eficaz em SQL. Podem ser necessárias alterações nos processos de ETL para garantir que os fluxos de trabalho de criação ou pontuação de modelos não falhem e para que os dados de entrada estejam disponíveis no formato correto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Comparação de funções Base R e ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 

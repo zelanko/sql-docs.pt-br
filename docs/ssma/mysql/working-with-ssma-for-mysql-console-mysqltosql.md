@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com o SSMA para MySQL Console (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1722db6c7325c10099cd293e6b8c102c38874692
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3bd319d0cff1a3f7d7681591a59b640a2afd9d24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Trabalhando com o SSMA para MySQL Console (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migração (SSMA Assistant) for MySQL agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script de entrada para o aplicativo para executar os comandos de formulário. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -35,7 +35,7 @@ Os tópicos abordados nesta seção incluem:
   
 |||  
 |-|-|  
-|**Tópicos**|**Description**|  
+|**Tópicos**|**Descrição**|  
 |[Guia de Introdução com o SSMA para MySQL Console &#40; MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|Explica o procedimento para executar o aplicativo de console.|  
 |[Opções de linha de comando no Console do SSMA &#40; MySQLToSQL &#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Descreve as opções de linha de comando e os parâmetros para operar o aplicativo de console SSMA.|  
 |[Criando arquivos de Script &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|Explica como criar um arquivo de script.|  
@@ -47,6 +47,6 @@ Os tópicos abordados nesta seção incluem:
 |[Gerando relatórios &#40; MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|Lista os comandos para gerar relatórios.|  
 |[Solucionando problemas de &#40; MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Fornece breves informações sobre como corrigir problemas de migração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Guia de Introdução com o SSMA para o Console do MySQL](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 45a3003ac39e806dbd012b79b974160f3530fc32
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0314dfcc66e783a48a7474b0b0656a93b1bf3822
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Características de cursor e tipo de Cursor
 Um aplicativo pode especificar as características de um cursor em vez de especificar o tipo de cursor (somente avanço, estático, controlado por ou dinâmico). Para fazer isso, o aplicativo seleciona a rolagem do cursor (definindo o atributo de instrução SQL_ATTR_CURSOR_SCROLLABLE) e sensibilidade (definindo o atributo da instrução SQL_ATTR_CURSOR_SENSITIVITY) antes de abrir o cursor para a instrução identificador. O driver então escolhe o tipo de cursor que fornece com mais eficiência as características que o aplicativo solicitado.  

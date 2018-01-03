@@ -1,30 +1,33 @@
 ---
-title: "Tutoriais de aprendizado de máquina do SQL Server | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+title: "Tutoriais de serviços de aprendizado de máquina do SQL Server | Microsoft Docs"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: Python
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- Python
+- R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
 caps.latest.revision: "32"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0547d809e73e13b7bedcc8ac960b00c7c8a9706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b8c384e5d8e13ed0961ad82f95af17c0352389be
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="sql-server-machine-learning-tutorials"></a>Tutoriais de aprendizado de máquina do SQL Server
+# <a name="tutorials-for-sql-server-machine-learning-services"></a>Tutoriais para serviços de aprendizado de máquina do SQL Server
 
 Este artigo fornece uma lista abrangente de aplicativos de exemplo que usam recursos de aprendizado de máquina no SQL Server 2016 ou o SQL Server 2017, tutoriais e demonstrações. Comece aqui saber como otimizar seu código R e Python para um ambiente de produção do SQL, a execução de R ou Python do T-SQL e como usar os contextos de computação local e remoto.
 
@@ -44,7 +47,7 @@ Para obter mais informações sobre como configurar e requisitos, consulte [pré
 
 + [Soluções](#bkmk_solutions) 
 
-    Modelos da equipe de ciência de dados da Microsoft são personalizáveis, para começar rapidamente com o aprendizado de máquina. Cada solução personalizada para uma tarefa específica ou um problema de setor; Além disso, a maioria das soluções são projetados para ser executado no SQL Server ou em um ambiente de nuvem como o aprendizado de máquina do Azure. Outras soluções podem executar no Linux ou em clusters de Hadoop ou Spark, usando o Microsoft R Server ou o servidor de aprendizado de máquina.
+    Modelos da equipe de ciência de dados da Microsoft são personalizáveis, para começar rapidamente com o aprendizado de máquina. Cada solução é adaptada para um problema específico da tarefa ou do setor. A maioria das soluções é desenvolvida para executar no SQL Server ou em um ambiente de nuvem como o aprendizado de máquina do Azure. Outras soluções podem executar no Linux ou em clusters de Hadoop ou Spark, usando o Microsoft R Server ou o servidor de aprendizado de máquina.
 
 ### <a name ="bkmk_samples"></a>Exemplos de produto do SQL Server
 
@@ -58,7 +61,7 @@ Esses exemplos e demonstrações fornecidas pela equipe de desenvolvimento do SQ
 
 + [NOVO! Executar o cliente clustering usando Python e SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
-    Saiba como usar o algoritmo Kmeans para executar o cluster sem supervisão de clientes. Este exemplo usa o Python idioma no banco de dados. 
+    Saiba como usar o algoritmo Kmeans para executar o cluster sem supervisão de clientes. Este exemplo usa o Python idioma no banco de dados.
     
     Aplica-se a: SQL Server de 2017
 
@@ -73,6 +76,10 @@ Esses exemplos e demonstrações fornecidas pela equipe de desenvolvimento do SQ
    Crie o aplicativo de análise de aluguel ski usando Python, para ajudar a planejar demandas futuras. Este exemplo usa a nova biblioteca do Python, **revoscalepy**, para criar um modelo de regressão linear.
    
    Aplica-se a: SQL Server de 2017
+
++ [Como usar Tableau com serviços de aprendizado de máquina do SQL Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/)
+
+    Analisar a mídia social e criar gráficos Tableau, usando o SQL Server e R.
 
 ### <a name="bkmk_solutions"></a>Modelos de solução
 
@@ -111,7 +118,7 @@ Com o SQL Server 2017, você pode instalar o R ou Python ou ambos. Caso contrár
 Depois de executar a instalação do SQL Server, não se esqueça destas etapas importantes:
 
 1. Habilitar o recurso de execução do script externo executando `sp_configure 'external scripts enabled', 1`. Siga as instruções para reconfigurar e reinicie o SQL Server.
-2. Certifique-se de que o serviço Launchpad é executado e que o trabalhador contas ele usa podem se conectar à instância do SQL Server.
+2. Certifique-se de que o serviço barra inicial está em execução e se as contas de trabalho da barra inicial podem se conectar à instância do SQL Server.
 3. Examine as permissões associadas com os usuários que executam scripts de R ou Python. Independentemente de você usar contas de usuário do Windows ou logons do SQL Server, o usuário deve ter permissão para executar scripts R ou Python e deve ser capaz de se conectar à instância. Dependendo do tutorial, o usuário também pode exigir permissão para gravar dados, criar objetos de banco de dados ou fazer uma massa importação de dados.
 
 Para obter detalhes, consulte este artigo para alguns problemas comuns de instalação e configuração: [Solucionando problemas de serviços de aprendizado de máquina](../machine-learning-troubleshooting-faq.md)

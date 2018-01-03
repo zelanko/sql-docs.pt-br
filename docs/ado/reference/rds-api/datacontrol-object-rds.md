@@ -3,7 +3,7 @@ title: Objeto DataControl (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cf3ffe486c22f7e0fce7bec243e182c459aedc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4921e2895aeeede12f161b31a5dac83e0276822a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datacontrol-object-rds"></a>Objeto DataControl (RDS)
 Associa uma consulta de dados [registros](../../../ado/reference/ado-api/recordset-object-ado.md) para um ou mais controles (por exemplo, uma caixa de texto, controle de grade ou caixa de combinação) para exibir o **registros** dados em uma página da Web.  
@@ -45,7 +45,7 @@ Associa uma consulta de dados [registros](../../../ado/reference/ado-api/records
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A ID de classe para o **RDS. DataControl** objeto é 0-983A-00C04FC29E33 BD96C556 65A3 - 11 D.  
   
 > [!NOTE]
@@ -113,7 +113,7 @@ Associa uma consulta de dados [registros](../../../ado/reference/ado-api/records
   
 -   [Propriedades, métodos e eventos do objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do objeto DataControl (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

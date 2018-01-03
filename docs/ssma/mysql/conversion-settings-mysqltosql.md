@@ -1,7 +1,7 @@
 ---
 title: "Configurações de conversão (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58dc331830f70cee8389a38a425adb1daceb3e27
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d19688f630a71ff111a755b6810379b06fd129d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversion-settings-mysqltosql"></a>Configurações de conversão (MySQLToSQL)
 O **'Configurações'** guia permite que o usuário defina as configurações de nível de nó. Na guia estará disponível nos seguintes nós da Metabase:  
@@ -76,7 +76,7 @@ Essas configurações estarão disponíveis com base no tipo de nó de Metabase.
   
         -   Sim  
   
-        -   Não  
+        -   não  
   
         -   Converter de acordo com as configurações de projeto  
   
@@ -84,6 +84,6 @@ Essas configurações estarão disponíveis com base no tipo de nó de Metabase.
   
     3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata quando você clicar em **aplicar** botão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Configurações de projeto (conversão) (MySQL para o SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

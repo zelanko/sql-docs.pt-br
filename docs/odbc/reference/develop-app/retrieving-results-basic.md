@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54a310e3e2f13431c0963f513fb9d5c4ec4e226b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0762d7f70becf8c6bdbd86bee524bc964676f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-results-basic"></a>Recuperando resultados (Basic)
 Um *conjunto de resultados de* é um conjunto de linhas na fonte de dados que corresponda a determinados critérios. É uma tabela conceitual que os resultados de uma consulta e que está disponível para um aplicativo em formato tabular. **Selecione** instruções, funções de catálogo e alguns procedimentos criam conjuntos de resultados. No exemplo a seguir, a primeira instrução SQL cria um conjunto de resultados contendo todas as linhas e todas as colunas na tabela Orders e a segunda instrução SQL cria um conjunto de resultados contendo colunas OrderID, o vendedor e o Status das linhas na tabela Orders em que o Status é aberto:  

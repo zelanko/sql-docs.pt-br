@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: d5a621f6bcd1605b7f48ada14607b3e55ef6d6de
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
 
@@ -43,7 +43,7 @@ Para usar uma cadeia de caracteres de conexão que aponta para um nome de servid
 
 As seções a seguir percorrer as etapas para configurar uma solução de cluster de failover. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir o cenário de ponta a ponta abaixo, você precisa duas máquinas para implantar o cluster de dois nós e outro servidor para configurar o servidor NFS. Etapas a seguir descrevem como esses servidores serão configurados.
 
@@ -134,13 +134,13 @@ No servidor NFS, faça o seguinte:
 1. Habilitar e iniciar`rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
 1. Habilitar e iniciar`nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
 1.  Editar `/etc/exports` para exportar o diretório que você deseja compartilhar. Você precisará de 1 linha para cada compartilhamento que você deseja. Por exemplo: 

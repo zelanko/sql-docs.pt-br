@@ -1,7 +1,7 @@
 ---
 title: Localizar o Assistente de bancos de dados (selecionados locais) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ccb64e44a02b83559ce3528290b06f401d1c402
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 069e14ae3babfb3961042edaf0d99e24367df85d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Localizar o Assistente de bancos de dados (selecionados locais) (AccessToSQL)
 Na página Selecionar locais do Assistente para localizar os bancos de dados, você pode inserir os parâmetros de pesquisa para localizar os bancos de dados do Access.  
@@ -66,7 +66,7 @@ Para localizar os bancos de dados que correspondam a um critério de tamanho, se
 **Proprietário**  
 Digite o nome de usuário do Windows completo do proprietário. Isso pode ser formatado como *domínio*\\*usuário*.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Adicionando e removendo arquivos de banco de dados do Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
 [Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

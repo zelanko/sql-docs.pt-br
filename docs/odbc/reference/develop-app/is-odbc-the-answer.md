@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab4f9d293b0cbe2f4536c80662271664a8fd896b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 390188eb430e51bf0ce27bf2f32f9f82c195d4da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="is-odbc-the-answer"></a>A resposta é ODBC?
 Antes de investigar a questão de interoperabilidade, considere a seguinte pergunta: o aplicativo deve usar ODBC em todos os? Isso pode parecer uma pergunta estranha em um guia para ODBC, mas é, na verdade, uma legítima. ODBC não foi projetado para substituir completamente o banco de dados nativo APIs nem foi projetado para fornecer acesso de banco de dados em todas as circunstâncias. Ele foi projetado para fornecer uma interface comum para bancos de dados e foi planejado para liberar os programadores de aplicativos de ter que conhecer e manter os vínculos para vários bancos de dados.  

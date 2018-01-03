@@ -1,7 +1,7 @@
 ---
 title: "Relatório de migração de dados (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca5f142a3aed5c618558c3fd6502af59f7fda185
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7711df7c7bfa26e548068f21a8ad8b77c888db7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-migration-report-accesstosql"></a>Relatório de migração de dados (AccessToSQL)
 O **relatório de migração de dados** caixa de diálogo é exibida depois de migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

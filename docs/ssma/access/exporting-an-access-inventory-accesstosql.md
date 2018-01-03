@@ -1,7 +1,7 @@
 ---
 title: "Exportando um inventário de acesso (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ec72d4137f8fcee6b600783988981f24b108f1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportando um inventário de acesso (AccessToSQL)
 Se você tiver vários bancos de dados do Access e você não tiver certeza sobre quais para migrar para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode exportar um inventário de todos os bancos de dados do Access em um projeto. Você pode revisar e consultar os metadados de inventário para determinar quais bancos de dados e objetos dentro desses bancos de dados para migrar. Esse inventário permite a rápida encontrar respostas para perguntas, como o seguinte:  
@@ -236,6 +236,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 Se você não souber o nome da coluna, você pode escrever uma consulta para retornar todas as colunas. Para fazer isso, remova a cláusula WHERE da consulta anterior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Preparar bancos de dados do Access para a migração](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   

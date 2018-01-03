@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed08d24f96b66b69bbff409cbc2c9e203526041b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81ec270afc5c0e845bea829a1851b00bb38fa075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Opções de configuração por meio de programação para o Driver de acesso
 |Opção|Description|Método|  
 |------------|-----------------|------------|  
 |Tamanho do buffer|O tamanho do buffer interno, em quilobytes, que é usado pelo Microsoft Access para transferir dados e para o disco. O tamanho do buffer padrão é 2048 KB (exibido como 2048). Qualquer valor inteiro divisível por 256 pode ser inserido.|Para definir essa opção dinamicamente, use a palavra-chave MAXBUFFERSIZE em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Nome da Fonte de Dados|Um nome que identifica a fonte de dados, como folha de pagamento ou pessoal.|Para definir essa opção dinamicamente, use o **DSN** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
-|Banco de Dados|Uma fonte de dados do Microsoft Access pode ser configurada sem selecionar ou criar um banco de dados. Se nenhum banco de dados é fornecido após a instalação, o usuário será solicitado a escolher um arquivo de banco de dados ao conectar-se à fonte de dados.|Para definir essa opção dinamicamente, use o **DBQ** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
+|banco de dados|Uma fonte de dados do Microsoft Access pode ser configurada sem selecionar ou criar um banco de dados. Se nenhum banco de dados é fornecido após a instalação, o usuário será solicitado a escolher um arquivo de banco de dados ao conectar-se à fonte de dados.|Para definir essa opção dinamicamente, use o **DBQ** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Description|Uma descrição opcional dos dados na fonte de dados; Por exemplo, "data de contratação, histórico de salário e análise atual de todos os funcionários."|Para definir essa opção dinamicamente, use o **descrição** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Exclusive|Se o **exclusivo** caixa é selecionada, o banco de dados será aberto no modo exclusivo e pode ser acessado somente por um usuário por vez. O desempenho é melhorado ao executar em modo exclusivo.|Para definir essa opção dinamicamente, use o **exclusivo** palavra-chave em uma chamada para [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |ImplicitCommitSync|Determina como as alterações feitas fora de uma transação são gravadas no banco de dados. Esse valor é definido inicialmente como "Sim", que significa que o driver do Microsoft Access aguardará confirmações em uma transação interna/implícita para ser concluída.|Essa opção é incluída no **definir opções avançadas** caixa de diálogo para o driver do Microsoft Access.|  

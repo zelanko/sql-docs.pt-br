@@ -3,10 +3,10 @@ title: Aplique Analytics Platform System (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
 caps.latest.revision: "25"
-ms.openlocfilehash: af879486885f2c27ad4c3d80ef9a3d41279ff0ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 562d0ce41f5a1b12930fdedabd73214ddebd4e4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicar Hotfixes do sistema de plataforma de análise
 Este tópico discute como aplicar hotfixes para o software do sistema de plataforma de análise.  
@@ -33,7 +33,7 @@ Este tópico discute como aplicar hotfixes para o software do sistema de platafo
 > [!WARNING]  
 > Não aplique um hotfix Analytics Platform System enquanto o dispositivo estiver em uso. Aplicação de um hotfix pode causar nós de dispositivo a reinicialização. O hotfix deve ser aplicado durante uma janela de manutenção quando o dispositivo não está sendo usado.  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
 Para executar essas etapas, você precisará de:  
   
 -   Um logon de sistema de plataforma de análise com permissões para acessar o Console de administração para monitorar o estado do dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
@@ -67,7 +67,7 @@ Ao contrário das atualizações da Microsoft, os hotfixes para o software do si
   
     4.  Siga as etapas apresentadas pelo pacote de hotfix.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Baixe e aplique as atualizações da Microsoft &#40; Analytics Platform System &#41;](download-and-apply-microsoft-updates.md)  
 [Desinstalar as atualizações da Microsoft &#40; Analytics Platform System &#41;](uninstall-microsoft-updates.md)  
 [Desinstalar Hotfixes do sistema de plataforma de análise &#40; Analytics Platform System &#41;](uninstall-analytics-platform-system-hotfixes.md)  

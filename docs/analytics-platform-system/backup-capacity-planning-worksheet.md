@@ -3,10 +3,10 @@ title: Planilha de planejamento de capacidade do servidor de backup (SQL Server 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
 caps.latest.revision: "6"
-ms.openlocfilehash: f707715e19a3c647048f3156878bbd479ebb4b59
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e025410f3be18b5f8276984219dd1cb6a40c2a87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-server-capacity-planning-worksheet"></a>Planilha de planejamento de capacidade do servidor de backup
 Esta planilha de planejamento de capacidade ajuda você a determinar os requisitos de um servidor de backup para executar um backup de banco de dados do SQL Server PDW e operações de restauração. Use isso para criar seu plano para compras novos ou provisionamento backup servidores existentes.  
@@ -48,6 +48,6 @@ Esta planilha de impressão e preenchê-lo com seus próprios requisitos.
   
 Quando tiver terminado de determinar seus requisitos de capacidade, retorne para o [adquirir e configurar um servidor carregando](acquire-and-configure-loading-server.md) tópico para planejar sua compra.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Backup e carregamento de hardware](backup-and-loading-hardware.md)  
   

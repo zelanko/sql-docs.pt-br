@@ -1,7 +1,7 @@
 ---
 title: "Usando repositórios de teste (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 2f32eec1e117a2f27b9581456dd707adf6d21f56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4412d7de5cd86071f2d1c25354e85266f33bccc7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso de repositórios de teste (OracleToSQL)
 Os repositórios de repositório de teste do SSMA SSMA Tester casos de teste e resultados de teste para uso posterior. Os dados de repositório são salvos nas tabelas do SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_oracle_utilities** de **ssmatesterdb** banco de dados.  
@@ -81,7 +81,7 @@ Os botões a seguir estão disponíveis na página de resultados de teste:
   
 -   Clique o **excluir** botão para excluir o resultado do teste selecionado  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Executar casos de teste &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Testando migrados objetos de banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

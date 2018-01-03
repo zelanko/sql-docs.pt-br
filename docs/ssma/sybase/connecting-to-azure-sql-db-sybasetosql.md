@@ -3,7 +3,7 @@ title: Conectar-se ao banco de dados do SQL Azure (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2cba5a9e698d98971940591889c144926fe1d8b8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 74be54cbdac01197d4756ae1f30b6285e8c2fa90
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Conectar-se ao banco de dados do SQL Azure (SybaseToSQL)
 Para migrar bancos de dados Sybase para o banco de dados de SQL do Azure, você deve se conectar à instância de destino de banco de dados de SQL do Azure. Quando você se conectar, SSMA obtém metadados sobre todos os bancos de dados na instância do banco de dados de SQL do Azure e exibe os metadados de banco de dados no Gerenciador de metadados de banco de dados do Azure SQL. O SSMA armazena informações da instância do Azure SQL DB está conectado, mas não armazena as senhas.  
@@ -93,6 +93,6 @@ A próxima etapa da migração depende de suas necessidades de projeto:
   
 -   Se você não precisa executar qualquer uma dessas tarefas, você pode converter as definições de objeto de banco de dados Sybase em definições de objeto de banco de dados de SQL do Azure. Para obter mais informações, consulte [converter objetos de banco de dados do Sybase ASE &#40; SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando Sybase ASE bancos de dados do SQL Server - banco de dados SQL do Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

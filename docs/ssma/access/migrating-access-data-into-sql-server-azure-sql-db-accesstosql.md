@@ -1,7 +1,7 @@
 ---
 title: Migrando dados do Access para o SQL Server - banco de dados do SQL Azure (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b9e885b397abc05af7ec538eb2ed46c8ba12ea2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8e320b2cf1ddc8ee704b32b54133328821484e8d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>Migrando dados do Access para o SQL Server - banco de dados do SQL Azure (AccessToSQL)
 Depois que você criou com êxito os objetos de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode migrar dados de acesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure.  
@@ -63,7 +63,7 @@ Você também pode migrar dados fora o SSMA usando o [!INCLUDE[ssNoVersion](../.
 ## <a name="next-step"></a>Próxima etapa  
 Se você tiver aplicativos de banco de dados do Access que você deseja continuar a usar após a migração, vincular as tabelas de banco de dados do Access para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tabelas do SQL Azure. Para obter mais informações, consulte [vinculação aplicativos de acesso ao SQL Server](http://msdn.microsoft.com/en-us/82374ad2-7737-4164-a489-13261ba393d4).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Conversão de configuração e opções de migração](http://msdn.microsoft.com/en-us/0a7304df-2f35-4453-96ef-7ac83dea1167)  
   

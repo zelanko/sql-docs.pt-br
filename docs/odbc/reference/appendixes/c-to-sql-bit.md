@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a3d5291538d2f37b037888935be7f93bec8a7865
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8100e678d336075ca42a898fa98c03cec5d8f6a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-bit"></a>C para SQL: Bit
 O identificador para o tipo de dados do ODBC C bits é:  
@@ -36,8 +36,8 @@ O identificador para o tipo de dados do ODBC C bits é:
   
 |Identificador de tipo SQL|Teste|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WVARCHAR SQL_WCHAR<br /><br /> SQL_WLONGVARCHAR|Nenhuma|n/d|  
-|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|Nenhuma|n/d|  
-|SQL_BIT|Nenhuma|n/d|  
+|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WVARCHAR SQL_WCHAR<br /><br /> SQL_WLONGVARCHAR|Nenhum|n/d|  
+|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|Nenhum|n/d|  
+|SQL_BIT|Nenhum|n/d|  
   
  O driver ignora o valor de comprimento/indicador ao converter dados de tipo de dados bit C e pressupõe que o tamanho do buffer de dados é o tamanho do tipo de dados bit C. O valor de comprimento/indicador é passado a *StrLen_or_Ind* argumento **SQLPutData** e no buffer especificado com o *StrLen_or_IndPtr* argumento **SQLBindParameter**. O buffer de dados é especificado com o *DataPtr* argumento na **SQLPutData** e *ParameterValuePtr* argumento **SQLBindParameter**.

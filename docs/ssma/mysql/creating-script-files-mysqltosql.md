@@ -1,7 +1,7 @@
 ---
 title: Criando arquivos de Script (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4972761ecda949cde856aaf6c14498251eeea85
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ddfe50aa62403c1dda26ebf1f2017bdf45bf7864
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-mysqltosql"></a>Criando arquivos de Script (MySQLToSQL)
 A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
@@ -409,6 +409,6 @@ O usuário pode facilmente validar seu arquivo de script no arquivo de definiç�
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no operando o console é [criando arquivos de valor variável &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criando arquivos do valor da variável &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: "Criar os arquivos de Conexão de servidor (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef64fe70b398331a621d5d9a255055e6b211d0f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a03351f51de739913f46ad3ac720cc676710ccfd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>Criar os arquivos de Conexão de servidor (DB2ToSQL)
 Informações do servidor podem ser especificadas na seção de servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é, `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente no arquivo de script e no arquivo de conexão de servidor, a definição de servidor no arquivo de script é considerada.  
@@ -86,6 +86,6 @@ Informações do servidor podem ser especificadas na seção de servidores do ar
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no operando o console é [executando o Console SSMA &#40; DB2ToSQL &#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Executar o console do SSMA](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

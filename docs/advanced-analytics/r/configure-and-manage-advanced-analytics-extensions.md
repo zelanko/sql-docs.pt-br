@@ -2,11 +2,11 @@
 title: "Opções de configuração para serviços de aprendizado de máquina avançada | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 369c630e249d7775e67508fc9b00e94447182012
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24f2082572cdb314257826570471548f87b1b60e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Opções de configuração avançadas para serviços de aprendizado de máquina
 
@@ -97,13 +97,13 @@ Você deve ser um administrador no computador que está executando o [!INCLUDE[s
 
 A tabela a seguir lista as configurações avançadas para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], com os valores permitidos. 
 
-|**Nome da configuração**|**Tipo**|**Description**|
+|**Nome da configuração**|**Tipo**|**Descrição**|
 |----|----|----|
 |TRABALHO\_LIMPEZA\_ON\_SAIR|Integer |Esta é uma configuração interna apenas, não altere esse valor. </br></br>Especifica se a pasta de trabalho temporária criada para cada sessão de tempo de execução externa deve ser limpa depois que a sessão seja concluída. Essa configuração é útil para depuração. </br></br>Valores com suporte são **0** (desativado) ou **1** (habilitado). </br></br>O padrão é 1, os arquivos de log significado são removidos ao sair.|
 |RASTREAMENTO\_NÍVEL|Integer |Configura o nível de detalhamento do rastreamento de MSSQLLAUNCHPAD para fins de depuração. Isso afeta os arquivos de rastreamento no caminho especificado pela configuração LOG_DIRECTORY. </br></br>Valores com suporte são: **1** (erro) **2** (desempenho), **3** (aviso), **4** (informações). </br></br>O padrão é 1, que significa que somente os avisos de saída.|
 
 Todas as configurações assumem a forma de um par chave-valor, com cada configuração em uma linha separada. Por exemplo, para alterar o nível de rastreamento, você deve adicionar a linha `Default: TRACE_LEVEL=4`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Considerações sobre segurança](security-considerations-for-the-r-runtime-in-sql-server.md)

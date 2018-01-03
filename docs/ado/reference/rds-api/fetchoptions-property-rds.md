@@ -3,7 +3,7 @@ title: Propriedade FetchOptions (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb723da9cfd35101167b3d8618fefd4d55cc8f9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77ed1de5f9506512e3f7812b2355b1c52d5fa8f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetchoptions-property-rds"></a>Propriedade FetchOptions (RDS)
 Indica o tipo de busca de maneira assíncrona.  
@@ -43,13 +43,13 @@ Indica o tipo de busca de maneira assíncrona.
 > [!NOTE]
 >  Cada arquivo executável do lado do cliente que usa constantes deve fornecer declarações para eles. Você pode recortar e colar as declarações de constantes desejado do arquivo Adcvbs.inc, localizado na pasta de instalação padrão para a biblioteca RDS.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Em um aplicativo Web, você normalmente deve usar **adcFetchAsync** (o valor padrão), porque ele fornece um melhor desempenho. Em um aplicativo cliente compilado, você normalmente deve usar **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de FetchOptions (VBScript) e ExecuteOptions](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Método Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

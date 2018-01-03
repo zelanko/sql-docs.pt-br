@@ -1,7 +1,7 @@
 ---
 title: Instalando componentes do SSMA no SQL Server (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 62d1fb09d879290ed8f6078f36996590f2799231
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 76880266efb8c38bffdaa4223e49822c6d3b0778
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Instalar os componentes do SSMA no SQL Server (OracleToSQL)
 Além de instalar o SSMA, você também deve instalar componentes no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Esses componentes incluem o pacote de extensão do SSMA, que dá suporte à migração de dados e provedores da Oracle para habilitar a conectividade de servidor para servidor.  
@@ -34,7 +34,7 @@ O pacote de extensão do SSMA adiciona os bancos de dados, **sysdb** e **ssmates
   
 Além disso, quando você migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], cria o SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] trabalhos de agente quando o mecanismo de migração de dados do lado servidor é usado para migrar os dados.  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
 Antes de instalar o SSMA para componentes de servidor Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], certifique-se de que o sistema atende aos seguintes requisitos:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]instância está instalada. O SSMA não oferece suporte para o SQL Server 2008 Express Edition.  
@@ -109,7 +109,7 @@ Depois de instalar o pacote de extensão, você será um, consulte um **ssma_ora
   
 Toda vez que você migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA cria um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] trabalho do agente. Esses trabalhos são nomeados **ssma_oracle pacote de migração de dados {GUID}**e são visíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nó do agente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] na pasta Jobs.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalando o SSMA para cliente Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

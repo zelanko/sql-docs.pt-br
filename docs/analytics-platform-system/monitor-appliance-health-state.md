@@ -3,10 +3,10 @@ title: Monitor de estado de integridade de dispositivo (Analytics Platform Syste
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
 caps.latest.revision: "12"
-ms.openlocfilehash: dad3355061bafcbbfa3a34b21d2043b0411129ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d83c3d35c4cf65ebf714b44bc9db7db36b11f818
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-appliance-health-state"></a>Monitor de estado de integridade de dispositivo
 Este tópico explica como monitorar o estado de um dispositivo de PDW do SQL Server usando o Console de administração, ou consultar diretamente as exibições de gerenciamento dinâmico do SQL Server PDW.  
@@ -96,7 +96,7 @@ O **[update_time]** coluna mostra a última vez em que o componente foi sondado 
 > [!CAUTION]  
 > Certifique-se de investigar o problema, quando um componente não foi sondado por 5 minutos ou mais; pode haver um alerta que indica um problema com as pulsações do software.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Monitoramento de dispositivo &#40; Analytics Platform System &#41;](appliance-monitoring.md)  
   

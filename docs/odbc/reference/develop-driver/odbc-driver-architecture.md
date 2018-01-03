@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ecde72ec7bd66fa3cc52ae70a3ca626ada2c0818
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69d4103e9f04da7775f38b436b009f8a3c06a962
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-driver-architecture"></a>Arquitetura do Driver ODBC
 Gravadores de driver devem estar cientes de que a arquitetura do driver pode afetar se um aplicativo pode usar SQL DBMS específico.  
@@ -59,5 +59,5 @@ Gravadores de driver devem estar cientes de que a arquitetura do driver pode afe
 |Habilitando o pooling de conexão|[Pool de Conexão ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Conectando a dados de um fonte ou Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), na referência do programador de ODBC|  
 |Problemas de driver e conexão Unicode/ANSI|[Drivers Unicode](../../../odbc/reference/develop-app/unicode-drivers.md)|[Considerações sobre programação](../../../odbc/reference/develop-app/programming-considerations.md), na referência do programador de ODBC|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

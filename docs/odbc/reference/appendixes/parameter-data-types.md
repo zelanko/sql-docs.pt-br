@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 655868b77b482a11145e8947e1ea81d34270ca65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1deb0723864a0ed27f639a5060cc17afe886b9e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-data-types"></a>Tipos de dados de parâmetro
 Embora cada parâmetro é especificado com **SQLBindParameter** é definido usando um tipo de dados do SQL, os parâmetros em uma instrução SQL ter nenhum intrínsecos tipo de dados. Portanto, os marcadores de parâmetro podem ser incluídos em uma instrução SQL somente se seus tipos de dados podem ser inferidos de outro operando na instrução. Por exemplo, em uma expressão aritmética, como? + COLUMN1, o tipo de dados do parâmetro pode ser deduzido do tipo de dados da coluna nomeada representado por COLUMN1. Um aplicativo não pode usar um marcador de parâmetro se o tipo de dados não pode ser determinado.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c8e907d01b79c314603ba87c8195e56c8710bd10
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba3689fb9d70418d546d9583a537b2112a65a71b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-reprocess-command"></a>Comando de REPROCESSAMENTO do conjunto
 Especifica quantas vezes ou como longos para bloquear um arquivo ou um registro após uma tentativa malsucedida de bloqueio.  
@@ -57,5 +57,5 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
  COMO AUTOMÁTICO  
  Especifica que o Visual FoxPro tenta bloquear o registro ou arquivo indefinidamente. (O REPROCESSAMENTO de conjunto para -2 é um comando equivalente).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A primeira tentativa de bloquear um arquivo ou registro nem sempre é bem-sucedida. Frequentemente, um registro ou o arquivo está bloqueado por outro usuário na rede. Definir REPROCESSAR determina se do Visual FoxPro faz tentativas adicionais para bloquear o registro ou o arquivo quando a tentativa inicial for bem-sucedida. Você pode especificar quantas vezes tentativas adicionais são feitas ou quanto tempo as tentativas são feitas. Uma rotina de erro ON afeta como malsucedido bloqueio tentativas são tratadas.

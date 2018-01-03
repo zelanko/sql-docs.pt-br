@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a14293bf4dcbe8e0c6f968a8a020475bfd4d8f1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 895c4d86c11d88fcf544b9a3c7612e1a6cdf4764
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqltables-access-driver"></a>SQLTables (Driver de acesso)
 > [!NOTE]  
@@ -36,5 +36,5 @@ ms.lasthandoff: 11/20/2017
 |*szTableQualifier*|Na coluna TABLE_QUALIFIER, **SQLTables** retorna o caminho para um arquivo de banco de dados.|  
 |*SzTableType*|Quando o driver do Microsoft Access for usado, "Tabela de sistema" há suporte para *szTableType* para tabelas do sistema, "Sinônimo" suporte para tabelas anexadas e "VIEW" é suportado para retornar a linha consultas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Função SQLTables](../../odbc/reference/syntax/sqltables-function.md)

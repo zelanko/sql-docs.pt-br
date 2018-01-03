@@ -2,11 +2,11 @@
 title: "Instale o aprendizado de máquina servidor autônomo ou R Server autônomo | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8a11d71e1568b3da175de0d2eecf182a9b415400
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d69755716ae84ed280f8af9c62a85dc861f66d75
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>Instalar o servidor de aprendizado de máquina (autônomo) ou R Server (autônomo)
 
@@ -152,8 +152,8 @@ A tabela a seguir lista os caminhos para cada instalação.
 |R Server (Autônomo) |Instalador autônomo do Windows|`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |Servidor do Machine Learning (Autônomo) |  Assistente de instalação do SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
 |Servidor do Machine Learning (Autônomo) |  Instalador autônomo do Windows |`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|R Services (no banco de dados) |Assistente de instalação do SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Serviços de Machine Learning (No Banco de Dados) |Assistente de instalação do SQL Server 2017|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`ou`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|R Services (no Banco de Dados) |Assistente de instalação do SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
+|Serviços de Machine Learning (No Banco de Dados) |Assistente de instalação do SQL Server 2017|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES` ou `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 
 ### <a name="development-tools"></a>Ferramentas de desenvolvimento
 

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fb9cd848463d0315d42b49f42e690f1bd7e47b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetstmtattr-function"></a>Função SQLSetStmtAttr
 **Conformidade**  
@@ -161,7 +161,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>Atributos de instrução  
  Os atributos definidos atualmente e a versão do ODBC no qual eles foram apresentados são mostrados na tabela a seguir; é esperado que serão definidos atributos mais drivers para tirar proveito de diferentes fontes de dados. Um intervalo de atributos é reservado pelo ODBC; os desenvolvedores de driver devem reservar valores para seu próprio uso específico do driver do Open Group. Para obter mais informações, consulte [tipos de dados específicos do Driver, tipos de descritor, tipos de informações, tipos de diagnóstico e atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-|Atributo|*ValuePtr* conteúdo|  
+|attribute|*ValuePtr* conteúdo|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|O identificador para o APD para chamadas subsequentes para **SQLExecute** e **SQLExecDirect** no identificador da instrução. O valor inicial deste atributo é o descritor alocado implicitamente quando a instrução foi inicialmente alocada. Se o valor desse atributo é definido como SQL_NULL_DESC ou o identificador originalmente alocado para o descritor de, um identificador APD explicitamente alocado que foi previamente associado com o identificador de instrução é dissociado dele e o identificador de instrução é revertida para o alocado implicitamente identificador APD.<br /><br /> Esse atributo não pode ser definido para um indicador de descritor que foi alocado implicitamente para outra instrução ou outro identificador do descritor que foi implicitamente definido na mesma instrução; identificadores de descritor alocado implicitamente não podem ser associados a mais de uma instrução ou o identificador do descritor.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|O identificador para descartar para buscas subsequentes no identificador da instrução. O valor inicial deste atributo é o descritor alocado implicitamente quando a instrução foi inicialmente alocada. Se o valor desse atributo é definido como SQL_NULL_DESC ou o identificador originalmente alocado para o descritor de, um identificador de descartar explicitamente alocado que foi previamente associado com o identificador de instrução é dissociado dele e o identificador de instrução é revertida para o Identificador de descartar foi alocado implicitamente.<br /><br /> Esse atributo não pode ser definido para um indicador de descritor que foi alocado implicitamente para outra instrução ou outro identificador do descritor que foi implicitamente definido na mesma instrução; identificadores de descritor alocado implicitamente não podem ser associados a mais de uma instrução ou o identificador do descritor.|  
@@ -214,6 +214,6 @@ SQLRETURN SQLSetStmtAttr(
 |Definir um atributo de conexão|[Função SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
 |Configuração de um único campo do descritor|[Função SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

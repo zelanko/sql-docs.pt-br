@@ -2,9 +2,11 @@
 title: Como criar um procedimento armazenado usando sqlrutils | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86e9655770c55f99514cd5a0a9b9910d5f78e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 475665c87f672868eaa6efeb2b5b6e927ed945af
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Criar um procedimento armazenado usando sqlrutils
 
@@ -39,7 +41,7 @@ Entre os parâmetros de entrada pode haver no máximo um quadro de dados.
 
 Os objetos dentro do quadro de dados, bem como todos os outros parâmetros de entrada da função, devem ser dos seguintes tipos de dados R:
 - POSIXct
-- numeric
+- NUMERIC
 - character
 - inteiro
 - logical
@@ -87,7 +89,7 @@ Quando você faz com que cada função de chamada, será criado um objeto de R q
 
 Quando todos os parâmetros de entrada e saídos estiverem prontos, fazer uma chamada para o `StoredProcedure` construtor.
 
-**Uso**
+**Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
@@ -234,7 +236,7 @@ myetl1function <- function() {
 > 
 > Embora você não precise explicitamente abrir a conexão ODBC como parte do seu código, uma conexão ODBC ainda é necessária para usar o **sqlrutils**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Gerando um procedimento armazenado usando sqlrutils](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 

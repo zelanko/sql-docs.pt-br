@@ -1,11 +1,13 @@
 ---
 title: "Redefinir o método (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4762d331c76b1e97d13ffd1dbf926a35468bcaa9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef5dfc619f39547150d096721da70c0ac715d04d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="reset-method-rds"></a>Método Reset (RDS)
 Executa a classificação ou o filtro em um cliente **registros** com base nas propriedades de classificação e filtro especificadas.  
@@ -42,7 +44,7 @@ DataControl.Reset(value)
  *value*  
  Opcional. Um **booliano** valor que é **True** (padrão), se você deseja filtrar o conjunto de linhas "filtrado" atual. **False** indica que você filtrar o conjunto de linhas original, removendo qualquer opção de filtro anterior.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)propriedades fornecem a classificação e filtragem de funcionalidade no cache do lado do cliente. A funcionalidade de classificação ordena os registros por valores de uma coluna. A funcionalidade de filtragem exibe um subconjunto de registros com base em um critério de localização, enquanto o completo [registros](../../../ado/reference/ado-api/recordset-object-ado.md) é mantido no cache. O **redefinir** método executará os critérios e substitua atual **registros** com um atualizável **registros**.  
   
  Se houver alterações nos dados originais que não tenham sido enviadas, o **redefinir** método irá falhar. Primeiro, use o [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) método para salvar as alterações em uma leitura/gravação **registros**e, em seguida, use o **redefinir** método para classificar ou filtrar os registros.  
@@ -75,7 +77,7 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn e propriedades SortDirection e exemplo de método de redefinição (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

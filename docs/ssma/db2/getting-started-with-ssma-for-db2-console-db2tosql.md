@@ -1,7 +1,7 @@
 ---
 title: "Guia de Introdução com o SSMA para o Console do DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9389ddf6ebe677463e0a11f53b50060b8c78ce9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cfffdb6df256ed0ee591965b1d1ac98cf3c1d721
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Guia de Introdução com o SSMA para o Console do DB2 (DB2ToSQL)
 Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console do DB2. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console SSMA típica.  
@@ -71,6 +71,6 @@ Interpretação de cor da saída do console na tabela a seguir:
 |Verde|Solicitar entrada do usuário|  
 |Ciano|Início, término e o resultado de uma operação|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalando o SSMA para DB2](http://msdn.microsoft.com/en-us/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

@@ -1,7 +1,7 @@
 ---
 title: Mapeamento de DB2 e tipos de dados do SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce0e2311d040705713b51bf007b9334bccaa69ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapeamento de DB2 e tipos de dados do SQL Server (DB2ToSQL)
 Os tipos de banco de dados do DB2 variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de banco de dados. Ao converter objetos de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, você deve especificar como mapear tipos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
@@ -94,9 +94,9 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
         Você não pode remover mapeamentos herdados. No entanto, os mapeamentos herdados são substituídos pelas mapeamentos personalizados em um objeto específico ou a categoria de objeto.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 A próxima etapa no processo de migração é como [avaliação relatório &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md) ou [convertendo esquemas de DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Se você criar um relatório de avaliação, objetos do DB2 são convertidos automaticamente durante a avaliação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do DB2 para SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

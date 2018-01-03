@@ -3,7 +3,7 @@ title: "Método CreateRecordset (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createrecordset-method-rds"></a>Método CreateRecordset (RDS)
 Cria um vazio, desconectado [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -51,7 +51,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Um **Variant** matriz de atributos que definem cada coluna a **registros** criado. Cada definição de coluna contém uma matriz de quatro atributos necessários e um atributo opcional.  
   
-|Atributo|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Nome|Nome do cabeçalho da coluna.|  
 |Tipo|Inteiro do tipo de dados.|  
@@ -61,7 +61,7 @@ object.CreateRecordset(ColumnInfos)
   
  O conjunto de matrizes de coluna, em seguida, é agrupado em uma matriz, que define o **registros**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O objeto comercial do lado do servidor pode preencher resultante **registros** com dados de um provedor de dados não - OLE DB, como um sistema operacional do arquivo contendo cotações de ações.  
   
  A seguinte tabela lista o [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valores com suporte a **CreateRecordset** método. O número listado é o número de referência usada para definir campos.  
@@ -109,7 +109,7 @@ object.CreateRecordset(ColumnInfos)
 |-|-|  
 |[Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do método CreateRecordset (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [Exemplo do método CreateRecordset (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
  [Método CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8a6df52b7dfdcc2fb4e47bb6d19afefe1fb4655
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3be99267a7b2b5395a03c6a5a03fd9b6c33742e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Usando SQLGetDiagRec e SQLGetDiagField
 Aplicativos chamam **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações de diagnóstico. Essas funções aceitam um identificador de ambiente, conexão, instrução ou descritor e retornam o diagnóstico da função que esse identificador usado pela última vez. O diagnóstico de logon de um identificador específico será descartado quando uma nova função é chamada usando esse identificador. Se a função retornou vários registros de diagnósticos, o aplicativo chama essas funções várias vezes; o número total de registros de status é recuperado pela chamada **SQLGetDiagField** para o registro de cabeçalho (record 0) com a opção SQL_DIAG_NUMBER.  

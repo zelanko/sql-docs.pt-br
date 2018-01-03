@@ -1,7 +1,7 @@
 ---
 title: "Configurações globais (Editor) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3685bd1a9445d4864ed0b71dbe964d865ec065e3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f48947b33bfdcea0e0cedfbaaa793649462c3bca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-db2tosql"></a>Configurações globais (Editor) (DB2ToSQL)
 Use a página do Editor do **configurações globais** caixa de diálogo para especificar configurações de janelas do editor de código.  

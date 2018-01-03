@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e94325210db4232ae3a5b715aa26a059d7895eae
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33cc5f63c34618f51196e173e58adbac58377f29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="why-was-odbc-created"></a>Por que o ODBC foi criado?
 Historicamente, empresas usaram um DBMS único. Todo o acesso de banco de dados foi feito por meio de front-end de sistema ou aplicativos escritos para funcionar exclusivamente com este sistema. No entanto, como o uso de computadores cresceu e mais hardware e software tornou-se disponível, as empresas iniciado para adquirir DBMSs diferentes. Os motivos foram muitas: pessoas compradas o que era mais barato, o que mais rápido, o que eles já soubessem, o que foi mais recente no mercado, o que funcionou melhor para um único aplicativo. Outros motivos foram reorganizações e fusões, onde departamentos que anteriormente tinham um DBMS único agora tinham vários.  

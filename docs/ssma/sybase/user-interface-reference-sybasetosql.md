@@ -3,7 +3,7 @@ title: "Referência da Interface de usuário (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aeba35ec3f29617674a912ed43464b2742bb5d5e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21e462dc66fd7bb46e9a4ee555b66fb63c153da4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referência da Interface de usuário (SybaseToSQL)
 Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSMA (Migration Assistant) para Sybase.  
@@ -55,7 +55,7 @@ Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes
 |[Configurações de projeto &#40; Mapeamento de tipo de &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|Use a página mapeamento de tipo do **configurações de projeto** caixa de diálogo para especificar os mapeamentos de tipo de padrão para todos os bancos de dados e objetos de banco de dados em SSMA para Sybase projeto.|  
 |[Salvar metadados &#40; SybaseToSQL &#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|O **salvar metadados** caixa de diálogo aparece quando você salvar um projeto que falta metadados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Guia de Introdução com o SSMA para Sybase &#40; SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
 [Migrando Sybase ASE bancos de dados do SQL Server - banco de dados SQL do Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -32,11 +32,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-data-types"></a>Tipos de dados de intervalo
 Um intervalo é definido como a diferença entre duas datas e horas. Intervalos são expressos em uma das duas maneiras diferentes. Um é um *ano-mês* intervalo que expressa intervalos em termos de anos e um número integral de meses. A outra é um *dia hora* intervalo que expressa intervalos em termos de dias, minutos e segundos. Esses dois tipos de intervalos são diferentes e não podem ser misturados, como meses podem ter diferentes números de dias.  

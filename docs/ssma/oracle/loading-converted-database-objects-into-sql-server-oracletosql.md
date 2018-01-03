@@ -1,7 +1,7 @@
 ---
 title: Carregando convertidos do banco de dados objetos no SQL Server (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 66240ced7e9016aede65ffc8a51ac21108154d85
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1de8ae1e53dfd76527987a15be62894dcae10120
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Carregando convertidos do banco de dados objetos no SQL Server (OracleToSQL)
 Depois de converter esquemas Oracle para o SQL Server, você pode carregar os objetos de banco de dados resultante no SQL Server. Você pode ter o SSMA criar os objetos, ou você pode executar scripts nos objetos e executar os scripts por conta própria. Além disso, o SSMA permite atualizar os metadados de destino com o conteúdo real do banco de dados do SQL Server.  
@@ -115,6 +115,6 @@ Depois que você carregou os objetos de banco de dados convertido no SQL Server,
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [migrar dados para o SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

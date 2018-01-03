@@ -1,11 +1,13 @@
 ---
 title: "Método SubmitChanges (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d7015e1a668697a12c373904c0bd71e22108449
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc04a3ac77d6363c86f684b474fb5fa9a06c3c5e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
 Envia as alterações de localmente em cache e atualizáveis pendentes [registros](../../../ado/reference/ado-api/recordset-object-ado.md) à fonte de dados especificado no [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propriedade ou o [URL](../../../ado/reference/rds-api/url-property-rds.md) propriedade.  
@@ -48,7 +50,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *Conjunto de registros*  
  Uma variável de objeto que representa um **registros** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [conectar](../../../ado/reference/rds-api/connect-property-rds.md), [servidor](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) propriedades devem ser definidas antes de usar o **SubmitChanges** método com o  **RDS. DataControl** objeto.  
   
  Se você chamar o [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) método depois de ter chamado **SubmitChanges** para o mesmo **registros** objeto, o **CancelUpdate** chamada falhar porque as alterações já foram confirmadas.  
@@ -65,7 +67,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 |-|-|  
 |[Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do método SubmitChanges (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [Botões de comando do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Método CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   

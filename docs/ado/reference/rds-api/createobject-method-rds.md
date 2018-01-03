@@ -3,7 +3,7 @@ title: "Método CreateObject (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba9c2d9ee2c2cf0a646155e5d184640d1aa0283b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createobject-method-rds"></a>Método CreateObject (RDS)
 Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para ele. Os pacotes e lê dados de proxy para o stub do lado do servidor para comunicação com o objeto de negócios enviar solicitações e dados pela Internet. Para objetos de componente em andamento, sem os proxies são usados, apenas um ponteiro para o objeto é fornecido.  
@@ -54,13 +54,13 @@ Cria o proxy para o objeto de negócios de destino e retorna um ponteiro para el
  *awebsrvr* ou *computername*  
  Um **cadeia de caracteres** valor que representa uma URL que identifica o servidor Web de serviços de informações da Internet (IIS) em que uma instância do objeto de negócios do servidor é criada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *protocolo HTTP* é o protocolo padrão da Web; *HTTPS* é um protocolo da Web seguro. Use o *protocolo DCOM* ao executar uma rede de área local sem HTTP. O *em processo* protocolo é uma biblioteca de vínculo dinâmico (DLL) local; ele não usa uma rede.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto DataFactory, método de consulta e exemplo de método CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
  [Exemplo de método CreateObject (VBScript) e o objeto de espaço de dados](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
  [Método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)

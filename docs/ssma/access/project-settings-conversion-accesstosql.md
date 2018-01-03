@@ -1,7 +1,7 @@
 ---
 title: "Configurações (conversão) (AccessToSQL) do projeto | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ce9b6bec50de99ba85561ec3a1679692ccb9bf6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec31bf02ccdeedd4356d0a85c85d7d33041d5bde
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Configurações de projeto (conversão) (AccessToSQL)
 As configurações de projeto de conversão permitem que você configure como os objetos são convertidos de objetos de banco de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou objetos de banco de dados do SQL Azure.  
@@ -120,6 +120,6 @@ Exibe uma mensagem no relatório de avaliação e no painel de saída quando um 
   
 -   **Modo de inteira**: True  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

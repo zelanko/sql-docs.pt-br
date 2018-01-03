@@ -2,9 +2,11 @@
 title: "Desempenho de serviços de R - resultados e recursos | Microsoft Docs"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0b490c8f0d3795dae52fc575c1e231d39ff6e874
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0ee44976c109818292f7fa1587d6828e9f209fc1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Desempenho de serviços de R: resultados e recursos
 
@@ -95,7 +97,7 @@ Esta seção compara antes e depois dos resultados para cada um dos testes.
 
 O primeiro teste em comparação com o uso de compactação e uma tabela Colunar para reduzir o tamanho dos dados.
 
-| Nome da tabela            | Linhas     | Reservado   | Dados       | index_size | Não usado  | % de economia (reservado) |
+| Nome da tabela            | Linhas     | Reservado   | data       | index_size | Não usado  | % de economia (reservado) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -386,7 +388,7 @@ A seguir estão links para informações, ferramentas e scripts usados no desenv
 
 + [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
-+ [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)
++ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
 
 + [Introdução ao administrador de recursos](https://technet.microsoft.com/library/bb895232.aspx)
 

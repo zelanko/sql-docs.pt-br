@@ -1,7 +1,7 @@
 ---
 title: Carregando convertidos do banco de dados objetos no SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a53fc54c474944739a839230ed9523aeeff9853c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Carregando convertidos do banco de dados objetos no SQL Server (DB2ToSQL)
 Depois de converter esquemas DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode carregar os objetos de banco de dados resultante em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode ter o SSMA criar os objetos, ou você pode executar scripts nos objetos e executar os scripts por conta própria. Além disso, o SSMA permite atualizar metadados de destino com o conteúdo real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados.  
@@ -115,6 +115,6 @@ Depois que você carregou os objetos de banco de dados convertido em [!INCLUDE[s
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [migrando dados do DB2 no SQL Server](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando dados do DB2 no SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

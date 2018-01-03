@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1992b3fc6d6013859c1bdd46d119f633db46acfc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors"></a>Cursores roláveis
 Aplicativos modernos em tela, o usuário rola para trás e frente os dados. Para esses aplicativos, retornando a uma linha anteriormente busca é um problema. Uma possibilidade é feche e reabra o cursor e, em seguida, buscar linhas até que o cursor atinge a linha necessária. Outra possibilidade é ler o conjunto de resultados, armazenar em cache localmente e implementar a rolagem no aplicativo. Ambas as possibilidades funcionam bem somente com conjuntos de resultados pequenos e a segunda possibilidade é difícil de implementar. Uma solução melhor é usar um *cursor rolável,* que pode retroceder e Avançar no conjunto de resultados.  

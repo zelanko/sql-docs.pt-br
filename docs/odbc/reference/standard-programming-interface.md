@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c1f3cccc67bb9c2223ee98f30a1fb6781a12fd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79cfb261e4ee433043794c864e7e02d93586c881
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-programming-interface"></a>Interface de programação padrão
 A interface de programação talvez é o candidato mais óbvio de padronização. Na verdade, quando estava sendo desenvolvido ODBC, ANSI e ISO já fornecido padrões para embedded SQL e SQL módulos. Embora nenhum padrões existiam para um banco de dados CLI, o grupo de acesso do SQL — um consórcio do setor de fornecedores de banco de dados — foi considerar a possibilidade de criar um; partes do ODBC posteriormente tornou-se a base para seu trabalho.  

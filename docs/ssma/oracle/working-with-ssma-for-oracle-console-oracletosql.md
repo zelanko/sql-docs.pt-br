@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com o SSMA para o Console do Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6135cf88be820227efbc2d6d0dfa7ccd919c8a84
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 57e366ff233e744f4689cd5f3ce5ba8275692aa4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Trabalhando com o SSMA para o Console do Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Versão do Migration Assistant (SSMA) para Oracle agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script de entrada para o aplicativo para executar os comandos de formulário. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  
@@ -32,7 +32,7 @@ Os tópicos abordados nesta seção incluem:
   
 |||  
 |-|-|  
-|**Tópicos**|**Description**|  
+|**Tópicos**|**Descrição**|  
 |[Guia de Introdução com o SSMA para Console do Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Explica o procedimento para executar o aplicativo de console.|  
 |[Opções de linha de comando no Console do SSMA &#40; OracleToSQL &#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Descreve as opções de linha de comando e os parâmetros para operar o aplicativo de console SSMA.|  
 |[Criando arquivos de Script &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Explica como criar um arquivo de script.|  
@@ -44,6 +44,6 @@ Os tópicos abordados nesta seção incluem:
 |[Gerando relatórios &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)|Lista os comandos para gerar relatórios.|  
 |[Solucionando problemas de &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|Fornece breves informações sobre como corrigir problemas de migração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Guia de Introdução com o SSMA para o Console do Oracle](http://msdn.microsoft.com/en-us/667a5e4a-6848-4973-a72d-1287f64718ac)  
   

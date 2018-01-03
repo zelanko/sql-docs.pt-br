@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="considering-database-features-to-use"></a>Considerando os recursos de banco de dados de uso
 Depois que o nível básico de interoperabilidade for conhecido, os recursos de banco de dados usados pelo aplicativo devem ser considerados. Por exemplo, quais instruções SQL de aplicativo executará? O aplicativo irá usar cursores roláveis? Transações? Procedimentos? Dados Long? Para obter ideias sobre quais recursos talvez não tenha suporte por todos os DBMSs, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), e [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) edescriçõesdefunção[ Apêndice c: gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Os recursos necessários para um aplicativo podem eliminar alguns DBMSs da lista de destino DBMSs. Eles também podem mostrar que o aplicativo pode direcionar facilmente DBMSs muitos.  

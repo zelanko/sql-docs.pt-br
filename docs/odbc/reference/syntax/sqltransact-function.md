@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e293ad391bee9698941b8681a852ed75bf0717e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d4aa10349035d7a9d5d16c979701c39ead96e8f2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqltransact-function"></a>Função SQLTransact
 **Conformidade**  
@@ -38,6 +38,6 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Não há suporte para o atributo SQL_ASYNC_DBC_FUNCTION_ENABLE, que foi introduzida no ODBC 3.8, por **SQLTransact**. Aplicativos usando uma operação assíncrona em um identificador de conexão devem usar **SQLEndTran**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

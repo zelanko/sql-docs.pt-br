@@ -3,7 +3,7 @@ title: Personalizando a ordem de chamadas (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e181c4339c663b2455c68151937013b5c587f2b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fcc1a0055eabcde9b4718e537e2ee37956f116f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>Personalizando a ordem de chamadas (SybaseToSQL)
 Nesta etapa, você selecionar a ordem na qual os objetos de teste serão invocados.  
@@ -36,6 +36,6 @@ Use os botões são colocados na parte superior da grade da lista de objetos par
 ## <a name="next-step"></a>Próxima etapa  
 [Concluindo a preparação do caso de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Testando migrados objetos de banco de dados &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

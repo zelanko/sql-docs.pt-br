@@ -5,7 +5,7 @@ ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2933ac739ff3772d3d0ad223f4c2a3041256777
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types"></a>Tipos de dados C
 Tipos de dados ODBC C indicam o tipo de dados de C buffers usados para armazenar dados no aplicativo.  
@@ -45,7 +45,7 @@ Tipos de dados ODBC C indicam o tipo de dados de C buffers usados para armazenar
 |SQL_C_USHORT [j]|SQLUSMALLINT|int curto não assinado|  
 |SQL_C_SLONG [j]|SQLINTEGER|Long int|  
 |SQL_C_ULONG [j]|SQLUINTEGER|int longo não assinado|  
-|SQL_C_FLOAT|SQLREAL|float|  
+|SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|caracteres não assinados|  
 |SQL_C_STINYINT [j]|SQLSCHAR|char assinada|  
@@ -161,5 +161,5 @@ struct tagSQLGUID {
   
 -   [Estruturas de inteiro de 64 bits](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados do C em ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)

@@ -1,11 +1,13 @@
 ---
 title: Conjunto de registros, propriedades SourceRecordset (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: feb657674ff4d2d8c17b11246407eaf3fba142d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dbe0667cd71609f092e3008bf65d7a5cca2faf37
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Conjunto de registros, propriedades SourceRecordset (RDS)
 Indica o **registros** objeto retornado de um objeto de negócios personalizada.  
@@ -45,7 +47,7 @@ Recordset = DataControl.Recordset
  *Conjunto de registros*  
  Uma variável de objeto que representa um **registros** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode definir o **SourceRecordset** propriedade para um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) retornado de um objeto comercial personalizado.  
   
  Essas propriedades permitem que um aplicativo para controlar o processo de ligação por meio de um processo personalizado. Recebem um conjunto de linhas encapsulado em um **Recordset** para que você pode interagir diretamente com o **Recordset**, executar ações como propriedades de configuração ou iteração a **conjunto de registros** .  
@@ -57,7 +59,7 @@ Recordset = DataControl.Recordset
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de SourceRecordset (VBScript) e o conjunto de registros](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
  [Método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Método Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 28caa361e4363aa2224d6cfa63a8830675aeece8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4959b329f855028cedc99f7c43ef889754baecda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor padrão
 Alguns argumentos no catálogo de funções, como o *TableName* argumento **SQLTables**, aceite os padrões de pesquisa. Esses argumentos aceitam padrões de pesquisa se o atributo da instrução SQL_ATTR_METADATA_ID for definido como SQL_FALSE; são argumentos de identificador que não aceitam um padrão de pesquisa se esse atributo é definido como SQL_TRUE.  

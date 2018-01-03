@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a94fc69a43737a4a59c7e82d39d4e6d6dda6b77a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 946742b89eb1023737adbc0fd0bdc4196587463c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo valores retornados para o Excel
 A tabela a seguir lista a linguagem C# defines para o *fInfoType* argumento e os valores correspondentes retornados por **SQLGetInfo**. Essas informações podem ser recuperadas passando listada linguagem C# defines **SQLGetInfo** no *fInfoType* argumento. Para obter mais informações sobre os valores retornados por **SQLGetInfo**, consulte o *referência do programador de ODBC*.  

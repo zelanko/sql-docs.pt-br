@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b58f344839a0f8e74fa46c5e788b7835d3eadc2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7eb679c8d7182dd0edd3a96caafa824a8722962
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trace-dll"></a>DLL de rastreamento
 A DLL que executa o rastreamento é um dos componentes centrais do ODBC. O rastreamento da DLL no momento é fornecido como um exemplo de DLL no componente de ODBC do SDK do Windows e foi incluído anteriormente Microsoft Data Access Components (MDAC) SDK. Portanto, a entrada do registro, a interface e o código de exemplo para a DLL de rastreamento estão disponíveis. Essa DLL pode ser substituída por um rastreamento de DLL produzido por um usuário ODBC ou um fornecedor de terceiros. Uma DLL de rastreamento personalizado deve ser fornecido um nome diferente a DLL de rastreamento de exemplo original. DLLs de rastreamento devem ser instalados no diretório do sistema ou não carregarão. As cadeias de caracteres de conexão não serão passadas para o rastreamento de DLL pelo Gerenciador de Driver.  
