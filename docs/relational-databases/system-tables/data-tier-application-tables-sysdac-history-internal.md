@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55bf1ae9625c5b27c7078bbba61704eef195b0ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabelas de aplicativo da camada de dados - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |**action_type**|**tinyint**|Identificador do tipo da ação:<br /><br /> **0** = implantar<br /><br /> **1** = criar<br /><br /> **2** = renomear<br /><br /> **3** = desanexar<br /><br /> **4** = excluir|  
 |**action_type_name**|**varchar (19)**|Nome do tipo de ação.<br /><br /> **implantar**<br /><br /> **criar**<br /><br /> **Renomear**<br /><br /> **Desanexar**<br /><br /> **Excluir**|  
 |**dac_object_type**|**tinyint**|Identificador do tipo de objeto afetado pela ação:<br /><br /> **0** = dacpac<br /><br /> **1** = logon<br /><br /> **2** = banco de dados|  
-|**dac_object_type_name**|**varchar(8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = instância do DAC<br /><br /> **logon**<br /><br /> **database**|  
+|**dac_object_type_name**|**varchar(8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = instância do DAC<br /><br /> **logon**<br /><br /> **banco de dados**|  
 |**action_status**|**tinyint**|Código que identifica o status atual da ação:<br /><br /> **0** = pendente<br /><br /> **1** = êxito<br /><br /> **2** = falha|  
 |**action_status_name**|**varchar(11)**|Status atual da ação:<br /><br /> **pendente**<br /><br /> **êxito**<br /><br /> **Falha**|  
 |**Necessário**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |**Date_Created**|**datetime**|A data e a hora de criação dessa entrada.|  
 |**date_modified**|**datetime**|A data e a hora da última alteração feita na entrada.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As ações de gerenciamento do DAC, como implantar ou excluir um DAC, geram várias etapas. Cada ação é atribuída um identificador de ação. Cada etapa é atribuída um número de sequência e uma linha **sysdac_history_internal**, em que o status da etapa é registrado. Cada linha é criada quando inicia a etapa de ação e é atualizada para refletir o status da operação quando necessário. Por exemplo, uma ação de implantação do DAC pode ser atribuída **action_id** 12 e pode obter quatro linhas em **sysdac_history_internal**:  
   
 |||||  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  Operações de DAC, como excluir, não remove linhas de **sysdac_history_internal**. Você pode usar a seguinte consulta para excluir manualmente as linhas dos DACs que não são mais implantados em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  
@@ -83,8 +83,8 @@ WHERE instance_id NOT IN
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de servidor fixa sysadmin. Acesso somente leitura a essa exibição está disponível para todos os usuários com permissões para se conectar ao banco de dados mestre.  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40; Transact-SQL &#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   

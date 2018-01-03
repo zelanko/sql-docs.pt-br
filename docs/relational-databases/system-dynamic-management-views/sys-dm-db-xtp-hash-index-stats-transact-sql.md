@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2952f937268ea71a60c87b9bbf766000c5b5a92
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 83e0b404fddcabaa9a70acda6718a3c53d7ba7de
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,11 +41,12 @@ ms.lasthandoff: 11/17/2017
   
 -   Se o número de buckets vazios for alto ou o comprimento máximo da cadeia for alto em relação ao comprimento de cadeia médio, é provável que haja várias linhas com valores de chave duplicados de índice ou haja uma distorção nos valores de chave. Todas as linhas com o mesmo valor de chave de índice recebem hash para o mesmo bucket; portanto, há um comprimento de cadeia longo nesse bucket.  
   
- Os comprimentos de cadeia longos podem afetar significativamente o desempenho de todas as operações DML em linhas individuais, incluindo SELECT e INSERT. Os comprimentos de cadeias curtas com um número alto de buckets vazios estão na indicação de um bucket_count que seja muito alto. Isso diminui o desempenho de verificações de índice.  
+Os comprimentos de cadeia longos podem afetar significativamente o desempenho de todas as operações DML em linhas individuais, incluindo SELECT e INSERT. Os comprimentos de cadeias curtas com um número alto de buckets vazios estão na indicação de um bucket_count que seja muito alto. Isso diminui o desempenho de verificações de índice.  
   
- **sys.DM db_xtp_hash_index_stats** examina a tabela inteira. Portanto, se houver grandes tabelas no banco de dados, **sys.DM db_xtp_hash_index_stats** pode levar um longo tempo de execução.  
+> [!WARNING]
+> **sys.DM db_xtp_hash_index_stats** examina a tabela inteira. Portanto, se houver grandes tabelas no banco de dados, **sys.DM db_xtp_hash_index_stats** pode levar um longo tempo de execução.  
   
- Para obter mais informações, consulte [índices de Hash para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
+Para obter mais informações, consulte [índices de Hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
 |Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
@@ -67,37 +68,35 @@ ms.lasthandoff: 11/17/2017
 
 A consulta a seguir pode ser usada para solucionar problemas de contagem de bucket do índice de hash de uma tabela existente. A consulta retorna estatísticas sobre o percentual de buckets vazios e o comprimento da cadeia de todos os índices de hash em tabelas de usuário.
 
-```Transact-SQL
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [table],   
     i.name                   as [index],   
     h.total_bucket_count,  
     h.empty_bucket_count,  
-      
     FLOOR((  
       CAST(h.empty_bucket_count as float) /  
         h.total_bucket_count) * 100)  
                              as [empty_bucket_percent],  
     h.avg_chain_length,   
     h.max_chain_length  
-  FROM  
-         sys.dm_db_xtp_hash_index_stats  as h   
-    JOIN sys.indexes                     as i  
+  FROM sys.dm_db_xtp_hash_index_stats as h   
+  INNER JOIN sys.indexes as i  
             ON h.object_id = i.object_id  
            AND h.index_id  = i.index_id  
-    JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
-    JOIN sys.tables t on h.object_id=t.object_id
+    INNER JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
+    INNER JOIN sys.tables t on h.object_id=t.object_id
   WHERE ia.type=1
   ORDER BY [table], [index];  
 ``` 
 
-Para obter detalhes sobre como interpretar os resultados dessa consulta, consulte [índices de Hash para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
+Para obter detalhes sobre como interpretar os resultados dessa consulta, consulte [de solução de problemas de índices de Hash para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Estatísticas de índice de hash para tabelas internas
 
 Determinados recursos usam tabelas internas que aproveitam os índices de hash, como índices columnstore em tabelas com otimização de memória. A consulta a seguir retorna estatísticas para índices de hash em tabelas internas que estão vinculadas a tabelas de usuário.
 
-```Transact-SQL
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [user_table],
     ia.type_desc as [internal_table_type],
@@ -106,13 +105,12 @@ Determinados recursos usam tabelas internas que aproveitam os índices de hash, 
     h.empty_bucket_count,  
     h.avg_chain_length,   
     h.max_chain_length  
-  FROM  
-         sys.dm_db_xtp_hash_index_stats  as h   
-    JOIN sys.indexes                     as i  
+  FROM sys.dm_db_xtp_hash_index_stats as h   
+  INNER JOIN sys.indexes as i  
             ON h.object_id = i.object_id  
            AND h.index_id  = i.index_id  
-    JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
-    JOIN sys.tables t on h.object_id=t.object_id
+    INNER JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
+    INNER JOIN sys.tables t on h.object_id=t.object_id
   WHERE ia.type!=1
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
@@ -121,7 +119,7 @@ Observe que o BUCKET_COUNT de índice em tabelas internas não podem ser alterad
 
 Essa consulta não é esperada para retornar todas as linhas, a menos que você estiver usando um recurso que aproveita os índices de hash em tabelas internas. A tabela a seguir com otimização de memória contém um índice columnstore. Depois de criar essa tabela, você verá os índices de hash em tabelas internas.
 
-```Transact-SQL
+```sql
   CREATE TABLE dbo.table_columnstore
   (
     c1 INT NOT NULL PRIMARY KEY NONCLUSTERED,
@@ -129,7 +127,7 @@ Essa consulta não é esperada para retornar todas as linhas, a menos que você 
   ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -3,7 +3,7 @@ title: "Utilitário osql | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: osql
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="osql-utility"></a>Utilitário osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]O **osql** utilitário permite que você insira [!INCLUDE[tsql](../includes/tsql-md.md)] instruções, procedimentos do sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
@@ -197,7 +197,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  O utilitário **-n**, **-O** e **-D** já não têm suporte do **osql**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O utilitário **osql** é iniciado diretamente do sistema operacional com as opções que diferenciam maiúsculas de minúsculas listadas aqui. Depois que o **osql**é iniciado, ele aceita instruções SQL e as envia interativamente ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os resultados são formatados e exibidos na tela (**stdout**). Use QUIT ou EXIT para sair do **osql**.  
   
  Se você não especificar um nome de usuário ao iniciar o **osql**, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fará a verificação e usará variáveis de ambiente, como **osqluser=(***user***)** ou **osqlserver=(***server***)**. Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  
@@ -212,7 +212,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Comandos OSQL  
  Além das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] dentro do **osql**, os comandos a seguir também estão disponíveis.  
   
-|Comando|Descrição|  
+|Comando|Description|  
 |-------------|-----------------|  
 |GO|Executa todas as instruções inseridas depois do último GO.|  
 |RESET|Apaga as instruções inseridas.|  
@@ -340,7 +340,7 @@ GO
   
  Essa instrução produz um resultado de `10.3496`, que indica que o valor é armazenado com todas as casas decimais intactas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comentário &#40;MDX&#41;](../mdx/comment-mdx.md)   
  [– &#40; Comentário &#41; &#40; MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST e CONVERT &#40; Transact-SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   

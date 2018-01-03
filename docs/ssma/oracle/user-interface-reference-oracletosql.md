@@ -1,7 +1,7 @@
 ---
 title: "Referência da Interface de usuário (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8fa2d072f3b5b4be05ad74ff770a5ec4ade6bff6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2d5f4ba79f2a1953ad10b51751ead84a8f4a3e73
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-oracletosql"></a>Referência da Interface de usuário (OracleToSQL)
 Esta seção inclui tópicos de ajuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para Oracle.  
@@ -54,7 +54,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
 |[Atualização do banco de dados &#40; OracleToSQL &#41;](../../ssma/oracle/refresh-from-database-oracletosql.md)|Use o **de atualização do banco de dados** caixa de diálogo para selecionar objetos para atualização do banco de dados Oracle.|  
 |[Salvar metadados &#40; OracleToSQL &#41;](../../ssma/oracle/save-metadata-oracletosql.md)|O **salvar metadados** caixa de diálogo aparece quando você salvar um projeto que falta metadados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Guia de Introdução com o SSMA para Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
 [Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

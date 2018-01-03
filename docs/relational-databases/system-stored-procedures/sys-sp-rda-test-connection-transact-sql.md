@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 897eb5ff888873c7e9befcdb850b13dd2dd9be03
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e7376d3b6fa4bebac0e0b176bd4144d6bec54b0c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -75,10 +75,10 @@ EXECUTE sys.sp_rda_test_connection
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|link_state|int|Um dos valores a seguir, que correspondem aos valores de **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state|INT|Um dos valores a seguir, que correspondem aos valores de **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
 |link_state_desc|varchar (32)|Um dos valores a seguir, que correspondem à anterior valores para **link_state**.<br /><br /> -ÍNTEGRO<br />     O entre o SQL Server e o Azure remoto server está íntegro.<br />-ERROR_AZURE_FIREWALL<br />     O firewall do Azure está impedindo que o link entre o servidor remoto do Azure e SQL Server.<br />-ERROR_NO_CONNECTION<br />     SQL Server não pode fazer uma conexão ao servidor remoto do Azure.<br />-ERROR_AUTH_FAILURE<br />     Uma falha de autenticação está impedindo que o link entre o servidor remoto do Azure e SQL Server.<br />-ERRO<br />     Um erro que não é um problema de autenticação, um problema de conectividade ou um problema de firewall está impedindo que o link entre o servidor remoto do Azure e SQL Server.|  
-|error_number|int|O número do erro. Se não houver nenhum erro, esse campo é NULL.|  
-|error_message|nvarchar (1024)|A mensagem de erro. Se não houver nenhum erro, esse campo é NULL.|  
+|error_number|INT|O número do erro. Se não houver nenhum erro, esse campo é NULL.|  
+|error_message|nvarchar(1024)|A mensagem de erro. Se não houver nenhum erro, esse campo é NULL.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissões db_owner.  
@@ -87,7 +87,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>Verifique a conexão do SQL Server para o servidor remoto do Azure  
   
-```tsql  
+```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
 ### <a name="check-the-azure-firewall"></a>Verifique o firewall do Azure  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -117,7 +117,7 @@ GO
   
 ### <a name="check-authentication-credentials"></a>Verificar as credenciais de autenticação.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -133,7 +133,7 @@ GO
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>Verificar o status do servidor remoto do Azure  
   
-```tsql  
+```sql  
 USE <SQL Server database>  
 GO  
 EXECUTE sys.sp_rda_test_connection   

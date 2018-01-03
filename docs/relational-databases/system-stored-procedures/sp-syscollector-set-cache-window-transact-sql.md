@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c1678c776266b602b227182f5109581851bdd0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9f9390255229779d2584fb0176c5651fa06cfb51
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você deve desabilitar o coletor de dados antes de alterar sua configuração de janela de cache. Esse procedimento armazenado falhará se o coletor de dados estiver habilitado. Para obter mais informações, consulte [habilitar ou desabilitar a coleta de dados](../../relational-databases/data-collection/enable-or-disable-data-collection.md), e [gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md).  
   
 ## <a name="permissions"></a>Permissões  
@@ -67,7 +67,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir desabilita o coletor de dados, configura a janela de cache para reter os dados para até três carregamentos com falha e habilita o coletor de dados.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  
@@ -77,7 +77,7 @@ GO
 EXECUTE dbo.sp_syscollector_enable_collector;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
   

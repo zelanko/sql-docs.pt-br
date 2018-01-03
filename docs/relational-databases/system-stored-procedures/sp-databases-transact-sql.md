@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6133cef4500d7066f38a51f5a5f124d1e879e01
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 444dc643385d2bf26cbc95984473f0b68519c92a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -53,7 +53,7 @@ sp_databases
 |**DATABASE_SIZE**|**int**|Tamanho de banco de dados, em kilobytes.|  
 |**COMENTÁRIOS**|**varchar(254)**|Para o [!INCLUDE[ssDE](../../includes/ssde-md.md)], esse campo sempre retorna NULL.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nomes de banco de dados retornados podem ser usados como parâmetros na instrução USE, para alterar o contexto de banco de dados atual.  
   
  **sp_databases** não tem nenhum equivalente em conectividade aberta de banco de dados (ODBC).  
@@ -64,13 +64,13 @@ sp_databases
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir exibe a execução do `sp_databases`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_databases;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [HAS_DBACCESS &#40; Transact-SQL &#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   

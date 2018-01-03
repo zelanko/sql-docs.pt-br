@@ -20,16 +20,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 86547cd78253d17ccacebe1d9b0db9e3cdda0c8a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d66238df770dfd647c3013441024409f15fdef9b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="clr-integration---enabling"></a>Integração do CLR - habilitar
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O recurso de integração do common language runtime (CLR) está desativado por padrão e deve ser habilitado para usar objetos que são implementados usando a integração CLR. Para habilitar a integração CLR, use o **clr habilitado** opção do **sp_configure** procedimento de armazenado [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
-```tsql  
+```sql  
   
 sp_configure 'show advanced options', 1;  
 GO  
@@ -52,7 +52,7 @@ GO
 > [!NOTE]  
 >  Não há suporte para a execução de CLR (common language runtime) com lightweight pooling. Antes de habilitar integração CLR, você deve desabilitar o lightweight pooling. Para saber mais, veja [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Opção clr enabled de configuração de servidor](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

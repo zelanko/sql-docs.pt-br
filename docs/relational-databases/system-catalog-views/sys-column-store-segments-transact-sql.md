@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a23388dd2333694f779b9f78de81dd9659916b49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 322cd5a22f3d23db02984e13f87989c0585db13e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ Retorna uma linha para cada segmento de coluna em um índice columnstore. Há um
 |**null_value**|**bigint**|Valor usado para representar nulos.|  
 |**on_disk_size**|**bigint**|Tamanho do segmento em bytes.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A consulta a seguir retorna informações sobre segmentos de um índice columnstore.  
   
-```tsql  
+```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
     COUNT(*) AS number_of_segments  
 FROM sys.column_store_segments AS s   
@@ -75,7 +75,7 @@ GO
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de objeto &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultando o catálogo de sistema do SQL Server perguntas Frequentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

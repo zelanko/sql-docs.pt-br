@@ -3,7 +3,7 @@ title: "Opções de linha de comando (Distributed Replay Utility) da ferramenta 
 ms.custom: 
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ae6edc607f16e822d2b752ee31c94042122007d7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 05d85792c13b7163257e6838a078b876969241b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Opções de linha de comando da ferramenta de administração (Distributed Replay Utility)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração do Distributed Replay, **DReplay.exe**, é uma ferramenta de linha de comando para se comunicar com o controlador de reprodução distribuída. Use a ferramenta de administração para iniciar, monitorar e cancelar operações no controlador.  
@@ -48,7 +48,7 @@ Usage:
   dreplay cancel [-m controller] [-q]   
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  É possível emitir as seguintes opções de linha de comando com **DReplay.exe**:  
   
  **preprocess**  

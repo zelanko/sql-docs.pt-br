@@ -1,7 +1,7 @@
 ---
 title: Convertendo esquemas Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 698f85fea4a5a21c2fbd697ec53f90ec7e888ccf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 208378f2be9ad4eea080df758616e554c1262905
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Convertendo esquemas Oracle (OracleToSQL)
 Depois de se conectar ao Oracle, conectado à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e o conjunto de projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de banco de dados.  
@@ -121,6 +121,6 @@ Para cada item que não puderam ser convertido, você deve determinar o que voc�
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [carregar objetos convertidos no SQL Server](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados Oracle para o SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -3,7 +3,7 @@ title: "Exemplo de arquivo com a configuração especificada pelo usuário (DTA)
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a8f6fb06e3e587410321dbe3a205df08f421356
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c2f7217eedcae1b7e26e61eb37008f36a5b81c37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>Exemplo de arquivo de entrada XML com configuração especificada pelo usuário (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Copie e cole este exemplo de arquivo de entrada XML que especifica uma configuração especificada pelo usuário com o **configuração** elemento em seu editor XML favorito ou editor de texto. Isso permite realizar uma análise hipotética. A análise hipotética envolve o uso do elemento **Configuration** para especificar um conjunto de estruturas de design físico hipotéticas para o banco de dados que você deseja ajustar. Então você usa o Orientador de Otimização do Mecanismo de Banco de Dados para analisar os efeitos de executar uma carga de trabalho em relação a essa configuração hipotética para descobrir se ela melhorará o desempenho de processamento de consulta. Esse tipo de análise oferece a vantagem de poder avaliar a nova configuração sem incorrer na sobrecarga da implementação de fato. Se sua configuração hipotética não oferecer a melhora de desempenho desejada, é fácil alterá-la e fazer novas análises até que você alcance a configuração que produza os resultados necessários.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Não é possível criar e remover a mesma estrutura de design físico em qualquer um dos modos (**Relative** ou **Absolute**) do elemento **Configuration** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  

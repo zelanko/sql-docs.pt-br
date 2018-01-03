@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55b67a0a3db22697b9f320f3c8861b08e09a2475
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 55ede35d26ce9f7de1655e076f1aeaad40642218
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (DataType geométrico)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Retorna uma mensagem que pode ajudar a identificar problemas com um objeto espac
   
  Tipo de retorno CLR: **cadeia de caracteres**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir contém os valores de retorno possíveis:  
   
 |Valor de retorno|Description|  
@@ -68,13 +68,13 @@ Retorna uma mensagem que pode ajudar a identificar problemas com um objeto espac
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir de um objeto espacial inválido ilustra como o **isvaliddetailed ()** métodos se comporta.  
   
-```tsql  
+```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
 SELECT @p.IsValidDetailed()  
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos estendidos em instâncias geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

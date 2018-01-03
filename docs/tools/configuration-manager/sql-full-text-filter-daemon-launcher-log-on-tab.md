@@ -3,7 +3,7 @@ title: Iniciador do Daemon de filtro de texto completo SQL (guia fazer logon) | 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 88b20c4eb7da9731885989284da6f893f4755839
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 816ec9e88b5786ef9fc5c59b17a2ccb4cfcd4934
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>Iniciador do Daemon de Filtro de Texto Completo do SQL (guia Fazer Logon)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o serviço iniciador do Daemon de filtro de texto completo SQL (iniciador FDHOST) é usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisa de texto completo. Este serviço deverá estar em execução se você usar a pesquisa de texto completo. Para obter informações sobre os processos do host do daemon de filtro, consulte "Arquitetura da pesquisa de texto completo" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75af14c94dd17ae6caead3f6b5dee9e0bf0b257e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f09bc032ffe4de52fcb7d9f46e4fbdd4450c8c14
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**FileHandle**|**bigint**|Valor do identificador de arquivo.|  
 |**BytesOnDisk**|**bigint**|Tamanho do arquivo físico (contagem de bytes) em disco.<br /><br /> Para arquivos de banco de dados, este é o mesmo valor como **tamanho** na **sys. database_files**, mas é expresso em bytes em vez de páginas.<br /><br /> Para arquivos esparsos de instantâneo do banco de dados, este é o espaço que o sistema operacional está usando para o arquivo.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **fn_virtualfilestats** é um função com valor de tabela que fornece informações estatísticas, como o número total de e/SS executada em um arquivo de sistema. Você pode usar essa função para ajudar a manter o controle do período de tempo que os usuários esperaram para ler ou gravar em um arquivo. A função também ajuda a identificar os arquivos que encontram grande quantidade de atividade de E/S.  
   
 ## <a name="permissions"></a>Permissões  
@@ -81,7 +81,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. Exibindo informações estatísticas para um banco de dados  
  O exemplo a seguir exibe informações estatísticas para o ID de arquivo 1 no banco de dados com um ID `1`.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Exibindo informações estatísticas para um banco de dados e arquivo nomeados  
  O exemplo a seguir exibe informações estatísticas para o arquivo de log no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. A função de sistema `DB_ID` é usado para especificar o *database_id* parâmetro.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -99,13 +99,13 @@ GO
 ### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C. Exibindo informações estatísticas para todos os bancos de dados e arquivos  
  O exemplo a seguir exibe informações estatísticas para todos os arquivos em todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DB_ID &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)   
  [FILE_IDEX &#40; Transact-SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

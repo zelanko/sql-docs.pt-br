@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee043b18eebafdc86b0d2d6e6a34afc0fc865c2f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e6de8f9b9a1ed36135915e5985312a02c02fba6d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (Curinga - caractere (s) para correspondência) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/18/2017
 ### <a name="a-simple-example"></a>R: exemplo simples de   
 O exemplo a seguir retorna os nomes dos que começam com a letra `m`. `[n-z]`Especifica que a segunda letra deve ser em algum lugar no intervalo de `n` para `z`. O caractere curinga porcentagem `%` permite caracteres todos ou nenhum, começando com o caractere de 3. O `model` e `msdb` bancos de dados atendem esse critério. O `master` banco de dados não funciona e é excluído do conjunto de resultados.
  
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm[n-z]%';
 ```
@@ -59,7 +59,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B: exemplo mais complexo   
  O exemplo a seguir usa o operador [] para encontrar as IDs e os nomes de todos os funcionários da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que possuem endereços com um código postal de quatro dígitos.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.BusinessEntityID, p.FirstName, p.LastName, a.PostalCode  
@@ -81,7 +81,7 @@ EmployeeID      FirstName      LastName      PostalCode
 
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [COMO &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% &#40; Curinga – caracteres &#40; s &#41; a correspondência &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   

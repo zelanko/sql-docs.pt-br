@@ -3,7 +3,7 @@ title: Aplicativo sqllogship | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqllogship
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbc29db3024f217fc09f283c3310ead6034e5003
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d98cbf2e1e18538fe20fd4ff76319b8b69d1e05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **sqllogship** aplicativo executa um backup, cópia, ou operação de restauração e tarefas de limpeza associadas para uma configuração de envio de log. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
@@ -58,7 +58,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  Especifica o nível das mensagens adicionadas ao histórico do envio de logs. *level* é um dos seguintes inteiros:  
   
-|level|Descrição|  
+|level|Description|  
 |-----------|-----------------|  
 |0|Não emite nenhuma mensagem de rastreamento ou de depuração.|  
 |1|Emite mensagens para tratamento de erros.|  
@@ -72,7 +72,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-querytimeout** *timeout_value*  
  Especifica o tempo designado para iniciar a operação especificada antes da tentativa expirar. O padrão é sem período de expiração. *timeout_value* é **int***.*  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Recomendamos a utilização das opções de backup, copiar e restaurar para realizar as tarefas de backup, copiar e restaurar quando for possível. Para iniciar esses trabalhos em uma operação em lote ou em outro aplicativo, chame o procedimento armazenado [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
   
  O histórico do envio de logs criado por **sqllogship** é intercalado com o histórico criado pelos trabalhos de backup, cópia e restauração do envio de logs. Se você pretende usar **sqllogship** repetidamente para realizar as operações de backup, cópia ou restauração de uma configuração de envio de logs, considere desabilitar o(s) trabalho(s) de envio de logs correspondente(s). Para obter mais informações, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
@@ -91,7 +91,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 > [!NOTE]  
 >  Para encontrar os caminhos dos diretórios de backup e cópia, execute o procedimento armazenado **sp_help_log_shipping_secondary_database** ou exiba a tabela **log_shipping_secondary** no **msdb**. Os caminhos dos diretórios de backup e de destino estão nas colunas **backup_source_directory** e **backup_destination_directory** , respectivamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
  [log_shipping_secondary &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   

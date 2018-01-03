@@ -3,7 +3,7 @@ title: Consultas | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
@@ -18,15 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1281c4a6accf5083cf6b023b4dc19b31ff432d25
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d7e4bf6357fe56f3c9b6a1e67e9e6aeb3675930
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queries"></a>Consultas
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  DML (linguagem de manipulação de dados) é um vocabulário usado para recuperar e trabalhar com dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use estas instruções para adicionar, modificar, consultar ou remover dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Linguagem de manipulação de dados (DML) é um vocabulário usado para recuperar e trabalhar com dados em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e o banco de dados SQL. Mais também funcionam no SQL Data Warehouse e PDW (revisar cada instrução individual para obter detalhes). Use estas instruções para adicionar, modificar, consultar ou remover dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
  A tabela a seguir lista as instruções DML usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

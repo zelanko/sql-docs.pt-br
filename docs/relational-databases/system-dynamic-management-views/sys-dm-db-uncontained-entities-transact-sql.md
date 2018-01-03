@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2786493aeb75402eae5d7e91458e97436f3435a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 91f36a8a8070e5f5752acf82bec5305fa4adc021
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.lasthandoff: 11/27/2017
   
 ||||  
 |-|-|-|  
-|**Nome da coluna**|**Tipo**|**Description**|  
-|*classe*|**int**|1 = Objeto ou coluna (inclui módulos, XPs, exibições, sinônimos e tabelas).<br /><br /> 4 = Entidade do Banco de Dados<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (Índice de Texto Completo)<br /><br /> 12 = Gatilho DDL do Banco de Dados<br /><br /> 19 = Rota<br /><br /> 30 = Especificação de Auditoria|  
+|**Nome da coluna**|**Tipo**|**Descrição**|  
+|*class*|**int**|1 = Objeto ou coluna (inclui módulos, XPs, exibições, sinônimos e tabelas).<br /><br /> 4 = Entidade do Banco de Dados<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (Índice de Texto Completo)<br /><br /> 12 = Gatilho DDL do Banco de Dados<br /><br /> 19 = Rota<br /><br /> 30 = Especificação de Auditoria|  
 |*class_desc*|**nvarchar(120)**|Descrição da classe da entidade. Um dos procedimentos a seguir para corresponder à classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|ID da entidade.<br /><br /> Se *classe* = 1, então o object_id<br /><br /> Se *classe* = 4 e, em seguida, principal_id.<br /><br /> Se *classe* = 5 e, em seguida, assembly_id.<br /><br /> Se *classe* = 6 e, em seguida, user_type_id.<br /><br /> Se *classe* = 7, em seguida, index_id.<br /><br /> Se *classe* = 12, em seguida, sys.<br /><br /> Se *classe* = 19, route_id.<br /><br /> Se *classe* = 30 e, em seguida, sys. database_audit_specifications.databse_specification_id.|  
 |*statement_line_number*|**int**|Se a classe for um módulo, retornará o número da linha no qual o uso não contido está localizado.  Caso contrário, o valor será nulo.|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/27/2017
 |*nome de feature_*|**nvarchar(256)**|Retorna o nome externo do objeto.|  
 |*feature_type_name*|**nvarchar(256)**|Retorna o tipo de recurso.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sys.DM db_uncontained_entities mostra essas entidades que podem, potencialmente, cruzar o limite de banco de dados. Retornará qualquer entidade de usuário que tenha o potencial para usar objetos fora do modelo de banco de dados.  
   
  Os tipos de recurso a seguir são relatados.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria um procedimento denominado P1 e consulta `sys.dm_db_uncontained_entities`. A consulta relata que P1 usa **sys.endpoints** , que está fora do banco de dados.  
   
-```tsql  
+```sql  
 CREATE DATABASE Test;  
 GO  
   
@@ -90,7 +90,7 @@ LEFT JOIN sys.objects AS SO
     ON UE.major_id = SO.object_id;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)  
   
   

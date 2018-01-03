@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d1a0820d6cafd6930eb4446267840b52aa24fd3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7036aeab4ff8573e07d27aae1b1b486bd5b34fe0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db  
     [ @dbname = ] ‘database_name’;  
 GO  
@@ -87,12 +87,12 @@ GO
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como registrar o banco de dados de estatísticas semânticas de idioma chamando **sp_fulltext_semantic_register_language_statistics_db**.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = 'semanticsDb';  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar e configurar a pesquisa semântica](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

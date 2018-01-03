@@ -3,7 +3,7 @@ title: Elemento TuningTimeInMin (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed0440a28276fa64aa94dad3bbfcdbb287dc28d7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f96f2d58bdc3e5bed18e9dd76fbdd7813a24f8a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica o comprimento máximo de uma sessão de ajuste em minutos.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**unsignedInt**, comprimento ilimitado.|  
 |**Valor padrão**|480 minutos (8 horas).|  
@@ -51,11 +51,11 @@ ms.lasthandoff: 12/05/2017
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhuma|  
+|**Elementos filho**|Nenhum|  
   
 ## <a name="example"></a>Exemplo  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>Description  
  O exemplo de código a seguir mostra como definir 12 horas como tempo máximo de ajuste:  
   
 ## <a name="code"></a>Código  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

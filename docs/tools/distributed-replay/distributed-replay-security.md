@@ -3,7 +3,7 @@ title: "Distributed Replay segurança | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e3f2b9639e7643ffefac8e67ac08c7443bb0463
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c49b865f8db2b57e95f4c2c5746e1d40090b15d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="distributed-replay-security"></a>Segurança do Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Antes de instalar e usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso Distributed Replay, você deve examinar as informações de segurança importantes neste tópico. Este tópico descreve as etapas de configuração de segurança pós-instalação que são necessárias antes de usar o Distributed Replay. Este tópico também descreve considerações importantes referentes à proteção de dados e etapas de remoção importantes.  
@@ -134,7 +134,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Exclua qualquer arquivo de rastreamento, intermediário, de distribuição e de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tenham sido usados em testes. Os arquivos intermediários e de distribuição são armazenados no diretório de trabalho no controlador e no cliente, respectivamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Instalar o Distributed Replay – Visão geral](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   

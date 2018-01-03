@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bafca706c9fa8aa1f90bfb38b16df067c317a475
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d0f725b1725442ec7853bc4ac130b3d3e1d10fe2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Dados espaciais - sys.DM db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
@@ -51,7 +51,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**classe**|**int**|1 = restrições<br /><br /> 7 = índices e heaps|  
+|**class**|**int**|1 = restrições<br /><br /> 7 = índices e heaps|  
 |**class_desc**|**nvarchar (60)**|OBJECT ou COLUMN para restrições<br /><br /> INDEX para índices e heaps|  
 |**major_id**|**int**|OBJECT ID de restrições<br /><br /> OBJECT ID da tabela que contém índices e heaps|  
 |**minor_id**|**int**|NULL para restrições<br /><br /> Index_id para índices e heaps|  
@@ -151,7 +151,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra uma consulta em **sys.DM db_objects_disabled_on_compatibility_level_change** para localizar os objetos afetados, alterando o nível de compatibilidade para 120.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
 GO  
   

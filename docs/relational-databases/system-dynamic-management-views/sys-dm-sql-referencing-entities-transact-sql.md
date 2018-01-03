@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8e4b889d1ee7ec8480c9f41a730ffafcd5888ef4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Gatilhos DDL no nível do servidor  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -99,7 +99,7 @@ sys.dm_sql_referencing_entities (
   
  Retorna um erro quando a entidade referenciada especificada é um procedimento armazenado numerado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir lista os tipos de entidades para os quais as informações de dependência são criadas e mantidas. As informações de dependência não são criadas nem mantidas para regras, padrões, tabelas temporárias, procedimentos armazenados temporários ou objetos do sistema.  
   
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
@@ -107,19 +107,19 @@ sys.dm_sql_referencing_entities (
 |Table|Sim*|Sim|  
 |Exibição|Sim|Sim|  
 |Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
-|procedimento armazenado CLR|Não|Sim|  
+|procedimento armazenado CLR|não|Sim|  
 |Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
-|Função CLR definida pelo usuário|Não|Sim|  
-|Gatilho CLR (DML e DDL)|Não|Não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|Não|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Procedimentos armazenados estendidos|Não|Sim|  
-|Fila|Não|Sim|  
-|Sinônimo|Não|Sim|  
-|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|Não|Sim|  
-|Coleção de esquemas XML|Não|Sim|  
-|Função de partição|Não|Sim|  
+|Função CLR definida pelo usuário|não|Sim|  
+|Gatilho CLR (DML e DDL)|não|não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|não|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
+|Procedimentos armazenados estendidos|não|Sim|  
+|Fila|não|Sim|  
+|Sinônimo|não|Sim|  
+|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|não|Sim|  
+|Coleção de esquemas XML|não|Sim|  
+|Função de partição|não|Sim|  
   
  \*Uma tabela é controlada como uma entidade de referência apenas quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de coluna computada, restrição CHECK ou restrição padrão.  
   
@@ -148,7 +148,7 @@ sys.dm_sql_referencing_entities (
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Retornando as entidades que fazem referência a uma determinada entidade  
  O exemplo a seguir retorna as entidades do banco de dados atual que fazem referência à tabela especificada.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Retornando as entidades que fazem referência a um determinado tipo  
  O exemplo a seguir retorna as entidades que referenciam o tipo de alias `dbo.Flag`. O conjunto de resultados mostra que dois procedimentos armazenados usam esse tipo. O `dbo.Flag` tipo também é usado na definição de várias colunas no `HumanResources.Employee` tabela; no entanto, porque o tipo não está na definição de uma coluna computada, restrição CHECK ou restrição padrão na tabela, nenhuma linha será retornada para o `HumanResources.Employee`tabela.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -177,7 +177,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: "Introdução ao SQL Server 2017 no Docker | Microsoft Docs"
-description: "Este tutorial de início rápido mostra como usar o Docker para executar a imagem de contêiner de 2017 do SQL Server. Em seguida, criar e consultar um banco de dados com sqlcmd."
+description: "Este guia de início rápido mostra como usar o Docker para executar a imagem de contêiner de 2017 do SQL Server. Em seguida, criar e consultar um banco de dados com sqlcmd."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,24 +15,24 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Executar a imagem de contêiner de 2017 do SQL Server com o Docker
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Neste tutorial de início rápido, você deve usar Docker para efetuar pull e executar a imagem de contêiner do SQL Server 2017, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Conecte-se com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
+Este guia de início rápido, você usa Docker para efetuar pull e executar a imagem de contêiner do SQL Server 2017, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Conecte-se com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 Esta imagem consiste em execução no Linux, com base no Ubuntu 16.04 do SQL Server. Ele pode ser usado com o mecanismo do Docker 1.8 + no Linux ou no Docker para Mac/Windows.
 
 > [!NOTE]
 > Este guia rápido se concentra especificamente nos usando mssql-server -**linux** imagem. A imagem do Windows não é coberta, mas você pode aprender mais sobre ele no [página de Hub do Docker mssql-server-windows-desenvolvedor](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
-## <a id="requirements"></a> Pré-requisitos
+## <a id="requirements"></a> Prerequisites
 
 - Mecanismo do docker 1.8 + em qualquer suporte para a distribuição de Linux ou o Docker para Mac/Windows. Para obter mais informações, consulte [instalar o Docker](https://docs.docker.com/engine/installation/).
 - Mínimo de 2 GB de espaço em disco
@@ -240,6 +240,8 @@ Outras ferramentas comuns para se conectar ao SQL Server incluem:
 
 - [Código do Visual Studio](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) no Windows](sql-server-linux-develop-use-ssms.md)
+- [Studio de operações do SQL Server (visualização)](../sql-operations-studio/what-is.md)
+- [MSSQL-cli (visualização)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>Remover o contêiner
 
@@ -257,6 +259,12 @@ docker rm sql1
 
 > [!WARNING]
 > Parando e removendo um contêiner permanentemente exclui todos os dados do SQL Server no contêiner. Se você precisar preservar os dados, [criar e copiar um arquivo de backup para fora do contêiner](tutorial-restore-backup-in-sql-server-container.md) ou use um [técnica de persistência de dados do contêiner](sql-server-linux-configure-docker.md#persist).
+
+## <a name="docker-demo"></a>Demonstração de docker
+
+Após uma tentativa de usar a imagem de contêiner do SQL Server para Docker, convém saber como o Docker é usado para melhorar o desenvolvimento e teste. O vídeo a seguir mostra como o Docker pode ser usado em um cenário de implantação e integração contínua.
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
 ## <a name="next-steps"></a>Próximas etapas
 

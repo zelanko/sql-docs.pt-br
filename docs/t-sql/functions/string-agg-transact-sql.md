@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fed0fc07f27a3069ba56309b1da7f18197bd987f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ Tipo de retorno é depende do primeiro argumento (expressão). Se o argumento de
 |int, bigint, smallint, tinyint, numérico, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR (4000) |
 
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  
 `STRING_AGG`agregação usa todas as expressões de linhas e os concatena em uma única cadeia de caracteres. Valores de expressão são implicitamente convertidos em tipos de cadeia de caracteres e depois concatenados. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, consulte [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
@@ -90,7 +90,7 @@ Valores nulos são ignorados e o separador correspondente não será adicionado.
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Gerar a lista de nomes separados em novas linhas 
 O exemplo a seguir produz uma lista de nomes em uma célula de resultado único, separados com retornos de carro.
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -107,7 +107,7 @@ FROM Person.Person;
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Gerar a lista de nomes separados por vírgula sem valores nulos   
 O exemplo a seguir substitui valores nulos com n '/' e retorna os nomes separados por vírgulas em uma célula de resultado.  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -122,7 +122,7 @@ FROM Person.Person;
 
 ### <a name="c-generate-comma-separated-values"></a>C. Gerar valores separados por vírgula 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -141,7 +141,7 @@ FROM Person.Person;
 ### <a name="d-return-news-articles-with-related-tags"></a>D. Retorno de artigos de notícias com marcas relacionadas 
 
 Artigo e suas marcas são separadas em tabelas diferentes. Desenvolvedor quer retornar uma linha por cada artigo com todas as marcas associadas. Usando a seguinte consulta: 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -160,7 +160,7 @@ GROUP BY a.articleId, title;
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Gerar a lista de endereços de email por cidades
 
 A consulta a seguir localiza os endereços de email dos funcionários e os agrupa por cidades: 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -178,7 +178,7 @@ Emails retornado nos emails de coluna pode ser usada para enviar emails ao grupo
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Gerar uma lista classificada de emails por cidades   
    
 Semelhante ao exemplo anterior, a consulta a seguir localiza os endereços de email de funcionários, agrupa por cidade e classifica os emails em ordem alfabética:   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 
@@ -193,7 +193,7 @@ GROUP BY town;
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 
 [Funções de cadeia de caracteres (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 

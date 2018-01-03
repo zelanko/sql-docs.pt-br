@@ -1,13 +1,12 @@
 ---
 title: dbo. slo_assignment_history (banco de dados do SQL Azure) | Microsoft Docs
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -26,14 +25,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61bf1f0541df9085235dc00072624e1e91425cc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fcff1c5141e6556f8cb4184284769e3be537f80a
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
@@ -53,12 +52,12 @@ ms.lasthandoff: 11/09/2017
 |-----------------|---------------|-----------------|  
 |database_name|**sysname**|Nome do banco de dados.|  
 |database_id|**int**|ID do banco de dados.|  
-|create_date|**DateTimeOffset(7)**|Data de criação do banco de dados.|  
+|create_date|**datetimeoffset(7)**|Data de criação do banco de dados.|  
 |service_objective_name|**sysname**|Nome do SLO (objetivo de nível de serviço).|  
 |service_objective_id|**uniqueidentifier**|A ID do SLO.|  
 |operation_id|**uniqueidentifier**|Identificador da operação.|  
-|operation_start_time|**DateTimeOffset(7)**|Hora de início da solicitação de alteração do SLO do banco de dados.|  
-|operation_end_time|**DateTimeOffset(7)**|Hora de término da solicitação de alteração do SLO do banco de dados.|  
+|operation_start_time|**datetimeoffset(7)**|Hora de início da solicitação de alteração do SLO do banco de dados.|  
+|operation_end_time|**datetimeoffset(7)**|Hora de término da solicitação de alteração do SLO do banco de dados.|  
 |error_code|**int**|Código de erro da solicitação de alteração do SLO do banco de dados.|  
 |error_desc|**nvarchar**|Descrição do erro na solicitação de alteração do SLO do banco de dados.|  
   
@@ -76,7 +75,7 @@ ORDER BY operation_start_time DESC;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciando bancos de dados Premium](http://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

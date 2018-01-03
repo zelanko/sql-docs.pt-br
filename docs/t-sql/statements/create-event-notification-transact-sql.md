@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48d7a50927d6fc3e193b54e85dd534aa859d13fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] inclui um tipo de mensagem e contrato específicos para notificações de eventos. Portanto, um serviço de inicialização do Service Broker não precisa ser criado porque já existe um serviço que especifica o seguinte nome de contrato: `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  O serviço de destino que recebe as notificações de eventos deve honrar esse contrato preexistente.  
@@ -140,7 +140,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Criando uma notificação de eventos no escopo do servidor  
  O exemplo a seguir cria os objetos obrigatórios para configurar um serviço de destino usando o [!INCLUDE[ssSB](../../includes/sssb-md.md)]. O serviço de destino faz referência ao tipo de mensagem e ao contrato do serviço de inicialização específico para notificações de eventos. Em seguida, uma notificação de evento é criada nesse serviço de destino, que envia uma notificação sempre que um evento de rastreamento `Object_Created` acontece na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
@@ -167,7 +167,7 @@ TO SERVICE 'NotifyService',
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. Criando uma notificação de eventos no escopo do banco de dados  
  O exemplo a seguir cria uma notificação de eventos no mesmo serviço de destino do exemplo anterior. A notificação de eventos é acionada depois que um evento `ALTER_TABLE` ocorre no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de amostra.  
   
-```tsql  
+```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
 ON DATABASE  
 FOR ALTER_TABLE  
@@ -186,12 +186,12 @@ WHERE name = 'log_ddl1';
 ### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D. Obtendo informações sobre uma notificação de eventos no escopo do banco de dados  
  O exemplo a seguir consulta a exibição do catálogo `sys.event_notifications` para obter os metadados sobre a notificação de eventos `Notify_ALTER_T1` que foi criada no escopo de banco de dados.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.event_notifications  
 WHERE name = 'Notify_ALTER_T1';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Notificações de eventos](../../relational-databases/service-broker/event-notifications.md)   
  [Remover notificações de eventos &#40; Transact-SQL &#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

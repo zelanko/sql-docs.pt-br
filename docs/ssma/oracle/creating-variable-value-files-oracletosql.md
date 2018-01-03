@@ -1,7 +1,7 @@
 ---
 title: "Criando arquivos do valor da variável (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 98c9d864e05aee250443f0dc572c4df934b471aa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a311dfe5be380a1e4b5fc7cf65eb84fe942d872
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Criando arquivos do valor da variável (OracleToSQL)
 Arquivo de valor de variável é um arquivo XML que inclui os valores dos parâmetros de comandos como o nome do servidor de origem ou destino que mudam frequentemente de migração de um servidor para outro. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variável para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com o **– v** alternar na linha de comando. Isso ajuda a manter valores estáticos em alguns arquivos de script com os valores das variáveis em vários arquivos de variável.  
@@ -96,6 +96,6 @@ Arquivo de valor de variável é um arquivo XML que inclui os valores dos parâm
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no operando o console é [criar os arquivos de Conexão do servidor &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar os arquivos do servidor (Oracle)](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

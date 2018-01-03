@@ -1,7 +1,7 @@
 ---
 title: "Conversão de bancos de dados MySQL (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0a152437daf59f15339f54172b98198223f6083d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 93bdfb54667b281ffc673c3086eb1aaf951e1498
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Conversão de bancos de dados MySQL (MySQLToSQL)
 Depois de se conectar ao MySQL, conectado à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure e conjunto de projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou objetos de banco de dados do SQL Azure.  
@@ -118,6 +118,6 @@ Para cada item que não puderam ser convertido, você deve determinar o que voc�
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no processo de migração é [carregar objetos de banco de dados convertidos no SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados MySQL para o SQL Server - banco de dados SQL do Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

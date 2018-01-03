@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1ad511e008e2d2c1d975f54a03db8290b26e527
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Para uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Para uso interno.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_describe_first_result_set** garante que se o procedimento retorna os metadados do primeiro conjunto de resultados para (um hipotético) lote A e, se esse lote (A) for subsequentemente executado, em seguida, o lote será (1) gera um erro de tempo de otimização, (2) gera um erro de tempo de execução, (3) não retornará nenhum resultado definida ou (4) retorna um primeiro conjunto de resultados com os mesmos metadados descritos por **sp_describe_first_result_set**.  
   
  O nome, a nulidade e o tipo de dados podem diferir. Se **sp_describe_first_result_set** retorna um conjunto de resultados vazio, a garantia é que a execução do lote retornará conjuntos sem resultados.  
@@ -186,7 +186,7 @@ WHERE object_id = @id1'
   
  Exemplo que usa 0 indicando que nenhuma informação foi retornada.  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.t (a int PRIMARY KEY, b1 int);  
 GO  
 CREATE VIEW dbo.v AS SELECT b1 AS b2 FROM dbo.t;  
@@ -196,33 +196,33 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
  Exemplo que usa 1 indicando que retorna informações como se incluísse uma opção FOR BROWSE na consulta.  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1  
   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
   
  Exemplo que usa 2 indicando que foi analisado como se você estivesse preparando um cursor.  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -404,7 +404,7 @@ N'
   
  Resultado: um **int NULL** como DBO e S1 s1.t1.a tem tipo **int** e nulidade diferente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_describe_undeclared_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.DM exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.DM exec_describe_first_result_set_for_object &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

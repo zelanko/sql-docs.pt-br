@@ -3,7 +3,7 @@ title: Configurar Distributed Replay | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,13 +17,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0eb4502675fb2bd9e9978b5443882a44f867e39c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dc41572e269bda127f8d725960944d40acacdfae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="configure-distributed-replay"></a>Configurar Distributed Replay
+# <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detalhes de configuração de Distributed Replay são especificados em arquivos XML no controlador do Distributed Replay, clientes e onde a ferramenta de administração estiver instalada. Esses arquivos incluem o seguinte:  
   
 -   [Arquivo de configuração do controlador](#DReplayController)  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
  O nível de log especificado pelo arquivo de configuração do controlador inclui o seguinte:  
   
-|Configuração|Elemento XML|Descrição|Valores permitidos|Required|  
+|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Nível de log|`<LoggingLevel>`|Especifica o nível de log do serviço de controlador.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nenhum. Por padrão, o valor é `CRITICAL`.|  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
  As configurações especificadas pelo arquivo de configuração de cliente incluem o seguinte:  
   
-|Configuração|Elemento XML|Descrição|Valores permitidos|Required|  
+|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controlador|`<Controller>`|Especifica o nome do computador do controlador. O cliente tentará se registrar com o ambiente de Distributed Replay entrando em contato o controlador.|Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.|Nenhum. Por padrão, o cliente tenta se registrar com a instância de controlador que está sendo executada localmente ("`.`"), se existir.|  
 |Diretório de trabalho do cliente|`<WorkingDirectory>`|É o caminho local no cliente onde os arquivos de expedição são salvos.<br /><br /> Os arquivos nesse diretório são substituídos na próxima reprodução.|Um nome de diretório completo, iniciando com a letra da unidade.|Nenhum. Se nenhum valor for especificado, os arquivos de expedição serão salvos no mesmo local que o arquivo de configuração de cliente padrão. Se for especificado um valor e essa pasta não existir no cliente, o serviço do cliente não será iniciado.|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/05/2017
   
  As definições de configuração de pré-processamento são especificadas em elementos XML que são filhos do elemento `<PreprocessModifiers>` no arquivo de configuração de pré-processamento. Essas configurações incluem:  
   
-|Configuração|Elemento XML|Descrição|Valores permitidos|Required|  
+|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Incluir atividades de sessão de sistema|`<IncSystemSession>`|Indica se as atividades de sessão de sistema durante a captura serão incluídas durante a reprodução.|`Yes` &#124; `No`|Nenhum. Por padrão, o valor é `No`.|  
 |Tempo ocioso máximo|`<MaxIdleTime>`|Arredonda o tempo ocioso para um número absoluto (em segundos).|Um inteiro que é >= -1.<br /><br /> `-1` indica que não houve alteração do valor original no arquivo de rastreamento original.<br /><br /> `0` indica que há alguma atividade ocorrendo em um determinado momento.|Nenhum. Por padrão, o valor é `-1`.|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<ReplayOptions>` incluem o seguinte:  
   
-|Configuração|Elemento XML|Descrição|Valores permitidos|Required|  
+|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o servidor de teste)|`<Server>`|Especifica o nome do servidor e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão.|*server_name*[\\*instance_name*]<br /><br /> Você não pode usar "`localhost`" ou "`.`" para representar o host local.|Não, se o nome do servidor já tiver sido especificado usando o parâmetro **-s***target server* com a opção **replay** da ferramenta de administração.|  
 |Modo de sequenciamento|`<SequencingMode>`|Especifica o modo usado para o agendamento de eventos.|`synchronization` &#124; `stress`|Nenhum. Por padrão, o valor é `stress`.|  
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<OutputOptions>` incluem o seguinte:  
   
-|Configuração|Elemento XML|Descrição|Valores permitidos|Required|  
+|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Gravar contagem de linhas|`<RecordRowCount>`|Indica se a contagem de linhas de cada conjunto de resultados deve ser gravada.|`Yes` &#124; `No`|Nenhum. Por padrão, o valor é `Yes`.|  
 |Gravar conjunto de resultados|`<RecordResultSet>`|Indica se o conteúdo de todos os conjuntos de resultados deve ser gravado.|`Yes` &#124; `No`|Nenhum. Por padrão, o valor é `No`.|  
@@ -169,7 +169,7 @@ ms.lasthandoff: 12/05/2017
 </Options>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Fórum do SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

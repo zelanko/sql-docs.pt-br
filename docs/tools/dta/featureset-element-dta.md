@@ -3,7 +3,7 @@ title: Elemento FeatureSet (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4b31e99ca6ad7d26ae67bd3092295cc7736d1fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f921dbdf63afe4748f80eeae63ecd559c909b7cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="featureset-element-dta"></a>Elemento FeatureSet (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contém as estruturas de design físico (índices ou exibições indexadas) que você deseja que o orientador de otimização do mecanismo de banco de dados a ser usado durante a análise.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, nenhum tamanho máximo.|  
 |**Valores permitidos**|**IDX_IV**<br /> Índices e exibições indexadas.<br /><br /> **IDX**<br /> Somente índices.<br /><br /> **IV**<br /> Somente exibições indexadas.<br /><br /> **NCL_IDX**<br /> Somente índices não clusterizados<br /><br /> Use um desses valores com esse elemento.|  
@@ -52,12 +52,12 @@ ms.lasthandoff: 12/05/2017
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhuma.|  
+|**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Exemplo de arquivos de entrada XML simples &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

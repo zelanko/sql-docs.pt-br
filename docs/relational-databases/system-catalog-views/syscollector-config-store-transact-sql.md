@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6811c1ab9fef0f15422f1d51ac9b969476e58699
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4bf584c6d467d311223831d180838e6851013830
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.lasthandoff: 11/27/2017
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|parameter_name|**nvarchar (128)**|O nome da propriedade. Não permite valor nulo.|  
+|parameter_name|**nvarchar(128)**|O nome da propriedade. Não permite valor nulo.|  
 |parameter_value|**sql_variant**|O valor real da propriedade. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão SELECT na exibição ou associação nas funções de banco de dados fixas dc_operator, dc_proxy ou dc_admin.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A lista de propriedades disponíveis é fixa e seus valores só podem ser alterados por meio do procedimento armazenado apropriado. A tabela a seguir descreve as propriedades que são expostas por esta exibição.  
   
 |Nome da propriedade|Description|  
@@ -57,12 +57,12 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir consulta a exibição syscollector_config_store.  
   
-```tsql  
+```sql  
 SELECT parameter_name, parameter_value  
 FROM msdb.dbo.syscollector_config_store;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Exibições do Coletor de Dados &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   

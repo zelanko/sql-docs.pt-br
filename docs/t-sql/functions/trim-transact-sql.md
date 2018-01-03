@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54a39a38050589ba4e842253e192b820c2f1c0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b7ea9bb6828182ee0cbc5d0ebef1065564bf03df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,14 +50,14 @@ cadeia de caracteres
 ## <a name="return-types"></a>Tipos de retorno   
 Retorna uma expressão de caractere com um tipo de argumento de cadeia de caracteres onde o caractere de espaço `char(32)` ou outros caracteres especificados são removidos de ambos os lados. Retorna `NULL` se a cadeia de caracteres de entrada é `NULL`.
 
-## <a name="remarks"></a>Comentários   
+## <a name="remarks"></a>Remarks   
 Por padrão `TRIM` função remove o caractere de espaço `char(32)` de ambos os lados. Isso é equivalente a `LTRIM(RTRIM(@string))`. Comportamento de `TRIM ` função com os caracteres especificados é idêntica ao comportamento de `REPLACE` função onde os caracteres do início ou término são substituídos por cadeias de caracteres vazias.
 
 
 ## <a name="examples"></a>Exemplos
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Remove o caractere de espaço de ambos os lados da cadeia de caracteres   
 O exemplo a seguir remove os espaços de antes e depois da palavra `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -68,7 +68,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Remove determinados caracteres de ambos os lados da cadeia de caracteres   
 O exemplo a seguir remove um ponto à direita e espaços à direita.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 
@@ -76,7 +76,7 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 `#     test`
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Funções de cadeia de caracteres (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 [LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)   
 [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)   

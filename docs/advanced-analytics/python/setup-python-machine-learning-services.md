@@ -1,10 +1,12 @@
 ---
 title: "Instalação e configuração para serviços de aprendizado de máquina do Python | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-non-specified
+ms.date: 12/20/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,15 +14,15 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bc9cfe7bf885c99ccfe487e10e001ff36f68ee86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: bea554929e222b98788524203ed060c9b5e0ce17
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Configurar os serviços de aprendizado de máquina do Python (no banco de dados)
 
-  Instalar os componentes necessários para Python executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de instalação e seguindo os prompts interativos, conforme descrito neste tópico.
+  Este artigo descreve como instalar os componentes necessários para Python executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de instalação e seguir as instruções interativas.
 
 ## <a name="machine-learning-options-in-sql-server-setup"></a>Opções de instalação do SQL Server de aprendizado de máquina
 
@@ -30,7 +32,7 @@ O **recursos compartilhados** seção contém uma opção de instalação separa
 
 Depois que a instalação for concluída, reconfigure a instância para permitir a execução de scripts que usam um executável externo. Talvez seja necessário fazer alterações adicionais no servidor para dar suporte a cargas de trabalho de aprendizado de máquina. Alterações de configuração geralmente requerem uma reinicialização da instância, ou uma reinicialização do serviço Launchpad.
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 + 2017 do SQL Server é necessária. Não há suporte para a integração do Python em versões anteriores do SQL Server.
 + Certifique-se de instalar o mecanismo de banco de dados. Uma instância do SQL Server é necessário para executar o Python scripts no banco de dados.
@@ -40,11 +42,12 @@ Depois que a instalação for concluída, reconfigure a instância para permitir
   Como alternativa, você pode usar a replicação para copiar tabelas necessárias para uma instância do SQL Server autônoma que usa os serviços de Python. Como alternativa, você pode instalar o aprendizado de máquina com os serviços de Python em um computador autônomo que usa a configuração de AlwaysOn e é parte de um grupo de disponibilidade.
 
 + Instalação lado a lado com outras versões do Python é possível, porque a instância do SQL Server usa sua própria cópia da distribuição Anaconda. No entanto, executando o código que usa o Python no computador do SQL Server fora do SQL Server pode causar vários problemas:
-    + Usar uma biblioteca diferente e o executável diferente e obter resultados diferentes, que é feito quando você estiver executando no SQL Server.
-    + Scripts de Python em execução em bibliotecas externas não podem ser gerenciados pelo SQL Server, levando a contenção de recursos.
+    
+    - Usar uma biblioteca diferente e o executável diferente e obter resultados diferentes, que é feito quando você estiver executando no SQL Server.
+    - Scripts de Python em execução em bibliotecas externas não podem ser gerenciados pelo SQL Server, levando a contenção de recursos.
   
 > [!IMPORTANT]
-> Após a conclusão da instalação, certifique-se de concluir as etapas de pós-configuração adicionais descritas neste tópico. Isso inclui habilitar o SQL Server para usar scripts externos e adicionar contas necessárias para o SQL Server executar trabalhos de Python em seu nome.
+> Após a conclusão da instalação, certifique-se de concluir as etapas adicionais de pós-configuração descritas neste artigo. Essas etapas incluem a habilitar o SQL Server para usar scripts externos e adicionar contas necessárias para o SQL Server executar trabalhos de Python em seu nome.
 
 ### <a name="unattended-installation"></a>Instalação autônoma
 
@@ -103,7 +106,12 @@ Para executar uma instalação autônoma, use as opções de linha de comando pa
 
 ##  <a name="bkmk_enableFeature"></a>Etapa 2: Habilitar a execução do script Python
 
-1. Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se ele não estiver instalado, você pode executar o Assistente de instalação do SQL Server novamente para abrir um link de download e instalá-lo.
+1. Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+
+    > [!TIP]
+    > Você pode baixar e instalar a versão apropriada nesta página: [baixar o SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > 
+    > Você também pode testar a versão de visualização de [Studio de operações SQL](https://docs.microsoft.com/sql/sql-operations-studio/what-is), que oferece suporte a tarefas administrativas e consultas no SQL Server.
   
 2. Conecte-se à instância onde você instalou os serviços de aprendizado de máquina e execute o seguinte comando:
 
@@ -120,7 +128,7 @@ Para executar uma instalação autônoma, use as opções de linha de comando pa
     RECONFIGURE WITH OVERRIDE
     ```
     
-    Se você já tiver ativado o recurso para a linguagem R, você não precisa executar reconfigurar uma segunda vez de Python. A plataforma de extensibilidade subjacente oferece suporte a ambas as linguagens.
+    Se você já tiver ativado o recurso para a linguagem R, não execute reconfigurar uma segunda vez de Python. A plataforma de extensibilidade subjacente oferece suporte a ambas as linguagens.
 
 4. Reinicie o serviço SQL Server da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Reiniciar o serviço do SQL Server também automaticamente reinicia relacionado [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] serviço.
 

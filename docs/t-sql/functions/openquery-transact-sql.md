@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66c1c5dc3f116cc88b8e61111f626361a1a601b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5b302ea6346c33431d87e1923156253411170ea5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,12 @@ OPENQUERY ( linked_server ,'query' )
  **'** *consulta* **'**  
  É a cadeia de caracteres de consulta executada no servidor vinculado. O comprimento máximo da cadeia de caracteres é 8 KB.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  OPENQUERY não aceita variáveis para seus argumentos.  
   
  OPENQUERY não pode ser usado para executar procedimentos armazenados estendidos em um servidor vinculado. Porém, um procedimento armazenado estendido pode ser executado em um servidor vinculado usando um nome de quatro partes. Por exemplo:  
   
-```t-sql  
+```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
@@ -73,7 +73,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. Executando uma consulta de passagem UPDATE  
  O exemplo a seguir usa uma consulta de passagem `UPDATE` no servidor vinculado criado no exemplo A.  
   
-```t-sql  
+```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +81,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>B. Executando uma consulta de passagem INSERT  
  O exemplo a seguir usa uma consulta de passagem `INSERT` no servidor vinculado criado no exemplo A.  
   
-```t-sql  
+```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,18 +89,18 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>C. Executando um consulta de passagem DELETE  
  O exemplo a seguir usa uma consulta de passagem `DELETE` para excluir a linha inserida no exemplo C.  
   
-```t-sql  
+```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. Executando uma consulta de passagem SELECT  
  O exemplo a seguir usa uma passagem `SELECT` consulta para selecionar a linha inserida no exemplo C.  
   
-```t-sql  
+```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

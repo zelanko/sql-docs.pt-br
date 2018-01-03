@@ -3,7 +3,7 @@ title: "Utilitários de Prompt de comando do SQL (mecanismo de banco de dados) |
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: misc
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1d08c7596e3ded97a7ef1dddf0b84bd3470bbab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9939c015b3c163d8de8b70c626c0b9108a48269c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>Utilitários de Prompt de comando do SQL (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Utilitários de prompt de comando permitem executar scripts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operações. A tabela a seguir contém uma lista de utilitários de prompt de comando que integram o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 |*italic*|Parâmetros fornecidos pelo usuário.|  
 |**bold**|Comandos, parâmetros e outra sintaxe que precisam ser digitados exatamente conforme mostrado.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Agente de Distribuição de Replicação](../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Agente do Leitor de Log de Replicação](../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Agente de Mesclagem de Replicação](../relational-databases/replication/agents/replication-merge-agent.md)   

@@ -3,7 +3,7 @@ title: Filtrar rastreamentos com o SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16bff7f75c75a8caae3ddaa297c31d70e927614a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0e678a5fd9886cbe8c529e3732ae08fb1480c22b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Filtrar rastreamentos com o SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode definir filtros em colunas de dados para [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] eventos de rastreamento para que sejam capturadas informações apenas para os eventos que você está interessado. Os filtros de rastreamento reduzem o impacto de rastrear o desempenho de sistema porque menos eventos são capturados no rastreamento. A filtragem também torna a saída do rastreamento mais fácil de ler, pois o número de eventos é menor.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
  [Filtrar eventos em um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

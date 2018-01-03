@@ -3,7 +3,7 @@ title: Elemento TuningOptions (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a6c2e3ec727651f0470394e61241eeeffdc01e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 979f070f80d21ff8b7fd502d7e4d3d6d0cb7646b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tuningoptions-element-dta"></a>Elemento TuningOptions (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contém as opções de ajuste de uma sessão de ajuste específica.  
@@ -41,10 +41,10 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|Nenhuma.|  
-|**Valor padrão**|Nenhuma.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Opcional. Se usado, só poderá ser usado uma vez para cada elemento **DTAInput** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="example"></a>Exemplo  
  Para obter exemplos do elemento **TuningOptions**, consulte o [Exemplos de arquivos XML de entrada &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

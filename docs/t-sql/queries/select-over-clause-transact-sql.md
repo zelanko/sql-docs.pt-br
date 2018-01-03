@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c7a34974cfcae2d58f7dcaefaffc9bc09e148f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>Selecione - a cláusula OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -195,7 +195,7 @@ Se ROWS/RANGE for especificado e \<quadro de janela anterior > é usado para \<e
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Usando a cláusula OVER com a função ROW_NUMBER  
  O exemplo a seguir mostra como usar a cláusula OVER com a função ROW_NUMBER para exibir um número de linha para cada linha em uma partição. A cláusula ORDER BY especificada na cláusula OVER ordena as linhas em cada partição pela coluna `SalesYTD`. A cláusula ORDER BY na instrução SELECT determina a ordem na qual todo o conjunto de resultados da consulta é retornado.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -235,7 +235,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Usando a cláusula OVER com funções de agregação  
  O exemplo a seguir usa a cláusula `OVER` com funções de agregação sobre todas as linhas retornadas pela consulta. Neste exemplo, o uso da cláusula `OVER` é mais eficiente que o uso de subconsultas para derivar os valores agregados.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -278,7 +278,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  O exemplo a seguir mostra o uso da cláusula `OVER` com uma função de agregação em um valor calculado.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -322,7 +322,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. Gerando uma média móvel e o total cumulativo  
  O exemplo a seguir usa as funções AVG e SUM com a cláusula OVER para fornecer uma média móvel e um total cumulativo de vendas anuais para cada território na tabela `Sales.SalesPerson`. Os dados são particionados por `TerritoryID` e ordenados logicamente por `SalesYTD`. Isso significa que a função AVG é computada para cada território com base no ano de vendas. Observe que para `TerritoryID` 1, há duas linhas para o ano de vendas 2005 que representam os dois vendedores com vendas nesse ano. As vendas médias para essas duas linhas são computadas e a terceira linha que representa vendas do ano 2006 é incluída na computação.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -361,7 +361,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  Neste exemplo, a cláusula OVER não inclui PARTITION BY. Isso significa que a função será aplicada a todas as linhas retornadas pela consulta. A cláusula ORDER BY especificada na cláusula OVER determina a ordem lógica na qual a função AVG é aplicada. A consulta retorna uma média móvel de vendas por ano para todos os territórios de vendas especificados na cláusula WHERE. A cláusula ORDER BY especificada na instrução SELECT determina a ordem na qual as linhas da consulta são exibidas.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -398,7 +398,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  O exemplo a seguir usa a cláusula ROWS para definir uma janela na qual as linhas são computadas como a linha atual e o *N* número de linhas que seguem (1 linha neste exemplo).  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -428,7 +428,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  No exemplo a seguir, a cláusula ROWS é especificada com UNBOUNDED PRECEDING. O resultado é que a janela inicia na primeira linha da partição.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -462,7 +462,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Usando a cláusula OVER com a função ROW_NUMBER  
  O exemplo a seguir retorna o ROW_NUMBER para representantes de vendas com base em suas cotas de vendas atribuída.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -489,7 +489,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. Usando a cláusula OVER com funções de agregação  
  Os exemplos a seguir mostram usando a cláusula OVER com funções de agregação. Neste exemplo, usando a cláusula OVER é mais eficiente do que o uso de subconsultas.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -521,7 +521,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  O exemplo a seguir mostra usando a cláusula OVER com uma função de agregação em um valor calculado. Observe que as agregações são calculadas por `SalesOrderNumber` e a porcentagem do pedido de vendas total é calculada para cada linha de cada `SalesOrderNumber`.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
@@ -547,7 +547,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43659      229      2    16     18.75  
  ```
  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções de agregação &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [Funções analíticas &#40; Transact-SQL &#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
  [Excelente postagem de blog sobre funções de janela e failover, em sqlmag.com, Itzik Ben-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  

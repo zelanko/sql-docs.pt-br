@@ -3,7 +3,7 @@ title: Migrar dados do Sybase ASE para o SQL Server - banco de dados SQL do Azur
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f7511fc695d70d37ba43e14bdd3ccd500f2a3db
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5ff0dfa9d72d7616d7e775361de03728fd951bea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migração de dados Sybase ASE para o SQL Server - banco de dados do SQL Azure (SybaseToSQL)
 Depois que você carregou com êxito os objetos de banco de dados do Sybase Adaptive Server Enterprise (ASE) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou banco de dados de SQL do Azure, você pode migrar dados de ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou banco de dados de SQL do Azure.  
@@ -117,6 +117,6 @@ Para exibir as mensagens de migração, certifique-se de que o painel de saída 
 > [!NOTE]  
 > Quando o SQL Express edition é usado como o banco de dados de destino, é permitida somente cliente lado migração de dados e não há suporte para a migração de dados do lado de servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando Sybase ASE bancos de dados do SQL Server - banco de dados SQL do Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

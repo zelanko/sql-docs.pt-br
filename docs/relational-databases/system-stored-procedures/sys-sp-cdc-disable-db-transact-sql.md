@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6bde9363f4778f4aee337d11067b28fefc9895c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bf0fefa010665821d13153072e35214080385566
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 sys.sp_cdc_disable_db  
 ```  
   
@@ -52,9 +52,9 @@ sys.sp_cdc_disable_db
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_cdc_disable_db** desabilita o change data capture para todas as tabelas no banco de dados atualmente habilitado. Todos os objetos do sistema relacionados à captura de dados de alteração, como tabelas de alteração, trabalhos, procedimentos armazenados e funções, serão descartados. O **is_cdc_enabled** coluna para a entrada do banco de dados no [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo é definida como 0.  
   
 > [!NOTE]  
@@ -66,14 +66,14 @@ sys.sp_cdc_disable_db
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir desabilita a captura de dados de alteração do banco de dados `AdventureWorks2012`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE sys.sp_cdc_disable_db;  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_cdc_enable_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
  [sp_cdc_disable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
   

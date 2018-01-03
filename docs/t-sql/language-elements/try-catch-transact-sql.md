@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6bf90e58d4956877786dd0d247653e8a99480c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d344044a5ce4a0cd995cc1695b69ac9312d4db74
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ END CATCH
  *statement_block*  
  Qualquer grupo de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um lote ou incluso em um bloco BEGIN…END.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma construção TRY...CATCH captura todos os erros de execução com severidade maior que 10 que não fecham a conexão do banco de dados.  
   
  Um bloco TRY deve ser seguido imediatamente por um bloco CATCH associado. A inclusão de qualquer outra instrução entre as instruções END TRY e BEGIN CATCH gera um erro de sintaxe.  
@@ -108,7 +108,7 @@ END CATCH
   
  Essas funções retornarão NULL se forem chamadas fora do escopo do bloco CATCH. As informações de erro podem ser recuperadas com o uso dessas funções em qualquer lugar no escopo do bloco CATCH. Por exemplo, o script a seguir mostra um procedimento armazenado que contém funções de tratamento de erros. No bloco `CATCH` de uma construção `TRY…CATCH`, o procedimento armazenado é chamado e as informações sobre o erro são retornadas.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -161,7 +161,7 @@ END CATCH;
   
  O exemplo a seguir mostra como um erro de resolução de nome de objeto gerado por uma instrução `SELECT` não é capturado pela construção `TRY…CATCH`, mas é capturado pelo bloco `CATCH` quando a mesma instrução `SELECT` é executada dentro de um procedimento armazenado.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -178,7 +178,7 @@ END CATCH
   
  A execução da instrução `SELECT` dentro de um procedimento armazenado fará com que o erro ocorra em um nível inferior ao do bloco `TRY`. O erro será tratado pela construção `TRY…CATCH`.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -211,7 +211,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. Usando TRY…CATCH  
  O exemplo a seguir mostra uma instrução `SELECT` que gerará um erro de divisão por zero. O erro faz com que a execução salte para o bloco `CATCH` associado.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -231,7 +231,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. Usando TRY…CATCH em uma transação  
  O exemplo a seguir mostra como um bloco `TRY…CATCH` funciona dentro de uma transação. A instrução dentro do bloco `TRY` gera um erro de violação de restrição.  
   
-```t-sql  
+```sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -260,7 +260,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. Usando TRY…CATCH com XACT_STATE  
  O exemplo a seguir mostra como usar a construção `TRY…CATCH` para tratar erros que ocorrem dentro de uma transação. A função `XACT_STATE` determina se a transação deve ser confirmada ou revertida. Neste exemplo, `SET XACT_ABORT` é `ON`. Isso torna a transação não confirmável quando o erro de violação de restrição ocorrer.  
   
-```t-sql  
+```sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -329,7 +329,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. Usando TRY…CATCH  
  O exemplo a seguir mostra uma instrução `SELECT` que gerará um erro de divisão por zero. O erro faz com que a execução salte para o bloco `CATCH` associado.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -345,7 +345,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [THROW &#40; Transact-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Severidade de erro do mecanismo de banco de dados](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

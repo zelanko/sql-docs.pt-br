@@ -3,7 +3,7 @@ title: "Utilitário DTA | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dta-utility"></a>utilitário dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **dta** utilitário é a versão do prompt de comando do Orientador de otimização do mecanismo de banco de dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* especificado com a opção **–D**||  
 |*owner_name*|**dbo**|*owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
-|*table_name*|Nenhuma||  
+|*table_name*|Nenhum||  
   
  Se um arquivo for usado, especifique .xml como sua extensão. Por exemplo, TuningLog.xml.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Especifica que tipos de estruturas de design físico **dta** deve incluir na recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento. Quando nenhum valor é especificado, **dta** usa o padrão **-fa****IDX**.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |IDX_IV|Índices e exibições indexadas.|  
 |IDX|Somente índices.|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Especifica quais estruturas de design físico **dta** deve reter ao gerar sua recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Nenhuma|Nenhuma estrutura existente|  
 |ALL|Todas as estruturas existentes|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Especifica se as novas estruturas de design físico (índices e exibições indexadas) propostas por **dta** devem ser particionadas e como particioná-las. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Nenhuma|Nenhum particionamento|  
 |FULL|Particionamento completo (escolha para melhorar o desempenho).|  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Especifica se são criadas estruturas de design físico online. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |OFF|Nenhuma estrutura de design físico recomendada pode ser criada online.|  
 |ON|Todas as estruturas de design físico recomendadas podem ser criadas online.|  
@@ -366,7 +366,7 @@ Nesse caso, DTA será usar o repositório de consultas como a fonte de carga de 
  **-x**  
  Inicia a sessão de ajuste e sai.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Pressione CTRL+C uma vez para parar a sessão de ajuste e gerar recomendações com base na análise do **dta** concluída até este ponto. Você será solicitado a indicar se deseja ou não gerar recomendações. Pressione CTRL+C novamente para parar a sessão de ajuste sem gerar recomendações.  
   
 ## <a name="examples"></a>Exemplos  
@@ -420,7 +420,7 @@ AdventureWorks2012.Production.Product  2000000
 dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
  [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   

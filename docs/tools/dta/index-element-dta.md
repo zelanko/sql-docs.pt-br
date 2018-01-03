@@ -3,7 +3,7 @@ title: "Índice de elemento (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13ff4535227d924b5da7bc27a36f5ecf082ba60f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18505a8ac88e1524f290d4559537ffe1f6751566
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-element-dta"></a>Elemento de índice (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contém informações sobre um índice que você deseja criar ou descartar para uma configuração especificada pelo usuário.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo de índice|Tipo de dados|Descrição|  
+|Atributo de índice|Tipo de dados|Description|  
 |---------------------|---------------|-----------------|  
 |**Clusterizado**|**booleano**|Opcional. Especifica um índice clusterizado. Defina como "verdadeiro" ou "falso". Por exemplo:<br /><br /> `<Index Clustered="true">`<br /><br /> Por padrão, esse atributo é definido como "falso".|  
 |**Exclusivo**|**booleano**|Opcional. Especifica um índice exclusivo. Defina como "verdadeiro" ou "falso". Por exemplo:<br /><br /> `<Index Unique="true">`<br /><br /> Por padrão, esse atributo é definido como "falso".|  
@@ -59,10 +59,10 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|Nenhuma.|  
-|**Valor padrão**|Nenhuma.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Exigido uma vez para cada um dos elementos **Create** ou **Drop** se nenhuma outra estrutura física de design for especificada com os elementos **Statistics** ou **Heap** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja a [Amostra de arquivo de entrada XML com a configuração especificada pelo usuário &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

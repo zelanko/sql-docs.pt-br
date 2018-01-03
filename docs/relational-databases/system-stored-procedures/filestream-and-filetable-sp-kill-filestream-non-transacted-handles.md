@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7958e7a6513363030d8962774a28992bd055661d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d06550f0a9cd322e26acfa8f29890833c15f947
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>FileStream e FileTable - sp_kill_filestream_non_transacted_handles
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [[ @handle_id = ] @handle_id]]  
 ```  
   
@@ -74,7 +74,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como chamar **sp_kill_filestream_non_transacted_handles** para fechar identificadores de arquivos não transacionais para dados de FileTable.  
   
-```tsql  
+```sql  
 -- Close all open handles in the current database.  
 sp_kill_filestream_non_transacted_handles  
   
@@ -87,7 +87,7 @@ sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @hand
   
  O exemplo a seguir mostra como usar um script para obter um *handle_id* e fechá-la.  
   
-```tsql  
+```sql  
 DECLARE @handle_id varbinary(16);  
 DECLARE @table_name sysname;  
   
@@ -98,7 +98,7 @@ EXEC sp_kill_filestream_non_transacted_handles @dbname, @table_name, @handle_id;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a7820a1592d8d7f2b600e8d53f59faf625d60bd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902a28f31abdc9dd501c6352acd4b2bee4042fd0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergearticle** é usado em replicação de mesclagem. Para obter mais informações sobre como descartar artigos, consulte [adicionar e descartar artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  Executar **sp_dropmergearticle** descartar um artigo de uma publicação não remove o objeto do banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use `DROP <object>` para remover esses objetos manualmente, se necessário.  
@@ -90,7 +90,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
   
 ## <a name="example"></a>Exemplo  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @article1 AS sysname;  
 DECLARE @article2 AS sysname;  
@@ -111,7 +111,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @table1 AS sysname;  
 DECLARE @table2 AS sysname;  
@@ -166,7 +166,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Excluir um artigo](../../relational-databases/replication/publish/delete-an-article.md)   
  [Adicionar e remover artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [sp_addmergearticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

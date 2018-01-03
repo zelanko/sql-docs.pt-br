@@ -3,7 +3,7 @@ title: "Referência do arquivo (mecanismo de banco de dados do Orientador de oti
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc25f556fdafc18f530ac48e176aba94b55c432d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f9ce7751a34f63d0ef235c86c1d1a993e467f893
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Referência do arquivo de entrada XML (Orientador de Otimização do Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] Orientador de otimização pode usar um arquivo de entrada XML para ajustar um banco de dados. Este arquivo XML define os bancos de dados, tabelas, arquivos ou tabelas da carga de trabalho e as opções a serem usadas na sessão de ajuste. Você também pode usar este arquivo para indicar uma configuração específica de usuário a fim de realizar uma análise hipotética.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Elemento Configuration &#40;DTA&#41;](../../tools/dta/configuration-element-dta.md)  
   
-## <a name="server-elements"></a>Elementos de servidor  
+## <a name="server-elements"></a>Elementos de servidor   
   
 -   [Elemento Name para Server &#40;DTA&#41;](../../tools/dta/name-element-for-server-dta.md)  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Elemento Name para Table &#40;DTA&#41;](../../tools/dta/name-element-for-table-dta.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

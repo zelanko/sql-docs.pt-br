@@ -1,7 +1,7 @@
 ---
 title: "Referência da Interface de usuário (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e61c90785328f887caff3df0b97d632cf4cdbaf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e39a5ca8327230660a0a6dc1c0a6d1170ae7c279
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referência da Interface de usuário (MySQLToSQL)
 Esta seção inclui tópicos de ajuda para o SQL Server SSMA (Migration Assistant) para MySQL.  
@@ -34,7 +34,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
   
 |||  
 |-|-|  
-|**Tópico**|**Description**|  
+|**Tópico**|**Descrição**|  
 |[Seleção de objeto avançado &#40; MySQLToSQL &#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Use o **avançado objeto selecione** caixa de diálogo para localizar objetos de banco de dados usando os critérios de filtro e, em seguida, marque ou desmarque esses objetos.|  
 |[Relatório de avaliação &#40; MySQLToSQL &#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Use o relatório para exibir os resultados da conversão de objetos do MySQL para sintaxe Transact-SQL e para estimar o tempo e a complexidade de uma migração para o SQL Server.|  
 |[Conectar ao MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Use o **conectar ao MySQL** caixa de diálogo para se conectar ao banco de dados MySQL que você deseja migrar.|  
@@ -58,7 +58,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
 |[Atualização do banco de dados &#40; MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|Use o **de atualização do banco de dados** caixa de diálogo para selecionar objetos para atualização do banco de dados MySQL.|  
 |[Salvar metadados &#40; MySQLToSQL &#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|O **salvar metadados** caixa de diálogo aparece quando você salvar um projeto que falta metadados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Guia de Introdução com o SSMA para MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [Migrando bancos de dados MySQL para o SQL Server - banco de dados SQL do Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

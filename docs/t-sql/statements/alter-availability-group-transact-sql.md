@@ -1,7 +1,7 @@
 ---
 title: ALTERAR o grupo de disponibilidade (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ALTER AVAILABILITY GROUP group_name
  Especifica que você prefere que trabalhos de backup ignorem a função das réplicas de disponibilidade ao escolher a réplica para executar backups. Observe que os trabalhos de backup podem avaliar outros fatores, como prioridade de backup de cada réplica de disponibilidade em combinação com seu estado operacional e estado conectado.  
   
 > [!IMPORTANT]  
->  Não há nenhuma imposição da configuração AUTOMATED_BACKUP_PREFERENCE. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. A configuração de preferência de backup automatizado não tem efeito sobre backups ad hoc. Para obter mais informações, consulte [Configurar Backup em réplicas de disponibilidade &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+>  Não há nenhuma imposição da configuração AUTOMATED_BACKUP_PREFERENCE. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. A configuração de preferência de backup automatizado não tem nenhum impacto sobre backups ad hoc. Para obter mais informações, consulte [Configurar Backup em réplicas de disponibilidade &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
 >  Para exibir a preferência de backup automatizada de um grupo de disponibilidade existente, selecione o **automated_backup_preference** ou **automated_backup_preference_desc** coluna o [ sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) exibição do catálogo. Além disso, [sys. fn_hadr_backup_is_preferred_replica &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) pode ser usado para determinar a réplica de backup preferencial.  Esta função sempre retornará 1 para pelo menos uma das réplicas, mesmo quando `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
@@ -302,7 +302,7 @@ ALTER AVAILABILITY GROUP group_name
 
    Para obter mais informações, consulte [única réplica de configuração](../../linux/sql-server-linux-availability-group-ha.md).
     
- AVAILABILITY_MODE é necessário na cláusula ADD REPLICA ON e opcional na cláusula MODIFY REPLICA ON. Para obter mais informações, veja [Modos de disponibilidade &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ AVAILABILITY_MODE é necessário na cláusula ADD REPLICA ON e opcional na cláusula MODIFY REPLICA ON. Para obter mais informações, consulte [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  FAILOVER_MODE  **=**  {AUTOMÁTICA | MANUAL}  
  Especifica o modo de disponibilidade da réplica de disponibilidade que você está definindo.  
@@ -356,7 +356,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  Todas as conexões são permitidas com os bancos de dados na réplica secundária para acesso somente leitura.  
   
- Para obter mais informações, veja [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para obter mais informações, consulte [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***porta***'**  
  Especifica a URL a ser usada para rotear solicitações de conexão de intenção de leitura para esta réplica de disponibilidade. Esta é a URL na qual o Mecanismo de Banco de Dados do SQL Server escuta. Normalmente, a instância padrão do Mecanismo de Banco de Dados do SQL Server escuta na porta TCP 1433.  
@@ -602,7 +602,7 @@ ALTER AVAILABILITY GROUP group_name
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
+ Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  Também requer a permissão ALTER ANY DATABASE.   
   
 ## <a name="examples"></a>Exemplos  
   
@@ -622,7 +622,7 @@ ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [DESCARTE o grupo de disponibilidade &#40; Transact-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   

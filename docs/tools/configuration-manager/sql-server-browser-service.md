@@ -3,7 +3,7 @@ title: "Serviço navegador do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -25,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 928a4cf4d1cef301c0554a5e1b484cb79749e47a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4d3619e88d1211daa32de1c3286fedcfd9eb53a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sql-server-browser-service"></a>Serviço Navegador do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programa navegador é executado como um serviço do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser contribui para as seguintes ações:  
+# <a name="sql-server-browser-service"></a>SQL Server Browser Service
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] O programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser é executado como um serviço Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta as solicitações de entrada de recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações sobre as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Browser contribui para as seguintes ações:  
   
 -   Navegando em uma lista de servidores disponíveis  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="using-a-firewall"></a>Usando um firewall  
  Para comunicar-se com o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor por trás de um firewall, abra a porta UDP 1434, além da porta TCP usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, 1433). Para obter informações sobre como trabalhar com um firewall, consulte "Como configurar um firewall para acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Protocolos de rede e bibliotecas de rede](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   

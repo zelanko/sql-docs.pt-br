@@ -3,7 +3,7 @@ title: Trabalhando com os arquivos de Script do Console de exemplo (SybaseToSQL)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58492c81337b17598481cf591f5ef9ac922e2ff9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd9859a3292d7cb9ec00f22f695be9aaa25b59f0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Trabalhando com os arquivos de Script do Console de exemplo (SybaseToSQL)
 Alguns arquivos de exemplo foram fornecidos junto com o produto para a referência de usuário e uso. Esta seção descreve a maneira de personalizar facilmente esses scripts para se adequar às necessidades do usuário final.  
@@ -130,7 +130,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem cenários dif
   
     `object-name:`Especifica o banco de dados de origem / tabelas nome que requer a serem migradas. Certifique-se de que o correspondente `object-type` é alterada com base no tipo de objeto que é especificado do`object-name`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criando arquivos do valor da variável &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
 [Criar os arquivos de Conexão do servidor &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
 [Gerando relatórios &#40; SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  

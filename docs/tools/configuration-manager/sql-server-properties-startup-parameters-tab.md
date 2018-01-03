@@ -3,7 +3,7 @@ title: "Propriedades do SQL Server (guia de parâmetros de inicialização) | Mi
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc88c227ddad0cabd100e78d4424375399aa5fb6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriedades do SQL Server (guia Parâmetros de Inicialização)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use essa caixa de diálogo para adicionar ou remover parâmetros de inicialização para o [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os parâmetros de inicialização podem ter um grande efeito no desempenho do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de adicionar ou alterar os parâmetros de inicialização, consulte o tópico "Usando as opções de inicialização do Serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 |Parâmetro|Descrição breve|  
 |---------------|-----------------------|  
-|-m|Inicia uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único.|  
+|-M|Inicia uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único.|  
 |-T1204|Retorna os recursos e tipos de bloqueios que participam de um deadlock e também o comando atual afetado.|  
 |-T1224|Desabilita o escalonamento de bloqueios com base no número de bloqueios.|  
 |-T3608|Impede que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicie ou recupere automaticamente qualquer banco de dados, exceto o banco de dados mestre.|  

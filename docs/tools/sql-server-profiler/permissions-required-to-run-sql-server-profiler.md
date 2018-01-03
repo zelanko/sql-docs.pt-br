@@ -3,7 +3,7 @@ title: "Permissões necessárias para executar o SQL Server Profiler | Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2ad771af23debc0bb70cf0a2ce8870ba18aac1bc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7892bf572016f697a80878376cfeba4aea3b447c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Permissões necessárias para executar o SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Por padrão, executar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] requer as mesmas permissões do usuário que os procedimentos armazenados do Transact-SQL que são usados para criar rastreamentos. Para executar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], os usuários devem dispor da permissão ALTER TRACE. Para obter mais informações, veja [Permissões GRANT do servidor &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md).  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Permissões de rastreamento do SQL Server Profiler replay](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "permissões de rastreamento de reprodução do SQL Server Profiler")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [Repetir rastreamentos](../../tools/sql-server-profiler/replay-traces.md)   
  [Criar um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   

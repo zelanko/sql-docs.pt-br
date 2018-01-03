@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab6b1bde36e0e2b84c2bacfd52baca137e894f0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 40bcb89844fb9b5cea09dab93765a32c8dedcc90
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Quando NULL é especificado ou um deslocamento de instrução não é especificado, um guia de plano é criado para cada instrução no lote usando o plano de consulta do identificador de plano especificado. Os guias de plano resultantes são equivalentes aos que usam a dica de consulta USE PLAN para forçar o uso de um determinado plano.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um guia de plano não pode ser criado para todos os tipos de instrução. Se um guia de plano não puder ser criado para uma instrução no lote, o procedimento armazenado ignorará a instrução e avançará para a próxima instrução do lote. Caso uma instrução ocorra várias vezes no mesmo lote, o plano da última ocorrência será habilitado, e os planos anteriores da instrução serão desabilitados. Se nenhuma instrução do lote puder ser usada em um guia de plano, o erro 10532 será gerado e a instrução falhará. Recomendamos sempre que você obtenha o identificador de plano na exibição de gerenciamento dinâmico sys.dm_exec_query_stats para ajudar a evitar a possibilidade de ocorrência desse erro.  
   
 > [!IMPORTANT]  
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
 ### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. Criando um guia de plano de um plano de consulta no cache de plano  
  O exemplo a seguir cria um guia de plano para uma instrução SELECT única especificando um plano de consulta no cache do plano. O exemplo começa pela execução de uma instrução `SELECT` única para a qual o guia de plano será criado. O plano para esta consulta é examinado usando as exibições de gerenciamento dinâmico `sys.dm_exec_sql_text` e `sys.dm_exec_text_query_plan`. Em seguida, o guia de plano é criado para a consulta por meio da especificação do plano de consulta no cache do plano associado à consulta. A instrução final no exemplo verifica se o guia de plano existe.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  
@@ -124,7 +124,7 @@ GO
   
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mecanismo de banco de dados armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.DM exec_query_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [Guias de plano](../../relational-databases/performance/plan-guides.md)   

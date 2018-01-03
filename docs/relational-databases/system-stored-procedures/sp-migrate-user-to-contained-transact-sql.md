@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_migrate_user_to_contained** cria o usuário de banco de dados independente com senha, independentemente das propriedades ou permissões de logon. Por exemplo, o procedimento pode ter êxito se o logon está desabilitado ou se o usuário é negado a **conectar** permissão para o banco de dados.  
   
  **sp_migrate_user_to_contained** tem as seguintes restrições.  
@@ -85,7 +85,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ### <a name="a-migrating-a-single-user"></a>A. Migrando um único usuário  
  O exemplo a seguir migra um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominado `Barry` para um usuário de banco de dados independente com senha. O exemplo não altera o nome de usuário e mantém o logon como habilitado.  
   
-```tsql  
+```sql  
 sp_migrate_user_to_contained   
 @username = N'Barry',  
 @rename = N'keep_name',  
@@ -96,7 +96,7 @@ sp_migrate_user_to_contained
 ### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>B. Migrando todos os usuários do banco de dados com logons para usuários de bancos de dados independentes sem logons  
  O exemplo a seguir migra todos os usuários baseados em logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuários de bancos de dados independentes com senhas. O exemplo exclui os logons que não estão habilitados. O exemplo deve ser executado no banco de dados independente.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   
@@ -119,7 +119,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)  
   

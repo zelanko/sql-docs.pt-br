@@ -42,11 +42,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) - tabela
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -383,7 +383,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  Especifica que bloqueios exclusivos serão usados e mantidos até que a transação seja concluída. Se especificados com ROWLOCK, PAGLOCK ou TABLOCK, os bloqueios exclusivos serão aplicados ao nível adequado de granularidade.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As dicas de tabela serão ignoradas se a tabela não for acessada pelo plano de consulta. Isso pode ser provocado porque o otimizador opta por não acessar a tabela ou porque uma exibição indexada é acessada. No último caso, o acesso a uma exibição indexada pode ser evitado pela dica de consulta OPTION (EXPAND VIEWS).  
   
  Todas as dicas de bloqueio são propagadas para todas as tabelas e exibições que são acessadas pelo plano de consulta, incluindo tabelas e exibições referenciadas em uma exibição. Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa os testes de consistência de bloqueio correspondentes.  
@@ -450,7 +450,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Usando a dica TABLOCK para especificar um método de bloqueio  
  O seguinte exemplo especifica que um bloqueio compartilhado será usado na tabela `Production.Product` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e mantido até o término da instrução UPDATE.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +474,7 @@ GO
   
  O exemplo a seguir usa a dica FORCESEEK com um índice para forçar o otimizador de consulta a executar uma operação de busca de índice no índice e na coluna de índice especificados.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +489,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. Usando a dica FORCESCAN para especificar uma operação de verificação de índice  
  O exemplo a seguir usa a dica FORCESCAN para forçar o otimizador de consultas a executar uma operação de verificação na tabela `Sales.SalesOrderDetail` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -499,7 +499,7 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Dicas de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Query Hints &#40;Transact-SQL&#41; [Dicas de consulta (Transact-SQL)]](../../t-sql/queries/hints-transact-sql-query.md)  

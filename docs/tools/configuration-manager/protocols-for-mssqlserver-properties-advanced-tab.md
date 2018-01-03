@@ -3,7 +3,7 @@ title: "Protocolos para propriedades MSSQLSERVER (guia Avançado) | Microsoft Do
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7755e07d2b2c52cfd22b71e07e607c33f7f2ea27
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b92a99eb2a86a6bbf03c4d6ca84c0d18c7dc4923
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Protocolos para propriedades de MSSQLSERVER (guia Avançado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o **avançado** guia o **protocolos para propriedades MSSQLSERVER** caixa de diálogo Configurar **proteção estendida para autenticação** para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A**Proteção Estendida** é um recurso dos componentes de rede implementado pelo sistema operacional. A**Proteção Estendida** está disponível no Windows 7 e no Windows Server 2008 R2 e está incluída em service packs de sistemas operacionais anteriores. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mais seguro quando as conexões são efetuadas usando a **Proteção Estendida**. Alguns benefícios da **Proteção Estendida** exigem a seleção de **Forçar Criptografia** na guia **Sinalizadores** .  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
  **SPNs NTLM aceitos**  
  Quando a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for identificada por mais de um SPN (nome principal do serviço) de NTLM, liste os SPNs aqui como uma série de cadeias de caracteres separadas por ponto-e-vírgula. Por exemplo, o valor **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**indica que clientes que tentam se conectar a SPNs nomeados **MSSQLSvc/HOST1.Contoso.com** e **MSSQLSvc/HOST2.Contoso.com** são permitidos. Essa variável tem um tamanho máximo de 2.048 caracteres.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Proteção Estendida para Autenticação com o Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

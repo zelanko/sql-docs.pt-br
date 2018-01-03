@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01e7104b90f1d2b03455a5d56ebf0e0de2b8d91a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5e046e203e7ebd5243cdfc6f10948dfd353b2dd3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -60,7 +60,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ## <a name="return-types"></a>Tipos de retorno  
  **tempo (** *precisão* **)**  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  TIMEROMPARTS retorna um valor de hora completamente inicializado. Se os argumentos forem inválidos, um erro será lançado. Se algum parâmetro for nulo, nulo será retornado. No entanto, se o *precisão* argumento for nulo, será gerado um erro.  
   
  O *frações* depende do argumento de *precisão* argumento. Por exemplo, se *precisão* for 7, cada fração representará 100 nanosegundos; se *precisão* é 3 e, em seguida, cada fração representará um milissegundo. Se o valor de *precisão* for zero, o valor de *frações* também deve ser zero; caso contrário, ocorrerá um erro.  
@@ -94,7 +94,7 @@ Result
   
 3.  Quando *frações* tem um valor de 500 e *precisão* tem um valor de 3, em seguida, o valor de *frações* representará 500/1000 de um segundo.  
   
-```tsql  
+```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 50, 2 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 500, 3 );  

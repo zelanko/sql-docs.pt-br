@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 11eea4891b1214e48f70ca56462322305fa97c06
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9f037f1e5c6f093582aeec4d2080a52e280718a4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurar RHEL Cluster para o grupo de disponibilidade do SQL Server
 
@@ -151,7 +151,7 @@ Para obter informações sobre propriedades de cluster Pacemaker, consulte [Pace
 Para criar o recurso de grupo de disponibilidade, use `pcs resource create` de comando e defina as propriedades do recurso. O comando a seguir cria um `ocf:mssql:ag` mestre/escravo de recursos para o grupo de disponibilidade com o nome `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]

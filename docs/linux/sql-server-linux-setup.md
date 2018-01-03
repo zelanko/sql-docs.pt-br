@@ -4,7 +4,7 @@ description: "Instalar, atualizar e desinstalar o SQL Server no Linux. Este tóp
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/26/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 65835ac1faf75664ecdbac8907c74906ccc4175e
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 Este tópico explica como instalar, atualizar e desinstalar o SQL Server 2017 no Linux. Há suporte para o SQL Server 2017 no Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) e Ubuntu. Ele também está disponível como uma imagem do Docker, que pode ser executado no mecanismo do Docker no Linux ou o Docker para Windows/Mac.
 
 > [!TIP]
-> Para começar rapidamente, ir para um dos tutoriais do início rápido para [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), ou [Docker](quickstart-install-connect-docker.md).
+> Para começar rapidamente, ir para uma das guias de início rápido para [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), ou [Docker](quickstart-install-connect-docker.md).
 
 ## <a id="supportedplatforms"></a>Plataformas com suporte
 
@@ -40,6 +40,10 @@ Há suporte para o SQL Server 2017 nas seguintes plataformas Linux:
 | **SUSE Linux Enterprise Server** | SP2 v12 | [Obter SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obter Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Mecanismo do docker** | 1.8+ | [Obter o Docker](http://www.docker.com/products/overview)
+
+A Microsoft oferece suporte a implantar e gerenciar contêineres do SQL Server usando OpenShift e Kubernetes.
+
+Para a política de suporte mais recente para o SQL Server 2017, consulte [política de suporte técnico para o Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a id="system"></a>Requisitos do sistema
 
@@ -62,7 +66,7 @@ Se você usar **sistema de arquivos de rede (NFS)** compartilhamentos remotos em
 
 ## <a id="platforms"></a>Instalar o SQL Server
 
-Você pode instalar o SQL Server no Linux da linha de comando. Para obter instruções, consulte um dos seguintes tutoriais de início rápido:
+Você pode instalar o SQL Server no Linux da linha de comando. Para obter instruções, consulte um dos tutoriais a seguir:
 
 - [Instalar no Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalar no SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -162,7 +166,7 @@ Final da URL do repositório confirma o tipo de repositório:
 Para configurar as atualização Cumulativa ou GDR repositórios, use as seguintes etapas:
 
 > [!NOTE]
-> O [tutoriais de início rápido](#platforms) configurar o repositório de atualizações Cumulativas. Se você seguir esses tutoriais, você não precisa usar as etapas abaixo para continuar a usar o repositório de atualizações Cumulativas. Essas etapas somente são necessárias para alterar o repositório configurado.
+> O [início rápido](#platforms) configurar o repositório de atualizações Cumulativas. Se você seguir esses tutoriais, você não precisa usar as etapas abaixo para continuar a usar o repositório de atualizações Cumulativas. Essas etapas somente são necessárias para alterar o repositório configurado.
 
 1. Se necessário, remova o repositório previamente configurado.
 
@@ -202,7 +206,7 @@ Para configurar as atualização Cumulativa ou GDR repositórios, use as seguint
 
 Você pode executar uma instalação autônoma da seguinte maneira:
 
-- Siga etapas inicial de [tutoriais de início rápido](#platforms) para registrar os repositórios e instalar o SQL Server.
+- Siga etapas inicial de [início rápido](#platforms) para registrar os repositórios e instalar o SQL Server.
 - Quando você executa `mssql-conf setup`, defina [variáveis de ambiente](sql-server-linux-configure-environment-variables.md) e usar o `-n` (nenhum prompt) opção.
 
 O exemplo a seguir configura a edição de desenvolvedor do SQL Server com o **MSSQL_PID** variável de ambiente. Ele também aceita o EULA (**ACCEPT_EULA**) e define a senha do usuário (**MSSQL_SA_PASSWORD**). O `-n` parâmetro executa uma instalação unprompted onde os valores de configuração são extraídos de variáveis de ambiente.
@@ -266,7 +270,7 @@ Após a instalação, você também pode instalar outros pacotes opcionais do SQ
 - [Pesquisa de texto completo do SQL Server](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-Conecte-se à instância do SQL Server para começar a criar e gerenciar bancos de dados. Para começar, consulte os tutoriais de início rápido:
+Conecte-se à instância do SQL Server para começar a criar e gerenciar bancos de dados. Para começar, consulte os guias de início rápido:
 
 - [Instalar no Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalar no SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

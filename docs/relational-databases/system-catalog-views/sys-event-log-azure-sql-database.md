@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4df7543112666b498a2896d62d16186a83d6e4af
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |**event_type**|**nvarchar (64)**|O tipo de evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obter uma lista de valores possíveis.|  
 |**event_subtype**|**int**|O subtipo do evento que está ocorrendo.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obter uma lista de valores possíveis.|  
 |**event_subtype_desc**|**nvarchar (64)**|A descrição do subtipo de evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obter uma lista de valores possíveis.|  
-|**severidade**|**int**|A severidade do erro. Os valores possíveis são:<br /><br /> 0 = Informações<br />1 = Aviso<br />2 = Erro|  
+|**severity**|**int**|A severidade do erro. Os valores possíveis são:<br /><br /> 0 = Informações<br />1 = Aviso<br />2 = Erro|  
 |**event_count**|**int**|O número de vezes que esse evento ocorreu para o banco de dados especificado no intervalo de tempo especificado (**start_time** e **end_time**).|  
 |**Descrição**|**nvarchar(max)**|Uma descrição detalhada do evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obter uma lista de valores possíveis.|  
 |**additional_data**|**XML**|*Observação: Esse valor é sempre NULL para V12 de banco de dados do SQL Azure. Consulte [exemplos](#Deadlock) seção para saber como recuperar eventos de deadlock para V12.*<br /><br /> Para **Deadlock** eventos, esta coluna contém o gráfico de deadlock. Esta coluna é NULL para outros tipos de evento. |  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  Essa exibição não inclui todos os eventos possíveis do banco de dados [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que podem acontecer, somente os listados aqui. As categorias, os tipos de evento e os subtipos adicionais podem ser adicionadas em versões futuras do [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severidade**|**Descrição**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Descrição**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**conectividade**|**connection_successful**|0|**connection_successful**|0|Conectado com êxito ao banco de dados.|  
 |**conectividade**|**connection_failed**|0|**invalid_login_name**|2|O nome de logon não é válido nesta versão do SQL Server.|  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="permissions"></a>Permissões  
  Os usuários com permissão para acessar o **mestre** banco de dados têm acesso somente leitura para este modo de exibição.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>Agregação de eventos  
  As informações de evento para esta exibição são coletadas e agregadas em intervalos de 5 minutos. O **event_count** coluna representa o número de vezes que um determinado **event_type** e **event_subtype** ocorreu para um banco de dados específico dentro de um intervalo de tempo determinado.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  Por exemplo, se um usuário não puder se conectar ao banco de dados Database1, devido a um nome de logon inválido, sete vezes entre 11:00 e 11:05 em 5/2/2012 (UTC), essas informações estarão disponíveis em uma única linha nesta exibição:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severidade**|**event_count**|**Descrição**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**Descrição**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -174,7 +174,7 @@ WHERE event_type = 'throttling'
 ### <a name="db-scoped-extended-event"></a>Eventos estendidos no escopo do banco de dados  
  Use o código de exemplo a seguir para configurar a sessão de eventos estendidos (XEvent) no escopo do banco de dados:  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -206,7 +206,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 Use a consulta a seguir para verificar se há um deadlock.  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  
@@ -227,7 +227,7 @@ WITH CTE AS (
 SELECT * FROM CTE2;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos no banco de dados do SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
   
   

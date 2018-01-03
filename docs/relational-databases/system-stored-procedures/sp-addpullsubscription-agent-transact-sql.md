@@ -22,15 +22,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e13ce0bc7be6b2e21a30f13a3cf7cc299d00295
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 01f7e3cdecd4c0a95c9d91104e2feee39f00252b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
+ 
   Adiciona um novo trabalho agendado de agente usado para sincronizar uma assinatura pull com uma publicação transacional. Esse procedimento armazenado é executado no assinante no banco de dados de assinatura.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -40,8 +40,7 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 sp_addpullsubscription_agent [ @publisher = ] 'publisher'  
-    [ , [ @publisher_db = ] 'publisher_db' ]  
-        , [ @publication = ] 'publication'  
+    [ , [ @publisher_db = ] 'publisher_db' ]          , [ @publication = ] 'publication'  
     [ , [ @subscriber = ] 'subscriber' ]  
     [ , [ @subscriber_db = ] 'subscriber_db' ]  
     [ , [ @subscriber_security_mode = ] subscriber_security_mode ]  
@@ -57,7 +56,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
     [ , [ @frequency_interval = ] frequency_interval ]  
     [ , [ @frequency_relative_interval = ] frequency_relative_interval ]  
     [ , [ @frequency_recurrence_factor = ] frequency_recurrence_factor ]  
-    [ , [ @frequency_subda y= ] frequency_subday ]  
+    [ , [ @frequency_subday = ] frequency_subday ]  
     [ , [ @frequency_subday_interval = ] frequency_subday_interval ]  
     [ , [ @active_start_time_of_day = ] active_start_time_of_day ]  
     [ , [ @active_end_time_of_day = ] active_end_time_of_day ]  
@@ -152,7 +151,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_type=**] *frequency_type*  
  É a frequência de agendamento do Agente de Distribuição. *frequency_type* é **int**, e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2** (padrão)|Sob Demanda|  
@@ -279,7 +278,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_addpullsubscription_agent** é usado em replicação de instantâneo e replicação transacional.  
   
 ## <a name="example"></a>Exemplo  
@@ -288,9 +287,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissões  
  Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_addpullsubscription_agent**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   

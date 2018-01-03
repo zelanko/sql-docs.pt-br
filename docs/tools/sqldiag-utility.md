@@ -3,7 +3,7 @@ title: "Utilitário SQLdiag | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqldiag
 ms.reviewer: 
@@ -36,13 +36,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2533811a2ccc47ac836079c4a4972bfc1f9e5bd7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ffbcdc873f61ee683e182294d40bb7880047b60
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sqldiag-utility"></a>Utilitário SQLdiag
+# <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **SQLdiag** utilitário é um utilitário de coleta de diagnósticos de propósito geral que pode ser executado como um aplicativo de console ou um serviço. É possível usar o **SQLdiag** para coletar logs e arquivos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e de outros tipos de servidores, e usá-lo para monitorar os servidores ao longo do tempo ou para solucionar problemas específicos com seus servidores. O**SQLdiag** foi criado para agilizar e simplificar a coleta de informações de diagnóstico para os Serviços de Atendimento ao Cliente da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 > [!NOTE]  
@@ -371,7 +371,7 @@ SQLDIAG START /A Instance1
 > [!NOTE]  
 >  Para coletar informações de rastreamento do [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] de instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clusterizadas, os compartilhamentos administrativos (ADMIN$) devem estar habilitados no cluster.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

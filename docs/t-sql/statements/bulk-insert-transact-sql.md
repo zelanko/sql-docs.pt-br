@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: da5449283269e7ff018e7a4b394eb4c26b69e590
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 5900878e440a0ae821655adea764eaebad8fddf2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -415,7 +415,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importando dados de um arquivo no armazenamento de BLOBs do Azure   
 O exemplo a seguir mostra como carregar dados de um arquivo csv em um local de armazenamento de BLOBs do Azure, que foi configurado como uma fonte de dados externa. Isso requer uma credencial no escopo do banco de dados usando uma assinatura de acesso compartilhado.    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -449,9 +449,9 @@ Para concluir `BULK INSERT` exemplos, incluindo a configuração de credencial e
   
 -   [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitário bcp](../../tools/bcp-utility.md)   
  [Arquivos de formato para importar ou exportar dados &#40; SQL Server &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

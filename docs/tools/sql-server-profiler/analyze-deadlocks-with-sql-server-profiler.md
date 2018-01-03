@@ -3,7 +3,7 @@ title: Analisar Deadlocks com o SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c0de1737702872b1d692a5489afbd4c64eba499
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c2940a94d2893fb58886506fa5db07402b86280d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analisar deadlocks com o SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para identificar a causa de um deadlock. Um deadlock ocorre quando há uma dependência cíclica entre dois ou mais threads, ou processos, do mesmo conjunto de recursos dentro do SQL Server. Usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], é possível criar um rastreamento que registra, reproduz e exibe eventos de deadlock para análise.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 |ID do Proprietário|ID de transação para os processos que estão usando transações e, atualmente, aguardam em um bloqueio.|  
 |Descritor da transação|Ponteiro para o descritor de transação que descreve o estado da transação.|  
 |Buffer de entrada|Buffer de entrada do processo atual; define o tipo de evento e a instrução que são executados. Os valores possíveis incluem:<br /><br /> **Idioma**<br /><br /> **RPC**<br /><br /> **Nenhuma**|  
-|Instrução|Tipo de instrução. Os valores possíveis são:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown (desconhecido)**|  
+|de|Tipo de instrução. Os valores possíveis são:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown (desconhecido)**|  
   
 ## <a name="deadlock-resource-node"></a>Nó de recurso de deadlock  
  Em um deadlock, dois processos esperam por um recurso ocupado pelo outro processo. Em um gráfico de deadlock, os recursos são exibidos como nós de recurso.  

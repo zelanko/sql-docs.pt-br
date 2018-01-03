@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8da98a7a5fe003c9567be9623cff3604e754c473
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a6942ecfcf189716e0829eadcb0d94c6d731650
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -68,7 +68,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>A. Comparar valores entre anos  
  O exemplo a seguir usa a função LAG para retornar a diferença em cotas de vendas para um funcionário específico nos anos anteriores. Observe que, como não há um valor de retardo disponível para a primeira linha, o padrão de zero (0) é retornado.  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -94,7 +94,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>B. Comparar valores dentro de partições  
  O exemplo a seguir usa a função LAG para comparar as vendas no ano até o momento entre funcionários. A cláusula PARTITION BY é especificada para dividir as linhas no conjunto de resultados por território de vendas. A função LAG é aplicada separadamente a cada partição e a computação é reiniciada para cada partição. A cláusula ORDER BY na cláusula OVER ordena as linhas em cada partição. A cláusula ORDER BY na instrução SELECT classifica as linhas em todo o conjunto de resultados. Observe que, como não há um valor de retardo disponível para a primeira linha de cada partição, o padrão de zero (0) é retornado.  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -120,7 +120,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>C. Especificando expressões arbitrárias  
  O exemplo a seguir demonstra como especificar uma variedade de expressões arbitrárias na sintaxe da função LAG.  
   
-```t-sql   
+```sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -148,7 +148,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>Unidade d: comparar valores entre trimestres  
  O exemplo a seguir demonstra a função LAG. A consulta usa a função LAG para retornar a diferença em cotas de vendas para um funcionário específico nos trimestres do calendário anterior. Observe que, como não há um valor de retardo disponível para a primeira linha, o padrão de zero (0) é retornado.  
   
-```t-sql   
+```sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  
@@ -172,7 +172,7 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cliente potencial &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   

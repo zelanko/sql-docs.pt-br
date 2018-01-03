@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5cd98a22d086fac88ad523fb2fdded5bc38d9d70
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 200bf01ba1127281d5ff25b9c69f3616c4cf64bd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
   
 sp_recompile [ @objname = ] 'object'  
 ```  
@@ -49,7 +49,7 @@ sp_recompile [ @objname = ] 'object'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_recompile procura um objeto somente no banco de dados atual.  
   
  As consultas usadas por procedimentos armazenados, gatilhos e funções definidas pelo usuário são otimizadas apenas quando são compiladas. Como índices ou outras alterações que afetam as estatísticas são feitos no banco de dados, os procedimentos armazenados compilados, gatilhos e funções definidas pelo usuário podem perder a eficiência. Recompilando procedimentos armazenados e gatilhos que agem em uma tabela, você pode reotimizar as consultas.  
@@ -70,7 +70,7 @@ EXEC sp_recompile N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

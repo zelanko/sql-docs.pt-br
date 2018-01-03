@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa43f93003240c41fefdc589392f936c60a2333d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -70,12 +70,12 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@***deadlock_intvar*  
  É uma variável de inteiro que especifica a prioridade de deadlock. A variável deve ser definida como um valor de inteiro no intervalo (-10 a 10).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Surgem deadlocks quando duas sessões estão aguardando acesso a recursos bloqueados por outra. Quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta que duas sessões estão com deadlock, ela soluciona o deadlock escolhendo um das sessões como uma vítima de deadlock. A transação atual da vítima é revertida e a mensagem de erro 1205 de deadlock é retornada ao cliente. Isso libera todos os bloqueios retidos por essa sessão, permitindo que a outra sessão continue.  
   
  A escolha de qual sessão será a vítima de deadlock depende da prioridade de deadlock de cada sessão:  
   
--   Se ambas as sessões tiverem a mesma prioridade de deadlock, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolhe a sessão que é menos dispendiosa para ser revertida como a vítima de deadlock. Por exemplo, se ambas as sessões tiverem definido sua prioridade de deadlock como HIGH, a instância escolherá como uma vítima a sessão que calcula ser menos dispendiosa para reverter.  
+-   Se ambas as sessões tiverem a mesma prioridade de deadlock, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolhe a sessão que é menos dispendiosa para ser revertida como a vítima de deadlock. Por exemplo, se ambas as sessões tiverem definido sua prioridade de deadlock como HIGH, a instância escolherá como uma vítima a sessão que calcula ser menos dispendiosa para reverter. O custo é determinado comparando o número de bytes de log gravados desse ponto em cada transação. (Você pode ver esse valor como "Log utilizada" em um gráfico de deadlock).
   
 -   Se as sessões tiverem prioridades de deadlock diferentes, a sessão com a prioridade de deadlock mais baixa será escolhida como a vítima de deadlock.  
   
@@ -102,7 +102,7 @@ SET DEADLOCK_PRIORITY NORMAL;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Definir LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  

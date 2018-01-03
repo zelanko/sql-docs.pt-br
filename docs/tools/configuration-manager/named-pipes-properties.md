@@ -3,7 +3,7 @@ title: Propriedades de Pipes nomeados | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5397519a722e753509161e9fc6cfcf108fc5c73a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6122004c46c36f21d2b301e70be91b26fa06c701
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="named-pipes-properties"></a>Propriedades de Pipes Nomeados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o **protocolo**página o **propriedades de Pipes nomeados** caixa de diálogo para exibir ou alterar o pipe que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta, ao usar o protocolo Pipes nomeados.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
  Digite **\\\\.\pipe\acct** para escutar no pipe **acct** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Escolhendo um protocolo de rede](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
  [Criando uma cadeia de conexão válida usando pipes nomeados](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  

@@ -3,7 +3,7 @@ title: "Criando uma cadeia de Conexão válida usando TCP/IP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18138e5f16ce4f7ed7851eee30dd7c645f69e645
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2aa53003196314ce633f5f4293c3ebb396ab727f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Criando uma cadeia de conexão válida usando TCP/IP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para criar uma cadeia de caracteres de conexão válida usando TCP/IP, você deve:  
@@ -174,7 +174,7 @@ Server             .\<instancename>
 > [!NOTE]  
 >  Para obter informações sobre como especificar o protocolo de rede como um parâmetro **sqlcmd** , consulte "Como fazer conexão com o Mecanismo de Banco de Dados usando sqlcmd.exe" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando uma cadeia de conexão válida usando o protocolo de memória compartilhada](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Criando uma cadeia de Conexão válida usando Pipes nomeados](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
  [Escolhendo um protocolo de rede](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  

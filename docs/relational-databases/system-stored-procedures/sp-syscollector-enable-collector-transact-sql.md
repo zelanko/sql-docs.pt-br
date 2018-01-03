@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee548e3788bb5c09e9fec3c4b801750e43449aa4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9d578fcdb568bc3caae3294ae132edb3c68ec93b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spsyscollectorenablecollector-transact-sql"></a>sp_syscollector_enable_collector (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ dbo.sp_syscollector_enable_collector
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Nenhuma  
+ Nenhum  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Assume o coletor de dados no servidor como padrão.  
   
 ## <a name="permissions"></a>Permissões  
@@ -59,13 +59,13 @@ dbo.sp_syscollector_enable_collector
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir habilita o coletor de dados.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC dbo.sp_syscollector_enable_collector;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
   

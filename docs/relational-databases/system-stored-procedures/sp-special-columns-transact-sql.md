@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fee0eefa43553f1e942abc2c7797d2dd487891d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902c3fc7afb5ede1af0d49ef4429f8177b2101ad
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  É a versão do ODBC que está sendo utilizada. *ODBCVer* é **int (**4**)**, com um padrão de 2. Isso indica o ODBC versão 2.0. Para obter mais informações sobre a diferença entre ODBC versão 2.0 e ODBC versão 3.0, consulte a especificação de ODBC SQLSpecialColumns para ODBC versão 3.0.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -88,7 +88,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 |SCALE|**smallint**|Escala da coluna na fonte de dados. NULL é retornado para os tipos de dados para os quais a escala não é aplicável.|  
 |PSEUDO_COLUMN|**smallint**|Indica se a coluna é uma pseudocoluna. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  sp_special_columns é equivalente a SQLSpecialColumns no ODBC. Os resultados retornados são ordenados por SCOPE.  
   
 ## <a name="permissions"></a>Permissões  
@@ -97,14 +97,14 @@ sp_special_columns [ @table_name = ] 'table_name'
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações sobre a coluna que identifica linhas de forma exclusiva na tabela `HumanResources.Department`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_special_columns @table_name = 'Department'   
     ,@table_owner = 'HumanResources';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados &#40; do catálogo Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

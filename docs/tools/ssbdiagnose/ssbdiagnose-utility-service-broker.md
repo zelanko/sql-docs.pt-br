@@ -3,7 +3,7 @@ title: "Utilitário ssbdiagnose (Service Broker) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 601de096e50a39b13113ff09e86965187701b327
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitário ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **ssbdiagnose** utilitário relata problemas em [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversas ou a configuração do [!INCLUDE[ssSB](../../includes/sssb-md.md)] serviços. É possível fazer verificações de configuração para dois serviços ou um único serviço. Os problemas são reportados na janela de prompt de comando como texto legível ou XML formatado que pode ser redirecionado para um arquivo ou outro programa.  
@@ -218,10 +218,10 @@ WHERE database_id = DB_ID();
   
  Se **-E** ou **-U** não for especificado, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDUSER. Se SQLCMDUSER também não for definido, **ssbdiagnose** usará a Autenticação do Windows.  
   
- Se a opção **-E** for usada com as opções **-U** ou **-P** , uma mensagem de erro será gerada.  
+ Se a opção **-E** for usada com as opções **-U** ou **-P**, uma mensagem de erro será gerada.  
   
  **-U** *login_id*  
- Abra uma conexão de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a ID de logon especificada. O logon deve ser membro da função de servidor fixa **sysadmin** .  
+ Abra uma conexão de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a ID de logon especificada. O logon deve ser membro da função de servidor fixa **sysadmin**.  
   
  Se **-E** ou **-U** não for especificado, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDUSER. Se SQLCMDUSER também não for definido, **ssbdiagnose** tentará se conectar usando o modo de Autenticação do Windows com base na conta do Windows do usuário que está executando **ssbdiagnose**.  
   
@@ -242,7 +242,7 @@ WHERE database_id = DB_ID();
   
  A entrada do usuário está oculta. Isso significa que nada é exibido e o cursor fica em posição.  
   
- Será gerada uma mensagem de erro se a opção **-P** for usada com a opção **-E** .  
+ Será gerada uma mensagem de erro se a opção **-P** for usada com a opção **-E**.  
   
  Se a opção **-P** for seguida por mais de um argumento, uma mensagem de erro será gerada.  
   
@@ -260,7 +260,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Exibe a ajuda de linha de comando.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use **ssbdiagnose** para fazer o seguinte:  
   
 -   Confirmar que não há erros de configuração em um aplicativo [!INCLUDE[ssSB](../../includes/sssb-md.md)] recém-configurado.  
@@ -451,7 +451,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   

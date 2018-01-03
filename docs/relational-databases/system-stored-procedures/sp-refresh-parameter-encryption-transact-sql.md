@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31dd44920c1bc814985cd0391f52e035621de89f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0 (êxito) ou um número diferente de zero (falha)
 
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 
 Os metadados de criptografia para os parâmetros de um módulo podem se tornar desatualizados, se:   
 * Propriedades de criptografia de uma coluna em uma tabela de referências de módulo, foram atualizados. Por exemplo, uma coluna foi removida e uma nova coluna com o mesmo nome, mas um tipo de criptografia diferente, chave de criptografia ou um algoritmo de criptografia foi adicionada.  
@@ -92,7 +92,7 @@ Para os módulos que são definidos com o `EXECUTE AS` cláusula `IMPERSONATE` p
 O exemplo a seguir cria uma tabela e um procedimento que fazem referência à tabela, configura o sempre criptografado e, em seguida, demonstra alterando a tabela e em execução o `sp_refresh_parameter_encryption` procedimento.  
 
 Primeiro, crie a tabela inicial e um procedimento armazenado que faz referência à tabela.
-```tsql
+```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
     [FirstName] [nvarchar](50) NULL,
@@ -121,7 +121,7 @@ GO
 ```
 
 Configure as chaves do sempre criptografado.
-```tsql
+```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
 (
@@ -143,7 +143,7 @@ GO
 
 
 Por fim, substituímos a coluna SSN com a coluna criptografada e, em seguida, executa o `sp_refresh_parameter_encryption` procedimento para atualizar os componentes de sempre criptografado.
-```tsql
+```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
 
@@ -160,7 +160,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>Consulte também 
+## <a name="see-also"></a>Consulte Também 
 
 [Sempre criptografado](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Assistente do Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

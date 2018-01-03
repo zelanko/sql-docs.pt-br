@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 592e0b34a2789df1c1aeb76b412feee110af248c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3d21b559f232a05ab8699962b4691aa3b4e3bea9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssecurableclasses-transact-sql"></a>sys.securable_classes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**class_desc**|**sysname**|Nome da classe.|  
-|**classe**|**int**|Designação numérica da classe.|  
+|**class**|**int**|Designação numérica da classe.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna as classes protegíveis com suporte desta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 SELECT * FROM sys.securable_classes ORDER BY class;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Protegíveis](../../relational-databases/security/securables.md)  
   
   

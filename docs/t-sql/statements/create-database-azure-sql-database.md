@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ Especifica o agrupamento padrão para o catálogo de metadados. *DATABASE_DEFAUL
   
  Para obter mais informações sobre os argumentos e a `CREATE DATABASE` instrução, consulte [CREATE DATABASE &#40; Servidor SQL Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os bancos de dados no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tem várias configurações padrão que são definidas quando o banco de dados é criado. Para obter mais informações sobre essas configurações padrão, consulte a lista de valores em [DATABASEPROPERTYEX &#40; Transact-SQL &#41; ](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
  MAXSIZE fornece a capacidade de limitar o tamanho do banco de dados. Se o tamanho do banco de dados atingir seu MAXSIZE, você receberá o código de erro 40544. Quando isso ocorre, você não pode inserir ou atualizar dados nem criar novos objetos (como tabelas, procedimentos armazenados, exibições e funções). No entanto, você ainda pode ler e excluir dados, truncar tabelas, descartar tabelas e índices e reconstruir índices. Você pode atualizar MAXSIZE para um valor maior que o tamanho atual do banco de dados ou excluir alguns dados para liberar espaço de armazenamento. Pode haver um atraso máximo de quinze minutos para que você possa inserir novos dados.  
@@ -223,14 +223,14 @@ Para obter um tutorial de início rápido mostrando como se conectar a um banco 
 ### <a name="simple-example"></a>Exemplo simples  
  Um exemplo simples para a criação de um banco de dados.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### <a name="simple-example-with-edition"></a>Exemplo simples com edição  
  Um exemplo simples para a criação de um banco de dados padrão.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -238,7 +238,7 @@ CREATE DATABASE TestDB2
 ### <a name="example-with-additional-options"></a>Exemplo com opções adicionais  
  Um exemplo de uso de várias opções.  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -247,7 +247,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### <a name="creating-a-copy"></a>Criando uma cópia  
  Um exemplo de criação de uma cópia de um banco de dados.  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -255,21 +255,21 @@ AS COPY OF school;
 ### <a name="creating-a-database-in-an-elastic-pool"></a>Criando um banco de dados em um Pool Elástico  
  Cria um novo banco de dados no pool chamado S3M100:  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>Criando uma cópia de um banco de dados em outro servidor  
  O exemplo a seguir cria uma cópia do banco de dados db_original, denominado db_copy no nível de desempenho P2 para um único banco de dados.  Isso é verdadeiro independentemente de ser db_original em um nível de desempenho para um único banco de dados ou de um pool Elástico.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  O exemplo a seguir cria uma cópia do banco de dados db_original, denominado db_copy em um pool Elástico denominado ep1.  Isso é verdadeiro independentemente de ser db_original em um nível de desempenho para um único banco de dados ou de um pool Elástico.  Se db_original estiver em um pool Elástico com um nome diferente, db_copy ainda é criado no ep1.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -279,7 +279,7 @@ CREATE DATABASE db_copy
 
 O exemplo a seguir define o agrupamento de catálogo para DATABASE_DEFAULT durante a criação do banco de dados, que define o agrupamento de catálogo a ser o mesmo que o agrupamento de banco de dados.
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```

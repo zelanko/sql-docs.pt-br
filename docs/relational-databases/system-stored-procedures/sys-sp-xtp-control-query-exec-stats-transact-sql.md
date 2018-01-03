@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4bcc1bb453783a38c4b23e6526de1a804bde8f1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aeae0a552d2df0c911b2a95a4578c3b835192612
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## <a name="code-sample"></a>Exemplo de código  
  O exemplo de código a seguir mostra como habilitar a coleta de estatísticas para todos os procedimentos armazenados compilados nativamente para a instância e, depois, para um procedimento armazenado compilado nativamente específico.  
   
-```tsql   
+```sql   
 DECLARE @c bit  
   
 EXEC [sys].[sp_xtp_control_query_exec_stats] @new_collection_value = 1;  
@@ -86,7 +86,7 @@ EXEC sp_xtp_control_query_exec_stats @database_id = 5,
 SELECT @c AS 'collection status';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

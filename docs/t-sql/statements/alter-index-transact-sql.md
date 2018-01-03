@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef1bc9e0e99288cb739f53eb42a8e19691a04601
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
--- Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+-- Syntax for SQL Server and Azure SQL Database
   
 ALTER INDEX { index_name | ALL } ON <object>  
 {  
@@ -152,7 +152,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```  
--- Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+-- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -419,7 +419,7 @@ FILLFACTOR = *fator de preenchimento*
  ON  
  Bloqueios de tabela de longa duração não são mantidos durante a operação do índice. Durante a fase principal da operação de índice, apenas um bloqueio IS (Tentativa Compartilhada) é mantido na tabela de origem. Isso permite que as consultas ou atualizações na tabela e nos índices subjacentes continuem. No início da operação, um bloqueio S (Compartilhado) é mantido brevemente no objeto de origem. Ao término da operação, por um breve momento, um bloqueio S será mantido na origem se um índice não clusterizado estiver sendo criado; ou um bloqueio SCH-M (Modificação de Esquema) será adquirido quando um índice clusterizado for criado ou descartado online, ou quando um índice clusterizado ou não clusterizado estiver sendo recriado. Não será possível definir ONLINE como ON quando um índice estiver sendo criado em uma tabela temporária local.  
   
- DESATIVADO  
+ OFF  
  Os bloqueios de tabela são aplicados enquanto durar a operação de índice. Uma operação de índice offline que cria, recria ou descarta um índice clusterizado, espacial ou XML, ou que recria ou descarta um índice não clusterizado, adquire um bloqueio Sch-M na tabela. Isso evita o acesso de todos os usuários à tabela subjacente enquanto durar a operação. Uma operação de índice offline que cria um índice não clusterizado adquire um bloqueio Compartilhado (S) na tabela. Isso impede atualizações na tabela subjacente, mas permite operações de leitura, como instruções SELECT.  
   
  Para obter mais informações, consulte [como funcionam as operações de índice Online](../../relational-databases/indexes/how-online-index-operations-work.md).  
@@ -556,7 +556,7 @@ O padrão é 0 minutos.
   
  Para definir tipos diferentes de compactação de dados para partições diferentes, especifique a opção DATA_COMPRESSION mais de uma vez, por exemplo:  
   
-```t-sql  
+```sql  
 REBUILD WITH   
 (  
 DATA_COMPRESSION = NONE ON PARTITIONS (1),   
@@ -634,7 +634,7 @@ ANULAR
 
 Anule uma operação de índice em execução ou em pausa que foi declarada como reiniciável. Você precisa executar explicitamente um **anular** operação de reconstrução de um índice retomável de finalização do comando. Falha ou pausar uma operação de índice retomáveis não encerra sua execução; em vez disso, ele deixa a operação em um estado de pausa indefinido.
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ALTER INDEX não pode ser usado para reparticionar um índice ou movê-lo para um grupo de arquivos diferente. Essa instrução não pode ser usada para modificar a definição de índice, como adicionar ou excluir colunas ou alterar a ordem das colunas. Use CREATE INDEX com a cláusula DROP_EXISTING para executar essas operações.  
   
  Quando uma opção não for especificada explicitamente, a configuração atual será aplicada. Por exemplo, se uma configuração FILLFACTOR não for especificada na cláusula REBUILD, o valor do fator de preenchimento armazenado no catálogo do sistema será usado durante o processo de recriação. Para exibir as configurações de opção de índice atual, use [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
@@ -703,9 +703,7 @@ Anule uma operação de índice em execução ou em pausa que foi declarada como
  É possível executar operações de índice online simultâneas na mesma tabela ou partição de tabela somente ao fazer o seguinte:  
   
 -   Criar vários índices não clusterizados.  
-  
 -   Reorganizar índices diferentes na mesma tabela.  
-  
 -   Reorganizar índices diferentes ao recriar índices não sobrepostos na mesma tabela.  
   
  Todas as outras operações de índice online executadas ao mesmo tempo falham. Por exemplo, não é possível recriar dois ou mais índices na mesma tabela ao mesmo tempo, ou criar um novo índice ao recriar um índice existente na mesma tabela.  
@@ -715,18 +713,17 @@ Anule uma operação de índice em execução ou em pausa que foi declarada como
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 RECONSTRUÇÃO de índice ONLINE é especificado como retomáveis usando o RETOMÁVEL = opção. 
--  A opção RETOMÁVEL não é persistente nos metadados para um determinado índice e se aplica somente a duração de uma instrução DDL atual. Portanto, o RETOMÁVEL = ON cláusula deve ser especificada explicitamente para habilitar a oferecer.
-
+-  A opção RETOMÁVEL não é persistente nos metadados para um determinado índice e se aplica somente a duração de uma instrução DDL atual.  Portanto, o RETOMÁVEL = ON cláusula deve ser especificada explicitamente para habilitar a oferecer.
 -  Observe que duas opções diferentes de MAX_DURATION. Um está relacionado à low_priority_lock_wait e o outro está relacionado ao RETOMÁVEL = opção.
    -  RETOMÁVEL oferecem suporte a opção MAX_DURATION = opção ou **low_priority_lock_wait** opção de argumento. 
-   MAX_DURATION RETOMÁVEIS opção especifica o intervalo de tempo para um índice que está sendo recompilação. Depois que essa hora é usada a recompilação de índice é pausada ou concluir sua execução. Usuário decide quando uma recompilação de um índice de pausa pode ser retomada. O **tempo** em minutos para MAX_DURATION deve ser maior que 0 minutos e menor ou igual uma semana (7 x 24 x 60 = 10080 minutos). Ter uma longa pausa para uma operação de índice pode afetar o desempenho de DML em uma tabela específica, bem como a capacidade de disco de banco de dados como ambos os índices original e um recém-criado exigem espaço em disco e precisa ser atualizado durante as operações DML. Se a opção MAX_DURATION for omitida, a operação de índice continuará até sua conclusão ou até que ocorra uma falha. 
+   -  MAX_DURATION RETOMÁVEIS opção especifica o intervalo de tempo para um índice que está sendo recompilação. Depois que essa hora é usada a recompilação de índice é pausada ou concluir sua execução. Usuário decide quando uma recompilação de um índice de pausa pode ser retomada. O **tempo** em minutos para MAX_DURATION deve ser maior que 0 minutos e menor ou igual uma semana (7 * 24 * 60 = 10080 minutos). Ter uma longa pausa para uma operação de índice pode afetar o desempenho de DML em uma tabela específica, bem como a capacidade de disco de banco de dados como ambos os índices original e um recém-criado exigem espaço em disco e precisa ser atualizado durante as operações DML. Se a opção MAX_DURATION for omitida, a operação de índice continuará até sua conclusão ou até que ocorra uma falha. 
 -   O \<low_priority_lock_wait > argumento opção permite que você decida como a operação de índice pode continuar quando bloqueado o bloqueio SCH-M.
  
 -  Executar novamente a instrução ALTER INDEX REBUILD original com os mesmos parâmetros retoma uma operação de recompilação de índice em pausa. Você também pode retomar uma operação de recompilação de índice em pausa, executando a instrução ALTER INDEX RETOMAR.
 -  O SORT_IN_TEMPDB = ON não há suporte para a opção de índice retomável 
 -  O comando DDL com RETOMÁVEL = ON não pode ser executado em uma transação explícita (não pode ser parte de begin tran... bloco de confirmação).
 -  Apenas operações de índice em pausa estão reiniciáveis.
--   Ao retomar uma operação de índice está pausada, você pode alterar o valor MAXDOP para um novo valor.  Se MAXDOP não for especificado ao retomar uma operação de índice que está em pausa, o último valor MAXDOP é obtido. Se a opção MAXDOP não é especificada para a operação de recriação de índice, o valor padrão é obtido.
+-  Ao retomar uma operação de índice está pausada, você pode alterar o valor MAXDOP para um novo valor.  Se MAXDOP não for especificado ao retomar uma operação de índice que está em pausa, o último valor MAXDOP é obtido. Se a opção MAXDOP não é especificada para a operação de recriação de índice, o valor padrão é obtido.
 - Para interromper imediatamente a operação de índice, você pode interromper o comando em andamento (Ctrl-C) ou você pode executar o comando ALTER INDEX pausar ou a instrução KILL *session_id* comando. Depois que o comando está em pausa pode ser retomado usando a opção de continuar.
 -  O comando anular elimina a sessão que hospedado a recompilação de índice original e anula a operação de índice  
 -  Não há recursos adicionais são necessários para recompilação de índice retomáveis exceto para
@@ -765,12 +762,10 @@ A seguinte funcionalidade está desabilitada para operações de recriação de 
   
  Para avaliar como o alterando a compactação PAGE e ROW afetará uma tabela, um índice ou uma partição, use o [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) procedimento armazenado.  
   
- As restrições a seguir se aplicam a índices particionados:  
+As restrições a seguir se aplicam a índices particionados:  
   
 -   Quando você usa `ALTER INDEX ALL ...`, você não pode alterar a configuração de compactação de uma única partição se a tabela tiver índices não alinhados.  
-  
 -   A instrução ALTER INDEX \<índice >... REBUILD PARTITION ... recria a partição especificada do índice.  
-  
 -   A instrução ALTER INDEX \<índice >... REBUILD WITH... recria todas as partições do índice.  
   
 ## <a name="statistics"></a>Estatísticas  
@@ -782,14 +777,12 @@ A seguinte funcionalidade está desabilitada para operações de recriação de 
 ## <a name="version-notes"></a>Notas de versão  
   
 -  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]Não use opções de grupo de arquivos e filestream.  
-  
 -  Índices ColumnStore não estão disponíveis antes de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
-
 -  Operações de índice retomáveis estão disponível começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
   
 ## <a name="basic-syntax-example"></a>Exemplo de sintaxe básica:   
   
-```t-sql 
+```sql 
 ALTER INDEX index1 ON table1 REBUILD;  
   
 ALTER INDEX ALL ON table1 REBUILD;  
@@ -803,7 +796,7 @@ ALTER INDEX ALL ON dbo.table1 REBUILD;
 ### <a name="a-reorganize-demo"></a>A. REORGANIZAR demonstração  
  Este exemplo demonstra como funciona o comando ALTER INDEX REORGANIZE.  Ele cria uma tabela que tem vários rowgroups e, em seguida, demonstra como REORGANIZAR mescla os rowgroups.  
   
-```  
+```sql  
 -- Create a database   
 CREATE DATABASE [ columnstore ];  
 GO  
@@ -848,20 +841,20 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```t-sql
+```sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
  Use a opção TABLOCK para inserir linhas em paralelo. Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a operação INSERT INTO pode ser executados em paralelo quando TABLOCK for usado.  
   
-```t-sql  
+```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
 SELECT TOP 300000 * FROM staging;  
 ```  
   
  Execute este comando para ver os rowgroups delta aberto. O número de rowgroups depende do grau de paralelismo.  
   
-```t-sql  
+```sql  
 SELECT *   
 FROM sys.dm_db_column_store_row_group_physical_stats   
 WHERE object_id  = object_id('cci_target');  
@@ -869,20 +862,20 @@ WHERE object_id  = object_id('cci_target');
   
  Execute este comando para forçar todos os fechado e rowgroups abertos para o columnstore.  
   
-```t-sql  
+```sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
  Execute este comando novamente e você verá que os rowgroups menores são mesclados em um rowgroup compactado.  
   
-```t-sql  
+```sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
 ### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Compactar rowgroups delta FECHADOS para o columnstore  
  Este exemplo usa o REORGANIZE opção para compacta cada rowgroup delta fechado para o columnstore como um rowgroup compactado.   Isso não é necessário, mas é útil quando o motor de tupla não compacta rowgroups CLOSED rápido o suficiente.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW  
 -- REORGANIZE all partitions  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -898,7 +891,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
   
  REORGANIZE combina rowgroups para preencher rowgroups até um número máximo de linhas \<= 1,024,576. Portanto, ao compactar todos os rowgroups aberto e fechado você não acabará com muita rowgroups compactados que têm apenas algumas linhas neles. Você deseja que rowgroups seja tão completo quanto possível reduzir o tamanho compactado e melhorar o desempenho de consulta.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW2016  
 -- Move all OPEN and CLOSED delta rowgroups into the columnstore.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
@@ -913,9 +906,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
  Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], REORGANIZE compactar mais de rowgroups delta para o columnstore. Ele também executa a desfragmentação online. Primeiro, ele reduz o tamanho do columnstore removendo fisicamente linhas excluídas quando 10% ou mais linhas em um grupo de linhas foram excluídos.  Em seguida, ele combina rowgroups para formar rowgroups maior do que ter até o máximo de 1,024,576 linhas por rowgroups.  Todos os rowgroups são alterados novamente compactados.  
   
 > [!NOTE]
->  Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], recriar um índice columnstore não é mais necessária na maioria das situações como REORGANIZAR fisicamente remove linhas excluídas e mescla os rowgroups. A opção COMPRESS_ALL_ROW_GROUPS força todos os rowgroups delta de aberto ou fechado para o columnstore que anteriormente só pode ser feito com uma recompilação.   REORGANIZE está online e ocorre em segundo plano para que consultas podem continuar, a operação ocorre.  
+> Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], recriar um índice columnstore não é mais necessária na maioria das situações como REORGANIZAR fisicamente remove linhas excluídas e mescla os rowgroups. A opção COMPRESS_ALL_ROW_GROUPS força todos os rowgroups delta de aberto ou fechado para o columnstore que anteriormente só pode ser feito com uma recompilação. REORGANIZE está online e ocorre em segundo plano para que consultas podem continuar, a operação ocorre.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
 -- Defragment by physically removing rows that have been logically deleted from the table, and merging rowgroups.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -932,7 +925,7 @@ Aplica-se a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começan
   
  Este exemplo mostra como recriar um índice columnstore clusterizado e forçar todos os rowgroups delta para o columnstore. A primeira etapa prepara uma tabela FactInternetSales2 com um índice columnstore clusterizado e insere dados das quatro primeiras colunas.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW  
   
 CREATE TABLE dbo.FactInternetSales2 (  
@@ -953,7 +946,7 @@ SELECT * FROM sys.column_store_row_groups;
   
  Os resultados mostram um rowgroup aberto, o que significa que não há [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aguardará mais linhas a serem adicionadas antes de fechar o rowgroup e move os dados para o columnstore. A próxima instrução recompila o índice columnstore clusterizado, o que força todas as linhas do ColumnStore.  
   
-```t-sql  
+```sql  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
 SELECT * FROM sys.column_store_row_groups;  
 ```  
@@ -965,7 +958,7 @@ SELECT * FROM sys.column_store_row_groups;
  
  Para recriar uma partição de um grande índice columnstore clusterizado, use ALTER INDEX REBUILD com a opção de partição. Este exemplo recria a partição 12. Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é recomendável substituir a RECOMPILAÇÃO com REORGANIZE.  
   
-```t-sql  
+```sql  
 ALTER INDEX cci_fact3   
 ON fact3  
 REBUILD PARTITION = 12;  
@@ -978,7 +971,7 @@ REBUILD PARTITION = 12;
   
  O exemplo a seguir recompila um índice columnstore clusterizado para usar a compactação de arquivamento e, em seguida, mostra como remover essa compactação. O resultado final usará apenas a compactação columnstore.  
   
-```t-sql  
+```sql  
 --Prepare the example by creating a table with a clustered columnstore index.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -1010,7 +1003,7 @@ GO
 ### <a name="a-rebuilding-an-index"></a>A. Recriando um índice  
  O exemplo a seguir recompila um único índice na tabela `Employee` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
@@ -1019,16 +1012,16 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```t-sql  
+```sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON);  
 ```  
   
- O exemplo a seguir adiciona a opção ONLINE que inclui a opção de bloqueio de baixa prioridade e adiciona a opção de compactação de linha.  
+O exemplo a seguir adiciona a opção ONLINE que inclui a opção de bloqueio de baixa prioridade e adiciona a opção de compactação de linha.  
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```t-sql  
+```sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH   
 (  
@@ -1043,7 +1036,7 @@ REBUILD WITH
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>C. Reorganizando um índice com a compactação LOB  
  O exemplo a seguir reorganiza um único índice clusterizado no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Como o índice contém um tipo de dados LOB no nível folha, a instrução também compacta todas as páginas que contêm dados de objeto grande. Observe que não é necessário especificar a opção WITH (LOB_COMPACTION) porque o valor padrão é ON.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
 ```  
   
@@ -1052,7 +1045,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```t-sql  
+```sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
     Sales.SalesOrderHeader  
 SET (  
@@ -1066,37 +1059,37 @@ GO
 ### <a name="e-disabling-an-index"></a>E. Desabilitando um índice  
  O exemplo a seguir desabilita um índice não clusterizado na tabela `Employee` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```t-sql  
+```sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 ```  
   
 ### <a name="f-disabling-constraints"></a>F. Desabilitando restrições  
  O exemplo a seguir desabilita uma restrição PRIMARY KEY desabilitando o índice de chave primária no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados. A restrição FOREIGN KEY na tabela subjacente é automaticamente desabilitada e a mensagem de aviso é exibida.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;  
 ```  
   
- O conjunto de resultados retorna esta mensagem de aviso.  
+O conjunto de resultados retorna esta mensagem de aviso.  
   
- ```t-sql  
- Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
- on table 'EmployeeDepartmentHistory' referencing table 'Department'  
- was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
- ```  
+```  
+Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
+on table 'EmployeeDepartmentHistory' referencing table 'Department'  
+was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
+```  
   
 ### <a name="g-enabling-constraints"></a>G. Habilitando restrições  
  O exemplo a seguir habilita as restrições PRIMARY KEY e FOREIGN KEY que foram desabilitadas no exemplo F.  
   
- A restrição PRIMARY KEY é habilitada com a recriação do índice PRIMARY KEY.  
+A restrição PRIMARY KEY é habilitada com a recriação do índice PRIMARY KEY.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department REBUILD;  
 ```  
   
- Em seguida, a restrição FOREIGN KEY é habilitada.  
+Em seguida, a restrição FOREIGN KEY é habilitada.  
   
-```t-sql  
+```sql  
 ALTER TABLE HumanResources.EmployeeDepartmentHistory  
 CHECK CONSTRAINT FK_EmployeeDepartmentHistory_Department_DepartmentID;  
 GO  
@@ -1107,7 +1100,7 @@ GO
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```t-sql  
+```sql  
 -- Verify the partitioned indexes.  
 SELECT *  
 FROM sys.dm_db_index_physical_stats (DB_ID(),OBJECT_ID(N'Production.TransactionHistory'), NULL , NULL, NULL);  
@@ -1123,7 +1116,7 @@ GO
 ### <a name="i-changing-the-compression-setting-of-an-index"></a>I. Alterando a configuração de compactação de um índice  
  O exemplo a seguir recompila um índice em uma tabela rowstore não particionada.  
   
-```t-sql
+```sql
 ALTER INDEX IX_INDEX1   
 ON T1  
 REBUILD   
@@ -1131,7 +1124,7 @@ WITH (DATA_COMPRESSION = PAGE);
 GO  
 ```  
   
- Para obter exemplos de compactação de dados adicionais, consulte [compactação de dados](../../relational-databases/data-compression/data-compression.md).  
+Para obter exemplos de compactação de dados adicionais, consulte [compactação de dados](../../relational-databases/data-compression/data-compression.md).  
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Recompilação de índice online de retomáveis
 
@@ -1141,7 +1134,7 @@ GO
 
 1. Executar uma recriação de índice online como operação retomável com MAXDOP = 1.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON) ;
    ```
 
@@ -1149,33 +1142,33 @@ GO
 
 3. Execute uma recriação de índice online como uma operação retomável com MAX_DURATION definido como 240 minutos.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240) ; 
    ```
 4. Pause uma recompilação de índice online em execução reiniciável.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table PAUSE ;
    ```   
 5. Retome uma recompilação de índice online para uma recompilação de índice que foi executada como retomável operação especificando um novo valor de MAXDOP definido como 4.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
 6. Retome uma operação de recompilação de índice online para uma recompilação de índice online que foi executada como reiniciável. Definir MAXDOP para 2, o tempo de execução para o índice que está sendo executando como resmumable a 240 minutos e, no caso de um índice que está sendo bloqueado a espera de bloqueio 10 minutos e depois disso eliminar todos os bloqueadores. 
 
-   ```t-sql
+   ```sql
       ALTER INDEX test_idx on test_table  
          RESUME WITH (MAXDOP=2, MAX_DURATION= 240 MINUTES, 
          WAIT_AT_LOW_PRIORITY (MAX_DURATION=10, ABORT_AFTER_WAIT=BLOCKERS)) ;
    ```      
 7. Anule a operação de recompilação de índice retomáveis que está em execução ou em pausa.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [Criar índice ESPACIAL &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [Criar índice XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
@@ -1188,5 +1181,3 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
-

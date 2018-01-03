@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2de361a20f4369cb79b856c265f732dc4dc8018c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4451ba929c34137f285aadb615a1b286fd38e28e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 |processor_group|**smallint**|Armazena a ID do grupo de processador que é atribuída a este thread.|  
 |pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o estado do trabalhador for RUNNING e ele estiver em execução de modo não preemptivo, o endereço do trabalhador corresponderá ao active_worker_address em sys.dm_os_schedulers.  
   
  Quando um trabalhador que está esperando um evento é sinalizado, o trabalhador é colocado no início da fila executável. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que isso aconteça mil vezes em uma linha; depois disso o trabalhador é colocado no final da fila. Mover um trabalhador para o final da fila tem algumas implicações de desempenho.  
@@ -91,7 +91,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `V
 ## <a name="examples"></a>Exemplos  
  Você pode usar a consulta a seguir para descobrir por quanto tempo um trabalhador esteve em execução em um estado SUSPENDED ou RUNNABLE.  
   
-```tsql
+```sql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  
@@ -138,7 +138,7 @@ SELECT
 
  Na saída, quando `w_runnable` e `w_suspended` forem iguais, isto representará o tempo que o trabalhador se encontra no estado SUSPENDED. Caso contrário, `w_runnable` representará o tempo gasto pelo trabalhador no estado RUNNABLE. Na saída, a sessão `52` está `SUSPENDED` durante `35,094` milissegundos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

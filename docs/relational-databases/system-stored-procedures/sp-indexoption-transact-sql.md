@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87af188936ad4c7b2101760b7b18ca63c90db9b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8b5b63c7f76695853ab216aee1aaab63a3139cc2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou superior a 0 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Não é oferecido suporte a índices XML. Se um índice XML for especificado, ou um nome de tabela for especificado sem nome de índice e a tabela tiver um índice XML, haverá falha na instrução. Para definir essas opções, use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) em vez disso.  
   
  Para exibir a linha atual e a página de propriedades de bloqueio, use [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) ou [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) exibição do catálogo.  
@@ -94,7 +94,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. Definindo uma opção em um índice específico  
  O exemplo a seguir não permite bloqueios de página sobre o `IX_Customer_TerritoryID` índice no `Customer` tabela.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',  
@@ -104,7 +104,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
 ### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>B. Definindo uma opção em todos os índices de uma tabela  
  O exemplo a seguir não permite bloqueios de linha em todos os índices associados com a tabela `Product`. A exibição do catálogo `sys.indexes` é consultada antes e depois da execução do procedimento `sp_indexoption` para mostrar os resultados da instrução.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options for all indexes on the table.  
@@ -126,7 +126,7 @@ GO
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Definindo uma opção em uma tabela sem índice clusterizado  
  O exemplo a seguir não permite bloqueios de página em uma tabela sem índice clusterizado (um heap). O `sys.indexes` exibição do catálogo é consultada antes e após o `sp_indexoption` procedimento é executado para mostrar os resultados da instrução.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options of the table.   
@@ -145,7 +145,7 @@ WHERE OBJECT_NAME (object_id) = N'DatabaseLog';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

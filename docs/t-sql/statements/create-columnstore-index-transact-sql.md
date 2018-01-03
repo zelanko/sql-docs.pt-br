@@ -34,11 +34,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +46,11 @@ ms.lasthandoff: 11/17/2017
 Converter uma tabela rowstore em um índice columnstore clusterizado ou criar um índice columnstore não clusterizado. Use um índice columnstore para executar análise operacional em tempo real com eficiência em uma carga de trabalho OLTP ou para melhorar o desempenho de consulta e compactação de dados de data warehouse cargas de trabalho.  
   
 > [!NOTE]  
->  Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar a tabela como um índice columnstore clusterizado.   Não é necessário criar primeiro uma tabela rowstore e convertê-lo para um índice columnstore clusterizado.  
-  
+> Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar a tabela como um índice columnstore clusterizado.   Não é necessário criar primeiro uma tabela rowstore e convertê-lo para um índice columnstore clusterizado.  
+
+> [!TIP]
+> Para obter informações sobre as diretrizes de design de índice, consulte o [guia de criação de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md).
+
 Vá para exemplos:  
 -   [Exemplos para converter uma tabela rowstore em columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [Exemplos de índices columnstore não clusterizados](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -294,25 +297,25 @@ As opções SET na coluna Valor necessário são necessárias sempre que ocorrer
   
  Para obter mais informações sobre índices filtrados, consulte [criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> Limitações e restrições  
+##  <a name="LimitRest"></a> Limitações e Restrições  
 
 **Cada coluna em um índice columnstore deve ser de um dos seguintes tipos de dados de negócios comuns:** 
 -   DateTimeOffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   Data  
 -   tempo [(  *n*  )]  
 -   float [(  *n*  )]  
 -   real [(  *n*  )]  
 -   decimal [( *precisão* [ *, escala* ] **)** ]
 -   numérico [( *precisão* [ *, escala* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   INT  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar (max) (aplica-se a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o banco de dados SQL Azure no premium preço, em índices columnstore clusterizados apenas)   

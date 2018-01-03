@@ -3,7 +3,7 @@ title: Exemplos de arquivo (DTA) de entrada XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d152397ce3dd0000d6086030b5b4c8e7142c92d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af23e30458051ee42f961d76f8ff74149d458a27
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-input-file-samples-dta"></a>Exemplos de arquivos de entrada XML (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Esta seção contém os arquivos XML de exemplo entrados que você pode usar com o **dta** ferramenta de linha de comando. Essa ferramenta é uma das interfaces de usuário com o Orientador de Otimização do Mecanismo de Banco de Dados e pode ser usada para ajustar bancos de dados a fim de melhorar o desempenho das consultas. O Orientador de Otimização do Mecanismo de Banco de Dados analisa os efeitos de uma carga de trabalho em um ou em vários bancos de dados. A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas nos bancos de dados a serem ajustados. Depois de analisar os efeitos da carga de trabalho, o Orientador de Otimização do Mecanismo de Banco de Dados cria uma recomendação para a adição de índices, exibições indexadas ou estratégias de particionamento que melhorarão o desempenho das consultas em seus bancos de dados.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Exemplo de arquivo de entrada XML com configuração especificada pelo usuário &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

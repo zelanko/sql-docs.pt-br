@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bb3aa76b6d09b2a1c31f30c20fb4ce4374d48d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bd975dbb78b502df209a6763c6198284f1f5dea
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ Um valor de -1 indica o fim do lote. O valor padrão é -1.
 |**criptografado**|**bit**|Indica se o procedimento armazenado correspondente está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = criptografado<br /><br /> A coluna não é anulável.|  
 |**query_plan**|**nvarchar(max)**|Contém a representação de Showplan em tempo de compilação do plano de execução de consulta que é especificado com *plan_handle*. O Showplan está em formato de texto. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário.<br /><br /> A coluna é anulável.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Sob as seguintes condições, nenhuma saída Showplan é retornada no **plano** coluna da tabela retornada para **sys.DM exec_text_query_plan**:  
   
 -   Se o plano de consulta é especificado usando *plan_handle* foi removido do cache do plano, o **query_plan** coluna da tabela retornada é nula. Por exemplo, essa condição pode ocorrer se houver um atraso entre quando o identificador de plano foi captado e quando foi usado com **sys.DM exec_text_query_plan**.  
@@ -118,7 +118,7 @@ Quando uma consulta ad hoc usa [simples](../../relational-databases/query-proces
   
  Primeiramente, recupere a identificação de processo do servidor (SPID) para o processo que está executando a consulta ou lote usando o procedimento armazenado `sp_who`:  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_who;  
@@ -127,7 +127,7 @@ GO
   
  O conjunto de resultados retornado por `sp_who` indica que o SPID é `54`anos. Você pode usar o SPID com a exibição de gerenciamento dinâmico `sys.dm_exec_requests` para recuperar o identificador de plano, por meio da seguinte consulta:  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -137,7 +137,7 @@ GO
   
  A tabela que é retornada por **exec_requests** indica que o identificador de plano para a consulta ou lote em execução lenta é `0x06000100A27E7C1FA821B10600`. O exemplo a seguir retorna o plano de consulta para o identificador de plano especificado e usa os valores padrão 0 e -1 para retornar todas as instruções na consulta ou lote.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT query_plan   
@@ -148,7 +148,7 @@ GO
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Recuperando todo o plano de consulta do cache de plano  
  Para recuperar um instantâneo de todos os planos de consulta residindo no cache de plano, recupere os identificadores de plano de todas as consultas no cachê, consultando a exibição de gerenciamento dinâmico `sys.dm_exec_cached_plans`. Os identificadores de plano são armazenados na coluna `plan_handle` de `sys.dm_exec_cached_plans`. Em seguida, use o operador CROSS APPLY para transmitir o identificador de plano a `sys.dm_exec_text_query_plan`, como se segue. O plano de execução produzido para cada plano atualmente no cache de plano está no `query_plan` coluna da tabela que é retornada.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT *   
@@ -160,7 +160,7 @@ GO
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. Recuperando todo plano de consulta para o qual o servidor coletou estatísticas de consulta do cache de plano  
  Para recuperar um instantâneo de todos os planos de consulta para os quais o servidor reuniu estatísticas que residem atualmente no cache de plano, recupere os identificadores desses planos no cache consultando a exibição de gerenciamento dinâmico `sys.dm_exec_query_stats`. Os identificadores de plano são armazenados na coluna `plan_handle` de `sys.dm_exec_query_stats`. Em seguida, use o operador CROSS APPLY para transmitir o identificador de plano a `sys.dm_exec_text_query_plan`, como se segue. A saída de plano de execução de cada plano está na coluna `query_plan` da tabela retornada.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
@@ -171,7 +171,7 @@ GO
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Recuperando informações sobre as cinco principais consultas por tempo médio de CPU  
  O exemplo a seguir retorna os planos de consulta e o tempo médio de CPU das cinco principais consultas. O **sys.DM exec_text_query_plan** função especifica os valores padrão 0 e -1 para retornar todas as instruções no lote no plano de consulta.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
@@ -180,5 +180,5 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.DM exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

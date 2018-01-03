@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Funções de partição  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -116,7 +116,7 @@ sys.dm_sql_referenced_entities (
   
  Retorna o erro 2020 quando as dependências de coluna não podem ser resolvidas. Esse erro não impede que a consulta retorne dependências no nível do objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa função pode ser executada no contexto de qualquer banco de dados para retornar as entidades que fazem referência a um gatilho DDL no nível do servidor.  
   
  A tabela a seguir lista os tipos de entidades para os quais as informações de dependência são criadas e mantidas. As informações de dependência não são criadas nem mantidas para regras, padrões, tabelas temporárias, procedimentos armazenados temporários ou objetos do sistema.  
@@ -126,19 +126,19 @@ sys.dm_sql_referenced_entities (
 |Table|Sim*|Sim|  
 |Exibição|Sim|Sim|  
 |Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
-|procedimento armazenado CLR|Não|Sim|  
+|procedimento armazenado CLR|não|Sim|  
 |Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
-|Função CLR definida pelo usuário|Não|Sim|  
-|Gatilho CLR (DML e DDL)|Não|Não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|Não|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Procedimentos armazenados estendidos|Não|Sim|  
-|Fila|Não|Sim|  
-|Sinônimo|Não|Sim|  
-|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|Não|Sim|  
-|Coleção de esquemas XML|Não|Sim|  
-|Função de partição|Não|Sim|  
+|Função CLR definida pelo usuário|não|Sim|  
+|Gatilho CLR (DML e DDL)|não|não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] |Sim|não|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|não|  
+|Procedimentos armazenados estendidos|não|Sim|  
+|Fila|não|Sim|  
+|Sinônimo|não|Sim|  
+|Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|não|Sim|  
+|Coleção de esquemas XML|não|Sim|  
+|Função de partição|não|Sim|  
   
  \*Uma tabela é controlada como uma entidade de referência apenas quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de coluna computada, restrição CHECK ou restrição padrão.  
   
@@ -152,7 +152,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Retornando entidades referenciadas por um gatilho DDL em nível de banco de dados  
  O exemplo a seguir retorna as entidades (tabelas e colunas) referenciadas pelo gatilho DDL `ddlDatabaseTriggerLog` de banco de dados.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +164,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. Retornando entidades referenciadas por um objeto  
  O exemplo seguinte retorna as entidades referenciadas pela função `dbo.ufnGetContactInformation` definida pelo usuário.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +176,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>C. Retornando dependências de coluna  
  O exemplo seguinte cria a tabela `Table1` com a coluna computada `c` definida como a soma de colunas `a` e `b`. A exibição `sys.dm_sql_referenced_entities` então é chamada. A exibição retorna duas linhas, um para cada coluna definida na coluna computada.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +205,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. Retornando dependências de colunas não associadas a esquema  
  O exemplo a seguir descarta a `Table1` e cria a `Table2` e o procedimento armazenado `Proc1`. O procedimento referencia a `Table2` e a tabela inexistente `Table1`. A exibição `sys.dm_sql_referenced_entities` é executada com o procedimento armazenado especificado como entidade de referência. O conjunto de resultados mostra uma linha da `Table1` e 3 da `Table2`. Como a `Table1` não existe, as dependências de coluna não podem ser resolvidas e o erro 2020 é retornado. A coluna `is_all_columns_found` retorna 0 para `Table1` que indica que havia colunas que não puderam ser descobertas.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +239,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. Demonstrando manutenção de dependência dinâmica  
  O exemplo a seguir estende o Exemplo D para mostrar que dependências são mantidas dinamicamente. O exemplo recria primeiro a `Table1`que foi cancelada no exemplo D. Depois `sys.dm_sql_referenced_entities` é executado novamente com o procedimento armazenado especificado como a entidade de referência. O conjunto de resultados mostra que as tabelas e suas colunas respectivas definidas no procedimento armazenado são retornadas. Além disso, a coluna `is_all_columns_found` retorna um 1 para todos os objetos e colunas.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +272,7 @@ GO
   
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   
@@ -292,7 +292,7 @@ FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalIn
  Employee      Gender              0           1          0
  ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

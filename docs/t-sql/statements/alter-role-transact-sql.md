@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a568c327c48b346491fae7d8b72d0e27bf5b5fea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 897e8017965e71f345a93550e9af0c138d80b3b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ Além disso, para alterar a associação em uma função de banco de dados fixa,
   
  O exemplo a seguir altera o nome da função `buyers` para `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
@@ -135,13 +135,13 @@ ALTER ROLE buyers WITH NAME = purchasing;
   
  Este exemplo cria uma função de banco de dados denominada `Sales`. Ele adiciona um usuário de banco de dados chamado Barry para a associação e, em seguida, mostra como remover o membro Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 CREATE ROLE Sales;  
 ALTER ROLE Sales ADD MEMBER Barry;  
 ALTER ROLE Sales DROP MEMBER Barry;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar função &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Remover função &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   

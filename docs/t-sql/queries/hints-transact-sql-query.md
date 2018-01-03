@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) - consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -308,7 +308,7 @@ Dica de tabela **(***exposed_object_name* [ **,** \<table_hint > [[**,** ]...  *
 > [!CAUTION] 
 > A especificação de FORCESEEK com parâmetros limita o número de planos que podem ser considerados pelo otimizador mais do que a especificação de FORCESEEK sem parâmetros. Isso pode resultar em um erro "Não é possível gerar o plano" em mais casos. Em uma versão futura, as modificações internas no otimizador talvez permitam a consideração de mais planos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Não podem ser especificadas dicas de consulta em uma instrução INSERT, exceto quando uma cláusula SELECT for usada dentro da instrução.  
   
  Só podem ser especificadas dicas de consulta na consulta de nível superior, e não em subconsultas. Quando uma dica de tabela é especificada como uma dica de consulta, a dica pode ser especificada na consulta de nível superior ou em uma subconsulta; No entanto, o valor especificado para *exposed_object_name* na dica de tabela cláusula deve corresponder exatamente ao nome exposto na consulta ou subconsulta.  
@@ -320,7 +320,7 @@ Dica de tabela **(***exposed_object_name* [ **,** \<table_hint > [[**,** ]...  *
   
 -   Tabelas  
   
--   Exibições  
+-   exibições  
   
 -   Exibições indexadas  
   
@@ -363,7 +363,7 @@ GO
 ### <a name="c-using-maxrecursion"></a>C. Usando MAXRECURSION  
  MAXRECURSION pode ser usado para impedir que uma expressão de tabela comum recursiva malformada entre em loop infinito. Intencionalmente, o exemplo a seguir cria um loop infinito e usa a dica MAXRECURSION para limitar o número de níveis de recursão a dois. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 --Creates an infinite loop  
 WITH cte (CustomerID, PersonID, StoreID) AS  
 (  
@@ -553,7 +553,7 @@ OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DIS
 GO  
 ```  
     
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dicas de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  

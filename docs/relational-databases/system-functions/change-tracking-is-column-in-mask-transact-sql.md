@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75d56944852d39d083bd1a8c075c3efb6aaa723
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ca1e489937aba92270fe73978f017c35b4fca99
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,19 +62,19 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |0|A coluna especificada não está no *change_columns* lista.|  
 |1|A coluna especificada está no *change_columns* lista.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK não executa nenhuma verificação para validar o *column_id* valor ou que o *change_columns* parâmetro foi obtido na tabela da qual o  *column_id* foi obtido.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir determina se a coluna `Salary` da tabela `Employees` foi atualizada. O `COLUMNPROPERTY` função retorna a ID de coluna a `Salary` coluna. A variável local `@change_columns` deve ser definida para os resultados de uma consulta usando CHANGETABLE como fonte de dados.  
   
-```tsql  
+```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
     (COLUMNPROPERTY(OBJECT_ID('Employees'), 'Salary', 'ColumnId')  
     ,@change_columns);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções do controle de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  

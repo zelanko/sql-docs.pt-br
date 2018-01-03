@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,14 +115,14 @@ END
   
 -   Se nenhum *Boolean_expression* for avaliada como TRUE, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna o *else_result_expression* se uma cláusula ELSE for especificada, ou um valor nulo se nenhuma cláusula ELSE for especificada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite apenas 10 níveis de aninhamento em expressões CASE.  
   
  A expressão CASE não pode ser usada para controlar o fluxo de execução de instruções Transact-SQL, blocos de instruções, funções definidas pelo usuário e procedimentos armazenados. Para obter uma lista dos métodos de controle de fluxo, consulte [linguagem de controle de fluxo &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
   
  A instrução CASE avalia suas condições em sequência e para com a primeira condição satisfatória. Em algumas situações, uma expressão é avaliada antes de uma instrução CASE receber os resultados da expressão como sua entrada. É possível que haja erros na avaliação dessas expressões. As expressões agregadas que aparecem em argumentos WHEN de uma instrução CASE são avaliadas primeiro e, em seguida, são fornecidas para a instrução CASE. Por exemplo, a seguinte consulta gera um erro de divisão por zero ao gerar o valor da agregação MAX. Isso ocorre antes da avaliação da expressão CASE.  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   
@@ -354,7 +354,7 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [União &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   

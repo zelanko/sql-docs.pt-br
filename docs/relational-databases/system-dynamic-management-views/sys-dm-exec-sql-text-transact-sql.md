@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,12 +75,12 @@ Identifica exclusivamente um plano de consulta para um lote em cache ou sendo ex
 |**ObjectId**|**int**|ID do objeto.<br /><br /> É NULL para instruções SQL ad hoc e preparadas.|  
 |**número**|**smallint**|Para um procedimento armazenado numerado, esta coluna retorna o número do procedimento armazenado. Para obter mais informações, consulte [numbered_procedures &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> É NULL para instruções SQL ad hoc e preparadas.|  
 |**criptografado**|**bit**|1 = O texto SQL é criptografado.<br /><br /> 0 = O texto SQL não é criptografado.|  
-|**texto**|**nvarchar (max** **)**|Texto da consulta SQL.<br /><br /> É NULL para objetos criptografados.|  
+|**text**|**nvarchar (max** **)**|Texto da consulta SQL.<br /><br /> É NULL para objetos criptografados.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Para consultas ad hoc, os identificadores SQL são valores de hash com base no texto SQL que está sendo enviado ao servidor e podem se originar de qualquer banco de dados. 
 
 Para objetos de banco de dados como procedimentos armazenados, gatilhos ou funções, os identificadores SQL são derivados da ID de banco de dados, da ID de objeto e do número de objeto. 
@@ -96,7 +96,7 @@ Identificador de plano é um valor de hash derivado do plano compilado do lote i
 A seguir está um exemplo básico para ilustrar passando um **sql_handle** diretamente ou com **CROSS APPLY**.
   1.  Crie uma atividade.  
 Execute o T-SQL a seguir em uma nova janela de consulta em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +108,7 @@ Execute o T-SQL a seguir em uma nova janela de consulta em [!INCLUDE[ssManStudio
     2.  Usando **CROSS APPLY**.  
     O sql_handle do **exec_requests** será passado para **dm_exec_sql_text** usando **CROSS APPLY**. Abra uma nova janela de consulta e passar o spid identificado na etapa 1. Neste exemplo, o spid é `59`.
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +118,7 @@ Execute o T-SQL a seguir em uma nova janela de consulta em [!INCLUDE[ssManStudio
     2.  Passando **sql_handle** diretamente.  
 Adquirir o **sql_handle** de **exec_requests**. Em seguida, passe o **sql_handle** diretamente para **dm_exec_sql_text**. Abra uma nova janela de consulta e passar o spid identificado na etapa 1 para **exec_requests**. Neste exemplo, o spid é `59`. Em seguida, passe retornado **sql_handle** como um argumento para **dm_exec_sql_text**.
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +130,7 @@ Adquirir o **sql_handle** de **exec_requests**. Em seguida, passe o **sql_handle
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Obter informações sobre as cinco principais consultas por tempo médio de CPU  
  O exemplo a seguir retorna o texto da instrução SQL e o tempo médio de CPU das cinco primeiras consultas.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>C. Fornecem estatísticas de execução em lotes  
  O exemplo a seguir retorna o texto de consultas SQL que estão sendo executadas em lotes e fornece informações estatísticas sobre elas.  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   

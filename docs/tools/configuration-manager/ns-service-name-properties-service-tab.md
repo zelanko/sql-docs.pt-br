@@ -3,7 +3,7 @@ title: "NS$&lt;nome do serviço&gt; propriedades (guia serviço) | Microsoft Doc
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e06f53141f95463ab1fd1485c2e03332e341f52
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4d326c1a962efbfc66a4e69ac1c4c6508006b33c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;nome do serviço&gt; propriedades (guia serviço)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Esse serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] service. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
  **Código de Saída**  
  Quando ocorre um erro, o número do erro é exibido nesta caixa. Use esse número para solucionar problemas de falhas procurando-o na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou forneça o número à sua equipe de suporte técnico.  
   
- **Host Name**  
+ **Nome do Host**  
  Exibe o nome do computador ou cluster que está executando a pesquisa de texto completo.  
   
  **Nome**  

@@ -1,7 +1,7 @@
 ---
 title: Instalando o SSMA para cliente do MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d90df6e2df45b099867240c8d8272871ce5333cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 20e2b46e1b020865359431a4999e097c20e14da1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Instalando o SSMA para cliente do MySQL (MySQLToSQL)
 O SSMA para cliente do MySQL consiste em arquivos de programas, executam as seguintes tarefas:  
@@ -42,7 +42,7 @@ O SSMA para cliente do MySQL consiste em arquivos de programas, executam as segu
   
 Este tópico fornece os pré-requisitos de instalação e instruções de instalação do SSMA para cliente do MySQL.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 SSMA para MySQL é projetado para trabalhar com o MySQL 4.1 ou versões posteriores e todas as edições do SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016 e banco de dados de SQL do Azure.  
   
 Antes de instalar o SSMA, certifique-se de que o computador atende aos seguintes requisitos:  
@@ -87,6 +87,6 @@ O local de instalação padrão é C:\Program Files\Microsoft SQL Server Migrati
   
 No computador do Windows de 64 bits, o produto foi instalado no Assistente de migração C:\Microsoft SQL Server para MySQL.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados MySQL para o SQL Server - banco de dados SQL do Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

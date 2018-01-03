@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 236debd7c90389d054de4b06caff9418b15366d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2944708e70d9cc71cddcad33ff060df8a223530d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYTABLE  
     (  
     table,  
@@ -54,7 +54,7 @@ SEMANTICSIMILARITYTABLE
   
  Esse nome pode ser um nome de uma a quatro partes, mas um nome de servidor remoto não é permitido.  
   
- **coluna**  
+ **column**  
  Nome da coluna indexada para a qual os resultados devem ser retornados. A coluna deve ter indexação semântica habilitada.  
   
  **column_list**  

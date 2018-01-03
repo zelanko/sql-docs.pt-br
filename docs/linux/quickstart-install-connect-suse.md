@@ -1,6 +1,6 @@
 ---
 title: "Introdução ao SQL Server 2017 no SUSE Linux Enterprise Server | Microsoft Docs"
-description: "Este tutorial de início rápido mostra como instalar o SQL Server 2017 no SUSE Linux Enterprise Server e, em seguida, criar e consultar um banco de dados com sqlcmd."
+description: "Este guia de início rápido mostra como instalar o SQL Server 2017 no SUSE Linux Enterprise Server e, em seguida, criar e consultar um banco de dados com sqlcmd."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: decf9cf88ef38264900c129c2626761718065739
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: b92036d4b706b5e76165708438d350c1883db912
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Instalar o SQL Server e criar um banco de dados no SUSE Linux Enterprise Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Neste tutorial de início rápido, você deve primeiro instalar 2017 do SQL Server no SUSE Linux Enterprise Server (SLES) v12 SP2. Conecte-se com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
+Neste guia de início rápido, você deve primeiro instalar 2017 do SQL Server no SUSE Linux Enterprise Server (SLES) v12 SP2. Conecte-se com **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 > [!TIP]
 > Este tutorial requer entrada do usuário e uma conexão de internet. Se você estiver interessado no [autônoma](sql-server-linux-setup.md#unattended) ou [offline](sql-server-linux-setup.md#offline) procedimentos de instalação, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você deve ter um computador do SLES v12 SP2 com **pelo menos 2 GB** de memória. O sistema de arquivos deve ser **XFS** ou **EXT4**. Outros sistemas de arquivos, como **BTRFS**, não têm suporte.
 
@@ -116,6 +116,11 @@ Para criar um banco de dados, você precisa se conectar com uma ferramenta que p
    ```
 
 > [!TIP]
-> **Sqlcmd** é apenas uma ferramenta para se conectar ao SQL Server para executar consultas e executar tarefas de gerenciamento e desenvolvimento. Outras ferramentas incluem [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) e [código do Visual Studio](sql-server-linux-develop-use-vscode.md).
+> **Sqlcmd** é apenas uma ferramenta para se conectar ao SQL Server para executar consultas e executar tarefas de gerenciamento e desenvolvimento. Outras ferramentas incluem:
+>
+> * [Studio de operações do SQL Server (visualização)](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Código do Visual Studio](sql-server-linux-develop-use-vscode.md).
+> * [MSSQL-cli (visualização)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5970f5dc6a0bf614de4540e7354e23a16f91546
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e37551d9e5a2d33a7b5ab3a4ab29c028cce0d2c4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +73,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -238,7 +238,7 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
 (2 row(s) affected)`  
 ```  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DROP PROCEDURE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

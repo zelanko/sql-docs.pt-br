@@ -3,7 +3,7 @@ title: "Propriedades do SQL Server (guia Avançado) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 570471b64b257bda598f72015e6b9a7767a4e5ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1e84232f8ef7287e3b3c2447c364284b024d8ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propriedades do SQL Server (guia Avançado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]As propriedades a seguir aparecem no **avançado** guia por padrão. Se as propriedades personalizadas estiverem definidas, elas também aparecerão nessa guia com seus valores.  

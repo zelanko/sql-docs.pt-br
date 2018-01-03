@@ -3,7 +3,7 @@ title: "Lição 2: Usando o banco de dados do Orientador de otimização do meca
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 707c67f64ac8e074f3f0177733c9119eb9095bc3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c7c9ec1efea6c7fa1051e3a527a46236aef21315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Orientador de otimização do mecanismo de banco de dados permite ajustar bancos de dados, gerenciar sessões de ajuste e exibir recomendações de ajuste. Usuários com conhecimento avançado de estruturas de design físico podem usar essa ferramenta para executar a análise exploratória de ajuste de banco de dados. Os iniciantes em ajuste de banco de dados também podem usar a ferramenta para encontrar a melhor configuração de estruturas de design físico para as cargas de trabalho que forem ajustar. Esta lição oferece a base prática para administradores de banco de dados que são novos usuários da interface gráfica do Orientador de Otimização do Mecanismo de Banco de Dados e para administradores de sistema que podem não ter conhecimento extenso de estruturas de design físico.  

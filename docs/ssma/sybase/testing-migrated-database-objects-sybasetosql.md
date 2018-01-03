@@ -3,7 +3,7 @@ title: Testando migrados objetos de banco de dados (SybaseToSQL) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a6359268254ee4b430380e6de91ad4ac0dc5f9ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a20ba21c0e142db53579500cf7e9f87f15fa556
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Testando migrados objetos de banco de dados (SybaseToSQL)
 Microsoft SQL Server Migration Assistant para Sybase testador (SSMA Tester) testa automaticamente a conversão do objeto de banco de dados e a migração de dados feitas pelo SSMA. Depois que todas as etapas de migração do SSMA estiverem concluídas, use o SSMA testador para verificar objetos convertidos funcionam da mesma forma e que todos os dados foi transferido corretamente.  
@@ -55,7 +55,7 @@ O SSMA Tester executa objetos selecionados para teste em Sybase e suas contrapar
 > [!NOTE]  
 > Atenção! Nunca use SSMA testador em sistemas de produção. Durante a execução de teste, o esquema de origem e os dados são modificados. Enquanto isso, a restauração completa do estado original pode ser impossível para alguns tipos de código testado.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Se você quiser usar o testador SSMA, instale o pacote de extensão do SSMA Sybase com os **instalar o banco de dados Tester** opção ativada.  
   
 Além disso, verifique o seguinte:  
@@ -66,10 +66,10 @@ Além disso, verifique o seguinte:
   
 Observe que a versão atual do SSMA Tester não suporta a execução paralela por usuários diferentes no mesmo servidor de origem ou de destino.  
   
-## <a name="getting-started"></a>Guia de Introdução  
-[Criar casos de teste & #40; SybaseToSQL & #41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
+## <a name="getting-started"></a>Introdução  
+[Criar casos de teste &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
-## <a name="see-also"></a>Consulte também  
-[Instalando componentes do SSMA SQL Server & #40; SybaseToSQL & #41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-[Configurações de projeto & #40; Conversão de & #41; & #40; SybaseToSQL & #41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Instalando componentes do SSMA SQL Server &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[Configurações de projeto &#40; Conversão de &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   

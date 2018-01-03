@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94ef4e523b213f3b959546964227325b350f23b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b2ecaff48f54ce76fe0d193eda5406df1bc574e7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>Argumentos  
  *notification_name*  
- É o nome da notificação de eventos a ser removida. Podem ser especificadas várias notificações de eventos. Para ver uma lista de notificações de eventos atualmente criadas, use [event_notifications &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ É o nome da notificação de eventos a ser removida. Podem ser especificadas várias notificações de eventos. Para ver uma lista de notificações de eventos atualmente criadas, use [event_notifications & #40; Transact-SQL & #41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
   
  SERVER  
  Indica que o escopo da notificação de eventos se aplica ao servidor atual. SERVER deverá ser especificado se ele foi especificado quando a notificação de eventos foi criada.  
@@ -62,7 +62,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  FILA *nome_da_fila*  
  Indica o escopo da notificação de eventos se aplica à fila especificada pelo *nome_da_fila*. QUEUE deverá ser especificado se ele foi especificado quando a notificação de eventos foi criada. *nome_da_fila* é o nome da fila e também deve ser especificado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se uma notificação de eventos for acionada em uma transação e for descartada na mesma transação, a instância da notificação de eventos será enviada e depois descartada.  
   
 ## <a name="permissions"></a>Permissões  
@@ -75,7 +75,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma notificação de eventos com escopo no banco de dados e depois a descarta:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE EVENT NOTIFICATION NotifyALTER_T1  
@@ -88,10 +88,10 @@ DROP EVENT NOTIFICATION NotifyALTER_T1
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Criar notificação de eventos &#40; Transact-SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar notificação de eventos & #40; Transact-SQL & #41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [event_notifications & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [Events & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

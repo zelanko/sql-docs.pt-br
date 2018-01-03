@@ -3,7 +3,7 @@ title: "Examine os resultados da repetição | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Após o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso Distributed Replay conclui uma reprodução distribuída, a atividade de reprodução para cada cliente pode ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir** . Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="column-descriptions-for-result-trace"></a>Descrições de coluna para rastreamento de resultado  
  A tabela a seguir descreve as colunas dos dados de rastreamento de resultado.  
   
-|Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|  
+|Nome da coluna de dados|Tipo de Dados|Description|ID da coluna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|O nome da classe de evento.|1|  
 |EventSequence|**bigint**|Para erros de provedor, e erros e avisos internos, esta é a sequência de eventos de captura que corresponde ao erro ou aviso.<br /><br /> Para todas as outras classes de eventos, esta é a sequência do evento nos dados de rastreamento originais.|2|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/05/2017
 |ReplayHostName|**nvarchar**|O nome do computador em que o aplicativo cliente está sendo executado durante a reprodução.|16|  
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com a conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante a captura.|17|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   

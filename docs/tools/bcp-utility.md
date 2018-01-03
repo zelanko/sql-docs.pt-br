@@ -3,7 +3,7 @@ title: "Utilitário bcp | Microsoft Docs"
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 18d7ba613fe4b98adc94bcf099e9576fd0550e6d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1b9fd81237093da7296d85efdbe9472da711315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +98,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Você também pode especificar explicitamente o nome de banco de dados com **d-**.  
   
- **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
+ **em** *data_file* | **out** *data_file* | **queryout**  *data_file* | **Formatar nul**  
  Especifica a direção da cópia em massa, do seguinte modo:  
   
 -   **in**<a name="in"></a> copia de um arquivo em uma tabela ou exibição de banco de dados.  
@@ -143,7 +143,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > Recomendamos a especificação de um nome de agrupamento para cada coluna em um arquivo de formato, exceto quando você quiser que a opção 65001 tenha prioridade sobre a especificação de agrupamento/página de código.
   
-|Valor da página de código|Descrição|  
+|Valor da página de código|Description|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Página de código padrão usada pelo cliente. Essa é a página de código padrão usada se **-C** não for especificado.|  
@@ -180,7 +180,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-F** ***first_row***<a name="F"></a>  
  Especifica o número da primeira linha que deve ser exportada de uma tabela ou importada de um arquivo de dados. Esse parâmetro requer um valor maior do que (>) 0, mas menor do que (<) ou igual ao (=) número total de linhas. Na ausência desse parâmetro, o padrão é a primeira linha do arquivo.  
   
- *first_row* pode ser um inteiro positivo com um valor de até 2^63-1. **-F** *first_row* é baseado em 1.  
+ *first_row* pode ser um inteiro positivo com um valor de até 2^63-1. **-F** *first_row* is 1-based.  
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> Especifica a dica ou dicas a serem usadas durante uma importação de dados em massa para uma tabela ou exibição.  
   
@@ -227,7 +227,7 @@ Especificado com o argumento **in** , todos os gatilhos de inserção definidos 
  Especifica que colunas vazias devem reter um valor nulo durante a operação, em vez de qualquer valor padrão nas colunas inseridas. Para obter mais informações, veja [Manter valores nulos ou usar os valores padrão durante a importação em massa &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  **-K** ***application_intent***<a name="K"></a>   
- Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor possível é **ReadOnly**. Se **-K** não for especificado, o utilitário bcp não dará suporte à conectividade a uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, veja [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor possível é **ReadOnly**. Se **-K** não for especificado, o utilitário bcp não dará suporte à conectividade a uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-L** ***last_row***<a name="L"></a>  
  Especifica o número da última linha a ser exportada de uma tabela ou importada de um arquivo de dados. Esse parâmetro exige um valor maior do que (>) 0, mas menor do que (<) ou igual ao (=) número da última linha. Na ausência desse parâmetro, o padrão é a última linha do arquivo.  
@@ -281,7 +281,7 @@ Executa a operação de cópia em massa usando os tipos de dados nativos (banco 
  Para obter mais informações, consulte [Comentários](#remarks), mais adiante neste tópico.  
   
  **-r** ***row_term***<a name="r"></a>  
- Especifica o terminador de linha. O padrão é **\n** (caractere de nova linha). Use esse parâmetro para substituir o terminador de linha padrão. Para obter mais informações, consulte [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Especifica o terminador de linha. O padrão é **\n** (caractere de nova linha). Use esse parâmetro para substituir o terminador de linha padrão. Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Se você especificar o terminador de linha em notação hexadecimal em um comando bcp.exe, o valor será truncado em 0x00. Por exemplo, se você especificar 0x410041, 0x41 será usado.  
   
@@ -612,7 +612,7 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
 |---|
 |Formatos de dados para importar ou exportar em massa (SQL Server)<br />&emsp;&#9679;&emsp;[Usar o formato nativo para importar ou exportar dados (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usar o formato de caractere para importar ou exportar dados (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usar o formato nativo Unicode para importar ou exportar dados (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usar o formato de caractere Unicode para importar ou exportar dados (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[Especificar terminadores de campo e linha (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[Manter valores nulos ou use os valores padrão durante a importação em massa (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[Manter valores de identidade ao importar dados em massa (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />Arquivos de formato para importação ou exportação de dados (SQL Server))<br />&emsp;&#9679;&emsp;[Criar um formato de arquivo (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Usar um arquivo de formato para importação em massa de dados (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Usar um arquivo de formato para ignorar um campo de dados (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[Exemplos de importação e exportação em massa de documentos XML (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Preparar dados para exportar ou importar em massa &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   

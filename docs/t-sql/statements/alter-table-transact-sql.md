@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ Algumas alterações de tipo de dados podem causar uma alteração nos dados. Po
   
  Se a coluna que está sendo modificada for criptografada com CRIPTOGRAFADO, você pode alterar o tipo de dados para um tipo de dados compatível (como INT para BIGINT), mas você não pode alterar as configurações de criptografia.  
   
- *nome da coluna*  
+ *column_name*  
  É o nome da coluna a ser alterada, adicionada ou removida. *nome da coluna* pode ter no máximo 128 caracteres. Para novas colunas, *column_name* pode ser omitido para colunas criadas com uma **timestamp** tipo de dados. O nome **timestamp** será usado se nenhum *column_name* é especificado para um **timestamp** coluna de tipo de dados.  
   
  [ *type_schema_name***.** ] *type_name*  
@@ -703,7 +703,7 @@ TABLE
   
  Especifica a opção de compactação de dados para a tabela, o número de partição ou o intervalo de partições especificado. As opções são as seguintes:  
   
- NONE  
+ Nenhuma  
  A tabela ou as partições especificadas não são compactadas. Não se aplica a tabelas columnstore.  
   
  ROW  
@@ -777,7 +777,7 @@ TABLE
   
 -   Para desabilitar o Stretch de uma tabela e copiar os dados remotos da tabela do Azure de volta para o SQL Server, execute o comando a seguir. Esse comando não pode ser cancelado.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -788,7 +788,7 @@ ALTER TABLE \<table name>
   
 -   Para desabilitar o Stretch de uma tabela e abandonar os dados remotos, execute o comando a seguir.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
@@ -849,7 +849,7 @@ SE EXISTIR
   
  Descarta condicionalmente a coluna ou restrição somente se ele já existe.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para adicionar novas linhas de dados, use [inserir](../../t-sql/statements/insert-transact-sql.md). Para remover linhas de dados, use [excluir](../../t-sql/statements/delete-transact-sql.md) ou [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md). Para alterar os valores nas linhas existentes, use [atualização](../../t-sql/queries/update-transact-sql.md).  
   
  Se houver qualquer plano de execução no cache de procedimento que referencie a tabela, ALTER TABLE o marcará para que seja recompilado na próxima execução.  
@@ -1845,7 +1845,7 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
 -   Partição 2 (vazio): ' 2004-01-01' < ' 2005-01-01'  
 -   A partição 3 (vazio): ' 2005-01-01' < = OrderDate  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

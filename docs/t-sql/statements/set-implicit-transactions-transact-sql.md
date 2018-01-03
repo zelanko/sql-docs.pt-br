@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c86a7a8108e94d07341f5b6ced498b56ab934405
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando ativado, o sistema está em *implícita* modo de transação. Isso significa que, se @@TRANCOUNT = 0, qualquer uma das seguintes instruções Transact-SQL inicia uma nova transação. É equivalente a um despercebidos BEGIN TRANSACTION está sendo executado pela primeira vez:  
   
 ||||  
@@ -56,8 +56,8 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT (Consulte exceção abaixo.)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
-|DROP|.|.|  
+|Delete (excluir)|OPEN|UPDATE|  
+|DROP|para obter informações sobre a ferramenta de configuração e recursos adicionais.|para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
   
  Quando OFF, cada uma das instruções T-SQL anteriores é delimitada por uma BEGIN TRANSACTION invisíveis e uma instrução COMMIT TRANSACTION despercebida. Quando OFF, dizemos que é o modo de transação *autocommit*. Se seu código T-SQL visivelmente emite um BEGIN TRANSACTION, dizemos que é o modo de transação *explícita*.  
   
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## <a name="examples"></a>Exemplos  
  Script Transact-SQL a seguir é executado em alguns casos de teste diferentes. A saída de texto também é fornecida, que mostra o comportamento detalhado e os resultados de cada caso de teste.  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -169,7 +169,7 @@ go
   
  Next é a saída de texto do script Transact-SQL anterior.  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  
@@ -200,7 +200,7 @@ go
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

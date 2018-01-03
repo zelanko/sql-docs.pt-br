@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc9282956afda2a41751dd57c2447da6314fb528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a51a1045532b9194586d197c6b1b537d795d1996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ AS constant_expression [ ; ]
  *constant_expression*  
  É um [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de todas as colunas ou outros objetos de banco de dados). Podem ser usadas qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. Funções definidas pelo usuário não podem ser usadas. Coloque constantes de caractere e data entre aspas simples (**'**); monetárias, inteiro e constantes de ponto flutuante não requerem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um nome padrão pode ser criado somente no banco de dados atual. Dentro de um banco de dados, os nomes padrão devem ser exclusivos por esquema. Quando um padrão é criado, use **sp_bindefault** para associá-lo a uma coluna ou a um tipo de dados de alias.  
   
  Se o padrão não for compatível com a coluna à qual está associado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará uma mensagem de erro ao tentar inserir o valor padrão. Por exemplo, n/d não pode ser usado como um padrão para um **numérico** coluna.  
@@ -97,7 +97,7 @@ AS constant_expression [ ; ]
 ### <a name="a-creating-a-simple-character-default"></a>A. Criando um padrão de caractere simples  
  O exemplo a seguir cria um padrão de caractere chamado `unknown`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -108,13 +108,13 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  Como não existe um padrão chamado `phonedflt`, a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir gera uma falha. Este exemplo é apenas uma ilustração.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

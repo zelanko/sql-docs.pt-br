@@ -3,7 +3,7 @@ title: "Filtrar eventos com base na hora de início do evento (SQL Server Profil
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd735db7b70d53f84bbbc7a3216928fc9935c70e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 668458975f918db8ecdafb463d8405b0d6ac8f5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>Filtrar eventos com base na hora de início do evento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico descreve como filtrar eventos de rastreamento com base na hora de início do evento usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  Expanda **Maior que** ou **Menor que**e insira um valor **datetime** no campo que aparece abaixo do operador de comparação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

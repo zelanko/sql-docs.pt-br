@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4dfc548cdc7c2ece756e86f753a8bc21513f158
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7e0e14e96c3581b7a66fad23e21ac7a15808a1f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Determinar a quantidade de Log de espaço livre em tempdb   
 A consulta a seguir retorna o espaço livre total de log em megabytes (MB) disponível em tempdb.
 
-```tsql
+```sql
 USE tempdb;  
 GO  
 
@@ -63,7 +63,7 @@ SELECT (total_log_size_in_bytes - used_log_space_in_bytes)*1.0/1024/1024 AS [fre
 FROM sys.dm_db_log_space_usage;  
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.DM db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    

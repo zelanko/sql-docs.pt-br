@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ce5718a35f8411a5333a200d6ea75f2326c79e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (banco de dados do SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `sp_execute_remote`parâmetros devem ser inseridos na ordem específica, conforme descrito na seção de sintaxe acima. Se os parâmetros forem inseridos na ordem incorreta, uma mensagem de erro será exibida.  
   
  `sp_execute_remote`tem o mesmo comportamento que [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) em relação a lotes e o escopo de nomes. A instrução Transact-SQL ou lote no sp_execute_remote  *@stmt*  parâmetro não é compilado até que a instrução sp_execute_remote seja executada.  
@@ -92,7 +92,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ### <a name="simple-example"></a>Exemplo simples  
  O exemplo a seguir cria e executa uma instrução SELECT simples no banco de dados remoto.  
   
-```tsql  
+```sql  
 EXEC sp_execute_remote  
     N'MyExtSrc',  
     N'SELECT COUNT(w_id) AS Count_id FROM warehouse'   

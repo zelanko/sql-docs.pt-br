@@ -3,7 +3,7 @@ title: "Utilitário Sqlmaint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlmaint
 ms.reviewer: 
@@ -25,13 +25,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef2ee4a1e84f18cc79b337e6358155f88fde826
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sqlmaint-utility"></a>Utilitário sqlmaint
+# <a name="sqlmaint-utility"></a>utilitário sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O**sqlmaint** utilitário executa um conjunto especificado de operações de manutenção em um ou mais bancos de dados. Use o **sqlmaint** para executar verificações DBCC, fazer backup de um banco de dados e do respectivo log de transações, atualizar estatísticas e recompilar índices. Todas as atividades de manutenção de banco de dados geram um relatório que pode ser enviado a um arquivo de texto designado, arquivo HTML ou conta de email. O**sqlmaint** executa planos de manutenção de bancos de dados criados com versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para executar planos de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no prompt de comando, use o [Utilitário dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
@@ -135,7 +135,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  O nome do arquivo UNC completo é necessário para *html_file* , quando **sqlmaint** acessa um servidor remoto.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Especifica que qualquer relatório HTML no diretório de relatório ser excluído se exceder o intervalo de tempo depois da criação do arquivo de relatório \< *time_period*>. **-DelHtmlRpt** procura arquivos cujos nomes correspondem ao padrão gerado pelo parâmetro *html_file* . Se *html_file* é c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, em seguida, **- DelHtmlRpt** faz com que **sqlmaint** para excluir todos os arquivos cujos nomes correspondem ao padrão C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*. htm e que sejam mais antigos que o especificado \< *time_period*>.  
+ Especifica que qualquer relatório HTML no diretório de relatório ser excluído se exceder o intervalo de tempo depois da criação do arquivo de relatório \< *time_period*>. **-DelHtmlRpt** procura arquivos cujos nomes correspondem ao padrão gerado pelo parâmetro *html_file*. Se *html_file* é c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, em seguida, **- DelHtmlRpt** faz com que **sqlmaint** para excluir todos os arquivos cujos nomes correspondem ao padrão C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*. htm e que sejam mais antigos que o especificado \< *time_period*>.  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  Especifica que o espaço não usado seja removido do banco de dados especificado em **-D**. Essa opção só é útil para bancos de dados definidos para crescer automaticamente. *Threshold_percent* especifica o tamanho em megabytes que o banco de dados deve atingir, antes que **sqlmaint** tente remover o espaço de dados não utilizado. Se o banco de dados for menor que *threshold_percent*, nenhuma ação será tomada. *Free_percent* especifica quanto espaço não utilizado deve permanecer no banco de dados, especificado como um percentual do tamanho final do banco de dados. Por exemplo, se um banco de dados com 200 MB contiver 100 MB de dados, especificar 10 para *free_percent* resultará em um tamanho final de banco de dados de 110 MB. Observe que um banco de dados não será expandido se for menor do que *free_percent* somado à quantidade de dados no banco de dados. Por exemplo, se um banco de dados de 108 MB tiver 100 MB de dados, especificar 10 para *free_percent* não expandirá o banco de dados para 110 MB; ele permanecerá com 108 MB.  
@@ -233,7 +233,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Se apenas o *number* for especificado, a parte de data padrão será **weeks**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O utilitário **sqlmaint** executa operações de manutenção em um ou mais bancos de dados. Se **-D** for especificado, as operações especificadas nas demais opções serão executadas apenas no banco de dados especificado. Se **-PlanName** ou **-PlanID** forem especificados, a única informação que **sqlmaint** recuperará do plano de manutenção especificado será a lista de bancos de dados no plano. Todas as operações especificadas nos demais parâmetros do **sqlmaint** são aplicadas a cada banco de dados na lista obtida do plano. O utilitário **sqlmaint** não aplica atividades de manutenção definidas no próprio plano.  
   
  O utilitário **sqlmaint** retorna 0 se for executado com êxito ou 1 se apresentar falha. A falha é informada:  
@@ -275,7 +275,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)  
   

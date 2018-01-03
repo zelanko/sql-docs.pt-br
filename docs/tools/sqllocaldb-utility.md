@@ -3,7 +3,7 @@ title: "Utilitário SqlLocalDB | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqllocaldb
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 962a07574f343032dff1099d468d066944a186a7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 96463b7d884bf4744a273085c9b77dd76ac27294
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqllocaldb-utility"></a>Utilitário SqlLocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o **SqlLocalDB** utilitário para criar uma instância de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. O utilitário **SqlLocalDB** (SqlLocalDB.exe) é uma ferramenta de linha de comando simples para permitir que usuários e desenvolvedores criem e gerenciem uma instância do [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Para obter informações sobre como usar o **LocalDB**, consulte [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
@@ -78,7 +78,7 @@ SqlLocalDB.exe
  **-?**  
  Retorna descrições breves de cada opção de **SqlLocalDB** .  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O argumento *instance name* deve seguir as regras de identificadores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou deve ser colocado entre aspas duplas.  
   
  A execução de SqlLocalDB sem argumentos retorna o texto da ajuda.  
@@ -117,7 +117,7 @@ EXIT
 sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
 [Ferramenta de gerenciamento da linha de comando: SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
   

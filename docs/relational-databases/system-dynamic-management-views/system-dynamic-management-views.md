@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 97d8db9f9e697b72deecc59f6dbb0674b5061f0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 803982ea5e9ce81d280eeb4ba09319d671d6a87c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="system-dynamic-management-views"></a>Exibições de gerenciamento dinâmico do sistema
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  Todas as exibições e funções de gerenciamento dinâmico estão no esquema sys e seguem a convenção de nomenclatura dm_*. Quando você usa uma exibição ou função de gerenciamento dinâmico, é preciso prefixar o nome da exibição ou função usando o esquema sys. Por exemplo, para consultar a exibição de gerenciamento dinâmico dm_os_wait_stats, execute a seguinte consulta:  
   
- ```tsql
+ ```sql
 SELECT wait_type, wait_time_ms  
 FROM sys.dm_os_wait_stats;  
 ```  
@@ -85,7 +85,7 @@ FROM sys.dm_os_wait_stats;
 |[Eu O relacionados funções e exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)|[Funções e exibições de gerenciamento dinâmico relacionadas à transação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)|  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONCEDER permissões de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
  [Permissões de banco de dados GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
  [Exibições do sistema &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

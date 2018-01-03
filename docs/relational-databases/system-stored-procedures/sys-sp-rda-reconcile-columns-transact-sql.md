@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce87847a891e04548a3da30c2f07238d27e7aa24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6bae454caa630025bb4470dc69da7fa4a97f6307
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +58,13 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>Permissões  
  Requer permissões db_owner.  
    
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se houver colunas na tabela remota do Azure que não existem mais na tabela do SQL Server habilitada para Stretch, essas colunas extras não impedirão o funcionamento normal do Stretch Database. Opcionalmente, é possível remover as colunas extras manualmente.  
   
 ## <a name="example"></a>Exemplo  
  Para reconciliar as colunas na tabela remota do Azure, execute a seguinte instrução.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  
 ```  
   

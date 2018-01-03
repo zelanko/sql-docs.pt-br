@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba2e281c7f5593425bd67b817e02d81ee29a4742
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8aa52f107c3ba3c7332ea207ad0f3fc07e0dd03b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="permissions"></a>Permissões  
  Requer permissões db_owner.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se você quiser excluir dados que já tem sido migrados para o Azure, siga estas etapas.  
   
 1.  Pausar a migração de dados. Para obter mais informações, consulte [pausar e retomar a migração de dados &#40; O Stretch Database &#41; ](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
@@ -70,7 +70,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="example"></a>Exemplo  
  Para reconciliar as IDs de lote, execute a seguinte instrução.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_batch @objname = N'StretchEnabledTableName';  
 ```  
   

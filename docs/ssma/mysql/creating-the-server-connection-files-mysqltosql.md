@@ -1,7 +1,7 @@
 ---
 title: "Criar os arquivos de Conexão de servidor (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 275a2c1a8a7f3f22926eddc0504c36e9b00ad930
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 58e675e00fd5dd3088cbb3837e0e2a412e18b047
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>Criar os arquivos de Conexão de servidor (MySQLToSQL)
 Informações do servidor podem ser especificadas na seção de servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é, `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente no arquivo de script e no arquivo de conexão de servidor, a definição de servidor no arquivo de script é considerada.  
@@ -100,6 +100,6 @@ O usuário facilmente possa validar o arquivo de conexão de servidor no arquivo
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no operando o console é [executando o Console SSMA &#40; MySQLToSQL &#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Executar o Console do SSMA (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

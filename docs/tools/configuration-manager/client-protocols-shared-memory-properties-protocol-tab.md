@@ -3,7 +3,7 @@ title: "Compartilhado de protocolos de cliente – propriedades de memória (gui
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd64ebf2997f88014ba4eeb309609938f0f6de09
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 53582937116f3acfb819ab460dc166ce1f50360a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Protocolos de Cliente – Propriedades de Memória Compartilhada (guia Protocolo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, use o **protocolo** guia o **propriedades de memória compartilhada** caixa de diálogo para exibir ou modificar a memória compartilhada. Para obter mais informações sobre cadeias de conexão, consulte [Creating a Valid Connection String Using Shared Memory Protocol (Criando uma cadeia de conexão válida usando protocolo de memória compartilhado)](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
  **Enabled**  
  Os valores possíveis são **Sim** e **Não**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolhendo um protocolo de rede](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

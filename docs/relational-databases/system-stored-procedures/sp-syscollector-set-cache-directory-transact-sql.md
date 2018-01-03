@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c21066f81db2e229ac66ea350a9c369174eaa4fb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4d43024a0e094e3f5f59c8929db30ed809884cb5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você deve desabilitar o coletor de dados antes de alterar sua configuração do diretório de cache. Esse procedimento armazenado falhará se o coletor de dados estiver habilitado. Para obter mais informações, consulte [habilitar ou desabilitar a coleta de dados](../../relational-databases/data-collection/enable-or-disable-data-collection.md), e [gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md).  
   
  O diretório especificado não precisa existir no momento em que o sp_syscollector_set_cache_directory for executado. Entretanto, os dados não serão armazenados em cache ou carregados com êxito até que o diretório seja criado. Recomenda-se criar o diretório antes de executar esse procedimento armazenado.  
@@ -62,7 +62,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir desabilita o coletor de dados, define o diretório de cache para o coletor de dados `D:\tempdata`e, em seguida, habilita o coletor de dados.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  
@@ -73,7 +73,7 @@ EXECUTE dbo.sp_syscollector_enable_collector;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   

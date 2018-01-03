@@ -3,7 +3,7 @@ title: Exibir e analisar rastreamentos com o SQL Server Profiler | Microsoft Doc
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b0a6ecac72a8f200d5ec104b4cd8774328db190e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e75f8ec80a1564b788cefdd226b2f7b7338a7734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Exibir e analisar rastreamentos com o SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir dados de evento capturados em um rastreamento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe dados com base em propriedades de rastreamento definidas. Um modo de analisar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiá-los para outro programa, como o Orientador de Otimização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização poderá usar um arquivo de rastreamento contendo um lote SQL e eventos de RPC (chamada de procedimento remoto) se a coluna de dados **Text** estiver incluída no rastreamento. Para certificar-se de que os eventos e colunas corretos são capturados para uso com o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , use o modelo Ajuste predefinido, que é fornecido com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -87,7 +87,7 @@ AND     CPU < (Duration * 1000)
   
  A mesma técnica pode ser usada para localizar qualquer evento agrupado. Após localizar os eventos que procura, agrupe-os por **ClientProcessID**, **ApplicationName**ou outra classe de evento para ver a atividade relacionada em ordem cronológica.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir um rastreamento salvo &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Exibir informações de filtro &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   

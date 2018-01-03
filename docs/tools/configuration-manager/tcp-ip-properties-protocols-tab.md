@@ -3,7 +3,7 @@ title: Propriedades de TCP/IP (guia Protocolos) | Microsoft Docs
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe54bf4b1cb0d2e99b5276b440bf30374e788954
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e090b89ed827e1ea8a7700a2503fed95ace84501
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tcpip-properties-protocols-tab"></a>Propriedades do TCP/IP (guia Protocolos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o **propriedades de TCP/IP** caixa de diálogo para configurar as opções para o protocolo TCP/IP. Clique em **TCP/IP** no painel esquerdo, para mostrar configurações individuais de endereço IP no painel de detalhes.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
  **No Delay**  
  O SQL Server não implementa alterações a esta propriedade.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolhendo um protocolo de rede](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
  [Criando uma cadeia de conexão válida usando TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)  
   

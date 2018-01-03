@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 537267b15a65dca3035ba79e6bbecb9f7bc4a51c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Conjuntos de resultados  
 **sp_server_diagnostics** retorna as informações a seguir  
   
-|Coluna|Data type|Description|  
+|coluna|Data type|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica o carimbo de data/hora de criação de linha. Cada linha em um único conjunto de linhas tem o mesmo carimbo de data/hora.|  
 |**component_type**|**sysname**|Indica se a linha contém informações para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância de nível de componente ou para um grupo de disponibilidade AlwaysOn:<br /><br /> instância<br /><br /> AlwaysOn: AvailabilityGroup|  
 |**component_name**|**sysname**|Indica o nome de componente ou o nome do grupo de disponibilidade:<br /><br /> sistema<br /><br /> recurso<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nome do grupo de disponibilidade >*|  
-|**estado**|**int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Descreve a coluna de estado. Descrições que correspondem aos valores na coluna de estado são:<br /><br /> 0: desconhecido<br /><br /> 1: limpa<br /><br /> 2: aviso<br /><br /> 3: erro|  
-|**dados**|**varchar (max)**|Especifica dados que são específicos do componente.|  
+|**data**|**varchar (max)**|Especifica dados que são específicos do componente.|  
   
  Aqui estão as descrições dos cinco componentes:  
   
@@ -84,7 +84,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<nome do grupo de disponibilidade >**: coleta dados para o grupo de disponibilidade especificado (se component_type = "sempre em: AvailabilityGroup").  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 De uma perspectiva de falha, os componentes system, resource e query_processing serão aproveitados para detecção de falha, enquanto os componentes io_subsystem e eventos serão aproveitados apenas para fins de diagnóstico.  
   
 A tabela a seguir mapeia os componentes para seus estados de integridade associados.  
@@ -107,7 +107,7 @@ O (x) em cada linha representa estados de integridade válida para o componente.
   
 ## <a name="examples"></a>Exemplos  
 É prática recomendada usar sessões estendidas para capturar as informações de integridade e salvá-las em um arquivo localizado fora do SQL Server. Portanto, ainda será possível acessar isso em caso de falha. O exemplo a seguir salva a saída de uma sessão de evento em um arquivo:  
-```tsql  
+```sql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -119,7 +119,7 @@ GO
 ```  
   
 A consulta de exemplo abaixo lê o arquivo de log de sessão estendida:  
-```tsql  
+```sql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -142,7 +142,7 @@ ORDER BY time;
 ```  
   
 O exemplo a seguir captura a saída de sp_server_diagnostics para uma tabela em um modo de não repetição:  
-```tsql  
+```sql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  
@@ -156,16 +156,16 @@ INSERT INTO SpServerDiagnosticsResult
 EXEC sp_server_diagnostics; 
 ```  
 
-A consulta de exemplo abaixo lê o resumo da tabela de saída:  
-```tsql  
+A consulta de exemplo abaixo lê a saída de resumo da tabela:  
+```sql  
 SELECT create_time,
        component_name,
        state_desc 
 FROM SpServerDiagnosticsResult;  
 ``` 
 
-A consulta de exemplo abaixo lê alguns a saída detalhada de cada componente na tabela:  
-```tsql  
+A consulta de exemplo abaixo lê algumas das saídas detalhadas de cada componente na tabela:  
+```sql  
 -- system
 select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
    data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',
@@ -245,7 +245,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Política de failover para instâncias de cluster de failover](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

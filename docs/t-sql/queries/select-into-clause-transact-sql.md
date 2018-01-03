@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>-Cláusula SELECT INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ Se alguma dessas condições for verdadeira, a coluna será criada como NOT NULL
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Criando uma tabela especificando colunas de várias origens  
  O exemplo a seguir cria a tabela `dbo.EmployeeAddresses` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] selecionando sete colunas de várias tabelas relacionadas a funcionários e endereços.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +128,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. Inserindo linhas usando log mínimo  
  O exemplo a seguir cria a tabela `dbo.NewProducts` e insere linhas da tabela `Production.Product`. O exemplo pressupõe que o modelo de recuperação do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] esteja definido como FULL. Para assegurar um log mínimo, o modelo de recuperação do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] é definido como BULK_LOGGED antes da inserção das linhas e redefinido como FULL após a instrução SELECT...INTO. Esse processo garante que a instrução SELECT... INTO use um espaço mínimo no log de transações e seja executada de forma eficiente.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +144,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. Criando uma coluna de identidade usando a função IDENTITY  
  O exemplo a seguir usa a função IDENTITY para criar uma coluna de identidade na nova tabela `Person.USAddress` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Isso é necessário porque a instrução SELECT que define a tabela contém uma junção; por isso, a propriedade IDENTITY não é transferida para a nova tabela. Observe que os valores de semente e incremento especificados na função IDENTITY são diferentes dos valores da coluna `AddressID` na tabela de origem `Person.Address`.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +173,7 @@ WHERE name = 'AddressID';
   
  **Aplica-se a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +216,7 @@ GO
   
  **Aplica-se ao:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -234,7 +234,7 @@ A seguir demostrates exemplo criando uma nova tabela como uma cópia de outra ta
 
  **Aplica-se a:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
@@ -247,7 +247,7 @@ GO
 SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Exemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

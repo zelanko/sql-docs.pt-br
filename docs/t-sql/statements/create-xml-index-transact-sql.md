@@ -33,11 +33,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28de81b28ee31c172d1a31644f6847579af4e961
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7949376e26e184013b9a31258ff757991f4bdd19
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -241,7 +241,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]  
 >  Operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Colunas computadas derivadas de **xml** dados tipos podem ser indexadas como uma coluna de chave de chave ou incluída, desde que o tipo de dados de coluna computada seja permitido como uma coluna de chave de índice ou chave. Não é possível criar um índice XML primário em um computada **xml** coluna.  
   
  Para exibir informações sobre índices XML, use o [xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) exibição do catálogo.  
@@ -256,7 +256,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 ### <a name="a-creating-a-primary-xml-index"></a>A. Criando um índice XML primário  
  O exemplo a seguir cria um índice XML primário na coluna `CatalogDescription` da tabela `Production.ProductModel`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT * FROM sys.indexes  
@@ -272,7 +272,7 @@ GO
 ### <a name="b-creating-a-secondary-xml-index"></a>B. Criando um índice XML secundário  
  O exemplo a seguir cria um índice XML secundário na coluna `CatalogDescription` da tabela `Production.ProductModel`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -286,7 +286,7 @@ CREATE XML INDEX IXML_ProductModel_CatalogDescription_Path
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   

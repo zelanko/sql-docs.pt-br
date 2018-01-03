@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0b7991dfbe4aee731d436d725aba2081adf87e84
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6270ef7364bfd4d1c599a9feb564e36fc6f217a2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 
 ## <a name="example"></a>Exemplo
 Este exemplo retorna o status de tempo de execução de todos os trabalhos do SQL Server Agent.  Execute o [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
-```tsql
+```sql
 SELECT sj.Name, 
     CASE
         WHEN sja.start_execution_date IS NULL THEN 'Not running'
@@ -65,7 +65,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [dbo.sysjobhistory &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6108de273aedd3808a1941da5c152c6c774e5804
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8dc796f006abde19b0441cb9dba27d29f27c1b7e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se nenhum recurso que pode ser restrita por uma edição específica é usado pelo banco de dados, a exibição não retorna nenhuma linha.  
   
  sys.DM db_persisted_sku_features pode listar os seguintes recursos de alteração de banco de dados como restritos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edições:  
@@ -75,12 +75,12 @@ ms.lasthandoff: 11/17/2017
 
  Para determinar se um banco de dados usa qualquer recurso que seja restrito a edições específicas, execute a seguinte instrução no banco de dados:  
   
-```t-sql  
+```sql  
 SELECT feature_name FROM sys.dm_db_persisted_sku_features;  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   

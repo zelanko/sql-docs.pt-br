@@ -3,8 +3,11 @@ title: "Descartando um índice do SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: native-client-ole-db-tables-indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e20449b0a86f69ef5280c207668764e16fbc2696
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 6ea14c79c046a63d51dd5f9587d36150bd95f494
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dropping-a-sql-server-index"></a>Descartando um índice do SQL Server
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 12/01/2017
   
  Os consumidores especificam o nome do índice como uma cadeia de caracteres Unicode no *pwszName* membro do *uName* união no *pIndexID* parâmetro. O *eKind* membro *pIndexID* deve ser DBKIND_NAME. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client não oferece suporte ao recurso de OLE DB de descartar todos os índices em uma tabela quando *pIndexID* é nulo. Se *pIndexID* é nulo, E_INVALIDARG será retornado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas e índices](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  

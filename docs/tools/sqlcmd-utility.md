@@ -3,7 +3,7 @@ title: "Utilitário Sqlcmd | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlcmd
 ms.reviewer: 
@@ -33,11 +33,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbf609bb0bfba5f49a38e942deb566377b066864
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -476,7 +476,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  **-?**  
  Exibe a versão do **sqlcmd** e um resumo da sintaxe das opções do **sqlcmd** .  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As opções não precisam ser usadas na ordem mostrada na seção de sintaxe.  
   
  Quando são retornados vários resultados, o **sqlcmd** imprime uma linha em branco entre cada conjunto de resultados em um lote. Além disso, a mensagem `<x> rows affected` não é exibida quando não se aplica à instrução executada.  
@@ -841,7 +841,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
   
 -   Defina valores mais altos de tempo limite para execução em lote ou de consulta do que você imagina que levará para a execução em lote ou de consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o utilitário sqlcmd](~/relational-databases/scripting/sqlcmd-start-the-utility.md)   
  [Executar arquivos de script Transact-SQL usando sqlcmd](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
  [Usar o utilitário sqlcmd](~/relational-databases/scripting/sqlcmd-use-the-utility.md)   

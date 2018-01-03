@@ -2,7 +2,7 @@
 title: "ALTERAR as opções de conjunto de banco de dados (Transact-SQL) | Microsoft Docs"
 description: "Saiba mais sobre como definir opções de banco de dados, como criptografia automática e ajuste, o repositório de consultas em um SQL Server e banco de dados do SQL Azure"
 ms.custom: 
-ms.date: 11/27/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -34,11 +34,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -388,7 +388,7 @@ SET
 
  **\<change_tracking_option >:: =**  
   
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não disponível em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
  Controla as opções de controle de alterações. É possível habilitar o controle de alterações, definir opções, alterar opções e desabilitar o controle de alterações. Para obter exemplos, consulte a seção Exemplos mais adiante neste tópico.  
   
@@ -693,7 +693,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Controla se o repositório de consultas está habilitado neste banco de dados, além de controlar a remoção de conteúdo do repositório de consultas.  
@@ -1018,7 +1018,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | DESATIVAR
   
  O status dessa opção pode ser determinado examinando-se a coluna is_arithabort_on na exibição do catálogo sys.databases ou a propriedade IsArithmeticAbortEnabled da função DATABASEPROPERTYEX.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1123,21 +1123,21 @@ FEDERATED_SERVICE_ACCOUNT = ON | DESATIVAR
 |\<db_user_access_option >|Sim|Sim|  
 |\<db_update_option >|Sim|Sim|  
 |\<delayed_durability_option >|Sim|Sim|  
-|\<external_access_option >|Sim|Não|  
-|\<cursor_option >|Sim|Não|  
-|\<auto_option >|Sim|Não|  
-|\<sql_option >|Sim|Não|  
-|\<recovery_option >|Sim|Não|  
-|\<target_recovery_time_option >|Não|Sim|  
-|\<database_mirroring_option >|Não|Não|  
-|ALLOW_SNAPSHOT_ISOLATION|Não|Não|  
-|READ_COMMITTED_SNAPSHOT|Não|Sim|  
+|\<external_access_option >|Sim|não|  
+|\<cursor_option >|Sim|não|  
+|\<auto_option >|Sim|não|  
+|\<sql_option >|Sim|não|  
+|\<recovery_option >|Sim|não|  
+|\<target_recovery_time_option >|não|Sim|  
+|\<database_mirroring_option >|não|não|  
+|ALLOW_SNAPSHOT_ISOLATION|não|não|  
+|READ_COMMITTED_SNAPSHOT|não|Sim|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Sim|Sim|  
-|\<service_broker_option >|Sim|Não|  
+|\<service_broker_option >|Sim|não|  
 |DATE_CORRELATION_OPTIMIZATION|Sim|Sim|  
 |\<parameterization_option >|Sim|Sim|  
 |\<change_tracking_option >|Sim|Sim|  
-|\<db_encryption >|Sim|Não|  
+|\<db_encryption >|Sim|não|  
   
  O cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é limpo com a definição de uma das seguintes opções:  
   
@@ -1223,7 +1223,7 @@ GO
   
  O conjunto de resultados mostra que a estrutura de isolamento de instantâneo está habilitada.  
   
- |name |snapshot_isolation_state |descrição|  
+ |NAME |snapshot_isolation_state |descrição|  
  |-------------------- |------------------------  |----------|  
  |AdventureWorks2012   |1                        | ON |  
   
@@ -1251,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Habilitando o repositório de consultas  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  O exemplo a seguir habilita o repositório de consultas e configura os parâmetros do repositório de consultas.  
   
@@ -1267,7 +1267,7 @@ SET QUERY_STORE = ON
     );  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
  [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   

@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d36338abefd30103b80a202ebde030d73b6b071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -191,7 +191,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CORP|CONNECT REPLICATION|DATABASE|  
 |COSQ|CONNECT SQL|SERVER|  
 |CP|CHECKPOINT|DATABASE|  
-|CRAC|CREATE AVAILABILITY GROUP<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CRAC|Criar grupo de disponibilidade<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CRAG|CREATE AGGREGATE|DATABASE|  
 |CRAK|CREATE ASYMMETRIC KEY|DATABASE|  
 |CRAS|CREATE ASSEMBLY|DATABASE|  
@@ -224,9 +224,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br /> **Aplica-se a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|Delete (excluir)|DATABASE|  
+|DL|Delete (excluir)|OBJECT|  
+|DL|Delete (excluir)|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|Execute|DATABASE|  
 |EX|Execute|OBJECT|  
@@ -326,7 +326,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  `sys.fn_builtin_permissions` é uma função com valor de tabela que emite uma cópia da hierarquia de permissões predefinidas. Essa hierarquia inclui permissões de cobertura. O `DEFAULT` conjunto de resultados descreve um gráfico acíclico direcionado da hierarquia de permissões, do qual é a raiz (classe = SERVER, permissão = CONTROL SERVER).  
   
  `sys.fn_builtin_permissions` não aceita parâmetros correlatos.  
@@ -348,25 +348,25 @@ O gráfico a seguir mostra as permissões e as relações entre elas. Algumas da
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. Listando todas as permissões internas   
 Use `DEFAULT` ou uma cadeia de caracteres vazia para retornar todas as permissões.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. Listando as permissões que podem ser definidas em uma chave simétrica   
 Especifique uma classe para retornar todas as permissões possíveis para essa classe.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>C. Listando classes nas quais há uma permissão SELECT   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Criar esquema &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   

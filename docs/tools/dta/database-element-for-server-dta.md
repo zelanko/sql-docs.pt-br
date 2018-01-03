@@ -3,7 +3,7 @@ title: Elemento de banco de dados do servidor (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fa21cbda68a6ec8234b3143e686fe8d361a9ae3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6506c6cbc96283c1f4b11a03ee7ad263847415d8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-element-for-server-dta"></a>Elemento de banco de dados para servidor (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica o banco de dados que você deseja ajustar em um servidor específico.  
@@ -39,9 +39,9 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma.|  
+|Comprimento e tipo de dados|Nenhum.|  
 |Valor padrão|Nenhuma.|  
 |Ocorrência|Exigido uma ou mais vezes por elemento **Server** .|  
   
@@ -52,13 +52,13 @@ ms.lasthandoff: 12/05/2017
 |Elemento pai|[Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md)|  
 |Elementos filho|[Elemento Name para Database &#40;DTA&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Elemento Schema para Database &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Esse elemento tem o nome **DatabaseDetailsTypecomplexType** no Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Não confunda este elemento **Database** com aquele cujo pai raiz é o elemento **Configuration**. Para obter mais informações, veja [Elemento Database para configuração &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento **Database** , veja [Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

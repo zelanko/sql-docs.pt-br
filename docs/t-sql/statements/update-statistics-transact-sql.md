@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96ace864a1cff7724451b521db4b184323db6d8e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,7 +173,7 @@ Quando **ON**, as estatísticas reterá o percentual de amostragem do conjunto d
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="when-to-use-update-statistics"></a>Quando usar UPDATE STATISTICS  
  Para obter mais informações sobre quando usar UPDATE STATISTICS, consulte [estatísticas](../../relational-databases/statistics/statistics.md).  
@@ -181,7 +181,7 @@ Quando **ON**, as estatísticas reterá o percentual de amostragem do conjunto d
 ## <a name="updating-all-statistics-with-spupdatestats"></a>Atualizando todas as estatísticas com sp_updatestats  
  Para obter informações sobre como atualizar estatísticas de todas as tabelas definidas pelo usuário e internas no banco de dados, veja o procedimento armazenado [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Por exemplo, o comando a seguir chama sp_updatestats para atualizar todas as estatísticas do banco de dados.  
   
-```t-sql  
+```sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -191,23 +191,23 @@ EXEC sp_updatestats;
 ## <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
  Não há suporte para a seguinte sintaxe por PDW / SQL Data Warehouse  
   
-```t-sql  
+```sql  
 update statistics t1 (a,b);   
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with sample 10 rows;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with NORECOMPUTE;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with INCREMENTAL=ON;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
@@ -219,7 +219,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ### <a name="a-update-all-statistics-on-a-table"></a>A. Atualizar todas as estatísticas de uma tabela  
  O exemplo a seguir atualiza as estatísticas para todos os índices no `SalesOrderDetail` tabela.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -229,7 +229,7 @@ GO
 ### <a name="b-update-the-statistics-for-an-index"></a>B. Atualizar as estatísticas de um índice  
  O exemplo a seguir atualiza as estatísticas do índice `AK_SalesOrderDetail_rowguid` da tabela `SalesOrderDetail`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -239,7 +239,7 @@ GO
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. Atualizar estatísticas com o uso de amostragem de 50 por cento  
  O exemplo a seguir cria e atualiza as estatísticas das colunas `Name` e `ProductNumber` na tabela `Product`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -253,7 +253,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. Atualizar estatísticas com o uso de FULLSCAN e NORECOMPUTE  
  O exemplo a seguir atualiza as estatísticas `Products` na tabela `Product` força um exame completo de todas as linhas na tabela `Product` e desativa a atualização automática das estatísticas de `Products`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -266,25 +266,25 @@ GO
 ### <a name="e-update-statistics-on-a-table"></a>E. Atualizar estatísticas em uma tabela  
  A exemplo a seguir atualiza o `CustomerStats1` estatísticas sobre o `Customer` tabela.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. Atualizar estatísticas usando uma verificação completa  
  A exemplo a seguir atualiza o `CustomerStats1` estatísticas, com base na verificação de todas as linhas de `Customer` tabela.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### <a name="g-update-all-statistics-on-a-table"></a>G. Atualizar todas as estatísticas de uma tabela  
  O exemplo a seguir atualiza todas as estatísticas sobre o `Customer` tabela.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Estatísticas](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
@@ -293,7 +293,7 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40; Transact-SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.DM db_stats_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 
 

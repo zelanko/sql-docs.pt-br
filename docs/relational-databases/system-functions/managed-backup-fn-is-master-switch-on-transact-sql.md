@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 764c6d1602f2894f0d69b4ffc905d75ac67f32d7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8aaca3d521c488eb70a3e889e8e371feb090e269
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfnismasterswitchon-transact-sql"></a>managed_backup.fn_is_master_switch_on (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 managed_backup.fn_is_master_switch_on ()  
 ```  
   
 ##  <a name="Arguments"></a> Argumentos  
- Nenhuma  
+ Nenhum  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **BITS**  
@@ -61,7 +61,7 @@ managed_backup.fn_is_master_switch_on ()
 ### <a name="permissions"></a>Permissões  
  Requer permissões SELECT na função.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

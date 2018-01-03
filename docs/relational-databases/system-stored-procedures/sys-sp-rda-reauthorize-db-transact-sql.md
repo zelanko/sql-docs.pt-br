@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6e9f73c96cc07bfe442ac3104c4b1f4824596ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 55c8e5167997ceb944cdce51b9d73b651c347396
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys. sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -61,20 +61,20 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>Permissões  
  Requer permissões db_owner.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando você executa [sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para se reconectar ao banco de dados remoto do Azure, essa operação redefine automaticamente o modo de consulta para LOCAL_AND_REMOTE, que é o comportamento padrão para o Stretch Database. Ou seja, consultas retornam resultados de dados locais e remotos.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir restaura a conexão autenticada entre um banco de dados local habilitado para Stretch e o banco de dados remoto. Ele faz uma cópia dos dados remotos (recomendados) e conecta-se a nova cópia.  
   
-```tsql  
+```sql  
 DECLARE @credentialName nvarchar(128);   
 SET @credentialName = N'<existing_database_scoped_credential_name>';   
 EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;  
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys. sp_rda_deauthorize_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   

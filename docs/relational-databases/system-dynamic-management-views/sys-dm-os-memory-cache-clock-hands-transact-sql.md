@@ -1,7 +1,7 @@
 ---
 title: sys.DM os_memory_cache_clock_hands (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/18/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32ac57b5da2720b8ba3c874d604b5f65ec8da308
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a42184a7a71f7623c7197405b7e718f40ef8979
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|Endereço do cache associado ao relógio. Não permite valor nulo.|  
 |**name**|**nvarchar(256)**|Nome do cache. Não permite valor nulo.|  
-|**tipo**|**nvarchar (60)**|Tipo de armazenamento de cache. Pode haver vários caches do mesmo tipo. Não permite valor nulo.|  
+|**type**|**nvarchar (60)**|Tipo de armazenamento de cache. Pode haver vários caches do mesmo tipo. Não permite valor nulo.|  
 |**clock_hand**|**nvarchar (60)**|Tipo de mão. Ele é um dos seguintes:<br /><br /> External<br /><br /> Internal<br /><br /> Não permite valor nulo.|  
 |**clock_status**|**nvarchar (60)**|Status do relógio. Ele é um dos seguintes:<br /><br /> Suspenso<br /><br /> Executando<br /><br /> Não permite valor nulo.|  
 |**rounds_count**|**bigint**|Número de varreduras feitas no cache para remover entradas. Não permite valor nulo.|  
@@ -58,14 +58,11 @@ ms.lasthandoff: 11/17/2017
 Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, requer o **administrador do servidor** ou um **administrador do Active Directory do Azure** conta.    
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena informações em memória em uma estrutura denominada cache de memória. As informações no cache podem ser dados, entradas de índice, planos de procedimento compilados e uma variedade de outros tipos de informações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para evitar a recriação das informações, elas são retidas no cache de memória pelo maior prazo possível, sendo removidas normalmente do cache quando forem muito antigas para serem úteis ou quando o espaço de memória for necessário para novas informações. O processo que remove informações antigas é chamado de varredura de memória. A varredura de memória é uma atividade frequente, mas não é contínua. Um algoritmo de relógio controla a varredura do cache de memória. Cada relógio pode controlar várias varreduras de memória, que são chamadas de ponteiros. O ponteiro do relógio do cache de memória é o local atual de um dos ponteiros de uma varredura de memória.  
-  
-## <a name="see-also"></a>Consulte também  
 
-
- [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
+ [sys.DM os_memory_cache_counters &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
   
-  
-
 

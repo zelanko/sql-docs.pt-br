@@ -3,7 +3,7 @@ title: "Propriedades (guia serviço) do SQL Server Integration Services | Micros
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac5eaaf1b4b5edf484e1dd98106b9c1b32056468
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fdd7b2f7ac6e01b52843e597f50bcbd6939053d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Propriedades do SQL Server Integration Services (guia Serviço)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o **Service**guia o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **propriedades** caixa de diálogo para exibir ou especificar as opções a seguir.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
  **Código de Saída**  
  O código de erro do Windows no [!INCLUDE[msCoName](../../includes/msconame-md.md)] que define todos os problemas encontrados na inicialização ou interrupção do serviço. Esta propriedade é definida como **ERROR_SERVICE_SPECIFIC_ERROR** (1066) quando o erro é exclusivo do serviço representado por essa classe, e as informações sobre o erro estão disponíveis na propriedade **ServiceSpecificExitCode** . O serviço define esse valor como NO_ERROR (0) quando está sendo executado, e novamente no término normal.  
   
- **Host Name**  
+ **Nome do Host**  
  Exibe o nome do computador ou cluster que está executando o serviço [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Nome**  

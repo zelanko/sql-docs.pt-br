@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 484ad4e6f82bff235fd1a9a3cad5752fb4ce08a2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5b6f184c3ea2a455c59f221f4156e5ab7ce5210
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 SEMANTICKEYPHRASETABLE  
     (  
     table,  
@@ -54,7 +54,7 @@ SEMANTICKEYPHRASETABLE
   
  Esse nome pode ser um nome de uma a quatro partes, mas um nome de servidor remoto não é permitido.  
   
- **coluna**  
+ **column**  
  Nome da coluna indexada para a qual os resultados devem ser retornados. A coluna deve ter indexação semântica habilitada.  
   
  **column_list**  
@@ -98,7 +98,7 @@ SEMANTICKEYPHRASETABLE
 ###  <a name="HowToTopPhrases"></a>Exemplo 1: Localizar as principais frases-chave em um documento específico  
  O exemplo a seguir recupera as 10 principais frases-chave do documento especificado pela variável @DocumentId na coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks. A variável @DocumentId representa um valor da coluna de chave do índice de texto completo. A função **SEMANTICKEYPHRASETABLE** recupera esses resultados com eficácia usando uma busca de índice em vez de um exame de tabela. Este exemplo assume que a coluna está configurada para indexação de texto completo e semântica.  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -113,7 +113,7 @@ ORDER BY KEYP_TBL.score DESC;
 ###  <a name="HowToTopDocuments"></a>Exemplo 2: Localizar os principais documentos que contêm uma frase chave específica  
  O exemplo a seguir recupera os 25 principais documentos que contêm a frase-chave Bracket da coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks. Este exemplo assume que a coluna está configurada para indexação de texto completo e semântica.  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

@@ -3,7 +3,7 @@ title: "Tutorial: Orientador de otimização do mecanismo de banco de dados | Mi
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91ada122d3cdad5d3b40b1809c063b821c898bcb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a21a71c1ae0239e4725f09b404fe7df8d62da697
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Bem-vindo ao tutorial do Orientador de otimização do mecanismo de banco de dados. O Orientador de Otimização do Mecanismo de Banco de Dados examina como são processadas as consultas nos bancos de dados que você especifica e recomenda meios de aprimorar o desempenho de processamento de consultas, modificando as estruturas do banco de dados, como índices, exibições indexadas e particionamento.  
@@ -41,7 +41,7 @@ Nessa lição, você se acostumará com a nova interface gráfica do usuário do
 [Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 Nessa lição, você aprenderá a executar tarefas básicas de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
-[Lição 3: Usando o utilitário de prompt de comando dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Lição 3: usar o utilitário de prompt de comando DTA](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 Nesta lição, você aprenderá a iniciar o utilitário de prompt de comando **dta** e executar alguns comandos de ajuste simples.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -57,7 +57,7 @@ Depois de você terminar as lições deste tutorial, recorra aos tópicos a segu
 -   [dta Utility](../../tools/dta/dta-utility.md) para obter material de referência sobre o utilitário de prompt de comando e o arquivo XML opcional que você pode usar para controlar a operação do utilitário.  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 1: Navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[Lição 1: navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
   
   
   

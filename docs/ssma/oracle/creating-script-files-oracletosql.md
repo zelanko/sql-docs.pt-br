@@ -1,7 +1,7 @@
 ---
 title: Criando arquivos de Script (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6b9582df990148a248dc79a83f0730398f561f17
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 469802e908d287d5612697b77711aa5ef4f01455
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-oracletosql"></a>Criando arquivos de Script (OracleToSQL)
 A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
@@ -405,6 +405,6 @@ O usuário pode facilmente validar seu arquivo de script no arquivo de definiç�
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa no operando o console é [criando arquivos de valor variável &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criando arquivos do valor da variável &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   

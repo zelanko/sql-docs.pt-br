@@ -3,7 +3,7 @@ title: "Definir as opções de projeto (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8196130a681a3d01691bae3c863f319005d6bae6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 750be041907417b0683633fbe59f88fdb5b53ead
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-sybasetosql"></a>Definindo opções de projeto (SybaseToSQL)
 Para cada projeto SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão do objeto, o carregamento de objeto, do SQL azure, interface do usuário e configurações de migração de dados. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure ou migrar dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure, verifique se as opções de configuração são adequadas para o projeto.  
@@ -47,7 +47,7 @@ O SSMA tem cinco conjuntos de configurações de projeto:
   
 Ele também tem quatro modos para definir essas configurações:  
   
-1.  Default  
+1.  Padrão  
   
 2.  Otimistas  
   
@@ -102,13 +102,13 @@ Você também pode personalizar configurações para o projeto atual. Essas conf
   
 3.  Clique em **Okey** para salvar as configurações.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 A próxima etapa da migração depende de suas necessidades de projeto:  
   
 -   Se você quiser personalizado para o mapeamento de tipos de dados de origem e de destino, consulte [mapeamento Sybase ASE e tipos de dados do SQL Server &#40; SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
   
 -   Caso contrário, você pode converter as definições de objeto de banco de dados Sybase em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou definições de objeto do SQL Azure. Para obter mais informações, consulte [converter objetos de banco de dados do Sybase ASE &#40; SybaseToSQL &#41; ](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Migrando Sybase ASE bancos de dados do SQL Server - banco de dados SQL do Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

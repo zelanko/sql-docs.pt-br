@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ CHANGETABLE (
  *Table*  
  É a tabela definida pelo usuário na qual devem ser obtidas as informações de controle de alterações. O controle de alterações deve ser ativado na tabela. Um nome de tabela de uma, duas, três ou quatro partes pode ser usado. O nome da tabela pode ser um sinônimo para a tabela.  
   
- *nome da coluna*  
+ *column_name*  
  Especifica o nome de coluna/colunas de chave primária. Podem ser especificados vários nomes de coluna em qualquer ordem.  
   
  *Value*  
@@ -117,7 +117,7 @@ CHANGETABLE (
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Altere as informações de contexto que podem opcionalmente ser especificadas usando a cláusula WITH como parte de uma instrução INSERT, UPDATE ou DELETE.|  
 |\<valor da coluna de chave primária >|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Em geral, a função CHANGETABLE é usada na cláusula FROM de uma consulta como se fosse uma tabela.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -158,7 +158,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Retornando linhas para uma sincronização inicial de dados  
  O exemplo a seguir mostra como obter dados para uma sincronização inicial dos dados da tabela. A consulta retorna todos os dados de linha e suas versões associadas. Você pode inserir ou adicionar esses dados ao sistema que conterá os dados sincronizados.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +170,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. Listando todas as alterações efetuadas desde uma versão específica  
  O exemplo a seguir lista todas as alterações feitas em uma tabela desde a versão especificada (`@last_sync_version)`. [Emp ID] e SSN são colunas em uma chave primária composta.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +182,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. Obtendo todos os dados alterados para uma sincronização  
  O exemplo a seguir mostra como você pode obter todos os dados alterados. Essa consulta une as informações de controle de alterações à tabela de usuário de forma que as informações da tabela de usuário sejam retornadas. Um `LEFT OUTER JOIN` é usado de forma que uma linha seja retornada para as linhas excluídas.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +197,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. Detectando conflitos usando CHANGETABLE (VERSION...)  
  O exemplo a seguir mostra como atualizar uma linha apenas se ela não tiver sido alterada desde a última sincronização. O número de versão da linha específica é obtido usando `CHANGETABLE`. Se a linha tiver sido atualizada, as alterações não serão efetuadas e a consulta retornará informações sobre a alteração mais recente efetuada na linha.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  
@@ -214,7 +214,7 @@ WHERE
         0);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções do controle de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   

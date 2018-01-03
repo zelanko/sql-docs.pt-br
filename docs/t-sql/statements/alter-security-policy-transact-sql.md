@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b420b7b73af8f32d2de9dac39cc4f57b41680c7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f5ce90660a43e5285735a74a01b560ec210ba3f0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-security-policy-transact-sql"></a>Altere a política de segurança (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Sintaxe  
   
-```tsql  
+```sql  
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -92,7 +92,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  table_schema_name.table_name  
  É a tabela de destino a qual o predicado de segurança será aplicado. Várias políticas de segurança desabilitadas podem direcionar uma única tabela, mas apenas uma pode ser habilitada em um determinado momento.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A instrução ALTER SECURITY POLICY está no escopo de uma transação. Se a transação for revertida, a instrução também será revertida.  
   
  Ao usar funções de predicado com tabelas com otimização de memória, as políticas de segurança devem incluir **SCHEMABINDING** e usar o **WITH NATIVE_COMPILATION** dica de compilação. O argumento SCHEMABINDING não pode ser alterado com a instrução ALTER porque ela se aplica a todos os predicados. Para alterar a associação de esquema, você deve descartar e recriar a política de segurança.  
@@ -158,7 +158,7 @@ ALTER SECURITY POLICY rls.SecPol
     ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança em nível de linha](../../relational-databases/security/row-level-security.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   

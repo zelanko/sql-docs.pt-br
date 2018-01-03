@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63ebaeb737f3e1d1b6abbf2a8b4800161a82e9ef
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b2680a591628811fb9617077700d05981ece2a2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_type=** ] *frequency_type*  
  Valor que indica quando o trabalho será executado. *frequency_type* é **int**, com um padrão de **0**, e pode ser um dos seguintes valores:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**4**|Diariamente|  
@@ -150,9 +150,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As agendas de trabalho podem ser gerenciadas independentemente dos trabalhos. Para adicionar uma agenda para um trabalho, use **sp_add_schedule** para criar a agenda e **sp_attach_schedule** para anexar a agenda a um trabalho.  
   
 ## <a name="permissions"></a>Permissões  
@@ -168,7 +168,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  
  ## <a name="example"></a>Exemplo
  O exemplo a seguir atribui uma agenda de trabalho para `SaturdayReports` que executará todos os sábados às 2:00 AM.
-```tsql  
+```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
         @name = N'Weekly_Sat_2AM',  -- Schedule name
@@ -178,7 +178,7 @@ EXEC msdb.dbo.sp_add_jobschedule
         @active_start_time = 20000 -- 2:00 AM
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e anexar agendas para trabalhos](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [Agendar um trabalho](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [Criar uma agenda](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   

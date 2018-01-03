@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 98f60a6a46fbbce2bd4b1bac16d0a7c8edc69361
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5fedc9777146d24cb04fb7652344f244babc8246
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna uma conversão de valor ao tipo de dados especificado se a conversão for bem-sucedida; caso contrário, retorna nulo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **TRY_CONVERT** usa o valor passado para ele e tenta convertê-lo em especificado *data_type*. Se a conversão for bem-sucedida, **TRY_CONVERT** retorna o valor conforme o especificado *data_type*; se ocorrer um erro, null será retornado. No entanto se você solicitar uma conversão que não é permitida explicitamente, em seguida, **TRY_CONVERT** falhará com um erro.  
   
  **TRY_CONVERT** é uma palavra reservada no nível de compatibilidade 110 e superior.  
@@ -71,7 +71,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ### <a name="a-tryconvert-returns-null"></a>A. TRY_CONVERT retorna nulo  
  O exemplo a seguir demonstra que TRY_CONVERT retorna nulo quando a conversão falha.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CONVERT(float, 'test') IS NULL   
     THEN 'Cast failed'  
@@ -92,7 +92,7 @@ Cast failed
   
  O exemplo a seguir demonstra que a expressão deve estar no formato esperado.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
 GO  
@@ -111,7 +111,7 @@ NULL
 ### <a name="b-tryconvert-fails-with-an-error"></a>B. TRY_CONVERT falha com um erro  
  O exemplo a seguir demonstra que TRY_CONVERT retorna um erro quando a conversão não é permitida explicitamente.  
   
-```tsql  
+```sql  
 SELECT TRY_CONVERT(xml, 4) AS Result;  
 GO  
 ```  
@@ -141,7 +141,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

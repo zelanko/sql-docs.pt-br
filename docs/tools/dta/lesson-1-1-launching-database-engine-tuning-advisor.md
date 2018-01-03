@@ -3,7 +3,7 @@ title: "Orientador de otimização do mecanismo de banco de dados de inicializa�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 18b2d37a6dac0ca41c8124ad0d006a993d534845
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 17fc87a98c82159dbc3c13d665b78282e652414c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Lição 1-1-Iniciando o orientador de otimização do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para começar, abra a interface gráfica do usuário do Orientador de otimização do mecanismo de banco de dados (GUI). Ao usá-lo pela primeira vez, um membro da função de servidor fixa **sysadmin** deve iniciar o Orientador de Otimização do Mecanismo de Banco de Dados para inicializar o aplicativo. Após a inicialização, os membros da função de banco de dados fixa **db_owner** podem usar o Orientador de Otimização do Mecanismo de Banco de Dados para ajustar seus bancos de dados. Para obter mais informações sobre como inicializar o Orientador de Otimização do Mecanismo de Banco de Dados, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eb86009bf940857788425afd4781ca79ab3686
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**nchar(128)**|Nome do arquivo lógico.|  
 |**FileID**|**smallint**|ID do arquivo.|  
 |**nome de arquivo**|**nchar(260)**|Nome do arquivo do -sistema operacional (nome do arquivo físico).|  
-|**grupo de arquivos**|**nvarchar (128)**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
-|**tamanho**|**nvarchar(18)**|Tamanho do arquivo em megabytes.|  
+|**grupo de arquivos**|**nvarchar(128)**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
+|**size**|**nvarchar(18)**|Tamanho do arquivo em megabytes.|  
 |**MaxSize**|**nvarchar(18)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
 |**crescimento**|**nvarchar(18)**|Incremento de crescimento do arquivo. Indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço for necessário.|  
 |**uso**|**varchar (9)**|Uso do arquivo Para um arquivo de dados, o valor é **'dados'** e para o arquivo de log é o valor **'log apenas'**.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **status** relatórios quais opções foram definidas como ON no banco de dados do conjunto de colunas no resultado. Todas as opções de banco de dados não são relatadas pelo **status** coluna. Para ver uma lista completa das configurações de opção de banco de dados atual, use o **sys. Databases** exibição do catálogo.  
   
 ## <a name="permissions"></a>Permissões  
@@ -87,19 +87,19 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### <a name="a-returning-information-about-a-single-database"></a>A. Retornando informações sobre um único banco de dados  
  O exemplo a seguir exibe informações sobre o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### <a name="b-returning-information-about-all-databases"></a>B. Retornando informações sobre todos os bancos de dados  
  O exemplo a seguir exibe informações sobre todos os bancos de dados no servidor que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mecanismo de banco de dados armazenados procedimentos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

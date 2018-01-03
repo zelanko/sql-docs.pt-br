@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 475c76c68198719de312a6a7ca9485097596d624
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d784eb9aa4447a60006a5b14d1b525337cb5b87c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  *@option*  
  Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. *@option*pode ter um dos seguintes valores:  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> Este é o valor padrão.|  
 |**1**|Retorna o nome do servidor sem conversão, por exemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
@@ -72,7 +72,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
 ## <a name="best-practices"></a>Práticas recomendadas  
  Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando o **FileTableRootPath** e **GetFileNamespacePath** funções juntas, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
   
 @root varchar(100)  
@@ -108,7 +108,7 @@ SELECT FileTableRootPath(N'dbo.MyFileTable');
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com diretórios e caminhos em FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

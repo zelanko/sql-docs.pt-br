@@ -23,11 +23,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea8fbfa2707da63b0b936539281ec578de02285c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |plan_handle|**varbinary(64)**|Mapa de hash do plano de consulta. Anulável.|
 |query_plan|**xml**|Showplan XML estatísticas parcial. Anulável.|
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 Essa função de sistema está disponível desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
 Essa função do sistema funciona em ambos **padrão** e **leve** infraestrutura de criação de perfil de estatísticas de execução de consulta.  
@@ -88,14 +88,14 @@ Essa função do sistema funciona em ambos **padrão** e **leve** infraestrutura
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Procurando nas estatísticas de plano e execução de consulta ao vivo de um lote em execução  
  A exemplo a seguir consulta **exec_requests** para localizar a consulta interessante e copiar seu `session_id` da saída.  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  Em seguida, para obter as estatísticas de plano e execução de consulta em tempo real, use copiado `session_id` com a função de sistema **sys.dm_exec_query_statistics_xml**.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,14 +103,14 @@ GO
 
  Ou combinado de todas as solicitações em execução.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  
 GO  
 ```   
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
   [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao &#40; do banco de dados Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

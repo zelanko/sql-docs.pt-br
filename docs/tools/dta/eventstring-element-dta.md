@@ -3,7 +3,7 @@ title: Elemento EventString (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c130b82b84da5001d6df778713efb6f9bb3c4aec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b51de55832ddd13103fb67f41f937a1efdd0b999
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventstring-element-dta"></a>Elemento EventString (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica um [!INCLUDE[tsql](../../includes/tsql-md.md)] cargas de trabalho de script diretamente no arquivo de entrada XML.  
@@ -41,16 +41,16 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|Descrição|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**Weight**|Opcional. Especifica o fator de peso da consulta (um fator de importância) para o evento especificado. Use um tipo de dados **float** para especificar o peso. Por exemplo, **Peso**= "100,01". O valor mínimo que você pode especificar para **Weight** é "0."|  
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, tamanho é ilimitado.|  
-|**Valor padrão**|Nenhuma.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Exigido uma vez se não houver outro tipo de carga de trabalho especificada. É preciso especificar um elemento filho **EventString**, **File**ou **Database** para o pai **Workload** , mas só pode ser usado um tipo. Por exemplo, se for especificada uma carga de trabalho com o elemento **EventString** , não será possível especificar uma carga de trabalho com o elemento **File** no mesmo arquivo de entrada XML.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -58,12 +58,12 @@ ms.lasthandoff: 12/05/2017
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento Workload &#40;DTA&#41;](../../tools/dta/workload-element-dta.md)|  
-|**Elementos filho**|Nenhuma.|  
+|**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso deste elemento, consulte [Amostra do arquivo de entrada XML com carga de trabalho embutida &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

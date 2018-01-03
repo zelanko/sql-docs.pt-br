@@ -3,7 +3,7 @@ title: "Propriedades de TCP/IP (guia de endereços IP) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 018d6474b242e80cfb483fc4ebea76d777af77e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9db69a0432f5f9f85001c4443e27c5b08a272f5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriedades do TCP/IP (Guia Endereços IP)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use o **propriedades de TCP/IP (guia de endereços IP)** caixa de diálogo para configurar as opções de protocolo TCP/IP para um endereço IP específico. Somente as **Portas TCP Dinâmicas** e a **Porta TCP** podem ser configuradas para todos os endereços de uma só vez com a seleção de **IP Tudo**.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
  **Ativa**  
  Indica que o endereço IP está ativo no computador. Não disponível para **IP Tudo**.  
   
- **Ativado**  
+ **Enabled**  
  Se a propriedade **Escutar Tudo** em **Propriedades do TCP/IP (Guia Protocolo)** for definida como **Não**, essa propriedade indicará ser o SQL Server está escutando no endereço IP. Se a propriedade **Escutar Tudo** em **Propriedades do TCP/IP (Guia Protocolo)** estiver definida como **Sim**, a propriedade será desconsiderada. Não disponível para **IP Tudo**.  
   
  **Endereço IP**  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
  O mecanismo de banco de dados pode escutar em várias portas no mesmo endereço IP. Liste as portas, separadas por vírgula, no formato 1433,1500,1501. Este campo é limitado a 2.047 caracteres.  
   
- Para configurar um único endereço IP para escutar em várias portas, o parâmetro **Escutar Tudo** também deve ser definido como **Não**, na **Guia Protocolos** da caixa de diálogo **Propriedades do TCP/IP** . Para obter mais informações, consulte “Como configurar o Mecanismo de Banco de Dados para escutar em várias portas TCP” nos Manuais Online do SQL Server.  
+ Para configurar um único endereço IP para escutar em várias portas, o parâmetro **Escutar Tudo** também deve ser definido como **Não**, na **Guia Protocolos** da caixa de diálogo **Propriedades do TCP/IP**. Para obter mais informações, consulte “Como configurar o Mecanismo de Banco de Dados para escutar em várias portas TCP” nos Manuais Online do SQL Server.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Adicionando ou removendo endereços IP  
  O SQL Server Configuration Manager exibe os endereços IP que estavam disponíveis no momento em que o SQL Server foi instalado. Os endereços IP disponíveis podem ser alterados quando placas de rede são adicionadas ou removidas, quando um endereço IP atribuído dinamicamente expira, quando a estrutura de rede é reconfigurada ou quando o local físico do computador é alterado, como quando um computador laptop se conecta à rede em um edifício diferente. Para alterar um endereço IP, edite a caixa **Endereço IP** e reinicie o SQL Server.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="additional-topics-in-books-online"></a>Tópicos adicionais nos Manuais Online  
  Pesquise no MSDN tópicos como **Configurar um servidor para escuta em uma porta TCP específica (SQL Server Configuration Manager)** e **Configurar o Mecanismo de Banco de Dados para escuta em várias portas TCP**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Escolhendo um protocolo de rede](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Criando uma cadeia de Conexão válida usando TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Serviço Navegador do SQL Server](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  

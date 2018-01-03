@@ -3,7 +3,7 @@ title: Instalar o Distributed Replay | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ad107252ba6c6dc86e6720a7a07dfa87d82b2a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99cb53df96c3b675274c5940edcf1e9bd4c8516a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-distributed-replay"></a>Instalar o Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode instalar o Distributed Replay de uma das três maneiras:  
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/05/2017
   
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a instalação.  
   
-|Parâmetro|Descrição|Valores com suporte|  
+|Parâmetro|Description|Valores com suporte|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Opcional**|Conta de serviço para o serviço do controlador do Distributed Replay Utility.|Verifica a conta e a senha|  
 |/CTLRSVCPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do controlador do Distributed Replay Controller.|Verifica a conta e a senha|  
@@ -220,7 +220,7 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Você deve especificar as duas senhas na linha de comando, porque não é possível configurá-las no arquivo de configuração.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   

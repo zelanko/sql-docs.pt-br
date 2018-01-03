@@ -1,7 +1,7 @@
 ---
 title: sys.DM db_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2a1ebc3301372b490de9ec631c3cdb0743f264b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d1603e9d1fb3fb9e84556f432c5b421844f8c1c3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID do objeto (tabela ou exibição indexada) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
 |stats_id|**int**|ID do objeto de estatísticas. É exclusiva na tabela ou exibição indexada. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|last_updated|**datetime2**|Data e hora da última atualização do objeto de estatísticas.|  
+|last_updated|**datetime2**|Data e hora da última atualização do objeto de estatísticas. Para obter mais informações, consulte o [comentários](#Remarks) seção nesta página.|  
 |rows|**bigint**|O número total de linhas da tabela ou exibição indexada na última atualização das estatísticas. Se as estatísticas forem filtradas ou corresponderem a um índice filtrado, o número de linhas talvez seja menor do que o número de linhas na tabela.|  
 |rows_sampled|**bigint**|O número total de linhas amostradas para cálculos de estatísticas.|  
 |etapas|**int**|O número de etapas no histograma. Para obter mais informações, veja [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
@@ -62,18 +62,17 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |modification_counter|**bigint**|Número total de modificações da coluna de estatísticas principal (a coluna em que o histograma é criado) desde que as últimas estatísticas de tempo foram atualizadas.<br /><br /> Tabelas com otimização de memória: iniciando [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] esta coluna contém: o número total de modificações para a tabela desde as última estatísticas de tempo foram atualizadas ou o banco de dados foi reiniciado.|  
 |persisted_sample_percent|**float**|Persistir a porcentagem de exemplo usada para as atualizações de estatísticas que não especificam explicitamente um percentual de amostragem. Se o valor for zero, nenhuma porcentagem de exemplo persistente é definida para essa estatística.<br /><br /> **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 atualização cumulativa 4|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="Remarks"></a> Comentários  
  **sys.DM db_stats_properties** retorna um conjunto de linhas vazio em qualquer uma das seguintes condições:  
   
--   **object_id** ou **stats_id** é NULL.  
-  
--   O objeto especificado não foi encontrado ou não corresponde a uma tabela ou exibição indexada.  
-  
--   A ID de estatísticas especificada não corresponde às estatísticas existentes para a ID de objeto especificada.  
-  
+-   **object_id** ou **stats_id** é NULL.    
+-   O objeto especificado não foi encontrado ou não corresponde a uma tabela ou exibição indexada.    
+-   A ID de estatísticas especificada não corresponde às estatísticas existentes para a ID de objeto especificada.    
 -   O usuário atual não tem permissões para exibir o objeto de estatísticas.  
   
  Esse comportamento permite o uso seguro de **sys.DM db_stats_properties** quando aplicado a linhas em exibições como **sys. Objects** e **Stats**.  
+ 
+Data de atualização de estatísticas é armazenada no [objeto de estatísticas de blob](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto com o [histograma](../../relational-databases/statistics/statistics.md#histogram) e [vetor de densidade](../../relational-databases/statistics/statistics.md#density), não nos metadados. Quando nenhum dado será lido para gerar dados de estatísticas, o blob de estatísticas não é criado, a data não estiver disponível e o *last_updated* coluna será NULL. Esse é o caso para estatísticas filtradas para que o predicado não retornar linhas, ou para novas tabelas vazias.
   
 ## <a name="permissions"></a>Permissões  
  Requer que o usuário tenha permissões selecionadas em colunas de estatísticas, que ele possua a tabela ou que seja membro da função de servidor fixa `sysadmin`, da função de banco de dados fixa `db_owner` ou da função de banco de dados fixa `db_ddladmin`.  
@@ -83,14 +82,14 @@ sys.dm_db_stats_properties (object_id, stats_id)
 ### <a name="a-simple-example"></a>A. Exemplo simples
 O exemplo a seguir retorna as estatísticas para o `Person.Person` tabela no banco de dados AdventureWorks.
 
-```
+```sql
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
 ``` 
   
 ### <a name="b-returning-all-statistics-properties-for-a-table"></a>B. Retornando todas as propriedades de estatísticas para uma tabela  
  O exemplo a seguir retorna propriedades de todas as estatísticas que existem para a tabela TEST.  
   
-```  
+```sql  
 SELECT sp.stats_id, name, filter_definition, last_updated, rows, rows_sampled, steps, unfiltered_rows, modification_counter   
 FROM sys.stats AS stat   
 CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp  
@@ -100,7 +99,7 @@ WHERE stat.object_id = object_id('TEST');
 ### <a name="c-returning-statistics-properties-for-frequently-modified-objects"></a>C. Retornando propriedades de estatísticas para objetos modificados com frequência  
  O exemplo a seguir retorna todas as tabelas, exibições indexadas e estatísticas do banco de dados atual para o qual a coluna principal foi modificada mais de 1000 vezes desde a última atualização de estatísticas.  
   
-```  
+```sql  
 SELECT obj.name, obj.object_id, stat.name, stat.stats_id, last_updated, modification_counter  
 FROM sys.objects AS obj   
 INNER JOIN sys.stats AS stat ON stat.object_id = obj.object_id  
@@ -108,7 +107,7 @@ CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp
 WHERE modification_counter > 1000;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas ao objeto &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   

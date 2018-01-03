@@ -3,7 +3,7 @@ title: Elemento OnlineIndexOperation (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f1b623107b78bcf9edd3ff101f2faf7831ff3fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd8acd696b9aa2ddfe200adba618d848657df5f7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onlineindexoperation-element-dta"></a>Elemento OnlineIndexOperation (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica se os índices, exibições indexadas ou partições que o orientador de otimização do mecanismo de banco de dados recomenda podem ser criadas online.  
@@ -40,11 +40,11 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, nenhum tamanho máximo.|  
 |**Valores permitidos**|**OFF**<br /> Nenhuma estrutura de design físico recomendada pode ser criada online.<br /><br /> **ON**<br /> Todas as estruturas de design físico recomendadas podem ser criadas online.<br /><br /> **MIXED**<br /> O Orientador de Otimização do Mecanismo de Banco de Dados tenta recomendar estruturas de design físico que podem ser criadas online quando possível.<br /><br /> Use um desses valores com esse elemento. Se os índices são criados online, a palavra-chave **ONLINE = ON** será acrescentada à definição de seus objetos.|  
-|**Valor padrão**|Nenhuma.|  
+|**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Opcional. Se usado, só pode ser utilizado uma vez para o elemento **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -52,12 +52,12 @@ ms.lasthandoff: 12/05/2017
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhuma.|  
+|**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Exemplo de arquivos de entrada XML simples &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

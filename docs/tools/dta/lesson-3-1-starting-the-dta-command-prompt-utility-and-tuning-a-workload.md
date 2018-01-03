@@ -3,7 +3,7 @@ title: "Iniciando o utilitário de Prompt de comando dta e ajustando uma carga d
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 615ce013af8c88bc748f1fc150e47fea182e7a06
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 70cb8fd744c0f169d151d076606740ad53fa404e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lição 3-1-Iniciando o utilitário de Prompt de comando dta e ajustando uma carga de trabalho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Essa tarefa orienta você na inicialização do **dta** utilitário, exibindo a Ajuda e, em seguida, usá-lo para ajustar uma carga de trabalho no prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md)da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados.  
@@ -70,7 +70,7 @@ Depois de você terminar as lições deste tutorial, recorra aos tópicos a segu
   
 Para retornar ao início do tutorial, consulte [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Mecanismo de Banco de Dados](../../relational-databases/database-engine-tutorials.md)  
   
   

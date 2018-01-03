@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8099f3a7e05a2cce9acc6186c4311ab0f3fc061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +185,7 @@ Execute a character string
   
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
@@ -282,7 +282,7 @@ Execute a character string
  '*nome*'  
  É um usuário ou nome de logon válido. *nome* deve ser um membro da função de servidor fixa sysadmin ou existir como uma entidade no [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivamente.  
   
- *nome* não pode ser uma conta interna, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT authority\localsystem..  
+ *nome* não pode ser uma conta interna, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT authority\localsystem.  
   
  Para obter mais informações, consulte [especificando um nome de logon ou usuário](#_user) mais adiante neste tópico.  
   
@@ -329,7 +329,7 @@ Execute a character string
   
  O conjunto de resultados real retornado durante execução pode diferir do resultado definido usando a cláusula WITH RESULT SETS de uma das seguintes maneiras: número de conjuntos de resultados, número de colunas, nome de coluna, nulidade e tipo de dados. Se o número de conjuntos de resultados for diferente, ocorrerá um erro e o lote será anulado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os parâmetros podem ser fornecidos usando *valor* ou usando*parameter_name*=*valor.* . Um parâmetro não faz parte de uma transação; portanto, se um parâmetro for alterado em uma transação que for posteriormente revertida, o parâmetro não será revertido para seu valor anterior. O valor retornado ao chamador será sempre o valor no momento do retorno do módulo.  
   
  O aninhamento ocorre quando um módulo chama outro ou executa código gerenciado, fazendo referência a um módulo CLR (Common Language Runtime) a um tipo definido pelo usuário ou agregação. O nível de aninhamento é aumentado quando o módulo chamado ou a referência de código gerenciado inicia a execução e diminuído quando ela termina. Exceder o máximo de 32 níveis de aninhamento faz com que toda a cadeia de chamada falhe. O nível de aninhamento atual é armazenado no @@NESTLEVEL função do sistema.  
@@ -356,7 +356,7 @@ Execute a character string
   
  As alterações no contexto de banco de dados duram apenas até o fim da instrução EXECUTE. Por exemplo, depois que `EXEC` na instrução seguinte é executado, o contexto de banco de dados se torna o mestre.  
   
-```tsql  
+```sql  
 USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
@@ -467,7 +467,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
 ### <a name="e-using-execute-with-a-stored-procedure-variable"></a>E. Usando EXECUTE com uma variável de procedimento armazenado  
  O exemplo seguinte cria uma variável que representa um nome de procedimento armazenado.  
   
-```tsql  
+```sql  
 DECLARE @proc_name varchar(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  
@@ -726,7 +726,7 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   

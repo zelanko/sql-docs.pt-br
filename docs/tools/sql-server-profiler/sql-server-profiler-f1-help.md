@@ -3,7 +3,7 @@ title: "Caixas de diálogo do SQL Server Profiler | Microsoft Docs"
 ms.custom: 
 ms.date: 07/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -48,11 +48,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e27d4133d4115d3313dcb7b9f0e9e834b60645d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 927d9d4f805932f4d95e898649e2cac60547d99c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Caixas de diálogo do SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventos de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. Estes são os comandos e configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -115,7 +115,7 @@ Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Model
 |Filtros|Especifique os filtros clicando no cabeçalho da coluna de dados e digitando os critérios de filtro. As colunas de dados filtrados são indicadas por um ícone de filtro à esquerda do rótulo da coluna na caixa de diálogo **Editar Filtro** .  
 |**Mostrar todos os eventos**|Mostra todos os eventos disponíveis. Essa opção será selecionada por padrão se você estiver criando um novo modelo que não seja baseado em um modelo existente. Desmarque para ocultar todos os eventos não selecionados na grade **Seleção de Eventos** .  
 |**Mostrar todas as colunas**|Mostra todas as colunas de dados disponíveis. Essa opção será selecionada por padrão se você estiver criando um novo modelo que não seja baseado em um modelo existente. Desmarque para ocultar todas as colunas de dados não selecionadas na guia **Seleção de Eventos** .  
-|**Filtros de coluna**|Inicia a caixa de diálogo **Editar Filtro** , que exibe um ícone de filtro à esquerda do rótulo da coluna de dados. Use a caixa de diálogo **Editar Filtro** para editar filtros de coluna de dados.  
+|**Filtros de coluna**|Inicia a caixa de diálogo **Editar Filtro**, que exibe um ícone de filtro à esquerda do rótulo da coluna de dados. Use a caixa de diálogo **Editar Filtro** para editar filtros de coluna de dados.  
 |**Organizar Colunas**|Altera a ordem das colunas no rastreamento e agrupa os resultados em uma ou mais colunas. 
 ## <a name="trace-file-properties"></a>Propriedades do arquivo de rastreamento 
 ### <a name="general-tab"></a>Guia Geral
@@ -153,7 +153,7 @@ Para visualizar esta janela, use o [!INCLUDE[ssSqlProfiler](../../includes/sssql
 |Filtros|Especifique os filtros clicando no cabeçalho da coluna de dados e digitando os critérios de filtro. As colunas de dados filtrados são indicadas por um ícone de filtro à esquerda do rótulo da coluna na caixa de diálogo **Editar Filtro** .  
 |**Mostrar todos os eventos**|Mostra todos os eventos disponíveis. Por padrão, somente as linhas selecionadas na grade **Seleção de Eventos** são exibidas. Desmarque essa caixa para ocultar todos os eventos não selecionados na grade **Seleção de Eventos** . Se a opção **Mostrar todos os eventos** estiver marcada e você estiver visualizando uma tabela ou arquivo de rastreamento, todos os eventos que foram gravados no rastreamento serão exibidos na janela de rastreamento.  
 |**Mostrar todas as colunas**|Mostra todas as colunas de dados disponíveis. Por padrão, somente colunas de dados selecionadas são exibidas. Desmarque essa caixa para ocultar todas as colunas de dados não selecionadas na grade **Seleção de Eventos** .  
-|**Filtros de coluna**|Inicia a caixa de diálogo **Editar Filtro** , que exibe um ícone de filtro à esquerda do rótulo da coluna. Você pode usar essa caixa de diálogo para editar filtros de coluna de dados.  
+|**Filtros de coluna**|Inicia a caixa de diálogo **Editar Filtro**, que exibe um ícone de filtro à esquerda do rótulo da coluna. Você pode usar essa caixa de diálogo para editar filtros de coluna de dados.  
 |**Organizar Colunas** |Depois de selecionar **Eventos** e colunas de dados a serem rastreados, clique em **Organizar Colunas** para forçar a grade a reclassificar a coluna na janela de resultados do rastreamento.  
 ## <a name="performance-counters-limit"></a>Limite de contadores de desempenho
 Use a caixa de diálogo Limite de Contadores de Desempenho para limitar as informações de um arquivo de log de desempenho do Monitor do Sistema ao correlacioná-lo com um rastreamento do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Você pode usar essa caixa de diálogo para selecionar os contadores que devem ser exibidos e usados para a correlação.  
@@ -198,7 +198,7 @@ O Microsoft SQL Server Profiler e o Orientador de Otimização usam essa caixa d
 |Item|Description
 |---|---
 |**SQL Server**|Especifica a instância do SQL Server conectada atualmente. Esse campo é populado automaticamente e não pode ser atualizado.  
-|**Banco de dados**|Especifique o banco de dados onde está localizada a tabela de rastreamento.  
+|**Backup de banco de dados**|Especifique o banco de dados onde está localizada a tabela de rastreamento.  
 |**Proprietário**|Specifies the owner of the trace table. Este campo é populado automaticamente como **dbo**.  
 |**Table**|Especifique o nome da tabela de rastreamento a partir da qual deve ser lido o rastreamento.  
 ## <a name="destination-table"></a>Tabela de destino
@@ -206,7 +206,7 @@ Use a caixa de diálogo **Tabela de Destino** para especificar uma tabela em que
 |Item|Description
 |---|---
 |**SQL Server**|Especifica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectada atualmente. Esse campo é populado automaticamente e não pode ser atualizado. Para alterar o servidor, clique em **Cancelar** e se conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que você deseja armazenar a tabela de rastreamento.  
-|**Banco de dados**|Especifica o banco de dados em que você quer armazenar a tabela de rastreamento.  
+|**Backup de banco de dados**|Especifica o banco de dados em que você quer armazenar a tabela de rastreamento.  
 |**Proprietário**|Specifies the owner of the trace table. Este campo é populado automaticamente como **dbo**.  
 |**Table**|Especifica o nome da tabela em que você quer armazenar o rastreamento.  
 ## <a name="replay-configuration"></a>Configuração de repetição
@@ -221,7 +221,7 @@ Para exibir essa janela, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprof
 |**Salvar na tabela**|Salva os resultados da repetição em uma tabela. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe a caixa de diálogo de seleção da tabela, permitindo que se especifique o local para salvar a tabela.  
 |**Número de threads de repetição**|Especifica o número de threads de repetição a usar simultaneamente. Um número maior consome mais recursos durante a repetição, porém esta será mais rápida e simultânea.  
 |**Repetir eventos na ordem em que foram rastreados**|Repete os eventos sequencialmente. Use esta opção se você estiver repetindo um rastreamento para depuração.  
-|**Repetir eventos usando vários threads** |Repete os eventos simultaneamente. Essa opção é mais rápida que repetir eventos sequencialmente, mas desabilita a depuração. Os eventos são ordenados dentro de seus identificadores de processo de sistema (SPID).  
+|**Reproduzir eventos usando vários threads** |Repete os eventos simultaneamente. Essa opção é mais rápida que repetir eventos sequencialmente, mas desabilita a depuração. Os eventos são ordenados dentro de seus identificadores de processo de sistema (SPID).  
 |**Exibir resultados da repetição**|Exibe os resultados da repetição no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. 
 ### <a name="advanced-replay-options"></a>Opções de repetição avançadas
 Na caixa de diálogo **Configuração de Reprodução** , use a guia **Opções de Reprodução Avançadas** para especificar como reproduzir um arquivo de rastreamento.  
