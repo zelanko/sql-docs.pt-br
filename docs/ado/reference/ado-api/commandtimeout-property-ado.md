@@ -3,7 +3,7 @@ title: Propriedade CommandTimeout (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 908ca954d2165b92287fe6ae3c2cba5eb927a0fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 64a989729fa084210cc780d9fb88a0830ddfddb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandtimeout-property-ado"></a>Propriedade CommandTimeout (ADO)
 Indica por quanto tempo de espera durante a execução de um comando antes de encerrar a tentativa e gerar um erro.  
@@ -32,7 +32,7 @@ Indica por quanto tempo de espera durante a execução de um comando antes de en
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **longo** valor que indica, em segundos, o tempo de espera para um comando seja executado. O padrão é 30.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **CommandTimeout** propriedade em uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto ou [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto para permitir que o cancelamento de uma [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método Chame, devido a atrasos de rede de tráfego ou pesada de uso do servidor. Se o intervalo definido no **CommandTimeout** propriedade decorrido antes que o comando conclui a execução, ocorrerá um erro e ADO cancela o comando. Se você definir a propriedade como zero, o ADO aguardará indefinidamente até que a execução seja concluída. Verifique se o provedor e fonte de dados ao qual você está escrevendo o suporte a código de **CommandTimeout** funcionalidade.  
   
  O **CommandTimeout** definição em um **Conexão** objeto não tem nenhum efeito **CommandTimeout** definição em um **comando** do objeto no mesmo **Conexão**; ou seja, o **comando** do objeto **CommandTimeout** propriedade não herda o valor da **Conexão** do objeto **CommandTimeout** valor.  
@@ -45,7 +45,7 @@ Indica por quanto tempo de espera durante a execução de um comando antes de en
 |-|-|  
 |[Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   

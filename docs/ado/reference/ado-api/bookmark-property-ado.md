@@ -3,7 +3,7 @@ title: Marcador de propriedade (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b1446203cf866562026219059f7520042b3b25b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 498f1db6216d949663dba9bd22e8066534241605
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmark-property-ado"></a>Propriedade Bookmark (ADO)
 Indica um marcador que identifica exclusivamente o registro atual em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto ou define o registro atual em um **Recordset** objeto para o registro identificado por um indicador válido.  
@@ -32,7 +32,7 @@ Indica um marcador que identifica exclusivamente o registro atual em um [registr
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **Variant** expressão que avalia um indicador válido.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **indicador** propriedade para salvar a posição do registro atual e retornar a esse registro a qualquer momento. Indicadores estão disponíveis apenas em **registros** objetos que dão suporte à funcionalidade de indicador.  
   
  Quando você abre um **registros** do objeto, cada um dos seus registros possui um indicador exclusivo. Para salvar o indicador para o registro atual, atribuir o valor de **indicador** propriedade a uma variável. Para retornar rapidamente a esse registro a qualquer momento depois de mover para um registro diferente, defina o **registros** do objeto **indicador** propriedade para o valor da variável.  
@@ -47,7 +47,7 @@ Indica um marcador que identifica exclusivamente o registro atual em um [registr
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades do indicador (VB), BOF e EOF](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [Exemplo de propriedades do indicador (VC + +), BOF e EOF](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
  [Método Supports](../../../ado/reference/ado-api/supports-method.md)

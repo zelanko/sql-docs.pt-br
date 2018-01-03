@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38a85c28afb7a93c15b031799b47b07f592350c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9060efc7289f0bf8fd17ad52cd97f45abefc4bfc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -210,7 +210,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="bkmk_AccessInMemTables"></a> Acessando tabelas com otimização de memória em uma réplica secundária  
  Os níveis de isolamento de transação que podem ser usados com tabelas com otimização de memória em uma réplica secundária são os mesmos que na réplica primária. A recomendação é definir o nível de isolamento no nível de sessão como READ COMMITTED e definir a opção no nível de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT como ON. Por exemplo:  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
@@ -237,12 +237,12 @@ GO
   
     |Réplica secundária legível?|O isolamento do instantâneo ou nível RCSI está habilitado?|Banco de dados primário|Banco de dados secundário|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |Não|Não|Nenhuma versão de linha ou sobrecarga de 14 bytes|Nenhuma versão de linha ou sobrecarga de 14 bytes|  
-    |Não|Sim|Versões de linha e sobrecarga de 14 bytes|Nenhuma versão de linha, mas sobrecarga de 14 bytes|  
-    |Sim|Não|Nenhuma versão de linha, mas sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
+    |não|não|Nenhuma versão de linha ou sobrecarga de 14 bytes|Nenhuma versão de linha ou sobrecarga de 14 bytes|  
+    |não|Sim|Versões de linha e sobrecarga de 14 bytes|Nenhuma versão de linha, mas sobrecarga de 14 bytes|  
+    |Sim|não|Nenhuma versão de linha, mas sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
     |Sim|Sim|Versões de linha e sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
   
-##  <a name="bkmk_RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="bkmk_RelatedTasks"></a> Tarefas Relacionadas  
   
 -   [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -260,7 +260,7 @@ GO
   
 -   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   

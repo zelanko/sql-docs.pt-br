@@ -3,7 +3,7 @@ title: "Propriedades da etapa de trabalho – Nova etapa de trabalho (página Ge
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fb87fbdb20c9872d502543f125911eb638cfc8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13f3553e80052f9264f70d0018d8d1157aaacb14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriedades da etapa de trabalho – Nova etapa de trabalho (página Geral)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ou para definir uma nova etapa de trabalho.  
@@ -39,7 +39,7 @@ Defina o subsistema usado pela etapa de trabalho. Dependendo do subsistema que v
 **Executar como**  
 Defina a conta proxy para a etapa de trabalho. Membros da função de servidor fixa sysadmin também podem especificar a **Conta de Serviço do SQL Agent**.  
   
-**Banco de dados**  
+**Backup de banco de dados**  
 Defina o banco de dados no qual a etapa de trabalho é executada. Esta opção não está disponível para todos os tipos de etapas de trabalho.  
   
 **Comando**  
@@ -137,7 +137,7 @@ Copie o texto selecionado.
 Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>Opções para etapas de trabalho do Replication Queue Reader  
-**Banco de dados**  
+**Backup de banco de dados**  
 O banco de dados a ser usado para a etapa de trabalho.  
   
 **Selecionar Tudo**  
@@ -278,7 +278,7 @@ Esta guia exibe as fontes de dados especificadas no pacote.
 **Gerenciador de Conexões**  
 Exibe o nome da fonte de dados.  
   
-**Description**  
+**Descrição**  
 Exiba a descrição da fonte de dados.  
   
 **Cadeia de Conexão**  
@@ -371,7 +371,7 @@ Especifique opções na janela de linha de comando.
 **Linha de comando**  
 Digite as opções de linha de comando a usar para o pacote.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciar etapas de trabalho](../../ssms/agent/manage-job-steps.md)  
 [Trabalhos do SQL Server Agent para pacotes](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
 [Administrando agentes de replicação](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  

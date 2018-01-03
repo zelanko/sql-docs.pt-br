@@ -3,7 +3,7 @@ title: Usar a caixa de ferramentas | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f8899fed233516fce93277a48f2ceb652212ff8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a33bf533868113e2fda6b550a36ac9e9969a96b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-toolbox"></a>Usar a Caixa de Ferramentas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode selecionar e arrastar itens, texto e controles da Caixa de Ferramentas sobre formulários, páginas e designers, e arrastar itens dessas fontes para a Caixa de Ferramentas para uso posterior. Por exemplo, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] você pode arrastar uma tarefa para um Plano de Manutenção.  
@@ -48,6 +48,6 @@ Os itens da Caixa de Ferramentas são agrupados em seções denominadas guias. A
 |Alterar a posição de um item em uma guia expandida da Caixa de Ferramentas|Arraste o item até o local novo e libere o botão do mouse.|  
 |Renomear um item da Caixa de Ferramentas|Clique com o botão direito do mouse no item e clique em **Renomear Item** no menu de atalho.|  
   
-## <a name="see-also"></a>Consulte também  
-[Elementos gerais da interface de usuário](../ssms/general-user-interface-elements.md)  
+## <a name="see-also"></a>Consulte Também  
+[Elementos gerais da interface do usuário](../ssms/general-user-interface-elements.md)  
   

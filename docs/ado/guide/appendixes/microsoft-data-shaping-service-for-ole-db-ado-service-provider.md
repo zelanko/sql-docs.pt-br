@@ -3,7 +3,7 @@ title: "Microsoft Data Shaping Service para OLE DB (provedor de serviços de ADO
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 624bc851727e9d929c4d83721ac64352669cf643
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 336d8754c31626d11dedf8c0023b9a803d0c2419
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping Service para visão geral do OLE DB
 > [!IMPORTANT]
@@ -66,5 +66,5 @@ cn.Properties("Data Provider") = "MSDASQL"
 
  Para obter mais informações sobre formatação de dados, consulte [modelagem de dados](../../../ado/guide/data/data-shaping-overview.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Apêndice A: Provedores](../../../ado/guide/appendixes/appendix-a-providers.md)

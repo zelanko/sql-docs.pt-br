@@ -3,7 +3,7 @@ title: Propriedade AbsolutePage (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e75be5da366dbda463a05c920192626446c17238
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 332064ee95d1d5b868d0aa7accad02b4966b4a7d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolutepage-property-ado"></a>Propriedade AbsolutePage (ADO)
 Indica em qual página reside o registro atual.  
@@ -34,7 +34,7 @@ Indica em qual página reside o registro atual.
   
  Para o código de 64 bits, use um tipo de dados que fornece armazenamento de um valor de 64 bits. Por exemplo, você pode usar o **longo** ou outro valor que pode ser o comprimento de 64 bits como DBORDINAL. Não use **PositionEnum** valores porque eles estão limitados a 32 bits de comprimento.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Essa propriedade pode ser usada para identificar o número da página em que o registro atual está localizado. Ele usa o [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propriedade logicamente dividir a contagem total de linhas do **registros** objeto em uma série de páginas, cada qual com o número de registros iguais a **PageSize** (exceto a última página, que pode ter menos registros). O provedor deve oferecer suporte a funcionalidade apropriada para essa propriedade disponível.  
   
 -   Ao obter ou definir o **AbsolutePage** propriedade, o ADO usa o [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propriedade e o [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propriedade juntos da seguinte maneira:  
@@ -48,7 +48,7 @@ Indica em qual página reside o registro atual.
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de PageSize (VB), PageCount e AbsolutePage](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
  [AbsolutePage, PageCount e exemplo de propriedades de PageSize (VC + +)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [Propriedade AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   

@@ -3,7 +3,7 @@ title: Painel de detalhes do Pesquisador de Objetos | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523ea1b976fc5769cd400e9bbe32f380956421df
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6bf7fdbd0c791ae6302774116769b91fcd4a6ee3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Detalhes do Pesquisador de Objetos, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], fornece uma exibição tabular de todos os objetos no servidor e apresenta uma interface do usuário para gerenciá-los. Os recursos do Pesquisador de Objetos variam ligeiramente, dependendo do tipo de servidor, mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento para todos os tipos de servidor.  
@@ -50,7 +50,7 @@ Detalhes do Pesquisador de Objetos inclui uma barra de ferramentas que contém o
 |**Avançar**|Move para a próxima tela depois que uma operação **Voltar** é selecionada.|  
 |**Para cima**|Move para o objeto ou a pasta pai.|  
 |**Sincronizar**|Define o foco de Pesquisador de Objetos para o objeto selecionado em Detalhes do Pesquisador de Objetos.|  
-|**Filtro**|Quando disponível, mostra um subconjunto configurável de objetos.|  
+|**Filter**|Quando disponível, mostra um subconjunto configurável de objetos.|  
 |**Atualizar**|Atualiza a exibição em Detalhes do Pesquisador de Objetos.|  
 |**Pesquisa**|Fornece uma área para inserir um termo de pesquisa para objetos de banco de dados específicos.|  
   
@@ -103,6 +103,6 @@ Conjuntos grandes
   
 -   A pesquisa de conjuntos de objetos grandes pode levar muito tempo e reduzir o desempenho do servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Pesquisador de Objetos](../../ssms/object/object-explorer.md)  
   

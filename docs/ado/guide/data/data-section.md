@@ -3,7 +3,7 @@ title: "Seção de dados | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fae3df37c9a83bdf97a7ae2a53bc76777b318546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 486c936681adca59a90dae6a5e304be6f8b4dba5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-section"></a>Seção de dados
 A seção de dados define os dados do conjunto de linhas juntamente com quaisquer atualizações, inserções ou exclusões pendentes. A seção de dados pode conter zero ou mais linhas. Ele só pode conter dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, colunas sem dados podem ser omitidas. Se um atributo ou subelemento é usado na seção de dados e essa construção não foi definida na seção de esquema, ele será ignorado silenciosamente.  
@@ -89,5 +89,5 @@ A seção de dados define os dados do conjunto de linhas juntamente com quaisque
   
  Uma atualização sempre contém os dados da linha original inteiro seguidos dos dados de linha alterada. A linha alterada pode conter todas as colunas ou apenas as colunas que realmente foram alterados. No exemplo anterior, a linha da transportadora 2 não é alterada, e somente a coluna de telefone foi alterado valores para 3 da transportadora e, portanto, é a única coluna incluída na linha alterada. As linhas inseridas para transportadoras 12, 13 e 14 são em lote juntos marca de rs: inserir em uma. Observe que as linhas excluídas podem também ser agrupadas, embora isso não é mostrado no exemplo anterior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

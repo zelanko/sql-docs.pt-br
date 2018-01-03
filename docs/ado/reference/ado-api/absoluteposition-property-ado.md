@@ -3,7 +3,7 @@ title: Propriedade AbsolutePosition (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 491ed39340dd066955db2fd73ed986614744cff4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17fe4e32b8a54d51ac3009e06e74e77e74321171
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absoluteposition-property-ado"></a>Propriedade AbsolutePosition (ADO)
 Indica a posição ordinal de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) registro atual do objeto.  
@@ -34,7 +34,7 @@ Indica a posição ordinal de um [registros](../../../ado/reference/ado-api/reco
   
  Para o código de 64 bits, use um tipo de dados que fornece armazenamento de um valor de 64 bits. Por exemplo, você pode usar longa ou outro valor que é o comprimento de 64 bits como DBORDINAL. Não use **PositionEnum** valores como eles estão limitados a 32 bits de comprimento.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para definir o **AbsolutePosition** propriedade, o ADO requer que implementa o provedor OLE DB que você estiver usando o [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) interface.  
   
  Acessando o **AbsolutePosition** propriedade de um **registros** que foi aberto com um um somente de encaminhamento ou cursor dinâmico gera o erro **adErrFeatureNotAvailable**. Com outros tipos de cursor, a posição correta será retornada como o provedor OLE DB oferece suporte a **IRowsetScroll:IRowsetLocate** interface. Se o provedor não oferece suporte a **IRowsetScroll** interface, a propriedade é definida como **adPosUnknown**. Consulte a documentação do provedor determinar se ele dá suporte a **IRowsetScroll**.  
@@ -51,7 +51,7 @@ Indica a posição ordinal de um [registros](../../../ado/reference/ado-api/reco
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de CursorLocation (VB) e AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
  [Exemplo de propriedades de CursorLocation (VC + +) e AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [Propriedade AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   

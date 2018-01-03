@@ -3,7 +3,7 @@ title: "Item de propriedade (conjunto de células do ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34b0d4a5f2104d625091a0b39f1b009b933bedbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36b85e56dbe958739b55f9446c368d01d8b436f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="item-property-ado-md-cellset"></a>Propriedade item (conjunto de células do ADO MD)
 Recupera uma célula de uma [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) usando suas coordenadas.  
@@ -49,7 +49,7 @@ Cell = Cellset.Item ( Positions)
   
 -   A posição ordinal  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **Item** propriedade para retornar um [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) objeto dentro de um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto. Se o **Item** propriedade não é possível localizar a célula correspondente a *posições* argumento, um erro ocorre.  
   
  O **Item** é a propriedade padrão para o **conjunto de células** objeto. Formas de sintaxe a seguir são intercambiáveis:  
@@ -59,7 +59,7 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *posições* argumento especifica qual célula para retornar. Você pode especificar a célula pela posição ordinal ou pela posição de cada eixo. Ao especificar a célula por posição em cada eixo, você pode especificar o valor numérico da posição ou os nomes dos membros para cada posição.  
   
  A posição ordinal é um número que identifica exclusivamente uma célula dentro de **conjunto de células**. Conceitualmente, as células são numeradas em um **conjunto de células** como se o **conjunto de células** foram um *p*-matriz dimensional, onde *p* é o número de eixos. As células são tratadas em ordem linha-principal. Abaixo está a fórmula para calcular o número ordinal de uma célula:  
@@ -72,6 +72,6 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto de célula (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

@@ -3,7 +3,7 @@ title: "Método CopyRecord (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9459d144016deaaec593a8edd92bf5b518a8962b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50749d088c57754ef9b667b114da8fb4f475ad19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
 Copia uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
@@ -60,7 +60,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="return-value"></a>Valor de retorno  
  Um **cadeia de caracteres** valor que geralmente retorna o valor de *destino*. No entanto, o valor exato retornado depende do provedor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os valores de *fonte* e *destino* não deve ser idêntico; caso contrário, ocorre um erro de tempo de execução. Pelo menos um dos nomes de servidor, caminho ou recurso deve ser diferente.  
   
  Todos os filhos (por exemplo, subdiretórios) de *fonte* são copiado repetidamente, a menos que **adCopyNonRecursive** for especificado. Em uma operação recursiva, *destino* não deve ser um subdiretório do *fonte*; caso contrário, a operação não será concluída.  

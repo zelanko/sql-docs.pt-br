@@ -3,7 +3,7 @@ title: FilterGroupEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 080b0149fcfe0df39e1efbe44a87fe6243424468
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d3b80757a0836fd11757c9e80c2b1650b0cb983f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Especifica o grupo de registros a ser filtrada de uma [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

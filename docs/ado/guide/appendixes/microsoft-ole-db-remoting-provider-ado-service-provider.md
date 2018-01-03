@@ -3,7 +3,7 @@ title: "Comunicação remota do Microsoft OLE DB Provider (provedor de serviços
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbc0d0060a58d1e73fe2df94c598a1fa054abd15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Visão geral do provedor Microsoft OLE DB remotamente
 O Microsoft OLE DB provedor remoto permite que um usuário local em um computador cliente invocar os provedores de dados em um computador remoto. Especifique os parâmetros de provedor de dados para o computador remoto como se fosse um usuário local no computador remoto. Em seguida, especifique os parâmetros usados pelo provedor de comunicação remota para acessar o computador remoto. Em seguida, você pode acessar o computador remoto como se fosse um usuário local.
@@ -75,7 +75,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
  No ADO 2.0, o provedor OLE DB comunicação remota pode ser especificado somente no *ActiveConnection* parâmetro do [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto **abrir** método. Começando com o ADO 2.1, o provedor também pode ser especificado no *ConnectionString* parâmetro do [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto **abrir** método.
 
  O equivalente a **RDS. DataControl** objeto [SQL](../../../ado/reference/rds-api/sql-property.md) propriedade não está disponível. O [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto **abrir** método *fonte* argumento é usado em vez disso.
@@ -96,5 +96,5 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Visão geral do provedor OLE DB remotamente](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)

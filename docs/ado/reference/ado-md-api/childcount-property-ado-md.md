@@ -3,7 +3,7 @@ title: Propriedade ChildCount (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5976605c9bfb96a7dc53895eaa4cbc511fb321a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 83637d5fd74dd034ae33c4f2ae1a4e6dfaeca43d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="childcount-property-ado-md"></a>Propriedade ChildCount (ADO MD)
 Indica o número de membros para os quais o atual [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objeto é o pai em uma hierarquia.  
@@ -34,7 +34,7 @@ Indica o número de membros para os quais o atual [membro](../../../ado/referenc
 ## <a name="return-values"></a>Valores de retorno  
  Retorna um **longo** inteiro e é somente leitura.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **ChildCount** propriedade para retornar uma estimativa de quantos filhos um **membro** tem. Os filhos reais de um **membro** pode ser retornado pelo [filhos](../../../ado/reference/ado-md-api/children-property-ado-md.md) propriedade.  
   
  Para **membro** objetos de um [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) do objeto, o número máximo retornado é 65536. Se o número real de filhos excede 65536, o valor retornado será ainda 65536. Portanto, o aplicativo deve interpretar um **ChildCount** de 65536 como igual ou maior que 65536 filhos.  
@@ -44,7 +44,7 @@ Indica o número de membros para os quais o atual [membro](../../../ado/referenc
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade Children (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Propriedade Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Coleção Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

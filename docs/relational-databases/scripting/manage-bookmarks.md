@@ -3,9 +3,9 @@ title: Gerenciar indicadores | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4dc1a1474d70e686fb08e6c6df79c40cb9d3488
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-bookmarks"></a>Gerenciar indicadores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Enquanto você está trabalhando em um editor de códigos, a janela **Indicadores** permite criar links com linhas de código específicas dentro de seu documento. Você pode exibir essa janela no menu **Exibir** .  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
  **Delete (excluir)**  
  Remove o indicador atualmente selecionado na janela **Indicadores** e do documento em que está o indicador. Não remove a linha de código que continha o indicador.  
   
- **Rename**  
+ **Renomear**  
  Permite atribuir um novo nome para exibição para um indicador ou uma pasta.  
   
  **Desabilitar/Habilitar Indicador**  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
  **Desabilitar/Habilitar Todos os Indicadores**  
  Desmarca ou habilita as caixas de seleção para todos os indicadores na janela **Indicadores** . Não remove indicadores ou altera as linhas de código que eles marcam.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atalhos de teclado do SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

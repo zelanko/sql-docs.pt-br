@@ -3,7 +3,7 @@ title: Provedor Microsoft OLE DB para o Microsoft Active Directory Service | Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a31421c2947f376b152826c87d2d01d1e0863da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provedor Microsoft OLE DB para o serviço do Microsoft Active Directory
 O provedor do Active Directory Service Interfaces (ADSI) permite que o ADO conectar-se aos serviços de diretório heterogêneos por meio de ADSI. Isso fornece aplicativos ADO acesso somente leitura para os serviços de diretório do Microsoft Windows NT 4.0 e o Microsoft Windows 2000, além de qualquer serviço de diretório compatível com LDAP e serviços de diretório Novell. ADSI é baseado em um modelo de provedor, para que se houver um novo provedor fornecendo acesse outro diretório, o aplicativo ADO poderão acessá-lo diretamente. O provedor ADSI é free-thread e Unicode habilitado.  
@@ -85,7 +85,7 @@ ADSDSOObject
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O provedor não aceita chamadas de procedimento armazenado ou nomes de tabela simples (por exemplo, o [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propriedade sempre será **adCmdText**). Consulte a documentação de Interfaces de serviço do Active Directory para obter uma descrição mais completa dos elementos de texto de comando.  
   
 ## <a name="recordset-behavior"></a>Comportamento do conjunto de registros  
@@ -122,13 +122,13 @@ objectClass='user' AND objectCategory='Person'"
   
 |Método|Está disponível?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Não|  
-|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Não|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Não|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Não|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|não|  
+|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|não|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|não|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|não|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sim|  
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|  
-|[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Não|  
+|[Delete (excluir) (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|não|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|  
 |[Migrar](../../../ado/reference/ado-api/move-method-ado.md)|Sim|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|  
@@ -140,12 +140,12 @@ objectClass='user' AND objectCategory='Person'"
 |[Repetir](../../../ado/reference/ado-api/requery-method.md)|Sim|  
 |[Ressincronização](../../../ado/reference/ado-api/resync-method.md)|Sim|  
 |[Dá suporte a](../../../ado/reference/ado-api/supports-method.md)|Sim|  
-|[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|Não|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Não|  
+|[Update (atualizar)](../../../ado/reference/ado-api/update-method.md)|não|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|não|  
   
  Para obter mais informações sobre o ADSI e as particularidades do provedor, consulte a documentação de Interfaces de serviço do Active Directory ou visite a página da Web do ADSI.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [Propriedade ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

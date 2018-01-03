@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73a3dde55206c32b43c43423189ebf764dcb38bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ed2a0f68f32069504f2e6e8147fd1a3f316898e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-package-objects"></a>Copiar objetos de pacote
   Este tópico descreve como copiar os itens de fluxo de controle, itens de fluxo de dados e gerenciadores de conexões dentro de um pacote ou entre pacotes.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  Clique com o botão direito do mouse na área **Gerenciadores de Conexões** e clique em **Colar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Controle](../integration-services/control-flow/control-flow.md)   
  [Fluxo de Dados](../integration-services/data-flow/data-flow.md)   
  [Conexões do SSIS &#40;Integration Services&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md)   

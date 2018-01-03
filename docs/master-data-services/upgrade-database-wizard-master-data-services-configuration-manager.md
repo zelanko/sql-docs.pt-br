@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f37057354b9b4565b4c455f14b46abb846c23a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 939ba7535afa7c877a151e348d8d0903e1572f25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Atualizar Assistente para Banco de Dados (Gerenciador de Configuração do Master Data Services)
   Use o **Assistente para Atualizar Banco de Dados** para atualizar um banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="progress-and-finish"></a>Progresso e Conclusão  
  Exibe o progresso do processo de atualização. Depois que o banco de dados for atualizado, clique no link do arquivo de log para exibir informações detalhadas sobre a atualização ou clique em **Concluir** para fechar o assistente de banco de dados e voltar à página **Bancos de Dados** . O banco de dados de atualização é selecionado e você pode exibir e modificar as configurações do sistema.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Página Configuração do Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Instalação e configuração do Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Atualizar o Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

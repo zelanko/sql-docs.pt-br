@@ -3,7 +3,7 @@ title: "Coleções e objetos ADO | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a6796b6511c81dc2a4f9100f656478bef3711b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b2bd4d1caf6ad0f2b180804407aede35155208e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-objects-and-collections"></a>Coleções e objetos de ADO
 ADO consiste em nove objetos a seguir e quatro coleções.  
@@ -43,5 +43,5 @@ ADO consiste em nove objetos a seguir e quatro coleções.
 |**Parâmetros** coleção|Contém todos os **parâmetro** objetos de um **comando** objeto.|  
 |**Erros** coleção|Contém todos os **erro** objetos criados em resposta a uma única falha de provedor.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modelo do objeto ADO](../../../ado/reference/ado-api/ado-object-model.md)

@@ -3,7 +3,7 @@ title: A propriedade CommandStream (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dacfa25b7ab9967f8c28e38c0df121063b583319
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d1c75a7db62475c8f717e36a93b9bf554c6248d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandstream-property-ado"></a>Propriedade CommandStream (ADO)
 Indica o fluxo usado como entrada para uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
@@ -32,7 +32,7 @@ Indica o fluxo usado como entrada para uma [comando](../../../ado/reference/ado-
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna o fluxo usado como entrada para uma **comando** objeto. O formato para esse fluxo é específica do provedor; Consulte a documentação do provedor para obter detalhes. Esta propriedade é semelhante de [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade usada para especificar uma cadeia de caracteres para a entrada de um **comando**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **CommandStream** e **CommandText** são mutuamente exclusivos. Quando o usuário define o **CommandStream** propriedade, o **CommandText** propriedade será definida como a cadeia de caracteres vazia (""). Se o usuário define o **CommandText** propriedade, o **CommandStream** propriedade será definida como **nada**.  
   
  Os comportamentos do **Command.Parameters.Refresh** e **Command.Prepare** métodos são definidos pelo provedor. Os valores dos parâmetros em um fluxo não podem ser atualizados.  
@@ -44,7 +44,7 @@ Indica o fluxo usado como entrada para uma [comando](../../../ado/reference/ado-
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Propriedade Dialect](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

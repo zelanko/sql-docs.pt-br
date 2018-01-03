@@ -3,7 +3,7 @@ title: "Catálogo de objeto (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9453642b399283477de7caf7ea84ec5e8e19ff6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d39183e7c46dc8cd563e6f409b961d169dfd80da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-object-ado-md"></a>Objeto de catálogo (ADO MD)
 Contém multidimensional informações de esquema (ou seja, cubos e subjacente dimensões, hierarquias, níveis e membros) específicas para um provedor de dados multidimensionais (MDP).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Com as coleções e propriedades de um **catálogo** do objeto, você pode fazer o seguinte:  
   
 -   Abra o catálogo, definindo o [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propriedade a um padrão ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto ou uma cadeia de caracteres de conexão válido.  
@@ -42,7 +42,7 @@ Contém multidimensional informações de esquema (ou seja, cubos e subjacente d
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de catálogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Coleção CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

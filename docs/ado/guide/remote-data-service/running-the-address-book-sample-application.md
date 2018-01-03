@@ -3,7 +3,7 @@ title: "Executando o aplicativo de exemplo do catálogo de endereço | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df6396d83c993c41e59bb2fcb6c1a87734049b07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a09bacb8adeabaefd925e34b613bef3d2dad5097
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-the-address-book-sample-application"></a>Executando o aplicativo de exemplo do catálogo de endereços
 > [!IMPORTANT]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Em seguida, você pode tentar vários cenários em que o aplicativo de exemplo do catálogo de endereços, como procurar por uma pessoa com base no seu nome de email, listando todas as pessoas com o título "Gerente de programas", ou existente de edição de registros. Clique em **localizar** para preencher a grade de dados com todos os nomes disponíveis.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto de associação de dados do catálogo de endereço](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
 
 

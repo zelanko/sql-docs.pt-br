@@ -3,7 +3,7 @@ title: "Método CancelBatch (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5dc5cc6d3047c7dc0804c42c7e8efcc80b64054
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49394c50c0b1265b0948e8d053a201342e44dd2c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancelbatch-method-ado"></a>Método CancelBatch (ADO)
 Cancela uma atualização em lotes pendentes.  
@@ -42,7 +42,7 @@ recordset.CancelBatchAffectRecords
  *AffectRecords*  
  Opcional. Um [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valor que indica quantos registros o **CancelBatch** método afetará.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **CancelBatch** método para cancelar todas as atualizações pendentes em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) no modo de atualização em lotes. Se o **registros** está no modo de atualização imediata, chamando **CancelBatch** sem **adAffectCurrent** gera um erro.  
   
  Se você estiver editando o registro atual ou se estiver adicionando um novo registro, quando você chamar **CancelBatch**, ADO primeiro chama o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método cancelar qualquer armazenado em cache as alterações. Depois disso, todas as alterações pendentes a **registros** são canceladas.  
@@ -54,7 +54,7 @@ recordset.CancelBatchAffectRecords
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de métodos de CancelBatch (VB) e UpdateBatch](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch e exemplo dos métodos CancelBatch (VC + +)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Método Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   

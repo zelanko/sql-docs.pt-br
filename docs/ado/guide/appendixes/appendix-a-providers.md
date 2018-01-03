@@ -3,7 +3,7 @@ title: "Apêndice a: provedores | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cc5846114e328cb717b8b9c6d86891e97b41ddf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc27499ecc4b67a95067002be0d8d3a5c86c76da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Apêndice a: dados e provedores de serviços
 Esta seção aborda os três tipos de provedores: provedores de dados, provedores de serviços e componentes de serviço. Provedores se enquadram em duas categorias: aqueles fornecendo dados e aqueles fornecendo serviços. Um *provedor de dados* possui seus próprios dados e expõe em formato tabular para seu aplicativo. Um *provedor* encapsula um serviço, produzindo e consumo de dados, aumentando os recursos em seus aplicativos do ADO. Um provedor de serviços também pode ser definido posteriormente como um *componente de serviço*, que devem trabalhar junto com outros provedores de serviços ou componentes.
@@ -78,5 +78,5 @@ Esta seção aborda os três tipos de provedores: provedores de dados, provedore
 ## <a name="provider-commands"></a>Comandos de provedor
  Para cada provedor listado aqui, se seus aplicativos permitem aos usuários inserir instruções SQL que os comandos de provedor, você deve sempre validar a entrada do usuário e ser cuidadoso de ataques de hacker possíveis usando instruções SQL potencialmente perigosas, como `DROP TABLE t1`, como parte da entrada do usuário.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Comando de objeto (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [o objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [provedor Microsoft OLE DB para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [provedor Microsoft OLE DB para Microsoft Active Directory Serviço](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [provedor Microsoft OLE DB para Microsoft Indexing Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [provedor Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [provedor Microsoft OLE DB para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Provedor Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [provedor Microsoft OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [a coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [conjunto de registros Objeto (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [(RDS) do método de atualização](../../../ado/reference/rds-api/refresh-method-rds.md)

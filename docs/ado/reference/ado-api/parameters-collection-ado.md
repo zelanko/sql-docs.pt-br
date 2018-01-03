@@ -3,7 +3,7 @@ title: "A coleção de parâmetros (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9544c12738c3c6f3e4d22a62e26c2654c9ac0edb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cceeccbcca886b151dd505881be25687fd26e37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameters-collection-ado"></a>Coleção de parâmetros (ADO)
 Contém todos os [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objetos de um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **comando** objeto tem um **parâmetros** coleção composta de **parâmetro** objetos.  
   
  Usando o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método em um **comando** do objeto **parâmetros** coleção recupera informações de parâmetro de provedor para o procedimento armazenado ou uma consulta parametrizada especificado no **comando** objeto. Alguns provedores dão suporte a chamadas de procedimento armazenado ou consultas parametrizadas; chamando o **atualizar** método o **parâmetros** coleção ao usar esse provedor será retornado um erro.  
@@ -89,7 +89,7 @@ Contém todos os [parâmetro](../../../ado/reference/ado-api/parameter-object.md
   
 -   [Eventos, métodos e propriedades de coleção de parâmetros](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [(ADO) do método append](../../../ado/reference/ado-api/append-method-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)

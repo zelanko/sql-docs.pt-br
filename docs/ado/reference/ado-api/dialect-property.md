@@ -3,7 +3,7 @@ title: Propriedade Dialect | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a57fa4b9acd97cd2bfe96545680e3bd8ffc6f35b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c6159cb20de931a30a668b49a638c5e31f1642e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialect-property"></a>Propriedade Dialect
 Indica o dialeto do [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriedades. O dialeto define a sintaxe e regras gerais que o provedor usa para analisar a cadeia de caracteres ou fluxo.  
@@ -32,7 +32,7 @@ Indica o dialeto do [CommandText](../../../ado/reference/ado-api/commandtext-pro
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  O **dialeto** propriedade contém um GUID válido que representa o dialeto do texto de comando ou fluxo. O valor padrão desta propriedade é {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, que indica que o provedor deve escolher como interpretar o texto de comando ou o fluxo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ADO não consultar o provedor quando o usuário lê o valor dessa propriedade; Retorna uma representação de cadeia de caracteres do valor armazenado atualmente no [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
   
  Quando o usuário define o **dialeto** propriedade ADO valida o GUID e gera um erro se o valor fornecido não é um GUID válido. Consulte a documentação do provedor determinar os valores GUID com suporte a **dialeto** propriedade.  
@@ -40,5 +40,5 @@ Indica o dialeto do [CommandText](../../../ado/reference/ado-api/commandtext-pro
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)

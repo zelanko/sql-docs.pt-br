@@ -3,9 +3,9 @@ title: "Pesquisar texto com expressões regulares | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d9837053135c6c0783d69d9544c84efd35cc5efe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4522ce26253a547b7cf55202f99a4e391f8fdaf3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] As expressões regulares são uma notação concisa e flexível para localização e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
@@ -45,9 +45,9 @@ ms.lasthandoff: 11/17/2017
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|Description|  
 |----------------|------------|-----------------|  
-|Qualquer caractere|.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
+|Qualquer caractere|para obter informações sobre a ferramenta de configuração e recursos adicionais.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
 |Zero ou mais|*|Faz a correspondência de zero ou mais ocorrências da expressão precedente, com todas as correspondentes possíveis.|  
 |Um ou mais|+|Faz a correspondência de pelo menos uma ocorrência da expressão precedente.|  
 |Início de linha|^|Ancora a cadeia de caracteres correspondente ao início de uma linha.|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  A lista de todas as expressões regulares válidas em operações **Localizar e Substituir** é mais longa do que pode ser exibido na **Lista de Referências**. Você também pode inserir qualquer uma das seguintes expressões regulares em uma cadeia de caracteres **Localizar** :  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|Description|  
 |----------------|------------|-----------------|  
 |Mínimo — zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Mínimo - um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
  A tabela a seguir relaciona a sintaxe para correspondência por propriedades de caracteres Unicode padrão. A abreviação de duas letras é igual à relacionada no banco de dados de propriedades de caractere Unicode. Elas podem ser especificadas como parte de um conjunto de caracteres. Por exemplo, a expressão [:Nd:Nl:No] faz a correspondência de qualquer tipo de dígito.  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|Description|  
 |----------------|------------|-----------------|  
 |Letra maiúscula|:Lu|Faz a correspondência de qualquer letra maiúscula. Por exemplo, Luhe faz a correspondência de "The" mas não "the".|  
 |Letra minúscula|:Ll|Faz a correspondência de qualquer letra minúscula. Por exemplo, Llhe faz a correspondência de "the" mas não "The".|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Além das propriedades de caracteres Unicode padrão, as propriedades adicionais a seguir podem ser especificadas como parte de um conjunto de caracteres.  
   
-|Expressão|Sintaxe|Descrição|  
+|Expression|Sintaxe|Description|  
 |----------------|------------|-----------------|  
 |Alfa|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
 |Numérico|:Nu|Faz a correspondência de qualquer número ou dígito.|  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
 |Katakana|:Ka|Faz a correspondência de caracteres de katakana.|  
 |Han/Kanji/Ideográfico|:Id|Faz a correspondência de caracteres ideográficos, como Han e Kanji.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pesquisar e substituir](../../relational-databases/scripting/search-and-replace.md)   
  [Pesquisar texto com curingas](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

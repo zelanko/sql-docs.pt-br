@@ -3,7 +3,7 @@ title: "Códigos de erro de DataControl | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54dcd3721781ccb2889d88c2545d8bb3630cb7bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0886839245fa7a4dc0e2baee0dfaf010ff876e70
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datacontrol-object-error-codes"></a>Códigos de erro do objeto DataControl
 A seguinte tabela lista o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) códigos de erro do objeto. A conversão decimal positiva de dois bytes de baixa, a conversão decimal negativa do código de erro completa e os valores hexadecimais são mostrados.
@@ -52,5 +52,5 @@ A seguinte tabela lista o [RDS. DataControl](../../../ado/reference/rds-api/data
 |**IDS_UpdatesFailed**|4098-2146824190 0x800A1002|Não é possível atualizar o banco de dados.|
 |**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL** propriedade requer que o arquivo de sistema Urlmon.dll, que não pode ser encontrado.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

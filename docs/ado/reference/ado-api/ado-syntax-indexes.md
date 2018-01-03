@@ -3,7 +3,7 @@ title: "Índices de sintaxe de ADO | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7adcbadefe3af5939679b6e6ce8bfe44667f95be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e185dbb815485553a133898a5802ecf5f9d5521c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-syntax-indexes"></a>Índices de sintaxe de ADO
 A sintaxe para chamar propriedades e métodos de ADO difere dependendo do ambiente de desenvolvimento. O restante da referência de linguagem do ADO usa o Microsoft Visual Basic linguagem de programação para ilustrar a sintaxe de método e propriedade ADO. No entanto, consulte as seções a seguir para obter exemplos de sintaxe mais específicos com base em sua linguagem de programação e a metodologia de:  
@@ -32,7 +32,7 @@ A sintaxe para chamar propriedades e métodos de ADO difere dependendo do ambien
   
 -   O [ADO para o índice de sintaxe de C++ Visual com #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) aborda os métodos e propriedades do ADO ao usar o **#import** diretiva de compilador com o Microsoft Visual C++.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usando o ADO com o Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Usando o ADO com o Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [Usando o ADO com linguagens de script](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

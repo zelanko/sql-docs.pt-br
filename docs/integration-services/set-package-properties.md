@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ae011fb40b1e20a82d92f6db4c1077910f8d735
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-package-properties"></a>Definir as propriedades do pacote
   Ao criar um pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] usando a interface gráfica fornecida pelo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você define as propriedades do objeto do pacote na janela Propriedades.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 |**CreationDate**|A data em que o pacote foi criado.|  
 |**CreatorComputerName**|O nome do computador no qual o pacote foi criado.|  
 |**CreatorName**|O nome da pessoa que criou o pacote.|  
-|**Description**|Uma descrição da funcionalidade do pacote.|  
+|**Descrição**|Uma descrição da funcionalidade do pacote.|  
 |**ID**|O GUID do pacote, que é atribuído quando o pacote é criado. Esta propriedade é somente leitura. Para gerar um novo valor aleatório para a propriedade **ID**, selecione **\<Gerar Nova ID\>** na lista suspensa.|  
 |**Nome**|O nome do pacote.|  
 |**PackageType**|O tipo do pacote. Os valores são **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**e **SQLReplication**. O valor padrão dessa propriedade é **Default**. Para saber mais, confira <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  

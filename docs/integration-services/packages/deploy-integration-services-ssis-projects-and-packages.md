@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e9f7359e19df03dc544211ba3a39041efa0637
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a dois modelos de implantação, o modelo de implantação de projeto e o modelo de implantação de pacote herdado. O modelo de implantação de projeto permite que você implante seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -92,7 +92,7 @@ Esse erro normalmente é o resultado de permissões DCOM ausentes. Para corrigir
 Para obter mais informações sobre o erro descrito nesta seção e sobre as permissões necessárias para a conta de serviço do SSIS, consulte a postagem no blog a seguir.  
 [System.ComponentModel.Win32Exception: o cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
-## <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no Servidor do Integration Services
+## <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
   Na versão atual do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de tempo de execução para pacotes por meio de ambientes.  
   
 > [!NOTE]  
@@ -100,7 +100,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
  Para implantar um projeto no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , conclua as tarefas a seguir:  
   
-1.  Criar um catálogo do SSISDB, se ainda não tiver criado. Para obter mais informações, consulte [Catálogo do SSIS](../../integration-services/service/ssis-catalog.md).  
+1.  Criar um catálogo do SSISDB, se ainda não tiver criado. Para obter mais informações, consulte [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, consulte as instruções abaixo: [Para converter um projeto no modelo de implantação de projeto](#convert).  
   
@@ -291,7 +291,7 @@ Inicie o assistente:
 
  - Digitando **“Assistente de Implantação do SQL Server”** no Windows Search 
 
-**OU**
+**OR**
 
  - Procurando o arquivo executável **ISDeploymentWizard.exe** na pasta de instalação do SQL Server; por exemplo: “C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”. 
  
@@ -341,7 +341,7 @@ Inicie o assistente:
 > [!IMPORTANT]  
 >  Para uma execução específica, um pacote pode ser executado somente com os valores contidos em um único ambiente de servidor.  
   
- Você pode consultar as exibições para uma lista de ambientes de servidor, referências de ambiente e variáveis de ambiente. Você também pode chamar procedimentos armazenados para adicionar, excluir, alterar e modificar ambientes, referências de ambiente e variáveis de ambiente. Para obter mais informações, consulte a seção **Ambientes de servidor, variáveis de servidor e referências de ambiente de servidor** em [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ Você pode consultar as exibições para uma lista de ambientes de servidor, referências de ambiente e variáveis de ambiente. Você também pode chamar procedimentos armazenados para adicionar, excluir, alterar e modificar ambientes, referências de ambiente e variáveis de ambiente. Para obter mais informações, consulte a seção **Ambientes de servidor, variáveis de servidor e referências de ambiente de servidor** em [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Para criar e usar um ambiente de servidor  
   
@@ -361,13 +361,13 @@ Inicie o assistente:
   
     3.  Digite o **Valor** para a variável de ambiente.  
   
-         Para obter informações sobre as regras para nomes de variável de ambiente, consulte a seção **Variável do ambiente** em [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Para obter informações sobre as regras para nomes de variável de ambiente, consulte a seção **Variável do ambiente** em [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
     4.  Indica se a variável contém o valor confidencial, marcando ou desmarcando a caixa de seleção **Confidencial** .  
   
          Se você selecionar **Confidencial**, o valor da variável não será exibido no campo **Valor** .  
   
-         Os valores confidenciais são criptografados no catálogo do SSISDB. Para obter mais informações sobre a criptografia SSL, consulte [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Os valores confidenciais são criptografados no catálogo do SSISDB. Para obter mais informações sobre a criptografia SSL, consulte [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 6.  Na página **Permissões** , conceda ou negue permissões para usuários e funções selecionados fazendo o seguinte.  
   
@@ -577,7 +577,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Usar Autenticação do SQL Server**  
  Quando um usuário se conecta com um nome de logon e senha especificados em uma conexão não confiável, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica a conexão verificando se foi definida uma conta de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se a senha especificada corresponde a uma senha registrada previamente. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tiver uma conta de logon definida, ocorrerá falha na autenticação e o usuário receberá uma mensagem de erro.  
   
- **Nome de usuário**  
+ **User name**  
  Especifique um nome de usuário quando você estiver usando a Autenticação do SQL Server.  
   
  **Senha**  

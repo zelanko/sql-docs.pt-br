@@ -3,7 +3,7 @@ title: "Coleções de ADO | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b6bc8649cca88a6a132db440a3294989dfdcadb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 911a1225bc9dd14cbf7bdc68ceb67af77ff819bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-collections"></a>Coleções de ADO
 As relações entre essas coleções e os objetos do ADO são representadas no [modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -34,11 +34,11 @@ As relações entre essas coleções e os objetos do ADO são representadas no [
 |||  
 |-|-|  
 |[Erros](../../../ado/reference/ado-api/errors-collection-ado.md)|Contém todos os **erro** objetos criados em resposta a uma única falha de provedor.|  
-|[Campos](../../../ado/reference/ado-api/fields-collection-ado.md)|Contém todos os **campo** objetos de um **registros** objeto.|  
+|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contém todos os **campo** objetos de um **registros** objeto.|  
 |[Parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contém todos os **parâmetro** objetos de um **comando** objeto.|  
 |[Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)|Contém todos os **propriedade** objetos para uma instância específica de um objeto.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes enumeradas do ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

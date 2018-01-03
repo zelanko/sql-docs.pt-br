@@ -3,7 +3,7 @@ title: "Formatar a cláusula COMPUTE | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula COMPUTE de forma gera um pai **registros**, cujas colunas consistem em uma referência para o filho **registros**; opcional colunas cujo conteúdo é capítulo, novo, ou colunas calculadas, ou o resultado da execução de funções de agregação no filho **Recordset** ou de forma anteriormente **Recordset**; e todas as colunas de filho **Recordset** listados em opcional pela cláusula.  
@@ -85,12 +85,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |Estado|Cidade|População|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|ou|Medford|200,000|  
-|ou|Portland|400,000|  
+|OU|Medford|200,000|  
+|OU|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|São Paulo|600,000|  
 |WA|Tacoma|500,000|  
-|ou|Corvallis|300,000|  
+|OU|Corvallis|300,000|  
   
  Agora, execute este comando de forma:  
   
@@ -114,7 +114,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Referência a child1|CA|  
 |1,200,000|Referência a child2|WA|  
-|1,100,000|Referência a child3|ou|  
+|1,100,000|Referência a child3|OU|  
   
 ## <a name="child1"></a>Child1  
   
@@ -134,11 +134,11 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |Estado|Cidade|População|  
 |-----------|----------|----------------|  
-|ou|Medford|200,000|  
-|ou|Portland|400,000|  
-|ou|Corvallis|300,000|  
+|OU|Medford|200,000|  
+|OU|Portland|400,000|  
+|OU|Corvallis|300,000|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessar linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Visão geral de modelagem de dados](../../../ado/guide/data/data-shaping-overview.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   

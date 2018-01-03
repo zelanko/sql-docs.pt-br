@@ -3,7 +3,7 @@ title: Propriedade CacheSize (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57ac5e367e3dd9181dcdbde260b04917d30453ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a035843f42ba6dd29f18887fec5ca334943a0df4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachesize-property-ado"></a>Propriedade CacheSize (ADO)
 Indica o número de registros de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto são armazenadas localmente em cache.  
@@ -32,7 +32,7 @@ Indica o número de registros de um [registros](../../../ado/reference/ado-api/r
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **longo** valor deve ser maior que 0. O padrão é 1.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **CacheSize** propriedade para controlar quantos registros devem ser recuperados por vez na memória local do provedor. Por exemplo, se o **CacheSize** é 10, após abertura primeiro o **registros** do objeto, o provedor recupera os primeiros 10 registros na memória local. Quando você percorre o **registros** do objeto, o provedor retorna os dados do buffer de memória local. Assim que você passa o último registro no cache, o provedor recupera os 10 registros da fonte de dados no cache.  
   
 > [!NOTE]
@@ -51,7 +51,7 @@ Indica o número de registros de um [registros](../../../ado/reference/ado-api/r
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade CacheSize (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [Exemplo de propriedade CacheSize (VC + +)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [Exemplo da propriedade CacheSize (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

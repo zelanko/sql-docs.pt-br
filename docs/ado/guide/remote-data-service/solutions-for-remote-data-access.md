@@ -3,7 +3,7 @@ title: "Soluções para acesso a dados remotos | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: babb34e20499612b34c5adb4e17f6eec0b9ed840
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dda25c24c657656ee092ca32645dc143d1d1510e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluções para acesso a dados remotos
 ## <a name="the-issue"></a>O problema  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="the-solution"></a>A solução  
  RDS define um modelo de programação, a sequência de atividades necessárias para acessar e atualizar uma fonte de dados — para obter acesso aos dados por meio de um intermediário, como o Internet Information Services (IIS). O modelo de programação resume a funcionalidade total do RDS.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modelo de programação de RDS básica](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
  [Cenário RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   

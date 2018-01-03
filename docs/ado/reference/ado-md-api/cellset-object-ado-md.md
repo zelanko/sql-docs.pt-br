@@ -3,7 +3,7 @@ title: "O objeto de conjunto de células (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,23 +20,23 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c860f9b84514cc84c73c52e10978ad76365cc6ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36bd85cb79d48590cb86a865cfd408db878a1b53
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cellset-object-ado-md"></a>Objeto de conjunto de células (ADO MD)
 Representa os resultados de uma consulta multidimensional. É uma coleção de células selecionadas de cubos ou outros conjuntos de células.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Dados dentro de um **conjunto de células** é recuperado usando o acesso direto, de matriz. Você pode analisar um membro específico para obter dados sobre esse membro. Por exemplo, o código a seguir retorna a legenda do primeiro membro na primeira posição do primeiro eixo de um conjunto de células nomeado `cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Não há nenhuma noção de uma célula atual em um conjunto de células. Em vez disso, o [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriedade recupera um determinado [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) objeto do conjunto de células. Os argumentos do **Item** propriedade determinam qual célula é recuperada. Você pode especificar o valor ordinal exclusivo de uma célula. Você também pode recuperar células usando seus números de posição de cada eixo do conjunto de células. Para obter mais informações sobre a recuperação de células, consulte o [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriedade.  
   
  Com as coleções, métodos e propriedades de um **conjunto de células** do objeto, você pode fazer o seguinte:  
@@ -63,7 +63,7 @@ cst.Axes(0).Positions(0).Members(0).Caption
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de conjunto de células (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Coleção de eixos (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Objeto de célula (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

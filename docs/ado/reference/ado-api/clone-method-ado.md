@@ -3,7 +3,7 @@ title: "Método (ADO) clone | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34f8e0161fa85ec497ec6a1e6b414691161ff7a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0fa4429b66b8a43bf2eecccca1fbc94597f07a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clone-method-ado"></a>Método clone (ADO)
 Cria uma duplicata [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto a partir de um existente **registros** objeto. Opcionalmente, especifica que o clone ser somente leitura.  
@@ -51,7 +51,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *LockType*  
  Opcional. Um [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valor que especifica o tipo de bloqueio do original **registros**, ou somente leitura **registros**. Os valores válidos são **adLockUnspecified** ou **adLockReadOnly**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **Clone** duplicado de método para criar vários **registros** objetos, especialmente se você deseja manter mais de um registro atual em um determinado conjunto de registros. Usando o **Clone** método é mais eficiente do que criar e abrir um novo **registros** objeto que usa a mesma definição original.  
   
  O [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade do original **registros**, se houver, não será aplicado ao clone. Definir o **filtro** propriedade do novo **registros** para filtrar os resultados. A maneira mais simples para copiar todos os existentes **filtro** valor é atribuí-lo diretamente, da seguinte maneira.  
@@ -74,22 +74,22 @@ rsNew.Filter = rsOriginal.Filter
   
 |Evento|Disparado em clones?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Não|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Não|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Não|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|não|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|não|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|não|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Sim|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Não|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|não|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Sim|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Não|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|não|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Sim|  
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Sim|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Não|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Não|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|não|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|não|  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do método clone (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Exemplo do método clone (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Exemplo do método Clone (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   

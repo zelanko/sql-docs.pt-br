@@ -3,7 +3,7 @@ title: "Instanciação de evento do ADO: ADO e WFC | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ffe0911f2845e7ff7e41cf41fcc4f267f7c0ad66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8c6afcc5c41535031961f0d96cf756cd4015c9b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Instanciação de evento do ADO: ADO e WFC
 ADO para Windows Foundation Classes (ADO/WFC) desenvolve o modelo de evento do ADO e apresenta uma interface de programação de aplicativo simplificado. Em geral, o ADO/WFC intercepta eventos ADO, consolida os parâmetros de evento em uma classe de evento único e, em seguida, chama o manipulador de eventos.  
@@ -66,7 +66,7 @@ ADO para Windows Foundation Classes (ADO/WFC) desenvolve o modelo de evento do A
   
 7.  Quando tiver terminado de processamento, remova o manipulador da lista de manipuladores de eventos de ADO/WFC. Use o método com um nome como **removeOn***EventName*(*manipulador*).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Resumo de manipulador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO - índice de sintaxe do WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Parâmetros de evento](../../../ado/guide/data/event-parameters.md)   

@@ -3,7 +3,7 @@ title: "Método SaveToFile | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 464742a71244a16b5823c2f85a0ddcbb413c66f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a515534601696c0ca056f573c179c5e00bac3e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
 Salva o conteúdo binário de um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) para um arquivo.  
@@ -48,7 +48,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Se você substituir um arquivo existente (quando **adSaveCreateOverwrite** é definido), **SaveToFile** trunca qualquer bytes do arquivo original existente que execute o novo [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **SaveToFile** pode ser usado para copiar o conteúdo de um **fluxo** objeto para um arquivo local. Não há nenhuma alteração no conteúdo ou propriedades do **fluxo** objeto. O **fluxo** objeto deve ser aberto antes de chamar **SaveToFile**.  
   
  Este método não altera a associação do **fluxo** objeto de fonte de dados subjacente. O **fluxo** objeto ainda será associado com a URL original ou **registro** que foi sua origem quando aberto.  
@@ -58,6 +58,6 @@ Stream.SaveToFile FileName, SaveOptions
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Open (fluxo de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Método Save](../../../ado/reference/ado-api/save-method.md)

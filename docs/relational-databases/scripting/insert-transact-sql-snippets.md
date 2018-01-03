@@ -3,9 +3,9 @@ title: Inserir trechos Transact-SQL | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b37ab2c15e2d1770f2dd0f8c861fb8c2e0f3144
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19d17312d6ff90fbab93064c558e18ddf9df73e1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="insert-transact-sql-snippets"></a>Inserir trechos Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um trecho de código [!INCLUDE[tsql](../../includes/tsql-md.md)] é um modelo que você pode usar como um ponto de partida ao gravar novas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Clique duas vezes em o trecho ou selecione o trecho do seletor de trecho e pressione TAB ou ENTER.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inserir trechos Transact-SQL com Surround](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

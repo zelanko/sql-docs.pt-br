@@ -3,7 +3,7 @@ title: "Alterar o nome de propriedade dinâmica (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d57a7d1bd99c445451e63ec630962ad652fa1a53
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e18334a3e438ed484f24382e4a84f0a278747ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Alterar o nome de propriedade dinâmica (ADO)
 Especifica um nome para o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -31,7 +31,7 @@ Especifica um nome para o [registros](../../../ado/reference/ado-api/recordset-o
 ## <a name="return-values"></a>Valores de retorno  
  Retorna um **cadeia de caracteres** valor que é o nome do **registros**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nomes de persistirem durante a conexão ou até que o **registros** está fechado.  
   
  O **nome remodelar** propriedade é usado principalmente para uso com o recurso de formatação novamente do [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) provedor de serviços. Nomes devem ser exclusivos para participar de formatação novamente.  
@@ -45,7 +45,7 @@ Especifica um nome para o [registros](../../../ado/reference/ado-api/recordset-o
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Microsoft Data Shaping Service para OLE DB (provedor de serviços de ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
  [Comandos de forma em geral](../../../ado/guide/data/shape-commands-in-general.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

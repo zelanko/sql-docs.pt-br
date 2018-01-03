@@ -3,7 +3,7 @@ title: Propriedade ActiveConnection (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a3a25e63f4da0329e3b1f81ced1b2b4fbe4086c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00f177b12594e834f5ab7a15a4d357bd4a7f75f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activeconnection-property-ado-md"></a>Propriedade ActiveConnection (ADO MD)
 Indica para qual ADO [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) o conjunto de células atual do objeto ou o catálogo ao qual pertence atualmente.  
@@ -35,7 +35,7 @@ Indica para qual ADO [Conexão](../../../ado/reference/ado-api/connection-object
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **Variant** que contém uma cadeia de caracteres que define uma conexão ou **Conexão** objeto. O padrão é vazio.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode definir essa propriedade para um ADO válido **Conexão** objeto ou uma cadeia de caracteres de conexão válido. Quando essa propriedade é definida como uma cadeia de caracteres de conexão, o provedor cria um novo **Conexão** usando esta definição de objeto e abre a conexão.  
   
  Se você usar o *ActiveConnection* argumento do [abrir](../../../ado/reference/ado-md-api/open-method-ado-md.md) método para abrir um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto, o **ActiveConnection** será de propriedade herde o valor do argumento.  
@@ -67,7 +67,7 @@ Indica para qual ADO [Conexão](../../../ado/reference/ado-api/connection-object
 |-|-|  
 |[Objeto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de conjunto de células (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Método Open (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

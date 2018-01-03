@@ -3,7 +3,7 @@ title: Propriedade Index | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fa23448f5942baabf364a0b02f61324d29ec7b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e7dac3b9494e2c23de547bdf96ba0079a264af9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-property"></a>Propriedade Index
 Indica o nome do índice atualmente em vigor para um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -32,7 +32,7 @@ Indica o nome do índice atualmente em vigor para um [registros](../../../ado/re
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor, que é o nome do índice.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O índice nomeado pelo **índice** propriedade deve ter sido declarada anteriormente na tabela base subjacente a **registros** objeto. Ou seja, o índice deve ter sido declarado programaticamente como um ADOX [índice](../../../ado/reference/adox-api/index-object-adox.md) objeto, ou quando a tabela base foi criada.  
   
  Se o índice não pode ser definido, ocorrerá um erro de tempo de execução. O **índice** propriedade não pode ser definida nas seguintes condições:  
@@ -56,7 +56,7 @@ Indica o nome do índice atualmente em vigor para um [registros](../../../ado/re
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade de índice (VB) e método de busca](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Objeto de índice (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Método Seek](../../../ado/reference/ado-api/seek-method.md)

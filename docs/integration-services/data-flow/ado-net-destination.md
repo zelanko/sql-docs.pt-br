@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3bd7ded25119de1acc18ded3d2add5de52441399
+ms.sourcegitcommit: d70b1c121c8536f92c90bf90f2e2b126acbc86de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="ado-net-destination"></a>Destino do ADO NET
   O destino ADO NET carrega dados em uma variedade de bancos de dados compatíveis com o [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que utilizam uma tabela ou exibição de banco de dados. Você tem a opção de carregar esses dados em uma tabela ou exibição existente ou de criar uma nova tabela e carregar os dados nessa tabela.  
@@ -104,10 +104,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Se uma tabela de origem do SQL Server ou do Sybase incluir uma coluna de identidade, utilize as tarefas Executar SQL para habilitar IDENTITY_INSERT antes do destino ADO NET e desabilitá-lo novamente depois. (A propriedade da coluna de identidade especifica um valor incremental para a coluna. A instrução SET IDENTITY_INSERT permite inserir valores explícitos da tabela de origem na coluna de identidade na tabela de destino.)  
 >   
->   Para executar com êxito as instruções SET IDENTITY_INSERT e o carregamento de dados, você precisa fazer o descrito a seguir. 
->       1. Use o mesmo gerenciador de conexões ADO.NET para as tarefas Executar SQL e para o destino ADO NET. 
->       2. No gerenciador de conexões, defina as propriedades **RetainSameConnection** e **MultipleActiveResultSets** como True. 
->       3. No destino ADO.NET, defina a propriedade **UseBulkInsertWhenPossible** como False. 
+>   Para executar com êxito as instruções SET IDENTITY_INSERT e o carregamento de dados, você precisa fazer o descrito a seguir.  
+>       1. Use o mesmo gerenciador de conexões ADO.NET para as tarefas Executar SQL e para o destino ADO NET.  
+>       2. No gerenciador de conexões, defina as propriedades **RetainSameConnection** e **MultipleActiveResultSets** como True.  
+>       3. No destino ADO.NET, defina a propriedade **UseBulkInsertWhenPossible** como False.   
 >
 >  Para obter mais informações, consulte [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) e [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **Truncation**  
  Não usado.  
   
- **Description**  
+ **Descrição**  
  Visualize a descrição da operação.  
   
  **Definir este valor para células selecionadas**  

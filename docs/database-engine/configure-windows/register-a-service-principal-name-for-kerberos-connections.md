@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: ddf0e47b4ff05f5280401ae5fdbc7a81a8ebb7ec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para usar a autenticação Kerberos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é preciso atender a estas duas condições:  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 É possível verificar se uma conexão está usando Kerberos consultando a exibição de gerenciamento dinâmico sys.dm_exec_connections. Execute a consulta a seguir e verifique o valor da coluna auth_scheme, que será "KERBEROS" se Kerberos estiver habilitado.  
   
-```t-sql  
+```sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -155,7 +155,7 @@ Contas de serviço podem ser usadas como um SPN. Elas são especificadas pelo at
   
 Para determinar o método de autenticação de uma conexão, execute a seguinte consulta.  
   
-```t-sql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -181,7 +181,7 @@ WHERE session_id = @@SPID;
   
  Se o cancelamento do SPN falhar durante o desligamento, essa falha será registrada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o desligamento prosseguirá.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte a SPN &#40;Nome da Entidade de Serviço&#41; em conexões com o cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

@@ -3,7 +3,7 @@ title: "Localizar o método (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f2a2af33a7355084f85e80fda3ff92e5415adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-method-ado"></a>Localizar o método (ADO)
 Pesquisa um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) para a linha que satisfaz os critérios especificados. Opcionalmente, a direção da pesquisa, linha inicial e o deslocamento da linha inicial pode ser especificada. Se os critérios forem atendidos, a posição da linha atual é definida no registro encontrado; Caso contrário, a posição é definida ao final (ou início) da **registros**.  
@@ -51,7 +51,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Iniciar*  
  Opcional. Um **Variant** indicador que funciona como a posição inicial da pesquisa.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Apenas um nome de coluna única que pode ser especificado em *critérios*. Este método não oferece suporte a pesquisas de várias colunas.  
   
  O operador de comparação em *critérios* pode ser "**>**"(maior que),"**\<**" (menor que), "=" (igual), "> =" (maior ou igual) "< =" (menor ou igual), "<>" (não igual), ou "como" (correspondência de padrão).  
@@ -71,7 +71,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Localizar o exemplo de método (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Propriedade Index](../../../ado/reference/ado-api/index-property.md)   
  [Otimizar a propriedade dinâmica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

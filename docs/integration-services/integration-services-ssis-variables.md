@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
   As variáveis armazenam valores que um pacote do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Os scripts na tarefa Script e o componente de Script também podem usar variáveis. As restrições de precedência que colocam em sequência tarefas e contêineres em um fluxo de trabalho podem usar variáveis quando suas definições de restrições incluem expressões.  
@@ -313,7 +313,7 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Atualizar uma variável dinamicamente com configurações  
  Para atualizar dinamicamente as variáveis, é possível criar configurações para as variáveis, implantar as configurações com o pacote e atualizar os valores da variável no arquivo de configuração ao implantar os pacotes. Em tempo de execução, o pacote usa os valores de variável atualizados. Para obter mais informações, consulte [Criar configurações de pacote](../integration-services/packages/create-package-configurations.md).  
 
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Usar os valores de variáveis e parâmetros em um pacote filho](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

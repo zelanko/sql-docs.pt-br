@@ -3,7 +3,7 @@ title: "Associar uma consulta com uma conexão em um projeto | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 36217d01e2858e7193b1d7cbe72e734d6831281f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c790e099f0fc9558b452879866c8dbbaa25d7f2d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Associar uma consulta a uma conexão em um projeto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se uma consulta for criada sem uma conexão ou se uma consulta for movida de um projeto para outro, ela não será associada a uma conexão no projeto atual.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Na caixa de diálogo **Conectar ao Mecanismo de Banco de Dados** , forneça as informações da conexão. Se as informações de conexão corresponderem a uma conexão existente, a consulta será associada com aquela conexão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
 [Alterar a conexão associada a uma consulta](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
 [Exibir ou alterar as propriedades de uma conexão em um projeto](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  

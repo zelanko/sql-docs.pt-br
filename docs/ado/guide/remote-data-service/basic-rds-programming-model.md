@@ -3,7 +3,7 @@ title: "Modelo de programação de RDS básica | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b78670ca568ef3c2cf8df89e8ed7bbfdbeccdcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a206bd1a158b09e3b7041a995bc98351975dfe6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-rds-programming-model"></a>Modelo de programação de RDS básica
 > [!IMPORTANT]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  Por fim, se suas necessidades em algum lugar no meio, ADO agora dá suporte a personalizar o comportamento do programa de servidor padrão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modelo de programação de RDS em detalhes](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [Cenário RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   

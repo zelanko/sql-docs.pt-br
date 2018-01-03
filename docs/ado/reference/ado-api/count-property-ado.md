@@ -3,7 +3,7 @@ title: Propriedade Count (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 899b0eab595e939d9a42456785fcea492f1fd606
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 186b8ace444c3e006c3978a1c8f2843bb422601f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="count-property-ado"></a>Propriedade Count (ADO)
 Indica o número de objetos em uma coleção.  
@@ -32,7 +32,7 @@ Indica o número de objetos em uma coleção.
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **longo** valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **contagem** propriedade para determinar quantos objetos estão em uma determinada coleção.  
   
  Como a numeração de membros de uma coleção começa com zero, você sempre deve codificar loops iniciando com zero membro e terminando com o valor da **contagem** propriedade menos 1. Se você estiver usando o Microsoft Visual Basic e deseja executar um loop através dos membros de uma coleção sem verificar o **contagem** propriedade, use o **para cada um... Próxima** comando.  
@@ -51,7 +51,7 @@ Indica o número de objetos em uma coleção.
 |[Coleção Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Coleção Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Coleção Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade Count (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Exemplo de propriedade Count (VC + +)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

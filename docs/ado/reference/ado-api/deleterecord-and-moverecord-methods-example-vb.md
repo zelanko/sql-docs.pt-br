@@ -3,7 +3,7 @@ title: "ExcluirRegistro e exemplo dos métodos MoveRecord (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 681e7990c2b93364e9792937cb68e0847de6f303
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 25f445aca31d47eaef43c849df818a0ea6c34753
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>Exemplo de métodos de MoveRecord (VB) e ExcluirRegistro
 Este exemplo demonstra como copiar, mover, editar e excluir o conteúdo de um arquivo de texto publicado em uma pasta da Web. Outras propriedades e métodos usados incluem [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [fonte](../../../ado/reference/ado-api/source-property-ado-record.md), e [liberar](../../../ado/reference/ado-api/flush-method-ado.md).  
@@ -153,7 +153,7 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método ExcluirRegistro (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Método de liberação (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [Método GetChildren (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   

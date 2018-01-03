@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de12dd7f28eb427429ecc0260ce37707ff0cec99
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcc6d1391487c1e56851f485abd709d29634adc6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Este artigo explica quando e como usar o destino package0 em eventos estendidos 
 A [seção ring_buffer](#h2_target_ring_buffer) inclui um exemplo de como usar o [XQuery no Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) para copiar uma cadeia de caracteres XML em um conjunto de linhas relacional.
 
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 
 - Esteja familiarizado com os conceitos básicos dos eventos estendidos, conforme descrito em [Início Rápido: Eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
@@ -122,7 +122,7 @@ sqlserver      checkpoint_begin   4
 Veja a seguir CREATE EVENT SESSION, que gerou os resultados anteriores. Para este teste, na cláusula EVENT...WHERE, o campo **package0.counter** foi usado para interromper a contagem depois de a contagem atingir 4.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_counter_1]
     ON SERVER 
     ADD EVENT sqlserver.checkpoint_begin   -- Test by issuing CHECKPOINT; statements.
@@ -160,7 +160,7 @@ O destino **event_file** grava a saída da sessão de evento do buffer em um arq
 Veja a seguir, CREATE EVENT SESSION, que usamos para o teste. Uma das cláusulas ADD TARGET especifica um event_file.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -292,7 +292,7 @@ No exemplo atual, a oferta da cláusula EVENT...ACTION ocorre para oferecer apen
 - Para acompanhar mais de uma ação de origem, você pode adicionar um segundo destino de histograma à instrução CREATE EVENT SESSION.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_lockacquired]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -358,7 +358,7 @@ O exemplo a seguir define **source_type=0**. O valor atribuído a **source=** é
 
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
     ON SERVER 
     ADD EVENT  sqlserver.checkpoint_begin
@@ -451,7 +451,7 @@ A instrução CREATE EVENT SESSION a seguir especifica dois eventos e dois desti
 Para restringir os resultados, primeiro usamos a instrução SELECT em sys.objects para encontrar o object_id de nossa tabela de teste. Adicionamos um filtro à ID da cláusula EVENT...WHERE.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -555,7 +555,7 @@ Nesta seção de ring_buffer, também vamos mostrar como é possível usar a imp
 Não há nada de especial nessa instrução CREATE EVENT SESSION, que usa o destino ring_buffer.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -668,7 +668,7 @@ Quando é recuperado por uma instrução SELECT, o conteúdo está na forma de u
 Para ver o XML anterior, você pode emitir a instrução SELECT a seguir enquanto a sessão de evento está ativa. Os dados XML ativos são recuperados da exibição do sistema **sys.dm_xe_session_targets**.
 
 
-```tsql
+```sql
 SELECT
         CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
     INTO
@@ -700,7 +700,7 @@ SELECT * FROM #XmlAsTable;
 Para ver o XML anterior como um conjunto de linhas relacional, continue após a instrução SELECT anterior emitindo o comando T-SQL a seguir. As linhas com comentários explicam cada um dos usos do XQuery.
 
 
-```tsql
+```sql
 SELECT
          -- (A)
          ObjectLocks.value('(@timestamp)[1]',

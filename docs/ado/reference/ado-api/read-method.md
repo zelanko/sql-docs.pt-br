@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 740be677f54f8d4b5d30902a792b58d4681df888
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad739a0d3aded4b0bf0458803d9fcdba5b388272
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="read-method"></a>Método Read
 Lê um número especificado de bytes de um binário [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -45,7 +45,7 @@ Variant = Stream.Read ( NumBytes)
 ## <a name="return-value"></a>Valor de retorno  
  O **leitura** método lê um número especificado de bytes ou o fluxo inteiro de um **fluxo** de objeto e retorna os dados resultantes como um **Variant**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se *NumBytes* é maior que o número de bytes restantes de **fluxo**, somente os bytes restantes são retornados. A leitura de dados não serão preenchidos de acordo com o comprimento especificado por *NumBytes*. Se não houver nenhum bytes para leitura, uma variante com um valor nulo será retornada. **Leitura** não pode ser usado para ler com versões anteriores.  
   
 > [!NOTE]
@@ -54,5 +54,5 @@ Variant = Stream.Read ( NumBytes)
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método ReadText](../../../ado/reference/ado-api/readtext-method.md)

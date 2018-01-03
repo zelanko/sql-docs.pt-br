@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ceaf111b6f78b72b12021054074c87e956e5cba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f67c300f13ce92de9784f1e62585ad127bddf47c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tópico contém um exemplo que apresenta a você a sintaxe do OLTP in-memory.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  O exemplo de código a seguir exige um diretório chamado c:\Data.  
   
-```tsql  
+```sql  
 CREATE DATABASE imoltp   
 GO  
   
@@ -239,7 +239,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de código de OLTP na memória](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

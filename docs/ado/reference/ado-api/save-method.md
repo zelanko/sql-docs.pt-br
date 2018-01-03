@@ -3,7 +3,7 @@ title: "Método Save | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bd594fb077c3a8b6eca9e3496c857dbbc0249c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb9651c4bf6de24fd3cdf7c7d42e6c0c24365fda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-method"></a>Método Save
 Salva o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um arquivo ou [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -45,7 +45,7 @@ recordset.Save Destination, PersistFormat
  *PersistFormat*  
  Opcional. Um [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valor que especifica o formato no qual o **registros** deve ser salvo (XML ou ADTG). O valor padrão é **adPersistADTG**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [método Save](../../../ado/reference/ado-api/save-method.md) método só pode ser chamado em um aberto **registros**. Use o [método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método para restauração posterior a **registros** de *destino*.  
   
  Se o [propriedade filtro](../../../ado/reference/ado-api/filter-property.md) propriedade está em vigor para o **Recordset**, em seguida, somente as linhas acessíveis com o filtro serão salvas. Se o **Recordset** é hierárquico, em seguida, o filho atual **Recordset** e seus filhos são salvos, incluindo o pai **Recordset**. Se o método de gravação de um filho **registros** é chamado, o filho e todos os seus filhos são salvas, mas o pai não é.  
@@ -98,7 +98,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |-|-|  
 |[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Salve e abra o exemplo de métodos (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Salve e abra o exemplo de métodos (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

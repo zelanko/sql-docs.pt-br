@@ -3,7 +3,7 @@ title: Adicionando registros usando AddNew | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e3bb2828935872cc4759608b0041db71ce8c24d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c29eacc0e556f82458cf313f1c0fc93d7ab83d3b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-records-using-addnew-method"></a>Adicionando registros usando o método AddNew
 Esta é a sintaxe básica do **AddNew** método:
@@ -53,5 +53,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
  Porque esse código usa um desconectada **registros** com um cursor do lado do cliente no modo de lote, você deve reconectar o **registros** à fonte de dados com um novo **Conexão** objeto antes de chamar o **UpdateBatch** método para postar as alterações no banco de dados. Isso é feito facilmente usando a nova função **GetNewConnection**.

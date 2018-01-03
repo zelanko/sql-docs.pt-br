@@ -3,7 +3,7 @@ title: "A propriedade de nome do nível (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63d1709c67ebc0aadb88d879f01633e0fa9c4ede
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e2777d2c16723ee1055c90604842a2ca6e37c50
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="levelname-property-ado-md"></a>Propriedade de nome do nível (ADO MD)
 Indica o nome do nível de um [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
@@ -34,12 +34,12 @@ Indica o nome do nível de um [membro](../../../ado/reference/ado-md-api/member-
 ## <a name="return-values"></a>Valores de retorno  
  Retorna um **cadeia de caracteres** e é somente leitura.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **LevelName** propriedade para recuperar o nome do nível ao qual o membro pertence. Isso corresponde do [nome](../../../ado/reference/ado-md-api/name-property-ado-md.md) propriedade de um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto de nível (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
  [Propriedade Name (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

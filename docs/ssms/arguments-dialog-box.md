@@ -3,7 +3,7 @@ title: "Caixa de diálogo Argumentos | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e5b21e5522fd44c4a97068c166355f571831302
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07f7625af26f29e94bdca8bbe78466ae32282ccc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arguments-dialog-box"></a>caixa de diálogo Argumentos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] A caixa de diálogo **Argumentos** especifica argumentos novos ou existentes para uma ferramenta. Essa caixa de diálogo é exibida quando você inicia uma ferramenta externa que tem a opção **Solicitar argumentos** selecionada na caixa de diálogo **Ferramentas Externas** .  
@@ -36,7 +36,7 @@ Relaciona as variáveis atuais especificadas para a ferramenta na caixa de diál
 **Linha de comando**  
 Exibe o valor dos argumentos especificados na caixa de diálogo **Argumentos** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [Caixa de diálogo Ferramentas Externas](../ssms/external-tools-dialog-box.md)  
 [Elementos gerais da interface de usuário](../ssms/general-user-interface-elements.md)  

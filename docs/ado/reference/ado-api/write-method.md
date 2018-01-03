@@ -3,7 +3,7 @@ title: "Método Write | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd956d5ff536105dc889e89d8f2d80f22db0e9c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aad21aef150d1ea9a176122eb3a0ddfb7dec9708
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="write-method"></a>Método Write
 Grava dados binários em uma [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -42,7 +42,7 @@ Stream.Write Buffer
  *Buffer*  
  Um **Variant** que contém uma matriz de bytes a serem gravados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Bytes especificados são gravados para o **fluxo** objeto sem espaços entre cada byte intermediários.  
   
  Atual [posição](../../../ado/reference/ado-api/position-property-ado.md) é definido como os bytes após os dados gravados. O **gravar** método não trunca o restante dos dados em um fluxo. Se você deseja truncar esses bytes, chame [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
@@ -55,5 +55,5 @@ Stream.Write Buffer
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método WriteText](../../../ado/reference/ado-api/writetext-method.md)

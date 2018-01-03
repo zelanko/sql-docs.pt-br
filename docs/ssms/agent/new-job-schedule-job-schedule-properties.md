@@ -3,7 +3,7 @@ title: "Nova agenda de trabalho – Propriedades da agenda de trabalho | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b1e568c6ccc32c56e098c8bd3ce407c631909c6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94af2eeef2d7a6bc308463deb70207305f52500f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Nova agenda de trabalho – Propriedades da agenda de trabalho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use essa página para exibir e alterar as propriedades da agenda.  
@@ -39,7 +39,7 @@ Exiba os trabalhos que usam a agenda.
 **Tipo de agenda**  
 Selecione o tipo de agenda.  
   
-**Ativado**  
+**Enabled**  
 Marque para habilitar ou desabilitar a agenda.  
   
 ## <a name="recurring-schedule-types-options"></a>Opções de tipos de agenda recorrentes  
@@ -95,13 +95,13 @@ Defina a data quando a agenda já não será válida.
 Especifique que a agenda permanecerá efetiva indefinidamente.  
   
 ## <a name="one-time-schedule-types-options"></a>Opções de tipos de agendas que ocorrem apenas uma vez  
-**Data**  
+**Date**  
 Selecione a data para que o trabalho seja executado.  
   
 **Hora**  
 Selecione a hora para que o trabalho seja executado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar e anexar agendas para trabalhos](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Agendar um trabalho](../../ssms/agent/schedule-a-job.md)  
   

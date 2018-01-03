@@ -3,7 +3,7 @@ title: Constantes enumeradas do ADOX | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d531e41fdba4e012ed1d33dcf3efa180065e7697
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-enumerated-constants"></a>Constantes enumeradas do ADOX
 Para ajudar a depuração, as constantes enumerada do ADOX listam um valor para cada constante. No entanto, esse valor é somente informativo e pode alterar de uma versão do ADOX para outro. Seu código deve depender apenas o nome, não o valor real de constantes enumeradas.  
@@ -42,6 +42,6 @@ Para ajudar a depuração, as constantes enumerada do ADOX listam um valor para 
 |[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|Especifica a regra para seguir quando um **chave** é excluído.|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|Especifica a sequência de classificação para uma coluna indexada.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

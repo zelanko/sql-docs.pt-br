@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 362ce1e89941b1abb4578f1931d91d424ec68ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c3e51c4507973ef0e4394aef1049fe0edadf94f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Você pode usar um *termo de proximidade* **NEAR** em um predicado [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou uma função [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para pesquisar palavras ou frases próximas umas das outras. 
@@ -79,7 +79,7 @@ Para obter mais informações sobre a sintaxe, consulte [CONTAINS &#40;Transact-
 ### <a name="example-1"></a>Exemplo 1
  Por exemplo, você pode procurar 'John' dentro de duas condições de 'Smith', da seguinte maneira:  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -92,7 +92,7 @@ Para obter mais informações sobre a sintaxe, consulte [CONTAINS &#40;Transact-
 ### <a name="example-2"></a>Exemplo 2
  O exemplo a seguir pesquisa a tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` para todos os resumos de documento que contêm o palavra "reflector" no mesmo documento que a palavra "bracket".  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -158,7 +158,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
      O valor de **transformar palavras de ruído** afetará como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata palavras irrelevantes se elas forem especificadas em pesquisas de proximidade. Para saber mais, veja [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md)   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21b7665fa4beaf0dc48f336c7f706f1a12ed4865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,17 +105,17 @@ O texto e as capturas de tela de suporte podem não ser exatas quando a interfac
 
     ![Nova Sessão > Eventos > Selecionar > Biblioteca de eventos, Eventos selecionados](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
-5. Na área **Biblioteca de eventos** , na lista suspensa, escolha **Somente nomes de evento**.
+5. Na área **Biblioteca de eventos**, na lista suspensa, escolha **Somente nomes de evento**.
     - Na caixa de texto, digite **sql**, que filtra e reduz a longa lista de eventos disponíveis usando um operador *contains* .
     - Role e clique no evento chamado **sql_statement_completed**.
     - Clique no botão de seta para a direita **>** para mover o evento para a caixa **Eventos selecionados** .
 
 6. Na página **Eventos** , clique no botão **Configurar** à extrema direita.
-    - Com o lado esquerdo cortado para melhor exibição, na captura de tela a seguir, é possível ver a área **Opções de configuração de evento** .
+    - Com o lado esquerdo cortado para melhor exibição, na captura de tela a seguir, é possível ver a área **Opções de configuração de evento**.
 
     ![Nova Sessão > Eventos > Configurar > Filtro (Predicado) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Clique na guia **Filtro (Predicado)** . Em seguida, clique em **Clique aqui para adicionar uma cláusula**para capturar todas as instruções SQL SELECT que têm uma cláusula HAVING.
+7. Clique na guia **Filtro (Predicado)**. Em seguida, clique em **Clique aqui para adicionar uma cláusula**para capturar todas as instruções SQL SELECT que têm uma cláusula HAVING.
 
 8. No lista suspensa **Campo** , escolha **sqlserver.sql_text**.
    - Em **Operador** , escolha um operador LIKE.
@@ -138,11 +138,11 @@ O texto e as capturas de tela de suporte podem não ser exatas quando a interfac
 
     ![Nova Sessão > Avançado > Latência máxima de expedição > OK](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. No canto superior esquerdo, clique na página **Avançado** .
+12. No canto superior esquerdo, clique na página **Avançado**.
     - Reduza a **Latência máxima de expedição** até 3 segundos.
     - Por fim, clique no botão **OK** na parte inferior.
 
-13. De volta ao **Pesquisador de Objetos**, expanda **Gerenciamento** > **Sessões**e veja o novo nó de **YourSession**.
+13. De volta ao **Pesquisador de Objetos**, expanda **Gerenciamento** > **Sessões** e veja o novo nó de **YourSession**.
 
     ![O nó da nova *event session* chamado YourSession, no Pesquisador de Objetos, em Gerenciamento > Eventos Estendidos > Sessões](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -165,7 +165,7 @@ Você usou a interface do usuário do SSMS para gerar um script T-SQL que criou 
 Veja a seguir a instrução T-SQL CREATE EVENT SESSION para *YourSession*, que foi gerada por cliques na interface do usuário:
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [YourSession]
     ON SERVER 
     ADD EVENT sqlserver.sql_statement_completed
@@ -206,7 +206,7 @@ GO
 Antes da instrução CREATE EVENT SESSION, você talvez queira emitir condicionalmente um DROP EVENT SESSION caso o nome já exista.
 
 
-```tsql
+```sql
 IF EXISTS (SELECT *
       FROM sys.server_event_sessions    -- If Microsoft SQL Server.
     --FROM sys.database_event_sessions  -- If Azure SQL Database in the cloud.
@@ -226,7 +226,7 @@ go
 Quando você cria uma sessão de evento, o padrão é que ela não inicie a execução automaticamente. Você pode iniciar ou interromper a sessão de evento a qualquer momento, usando a instrução T-SQL ALTER EVENT SESSION a seguir.
 
 
-```tsql
+```sql
 ALTER EVENT SESSION [YourSession]
       ON SERVER
     --ON DATABASE
@@ -252,7 +252,7 @@ Teste sua sessão de evento com estas etapas simples:
 
 
 
-```tsql
+```sql
 SELECT
         c.name,
         Count(*)  AS [Count-Per-Column-Repeated-Name]
@@ -304,7 +304,7 @@ No SSMS, execute a instrução T-SQL SELECT a seguir para retornar resultados em
 > O sistema de eventos sempre acrescenta um número longo ao nome de arquivo de *.xel* event_file especificado. Antes de executar a instrução SELECT a seguir por meio do arquivo, copie o nome completo fornecido pelo sistema e cole-o em SELECT.
 
 
-```tsql
+```sql
 SELECT
         object_name,
         file_name,
@@ -430,7 +430,7 @@ Cenários específicos de sessões de evento destinadas à avaliação de bloque
 A tabela a seguir lista os termos usados para eventos estendidos e descreve seus significados.
 
 
-| Termo | Descrição |
+| Termo | Description |
 | :--- | :---------- |
 | sessão de evento | Um constructo centrado em torno de um ou mais eventos, além de itens de suporte como ações, são destinos. A instrução CREATE EVENT SESSION constrói cada sessão de evento. Você pode usar ALTER em uma sessão de evento para iniciá-la e interrompê-la quando desejar. <br/> <br/> Às vezes, uma sessão de evento é chamada de apenas uma *sessão*, quando o contexto esclarece que ela indica uma *sessão de evento*. <br/> <br/> Mais detalhes sobre as sessões de evento são descritos em: [Sessões de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | event | Uma ocorrência específica no sistema que é inspecionada por uma sessão de eventos ativos. <br/> <br/> Por exemplo, o evento *sql_statement_completed* representa o momento em que se conclui qualquer instrução T-SQL. O evento pode relatar sua duração e outros dados. |
@@ -446,7 +446,7 @@ A tabela a seguir lista os termos usados para eventos estendidos e descreve seus
 O T-SQL SELECT a seguir retorna uma linha para cada evento disponível cujo nome contém a cadeia de caracteres de três “sql”. Obviamente, você pode editar o valor LIKE para procurar nomes de eventos diferentes. As linhas também dão nome ao pacote que contém o evento.
 
 
-```tsql
+```sql
 SELECT   -- Find an event you want.
         p.name         AS [Package-Name],
         o.object_type,
@@ -578,7 +578,7 @@ As instruções SELECT do Transact-SQL podem relatar quem tem essas permissões.
 A instrução SELECT...UNION ALL a seguir retorna linhas que mostram quem tem as permissões necessárias para criar sessões de evento e consultar as exibições de catálogo do sistema em busca de eventos estendidos.
 
 
-```tsql
+```sql
 -- Ascertain who has the permissions listed in the ON clause.
 -- 'CONTROL SERVER' permission includes the permissions
 -- 'ALTER ANY EVENT SESSION' and 'VIEW SERVER STATE'.
@@ -636,7 +636,7 @@ A instrução SELECT a seguir relata as permissões. Ela utiliza a função inte
 Além disso, se você tem autoridade para temporariamente *representar* outras contas, é possível remover a marca de comentário de [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) e as instruções REVERT, para saber mais sobre outras contas.
 
 
-```tsql
+```sql
 --EXECUTE AS LOGIN = 'AccountNameHere';
 SELECT HAS_PERMS_BY_NAME(
     null, null,

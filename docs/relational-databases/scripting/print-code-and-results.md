@@ -3,9 +3,9 @@ title: "Imprimir código e resultados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e90994acf92b6c2a3ba44d04ec62266f364a2dcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cdbf0bb1cc9965115d76cbf28d452db0e639f59
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-code-and-results"></a>Imprimir código e resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quando você imprime uma consulta ou um arquivo, elementos coloridos serão impressos em cores se sua impressora der suporte a impressão colorida e a impressão colorida estiver habilitada na configuração da impressora.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Se a opção de números de linha estiver habilitada no Editor, os números de linha não serão impressos a menos que você selecione **Incluir números de linha** na caixa de diálogo **Imprimir** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Alterar cor, tamanho e estilo da fonte](../../relational-databases/scripting/change-font-color-size-and-style.md)  
   
   

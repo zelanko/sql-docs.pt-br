@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 23ba1090608287b5ce397a160cc103c0b06f8932
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1eab2fac5e1d2f944228e75f00fb8ecc8596b9c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-programming-task-table"></a>Tabela de tarefas de programação de ADO
 A tabela a seguir lista as tarefas de programação contidas no *guia do programador do ADO* e fornece referências para cada tarefa. Essas referências podem ser descrições ou exemplos de código no qual você pode encontrar informações sobre o recurso de ADO que executa a tarefa.

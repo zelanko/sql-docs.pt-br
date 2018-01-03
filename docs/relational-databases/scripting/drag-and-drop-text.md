@@ -3,9 +3,9 @@ title: Arrastar e soltar texto | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b55cb9cab0176d4d6e58870c087e75d2626822a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bd54efab760638f4a76fc1c7cdff6720514b2dd1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drag-and-drop-text"></a>Arrastar e soltar texto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Você pode selecionar texto e depois arrastá-lo e soltá-lo em outro local. É possível arrastar e soltar texto:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Arrastar texto significa movê-lo, isto é, o texto é apagado do local anterior e movido para o novo local. Pressionar a tecla CTRL enquanto você arrasta o texto, significa copiá-lo no local novo. Arrastar um objeto do Pesquisador de Objetos é uma exceção e não exclui o nome do objeto do explorador.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Código e texto de navegação](../../relational-databases/scripting/navigate-code-and-text.md)  
   
   

@@ -3,7 +3,7 @@ title: "Noções básicas sobre cursores e bloqueios | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75209516e372612beb8885051fd22882b967894c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 183fb439f3cd120dcc5620c3b2c08bd2788f70d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-cursors-and-locks"></a>Noções básicas sobre cursores e bloqueios
 É importante entender como os cursores operam para que você pode selecionar o tipo de cursor melhor e mais eficiente para requisitos de acesso a dados do aplicativo. Uma configuração menor ideal do cursor pode tornar lenta lamentavelmente de operações de acesso a dados.  

@@ -3,7 +3,7 @@ title: Propriedade do provedor (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ead9a90e3788efd420251912612de520279b43e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e764a6b8b3a11f6705ce047680e5884aed89bf8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-property-ado"></a>Propriedade do provedor (ADO)
 Indica o nome do provedor para uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
@@ -37,7 +37,7 @@ Indica o nome do provedor para uma [Conexão](../../../ado/reference/ado-api/con
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor que indica o nome do provedor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **provedor** propriedade para definir ou retornar o nome do provedor para uma conexão. Essa propriedade também pode ser definida pelo conteúdo do [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade ou o *ConnectionString* argumento do [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método; porém, especificar um provedor em mais de um local ao chamar o **abrir** método pode ter resultados imprevisíveis. Se o provedor não for especificado, a propriedade padrão será MSDASQL ([Microsoft OLE DB Provider para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
   
  O **provedor** propriedade é leitura/gravação quando a conexão é fechada e somente leitura quando ela é aberta. A configuração não terá efeito até que você abra o **Conexão** objeto ou acesso a [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção do **Conexão** objeto. Se a configuração não for válida, ocorrerá um erro.  
@@ -45,7 +45,7 @@ Indica o nome do provedor para uma [Conexão](../../../ado/reference/ado-api/con
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedades de DefaultDatabase (VB) e o provedor](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Exemplo de propriedades de DefaultDatabase (VB) e o provedor](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provedor Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   

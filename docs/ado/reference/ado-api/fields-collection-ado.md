@@ -3,7 +3,7 @@ title: "Campos de coleção (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 433ce545129e4a0a6ac88238ba3181fade2186bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32b9f8cff20d7b2e82479985af4219439c8b2233
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fields-collection-ado"></a>Coleção de campos (ADO)
 Contém todos os [campo](../../../ado/reference/ado-api/field-object.md) objetos de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **registros** objeto tem um **campos** coleção composta de **campo** objetos. Cada **campo** objeto corresponde a uma coluna de **registros**. Você pode preencher o **campos** coleção antes de abrir o **registros** chamando o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método na coleção.  
   
 > [!NOTE]
@@ -50,5 +50,5 @@ Contém todos os [campo](../../../ado/reference/ado-api/field-object.md) objetos
   
 -   [Propriedades de coleção de campos, métodos e eventos](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)

@@ -3,7 +3,7 @@ title: Comando de objeto (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2f4aab59ac3a5296d4dcd75927b632f7a6915d46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cc65eed5ff64351932689c2f54d7fab44f7e0915
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-object-ado"></a>Objeto de comando (ADO)
 Define um comando específico que você pretende executar em relação a uma fonte de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use um **comando** objeto para consultar um banco de dados e retornar os registros em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, para executar uma operação em massa, ou para manipular a estrutura de um banco de dados. Dependendo da funcionalidade do provedor, alguns **comando** coleções, métodos ou propriedades podem gerar um erro quando eles são referenciados.  
   
  Com as coleções, métodos e propriedades de um **comando** do objeto, você pode fazer o seguinte:  
@@ -80,7 +80,7 @@ objCmd(0)
   
 -   [Propriedades do objeto de comando, métodos e eventos](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Coleção de parâmetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Coleção de propriedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

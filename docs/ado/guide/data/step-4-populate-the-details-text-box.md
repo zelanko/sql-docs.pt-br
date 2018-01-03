@@ -3,7 +3,7 @@ title: 'Etapa 4: Preencher a caixa de texto de detalhes | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2611012fe27e268f40f85647411dd8ad66a6651b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8545cc4af5e646d216ea17f0d1cceae1ea021abf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Etapa 4: Preencher a caixa de texto de detalhes
 Para preencher a caixa de texto de detalhes, criar uma nova sub-rotina denominada **recFields** e insira o código a seguir:  
@@ -52,6 +52,6 @@ End Sub
   
  Esse código preenche `lstDetails` com os campos e valores do registro simple passado para `recFields`. Se o recurso é um arquivo de texto, um fluxo de texto é aberto do registro de recurso. O código determina se o conjunto de caracteres é ASCII e copia o conteúdo de fluxo em `txtDetails`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Etapa 3: Preencher a caixa de listagem de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

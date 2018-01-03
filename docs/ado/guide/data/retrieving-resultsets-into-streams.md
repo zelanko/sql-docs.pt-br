@@ -3,7 +3,7 @@ title: Recuperando conjuntos de resultados em fluxos | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed2d2412cf8314875f9469689677c22ae4e60e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7bca240a384ef3e8a3e6bbd2a59731cc8861136d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperando conjuntos de resultados em fluxos
 Em vez de receber os resultados nas tradicional **registros** objeto ADO em vez disso, pode recuperar os resultados da consulta em um fluxo. O ADO **fluxo** objeto (ou outros objetos que dão suporte a COM **IStream** interface, como o ASP **solicitação** e **resposta** objetos ) pode ser usado para conter os resultados. Um uso para esse recurso é para recuperar os resultados em formato XML. Com o SQL Server, por exemplo, resultados XML podem ser retornados de várias maneiras, como usando a cláusula FOR XML com uma consulta SQL SELECT ou uma consulta XPath.  
@@ -184,5 +184,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
  Neste ponto, XML tenha sido transmitido para o navegador do cliente e está pronto para ser exibido. Isso é feito usando o VBScript do lado do cliente para associar o documento XML a uma instância do DOM e loop através de cada nó filho para criar uma lista de produtos em HTML.

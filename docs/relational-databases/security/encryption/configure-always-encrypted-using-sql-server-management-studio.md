@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d4181262d713918c834d7dc971444118f11fe623
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a6e6764d71d632cb4f232eecd34e16f38bede57
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurar o Always Encrypted usando o SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ A Parametrização de Always Encrypted é um recurso do SQL Server Management St
   
 Sem parametrização, o .NET Framework Data Provider passa cada instrução, que você cria no Editor de Consultas, como uma consulta sem parâmetros. Se a consulta contiver literais ou variáveis Transact-SQL destinados a colunas criptografadas, o .NET Framework Data Provider para SQL Server não será capaz de detectá-los e criptografá-los, antes de enviar a consulta ao banco de dados. Como resultado, a consulta falhará devido à incompatibilidade de tipo (entre a variável Transact-SQL literal de texto sem formatação e a coluna criptografada). Por exemplo, a consulta a seguir falhará sem parametrização, supondo que a coluna `SSN` seja criptografada.   
 
-```tsql
+```sql
 DECLARE @SSN NCHAR(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN
@@ -148,7 +148,7 @@ Se a Parametrização de Always Encrypted e o comportamento do Always Encrypted 
 - São inicializadas usando um único literal. Variáveis inicializadas usando expressões, inclusive operadores ou funções, não serão parametrizadas.      
 
 A seguir estão exemplos de variáveis, que o SQL Server Management Studio irá parametrizar.   
-```tsql
+```sql
 DECLARE @SSN char(11) = '795-73-9838';
    
 DECLARE @BirthDate date = '19990104';
@@ -156,7 +156,7 @@ DECLARE @Salary money = $30000;
 ```
 
 E, aqui estão alguns exemplos de variáveis que o SQL Server Management Studio não tentará parametrizar:   
-```tsql
+```sql
 DECLARE @Name nvarchar(50); --Initialization seperate from declaration
 SET @Name = 'Abel';
    
@@ -170,7 +170,7 @@ Para uma parametrização tentada ser bem-sucedida:
 - Se o tipo declarado da variável for um tipo de data ou hora, a variável deverá ser inicializada usando uma cadeia de caracteres que usa um dos seguintes formatos ISO 8601 compatíveis.   
 
 Estes são exemplos de declarações de variáveis Transact-SQL que resultarão em erros de parametrização:   
-```tsql
+```sql
 DECLARE @BirthDate date = '01/04/1999' -- unsupported date format   
    
 DECLARE @Number int = 1.1 -- the type of the literal does not match the type of the variable   
@@ -192,7 +192,7 @@ Outro exemplo abaixo mostra duas variáveis que atendem às condições de pré-
 >   [!NOTE]
 >   Como o Always Encrypted oferece suporte a um subconjunto limitado de conversões de tipo, em muitos casos, é necessário que o tipo de dados de uma variável Transact-SQL seja o mesmo que o tipo da coluna de banco de dados de destino, ao qual ele se destina. Por exemplo, supondo que o tipo da coluna `SSN` na tabela `Patients` seja `char(11)`, a consulta abaixo falhará, já que o tipo da variável `@SSN` , que é `nchar(11)`, não coincide com o tipo da coluna.   
 
-```tsql
+```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
@@ -461,7 +461,7 @@ Você também precisa acessar as chaves mestras de coluna, configuradas para as 
 - **Provedor de Serviços de Criptografia (CAPI)** : a permissão e as credenciais necessárias que podem ser solicitadas ao usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
 Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Always Encrypted (mecanismo de banco de dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Assistente do Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)
 - [Visão geral do gerenciamento de chaves do Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

@@ -3,9 +3,9 @@ title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8c9b1806be022d0391cb19cc03a81a039927e923
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a1c97182f96f6f06d8dee2e999a94f17001ae5f0
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Os editores no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dão suporte a opções do [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reduzem a digitação, fornecem acesso rápido a informações de sintaxe ou facilitam a exibição dos delimitadores de expressões complexas.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 |Descreve como o IntelliSense pode identificar as duas extremidades de um par de delimitadores, e como você pode saltar entre as duas extremidades do par.|[Correspondência automática de pares de sintaxe](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
 |Descreve as condições sob as quais o IntelliSense pode não funcionar.|Solucionando problemas do IntelliSense (SQL Server Management Studio)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

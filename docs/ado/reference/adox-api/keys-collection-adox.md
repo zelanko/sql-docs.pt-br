@@ -3,7 +3,7 @@ title: "Chaves de coleção (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d58a565fde1f4f1628d55293c401250529269a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b832a459e5eac0a6e208517457eccba8b10e74c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keys-collection-adox"></a>Coleção de chaves (ADOX)
 Contém todos os [chave](../../../ado/reference/adox-api/key-object-adox.md) objetos de um [tabela](../../../ado/reference/adox-api/table-object-adox.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) método para um [chaves coleção](../../../ado/reference/adox-api/keys-collection-adox.md) é exclusivo para ADOX. Você pode:  
   
 -   Adicione uma nova chave para a coleção com o [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) método.  
@@ -50,7 +50,7 @@ Contém todos os [chave](../../../ado/reference/adox-api/key-object-adox.md) obj
   
 -   [Propriedades, Métodos e Eventos da coleção Indexes](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Propriedades de coleção de chaves, métodos e eventos](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

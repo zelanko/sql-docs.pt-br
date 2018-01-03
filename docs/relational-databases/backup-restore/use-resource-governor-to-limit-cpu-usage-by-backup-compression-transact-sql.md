@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36fd0cd2cc5f7168e4daf7948ab9a9223b21e394
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
      **Para criar um logon**  
   
-    -   [Crie um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
+    -   [Criar um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
   
     -   [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  Esse exemplo cria um logon para a conta do Windows *domain_name*`\MAX_CPU` e, em seguida, concede a permissão VIEW SERVER STATE ao logon. Essa permissão permite verificar a classificação do Administrador de Recursos de sessões do logon. Em seguida, o exemplo cria um usuário para *domain_name*`\MAX_CPU` e o adiciona à função de banco de dados fixa db_backupoperator do banco de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Esse nome de usuário será usado pela função de classificação do Administrador de Recursos.  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -207,7 +207,7 @@ GO
 > [!IMPORTANT]  
 >  O exemplo a seguir usa o nome de usuário de exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criado no "Exemplo A: Configurando um logon e um usuário (Transact-SQL)", *domain_name*`\MAX_CPU`. Substitua-os pelo nome do usuário do logon que será usado para criar backups compactados de baixa prioridade.  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -249,7 +249,7 @@ GO
 ##  <a name="verifying"></a> Verificando a classificação da sessão atual (Transact-SQL)  
  Opcionalmente, faça logon como o usuário especificado na função de classificação e verifique a classificação da sessão emitindo a seguinte instrução [SELECT](../../t-sql/queries/select-transact-sql.md) no Pesquisador de Objetos:  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -272,7 +272,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemplo C: Criando um backup compactado (Transact-SQL)  
  O exemplo de [BACKUP](../../t-sql/statements/backup-transact-sql.md) a seguir cria um backup completo compactado do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] em um arquivo de backup recém-formatado, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
@@ -285,8 +285,8 @@ GO
   
  [&#91;Início&#93;](#Top)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e testar uma função de classificação definida pelo usuário](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   

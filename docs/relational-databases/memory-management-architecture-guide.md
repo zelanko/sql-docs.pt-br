@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 503814b6f9ade3623a4586b97ae09434f78c0db4
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,10 +93,10 @@ A tabela a seguir indica se um tipo específico de alocação de memória é con
 |Tipo de alocação de memória| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Alocações de uma página|Sim|Sim, consolidadas em alocações de página de “qualquer tamanho”|
-|Alocações de várias páginas|Não|Sim, consolidadas em alocações de página de “qualquer tamanho”|
-|Alocações de CLR|Não|Sim|
-|Memória de pilhas de thread|Não|Não|
-|Alocações diretas do Windows|Não|Não|
+|Alocações de várias páginas|não|Sim, consolidadas em alocações de página de “qualquer tamanho”|
+|Alocações de CLR|não|Sim|
+|Memória de pilhas de thread|não|não|
+|Alocações diretas do Windows|não|não|
 
 A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode alocar mais memória do que o valor especificado na configuração max server memory. Esse comportamento pode ocorrer quando o valor de ***Memória Total do Servidor (KB)*** já tiver atingido a configuração da ***Memória do Servidor de Destino (KB)*** (conforme especificado por max server memory). Se houver memória contígua livre insuficiente para atender à demanda de solicitações de memória de várias páginas (mais de 8 KB) devido à fragmentação da memória, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá exceder o uso em vez de rejeitar a solicitação de memória. 
 
@@ -120,7 +120,7 @@ A tabela a seguir indica se um tipo específico de alocação de memória se enc
 
 |Tipo de alocação de memória| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Alocações de uma página|Não|Não, consolidados em alocações de páginas de “qualquer tamanho”|
+|Alocações de uma página|não|Não, consolidados em alocações de páginas de “qualquer tamanho”|
 |Alocações de várias páginas|Sim|Não, consolidados em alocações de páginas de “qualquer tamanho”|
 |Alocações de CLR|Sim|Sim|
 |Memória de pilhas de thread|Sim|Sim|
@@ -138,7 +138,7 @@ A opção **[max server memory](../database-engine/configure-windows/server-memo
 
 A instrução a seguir retorna informações sobre a memória alocada atualmente:  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
@@ -281,7 +281,7 @@ A proteção de soma de verificação, apresentada no [!INCLUDE[ssVersion2005](.
 
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconhece o NUMA (Non-uniform Memory Access) e tem um bom desempenho em hardware de NUMA sem configuração especial. Devido ao aumento da velocidade de clock e do número de processadores, fica muito difícil reduzir a latência de memória exigida para usar este poder de processamento adicional. Para evitar isto, fornecedores de hardware fornecem caches de L3 grandes, mas esta é apenas uma solução limitada. A arquitetura NUMA oferece uma solução escalonável para esse problema. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi projetado para tirar proveito de computadores baseados em NUMA sem exigir nenhuma mudança de aplicativo. Para saber mais, veja [Como configurar o SQL Server para usar o Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Opções Server Memory de configuração do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Lendo Páginas](../relational-databases/reading-pages.md)   
 [Gravando Páginas](../relational-databases/writing-pages.md)   

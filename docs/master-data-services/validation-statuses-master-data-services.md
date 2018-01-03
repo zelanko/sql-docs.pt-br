@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db272b86bf1256bbf001b3c2662cd0be6f803c94
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d50b9b71731b7bd681f3cc82e3eeb1e2efb58a2e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="validation-statuses-master-data-services"></a>Status da validação (Master Data Services)
   Na área funcional **Gerenciamento de Versões** , na página **Validar Versão** , os seguintes status são possíveis.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 |Falha na validação|Membros que não passaram na validação da regra de negócio.|  
 |Aguardando a revalidação do membro dependente|Membros consolidados atualizados que estão esperando para serem validados junto com membros filho.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

@@ -3,7 +3,7 @@ title: "Método (usuários ADOX) append | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1720503f6ff8de32b247fa4878bccb69c88d5c71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69f839a24ee99d0db10435a3562926786f2d4620
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-users"></a>Acrescente o método (ADOX usuários)
 Adiciona um novo [usuário](../../../ado/reference/adox-api/user-object-adox.md) o objeto para o [usuários](../../../ado/reference/adox-api/users-collection-adox.md) coleção.  
@@ -45,7 +45,7 @@ Users.Append User[,Password]
  *Senha*  
  Opcional. Um **cadeia de caracteres** valor que contém a senha do usuário. O *senha* parâmetro corresponde ao valor especificado pelo [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) método de um **usuário** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **usuários** coleção de um [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa usuários todos do catálogo. O **usuários** coleção para um [grupo](../../../ado/reference/adox-api/group-object-adox.md) representa apenas os usuários que têm uma associação no grupo específico.  
   
  Se o provedor não oferece suporte para criar usuários, ocorrerá um erro.  
@@ -56,7 +56,7 @@ Users.Append User[,Password]
 ## <a name="applies-to"></a>Aplica-se a  
  [Coleção Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar usuários e grupos, exemplo dos métodos ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Acrescente o método (ADOX colunas)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [(Grupos de ADOX) do método append](../../../ado/reference/adox-api/append-method-adox-groups.md)   

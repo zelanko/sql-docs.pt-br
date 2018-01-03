@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,16 +17,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c46e03e62200624211c0db1d5aa652d03f56beaf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3fc14a5133f5e6abeaa6f64b4f43941a59c68ff7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Editar e excluir um índice (Master Data Services)
   É possível editar e excluir um índice que tenha sido criado nos atributos.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional Administração do Sistema. Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  **Para excluir um índice**  
   
-1.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
+1.  Na página **Gerenciar Modelo** , selecione um modelo na grade e clique em **Entidades**.  
   
 2.  Na página **Gerenciar Entidade** , selecione a entidade que contém o índice que deseja excluir.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Nas caixas de mensagem de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um índice &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [Índice personalizado &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   

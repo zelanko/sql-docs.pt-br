@@ -3,7 +3,7 @@ title: "Visão geral dos dados e esquemas multidimensionais | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49c9f724fcd82de499ecb88a464c4c5ea3980b2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dee35cd9c75f7872001c76c42265135018284dfb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Visão geral de esquemas Multidimensional e de dados
 ## <a name="understanding-multidimensional-schemas"></a>Noções básicas sobre esquemas Multidimensional  
@@ -88,7 +88,7 @@ Hamburg, Munich, Stuttgart}
   
  Este exemplo também ilustra outra característica: alguns membros do nível da hierarquia da semana do ano semana não aparecem em qualquer nível da hierarquia de trimestre do ano. Portanto, uma hierarquia não precisa incluir todos os membros de uma dimensão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modelo de objeto ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Programando com ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   

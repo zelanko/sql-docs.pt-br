@@ -3,7 +3,7 @@ title: Namespaces | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d32b2d51454f48d4ef164058abbf08d06859a281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1b5921d1c91ee326810041c612097c41e9e099e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces"></a>Namespaces
 O formato de persistência XML no ADO usa os seguintes quatro namespaces.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O formato de persistência XML no ADO usa os seguintes quatro namespaces.  
   
 |Prefixo|Description|  
@@ -50,5 +50,5 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
   
  O usuário pode definir isso para ser qualquer nome, desde que esse nome é usado de forma consistente em todo o documento XML. ADO sempre grava "s," "rs", "dt" e "z", mas esses nomes de prefixo não são embutidos em código no componente de carregamento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -3,7 +3,7 @@ title: "Abra o método (fluxo de ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2da6a07f58ab3cceb9ca9d661703603146c3e5f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e93255bf18f91377f8d62400a236208507cb8c8c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-stream"></a>Método Open (fluxo de ADO)
 Abre uma [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto para manipular fluxos de dados binários ou de texto.  
@@ -54,7 +54,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *Senha*  
  Opcional. Um **cadeia de caracteres** valor que contém a senha, se necessário, acessa o **fluxo** objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando um **registro** objeto é passado como o parâmetro de origem, o *UserID* e *senha* parâmetros não são usados como acesso a **registro** o objeto já está disponível. Da mesma forma, o [modo](../../../ado/reference/ado-api/mode-property-ado.md) do **registro** objeto é transferido para o **fluxo** objeto. Quando *fonte* não for especificado, o **fluxo** aberto não contém dados e tem um [tamanho](../../../ado/reference/ado-api/size-property-ado-stream.md) de zero (0). Para evitar a perda dos dados gravados isso **fluxo** quando o **fluxo** é fechado, salvar o **fluxo** com o [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) ou [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) métodos, ou salvá-lo para outro local de memória.  
   
  Um *OpenOptions* valor **adOpenStreamFromRecord** identifica o conteúdo do *fonte* parâmetro seja já aberto **registro**objeto. O comportamento padrão é tratar *fonte* como uma URL que aponta diretamente para um nó em uma estrutura de árvore, como um arquivo. Fluxo padrão associado a esse nó é aberto.  
@@ -66,7 +66,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Open (Conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Método Open (ADO registro)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

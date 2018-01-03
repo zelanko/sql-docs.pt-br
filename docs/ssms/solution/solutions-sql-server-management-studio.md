@@ -3,7 +3,7 @@ title: "Soluções (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 506e7aec9c3c6c89d057d75f4b8b92947cc0cd50
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54000cd193dc9634f9dcfae9bd702fadcd77b7e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluções (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Uma solução [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] é uma coleção de um ou mais projetos relacionados. Projetos são contêineres que os desenvolvedores usam para organizar arquivos relacionados, como conjuntos de scripts de administração geralmente usados.  
@@ -58,7 +58,7 @@ Soluções e projetos podem ser integrados em um banco de dados do [!INCLUDE[msC
 |Descreve como mover itens entre projetos em uma solução.|[Mover itens em uma solução](../../ssms/solution/move-items-in-a-solution.md)|  
 |Descreve como renomear uma solução ou os itens na solução.|[Renomear soluções e itens de projeto](../../ssms/solution/rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
 [Projetos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Controle do código-fonte do Gerenciador de Soluções](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  

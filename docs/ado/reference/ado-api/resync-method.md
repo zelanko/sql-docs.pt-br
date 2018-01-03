@@ -3,7 +3,7 @@ title: "Ressincronizar método | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fe3a2a123061cd0fc4de31d2b08ab82d41f7542
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 101e2695a47b2c255aac94aedb6b613c1fca15c6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resync-method"></a>Sincronizar de método
 Atualiza os dados no atual [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, ou [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto do banco de dados subjacente.  
@@ -47,7 +47,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  *ResyncValues*  
  Opcional. Um [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valor que especifica se valores subjacentes são substituídos. O valor padrão é **adResyncAllValues**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>Conjunto de registros  
  Use o **Resync** método ressincronizar registros no atual **registros** com o banco de dados subjacente. Isso é útil se você estiver usando um cursor estático ou de somente avanço, mas você deseja ver as alterações no banco de dados subjacente.  
@@ -75,7 +75,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
 |-|-|  
 |[Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sincronizar de exemplo do método (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Sincronizar de exemplo do método (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Método Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   

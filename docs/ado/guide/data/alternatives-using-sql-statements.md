@@ -3,7 +3,7 @@ title: "Alternativas: Usando instruções SQL | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 325c9a9a75083a17ffda0f19c8521c3f36f8104e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 00d771042d09ab9dc95a90debbaac94ac15301d5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alternatives-using-sql-statements"></a>Alternativas: Usando instruções SQL
 ADO também permite usar comandos como alternativas para suas propriedades internas e métodos para a edição de dados. Dependendo do seu provedor, todas as operações mencionadas nesta seção podem também ser feitas ao passar comandos para a fonte de dados. Por exemplo, instruções de atualização do SQL podem ser usadas para modificar os dados sem usar o **valor** propriedade de um **campo**. Instruções SQL INSERT podem ser usadas para adicionar novos registros de uma fonte de dados, em vez do método ADO **AddNew**. Para obter mais informações sobre a linguagem de manipulação de dados do provedor ou o SQL, consulte a documentação da fonte de dados.  

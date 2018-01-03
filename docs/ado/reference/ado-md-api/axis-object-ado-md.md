@@ -3,7 +3,7 @@ title: O objeto de eixo (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4164cd36a128de91f42f141db4c04aa7d9a2110c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075cccb08756fe6459db87bbbc091700ae333400
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="axis-object-ado-md"></a>Objeto de eixo (ADO MD)
 Representa uma posição ou o eixo do filtro de um conjunto de células que contém os membros selecionados de uma ou mais dimensões.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **eixo** objeto pode ser contido por um [eixos](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) coleção, ou retornadas pelo [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) propriedade de um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
  Com as coleções e propriedades de um **eixo** do objeto, você pode fazer o seguinte:  
@@ -46,7 +46,7 @@ Representa uma posição ou o eixo do filtro de um conjunto de células que cont
   
 -   [Propriedades, métodos e eventos](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de eixo (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Coleção de eixos (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Coleção de posições (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

@@ -3,7 +3,7 @@ title: Propriedade FormattedValue (ADO MD) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cbf0c7a5fc9fc88cc1962ec3414b293c03a41a25
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dc60bd0923a37d396c6c181687b2a6091418227
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="formattedvalue-property-ado-md"></a>Propriedade FormattedValue (ADO MD)
 Indica a exibição formatada de um [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valor.  
@@ -34,12 +34,12 @@ Indica a exibição formatada de um [célula](../../../ado/reference/ado-md-api/
 ## <a name="return-values"></a>Valores de retorno  
  Retorna um **cadeia de caracteres** e é somente leitura.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **FormattedValue** propriedade para obter o valor de exibição formatada do [valor](../../../ado/reference/ado-md-api/value-property-ado-md.md) propriedade de um [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md) objeto. Por exemplo, se o valor de uma célula foi 1056.87, e esse valor representado um valor em dólar, **FormattedValue** seria $1,056.87.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de conjunto de células (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Propriedade Value (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)

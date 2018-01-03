@@ -3,7 +3,7 @@ title: "Abra o método (registro de ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc5b12e87123af4abc3b92535b87668b7c983f4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 627000fbf4b3b153895d64ba0bd7560654d63719
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-record"></a>Método Open (ADO registro)
 Abre um existente [registro](../../../ado/reference/ado-api/record-object-ado.md) de objeto ou cria um novo item representado pelo **registro**, como um arquivo ou diretório.  
@@ -60,7 +60,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *Senha*  
  Opcional. Um **cadeia de caracteres** valor que contém a senha, se necessário, verifica *nome de usuário*.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  *Origem* pode ser:  
   
 -   UMA URL. Se o protocolo para a URL é http, o provedor de Internet será invocado por padrão. Se a URL aponta para um nó que contém um script executável (como um. Página ASP), um **registro** que contém a origem em vez de executado conteúdo é aberto por padrão. Use o *opções* argumento para modificar esse comportamento.  
@@ -81,7 +81,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Open (Conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Método Open (fluxo de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   

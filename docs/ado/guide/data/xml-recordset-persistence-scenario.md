@@ -3,7 +3,7 @@ title: "Cenário de persistência do conjunto de registros XML | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bfbc480a7b13a7008d2cc7679a5033e2f3270797
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9a809d6e2e50ee20747466ab4b2895a5aedf721
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Cenário de persistência do conjunto de registros XML
 Nesse cenário, você criará um aplicativo de Active Server Pages (ASP) que salva o conteúdo de um objeto Recordset diretamente para o objeto de resposta do ASP.  
@@ -117,6 +117,6 @@ Nesse cenário, você criará um aplicativo de Active Server Pages (ASP) que sal
   
  Feche o arquivo default. htm e salvá-lo na mesma pasta onde você salvou XMLResponse.asp. Usando o Internet Explorer 4.0 ou posterior, abra a URL http://*sqlserver*/XMLPersist/default.htm e observar os resultados. Os dados são exibidos em uma tabela DHTML associada. Agora, abra a URL http:// *sqlserver* /XMLPersist/XMLResponse.asp e observar os resultados. O XML é exibido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Save](../../../ado/reference/ado-api/save-method.md)   
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

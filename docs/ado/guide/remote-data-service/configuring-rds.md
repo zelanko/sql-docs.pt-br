@@ -3,7 +3,7 @@ title: Configurando o RDS | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6fcd1b697b6e82e56cae839df4237c5234ef7eea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fe82435c8d8a2d1c1f577a8190fabe60192dd351
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configuring-rds"></a>Configurando o RDS
 > [!IMPORTANT]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Configurando o DataFactory para modos seguros ou irrestritos](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usando as tecnologias relacionadas com RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [Personalização do DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Solução de problemas do RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)

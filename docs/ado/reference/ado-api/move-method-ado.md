@@ -3,7 +3,7 @@ title: "Mover o método (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d1db74ef70a98467e320dc09ff4e19c5935ac04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47239335259fc7bee4d01ef01741e4148f1a3ea0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-method-ado"></a>Método Move (ADO)
 Move a posição do registro atual em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -45,7 +45,7 @@ recordset.Move NumRecords, Start
  *Iniciar*  
  Opcional. Um **cadeia de caracteres** valor ou **Variant** que é avaliada como um indicador. Você também pode usar um [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **mover** método tem suporte em todos os **registros** objetos.  
   
  Se o *NumRecords* argumento for maior que zero, a posição do registro atual avança (até o fim do **registros**). Se *NumRecords* é menor que zero, a posição atual do registro recua (no início do **registros**).  
@@ -68,7 +68,7 @@ recordset.Move NumRecords, Start
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo do método Move (VB)](../../../ado/reference/ado-api/move-method-example-vb.md)   
  [Exemplo do método Move (VBScript)](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
  [Exemplo do método Move (VC + +)](../../../ado/reference/ado-api/move-method-example-vc.md)   

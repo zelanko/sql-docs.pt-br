@@ -3,7 +3,7 @@ title: A propriedade Unique (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c13284be878cb5a737a02e63bb83dd5ab63eb89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 46ce4a2e1dcf16ce03fd15b905e5caff44e8d961
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unique-property-adox"></a>Propriedade Unique (ADOX)
 Indica se as chaves de índice devem ser exclusivas.  
@@ -35,7 +35,7 @@ Indica se as chaves de índice devem ser exclusivas.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define e retorna um **booliano** valor.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor padrão é **Falso**.  
   
  Essa propriedade é somente leitura no [índice](../../../ado/reference/adox-api/index-object-adox.md) já está anexados a uma coleção de objetos.  
@@ -43,6 +43,6 @@ Indica se as chaves de índice devem ser exclusivas.
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [PrimaryKey e exemplo de propriedades exclusivas (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

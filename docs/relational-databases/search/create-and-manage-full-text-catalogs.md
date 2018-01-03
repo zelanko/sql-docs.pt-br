@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82eda03e726cc16476847cc8ed21ad46f77509cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Criar e gerenciar catálogos de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Um catálogo de texto completo é um contêiner lógico para um grupo de índices de texto completo. É necessário criar um catálogo de texto completo antes de criar um índice de texto completo.
@@ -36,7 +36,7 @@ Um catálogo de texto completo é um objeto virtual que não pertence a nenhum g
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Criar um catálogo de texto completo com Transact-SQL
 Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Por exemplo:
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -71,7 +71,7 @@ GO
   
 A tabela a seguir lista as propriedades relacionadas a catálogos de texto completo. Talvez essas informações sejam úteis para administrar e solucionar problemas de pesquisa de texto completo. 
   
-|Propriedade|Descrição|  
+|Propriedade|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Configuração da diferenciação de caracteres com/sem acento.|
 |**ImportStatus**|Se o catálogo de texto completo está sendo importado.|  

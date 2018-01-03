@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ece7ad69dc6ed7421b3e2793330e9ecb995575fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Funções – dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  Se uma ID de execução não for especificada, a estatística de desempenho para várias execuções será retornada. Se você for membro da função de banco de dados **ssis_admin** , as estatísticas de desempenho de todas as execuções em andamento serão retornadas.  Se você não for membro da função de banco de dados **ssis_admin** , as estatísticas de desempenho das execuções em andamento para as quais você tem permissões de leitura serão retornadas. O *execution_id* é um **BigInt**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir lista os valores de nomes de contadores retornados pela função dm_execution_performance_counter.  
   
 |Nome do contador|Description|  
@@ -62,7 +62,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Retorno  
  A função dm_execution_performance_counters retorna uma tabela com as colunas a seguir, para uma execução em execução. As informações retornadas são de todos os pacotes contidos na execução. Se não houver nenhuma execução em execução, uma tabela vazia será retornada.  
   
-|Nome da coluna|Tipo de coluna|Description|Comentários|  
+|Nome da coluna|Tipo de coluna|Description|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** não é um valor válido.|Identificador exclusivo da execução que contém o pacote.||  
 |counter_name|**nvarchar(128)**|O nome do contador.|Consulte a seção **Comentários** de valores.|  

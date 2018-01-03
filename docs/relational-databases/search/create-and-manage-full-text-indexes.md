@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b0c6e128f6b2213e1a4a2af46281388f7c8a593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Este tópico descreve como criar, popular e gerenciar índices de texto completo no SQL Server.
@@ -87,7 +87,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
   
  A tabela a seguir lista as propriedades de texto completo relacionadas a colunas e tabelas indexadas e suas funções [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
   
-|Propriedade|Descrição|Função|  
+|Propriedade|Description|Função|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN na tabela que armazena as informações de tipo de documento da coluna.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Se uma coluna foi habilitada para indexação de texto completo.|COLUMNPROPERTY|  
@@ -174,7 +174,7 @@ GO
   
 Observe que o Mecanismo de Texto Completo pode aproveitar os filtros existentes instalados no sistema operacional. Para que você possa usar filtros do sistema operacional, separadores de palavras e lematizadores, carregue-os na instância do servidor da seguinte maneira:  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_service @action='load_os_resources', @value=1  
 ```  
   

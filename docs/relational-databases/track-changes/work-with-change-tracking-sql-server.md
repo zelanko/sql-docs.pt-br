@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3f0d5a22242be81f68c218cb5f89f36d4853641f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 83c4872e3e021afc6cb85133d0e02f22f181d612
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabalhar com o controle de alterações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  O exemplo a seguir mostra como obter a versão de sincronização inicial, bem como o conjunto de dados inicial.  
   
-```tsql  
+```sql  
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Usando as funções de controle de alterações para obter alterações  
  Para obter as linhas alteradas de uma tabela e as informações sobre as alterações, use a função CHANGETABLE(CHANGES…). Por exemplo, a consulta a seguir obtém as alterações da tabela `SalesLT.Product` .  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
@@ -94,7 +94,7 @@ FROM
   
  Geralmente, um cliente optará por obter os últimos dados de uma linha em vez de apenas as chaves primárias da linha. Além disso, um aplicativo juntaria os resultados de CHANGETABLE(CHANGES…) com os dados na tabela do usuário. Por exemplo, a consulta a seguir une as linhas da tabela `SalesLT.Product` para obter os valores das colunas `Name` e `ListPrice` . Observe o uso da função `OUTER JOIN`. Ela é obrigatória para garantir que as informações de alteração sejam retornadas para essas linhas que foram excluídas da tabela do usuário.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, P.Name, P.ListPrice,  
     CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
@@ -109,13 +109,13 @@ ON
   
  Para obter a versão a ser usada na próxima enumeração de alteração, use  CHANGE_TRACKING_CURRENT_VERSION(), como mostra o exemplo a seguir.  
   
-```tsql  
+```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
  Quando um aplicativo obtiver alterações, ele deverá usar CHANGETABLE(CHANGES…) e CHANGE_TRACKING_CURRENT_VERSION(), como mostra o exemplo a seguir.  
   
-```tsql  
+```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -142,7 +142,7 @@ ON
   
  O exemplo a seguir mostra como verificar a validade do valor de `last_synchronization_version` para cada tabela.  
   
-```tsql  
+```sql  
 -- Check individual table.  
 IF (@last_synchronization_version < CHANGE_TRACKING_MIN_VALID_VERSION(  
                                    OBJECT_ID('SalesLT.Product')))  
@@ -154,7 +154,7 @@ END
   
  Como mostra o exemplo a seguir, a validade do valor de `last_synchronization_version` pode ser verificada em comparação a todas as tabelas no banco de dados.  
   
-```tsql  
+```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
   SELECT COUNT(*) FROM sys.change_tracking_tables  
@@ -174,7 +174,7 @@ END
   
  No exemplo a seguir, a coluna `CT_ThumbnailPhoto` será `NULL` se ela não tiver sido alterada. Esta coluna também deve ser `NULL` porque ela foi alterada para `NULL` - o aplicativo pode usar a coluna `CT_ThumbNailPhoto_Changed` para determinar se a coluna foi alterada.  
   
-```tsql  
+```sql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
     OBJECT_ID('SalesLT.Product'),'ThumbNailPhoto', 'ColumnId')  
   
@@ -252,7 +252,7 @@ ON
   
  O exemplo a seguir mostra como o isolamento de instantâneo é habilitado para um banco de dados.  
   
-```tsql  
+```sql  
 -- The database must be configured to enable snapshot isolation.  
 ALTER DATABASE AdventureWorksLT  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
@@ -260,7 +260,7 @@ ALTER DATABASE AdventureWorksLT
   
  Uma transação de instantâneo é usada a seguinte forma:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
   -- Verify that version of the previous synchronization is valid.  
@@ -321,7 +321,7 @@ COMMIT TRAN
   
  O exemplo a seguir mostra como usar a função CHANGETABLE(VERSION …) para verificar conflitos do modo mais eficiente, sem uma consulta separada. No exemplo, `CHANGETABLE(VERSION …)` determina o `SYS_CHANGE_VERSION` para a linha especificada por `@product id`. `CHANGETABLE(CHANGES …)` pode obter as mesmas informações, mas isso seria menos eficiente. Se o valor de `SYS_CHANGE_VERSION` para a linha for maior que o valor de `@last_sync_version`, haverá um conflito. Se houver um conflito, a linha não será atualizada. A verificação `ISNULL()` é necessária porque não poderia haver nenhuma informações de alteração disponível para a linha. Nenhuma informação de alteração existiria se a linha não tivesse sido atualizada, visto que o controle de alteração estava habilitado ou a informação de alteração foi limpa.  
   
-```tsql  
+```sql  
 -- Assumption: @last_sync_version has been validated.  
   
 UPDATE  
@@ -341,7 +341,7 @@ WHERE
   
  O código a seguir pode verificar a conta de linha atualizada e identificar mais informações sobre o conflito.  
   
-```tsql  
+```sql  
 -- If the change cannot be made, find out more information.  
 IF (@@ROWCOUNT = 0)  
 BEGIN  
@@ -367,7 +367,7 @@ END
   
  Informações de contexto são normalmente usadas para identificar a origem das alterações. Se a origem da alteração puder ser identificada, aquela informação poderá ser usada por um repositório de dados para evitar a obtenção de alterações quando ele for novamente sincronizado.  
   
-```tsql  
+```sql  
   -- Try to update the row and check for a conflict.  
   WITH CHANGE_TRACKING_CONTEXT (@source_id)  
   UPDATE  
@@ -390,7 +390,7 @@ END
 > [!IMPORTANT]  
 >  Recomendamos que você use isolamento de instantâneo e faça as alterações dentro de uma transação de instantâneo.  
   
-```tsql  
+```sql  
 -- Prerequisite is to ensure ALLOW_SNAPSHOT_ISOLATION is ON for the database.  
   
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
@@ -439,7 +439,7 @@ COMMIT TRAN
   
 -   Quando um cliente consultar alterações, registre o último número de versão de sincronização para cada cliente no servidor. Se houver um problema com os dados, os últimos números de versão sincronizados não serão compatíveis. Isso indica que é necessária uma reinicialização.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Sobre o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Gerenciar o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   

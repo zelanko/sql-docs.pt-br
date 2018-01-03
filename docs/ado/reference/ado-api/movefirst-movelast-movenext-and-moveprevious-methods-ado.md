@@ -3,7 +3,7 @@ title: "MoveFirst, MoveLast, MoveNext e MovePrevious métodos (ADO) | Microsoft 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -32,11 +32,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fa55853548b825b04ac75d5cb4af9689e34e3cd7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cbef486ed01dd49e13ba1ca88d197576dc98570
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext e MovePrevious métodos (ADO)
 Move para a primeira, última, registro anterior ou seguinte em um especificado [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto e torna esse registro o registro atual.  
@@ -48,7 +48,7 @@ Move para a primeira, última, registro anterior ou seguinte em um especificado 
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **MoveFirst** método para mover a posição do registro atual para o primeiro registro o **registros**.  
   
  Use o **MoveLast** método para mover a posição do registro atual para o último registro no **registros**. O **registros** objeto deve dar suporte a indicadores ou movimento do cursor com versões anteriores; caso contrário, a chamada do método gerará um erro.  
@@ -66,7 +66,7 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [MoveFirst, MoveLast, MoveNext e MovePrevious métodos exemplo (VB)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
  [MoveFirst, MoveLast, MoveNext e MovePrevious métodos exemplo (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
  [MoveFirst, MoveLast, MoveNext e MovePrevious métodos exemplo (VC + +)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   

@@ -21,11 +21,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea89e4192c833ce569c336f5f2eb5f7382c136ab
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2f69e34f9d4fbbe6514cc2350ca2b14c2685ce8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-troubleshooting"></a>Solucionando problemas do PolyBase
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para solucionar problemas do PolyBase, use as técnicas encontradas neste tópico.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 |||  
 |-|-|  
-|Exibição|Descrição|  
+|Exibição|Description|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifica tabelas externas.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifica fontes de dados externas.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifica formatos de arquivo externos.|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/18/2017
   
      Registre a ID de execução da consulta mais longa em execução.  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/18/2017
   
     -   DMS: implica uma operação de serviço de movimentação de dados do PolyBase. Vá para a etapa 3b.  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/18/2017
   
          Use a ID de execução e o índice de etapa registrados nas etapas anteriores. Use a ID de execução e o índice de etapa registrados nas etapas anteriores.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/18/2017
   
          Use a ID de execução e o índice de etapa registrados nas etapas anteriores.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/18/2017
   
      Use a ID de execução e o índice de etapa registrados nas etapas anteriores.  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   

@@ -3,7 +3,7 @@ title: "Propriedades de categorias de trabalho – Nova categoria de trabalho | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 622a0451534174884d44259a329702cabaff2528
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a5086ecbd7c6dbd2a8a6635da9c3820b80fd0702
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-categories-properties---new-job-category"></a>Propriedades de categorias de trabalho – Nova categoria de trabalho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lista os trabalhos em uma ou em todas as categorias de trabalho e permite que você adicione uma nova categoria de trabalho.  
@@ -43,6 +43,6 @@ Marque ou desmarque a categoria de trabalho para alterá-la.
 **Trabalho**  
 Exibe o nome do trabalho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar trabalhos](../../ssms/agent/create-jobs.md)  
   

@@ -3,7 +3,7 @@ title: Propriedade MarshalOptions (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48c9e36d9f20f1b9885526471d429a60be0f05bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2510c196b455e348c7b131ea9113d23df237e5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshaloptions-property-ado"></a>Propriedade MarshalOptions (ADO)
 Indica os registros da [registros](../../../ado/reference/ado-api/recordset-object-ado.md) devem ser empacotados de volta para o servidor.  
@@ -32,7 +32,7 @@ Indica os registros da [registros](../../../ado/reference/ado-api/recordset-obje
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md) valor. O valor padrão é **adMarshalAll**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ao usar um cliente [registros](../../../ado/reference/ado-api/recordset-object-ado.md), os registros que foram modificados no cliente são gravados na camada intermediária ou o servidor Web por meio de uma técnica chamada empacotamento, o processo de empacotamento e envio de método de interface parâmetros em limites de thread ou processo. Definindo o **MarshalOptions** propriedade pode melhorar o desempenho quando a modificação de dados remotos são empacotados para a atualização para o servidor Web ou de camada intermediária.  
   
 > [!NOTE]
@@ -41,6 +41,6 @@ Indica os registros da [registros](../../../ado/reference/ado-api/recordset-obje
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de propriedade MarshalOptions (VB)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
  [Exemplo da propriedade MarshalOptions (VC++)](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   

@@ -3,7 +3,7 @@ title: "Executando objetos de negócios nos serviços de componentes | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df0d9faf78e4e63053e96f5513d38a31af0ca827
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 162f91a88f9e1b7fcd96ec5fa637a608b87b0921
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-business-objects-in-component-services"></a>Executando objetos de negócios nos serviços de componentes
 > [!IMPORTANT]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]
 >  Quando os objetos de negócios na camada intermediária são implementados como componentes de serviços de componentes usando **GetObjectContext**, **SetComplete**, e **SetAbort**, a empresa objetos podem usar serviços de componentes (ou MTS, se você estiver usando o Windows NT) objetos de contexto para manter seu estado em várias chamadas de cliente. Este cenário é possível com DCOM, que costuma ser implementada entre clientes confiáveis e servidores em uma intranet. Nesse caso, o [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto e [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método no lado do cliente são substituídos pelo objeto de contexto de transação e **CreateInstance** método, que são fornecidos pelo **ITransactionContext** interface e implementados pelos serviços de componente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

@@ -3,7 +3,7 @@ title: Erros do provedor | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-errors"></a>Erros do provedor
 Quando ocorre um erro de provedor, um erro de tempo de execução de -2147467259 é retornado. Quando você receber esse erro, verifique o **erros** coleção de ativo **Conexão** objeto, que contém um ou mais erros que descreve o que ocorreu.  
@@ -72,7 +72,7 @@ End Function
   
 |Nome da propriedade|Description|  
 |-------------------|-----------------|  
-|**Description**|Uma descrição de texto do erro que ocorreu.|  
+|**Descrição**|Uma descrição de texto do erro que ocorreu.|  
 |**HelpContext, HelpFile**|Refere-se para o arquivo de Ajuda e o tópico da Ajuda que contém uma descrição do erro que ocorreu.|  
 |**NativeError**|O número do erro específico do provedor.|  
 |**Número**|Um inteiro longo que representa o número (listados no **ErrorValueEnum**) do erro que ocorreu.|  

@@ -3,7 +3,7 @@ title: "Coleções (ADO - sintaxe WFC) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1692b77f79e04451ba38814a0a629f260e22bf6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8749dbb5803b5ff2b3b2563f7bbc01290e788e1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections-ado---wfc-syntax"></a>Coleções (ADO - WFC sintaxe)
 **pacote com.ms.wfc.data**  
@@ -88,7 +88,7 @@ public com.ms.wfc.data.Error getItem(String s)
 public int getCount()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleção de erros (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Coleção de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

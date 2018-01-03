@@ -3,7 +3,7 @@ title: "Gramática de forma formal | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48fb9c051deb490a2652bda4d8cd39be335c3270
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09f578dc3467c10be247e34c4ebb89807543052f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="formal-shape-grammar"></a>Gramática de forma formal
 Esta é a gramática formal para a criação de qualquer comando de forma:  
@@ -73,7 +73,7 @@ Esta é a gramática formal para a criação de qualquer comando de forma:
 |\<cadeia de caracteres >|caractere Unicode [caractere unicode....]|  
 |\<expressão >|Um Visual Basic para a expressão de aplicativos cujos operandos são outras colunas não CALC na mesma linha.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessar linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Visão geral de modelagem de dados](../../../ado/guide/data/data-shaping-overview.md)   
  [Provedores necessários para modelagem de dados](../../../ado/guide/data/required-providers-for-data-shaping.md)   

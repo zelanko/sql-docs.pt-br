@@ -3,7 +3,7 @@ title: Chave de objeto (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e3845e59be9896c9520b77341d2d9d4e880b918a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea650d8389cee45e040db561948990ceb3701754
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="key-object-adox"></a>Objeto de chave (ADOX)
 Representa um campo de chave estrangeiro, exclusivo ou primário de uma tabela de banco de dados.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O código a seguir cria um novo **chave**:  
   
 ```  
@@ -52,7 +52,7 @@ Dim obj As New Key
   
 -   [Propriedades, Métodos e Eventos do objeto Key](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Coleção de colunas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Coleção Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

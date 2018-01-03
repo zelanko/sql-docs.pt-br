@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91f9472c80cc592181618bd218ee03199334e9d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7a29f3f006af3376c430b99de312474283905ed9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formatos de exibição de assinatura (Master Data Services)
   Com base na entidade ou na hierarquia derivada selecionada, os seguintes formatos estão disponíveis para sua exibição de assinatura.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
 |**Filho de Pai Derivado (Exibição de Hierarquia Derivada)**|Contém uma estrutura de hierarquia derivada em formato filho de pai.|  
 |**Níveis Derivados (Exibição de Hierarquia Derivada)**|Contém uma estrutura de hierarquia derivada em formato de nível.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral: Exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Criar uma exibição de assinatura para exportar dados &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

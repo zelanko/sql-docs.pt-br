@@ -3,7 +3,7 @@ title: Propriedade Version (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9cff8cd7404ae02d4ed6aaafa1dd8155398c1bb0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 500dee0adfd3be82def58ba0dcce532b4bffec70
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-property-ado"></a>Propriedade Version (ADO)
 Indica o número de versão do ADO.  
@@ -35,7 +35,7 @@ Indica o número de versão do ADO.
 ## <a name="return-value"></a>Valor de retorno  
  Retorna um **cadeia de caracteres** valor que indica a versão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use o **versão** propriedade para retornar o número de versão da implementação do ADO.  
   
  A versão do provedor estarão disponível como uma propriedade dinâmica no [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção.  
@@ -43,6 +43,6 @@ Indica o número de versão do ADO.
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo da propriedade Version (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Exemplo da propriedade Version (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   

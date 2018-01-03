@@ -3,7 +3,7 @@ title: "Método SetEOS | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3400be98c29b676235ddf38fcd73d7e2f1693a7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82a80499aff8dbe5344847b34dc6f969eb16ccdc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seteos-method"></a>Método SetEOS
 Define a posição que é o final do fluxo.  
@@ -38,7 +38,7 @@ Define a posição que é o final do fluxo.
 Stream.SetEOS  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **SetEOS** atualiza o valor da [EOS](../../../ado/reference/ado-api/eos-property.md) propriedade fazendo atual [posição](../../../ado/reference/ado-api/position-property-ado.md) o fim do fluxo. Todos os bytes ou caracteres da posição atual a seguir são truncados.  
   
  Porque [gravar](../../../ado/reference/ado-api/write-method.md), [WriteText](../../../ado/reference/ado-api/writetext-method.md), e [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) não truncar valores extras existente **fluxo** objetos, você pode truncar esses bytes ou caracteres definindo a nova posição final de fluxo com **SetEOS**.  

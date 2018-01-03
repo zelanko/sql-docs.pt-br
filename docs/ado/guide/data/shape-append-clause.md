@@ -3,7 +3,7 @@ title: "A forma de cláusula APPEND | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab01c719611309117308c818930b1553741495e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND de forma
 A cláusula de ACRÉSCIMO de comando de forma acrescenta uma coluna ou colunas para um **registros**. Com frequência, essas colunas são colunas de capítulo, o que fazer referência a um filho **registros**.  
@@ -70,7 +70,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  *conjunto de registros filho*  
  -   Um comando de provedor entre chaves ("{") que retorna um **registros** objeto. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não requer qualquer linguagem de consulta específica.  
   
@@ -101,7 +101,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  A cláusula após a palavra-chave de ACRÉSCIMO é realmente uma lista, onde cada cláusula é separada por uma vírgula e define a outra coluna a ser acrescentada ao pai.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando você construir comandos do provedor da entrada do usuário como parte de um comando de forma, a forma tratar o usuário forneceu um comando de provedor como uma cadeia de caracteres opaca e passá-las precisamente para o provedor. Por exemplo, no comando de forma a seguir,  
   
 ```  
@@ -126,7 +126,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [Cláusulas COMPUTE de forma de intervenção](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de modelagem de dados](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)

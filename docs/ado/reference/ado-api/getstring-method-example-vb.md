@@ -3,7 +3,7 @@ title: "Exemplo de método GetString (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: beaff0b2775dc0de9c0f2f1a334139f5cc92830d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4fd41ab0ccc3c14844390c5b24674678e17ba1d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getstring-method-example-vb"></a>Exemplo de método GetString (VB)
 Este exemplo demonstra o [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método.  
@@ -105,6 +105,6 @@ End Sub
 'EndGetStringVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

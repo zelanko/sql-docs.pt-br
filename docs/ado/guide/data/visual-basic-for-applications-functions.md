@@ -3,7 +3,7 @@ title: "Visual Basic para funções de aplicativos | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835dfeb15a84529baf553ce1daa171d02e8faca7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic para funções de aplicativos
 Para funções de aplicativos do Visual Basic seguir podem ser usado em expressões de CÁLCULO de formatação de dados:  
@@ -35,11 +35,11 @@ Para funções de aplicativos do Visual Basic seguir podem ser usado em express�
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB$|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|Data|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|data|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |Erro|Error$|Exp|Fix|Formato|Format$|  
 |FV|Hex|Hex$|Hora|IIF|InStr|  
-|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left (à esquerda)|  
 |LeftB|Left$|LeftB$|Len|Log|LTrim|  
 |LTrim$|Mid|Mid$|Minuto|MIRR|Month|  
@@ -52,7 +52,7 @@ Para funções de aplicativos do Visual Basic seguir podem ser usado em express�
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Dia de semana|Year||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessar linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Visão geral de modelagem de dados](../../../ado/guide/data/data-shaping-overview.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   

@@ -3,7 +3,7 @@ title: "Formato de persistência XML | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ef8f1495b6c790abe7b3b616e2d37908c42517b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d56fbae28f2c1d5192f2ac1e1c4f8939d7e4b027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-persistence-format"></a>Formato de persistência XML
 ADO usa codificação UTF-8 para o fluxo XML que ele persistir.  
   
  O formato XML ADO é dividido em duas seções, uma seção de esquema seguida a seção de dados. Este é um arquivo XML de exemplo para a tabela Transportadoras do banco de dados Northwind. Várias partes do XML são discutidas o exemplo a seguir.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -75,5 +75,5 @@ xmlns:z="#RowsetSchema">
   
  A seção de dados tem três linhas que contém informações sobre transportadores. Para um conjunto de linhas vazio, a seção de dados pode estar vazia, mas o \<: dados do rs > marcas devem estar presentes. Sem dados, você poderia escrever a abreviação de marca simplesmente \<: dados do rs / >. Qualquer marca prefixada com "rs" indica que é o namespace definido pelo urn: schemas-microsoft-com:rowset.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

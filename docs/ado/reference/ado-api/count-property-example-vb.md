@@ -3,7 +3,7 @@ title: Exemplo de propriedade Count (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 665541a111e8117a9a96b0788ac837a50ed79eaf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e205d426a751de5923fbf92f42aac82a3346572
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="count-property-example-vb"></a>Exemplo de propriedade Count (VB)
 Este exemplo demonstra o [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade com duas coleções do ***funcionário*** banco de dados. A propriedade obtém o número de objetos em cada coleção e define o limite superior dos loops que enumeram essas coleções. Outra maneira de enumerá-las sem usar o **contagem** propriedade seria usar `For Each...Next` instruções.  
@@ -100,5 +100,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

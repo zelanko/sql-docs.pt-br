@@ -3,7 +3,7 @@ title: Evento WillExecute (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5988a43be066f61019223eb6a501d1bc73e8bc23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 O **WillExecute** evento é chamado antes de um comando pendente é executado em uma conexão.  
@@ -63,7 +63,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  O [Conexão Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) de objeto para o qual esta notificação de evento se aplica.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um **WillExecute** evento pode ocorrer devido a uma Conexão.  [Executar método (Conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [executar método (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md), ou [método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método o *pConnection* deve de parâmetro sempre contém uma referência válida para um **Conexão** objeto. Se o evento for devido a **Connection.Execute**, o *pRecordset* e *pCommand* parâmetros são definidos como **nada**. Se o evento for devido a **Recordset.Open**, o *pRecordset* parâmetro fará referência a **registros** objeto e o *pCommand* parâmetro está definido como **nada**. Se o evento for devido a **Command.Execute**, o *pCommand* parâmetro fará referência a **comando** objeto e o *pRecordset* parâmetro está definido como **nada**.  
   
  **WillExecute** permite que você examine e modifique os parâmetros de execução pendente. Esse evento pode retornar uma solicitação que o comando pendente ser cancelada.  
@@ -73,7 +73,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
  Se o dialeto da nova cadeia de caracteres de origem é diferente da configuração original de [propriedade Dialect](../../../ado/reference/ado-api/dialect-property.md) propriedade (que correspondeu ao **CommandStream**), o dialeto correto deve ser especificado pela configuração o **dialeto** propriedade do objeto de comando referenciada por *pCommand*.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo de manipulador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

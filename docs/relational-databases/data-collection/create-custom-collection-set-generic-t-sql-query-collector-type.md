@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34b63ac7f650bdc3e333bb50a19021a48c65dee1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef0146839adf62839b6f319df6407a4afad8e1f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Criar conjunto de coleta personalizado – Tipo de coletor de consultas T-SQL genérico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] É possível criar um conjunto de coleta personalizado com itens de coleta que usam o tipo de coletor de Consultas T-SQL Genérico, usando os procedimentos armazenados fornecidos com o coletor de dados. A execução dessa tarefa envolve o uso do Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para aplicar os seguintes procedimentos:  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Como o novo item de coleta é baseado em um tipo de coletor genérico já instalado, você pode executar o código a seguir para definir o GUID que corresponde ao tipo de coletor de Consultas T-SQL Genérico.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Use o procedimento armazenado sp_syscollector_create_collection_item para criar o item de coleta. Declare o esquema do item de coleta para que ele seja mapeado para o esquema exigido para o tipo de coletor de Consultas T-SQL Genérico.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Antes de iniciar o novo conjunto de coleta, execute a consulta a seguir para verificar se o novo conjunto de coleta e seu item de coleta foram criados.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir combina os exemplos documentados nas etapas anteriores. Observe que a frequência da coleta definida para o item de coleta (5 segundos) é ignorada porque o modo de coleta do conjunto de coleta está definido como 0, que é um modo de armazenamento em cache. Para obter mais informações, consulte [Data Collection](../../relational-databases/data-collection/data-collection.md).  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  
@@ -166,9 +166,9 @@ SELECT @collection_item_id;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Gerenciar Agendas](http://msdn.microsoft.com/library/f56c0736-dccc-41d2-afcf-71344aff143a)   
- [Iniciar ou interromper um conjunto de coleta](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
+ [Iniciar ou parar um conjunto de coleta](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
   

@@ -3,7 +3,7 @@ title: "Propriedades de LineSeparator e EOS e exemplo de método SkipLine (VB) |
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2672b5d41683313c36d95adac68f33367396864
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd0c9f048aee7463e54f9de7e55a246f3e72ee62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Propriedades de LineSeparator e EOS e exemplo de método SkipLine (VB)
 Este exemplo demonstra como manipular uma linha de fluxos de texto por vez. O efeito de alterar o separador de linha da padrão de carro retorno/alimentação de linha (**adCRLF**) para simplesmente avanço de linha (**adLF**) ou o retorno de carro (**adCR**) é mostrado.  
@@ -117,7 +117,7 @@ End Sub
 'EndSkipLineVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade EOS](../../../ado/reference/ado-api/eos-property.md)   
  [Propriedade LineSeparator (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [Método SkipLine](../../../ado/reference/ado-api/skipline-method.md)

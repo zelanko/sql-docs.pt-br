@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93230571a231e1746eeff928d894c02fffd57ad
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] As atividades comuns de criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usam uma chave assimétrica protegida pelo Azure Key Vault incluem as três áreas a seguir.  
@@ -63,7 +63,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
   
     -   Conclua a segunda parte do argumento `SECRET` com o **Segredo do Cliente** da Parte I. Neste exemplo, o **Segredo do Cliente** da Parte 1 é `Replace-With-AAD-Client-Secret`. A cadeia de caracteres final do argumento `SECRET` será uma sequência longa de letras e números, *sem hifens*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -78,7 +78,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
   
      Crie um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e adicione a credencial da Etapa 1 para ele. Esse exemplo do [!INCLUDE[tsql](../../../includes/tsql-md.md)] usa a mesma chave que foi importada anteriormente.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -98,7 +98,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
   
      A DEK criptografará os arquivos de log e de dados na instância do banco de dados e, por sua vez, será criptografada pela chave assimétrica do Cofre de Chaves do Azure. A DEK pode ser criada usando qualquer algoritmo com suporte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou o comprimento da chave.  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -110,7 +110,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
   
 4.  **Ativar TDE**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -127,7 +127,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
   
      Como alternativa, você pode executar o seguinte script [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Um estado de criptografia de 3 indica um banco de dados criptografado.  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -160,7 +160,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
   
     -   Conclua a segunda parte do argumento `SECRET` com o **Segredo do Cliente** da Parte I. Neste exemplo, o **Segredo do Cliente** da Parte I é `Replace-With-AAD-Client-Secret`. A cadeia de caracteres final do argumento `SECRET` será uma sequência longa de letras e números, *sem hifens*.   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -181,7 +181,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
   
      Este exemplo usa a chave assimétrica do `CONTOSO_KEY_BACKUP` armazenada no cofre de chaves, que pode ser importada ou criada anteriormente para o banco de dados mestre, como descrito anteriormente na Parte IV, Etapa 5.  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -203,7 +203,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
      
      No exemplo abaixo, observe que, se o banco de dados já foi criptografado com TDE e a chave assimétrica `CONTOSO_KEY_BACKUP` é diferente da chave assimétrica TDE, o backup será criptografado tanto pela chave assimétrica TDE quanto por `CONTOSO_KEY_BACKUP`. A instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisará das duas chaves para descriptografar o backup.
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -226,7 +226,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
     
      Código de restauração de exemplo:  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -243,7 +243,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
   
  Este exemplo usa a chave assimétrica do `CONTOSO_KEY_COLUMNS` armazenada no cofre de chaves, que pode ser importada ou criada anteriormente, como descrito na Etapa 3, seção 3 do [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)(Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure). Para usar essa chave assimétrica no banco de dados `ContosoDatabase` , você deve executar a instrução `CREATE ASYMMETRIC KEY` novamente, para fornecer ao banco de dados `ContosoDatabase` uma referência para a chave.  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   
@@ -282,10 +282,10 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Gerenciamento extensível de chaves usando o Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Opção de configuração de servidor EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [Manutenção e solução de problemas do conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

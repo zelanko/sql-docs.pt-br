@@ -3,7 +3,7 @@ title: "SQL Server Management Studio – Changelog (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6046e57ec48ace2795c65879d00ad563d81fd0d6
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: f6a8a753f3bb272ebd1a98429a5f224dce717f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este artigo fornece detalhes sobre atualizações, aprimoramentos e correções de bug para as versões atuais e anteriores do SSMS. Baixe [versões anteriores do SSMS abaixo](#previous-ssms-releases).
@@ -455,7 +455,7 @@ Disponibilidade geral | Número de build: 14.0.17099.0
 - Correção de um problema no qual o SSMS estava colocando o banco de dados no modo offline ao executar o script [item do Connect](https://connect.microsoft.com/SQLServer/feedback/details/3118550)
 - Correções diversas na interface do usuário em versões localizadas (não inglês) do SSMS.
 - Correção do problema no qual o nó "Chaves do Always Encrypted" estava ausente durante o direcionamento do SQL 2016 SP1 Standard Edition.
-- Sempre Criptografado
+- Always Encrypted
     - Menu "Always Encrypted" incorretamente habilitado ao direcionar o SQL 2016 RTM Standard Edition ou qualquer servidor do SQL 2014 (e abaixo)
     - Correção de um problema em que o IntelliSense relata um erro quando a sintaxe CREATE ou ALTER é usada
     - Correção do problema em que a criptografia falha caso CMK/CEK contenha caracteres que devem ser escapados, ou seja, entre colchetes
@@ -665,7 +665,7 @@ Disponibilidade geral | Número de versão: 13.0.15700.28
 
 * [Nova opção de autenticação **'Autenticação Universal do Active Directory'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Esse é um mecanismo de autenticação baseada em token orientado pelo Azure Active Directory que dá suporte a mecanismos de autenticação multifator, de senha e integrada.
 
-* Novos modelos de eventos estendidos correspondentes à funcionalidade dos modelos do SQL Server Profiler [(Item nº 2543925 do Microsoft Connect).](../tools/sql-server-profiler/sql-server-profiler-templates.md).
+* Novos modelos de eventos estendidos correspondentes à funcionalidade dos modelos do SQL Server Profiler [(Item nº 2543925 do Microsoft Connect)](../tools/sql-server-profiler/sql-server-profiler-templates.md).
 
 * Novas caixas de diálogo Criar banco de dados e Propriedades de banco de dados para bancos de dados do Azure SQL.
 

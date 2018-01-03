@@ -3,7 +3,7 @@ title: "Passando parâmetros para um comando nomeado | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd64725eab5760c0cce7d2ecf33b320d94b3a283
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0db27250c2f095c31aa5bca95b738fa64ca922
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passando parâmetros para um comando nomeado
 Assim como o resultado do comando é passado a como um *out* variável do comando nomeado, parâmetros para um comando parametrizado pode foi passada como *em* variáveis para o comando nomeado.  
@@ -98,5 +98,5 @@ objConn.GetOrdersOf "12345", objRs
   
  — é válido, mas produzirá um resultado vazio definido porque esses registros não existem no banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

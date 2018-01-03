@@ -3,7 +3,7 @@ title: "Método ExcluirRegistro (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 66d13bc4449bad73b1ab09869a764e6bff533442
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eedc8d14c94ec89554651cdfce03af0eb63315cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleterecord-method-ado"></a>Método ExcluirRegistro (ADO)
 Exclui uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -45,7 +45,7 @@ Record.DeleteRecord Source, Async
  *Assíncrono*  
  Opcional. Um **booliano** valor que, quando **True**, especifica que a operação de exclusão é assíncrona.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Operações no objeto representado por esse **registro** pode falhar depois que esse método é concluído. Depois de chamar **ExcluirRegistro**, o **registro** devem ser fechados porque o comportamento do **registro** pode se tornar imprevisível dependendo de quando o provedor de atualizações do **Registro** com a fonte de dados.  
   
  Se este **registro** foi obtido um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), em seguida, os resultados dessa operação não serão refletidos imediatamente no **conjunto de registros**. Atualizar o **registros** , feche e reabra-lo, ou executando o **registros** [Requery](../../../ado/reference/ado-api/requery-method.md) método, o [atualização](../../../ado/reference/ado-api/update-method.md) método, ou o [Resync](../../../ado/reference/ado-api/resync-method.md) método.  
@@ -56,7 +56,7 @@ Record.DeleteRecord Source, Async
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Delete (coleção de campos do ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Excluir método (coleção de parâmetros do ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Método Delete (Conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)

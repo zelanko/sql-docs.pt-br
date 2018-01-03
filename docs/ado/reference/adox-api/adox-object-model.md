@@ -3,7 +3,7 @@ title: Modelo de objeto ADOX | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4363ba002ec8b07346d2567985bd10d8cf2ebb9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12774ed7deabed8413687251c2a87bea9cdd9b05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-object-model"></a>Modelo de objeto ADOX
 O diagrama a seguir ilustra como os objetos são representados e ADOX relacionados. Para obter mais informações sobre um objeto específico ou uma coleção, consulte o tópico de referência específica, ou [ADOX objetos](../../../ado/reference/adox-api/adox-objects.md) e [ADOX coleções](../../../ado/reference/adox-api/adox-collections.md).  
@@ -31,7 +31,7 @@ O diagrama a seguir ilustra como os objetos são representados e ADOX relacionad
   
  Cada uma da [tabela](../../../ado/reference/adox-api/table-object-adox.md), [índice](../../../ado/reference/adox-api/index-object-adox.md), e [coluna](../../../ado/reference/adox-api/column-object-adox.md) objetos também tem um padrão ADO [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência da API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Exemplos de código ADOX](../../../ado/reference/adox-api/adox-code-examples.md)   
  [Coleções de ADOX](../../../ado/reference/adox-api/adox-collections.md)   
