@@ -2082,8 +2082,8 @@ ms.lasthandoff: 12/21/2017
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|Falha na tarefa ao executar a operação "%1".|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|O arquivo/processo "%1" não está no caminho.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|O assunto está vazio.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|O endereço na linha "Para" está incorreto. Falta o símbolo "@" ou ele não é válido.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|O endereço na linha "De" está incorreto. Falta o símbolo "@" ou ele não é válido.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|O endereço na linha "Para" está incorreto. Falta o símbolo " @ " ou ele não é válido.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|O endereço na linha "De" está incorreto. Falta o símbolo " @ " ou ele não é válido.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Os dois documentos XML são diferentes.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|A validação DTD usará o arquivo DTD definido na linha DOCTYPE no documento XML. Não usará o que está atribuído à propriedade "%1".|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|Falha na tarefa ao validar "%1".|  
