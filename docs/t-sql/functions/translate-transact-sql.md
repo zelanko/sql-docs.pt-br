@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4f4793f0692b77ba8a606c904612674e29721
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a498430f8af12bad1e5ec934dcb60c63aeb96e56
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="translate-transact-sql"></a>Traduzir (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ traduções
 ## <a name="return-types"></a>Tipos de retorno   
 Retorna uma expressão de caractere do mesmo tipo como `inputString` onde os caracteres do segundo argumento são substituídos com os caracteres de correspondência de terceiro argumento.
 
-## <a name="remarks"></a>Comentários   
+## <a name="remarks"></a>Remarks   
 
 `TRANSLATE`função retornará um erro se os caracteres e traduções têm tamanhos diferentes. `TRANSLATE`função deve retornar entrada inalterada se valores nulos são fornecidos como argumentos de substituição ou caracteres. O comportamento do `TRANSLATE` função deve ser idêntica de [substituir](../../t-sql/functions/replace-transact-sql.md) função.   
 
@@ -77,7 +77,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>B. Converter os pontos GeoJSON WKT    
 GeoJSON é um formato de codificação de uma variedade de estruturas de dados geográficos. Com o `TRANSLATE` função, os desenvolvedores podem converter facilmente os pontos GeoJSON em formato WKT e vice-versa. A consulta a seguir substitui o quadrado e as chaves na entrada com chaves regulares:   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
@@ -90,7 +90,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 (137.4  72.3) |[137.4,72.3] |
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Funções de cadeia de caracteres (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 [Substituir (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)   

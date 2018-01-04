@@ -3,7 +3,7 @@ title: Criar biblioteca externa (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
@@ -21,15 +21,15 @@ helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bf4807943521308cb2907adab8cfc6e701325b8a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-external-library-transact-sql"></a>Criar biblioteca externa (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 Carrega os pacotes de R para um banco de dados do caminho do arquivo ou fluxo de bytes especificado.
 
@@ -89,7 +89,7 @@ Especifica o conteúdo do pacote como um literal hexadecimal, semelhante aos ass
 
 Especifica a plataforma para o conteúdo da biblioteca. O valor padrão para a plataforma de host que está executando o SQL Server. Portanto, o usuário não precisa especificar o valor. É necessário no caso em que várias plataformas têm suporte ou o usuário precisa especificar uma plataforma diferente. Windows é a única plataforma com suporte.
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 
 Para a linguagem R, ao usar um arquivo, os pacotes devem ser preparados na forma de arquivos compactados com o. Extensão ZIP para Windows. Atualmente, apenas a plataforma do Windows tem suporte
 
