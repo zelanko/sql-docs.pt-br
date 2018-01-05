@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: ce2427d4defca8640d93ea25919fe805ac7c6133
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
 
@@ -180,7 +180,7 @@ No servidor NFS, faça o seguinte:
 
 Execute as seguintes etapas em todos os nós de cluster.
 
-1.  Do servidor NFS, instalar`nfs-utils`
+1.  Instalar o`nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -214,7 +214,7 @@ Para obter informações adicionais sobre como usar o NFS, consulte os seguintes
 1.  **No nó primário**, salvar os arquivos de banco de dados para um local temporário. O script a seguir, cria um novo diretório temporário, copia os arquivos de banco de dados para o novo diretório e remove os arquivos de banco de dados antigo. Como o SQL Server é executado como usuário local mssql, você precisa garantir que, após a transferência de dados para o compartilhamento montado, usuário local tenha acesso de leitura / gravação ao compartilhamento de. 
 
    ``` 
-   $ su mssql
+   $ sudo su mssql
    $ mkdir /var/opt/mssql/tmp
    $ cp /var/opt/mssql/data/* /var/opt/mssql/tmp
    $ rm /var/opt/mssql/data/*
@@ -240,9 +240,9 @@ Para obter informações adicionais sobre como usar o NFS, consulte os seguintes
 1.  Copie os arquivos de log e banco de dados que você salvou `/var/opt/mssql/tmp` para o compartilhamento recentemente montado `/var/opt/mssql/data`. Isso só precisa ser feito **no nó primário**. Certifique-se de que você forneça permissões de leitura e gravação ao usuário local 'mssql'.
 
    ``` 
-   $ chown mssql /var/opt/mssql/data
-   $ chgrp mssql /var/opt/mssql/data
-   $ su mssql
+   $ sudo chown mssql /var/opt/mssql/data
+   $ sudo chgrp mssql /var/opt/mssql/data
+   $ sudo su mssql
    $ cp /var/opt/mssql/tmp/* /var/opt/mssql/data/
    $ rm /var/opt/mssql/tmp/*
    $ exit
@@ -265,8 +265,8 @@ Neste ponto, ambas as instâncias do SQL Server estão configuradas para executa
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+   echo '<loginName>' | sudo tee -a /var/opt/mssql/secrets/passwd
+   echo '<loginPassword>' | sudo tee -a /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```

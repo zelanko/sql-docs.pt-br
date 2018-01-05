@@ -14,17 +14,19 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 6ad13c3432daee4fd38b6d46704adc0c00913f7a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Criar e configurar um grupo de disponibilidade para o SQL Server no Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Este tutorial aborda como criar e configurar um grupo de disponibilidade (AG) para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux. Ao contrário de [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] e anteriormente no Windows, você pode habilitar grupos de disponibilidade com ou sem criar o cluster Pacemaker subjacente primeiro. Integração com o cluster, se necessário, não é feita até mais tarde.
+
+O tutorial inclui as seguintes tarefas:
  
 > [!div class="checklist"]
 > * Habilite grupos de disponibilidade.
@@ -593,11 +595,9 @@ O recurso de grupo de disponibilidade que é criado é um tipo especial de recur
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
     ```
 
->[OBSERVAÇÃO] Em RHEL 7.4, você poderá encontrar um aviso com o uso de - mestre. Para evitar isso, use a seguinte sintaxe:
-    ```bash
-    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-    ```
-
+    >[!NOTE]
+    >Em RHEL 7.4, você poderá encontrar um aviso com o uso de - mestre. Para evitar isso, use`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+   
     **SUSE Linux Enterprise Server (SLES)**
     
     ```bash
@@ -618,7 +618,7 @@ O recurso de grupo de disponibilidade que é criado é um tipo especial de recur
     commit
     ```
     
-    where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
+    onde *NameForAGResource* é o nome exclusivo dado a esse recurso de cluster para o grupo de disponibilidade e *AGName* é o nome do grupo de disponibilidade que foi criado.
  
 2.  Crie o recurso de endereço IP para o grupo de disponibilidade que será associado com a funcionalidade de ouvinte.
 
@@ -647,8 +647,7 @@ O recurso de grupo de disponibilidade que é criado é um tipo especial de recur
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
-   
-    
+
     **SLES**
     
     ```bash
@@ -690,5 +689,5 @@ Neste tutorial, você aprendeu a criar e configurar um grupo de disponibilidade 
 Para a maioria das tarefas de administração de AG, incluindo atualizações e failover, consulte:
 
 > [!div class="nextstepaction"]
-> [Operar o grupo de disponibilidade de alta disponibilidade para o SQL Server no Linux](sql-server-linux-availability-group-failover-ha.md).
+> [Operar o grupo de disponibilidade de alta disponibilidade para o SQL Server no Linux](sql-server-linux-availability-group-failover-ha.md)
 

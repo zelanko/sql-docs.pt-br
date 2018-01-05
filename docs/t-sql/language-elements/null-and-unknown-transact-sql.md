@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a581045af3d5ed73e9cf9736c60588d87733369
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULO e desconhecido (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,25 +39,25 @@ ms.lasthandoff: 11/17/2017
   
 -   Valores nulos não podem ser usados como as informações necessárias para distinguir uma linha em uma tabela de outra linha em uma tabela, como chaves primárias ou de informações usadas para distribuir as linhas, tais como chaves de distribuição.  
   
- Quando valores nulos estão presentes em dados, os operadores lógicos e de comparação podem potencialmente retornar um terceiro resultado UNKNOWN em vez de somente TRUE ou FALSE. Essa necessidade de lógica com valor três é uma fonte de muitos erros de aplicativo. Essas tabelas esboçam o efeito de introduzir comparações nulas.  
+ Quando valores nulos estão presentes em dados, os operadores lógicos e de comparação podem potencialmente retornar um terceiro resultado UNKNOWN em vez de somente TRUE ou FALSE. Essa necessidade de lógica com valor três é uma fonte de muitos erros de aplicativo. Operadores lógicos em uma expressão booleana que inclui desconhecidos retornará UNKNOWN, a menos que o resultado do operador não é dependente de expressão desconhecido. Essas tabelas fornecem exemplos desse comportamento.  
   
- A tabela a seguir mostra os resultados da aplicação de um operador AND a dois operandos boolianos onde um operando retorna NULL.  
+ A tabela a seguir mostra os resultados da aplicação de um operador AND para duas expressões booleanas onde uma expressão retorna UNKNOWN.  
   
-|Operando 1|Operando 2|Resultado|  
+|Expressão 1|Expressão 2|Resultado|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- A tabela a seguir mostra os resultados da aplicação de um operador OR a dois operandos boolianos onde um operando retorna NULL.  
+ A tabela a seguir mostra os resultados da aplicação de um operador OR para duas expressões booleanas onde uma expressão retorna UNKNOWN.  
   
-|Operando 1|Operando 2|Resultado|  
+|Expressão 1|Expressão 2|Resultado|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [E &#40; Transact-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   
  [OU &#40; Transact-SQL &#41;](../../t-sql/language-elements/or-transact-sql.md)   
  [Não &#40; Transact-SQL &#41;](../../t-sql/language-elements/not-transact-sql.md)   

@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5900878e440a0ae821655adea764eaebad8fddf2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: HT
+ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -335,7 +335,7 @@ Antes de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1 CTP, arquivo
  Para obter mais informações sobre essa e outras considerações de segurança para usar BULK INSERT, consulte [importação em massa dados usando BULK INSERT ou OPENROWSET &#40; BULK... &#41; &#40; SQL Server &#41; ](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Permissões  
- Requer as permissões INSERT e ADMINISTER BULK OPERATIONS. Além disso, a permissão ALTER TABLE será necessária se uma ou mais das seguintes afirmações for verdadeira:  
+ Requer as permissões INSERT e ADMINISTER BULK OPERATIONS. No banco de dados SQL Azure, são necessárias permissões de operações de inserção e ADMINISTRAR o banco de dados em MASSA. Além disso, a permissão ALTER TABLE será necessária se uma ou mais das seguintes afirmações for verdadeira:  
   
 -   Existem restrições e a opção CHECK_CONSTRAINTS não foi especificada.  
   

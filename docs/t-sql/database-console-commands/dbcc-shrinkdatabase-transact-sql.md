@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Reduz o tamanho dos arquivos de dados e de log do banco de dados especificado.
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  É a porcentagem de espaço livre que você deseja deixar no arquivo de banco de dados após a redução do banco de dados.  
   
  NOTRUNCATE  
- Compacta os dados dos arquivos de dados, movendo as páginas alocadas do final de um arquivo para as páginas alocadas à frente do arquivo. *target_percent* é opcional.  
+ Compacta os dados dos arquivos de dados, movendo as páginas alocadas do final de um arquivo para as páginas alocadas à frente do arquivo. *target_percent* é opcional. Essa opção não tem suporte com o Azure SQL Data Warehouse. 
   
  O espaço livre no final do arquivo não é retornado ao sistema operacional, e o tamanho físico do arquivo não é alterado. Portanto, quando NOTRUNCATE é especificado, o banco de dados parece não ter sido reduzido.  
   
  NOTRUNCATE aplica-se apenas a arquivos de dados. O arquivo de log não é afetado.  
   
  TRUNCATEONLY  
- Libera todo o espaço livre no final do arquivo para o sistema operacional, mas não executa nenhuma movimentação de página dentro do arquivo. O arquivo de dados é reduzido somente para a última extensão alocada. *target_percent* será ignorado se especificado com TRUNCATEONLY.  
+ Libera todo o espaço livre no final do arquivo para o sistema operacional, mas não executa nenhuma movimentação de página dentro do arquivo. O arquivo de dados é reduzido somente para a última extensão alocada. *target_percent* será ignorado se especificado com TRUNCATEONLY. Essa opção não tem suporte com o Azure SQL Data Warehouse.
   
  TRUNCATEONLY afeta o arquivo de log. Para truncar somente o arquivo de dados, use DBCC SHRINKFILE.  
   
@@ -94,7 +94,7 @@ A tabela a seguir descreve as colunas do conjunto de resultados.
 >[!NOTE]
 > O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não exibe linhas para esses arquivos não reduzidos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Para reduzir todos os arquivos de dados e de log de um banco de dados específico, execute o comando DBCC SHRINKDATABASE. Para reduzir um dados ou arquivo de log em vez de um banco de dados, execute o [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) comando.
   
 Para exibir a quantidade atual de espaço livre (não alocado) no banco de dados, execute [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
@@ -108,6 +108,9 @@ Executar DBCC SHRINKDATABASE sem especificar a opção NOTRUNCATE ou a opção T
 O banco de dados que é reduzido não tem que estar em modo do usuário único; outros usuários podem trabalhar nele durante sua redução. Isto inclui os bancos de dados do sistema.
   
 Não é possível reduzir um banco de dados enquanto ele estiver sendo armazenado em backup. Da mesma forma, não é possível fazer backup de um banco de dados enquanto houver uma operação de redução em processamento.
+
+>[!NOTE]
+> Atualmente, o Azure SQL Data Warehouse não dá suporte a DBCC SHRINKDATABASE com TDE habilitada.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Como DBCC SHRINKDATABASE funciona  
 O DBCC SHRINKDATABASE reduz arquivos de dados individualmente, porém reduz arquivos de log como se todos esses arquivos existissem em uma série de logs contíguos. Os arquivos são sempre reduzidos do final.

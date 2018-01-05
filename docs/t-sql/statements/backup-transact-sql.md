@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  É o nome lógico de um grupo de arquivos ou variável cujo valor é igual ao nome lógico de um grupo de arquivos que deve ser incluído no backup. No modelo de recuperação simples, um backup de grupo de arquivos é permitido apenas para grupos de arquivos somente leitura.  
   
 > [!NOTE]  
->  Considere usar backups de arquivo quando o tamanho do banco de dados e as exigências de desempenho tornarem um backup de banco de dados impraticável.  
+>  Considere usar backups de arquivo quando o tamanho do banco de dados e as exigências de desempenho tornarem um backup de banco de dados impraticável. O dispositivo NUL pode ser usado para testar o desempenho dos backups, mas não deve ser usado em ambientes de produção.
   
  *n*  
  É um espaço reservado que indica que vários arquivos e grupos de arquivos podem ser especificados em uma lista separada por vírgulas. O número é ilimitado. 
@@ -227,8 +227,11 @@ PARA \<backup_device > [ **,**...  *n*  ] Indica que o conjunto de acompanhament
  { *logical_device_name* | **@***logical_device_name_var* }  
  É o nome lógico do dispositivo de backup no qual o backup do banco de dados é feito. O nome lógico deve seguir as regras para identificadores. Se fornecido como uma variável (@*logical_device_name_var*), o nome de dispositivo de backup pode ser especificado como uma constante de cadeia de caracteres (@*logical_device_name_var*  **=**  nome de dispositivo de backup lógico) ou como uma variável de qualquer tipo de dados de cadeia de caracteres do caractere exceto para o **ntext** ou **texto** tipos de dados.  
   
- {DISK | FITA | URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* }  
- Especifica um arquivo de disco ou dispositivo de fita, ou um serviço de armazenamento de Blob do Windows Azure. O formato de URL é usado para a criação de backups para o serviço de armazenamento do Windows Azure. Para obter mais informações e exemplos, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obter um tutorial, consulte [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de Blob do Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ {DISK | FITA | URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* | NUL}  
+ Especifica um arquivo de disco ou dispositivo de fita, ou um serviço de armazenamento de Blob do Windows Azure. O formato de URL é usado para a criação de backups para o serviço de armazenamento do Windows Azure. Para obter mais informações e exemplos, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obter um tutorial, consulte [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de Blob do Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+
+[!NOTE] 
+ O dispositivo de disco NUL descartará todas as informações enviadas para ele e só deve ser usado para teste. Isso não é para uso em produção.
   
 > [!IMPORTANT]  
 >  Com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 até [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode somente fazer backup em um único dispositivo durante o backup para URL. Para fazer o backup em vários dispositivos ao fazer backup em URL, você deve usar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e você deve usar os tokens de assinatura de acesso compartilhado (SAS). Para obter exemplos sobre como criar uma assinatura de acesso compartilhado, consulte [Backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [simplificando a criação de credenciais do SQL com tokens de assinatura de acesso compartilhado (SAS) no armazenamento do Azure com o Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
@@ -236,6 +239,8 @@ PARA \<backup_device > [ **,**...  *n*  ] Indica que o conjunto de acompanhament
 **URL se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Um dispositivo de disco não precisa existir antes de ser especificado em uma instrução BACKUP. Se o dispositivo físico existir e a opção INIT não estiver especificada na instrução BACKUP, o backup será anexado ao dispositivo.  
+ 
+ O dispositivo NUL descartará todas as entradas enviadas para esse arquivo, no entanto, o backup ainda marcará todas as páginas como backup.
   
  Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -346,7 +351,7 @@ Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 ca
 {EXPIREDATE **='***data***'**| RETAINDAYS  **=**  *dias* }  
 Especifica quando o conjunto de backup desse backup pode ser substituído. Se essas duas opções forem usadas, RETAINDAYS terá precedência sobre EXPIREDATE.  
   
-Se nenhuma opção for especificada, a data de validade é determinada pelo **mediaretention** configuração. Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+Se nenhuma opção for especificada, a data de validade é determinada pelo **mediaretention** configuração. Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!IMPORTANT]  
 >  Essas opções apenas impedem que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] substitua um arquivo. Fitas podem ser apagadas por outros métodos e os arquivos de disco podem ser excluídos pelo sistema operacional. Para obter mais informações sobre verificação de validade, consulte SKIP e FORMAT neste tópico.  
@@ -872,7 +877,7 @@ WITH STATS = 5;
 ```
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Backups da parte final do log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   

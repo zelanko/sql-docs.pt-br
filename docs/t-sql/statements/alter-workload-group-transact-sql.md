@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bfb6ca0200095860acec2b275020012e4b96284
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -57,24 +56,22 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  É o nome de um grupo de cargas de trabalho existente, definido pelo usuário, ou o grupo de cargas de trabalho padrão do Administrador de Recursos.  
   
 > [!NOTE]  
->  O Administrador de Recursos cria os grupos internos e padrão quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado.  
+> O Administrador de Recursos cria os grupos internos e padrão quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado.  
   
  A opção "default" deve estar entre aspas ("") ou colchetes ([]) quando usado com ALTER WORKLOAD GROUP para evitar conflito com DEFAULT, que é uma palavra reservada do sistema. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Grupos de cargas de trabalho predefinidos e pools de recursos usam nomes de letras minúsculas, como "padrão". Isso deve ser levado em consideração nos servidores que usam agrupamento com diferenciação de maiúsculas e minúsculas. Os servidores com agrupamento sem diferenciação de maiúsculas e minúsculas, como SQL_Latin1_General_CP1_CI_AS, tratarão "default" e "Default" da mesma maneira.  
+> Grupos de cargas de trabalho predefinidos e pools de recursos usam nomes de letras minúsculas, como "padrão". Isso deve ser levado em consideração nos servidores que usam agrupamento com diferenciação de maiúsculas e minúsculas. Os servidores com agrupamento sem diferenciação de maiúsculas e minúsculas, como SQL_Latin1_General_CP1_CI_AS, tratarão "default" e "Default" da mesma maneira.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  Especifica a importância relativa de uma solicitação no grupo de carga de trabalho. A importância é uma das seguintes:  
   
 -   LOW  
-  
 -   MEDIUM (padrão)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  Internamente, cada configuração de importância é armazenada como um número usado para cálculos.  
+> Internamente, cada configuração de importância é armazenada como um número usado para cálculos.  
   
  IMPORTANCE é local para o pool de recursos; grupos de cargas de trabalho de importâncias diferentes no mesmo pool de recursos afetam uns aos outros, mas não afetam grupos de cargas de trabalho em outro pool de recursos.  
   
@@ -82,7 +79,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Especifica o máximo de memória que uma única solicitação pode usar do pool. Essa porcentagem é relativa ao tamanho do pool de recursos especificado por MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  A quantidade especificada se refere apenas à memória de concessão de execução da consulta.  
+> A quantidade especificada se refere apenas à memória de concessão de execução da consulta.  
   
  *valor* deve ser 0 ou um número inteiro positivo. O intervalo permitido para *valor* é de 0 a 100. A configuração padrão para *valor* é 25.  
   
@@ -105,7 +102,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Especifica o tempo máximo de CPU, em segundos, que uma solicitação pode usar. *valor* deve ser 0 ou um número inteiro positivo. A configuração padrão para *valor* é 0, o que significa ilimitado.  
   
 > [!NOTE]  
->  O Administrador de Recursos não impedirá a continuação de uma solicitação se o tempo máximo for excedido. Porém, um evento será gerado. Para obter mais informações, consulte [limite de CPU excedido classe de evento](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> Por padrão, o administrador de recursos não impedirá uma solicitação de continue se o tempo máximo for excedido. Porém, um evento será gerado. Para obter mais informações, consulte [limite de CPU excedido classe de evento](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+
+> [!IMPORTANT]
+> Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e usando [2422 do sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), administrador de recursos será anular uma solicitação quando o tempo máximo for excedido.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valor*  
  Especifica o tempo máximo, em segundos, que uma consulta pode aguardar pela concessão de memória (memória do buffer de trabalho).  
@@ -147,7 +147,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 >  A opção "default" diferencia maiúsculas de minúsculas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  ALTER WORKLOAD GROUP é permitido no grupo padrão.  
   
  As alterações na configuração do grupo de cargas de trabalho não entrarão em vigor enquanto ALTER RESOURCE GOVERNOR RECONFIGURE não for executado. Ao alterar um plano que afetam a configuração, a nova configuração só terão efeito em planos em cache anteriormente após a execução de DBCC FREEPROCCACHE (*nome_do_pool*), onde *nome_do_pool* é o nome de um recurso Pool de recursos de administrador no qual o grupo de carga de trabalho está associado.  
@@ -191,7 +191,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
