@@ -99,7 +99,7 @@ ms.lasthandoff: 12/08/2017
  A principal restrição ao criar uma relação de atributo é certificar-se de que o atributo referenciado pela relação de atributo, não possui mais que um valor para qualquer membro no atributo ao qual a relação de atributo pertence. Por exemplo, se você definir uma relação entre um atributo Cidade e um atributo Estado, cada cidade pode apenas estar relacionada a um único estado.  
   
 ## <a name="attribute-relationship-queries"></a>Consultas de relação de atributo  
- Você pode usar consultas MDX para recuperar dados de relações de atributo, na forma de propriedades do membro, com o **propriedades** palavra-chave de MDX **selecione** instrução. Para obter mais informações sobre como usar MDX para recuperar propriedades do membro, consulte [usando propriedades de membro & #40; MDX & #41; ](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
+ Você pode usar consultas MDX para recuperar dados de relações de atributo, na forma de propriedades do membro, com o **propriedades** palavra-chave de MDX **selecione** instrução. Para obter mais informações sobre como usar MDX para recuperar propriedades do membro, consulte [usando propriedades de membro &#40; MDX &#41; ](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
