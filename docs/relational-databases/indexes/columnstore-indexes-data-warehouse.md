@@ -1,7 +1,7 @@
 ---
-title: "Índices columnstore – data warehouse | Microsoft Docs"
+title: "Índices columnstore – Data Warehouse | Microsoft Docs"
 ms.custom: 
-ms.date: 01/27/2017
+ms.date: 12/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -17,13 +17,13 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5fd07fe225529bd8a3be25a988059a72e99dc5c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 445ba773310316e4d3938e7842937650b55c04f7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="columnstore-indexes---data-warehouse"></a>Índices columnstore – data warehouse
+# <a name="columnstore-indexes---data-warehouse"></a>Índices columnstore – Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Os índices columnstore, junto com o particionamento, são essenciais para criar um data warehouse do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -32,32 +32,23 @@ ms.lasthandoff: 11/17/2017
  O[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] introduz estes recursos para melhorias de desempenho de columnstore:  
   
 -   O AlwaysOn dá suporte à consulta de um índice columnstore em uma réplica secundária legível.  
-  
 -   O MARS (Multiple Active Result Sets) oferece suporte aos índices columnstore.  
-  
 -   Uma nova exibição de gerenciamento dinâmico [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) fornece informações em nível de grupo de linhas de solução de problemas de desempenho.  
-  
 -   Consultas de thread único nos índices columnstore podem ser executadas em modo de lote. Anteriormente, somente consultas multithread podiam ser executadas em modo de lote.  
-  
--   O operador SORT é executado em modo de lote.  
-  
--   Várias operações DISTINCT são executadas em modo de lote.  
-  
--   As agregações de janela agora são executadas em modo de lote no nível de compatibilidade do banco de dados 130  
-  
+-   O operador `SORT` é executado no modo de lote.  
+-   Várias operações `DISTINCT` são executadas no modo de lote.  
+-   As Agregações de Janela agora são executadas no modo de lote no nível de compatibilidade do banco de dados 130 e superior.  
 -   Aplicação de agregação para processamento eficiente de agregações. Isso tem suporte em todos os níveis de compatibilidade de banco de dados.  
-  
 -   Aplicação de predicado de cadeia de caracteres para o processamento eficiente dos predicados de cadeia de caracteres. Isso tem suporte em todos os níveis de compatibilidade de banco de dados.  
-  
--   Isolamento de instantâneo do nível de compatibilidade do banco de dados 130  
+-   Isolamento de instantâneo no nível de compatibilidade do banco de dados 130 e superior.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Melhora o desempenho combinando índices não clusterizado e columnstore  
- Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]em diante, é possível definir índices não clusterizados em um índice columnstore clusterizado.  
+ Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]em diante, é possível definir índices não clusterizados em um índice columnstore clusterizado.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Exemplo: melhorar a eficiência de buscas de tabelas com um índice não clusterizado  
- Para melhorar a eficiência das buscas de tabelas em um data warehouse, você pode criar um índice não clusterizado projetado para executar consultas que executam melhor com as buscas de tabelas. Por exemplo, consultas que procuram valores correspondentes ou retornam um pequeno intervalo de valores terão um desempenho melhor em um índice de árvore b em vez de um índice columnstore. Elas não exigem uma verificação completa da tabela por meio do índice columnstore, e retornarão o resultado correto com mais rapidez, fazendo uma pesquisa binária por um índice de árvore b.  
+ Para melhorar a eficiência das buscas de tabelas em um data warehouse, você pode criar um índice não clusterizado projetado para executar consultas que executam melhor com as buscas de tabelas. Por exemplo, as consultas que procuram valores correspondentes ou retornam um pequeno intervalo de valores terão um desempenho melhor em um índice de árvore B em vez de um índice columnstore. Elas não exigem uma verificação de tabela completa por meio do índice columnstore e retornarão o resultado correto com mais rapidez, fazendo uma pesquisa binária por meio de um índice de árvore B.  
   
-```  
+```sql  
 --BASIC EXAMPLE: Create a nonclustered index on a columnstore table.  
   
 --Create the table  
@@ -78,13 +69,13 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
 ```  
   
 ### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Exemplo: use um índice não clusterizado para impor uma restrição de chave primária em um tabela columnstore.  
- Por padrão, uma tabela columnstore não permite uma restrição de chave primária. Agora você pode usar um índice não clusterizado em uma tabela columnstore para impor uma restrição de chave primária. Uma chave primária é equivalente a uma restrição UNIQUE em uma coluna não NULL, e o SQL Server implementa uma restrição UNIQUE como um índice não clusterizado. Combinando esses fatos, o exemplo a seguir define uma restrição UNIQUE na accountkey da coluna não NULL. O resultado é um índice não clusterizado que impõe uma restrição de chave primária como uma restrição UNIQUE em uma coluna não NULL.  
+ Por padrão, uma tabela columnstore não permite uma restrição de chave primária. Agora você pode usar um índice não clusterizado em uma tabela columnstore para impor uma restrição de chave primária. Uma chave primária é equivalente a uma restrição UNIQUE em uma coluna não NULL e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa uma restrição UNIQUE como um índice não clusterizado. Combinando esses fatos, o exemplo a seguir define uma restrição UNIQUE na accountkey da coluna não NULL. O resultado é um índice não clusterizado que impõe uma restrição de chave primária como uma restrição UNIQUE em uma coluna não NULL.  
   
  Em seguida, a tabela é convertida em um índice columnstore clusterizado. Durante a conversão, o índice não clusterizado persiste. O resultado é um índice columnstore clusterizado com um índice não clusterizado que impõe a restrição de chave primária. Uma vez que qualquer atualização ou inserção na tabela columnstore também afetará o índice não clusterizado, todas as operações que violarem a restrição exclusiva e o não NULL causarão a falha de toda a operação.  
   
  O resultado é um índice columnstore com um índice não clusterizado que impõe uma restrição de chave primária nos dois índices.  
   
-```  
+```sql 
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  
@@ -110,15 +101,13 @@ CREATE CLUSTERED COLUMNSTORE INDEX t_account_cci ON t_account
 --If desired, add a foreign key constraint on AccountKey.  
   
 ALTER TABLE [dbo].[t_account]  
-WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey)  
-;  
-  
+WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey); 
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>Melhorar o desempenho permitindo o bloqueio no nível da linha e no nível do grupo de linhas  
  Para complementar o índice não clusterizado em um recurso de índice columnstore, o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oferece o recurso de bloqueio granular para selecionar, atualizar e excluir operações. É possível executar consultas com o bloqueio no nível de linha em buscas de índice com base em um índice não clusterizado, e um bloqueio no nível do grupo de linhas em verificações de tabela completa com base no índice columnstore. Use isto para alcançar maior simultaneidade de leitura/gravação usando adequadamente o bloqueio no nível de linha e no nível do grupo de linhas.  
   
-```  
+```sql  
 --Granular locking example  
 --Store table t_account as a columnstore table.  
 CREATE CLUSTERED COLUMNSTORE INDEX taccount_cci ON t_account  
@@ -137,18 +126,16 @@ BEGIN TRAN
     -- and takes the row lock  
     SELECT * FROM t_account WHERE AccountKey = 100;  
 END TRAN  
-  
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>Isolamento de instantâneo e isolamentos de instantâneo de leitura confirmada  
  Use o SI (isolamento de instantâneo) para garantir a consistência transacional, e os RCSI (isolamentos de instantâneo de leitura confirmada) para garantir a consistência no nível da instrução para consultas em índices columnstore. Isso permite que as consultas sejam executadas sem bloquear os gravadores de dados. Esse comportamento de não bloqueio também reduz consideravelmente a probabilidade de deadlocks para transações complexas. Para saber mais, confira [Isolamento de instantâneo no SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) no MSDN.  
   
-## <a name="see-also"></a>Consulte também  
- Guia de Índices columnstore   
- Carregamento de dados dos Índices columnstore   
- Resumo de recursos com versão dos índices columnstore   
+## <a name="see-also"></a>Consulte Também  
+ [Diretrizes de design dos Índices columnstore](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
+ [Diretrizes de Carregamento de Dados de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Desempenho de consultas de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [Arquitetura de índices columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

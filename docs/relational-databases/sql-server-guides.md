@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1c80c429cd094c36ec92aa71039e6431e60e73e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65789c30fdb080171e70ab16e81808990a7b636e
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="sql-server-guides"></a>Guias do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Os guias a seguir estão disponíveis. Eles abordam conceitos gerais e se aplica
 [Guia de design de índice](../relational-databases/sql-server-index-design-guide.md)  
 [Guia de arquitetura de gerenciamento de memória](../relational-databases/memory-management-architecture-guide.md)  
 [Guia de arquitetura de página e extensões](../relational-databases/pages-and-extents-architecture-guide.md)  
-[Validação pós-migração e guia de otimização](post-migration-validation-and-optimization-guide.md)  
+[Validação pós-migração e guia de otimização](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [Guia de arquitetura de processamento de consultas](../relational-databases/query-processing-architecture-guide.md)  
 [Guia de controle de versão de linha e bloqueio de transações do SQL Server](https://msdn.microsoft.com/library/jj856598)  
 [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 523dcd99da61b11e42848ea77037baf59a3ea00b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eb0da34dd83cd9e7b10a21a4a89047902e656ab3
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introdução a este exemplo simples do Assistente de Importação e Exportação
 Saiba o que esperar do Assistente de Importação e Exportação do SQL Server examinando um cenário comum – a importação de dados de uma planilha do Excel para um banco de dados do SQL Server. Mesmo se você pretende usar uma fonte e um destino diferentes, este tópico mostra mais do que você precisa saber sobre como executar o assistente.

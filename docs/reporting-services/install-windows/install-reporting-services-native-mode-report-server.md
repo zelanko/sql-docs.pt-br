@@ -1,7 +1,7 @@
 ---
-title: "Instalar o servidor de relatório no modo nativo do Reporting Services | Microsoft Docs"
+title: "Instalar o servidor de relatório no modo nativo do Reporting Services 2016 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
@@ -19,15 +19,15 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: "68"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 9feeb8c3f7e9d2c1d365e8d6ad7f327e20d80b4f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e80a99e9e38d7bbf52dd11aae9bb567f38f943f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="install-reporting-services-native-mode-report-server"></a>Instalar o servidor de relatórios no modo nativo do Reporting Services
+# <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalar o servidor de relatório no modo nativo do Reporting Services 2016
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -91,7 +91,7 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
 ##  <a name="bkmk_defaultURLreservations"></a> Reservas de URL padrão  
  As reservas de URL são compostas de um prefixo, nome de host, porta e diretório virtual:  
   
-|Parte|Descrição|  
+|Parte|Description|  
 |----------|-----------------|  
 |Prefixo|O prefixo padrão é HTTP. Se você instalou anteriormente um certificado de protocolo SSL, a Instalação tentará criar reservas de URL que usem o prefixo HTTPS.|  
 |Nome do host|O nome de host padrão é um curinga forte (+). Ele especifica que o servidor de relatório aceitará qualquer solicitação HTTP na porta designada para qualquer nome do host resolvido para o computador, incluindo `http://<computername>/reportserver`, `http://localhost/reportserver` ou `http://<IPAddress>/reportserver`.|  
@@ -180,7 +180,7 @@ Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../inclu
   
 -   Para configurar o portal da Web para que você possa acessá-lo em um computador de relatório, a fim de exibir e gerenciar relatórios, consulte [Configurar um firewall para acesso ao servidor de relatório](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) e [Configurar um servidor de relatório para administração remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Solucionar um problema da instalação do Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
 [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   

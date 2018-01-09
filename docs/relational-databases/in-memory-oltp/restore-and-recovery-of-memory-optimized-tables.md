@@ -1,7 +1,7 @@
 ---
 title: "Restauração e recuperação de tabelas com otimização de memória | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,16 +17,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: add6844ed550417478cc44090fd40a4a5b4cf62b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2b1b3fb41bc66dc8c3599870bc4035211768594
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauração e recuperação de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   O mecanismo básico para recuperar ou restaurar um banco de dados com tabelas com otimização de memória é semelhante a bancos de dados com apenas tabelas baseadas em disco. Mas, de modo diferente das tabelas baseadas em disco, as tabelas com otimização de memória devem ser carregadas na memória antes que o banco de dados seja disponibilizado para o acesso de usuários. Isso adiciona uma nova etapa na recuperação do banco de dados.  
+  
+  Se o servidor não tiver memória suficiente disponível, haverá falha na recuperação de banco de dados e o banco de dados será marcado como suspeito. Para resolver esse problema, consulte [Resolver problemas de memória insuficiente](resolve-out-of-memory-issues.md). 
   
  Durante as operações de recuperação ou restauração, o mecanismo OLTP na memória lê os arquivos delta e de dados para carregamento na memória física. O tempo de carregamento é determinado pelos seguintes fatores:  
   
@@ -66,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Tabelas grandes com otimização de memória, com um ou mais índices não clusterizados, são diferentes de um índice de hash cujo número de buckets é dimensionado no momento de criação. Os índices não clusterizados crescem dinamicamente, resultando na alta utilização da CPU.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backup, restauração e recuperação de tabelas com otimização de memória](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

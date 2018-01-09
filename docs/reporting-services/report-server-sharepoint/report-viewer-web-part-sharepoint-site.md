@@ -1,5 +1,5 @@
 ---
-title: "Web part do Visualizador de Relatórios em um site do SharePoint | Microsoft Docs"
+title: "Web part do Visualizador de Relatórios em um site do SharePoint – SSRS | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: reporting-services
@@ -15,15 +15,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fe9fb37ed9b35f0fb108c1757ea79acbd575703
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d3479fd05c49b2aed36008f81ffb42bb95a6e68
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Web part do Visualizador de Relatórios em um site do SharePoint
+# <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Web part do Visualizador de Relatórios em um site do SharePoint – Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 

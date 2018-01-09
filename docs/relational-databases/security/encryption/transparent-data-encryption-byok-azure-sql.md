@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.custom: 
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 11/15/2017
 ms.author: aliceku
-ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5aaa55cc04e4844889266dc434ac92a0ed22ed00
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption com suporte a Bring Your Own Key para Data Warehouse e Banco de Dados SQL do Azure
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption com suporte a Bring Your Own Key (VERSÃO PRÉVIA) para o Banco de Dados SQL do Azure e Data Warehouse
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-O suporte a BYOK (Bring Your Own Key) na [TDE (Transparent Data Encryption)](transparent-data-encryption.md) permite que o você tenha controle de suas chaves de criptografia TDE e restrinja quem pode acessá-las e quando. O [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), o sistema de gerenciamento de chaves externas baseado em nuvem do Azure, é o primeiro serviço de gerenciamento de chaves com o qual a TDE tem suporte integrado a BYOK. Com o BYOK, a chave de criptografia do banco de dados é protegida por uma chave assimétrica armazenada no Key Vault. A chave assimétrica é definida no nível do servidor e herdada por todos os bancos de dados no servidor. 
+O suporte a BYOK (Bring Your Own Key) na [TDE (Transparent Data Encryption)](transparent-data-encryption.md) permite que o você tenha controle de suas chaves de criptografia TDE e restrinja quem pode acessá-las e quando. O [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), o sistema de gerenciamento de chaves externas baseado em nuvem do Azure, é o primeiro serviço de gerenciamento de chaves com o qual a TDE tem suporte integrado a BYOK. Com o BYOK, a chave de criptografia do banco de dados é protegida por uma chave assimétrica armazenada no Key Vault. A chave assimétrica é definida no nível do servidor e herdada por todos os bancos de dados no servidor. Atualmente, este recurso está em versão prévia e não recomendamos usá-lo para cargas de trabalho de produção até declaramos Disponibilidade Geral.
 
 Com suporte a BYOK, os usuários agora podem controlar tarefas de gerenciamento de chaves, incluindo rotações de chave, permissões do cofre de chaves, exclusão de chaves e habilitação de auditoria/relatórios em todas as chaves de criptografia. O Key Vault fornece o gerenciamento central de chaves, utiliza os HSMs (módulos de segurança de hardware) monitorados e possibilita a separação de tarefas entre o gerenciamento de chaves e de dados para ajudar a atender à conformidade regulatória. 
 
@@ -57,6 +60,7 @@ Usar a TDE com BYOK traz tarefas de gerenciamento de chave e custos relacionados
 Assumir o gerenciamento de chave de criptografia dos recursos de um aplicativo é uma responsabilidade importante. Ao usar a TDE com BYOK por meio do Key Vault, as tarefas a seguir são as tarefas de gerenciamento de chaves que você está assumindo:
 - **Rotações de chave:** os protetores de TDE devem ser girados de acordo com as políticas internas ou com os requisitos de conformidade. As rotações de chave podem ser feitas por meio do cofre de chaves do Protetor de TDE.  
 - **Permissões do Key Vault**: as permissões no Key Vault são provisionadas em um nível de servidor e de cofre de chaves. As permissões do servidor para um cofre de chaves podem ser revogadas a qualquer momento usando a política de acesso do cofre de chaves.
+- **Redundância do cofre de chaves**: como o material da chave nunca deixa o Azure Key Vault e o servidor não tem acesso às cópias armazenadas em cache fora do cofre de chaves, é necessário configurar a replicação geográfica do Azure Key Vault para manter o acesso ao material da chave caso uma região do Azure Key Vault esteja passando por uma interrupção.  Os bancos de dados com replicação geográfica perderão o acesso ao seu material da chave se dependerem de um único Azure Key Vault.
 - **Exclusão de chaves**: as chaves podem ser removidas do Key Vault e do SQL Server para fornecer segurança adicional ou atender aos requisitos de conformidade.
 - **Auditoria/relatórios em todas as chaves de criptografia**: o Key Vault fornece logs que são fáceis de injetar em outras ferramentas de SIEM (gerenciamento de evento e informações de segurança). O [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) do OMS (Operations Management Suite) é um exemplo de serviço que já está integrado.
 
@@ -91,12 +95,11 @@ Não há suporte para os Protetores de TDE exclusivos para um banco de dados ou 
 
 ### <a name="high-availability-and-disaster-recovery"></a>Alta disponibilidade e recuperação de desastre
   
-Há duas maneiras de configurar a replicação geográfica para servidores usando o Key Vault: 
+A replicação geográfica deve ser configurada para o cofre de chaves para manter a alta disponibilidade do material da chave no Azure Key Vault:
 
-- **Cofre de chaves separado**: cada servidor tem acesso a um cofre de chaves separado (o ideal é cada um dentro de sua própria região do Azure). Essa é a configuração recomendada, já que cada servidor tem sua própria cópia do Protetor de TDE para os bancos de dados criptografados replicados geograficamente. Se uma das regiões do Azure do servidor ficar offline, os outros servidores poderão continuar a acessar os bancos de dados replicados geograficamente.   
+- **Cofre de chaves redundante**: cada servidor com replicação geográfica tem acesso a um cofre de chaves separado, de preferência, colocalizado na mesma região do Azure. Essa é a configuração recomendada, já que cada servidor tem sua própria cópia do protetor de TDE para os bancos de dados criptografados com replicação geográfica. Se uma das regiões do Azure do servidor ficar offline, os outros servidores poderão continuar a acessar os bancos de dados replicados geograficamente.  Isso precisa ser configurado com cautela para garantir que, se um cofre de chaves ficar indisponível, o servidor poderá acessar o backup do protetor de TDE no outro cofre de chaves.     
 
-- **Key vault compartilhado**: todos os servidores compartilham o mesmo cofre de chaves. Essa configuração é mais fácil de ser definida, mas se a região do Azure na qual o cofre de chaves estiver localizado ficar offline, todos os servidores não poderão ler os bancos de dados criptografados replicados geograficamente nem seus próprios bancos de dados criptografados. 
- 
+
 Para começar, use o cmdlet [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) para adicionar cada chave do Key Vault do servidor aos outros servidores em um link de replicação geográfica.  
 (Exemplo de um KeyId do Key Vault: *https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
 

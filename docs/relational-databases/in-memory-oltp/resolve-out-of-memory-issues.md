@@ -1,7 +1,7 @@
 ---
 title: "Resolver problemas de memória insuficiente | Microsoft Docs"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 838f604df21a87912db8d48f815a73c6af27c8f2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cd2c56037edfc85932f8cb9ef0c7dbe8b5251ef4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.lasthandoff: 11/27/2017
 |[Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM](#bkmk_VMs)|O que deve ser levado em consideração ao usar o OLTP in-memory em um ambiente virtualizado.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolver falhas de restauração de banco de dados devido a OOM  
- Quando tenta restaurar um banco de dados, você pode receber a mensagem de erro: “Falha na operação de restauração do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”. Isso indica que o servidor não tem memória suficiente disponível para restaurar o banco de dados.
+ Quando tenta restaurar um banco de dados, você pode receber a mensagem de erro: “Falha na operação de restauração do banco de dados '*\<databaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'”. Isso indica que o servidor não tem memória suficiente disponível para restaurar o banco de dados. 
    
-O servidor restaurado em um banco de dados deve ter memória suficiente disponível para as tabelas com otimização de memória no backup de banco de dados; caso contrário, o banco de dados não será colocado online.  
+O servidor restaurado em um banco de dados deve ter memória suficiente disponível para as tabelas com otimização de memória no backup de banco de dados; caso contrário, o banco de dados não será colocado online e será marcado como suspeito.  
   
 Se o servidor tiver memória física suficiente, mas você ainda estiver vendo este erro, é possível que outros processos estejam usando uma quantidade excessiva de memória ou um problema de configuração faz com que não haja memória suficiente disponível para a restauração. Para esta classe de problemas, use as seguintes medidas para disponibilizar mais memória para a operação de restauração: 
   
@@ -54,7 +54,7 @@ Se o servidor tiver memória física suficiente, mas você ainda estiver vendo e
     > Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT para o mesmo valor de MAX_MEMORY_PERCENT.   
     > Confira o tópico [Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM](#bkmk_VMs) para obter mais informações.  
   
-    ```tsql  
+    ```sql  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -117,7 +117,7 @@ Este trecho de código altera MAX_MEMORY_PERCENT para o pool de recursos PoolHk 
 >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT como o mesmo.   
 > Confira o tópico [Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM](#bkmk_VMs) para obter mais informações.  
   
-```tsql  
+```sql  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -163,7 +163,7 @@ Se você seguir as práticas acima para um banco de dados com tabelas otimizadas
 ### <a name="resolution"></a>Resolução
 Para solucionar isso, pré-aloque memória suficiente para o banco de dados a ser recuperado ou reinicie o banco de dados, não um valor mínimo que depende da memória dinâmica para fornecer a memória adicional quando for necessário.
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciando memória para OLTP na memória](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Monitorar e solucionar problemas de uso da memória](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   

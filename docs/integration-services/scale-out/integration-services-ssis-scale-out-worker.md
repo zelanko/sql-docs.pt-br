@@ -1,7 +1,8 @@
 ---
 title: Trabalho do SSIS (SQL Server Integration Services) Scale Out | Microsoft Docs
+ms.description: This article describes the Scale Out Master component of SSIS Scale Out
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
@@ -16,18 +17,18 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb36dc89fbe8fbedc96e426d00f6982213d7d4c9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e73695e21e8055d3c27079f106390e8d44894db
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabalho de Expansão de Integration Services (SSIS)
 
-O Trabalho do Scale Out executa um serviço Trabalho do Scale Out do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] para efetuar pull de tarefas de execução do Mestre do Scale Out e executa os pacotes localmente com o ISServerExec.exe.
+O Trabalho do Scale Out executa o serviço Trabalho do Scale Out para efetuar pull de tarefas de execução no Mestre do Scale Out. Em seguida, o trabalho executa os pacotes localmente com `ISServerExec.exe`.
 
-## <a name="configure-sql-server-integration-services-scale-out-worker-service"></a>Configurar o serviço Trabalho de Expansão do SQL Server Integration Services
-O serviço Trabalho de Expansão pode ser configurado usando o arquivo \<driver\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config. O serviço deve ser reiniciado depois de atualizar o arquivo de configuração.
+## <a name="configure-the-scale-out-worker-service"></a>Configurar o serviço Trabalho do Scale Out
+Configure o serviço Trabalho do Scale Out usando o arquivo ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. É necessário reiniciar o serviço depois de atualizar o arquivo de configuração.
 
 Configuração  |Description  |Valor padrão  
 ---------|---------|---------
@@ -45,20 +46,24 @@ TaskRequestMaxCPU|O limite superior de CPU para tarefas de solicitação do Trab
 TaskRequestMinMemory|O limite inferior de memória, em MB, para tarefas de solicitação do Trabalho de Expansão. **NÃO em uso no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|100.0         
 MaxTaskCount|O número máximo de tarefas que o Trabalho de Expansão pode conter.|10         
 LeaseInternval|O intervalo de concessão de uma tarefa contida pelo Trabalho de Expansão.|00:01:00         
-TasksRootFolder|A pasta de logs de tarefas. O caminho de pasta \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\Cluster\Tasks será usado se o valor estiver vazio. [account] é a conta que executa o serviço Trabalho de Expansão. Por padrão, a conta é SSISScaleOutWorker140.|Empty (vazio)         
-TaskLogLevel|O nível de log de tarefas do Trabalho de Expansão. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information,Warning,Error,Progress,CriticalError,Audit)     
+TasksRootFolder|A pasta de logs de tarefas. Se o valor estiver vazio, o caminho de pasta `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` será usado. [account] é a conta que executa o serviço Trabalho de Expansão. Por padrão, a conta é SSISScaleOutWorker140.|Empty (vazio)         
+TaskLogLevel|O nível de log de tarefas do Trabalho de Expansão. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information, Warning, Error, Progress, CriticalError, Audit)     
 TaskLogSegment|O período de tempo de um arquivo de log de tarefas.|00:00:00         
 TaskLogEnabled|Especifica se o log de tarefas está habilitado.|true         
-ExecutionLogCacheFolder|A pasta usada para armazenar em cache o log de execução de pacote. O caminho de pasta \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\Cluster\Agent\ELogCache será usado se o valor estiver vazio. [account] é a conta que executa o serviço Trabalho de Expansão. Por padrão, a conta é SSISScaleOutWorker140.|Empty (vazio)         
+ExecutionLogCacheFolder|A pasta usada para armazenar em cache o log de execução de pacote. Se o valor estiver vazio, o caminho de pasta ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` será usado. [account] é a conta que executa o serviço Trabalho de Expansão. Por padrão, a conta é SSISScaleOutWorker140.|Empty (vazio)         
 ExecutionLogMaxBufferLogCount|O número máximo de logs de execução armazenados em cache em um buffer de log de execução na memória.|10000        
 ExecutionLogMaxInMemoryBufferCount|O número máximo de buffers de log de execução na memória de logs de execução.|10         
 ExecutionLogRetryCount|O número de repetições se o log de execução falhar.|3
-ExecutionLogRetryTimeout|A repetição atinge o tempo limite se o log de execução falha. ExecutionLogRetryCount será ignorado se ExecutionLogRetryTimeout for atingido.|7.00:00:00 (7 dias)        
-AgentId|ID do agente de trabalho do Trabalho de Expansão|Gerado automaticamente        
+ExecutionLogRetryTimeout|A repetição atinge o tempo limite se o log de execução falha. Se ExecutionLogRetryTimeout for atingido, ExecutionLogRetryCount será ignorada. |7.00:00:00 (7 dias)        
+AgentId|ID do agente de Trabalho do Trabalho do Scale Out|Gerado automaticamente    
+||||    
 
-## <a name="view-scale-out-worker-log"></a>Exibir o log do Trabalho de Expansão
-O arquivo de log do serviço Trabalho do Scale Out está no caminho da pasta \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Agent.
+## <a name="view-the-scale-out-worker-log"></a>Exibir o log do Trabalho do Scale Out
+O arquivo de log do serviço Trabalho do Scale Out está na pasta `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent`.
 
-O local do log de cada tarefa individual é configurado no arquivo WorkerSettings.config por TasksRootFolder. Se não for especificado, o log estará no caminho de pasta \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Tasks. 
+O local do log de cada tarefa individual é configurado no arquivo `WorkerSettings.config` na `TasksRootFolder`. Se um valor não for especificado, o log estará na pasta `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. 
 
-A *[account]* é a conta que executa o serviço Trabalho do Scale Out. Por padrão, a conta é SSISScaleOutWorker140.
+O parâmetro *[account]* é a conta que executa o serviço Trabalho do Scale Out. Por padrão, a conta é `SSISScaleOutWorker140`.
+
+## <a name="next-steps"></a>Próximas etapas
+[Mestre do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-master.md)

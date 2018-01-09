@@ -1,9 +1,9 @@
 ---
 title: "Log de mudanças para o SSDT (SQL Server Data Tools) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 12/22/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
@@ -17,16 +17,102 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 06b6fbdbf9d53273abe660ca6d16ba2afb51fa26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este log de alterações é para o [SSDT (SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver postagens detalhadas sobre as novidades e alterações, visite [o blog da Equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT para Visual Studio 2017 (15.5.1)
+Número de build: 14.0.16148.0
+  
+### <a name="whats-new"></a>Novidades
+
+O Visual Studio 2017 (15.5.1) é a mesma versão da versão 15.5.0, com exceção das seguintes correções de bug no instalador:
+
+1.  Correção de um problema no qual o instalador trava na pós-instalação do SQL Server Integration Services.
+2.  Correção de um problema no qual a instalação falha com a seguinte mensagem de erro: “Não há suporte para a operação de metarquivo solicitada (0x800707D3)”.
+
+Além dessas duas correções de bug, os seguintes detalhes do 15.5.0 ainda se aplicam ao 15.5.1
+
+## <a name="ssdt-for-visual-studio-2017-1550"></a>SSDT para Visual Studio 2017 (15.5.0)
+Número de build: 14.0.16146.0
+  
+### <a name="whats-new"></a>Novidades
+
+O SSDT para Visual Studio 2017 (15.5.0) passa da versão prévia para GA (disponibilidade geral).
+
+**Instalador**
+1. A interface do usuário da instalação está localizada.
+1. Substitua o ícone por uma versão de qualidade superior.
+
+**IS (Integration Services)**
+1. Adição de uma etapa de validação de pacote no Assistente de Implantação ao implantar o Azure SSIS IR no ADF, que detecta problemas de compatibilidade potenciais em pacotes do SSIS a serem executados no Azure SSIS IR. Para obter mais informações, consulte [Validar pacotes do SSIS implantados no Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. A extensão do SSIS está localizada.
+
+### <a name="bug-fixes"></a>Correções de bugs
+
+**IS (Integration Services)**
+1. Correção de um problema no qual o layout do gerenciador de conexões OLEDB e ADO.NET está corrompido.
+2. Correção de um problema no qual um erro de assembly não encontrado é acionado durante a tentativa de editar uma Tarefa de Processamento de Dimensão.
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+**IS (Integration Services)** A Tarefa Executar Pacote do SSIS não dá suporte à depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
+
+
+
+## <a name="ssdt-174-for-visual-studio-2015"></a>SSDT 17.4 para Visual Studio 2015
+Número de build: 14.0.61712.050
+
+### <a name="whats-new"></a>Novidades
+
+**Projetos do AS (Analysis Services)**
+- Adição de três novas opções aos projetos de tabela (em Opções > Tabela do Analysis Services > Importação de Dados):
+  - Habilitar fontes de dados herdadas – permite que o usuário crie fontes de dados mais antigas do “modo de compatibilidade 1200” nos modos de compatibilidade mais novos.
+  - Detecção automática de tipo – quando essa opção estiver habilitada, o Editor de Consultas para fontes de dados modernas tentará detectar tipos de dados para consultas não estruturadas quando eles forem carregados. Se a detecção for bem-sucedida, uma nova etapa poderá ser adicionada à consulta.
+  - Executar análise em segundo plano – quando essa opção estiver habilitada, o Editor de Consultas para fontes de dados modernas executará consultas na fonte de dados, conforme as consultas forem carregadas para analisar o esquema de saída da consulta.
+
+**IS (Integration Services)**
+- Adição de uma etapa de validação de pacote no Assistente de Implantação ao implantar o Azure SSIS IR no ADF, que detecta problemas de compatibilidade potenciais em pacotes do SSIS a serem executados no Azure SSIS IR. Para obter mais informações, consulte [Validar pacotes do SSIS implantados no Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+
+
+### <a name="bug-fixes"></a>Correções de bugs
+
+**Projetos do AS (Analysis Services):**
+- Correção de um problema que poderá causar uma exceção sem tratamento durante o check-in de alterações de modelo no TFS.
+- Correção de um problema que poderá causar uma exceção ao adicionar uma tabela com uma expressão M complexa a um modelo 1400.
+- Correção de um problema que poderá causar uma falha no Visual Studio durante a pesquisa de metadados na exibição de diagrama do modelo.
+- Correção de um problema com modelos 1400 que poderá fazer com que as colunas calculadas sejam removidas da definição de tabela ao salvar alterações em consultas da partição M.
+- Correção de um problema ao usar a opção Renomear Consulta em modelos 1400 na interface do usuário Obter Dados\Editor de Tabela que poderá congelar durante a validação de compatibilidade com o modelo de dados atual.
+- Correção de um problema que fez com que uma referência de assembly Newtonsoft estivesse ausente ao implantar um modelo 1400 no Azure Analysis Services.
+- Correção de um problema que causou um erro de importação de dados por meio de PQ em um modelo 1400 em alguns casos.
+- Correção de um problema de dimensionamento nas caixas de diálogo da interface do usuário do PowerQuery que ocorre durante a definição do dimensionamento de Janelas.
+- Correção de um problema com a renomeação de funções.
+- Correção de problemas com as Configurações de Projeto que poderão ter causado alterações de não salvar\sincronizar corretamente em alguns casos.
+- Correção de um problema no editor do PowerQuery que adicionava etapas “Alterar Tipo” automaticamente.
+- Correção de um problema que causou um erro ao abrir o arquivo BIM depois de alternar entre o modo Espaço de Trabalho Integrado.
+- A propriedade MaxConnections agora está visível para fontes de dados em modelos de tabela.
+- Aumento do tamanho inicial da janela do editor do PowerQuery.
+- Palavras-chave da Consulta M, como “Origem” no editor do PowerQuery, agora serão mostradas como localizadas.
+- Credenciais de cache ao trabalhar com modelos 1400 e fontes de dados estruturadas para evitar a necessidade de inserir as mesmas credenciais para cada tabela editada.
+
+**Projetos do RS:**
+- Correção de um problema que impedia a implantação de um único relatório em um projeto de vários relatórios
+- Correção de um problema com Fontes de Dados Compartilhadas que poderá ter causado um problema na implantação
+- Correção de um problema que poderá falhar o Gerenciador de Desfazer ao alternar entre a exibição de código, o modo de exibição de Design e a janela do editor de consultas
+- Correção de um problema que poderá ter feito com que o painel de parâmetros desaparecesse após um erro de tempo de execução
+- Correção de um problema com os Projetos de Relatório que poderá ter causado a perda de mapeamentos do controle do código-fonte
+
+**Integration Services:**
+- Correção de um problema que poderá ter ocorrido ao alternar uma conexão em uma Tarefa de Processo do Analysis Services
+- Correção de um problema no qual algumas tarefas/componentes não estão bem localizados.
+- Correção de um problema no qual os componentes CDC são interrompidos após a aplicação de uma correção do SQL ao CDC que adiciona a coluna \__$command\_id.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT para Visual Studio 2017 (versão prévia 15.4.0)

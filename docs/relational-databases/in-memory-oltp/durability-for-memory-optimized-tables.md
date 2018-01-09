@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 772e17a6f5b444b6d75719896bed74e3cd13ab67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31182384eaf0b9ae13cca070ac18eba76a14df1e
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,11 +110,11 @@ ms.lasthandoff: 11/17/2017
  Nem todos os CFPs com o espaço disponível se qualificam para mesclagem. Por exemplo, se dois CFPs adjacentes apresentarem 60% de utilização, eles não estarão qualificados para mesclagem e cada um desses CFPs terá 40% do armazenamento não usado. No pior caso, todos os CFPs terão 50% de utilização, uma utilização do armazenamento de apenas 50%. Embora as linhas excluídas possam existir no armazenamento porque os CFPs não se qualificam para mesclagem, essas linhas talvez já tenham sido removidas da memória pela coleta de lixo na memória. O gerenciamento de armazenamento e de memória é independente da coleta de lixo. O armazenamento ocupado pelos CFPs ativos (nem todos os CFPs estão sendo atualizados) pode ser até 2 vezes maior do que o tamanho de tabelas duráveis na memória.  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo de vida de um CFP  
- Transição de CPFs por vários estados antes de poderem ser desalocados. Os backups de log e de pontos de verificação do banco de dados devem ocorrer para fazer a transição dos arquivos pelas fases e, por fim, limpar os arquivos que não são mais necessários. Para obter uma descrição dessas fases, veja [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
+ Os CFPs passam por vários estados antes de poderem ser desalocados. Os backups de log e de pontos de verificação do banco de dados devem ocorrer para fazer a transição dos arquivos pelas fases e, por fim, limpar os arquivos que não são mais necessários. Para obter uma descrição dessas fases, veja [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
   
  Você pode forçar manualmente o ponto de verificação seguido pelo backup de log para acelerar a coleta de lixo. Nos cenários de produção, os backups automáticos de pontos de verificação e log ocorrem como parte da estratégia de backup que executará a transição perfeita de CFPs por essas fases, sem a necessidade de nenhuma intervenção manual. O impacto do processo de coleta de lixo é que os bancos de dados com tabelas com otimização de memória podem ter um tamanho de armazenamento maior em comparação com seu tamanho na memória. Se os backups de log e de ponto de verificação não ocorrerem, o volume em disco dos arquivos de ponto de verificação continuará aumentando.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

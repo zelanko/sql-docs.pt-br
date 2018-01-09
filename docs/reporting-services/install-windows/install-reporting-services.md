@@ -1,33 +1,31 @@
 ---
-title: Instalar o SQL Server Reporting Services | Microsoft Docs
-ms.date: 10/10/2017
+title: Instalar o SQL Server Reporting Services (2017 e posterior) | Microsoft Docs
+ms.date: 12/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: get-started-article
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bce2b4fadbf5ee10153d021f01bd4eb9a7e71c27
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="install-sql-server-reporting-services"></a>Instale o SQL Server Reporting Services
+# <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalar o SQL Server Reporting Services (2017 e posterior)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-A instalação do SQL Server Reporting Services envolve componentes do servidor para armazenar itens de relatório, renderizar relatórios, processar assinaturas e outros serviços de relatório.  Saiba como instalar o Servidor de Relatórios do Power BI.
+A instalação do SQL Server Reporting Services envolve componentes do servidor para armazenar itens de relatório, renderizar relatórios, processar assinaturas e outros serviços de relatório. 
 
 Para baixar o SQL Server 2017 Reporting Services, acesse o [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=55252).
 
@@ -55,11 +53,11 @@ A instalação de um servidor de relatório é muito simples. Há apenas algumas
 
     ![Escolher a edição](media/install-reporting-services/report-server-install-edition.png)
 
-    Escolha Evaluation ou Developer Edition na lista suspensa.
+    Para obter uma edição gratuita, escolha Evaluation ou Developer na lista suspensa.
 
     ![Evaluation ou Developer Editions](media/install-reporting-services/report-server-install-edition-select.png)
 
-    Caso contrário, insira uma chave do produto (Product Key).
+    Caso contrário, insira uma chave do produto (Product Key). [Localizar a chave do produto (Product Key) para o SQL Server 2017 Reporting Services](find-reporting-services-product-key-ssrs.md).
 
 4. Leia e concorde com os termos e condições de licença e, em seguida, selecione **Avançar**.
 
@@ -104,7 +102,7 @@ Um serviço Windows é criado como parte da instalação. Ele é exibido como **
 
 As reservas de URL são compostas de um prefixo, nome de host, porta e diretório virtual:
 
-|Parte|Descrição|
+|Parte|Description|
 |----------|-----------------|
 |Prefixo|O prefixo padrão é HTTP. Se você instalou anteriormente um certificado de protocolo SSL, a Instalação tentará criar reservas de URL que usam o prefixo HTTPS.|
 |Nome do host|O nome de host padrão é um curinga forte (+). Ele especifica que o servidor de relatório aceita qualquer solicitação HTTP na porta designada para qualquer nome do host resolvido para o computador, incluindo `http://<computername>/reportserver`, `http://localhost/reportserver` ou `http://<IPAddress>/reportserver.`|

@@ -1,7 +1,7 @@
 ---
 title: "Índices clusterizados e não clusterizados descritos | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -20,17 +20,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 55498dc339c081da3e9c5fbeca1c464a93b2395e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7267f4ab8ca17f2f4eefff78e34b55f5bd43b57
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices clusterizados e não clusterizados descritos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Índices clusterizados e não clusterizados descritos](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
-
 
   Um índice é uma estrutura em disco associada a uma tabela ou exibição, que agiliza a recuperação das linhas de uma tabela ou exibição. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Essas chaves são armazenadas em uma estrutura (árvore B) que habilita o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a localizar a linha ou as linhas associadas aos valores de chave de forma rápida e eficaz.  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="indexes-and-constraints"></a>Índices e restrições  
  Os índices são criados automaticamente quando as restrições PRIMARY KEY e UNIQUE são definidas em colunas de tabelas. Por exemplo, ao criar uma tabela e identificar determinada coluna como a chave primária, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria automaticamente uma restrição PRIMARY KEY e o índice nessa coluna. Para obter mais informações, veja [Criar chaves primárias](../../relational-databases/tables/create-primary-keys.md) e [Criar restrições exclusivas](../../relational-databases/tables/create-unique-constraints.md).  
   
-## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Como os índices são usados pelo otimizador de consulta  
+## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Como os índices são usados pelo Otimizador de Consulta  
  Índices bem projetados podem reduzir as operações de E/S de disco e consumir menos recursos de sistema, aprimorando o desempenho das consultas. Os índices podem ser úteis para uma série de consultas que contêm instruções SELECT, UPDATE, DELETE ou MERGE. Considere a consulta `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Quando essa consulta é executada, o otimizador de consulta avalia cada método disponível para recuperar os dados e seleciona o mais eficaz. O método pode ser uma verificação de tabela ou verificação de um ou mais índices, se houver.  
   
  Ao executar uma verificação de tabela, o otimizador de consulta lê todas as linhas da tabela e extrai as linhas que atendem os critérios da consulta. Uma verificação de tabela gera várias operações de E/S de disco e pode utilizar muitos recursos. No entanto, a verificação de tabela poderá ser o método mais eficaz se, por exemplo, o conjunto de resultados da consulta contiver um alto percentual de linhas da tabela.  
@@ -68,9 +67,12 @@ ms.lasthandoff: 11/17/2017
   
  Normalmente, o otimizador de consulta seleciona o método mais eficaz ao executar consultas. No entanto, se não houver índices disponíveis, o otimizador de consulta precisará usar uma verificação de tabela. Sua tarefa é criar índices mais adequados ao seu ambiente, para que o otimizador de consulta tenha uma seleção de índices eficientes da qual selecionar. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md) para ajudar com a análise de seu ambiente de banco de dados e na seleção de índices apropriados.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+> [!IMPORTANT] 
+> Para obter mais informações sobre as diretrizes de design de índice e operações internas, consulte o [Guia de design de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md).
+
+## <a name="related-content"></a>Conteúdo relacionado  
+ [Guia de criação de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md)     
  [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [Criar índices não clusterizados](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Guia de design de índice do SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 10/06/2016
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -13,58 +13,86 @@ ms.tgt_pltfrm:
 ms.topic: article
 helpviewer_keywords:
 - index design guide
+- index design guidance
 - guide, index design
+- guidance, index design
+- index internals
+- index architecture
+- sql server index internals
+- sql server index architecture
+- sql server index design guide
+- sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3f01a5120c0787afad67a3da51a6305bf54558dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d48c41769f674278a1597dd52e40758a928a9b6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sql-server-index-design-guide"></a>Guia de criação de índice do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Os índices criados inadequadamente e a falta de índices são as principais fontes de afunilamentos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de criação de índice do SQL Server contém informações e práticas recomendadas para ajudar você a criar índices efetivos para atender às necessidades de seu aplicativo.  
+Os índices criados inadequadamente e a falta de índices são as principais fontes de afunilamentos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de design de índice do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contém informações e as melhores práticas para ajudar você a criar índices efetivos de acordo com as necessidades de seu aplicativo.  
     
-Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](http://msdn.microsoft.com/library/ms175049.aspx).  
-  
+Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](../relational-databases/indexes/indexes.md).  
+
+Este guia aborda os seguintes tipos de índices:
+
+-   Clusterizado
+-   Não clusterizado
+-   Exclusivo
+-   Filtrado
+-   columnstore
+-   Hash
+-   Não clusterizado com otimização de memória
+
+Para obter informações sobre índices XML, consulte [Visão geral de índices XML](../relational-databases/xml/xml-indexes-sql-server.md).
+
+Para obter informações sobre índices espaciais, consulte [Visão geral de índices espaciais](../relational-databases/spatial/spatial-indexes-overview.md).
+
+Para obter informações sobre índices de texto completo, consulte [Popular índices de texto completo](../relational-databases/search/populate-full-text-indexes.md).
   
 ##  <a name="Basics"></a> Noções básicas sobre criação de índice  
- Um índice é uma estrutura em disco associada a uma tabela ou exibição, que agiliza a recuperação das linhas de uma tabela ou exibição. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Essas chaves são armazenadas em uma estrutura (árvore B) que habilita o SQL Server a localizar a linha ou as linhas associadas aos valores de chave de forma rápida e eficaz.  
-  
+ Um índice é uma estrutura em disco ou in-memory associada a uma tabela ou exibição que acelera a recuperação de linhas de uma tabela ou exibição. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Para índices em disco, essas chaves são armazenadas em uma estrutura (árvore B) que permite ao SQL Server localizar a linha ou as linhas associadas aos valores de chave de forma rápida e eficaz.  
+
+ Um índice armazena dados logicamente organizados como uma tabela com linhas e colunas e fisicamente armazenados em um formato de dados de linha chamado *rowstore* <sup>1</sup> ou armazenados em um formato de dados de coluna chamado *[columnstore](#columnstore_index)*.  
+    
  A seleção dos índices certos para um banco de dados e sua carga de trabalho é um ato de balanceamento complexo entre a velocidade de consulta e o custo de atualização. Índices limitados ou com poucas colunas na chave de índice exigem menos espaço em disco e sobrecarga de manutenção. Por outro lado, índices amplos cobrem mais consultas. Talvez você precise experimentar vários projetos diferentes antes de encontrar o índice mais eficiente. Os índices podem ser adicionados, modificados e descartados sem afetar o esquema de banco de dados ou o design do aplicativo. Portanto, você não deve hesitar em experimentar índices diferentes.  
   
  O otimizador de consulta no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escolhe o índice mais eficaz de forma confiável na grande maioria dos casos. Sua estratégia geral de criação de índice deveria fornecer uma variedade de opções de índices para o otimizador de consulta escolher e confiar durante a tomada de decisão correta. Isso reduz o tempo de análise e atinge um bom desempenho em várias situações. Para consultar quais índices o otimizador de consulta usa em uma consulta específica, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], no menu **Consulta** , selecione **Incluir Plano de Execução Real**.  
   
  Não equipare sempre o uso de índice com bom desempenho e bom desempenho com uso de índice eficiente. Se o uso de um índice sempre ajudasse a produzir o melhor desempenho, a tarefa do otimizador de consulta seria simples. Na realidade, a escolha incorreta de um índice pode causar um desempenho insatisfatório. Portanto, a tarefa do otimizador de consulta é selecionar um índice ou uma combinação de índices apenas quando isso gerar melhoria de desempenho e evitar a recuperação indexada quando isso atrapalhar o desempenho.  
-  
+
+ <sup>1</sup> Rowstore tem sido o modo tradicional de armazenar dados de tabela relacional. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], rowstore refere-se à tabela em que o formato de armazenamento de dados subjacente é um heap, uma árvore B ([índice clusterizado](#Clustered)) ou uma tabela com otimização de memória.
+
 ### <a name="index-design-tasks"></a>Tarefas de criação de índice  
  As seguintes tarefas compõem a estratégia recomendada para criação de índices:  
   
-1.  Entenda as características do banco de dados. Por exemplo, trata-se de um banco de dados OLTP (transação online) com modificações frequentes de dados, um DSS (sistema de apoio à decisão) ou um banco de dados OLAP de data warehouse que contém principalmente dados somente leitura e deve processar conjuntos de dados muito grandes rapidamente. No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o *columnstore xVelocity de memória otimizada* é especialmente apropriado para conjuntos de dados de data warehouse típicos. Os índices columnstore podem transformar a experiência com data warehouse para usuários proporcionando um desempenho mais rápido para consultas de data warehouse comuns, como filtragem, agregação, agrupamento ou consultas de junção em estrela. Para saber mais, consulte [Guia de índices columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).  
-  
+1.  Entenda as características do banco de dados. 
+    * Por exemplo, é um banco de dados OLTP (processamento de transações online) com modificações frequentes de dados que deve manter uma alta taxa de transferência. A partir do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], as tabelas e os índices com otimização de memória são especialmente apropriados para este cenário, fornecendo um design livre de travas. Para obter mais informações, consulte [Índices para tabelas com otimização de memória](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) ou [Diretrizes de design de índice não clusterizado para tabelas com otimização de memória](#inmem_nonclustered_index) e [Diretrizes de design de índice de hash para tabelas com otimização de memória](#hash_index) neste guia.
+    * Se preferir, veja um exemplo de um banco de dados DSS (sistema de apoio à decisão) ou OLAP (data warehouse) que deve processar conjuntos de dados muito grandes rapidamente. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], os índices columnstores são especialmente apropriados para conjuntos de dados de data warehouse típicos. Os índices columnstore podem transformar a experiência com data warehouse para usuários proporcionando um desempenho mais rápido para consultas de data warehouse comuns, como filtragem, agregação, agrupamento ou consultas de junção em estrela. Para obter mais informações, consulte [Visão geral de índices columnstore](../relational-databases/indexes/columnstore-indexes-overview.md) ou [Diretrizes de design de índice columnstore](#columnstore_index) neste guia.  
+
 2.  Entenda as características das consultas mais usadas. Por exemplo, saber que uma consulta usada frequentemente associa duas ou mais tabelas o ajudará a determinar o melhor tipo de índice a ser usado.  
   
 3.  Entenda as características das colunas usadas nas consultas. Por exemplo, um índice é ideal para colunas que tenham um tipo de dados de inteiro e, também, colunas exclusivas ou não nulas. Para colunas que têm subconjuntos bem definido de dados, é possível usar um índice filtrado no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e versões posteriores. Para obter mais informações, consulte [Diretrizes de criação de índice filtrado](#Filtered) neste guia.  
   
-4.  Determine quais opções de índice poderiam aumentar o desempenho na criação ou manutenção do índice. Por exemplo, a criação de um índice clusterizado em uma tabela grande existente se beneficiaria da opção de índice ONLINE. A opção ONLINE permite que atividade simultânea nos dados subjacentes continue enquanto o índice está sendo criado ou reconstruído. Para obter mais informações sobre opções de índice, consulte [Definir opções de índice](../relational-databases/indexes/set-index-options.md).  
+4.  Determine quais opções de índice poderiam aumentar o desempenho na criação ou manutenção do índice. Por exemplo, a criação de um índice clusterizado em uma tabela grande existente se beneficiará da opção de índice `ONLINE`. A opção ONLINE permite que atividade simultânea nos dados subjacentes continue enquanto o índice está sendo criado ou reconstruído. Para obter mais informações sobre opções de índice, consulte [Definir opções de índice](../relational-databases/indexes/set-index-options.md).  
   
 5.  Determine o melhor local de armazenamento para o índice. Um índice não clusterizado pode ser armazenado no mesmo grupo de arquivos que a tabela subjacente ou em um grupo de arquivos diferente. O local de armazenamento de índices pode melhorar o desempenho de consulta aumentando desempenho de E/S do disco. Por exemplo, o armazenamento de um índice não clusterizado em um grupo de arquivos que está em um disco diferente do grupo de arquivos de tabela pode melhorar o desempenho porque vários discos podem ser lidos ao mesmo tempo.  
-  
-     Alternativamente, os índices clusterizados e não clusterizados podem usar um esquema de partição em vários grupos de arquivos. O particionamento facilita o gerenciamento de tabelas ou índices grandes permitindo o acesso ou o gerenciamento de subconjuntos de dados de forma rápida e eficaz, enquanto mantém a integridade geral da coleção. Para obter mais informações, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Quando você pensar em particionamento, determine se o índice deve ser alinhado; isto é, particionado essencialmente da mesma maneira que a tabela ou particionado de forma independente.  
-  
+     Alternativamente, os índices clusterizados e não clusterizados podem usar um esquema de partição em vários grupos de arquivos. O particionamento facilita o gerenciamento de tabelas ou índices grandes permitindo o acesso ou o gerenciamento de subconjuntos de dados de forma rápida e eficaz, enquanto mantém a integridade geral da coleção. Para obter mais informações, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Quando você pensar em particionamento, determine se o índice deve ser alinhado; isto é, particionado essencialmente da mesma maneira que a tabela ou particionado de forma independente.   
+
 ##  <a name="General_Design"></a> Diretrizes para criação de índice geral  
  Administradores de banco de dados experientes podem projetar um bom conjunto de índices, mas essa tarefa é muito complexa, demorada e propensa a erros até mesmo para bancos de dados e cargas de trabalho moderadamente complexos. Compreender as características de seu banco de dados, consultas e colunas de dados pode lhe ajudar a projetar índices melhores.  
   
 ### <a name="database-considerations"></a>Considerações sobre banco de dados  
  Quando você projeta um índice, considere as seguintes diretrizes para banco de dados:  
   
--   Números grandes de índices em uma tabela afetam o desempenho das instruções INSERT, UPDATE, DELETE e MERGE porque todos os índices precisam ser ajustados adequadamente à medida que os dados são alterados em uma tabela. Por exemplo, se uma coluna for usada em vários índices e você executar uma instrução UPDATE que modifica os dados dessa coluna, cada índice que contém essa coluna deverá ser atualizado, bem como a coluna na tabela base subjacente (heap ou índice clusterizado).  
+-   Números grandes de índices em uma tabela afetam o desempenho das instruções `INSERT`, `UPDATE`, `DELETE` e `MERGE` porque todos os índices precisam ser ajustados adequadamente à medida que os dados são alterados em uma tabela. Por exemplo, se uma coluna for usada em vários índices e você executar uma instrução `UPDATE` que modifica os dados dessa coluna, todos os índices que contêm essa coluna deverão ser atualizados, bem como a coluna na tabela base subjacente (heap ou índice clusterizado).  
   
     -   Evite tabelas fortemente atualizadas em cima desindexações e mantenha os índices estreitos, ou seja, com o mínimo de colunas possível.  
   
@@ -112,14 +140,12 @@ Este guia presume que o leitor tenha uma compreensão geral dos tipos de índice
  Depois de ter determinado que um índice é apropriado para uma consulta, você pode selecionar o tipo de índice que melhor se adéque a sua situação. Características de índice incluem o seguinte:  
   
 -   Clusterizado X não clusterizado.  
-  
 -   Exclusivo X não exclusivo  
-  
 -   Única coluna X multicoluna  
-  
 -   Ordem crescente ou decrescente em colunas no índice  
-  
 -   Tabela completa versus filtrada para índices não clusterizados  
+-   Columnstore versus rowstore
+-   Hash versus não clusterizado para tabelas com otimização de memória
   
  Você também pode personalizar as características de armazenamento inicial do índice para aperfeiçoar seu desempenho ou manutenção definindo uma opção como FILLFACTOR. Além disso, você pode determinar o local de armazenamento de índice usando grupos de arquivos ou esquemas de partição para aperfeiçoar o desempenho.  
   
@@ -129,9 +155,7 @@ Este guia presume que o leitor tenha uma compreensão geral dos tipos de índice
  Por padrão, os índices são armazenados no mesmo grupo de arquivos que a tabela base na qual o índice é criado. Um índice cluster não particionado e a tabela base sempre residem no mesmo grupo de arquivos. No entanto, você pode fazer o seguinte:  
   
 -   Crie índices não clusterizados em um grupo de arquivos diferente do grupo de arquivos da tabela base ou do índice clusterizado.  
-  
 -   Particione índices cluster e não cluster para que ocupem vários grupos de arquivos.  
-  
 -   Mova uma tabela de um grupo de arquivos para outro descartando o índice cluster e especificando um novo grupo de arquivos ou esquema de partição na cláusula MOVE TO da instrução DROP INDEX ou usando a instrução CREATE INDEX com a cláusula DROP_EXISTING.  
   
  Ao criar o índice não cluster em um grupo de arquivos diferente, você pode obter ganhos de desempenho se os grupos de arquivos estiverem usando unidades físicas diferentes com seus próprios controladores. As informações de índices e de dados podem ser lidas em paralelo pelas várias cabeças de disco. Por exemplo, se `Table_A` no grupo de arquivos `f1` e `Index_A` no grupo de arquivos `f2` estiverem ambos sendo usados pela mesma consulta, podem-se obter ganhos de desempenho porque os dois grupos de arquivos estão sendo completamente usados sem contenção. Porém, se `Table_A` for verificado pela consulta, mas `Index_A` não for referenciado, apenas o grupo de arquivos `f1` será usado. Isso não cria nenhum ganho de desempenho.  
@@ -147,14 +171,14 @@ Este guia presume que o leitor tenha uma compreensão geral dos tipos de índice
   
 -   Fazer as consultas serem executadas de maneira mais rápida e eficiente. Quando as consultas acessarem várias partições de um índice, o otimizador de consulta pode processar partições individuais ao mesmo tempo e pode excluir partições que não sejam afetadas pela consulta.  
   
- Para obter mais informações, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Para saber mais, confira [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Diretrizes de criação de ordem de classificação de índice  
  Ao definir índices, confirme se os dados da coluna de chave de índice deverão ser armazenados em ordem crescente ou decrescente. Ordem crescente é o padrão e assegura a compatibilidade com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A sintaxe das instruções CREATE INDEX, CREATE TABLE e ALTER TABLE dá suporte às palavras-chave ASC (crescente) e DESC (decrescente) em colunas individuais de índices e restrições.  
   
  A especificação da ordem de armazenamento dos valores de chave em um índice é útil quando as consultas que fazem referência à tabela contêm cláusulas ORDER BY que especificam direcionamentos diferentes para a coluna de chave ou as colunas daquele índice. Nesses casos, o índice pode eliminar a necessidade de um operador SORT no plano de consulta, o que torna a consulta mais eficaz. Por exemplo, os compradores do departamento de compras da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] devem avaliar a qualidade dos produtos que adquirem de fornecedores. Os compradores estão mais interessados em localizar os produtos enviados por esses fornecedores, e que têm alta taxa de rejeição. Como demonstrado pela consulta a seguir, recuperar os dados para atender esses critérios requer que a coluna `RejectedQty` da tabela `Purchasing.PurchaseOrderDetail` seja classificada em ordem decrescente (do maior para o menor) e que a coluna `ProductID` seja classificada em ordem crescente (do menor para o maior).  
   
-```  
+```sql  
 SELECT RejectedQty, ((RejectedQty/OrderQty)*100) AS RejectionRate,  
     ProductID, DueDate  
 FROM Purchasing.PurchaseOrderDetail  
@@ -165,10 +189,9 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  ![IndexSort1](../relational-databases/media/indexsort1.gif)
   
-  
  Se um índice for criado com colunas de chave correspondentes às da cláusula ORDER BY da consulta, o operador SORT poderá ser eliminado do plano de consulta, e este se tornará mais eficaz.  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_PurchaseOrderDetail_RejectedQty  
 ON Purchasing.PurchaseOrderDetail  
     (RejectedQty DESC, ProductID ASC, DueDate, OrderQty);  
@@ -178,12 +201,29 @@ ON Purchasing.PurchaseOrderDetail
   
  ![InsertSort2](../relational-databases/media/insertsort2.gif)
   
-  
  O [!INCLUDE[ssDE](../includes/ssde-md.md)] pode se mover para qualquer direção de forma igualmente eficaz. Um índice definido como `(RejectedQty DESC, ProductID ASC)` ainda pode ser usado em uma consulta na qual a direção de classificação das colunas da cláusula ORDER BY é invertida. Por exemplo, uma consulta com a cláusula ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` pode utilizar o índice.  
   
  A ordem de classificação só pode ser especificada para colunas de chave. A exibição de catálogo [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) e a função INDEXKEY_PROPERTY relatam se a coluna de índice está armazenada em ordem crescente ou decrescente.  
-  
-  
+
+## <a name="metadata"></a>Metadados  
+Use essas exibições de metadados para ver os atributos de índices. Mais informações arquitetônicas são inseridas em algumas dessas exibições.
+
+> [!NOTE]
+> Em índices columnstore, todas as colunas são armazenadas nos metadados como colunas incluídas. O índice columnstore não tem colunas de chave.  
+
+||| 
+|-|-|
+|[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
+|[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
+[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
+|[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
+|[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)| 
+|[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)|[sys.dm_db_xtp_object_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-object-stats-transact-sql.md)|
+|[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
+|[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
+
 ##  <a name="Clustered"></a> Diretrizes de design de índices clusterizados  
  Os índices clusterizados classificam e armazenam as linhas de dados da tabela com base em seus valores de chave. Pode haver apenas um índice clusterizado por tabela, porque as próprias linhas de dados podem ser classificadas apenas em uma única ordem. Com poucas exceções, toda tabela deveria ter um índice clusterizado definido na coluna ou colunas, o qual proporciona o seguinte:  
   
@@ -192,18 +232,18 @@ ON Purchasing.PurchaseOrderDetail
 -   Oferece um alto grau de singularidade.  
   
     > [!NOTE]  
-    >  Quando você cria uma restrição PRIMARY KEY, um índice exclusivo na coluna, ou colunas, é criado automaticamente. Por padrão, esse índice é cluster. Porém, você pode especificar um índice não clusterizado ao criar a restrição.  
+    > Quando você cria uma restrição PRIMARY KEY, um índice exclusivo na coluna, ou colunas, é criado automaticamente. Por padrão, esse índice é cluster. Porém, você pode especificar um índice não clusterizado ao criar a restrição.  
   
 -   Pode ser usado em consultas de intervalo.  
   
- Se o índice clusterizado não for criado com a propriedade UNIQUE, o [!INCLUDE[ssDE](../includes/ssde-md.md)] acrescentará uma coluna de indicador de exclusividade de 4 bytes automaticamente à tabela. Quando necessário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] acrescenta um valor de indicador de exclusividade automaticamente a uma linha para tornar cada chave exclusiva. Essa coluna e seus valores são usados internamente e não podem ser vistos ou avaliados por usuários.  
+ Se o índice clusterizado não for criado com a propriedade `UNIQUE`, o [!INCLUDE[ssDE](../includes/ssde-md.md)] adicionará automaticamente uma coluna de indicador de exclusividade de 4 bytes à tabela. Quando necessário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] acrescenta um valor de indicador de exclusividade automaticamente a uma linha para tornar cada chave exclusiva. Essa coluna e seus valores são usados internamente e não podem ser vistos ou avaliados por usuários.  
   
 ### <a name="clustered-index-architecture"></a>Arquitetura de índice clusterizado  
- No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os índices são organizados como árvores B. Cada página em uma árvore B de índice é chamada de nó do índice. O nó superior da árvore B é chamado de nó raiz. Os nós inferiores no índice são chamados de nós folha. Quaisquer níveis de índice entre os nós raiz e folha são coletivamente conhecidos como níveis intermediários. Em um índice clusterizado, os nós folha contêm as páginas de dados da tabela subjacente. Os nós de nível intermediário e raiz contêm páginas de índice com linhas de índice. Cada linha de índice contém um valor de chave e um ponteiro para uma página de nível de intermediário na árvore B ou uma linha de dados no nível folha do índice. As páginas de cada nível do índice são vinculadas a uma lista vinculada duas vezes.  
+ No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os índices são organizados como Árvores B. Cada página em uma árvore B de índice é chamada de nó do índice. O nó superior da árvore B é chamado de nó raiz. Os nós inferiores no índice são chamados de nós folha. Quaisquer níveis de índice entre os nós raiz e folha são coletivamente conhecidos como níveis intermediários. Em um índice clusterizado, os nós folha contêm as páginas de dados da tabela subjacente. Os nós de nível intermediário e raiz contêm páginas de índice com linhas de índice. Cada linha de índice contém um valor de chave e um ponteiro para uma página de nível de intermediário na árvore B ou uma linha de dados no nível folha do índice. As páginas de cada nível do índice são vinculadas a uma lista vinculada duas vezes.  
   
  Índices clusterizados têm uma linha em [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), com **index_id** = 1 para cada partição usada pelo índice. Por padrão, um índice clusterizado tem um único particionamento. Quando um índice clusterizado tem particionamentos múltiplos, cada particionamento tem uma estrutura de árvore B que contém os dados para aquele particionamento específico. Por exemplo, se um índice clusterizado tiver quatro particionamentos, haverá quatro estruturas de árvore B; uma em cada particionamento.  
   
- Dependendo dos tipos de dados no índice clusterizado, cada estrutura de índice clusterizado terá uma ou mais unidades de alocação para armazenar e gerenciar os dados de um particionamento específico. No mínimo, cada índice clusterizado terá uma unidade de alocação IN_ROW_DATA por particionamento. O índice clusterizado também terá uma unidade de alocação LOB_DATA por particionamento se contiver colunas LOB (objetos grandes). Também terá uma unidade de alocação ROW_OVERFLOW_DATA por particionamento se tiver colunas de comprimento variável excedendo o limite de tamanho de linha de 8.060 bytes.  
+ Dependendo dos tipos de dados no índice clusterizado, cada estrutura de índice clusterizado terá uma ou mais unidades de alocação para armazenar e gerenciar os dados de um particionamento específico. No mínimo, cada índice clusterizado terá uma unidade de alocação IN_ROW_DATA por particionamento. O índice clusterizado também terá uma unidade de alocação *LOB_DATA* por partição se contiver colunas LOB (objetos grandes). Ele também terá uma unidade de alocação *ROW_OVERFLOW_DATA* por partição se tiver colunas de comprimento variável que excedem o limite de tamanho de linha de 8.060 bytes.  
   
  As páginas da cadeia de dados e as linhas são classificadas pelo valor da chave de índice clusterizado. Todas as inserções são feitas no ponto em que o valor de chave da linha inserida se ajusta à sequência de classificação entre as linhas existentes.  
   
@@ -214,15 +254,15 @@ ON Purchasing.PurchaseOrderDetail
 ### <a name="query-considerations"></a>Considerações sobre consultas  
  Antes de criar índices clusterizados, entenda como seus dados serão acessados. Considere utilizar um índice clusterizado para consultas que façam o seguinte:  
   
--   Retornam um intervalo de valores usando os operadores como BETWEEN, >, >=, < e <=.  
+-   Retornam um intervalo de valores usando os operadores como `BETWEEN`, >, >=, < e <=.  
   
      Depois que a linha com o primeiro valor for encontrada usando o índice cluster, garante-se que as linhas com valores indexados subsequentes estejam fisicamente adjacentes. Por exemplo, se uma consulta recuperar registros entre um intervalo de números de ordem de vendas, um índice clusterizado na coluna `SalesOrderNumber` poderá localizar rapidamente a linha que contém o número de ordem de vendas inicial e em seguida recuperará todas as linhas sucessivas na tabela, até que o último número de ordem de vendas seja alcançado.  
   
 -   Retornam grandes conjuntos de resultados.  
   
--   Use cláusulas JOIN. Normalmente elas são colunas de chave estrangeira.  
+-   Usam cláusulas `JOIN`. Normalmente, elas são colunas de chave estrangeira.  
   
--   Use cláusulas ORDER BY ou GROUP BY.  
+-   Usam cláusulas `ORDER BY` ou `GROUP BY`.  
   
      Um índice nas colunas especificadas na cláusula ORDER BY ou GROUP BY pode eliminar a necessidade de o [!INCLUDE[ssDE](../includes/ssde-md.md)] classificar os dados, pois as linhas já estão classificadas. Isso melhora o desempenho da consulta.  
   
@@ -231,13 +271,18 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Sejam exclusivas ou contenham muitos valores distintos  
   
-     Por exemplo, uma ID de funcionário identifica os funcionários de maneira exclusiva. Um índice clusterizado ou restrição PRIMARY KEY na coluna `EmployeeID` melhoraria o desempenho de consultas que pesquisam informações de funcionário com base no número de ID do funcionário. Como alternativa, um índice clusterizado poderia ser criado em `LastName`, `FirstName`, `MiddleName` porque os registros dos funcionários são agrupados e consultados frequentemente dessa maneira e a combinação dessas colunas ainda ofereceria um grau alto de diferença.  
+     Por exemplo, uma ID de funcionário identifica os funcionários de maneira exclusiva. Um índice clusterizado ou uma restrição [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) na coluna `EmployeeID` melhorará o desempenho de consultas que pesquisam informações de funcionário com base no número de ID do funcionário. Como alternativa, um índice clusterizado poderia ser criado em `LastName`, `FirstName`, `MiddleName` porque os registros dos funcionários são agrupados e consultados frequentemente dessa maneira e a combinação dessas colunas ainda ofereceria um grau alto de diferença. 
+
+     > [!TIP]
+     > Se não for especificado de forma diferente, ao criar uma restrição [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] criará um [índice clusterizado](#clustered_index) para dar suporte a essa restrição.
+     > Embora um *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* possa ser usado para impor exclusividade como uma PRIMARY KEY, ele não é uma chave de clustering eficiente.
+     > Se estiver usando um *uniqueidentifier* como a PRIMARY KEY, a recomendação é criá-lo como um índice não clusterizado e usar outra coluna, como um `IDENTITY` para criar o índice clusterizado.   
   
 -   Sejam acessadas sequencialmente  
   
      Por exemplo, um ID de produto identifica produtos de maneira exclusiva na tabela `Production.Product` no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Consultas nas quais uma pesquisa sequencial seja especificada, tais como `WHERE ProductID BETWEEN 980 and 999`, se beneficiariam de um índice clusterizado em `ProductID`. Isso ocorre porque as linhas seriam armazenadas em ordem classificada nessa coluna de chave.  
   
--   Definido como IDENTITY.  
+-   Definido como `IDENTITY`.  
   
 -   Frequentemente usado para classificar os dados recuperados de uma tabela.  
   
@@ -252,7 +297,6 @@ ON Purchasing.PurchaseOrderDetail
 -   Chaves largas  
   
      Chaves largas são uma combinação de várias colunas ou de várias colunas de tamanho grande. Os valores de chave do índice clusterizado são usados por todos os índices não clusterizados como chaves de pesquisa. Qualquer índice não clusterizado definido na mesma tabela será significativamente maior porque as entradas de índice não clusterizado contêm a chave de cluster e também as colunas de chave definidas para aquele índice não clusterizado.  
-  
   
 ##  <a name="Nonclustered"></a> Diretrizes de criação de índice não clusterizado  
  Um índice não clusterizado contém os valores de chave do índice e os localizadores de linha que apontam para o local de armazenamento dos dados da tabela. Você pode criar vários índices não clusterizados em uma tabela ou exibição indexada. Em geral, os índices não clusterizados devem ser criados para aprimorar o desempenho de consultas utilizadas com frequência que não são cobertas pelo índice clusterizado.  
@@ -274,12 +318,11 @@ ON Purchasing.PurchaseOrderDetail
   
  Os índices não clusterizados têm uma linha em [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) com **index_id** >1 para cada partição usada pelo índice. Por padrão, um índice não clusterizado tem uma única partição. Quando um índice não clusterizado tem várias partições, cada partição tem uma estrutura de árvore B que contém linhas de índice para aquela partição específica. Por exemplo, se um índice não clusterizado tiver quatro partições, haverá quatro estruturas de árvore B, uma em cada partição.  
   
- Dependendo dos tipos de dados no índice não clusterizado, cada estrutura de índice não clusterizado terá uma ou mais unidades de alocação para armazenar e gerenciar os dados de uma partição específica. No mínimo, cada índice não clusterizado terá uma unidade de alocação IN_ROW_DATA por partição que armazena as páginas de árvore B do índice. O índice não clusterizado também terá uma unidade de alocação LOB_DATA por partição se contiver colunas LOB (objetos grandes). Além disso, terá uma unidade de alocação ROW_OVERFLOW_DATA por partição se contiver colunas de comprimento variável que excedem o limite de tamanho de linha de 8.060 bytes.  
+ Dependendo dos tipos de dados no índice não clusterizado, cada estrutura de índice não clusterizado terá uma ou mais unidades de alocação para armazenar e gerenciar os dados de uma partição específica. No mínimo, cada índice não clusterizado terá uma unidade de alocação *IN_ROW_DATA* por partição que armazena as páginas de árvore B do índice. O índice não clusterizado também terá uma unidade de alocação *LOB_DATA* por partição se contiver colunas LOB (objetos grandes). Além disso, ele terá uma unidade de alocação *ROW_OVERFLOW_DATA* por partição se contiver colunas de comprimento variável que excedem o limite de tamanho de linha de 8.060 bytes.  
   
  A ilustração a seguir mostra a estrutura de um índice não clusterizado em uma única partição.  
 
 ![bokind1a](../relational-databases/media/bokind1a.gif)  
-  
   
 ### <a name="database-considerations"></a>Considerações sobre banco de dados  
  Considere as características do banco de dados ao criar índices não clusterizados.  
@@ -295,7 +338,7 @@ ON Purchasing.PurchaseOrderDetail
 ### <a name="query-considerations"></a>Considerações sobre consultas  
  Antes de criar índices não clusterizados, é recomendado entender como os dados são acessados. Considere usar um índice não clusterizado para consultas com os seguintes atributos:  
   
--   Use as cláusulas JOIN ou GROUP BY.  
+-   Usam cláusulas `JOIN` ou `GROUP BY`.  
   
      Crie vários índices não clusterizados em colunas envolvidas em operações de junção e de agrupamento e um índice clusterizado em qualquer coluna de chave estrangeira.  
   
@@ -328,24 +371,20 @@ ON Purchasing.PurchaseOrderDetail
  Um índice com colunas não chave incluídas pode melhorar o desempenho de consulta significativamente quando todas as colunas na consulta forem incluídas no índice como colunas de chave ou não chave. Os ganhos de desempenho são alcançados pois o otimizador de consulta pode localizar todos os valores de coluna dentro do índice, a tabela, ou dados de índice clusterizado não são acessados, resultando em poucas operações de E/S de disco.  
   
 > [!NOTE]  
->  Quando um índice contém todas colunas referenciadas pela consulta, ele costuma ser referenciado como se abrangendo a consulta.  
+> Quando um índice contém todas colunas referenciadas pela consulta, ele costuma ser referenciado como se abrangendo a consulta.  
   
  Enquanto as colunas de chave são armazenadas em todos os níveis do índice, as colunas não chave são armazenadas apenas em nível folha.  
   
 ##### <a name="using-included-columns-to-avoid-size-limits"></a>Usando colunas incluídas para evitar limites de tamanho  
- Você pode incluir colunas não chave em um índice não clusterizado para evitar exceder as limitações do tamanho atual do índice, de um máximo de 16 colunas de chave, e um máximo de tamanho chave de índice de 900 bytes. O [!INCLUDE[ssDE](../includes/ssde-md.md)] não considera as colunas não chave ao calcular o número de colunas de chave de índice, ou o tamanho da chave do índice.  
-  
+ Você pode incluir colunas não chave em um índice não clusterizado para evitar exceder as limitações do tamanho atual do índice, de um máximo de 16 colunas de chave, e um máximo de tamanho chave de índice de 900 bytes. O [!INCLUDE[ssDE](../includes/ssde-md.md)] não considera as colunas não chave ao calcular o número de colunas de chave de índice, ou o tamanho da chave do índice.   
  Por exemplo, suponha que você quer indexar as colunas seguintes na tabela `Document` :  
-  
- `Title nvarchar(50)`  
-  
- `Revision nchar(5)`  
-  
- `FileName nvarchar(400)`  
+ *  `Title nvarchar(50)`  
+ *  `Revision nchar(5)`  
+ *  `FileName nvarchar(400)`  
   
  Como os tipos de dados **nchar** e **nvarchar** exigem 2 bytes para cada caractere, um índice que contém essas três colunas ultrapassaria a limitação de tamanho de 900 bytes por 10 bytes (455 * 2). Ao usar a cláusula `INCLUDE` da declaração `CREATE INDEX` , a chave de índice pode ser definida como uma coluna não chave (`Title, Revision`) e `FileName` . Desse modo, o tamanho da chave de índice seria de 110 bytes (55 \* 2) e o índice ainda conteria todas as colunas necessárias. A seguinte declaração cria tal índice.  
   
-```  
+```sql  
 CREATE INDEX IX_Document_Title   
 ON Production.Document (Title, Revision)   
 INCLUDE (FileName);   
@@ -395,7 +434,7 @@ INCLUDE (FileName);
   
  Por exemplo, suponha que você quer projetar um índice para abranger a consulta seguinte.  
   
-```  
+```sql  
 SELECT AddressLine1, AddressLine2, City, StateProvinceID, PostalCode  
 FROM Person.Address  
 WHERE PostalCode BETWEEN N'98000' and N'99999';  
@@ -405,7 +444,7 @@ WHERE PostalCode BETWEEN N'98000' and N'99999';
   
  A seguinte declaração cria um índice com colunas incluídas para abranger a consulta.  
   
-```  
+```sql  
 CREATE INDEX IX_Address_PostalCode  
 ON Person.Address (PostalCode)  
 INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
@@ -421,7 +460,6 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 -   A manutenção do índice pode aumentar o tempo necessário para executar modificações, inserções, atualizações ou exclusões, para a tabela subjacente ou exibição indexada.  
   
  Você terá que determinar se os ganhos no desempenho de consulta superam o efeito no desempenho durante a modificação de dados, e em requisitos adicionais de espaço em disco.  
-  
   
 ##  <a name="Unique"></a> Diretrizes de design de índice exclusivo  
  Um índice exclusivo garante que a chave de índice não contém nenhum valor duplicado e, portanto, cada linha na tabela é exclusiva de algum modo. Especificar um índice exclusivo só faz sentido quando a exclusividade for uma característica dos próprios dados. Por exemplo, se você quiser garantir que os valores na coluna `NationalIDNumber` na tabela `HumanResources.Employee` sejam exclusivos, quando a chave primária for `EmployeeID`, crie uma restrição UNIQUE na coluna `NationalIDNumber` . Se o usuário tentar digitar o mesmo valor naquela coluna para mais de um empregado, será exibida uma mensagem de erro e o valor duplicado não é inserido.  
@@ -450,9 +488,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="Filtered"></a> Diretrizes de criação de índice filtrado  
  Um índice filtrado é um índice não clusterizado otimizado, criado especialmente para consultas que fazem seleções a partir de um subconjunto bem-definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta e reduzir os custos de manutenção e armazenamento do índice em comparação com os índices de tabela completa.  
   
-||  
-|-|  
-|**Aplica-se a**: do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|  
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Os índices filtrados podem oferecer as seguintes vantagens com relação aos índices de tabela completa:  
   
@@ -484,22 +520,25 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 ### <a name="design-considerations"></a>Considerações de criação  
  Para criar índices filtrados eficazes, é importante entender quais consultas o aplicativo usa e como elas se relacionam com os subconjuntos de dados. Alguns exemplos de dados com subconjuntos bem-definidos são as colunas com valores predominantemente NULL, as colunas com categorias de valores heterogêneas e as colunas com intervalos de valores diferentes. As considerações sobre criação a seguir apresentam uma variedade de cenários em que um índice filtrado pode ser vantajoso com relação aos índices de tabela completa.  
+ 
+> [!TIP] 
+> A definição do [índice columnstore não clusterizado](#columnstore_index) dá suporte ao uso de uma condição filtrada. Para minimizar o impacto no desempenho da adição de um índice columnstore em uma tabela OLTP, use uma condição filtrada para criar um índice columnstore não clusterizado apenas nos dados inativos da sua carga de trabalho operacional. 
   
 #### <a name="filtered-indexes-for-subsets-of-data"></a>Índices filtrados para subconjuntos de dados  
- Quando a coluna tem apenas uma pequena quantidade de valores relevantes para consultas, você pode criar um índice filtrado no subconjunto de valores. Por exemplo, se os valores de uma coluna forem predominantemente NULL e a consulta selecionar apenas valores não NULL, será possível criar um índice filtrado para linhas de dados não NULL. O índice resultante será menor e sua manutenção será menos dispendiosa em comparação com um índice não clusterizado de tabela completa definido nas mesmas colunas de chave.  
+Quando a coluna tem apenas uma pequena quantidade de valores relevantes para consultas, você pode criar um índice filtrado no subconjunto de valores. Por exemplo, se os valores de uma coluna forem predominantemente NULL e a consulta selecionar apenas valores não NULL, será possível criar um índice filtrado para linhas de dados não NULL. O índice resultante será menor e sua manutenção será menos dispendiosa em comparação com um índice não clusterizado de tabela completa definido nas mesmas colunas de chave.  
   
- Por exemplo, o banco de dados `AdventureWorks2012` tem uma tabela `Production.BillOfMaterials` com 2.679 linhas. A coluna `EndDate` tem apenas 199 linhas que contêm um valor não NULL e outras 2.480 linhas que contêm NULL. O índice filtrado a seguir abrange consultas que retornam as colunas definidas no índice e que selecionam apenas linhas com valor não NULL para `EndDate`.  
+Por exemplo, o banco de dados `AdventureWorks2012` tem uma tabela `Production.BillOfMaterials` com 2.679 linhas. A coluna `EndDate` tem apenas 199 linhas que contêm um valor não NULL e outras 2.480 linhas que contêm NULL. O índice filtrado a seguir abrange consultas que retornam as colunas definidas no índice e que selecionam apenas linhas com valor não NULL para `EndDate`.  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX FIBillOfMaterialsWithEndDate  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL ;  
 GO  
 ```  
   
- O índice filtrado `FIBillOfMaterialsWithEndDate` é válido para a consulta a seguir. Você pode exibir o plano de execução da consulta para determinar se o otimizador de consulta usou o índice filtrado.  
+O índice filtrado `FIBillOfMaterialsWithEndDate` é válido para a consulta a seguir. Você pode exibir o plano de execução da consulta para determinar se o otimizador de consulta usou o índice filtrado.  
   
-```  
+```sql  
 SELECT ProductAssemblyID, ComponentID, StartDate   
 FROM Production.BillOfMaterials  
 WHERE EndDate IS NOT NULL   
@@ -507,30 +546,28 @@ WHERE EndDate IS NOT NULL
     AND StartDate > '20080101' ;  
 ```  
   
- Para obter mais informações sobre como criar índices filtrados e definir a expressão de predicado do índice filtrado, consulte [Create Filtered Indexes](../relational-databases/indexes/create-filtered-indexes.md).  
+Para obter mais informações sobre como criar índices filtrados e definir a expressão de predicado do índice filtrado, consulte [Create Filtered Indexes](../relational-databases/indexes/create-filtered-indexes.md).  
   
 #### <a name="filtered-indexes-for-heterogeneous-data"></a>Índices filtrados para dados heterogêneos  
  Quando a tabela contém linhas de dados heterogêneos, é possível criar um índice filtrado para uma ou mais categorias de dados.  
   
  Por exemplo, a cada produto listado na tabela `Production.Product` é atribuído um `ProductSubcategoryID`que, por sua vez, está associado às categorias de produtos Bikes, Components, Clothing ou Accessories. Essas categorias são heterogêneas porque os valores das coluna da tabela `Production.Product` não estão estreitamente correlacionados. Por exemplo, as colunas `Color`, `ReorderPoint`, `ListPrice`, `Weight`, `Class`e `Style` têm características exclusivas para cada categoria de produto. Suponha que haja consultas frequentes sobre acessórios que possuem subcategorias entre 27 e 36. É possível aprimorar o desempenho das consultas sobre acessórios criando um índice filtrado nas subcategorias de acessórios, conforme ilustrado no exemplo a seguir.  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX FIProductAccessories  
     ON Production.Product (ProductSubcategoryID, ListPrice)   
         Include (Name)  
 WHERE ProductSubcategoryID >= 27 AND ProductSubcategoryID <= 36;  
-  
 ```  
   
  O índice filtrado `FIProductAccessories` abrange a seguinte consulta porque os resultados da consulta  
   
  estão contidos no índice e o plano da consulta não inclui uma pesquisa de tabela base. Por exemplo, a expressão de predicado da consulta `ProductSubcategoryID = 33` é um subconjunto do predicado de índice filtrado `ProductSubcategoryID >= 27` e `ProductSubcategoryID <= 36`, as colunas `ProductSubcategoryID` e `ListPrice` no predicado de consulta são ambas colunas de chave no índice, e o nome é armazenado no nível folha do índice como uma coluna incluída.  
   
-```  
+```sql  
 SELECT Name, ProductSubcategoryID, ListPrice  
 FROM Production.Product  
 WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;  
-  
 ```  
   
 #### <a name="key-columns"></a>Colunas de Chave  
@@ -540,21 +577,21 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  A coluna na expressão do índice filtrado não precisará ser uma coluna de chave ou incluída na definição do índice filtrado, se a expressão do índice filtrado for equivalente ao predicado da consulta e a consulta não retorná-la com os resultados da consulta. Por exemplo, `FIBillOfMaterialsWithEndDate` abrange a consulta a seguir porque o predicado da consulta é equivalente à expressão de filtro e `EndDate` não é retornado com os resultados da consulta. `FIBillOfMaterialsWithEndDate` não precisa de `EndDate` como uma coluna de chave ou incluída na definição do índice filtrado.  
   
-```  
+```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
 WHERE EndDate IS NOT NULL;   
 ```  
   
  A coluna na expressão de índice filtrado deverá ser uma coluna de chave ou incluída na definição do índice filtrado se o predicado de consulta usá-la em uma comparação que não for equivalente à expressão do índice filtrado. Por exemplo, `FIBillOfMaterialsWithEndDate` é válido para a consulta a seguir, porque seleciona um subconjunto de linhas do índice filtrado. Contudo, não abrange a consulta a seguir porque `EndDate` é usado na comparação de `EndDate > '20040101'`, que não é equivalente à expressão do índice filtrado. O processador de consultas não pode executar essa consulta sem observar os valores de `EndDate`. Portanto, `EndDate` deve ser uma coluna de chave ou incluída na definição do índice filtrado.  
   
-```  
+```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
 WHERE EndDate > '20040101';   
 ```  
   
  A coluna na expressão do índice filtrado deverá ser uma coluna de chave ou incluída na definição do índice filtrado se fizer parte do conjunto de resultados da consulta. Por exemplo, `FIBillOfMaterialsWithEndDate` não abrange a consulta a seguir, porque retorna a coluna `EndDate` nos resultados da consulta. Portanto, `EndDate` deve ser uma coluna de chave ou incluída na definição do índice filtrado.  
   
-```  
+```sql  
 SELECT ComponentID, StartDate, EndDate FROM Production.BillOfMaterials  
 WHERE EndDate IS NOT NULL;  
 ```  
@@ -566,33 +603,295 @@ WHERE EndDate IS NOT NULL;
   
  O exemplo a seguir cria uma tabela com diversos tipos de dados.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.TestTable (a int, b varbinary(4));  
-  
 ```  
   
  Na definição de índice filtrado a seguir, a coluna `b` é convertida implicitamente em um tipo de dados de número inteiro para comparação com a constante 1. Isso gera a mensagem de erro 10611 porque a conversão ocorre à esquerda do operador no predicado filtrado.  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX TestTabIndex ON dbo.TestTable(a,b)  
 WHERE b = 1;  
 ```  
   
  A solução é converter a constante à direita para o mesmo tipo da coluna `b`, como mostra o seguinte exemplo:  
   
-```  
+```sql  
 CREATE INDEX TestTabIndex ON dbo.TestTable(a,b)  
 WHERE b = CONVERT(Varbinary(4), 1);  
 ```  
   
  A movimentação da conversão de dados da esquerda para a direita de um operador de comparação pode alterar o significado da conversão. No exemplo anterior, quando o operador CONVERT foi adicionado à direita, a comparação mudou de uma comparação de número inteiro para uma comparação **varbinary** .  
   
+## <a name="columnstore_index"></a> Diretrizes de design de índice columnstore
+
+Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. Para obter mais informações, consulte [Visão geral de índices columnstore](../relational-databases/indexes/columnstore-indexes-overview.md). 
+
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+
+### <a name="columnstore-index-architecture"></a>Arquitetura de índices columnstore
+
+Com estas noções básicas ficará mais fácil entender outros artigos sobre columnstore que explicam como usá-los com eficiência.
+
+#### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>O armazenamento de dados usa compactação de columnstore e rowstore
+Em discussões sobre índices columnstore, usamos os termos *rowstore* e *columnstore* para enfatizar o formato do armazenamento de dados. Os índices columnstore usam os dois tipos de armazenamento.
+
+ ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
+
+- Um **columnstore** são dados organizados logicamente como uma tabela com linhas e colunas e armazenados fisicamente em um formato de dados com reconhecimento de colunas.
   
+Um índice columnstore armazena fisicamente a maioria dos dados no formato columnstore. No formato columnstore, os dados são compactados e descompactados como colunas. Não é necessário descompactar outros valores em cada linha que não sejam solicitados pela consulta. Isso acelera a verificação de uma coluna inteira de uma tabela grande. 
+
+- Um **rowstore** são dados logicamente organizados como uma tabela com linhas e colunas e fisicamente armazenados em um formato de dados com reconhecimento de linha. Essa tem sido a maneira tradicional de armazenar dados de tabelas relacionais, como um índice de heap ou árvore B clusterizado.
+
+Um índice columnstore também armazena fisicamente algumas linhas em um formato de rowstore, chamado deltastore. O deltastore, também chamado de rowgroups delta, é um espaço reservado para linhas que são muito poucas para se qualificarem para compactação no columnstore. Cada rowgroup delta é implementado como um índice de árvore B clusterizado. 
+
+- Um **deltastore** é um local de espera para linhas que são muito poucas para serem compactadas no columnstore. O deltastore é um rowstore. 
+  
+#### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Operações são executadas em rowgroups e em segmentos de colunas
+
+O índice columnstore agrupa linhas em unidades gerenciáveis. Cada uma dessas unidades é chamada de rowgroup. Para melhor desempenho, o número de linhas em um rowgroup é grande o suficiente para melhorar as taxas de compactação e pequeno o suficiente para beneficiar-se de operações na memória.
+
+* Um **rowgroup** é um grupo de linhas em que o índice columnstore executa operações de gerenciamento e compactação. 
+
+Por exemplo, o índice columnstore executa estas operações em rowgroups:
+
+* Compacta rowgroups no columnstore. A compactação é executada em cada segmento de coluna dentro de um rowgroup.
+* Mescla rowgroups durante uma operação ALTER INDEX REORGANIZE.
+* Cria novos rowgroups durante uma operação ALTER INDEX REBUILD.
+* Relata a integridade e a fragmentação do rowgroup nas DMVs (exibições de gerenciamento dinâmico).
+
+O deltastore é composto de um ou mais rowgroups chamados rowgroups delta. Cada rowgroup delta é um índice de árvore B clusterizado que armazena linhas quando elas são muito poucas para serem compactadas no columnstore.  
+
+* Um **rowgroup delta** é um índice de árvore B clusterizado que armazena pequenas cargas e inserções em massa até que o rowgroup contenha 1.048.576 linhas ou até que o índice seja recompilado.  Quando um rowgroup delta contém 1.048.576 linhas, ele é marcado como fechado e espera por um processo chamado motor de tupla para compactá-lo no columnstore. 
+
+Cada coluna tem alguns de seus valores em cada rowgroup. Esses valores são chamados de segmentos de coluna. Quando o índice columnstore compacta um rowgroup, ele compacta cada segmento de coluna separadamente. Para descompactar uma coluna inteira, o índice columnstore só precisa descompactar um segmento de coluna de cada rowgroup.
+
+* Um **segmento de coluna** é a parte de valores de coluna em um rowgroup. Cada rowgroup contém um segmento de coluna para cada coluna na tabela. Cada coluna tem um segmento de coluna em cada rowgroup.| 
+  
+ ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ 
+#### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>Cargas e inserções pequenas vão para o deltastore
+Um índice columnstore melhora a compactação e o desempenho do columnstore por compactar pelo menos 102.400 linhas por vez no índice columnstore. Para compactar linhas em massa, o índice columnstore acumula pequenas cargas e insere no deltastore. As operações de deltastore são tratadas em segundo plano. Para retornar os resultados corretos da consulta, o índice columnstore clusterizado combina os resultados da consulta de columnstore e deltastore. 
+
+As linhas vão para o deltastore quando:
+* São inseridas com a instrução `INSERT INTO ... VALUES`.
+* Estão no final de uma carga em massa e em número menor de 102.400.
+* São atualizadas. Cada atualização é implementada como uma exclusão e uma inserção.
+
+O deltastore também armazena uma lista de IDs de linhas excluídas que foram marcadas como excluídas, mas ainda não foram excluídas fisicamente do columnstore. 
+
+#### <a name="when-delta-rowgroups-are-full-they-get-compressed-into-the-columnstore"></a>Quando os rowgroups delta estão cheios, eles são compactados para o columnstore
+
+Os índices columnstore clusterizados coletam até 1.048.576 linhas em cada rowgroup delta antes de compactar o rowgroup no columnstore. Isso melhora a compactação do índice columnstore. Quando um rowgroup delta contém 1.048.576 linhas, o índice columnstore marca o rowgroup como fechado. Um processo em segundo plano, chamado *motor de tupla*, localiza cada rowgroup fechado e compacta-o no columnstore. 
+
+Você pode forçar rowgroups delta para o columnstore usando [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) para reccompilar ou reorganizar o índice.  Observe que, se houver pressão de memória durante a compactação, o índice columnstore poderá reduzir o número de linhas no rowgroup compactado.
+
+#### <a name="each-table-partition-has-its-own-rowgroups-and-delta-rowgroups"></a>Cada partição de tabela tem seus próprios rowgroups e rowgroups delta
+
+O conceito de particionamento é o mesmo em um índice clusterizado, um heap e um índice columnstore. Particionar uma tabela divide a tabela em grupos menores de linhas de acordo com um intervalo de valores de coluna. Geralmente, ele é usado para gerenciar os dados. Por exemplo, você pode criar uma partição para cada ano de dados e usar a alternância de partição para arquivar dados em um armazenamento mais barato. A alternância de partição funciona em índices columnstore e facilita a movimentação de uma partição de dados para outro local.
+
+Os rowgroups sempre são definidos dentro de uma partição de tabela. Quando um índice columnstore é particionado, cada partição tem seus próprios rowgroups compactados e rowgroups delta.
+
+##### <a name="each-partition-can-have-multiple-delta-rowgroups"></a>Cada partição pode ter vários rowgroups delta
+Cada partição pode ter mais de um rowgroup delta. Quando o índice columnstore precisar adicionar dados a um rowgroup delta e o rowgroup delta estiver bloqueado, o índice columnstore tentará obter um bloqueio em um rowgroup delta diferente. Se não houver nenhum rowgroup delta disponível, o índice columnstore criará um novo rowgroup delta.  Por exemplo, uma tabela com 10 partições poderia facilmente ter 20 ou mais rowgroups delta. 
+
+#### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>Você pode combinar índices columnstore e rowstore na mesma tabela
+Um índice não clusterizado contém uma cópia de parte ou de todas as linhas e colunas na tabela subjacente. O índice é definido como uma ou mais colunas da tabela e tem uma condição opcional que filtra as linhas. 
+
+A partir do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], é possível criar um **índice columnstore não clusterizado atualizável em uma tabela rowstore**. O índice columnstore armazena uma cópia dos dados, portanto, você precisa de armazenamento extra. No entanto, os dados no índice columnstore serão compactados em um tamanho menor do que a tabela rowstore precisa.  Com isso, você pode executar análises no índice columnstore e transações no índice rowstore ao mesmo tempo. O repositório de colunas é atualizado quando dados são alterados na tabela rowstore, assim, ambos os índices trabalham com os mesmos dados.  
+  
+A partir do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], é possível ter **um ou mais índices rowstore não clusterizados em um índice columnstore**. Fazendo isso, você pode executar buscas de tabela eficientes no columnstore subjacente. Outras opções também são disponibilizadas. Por exemplo, você pode impor uma restrição de chave primária usando uma restrição UNIQUE na tabela rowstore. Como um valor não exclusivo não poderá ser inserido na tabela rowstore, o SQL Server não pode inserir o valor no columnstore.  
+ 
+### <a name="performance-considerations"></a>Considerações sobre desempenho 
+
+-   A definição do índice columnstore não clusterizado oferece suporte ao uso de uma condição filtrada. Para minimizar o impacto no desempenho da adição de um índice columnstore em uma tabela OLTP, use uma condição filtrada para criar um índice columnstore não clusterizado apenas nos dados inativos da sua carga de trabalho operacional. 
+  
+-   Uma tabela na memória pode ter um índice columnstore. Você pode criá-lo quando a tabela for criada ou adicioná-lo mais tarde com [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Antes do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], somente uma tabela baseada em disco podia ter um índice columnstore. 
+
+Para obter mais informações, consulte [Índices columnstore – desempenho de consultas](../relational-databases/indexes/columnstore-indexes-query-performance.md).
+
+### <a name="design-guidance"></a>Diretrizes de design 
+
+-   Uma tabela rowstore pode ter um índice columnstore não clusterizado atualizável. Antes do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o índice columnstore não clusterizado era somente leitura.  
+ 
+Para obter mais informações, consulte [Índices columnstore – diretrizes de design](../relational-databases/indexes/columnstore-indexes-design-guidance.md).
+
+##  <a name="hash_index"></a> Diretrizes de design de índice de hash 
+
+Todas as tabelas com otimização de memória devem ter, pelo menos, um índice, porque são os índices que conectam as linhas. Em uma tabela com otimização de memória, cada índice também tem otimização de memória. Índices de hash são um dos tipos de índice possíveis em uma tabela com otimização de memória. Para obter mais informações, consulte [Índices para tabelas com otimização de memória](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
+
+**Aplica-se a**: do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+
+### <a name="hash-index-architecture"></a>Arquitetura de índice de hash
+Um índice de hash consiste em uma matriz de ponteiros e cada elemento da matriz é chamado um bucket de hash.
+- Cada bucket tem 8 bytes, que são usados para armazenar o endereço de memória de uma lista de links de entradas de chave.  
+- Cada entrada é um valor de uma chave de índice, mais o endereço de sua linha correspondente na tabela com otimização de memória subjacente.  
+- Cada um dos pontos de entrada para a próxima entrada em uma lista de links de entradas, todos encadeados no bucket atual.  
+
+O número de buckets deve ser especificado no momento da definição do índice:
+- Quanto menor a proporção de buckets para linhas ou valores distintos, maior será a lista média de links de bucket.  
+- Listas de links curtas executam com mais rapidez do que listas de links longas.
+- O número máximo de buckets em índices de hash é de 1.073.741.824.
+
+> [!TIP]
+> Para determinar a `BUCKET_COUNT` certa para seus dados, consulte [Configurando a contagem de buckets do índice de hash](#configuring_bucket_count).
+
+A função de hash é aplicada às colunas de chave do índice e o resultado da função determina em qual bucket a chave se enquadra. Cada bucket tem um ponteiro para linhas cujos valores de chave de hash são mapeados para o bucket.
+
+A função de hash usada para índices de hash tem as seguintes características:
+- O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem uma função de hash que é usada para todos os índices de hash.
+- A função de hash é determinística. O mesmo valor de chave de entrada sempre é mapeado para o mesmo bucket no índice de hash.
+- Várias chaves de índice podem ser mapeadas para o mesmo bucket de hash.
+- A função de hash é equilibrada, o que significa que a distribuição de valores de chave do índice em buckets de hash geralmente segue uma distribuição de Poisson ou curva de sino, não uma distribuição linear simples.
+- A distribuição de Poisson não é uma distribuição uniforme. Os valores de chave de índice não são distribuídos uniformemente nos buckets de hash.
+- Se duas chaves de índice forem mapeadas para o mesmo bucket de hash, haverá uma *colisão de hash*. Um número grande de colisões de hash pode afetar o desempenho das operações de leitura. Uma meta realista é que 30% dos buckets contenham dois valores de chave diferentes.
+  
+A interação entre o índice de hash e os buckets é resumida na imagem a seguir.  
+  
+![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Chaves de índice, inseridos na função de hash, a saída é o endereço de um bucket de hash, que aponta para o início da cadeia.")  
+
+### <a name="configuring_bucket_count"></a> Configurando o número de buckets do índice de hash
+O número de buckets do índice de hash é especificado no momento da criação do índice e pode ser alterado com a sintaxe `ALTER TABLE...ALTER INDEX REBUILD`.  
+  
+Na maioria dos casos, o ideal é que a contagem de buckets deve estar entre 1 e 2 vezes o número de valores distintos na chave de índice.   
+Talvez nem sempre seja possível prever quantos valores determinada chave de índice tem ou terá. Em geral, o desempenho ainda será bom se o valor de **BUCKET_COUNT** estiver dentro de 10 vezes o número real de valores de chave, e valores superestimados são geralmente melhores que os subestimados.  
+  
+Um **número muito pequeno** de buckets tem as seguintes desvantagens:  
+  
+- Mais colisões de hash de valores de chave distintos.  
+- Cada valor distinto é forçado a compartilhar o mesmo bucket com um valor distinto diferente.  
+- O comprimento médio de cadeia por bucket aumenta.  
+- Quanto maior é a cadeia de bucket, mais lentas são as pesquisas de igualdade no índice.  
+  
+Um **número muito grande** de buckets tem as seguintes desvantagens:  
+  
+- Um número de buckets muito alto pode resultar em mais buckets vazios.  
+- Buckets vazios afetam o desempenho de verificações de índice completas. Se elas forem executadas regularmente, considere escolher uma contagem de buckets próximo ao número de valores de chave de índice distintos.  
+- Buckets vazios usam a memória, embora cada bucket use apenas 8 bytes.  
+  
+> [!NOTE]
+> A adição de mais buckets não contribui para reduzir o encadeamento de entradas que compartilham um valor duplicado. A taxa de duplicação de valor é usada para decidir se um hash é o tipo de índice apropriado, não para calcular o número de buckets.  
+
+### <a name="performance-considerations"></a>Considerações sobre desempenho  
+  
+O desempenho de um índice de hash é:  
+  
+- Excelente quando o predicado na cláusula `WHERE` especifica um valor **exato** para cada coluna na chave de índice de hash. Um índice de hash reverterá para um exame de acordo com um predicado de desigualdade. 
+- Fraco quando o predicado na cláusula `WHERE` procura um **intervalo** de valores na chave de índice.  
+- Fraco quando o predicado na cláusula `WHERE` estipula um valor específico para a **primeira** coluna de uma chave de índice de hash de duas colunas, mas não especifica um valor para **outras** colunas da chave.  
+
+> [!TIP]
+> O predicado deve incluir todas as colunas na chave de índice de hash. O índice de hash requer uma chave (para submeter a hash) para realizar a busca no índice. Se uma chave de índice consistir em duas colunas e a cláusula `WHERE` fornecer apenas a primeira coluna, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não terá uma chave completa para o hash. Isso resultará em um plano de consulta de exame de índice.
+
+Se um índice de hash for usado e o número de chaves de índice exclusivo for 100 vezes (ou mais) a contagem de linhas, considere a possibilidade de aumentar o número de buckets para evitar cadeias de linhas grandes ou use um [índice não clusterizado](#inmem_nonclustered_index).
+
+### <a name="h3-b2-declaration-limitations"></a> Considerações sobre declaração  
+Um índice de hash apenas pode existir em uma tabela com otimização de memória. Ele não pode existir em uma tabela baseada em disco.  
+  
+Um índice de hash pode ser declarado como:  
+  
+- UNIQUE ou pode usar Não Exclusivo como padrão.  
+- NONCLUSTERED, que é o padrão.   
+  
+Este é um exemplo da sintaxe para criar um índice de hash fora da instrução CREATE TABLE:  
+  
+    ```sql
+    ALTER TABLE MyTable_memop  
+    ADD INDEX ix_hash_Column2 UNIQUE  
+    HASH (Column2) WITH (BUCKET_COUNT = 64);
+    ``` 
+
+### <a name="row-versions-and-garbage-collection"></a>Versões de linha e coleta de lixo  
+Em uma tabela com otimização de memória, quando uma linha é afetada por um `UPDATE`, a tabela cria uma versão atualizada da linha. Durante a transação de atualização, é possível que outras sessões consigam ler a versão mais antiga da linha, evitando a lentidão de desempenho associada a um bloqueio de linha.  
+  
+O índice de hash também pode ter versões diferentes de suas entradas para acomodar a atualização.  
+  
+Posteriormente, quando as versões mais antigas não forem mais necessárias, um thread de GC (coleta de lixo) percorrerá os buckets e suas listas de links para limpar as entradas antigas. A execução do thread da GC é melhor se os tamanhos de cadeia de lista de link são curtos. Para obter mais informações, consulte [Coleta de lixo de OLTP in-memory](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md). 
+
+##  <a name="inmem_nonclustered_index"></a> Diretrizes de design de índice não clusterizado com otimização de memória 
+
+Índices não clusterizados são um dos tipos de índice possíveis em uma tabela com otimização de memória. Para obter mais informações, consulte [Índices para tabelas com otimização de memória](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
+
+**Aplica-se a**: do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+
+### <a name="in-memory-nonclustered-index-architecture"></a>Arquitetura de índice não clusterizado na memória
+
+Índices não clusterizados na memória são implementados com uma estrutura de dados chamada Árvore Bw, originalmente concebida e descrita pela Microsoft Research em 2011. Uma Árvore Bw é uma variação livre de bloqueios e travas de uma Árvore B. Para obter mais detalhes, consulte [A Árvore Bw: uma árvore B para novas plataformas de hardware](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+
+Em um nível muito alto, a Árvore BW pode ser interpretada como um mapa de páginas organizadas por ID de página (PidMap), um recurso para alocar e reutilizar IDs de página (PidAlloc) e um conjunto de páginas vinculadas no mapa de páginas umas às outras. Esses três subcomponentes de alto nível formam a estrutura básica interna de uma Árvore Bw.
+
+A estrutura é semelhante a uma Árvore B normal, pois cada página tem um conjunto de valores de chave ordenados e existem níveis no índice que apontam para um nível inferior e os níveis folha apontam para uma linha de dados. Entretanto, há várias diferenças.
+
+Assim como os índices de hash, várias linhas de dados podem ser vinculadas (versões). Os ponteiros de página entre os níveis são IDs de página lógicas, que são deslocamentos em uma tabela de Mapeamento de Página, que, por sua vez, tem o endereço físico de cada página.
+
+Não existem atualizações in-loco de páginas de índice. Novas páginas delta são introduzidas para essa finalidade.
+-  Nenhum bloqueio ou trava é necessário para atualizações de página.
+-  Páginas de índice não são de tamanho fixo.
+
+O valor de chave em cada página de nível não folha mostrada é o valor mais alto que o filho para o qual ele aponta contém e cada linha também contém essa ID de página lógica. Nas páginas no nível de folha, juntamente com o valor de chave, ele contém o endereço físico da linha de dados.
+
+Pesquisas de ponto são semelhantes às Árvores B, exceto pelo fato de as páginas serem vinculadas em uma única direção e o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] seguir ponteiros de página direita, em que cada página não folha tem o valor mais alto de seu filho, em vez do valor mais baixo, como em uma Árvore B.
+
+Se uma página no nível de Folha precisar ser alterada, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] não modificará a página propriamente dita. Em vez disso, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] criará um registro delta que descreve a alteração e o acrescentará à página anterior. Em seguida, ele também atualizará o endereço da tabela de mapa da página anterior para o endereço do registro delta, que agora se torna o endereço físico dessa página.
+
+Há três operações diferentes que podem ser necessárias para gerenciar a estrutura de uma Árvore Bw: consolidação, divisão e mesclagem.
+
+#### <a name="delta-consolidation"></a>Consolidação de delta
+Uma cadeia grande de registros delta pode acabar prejudicando o desempenho de pesquisas, pois isso pode significar que estamos percorrendo cadeias longas durante a pesquisa por meio de um índice. Se um novo registro delta for adicionado a uma cadeia que já tem 16 elementos, as alterações nos registros delta serão consolidadas na página de índice referenciada e, em seguida, a página será recriada, incluindo as alterações indicadas pelo novo registro delta que dispararam a consolidação. A página recém-recriada terá a mesma ID de página, mas um novo endereço de memória. 
+
+![hekaton_tables_23e](../relational-databases/in-memory-oltp/media/HKNCI_Delta.gif "Consolidação de registros delta")
+
+#### <a name="split-page"></a>Dividir página
+Uma página de índice na Árvore Bw aumenta conforme a necessidade, começando com o armazenamento de uma única linha até um máximo de 8 KB. Depois que a página de índice aumentar para 8 KB, uma nova inserção de uma única linha fará com que a página de índice seja dividida. Para uma página interna, isso significa que quando não há mais nenhum espaço para adição de outro ponteiro e valor de chave, e para uma página de folha, isso significa que a linha será muito grande para se ajustar à página depois que todos os registros delta forem incorporados. As informações de estatísticas no cabeçalho de uma página de folha controlam a quantidade de espaço que será necessário para consolidar os registros delta e essas informações são ajustadas a cada adição de um novo registro delta. 
+
+Uma operação de Divisão é feita em duas etapas atômicas. Na imagem abaixo, suponha que uma página de Folha force uma divisão porque uma chave com o valor 5 está sendo inserida e existe uma página não folha apontando para o final da página atual no nível de folha (valor de chave 4).
+
+![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Dividindo páginas")
+
+**Etapa 1:** alocar duas novas páginas P1 e P2 e dividir as linhas da página P1 antiga nessas novas páginas, incluindo a linha recém-inserida. Um novo slot na Tabela de Mapeamento de Página é usado para armazenar o endereço físico da página P2. Essas páginas, P1 e P2, ainda não são acessíveis a todas as operações simultâneas. Além disso, o ponteiro lógico de P1 para P2 é definido. Em seguida, em uma única etapa atômica, atualize a Tabela de Mapeamento de Página para alterar o ponteiro do P1 antigo para o novo P1. 
+
+**Etapa 2:** a página não folha aponta para P1, mas não há nenhum ponteiro direto de uma página não folha para P2. P2 só é acessível por meio de P1. Para criar um ponteiro de uma página não folha para P2, aloque uma nova página não folha (página de índice interna), copie todas as linhas da página não folha antiga e adicione uma nova linha para que ela aponte para P2. Depois que isso for feito, em uma única etapa atômica, atualize a Tabela de Mapeamento de Página para alterar o ponteiro da página não folha antiga para a nova página não folha.
+
+#### <a name="merge-page"></a>Mesclar página
+Quando uma operação `DELETE` resultar em uma página com menos de 10% do tamanho máximo da página (atualmente, 8 KB) ou com uma única linha nela, essa página será mesclada com uma página contígua.
+
+Quando uma linha é excluída de uma página, um registro delta para a exclusão é adicionado. Além disso, é feita uma verificação para determinar se a página de índice (página não folha) se qualifica para a Mesclagem. Essa verificação verifica se o espaço restante após a exclusão da linha será menor que 10% do tamanho máximo da página. Se ela se qualificar, a Mesclagem será executada em três etapas atômicas.
+
+Na imagem abaixo, suponha que uma operação `DELETE` excluirá o valor de chave 10. 
+
+![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Mesclando páginas")
+
+**Etapa 1:** uma página delta que representa o valor de chave 10 (triângulo azul) é criada e seu ponteiro na página não folha Pp1 é definido como a nova página delta. Além disso, uma página especial delta de mesclagem (triângulo verde) é criada e é vinculada para apontar para a página delta. Neste estágio, nenhuma das páginas (página delta e página delta de mesclagem) é visível para transação simultânea. Em uma única etapa atômica, o ponteiro para a página nível Folha P1 na Tabela de Mapeamento de Página é atualizado para apontar para a página delta de mesclagem. Após essa etapa, a entrada do valor de chave 10 em Pp1 agora apontará para a página delta de mesclagem. 
+
+**Etapa 2:** a linha que representa o valor de chave 7 na página não folha Pp1 precisa ser removida e a entrada do valor de chave 10 atualizada para apontar para P1. Para fazer isso, uma nova página não folha Pp2 é alocada e todas as linhas de Pp1 são copiadas, exceto a linha que representa o valor de chave 7; em seguida, a linha do valor de chave 10 é atualizada para apontar para a página P1. Depois que isso é feito, em uma única etapa atômica, a entrada da Tabela de Mapeamento de Página que aponta para Pp1 é atualizada para apontar para Pp2. Pp1 não é mais acessível. 
+
+**Etapa 3:** as páginas de nível folha P2 e P1 são mescladas e as páginas delta, removidas. Para fazer isso, uma nova página P3 é alocada e as linhas de P2 e P1 são mescladas e as alterações da página delta são incluídas no novo P3. Em seguida, em uma única etapa atômica, a entrada da Tabela de Mapeamento de Página que aponta para a página P1 é atualizada para apontar para a página P3. 
+
+### <a name="performance-considerations"></a>Considerações sobre desempenho
+
+O desempenho de um índice não clusterizado é melhor do que o de índices de hash não clusterizados ao consultar uma tabela com otimização de memória com predicados de desigualdade.
+
+> [!NOTE]
+> Uma coluna em uma tabela com otimização de memória pode fazer parte de um índice de hash e de um índice não clusterizado.
+
+> [!TIP]
+> Quando uma coluna em colunas de chave de índice não clusterizado tem muitos valores duplicados, o desempenho pode ser prejudicado para atualizações, inserções e exclusões. Uma maneira de melhorar o desempenho nessa situação é adicionar outra coluna ao índice não clusterizado.
+
 ##  <a name="Additional_Reading"></a> Leitura adicional  
 [Melhorando o desempenho com exibições indexadas do SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-  
-  
-
+[Criar uma chave primária](../relational-databases/tables/create-primary-keys.md)    
+[Índices para tabelas com otimização de memória](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
+[Visão geral de Índices columnstore](../relational-databases/indexes/columnstore-indexes-overview.md)  
+[Solução de problemas de índices de hash para tabelas com otimização de memória](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
+[Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
+[Exibições e funções de gerenciamento dinâmico relacionadas ao índice &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
+[Índices em colunas computadas](../relational-databases/indexes/indexes-on-computed-columns.md)   
+[Índices e ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
+[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
+[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)  
