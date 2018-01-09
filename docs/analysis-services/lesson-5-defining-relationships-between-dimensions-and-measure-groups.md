@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c3000dfc2ecd94fb70061eead07ef92cfd643f73
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lição 5: Definindo relações entre grupos de medidas e dimensões
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nas lições anteriores neste tutorial, você aprendeu que dimensões de banco de dados adicionados a um cubo podem ser usados como base para uma ou mais dimensões de cubo. Nesta lição, você aprenderá a definir diferentes tipos de relações entre dimensões de cubo e grupos de medidas, além de especificar as propriedades dessas relações.  
@@ -49,7 +49,7 @@ Nesta tarefa, você aprenderá a modificar a granularidade de uma dimensão para
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 6: Definindo cálculos](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Relações de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

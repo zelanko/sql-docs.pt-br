@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 17fde2d95fb202712610a31769b1a50623bac7c7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a09461909c86014aeb459cdc602ee9e96985d88a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>Lição 2-2-definir um cubo
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]O Assistente de cubo ajuda você a definir os grupos de medidas e dimensões de um cubo. Na tarefa a seguir, você usará o Assistente para Cubos para criar um cubo.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Adicionando atributos em dimensões](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Cubos em modelos multidimensionais](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
 [Dimensões em modelos multidimensionais](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

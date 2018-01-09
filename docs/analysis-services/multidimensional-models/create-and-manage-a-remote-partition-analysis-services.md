@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Criar e gerenciar uma partição remota (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ao particionar um grupo de medidas, você pode configurar um banco de dados secundário em um controle remoto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância como armazenamento da partição.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
  Um banco de dados secundário dedicado pode armazenar partições remotas para um único banco de dados mestre, mas o banco de dados mestre pode usar vários bancos de dados secundários, desde que todos os bancos de dados secundários estejam na mesma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dimensões em um banco de dados dedicado a partições remotas são criadas como dimensões vinculadas.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Antes de criar uma partição remota, as seguintes condições devem ser cumpridas:  
   
 -   Você deve ter uma segunda instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e um banco de dados dedicado para armazenar as partições. O banco de dados secundário tem uma única finalidade; ele fornece o armazenamento de partições remotas para um banco de dados mestre.  
@@ -119,7 +116,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Configurar a partição remota (no SSDT)  
   
-1.  No servidor mestre: Abra o cubo no Designer de Cubo e clique na guia **Partições** . Expanda o grupo de medidas. Clique em **Nova Partição** se o grupo de medidas já estiver configurado para várias partições ou clique no botão Procurar. . ) na coluna de origem para editar a partição existente.  
+1.  No servidor mestre: Abra o cubo no Designer de Cubo e clique na guia **Partições** . Expanda o grupo de medidas. Clique em **Nova Partição** se o grupo de medidas já estiver configurado para várias partições ou clique no botão Procurar. para obter informações sobre a ferramenta de configuração e recursos adicionais. ) na coluna de origem para editar a partição existente.  
   
 2.  No Assistente para Partições, em **Especificar Informações sobre a Origem**, selecione a Exibição da Fonte de Dados original e a tabela de fatos.  
   
@@ -140,7 +137,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Embora bancos de dados dedicados a armazenamento de partições remotas não seja exposto a conjuntos de linhas de esquema, os aplicativos que usam AMO (Objetos de Gerenciamento de Análise) ainda podem descobrir um banco de dados dedicado usando o comando Discover do XML for Analysis. Qualquer comando CREATE ou DELETE que é enviado diretamente a um banco de dados dedicado usando um TCP ou cliente de HTTP terá sucesso, mas o servidor retornará um aviso indicando que a ação pode danificar o banco de dados gerenciado de perto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

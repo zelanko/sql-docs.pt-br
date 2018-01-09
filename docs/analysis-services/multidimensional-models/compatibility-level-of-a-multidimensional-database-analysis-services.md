@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0055b4c33a489d13ee7feac39f179505d76d50e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Nível de compatibilidade de um banco de dados multidimensional (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a propriedade de nível de compatibilidade do banco de dados determina o nível funcional de um banco de dados. Os níveis de compatibilidade são exclusivos de cada tipo de modelo. Por exemplo, um nível de compatibilidade **1100** tem um significado diferente quando o banco de dados é multidimensional ou tabular.  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 > [!WARNING]  
 >  A definição da compatibilidade do banco de dados como um nível mais alto é irreversível. Após aumentar o nível de compatibilidade para **1100**, você deve continuar executando o banco de dados em servidores mais recentes. Não é possível reverter para **1050**. Você não pode anexar nem restaurar um banco de dados **1100** em uma versão de servidor anterior ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Os níveis de compatibilidade do banco de dados são apresentados no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Você precisa ter um [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou superior para exibir ou definir o nível de compatibilidade do banco de dados.  
   
  O banco de dados não pode ser um cubo local. Os cubos locais não dão suporte à propriedade **CompatibilityLevel** .  
@@ -97,10 +94,10 @@ ms.lasthandoff: 12/08/2017
   
 3.  A sincronização de servidores tem suporte apenas para servidores que compartilham a mesma versão e o mesmo nível de compatibilidade de banco de dados.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Após aumentar o nível de compatibilidade do banco de dados, você pode definir a propriedade **StringStoresCompatibilityLevel** no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Isso aumenta o armazenamento de cadeia de caracteres para medidas e dimensões. Para obter mais informações sobre esse recurso, consulte [Configurar o armazenamento de cadeia de caracteres para dimensões e partições](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

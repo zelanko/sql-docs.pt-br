@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>Registro de SPN de uma instância do Analysis Services
+# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um nome de entidade de serviço (SPN) identifica exclusivamente uma instância de serviço em um domínio do Active Directory quando Kerberos é usado para autenticar identidades de cliente e de serviço mutuamente. Um SPN é associado à conta de logon na qual a instância do serviço é executada.  
   
  Para aplicativos cliente que se conectam ao Analysis Services através da autenticação Kerberos, as bibliotecas de cliente do Analysis Services criam um SPN usando o nome de host da cadeia de conexão e outras variáveis conhecidas, como a classe de serviço, que são corrigidos em qualquer versão especificada do Analysis Services.  
@@ -102,7 +99,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Exemplo de sintaxe para uma instância nomeada em execução como NT Service\MSOLAP$\<-nome da instância >**  
   
- Esse exemplo mostra a sintaxe **setspn** para uma instância nomeada executada na conta virtual padrão. Nesse exemplo, o nome do host do computador é **AW-SRV02**e o nome da instância é **AW-FINANCE**. Novamente, é a conta do computador especificada para o SPN, em vez da conta virtual **NT Service\MSOLAP$**\<nome da instância >.  
+ Esse exemplo mostra a sintaxe **setspn** para uma instância nomeada executada na conta virtual padrão. Nesse exemplo, o nome do host do computador é **AW-SRV02** e o nome da instância é **AW-FINANCE**. Novamente, é a conta do computador especificada para o SPN, em vez da conta virtual **NT Service\MSOLAP$**\<nome da instância >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -171,7 +168,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Uma instância do Analysis Services só pode realizar a escuta em uma única porta. Não há suporte para o uso de várias portas. Para obter mais informações sobre a configuração da porta, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Autenticação e delegação de identidade do Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Autenticação mútua usando Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Como configurar o SQL Server 2008 Analysis Services e SQL Server 2005 Analysis Services para usar a autenticação Kerberos](http://support.microsoft.com/kb/917409)   

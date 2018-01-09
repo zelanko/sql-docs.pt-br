@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2a122ab3ac28879a1fbcf3790953ba229a285df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Atualizar pastas de trabalho e atualização de dados agendada (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tópico explica a experiência do usuário das pastas de trabalho criadas no anterior [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ambientes e como atualizar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pastas de trabalho para que você pode tirar proveito dos novos recursos introduzidos nesta versão. Para saber mais sobre os novos recursos, veja [Novidades no Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -175,7 +175,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  Role até MSOLAP. Verifique se MSOLAP.5 está listado entre os provedores OLAP instalados no sistema. Verifique se MSOLAP|CurVer está definido como MSOLAP.5  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrar o Power Pivot para o SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Atualizar Power Pivot para SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Novidades do Analysis Services](../../../analysis-services/what-s-new-in-analysis-services.md)   

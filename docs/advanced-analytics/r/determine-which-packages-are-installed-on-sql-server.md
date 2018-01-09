@@ -1,13 +1,13 @@
 ---
 title: "Determinar quais pacotes de R são instalados no SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 10/09/2016
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
@@ -16,17 +16,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c570f5643880b1111889e29e6de03bbff4b10e1d
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: e3f906e0c5290b6aa2cab375e4761390f84e718d
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>Determinar quais pacotes de R são instalados no SQL Server
 
-Quando você instala o aprendizado de máquina no SQL Server com a opção de linguagem R, a instalação cria uma biblioteca de pacote de R associada com a instância. Cada instância tem uma biblioteca de pacote separada. As bibliotecas de pacote são **não** compartilhadas entre instâncias, portanto, é possível para pacotes diferentes para ser instalado em instâncias diferentes.
+Quando você instala o aprendizado de máquina no SQL Server com a opção de linguagem R, uma biblioteca de pacote de R é criada especificamente para ser usada pela instância. Cada instância do servidor tem sua própria biblioteca de pacote. Bibliotecas de pacote não podem ser compartilhadas entre instâncias.
 
-Este artigo descreve como você pode determinar quais pacotes de R são instalados para uma instância específica.
+Este artigo descreve como você pode determinar quais pacotes de R são instalados para uma instância específica do SQL Server.
 
 ## <a name="generate-r-package-list-using-a-stored-procedure"></a>Gerar a lista de pacotes de R usando um procedimento armazenado
 
@@ -34,36 +34,34 @@ O exemplo a seguir usa a função R `installed.packages()` em uma [!INCLUDE [tsq
 
 ```SQL
 EXECUTE sp_execute_external_script
-@language=N'R'  
-,@script = N'str(OutputDataSet);  
-packagematrix <- installed.packages();  
-NameOnly <- packagematrix[,1];  
-OutputDataSet <- as.data.frame(NameOnly);'  
-,@input_data_1 = N'SELECT 1 as col'  
-WITH RESULT SETS ((PackageName nvarchar(250) ))  
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+NameOnly <- packagematrix[,1];
+OutputDataSet <- as.data.frame(NameOnly);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250) ))
 ```
 
-Para obter mais informações sobre opcional e campos padrão para o arquivo de descrição do pacote de R, consulte [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
+Para obter mais informações sobre opcional e campos padrão para o campo de descrição do pacote de R, consulte [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
 
 ## <a name="verify-whether-a-package-is-installed-with-an-instance"></a>Verificar se um pacote está instalado com uma instância
 
-Se você tiver instalado um pacote e deseja ter certeza de que ele esteja disponível para uma determinada instância do SQL Server, você pode executar a seguinte chamada de procedimento armazenado para carregar o pacote e retornar apenas as mensagens.
+Se você tiver instalado um pacote e deseja ter certeza de que ele esteja disponível para uma determinada instância do SQL Server, você pode executar a seguinte chamada de procedimento armazenado para carregar o pacote e retornar apenas as mensagens. Este exemplo procura e carrega a biblioteca RevoScaleR, se disponível.
 
-```SQL
+```sql
 EXEC sp_execute_external_script  @language =N'R',
 @script=N'library("RevoScaleR")'
 GO
 ```
 
-Este exemplo procura e carrega a biblioteca RevoScaleR.
++ Se o pacote for encontrado, uma mensagem será retornada: "Comandos concluída com êxito."
 
-+ Se o pacote for encontrado, a mensagem retornada deve ser algo como "Comandos concluída com êxito."
-
-+ Se o pacote não pode ser localizado ou carregado, você receberá um erro como esse: "Ocorreu um erro de script externo: erro em library("RevoScaleR"): não há nenhum pacote chamado RevoScaleR"
++ Se o pacote não pode ser localizado ou carregado, você receberá um erro que contém o texto: "não há nenhum pacote chamado 'MissingPackageName'"
 
 ## <a name="get-a-list-of-installed-packages-using-r"></a>Obter uma lista de pacotes instalados usando o R
 
-Há várias maneiras de se obter uma lista de pacotes instalados ou carregados, usando ferramentas de R e funções de R. Muitas ferramentas de desenvolvimento do R fornecem um pesquisador de objetos ou uma lista de pacotes instalados ou carregados no espaço de trabalho atual do R.
+Há várias maneiras de se obter uma lista de pacotes instalados ou carregados, usando ferramentas de R e funções de R. Muitas ferramentas de desenvolvimento do R fornecem um pesquisador de objetos ou uma lista de pacotes instalados ou carregados no espaço de trabalho atual do R. Esta seção fornece alguns comandos curtos que podem ser usadas em qualquer linha de comando de R ou SP\_executar\_externo\_script.
 
 + Do utilitário local do R, use uma função de base R, como `installed.packages()`, que está incluído o `utils` pacote. Para obter uma lista que é precisa para uma instância, você deve especificar explicitamente o caminho da biblioteca ou usar as ferramentas de R associadas com a biblioteca de instância.
 
@@ -79,6 +77,37 @@ Por exemplo, execute o seguinte código de R para obter uma lista de pacotes dis
 sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;")
 sqlPackages <- rxInstalledPackages(computeContext = sqlServerCompute)
 sqlPackages
+```
+
+## <a name="get-library-location-and-version"></a>Obter a versão e o local da biblioteca
+
+O exemplo a seguir obtém a localização da biblioteca de RevoScaleR no contexto de computação local e a versão do pacote.
+
+```r
+rxFindPackage(RevoScaleR, "local")
+packageVersion("RevoScaleR")
+```
+
+## <a name="determine-path-of-library-used-by-sql-server"></a>Determinar o caminho de biblioteca usada pelo SQL Server
+
+Se você atualizou a componentes usando associação de aprendizado de máquina, pode alterar o caminho para a biblioteca de R. Quando isso acontece, atalhos anteriores das ferramentas podem fazer referência a uma versão anterior. Para ter certeza da versão pacote e o caminho usado pelo SQL Server, você pode executar um comando como o seguinte:
+
+```sql
+EXEC sp_execute_external_script
+    @language =N'R',
+    @script=N'
+    sql_r_path <- rxSqlLibPaths("local")
+      print(sql_r_path)
+    version_info <-packageVersion("RevoScaleR")
+      print(version_info)'
+```
+
+**Resultados**
+
+```text
+STDOUT message(s) from external script: 
+[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
+[1] '9.2.1'
 ```
 ## <a name="see-also"></a>Consulte também
 

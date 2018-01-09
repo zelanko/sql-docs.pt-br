@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8361308afe6ffabf33fd152f308ad12c9bedd479
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 88b23c96ad23f4761ca05dafa685cdba026a484a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lição 1-7: definindo e procurando KPIs
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Para definir indicadores chave de desempenho (KPIs), primeiro você define um nome KPI e o grupo de medidas ao qual o KPI está associado. Um KPI pode ser associado a todos ou apenas a um único grupo de medidas. Depois disso, você define os seguintes elementos do KPI:  

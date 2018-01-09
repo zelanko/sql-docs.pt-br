@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9c02bc400a7d1b3d9bec1a42f6ee43045616e3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
-ms.translationtype: HT
+ms.openlocfilehash: 66058488afc823095c2868b45d4156d723fb6ae6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Recuperando dados usando o AdomdDataReader
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ao recuperar dados analíticos, o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> objeto fornece um bom equilíbrio entre sobrecarga e interatividade. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> recupera um fluxo dados somente leitura, somente encaminhamento, bidimensional a partir de uma fonte de dados analíticos. Esse fluxo de dados não armazenado permite que a lógica procedural processe com eficiência os resultados de uma fonte de dados analíticos de forma sequencial. Isso faz do <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> uma boa opção para a recuperação de grandes quantidades de dados para fins de exibição, uma vez que os dados não são armazenados em cache em memória.  
@@ -124,7 +122,7 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="retrieving-multiple-result-sets"></a>Recuperando vários conjuntos de resultados  
  A mineração de dados dá suporte ao conceito de tabelas aninhadas, exibidas pelo ADOMD.NET como conjuntos de linhas aninhados. Para recuperar o conjunto de linhas aninhado associado a cada linha, você deve chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A> método.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recuperando dados de uma fonte de dados analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [Recuperando dados usando o conjunto de células](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
  [Recuperando dados usando o XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  

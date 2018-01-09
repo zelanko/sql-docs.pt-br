@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 33b53fb1f2015fe83e8803b10be6e981922d90ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilidade com versões anteriores do Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -50,7 +50,7 @@ Os recursos a seguir estão obsoletas nesta versão:
 |Multidimensional|Dimensões vinculadas|   
 |Multidimensional|Notificações de tabela do SQL Server para o cache pró-ativo.  <br />A substituição é usar a sondagem para o cache pró-ativo. <br />Consulte [Cache pró-ativo &#40;Dimensões&#41;](../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md) e [Cache pró-ativo e &#40;Partições&#41;](../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |Multidimensional|Cubos de sessão. Não há nenhuma substituição.|  
-|Multidimensional|Cubos locais. Não há nenhuma substituição.|  
+|Multidimensional|Cubos locais. Não há substituições.|  
 |Tabular|Os níveis de compatibilidade de modelo de tabela 1100 e 1103 não terão suporte em uma versão futura. A substituição é definir modelos de nível de compatibilidade 1200 ou superior, convertendo definições de modelo para metadados tabulares. Consulte [Nível de compatibilidade para modelos de tabela no Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Ferramentas|Server Profiler para reprodução de rastreamento <br />Substituição. Não há nenhuma substituição.|  

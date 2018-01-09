@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcda3b90d2157869be1c187e8c6d86449790f7b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ec8f5afd3396e13d5bc5e757d1f61c1ca67dd67
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connections-in-adomdnet"></a>Conexões no ADOMD.NET
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]No ADOMD.NET, você usa o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objeto para abrir conexões com fontes de dados analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bancos de dados. Quando a conexão não for mais necessária, feche-a explicitamente.  
@@ -72,7 +70,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 > [!IMPORTANT]  
 >  No **Finalize** implementado de método de qualquer classe, não chame o **fechar** ou **Dispose** métodos de um <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> objeto, ou qualquer outro objeto gerenciado. Em um finalizador, só libere os recursos não gerenciados de propriedade direta da classe implementada. Se a classe implementada não possuir algum recurso não gerenciado, não inclua um **Finalize** método na definição de classe.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação do cliente no ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 958927bcd5f55fadfd5753702d7be012da3e882c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f340e182d8867a1560d1bf31945aced7ecfa0f22
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lição 9-2-Definindo e procurando traduções
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Uma tradução é uma representação dos nomes de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos em um idioma específico. Os objetos incluem grupos de medidas, medidas, dimensões, atributos, hierarquias, KPIs, ações e membros calculados. As traduções oferecem suporte de servidor a aplicativos cliente que podem oferecer suporte para vários idiomas. Como cliente, basta passar o identificador de localidade (LCID) para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que usa o LCID para determinar qual conjunto de traduções deverá ser usado quando ele fornecer metadados para os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não tiver uma tradução para o idioma ou para um objeto específico, o idioma padrão será usado para retornar o metadados do objeto ao cliente. Por exemplo, se um usuário empresarial na França acessar um cubo a partir de uma estação de trabalho que tenha uma configuração local francesa, esse usuário poderá visualizar as legendas de membro e os valores de propriedade de membro na França, caso haja uma tradução francesa. Entretanto, se um usuário empresarial na Alemanha acessar o mesmo cubo a partir de uma estação de trabalho que tenha uma configuração local alemã, esse usuário poderá visualizar os nomes de membro e os valores de propriedade de membro em alemão. Para obter mais informações, consulte [Traduções de cubo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Traduções de dimensão](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)e [Suporte a tradução no Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
@@ -47,7 +47,7 @@ Nas tarefas deste tópico, você define as traduções de metadados para um conj
   
     Outra coluna de idioma será exibida e nela você poderá definir as traduções francesas.  
   
-5.  Na linha do objeto **Legenda** da dimensão **Data** , digite **Fecha** na coluna de tradução para o **Espanhol (Espanha)** e **Temps** na coluna de tradução para o **Francês (França)** .  
+5.  Na linha do objeto **Legenda** da dimensão **Data**, digite **Fecha** na coluna de tradução para o **Espanhol (Espanha)** e **Temps** na coluna de tradução para o **Francês (França)**.  
   
 6.  Na linha do objeto **Legenda** no atributo **Nome do Mês** , digite **Mes del Año** na coluna de tradução para o **Espanhol (Espanha)** e **Mois d'Année** na coluna de tradução para o **Francês (França)** .  
   
@@ -77,7 +77,7 @@ Nas tarefas deste tópico, você define as traduções de metadados para um conj
   
 2.  Na barra de ferramentas da guia **Traduções** , clique no botão **Nova Tradução** .  
   
-    Uma lista de idiomas é exibida na caixa de diálogo **Selecionar Idioma** .  
+    Uma lista de idiomas é exibida na caixa de diálogo **Selecionar Idioma**.  
   
 3.  Selecione **Espanhol (Espanha)**e clique em **OK**.  
   
@@ -132,7 +132,7 @@ Nas tarefas deste tópico, você define as traduções de metadados para um conj
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 10: Definindo funções administrativas](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Traduções de cubo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
 [Traduções de cubo](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)  
 [Suporte a tradução no Analysis Services](../analysis-services/translation-support-in-analysis-services.md)  

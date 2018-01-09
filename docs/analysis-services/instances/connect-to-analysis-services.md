@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: instances of Analysis Services, connections
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 683474e873b45eca2fc39d0b8f254da06d205cf2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a78769062f87671ee510095bf90f1d3680f81954
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-analysis-services"></a>Conectar ao Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use as informações desta seção para saber mais sobre as propriedades de cadeia de caracteres de conexão, as bibliotecas de cliente usadas para conexões, os métodos de autenticação são suportados pelo Analysis Services e como definir ou limpar conexões antes de colocar um servidor offline.  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 |[Provedores de dados usados em conexões do Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)|O Analysis Services fornece três bibliotecas de cliente para acessar operações do servidor ou dados do Analysis Services. Este tópico oferece uma breve introdução ao ADOMD.NET, Analysis Services Management Objects (AMO) e provedor OLE DB do Analysis Services (MSOLAP).|  
 |[Desconectar usuários e sessões no Analysis Services Server](../../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md)|Limpe as conexões e sessões existentes antes de colocar um servidor offline ou de realizar testes de desempenho de linha de base.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configuração de pós-instalação &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
   

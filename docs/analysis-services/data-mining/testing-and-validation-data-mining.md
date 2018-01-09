@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -37,11 +35,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e20e18e5f2a41150a74b54575b582fd4e9dc3492
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>Teste e validação (mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A validação é o processo de avaliar como seus modelos de mineração executam nos dados reais. É importante validar seus modelos de mineração entendendo suas qualidades e características antes de implantá-los em um ambiente de produção.  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
 |Saiba mais sobre os tipos de gráfico de precisão fornecidos.|[Gráfico de comparação de precisão &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de ganho &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Dispersão &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Saiba criar uma matriz de classificação, às vezes chamada de matriz de confusão, para avaliar o número de verdadeiros e falsos positivos e negativos.|[Matriz de classificação &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ferramentas de mineração de dados](../../analysis-services/data-mining/data-mining-tools.md)   
  [Soluções de mineração de dados](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  

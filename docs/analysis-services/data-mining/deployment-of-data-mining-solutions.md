@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa0664275dd45cb5cccdef8a9f93d3b4da697be0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Implantação de soluções de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A última etapa no processo de mineração de dados é implantar os modelos em um ambiente de produção. A implantação é importante porque torna os modelos disponíveis para usuários, para que você possa executar qualquer uma das tarefas a seguir:  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="in-this-section"></a>Nesta seção  
  [Implantar uma solução de mineração de dados em versões anteriores do SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
- [Exportar e importar objetos de mineração de dados](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Exportar e importar objetos de Mineração de dados](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
 ##  <a name="bkmk_Reqs"></a> Requisitos para a implantação de soluções de mineração de dados  
  A instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o qual você implanta a solução deve estar sendo executada em um modo que dá suporte a objetos multidimensionais e objetos de mineração de dados; ou seja, você não pode implantar objetos de mineração de dados em uma instância que hospeda modelos de tabela ou dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/08/2017
  Normalmente os objetos de mineração de dados também usam as mesmas fontes de dados e exibições da fonte de dados que são usadas para o cubo. No entanto, você pode adicionar fontes de dados e exibições da fonte de dados que são destinadas especificamente para mineração de dados. Por exemplo, normalmente um cubo não conteria dados sobre clientes em potencial ou dados externos que não são usados nos objetos multidimensionais.  
   
 ##  <a name="bkmk_Resources"></a> Recursos relacionados  
- [Movendo objetos de mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Movendo objetos de Mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  Se seu modelo for baseado somente em dados relacionais, exportar e importar objetos usando DMX é o modo mais fácil de mover modelos.  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/08/2017
   
  Fornece informações gerais sobre a implantação de projetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e descreve as propriedades que você pode definir como parte da configuração de projeto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Ferramentas de Consulta de Mineração de Dados](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  

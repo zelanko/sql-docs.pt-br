@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb13244b95652917fdf09d017d66f927be915c8b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 61e3be434f2029216742813178b041b083174362
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Procurar um modelo usando a Exibição de Árvore da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizador de árvore no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe as árvores de decisão que são criadas com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo árvores de decisão. O algoritmo Árvores de Decisão [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de árvore de decisão híbrido que oferece suporte tanto à classificação quanto regressão. Portanto, você também pode usar esse visualizador para exibir modelos com base no algoritmo Regressão Linear [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é usado para modelagem preditiva de atributos discretos e contínuos. Para obter mais informações sobre esse algoritmo, consulte [Referência técnica do algoritmo Árvores de Decisão da Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md).  
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/08/2017
   
  [Voltar ao Início](#BKMK_TabsPanes)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência técnica do algoritmo Árvores de Decisão da Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 18621eba78a2e4c95de6373485044b5f88e1f744
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Atributos e hierarquias de atributos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]As dimensões são coleções de atributos que estão associados a uma ou mais colunas em uma tabela ou exibição na exibição da fonte de dados.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Relações de atributo, esquemas em estrela e esquemas floco de neve  
  Por padrão, em um esquema em estrela, todos os atributos estão diretamente relacionados ao atributo de chave, o que permite que os usuários pesquisem os fatos no cubo com base em qualquer hierarquia de atributos na dimensão. Em um esquema floco de neve, um atributo estará diretamente vinculado ao atributo de chave se a tabela subjacente estiver diretamente vinculada à tabela de fatos, ou vinculado indiretamente pelos atributos associados à chave na tabela subjacente, que vincula a tabela floco de neve à tabela vinculada diretamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar hierarquias definidas pelo usuário](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Definir relações de atributo](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

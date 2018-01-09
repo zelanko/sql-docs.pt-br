@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f467621594b3ed81793d0925b600650dfa1e3599
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 93884e29674fa1a96402d23e397cddb3a1fe0bef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Naive Bayes
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes é um algoritmo de classificação fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para uso em modelagem de previsão. O algoritmo calcula a probabilidade condicional entre as colunas de entrada e as previsíveis e assume que as colunas são independentes. Esta pressuposição de independência leva ao nome Naive Bayes.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Naive Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.|  
+|Naive Bayes|Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Naive Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.|  
   
  O algoritmo foi projetado para minimizar o tempo de processamento e selecionar com eficiência os atributos que têm a maior importância; no entanto, você pode controlar os dados usados pelo algoritmo definindo parâmetros da seguinte forma:  
   
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Coluna|Tipos de conteúdo|  
+|coluna|Tipos de conteúdo|  
 |------------|-------------------|  
 |Atributo de entrada|Cíclico, discreto, diferenciado, chave, tabela, e ordenado|  
 |Atributo previsível|Cíclico, discreto, diferenciado, tabela, e ordenado|  
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Algoritmo Naïve Bayes da Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Exemplos de consulta de modelo naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
  [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  

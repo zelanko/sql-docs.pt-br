@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9e5ea91f535ca2897e0b0de7859647992a1bd388
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7783dd3fabfe32359b8d2da35ad9eda25a91057f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-data-access"></a>Acesso a dados do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve as maneiras em que os dados são recuperados de um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pasta de trabalho que é publicada em uma biblioteca do SharePoint.  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
  Nem todos os dados de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são tratados pelo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Os Serviços do Excel processam tabelas e dados de células de uma planilha. Apenas Tabelas Dinâmicas, Gráficos Dinâmicos e segmentações de dados que vão de encontro aos dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são tratados pelo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Acesso a dados de modelo de tabela](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: de1d81ae0dba51e98cb8d883ca5e7ae22eb4314b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de mineração (Analysis Services - Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Filtragem do modelo com base em dados ajuda a criar modelos de mineração que usam subconjuntos de dados em uma estrutura de mineração. A filtragem proporciona flexibilidade quando você projeta suas estruturas de mineração e fontes de dados porque você pode criar uma única estrutura de mineração, com base em uma exibição da fonte de dados abrangente. Em seguida, é possível criar filtros que serão usados somente como parte dos dados para treinar e testar uma variedade de modelos, em vez de criar uma estrutura diferente e um modelo relacionado para cada subconjunto de dados.  
@@ -128,7 +126,7 @@ ms.lasthandoff: 12/08/2017
   
  Para obter informações sobre como usar filtros de modelo quando você estiver testando um modelo de mineração, consulte [Escolher um tipo de gráfico de precisão e definir opções de gráfico](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sintaxe de filtro de modelo e exemplos &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
  [Teste e validação &#40;Mineração de dados&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   

@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88e8d798f3e3a37fafab3f06ca6354310508e2b5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-properties"></a>Propriedades do modelo de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Modelos de mineração têm os seguintes tipos de propriedades:  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |**Algoritmo**|Define o tipo de algoritmo do modelo de mineração.|  
 |**AlgorithmParameters**|Define valores para os parâmetros dos algoritmos disponíveis para cada tipo de algoritmo.|  
-|**Filtro**|Define um filtro que é aplicado aos dados que são usados para treinar e testar o modelo de mineração. A definição do filtro é armazenada com o modelo e pode ser usada opcionalmente quando consultas de previsão são criadas ou quando você testar a exatidão do modelo.<br /><br /> O filtro de modelo não é opcional para o treinamento do modelo.|  
+|**Filter**|Define um filtro que é aplicado aos dados que são usados para treinar e testar o modelo de mineração. A definição do filtro é armazenada com o modelo e pode ser usada opcionalmente quando consultas de previsão são criadas ou quando você testar a exatidão do modelo.<br /><br /> O filtro de modelo não é opcional para o treinamento do modelo.|  
 |**Nome**|Define o nome do modelo de mineração.|  
 |**AllowDrillThrough**|Especifica se a análise está habilitada no modelo de mineração.|  
   
@@ -60,13 +58,13 @@ ms.lasthandoff: 12/08/2017
   
 |Propriedade|Description|  
 |--------------|-----------------|  
-|**Description**|Descreve a finalidade da coluna de mineração.|  
+|**Descrição**|Descreve a finalidade da coluna de mineração.|  
 |**Nome**|Define o nome da coluna do modelo de mineração. Você pode digitar um novo nome, para fornecer um alias à coluna do modelo de mineração.|  
 |**ModelingFlags**|Define qualquer sinalizador específico de um algoritmo para a coluna.|  
 |**SourceColumnID**|Indica o nome da coluna de estrutura de mineração na qual a coluna de modelo é baseada.<br /><br /> Esta propriedade é somente leitura.|  
-|**Uso**|Define como a coluna será usada pelo modelo de mineração.|  
+|**Usage**|Define como a coluna será usada pelo modelo de mineração.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Colunas do modelo de mineração](../../analysis-services/data-mining/mining-model-columns.md)   
  [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Tarefas e instruções do modelo de mineração](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   

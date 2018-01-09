@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07588cbc2548028565db1f0d6da706d48bf0540b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b904dc4d9858b87f135b180b66ea24e8f688f0c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Regressão Linear da Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] uma variação do algoritmo Regressão Linear é a [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de árvores de decisão que ajuda a calcular uma relação linear entre uma variável dependente e independente e, em seguida, usar esse relação para previsão.  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  Além de criar um modelo de regressão linear selecionando o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , se o atributo previsível for um tipo de dados numérico contínuo, você poderá criar um modelo de árvore de decisão que contenha regressões. Neste caso, o algoritmo irá dividir quando encontrar os pontos de separação apropriados, mas criará uma fórmula de regressão para algumas regiões de dados. Para obter mais informações sobre árvores de regressão em um modelo de árvores de decisão, consulte [Conteúdo do modelo de mineração para modelos da árvore de decisão &#40;Analysis Services – Mineração de dados&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   Não dá suporte ao uso de PMML para criar modelos de mineração.  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Suporta o uso de modelos de mineração OLAP.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo de regressão Linear de Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de regressão linear](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   

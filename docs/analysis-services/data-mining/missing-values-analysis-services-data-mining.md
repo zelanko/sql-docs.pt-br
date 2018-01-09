@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tratamento de *valores ausentes* corretamente é uma parte importante da modelagem efetiva. Esta seção explica o que são valores ausentes, e descreve os recursos fornecidos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabalhar com valores ausentes ao criar estruturas de mineração de dados e modelos de mineração.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
  Por exemplo, a tabela a seguir mostra a distribuição de valores do nó (All) no modelo de árvore de decisão criado para o tutorial Bike Buyer. No cenário do exemplo, a coluna [Bike Buyer] é um atributo previsível, em que 1 indica "Sim" e 0 indica "Não".  
   
-|Value|Casos|  
+|Valor|Casos|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="adjusting-probability-for-missing-states"></a>Ajustando a probabilidade para valores ausentes  
  Além de contar valores, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcula a probabilidade de qualquer valor em todo o conjunto de dados. O mesmo é válido para o valor **Ausente** . Por exemplo, a tabela a seguir mostra as probabilidades para os casos do exemplo anterior:  
   
-|Value|Casos|Probabilidade|  
+|Valor|Casos|Probabilidade|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -111,7 +109,7 @@ O algoritmo de árvores de decisão faz um ajuste adicional que ajuda o algoritm
   
  O efeito desse ajuste é manter a estabilidade da árvore.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Os tópicos a seguir fornecem mais informações sobre como tratar valores ausentes.  
   
 |Tarefas|Links|  
@@ -121,7 +119,7 @@ O algoritmo de árvores de decisão faz um ajuste adicional que ajuda o algoritm
 |Saiba como especificar sinalizadores de modelagem no DMX|[Sinalizadores de modelagem &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
 |Altere o modo como a estrutura de mineração trata valores ausentes|[Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Sinalizadores de modelagem &#40;Mineração de dados&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   

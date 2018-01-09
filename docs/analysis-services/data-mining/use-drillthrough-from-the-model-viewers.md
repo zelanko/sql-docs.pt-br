@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb23accde5d3711a97d67aab6750a6a16a6a8b3d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31ac0cffe6656c5d644b5424b56f150572dc9af6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Usar detalhamento dos visualizadores do modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dependendo do tipo de modelo, você pode usar o detalhamento dos visualizadores de procura no **Visualizador do modelo de mineração** guia do Designer de mineração de dados para explorar os casos usados no modelo de mineração ou consultar colunas adicionais na estrutura de mineração. Embora muitos tipos de modelos não ofereçam suporte ao detalhamento porque os padrões no modelo não podem ser vinculados diretamente a casos específicos, os tipos de modelos a seguir oferecem suporte ao detalhamento.  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  Clique com o botão direito do mouse em qualquer ponto nos resultados e selecione **Copiar Tudo** para salvar os resultados na Área de Transferência. Se o modelo contiver uma coluna de tabela aninhada, só o nome da coluna de tabela aninhada será colado; para recuperar os valores de dados dentro da coluna de tabela aninhada para cada caso, crie uma consulta no conteúdo modelo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Detalhamento em modelos de mineração](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
  [Detalhamento em estruturas de mineração](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  

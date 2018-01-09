@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55c63a3a3d54bd92f494e11029e6ee450f0ee46c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lição 3-2-modificando a dimensão cliente
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Há várias maneiras diferentes que você pode aumentar a usabilidade e a funcionalidade das dimensões em um cubo. Nas tarefas deste tópico, você modificará a dimensão Customer.  
@@ -271,7 +271,7 @@ Depois de alterar atributos e hierarquias, você deve implantar as alterações 
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Modificando a dimensão Produto](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência de propriedades de atributo de dimensão](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
 [Remover um atributo de uma dimensão](../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
 [Renomear um atributo](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  

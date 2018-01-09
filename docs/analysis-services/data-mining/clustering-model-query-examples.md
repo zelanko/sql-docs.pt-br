@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clustering-model-query-examples"></a>Exemplos de consulta de modelo de clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você cria uma consulta em um modelo de mineração de dados, você pode recuperar metadados sobre o modelo ou criar uma consulta de conteúdo que fornece detalhes sobre os padrões encontrados em análises. Se preferir, crie uma consulta de previsão, que usa os padrões do modelo para fazer previsões para os novos dados. Cada tipo de consulta fornece informações diferentes. Por exemplo, uma consulta de conteúdo pode fornecer detalhes adicionais sobre os clusters encontrados, enquanto uma consulta de previsão pode informar a qual cluster um novo ponto de dados provavelmente pertence.  
@@ -281,13 +279,13 @@ NATURAL PREDICTION JOIN
   
  Exemplo dos resultados quando o uso é definido como **Predict**:  
   
-|Bike Buyer|Expressão|  
+|Bike Buyer|Expression|  
 |----------------|----------------|  
 |1|0.592924735740338|  
   
  Exemplo dos resultados quando o uso é definido como **PredictOnly** e o modelo é reprocessado:  
   
-|Bike Buyer|Expressão|  
+|Bike Buyer|Expression|  
 |----------------|----------------|  
 |1|0.55843544003102|  
   
@@ -332,7 +330,7 @@ NATURAL PREDICTION JOIN
   
  Resultados do exemplo:  
   
-|$CLUSTER|Expressão|  
+|$CLUSTER|Expression|  
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
@@ -395,7 +393,7 @@ NATURAL PREDICTION JOIN
   
  Para obter a sintaxe de funções específicas, consulte [Referência de função de DMX &#40;extensões DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  

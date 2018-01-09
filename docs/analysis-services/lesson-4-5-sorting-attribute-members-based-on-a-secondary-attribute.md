@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 33d0192fa992a8f9e6ebb8bfeb7e9155e9b2fc32
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lição 4-5 - membros de atributo de classificação com base em um atributo secundário
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Lição 3, você aprendeu a classificar membros de atributo com base em seu nome ou o valor de chave. Aprendeu também a usar uma chave de membro composta para afetar os membros de atributo e a ordem de classificação. Para obter mais informações, consulte [Modificando a dimensão de data](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). No entanto, se nem o nome e nem a chave do atributo primário fornecerem a ordem de classificação desejada, você poderá usar um atributo secundário para obter a ordem desejada. Com a definição de uma relação entre os atributos, você pode usar o segundo atributo para classificar os membros do primeiro atributo.  

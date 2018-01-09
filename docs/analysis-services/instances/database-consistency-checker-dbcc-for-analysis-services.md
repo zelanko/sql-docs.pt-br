@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Verificador de consistência do banco de dados (DBCC) para o Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC fornece validação de banco de dados sob demanda para bancos de dados multidimensionais e tabulares em uma instância do Analysis Services. Você pode executar o DBCC em uma janela de consulta MDX ou XMLA no SSMS (SQL Server Management Studio) e rastrear a saída do DBCC no SQL Server Profiler ou nas sessões do xEvent no SSMS.  
@@ -227,8 +224,8 @@ Execution complete
 ||||  
 |-|-|-|  
 |**Objeto**|**Descrição de verificação do DBCC**|**Erro na falha**|  
-|Banco de dados|Verifica a contagem de tabelas no banco de dados.  Um valor menor que zero indica corrupção.|Há corrupção na camada de armazenamento. A coleção de tabelas no banco de dados '%{parent/}' está corrompida.|  
-|Banco de dados|Verifica a estrutura interna usada para rastrear a integridade referencial e lança um erro se o tamanho estiver incorreto.|Os arquivos de banco de dados não passaram nas verificações de consistência.|  
+|banco de dados|Verifica a contagem de tabelas no banco de dados.  Um valor menor que zero indica corrupção.|Há corrupção na camada de armazenamento. A coleção de tabelas no banco de dados '%{parent/}' está corrompida.|  
+|banco de dados|Verifica a estrutura interna usada para rastrear a integridade referencial e lança um erro se o tamanho estiver incorreto.|Os arquivos de banco de dados não passaram nas verificações de consistência.|  
 |Table|Verifica o valor interno usado para determinar se a tabela é uma tabela de dimensão ou de fatos.  Um valor que está fora do intervalo conhecido que indica corrupção.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da tabela.|  
 |Table|Verifica se o número de partições no mapa do segmento da tabela corresponde ao número de partições definidas para a tabela.|Há corrupção na camada de armazenamento. A coleção de partições na tabela '%{parent/}' está corrompida.|  
 |Table|Se um banco de dados tabular for criado ou importado do PowerPivot para Excel 2010 e tiver uma contagem de partição maior que um, um erro será gerado, pois o suporte de partição foi adicionado em versões posteriores e isso poderia indicar corrupção.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  
@@ -239,17 +236,17 @@ Execution complete
 |Hierarquia|Gerar um erro se a ordem de classificação da hierarquia não for um valor reconhecido.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar a hierarquia '%{hier/}'.|  
 |Hierarquia|As verificações executadas na hierarquia dependem do tipo interno de esquema de mapeamento de hierarquia usado.<br /><br /> Todas as hierarquias são verificadas em relação ao estado processado correto, se a hierarquia de repositório existe e se, quando aplicável, estruturas de dados usadas para uma conversão de ID de dados para posição de hierarquia existem.<br /><br /> Supondo que todas essas verificações passem, a estrutura da hierarquia será movimentada para verificar se cada posição na hierarquia corresponde ao membro correto.<br />Se algum desses testes falhar, um erro será gerado.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar a hierarquia '%{hier/}'.|  
 |Hierarquia definida pelo usuário|Verifica se os nomes de nível de hierarquia são definidos.<br /><br /> Se a hierarquia foi processada, verifique se o armazenamento de dados da hierarquia interna tem o formato correto.  Verifique se o repositório de hierarquia interna não contém nenhum valor de dados inválido.<br /><br /> Se a hierarquia for marcada como não processada, confirme que esse estado se aplicará a estruturas de dados antigas e que todos os níveis da hierarquia serão marcados como vazios.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar a hierarquia '%{hier/}'.|  
-|Coluna|Gerar um erro se a codificação usada para a coluna não for definida para um valor conhecido.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
-|Coluna|Verifique se a coluna foi compactada pelo mecanismo na memória ou não.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
-|Coluna|Verifique o tipo de compactação na coluna de valores conhecidos.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
-|Coluna|Quando a coluna "geração de tokens" não estiver definida para um valor conhecido, um erro será gerado.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
-|Coluna|Se o intervalo de ID armazenado para um dicionário de dados de colunas não coincidir com o número de valores no dicionário de dados ou estiver fora do intervalo permitido, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o dicionário de dados.|  
-|Coluna|Verifique se o número de segmentos de dados de uma coluna corresponde ao número de segmentos de dados da tabela à qual ela pertence.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
-|Coluna|Verifique se o número de partições de uma coluna de dados corresponde ao número de partições do mapa de segmento de dados da coluna.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  
-|Coluna|Verifique se o número de registros em um segmento de coluna corresponde à contagem de registros armazenada no índice desse segmento de coluna.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
-|Coluna|Se uma coluna não tiver nenhuma estatística de segmento, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
-|Coluna|Se uma coluna não tiver informações de compactação ou de armazenamento de segmento, será gerado um erro.|Os arquivos de banco de dados não passaram nas verificações de consistência.|  
-|Coluna|Relate um erro se as estatísticas do segmento de uma coluna não coincidirem com os valores da coluna real para a ID de dados mínimos, ID de dados máximos, número de valores distintos, número de linhas ou a presença de valores NULL.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
+|coluna|Gerar um erro se a codificação usada para a coluna não for definida para um valor conhecido.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
+|coluna|Verifique se a coluna foi compactada pelo mecanismo na memória ou não.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
+|coluna|Verifique o tipo de compactação na coluna de valores conhecidos.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
+|coluna|Quando a coluna "geração de tokens" não estiver definida para um valor conhecido, um erro será gerado.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas da coluna.|  
+|coluna|Se o intervalo de ID armazenado para um dicionário de dados de colunas não coincidir com o número de valores no dicionário de dados ou estiver fora do intervalo permitido, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o dicionário de dados.|  
+|coluna|Verifique se o número de segmentos de dados de uma coluna corresponde ao número de segmentos de dados da tabela à qual ela pertence.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
+|coluna|Verifique se o número de partições de uma coluna de dados corresponde ao número de partições do mapa de segmento de dados da coluna.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar o mapa do segmento.|  
+|coluna|Verifique se o número de registros em um segmento de coluna corresponde à contagem de registros armazenada no índice desse segmento de coluna.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
+|coluna|Se uma coluna não tiver nenhuma estatística de segmento, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
+|coluna|Se uma coluna não tiver informações de compactação ou de armazenamento de segmento, será gerado um erro.|Os arquivos de banco de dados não passaram nas verificações de consistência.|  
+|coluna|Relate um erro se as estatísticas do segmento de uma coluna não coincidirem com os valores da coluna real para a ID de dados mínimos, ID de dados máximos, número de valores distintos, número de linhas ou a presença de valores NULL.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
 |ColumnSegment|Se a ID de dados mínimos ou a ID de dados máximos for menor que o valor do sistema reservado para NULL, marque as informações de segmento de coluna como corrompido.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
 |ColumnSegment|Se não houver nenhuma linha para este segmento, os valores mínimo e máximo de dados da coluna devem ser definidos para o valor do sistema reservado para NULL.  Se o valor não for nulo, será gerado um erro.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
 |ColumnSegment|Se a coluna tiver linhas e pelo menos um valor não nulo, verifique que a ID de dados mínimos e máximos da coluna é maior que o valor do sistema reservado para NULL.|As verificações de consistência do banco de dados (DBCC) falharam ao verificar as estatísticas do segmento.|  
@@ -261,8 +258,8 @@ Execution complete
 |Tabela de DBCC|Para a tabela em validação, verifique se o número de colunas é menor que zero e gere um erro se for verdadeiro.  Também ocorrerá um erro se o repositório de coluna de uma coluna na tabela for NULL.|Há corrupção na camada de armazenamento. A coleção de colunas na tabela '%{parent/}' está corrompida.|  
 |Partição do DBCC|Verifica se a quem a tabela que pertence a partição que está sendo validada pertence e se o número de colunas da tabela for menor que zero, indica que a coleção de colunas está corrompida para a tabela. Também ocorrerá um erro se o repositório de coluna de uma coluna na tabela for NULL.|Há corrupção na camada de armazenamento. A coleção de colunas na tabela '%{parent/}' está corrompida.|  
 |Partição do DBCC|Percorre cada coluna da partição selecionada e verifica se cada segmento da partição tem um link válido para uma estrutura de segmento de coluna.  Se nenhum segmento tiver um link NULL, a partição será considerada corrompida.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
-|Coluna|Retornará um erro se o tipo de coluna não for válido.|Um tipo de segmento inválido foi encontrado.|  
-|Coluna|Retornará um erro se qualquer coluna tiver uma contagem negativa para o número de segmentos em uma coluna ou se o ponteiro para a estrutura de segmento de coluna de um segmento tiver um link NULL.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
+|coluna|Retornará um erro se o tipo de coluna não for válido.|Um tipo de segmento inválido foi encontrado.|  
+|coluna|Retornará um erro se qualquer coluna tiver uma contagem negativa para o número de segmentos em uma coluna ou se o ponteiro para a estrutura de segmento de coluna de um segmento tiver um link NULL.|Há corrupção na camada de armazenamento. A coleção de segmentos da coluna '%{parent/}' está corrompida.|  
 |Comando DBCC|O comando DBCC relatará várias mensagens de status conforme ele passa para a operação de DBCC.  Ele relatará uma mensagem de status antes de iniciar, que inclui o banco de dados, a tabela ou o nome de coluna do objeto e novamente após a conclusão de cada verificação de objeto.|Verificando a consistência do \<objectname > \<objecttype >. Fase: pré-verificação.<br /><br /> Verificando a consistência do \<objectname > \<objecttype >. Fase: pós-verificação.|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>Resoluções comuns para condições de erro  
@@ -305,7 +302,7 @@ Execution complete
 > [!NOTE]  
 >  Essa configuração não terá impacto no DBCC quando o comando for executado sob demanda.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Processar banco de dados, tabela ou partição &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Monitorar uma instância do Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   

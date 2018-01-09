@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb3185b6c95807fa4adb383844a62dcb14342a7c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eaea16c728177c1a2672bfd04075079598e920c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Definindo e identificando objetos (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Objetos são identificados em XML para comandos Analysis (XMLA) usando identificadores de objeto e referências de objeto e são definidos usando elementos do Analysis Services Scripting Language (ASSL) comandos XMLA.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="object-definitions"></a>Definições do objeto  
  O [criar](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) e [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) comandos no XMLA criam ou alteram, respectivamente, objetos em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. As definições para os objetos são representadas por um [ObjectDefinition](../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md) elemento que contém elementos da ASSL. Identificadores de objeto podem ser especificados explicitamente para todos os principais e muitos dos objetos secundários por meio de [ID](../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md) elemento. Se o **ID** elemento não for usado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância fornece um identificador exclusivo, com uma convenção de nomenclatura que depende do objeto a ser identificado. Para obter mais informações sobre como usar o **criar** e **Alter** comandos para definir objetos, consulte [criando e alterando objetos &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento de objeto &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
  [Elemento ParentObject &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)   
  [Elemento Source &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   

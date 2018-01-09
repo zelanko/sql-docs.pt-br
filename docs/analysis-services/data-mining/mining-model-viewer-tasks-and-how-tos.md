@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 61bcf404f76a25b4003bbf96be87a2191c903b0f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 49b33d951d759ea941ad8944db5f9e515698bfc7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tarefas e instruções do visualizador do modelo de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Designer de mineração de dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém várias ferramentas que você pode usar para explorar modelos de mineração. Os tópicos a seguir fornecem instruções passo a passo sobre como concluir tarefas específicas do uso da guia **Visualizador do Modelo de Mineração** no designer.  
@@ -47,13 +45,13 @@ ms.lasthandoff: 12/08/2017
   
 -   [Filtrar uma conjunto de itens em um modelo de regras de associação](../../analysis-services/data-mining/filter-an-itemset-in-an-association-rules-model.md)  
   
--   [Detalhar dados do caso a partir do modelo de mineração](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
+-   [Detalhar dados de caso com base em um modelo de mineração](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
   
 -   [Exibir a fórmula para um modelo de série temporal &#40;Data Mining&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [Alterar as cores usadas no Visualizador de Mineração de Dados](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tutorial de mineração de dados básico](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7155763db87be5c44ae9e5718d3d72939380038b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Fazendo backup, restaurando e sincronizando bancos de dados (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]No XML for Analysis, existem três comandos que fazer backup, restaurar e sincronizar bancos de dados:  
@@ -152,9 +150,9 @@ ms.lasthandoff: 12/08/2017
 ### <a name="synchronizing-rolap-objects"></a>Sincronizando objetos ROLAP  
  O **sincronizar** comando não pode sincronizar agregações ou dados para objetos que usam o armazenamento ROLAP porque essas informações estão armazenadas em tabelas em uma fonte de dados relacional subjacente. No entanto, os metadados para objetos ROLAP podem ser sincronizados. Para sincronizar os metadados, o **sincronizar** comando recria a estrutura da tabela em uma fonte de dados relacional.  
   
- Você pode usar o **local** elemento em um comando Synchronize para sincronizar objetos ROLAP. Para cada **local** elemento usado para transferir uma fonte de dados, o **DataSourceType** propriedade deve ser definida explicitamente como *Local*. . Você também deve definir o **ConnectionString** propriedade o **local** elemento para a cadeia de caracteres de conexão do novo local. Durante a sincronização, o **sincronizar** comando substituirá a cadeia de conexão da fonte de dados identificada pelo **DataSourceID** propriedade o **local** elemento com o valor da **ConnectionString** propriedade o **local** elemento.  
+ Você pode usar o **local** elemento em um comando Synchronize para sincronizar objetos ROLAP. Para cada **local** elemento usado para transferir uma fonte de dados, o **DataSourceType** propriedade deve ser definida explicitamente como *Local*. para obter informações sobre a ferramenta de configuração e recursos adicionais. Você também deve definir o **ConnectionString** propriedade o **local** elemento para a cadeia de caracteres de conexão do novo local. Durante a sincronização, o **sincronizar** comando substituirá a cadeia de conexão da fonte de dados identificada pelo **DataSourceID** propriedade o **local** elemento com o valor da **ConnectionString** propriedade o **local** elemento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento de backup &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Restaurar o elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
  [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   

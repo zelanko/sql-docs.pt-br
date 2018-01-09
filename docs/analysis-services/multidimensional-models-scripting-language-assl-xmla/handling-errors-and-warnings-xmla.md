@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 510e6bbbc7155c60241b9aee4ed8b33f130652ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Manipulando erros e avisos (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tratamento de erros é necessário quando um XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método não é executado, é executado com êxito, mas gera erros ou avisos, ou seja executado com êxito mas retorna resultados que contêm erros.  
@@ -61,11 +59,11 @@ ms.lasthandoff: 12/08/2017
   
 |Nome da coluna|Tipo|Description|Nulo permitido<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Código de retorno que indica o êxito ou a falha do método. O valor hexadecimal deve ser convertido em um **UnsignedInt** valor.|Não|  
+|**ErrorCode**|**UnsignedInt**|Código de retorno que indica o êxito ou a falha do método. O valor hexadecimal deve ser convertido em um **UnsignedInt** valor.|não|  
 |**WarningCode**|**UnsignedInt**|Código de retorno que indica uma condição de aviso. O valor hexadecimal deve ser convertido em um **UnsignedInt** valor.|Sim|  
-|**Description**|**Cadeia de caracteres**|Texto e descrição de erro ou de aviso retornadas pelo componente que gerou o erro.|Sim|  
-|**Origem**|**Cadeia de caracteres**|Nome do componente que gerou o erro ou o aviso.|Sim|  
-|**Arquivo de ajuda**|**Cadeia de caracteres**|Caminho ou URL para o arquivo de Ajuda ou tópico que descreve o erro ou o aviso.|Sim|  
+|**Descrição**|**String**|Texto e descrição de erro ou de aviso retornadas pelo componente que gerou o erro.|Sim|  
+|**Origem**|**String**|Nome do componente que gerou o erro ou o aviso.|Sim|  
+|**Arquivo de ajuda**|**String**|Caminho ou URL para o arquivo de Ajuda ou tópico que descreve o erro ou o aviso.|Sim|  
   
  <sup>1</sup> indica se os dados são necessários e devem ser retornados ou se os dados são opcionais e uma cadeia de caracteres nula será permitida se a coluna não se aplica.  
   
@@ -134,7 +132,7 @@ HelpFile="" />
 </return>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo com XMLA no Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

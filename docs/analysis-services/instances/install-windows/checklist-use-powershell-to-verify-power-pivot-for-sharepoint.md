@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98c99d91fcbd0452f0873c32e2ef6f4fbe7d356d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b3c2fc5eb3c70f65c8453bd844a61db71464d39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de verificação: usar o PowerShell para verificar o Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Não [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] operação de instalação ou de recuperação será completa sem uma passagem de teste de verificação rigoroso que confirme seus serviços e dados estão operacionais. Neste artigo, mostramos como executar essas etapas usando o Windows PowerShell. Colocamos cada etapa em sua própria seção para que você possa ir diretamente para as tarefas específicas. Por exemplo, execute o script na seção [Bancos de dados](#bkmk_databases) deste tópico para verificar o nome dos bancos de dados de conteúdo e aplicativo de serviço se quiser agendá-los para manutenção ou backup.  

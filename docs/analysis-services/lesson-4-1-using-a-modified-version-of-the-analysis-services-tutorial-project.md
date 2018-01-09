@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lição 4-1-usando uma versão modificada do projeto Tutorial do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]As demais lições neste tutorial se baseiam em uma versão aprimorada do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto do Tutorial que você concluiu nas três primeiras lições. Foram adicionadas outras tabelas e cálculos nomeados à exibição da fonte de dados **Adventure Works DW 2012** e outras dimensões ao projeto. Essas novas dimensões foram adicionadas ao cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Além disso, um segundo grupo de medidas foi adicionado; ele contém medidas de uma segunda tabela de fatos. Esse projeto aprimorado permitirá que você continue a aprender como adicionar funcionalidades ao seu aplicativo de inteligência empresarial sem ter que repetir as ações já aprendidas.  
@@ -49,7 +49,7 @@ Antes de continuar com o tutorial, você deve baixar, extrair, carregar e proces
   
 1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Arquivo** , clique em **Fechar Solução** para fechar os arquivos que não serão usados.  
   
-2.  No menu **Arquivo** , aponte para **Abrir**e clique em **Projeto/Solução**.  
+2.  No menu **Arquivo**, aponte para **Abrir** e clique em **Projeto/Solução**.  
   
 3.  Navegue até o local onde você extraiu os arquivos de projeto do tutorial.  
   
@@ -60,7 +60,7 @@ Antes de continuar com o tutorial, você deve baixar, extrair, carregar e proces
 ## <a name="understanding-the-enhancements-to-the-project"></a>Entendendo os aprimoramentos do projeto  
 A versão aprimorada do projeto é diferente da versão do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você concluiu nas três primeiras lições. As diferenças são descritas nas seções a seguir. Revise estas informações antes de continuar com as demais lições do tutorial.  
   
-### <a name="data-source-view"></a>Exibição da fonte de dados  
+### <a name="data-source-view"></a>Exibição da Fonte de Dados  
 A exibição da fonte de dados no projeto aprimorado contém uma tabela de fatos adicional e quatro tabelas de dimensão adicionais do banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
 Observe que, com dez tabelas na exibição da fonte de dados, o diagrama <All Tables> está ficando muito cheio. Isso dificulta a compreensão das relações entre as tabelas e a localização de tabelas específicas. Para solucionar esse problema, as tabelas são organizadas em dois diagramas lógicos: **Vendas pela Internet** e **Vendas do Revendedor** . Esses diagramas são organizados com base em uma única tabela de fato. Criar diagramas lógicos permite que você exiba e trabalhe com um subconjunto específico de tabelas em uma exibição de fonte de dado em vez de ter que exibir sempre todas as tabelas e suas relações em um único diagrama.  
@@ -68,11 +68,11 @@ Observe que, com dez tabelas na exibição da fonte de dados, o diagrama <All Ta
 #### <a name="internet-sales-diagram"></a>Diagrama Vendas pela Internet  
 O diagrama **Vendas pela Internet** contém as tabelas relacionadas à venda de produtos do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] diretamente aos clientes pela Internet. As tabelas do diagrama são as quatro tabelas de dimensão e a tabela de fatos que você adicionou à exibição da fonte de dados **Adventure Works DW 2012** na Lição 1. Essas tabelas são as seguintes:  
   
--   **Geografia**  
+-   **Geography**  
   
 -   **Cliente**  
   
--   **Data**  
+-   **Date**  
   
 -   **Product**  
   
@@ -89,7 +89,7 @@ O diagrama **Vendas do Revendedor** contém as tabelas relacionadas à venda de 
   
 -   **Geografia**  
   
--   **Data**  
+-   **Date**  
   
 -   **Product**  
   
@@ -123,6 +123,6 @@ O cubo **Tutorial do Analysis Services** agora tem dois grupos de medidas: o gru
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Definindo propriedades de atributo pai em uma hierarquia pai-filho](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Implantando um projeto do Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

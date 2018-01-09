@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,13 +30,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Algoritmo Rede Neural da Microsoft
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo rede Neural é uma implementação da arquitetura de rede neural populares e adaptável para aprendizado de máquina.  O algoritmo funciona testando cada estado possível do atributo de entrada com cada estado possível do atributo previsível e calculando probabilidades para cada combinação com base nos dados de treinamento. Essas probabilidades podem ser usadas para tarefas de classificação ou regressão e também para a previsão de um resultado com base em alguns atributos de entrada. Uma rede neural também pode ser usada para análise de associação.  
   
  Quando cria um modelo de mineração usando o algoritmo de Rede Neural do [!INCLUDE[msCoName](../../includes/msconame-md.md)] , você pode incluir várias saídas e o algoritmo criará várias redes. O número de redes contidas em um único modelo de mineração depende do número de estados (ou valores de atributo) nas colunas de entrada, bem como do número de colunas previsíveis que o modelo de mineração usa e o número de estados nessas colunas.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
  Para obter informações gerais sobre como criar uma consulta em um modelo de mineração de dados, consulte [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   Não suporta detalhamento ou dimensões de mineração de dados. Isso acontece porque a estrutura dos nós do modelo de mineração não corresponde diretamente aos dados subjacentes.  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Não suporta a criação de dimensões de mineração de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência técnica do algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Conteúdo do modelo de mineração para modelos de rede Neural &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)   

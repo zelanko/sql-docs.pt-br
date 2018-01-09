@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -41,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Programação de modelo de propriedades de cubo - Multidimensional
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cubos têm várias propriedades que você pode definir para afetar o comportamento de todo o cubo. Essas propriedades são resumidas na tabela a seguir.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |**AggregationPrefix**|Especifica o prefixo comum usado para nomes de agregação.|  
 |**Agrupamento**|Especifica o identificador de localidade (LCID) e o sinalizador de comparação, separados por um sublinhado: por exemplo, Latin1_General_C1_AS.|  
 |**DefaultMeasure**|Contém uma linguagem MDX que define a medida padrão para o cubo.|  
-|**Description**|Fornece uma descrição do cubo que pode ser exposta em aplicativos cliente.|  
+|**Descrição**|Fornece uma descrição do cubo que pode ser exposta em aplicativos cliente.|  
 |**ErrorConfiguration**|Contêm configurações de tratamento de erros que podem ser definidas para tratar chaves duplicadas, chaves desconhecidas, limites de erros, ação devido à detecção de erros, arquivo de log de erros e tratamento de chaves nulas.|  
 |**EstimatedRows**|Especifica o número de linhas estimadas no cubo.|  
 |**ID**|Contém o identificador exclusivo (ID) do cubo.|  
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Para obter mais informações sobre como definir valores para a propriedade ErrorConfiguration ao trabalhar com valores nulos e outros problemas de integridade de dados, consulte [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [O cache pró-ativo &#40; Partições &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   
   

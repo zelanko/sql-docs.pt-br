@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sample-data-and-projects"></a>Instalar dados de exemplo e projetos 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Use as instruções e links fornecidos neste tópico para instalar todos os arquivos de projeto e os dados usados em tutoriais do Analysis Services.  
@@ -154,7 +154,7 @@ O arquivo de projeto para a Lição 4 é particularmente importante porque forne
 ## <a name="next-step"></a>Próxima etapa  
 Você agora está pronto para usar o tutorial. Para obter mais informações sobre como começar, consulte [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Instalar o SQL Server 2016 por meio do Assistente de Instalação &#40;Instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
 [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  

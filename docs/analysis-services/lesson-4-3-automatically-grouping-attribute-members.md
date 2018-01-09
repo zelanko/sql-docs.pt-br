@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d787f200287979270ce8ffe818c3375878fc284
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 46154c876e57ea952e0df93294f6d65891fa91c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lição 4-3 - agrupando membros de atributo automaticamente
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Quando você procurar um cubo, você normalmente dimensiona os membros de uma hierarquia de atributo pelos membros de outra hierarquia de atributo. Por exemplo, você pode agrupar as vendas de cliente por cidade, produto comprado ou sexo. Porém, com determinados tipos de atributo, é útil usar o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para criar automaticamente agrupamentos de membros de atributo com base na distribuição dos membros dentro de uma hierarquia de atributo. Por exemplo, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode criar grupos de valores de renda anual para clientes. Ao fazer isso, os usuários que navegarem pela hierarquia de atributo verão o nome e os valores dos grupos em vez dos próprios membros. Isso limita o número de níveis que são apresentados aos usuários, o que pode ser mais útil para a análise.  
@@ -132,7 +132,7 @@ Nas tarefas deste tópico, você habilitará tipos diferentes de agrupamentos pa
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Ocultando e desabilitando as hierarquias de atributo](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Agrupar membros de atributo &#40;Discretização&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

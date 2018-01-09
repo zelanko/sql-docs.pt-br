@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cb289289301d3837ff2f82848b6fd183354b7e56
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f44a257eb21427252cd611e4bd7cbb052f27df2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão linear (Analysis Services – Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Regressão Linear. Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -146,7 +144,7 @@ ms.lasthandoff: 12/08/2017
  MSOLAP_NODE_SHORT_CAPTION  
  O rótulo usado para exibição.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ao criar um modelo usando o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , o mecanismo de mineração de dados cria uma instância especial de um modelo de árvores de decisão e fornece parâmetros que restringem a árvore para que ela tenha todos os dados de treinamento em um único nó. Todas as entradas contínuas são sinalizadas e avaliadas como regressores potenciais, mas apenas os regressores que se ajustam aos dados são mantidos como regressores no modelo final. A análise gera uma única fórmula de regressão para cada regressor ou nenhuma fórmula de regressão.  
   
  Você pode exibir toda a fórmula de regressão em **Legenda de Mineração**clicando no nó **(All)** no [Visualizador de Árvores da Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
@@ -194,7 +192,7 @@ ms.lasthandoff: 12/08/2017
   
  Com isso, presumindo que a idade média seja de aproximadamente 45 anos, a interceptação (VALUETYPE = 11) da fórmula de regressão indica a renda média.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Regressão Linear da Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Referência técnica do algoritmo de regressão Linear de Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b8da7c6608b10c5816fafda8129efbf9e393e9b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo rede Neural da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|hidden layer|Em branco|  
+|Camada oculta|Em branco|  
 |Nó oculto|Em branco|  
 |Camada de saída|Em branco|  
 |Nó de saída|Nome do atributo de saída|  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/08/2017
 |Estatísticas marginais|Em branco|  
 |Camada de entrada|Em branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|hidden layer|Em branco|  
+|Camada oculta|Em branco|  
 |Nó oculto|Número inteiro que indica a sequência do nó oculto na lista de nós ocultos.|  
 |Camada de saída|Em branco|  
 |Nó de saída|Se o atributo de saída for contínuo, conterá o nome do atributo de saída.<br /><br /> Se o atributo de saída for discreto ou diferenciado, contém o nome do atributo e o valor.|  
@@ -196,7 +194,7 @@ ms.lasthandoff: 12/08/2017
  MSOLAP_NODE_SHORT_CAPTION  
  Para modelos de rede neural, sempre em branco.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O objetivo do treinamento de um modelo de rede neural é determinar os pesos associados a cada transição de uma entrada para um ponto médio, e de um ponto médio para um ponto de extremidade. Assim, a camada de entrada do modelo existe principalmente para armazenar os valores reais usados para criar o modelo. A camada oculta armazena os pesos que foram computados e fornece ponteiros para os atributos de entrada. A camada de saída armazena os valores previsíveis e também fornece ponteiros para os pontos médios na camada oculta.  
   
 ##  <a name="bkmk_NodeIDs"></a> Usando nomes e IDs de nós  
@@ -244,8 +242,8 @@ ms.lasthandoff: 12/08/2017
   
  **Atributo contínuo:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm a média do atributo, o coeficiente do nó como um todo e a variação do coeficiente.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Referência técnica do algoritmo Rede Neural da Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelos de rede neural](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   

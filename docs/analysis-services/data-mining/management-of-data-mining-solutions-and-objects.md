@@ -5,12 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gerenciamento de soluções de mineração de dados e objetos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece ferramentas de cliente que você pode usar para gerenciar estruturas de mineração e modelos de mineração. Esta seção descreve as operações de gerenciamento que você pode executar usando cada ambiente.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
  Além dessas ferramentas, você pode gerenciar objetos de mineração de dados programaticamente, usando AMO, ou usar outros clientes que se conectam a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , como os Suplementos de Mineração de Dados para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Movendo objetos de mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Movendo objetos de Mineração de dados](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
  Os links a seguir fornecem informações sobre como modificar objetos de mineração de dados usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Editar a exibição da fonte de dados usada para a Estrutura de Mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar a exibição da fonte de dados usada para a estrutura de mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 12/08/2017
   
  **Restrições:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gera algumas instruções XMLA que têm suporte apenas para uso interno e não podem ser usadas em scripts XML DDL.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Documentação do desenvolvedor do Analysis Services](../../analysis-services/analysis-services-developer-documentation.md)  
   
   

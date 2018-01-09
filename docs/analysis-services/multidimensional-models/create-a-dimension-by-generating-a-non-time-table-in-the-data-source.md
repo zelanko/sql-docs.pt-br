@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente de dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão sem usar uma fonte de dados. Isso é possível selecionando a opção **Gerar uma tabela que não seja de tempo na fonte de dados** da página **Selecionar Método de Criação** do assistente. Para criar uma nova tabela de dimensão na fonte de dados subjacente, você precisa ter permissão para criar objetos na fonte de dados subjacente. Ao definir uma dimensão sem uma exibição da fonte de dados predefinida, você pode definir a dimensão do zero ou pode usar um modelo de dimensão.  
@@ -40,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Cliente  
   
--   Data  
+-   data  
   
 -   Departamento  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  Quando você marcar a caixa de seleção **Esta é uma dimensão variável** , o Assistente para Dimensões definirá os atributos indicados na seguinte tabela:  
   
-|Atributo|Tipo|  
+|attribute|Tipo|  
 |---------------|----------|  
 |SCD OriginalID|SCDOriginalID|  
 |Data de Término da SCD|SCDEndDate|  
@@ -112,7 +109,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="completing-the-dimension-wizard"></a>Concluindo o Assistente para Dimensões  
  Na página **Concluindo o Assistente** , digite um nome para a nova dimensão e veja a estrutura da dimensão. Marque a caixa de seleção **Gerar esquema agora** para iniciar o Assistente de Geração de Esquema depois que você clicar em **Concluir**. Na maioria dos casos, você não deve marcar esta caixa de seleção se planejar criar outros objetos. Se você não marcar essa caixa de seleção, poderá usar o Designer de Dimensão para gerar o esquema posteriormente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma dimensão de tempo ao gerar uma tabela de tempo](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [Criar uma dimensão de tempo ao gerar uma tabela de tempo](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
