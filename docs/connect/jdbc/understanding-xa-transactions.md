@@ -26,7 +26,7 @@ ms.lasthandoff: 11/18/2017
 # <a name="understanding-xa-transactions"></a>Compreendendo transações XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece suporte para plataforma Java, Enterprise Edition/JDBC 2.0 as transações distribuídas opcionais. Conexões JDBC obtidas através da classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) podem participar de ambientes, como servidores da plataforma Java, Enterprise Edition (Java EE) aplicativo de processamento de transações distribuídas padrão.
+  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece suporte para as transações distribuídas opcionais da plataforma Java, Enterprise Edition/JDBC 2.0. As conexões JDBC obtidas através da classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) podem participar de ambientes de processamento de transações distribuídas padrão, como servidores de aplicativo da plataforma Java, Enterprise Edition (Java EE).
   
 > [!WARNING]  
 >  O Microsoft JDBC Driver 4.2 (e superior) para SQL inclui novas opções de tempo limite para o recurso existente para reversão automática de transações não preparadas. Consulte [definindo as configurações de tempo limite do lado do servidor para reversão automática de transações não preparadas](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) mais adiante neste tópico para obter mais detalhes.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Diretrizes e limitações ao usar transações XA  
  As diretrizes adicionais a seguir se aplicam a transações firmemente acopladas:  
   
--   Ao usar transações XA junto com o MS DTC, talvez você observe que a versão atual do MS DTC não ofereça suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.
+-   Ao usar transações XA junto com o MS DTC, talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra. 
   
      O hotfix fornecido em [MSDTC e transações firmemente acopladas](http://support.microsoft.com/kb/938653) habilita o suporte a ramificações XA firmemente acopladas em que várias ramificações XA com a mesma transação global ID (GTRID) são mapeadas para uma única ID de transação de MS DTC. Esse suporte permite que várias ramificações XA firmemente acopladas vejam as alterações uma da outra no Gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
