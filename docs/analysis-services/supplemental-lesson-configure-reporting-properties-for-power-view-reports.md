@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementares lição - configurar propriedades de relatório para relatórios do Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ Esta lição suplementar, você definirá propriedades de relatório para o proj
   
 Tempo estimado para concluir esta lição: **30 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Esta lição suplementar faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas desta lição suplementar, conclua todas as lições anteriores.  
 Para concluir esta lição suplementar específica, você deverá ter o seguinte:  
   
@@ -155,59 +155,59 @@ Você somente definirá algumas propriedades de coluna diferentes aqui, mas há 
   
     **Cliente**  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Geography Id|Hidden|Verdadeiro|  
+    |Geography Id|Hidden|True|  
     |Birth Date|Formato de Dados|Data Abreviada|  
   
-    **Data**  
+    **Date**  
   
     > [!NOTE]  
     > Como a tabela Date foi selecionada como a tabela de datas do modelo usando a configuração Marcar como Tabela de Data, na Lição 7: Marcar como Tabela de Data, e a coluna Date na tabela Date como a coluna a ser usada como o identificador exclusivo, a propriedade Identificador de Linha para a coluna Date será automaticamente definida como True e não poderá ser alterada. Ao usar as funções de inteligência de tempo em fórmulas DAX, você deverá especificar uma tabela de data. Neste modelo, você criou várias medidas usando funções de inteligência de tempo para calcular dados de vendas para vários períodos como trimestres anterior e atual, e também para usar em KPIs. Para obter mais informações sobre como especificar uma tabela de data, consulte [Especificar Marcar como Tabela de Data para uso com a inteligência de dados temporais &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nos Manuais Online do SQL Server.  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Data|Formato de Dados|Data Abreviada|  
-    |Day Number of Week|Hidden|Verdadeiro|  
+    |data|Formato de Dados|Data Abreviada|  
+    |Day Number of Week|Hidden|True|  
     |Day Name|Sort By Column|Day Number of Week|  
-    |Day Of Week|Hidden|Verdadeiro|  
-    |Day of Month|Hidden|Verdadeiro|  
-    |Day of Year|Hidden|Verdadeiro|  
+    |Day Of Week|Hidden|True|  
+    |Day of Month|Hidden|True|  
+    |Day of Year|Hidden|True|  
     |Month Name|Sort By Column|Month|  
-    |Month|Hidden|Verdadeiro|  
-    |Month Calendar|Hidden|Verdadeiro|  
-    |Fiscal Quarter|Hidden|Verdadeiro|  
-    |Fiscal Year|Hidden|Verdadeiro|  
-    |Fiscal Semester|Hidden|Verdadeiro|  
+    |Month|Hidden|True|  
+    |Month Calendar|Hidden|True|  
+    |Fiscal Quarter|Hidden|True|  
+    |Fiscal Year|Hidden|True|  
+    |Fiscal Semester|Hidden|True|  
   
     **Geography**  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Geography Id|Hidden|Verdadeiro|  
-    |Sales Territory Id|Hidden|Verdadeiro|  
+    |Geography Id|Hidden|True|  
+    |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Product Id|Hidden|Verdadeiro|  
-    |Product Alternate Id|Rótulo Padrão|Verdadeiro|  
-    |Product Subcategory Id|Hidden|Verdadeiro|  
+    |Product Id|Hidden|True|  
+    |Product Alternate Id|Rótulo Padrão|True|  
+    |Product Subcategory Id|Hidden|True|  
     |Product Start Date|Formato de Dados|Data Abreviada|  
     |Product End Date|Formato de Dados|Data Abreviada|  
   
     **Internet Sales**  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Product Id|Hidden|Verdadeiro|  
-    |Customer Id|Hidden|Verdadeiro|  
-    |Promotion Id|Hidden|Verdadeiro|  
-    |Currency Id|Hidden|Verdadeiro|  
-    |Sales Territory Id|Hidden|Verdadeiro|  
+    |Product Id|Hidden|True|  
+    |Customer Id|Hidden|True|  
+    |Promotion Id|Hidden|True|  
+    |Currency Id|Hidden|True|  
+    |Sales Territory Id|Hidden|True|  
     |Order Quantity|Tipo de Dados<br /><br />Formato de Dados<br /><br />Casas Decimais|Número Decimal<br /><br />Número Decimal<br /><br />0|  
-    |Order Date|Formato de Dados|Data Abreviada|  
+    |Data do Pedido|Formato de Dados|Data Abreviada|  
     |Due Date|Formato de Dados|Data Abreviada|  
     |Ship Date|Formato de Dados|Data Abreviada|  
   

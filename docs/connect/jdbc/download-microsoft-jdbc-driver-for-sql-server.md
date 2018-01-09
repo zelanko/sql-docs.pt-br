@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c0eabc75736667c2b56440baccc85c78fd5271e1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: eaa56ea9b9109a62fe2ee6db2b5e674f15b4267b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Baixe o Microsoft JDBC Driver para SQL Server
 
@@ -34,7 +34,7 @@ O Driver JDBC pode ser adicionado a um projeto Maven adicionando-o como uma depe
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.1.jre8</version>
+    <version>6.2.2.jre8</version>
 </dependency>
 ```  
 

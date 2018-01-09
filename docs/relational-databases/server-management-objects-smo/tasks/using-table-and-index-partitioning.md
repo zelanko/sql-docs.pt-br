@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97bb7090df8c92ab960cb252ac0da2d91861878f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae5b30ad5cab9d7e9ceb34103e64b7a782367b1e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-table-and-index-partitioning"></a>Usando o particionamento de tabela e índice
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dados podem ser armazenados usando os algoritmos de armazenamento fornecidos por [tabelas e índices particionados](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  
@@ -135,7 +135,7 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas e índices particionados](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

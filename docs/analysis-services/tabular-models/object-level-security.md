@@ -5,12 +5,10 @@ ms.date: 06/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: 
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d86f5ce95ce359f5955e974f7f57012721c3dcb5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-level-security"></a>Segurança em nível de objeto
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Segurança do modelo de dados começa com efetivamente implementando [funções](../../analysis-services/tabular-models/roles-ssas-tabular.md) e filtros de nível de linha para definir permissões de usuário nos dados e objetos de modelo de dados. Começando com modelos de tabela 1400, você também pode definir segurança em nível de objeto, que inclui a segurança em nível de tabela e segurança em nível de coluna a [objeto funções](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
@@ -80,7 +78,7 @@ Neste exemplo, a propriedade metadataPermission da classe columnPermissions para
   }
 ```
 
-## <a name="restrictions"></a>Restrições
+## <a name="restrictions"></a>Restrictions
 
 *  Segurança em nível de tabela não pode ser definida para um modelo se ele divide uma cadeia de relações. É gerado um erro em tempo de design.
  Por exemplo, se houver relações entre as tabelas A e B e B e C, você não pode proteger tabela B. Se a tabela B estiver protegida, de uma consulta na tabela A não pode trânsito as relações entre a tabela A e B e B e C. Nesse caso, uma relação separada pode ser configurada entre as tabelas A e B.
@@ -97,7 +95,7 @@ Neste exemplo, a propriedade metadataPermission da classe columnPermissions para
 
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
 [Objeto Roles (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
 [TMSL (linguagem de script de modelo de tabela)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

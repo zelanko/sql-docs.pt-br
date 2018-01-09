@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ec951bb5666f28167e0ce704e63ba3bb0972d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O Assistente de geração de esquema gera um esquema relacional não normalizado para o banco de dados de área de assunto com base nas dimensões e grupos de medidas em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
@@ -66,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Ocorrerá um erro se mais de uma atributo de chave for especificado na dimensão na qual se baseia a tabela de dimensões.  
   
- Traduções  
+ Translations  
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer atributo que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="fact-tables"></a>Tabelas de fatos  
@@ -87,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
  Se você decidir impor a integridade referencial, restrições de integridade referencial serão geradas entre as tabelas de dimensões e as tabelas de fatos sempre que aplicável.  
   
- Traduções  
+ Translations  
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer propriedade do grupo de medidas que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversão do tipo de dados e comprimentos padrão  
@@ -103,7 +100,7 @@ ms.lasthandoff: 12/08/2017
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Entendendo a geração com incremento](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
  [Gerenciar alterações em exibições da fonte de dados e em fontes de dados](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   

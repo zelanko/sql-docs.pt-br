@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -28,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a006fd31f2a89215387dba48074adcb6a2add509
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 77ca2c4e3a63db80ff21a91309f5fc531e5ba3ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipulação de dados MDX - UPDATE CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +71,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Uma expressão numérica MDX válida que retorna um valor decimal entre 0 e 1.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Você pode atualizar o valor de uma célula folha ou célula não folha especificada em um cubo, alocando opcionalmente o valor para uma célula não folha especificada em células folha dependentes. A célula especificada pela expressão de tupla pode ser qualquer célula válida no espaço multidimensional (ou seja, a célula não tem de ser uma célula folha). No entanto, a célula deve ser agregada com a [soma](../mdx/sum-mdx.md) função de agregação e não deve incluir um membro calculado na tupla que é usada para identificar a célula.  
   
  Pode ser útil considerar a **UPDATE CUBE** instrução como uma sub-rotina que irá gerar automaticamente uma série de operações de write-back de células individuais para células folha e não-folha que acumularão em uma determinada soma.  
@@ -125,7 +125,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  Quando células atualizadas não se sobrepõem, a propriedade de cadeia de conexão **Atualizar Nível de Isolamento** pode ser usada para aprimorar o desempenho de UPDATE CUBE.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Instruções MDX de manipulação de dados &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   

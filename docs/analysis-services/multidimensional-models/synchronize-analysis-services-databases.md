@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8824ea31de1d2dc2774f57ac70af05a30f442408
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bancos de dados equivalentes copiando os dados e metadados de um banco de dados em um servidor de origem para um banco de dados em um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
@@ -51,7 +48,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Os whitepapers a seguir, escritos para versões anteriores do Analysis Services, ainda se aplicam às soluções multidimensionais escalonáveis criadas usando o SQL Server 2012. Para obter mais informações, consulte [Consulta em expansão com o Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) e [Expansão de consulta para o Analysis Services com bancos de dados somente leitura](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  No servidor de destino do qual a sincronização do banco de dados é iniciada, você deve ser membro da função de administrador de servidor do Analysis Services. No servidor de origem, sua conta de usuário do Windows deve ter permissões de Controle Total no banco de dados de origem. Se você estiver sincronizando o banco de dados interativamente, lembre-se de que a sincronização é executada no contexto de segurança de sua identidade de usuário do Windows. Se sua conta tiver acesso negado a objetos específicos, os objetos serão excluídos da operação. Para obter mais informações sobre as funções de administrador do servidor e as permissões de banco de dados, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [Conceder permissões de banco de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
  A porta TCP 2383 deve estar aberta em ambos os servidores para permitir conexões remotas entre instâncias padrão. Para obter mais informações sobre a criação de uma exceção no Firewall do Windows, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -192,10 +189,10 @@ ms.lasthandoff: 12/08/2017
   
 8.  Clique em **Concluir** para sincronizar. Depois de verificar as opções na página **Concluindo o Assistente** , clique em **Concluir** novamente.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Se você não sincronizou funções ou associação, lembre-se de especificar agora as permissões de acesso de usuário no banco de dados de destino.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Implantar soluções de modelo usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [Implantar soluções de modelo usando o Assistente de implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  

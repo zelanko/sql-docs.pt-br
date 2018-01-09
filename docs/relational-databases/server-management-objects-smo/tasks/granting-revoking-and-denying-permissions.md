@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25903194512146b53d325b217ff7d866d7b38ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d9a4e8529fdb24060db49e2263576f492570e64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Concedendo, revogando e negando permissões
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> objeto é usado para atribuir um conjunto de permissões ou uma permissão de servidor individuais para o <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> objeto. Para permissões em nível de servidor, o usuário autorizado se refere a um logon. Logons autenticados pelo Windows são listados como nomes de usuários do Windows. Quando essa amostra de código é executada, ela revoga a permissão do usuário autorizado e verifica se ela foi removida com o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
@@ -257,7 +257,7 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

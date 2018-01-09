@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 3033651c005ce39bd0e2565dd51ed2d2b1089e62
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar o SQL Server Integration Services (SSIS) no Linux
 
@@ -119,6 +119,29 @@ Para remover `mssql-server-is`, você pode executar o seguinte comando:
 ```bash
 sudo yum remove mssql-server-is
 ```
+
+## <a name="unattended-installation"></a>Instalação autônoma
+Para executar uma instalação autônoma quando você executa `ssis-conf setup`, faça o seguinte:
+1.  Especifique o `-n` (nenhum prompt) opção.
+2.  Fornece valores necessários definindo variáveis de ambiente.
+
+O exemplo a seguir faz o seguinte:
+-   Instala o SSIS.
+-   Especifica a edição de desenvolvedor, fornecendo um valor para o `SSIS_PID` variável de ambiente.
+-   Aceita o EULA, fornecendo um valor para o `ACCEPT_EULA` variável de ambiente.
+-   Executa uma instalação autônoma, especificando o `-n` (nenhum prompt) opção.
+
+```
+sudo SSIS_PID= Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
+```
+
+### <a name="environment-variables-for-unattended-installation"></a>Variáveis de ambiente para uma instalação autônoma
+
+| Variável de ambiente | Description |
+|---|---|
+| **ACCEPT_EULA** | Aceita o contrato de licença do SQL Server quando definido como qualquer valor (por exemplo, `Y`).|
+| **SSIS_PID** | Define a chave de produto ou edição do SQL Server. Aqui estão os valores possíveis:<br/>Evaluation<br/>Desenvolvedor<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Uma chave do produto<br/><br/>Se você especificar uma chave do produto, a chave do produto deve estar no formato `#####-#####-#####-#####-#####`, onde `#` é uma letra ou um número.  |
+| | |
 
 ## <a name="next-steps"></a>Próximas etapas
 

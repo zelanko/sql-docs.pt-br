@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecb5e4f780c1aa35b5ab509cc7862b477c3854d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1ad6e283f580aa36ef84d62ae274a57f6d84e6a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Trabalhando com tipos de dados definidos pelo usuário no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Você pode acessar a funcionalidade do tipo definido pelo usuário (UDT) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do [!INCLUDE[tsql](../../includes/tsql-md.md)] idioma usando a sintaxe de consulta normal. Os UDTs podem ser usados na definição de objetos de banco de dados, como variáveis em lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)], em funções e procedimentos armazenados, e como argumentos em funções e procedimentos armazenados.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
  [Manipulando dados UDT](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)  
  Descreve como usar o [!INCLUDE[tsql](../../includes/tsql-md.md)] para trabalhar com dados UDT no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos definidos pelo usuário do CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

@@ -5,13 +5,10 @@ ms.date: 03/02/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 569cd3ff914f7b758fb1cfaf1a8c631e8c3d9c4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8c7b3af6a309be12a58ae666de50ad702fe1fbd1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-modeling-ssas"></a>Modelagem tabular (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Modelos tabulares são bancos de dados do Analysis Services que são executados na memória ou no modo DirectQuery, acessando os dados diretamente em fontes de dados relacionais de back-end.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
  [Acesso aos dados do modelo tabular](../../analysis-services/tabular-models/tabular-model-data-access.md) – os tópicos nesta seção descrevem a conexão a soluções de modelo de tabela implantadas.
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Novidades do Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Comparando soluções tabulares e multidimensionais &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Ferramentas e aplicativos usados no Analysis Services](../../analysis-services/tools-and-applications-used-in-analysis-services.md)   

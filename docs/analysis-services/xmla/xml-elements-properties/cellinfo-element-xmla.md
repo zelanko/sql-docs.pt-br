@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CellInfo Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f3d572ebdc461a5323d4e2675d23137063ff307
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2e26f0b4adb6872fed90fcab1a84b2ff83c90a1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cellinfo-element-xmla"></a>Elemento CellInfo (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Representa os metadados de célula contidos pelo pai [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) elemento.  
@@ -52,10 +50,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |Elementos pai|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |Elementos filho|Uma ou mais definições de propriedade de célula|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **CellInfo** elemento contém uma coleção de propriedades de célula para as células incluídas no conjunto de dados multidimensional retornado por uma **raiz** elemento usando o **MDDataSet**tipo de dados. Cada propriedade de célula no **CellInfo** elemento é definido por um elemento XML separado, cada um com um **nome** atributo e um **tipo** atributo. O **nome** atributo da propriedade de célula corresponde ao nome do OLE DB para a propriedade de célula OLAP representada pelo elemento XML e o **tipo** atributo representa o tipo de dados XML da célula propriedade. O nome do elemento XML é usado para identificar o valor da propriedade de célula para as células contidas no **CellData** elemento o **raiz** elemento.  
   
  A sintaxe a seguir descreve uma definição de propriedade de célula:  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 </OlapInfo>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

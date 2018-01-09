@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: XOR
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e2c87b1438d55f6b47ee03dc074c5c66e81be888
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: dfde684aa3b9de8403c16335247826f7d2ae4f29
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ Expression1 XOR Expression2
 ## <a name="return-value"></a>Valor de retorno  
  Um valor booliano que retorna **true** se apenas um argumento for avaliado como **true**; caso contrário, **false**.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **XOR** operador trata ambos os parâmetros como valores boolianos (zero, 0, como **false**; caso contrário, **true**) antes do operador realizar a exclusão lógica. A tabela a seguir ilustra como o **XOR** operador realizar a exclusão lógica.  
   
 |*Expression1*|*Expression2*|Valor de retorno|  
@@ -59,7 +59,7 @@ Expression1 XOR Expression2
 |**false**|**true**|**true**|  
 |**false**|**false**|**false**|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de operador MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

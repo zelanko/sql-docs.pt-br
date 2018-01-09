@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,11 +19,11 @@ helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-transact-sql"></a>PREVER (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ O `MODEL` parâmetro é usado para especificar o modelo usado para previsão ou 
 
 O objeto de modelo pode ser criado usando o R ou Python ou outra ferramenta.
 
-**dados**
+**data**
 
 O parâmetro de dados é usado para especificar os dados usados para previsão ou pontuação. Dados são especificados na forma de uma fonte de tabela na consulta. Fonte de tabela pode ser uma tabela, o alias de tabela, alias CTE, exibição ou função com valor de tabela.
 
@@ -91,7 +91,7 @@ As mensagens de erro relacionadas aos dados, o modelo ou o formato de coluna sã
 
 Não é possível exibir a estrutura de modelo interno usando `PREDICT`. Se você quiser entender o conteúdo do modelo em si, carregar o objeto de modelo, desserializá-la e usar código R apropriado para analisar o modelo.
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 
 O `PREDICT` função é suportada em todas as edições do SQL Server, incluindo o Linux.
 

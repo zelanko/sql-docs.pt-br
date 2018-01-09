@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 924f2a618b029d3724a2435fa1a27287d454247e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 09f1785d313f0598121ad06e42b26ca4f4367730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programando objetos OLAP AMO avançados
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tópico explica o Analysis Management Objects (AMO) detalhes de OLAP programação avançada de objetos. Este tópico contém as seguintes seções:  
@@ -425,7 +423,7 @@ static public void CreatePerspectives(Cube cube)
   
 2.  Adicione especificações de cache.  
   
-|Especificação|Descrição|  
+|Especificação|Description|  
 |-------------------|-----------------|  
 |AggregationStorage|O tipo de armazenamento para agregações.<br /><br /> Aplica-se somente a partições. Na dimensão, deve ser **Regular.**|  
 |SilenceInterval|Quantidade mínima de tempo em que o cache existirá antes do início do processo de imagens MOLAP.|  
@@ -490,7 +488,7 @@ static public void CreateTranslations(Database db)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices>   
  [Introdução às Classes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Classes OLAP AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   

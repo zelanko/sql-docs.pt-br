@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8361cd9ed74ce3c3de1d256e0499a44c35bfe5b2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c82d4e7bc8f39168a963cc5b11cbafe410eb6f2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>Convenções de sintaxe de MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/27/2017
 |[,] ...n|Indica que o item anterior pode ser repetido n vezes. Às vezes, os itens são separados por vírgulas.|  
 |\<Rótulo >:: =|Indica o nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular partes de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre colchetes angulares: \<rótulo >.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de linguagem MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

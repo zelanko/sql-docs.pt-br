@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f17e0880839470e128266ae62993bceeb4457c3e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Alterar propriedades em uma exibição da fonte de dados (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois de definir uma exibição da fonte de dados usando o Assistente de exibição de fonte de dados e adicionar tabelas, exibições, cálculos nomeados e exibir consultas nomeadas à fonte de dados, convém alterar as propriedades relacionadas a:  
@@ -54,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
 |Propriedade|Description|  
 |--------------|-----------------|  
-|Fonte de dados|Especifica a fonte de dados da exibição da fonte de dados cujas propriedades você está exibindo.|  
+|fonte de dados|Especifica a fonte de dados da exibição da fonte de dados cujas propriedades você está exibindo.|  
 |Description|Especifica a descrição da exibição da fonte de dados.|  
 |Nome|Especifica o nome da exibição da fonte de dados que aparece no Gerenciador de Soluções ou no banco de dados do Analysis Services. Você pode alterar o nome da exibição da fonte de dados aqui ou no Gerenciador de Soluções.|  
 |NameMatchingCriteria|Os critérios de correspondência de nomes da fonte de dados. O padrão será (nenhum) se o Assistente de Exibição da Fonte de Dados detectar relações entre chave primária e chave estrangeira. Mesmo que essa propriedade tenha sido definida pelo Assistente de Exibição da Fonte de Dados, você poderá especificar um valor aqui. Se houver relações do banco de dados e você especificar um critério de correspondência de nomes, ambos serão usados para inferir relações entre as tabelas existentes e a tabela recém-adicionada.|  
@@ -72,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |FriendlyName|Especifica um nome para a tabela ou exibição mais fácil para os usuários entenderem ou mais relevante para a área de assunto. Por padrão, a propriedade **FriendlyName** de uma tabela ou exibição é igual à propriedade **Name** da tabela ou exibição. A propriedade **FriendlyName** é usada por objetos OLAP e de mineração de dados ao definir os nomes dos objetos com base nas tabelas ou exibições. Você pode editar essa propriedade.|  
 |Nome|Especifica o nome da tabela ou exibição subjacente ou o nome da consulta nomeada. A propriedade **Name** é usada por objetos OLAP e de mineração de dados ao definir nomes de objetos com base em consultas nomeadas. Essa propriedade é editável apenas no caso de consultas nomeadas.|  
 |QueryDefinition|Especifica a definição de consulta nomeada. Essa propriedade aplica-se somente a consultas nomeadas e não pode ser editada diretamente. Para editá-la, edite a própria consulta nomeada.|  
-|Esquema|Especifica o esquema de banco de dados válido para a tabela, exibição ou consulta nomeada. Essa propriedade não é editável.|  
+|esquema|Especifica o esquema de banco de dados válido para a tabela, exibição ou consulta nomeada. Essa propriedade não é editável.|  
 |TableType|Especifica o tipo de tabela para a tabela, exibição ou consulta nomeada. Essa propriedade não é editável.|  
   
 ## <a name="viewing-or-changing-datacolumn-properties"></a>Exibindo ou alterando as propriedades DataColumn  
@@ -88,7 +85,7 @@ ms.lasthandoff: 12/08/2017
 |Comprimento|Especifica o comprimento máximo da coluna com base nos dados da coluna da tabela ou exibição subjacente.|  
 |Nome|Especifica o nome da coluna subjacente ou o nome do cálculo nomeado. A propriedade **Name** é usada por objetos OLAP e de mineração de dados ao definir atributos com base em cálculos nomeados. Essa propriedade é editável apenas no caso de cálculos nomeados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de fontes de dados em modelos multidimensionais](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: AGGREGATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6e0905531658202c86ef5deac9e20d4db36fd9d6
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregate-mdx"></a>Função Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,17 +45,17 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_Expression*  
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um conjunto de tuplas vazias ou um conjunto vazio for especificado, essa função retornará um valor vazio.  
   
  A tabela a seguir descreve como o **agregação** função se comporta com funções de agregação diferentes.  
   
 |Operador de agregação|Resultado|  
 |--------------------------|------------|  
-|Sum|Retorna a soma dos valores no conjunto.|  
+|SUM|Retorna a soma dos valores no conjunto.|  
 |Count|Retorna a contagem dos valores no conjunto.|  
 |Max|Retorna o valor máximo no conjunto.|  
-|Min|Retorna o valor mínimo no conjunto.|  
+|Mín|Retorna o valor mínimo no conjunto.|  
 |Funções de agregação semiaditivas|Retorna o cálculo de comportamento semiaditivo no conjunto depois de projetar a forma no eixo de tempo.|  
 |Contagem Distinta|Faz agregações nos dados de fatos que contribuem com o subcubo quando o eixo do slicer inclui um conjunto.<br /><br /> Retorna a contagem distinta para cada membro do conjunto. O resultado depende da segurança das células que estão sendo agregadas e não da segurança das células obrigatórias para o cálculo. A segurança de célula no conjunto gera um erro; a segurança de célula abaixo da granularidade do conjunto especificado é ignorada. Os cálculos no conjunto geram um erro. Os cálculos abaixo da granularidade do conjunto são ignorados. A contagem distinta em um conjunto que inclui um membro e um ou mais filhos retorna a contagem distinta dos fatos que contribuem com o membro filho.|  
 |Atributos que não podem ser agregados|Retorna a soma dos valores.|  
@@ -132,7 +132,7 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [PeriodsToDate &#40; MDX &#41;](../mdx/periodstodate-mdx.md)   
  [Filhos &#40; MDX &#41;](../mdx/children-mdx.md)   
  [Hierarquize &#40; MDX &#41;](../mdx/hierarchize-mdx.md)   

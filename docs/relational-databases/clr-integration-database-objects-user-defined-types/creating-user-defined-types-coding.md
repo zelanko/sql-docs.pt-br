@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -38,11 +38,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71fd426940e8cf9b5970bcd24a3f982bc9dc8f2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f1abec952d7ad6ca57b38ff1bda37134312da4b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Criando tipos definidos pelo usuário - codificação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ao codificar sua definição de tipo definido pelo usuário (UDT), você deve implementar vários recursos, dependendo se você estiver implementando o UDT como uma classe ou estrutura, bem como sobre as opções de serialização e o formato escolhido.  
@@ -752,7 +752,7 @@ public void Read(System.IO.BinaryReader r)
   
  Para o código completo listagem para o **moeda** UDT, consulte [exemplos do mecanismo de banco de dados do SQL Server](http://msftengprodsamples.codeplex.com/).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando um tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

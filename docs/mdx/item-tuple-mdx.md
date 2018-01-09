@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ITEM
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 45b34c8625837db7c379aa981f834559c4a033b6
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9c7e727908bbd2265cab05b9d1aa2f55cc7b9ebd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="item-tuple-mdx"></a>Item (Tupla) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Index*  
  Uma expressão numérica válida que especifica a tupla específica através da posição dentro do conjunto a ser retornado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **Item** função retorna uma tupla do conjunto especificado. Há três maneiras possíveis de chamar o **Item** função:  
   
 -   Se uma expressão única cadeia de caracteres for especificada, o **Item** função retorna a tupla especificada. Por exemplo, “([2005] .Q3, [Store05])”.  
@@ -88,7 +88,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

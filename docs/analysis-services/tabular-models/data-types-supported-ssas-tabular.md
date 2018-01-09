@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 84cdb30142c75b4bc35d956daff130df3bf62305
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipos de dados com suporte em modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este artigo descreve os tipos de dados que podem ser usados em modelos tabulares e discute a conversão implícita de tipos de dados quando dados são calculados ou usados em uma fórmula de expressões DAX (Data Analysis).  
@@ -39,13 +36,13 @@ Quando você importa dados ou usa um valor em uma fórmula, mesmo quando a fonte
   
 ||||  
 |-|-|-|  
-|**Tipo de dados em modelo**|**Tipos de dados em DAX**|**Description**|  
+|**Tipo de dados em modelo**|**Tipos de dados em DAX**|**Descrição**|  
 |Número Inteiro|Um valor inteiro de 64 bits (oito bytes)*<br /><br /> Observação:<br />         As fórmulas DAX não dão suporte aos tipos de dados que são muito pequenos para conter o valor mínimo relacionado na descrição.|Números sem casas decimais. Inteiros podem ser números positivos ou negativos, mas devem ser números inteiros entre -9.223.372.036.854.775.808 (-2^63) e 9.223.372.036.854.775.807 (2^63-1).|  
 |Número Decimal|Um número real de 64 bits (oito bytes)*<br /><br /> Observação:<br />         As fórmulas DAX não dão suporte aos tipos de dados que são muito pequenos para conter o valor mínimo relacionado na descrição.|Números reais são números que podem ter casas decimais. Os números reais abrangem uma grande variedade de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Zero<br /><br /> Valores positivos de 2,23E -308 a 1,79E + 308<br /><br /> No entanto, o número de dígitos significativos está limitado a 17 dígitos decimais.|  
-|Boolean|Boolean|Um valor True ou False.|  
+|Boolean|Booliano|Um valor True ou False.|  
 |Texto|Cadeia de caracteres|Uma cadeia de caracteres de dados de caractere Unicode. Pode ser cadeias de caracteres, números ou datas representados em um formato de texto.|  
-|Data|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
-|Moeda|Moeda|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
+|data|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
+|CURRENCY|CURRENCY|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
 |N/A|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
   
  \*Se você tentar importar dados que tenham valores numéricos grandes, a importação pode falhar com o seguinte erro:  
@@ -56,7 +53,7 @@ Quando você importa dados ou usa um valor em uma fórmula, mesmo quando a fonte
   
 ||  
 |-|  
-|Value|  
+|Valor|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1,7976931348623158e+308|  
@@ -96,10 +93,10 @@ Quando você importa dados ou usa um valor em uma fórmula, mesmo quando a fonte
   
 ||||||  
 |-|-|-|-|-|  
-|Operador (+)|INTEGER|Moeda|REAL|Data/hora|  
-|INTEGER|INTEGER|Moeda|REAL|Data/hora|  
-|Moeda|Moeda|Moeda|REAL|Data/hora|  
-|REAL|REAL|REAL|REAL|Data/hora|  
+|Operador (+)|INTEGER|Moeda|real|Data/hora|  
+|INTEGER|INTEGER|Moeda|real|Data/hora|  
+|CURRENCY|CURRENCY|CURRENCY|real|Data/hora|  
+|real|real|real|real|Data/hora|  
 |Data/hora|Data/hora|Data/hora|Data/hora|Data/hora|  
   
  Por exemplo, se um número real for usado em uma operação de adição com dados de moeda, os dois valores serão convertidos em REAL, e o resultado será retornado como REAL.  
@@ -109,10 +106,10 @@ Quando você importa dados ou usa um valor em uma fórmula, mesmo quando a fonte
   
 ||||||  
 |-|-|-|-|-|  
-|Operador (-)|INTEGER|Moeda|REAL|Data/hora|  
-|INTEGER|INTEGER|Moeda|REAL|REAL|  
-|Moeda|Moeda|Moeda|REAL|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
+|Operador (-)|INTEGER|Moeda|real|Data/hora|  
+|INTEGER|INTEGER|Moeda|real|real|  
+|CURRENCY|CURRENCY|CURRENCY|real|real|  
+|real|real|real|real|real|  
 |Data/hora|Data/hora|Data/hora|Data/hora|Data/hora|  
   
  Por exemplo, se uma data for usada em uma operação de subtração com qualquer outro tipo de dados, os dois valores serão convertidos em datas, e o valor de retorno também será uma data.  
@@ -124,10 +121,10 @@ Quando você importa dados ou usa um valor em uma fórmula, mesmo quando a fonte
   
 ||||||  
 |-|-|-|-|-|  
-|Operador (*)|INTEGER|Moeda|REAL|Data/hora|  
-|INTEGER|INTEGER|Moeda|REAL|INTEGER|  
-|Moeda|Moeda|REAL|Moeda|Moeda|  
-|REAL|REAL|Moeda|REAL|REAL|  
+|Operador (*)|INTEGER|Moeda|real|Data/hora|  
+|INTEGER|INTEGER|Moeda|real|INTEGER|  
+|CURRENCY|CURRENCY|real|CURRENCY|CURRENCY|  
+|real|real|CURRENCY|real|real|  
   
  Por exemplo, se um inteiro for combinado com um número real em uma operação de multiplicação, os dois números serão convertidos em números reais, e o valor de retorno também será REAL.  
   
@@ -136,11 +133,11 @@ Quando você importa dados ou usa um valor em uma fórmula, mesmo quando a fonte
   
 ||||||  
 |-|-|-|-|-|  
-|Operador (/)<br /><br /> (Linha/coluna)|INTEGER|Moeda|REAL|Data/hora|  
-|INTEGER|REAL|Moeda|REAL|REAL|  
-|Moeda|Moeda|REAL|Moeda|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
-|Data/hora|REAL|REAL|REAL|REAL|  
+|Operador (/)<br /><br /> (Linha/coluna)|INTEGER|Moeda|real|Data/hora|  
+|INTEGER|real|CURRENCY|real|real|  
+|CURRENCY|CURRENCY|real|CURRENCY|real|  
+|real|real|real|real|real|  
+|Data/hora|real|real|real|real|  
   
  Por exemplo, se um inteiro for combinado com um valor de moeda em uma operação de divisão, os dois valores serão convertidos em números reais, e o resultado também será um número real.  
   
@@ -152,10 +149,10 @@ Há suporte para apenas um conjunto limitado de combinações de tipo de dados m
   
 ||||  
 |-|-|-|  
-|Expressão|DAX|Excel|  
-|BLANK + BLANK|Em branco|0 (zero)|  
+|Expression|DAX|Excel|  
+|BLANK + BLANK|BLANK|0 (zero)|  
 |BLANK +5|5|5|  
-|BLANK * 5|Em branco|0 (zero)|  
+|BLANK * 5|BLANK|0 (zero)|  
 |5/BLANK|Infinity|Erro|  
 |0/BLANK|NaN|Erro|  
 |BLANK/BLANK|Em branco|Erro|  
@@ -163,8 +160,8 @@ Há suporte para apenas um conjunto limitado de combinações de tipo de dados m
 |FALSE AND BLANK|FALSE|FALSE|  
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
-|BLANK OR BLANK|Em branco|Erro|  
-|BLANK AND BLANK|Em branco|Erro|  
+|BLANK OR BLANK|BLANK|Erro|  
+|BLANK AND BLANK|BLANK|Erro|  
   
  Para obter detalhes sobre como uma determinada função ou operador manipula espaços em branco, consulte os tópicos individuais de cada função DAX, na seção, [Referência de função DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   

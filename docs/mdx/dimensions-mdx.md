@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: Dimensions
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f02a6e2698459f2b766278bfc95038683a058dc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e14d37c916240c0c7cc454df50d44d4de4ba319a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  Uma expressão de cadeia de caracteres válida que especifica o nome de uma hierarquia.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o número de uma hierarquia for especificado, o **dimensões** função retorna o número da hierarquia de uma hierarquia cuja posição baseada em zero dentro do cubo é especificada.  
   
  Se um nome de hierarquia for especificado, o **dimensões** função retorna a hierarquia especificada. Normalmente, você pode usar esta versão de cadeia de caracteres do **dimensões** função com funções definidas pelo usuário.  
@@ -89,7 +89,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

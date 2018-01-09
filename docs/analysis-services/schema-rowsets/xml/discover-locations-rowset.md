@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee327934c7b524a9cb20be146e0fb72d8eb4ab67
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 61f69caeab165c4d6822f8f25667ad544d6014ec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverlocations-rowset"></a>Conjunto de linhas DISCOVER_LOCATIONS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retorna informações sobre o conteúdo de um arquivo de backup. Você deve ter permissão para acessar o local do arquivo de backup.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
 |Nome da coluna|Indicador de tipo|Estado de restrição|  
 |-----------------|--------------------|-----------------------|  
-|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|Required|  
+|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|Obrigatório|  
 |**LOCATION_PASSWORD PF_DBTYPE**|**DBTYPE_WSTR**|Obrigatório se fosse especificado durante o backup. Essa restrição não é usada para restringir as linhas retornadas. É usada para fornecer a senha para acessar o local.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Usando ADOMD.NET para retornar o conjunto de linhas  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |GUID|a07ccd92-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|Locais|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

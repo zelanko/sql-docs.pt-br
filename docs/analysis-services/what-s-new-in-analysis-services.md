@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>O que &#39; s no Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services inclui vários novos aprimoramentos fornecer melhor desempenho, criação de solução mais fácil, gerenciamento de banco de dados automatizada, relações aprimoradas com bidirecional entre a filtragem, paralelo processamento da partição, e muito mais. O cerne da maioria dos aprimoramentos para esta versão é o novo nível de compatibilidade 1200 para bancos de dados de modelo tabular.     
@@ -68,7 +68,7 @@ Nesta versão, você não precisa mais de duas versões do SSDT para compilar pr
 As pastas de exibição agora estão disponíveis para modelos de tabela 1200. Definidas no SQL Server Data Tools e renderizadas nos aplicativos cliente como Excel ou Power BI Desktop, as pastas de exibição ajudam a organizar grandes números de medidas em pastas individuais, adicionando uma hierarquia visual para facilitar a navegação em listas de campos.
 ### <a name="bi-directional-cross-filtering"></a>Filtragem cruzada bidirecional
 Uma novidade nesta versão é a abordagem interna para habilitar filtros cruzados bidirecionais em modelos de tabela, o que elimina a necessidade de soluções alternativas manuais de DAX para a propagação de contextos de filtro em relações da tabela. Os filtros são gerados automaticamente apenas quando a direção pode ser estabelecida com um alto grau de certeza. Caso haja ambiguidade na forma de vários caminhos de consulta entre relações de tabela, um filtro não será criado automaticamente. Consulte [Filtros cruzados bidirecionais para modelos de tabela no SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) para obter detalhes.
- ### <a name="translations"></a>Traduções    
+ ### <a name="translations"></a>Translations    
  Agora você pode armazenar metadados traduzidos em um modelo tabular 1200. Metadados do modelo incluem campos para **Culture**, legendas traduzidas e descrições traduzidas. Para adicionar traduções, use o comando **Model** > **Translations** em [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Consulte [Traduções em modelos de tabela &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para ver mais detalhes.    
  ### <a name="pasted-tables"></a>Tabelas coladas    
  Agora é possível atualizar um modelo de tabela 1100 ou 1103 para 1200 quando o modelo contém tabelas coladas. É recomendável usar o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. No SSDT, defina **CompatibilityLevel** para 1200 e implante em uma instância [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter detalhes, consulte [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .    
@@ -206,7 +206,7 @@ Esta versão traz melhorias significativas no DirectQuery para modelos de tabela
     
 Para saber mais, consulte [Modo DirectQuery &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Blog da equipe do Analysis Services](http://blogs.msdn.microsoft.com/analysisservices/)    
 [Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)    
      

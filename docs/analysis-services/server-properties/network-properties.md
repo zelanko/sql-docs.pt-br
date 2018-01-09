@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -42,11 +42,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9566ef27a12b78300ff94e2253ac05393a540be
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a315095f7a7f7060964eb22c0c54698f5f68f9a9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="network-properties"></a>Propriedades de rede
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a propriedades de servidor listadas nas tabelas a seguir. Para obter mais informações sobre propriedades adicionais do servidor e como defini-las, consulte [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/08/2017
  **IPV4Support**  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv4. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |*0*|IPv4 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv4 necessário; servidor não será iniciado se não puder escutar IPv4.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/08/2017
  **IPV6Support**  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv6. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |*0*|IPv6 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv6 necessário; servidor não será iniciado se não for possível escutar IPv6|  
@@ -148,8 +148,8 @@ ms.lasthandoff: 12/08/2017
  **SocketOptions\ SendBufferSize**  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Propriedades do servidor no Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services.](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

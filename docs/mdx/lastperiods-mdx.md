@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: LASTPERIODS
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7b5f43547cdf6a48a35e2a433dcc7a82cdabe054
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a3a9f0940796ecbc8138447fa8dd4ba59febbe96
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ LastPeriods(Index [ ,Member_Expression ] )
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se o número especificado de períodos for positivo, o **LastPeriods** retorna um conjunto de membros que começa com o membro defasagem *índice* -1 da expressão de membro especificado e termina com o membro especificado. O número de membros retornados pela função é igual a *índice*.  
   
  Se o número especificado de períodos for negativo, o **LastPeriods** função retorna um conjunto de membros que começa com o membro especificado e termina com o membro que lidera (- *índice* - 1) do membro especificado. O número de membros retornados pela função é igual ao valor absoluto do *índice*.  
@@ -76,7 +76,7 @@ SELECT LastPeriods
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

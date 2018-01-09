@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d015dcbb891b1242bb3920f194ee0a63669dc9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bed8d0a05f1a7a7b353ee723e0c498fe0d1d3c2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqldrivers"></a>SQLDrivers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 
   O Gerenciador de Driver ODBC retorna todas as cadeias de caracteres de especificação do atributo **SQLDrivers** . Para obter mais informações sobre a definição de valores e da cadeia de caracteres do atributo, consulte o [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink/?LinkId=4173), ou você pode exibir [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQLDrivers](http://go.microsoft.com/fwlink/?LinkId=59341)   
  [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

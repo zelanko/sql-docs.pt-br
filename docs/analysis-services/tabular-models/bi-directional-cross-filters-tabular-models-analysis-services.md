@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0ffd9fce046edae4098f965f2cc2967fa7f1e3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>Os filtros cruzados bidirecionais - modelos tabulares - Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Novo no SQL Server 2016 é um método interno para habilitar *bidirecional filtros cruzados* em modelos tabulares, eliminando a necessidade de soluções DAX manuais para propagar o contexto de filtro em relações de tabela.  
@@ -204,7 +202,7 @@ ms.lasthandoff: 12/08/2017
   
  Na prática, a filtragem cruzada permite formas de exploração de dados que são fornecidas normalmente apenas por meio de uma construção de muitos para muitos. No entanto, é importante reconhecer que a filtragem cruzada bidirecional não é uma construção de muitos para muitos.  A configuração de tabela de muitos para muitos continua sem suporte no Designer para os modelos de tabela desta versão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar relações no Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
  [Um exemplo prático de como tratar relações muitos-para-muitos simples em modelos de tabela do Power Pivot e SSAS](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [Resolvendo relações muitos-para-muitos aproveitando DAX filtragem cruzadam de tabelas](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   

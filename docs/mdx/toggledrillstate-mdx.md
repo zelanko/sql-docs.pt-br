@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TOGGLEDRILLSTATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 69533fc6585b0e40eaa04d8f3554716f614af4e0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e8564128db3f9eaa06e7eb5bfe93880c74c5b3b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Include_calc_members*  
  (Opcional). Um sinalizador que indica se deve-se incluir membros calculados, caso existam, no nível de drill down.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **ToggleDrillState** função alterna o estado de busca de cada membro do segundo conjunto que está presente no primeiro conjunto. O primeiro conjunto pode conter tuplas com qualquer dimensionalidade, mas o segundo deve conter membros de uma única dimensão. O **ToggleDrillState** função é uma combinação da **DrillupMember** e **DrilldownMember** funções. Se o membro *m*, do segundo conjunto estiver presente no primeiro conjunto, e que o membro for buscado (isto é, tiver um descendente imediatamente após ele), em seguida, `DrillupMember(Set_Expression1, {m})` é aplicado no membro ou na tupla no primeiro conjunto. Se esse *m* membro for buscado (ou seja, não há nenhum descendente de *m* imediatamente após *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` é aplicado no primeiro conjunto.  
   
  Se o valor opcional **RECURSIVA** sinalizador é usado, fazer drill up e drill são aplicadas recursivamente. Para obter mais informações sobre o sinalizador recursivo, consulte o [DrillupMember](../mdx/drillupmember-mdx.md) e [DrilldownMember](../mdx/drilldownmember-mdx.md) funções.  
@@ -74,7 +74,7 @@ SELECT ToggleDrillState
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

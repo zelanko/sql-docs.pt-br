@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: HEAD
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c4bfdcd8170ed6ff50e64e137e99ddd703bb0d5e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7276608bf6d50410cd157fe82ec96d006639d5df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="head-mdx"></a>Head (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ Head(Set_Expression [ ,Count ] )
  *Contagem*  
  Uma expressão numérica válida que especifica o número de tuplas a ser retornado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **Head** função retorna o número especificado de tuplas desde o início do conjunto especificado. A ordem dos elementos é preservada. O valor padrão de Count é 1. Se o número especificado de tuplas for menor que 1, o **Head** função retorna um conjunto vazio. Se o número especificado de tuplas ultrapassar o número de tuplas no conjunto, a função retornará o conjunto original.  
   
 ## <a name="example"></a>Exemplo  
@@ -65,7 +65,7 @@ Head
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Final &#40; MDX &#41;](../mdx/tail-mdx.md)   
  [Item &#40; Coleção de itens &#41; &#40; MDX &#41;](../mdx/item-tuple-mdx.md)   
  [Item &#40; Membro &#41; &#40; MDX &#41;](../mdx/item-member-mdx.md)   

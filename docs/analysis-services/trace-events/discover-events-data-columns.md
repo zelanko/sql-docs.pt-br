@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Discover Events event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4eeba0ee1a65901b9a767eaa4acae25af56fd23e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eee3ed0e00d25e255d1cf8de5cc08f0645cdd0dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discover-events-data-columns"></a>Colunas de dados de eventos de identificação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria Discover Events tem as seguintes classes de evento:  
@@ -65,10 +65,10 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Contém a hora atual do evento de identificação, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora (se disponível) em que o evento final de identificação foi iniciado. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Contém o período de tempo aproximado da duração (milissegundos) do evento de identificação.|  
+|Duração|5|2|Contém o período de tempo aproximado da duração (milissegundos) do evento de identificação.|  
 |CPUTime|6|2|Contém a quantidade de tempo da CPU (em milissegundos) usado pelo evento.|  
 |Severity|22|1|Contém o nível de severidade de uma exceção.|  
-|Success|23|1|Contém o êxito ou a falha do evento de identificação. Os valores são:<br /><br /> 0 = Falha<br /><br /> 1 = Êxito|  
+|Êxito|23|1|Contém o êxito ou a falha do evento de identificação. Os valores são:<br /><br /> 0 = Falha<br /><br /> 1 = Êxito|  
 |Erro|24|1|Contém o número de erro de qualquer erro associado ao evento de identificação.|  
 |ConnectionID|25|1|Contém a ID de conexão exclusiva associada ao evento de identificação.|  
 |DatabaseName|28|8|Contém o nome do banco de dados no qual o evento de identificação ocorreu.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/08/2017
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual o evento de identificação ocorreu.|  
 |RequestProperties|45|9|Contém as propriedades na solicitação XMLA.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

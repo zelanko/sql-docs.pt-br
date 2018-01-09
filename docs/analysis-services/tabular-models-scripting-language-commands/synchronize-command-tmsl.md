@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6912b3c73f898335853ff3ffe78021fad75bb357
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bdf14cf2c3ac199c1108cd8d1178ede676976baa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Sincronizar comando (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,11 +46,11 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Propriedade**|**Padrão**|**Description**|  
+|**Propriedade**|**Default**|**Descrição**|  
 |Banco de Dados||O nome do objeto de banco de dados a serem sincronizados.|  
 |origem||A cadeia de caracteres de conexão para usar para se conectar ao servidor de origem.|  
 |synchronizeSecurity|skipMembership|Um valor de enumeração que especifica como restaurar definições de segurança, incluindo funções e permissões. Os valores válidos incluem skipMembership, copyAll, ignoreSecurity.|  
-|applyCompression|Verdadeiro|Um booliano que, quando for verdadeiro, indica que a compactação será aplicado durante a operação de sincronização. Caso contrário, false.|  
+|applyCompression|True|Um booliano que, quando for verdadeiro, indica que a compactação será aplicado durante a operação de sincronização. Caso contrário, false.|  
   
 ## <a name="response"></a>Resposta  
  Retorna um resultado vazio quando o comando terá êxito. Caso contrário, uma exceção XMLA é retornada.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/08/2017
   
  O [ \[MS-SSAS-T\]: SQL Server Analysis Services Tabular (protocolo técnicos do SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento inclui seção 3.1.5.2.2 que descreve a estrutura de objetos e comandos de metadados de tabela do JSON. Atualmente, esse documento aborda recursos ainda não implementados no script TMSL e comandos. Consulte o tópico [linguagem de script de modelo de tabela &#40; TMSL &#41; Referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) para fins de esclarecimento sobre o que tem suporte  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

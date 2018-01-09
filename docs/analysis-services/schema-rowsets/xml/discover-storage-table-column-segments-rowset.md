@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66d86e3583b81069f2c1f77a616dac91a022ff9c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações em nível de coluna e segmento sobre tabelas de armazenamento usado por um banco de dados do Analysis Services em execução tabela ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo. Este conjunto de linhas é usado principalmente para solução e análise de problemas.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** contém as colunas a seguir.  
   
-|**Nome da coluna**|**Indicador de tipo**|**Restrição**|**Description**|  
+|**Nome da coluna**|**Indicador de tipo**|**Restrição**|**Descrição**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Sim|Especifica o banco de dados tabular.<br /><br /> É possível restringir o conjunto de linhas **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** usando esta coluna. Se ele for omitido, o banco de dados atual será usado.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Sim|O nome do modelo.<br /><br /> É possível restringir o conjunto de linhas **DISCOVER_STORAGE_TABLES** usando esta coluna.|  
@@ -74,7 +72,7 @@ ORDER BY TABLE_ID
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas de esquema do Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

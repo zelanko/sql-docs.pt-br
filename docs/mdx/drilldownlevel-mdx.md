@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNLEVEL
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 64509c923c21094d9b4c183a8d37273af5109777
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: da071ef3ba43af94caf81e1016cb84a2bffc082f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (Opcional). Um sinalizador que indica se deve-se incluir membros calculados, caso existam, no nível de drill down.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **DrilldownLevel** função retorna um conjunto de filho membros em ordem hierárquica, com base nos membros incluídos no conjunto especificado. A ordem é preservada entre os membros originais no conjunto especificado, a não ser que todos os membros filho incluídos no conjunto de resultados da função sejam imediatamente incluídos com seu membro pai.  
   
  Dada uma estrutura de dados hierárquica de vários níveis, você pode escolher explicitamente um nível de detalhamento. Há dois modos mutuamente exclusivos para especificar o nível. A primeira abordagem é definir o **level_expression** argumento usando uma expressão MDX que retorna o nível, uma abordagem alternativa é especificar o **índice** argumento, usando uma expressão numérica que especifica o nível por número.  
@@ -127,7 +127,7 @@ FROM [Adventure Works]
   
  Se você remover apenas o sinalizador e executar novamente a consulta, obterá os mesmos resultados, menos o membro calculado [Costa Oeste].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

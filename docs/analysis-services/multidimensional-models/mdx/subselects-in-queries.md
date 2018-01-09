@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 664aa30f1b4dca46597ba464e93eb8534e44dca3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="subselects-in-queries"></a>Subseleções em consultas
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Expressões de Subseleção são expressões SELECT aninhadas que são usadas para restringir o espaço do cubo onde o SELECT externo exterior está sendo avaliado. Subseleções permitem definir um novo espaço sobre os quais todos os cálculos são avaliados.  
@@ -347,7 +344,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Como você pode ver, há diferenças nos resultados entre ambos os conjuntos. A primeira consulta respondeu a pergunta de quais são os melhores produtos de venda nas primeiras 5 regiões, a segunda consulta respondeu a pergunta de onde são as maiores vendas dos 5 principais produtos.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
  As subseleções têm as seguintes restrições e limitações:  
   
 -   A cláusula WHERE não filtra o subespaço.  

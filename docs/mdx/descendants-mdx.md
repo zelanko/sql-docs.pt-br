@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DESCENDANTS
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6ca101464d62d1a3e07f8d02e457e974b498a3bc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a641da0586093194c2ae64614a7cdf845827001f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  Uma expressão de cadeia de caracteres válida que especifica um sinalizador de descrição que distingue entre possíveis conjuntos de descendentes.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um nível for especificado, o **descendentes** retorna um conjunto que contém descendentes do membro especificado ou os membros do conjunto especificado em um nível especificado, opcionalmente modificado por um sinalizador especificado em *Desc_Flag*.  
   
  Se *distância* for especificado, o **descendentes** retorna um conjunto que contém descendentes do membro especificado ou os membros do conjunto especificado que são o número especificado de níveis fora da hierarquia do membro especificado, opcionalmente modificado por um sinalizador especificado em *Desc_Flag*. Normalmente, você usa esta função com o argumento Distance para lidar com hierarquias com rotas. Se a distância especificada for zero (0), a função retornará um conjunto composto apenas pelo membro especificado ou pelo conjunto especificado.  
@@ -172,7 +172,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

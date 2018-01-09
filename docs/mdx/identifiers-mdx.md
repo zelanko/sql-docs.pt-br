@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8344a7fd4462ef28eab57e6b06d2e75306c9e399
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9b45b45da18ea7c9047609ffb47bc5a698e43a21
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -139,7 +139,7 @@ ms.lasthandoff: 11/27/2017
   
  Além disso, o identificador Measures no exemplo anterior foi delimitado para demonstrar a delimitação de mais de um identificador.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de linguagem MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
  [Conceitos básicos de consulta MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Elementos de sintaxe MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  

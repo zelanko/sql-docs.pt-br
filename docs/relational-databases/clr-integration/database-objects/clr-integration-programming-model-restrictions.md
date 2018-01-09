@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 180f770c24721ef9e8ed84e4d6f01204b0fd42b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23972fb78bafaca778b37fc7226d3db4f53083e8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrições do modelo de programação da Integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Quando você estiver criando um procedimento armazenado gerenciado ou outro objeto de banco de dados gerenciado, há determinadas verificações de código realizadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que precisam ser consideradas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]realiza verificações no assembly de código gerenciado quando ele é registrado pela primeira vez no banco de dados, usando o **CREATE ASSEMBLY** instrução e também em tempo de execução. O código gerenciado também é verificado em tempo de execução porque, em um assembly, talvez haja caminhos de código que jamais possam ser alcançados em tempo de execução.  Isso proporciona flexibilidade para registrar, especialmente, assemblies de terceiros, logo um assembly não seria bloqueado quando houvesse um código 'não seguro' projetado para execução em um ambiente do cliente, mas que jamais seria executado no CLR hospedado. Os requisitos que o código gerenciado deve atender dependem se o assembly é registrado como **seguro**, **EXTERNAL_ACCESS**, ou **UNSAFE**, **SAFE** sendo mais rigorosos e estão listadas abaixo.  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="safe"></a>SAFE  
  Todos os **EXTERNAL_ACCESS** condições são atendidas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bibliotecas com suporte do .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [Segurança de acesso do código de integração de CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Atributos de proteção de host e programação da integração CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

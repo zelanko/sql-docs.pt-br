@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,18 +27,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a800041d5a0f98760e1359c5eee93c706859e020
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measures-and-measure-groups"></a>Medidas e Grupos de Medidas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um cubo inclui *medidas* na *grupos de medidas*, lógica de negócios, além de uma coleção de dimensões que fornecem contexto para avaliar os dados numéricos que fornece uma medida. Medidas e grupos de medidas são um componente essencial de um cubo. Um cubo não pode existir sem pelo menos uma delas.  
   
  Este tópico descreve [medidas](#bkmk_measure) e [grupos de medidas](#bkmk_mg). Ele também contém a tabela a seguir, com links para procedimentos para medidas de criação e configuração e grupos de medidas.  
   
-|**Link**|**Description**|  
+|**Link**|**Descrição**|  
 |--------------|---------------------|  
 |[Criar medidas e grupos de medidas em modelos multidimensionais](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Escolha uma das várias abordagens para criar medidas e grupos de medidas.|  
 |[Configurar propriedades de medida](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Se você usou o Assistente de cubo para iniciar seu cubo, talvez seja necessário alterar o método de agregação, aplicar um formato de dados, definir a visibilidade da medida em aplicativos cliente ou possivelmente adicionar uma expressão de medida para manipular os dados antes de os valores serem agregados.|  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
   
  Um simples objeto <xref:Microsoft.AnalysisServices.MeasureGroup> é composto por informações básicas, como o nome do grupo, o modo de armazenamento e o modo de processamento. Ele também contém suas partes constituintes; as medidas, dimensões e partições que formam a composição do grupo de medidas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cubos em modelos multidimensionais](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [Criar medidas e grupos de medidas em modelos multidimensionais](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   

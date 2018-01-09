@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuração de erro para o cubo, partição e processamento de dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Propriedades de configuração de erro no cubo, partição ou objetos de dimensão determinam como o servidor responde quando ocorrem erros de integridade de dados durante o processamento. As chaves duplicadas, chaves ausentes e os valores nulos em uma coluna de chave normalmente disparam esses erros, e embora o registro que cause o erro não seja adicionado ao banco de dados, você pode definir propriedades que determinam o que acontece em seguida. Por padrão, o processamento para. No entanto, durante o desenvolvimento do cubo, talvez você queira que o processamento continue quando ocorrerem os erros de forma que você possa testar comportamentos do cubo com dados importados, mesmo se estiverem incompletos.  
@@ -90,7 +87,7 @@ ms.lasthandoff: 12/08/2017
   
  **Resposta do servidor para erros específicos**  
   
-|Propriedade|Default|Outros valores|  
+|Propriedade|Padrão|Outros valores|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Ocorre ao inicializar a configuração de erros.|**IgnoreError** não registra em log nem conta erros; o processamento continuará desde que a contagem de erro esteja abaixo do limite máximo.|**ReportAndContinue** registra em log e conta o erro.<br /><br /> **ReportAndStop** relata o erro e interrompe o processamento imediatamente, independentemente do limite de erros.|  
 |**KeyNotFound**<br /><br /> Ocorre quando uma chave estrangeira em uma tabela de fatos não tem uma chave primária correspondente em uma tabela de dimensões relacionada (por exemplo, uma tabela de fatos de vendas tem um registro com uma ID de produto que não existe na tabela de dimensões de produto). Esse erro pode ocorrer durante o processamento da partição ou o processamento de dimensões floco de neve.|**ReportAndContinue** registra em log e conta o erro.|**ReportAndStop** relata o erro e interrompe o processamento imediatamente, independentemente do limite de erros.<br /><br /> **IgnoreError** não registra em log nem conta erros; o processamento continuará desde que a contagem de erro esteja abaixo do limite máximo. Os registros que disparam esse erro são convertidos para o membro desconhecido por padrão, mas você pode alterar a propriedade **KeyErrorAction** para rejeitá-los.|  
@@ -189,7 +186,7 @@ ms.lasthandoff: 12/08/2017
   
  Decida se deseja alterar os comportamentos padrão de processamento de nulos. Por padrão, os nulos em uma coluna de cadeia de caracteres são processados como valores vazios, enquanto que os nulos em uma coluna numérica são processados como zero. Consulte [Definindo o membro desconhecido e as propriedades de processamento nulo](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) para obter instruções sobre como definir o processamento nulo em um atributo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades do log](../../analysis-services/server-properties/log-properties.md)   
  [Definir o membro desconhecido e propriedades de processamento nulo](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   

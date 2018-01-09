@@ -8,9 +8,7 @@ ms.component:
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Parallel Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 458e53464bdcb30d928ad2d752545f5cb8fd3f18
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0045bb8696a6f8cae8977cd5d4f2d1b6da0f8f22
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Especifica o número de trabalhos de processamento pode ser executado em paralelo usando o pai [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando.  
@@ -52,10 +50,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhuma|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Nenhum|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -67,13 +65,13 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Descrição|  
+|attribute|Description|  
 |---------------|-----------------|  
 |maxParallel|Atributo **Integer** opcional. Indica o número de máximo de threads nos quais devem ser executados comandos em paralelo. Se não for especificado ou definido como 0, a instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] determina um número ideal de threads com base no número de processadores disponíveis no computador.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

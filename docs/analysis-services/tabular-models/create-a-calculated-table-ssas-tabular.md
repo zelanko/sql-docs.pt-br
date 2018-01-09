@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 61ad9b1d13918bd6d172c7670b20b127d0713b67
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8278b8af21faf65640451d2557b1de19916b3327
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-calculated-table-ssas-tabular"></a>Criar uma tabela calculada (SSAS tabular)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Um *tabela calculada* é um objeto computado baseado em uma expressão, ou consulta DAX derivado do todo ou parte de outras tabelas no mesmo modelo.  
@@ -73,7 +73,7 @@ Há uma CalculatedTableColumn para cada coluna retornada pela expressão, em que
 =CROSSJOIN(DimProductCategory, DimCurrency)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Expressões de análise de dados &#40; DAX &#41; no Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [Noções básicas sobre DAX em modelos de tabela &#40;SSAS de Tabela&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: SELECT
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 2a8b90fca4585047873c919c5aa90d1d6d3b8f17
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulação de dados MDX - SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -122,7 +122,7 @@ FROM
  *MemberProperty_Name*  
  Uma cadeia de caracteres válida que representa uma propriedade de membro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A expressão `<SELECT slicer axis clause>` deve conter membros em dimensões e hierarquias diferentes daquelas mencionadas nas expressões `<SELECT query axis clause>` especificadas.  
   
  Se um atributo no cubo for omitido das expressões `<SELECT query axis clause>` e do valor `<SELECT slicer axis clause>` especificados, o membro padrão do atributo será implicitamente adicionado ao eixo do slicer.  
@@ -131,7 +131,7 @@ FROM
   
  Membros calculados podem ser incluídos em \<cláusula de eixo de consulta SELECT > sempre que a conexão foi aberta usando o parâmetro de cadeia de caracteres de conexão *subconsultas = 1*; consulte [suporte para propriedades de XMLA &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso do parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
   
-## <a name="autoexists"></a>Autoexists  
+## <a name="autoexists"></a>autoexists  
  Quando dois ou mais atributos da dimensão são usados em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para assegurar que os membros desses atributos sejam devidamente confinados para atender aos critérios de todos os outros atributos. Por exemplo, vamos supor que você esteja trabalhando com atributos da dimensão Geografia. Se houver uma expressão que retorne todos os membros do atributo Cidade, e outra expressão que confine os membros do atributo País a todos os países na Europa, isso resultará no confinamento dos membros de Cidade apenas às cidades que pertencem a países na Europa. Essas característica do Analysis Services é denominada Autoexists e se aplica apenas aos atributos na mesma dimensão. Autoexists somente se aplica a atributos da mesma dimensão porque tenta impedir que os registros da dimensão excluídos em uma expressão do atributo sejam incluídos pelas outras expressões do atributo. Autoexists também pode ser entendido como a interseção resultante das diferentes expressões de atributo sobre os registros da dimensão. Consulte estes exemplos abaixo:  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
@@ -390,7 +390,7 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**Todos os Produtos**|**Acessórios**|**Bikes**|**Clothing**|**Componentes**|  
+||**Todos os Produtos**|**Acessórios**|**Bikes**|**Roupas**|**Componentes**|  
 |**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -475,7 +475,7 @@ WHERE
 |Reseller Sales Amount|Custo do produto total do revendedor|Lucro bruto do revendedor|Margem de lucro bruto do revendedor|  
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Principais conceitos em MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Instruções MDX de manipulação de dados &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Restringindo a consulta com a consulta e os eixos de segmentação de dados &#40; MDX &#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  

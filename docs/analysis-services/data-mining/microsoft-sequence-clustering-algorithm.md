@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,13 +22,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 375e6c59c38d7bcf4eb270c6b007d2fca16d119c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo MSC
+# <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo msc é um algoritmo exclusivo que combina a análise de sequência com o cluster. Você pode usá-lo para explorar dados que contêm eventos que podem ser vinculados em uma *sequência*. O algoritmo localiza as sequências mais comuns e realiza clustering para encontrar sequências que são similares. Os exemplos a seguir ilustram os tipos de sequências das quais você pode capturar dados de aprendizado de máquina para fornecer informações sobre problemas comuns ou cenários comerciais:  
   
 -   Fluxos ou caminhos de cliques gerados quando os usuários navegam em um site  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
   
  Para obter informações sobre como criar consultas com base em um modelo de mineração de dados, consulte [Consultas de mineração de dados](../../analysis-services/data-mining/data-mining-queries.md). Para obter exemplos de como usar consultas com um modelo de sequence clustering, consulte [Exemplos de consulta de modelo de sequence clustering](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   Não dá suporte ao uso de PMML para criar modelos de mineração.  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Dá suporte ao uso de modelos de mineração OLAP e à criação de dimensões de mineração de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo msc](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de Clustering de sequência](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6da7af04e852c5fff10a6d33e1ab69723d79e014
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4db4d5d2e57f5f4a967a2099ef11efa0ca10ca21
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="server-properties-in-analysis-services"></a>Propriedades do servidor do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador pode modificar as propriedades de configuração de servidor padrão de um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. Cada instância tem suas próprias propriedades de configuração, que são definidas de forma independente de outras instâncias no mesmo servidor.  
@@ -92,7 +92,7 @@ As páginas de propriedades do SQL Server Management Studio mostram um subconjun
 |[Propriedades de segurança](../../analysis-services/server-properties/security-properties.md)|A seção de segurança contém propriedades básicas e avançadas que definem as permissões de acesso. Isso inclui configurações que pertencem a administradores e usuários.|  
 |[Propriedades de pool de threads](../../analysis-services/server-properties/thread-pool-properties.md)|As propriedades de pool de threads controlam quantos threads o servidor cria. Essas são principalmente propriedades avançadas.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciamento de instância do Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
  [Especificando definições de configuração para implantação de solução](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

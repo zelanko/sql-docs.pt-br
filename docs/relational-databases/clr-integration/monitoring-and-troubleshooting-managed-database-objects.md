@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 488b1caaab31a06f2bff4f611e0bc1e6affada68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b624f5dcc4cad3bdd4ffc6cbddad0f49f701ec55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Monitorando e diagnosticando objetos de banco de dados gerenciado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico fornece informações sobre as ferramentas que podem ser usados para monitorar e solucionar problemas de objetos de banco de dados gerenciados e assemblies executados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="performance-counters"></a>Contadores de desempenho  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece objetos e contadores que podem ser usados pelo Monitor do Sistema para monitorar a atividade em computadores que executem uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um objeto é qualquer recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como um bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um processo do Windows. Cada objeto contém um ou mais contadores, que determinam vários aspectos dos objetos a monitorar. Para obter mais informações, confira o artigo [Usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-|Objeto|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[SQL Server, objeto CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|Tempo total gasto na execução de CLR.|  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
 |[exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|Retorna informações sobre cada solicitação sendo executada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[sys.DM os_memory_clerks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|Retorna todos os administradores de memória ativos no momento na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo administradores de memória CLR.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos de programação da Integração CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: filter
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7a29ceb5b62cfabf53084e3ad467161fbe86d9b7
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 729adc2230242798e67914907b6928ec7346b871
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  Uma expressão lógica MDX válida avaliada como verdadeira ou falsa.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **filtro** função avalia a expressão lógica especificada em relação a cada tupla no conjunto especificado. A função retorna um conjunto que consiste em cada tupla no conjunto especificado em que a expressão lógica é avaliada como **true**. Se nenhuma tupla for avaliada como **true**, um conjunto vazio será retornado.  
   
  O **filtro** função funciona de maneira semelhante do [IIf](../mdx/iif-mdx.md) função. O **IIf** função retorna apenas uma das duas opções com base na avaliação de uma expressão lógica MDX, enquanto o **filtro** função retorna um conjunto de tuplas que atendem à condição de pesquisa especificada. Na verdade, o **filtro** função executa `IIf(Logical_Expression, Set_Expression.Current, NULL)` em cada tupla no conjunto e retorna o conjunto resultante.  
@@ -94,7 +94,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

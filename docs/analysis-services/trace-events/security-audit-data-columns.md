@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Security Audit event category [SQL Server]
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5aad698cab42cc52126efed7c7e72b977df97f27
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d827295c68028d54d64bbb91447aa7ab22eaaa77
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="security-audit-data-columns"></a>Colunas de dados de auditoria de segurança
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria de evento de auditoria de segurança tem as seguintes classes de evento:  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |NTUserName|32|8|Nome do usuário do Windows.|  
@@ -65,9 +65,9 @@ ms.lasthandoff: 12/08/2017
 |EventClass|0|1|A classe de evento é usada para categorizar eventos.|  
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |NTUserName|32|8|Nome do usuário do Windows.|  
 |NTDomainName|33|8|O domínio do Windows ao qual o usuário pertence.|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/08/2017
 |EventSubclass|1|1|A Subclasse de Evento oferece informações adicionais sobre cada classe de evento:<br /><br /> 1: desligamento da instância<br /><br /> 2: instância iniciada<br /><br /> 3: instância pausada<br /><br /> 4 = continuação da instância|  
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/08/2017
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |ObjectReference|15|8|Referência ao objeto. Codificado como XML para todos os pais, usando marcas para descrever o objeto.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/08/2017
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventSubclass|1|1|A Subclasse de Evento oferece informações adicionais sobre cada classe de evento:<br /><br /> 1: **Backup**<br /><br /> 2: **Restore**<br /><br /> 3: **Synchronize**<br /><br /> 4: **Detach**<br /><br /> 5: **Attach**<br /><br /> 6: **ImageLoad**<br /><br /> 7: **ImageSave**|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -136,7 +136,7 @@ ms.lasthandoff: 12/08/2017
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Categoria de evento de auditoria de segurança](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 550455ead049191d94de93a40a55aa3b064602a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be30c3c81333080fdcf3bc40bd6abad7c7449d5b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-the-current-transaction"></a>Acessando a transação atual
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Se uma transação está ativa no ponto no qual código de runtime (CLR) de linguagem comum em execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é inserido, a transação é exposta por meio de **Transactions** classe. A propriedade **Transaction.Current** é usada para acessar a transação atual. Na maioria das vezes, não é necessário acessar a transação explicitamente. Para conexões de banco de dados, ADO.NET verifica **Transaction.Current** automaticamente quando o método **Connection.Open** é chamado e inscreve a conexão de forma transparente nessa transação (a menos que a palavra-chave **Enlist** esteja definida como falsa na cadeia de conexão).  
@@ -206,7 +206,7 @@ DROP ASSEMBLY TestProcs;
 Go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integração CLR e transações](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

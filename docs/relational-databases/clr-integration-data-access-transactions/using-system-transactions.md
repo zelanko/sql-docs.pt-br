@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40c3ac24cc6be800fea8da1fab407569e4cdab87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-systemtransactions"></a>Usando System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O **System. Transactions** namespace fornece uma estrutura de transação que está totalmente integrada com o ADO.NET e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integração common language runtime (CLR). Uma classe **System.Transactions.TransactionScope** torna um bloco de código transacional inscrevendo implicitamente conexões em uma transação distribuída. Chame o método **Complete** no final do bloco de código marcado pelo **TransactionScope**. O método **Dispose** será invocado quando a execução do programa deixar um bloco de código, fazendo a transação ser descontinuada se o método **Complete** não for chamado. Se tiver sido lançada uma exceção que faz o código deixar o escopo, a transação será considerada descontinuada.  
@@ -111,7 +111,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integração CLR e transações](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0d458e95075bb96154d14a935d5aa5cba839d752
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 900b602a00e11cc58cd6500cafc99eb90dcca62d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="slash-star-comment-dmx"></a>Estrela de barra (comentário) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,14 +44,14 @@ ms.lasthandoff: 11/20/2017
  *Comment_Text*  
  Cadeia de caracteres que contém o texto do comentário.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Comentários de várias linhas devem ser indicados por / * e \*/.  
   
  Não há comprimento máximo para comentários.  
   
  Para obter mais informações sobre como usar tipos diferentes de comentários em DMX, consulte [comentários &#40; DMX &#41;](../dmx/comments-dmx.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Barras duplas &#40; Comentário &#41; &#40; DMX &#41;](../dmx/double-slash-comment-dmx.md)   
  [– &#40; Comentário &#41; &#40; DMX &#41; Resumo](../dmx/comment-dmx-summary.md)   
  [Extensões de mineração de dados &#40; DMX &#41; Referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   

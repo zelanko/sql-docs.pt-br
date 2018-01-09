@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eab4af44192304701687c7796448407eaacdaa96
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partições - modos de armazenamento de partição e processamento
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O modo de armazenamento de uma partição afeta a consulta e processamento de desempenho, requisitos de armazenamento e locais de armazenamento da partição e seu grupo de medidas pai e o cubo. A escolha do modo de armazenamento também afeta escolhas de processamento.  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/08/2017
   
  As partições armazenadas como HOLAP são menores que as partições MOLAP equivalentes, pois elas não contêm dados de origem e respondem mais rapidamente que as partições ROLAP para consultas envolvendo dados resumidos. O modo de armazenamento HOLAP é geralmente adequado a partições em cubos que requerem resposta rápida a consultas de resumos com base em uma grande quantidade de dados de origem. Entretanto, quando os usuários geram consultas que atingem os dados no nível folha, como ao calcular valores de média, o MOLAP geralmente é a melhor escolha.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [O cache pró-ativo &#40; Partições &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Sincronizar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3bfc3eb927d6e9764349281ea48ef94e7873675b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 67376067c26a3eae41d0c090a141367fcf5cc396
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-scripting---if"></a>Script MDX - se
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ IF expression THEN assignment END IF
  *atribuição*  
  Uma expressão MDX que atribui um valor a um subcubo ou uma propriedade calculada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use a instrução IF para fluxo de controle, que é diferente de [IIf &#40; MDX &#41; ](../mdx/iif-mdx.md) função e o [instrução CASE &#40; MDX &#41; ](../mdx/case-statement-mdx.md) que só pode ser usado para retornar valores ou objetos.  
   
 ## <a name="examples"></a>Exemplos  
@@ -56,7 +56,7 @@ IF expression THEN assignment END IF
   
  `END SCOPE`;  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

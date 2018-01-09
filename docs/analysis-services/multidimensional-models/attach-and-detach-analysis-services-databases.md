@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,13 +25,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f882dfe4979beeb7fa162c7bc649fd01440291d1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4abef02a67a334486b123a2ed29b8119e7a29f8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="attach-and-detach-analysis-services-databases"></a>Anexar e desanexar bancos de dados do Analysis Services
+# <a name="attach-and-detach-analysis-services-databases"></a>Anexar e desanexar Bancos de Dados do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Geralmente há situações quando um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador de banco de dados (dba) deseja colocar um banco de dados offline por um período e então colocar o banco de dados online novamente na mesma instância do servidor, ou em um diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto. Para todos estes e outros casos, os comandos **Attach** e **Detach** permitem que o DBA do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] coloque o banco de dados offline e o coloque online novamente com o mínimo de esforço.  
   
 ## <a name="attach-and-detach-commands"></a>Comandos Anexar e Desanexar  
@@ -65,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 > [!IMPORTANT]  
 >  É preciso ter privilégios de administrador do servidor para executar o comando **Attach** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Mover um banco de dados do Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
  [Banco de dados ReadWriteModes](../../analysis-services/multidimensional-models/database-readwritemodes.md)   

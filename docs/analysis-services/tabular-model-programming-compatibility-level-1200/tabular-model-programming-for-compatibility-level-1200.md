@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5c7a0c3c69a8d4c834cf6a44cd3e588faed2593f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30122388bc5e1c82f26bbaa37452330b97a77077
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Tabela de modelo de programação para 1200 de nível de compatibilidade e superior
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Começando com o nível de compatibilidade 1200, metadados de tabela é usado para descrever as construções de modelo, substituindo históricos metadados multidimensionais como descritores de objetos de modelo de tabela. Metadados de tabelas, colunas e relações são tabela, coluna e relação, em vez dos equivalentes Multidimensional (dimensão e atributo).  
@@ -56,7 +54,7 @@ Atualizar uma solução de tabela existente é recomendado, mas não é necessá
 > [!NOTE]  
 >  Bibliotecas de cliente do Analysis Services Management Objects (AMO), o ADOMD.NET e o modelo de objeto de tabela (TOM) agora voltados para o tempo de execução do .NET 4.0.   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Documentação do desenvolvedor do Analysis Services](../../analysis-services/analysis-services-developer-documentation.md)   
  [Programação de modelo de tabela para compatibilidade 1050 1103 por meio de níveis](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
  [Referência técnica &#40; SSAS &#41; ](../../analysis-services/powershell/technical-reference-ssas.md) [Atualizar o Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  

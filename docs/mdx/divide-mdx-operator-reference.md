@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: /
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e4c4a1d6b4a71cca9671b397189d817b1ec349ab
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5cc93d1be3e91fc42fdd5e0d579321106c9375b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="divide---mdx-operator-reference"></a>Dividir - referência de operador MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ Dividend / Divisor
 ## <a name="return-value"></a>Valor de retorno  
  Um valor com o tipo de dados do parâmetro com prioridade maior.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor real retornado pelo **/ (divisão)** operador representa o quociente da primeira expressão dividido pela segunda expressão.  
   
  As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se *Divisor* é avaliada como um valor nulo, o operador gerará um erro. Se ambos os *Divisor* e *dividendo* avaliar como um valor nulo, o operador retornará um valor nulo.  
@@ -111,7 +111,7 @@ WHERE
   
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IIf &#40; MDX &#41;](../mdx/iif-mdx.md)   
  [Referência de operador MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
   

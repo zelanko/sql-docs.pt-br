@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: EnumString Data Type
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4018f8cafb3daed98c05d9d59c12a0cfb1998e7a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b00fa29ae9dc0bb4529e013f9767451c3d0f1720
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enumstring-data-type-xmla"></a>Tipo de dados EnumString (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Define um tipo de dados derivado que representa um conjunto de constantes nomeadas para um determinado enumerador.  
@@ -46,20 +44,20 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Características do tipo de dados  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|**cadeia de caracteres**|  
-|Tipos de dados derivados|Nenhuma|  
+|Tipos de dados derivados|Nenhum|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhuma|  
-|Elementos filho|Nenhuma|  
-|Elementos derivados|Nenhuma|  
+|Elementos pai|Nenhum|  
+|Elementos filho|Nenhum|  
+|Elementos derivados|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  XMLA (XML for Analysis) usa enumeração para limitar os valores de cadeia para um conjunto de configurações verificáveis. **EnumString** usa o XML padrão **cadeia de caracteres** tipo de dados. São especificados os valores específicos para cada uma das constantes nomeadas com a definição de enumerador. Enumeradores são definidos pela inclusão deles para o [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) linhas de esquema e pode ser recuperado usando o [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) tipo de solicitação de método com o DISCOVER_ENUMERATORS.  
   
  A tabela a seguir descreve os enumeradores suportados por uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
 |ResultsetContents|Oferece suporte à propriedade XMLA, **conteúdo**, que determina se os metadados ou dados são retornados em uma **raiz** elemento.<br /><br /> Para obter mais informações sobre **conteúdo**, consulte [suporte para propriedades de XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |MDXSupportLevel|Oferece suporte à propriedade XMLA, **MDXSupport**, que indica o nível de suporte de MDX (Multidimensional Expressions) disponível em um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.<br /><br /> Para obter mais informações sobre **MDXSupport**, consulte [suporte para propriedades de XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados XML &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

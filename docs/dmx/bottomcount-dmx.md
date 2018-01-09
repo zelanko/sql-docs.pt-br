@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: BOTTOMCOUNT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3b75e2846d0cbafa798281b276f3bfac768473f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 90362587d913e70447157a353b738410122c6c38
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Tipo de retorno  
  \<expressão de tabela >  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor que é fornecido pelo \<expressão de classificação > argumento determina a ordem de classificação crescente das linhas que são fornecidos no \<expressão de tabela > argumento e o número de linhas inferiores especificado no \<contagem > argumento será retornado.  
   
 ## <a name="examples"></a>Exemplos  
@@ -111,7 +109,7 @@ NATURAL PREDICTION JOIN
   
  **Observação** Este exemplo é fornecido apenas para ilustrar o uso de BottomCount. Dependendo do tamanho do conjunto de dados, esta consulta pode demorar muito para ser executada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)   

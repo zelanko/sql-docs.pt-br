@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: 2ecd66763b0fbcdff8eb0d776b9c7b7df98e60b0
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrair, transformar e carregar dados em Linux com o SSIS
 
@@ -31,7 +31,7 @@ Pacotes do SSIS em execução no Linux podem se conectar ao Microsoft SQL Server
 
 Para obter mais informações sobre os recursos do SSIS, consulte [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para executar pacotes SSIS em um computador Linux, primeiro você precisa instalar o SQL Server Integration Services. O SSIS não está incluído na instalação do SQL Server para computadores Linux. Para obter instruções de instalação, consulte [instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 
@@ -47,6 +47,34 @@ Para executar um pacote do SSIS em um computador Linux, faça o seguinte:
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
+## <a name="run-an-encrypted-password-protected-package"></a>Executar um pacote criptografado (protegido por senha)
+Há três maneiras de executar um pacote do SSIS é criptografado com uma senha:
+
+1.  Defina o valor da variável de ambiente `SSIS_PACKAGE_DECRYPT`, conforme mostrado no exemplo a seguir:
+
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
+
+2.  Especifique o `/de[crypt]` opção para digitar a senha interativamente, conforme mostrado no exemplo a seguir:
+
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
+    
+    Enter decryption password:
+    ```
+
+3.  Especifique o `/de` opção para fornecer a senha na linha de comando, conforme mostrado no exemplo a seguir. Esse método não é recomendado porque ele armazena a senha de descriptografia com o comando no histórico de comandos.
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
+    
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
+    ```
+
 ## <a name="design-packages"></a>Criar pacotes
 
 **Conecte-se a fontes de dados ODBC**. Com o SSIS, sobre a atualização do Linux CTP 2.1 e posterior, os pacotes do SSIS podem usar conexões ODBC no Linux. Essa funcionalidade foi testada com o SQL Server e os drivers ODBC MySQL, mas também é esperada para funcionar com qualquer driver de ODBC Unicode que observa a especificação de ODBC. Em tempo de design, você pode fornecer um DSN ou uma cadeia de caracteres de conexão para conectar-se aos dados de ODBC; Você também pode usar a autenticação do Windows. Para obter mais informações, consulte o [postagem do blog anunciar suporte a ODBC no Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
@@ -56,7 +84,7 @@ Para executar um pacote do SSIS em um computador Linux, faça o seguinte:
 ## <a name="deploy-packages"></a>Implantar pacotes
 Você só pode armazenar pacotes no sistema de arquivos Linux nesta versão. O banco de dados de catálogo do SSIS e o serviço SSIS herdado não estão disponíveis no Linux para o armazenamento e a implantação do pacote.
 
-## <a name="schedule-packages"></a>Pacotes de agenda
+## <a name="schedule-packages"></a>Agendar pacotes
 Você pode usar o sistema do Linux, como ferramentas de agendamento `cron` para agendar pacotes. Você não pode usar o SQL Agent no Linux para agendar a execução de pacote nesta versão. Para obter mais informações, consulte [pacotes do SSIS de agenda em Linux com cron](sql-server-linux-schedule-ssis-packages.md).
 
 ## <a name="limitations-and-known-issues"></a>Limitações e problemas conhecidos

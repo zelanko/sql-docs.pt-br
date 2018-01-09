@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1bdecb5570f4c139fd42a77d2ef5479758bdf63a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37d547672455e794854d2143819a445fc25edef2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-code-access-security"></a>Segurança de acesso a código da integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O common language runtime (CLR) oferece suporte a um modelo de segurança chamado segurança de acesso de código para código gerenciado. Nesse modelo, são concedidas permissões a assemblies com base na identidade do código. Para obter mais informações, consulte a seção "Segurança de acesso do código" no Software Development Kit do .NET Framework.  
@@ -114,11 +114,11 @@ ms.lasthandoff: 11/17/2017
 ||**SAFE**|**EXTERNAL_ACCESS**|**NÃO SEGURO**|  
 |**Permissões de segurança de acesso do código**|Somente execução|Execução + acesso a recursos externos|Irrestrito (inclusive P/Invoke)|  
 |**Restrições do modelo de programação**|Sim|Sim|Sem restrições|  
-|**Requisito de verificabilidade**|Sim|Sim|Não|  
+|**Requisito de verificabilidade**|Sim|Sim|não|  
 |**Acesso a dados locais**|Sim|Sim|Sim|  
-|**Capacidade de chamar código nativo**|Não|Não|Sim|  
+|**Capacidade de chamar código nativo**|não|não|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Atributos de proteção de host e programação da integração CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Restrições do modelo de programação de integração de CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   

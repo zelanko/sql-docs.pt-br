@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -29,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ab4dc73881d8c29586b4f70a2b89f68a00263abd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: be395f43e1a372e54f9759edcf58d0b35f03d15c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Definição de dados MDX - criar o cubo de sessão
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -130,7 +130,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<tipo de nível >  
  Especificação válida somente para definição de dimensão derivada.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Ao contrário do servidor e de cubos locais, um cubo de sessão não persiste além da sessão que criou o cubo de sessão. Um cubo de sessão é definido de acordo com as medidas e definições que o definem. Há dois tipos de dimensões:  
   
 -   Dimensões de origem – são dimensões que faziam parte de um de mais cubos de origem.  
@@ -218,7 +218,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de definição de dados MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [Criar cubo GLOBAL instrução &#40; MDX &#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   

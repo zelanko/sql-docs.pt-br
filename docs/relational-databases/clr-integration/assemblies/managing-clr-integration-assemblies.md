@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs: TSQL
@@ -22,21 +22,21 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e95209ed47c5e49177ae43bc9bf5ae1026ca511
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c0e533e43c49bcd7bc32264cf1e59216ee0bc03a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gerenciando assemblies de integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Código gerenciado é compilado e implantado em unidades chamadas de assembly. Um assembly é empacotado como uma DLL ou um arquivo executável (.exe). Um arquivo executável pode ser executado sozinho, mas uma DLL precisa ser hospedada em um aplicativo existente. Os assemblies DLL gerenciados podem ser carregados no e hospedados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que você registre o assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução CREATE ASSEMBLY, antes que ele seja carregado no processo e usado. Os assemblies também podem ser atualizados de uma versão mais recente usando a instrução ALTER ASSEMBLY ou removidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução DROP ASSEMBLY.  
   
  Informações de assembly são armazenadas no **assembly_files** tabela no banco de dados onde o assembly foi instalado. O **assembly_files** tabela contém as seguintes colunas.  
   
-|Coluna|Description|  
+|coluna|Description|  
 |------------|-----------------|  
 |assembly_id|O identificador definido para o assembly. Este número é atribuído a todos os objetos relacionados ao mesmo assembly.|  
-|name|O nome do objeto.|  
+|NAME|O nome do objeto.|  
 |file_id|Um número que identifica cada objeto, com o primeiro objeto associado com um determinado **assembly_id** recebendo o valor de 1. Se vários objetos estão associados com o mesmo **assembly_id**, em seguida, cada subsequentes **file_id** valor é incrementado em 1.|  
 |content|A representação hexadecimal do assembly ou arquivo.|  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
  [Descarte de um assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)  
  Discute o descarte de assemblies CLR do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Segurança de acesso do código da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
   

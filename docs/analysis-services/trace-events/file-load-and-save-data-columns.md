@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 788c4b0e0ff0b35a193f5af55b3e4949fb04e572
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8f10d93cf8670da5e14d2fb65193c43398ad1c6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="file-load-and-save-data-columns"></a>Colunas de dados File Load and Save
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A categoria de evento File Load and Save tem a seguinte classe de evento:  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |JobID|7|1|ID do trabalho para andamento.|  
 |SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
 |IntegerData|10|1|Dados Integer.|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/08/2017
 |ObjectName|13|8|Nome do objeto.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |JobID|7|1|ID do trabalho para andamento.|  
 |SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
 |IntegerData|10|1|Dados Integer.|  
@@ -122,7 +122,7 @@ ms.lasthandoff: 12/08/2017
 |ObjectName|13|8|Nome do objeto.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |JobID|7|1|ID do trabalho para andamento.|  
 |SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
 |IntegerData|10|1|Dados Integer.|  
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/08/2017
 |ObjectName|13|8|Nome do objeto.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -205,7 +205,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |JobID|7|1|ID do trabalho para andamento.|  
 |SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
 |IntegerData|10|1|Dados Integer.|  
@@ -214,7 +214,7 @@ ms.lasthandoff: 12/08/2017
 |ObjectName|13|8|Nome do objeto.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -223,7 +223,7 @@ ms.lasthandoff: 12/08/2017
 |TextData|42|9|Dados de texto associados ao evento.|  
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Categoria de evento File Load and Save](../../analysis-services/trace-events/file-load-and-save-event-category.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b713da243d7c97902ed0810509a18f97dbc0c3aa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definição de dados MDX - ALTER CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +131,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Uma expressão de cadeia de caracteres válida que fornece um nome ou uma chave de membro.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
  Se a cláusula WITH DESCENDANTS não for utilizada, os filhos de um membro descartado se tornam filhos do pai do membro descartado. Se a cláusula WITH DESCENDENTES for utilizada, todos os descendentes e suas linhas na tabela de dimensões também serão descartados.  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Uma linguagem MDX válida que retorna um único membro.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
  A linguagem MDX especificada pode ser estática ou dinâmica.  
   
 ## <a name="moving-a-dimension-member"></a>Movendo um membro de dimensão  
@@ -181,7 +181,7 @@ CELL CALCULATION Calculation_Name
 ## <a name="creating-a-cell-calculation"></a>Criando um cálculo de célula  
  Para obter mais informações sobre como criar um cálculo de célula usando a instrução ALTER CUBE, consulte [instrução DROP de CÁLCULO de CÉLULA &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de definição de dados MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

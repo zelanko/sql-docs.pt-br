@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20401dbc3487931219009811c83694c7f2f19703
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4ae8366ecec5bf25e1fd27a63d22ac796c080660
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entityset-element-csdlbi"></a>Elemento EntitySet (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O elemento EntitySet define uma coleção de entidades de um determinado tipo em um modelo de dados da CSDLBI.  
@@ -36,12 +34,12 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela abaixo lista os elementos e atributos que definem um EntitySet.  
   
-|Nome do Atributo|É obrigatório|Descrição|  
+|Nome do Atributo|É obrigatório|Description|  
 |--------------------|-----------------|-----------------|  
-|Caption|Não|Uma descrição amigável do conjunto de entidades.|  
-|CollectionCaption|Não|Uma cadeia de caracteres que contém o nome plural da entidade.|  
-|ReferenceName|Não|Contém o nome não mesclado e totalmente qualificado da entidade. Em um modelo multidimensional, isso corresponde ao nome CubeDimension.|  
-|Oculto|Não|Indica se a entidade está oculta. Por padrão, as entidades não são ocultas.|  
+|Legenda|não|Uma descrição amigável do conjunto de entidades.|  
+|CollectionCaption|não|Uma cadeia de caracteres que contém o nome plural da entidade.|  
+|ReferenceName|não|Contém o nome não mesclado e totalmente qualificado da entidade. Em um modelo multidimensional, isso corresponde ao nome CubeDimension.|  
+|Hidden|não|Indica se a entidade está oculta. Por padrão, as entidades não são ocultas.|  
   
 ## <a name="example"></a>Exemplo  
  **Tabular**  
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 </EntitySet>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência técnica para Anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

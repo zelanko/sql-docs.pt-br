@@ -5,13 +5,10 @@ ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparando soluções tabulares e multidimensionais
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services fornece várias abordagens para criar um modelo semântico do business intelligence: Tabular, Multidimensional e PowerPivot para SharePoint.
@@ -60,33 +57,33 @@ ms.lasthandoff: 12/08/2017
 |||| 
 |-|-|-|
 ||Multidimensional|Tabular|
-|Ações|Sim|Não|
-|Agregações|Sim|Não|
-|Coluna calculada|Não|Sim|  
+|Ações|Sim|não|
+|Agregações|Sim|não|
+|Coluna calculada|não|Sim|  
 |Medidas calculadas|Sim|Sim| 
-|Tabelas calculadas|Não|Sim<sup>1</sup>|  
-|Assemblies personalizados|Sim|Não|
-|Rollups personalizados|Sim|Não| 
-|Membro padrão|Sim|Não|  
+|Tabelas calculadas|não|Sim<sup>1</sup>|  
+|Assemblies personalizados|Sim|não|
+|Rollups personalizados|Sim|não| 
+|Membro padrão|Sim|não|  
 |Pastas de exibição|Sim|Sim<sup>1</sup>|  
 |Contagem Distinta|Sim|Sim (por DAX)|
 |Detalhamento|Sim|Sim (depende do aplicativo cliente)|
 |Hierarquias|Sim|Sim|
 |KPIs|Sim|Sim| 
 |Objetos vinculados|Sim|Sim (tabelas vinculadas)|
-|Expressões de M|Não|Sim<sup>1</sup>|
+|Expressões de M|não|Sim<sup>1</sup>|
 |Relações muitos para muitos|Sim|Não (mas não há [bidirecional filtros cruzados](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) nos níveis de compatibilidade 1200 e superior)| 
-|Conjuntos nomeados|Sim|Não| 
+|Conjuntos nomeados|Sim|não| 
 |Hierarquias desbalanceadas|Sim|Sim<sup>1</sup>|  
-|Hierarquias pai-filho|Sim|Sim (via DAX)|
+|Hierarquias pai-filho|Sim|Sim (por DAX)|
 |Partições|Sim|Sim| 
-|Perspectivas|Sim|Sim|
+|perspectivas|Sim|Sim|
 |Segurança em nível de linha|Sim|Sim| 
 |Segurança em nível de objeto|Sim|Sim<sup>1</sup>|
 |Medidas semiaditivas|Sim|Sim| 
 |Translations|[Sim](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sim| 
 |Hierarquias definidas pelo usuário|Sim|Sim|
-|Write-back|Sim|Não| 
+|Write-back|Sim|não| 
   
  <sup>1</sup> consulte [modelos de nível de compatibilidade de tabela no Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) para obter informações sobre as diferenças funcionais entre níveis de compatibilidade.  
   
@@ -177,7 +174,7 @@ ms.lasthandoff: 12/08/2017
  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciamento de instância do Analysis Services](../analysis-services/instances/analysis-services-instance-management.md)   
  [Novidades do Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)     
 

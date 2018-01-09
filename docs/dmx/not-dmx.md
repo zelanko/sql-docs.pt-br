@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: NOT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7124cc5f317d8480863a94772b290020a5ba9f57
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c242a6767e60b04249d69d340806d0cf78a374e2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +45,7 @@ NOT Expression1
 ## <a name="return-value"></a>Valor de retorno  
  Valor booliano que retorna FALSE se o argumento avaliar como TRUE; do contrário, FALSE.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O argumento é tratado como valor booliano (0 como FALSE; do contrário, TRUE) antes que o operador realize a negação lógica. Se *Expression1* for TRUE, o operador retornará FALSE. Se *Expression1* é FALSE, o operador retornará TRUE. A tabela a seguir ilustra como a conjunção lógica é executada.  
   
 |Se a Expression1 for|O valor de retorno será|  
@@ -55,7 +53,7 @@ NOT Expression1
 |TRUE|FALSE|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Lógica operadores &#40; DMX &#41;](../dmx/operators-logical.md)   
  [Operadores &#40; DMX &#41;](../dmx/operators-dmx.md)  

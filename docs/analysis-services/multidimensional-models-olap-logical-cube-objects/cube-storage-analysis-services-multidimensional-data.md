@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83762a6da2ee3b67c388fdd7b1b3ac5ffc144573
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bf2333da378e88992b54db5169a2cf8fedc5ec9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Armazenamento de cubo (Analysis Services – Dados Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Armazenamento pode incluir apenas os metadados do cubo ou pode incluir todos os dados de origem da tabela de fatos, bem como as agregações definidas por dimensões relacionadas ao grupo de medidas. A quantidade de dados armazenados depende do modo de armazenamento selecionado e do número de agregações. A quantidade de dados armazenados afeta diretamente o desempenho de consulta. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa diversas técnicas para minimizar o espaço necessário para o armazenamento de dados de cubo e agregações:  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="linked-measure-groups"></a>Grupos de medidas vinculados  
  Isso pode exigir um espaço em disco considerável para armazenar várias cópias de um cubo em instâncias diferentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mas você pode reduzir, consideravelmente, o espaço necessário substituindo as cópias do grupo de medidas por grupos de medidas vinculados. Um grupo de medidas vinculado é baseado em um grupo de medidas em um cubo em outro banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], na mesma instância ou em uma instância diferente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Um grupo de medidas vinculado também pode ser usado com dimensões vinculadas do mesmo cubo de origem. As dimensões vinculadas e os grupos de medidas usam as agregações do cubo de origem e não têm requisitos de armazenamento de dados próprios. Portanto, mantendo os grupos de medidas de origem e dimensões em um banco de dados e criando cubos vinculados e dimensões em cubos em outros bancos de dados, você pode economizar espaço em disco que, de outra maneira, seria usado para armazenamento. Para obter mais informações, consulte [grupos de medidas vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Agregações e designs de agregação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

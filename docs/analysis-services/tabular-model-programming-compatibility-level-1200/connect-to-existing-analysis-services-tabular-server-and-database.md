@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e34cc306126acc431048fd93b7eab99049bc2414
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9f8282029d3f20075ed35b29e1af913a882075da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>Conecte-se ao banco de dados e servidor de tabela do Analysis Services existente
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]No SQL Server 2016, o Analysis Services Management Objects (AMO) inclui vários namespaces que pode ser usados para configurar uma conexão de servidor. Este artigo explica como estabelecer uma conexão de servidor usando o namespace AnalysisServices para modelos e bancos de dados criados em 1200 ou maior nível de compatibilidade. 

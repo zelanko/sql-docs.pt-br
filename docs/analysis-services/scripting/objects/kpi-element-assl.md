@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Kpi Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3d621817020877c782abedfe46e36a14768564a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2df3bde25177d272c7b267af60670bdace41af95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpi-element-assl"></a>Elemento Kpi (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define um indicador chave de desempenho (KPI) em um [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento ou um [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.  
@@ -63,15 +61,15 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Consulte a tabela a seguir.|  
-|Valor padrão|Nenhuma|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 |Ancestral ou pai|Tipo de Dados|  
 |------------------------|---------------|  
-|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|Nenhuma|  
+|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|Nenhum|  
 |[Perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[PerspectiveKpi](../../../analysis-services/scripting/data-type/perspectivekpi-data-type-assl.md)|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -84,12 +82,12 @@ ms.lasthandoff: 12/08/2017
 |Ancestral ou pai|Elementos filho|  
 |------------------------|--------------------|  
 |[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|[Anotações](../../../analysis-services/scripting/collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../../../analysis-services/scripting/properties/associatedmeasuregroupid-element-assl.md), [CurrentTimeMember](../../../analysis-services/scripting/properties/currenttimemember-element-assl.md), [descrição](../../../analysis-services/scripting/properties/description-element-assl.md), [DisplayFolder](../../../analysis-services/scripting/properties/displayfolder-element-assl.md), [Meta](../../../analysis-services/scripting/properties/goal-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [nome](../../../analysis-services/scripting/properties/name-element-assl.md), [Status](../../../analysis-services/scripting/properties/status-element-assl.md), [StatusGraphic](../../../analysis-services/scripting/properties/statusgraphic-element-assl.md), [ Traduções](../../../analysis-services/scripting/collections/translations-element-assl.md), [tendência](../../../analysis-services/scripting/properties/trend-element-assl.md), [TrendGraphic](../../../analysis-services/scripting/properties/trendgraphic-element-assl.md), [valor](../../../analysis-services/scripting/properties/value-element-assl.md)|  
-|[Perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md)|Nenhuma|  
+|[Perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md)|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os elementos correspondentes no modelo de objeto AMO (Objetos de Gerenciamento de Análise) são <xref:Microsoft.AnalysisServices.Kpi> e <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

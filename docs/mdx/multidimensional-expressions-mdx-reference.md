@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: sql13.asvs.sqlserverstudio.startpage.mdx.f1
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: aa471c4f2896cacd319cd4f6c1dd8a3bf6d2518a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f0391b6ddf2e87a8170e4271ab2082b424baff34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Referência de linguagem MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/27/2017
 |[Elementos de sintaxe MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)|Descreve os vários elementos de sintaxe disponíveis na linguagem MDX para expressões, instruções e scripts MDX.|  
 |[Referência de linguagem MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)|Descreve as instruções, os operadores e as funções que definem a linguagem MDX.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Consultando dados multidimensionais com MDX](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Recuperando dados de uma fonte de dados analíticos](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d197240962d834b3da6c6e1dbdd1fb224a995192
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O mínimo necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
  Este tópico descreve os outros recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que geralmente fazem parte de uma solução de análises preditiva, para dar suporte aos processos de preparação de dados e mineração de dados, ou para dar suporte aos usuários fornecendo ferramentas para análise e ação.  
   
- [Integration Services](#bkmk_SSIS)  
+ [Serviços de Integração](#bkmk_SSIS)  
   
  [Reporting Services](#bkmk_SSRS)  
   
@@ -208,7 +206,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Nem todos os idiomas de texto completo dão suporte à indexação semântica. Para ver uma lista dos idiomas com suporte, consulte [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Soluções de modelo multidimensional &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Soluções de modelo de tabela &#40;SSAS de tabela&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   

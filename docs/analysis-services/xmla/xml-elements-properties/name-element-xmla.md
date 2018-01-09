@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Name Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f365c28885809b7b9de95f2c4505bd1eb739d023
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 995792653603bd7ff5954a34755e7704544675b6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="name-element-xmla"></a>Elemento Name (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém o nome de um membro de atributo para o pai [atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) ou [tradução](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md) elemento.  
@@ -50,30 +48,30 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|String|  
-|Valor padrão|Nenhuma|  
+|Comprimento e tipo de dados|Cadeia de caracteres|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|Consulte a tabela a seguir.|  
   
 |Ancestral ou pai|Cardinalidade|  
 |------------------------|-----------------|  
 |[Atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
-|[Tradução](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|[Tradução](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md), [tradução](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para **atributo** elementos, o **nome** elemento contém o nome do membro do atributo a ser inserido ou atualizado durante, respectivamente, o **inserir** ou **Atualização** comando.  
   
  Para **tradução** elementos, o **nome** elemento contém a legenda do membro do atributo, no idioma especificado pelo **idioma** elemento do pai  **Tradução** objeto. Se o **nome** elemento não for especificado ou contiver uma cadeia de caracteres vazia, o valor da **nome** elemento para o **atributo** elemento que contém o  **Tradução** elemento é usado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inserir o elemento &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Elemento de linguagem &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/language-element-xmla.md)   
  [Atualizar o elemento &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   

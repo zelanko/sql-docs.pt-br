@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View - configurar propriedades de comportamento de tabela para relatórios
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Se você estiver usando um modelo de tabela como um modelo de dados para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], você pode definir propriedades de comportamento de tabela que exponham linhas de detalhes em um nível mais granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.  
@@ -141,7 +138,7 @@ ms.lasthandoff: 12/08/2017
   
  ![Gráfico com base no agrupamento de ID de linha](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "gráfico com base no agrupamento de ID de linha")  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Depois de avaliar as tabelas em seu modelo e definir as propriedades de comportamento da tabela nelas contendo linhas de detalhes que sempre devem aparecer como itens individuais, você poderá otimizar ainda mais o modelo por meio de propriedades ou configurações adicionais.  
   
   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma instância do Analysis Services registrará notificações do servidor, erros e avisos no arquivo msmdsrv.log, um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](http://support.microsoft.com/kb/2965035).  
@@ -54,8 +51,8 @@ ms.lasthandoff: 12/08/2017
 |Nome ou local do arquivo|Tipo|Usado para|Ativado por padrão|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log de erros|Monitoramento de rotina e solução de problemas básicos|Sim|  
-|Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|Não|  
-|SQLDmp\<guid >. mdmp arquivos|Falhas e exceções|Solução de problemas detalhada|Não|  
+|Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|não|  
+|SQLDmp\<guid >. mdmp arquivos|Falhas e exceções|Solução de problemas detalhada|não|  
   
  O link a seguir é altamente recomendável para a obtenção de recursos de informações adicionais que não são abordados neste tópico: [Dicas para coleta de dados inicial do Suporte da Microsoft](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -161,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
  A definição de configuração tem mais probabilidade de ser modificada é a **CreateAndSendCrashReports** usada para determinar se um arquivo de despejo de memória será gerado.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0|Desativa o arquivo de despejo de memória. Todas as outras configurações na seção Exceção são ignoradas.|  
 |1|(Padrão) Habilita, mas não envia o arquivo de despejo de memória.|  
@@ -188,7 +185,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Use ASTrace2012 em vez de um log de consulta para descobrir o que está consultando cubos. O log de consultas normalmente é usado para fornecer sugestões para o Assistente de Otimização com Base no Uso e os dados capturados não são fácil de ler ou interpretar. O ASTrace2012 é uma ferramenta de comunidade, amplamente utilizada, que captura as operações de consulta. Consulte [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)(Exemplos da comunidade do Microsoft SQL Server: Analysis Services).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciamento de instância do Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
  [Introdução ao monitoramento do Analysis Services com o SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Propriedades do servidor do Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7ddfd4155b0dfe0a5b624935c79098fb82ed0ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 28082a9c402700a17c7072ed6d7dcd3a87c92bd9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-database-mail"></a>Usando o Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]No SMO, o subsistema Database Mail é representado pelo <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> que é referenciado pelo objeto de <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> propriedade. Através do objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> do SMO, você pode configurar o subsistema Database Mail e gerenciar perfis e contas de email. O SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objeto pertence a **Server** objeto, o que significa que o escopo das contas de email está no nível do servidor.  

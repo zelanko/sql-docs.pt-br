@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
@@ -20,16 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d6422eb1648f33f699525edbc944f3bc0b4c5519
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 560f9240a17b3b74afc09729026fc8fd4038bd16
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Projetos de modelo tabular (SSAS tabular)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Para criar um novo modelo tabular, você deve primeiro criar um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando você instala o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], três novos modelos de projeto de Business Intelligence são fornecidos para criar projetos de modelo tabular. Cada modelo de projeto fornece uma estrutura na qual você pode começar a criar seu modelo. Os tópicos nesta seção descrevem como criar um novo projeto de modelo tabular usando os modelos de projeto.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tópico|Description|  
 |-----------|-----------------|  

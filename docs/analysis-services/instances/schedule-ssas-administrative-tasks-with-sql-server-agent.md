@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4842c80e3ac4cd34ec419e1577f7a2354a2ae34a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4d2bc32eb76882c00b411e7eff81fd3cf5b45b77
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Agendar tarefas administrativas do SSAS com o SQL Server Agent
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Usando o serviço SQL Server Agent, você pode agendar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tarefas administrativas para executar na ordem e horários em que você precisam. As tarefas agendadas ajudam a automatizar os processos que são executados em ciclos regulares ou previsíveis. Você pode agendar a execução de tarefas administrativas, como o processamento de cubos, nas horas de menor atividade comercial. Pode também estabelecer a ordem em que essas tarefas devem ser executadas criando etapas em um trabalho do SQL Server Agent. Por exemplo, é possível processar um cubo e, em seguida, fazer o backup do cubo.  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/08/2017
   
  Este tópico é um passo a passo que mostra dois modos de usar o SQL Server Agent para executar um script XMLA. O primeiro exemplo demonstra como agendar o processamento de uma única dimensão. O segundo exemplo mostra como combinar tarefas de processamento em um único script executado com base em uma agenda. Para concluir essas etapas, você precisará atender aos pré-requisitos a seguir.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  O serviço SQL Server Agent deve ser instalado.  
   
  Por padrão, os trabalhos são executados na conta de serviço. Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a conta padrão do SQL Server Agent é NT Service\SQLAgent$\<nome_da_instância >. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -230,7 +227,7 @@ ms.lasthandoff: 12/08/2017
   
 16. Quando o trabalho for concluído, clique em **Fechar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de processamento e as configurações de &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   

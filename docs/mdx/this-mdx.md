@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: THIS
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cb9d77b3264b64af132a05fc73d82543060c9f19
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7065d192cf9b02f827753b8e0b50191d6daf30b8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="this-mdx"></a>This (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/27/2017
 This   
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **isso** função pode ser usada no lugar de qualquer expressão de subcubo para fornecer o subcubo atual dentro do escopo atual do script de cálculo MDX. O **isso** função deve ser usada no lado esquerdo de uma atribuição.  
   
 ## <a name="examples"></a>Exemplos  
@@ -84,7 +84,7 @@ This
   
  `End Scope;`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
  [Cálculos](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
   

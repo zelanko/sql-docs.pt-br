@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Root Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 714981915579f08fe025d73d574f8ffeccdf72a8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="root-element-xmla"></a>Elemento root (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contém um resultado retornado pelo [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método ou um comando XML for Analysis (XMLA) executado usando o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
@@ -54,10 +52,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Consulte a tabela a seguir.|  
-|Valor padrão|Nenhuma|  
+|Valor padrão|Nenhum|  
 |Cardinalidade|1-n: elemento obrigatório que pode ocorrer mais de uma vez.|  
   
 |Ancestor|Tipo de dados|  
@@ -70,12 +68,12 @@ ms.lasthandoff: 12/08/2017
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[resultados](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [de retorno](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **raiz** elemento contém as informações retornadas de uma a [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) elemento retornado por um único **Discover** chamada de método, ou no [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) elemento retornado por um único comando XMLA executado por um único **Execute** chamada de método.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

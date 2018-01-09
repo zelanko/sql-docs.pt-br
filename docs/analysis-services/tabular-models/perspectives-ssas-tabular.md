@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1fdbede4868884656f3dbf9e7ff8d37e3019ed12
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a10f9bc23e8c08cb36dac71ad473a67008424e67
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="perspectives"></a>Perspectivas
+# <a name="perspectives"></a>perspectivas
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Perspectivas, em modelos tabulares, definem subconjuntos visíveis de um modelo que fornecem pontos de vista concentrados, específicos à empresa ou específicos de aplicativo do modelo.  
   
 ##  <a name="bkmk_understanding"></a> Benefícios  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 |-----------|-----------------|  
 |[Criar e gerenciar perspectivas](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|Descreve como criar e gerenciar perspectivas usando a caixa de diálogo Perspectivas no designer de modelo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Hierarquias](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   

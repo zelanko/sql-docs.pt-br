@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,11 +30,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8f9f76427b6202850daa2ac18705c5111c4461a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b29ed2c50abd7f345ad9688c8cb82354bb57b778
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-access-from-clr-database-objects"></a>Acesso aos dados dos objetos de banco de dados CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Uma rotina do common language runtime (CLR) pode acessar facilmente os dados armazenados na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no qual ele é executado, bem como os dados armazenados em instâncias remotas. Os dados específicos que a rotina pode acessar são determinados pelo contexto de usuário no qual o código está sendo executado. Acessar dados de um objeto de banco de dados CLR usando o .NET Framework Data Provider para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], também conhecidos como **SqlClient**. Este é o mesmo provedor usado por desenvolvedores que acessam dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de aplicativos cliente gerenciados e de camada intermediária. Por isso, você pode aproveitar seu conhecimento do ADO.NET e **SqlClient** em aplicativos cliente e de camada intermediária.  

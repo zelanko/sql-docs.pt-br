@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: COALESCEEMPTY
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d2077f6e268d37839a20bed93c32efbd3c98412f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d02d253d39a605405df747b49fd0a762913030f1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  Uma expressão de cadeia de caracteres que geralmente é um valor de cadeia de caracteres especificado, substituída por um NULL retornado pela primeira expressão de cadeia de caracteres.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se uma ou mais expressões numéricas forem especificadas, o **CoalesceEmpty** função retorna o valor numérico da primeira expressão numérica (da esquerda para a direita) que pode ser resolvido para um valor não vazio. Se nenhuma das expressões numéricas especificadas puder ser resolvida para um valor não vazio, a função retornará o valor de célula vazio. Geralmente, o valor da segunda expressão numérica é o valor numérico substituído por um NULL retornado pela primeira expressão numérica.  
   
  Se uma ou mais expressões de cadeia de caracteres forem especificadas, a função retornará o valor de cadeia de caracteres da primeira expressão de cadeia de caracteres (da esquerda para a direita) que pode ser resolvido como um valor não vazio. Se nenhuma das expressões de cadeia de caracteres especificadas puder ser resolvida para um valor não vazio, a função retornará o valor de célula vazio. Geralmente, o valor da segunda expressão de cadeia de caracteres é um valor de cadeia de caracteres, substituída por um NULL retornado pela primeira expressão de cadeia de caracteres.  
@@ -88,7 +88,7 @@ FROM [Adventure Works]
 WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

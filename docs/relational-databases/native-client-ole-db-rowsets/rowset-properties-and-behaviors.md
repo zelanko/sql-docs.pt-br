@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68f4ffdbf0408a936d7a2c9b49f18eb8adb32520
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0c53bff9e68fb0b95ce2876fd9521c0eb40c206
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriedades e comportamentos do conjunto de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
 |SSPROP_QP_NOTIFICATION_OPTIONS|Coluna: Não<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Tipo: VT_BSTR<br /><br /> Padrão: cadeia de caracteres vazia<br /><br /> Descrição: as opções de notificação de consulta. Essas opções são especificadas em uma cadeia de caracteres com `name=value`. O usuário é responsável por criar o serviço e ler as notificações da fila. A sintaxe da cadeia de opções de notificações de consulta é:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Por exemplo:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Coluna: Não<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Tipo: VT_UI4<br /><br /> Padrão: 432.000 segundos (5 dias)<br /><br /> Mínimo: 1 segundo<br /><br /> Máximo: 2^31-1 segundos<br /><br /> Descrição: o número de segundos que a notificação de consulta permanece ativa.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

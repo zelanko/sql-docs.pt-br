@@ -8,7 +8,7 @@ ms.service:
 ms.component: extended-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6c58a35b5f9f05efb98561b442aeefa80358924
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66111dcdc5c69df0edbda0f57143873c89e12ac1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-extended-stored-procedures"></a>Criando procedimentos armazenados estendidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
   
  Para depurar uma DLL de procedimento armazenado estendido, copie-a no diretório [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Para especificar o executável para a sessão de depuração, insira o nome de arquivo e caminho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo executável (por exemplo, C:\Program Files\Microsoft SQL mssql13. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Para obter informações sobre argumentos sqlservr, consulte [aplicativo sqlservr](../../tools/sqlservr-application.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [srv_got_attention &#40; Estendido API de procedimento armazenado &#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

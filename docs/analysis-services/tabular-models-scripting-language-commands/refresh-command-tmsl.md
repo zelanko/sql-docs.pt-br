@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b715a469718a168f0872e3f95cd817ec1e735d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 77bef111f20a6ccc72347b8e02bd967ef2d316b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="refresh-command-tmsl"></a>Atualização de comando (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Processa objetos no banco de dados atual.   
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Tipo de atualização**|**Aplica-se a**|**Description**|  
+|**Tipo de atualização**|**Aplica-se a**|**Descrição**|  
 |completa|Banco de dados<br />Tabela,<br />Partition|Para todas as partições na partição, tabela ou banco de dados especificado, atualize os dados e recalcule todos os dependentes. Para uma partição de cálculo, recalcule a partição e todos os seus dependentes.|  
 |clearValues|Banco de dados<br />Tabela,<br />Partition|Limpe os valores nesse objeto e todos os seus dependentes.|  
 |calcular|Banco de dados<br />Tabela,<br />Partition|Recalcule este objeto e todos os seus dependentes, mas somente se necessário. Esse valor não força o recálculo, exceto fórmulas voláteis.|  
@@ -236,7 +234,7 @@ ms.lasthandoff: 12/08/2017
   
  O [ \[MS-SSAS-T\]: SQL Server Analysis Services Tabular (protocolo técnicos do SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento inclui seção 3.1.5.2.2 que descreve a estrutura de objetos e comandos de metadados de tabela do JSON. Atualmente, esse documento aborda recursos ainda não implementados no script TMSL e comandos. Consulte o tópico ([linguagem de script de modelo de tabela &#40; TMSL &#41; Referência](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) para fins de esclarecimento sobre o que tem suporte.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de TMSL &#40;Linguagem de Scripts de Modelo de Tabela&#41;](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Opções de processamento e as configurações de &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
   

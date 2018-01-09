@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="associationset-element-csdlbi"></a>Elemento AssociationSet (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O **AssociationSet** elemento é um tipo complexo que define uma associação. Em um modelo de dados da CSDLBI, uma associação é uma relação entre duas tabelas.  
@@ -34,10 +32,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="applicable-attributes"></a>Atributos aplicáveis  
  A tabela a seguir lista os elementos e atributos que definem o elemento **AssociationSet** .  
   
-|Nome|É obrigatório|Descrição|  
+|Nome|É obrigatório|Description|  
 |----------|-----------------|-----------------|  
 |Estado|Sim|Uma cadeia de caracteres que indica se a associação está ativa ou não. O valor é definido pelo elemento State.|  
-|Oculto|Não|Um valor booliano que indica se a relação está visível. Por padrão, o valor de Hidden é **false**, o que significa que todas as relações ficam visíveis no modelo.|  
+|Hidden|não|Um valor booliano que indica se a relação está visível. Por padrão, o valor de Hidden é **false**, o que significa que todas as relações ficam visíveis no modelo.|  
   
 ## <a name="state-element"></a>Elemento State  
  O elemento **State** é um tipo simples que descreve se uma associação está ativa, e deve ser usada em cálculos, ou se ela está inativa, e deve ser explicitamente referenciada nos cálculos.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
  A tabela a seguir lista os valores do elemento **State** .  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Ativa|A associação está ativa.|  
 |Inativa|A associação está ativa.|  
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/08/2017
 </AssociationSet>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência técnica para Anotações de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

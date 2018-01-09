@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PredictTimeSeries
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: eba719cb9cc1463b83e6e8aeda8b489d05fba53a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1b631ab035bf4c444aa1c6b449eaa87e3305c91
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +83,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Tipo de retorno  
  Um \< *expressão de tabela*>.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O algoritmo Time Series da [!INCLUDE[msCoName](../includes/msconame-md.md)] não suporta a previsão histórica ao usar a instrução PREDICTION JOIN para adicionar novos dados.  
   
  Em um PREDICTION JOIN, o processo de previsão sempre começa no período imediatamente após o final da série de treinamento original. Isso é verdadeiro mesmo se você adicionar novos dados. Portanto, o  *n*  parâmetro e *n-start* valores de parâmetro devem ser um inteiro maior que 0.  
@@ -269,7 +267,7 @@ OR [Model Region] = 'M200 North America'
 > [!NOTE]  
 >  A palavra-chave FLATTENED foi usada neste exemplo para facilitar a apresentação dos resultados em uma tabela; no entanto, se o provedor suportar conjuntos de linhas hierárquicos, você poderá omitir a palavra-chave FLATTENED. Se você omitir a palavra-chave FLATTENED, a consulta retornará duas colunas, a primeira contendo o valor que identifica a série de dados `[Model Region]` e a segunda contendo a tabela aninhada de estatísticas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões de mineração de dados &#40; DMX &#41; Referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Exemplos de consulta de modelo de série temporal](../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Prever &#40; DMX &#41;](../dmx/predict-dmx.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c309c174deec84526ffb0a85612fe833b0a24d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e0546fe394d34b9a06bed38b0277192ca8f9ff8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de linha e cursores do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  Para usar um determinado tipo de modelo de cursor, localize a coluna correspondente ao modelo de cursor e encontre todas as propriedades do conjunto de linhas com o valor 'T' na coluna. Defina essas propriedades do conjunto de linhas como VARIANT_TRUE para usar o modelo de cursor específico. As propriedades do conjunto de linhas com '-' como um valor podem ser definidas como VARIANT_TRUE ou VARIANT_FALSE.  
   
-|Conjunto de linhas propriedades/modelos de cursor|Default<br /><br /> result<br /><br /> set<br /><br /> (RO)|Rápido<br /><br /> avanço<br /><br /> rápido<br /><br /> (RO)|Estático<br /><br /> (RO)|Keyset<br /><br /> por conjunto de chaves<br /><br /> (RO)|  
+|Conjunto de linhas propriedades/modelos de cursor|Padrão<br /><br /> result<br /><br /> set<br /><br /> (RO)|Rápido<br /><br /> avanço<br /><br /> rápido<br /><br /> (RO)|Estático<br /><br /> (RO)|Keyset<br /><br /> por conjunto de chaves<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -159,7 +159,7 @@ ms.lasthandoff: 11/17/2017
   
  Independentemente do método usado para preencher o conjunto de linhas e formar o bloco de cursor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o bloco permanece ativo até que o próximo método de busca de linhas seja executado no conjunto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

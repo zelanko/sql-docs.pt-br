@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d73d30b8335e3dc99c15013be9bc6cb32ed67ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9a4ed6f218b77febc84719fb001ca072c9b80bc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ ms.lasthandoff: 11/17/2017
   
  Se a função de um catálogo diferente e SQLTables, SQLColumns ou SQLPrimaryKeys é chamada quando SQL_SOPT_SS_NAME_SCOPE tiver um valor diferente de SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR será retornado. Um registro de diagnóstico é gerado com SQLSTATE HY010 e a mensagem "Erro de sequência de função (SQL_SOPT_SS_NAME_SCOPE não está definido como SQL_SS_NAME_SCOPE_TABLE)".  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Função SQLGetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59355)   
  [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

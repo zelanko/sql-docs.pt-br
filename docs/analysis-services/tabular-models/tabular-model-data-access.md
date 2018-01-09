@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-data-access"></a>Acesso a dados de modelo de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Bancos de dados de modelo de tabela no Analysis Services podem ser acessados pela maioria dos clientes, interfaces e idiomas que você usa para recuperar dados ou metadados de um modelo multidimensional mesmo. Para obter mais informações, consulte [Acesso a dados de modelo multidimensional &#40;Analysis Services – dados multidimensionais 41](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -133,7 +130,7 @@ Você pode conectar-se a um modelo de banco de dados de tabela do Analysis Servi
 > [!WARNING]  
 >  Você não pode usar as consultas MDX ou DMX em um banco de dados que foi implantado em modo DirectQuery; portanto, se você precisar executar uma consulta em um modelo DirectQuery usando os conjuntos de linhas de esquema, deve usar XMLA, e não o DMV associado. Para DMVs que retornam resultados para o servidor como um todo, como SELECT * de $ $system.DBSCHEMA_CATALOGS ou DISCOVER_TRACES, você pode executar a consulta no conteúdo de um banco de dados que é implantado em um modo armazenado em cache.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectar a um modelo de banco de dados de tabela &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Acesso a dados do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [Conectar ao Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

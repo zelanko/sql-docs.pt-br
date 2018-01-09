@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 542b50ce2d0e9f3bee53fd6fa5290a152dd03edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-standard-action"></a>Adicionar uma ação padrão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode adicionar uma ação para um banco de dados usando a exibição ações no Designer de cubo. Essa exibição pode ser acessada pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois de você criar uma ação, ela ficará disponível a usuários depois que você reprocessar o cubo pertinente. Para obter mais informações, consulte [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
@@ -58,7 +55,7 @@ ms.lasthandoff: 12/08/2017
   
         |Tipo|Description|  
         |----------|-----------------|  
-        |Conjunto de dados|Recupera um conjunto de dados.|  
+        |Dataset|Recupera um conjunto de dados.|  
         |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
         |Conjunto de linhas|Recupera um conjunto de linhas.|  
         |Instrução|Executa um comando OLE DB.|  

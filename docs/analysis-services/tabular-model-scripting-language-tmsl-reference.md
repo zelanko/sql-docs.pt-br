@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a897c2cc561d5a313f2f7c7b30d987c5ad21d01
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Referência de linguagem (TMSL) de script de modelo de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Linguagem de script de modelo tabular (TMSL) é a sintaxe de definição de modelo de comando e o objeto para bancos de dados do Analysis Services modelo de tabela no nível de compatibilidade 1200 ou superior. O TMSL se comunica com o Analysis Services por meio do protocolo XMLA, onde o [XMLA. Executar](../analysis-services/xmla/xml-elements-methods-execute.md) método aceita com base em JSON **instrução** scripts em TMSL, bem como os scripts tradicionais baseado em XML em [Analysis Services Scripting Language &#40; ASSL para XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/08/2017
 |SQL Server 2012|ASSL|ASSL|NA|NA|  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Nível de compatibilidade para modelos de tabela no Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

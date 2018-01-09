@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: FREEZE
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b447ef6b4c4699e652b6093c5d0a10e44ecb4d41
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 981baf5a25d77884444320e832e35d8b16623c46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-scripting---freeze"></a>Script MDX - CONGELAR
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  Uma linguagem MDX válida que retorna um subcubo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **CONGELAR** instrução bloqueia os valores de células em um subcubo especificado, impedindo que instruções subsequentes no MDX script alterem seus valores em cálculo subsequente passa.  
   
  No exemplo a seguir, A e B representam subcubos em um script de cálculo MDX:  
@@ -68,7 +68,7 @@ B = 3
   
  Agora, A é igual a 2 e B é igual a 3.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

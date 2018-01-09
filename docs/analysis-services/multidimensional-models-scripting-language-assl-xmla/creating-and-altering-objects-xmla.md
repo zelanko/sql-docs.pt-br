@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06d6b8e0460ffa303c6e365820c61f9d200dcc95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6906c6dbab99923983cbfa4e75c35c6f3c0f5073
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Criando e alterando objetos (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Os objetos principais podem ser independentemente criados, alterados e excluídos. Os objetos principais incluem o seguinte:  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Partições  
   
--   Perspectivas  
+-   perspectivas  
   
 -   Modelos de mineração  
   
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="comments"></a>Comentários  
  O **ObjectExpansion** atributo o **Alter** foi definido como *ObjectProperties*. Essa configuração permite que o [ImpersonationInfo](../../analysis-services/scripting/properties/impersonationinfo-element-assl.md) elemento, um objeto secundário, a serem excluídos da fonte de dados definida no **ObjectDefinition**. Dessa forma, a informações de representação para aquela fonte de dados permanece definida para a conta de serviço, como especificado no primeiro exemplo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executar método &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [Desenvolvendo com o Analysis Services Scripting Language &#40; ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Desenvolvendo com XMLA no Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  

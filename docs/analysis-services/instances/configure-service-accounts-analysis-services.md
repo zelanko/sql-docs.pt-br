@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2109157a401082febbaadb2a42f607aba22ee73
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar contas de serviço (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Provisionamento de conta de todo o produto é documentado em [configurar contas de serviço do Windows e permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), um tópico que fornece informações de conta de serviço abrangente para todos os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviços, incluindo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte-o para obter informações sobre tipos de contas válidos, privilégios do Windows atribuídos por configuração, permissões do sistema de arquivo, permissões de registro e muito mais.  
@@ -157,7 +154,7 @@ ms.lasthandoff: 12/08/2017
 |Write-back|Adicione a conta de serviço a funções de banco de dados do Analysis Services definidos no servidor remoto|Quando habilitado em aplicativos cliente, o write-back é um recurso de modelos multidimensionais que permite a criação de novos valores de dados durante a análise de dados. Se o write-back estiver habilitado em alguma dimensão ou cubo, a conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deverá ter permissões de gravação na tabela de write-back do banco de dados relacional de origem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se essa tabela ainda não existir e for necessário criá-la, a conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também deverá ter permissões de criação de tabelas no banco de dados designado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |Grave em uma tabela de log de consultas em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Crie um logon de banco de dados para a conta de serviço e atribua permissões de gravação na tabela de log de consultas|Você pode habilitar o log de consultas para coletar dados de uso em uma tabela de banco de dados para a análise subsequente. A conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve ter permissões de gravação na tabela de log de consultas no banco de dados designado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se essa tabela ainda não existir e for necessário criá-la, a conta de logon do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também deve ter permissões de criação de tabelas no banco de dados designado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Melhorar o desempenho do SQL Server Analysis Services com o Assistente de Otimização Baseado no Uso (Blog)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) e [Log de consultas no Analysis Services (Blog)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Conta de serviço do SQL Server e o SID por serviço (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server usa um SID de serviço para fornecer isolamento de serviço (artigo do KB)](http://support.microsoft.com/kb/2620201)   

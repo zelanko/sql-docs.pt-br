@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe36637d98e02507383ecb592e199176a5e300ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9f54b444beb513ec4cc81432d3a58c27b4f6fc43
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="the-data-connection-user-could-not-be-delegated"></a>O usuário da conexão de dados não pode ser delegado
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para pastas de trabalho do Excel que contêm [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dados, os serviços do Excel retornam este erro se ele não pode se conectar a um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] instância de servidor no SharePoint.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
     2.  Inicie o Claims to Windows Token Service se ele ainda não estiver em execução.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

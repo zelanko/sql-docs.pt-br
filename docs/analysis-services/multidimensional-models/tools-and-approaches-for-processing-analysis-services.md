@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad1cff7114e6891af5cdf54cfc29b658213c6bb4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 910a1fc1ddcd7eee478c5a16ed1243801e482203
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Ferramentas e abordagens para processamento (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O processamento é uma operação em que o Analysis Services consulta uma fonte de dados relacional e popula objetos do Analysis Services usando esses dados.  
@@ -73,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
     -   Modelos de mineração  
   
-    -   Estruturas de Mineração  
+    -   Estruturas de mineração  
   
      Objetos do Analysis Services são hierárquicos. Se você escolher o banco de dados, o processamento poderá ocorrer para todos os objetos contidos no banco de dados. O real processamento depende da opção de processamento selecionada e do estado do objeto. Especificamente, se um objeto não for processado, o processamento de seu pai resultará no processamento desse objeto. Para obter mais informações sobre dependências de objeto, consulte [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
@@ -131,7 +128,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  A partir desta versão do SQL Server, você pode usar cmdlets do Analysis Services PowerShell para processar objetos. Os seguintes cmdlets podem ser executados de forma interativa ou no script:  
   
-    -   [Cmdlet ProcessCube](../../analysis-services/powershell/invoke-processcube-cmdlet.md)  
+    -   [Cmdlet Invoke-ProcessCube](../../analysis-services/powershell/invoke-processcube-cmdlet.md)  
   
     -   [Cmdlet Invoke-ProcessDimension](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
   
@@ -165,7 +162,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  Edite a tarefa para especificar uma conexão com o banco de dados, quais objetos processar e opção de processamento. Para obter mais informações sobre como implementar essa tarefa, consulte [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Processar um modelo multidimensional &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

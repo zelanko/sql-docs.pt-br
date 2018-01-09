@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 485a37af0cb6d9d5f7d34986f99db151e59c4628
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5dd392ca57706e595b6df5f44b512cf11dacdff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>Arquitetura de integração de CLR - desempenho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tópico discute algumas das opções de design que aprimoram o desempenho de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integração com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] runtime de linguagem comum (CLR) do .NET Framework.  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="scalable-memory-usage"></a>Uso da memória escalonável  
  Para que coleta de lixo gerenciada seja executada e bem-escalada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], evite uma única alocação grande. As alocações com mais de 88 quilobytes (KB) serão colocadas no heap de objetos grandes, que fará o desempenho e a escala da coleta de lixo serem muito piores que no caso de várias alocações menores. Por exemplo, se você precisar alocar uma matriz multidimensional grande, é melhor alocar uma matriz denteada (dispersa).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos definidos pelo usuário do CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

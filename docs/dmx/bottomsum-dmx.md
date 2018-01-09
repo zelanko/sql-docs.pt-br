@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: BOTTOMSUM
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 49ae28646f7fbe2c2374915d5139ef9f1daef884
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fa897bdaf0ebccf356603eaf0bfd3b4dafa1de6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>Tipo de retorno  
  \<expressão de tabela >  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **BottomSum** função retorna as linhas mais baixas em ordem crescente de classificação. A classificação baseia-se no valor avaliado do \<expressão de classificação > argumento para cada linha, de modo que a soma da \<expressão de classificação > valores é pelo menos o total dado especificado pelo \<soma > argumento. **BottomSum** retorna o menor número de elementos possível embora ainda assim atenda o valor de soma especificado.  
   
 ## <a name="examples"></a>Exemplos  
@@ -110,7 +108,7 @@ NATURAL PREDICTION JOIN
   
  **Observação** neste exemplo é fornecido apenas para ilustrar o uso de BottomSum. Dependendo do tamanho do conjunto de dados, esta consulta pode demorar muito para ser executada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funções de previsão geral &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)  

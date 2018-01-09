@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2779e5f09f447e0499e2eeb87ec89ba698cc8628
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Habilitar o modo DirectQuery no SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Você pode alterar as propriedades de acesso de dados de um modelo de tabela que já tenha sido implantado, habilitando o modo DirectQuery, onde consultas são executadas em uma fonte de dados relacional de back-end em vez de em cache dados residentes na memória.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/08/2017
   
     |||  
     |-|-|  
-    |**Valores válidos**|**Description**|  
+    |**Valores válidos**|**Descrição**|  
     |**DirectQuery**|Consultas são executadas em um banco de dados relacional back-end, usando a conexão da fonte de dados definida para o modelo.<br /><br /> Consultas ao modelo são convertidas em consultas de banco de dados nativo e redirecionadas para a fonte de dados.<br /><br /> Quando você processa um modelo definido para o modo DirectQuery, somente metadados são compilados e implantados. Os dados em si são externos ao modelo, residindo nos arquivos de banco de dados da fonte de dados em funcionamento.|  
     |**Importar**|Consultas são executadas no banco de dados de tabela em MDX ou DAX.<br /><br /> Quando você processa um modelo definido para modo de Importação, os dados são recuperados de uma fonte de dados back-end e armazenados em disco. Quando o banco de dados é carregado, os dados são copiados totalmente para a memória para tornar verificações e consultas de tabela muito mais rápidas.<br /><br /> Esse é o modo padrão para modelos de tabela e é o único modo para certas fontes de dados (não relacionais).|  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
     |||  
     |-|-|  
-    |**Valores válidos**|**Description**|  
+    |**Valores válidos**|**Descrição**|  
     |**InMemory**|Consultas usam somente os dados armazenados em cache, na memória.|  
     |**InMemorywithDirectQuery**|As consultas usam o cache por padrão, a menos que especificado em contrário na cadeia de conexão do cliente.<br /><br /> Esse é um modo híbrido, onde as partições são individualmente configuradas para serem usadas na memória ou no DirectQuery.|  
     |**DirectQuery**|As consultas só usam a fonte de dados relacional.|  

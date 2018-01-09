@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: GENERATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4ef13a4355c73458023c7d11663587a771d71c23
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *Delimitador*  
  Um delimitador válido expresso como uma expressão de cadeia de caracteres.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se um segundo conjunto for especificado, o **gerar** função retorna um conjunto gerado aplicando as tuplas do segundo conjunto a cada tupla no primeiro conjunto*,* e, em seguida, associando os conjuntos resultantes por união. Se **todos os** for especificado, a função preservará as duplicações no conjunto resultante.  
   
  Se uma expressão de cadeia de caracteres for especificada, o **gerar** função retorna uma cadeia de caracteres gerada avaliando a expressão de cadeia de caracteres especificada em relação a cada tupla no primeiro conjunto*,* e concatenando os resultados. Opcionalmente, a cadeia de caracteres pode ser delimitada, separando-se cada resultado na cadeia de caracteres concatenada resultante.  
@@ -137,7 +137,7 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  Essa forma do **gerar** função pode ser útil ao depurar cálculos, pois permite retornar uma cadeia de caracteres que exibe os nomes de todos os membros em um conjunto. Isso pode ser mais fácil de ler do que a representação MDX rígida de um conjunto que o [SetToStr &#40; MDX &#41; ](../mdx/settostr-mdx.md) função retorna.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

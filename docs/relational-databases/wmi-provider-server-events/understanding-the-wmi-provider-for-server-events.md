@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92f53728f3c3b9b2a1ea78299c2104d1af51319f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0771cf457515af5fd66da0f1232f2c908ae460ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Compreendendo o Provedor WMI para eventos do servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]O provedor WMI para eventos de servidor permite que você use o Windows Management Instrumentation (WMI) para monitorar eventos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O provedor funciona transformando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um objeto WMI gerenciado. Qualquer evento que possa gerar uma notificação de eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser aproveitado pelo WMI usando esse provedor. Além disso, como um aplicativo de gerenciamento que interage com o WMI, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode responder a esses eventos, aumentando o escopo de eventos abordados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em versões anteriores.  
@@ -68,7 +68,7 @@ GO
   
  Para obter um exemplo de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo de gerenciamento de agente que usa o provedor WMI para eventos de servidor, consulte [exemplo: Criando um SQL Server Agent alerta usando o provedor WMI para eventos de servidor](http://technet.microsoft.com/library/ms186385.aspx). Para obter um exemplo de um aplicativo de gerenciamento que usa o provedor WMI para eventos de servidor em código gerenciado, consulte [exemplo: usando o provedor de eventos WMI em código gerenciado](http://technet.microsoft.com/library/ms179315.aspx). Mais informações também estão disponíveis sobre o WMI no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Provedor WMI para conceitos de eventos de servidor](http://technet.microsoft.com/library/ms180560.aspx)  
   
   

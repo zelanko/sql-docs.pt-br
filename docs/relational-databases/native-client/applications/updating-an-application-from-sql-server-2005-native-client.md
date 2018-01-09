@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: SQL Server Native Client, updating applications
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bde56c3efe2231d54463c4d23f311237415a6f53
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea8bd24944008b1301f02024f9aa77910a7dbe37
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Atualizando um aplicativo no SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |Validação mais rígida dos parâmetros SQL_C_TYPE _TIMESTAMP e DBTYPE_DBTIMESTAMP.|Antes de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client, **datetime** valores foram arredondados para se ajustar a escala de **datetime** e **smalldatetime** colunas por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client (bem como as versões posteriores) aplica as regras de validação mais rígidas que são definidas na especificação ODBC principal para segundos fracionários. Se não for possível converter um valor de parâmetro no tipo SQL usando a escala especificada ou implícita pela associação de cliente sem truncamento de dígitos à direita, será retornado um erro.|  
 |O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode retornar resultados diferentes quando um gatilho é executado.|Alterações introduzidas no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pode fazer com que um aplicativo retorne diferentes resultados de uma instrução que causou um gatilho a ser executada quando **NOCOUNT OFF** estava em vigor. Nessa situação, o aplicativo pode gerar um erro. Para resolver esse erro, defina **NOCOUNT ON** no gatilho ou chame SQLMoreResults para ir para o próximo resultado.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação do SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

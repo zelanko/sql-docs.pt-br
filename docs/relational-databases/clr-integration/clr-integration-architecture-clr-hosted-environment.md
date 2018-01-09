@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62e51e155dbd230d3db7d6e84d71f5b1635a22be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bbd3cffc1f5db0b07f0868b2ac1b6b6f78989a5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitetura de integração de CLR - ambiente hospedado de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integração com o .NET Framework common language runtime (CLR) permite que os programadores usar linguagens como Visual c#, Visual Basic .NET e Visual C++. Funções, procedimentos armazenados, gatilhos, tipos de dados e agregações estão entre os tipos de lógica corporativa que os programadores podem escrever usando essas linguagens.  
@@ -132,8 +132,8 @@ ms.lasthandoff: 11/17/2017
 |Conjunto de permissões|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Segurança de Acesso do Código|Somente execução|Execução + acesso a recursos externos|Irrestrito|  
 |Restrições do modelo de programação|Sim|Sim|Sem restrições|  
-|Requisito de verificabilidade|Sim|Sim|Não|  
-|Capacidade de chamar código nativo|Não|Não|Sim|  
+|Requisito de verificabilidade|Sim|Sim|não|  
+|Capacidade de chamar código nativo|não|não|Sim|  
   
  SAFE é o modo mais confiável e seguro, com restrições associadas ao modelo de programação permitido. Assemblies SAFE recebem permissão suficiente para executar, realizar cálculos e ter acesso ao banco de dados local. Assemblies SAFE precisam ser seguros do tipo verificável e não têm permissão para chamar código não gerenciado.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]também não permite chamadas para as APIs do .NET Framework que são anotadas com o **SharedState**, **sincronização** e **ExternalProcessMgmt** atributos de proteção de host. Isso impede que os assemblies SAFE e EXTERNAL_ACCESS chamem APIs que permitam compartilhar o estado, fazer sincronização e afetar a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [restrições do modelo de programação de integração de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança da integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Desempenho da integração CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

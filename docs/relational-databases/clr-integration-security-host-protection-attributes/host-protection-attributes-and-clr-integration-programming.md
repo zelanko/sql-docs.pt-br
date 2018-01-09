@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4caf403fe2fee4b43031efd387a170aae3de1353
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68732b099e87a8d890d99e35e17bfff3b1452092
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Atributos de proteção de host e programação da Integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]O common language runtime (CLR) fornece um mecanismo para anotar o aplicativo gerenciado interfaces de programação (APIs) que fazem parte do .NET Framework com determinados atributos que podem ser de interesse de um host do CLR, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Entre os exemplos desses HPAs (atributos de proteção de host) estão:  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
  [Tipos e membros não permitidos no System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Lista os tipos e os membros de System.Core.dll cujos valores HPA são desaprovados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança de acesso do código de integração de CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Restrições do modelo de programação de integração de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Criando um assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  

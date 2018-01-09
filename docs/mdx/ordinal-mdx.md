@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: Ordinal
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2cf441cb5eaaba8ec7b0e14adb1f770464006abb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 82ec76e1cf3159b20c2eae8812a8f4418591bbc9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="ordinal-mdx"></a>Ordinal (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ Level_Expression.Ordinal
  *Level_Expression*  
  Uma linguagem MDX válida que retorna um nível.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O **Ordinal** função frequentemente é usada em conjunto com o **IIF** e **CurrentMember** funções para exibir valores diferentes condicionalmente em níveis de hierarquia diferentes, com base na posição ordinal de cada célula específica no resultado da consulta. Por exemplo, você pode usar o **Ordinal** função para executar cálculos em determinados níveis e exibir um valor padrão de "N / a" em outros níveis.  
   
 ## <a name="example"></a>Exemplo  
@@ -54,7 +54,7 @@ SELECT Measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

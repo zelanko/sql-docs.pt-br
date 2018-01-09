@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="measures"></a>Medidas
+# <a name="measures"></a>medidas
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Em modelos de tabela, uma medida é um cálculo criado usando uma fórmula DAX para uso em um cliente de relatório. As medidas são avaliadas com base em campos, filtros e usuários de segmentações de dados selecionados no aplicativo cliente de relatório.  
   
 ##  <a name="bkmk_understanding"></a> Benefícios  
@@ -81,7 +78,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |Propriedade|Configuração padrão|Description|  
 |--------------|---------------------|-----------------|  
-|**Description**|Em branco|Descrição da medida. A descrição não aparecerá com a medida em um cliente de relatório.|  
+|**Descrição**|Em branco|Descrição da medida. A descrição não aparecerá com a medida em um cliente de relatório.|  
 |**Formato**|Automaticamente determinado do tipo de dados da coluna referenciado na expressão de fórmula.|Formato da medida. Por exemplo, moeda ou percentual.|  
 |**Fórmula**|A fórmula inserida na barra de fórmula quando a medida foi criada.|A fórmula da medida.|  
 |**Nome da Medida**|Se AutoSoma for usado, o nome da medida precederá o nome da coluna seguido por dois-pontos. Se uma fórmula personalizada for inserida, digite um nome seguido por dois-pontos e digite a fórmula.|O nome da medida conforme é exibida em uma Lista de Campo do cliente de relatório.|  
@@ -91,13 +88,13 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Qualquer medida pode servir como a medida Base de um KPI. Para criar um KPI, na grade de medida, clique com o botão direito do mouse na medida e clique em **Criar KPI**. A caixa de diálogo Indicador chave de desempenho aparece e você pode especificar um valor de destino (definido por uma medida ou um valor absoluto) e pode definir limites de status e um tipo gráfico. Para obter mais informações, consulte [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
   
-##  <a name="bkmk_rel_tasks"></a> Tarefas relacionadas  
+##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
 |Tópico|Description|  
 |-----------|-----------------|  
 |[Criar e gerenciar medidas](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Descreve como criar e gerenciar medidas usando a grade de medida no designer de modelo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Criar e gerenciar KPIs](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
  [Colunas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md)  

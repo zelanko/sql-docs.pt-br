@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c9f593c830dbdffe9b09b6f5e44d0957a7bb1d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3d71a404f2b91606ec12ac08689a2c8ebefea85f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lição 3-4-modificando a dimensão de data
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nas tarefas deste tópico, você cria uma hierarquia definida pelo usuário e alterar os nomes de membro são exibidos para os atributos de data, mês, trimestre do calendário e semestre do calendário. Você também definirá as chaves compostas para atributos, controlará a ordem de classificação dos membros de dimensão e definirá relações de atributo.  
@@ -111,7 +111,7 @@ Se os dados subjacentes permitirem, você também deve definir relações de atr
   
 3.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **English Month Name**. Defina o **Atributo Relacionado** como **Trimestre do Calendário**.  
   
-4.  Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
+4.  Na lista **Tipo de relação**, defina o tipo de relação como **Rígida**.  
   
     O tipo de relação é **Rígida** porque as relações entre os membros não mudarão com o passar do tempo.  
   
@@ -215,7 +215,7 @@ A propriedade **KeyColumns** contém a coluna ou as colunas que representam a ch
   
 2.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar (**...**).  
   
-3.  Na caixa de diálogo **Colunas de Chaves** , na lista **Colunas Disponíveis** , selecione a coluna **CalendarYear**e clique no botão **>** .  
+3.  Na caixa de diálogo **Colunas de Chaves**, na lista **Colunas Disponíveis**, selecione a coluna **CalendarYear** e clique no botão **>**.  
   
     Agora, as colunas **CalendarQuarter** e **CalendarYear** são exibidas na lista **Colunas de Chave** .  
   
@@ -306,6 +306,6 @@ Nesta tarefa, você poderá alterar a ordem de classificação alterando a ordem
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Navegando no cubo implantado](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Dimensões em modelos multidimensionais](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PARALLELPERIOD
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7ffd7d68192806a30c65d7c446b3907e766401f8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 03157756a26301dc0dbaec037b51826b0f6fd6da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parallelperiod-mdx"></a>Função ParallelPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Member_Expression*  
  Uma linguagem MDX válida que retorna um membro.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Embora seja similar do [primo](../mdx/cousin-mdx.md) função, o **ParallelPeriod** função está mais relacionada à série temporal. O **ParallelPeriod** função aproveita o ancestral do membro especificado no nível especificado, encontra o irmão do ancestral com a latência especificada e, finalmente, retorna o período paralelo do membro especificado entre os descendentes do irmão.  
   
  O **ParallelPeriod** função tem os seguintes padrões:  
@@ -86,7 +86,7 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

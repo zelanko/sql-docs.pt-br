@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 37b5bc5e1b1e19bbadc53b734b0aee2470488c80
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2adc9ae709257cc3d44496e9ad4c7d078b76cb92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  Uma expressão de cadeia de caracteres válida que especifica um nome de grupo de medidas.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 1.  Linhas de grupo de medidas com medidas que contêm valores nulos contribuem para **Exists** quando o argumento MeasureGroupName é especificado. Esta é a diferença entre esta forma de Exists e a função Nonempty: se a propriedade NullProcessing dessas medidas for definida como Preserve, isso significará que as medidas mostrarão valores nulos quando forem executadas consultas nessa parte do cubo; NonEmpty sempre removerá as tuplas de um conjunto que tiverem valores de medida nulos, ao passo que Exists com o argumento MeasureGroupName não filtrará as tuplas que tiverem linhas de grupo de medidas associadas, mesmo que os valores de medida sejam nulos.  
   
@@ -102,7 +102,7 @@ EXISTS(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de função MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
  [Crossjoin &#40; MDX &#41;](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40; MDX &#41;](../mdx/nonemptycrossjoin-mdx.md)   
