@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-partition-writeback"></a>Definir o write-back de partições
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Se você habilitar um grupo de medidas, os usuários finais podem alterar dados de cubo enquanto procuram por ele, as alterações são salvas em uma tabela separada chamada tabela de write-back, não em dados de cubo ou fonte de dados. Os usuários finais que procuram uma partição habilitada para gravação observam o efeito líquido de todas as alterações na tabela de write-back da partição.  
@@ -68,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
  Para converter os dados de write-back em uma partição, use a caixa de diálogo **Converter em Partição**, que pode ser acessada ao clicar com o botão direito do mouse na tabela de write-back de uma partição habilitada para gravação no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Especifique um nome para a partição e se deseja projetar a agregação para a partição posteriormente ou no momento da criação. Para criar a agregação no mesmo momento em que a partição é escolhida, é necessário copiar o design de agregação de uma partição existente. Esta é, mas não necessariamente, a partição de write-back atual. Também é possível processar a partição durante sua criação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Partições habilitadas para gravação](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Habilitar Write-back em um cubo OLAP no nível de célula no Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [Habilitando e protegendo a entrada de dados com write-back do Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  

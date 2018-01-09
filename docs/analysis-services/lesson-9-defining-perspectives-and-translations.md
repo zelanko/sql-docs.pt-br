@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 87c14f37d8688b0f93b59e7e2dd7e31f57d0afc1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8b6d074b6aee9d6fe70258f22e95b48cb690419c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lição 9: Definindo perspectivas e traduções
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nesta lição, você aprenderá a definir perspectivas e traduções. Você pode definir perspectivas para reduzir a complexidade aparente de um cubo e definir traduções que permitam que os usuários exibam os metadados do cubo no idioma que preferirem.  
@@ -41,7 +41,7 @@ Nesta tarefa, você definirá e navegará por traduções de metadados específi
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 10: Definindo funções administrativas](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Cenário do tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Perspectivas](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  

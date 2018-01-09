@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 245c39d7ff9366e43b1faad07fec64befa5aea0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS fornece vários algoritmos que são otimizados para previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
@@ -111,8 +109,8 @@ ms.lasthandoff: 12/08/2017
   
 |TimeID|Product|Sales|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|A|1.000|600|  
-|2/2001|A|1100|500|  
+|1/2001|Um|1.000|600|  
+|2/2001|Um|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Um modelo de série temporal pode fazer previsões que diferem às vezes, significativamente, dependendo do sistema operacional de 64 bits que o servidor usar. Essas diferenças ocorrem devido ao modo como um sistema com base em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]representa e lida com números para aritmética de ponto flutuante, que difere do modo de um sistema com base em [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] Como os resultados da previsão podem ser específicos para o sistema operacional, recomendamos que você avalie modelos no mesmo sistema operacional que usará na produção.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 -   Não suporta o uso de PMML (Predictive Model Markup Language) para criar modelos de mineração.  
   
@@ -160,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Dá suporte ao detalhamento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Procurar um modelo usando o visualizador MTS](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Referência técnica do algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   

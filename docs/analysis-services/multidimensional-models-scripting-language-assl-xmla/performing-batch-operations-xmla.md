@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09f95f71f20800f5a0250aec83c505e8aaf99be1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 21116359cfbea301242d8e743ff2431e742c1960
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>Executando operações em lote (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode usar o [lote](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) do XML for Analysis (XMLA) para executar vários comandos XMLA usando um único XMLA [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) método. Você pode executar vários comandos contidos no **lote** comando como uma única transação ou em transações individuais para cada comando, em série ou em paralelo. Você também pode especificar associações fora de linha e outras propriedades no **lote** comando para processar vários [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.  
@@ -128,7 +126,7 @@ ms.lasthandoff: 12/08/2017
     > [!IMPORTANT]  
     >  Um **processo** comando não pode incluir o **associações**, **DataSource**, **DataSourceView**, ou **ErrorConfiguration**  propriedades, se o **processo** comando está contido em um **lote** comando. Se for necessário especificar essas propriedades para um **processo** command, forneça as informações necessárias nas propriedades correspondentes do **lote** comando que contém o **processo** comando.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento batch &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
  [Elemento Process &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

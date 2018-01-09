@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d3f3148837cd2e511ffd6d8fc539c32db362c88
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensões vinculadas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Uma dimensão vinculada baseia-se em uma dimensão criada e armazenada em outro banco de dados do Analysis Services da mesma versão e nível de compatibilidade. Usando uma dimensão vinculada, você pode criar, armazenar e manter uma dimensão em um banco de dados, ao mesmo tempo disponibilizando-o para usuários de vários bancos de dados. Para usuários, uma dimensão vinculada aparece como qualquer outra dimensão.  
@@ -39,7 +36,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Como a atualização não está disponível, a maioria dos desenvolvedores do Analysis Services copiam as dimensões em vez de vinculá-las. Você pode copiar dimensões entre projetos dentro da mesma solução. Para obter mais informações, consulte [Atualização de uma dimensão vinculada no SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  O banco de dados de origem que fornece a dimensão e o banco de dados atual que o usam deve estar na mesma versão e nível de compatibilidade. Para obter mais informações, consulte [Nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  O banco de dados de origem deve estar implantado e online. Os servidores que publicam ou consomem objetos vinculados devem ser configurados para permitir a operação (consulte abaixo).  
@@ -81,10 +78,10 @@ ms.lasthandoff: 12/08/2017
   
 7.  Na página Informações sobre Representação, clique em **Usar a conta de serviço**. Clique em **Avançar**e conclua o Assistente. A conexão que você acaba de definir será selecionada no Assistente para Objetos Vinculados.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
  Não é possível alterar a estrutura de uma dimensão vinculada, portanto, você não pode exibi-la com a guia **Estrutura da Dimensão** do Designer de Dimensão. Depois de processar a dimensão vinculada, você pode exibi-la com a guia **Navegador** . Você também pode alterar seu nome e criar uma tradução para o nome.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Grupos de medidas vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
  [Relações de dimensão](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

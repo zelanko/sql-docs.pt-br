@@ -5,13 +5,10 @@ ms.date: 06/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e6b67ada589c925b8737ed13ba6c07f93a75f12c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Recursos do Analysis Services com suporte nas edições do SQL Server 2016
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
@@ -47,8 +44,8 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Hierarquias|Sim|Sim|||||Sim|  
 |KPIs|Sim|Sim|||||Sim|  
-|Perspectivas|Sim||||||Sim|  
-|Traduções|Sim|Sim|||||Sim|  
+|perspectivas|Sim||||||Sim|  
+|Translations|Sim|Sim|||||Sim|  
 |Cálculos DAX, consultas DAX, consultas MDX|Sim|Sim|||||Sim|  
 |Segurança em nível de linha|Sim|Sim|||||Sim|  
 |Várias partições|Sim||||||Sim|  
@@ -62,7 +59,7 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |Medidas semiaditivas|Sim|Não <sup>1</sup>|||||Sim|  
 |Hierarquias|Sim|Sim|||||Sim|  
 |KPIs|Sim|Sim|||||Sim|  
-|Perspectivas|Sim||||||Sim|  
+|perspectivas|Sim||||||Sim|  
 |Ações|Sim|Sim|||||Sim|  
 |Inteligência de conta|Sim|Sim|||||Sim|  
 |Inteligência de dados temporais|Sim|Sim|||||Sim|  
@@ -74,7 +71,7 @@ Este tópico fornece detalhes de recursos com suporte nas diferentes edições d
 |Tipos de hierarquia avançados (pai-filho e hierarquias desbalanceadas)|Sim|Sim|||||Sim|  
 |Dimensões avançadas (Dimensões de referência, dimensões muitos-para-muitos)|Sim|Sim|||||Sim|  
 |Medidas e dimensões vinculadas|Sim|Sim  <sup>2</sup> |||||Sim|  
-|Traduções|Sim|Sim|||||Sim|  
+|Translations|Sim|Sim|||||Sim|  
 |Agregações|Sim|Sim|||||Sim|  
 |Várias partições|Sim|Sim, até 3|||||Sim|  
 |Cache pró-ativo|Sim||||||Sim|  

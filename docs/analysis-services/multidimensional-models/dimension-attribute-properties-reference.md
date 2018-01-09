@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f9acd136bdeb7c286ec4d110b3f5b4b70018685f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>Referência de propriedades de atributo de dimensão
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], há muitas propriedades que determinam como dimensões e dimensão os atributos de função. A tabela a seguir lista e descreve cada uma dessas propriedades de atributo.  
@@ -42,7 +39,7 @@ ms.lasthandoff: 12/08/2017
 |**CustomRollupColumn**|Especifica a coluna que define uma fórmula de rollup personalizado.|  
 |**CustomRollupPropertiesColumn**|Especifica a coluna que contém as propriedades de uma fórmula de rollup personalizado.|  
 |**DefaultMember**|Especifica uma expressão de linguagem MDX que define a medida padrão para o atributo.|  
-|**Description**|Contém a descrição do atributo.|  
+|**Descrição**|Contém a descrição do atributo.|  
 |**DiscretizationBucketCount**|Contém o número de recipientes nos quais são diferenciados.|  
 |**DiscretizationMethod**|Define o método a ser usado para diferenciação.|  
 |**EstimatedCount**|Especifica o número estimado de membros no atributo. Até a execução do Assistente de Design de Agregação, o valor padrão é zero. Você pode permitir que o assistente conte o número de registros ou digitar um valor estimado. Digite um valor manualmente se você souber o número de membros e quiser economizar o tempo necessário para consultar o banco de dados da conta. Se você estiver trabalhando com um subconjunto de testes de seus dados de produção, será possível usar as contagens dos dados de produção de forma que o design de agregação seja otimizado para os dados de produção em vez dos dados de teste.|  
@@ -71,7 +68,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  O membro padrão em um atributo será usado para avaliar as expressões quando um membro da hierarquia não for incluído explicitamente em uma consulta. O membro padrão de um atributo é especificado pela sua propriedade **DefaultMember** . Sempre que uma hierarquia de uma dimensão for incluída em uma consulta, todos os membros padrão de atributos correspondentes a níveis na hierarquia serão ignorados. Se nenhuma hierarquia de uma dimensão for incluída em uma consulta, os membros padrão serão usados em todos os atributos da dimensão. Para obter mais informações, consulte [Definir um membro padrão](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

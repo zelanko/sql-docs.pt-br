@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f0ababa5bb354b91df756bd5998967fb9b6ddf3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Especificações de capacidade máxima (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]As tabelas a seguir especificam os tamanhos e números máximos de vários objetos definidos no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] componentes em modos de implantação de servidor diferente.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_OLAP"></a>Multidimensional e mineração de dados (DeploymentMode = 0)  
  O modo de armazenamento MOLAP que armazena dados e metadados tem limites físicos adicionais em tamanhos de arquivos. Os arquivos de repositório de cadeia de caracteres têm, por padrão, um tamanho máximo de 4 GB. Se você precisar de arquivos maiores para repositórios de cadeia de caracteres, poderá especificar outra arquitetura de armazenamento de cadeia de caracteres. Para obter mais informações, consulte [configurar o armazenamento de cadeia de caracteres para dimensões e partições](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-|Objeto|Tamanho máximo/números|  
+|Object|Tamanho máximo/números|  
 |------------|----------------------------|  
 |Bancos de dados em uma instância|2^31-1 = 2,147,483,647|  
 |Dimensões em um banco de dados|2^31-1 = 2,147,483,647|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|Objeto|Tamanho máximo/números|  
+|Object|Tamanho máximo/números|  
 |------------|----------------------------|  
 |Bancos de dados em uma instância|2^31-1 = 2,147,483,647|  
 |Tabelas em um banco de dados|2^31-1 = 2,147,483,647|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_vertipaq"></a>Tabela (DeploymentMode = 2)  
 Estes são os limites teóricos. Desempenho irá diminuir em números menores.   
 
-|Objeto|Tamanho máximo/números|  
+|Object|Tamanho máximo/números|  
 |------------|----------------------------|  
 |Bancos de dados em uma instância|16,000|  
 |Número combinado de tabelas e colunas em um banco de dados|16,000|  

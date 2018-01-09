@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,11 +40,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9140c9870866538b4f9b192300e41278fdddd8a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Fontes de dados e associações (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cubos, dimensões e outros [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos podem ser associados a uma fonte de dados. Uma fonte de dados pode ser um dos seguintes objetos:  
@@ -69,8 +66,8 @@ ms.lasthandoff: 12/08/2017
 |---------------------------------|-----------------|  
 |BigInt|Um inteiro de 64 bytes com sinal. Esse tipo de dados é mapeado para o tipo de dados Int64 no Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I8 no OLE DB.|  
 |Bool|Um valor booliano. Esse tipo de dados é mapeado para o tipo de dados Boolean no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_BOOL no OLE DB.|  
-|Moeda|Um valor de moeda que varia de -263 (ou -922.337.203.685.477,5808) a 263-1 (ou +922.337.203.685.477,5807) com uma precisão a dez milésimos de uma unidade de moeda. Esse tipo de dados é mapeado para o tipo de dados Decimal no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_CY no OLE DB.|  
-|Data|Dados de data, armazenados como um número de ponto flutuante com precisão dupla. A parte inteira é o número de dias desde 30 de dezembro de 1899, enquanto a parte fracionária é uma fração de um dia. Esse tipo de dados é mapeado para o tipo de dados DateTime no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_DATE no OLE DB.|  
+|CURRENCY|Um valor de moeda que varia de -263 (ou -922.337.203.685.477,5808) a 263-1 (ou +922.337.203.685.477,5807) com uma precisão a dez milésimos de uma unidade de moeda. Esse tipo de dados é mapeado para o tipo de dados Decimal no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_CY no OLE DB.|  
+|data|Dados de data, armazenados como um número de ponto flutuante com precisão dupla. A parte inteira é o número de dias desde 30 de dezembro de 1899, enquanto a parte fracionária é uma fração de um dia. Esse tipo de dados é mapeado para o tipo de dados DateTime no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_DATE no OLE DB.|  
 |Double|Um número de ponto flutuante de precisão dupla dentro do intervalo de -1,79E +308 a 1,79E +308. Esse tipo de dados é mapeado para o tipo de dados Double no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_R8 no OLE DB.|  
 |Integer|Um inteiro de 32 bytes com sinal. Esse tipo de dados é mapeado para o tipo de dados Int32 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I4 no OLE DB.|  
 |Single|Um número de ponto flutuante de precisão única dentro do intervalo de -3,40E +38 a 3,40E +38. Esse tipo de dados é mapeado para o tipo de dados Single no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_R4 no OLE DB.|  

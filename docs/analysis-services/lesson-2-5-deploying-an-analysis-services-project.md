@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: de2922988f9a53f6ec4eae3d563d0e29ad565ac0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 19d9c5cae52ed4eee5ee553905475bcbf62c38c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Lição 2-5-implantar um projeto do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Para exibir os dados de cubo e dimensão para os objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no cubo do Tutorial o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto do Tutorial, você deve implantar o projeto a uma instância especificada do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e, em seguida, processar o cubo e suas dimensões. *Implantar* um projeto  do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria os objetos definidos em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O*processamento* dos objetos em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copia os dados das fontes de dados subjacentes nos objetos de cubo. Para obter mais informações, consulte [Implantar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
@@ -66,7 +66,7 @@ Você implantou com sucesso o cubo do Tutorial do [!INCLUDE[ssASnoversion](../in
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Navegando pelo cubo](../analysis-services/lesson-2-6-browsing-the-cube.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Implantar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
 [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   

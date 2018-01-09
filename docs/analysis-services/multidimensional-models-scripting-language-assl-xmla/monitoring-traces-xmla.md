@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3ae92fd24e3e9d5abbf3084472eac09a0e2d59fb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitoring-traces-xmla"></a>Monitorando rastreamentos (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode usar o [assinar](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) do XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O **assinar** comando retorna os resultados de um rastreamento como um conjunto de linhas.  
@@ -42,14 +40,14 @@ ms.lasthandoff: 12/08/2017
   
  O conjunto de linhas contém as colunas listadas na tabela a seguir.  
   
-|Coluna|Data type|Description|  
+|coluna|Data type|Description|  
 |------------|---------------|-----------------|  
 |EventClass|Integer|A classe de evento do evento recebido pelo rastreamento.|  
 |EventSubclass|Long integer|A subclasse do evento recebido pelo rastreamento.|  
-|CurrentTime|Datetime|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|StartTime|Datetime|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|EndTime|Datetime|O horário de término evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.<br /><br /> Esta coluna não é preenchida para classes de evento que descrevem o início de um processo ou de uma ação.|  
-|Duration|Long integer|O tempo total (em milissegundos) decorrido no evento.|  
+|CurrentTime|DATETIME|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|StartTime|DATETIME|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
+|EndTime|DATETIME|O horário de término evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.<br /><br /> Esta coluna não é preenchida para classes de evento que descrevem o início de um processo ou de uma ação.|  
+|Duração|Long integer|O tempo total (em milissegundos) decorrido no evento.|  
 |CPUTime|Long integer|O tempo de processador (em milissegundos) decorrido no evento.|  
 |JobID|Long integer|O identificador de trabalho para o processo.|  
 |SessionID|Cadeia de caracteres|O identificador da sessão para a qual o evento ocorreu.|  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |NestLevel|Integer|O nível da transação para a qual o evento ocorreu.|  
 |NumSegments|Long integer|O número de segmentos de dados afetados ou acessados pelo comando para o qual o evento ocorreu.|  
 |Severity|Integer|O nível de severidade de uma exceção para o evento. A coluna pode conter um dos seguintes valores:<br /><br /> <br /><br /> 0: êxito<br /><br /> <br /><br /> 1: obter informações<br /><br /> <br /><br /> 2: aviso<br /><br /> <br /><br /> 3: erro|  
-|Success|Booliano|Indica se um comando teve êxito ou se falhou.|  
+|Êxito|Booliano|Indica se um comando teve êxito ou se falhou.|  
 |Erro|Long integer|O número do erro do evento, se aplicável.|  
 |ConnectionID|Cadeia de caracteres|O identificador da conexão para a qual o evento ocorreu.|  
 |DatabaseName|Cadeia de caracteres|O nome do banco de dados para o qual o evento ocorreu.|  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |RequestParameters|Cadeia de caracteres|Os parâmetros da consulta parametrizada ou do comando XMLA para os quais o evento ocorreu.|  
 |RequestProperties|Cadeia de caracteres|As propriedades do método XMLA para o qual o evento ocorreu.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolvendo com XMLA no Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

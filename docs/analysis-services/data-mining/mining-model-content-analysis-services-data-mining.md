@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois que você tenha criado e processado um modelo de mineração usando dados da estrutura de mineração subjacente, o modelo de mineração é concluído e contém *conteúdo do modelo de mineração*. Você pode usar este conteúdo para fazer previsões ou analisar seus dados.  
@@ -85,11 +83,11 @@ ms.lasthandoff: 12/08/2017
 |ID DE NODE_TYPE|Rótulo do nó|Conteúdo do nó|  
 |-------------------|----------------|-------------------|  
 |1|Modelo|Metadados e nó raiz de conteúdo. Aplica-se a todos os tipos de modelo.|  
-|2|Árvore|Nó raiz de uma árvore de classificação. Aplica-se a modelos de árvore de decisão.|  
+|2|trEE|Nó raiz de uma árvore de classificação. Aplica-se a modelos de árvore de decisão.|  
 |3|Interior|Nó interno dividido em uma árvore. Aplica-se a modelos de árvore de decisão.|  
 |4|Distribuição|Nó terminal de uma árvore. Aplica-se a modelos de árvore de decisão.|  
 |5|Cluster|Cluster detectado pelo algoritmo. Aplica-se a modelos de clustering e a modelos de clustering de sequências.|  
-|6|Desconhecido|Tipo de nó desconhecido.|  
+|6|Unknown (desconhecido)|Tipo de nó desconhecido.|  
 |7|Conjunto de itens|Conjunto de itens detectado pelo algoritmo. Aplica-se a modelos de associação ou a modelos de clustering de sequências.|  
 |8|AssociationRule|Regra de associação detectada pelo algoritmo. Aplica-se a modelos de associação ou a modelos de clustering de sequências.|  
 |9|PredictableAttribute|Atributo previsível. Aplica-se a todos os tipos de modelo.|  
@@ -288,7 +286,7 @@ ms.lasthandoff: 12/08/2017
 |Modelos Naïve Bayes|[Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |Modelos de rede neural|[Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |Clustering de sequências|[Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|Modelos de série temporal|[Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemplos de consulta de um modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|Modelos de série temporal|[Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelos de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Ferramentas para exibir o conteúdo do modelo de mineração  
  Ao procurar ou explorar um modelo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você poderá exibir as informações no **Visualizador de Árvore de Conteúdo Genérica da Microsoft**, disponível no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -310,7 +308,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você também pode acessar as informações nos conjuntos de linhas de esquema de mineração de dados estabelecendo uma conexão com a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e consultando as tabelas do sistema. Para obter mais informações, consulte [Conjuntos de linhas de esquema de Data Mining &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visualizador de árvore de conteúdo genérica da Microsoft &#40;Mineração de dados&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
  [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   

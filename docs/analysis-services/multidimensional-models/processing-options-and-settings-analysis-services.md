@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Processando opções e configurações (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando você processar objetos em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode selecionar uma opção de processamento para controlar o tipo de processamento que ocorre para cada objeto. Os tipos de processamento variam de um objeto para outro e por alterações ocorridas no objeto desde que ele foi processado pela última vez. Se você habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para selecionar automaticamente um método de processamento, ele usará o método que retornar o objeto a um estado inteiramente processado no menor tempo.  
@@ -53,7 +50,7 @@ ms.lasthandoff: 12/08/2017
 |**Processar Padrão**|Cubos, bancos de dados, dimensões, cubos, grupos de medidas, modelos de mineração, estruturas de mineração e partições.|Detecta o estado de processamento de objetos de banco de dados e realiza o processamento necessário para passar os objetos não processados ou parcialmente processados para um estado completamente processado. Se você alterar a associação de dados, Processar Padrão fará um Processar Completo no objeto afetado.|  
 |**Processar Completo**|Cubos, bancos de dados, dimensões, cubos, grupos de medidas, modelos de mineração, estruturas de mineração e partições.|Processa um objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e todos os objetos associados. Quando o comando Processar Completo é executado em um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta todos os dados do objeto e, em seguida, processa o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural foi feita em um objeto, por exemplo, ao adicionar, excluir ou renomear uma hierarquia de atributo.|  
 |**Processar Limpeza**|Cubos, bancos de dados, dimensões, cubos, grupos de medidas, modelos de mineração, estruturas de mineração e partições.|Descarta os dados no objeto especificado e em qualquer objeto constituinte de nível inferior. Depois de serem descartados, os dados não são recarregados.|  
-|**Processar Dados**|Dimensões, cubos, grupos de medidas e partições.|Processa apenas os dados sem criar agregações ou índices. Se houver dados nas partições, eles serão descartados antes de a partição ser populada novamente com dados de origem.|  
+|**Processar dados**|Dimensões, cubos, grupos de medidas e partições.|Processa apenas os dados sem criar agregações ou índices. Se houver dados nas partições, eles serão descartados antes de a partição ser populada novamente com dados de origem.|  
 |**Processar adição**|Dimensões, grupos de medidas e partições.<br /><br /> Observação: o **Processo Adicionar** não está disponível para processamento de dimensão no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mas você pode escrever um script XMLA para executar esta ação.|Para dimensões, adiciona novos membros e atualiza legendas de atributo de dimensão e descrições.<br /><br /> Para grupos de medidas e partições, adiciona processos e dados de fatos recém-disponibilizados apenas às partições pertinentes.|  
 |**Processar Atualização**|Dimensões|Força uma releitura dos dados e uma atualização dos atributos de dimensão. Agregações flexíveis e índices em partições relacionadas serão descartados.|  
 |**Processar Índice**|Cubos, dimensões, grupos de medidas e partições|Cria ou recria índices e agregações para todas as partições processadas. Para objetos não processados, esta opção gera um erro.<br /><br /> O processamento com esta opção será necessário se você desativar Processamento Lento.|  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
 ||**Limite de erros de processamento**. Controla o número de erros processados selecionando uma das seguintes opções:|**Ignorar contagem de erros**. O processamento continuará independentemente do número de erros.<br /><br /> **Parar se houver erro**. Com esta opção, você controla duas configurações adicionais. **Número de erros** limita o processamento à ocorrência de um número específico de erros. **Ação se houver erro** permite determinar a ação a ser tomada quando o **Número de erros** for atingido. É possível selecionar **Parar processamento**para que o trabalho de processamento falhe e reverta todas as alterações ou **Parar log**para que o processamento continue sem registrar erros. **Parar se houver erro** é a configuração padrão com a opção **Número de erros** definida como **0** e **Ação se houver erro** está definido como **Parar processamento**.|  
 ||As seguintes condições de erro. Você pode definir o valor da opção para controlar o comportamento específico de tratamento de erros.<br /><br /> Quando você seleciona **Usar configuração de erro padrão**, o Analysis Services usa a configuração de erro definida para cada objeto que está sendo processado. Se um objeto for configurado para usar a configuração padrão, o Analysis Services utilizará as configurações padrão listadas para cada opção.|**Chave não encontrada**. Ocorre quando um valor de chave existe em uma partição, mas não existe na dimensão correspondente. A configuração padrão é **Relatar e continuar**. Outras configurações são **Ignorar erro** e **Relatar e parar**.<br /><br /> **Chave duplicada**. Ocorre quando mais de um valor de chave existe em uma dimensão. A configuração padrão é **Ignorar erro**. Outras configurações são **Relatar e continuar** e **Relatar e parar**.<br /><br /> **Chave nula convertida em desconhecida**. Ocorre quando um valor de chave é nulo e a opção **Ação do erro de chave** é definida como **Converter em desconhecido**. A configuração padrão é **Ignorar erro**. Outras configurações são **Relatar e continuar** e **Relatar e parar**.<br /><br /> **Chave nula não permitida**. Ocorre quando **Ação do erro de chave** é definido como **Descartar registro**. A configuração padrão é **Relatar e continuar**. Outras configurações são **Ignorar erro** e **Relatar e parar**.|  
   
-## <a name="see-also"></a>Consulte também  
- [Processando um modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Processar um modelo multidimensional &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

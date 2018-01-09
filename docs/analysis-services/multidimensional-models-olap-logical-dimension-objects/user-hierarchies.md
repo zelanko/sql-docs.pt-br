@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -35,11 +33,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71c8f644f19236e9507b37ebdd75f1bcde7299eb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 01f5e5b5a73a8888d24d3ee46127c67327ec75da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-hierarchies"></a>Hierarquias do usuário
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
@@ -101,7 +99,7 @@ ms.lasthandoff: 12/08/2017
   
  Diferentemente de hierarquias definidas pelo usuário, na qual o número de níveis na hierarquia determina o número de níveis que podem ser visualizados por usuários finais, uma hierarquia pai-filho é definida com o único nível de um atributo de hierarquia e os valores nesse único nível produzem os vários níveis visualizados por usuários. O número de níveis exibidos depende do conteúdo das colunas da tabela de dimensões que armazenam as chaves de membro e as chaves de pai. O número de níveis pode ser alterado quando os dados nas tabelas de dimensões alteram. Para obter mais informações, consulte [dimensões pai-filho](../../analysis-services/multidimensional-models/parent-child-dimension.md), e [atributos em hierarquias pai-filho](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar hierarquias definidas pelo usuário](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Propriedades de hierarquia do usuário](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

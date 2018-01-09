@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 92207d751d305fba91bb3e5a2762918cf2451272
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Medidas semiaditivas, que não agregam uniformemente todas as dimensões, são muito comuns em muitos cenários empresariais. Todo cubo que se baseia em instantâneos de balanços, com o decorrer do tempo, apresenta esse problema. Você encontra esses instantâneos em aplicativos que cuidam de títulos, saldos de contas, orçamentos, recursos humanos, apólices de seguros e sinistros e em vários outros domínios empresariais.  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Primeiro Filho Não Vazio  
   
--   Nenhum.  
+-   Nenhum  
   
  Essa opção não altera as medidas com uma função de agregação regular: **Sum**, **Min**, **Max**, **Count**ou **Distinct****Count**.  
   
@@ -86,8 +83,8 @@ ms.lasthandoff: 12/08/2017
 |LastChild|O valor do membro é avaliado como o valor de seu último filho juntamente com a dimensão de tempo.|  
 |LastNonEmpty|O valor do membro é avaliado como o valor de seu último filho juntamente com a dimensão que contém dados.|  
 |Max|A função de agregação máxima é aplicada.|  
-|Min|A função de agregação mínima é aplicada.|  
-|Nenhum.|Nenhuma agregação é aplicada.|  
+|Mín|A função de agregação mínima é aplicada.|  
+|Nenhum|Nenhuma agregação é aplicada.|  
 |SUM|A função de soma padrão é aplicada.|  
   
  Qualquer comportamento semiaditivo existente será substituído quando você concluir o assistente.  

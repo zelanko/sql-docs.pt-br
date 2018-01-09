@@ -1,26 +1,26 @@
 ---
 title: "O que &#39; s novo nos serviços de aprendizado de máquina | Microsoft Docs"
-ms.date: 11/16/2017
+ms.date: 01/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
 caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>O que há de novo nos serviços de aprendizado de máquina no SQL Server
 
@@ -34,9 +34,11 @@ Pegue o lançamento mais recente aqui! [Python no SQL Server 2017: aprimorada de
 
 Servidor de aprendizado de máquina no SQL Server fornece suporte abrangente para criar e implantar soluções de aprendizado de máquina em R ou Python. Aqui estão os destaques desta versão:
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Novidades na atualização cumulativa 1 para SQL Server 2017
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>Novidades na atualização cumulativa 3 para SQL Server 2017
 
-Agora você pode atualizar os componentes do Python e R para o servidor de aprendizado de máquina 9.2.1.24. Esta versão apresenta vários aprimoramentos para **revoscalepy** e **RevoScaleR**, incluindo melhorias de desempenho.
+Esta versão contém atualizações para componentes do Python e R. 
+
++ Adicionado suporte para a serialização de modelo do Python em revoscalepy, usando a função rx_serialize_model
 
 ### <a name="in-database-python-integration"></a>Integração de Python no banco de dados
 

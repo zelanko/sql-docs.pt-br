@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>Conjunto de linhas DISCOVER_DIMENSION_STAT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações sobre uma dimensão, incluindo o nome do banco de dados que contém a ele, o nome da dimensão, seus atributos e uma contagem de membros de cada atributo. Em um modelo de tabela, isso corresponde às colunas em uma tabela e ao número de valores em cada coluna.  
@@ -36,8 +34,8 @@ ms.lasthandoff: 12/08/2017
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|Required|O nome do banco de dados que contém a dimensão.<br /><br /> Esta coluna é obrigatória na lista de restrições.|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|Required|O nome da dimensão.<br /><br /> Esta coluna é obrigatória na lista de restrições.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Obrigatório|O nome do banco de dados que contém a dimensão.<br /><br /> Esta coluna é obrigatória na lista de restrições.|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|Obrigatório|O nome da dimensão.<br /><br /> Esta coluna é obrigatória na lista de restrições.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||O atributo de um atributo na dimensão.|  
 |**ATTRIBUTE_COUNT**|**DBTYPE_I8**||A contagem de valores no atributo nomeado. Para um modelo de tabela, o valor sempre equivale ao número de linhas na tabela.|  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 |GUID|a07ccd90-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

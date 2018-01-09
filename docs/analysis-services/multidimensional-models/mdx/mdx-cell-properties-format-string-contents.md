@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propriedades de célula MDX - conteúdo de FORMAT_STRING
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O **FORMAT_STRING** formatos de propriedade de célula a **valor** propriedade de célula, o valor para a criação de **FORMATTED_VALUE** propriedade de célula. A propriedade de célula **FORMAT_STRING** lida com valores numéricos e cadeias de caracteres, aplicando a expressão de formato ao valor para retornar um valor formatado para a propriedade de célula **FORMATTED_VALUE** . As tabelas a seguir detalham a sintaxe e os caracteres de formatação usados para lidar com valores de cadeia de caracteres e numéricos.  
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
 |Caractere|Description|  
 |---------------|-----------------|  
-|Nenhum.|Exibe o número sem qualquer formatação.|  
+|Nenhum|Exibe o número sem qualquer formatação.|  
 |**0**|Representa um espaço reservado de dígito que exibe um dígito ou um zero (0).<br /><br /> Se o número tiver um dígito na posição onde aparece um zero na cadeia de caracteres de formato, o valor formatado exibirá o dígito. Caso contrário, o valor formatado exibirá um zero nessa posição.<br /><br /> Se o número tiver menos dígitos que zeros (em qualquer lado da divisão decimal) na cadeia de caracteres de formato, o valor formatado exibirá zeros à esquerda e à direita.<br /><br /> Se o número tiver mais dígitos à direita do separador decimal que zeros à direita do separador decimal na expressão de formato, o valor formatado arredondará o número para o mesmo número de casas decimais que a quantidade de zeros.<br /><br /> Se o número tiver mais dígitos à esquerda do separador decimal que zeros à esquerda do separador decimal na expressão de formato, o valor formatado exibirá os dígitos adicionais sem alteração.|  
 |**#**|Representa um espaço reservado de dígito que exibe um dígito ou nada.<br /><br /> Se a expressão tiver um dígito na posição em que aparece um sinal numérico (**#**) na cadeia de caracteres de formato, o valor formatado exibirá o dígito. Caso contrário, o valor formatado não exibirá nada naquela posição.<br /><br /> O espaço reservado para sinal numérico (**#**) funciona como o espaço reservado para o dígito zero (**0**), exceto pelo fato de que os zeros à esquerda e à direita não serão exibidos se o número tiver a mesma quantidade de dígitos, ou menos, que de caracteres **#** em qualquer um dos lados do separador decimal na expressão de formato.|  
 |**.**|Representa um espaço reservado decimal que determina quantos dígitos serão exibidos à esquerda e à direita do separador decimal.<br /><br /> Se a expressão de formato contiver apenas caracteres de sinal numérico (**#**) à esquerda do ponto (**.**), números menores que 1 começaram com um separador decimal. Para exibir um zero à esquerda no caso de números fracionais, use zero (0) como o primeiro espaço reservado para dígito à esquerda do separador decimal.<br /><br /> O caractere real usado como espaço reservado decimal na saída formatada depende do formato numérico reconhecido pelo sistema do computador.<br /><br /> Observação: em algumas localidades, a vírgula é usada como o separador decimal.|  
@@ -157,7 +154,7 @@ ms.lasthandoff: 12/08/2017
 |`Medium Time`|Exibe uma hora no formato de 12 horas usando horas e minutos e o designator AM/PM.|  
 |`Short Time`|Exibe uma hora usando o formato de 24 horas, por exemplo, 17:45.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [LANGUAGE e FORMAT_STRING em FORMATTED_VALUE](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [Usando propriedades de célula &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Criando e usando valores de propriedade &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   

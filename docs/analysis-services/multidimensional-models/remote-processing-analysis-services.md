@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
@@ -20,16 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 190fc7bd8fa6a88d5a55068f32a4c55d2d1fd455
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="remote-processing-analysis-services"></a>Processamento remoto (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode executar processamento em um controle remoto agendado ou autônomo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância, em que a solicitação de processamento origina-se de um computador, mas é executado em outro computador na mesma rede.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Se você estiver executando versões diferentes do SQL Server em cada computador, as bibliotecas de cliente devem corresponder à versão da instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que está processando o modelo.
   
@@ -99,7 +96,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  Como etapa final, modifique o trabalho para ser executado em uma agenda que você definir, adicionando quaisquer alertas ou notificações necessários para administrar o trabalho. Você também poderá refinar o script de processamento ou criar várias etapas do trabalho para processar objetos independentemente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [Agendar tarefas administrativas do SSAS com o SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Processamento em lotes &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   

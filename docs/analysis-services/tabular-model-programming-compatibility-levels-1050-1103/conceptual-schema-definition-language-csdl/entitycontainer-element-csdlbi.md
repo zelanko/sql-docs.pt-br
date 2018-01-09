@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Elemento EntityContainer (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O elemento EntityContainer é um tipo complexo, com base no tipo CSDL, EntityContainer, que define uma coleção de entidades em um único modelo de dados. Em um aplicativo business intelligence, o modelo de dados representado por um EntityContainer pode conter várias tabelas com colunas vinculadas por relações, bem como cálculos, medidas e KPIs. Ele é conceitualmente semelhante a um banco de dados ou uma fonte de dados.  
@@ -36,15 +34,15 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela abaixo descreve os elementos e atributos que definem o EntityContainer.  
   
-|Nome|É obrigatório|Descrição|  
+|Nome|É obrigatório|Description|  
 |----------|-----------------|-----------------|  
 |Nome|Sim|O nome do modelo de dados.|  
-|Caption|Não|Uma descrição do banco de dados ou do modelo de dados.|  
+|Legenda|não|Uma descrição do banco de dados ou do modelo de dados.|  
 |Cultura|Sim|Uma cadeia de caracteres que contém o LCID da solicitação.|  
 |CompareOptions|Sim|Classificação específica do idioma e opções de comparação de cadeia de caracteres para o modelo.|  
-|DirectQueryMode|Não|Uma enumeração que indica o modo de consulta quando o modelo estiver usando o modo DirectQuery.|  
+|DirectQueryMode|não|Uma enumeração que indica o modo de consulta quando o modelo estiver usando o modo DirectQuery.|  
 |Elemento EntitySet|Sim|[Elemento EntitySet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|Elemento AssociationSet|Não|[Elemento AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|Elemento AssociationSet|não|[Elemento AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>Elemento CompareOptions  
  O atributo CompareOptions define propriedades de agrupamento que são aplicadas ao modelo de dados. As propriedades definidas por CompareOptions são derivadas das configurações para ordem de classificação, distinção kana e distinção de maiúsculas/minúsculas definidas no banco de dados do Analysis Services em tempo de design de modelo. A tabela a seguir descreve os valores inclusos como parte do atributo CompareOptions.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
  O tipo simples, DirectQueryMode, define o tipo de consulta que é usado por padrão quando o modelo é habilitado para recuperar dados diretamente de uma fonte de dados relacional. Essa propriedade é aplicável somente a modelos de tabela que são executados no modo DirectQuery. A tabela a seguir lista os valores possíveis da enumeração do modo DirectQuery.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |InMemory|Indica se as consultas no modelo usarão dados no cache.|  
 |InMemoryWithDirectQuery|Indica se, por padrão, as consultas no modelo usarão dados da fonte de dados relacional.|  
@@ -118,7 +116,7 @@ ms.lasthandoff: 12/08/2017
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento EntitySet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
   
   

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23021f365a349e226194326ed2d4d43acb2e7af8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Ações (Analysis Services – Dados Multidimensionais)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]As ações podem ser de tipos diferentes e devem ser criadas adequadamente. As ações podem ser:  
@@ -68,19 +65,19 @@ ms.lasthandoff: 12/08/2017
 |Tipo de ação|Description|  
 |-----------------|-----------------|  
 |CommandLine|Executa um comando no prompt de comando.|  
-|Conjunto de dados|Retorna um conjunto de dados a um aplicativo cliente.|  
+|Dataset|Retorna um conjunto de dados a um aplicativo cliente.|  
 |Detalhamento|Retorna uma instrução de detalhamento como uma expressão e que o cliente executa para retornar um conjunto de dados.|  
 |Html|Executa um script HTML em um navegador de Internet.|  
 |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
 |Relatório|Envia uma solicitação com base em URL parametrizada para um servidor de relatórios e retorna um relatório a um aplicativo cliente.|  
 |Conjunto de linhas|Retorna um conjunto de linhas a um aplicativo cliente.|  
-|Instrução|Executa um comando OLE DB.|  
+|de|Executa um comando OLE DB.|  
 |URL|Exibe uma página da Web dinâmica em um navegador de Internet.|  
   
 ## <a name="resolving-and-executing-actions"></a>Resolvendo e executando ações  
  Quando um usuário empresarial acessa o objeto pra o qual o objeto de comando está definido, a instrução associada à ação é automaticamente resolvida, o que o torna disponível para o aplicativo cliente, mas a ação não é executada automaticamente. A ação só é executada quando o usuário empresarial executar a operação específica ao cliente que inicia a ação. Por exemplo, um aplicativo cliente pode exibir uma lista de ações como menu pop-up, quando o usuário empresarial clica com o botão direito do mouse em um membro ou célula em particular.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ações em modelos multidimensionais](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

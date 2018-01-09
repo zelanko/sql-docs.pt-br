@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec1460930df27e1111d17b6c5692f82186348153
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 69611501f104519777b263d621fbfc1d74f884c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adomdnet-server-programming"></a>Programando o servidor no ADOMD.NET
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Os componentes de servidor do ADOMD.NET residem dentro de **adomdserver** namespace (em msmgdsrv.dll). Use estes componentes do servidor para criar funções personalizadas de MDX (Multidimensional Expressions) e procedimentos armazenados que são executados em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os objetos de servidor oferecem os recursos para a consulta de cubos e de modelos de mineração e para a avaliação de expressões em um determinado contexto. Os benefícios da criação de funções e de procedimentos armazenados personalizados incluem execução rápida, implantação centralizada e maior facilidade de manutenção.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 |[Arquitetura de objeto de servidor do ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md)|Descreve a arquitetura de objeto para objetos de servidor do ADOMD.NET.|  
 |[Funções e procedimentos armazenados definidos pelo usuário](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)|Orienta você pelo processo de criação de uma função ou procedimento armazenado definido pelo usuário.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação de cliente ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)   
  [Desenvolvendo com ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   

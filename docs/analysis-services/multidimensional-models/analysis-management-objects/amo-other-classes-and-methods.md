@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f4de10c612f0338cecbfbd2e106bee41c6115905
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>Outras classes e métodos AMO
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Esta seção contém classes comuns que não são específicas ao OLAP ou à mineração de dados e que são úteis para administrar ou gerenciar objetos em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Essas classes abordam recursos como procedimentos armazenados, rastreamento, exceções e backup e restauração.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/08/2017
   
  Segurança =**CopyAll**  
   
-##### <a name="restrictions"></a>Restrições  
+##### <a name="restrictions"></a>Restrictions  
   
 1.  Uma partição local não pode ser restaurada como partição remota.  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/08/2017
   
  O AMO lançará exceções quando problemas diferentes forem encontrados. A tabela a seguir lista o tipo de exceções manipuladas pelo AMO. As exceções são derivadas da classe de <xref:Microsoft.AnalysisServices.AmoException>.  
   
-|Exception|Origem|Description|  
+|Exceção|Origem|Description|  
 |---------------|------------|-----------------|  
 |<xref:Microsoft.AnalysisServices.AmoException>|Classe base|O aplicativo recebe esta exceção quando um objeto pai exigido está ausente ou quando um item solicitado não é localizado em uma coleção.|  
 |<xref:Microsoft.AnalysisServices.OutOfSyncException>|Derivada de AMOException|O aplicativo recebe esta exceção quando o AMO não está sincronizado com o mecanismo e o mecanismo retorna uma referência de objeto que o AMO não conhece.|  
@@ -176,7 +174,7 @@ ms.lasthandoff: 12/08/2017
 |<xref:Microsoft.AnalysisServices.ResponseFormatException>|Derivada de AMOException|Esta exceção ocorre quando o mecanismo retorna uma mensagem em um formato que o AMO não compreende.|  
 |<xref:Microsoft.AnalysisServices.ConnectionException>|Derivada de AMOException|Esta exceção ocorre quando uma conexão não pode ser estabelecida (com Server.Connect) ou quando a conexão é perdida durante a comunicação do AMO com o mecanismo (por exemplo, durante um Update ou Process ou Drop).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices>   
  [Introdução às Classes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Arquitetura lógica &#40; Analysis Services - dados multidimensionais &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   

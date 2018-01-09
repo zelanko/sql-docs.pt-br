@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_ACTIONS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50b7b29005b5dc5ee4652a79784f33194c5a5a9a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 214fb372b021e7cee9f11bb82cccdc65575a7929
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemaactions-rowset"></a>Conjunto de linhas MDSCHEMA_ACTIONS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve as ações que podem estar disponíveis para o aplicativo cliente.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/08/2017
   
  Aplicativos cliente podem definir mais de um **ACTION_TYPE** usando o operador OR.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir lista o válido **COORDENAR** e **COORDINATE_TYPE** combinações.  
   
 |tipo de objeto COORDINATE|COORDINATE_TYPE|  
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/08/2017
 |**Definir**|**MDACTION_COORDINATE_SET**|  
 |**célula**|**MDACTION_COORDINATE_CELL**|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

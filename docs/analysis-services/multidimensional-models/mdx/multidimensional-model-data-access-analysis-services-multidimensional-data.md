@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Acesso a dados de modelo multidimensional (Analysis Services – Dados Multidimensionais)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Use as informações neste tópico para saber como acessar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dados multidimensionais usando métodos programáticos, script ou aplicativos cliente que incluem suporte interno para se conectar a um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor em sua rede.  
@@ -104,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |XMLA|O XMLA é a API de nível baixo disponível para um programador do Analysis Services e é o denominador comum que está por baixo de todas as metodologias de acesso a dados do Analysis Services. O XMLA é um padrão da indústria, um protocolo XML baseado em SOAP que dá suporte a acesso a dados universal em qualquer fonte de dados multidimensional padrão disponível em uma conexão HTTP. Ele usa o SOAP para formular solicitações e respostas para dados multidimensionais. Se seu aplicativo for executado em uma plataforma não Windows, você poderá usar XMLA para acessar um banco de dados multidimensional que está sendo executado em um servidor de Windows em sua rede. Para obter mais informações, consulte [Desenvolvendo com XMLA no Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).|  
 |ASSL (linguagem de script do Analysis Services)|ASSL é um termo descritivo que se aplica a extensões de Analysis Services do protocolo XMLA. Embora os métodos Execute e Discover são descritos pelo protocolo XMLA, o ASSL adiciona o recurso a seguir:<br /><br /> - Script XMLA<br /><br /> - Definições do objeto XMLA<br /><br /> - Comandos XMLA<br /><br /> As extensões de ASSL permitem que o Analysis Services use as construções do XMLA além das providências básicas do protocolo, adicionando definição de dados, manipulação de dados e suporte a controle de dados. Para obter mais informações, consulte [Desenvolvendo com ASSL &#40;linguagem de script do Analysis Services&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectar-se ao Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Desenvolvendo com o Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Desenvolvendo com XMLA no Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   

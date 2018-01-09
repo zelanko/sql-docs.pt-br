@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 86bf8220b54d34646a38542b7edb861b8312137c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b50bb9f02ef1f5d0c36d05f269b229e803c8100b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lição 9-1-Definindo e procurando perspectivas
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Uma perspectiva pode simplificar a exibição de um cubo para fins específicos. Por padrão, os usuários podem ver todos os elementos em um cubo para o qual têm permissões. O quê os usuários visualizam ao exibir um cubo completo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é a perspectiva padrão para o cubo. Uma exibição de todo o cubo pode ser muito complexa para os usuários pesquisarem, principalmente para usuários que precisam apenas interagir com uma pequena parte do cubo para satisfazer seus requisitos de inteligência empresarial e geração de relatórios.  
@@ -200,7 +200,7 @@ Nas tarefas deste tópico, você definirá várias perspectivas diferentes e dep
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Definindo e procurando traduções](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Perspectives](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
 [Perspectivas em modelos multidimensionais](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   

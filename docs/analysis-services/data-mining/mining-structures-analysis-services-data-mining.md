@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c228c4db6aff3eca771e3c4e5aacbbfc3e2aa2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estruturas de mineração (Analysis Services – Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A estrutura de mineração define os dados do qual modelos de mineração são criados: Especifica a exibição da fonte de dados, o número e tipo de colunas, e define uma partição opcional em treinamento e teste. Uma única estrutura de mineração pode oferecer suporte a vários modelos de mineração que compartilham o mesmo domínio. O diagrama a seguir mostra a relação da estrutura de mineração de dados com a fonte de dados e com os modelos de mineração de dados que a compõe.  
@@ -117,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
  Para obter mais informações sobre a arquitetura dos modelos de mineração de dados, consulte [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Use os links fornecidos aqui para saber mais sobre como definir, gerenciar e usar estruturas de mineração.  
   
 |Tarefas|Links|  
@@ -126,9 +124,9 @@ ms.lasthandoff: 12/08/2017
 |Trabalhar com estruturas de mineração com base em cubos OLAP|[Criar uma nova estrutura de mineração OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
 |Trabalhar com colunas em uma estrutura de mineração|[Adicionar colunas a uma estrutura de mineração](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [Remover colunas de uma estrutura de mineração](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |Alterar ou consultar dados e propriedades da estrutura de mineração|[Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
-|Trabalhar com as fontes de dados subjacentes e atualizar dados de origem|[Editar a exibição da fonte de dados usada para a Estrutura de Mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Processar uma estrutura de mineração](../../analysis-services/data-mining/process-a-mining-structure.md)|  
+|Trabalhar com as fontes de dados subjacentes e atualizar dados de origem|[Editar a exibição da fonte de dados usada para a estrutura de mineração](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Processar uma estrutura de mineração](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objetos de banco de dados &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   

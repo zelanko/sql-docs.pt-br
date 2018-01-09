@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acesso personalizado a dados da dimensão (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Depois de habilitar o acesso de leitura a um cubo, você pode definir permissões adicionais que explicitamente permitem ou negam acesso a membros de dimensão (incluindo as medidas contidas na dimensão de medidas que contém todas as medidas usadas em um cubo). Por exemplo, considerando várias categorias de revendedores, você pode querer definir as permissões para excluir dados de um tipo de negócio específico. A ilustração a seguir mostra o antes e o depois da negação de acesso ao tipo de negócio Depósito na dimensão do Revendedor.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  As instruções a seguir pressupõem uma conexão de cliente que emite consultas MDX. Se o cliente usa o DAX, como o Power View no Power BI, a segurança de dimensão não fica evidente nos resultados da consulta. Consulte [Compreendendo o Power View para modelos multidimensionais](understanding-power-view-for-multidimensional-models.md) .para obter mais informações.
       
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Nem todos os membros de medidas ou dimensão podem ser usados ​​em cenários de acesso personalizados. A conexão irá falhar se uma função restringir o acesso a uma medida ou membro padrão ou restringir o acesso a medidas que fazem parte de expressões de medida.  
   
  **Verifique se há obstruções à segurança da dimensão: medidas padrão, membros padrão e medidas usados em expressões de medidas**  
@@ -136,7 +133,7 @@ ms.lasthandoff: 12/08/2017
  **Verificar**  
  Clique para testar a sintaxe MDX definida nesta página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [Conceder acesso personalizado a célula de dados &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
  [Conceder permissões em estruturas de mineração de dados e modelos de &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   

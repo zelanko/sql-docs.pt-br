@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Propriedades de atributo - membros do grupo de atributo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um membro do grupo é uma coleção gerada pelo sistema de membros de dimensão consecutivos. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível agrupar os membros de um atributo em diversos grupos de membros por meio de um processo chamado diferenciação. Um nível em uma hierarquia contém grupos de membro ou membros, mas não ambos. Quando os usuários da empresa procuram um nível que contém grupos de membros, eles veem nomes e valores de célula dos grupos de membros. Os membros gerados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte aos grupos de membros são chamados membros do agrupamento e são similares aos membros comuns.  
@@ -45,8 +42,8 @@ ms.lasthandoff: 12/08/2017
   
 |Configuração**DiscretizationMethod** |Description|  
 |--------------------------------------|-----------------|  
-|**Nenhum.**|Exibe os membros.|  
-|**Automatic**|Seleciona o método que melhor representa os dados: o método **EqualAreas** ou o método **Clusters** .|  
+|**Nenhuma**|Exibe os membros.|  
+|**Automático**|Seleciona o método que melhor representa os dados: o método **EqualAreas** ou o método **Clusters** .|  
 |**EqualAreas**|Tenta dividir os membros do atributo em grupos com o mesmo número de membros.|  
 |**Clusters**|Tenta dividir os membros do atributo em grupos por meio de amostragem dos dados de treinamento, inicializando um número aleatório de pontos e executando várias interações do algoritmo de clustering Expectation Maximization (EM).<br /><br /> Esse método é útil pois funciona com qualquer curva de distribuição, mas é mais dispendioso em termos de tempo de processamento.|  
   
@@ -118,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Se a tabela de dimensões de uma dimensão que contém grupos de membros for atualizada e, na sequência, a dimensão for totalmente processada, será gerado um novo conjunto de grupos de membros. Os nomes e os filhos dos novos grupos de membros podem ser diferentes dos anteriores.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

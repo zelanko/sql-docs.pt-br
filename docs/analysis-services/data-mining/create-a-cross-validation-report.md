@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47368a14a07f9ab0a42df11d29dbca6404b19463
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b8b5dad234adf73717b5785fc0f3b06becaebce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-cross-validation-report"></a>Criar um relatório de validação cruzada
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico orienta você na criação de um relatório de validação cruzada usando a guia gráfico de precisão no Designer de mineração de dados. Para obter informações gerais sobre a aparência de um relatório de validação cruzada e as medidas estatísticas que ele inclui, consulte [Validação cruzada &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  Cole a seleção em uma pasta do Excel aberta. Se você usar a opção **Colar** , o relatório será colado no Excel como HTML, preservando a formatação de linhas e colunas. Se colar o relatório usando a opção **Colar Especial** para texto ou texto Unicode, o relatório será colado em um formato delimitado por linha.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

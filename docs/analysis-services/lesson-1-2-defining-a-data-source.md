@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c6d92c514cb38f1277efeedaa4172968f8e150ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c1504d26e2c7cbdbdacf943e17d7514ba20b786
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Lição 1-2-definir uma fonte de dados
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Depois de criar um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto, geralmente começar a trabalhar com o projeto com a definição de uma ou mais fontes de dados que o projeto será usado. Ao definir uma fonte de dados, você está definindo as informações da cadeia de conexão que será usada para conectar-se à fonte de dados. Para obter mais informações, veja [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -49,7 +49,7 @@ Na tarefa a seguir, você definirá o banco de dados de exemplo do AdventureWork
   
 7.  Clique em **Testar Conexão** para testar a conexão com o banco de dados.  
   
-8.  Clique em **OK**e em **Avançar**.  
+8.  Clique em **OK** e em **Avançar**.  
   
 9. Na página **Informações sobre Representação** do assistente, você define as credenciais de segurança que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usará para se conectar à fonte de dados. A representação afeta a conta do Windows usada para conexão à fonte de dados quando a Autenticação do Windows é selecionada. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não dá suporte à representação para o processamento de objetos OLAP. Selecione **Usar a conta de serviço**e clique em **Avançar**.  
   
@@ -61,6 +61,6 @@ Na tarefa a seguir, você definirá o banco de dados de exemplo do AdventureWork
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
 [Definindo uma exibição da fonte de dados](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   

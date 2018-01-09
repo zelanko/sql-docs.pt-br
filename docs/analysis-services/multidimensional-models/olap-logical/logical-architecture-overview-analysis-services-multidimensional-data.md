@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Visão geral da arquitetura lógica (Analysis Services – Dados Multidimensionais)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O Analysis Services funciona em um modo de implantação de servidor que determina o ambiente de tempo de execução e arquitetura de memória usado pelos diferentes tipos de modelos do Analysis Services. O modo de servidor é determinado durante a instalação. **Modo multidimensional e mineração de dados** oferece suporte a OLAP tradicional e mineração de dados. **Modo de tabela** dá suporte a modelos de tabela. **Modo integrado do SharePoint** refere-se a uma instância do Analysis Services que foi instalado como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, usado para carregar e consultar o Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de dados dentro de uma pasta de trabalho.  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  Os valores alfanuméricos menores ao redor do cubo são os membros das dimensões. Exemplos de membros são: terra (membro da dimensão Rota), África (membro da dimensão Origem) e 1º trimestre (membro da dimensão Horário).  
   
-### <a name="measures"></a>Medidas  
+### <a name="measures"></a>medidas  
  Os valores nas células do cubo representam as duas medidas, Pacotes e Último. A medida pacotes representa o número de pacotes importados e o **soma** função é usada para agregar os fatos. A medida último representa a data de recebimento e o **Max** função é usada para agregar os fatos.  
   
 ### <a name="dimensions"></a>Dimensões  
@@ -132,7 +130,7 @@ ms.lasthandoff: 12/08/2017
   
  O exemplo mostrado aqui contém uma única tabela de fatos. Quando um cubo tem várias tabelas de fatos, as medidas de cada tabela de fatos são organizadas em grupos de medidas e um grupo de medidas está relacionado à um conjunto específico de dimensões por relações de dimensões definidas. Essas relações são definidas pela especificação das tabelas participantes na exibição de fonte de dados e granularidade da relação. **Tópico relacionado:**[relações de dimensão](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados de modelo multidimensional &#40; SSAS &#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

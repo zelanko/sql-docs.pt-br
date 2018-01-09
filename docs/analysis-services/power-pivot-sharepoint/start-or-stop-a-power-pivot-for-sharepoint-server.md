@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cceb9ce47e059750e1d4cb8dc3fe3b1d45444f82
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 72fb8e7c0f964fe140082d9aed5748b98440fac3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Iniciar ou parar um Power Pivot para SharePoint Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o serviço do sistema e um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância operam juntos no mesmo servidor de aplicativo local para dar suporte a solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
 |Novas solicitações para consultas ou atualização de dados|Se você estiver parando somente o servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no farm, novas solicitações para dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não serão manipuladas e uma solicitação de dados resultará em um erro de dados não encontrados.<br /><br /> Se você tiver servidores do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint adicionais, a solicitação irá para um dos servidores disponíveis.|  
 |Dados de uso|Não serão coletados dados de uso enquanto os serviços estiverem parados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

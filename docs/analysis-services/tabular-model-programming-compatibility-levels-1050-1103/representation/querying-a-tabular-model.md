@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e413fe7d6d56d3b79637eb2b263abd8c06f23e1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 024fd5fb264f4fce86d0c2f28f2558ccfa9e800a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="querying-a-tabular-model"></a>Consultando um modelo de tabela
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Como um desenvolvedor, consultar um modelo de tabela significa recuperar dados do banco de dados tabular; para atingir essa meta, você tem duas opções: usar consultas de tabela no DAX, ou usar o MDX e recuperar os dados provenientes de um cubo. Entretanto, dependendo do modo subjacente de seu modelo de tabela, você pode ficar restrito a usar apenas consultas de tabela DAX; o modo DirectQuery requer o uso de consultas de tabela DAX.  

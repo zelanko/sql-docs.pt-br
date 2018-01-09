@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Analysis Services Scripting Language XML Element Hierarchy
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d96724b711f4a955c6b2513fff73017ade2052b8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b45f5737bacd5b86d10584f8c6e0b131e1e658cf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Hierarquia de elemento XML da ASSL (Analysis Services Scripting Language)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A tabela a seguir exibe a hierarquia de objetos no Scripting linguagem ASSL (Analysis Services).  
@@ -1940,7 +1938,7 @@ ms.lasthandoff: 12/08/2017
 </Server>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elementos XML de linguagem de script &#40; do Analysis Services ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)   
  [Analysis Services Scripting Language hierarquia de tipo de dados XML &#40; ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)   
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data feeds [Analysis Services with SharePoint]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 70d102f069894aec4e6286e3bdc590f41fcdbbea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c9b2b0c9ed6a70ce6e596bd1afe8bd2b49fc3a4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Compartilhar feeds de dados usando uma biblioteca de feed de dados (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Um feed de dados é um fluxo de dados XML que é gerado a partir de um serviço ou aplicativo que expõe dados em formato de conexão Atom. Ele é usado cada vez mais para transportar dados entre aplicativos e para visualizadores do lado do cliente. Em uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, os feeds de dados são usados para preencher uma fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] com dados de um aplicativo ou serviço com reconhecimento do Atom.  
@@ -120,7 +117,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="usedsdoc"></a> Próxima etapa: Usar um documento de serviço de dados  
  Para usar um documento de serviço de dados criado em uma biblioteca do SharePoint, você usa a opção de importação **De Feeds de Dados** em uma fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obter instruções mais, confira [Usar feeds de dados &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Feeds de dados do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

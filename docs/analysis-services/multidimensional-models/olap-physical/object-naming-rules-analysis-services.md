@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras reservadas e caracteres que não podem ser usados em nomes de objetos, no código ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -74,13 +72,13 @@ ms.lasthandoff: 12/08/2017
   
  A tabela a seguir lista caracteres inválidos para objetos específicos.  
   
-|Objeto|Caracteres inválidos|  
+|Object|Caracteres inválidos|  
 |------------|------------------------|  
 |**Servidor**|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Para obter detalhes, consulte [Convenções de nomenclatura (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) .|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  
-|**Level** ou **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimension** ou **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|Todos os outros objetos|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
+|**Level** ou **Attribute**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
+|**Dimension** ou **Hierarchy**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
+|Todos os outros objetos|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
   
  **Exceções: Quando caracteres reservados são permitidos**  
   
@@ -88,14 +86,14 @@ ms.lasthandoff: 12/08/2017
   
 |Modo de servidor e nível de compatibilidade de banco de dados|Caracteres reservados permitidos?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (todas as versões)|Não|  
-|Tabela - 1050|Não|  
-|Tabela - 1100|Não|  
+|MOLAP (todas as versões)|não|  
+|Tabela - 1050|não|  
+|Tabela - 1100|não|  
 |Tabela – 1130 e superior|Sim|  
   
  Bancos de dados podem ter um ModelType padrão. O padrão é equivalente a multidimensional e, portanto, não dá suporte ao uso de caracteres reservados em nomes de colunas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Palavras reservadas para MDX](../../../mdx/mdx-reserved-words.md)   
  [Suporte a tradução no Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
  [XML for Analysis conformidade &#40; XMLA &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  

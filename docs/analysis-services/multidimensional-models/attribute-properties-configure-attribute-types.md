@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Propriedades de atributo - configurar tipos de atributo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tipos de atributo ajudam a classificar um atributo em termos de funcionalidade empresarial. Existem muitos tipos de atributo, sendo que a maioria é usada por aplicativos cliente para exibir ou oferecer suporte a um atributo. No entanto, alguns tipos de atributo também têm significado específico para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por exemplo, alguns tipos de atributo identificam atributos que representam períodos de tempo em vários calendários de dimensões de tempo.  
@@ -192,7 +189,7 @@ ms.lasthandoff: 12/08/2017
   
 |Valor do tipo de atributo|Description|  
 |--------------------------|-----------------|  
-|**Data**|Representa uma data. Normalmente, esse tipo de atributo é aplicado ao atributo de chave de uma dimensão de tempo ou dimensão de tempo de servidor.|  
+|**Date**|Representa uma data. Normalmente, esse tipo de atributo é aplicado ao atributo de chave de uma dimensão de tempo ou dimensão de tempo de servidor.|  
 |**DayOfHalfYear**|Representa o ordinal de dia de um semestre.|  
 |**DayOfMonth**|Representa o ordinal de dia de um mês.|  
 |**DayOfQuarter**|Representa o ordinal de dia de um semestre.|  
@@ -314,7 +311,7 @@ ms.lasthandoff: 12/08/2017
 |**WinterSummerSeason**|Indica se a data faz parte da estação de inverno/verão.|  
 |**Years**|Representa anos.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atributos e hierarquias de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Referência de propriedades de atributo de dimensão](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   

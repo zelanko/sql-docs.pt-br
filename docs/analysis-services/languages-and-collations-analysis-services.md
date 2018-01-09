@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: Testar o Analysis Services
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e agrupamentos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e agrupamentos fornecidos pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] sistemas operacionais Windows. As propriedades**Language** e **Collation** são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia do objeto.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 12/08/2017
 |Ordem de classificação (sufixo)|Descrição da ordem de classificação|  
 |---------------------------|----------------------------|  
 |Binário (_BIN) ou BIN2 (_BIN2)|Existem dois tipos de agrupamentos binários no SQL Server; os agrupamentos BIN mais antigos e os agrupamentos BIN2 mais recentes. Em um agrupamento BIN2 todos os caracteres são classificados de acordo com seus pontos de código. Em um agrupamento BIN apenas o primeiro caractere é classificado de acordo com o ponto de código e os caracteres restantes são classificados de acordo com seus valores de byte. (Como a plataforma Intel é um arquitetura little endian, os caracteres de código Unicode são sempre trocados por bytes armazenados.)<br /><br /> Para agrupamentos binários em tipos de dados Unicode, a localidade não é considerada em classificações de dados. Por exemplo, Latin_1_General_BIN e Japanese_BIN geram resultados de classificação idênticos quando usados em dados Unicode.<br /><br /> A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
-|Case-sensitive (_CS)|Faz distinção entre letras maiúscula e minúsculas. Se selecionada, as letras minúsculas são ordenadas à frente das versões em letras maiúsculas. Você pode definir explicitamente a não diferenciação de maiúsculas e minúsculas especificando _CI. Configurações de maiúsculas e minúsculas específicas de agrupamento não se aplicam a identificadores de objeto, como a ID de uma dimensão, cubo e outros objetos. Para obter detalhes, consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
+|Case-sensitive (_CS)|Faz distinção entre letras maiúscula e minúsculas. Se selecionada, as letras minúsculas são ordenadas à frente das versões em letras maiúsculas. Você pode definir explicitamente a não diferenciação de maiúsculas e minúsculas especificando _CI. Configurações de maiúsculas e minúsculas específicas de agrupamento não se aplicam a identificadores de objeto, como a ID de uma dimensão, cubo e outros objetos. Consulte [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) para obter detalhes.|  
 |Accent-sensitive (_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, 'a' não é igual a 'ã'. Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões acentuadas e não acentuadas das letras são iguais para fins de classificação. É possível definir a não diferenciação de acentos especificando _AI.|  
 |Kana-sensitive (_KS)|Distingue entre os dois tipos de caracteres kana japoneses: hiragana e katakana. Se essa opção não for selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que caracteres hiragana e katakana são iguais para fins de classificação. Não há nenhum sufixo de ordem de classificação para kana.|  
 |Width-sensitive (_WS)|Distingue entre um caractere de byte único e o mesmo caractere quando representado como um caractere de byte duplo. Se essa opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará as representações de byte único e byte duplo do mesmo caractere como iguais para fins de classificação. Não há nenhum sufixo de ordem de classificação para distinção de largura.|  
@@ -169,7 +169,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  No Management Studio, clique com o botão direito do mouse no banco de dados | **Bancos de Dados de Script como** | **ALTERAR para** | **Nova Janela do Editor de Consulta**.  
   
-2.  Pesquisar e substituir o agrupamento ou idioma existente por um valor alternativo.  
+2.  Pesquisar e substituir o agrupamento ou idioma existente com um valor alternativo.  
   
 3.  Pressione F5 para executar o script.  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_gb18030"></a> Suporte a GB18030 no Analysis Services  
  GB18030 é um padrão separado usado na República Popular da China para codificar caracteres chineses. Em GB18030, caracteres podem ter 1, 2 ou 4 bytes em comprimento. No Analysis Services, não há conversão de dados durante o processamento de dados de fontes externas. Os dados são simplesmente armazenados como Unicode. No momento da consulta, uma conversão GB18030 é realizada por meio de bibliotecas do cliente Analysis Services (especificamente, o provedor OLE DB MSOLAP.dll) quando os dados de texto são retornados nos resultados da consulta, baseados nas configurações do sistema operacional cliente. O mecanismo de banco de dados também dá suporte a GB18030. Para obter detalhes, consulte [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cenários de globalização para o Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Dicas de globalização e práticas recomendadas &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)  

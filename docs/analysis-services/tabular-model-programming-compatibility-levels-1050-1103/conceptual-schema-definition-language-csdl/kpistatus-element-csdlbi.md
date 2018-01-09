@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 714326df1756cb74b862c8145d7bff2facebdb1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af4c2fd061dcfcce4316fd16dd0272bbac45c6c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpistatus-element-csdlbi"></a>Elemento KpiStatus (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]O elemento KpiStatus define uma referência à coluna que contém o valor usado como o indicador de status em um indicador de desempenho de chave (KPI).  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elementos e atributos  
  A tabela a seguir lista os elementos e atributos que definem o elemento KpiStatus.  
   
-|Nome|É obrigatório|Descrição|  
+|Nome|É obrigatório|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|Sim|Uma referência a uma coluna que contém o valor usado como o indicador de status em um KPI.<br /><br /> Esse elemento DEVE conter exatamente uma referência de coluna, conforme definido pelo tipo TPropertyRefcomplex.|  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/08/2017
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elemento KPI &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
   
   

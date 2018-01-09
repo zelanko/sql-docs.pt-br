@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a33445fedf93a6dce4f2bf9b4f6a90465b6c60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurar o PowerPivot e implantar soluções (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Estes tópicos descrevem a implantação e configuração de aprimoramentos de camada intermediária para o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] os recursos da [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] incluindo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] galeria, a atualização de dados de agenda, painel de gerenciamento e provedores de dados. Execute **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para configuração do SharePoint 2013** para concluir o seguinte:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_run_configuration_tool"></a> Executar a configuração do Power Pivot para SharePoint 2013  
  **Observação:** o assistente para instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instala duas ferramentas de configuração diferentes para [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Cada um deles oferece suporte a uma versão diferente do SharePoint.  
   
-|Nome|Descrição|  
+|Nome|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para configuração do SharePoint 2013|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Ferramenta de Configuração|SharePoint 2010 com SharePoint 2010 Service Pack 1 (SP1)|  

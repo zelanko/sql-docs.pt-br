@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriedades de cadeia de conexão (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tópico documenta as propriedades de cadeia de caracteres de conexão podem ser definidas em uma das ferramentas de designer ou administração ou ver nas cadeias de conexão criadas por aplicativos cliente que se conectam e consultar dados do Analysis Services. Sendo assim, ele aborda apenas um subconjunto das propriedades disponíveis. A lista completa inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado no servidor.  
@@ -199,7 +196,7 @@ ms.lasthandoff: 12/08/2017
   
  O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa uma chave de criptografia separada para criptografar informações da cadeia de conexão para cada banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria essa chave durante a criação de um banco de dados e criptografa as informações da cadeia de conexão com base na conta de inicialização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inicia, a chave criptografada para cada banco de dados é lida, descriptografada e armazenada. Em seguida, o[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa a chave descriptografada adequada para descriptografar as informações da cadeia de conexão da fonte de dados quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa se conectar a uma fonte de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar o acesso HTTP ao Analysis Services no ISS &#40;Serviços de Informações da Internet &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurar o Analysis Services para delegação restrita de Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Provedores de dados usados em conexões do Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)   

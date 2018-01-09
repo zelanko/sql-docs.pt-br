@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_KPIS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 273adea0694ae9b59b2a49f26d04165c3fe948d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3a787f90243bed3fa62cb16281df182a97bfd3ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemakpis-rowset"></a>Conjunto de linhas MDSCHEMA_KPIS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descreve os indicadores chave de desempenho (KPIs) dentro de um banco de dados.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/08/2017
 |**KPI_NAME**|**DBTYPE_WSTR**|Opcional.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) A restrição padrão é um valor de **1**. Um bitmap com um dos seguintes valores válidos:<br /><br /> **1** CUBO<br /><br /> **2** DIMENSÃO|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas de esquema OLE DB para OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

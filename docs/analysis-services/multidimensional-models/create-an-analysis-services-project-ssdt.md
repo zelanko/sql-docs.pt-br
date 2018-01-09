@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff6e42f9b18df54afc83fe80574d79845cf78e4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Criar um Projeto de Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode definir um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modelo de projeto ou usando a importação [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de banco de dados para ler o conteúdo de um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados. Se não houver uma solução carregada no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a criação de um novo projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará automaticamente uma nova solução. Caso contrário, o novo projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] será adicionado à solução existente. As práticas recomendadas para o desenvolvimento de soluções exigem a criação de projetos separados para tipos diferentes de dados de aplicativo, usando uma única solução se os projetos forem relacionados. Por exemplo, você pode ter uma única solução que contém projetos separados para pacotes de Integration Services, bancos de dados do Analysis Services e relatórios do Reporting Services que são todos usados pelo mesmo aplicativo de negócios.  
@@ -124,11 +121,11 @@ ms.lasthandoff: 12/08/2017
   
 |Pasta|Description|  
 |------------|-----------------|  
-|Fontes de Dados|Contém as fontes de dados de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria esses objetos com o Assistente de Fonte de Dados e os edita no Designer de Fonte de Dados.|  
+|Fontes de dados|Contém as fontes de dados de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria esses objetos com o Assistente de Fonte de Dados e os edita no Designer de Fonte de Dados.|  
 |Exibições da fonte de dados|Contém as exibição da fonte de dados de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria esses objetos com o Assistente de Exibição da Fonte de Dados e os edita no Designer de Exibição da Fonte de Dados.|  
 |Cubes|Contém os cubos de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria esses objetos com o Assistente para Cubos e os edita no Designer de Cubo.|  
 |Dimensões|Contém as dimensões de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria esses objetos com o Assistente para Dimensões ou Assistente para Cubos e os edita no Designer de Dimensão.|  
-|Estruturas de Mineração|Contém as estruturas de mineração de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria esses objetos com o Assistente para Modelo de Mineração e os edita no Designer de Modelo de Mineração.|  
+|Estruturas de mineração|Contém as estruturas de mineração de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria esses objetos com o Assistente para Modelo de Mineração e os edita no Designer de Modelo de Mineração.|  
 |Funções|Contém as funções de banco de dados de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria e administra funções no Designer de Função.|  
 |Assemblies|Contém referências a bibliotecas COM e assemblies do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você cria referências na caixa de diálogo **Adicionar Referência** .|  
 |Diversos|Contém qualquer tipo de arquivo, com exceção dos tipos de arquivo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Use essa pasta para adicionar os arquivos diversos, como arquivos de texto com observações sobre o projeto.|  
@@ -162,13 +159,13 @@ ms.lasthandoff: 12/08/2017
 |Categoria|Modelo de item|Description|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Itens de projeto|Cube|Inicia o Assistente para Cubos para adicionar um cubo novo ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-||Fonte de dados|Inicia o Assistente para Fonte de Dados para adicionar uma nova fonte de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||fonte de dados|Inicia o Assistente para Fonte de Dados para adicionar uma nova fonte de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Exibição da fonte de dados|Inicia o Assistente de Exibição da Fonte de Dados para adicionar uma nova exibição da fonte de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Função de banco de dados|Adiciona uma nova função de banco de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e, em seguida, exibe o Designer de Funções para a nova função de banco de dados.|  
 ||Dimensão|Inicia o Assistente para Dimensões para adicionar uma nova dimensão de banco de dados ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Estrutura de mineração|Use o Assistente de Data Mining para adicionar uma nova estrutura de mineração e um novo modelo de mineração ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [Criar projetos do Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Implantar projetos do Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  

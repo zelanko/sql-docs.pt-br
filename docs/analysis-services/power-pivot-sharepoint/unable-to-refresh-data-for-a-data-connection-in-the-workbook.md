@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 35eeb61383298c6345147e3ea1db3f4f8c7e915b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Não é possível atualizar dados de uma conexão de dados na pasta de trabalho
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para pastas de trabalho do Excel que contêm [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dados, os serviços do Excel retornam este erro quando ele envia uma solicitação de conexão para um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servidor e a solicitação falha.  

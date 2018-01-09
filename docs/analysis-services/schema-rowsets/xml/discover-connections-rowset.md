@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3dfac6a570588d4fb08d255319bebd834c3512cf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d9d56f64f0b4cb1912e9eaaa7e644c6cbc29ad44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverconnections-rowset"></a>Conjunto de linhas DISCOVER_CONNECTIONS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornece informações de uso e a atividade de recurso sobre as conexões atualmente abertas no servidor.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas **DISCOVER_CONNECTIONS** contém as colunas a seguir.  
   
-|Nome da coluna|Indicador de tipo|Restrições|Description|  
+|Nome da coluna|Indicador de tipo|Restrictions|Description|  
 |-----------------|--------------------|------------------|-----------------|  
 |**CONNECTION_ID**|**DBTYPE_I4**|Sim|Um número exclusivo que identifica a conexão.|  
 |**CONNECTION_USER_NAME**|**DBTYPE_WSTR**|Sim|O nome de usuário da conexão.|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |GUID|a07ccd25-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|Conexões|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjunto de linhas de esquema do XML](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

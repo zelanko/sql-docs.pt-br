@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b00a88530d8917d45358cbd69a21b9b2555e1f82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Implantação de uma solução de modelo tabular (SSAS tabular)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Depois de criar um projeto de modelo de tabela, você deve implantá-lo para que os usuários procurem o modelo usando um aplicativo cliente de relatório. Este tópico descreve as várias propriedades e os vários métodos que você pode usar ao implantar soluções de modelo de tabela em seu ambiente.  
@@ -59,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 |Propriedade|Configuração padrão|Description|  
 |--------------|---------------------|-----------------|  
-|**Opção de Processamento**|**Padrão**|Esta propriedade especifica o tipo de processamento exigido quando as alterações em objetos são implantadas. Essa propriedade oferece as seguintes opções:<br /><br /> **Padrão** – Essa configuração especifica que o Analysis Services determinará o tipo de processamento necessário. Os objetos não processados serão processados e, se preciso for, recalculando relações de atributos, hierarquias de atributo, hierarquias de usuário e colunas calculadas. Estas configurações geralmente resultam em um tempo de implantação mais rápido do que usar a opção de processamento completo.<br /><br /> **Não Processar** – Esta configuração especifica que somente os metadados serão implantados. Depois de implantar, pode ser necessário executar uma operação de processo no modelo implantado para atualizar e recalcular dados.<br /><br /> **Completa** – Esta configuração especifica que ambos os metadados são implantados e uma operação completa de processo é executada. Isto garante que o modelo implantado tem as atualizações mais recentes a metadados e dados.|  
+|**Opção de Processamento**|**Default**|Esta propriedade especifica o tipo de processamento exigido quando as alterações em objetos são implantadas. Essa propriedade oferece as seguintes opções:<br /><br /> **Padrão** – Essa configuração especifica que o Analysis Services determinará o tipo de processamento necessário. Os objetos não processados serão processados e, se preciso for, recalculando relações de atributos, hierarquias de atributo, hierarquias de usuário e colunas calculadas. Estas configurações geralmente resultam em um tempo de implantação mais rápido do que usar a opção de processamento completo.<br /><br /> **Não Processar** – Esta configuração especifica que somente os metadados serão implantados. Depois de implantar, pode ser necessário executar uma operação de processo no modelo implantado para atualizar e recalcular dados.<br /><br /> **Completa** – Esta configuração especifica que ambos os metadados são implantados e uma operação completa de processo é executada. Isto garante que o modelo implantado tem as atualizações mais recentes a metadados e dados.|  
 |**Implantação Transacional**|**Falso**|Esta propriedade especifica se a implantação é transacional. Por padrão, a implantação de todos os objetos ou dos objetos alterados não é transacional com o processamento desses objetos implantados. A implantação pode ser bem-sucedida e persistir mesmo em caso de falha do processamento. É possível alterar esse padrão para incorporar a implantação e o processamento em uma única transação.|  
 |**Modo de Consulta**|**Na Memória**|Esta propriedade especifica o modo no qual a origem da qual os resultados da consulta são retornados está sendo executada no modo Na Memória (armazenado em cache) ou no modo DirectQuery. Essa propriedade oferece as seguintes opções:<br /><br /> **DirectQuery** – Essa configuração especifica que todas as consultas ao modelo devem usar somente a fonte de dados relacional.<br /><br /> **DirectQuery com na memória** – Essa configuração especifica, por padrão, que as consultas devem ser respondidas usando a origem relacional, a menos que especificado em contrário na cadeia de conexão do cliente.<br /><br /> **Na Memória** – Esta configuração especifica que as consultas devem ser respondidas usando somente o cache.<br /><br /> **Na Memória com DirectQuery** – Esta configuração especifica, por padrão. que as consultas devem ser respondidas usando o cache, a menos que especificado em contrário na cadeia de conexão do cliente.<br /><br /> <br /><br /> Para obter mais informações, consulte [Modo DirectQuery &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
   
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|---------------------|-----------------|  
 |**Servidor**<br /><br /> Defina quando o projeto é criado.|**localhost**|Essa propriedade, definida quando o projeto é criado, especifica a instância do Analysis Services por nome no qual o modelo será implantado. Por padrão, o modelo será implantado na instância padrão do Analysis Services no computador local. Contudo, é possível alterar essa configuração para especificar uma instância nomeada no computador local ou uma instância em qualquer computador remoto no qual você tenha permissão para criar objetos do Analysis Services.|  
 |**Edição**|A mesma edição como a instância na qual o Servidor de Espaço de trabalho está localizado.|Essa propriedade especifica a edição do servidor do Analysis Services no qual o modelo será implantado. A edição do servidor define vários recursos que podem ser incorporados no projeto. Por padrão, a edição será do servidor do Analysis Services local. Se você especificar outro servidor do Analysis Services, como, por exemplo, um servidor de produção do Analysis Services, especifique a edição desse servidor do Analysis Services.|  
-|**Banco de dados**|**\<projectname >**|Essa propriedade especifica o nome do banco de dados do Analysis Services no qual os objetos modelo serão instanciados na implantação. Esse nome também será especificado em uma conexão de dados de cliente de relatório ou em um arquivo de conexão de dados .bism.<br /><br /> Você poderá alterar este nome a qualquer momento quando estiver criando o modelo. Se você alterar o nome depois de implantar o modelo, as alterações feitas depois da implantação não afetarão o modelo implantado previamente. Por exemplo, se você abrir uma solução nomeada **TestDB** e implantar sua solução com o nome padrão de banco de dados modelo chamado Model, e depois modificar a solução e renomear o banco de dados modelo, **Sales**, a instância do Analysis Services em que as soluções foram implantadas exibirá bancos de dados separados, um denominado Model e o outro denominado Sales.|  
+|**Backup de banco de dados**|**\<projectname >**|Essa propriedade especifica o nome do banco de dados do Analysis Services no qual os objetos modelo serão instanciados na implantação. Esse nome também será especificado em uma conexão de dados de cliente de relatório ou em um arquivo de conexão de dados .bism.<br /><br /> Você poderá alterar este nome a qualquer momento quando estiver criando o modelo. Se você alterar o nome depois de implantar o modelo, as alterações feitas depois da implantação não afetarão o modelo implantado previamente. Por exemplo, se você abrir uma solução nomeada **TestDB** e implantar sua solução com o nome padrão de banco de dados modelo chamado Model, e depois modificar a solução e renomear o banco de dados modelo, **Sales**, a instância do Analysis Services em que as soluções foram implantadas exibirá bancos de dados separados, um denominado Model e o outro denominado Sales.|  
 |**Nome do Cubo**|**Modelo**|Esta propriedade especifica o nome de cubo como mostrado nas ferramentas de cliente (como o Excel) e AMO (Objetos de Gerenciamento de Análise).|  
   
 ### <a name="directquery-options-properties"></a>Propriedades de opções do DirectQuery  
@@ -103,12 +100,12 @@ ms.lasthandoff: 12/08/2017
 |Tarefa|Description|  
 |----------|-----------------|  
 |[Implantar das Ferramentas de Dados do SQL Server &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|Descreve como configurar propriedades de implantação e implantar um projeto de modelo de tabela usando o comando Implantar no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].|  
-|[Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|Os tópicos nesta seção descrevem como usar o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar soluções de modelo de tabela e multidimensionais.|  
-|[Implantar soluções modelo com o Utilitário de Implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Descreve como usar o Utilitário de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar soluções de modelo de tabela e multidimensionais.|  
+|[Implantar soluções de modelo usando o Assistente de implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|Os tópicos nesta seção descrevem como usar o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar soluções de modelo de tabela e multidimensionais.|  
+|[Implantar soluções de modelo com o Utilitário de Implantação](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Descreve como usar o Utilitário de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar soluções de modelo de tabela e multidimensionais.|  
 |[Implantar soluções de modelo usando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|Descreve como usar XMLA para implantar as soluções de tabela e multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[Sincronizar bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|Descreve como usar o Assistente para Sincronizar Bancos de Dados para sincronizar os metadados e os dados entre quaisquer dois bancos de dados de tabela ou multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectar a um modelo de banco de dados de tabela &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

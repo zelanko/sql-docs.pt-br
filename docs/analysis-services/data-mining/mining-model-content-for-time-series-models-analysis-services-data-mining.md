@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de série temporal (Analysis Services – Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Todos os modelos de mineração usam a mesma estrutura para armazenar seu conteúdo. Essa estrutura é definida de acordo com o conjunto de linhas de esquema do conteúdo da mineração de dados. Entretanto, em uma estrutura padrão, os nós que contêm informações são organizados de formas diferentes para representar vários tipos de árvores. Este tópico descreve como os nós são organizados e o que cada nó significa para os modelos de mineração que têm como base o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -415,9 +413,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** exibe os termos da equação em uma tabela aninhada que você pode consultar para obter termos específicos. A tabela de distribuição de nó segue a mesma estrutura hierárquica das regras XML. Ou seja, o nó raiz da série ARIMA (NODE_TYPE = 27) contém o valor de interceptação e as periodicidades da equação completa; isso pode incluir várias periodicidades, onde os nós filho contêm somente informações especificas de uma determinada estrutura periódica ou de nós filho daquela estrutura periódica.  
   
-|Tipo de nó|Atributo|Tipo de valor|  
+|Tipo de nó|attribute|Tipo de valor|  
 |---------------|---------------|----------------|  
-|27 (Raiz ARIMA)|Interceptação<br /><br /> periodicidade|11|  
+|27 (Raiz ARIMA)|Interceptação<br /><br /> Periodicidade|11|  
 |28 (Estrutura periódica ARIMA)|periodicidade<br /><br /> Ordem regressiva automática<br /><br /> ordem de diferença<br /><br /> Ordem de média de movimentação|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (Regressão automática ARIMA)|Coeficiente<br /><br /> (complemento de coeficiente)|7|  
 |30 (Média de movimentação ARIMA)|Valor em t<br /><br /> Valor em t-1<br /><br /> …<br /><br /> Valor em t-n|7|  
@@ -441,10 +439,10 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   Representação XML: usa uma consulta XML.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Pode ser difícil recuperar informações de uma árvore ARTXP, pois as informações para cada divisão estão em um local diferente na árvore. Portanto, com o modelo ARTXP, você deve reunir todas as partes e depois processá-las para reconstituir a fórmula inteira. É mais fácil recuperar uma equação de um modelo ARIMA porque a fórmula foi disponibilizada ao longo da árvore. Para obter informações sobre como criar uma consulta para recuperar essas informações, consulte [Exemplos de consulta de modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo MTS](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Exemplos de consulta de modelo de série temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   

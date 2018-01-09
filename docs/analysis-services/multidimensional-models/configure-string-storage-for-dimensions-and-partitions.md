@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b593a2de59682d400c72d5242b078b3b7f2fadb5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar o armazenamento de cadeia de caracteres para dimensões e partições
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Você pode reconfigurar o armazenamento de cadeia de caracteres para acomodar cadeias de caracteres muito grandes em atributos de dimensão ou partições que excedem o limite de tamanho de arquivo de 4 GB para repositórios de cadeia de caracteres. Se suas dimensões ou partições incluírem repositórios de cadeias de caracteres desse tamanho, você poderá contornar a restrição de tamanho do arquivo alterando a propriedade **StringStoresCompatibilityLevel** em nível de dimensão ou de partição para objetos locais e vinculados (locais ou remotos).  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/08/2017
   
  Os valores válidos para essa propriedade incluem os seguintes:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1050**|Especifica a arquitetura de armazenamento de cadeias de caracteres padrão, sujeita a um tamanho de arquivo máximo de 4 GB por repositório.|  
 |**1100**|Especifica um maior armazenamento de cadeias de caracteres, dá suporte a até quatro bilhões de cadeias de caracteres exclusivas por repositório.|  
@@ -95,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
  Você deve usar a opção Processar Completo em cada objeto que esteja usando a nova arquitetura de repositório de cadeias de caracteres. Antes de processar, execute uma análise de impacto na dimensão para verificar se objetos dependentes também requerem reprocessamento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ferramentas e abordagens para processamento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
  [Processando opções e configurações &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Modos de armazenamento de partição e processamento](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   

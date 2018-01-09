@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Retorna as métricas de precisão de validação cruzada para uma estrutura de mineração e todos os modelos relacionados, excluindo modelos de clustering.  
@@ -72,12 +72,12 @@ SystemGetAccuracyResults(<mining structure>,
   
  Para obter uma lista completa de valores possíveis, consulte a seção Comentários mais adiante neste tópico.  
   
- (Obrigatória)  
+ (obrigatório)  
   
  *atributo de destino*  
  Cadeia de caracteres que contém o nome de um objeto previsível. Um objeto previsível pode ser uma coluna, coluna de tabela aninhada ou coluna de chave de tabela aninhada de um modelo de mineração.  
   
- (Obrigatória)  
+ (obrigatório)  
   
  *estado de destino*  
  Cadeia de caracteres que contém um valor específico para prever.  
@@ -116,9 +116,9 @@ SystemGetAccuracyResults(<mining structure>,
 |PartitionCases|Um inteiro que indica o número de linhas no conjunto de casos, com base no  *\<conjunto de dados >* parâmetro.|  
 |Teste|O tipo de teste que foi executado.|  
 |Measure|Nome da medida retornada pelo teste. Medidas para cada modelo dependem do tipo modelo e do tipo do valor previsível.<br /><br /> Para obter uma lista de medidas retornadas para cada tipo previsível, consulte [Medidas no relatório de validação cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Para obter uma definição de cada medida, consulte [Validação cruzada &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Value|O valor para a medida especificada.|  
+|Valor|O valor para a medida especificada.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir fornece exemplos dos valores que você pode usar para especificar os dados na estrutura de mineração usados para validação cruzada. Se você desejar usar casos de teste para validação cruzada, a estrutura de mineração já deverá conter um conjunto de dados para teste. Para obter informações sobre como definir um conjunto de dados de teste ao criar uma estrutura de mineração, consulte [Conjuntos de dados de treinamento e teste](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 |Valor inteiro|Description|  
@@ -151,7 +151,7 @@ CALL SystemGetAccuracyResults (
   
  Resultados do exemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Measure|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Teste|Medida|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Classificação|True Positivo|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Classificação|False Positivo|177|  
@@ -164,7 +164,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="requirements"></a>Requisitos  
  A validação cruzada está disponível somente no [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] a partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40; Analysis Services – mineração de dados &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   

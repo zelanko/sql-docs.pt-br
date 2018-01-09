@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 097d318ddf841e09f53ca90b0266bbd3806f59dc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ec19c9f3c826910b7c5d8a3d5a3737e09228b664
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Criar e executar um script MDX nas Ferramentas de Dados do SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para criar e executar um Script MDX no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você precisa estar em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] com um cubo já criado e pronto para edição.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  Para executar o script MDX, implante e processe o cubo com as novas alterações do script MDX.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [O script básico de MDX &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
  [Conceitos básicos de script MDX &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Instruções de script MDX &#40; MDX &#41;](../../mdx/mdx-scripting-statements-mdx.md)  
