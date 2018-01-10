@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77eace2e6b30a535039440775ad27a893d011d0f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5fe6550f5138d78dbab0515f5aa060dabcacfb16
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Alterar um tipo de gráfico (Construtor de Relatórios e SSRS)
 Na primeira vez que você inserir um gráfico em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , a caixa de diálogo **Selecionar Tipo de Gráfico** aparecerá. Se você cancelar essa caixa de diálogo, um tipo de gráfico Coluna será adicionado por padrão.  
@@ -44,7 +42,7 @@ Na primeira vez que você inserir um gráfico em um relatório paginado do [!INC
   
 2.  Na caixa de diálogo **Tipo SelectChart** , selecione um tipo de gráfico na lista.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  

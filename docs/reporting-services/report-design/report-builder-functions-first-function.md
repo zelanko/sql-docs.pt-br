@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6919cb9eea7da37cb3967b4e06d945a66ab6c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb2645f7db1b7e65c1fea7f72ab70b79b7565bdb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---first-function"></a>Funções do Construtor de Relatórios – Função First
   Retorna o primeiro valor no escopo fornecido da expressão especificada.  
@@ -48,7 +46,7 @@ First(expression, scope)
 ## <a name="return-type"></a>Tipo de retorno  
  Determinado pelo tipo de expressão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A função **First** retorna o primeiro valor em um conjunto de dados depois que toda a classificação e filtragem tiverem sido aplicadas no escopo especificado.  
   
  A função **First** não pode ser usada em expressões de filtro de grupo com qualquer coisa, exceto o escopo atual (padrão).  
@@ -78,7 +76,7 @@ First(expression, scope)
 =First(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

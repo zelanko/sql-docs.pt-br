@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 caps.latest.revision: "32"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5d24b824fcb87d7eca888f4dbc7c4c142e2c71de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e38526ea1804c4a38a1a2dccec1339c4718f290
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="understanding-security-policies"></a>Compreendendo políticas de segurança 
   Qualquer código executado por um servidor de relatório deve fazer parte de uma política de segurança de acesso a códigos específica. Essas políticas de segurança consistem em grupos de códigos que mapeiam evidência para um conjunto de conjuntos de permissões nomeados. Frequentemente, os grupos de códigos estão associados a um conjunto de permissões nomeado que especifica permissões permitidas para código nesse grupo. O tempo de execução usa a evidência fornecida por um host confiável ou pelo carregador para determinar a quais grupos de códigos o código pertence e, portanto, quais permissões conceder ao código. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] segue esta arquitetura de política de segurança, conforme definido pelo CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. As seções a seguir descrevem os vários tipos de código em [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e a as regras de política associadas a eles.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
   
  Em alguns casos, pode ser necessário executar uma operação que exija permissões de código específicas em uma expressão de relatório. Geralmente isso significa que uma expressão de relatório precisa fazer uma chamada a um método de biblioteca CLR protegido (como um que acessa arquivos ou o Registro do sistema). A documentação do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] descreve as permissões de código necessárias para tornar essa chamada segura; para executar a chamada, o código de chamada deve receber essas permissões seguras específicas. Se você fizer a chamada em uma expressão de relatório ou no elemento **Code**, o assembly de host de expressão deverá receber as permissões apropriadas. Entretanto, após conceder as permissões aos hosts de expressão, todos os códigos executados em qualquer expressão em qualquer relatório receberão essa permissão específica. É muito mais seguro fazer a chamada de um assembly personalizado e conceder a ele as permissões específicas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança de acesso do código no Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)   
  [Desenvolvimento seguro &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   

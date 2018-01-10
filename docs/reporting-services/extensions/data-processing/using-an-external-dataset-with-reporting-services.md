@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd33f6f7d6d664ce5d3affea0cb9fdab1b1992ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 26d020699157a54d9ee2cb85baef8c063ca92f50
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Usando um conjunto de dados externo com o Reporting Services
   O objeto **DataSet** é central para o suporte a cenários de dados desconectados e distribuídos com o [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. O objeto **DataSet** é uma representação residente na memória dos dados que fornece um modelo de programação relacional consistente, seja qual for a fonte de dados. Pode ser usado com várias fontes de dados diferentes, com dados XML ou para gerenciar dados locais ao aplicativo. O objeto **DataSet** representa um conjunto completo de dados, incluindo tabelas relacionadas, restrições e relacionamentos entre as tabelas. Por causa da versatilidade do objeto **DataSet** em armazenar e expor dados, com frequência, os dados poderão ser processados e transformados em um objeto **DataSet** antes da ocorrência de qualquer relatório sobre os dados.  
@@ -171,7 +169,7 @@ public int GetOrdinal(string name)
   
  Depois de criar e recuperar o conjunto de dados, use o objeto **DataSet** nas implementações dos membros **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType** e **FieldCount** da classe **DataReader**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões do Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Implementando uma extensão de processamento de dados](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Biblioteca de extensões do Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  

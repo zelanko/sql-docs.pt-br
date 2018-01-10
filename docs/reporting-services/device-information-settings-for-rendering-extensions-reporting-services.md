@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dffc0db9598a8f31690cebfe6a7ecb8c6b52cfbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ad004b9e6c01b1bddc61019f64ae9bd1999850f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configurações de informações de dispositivos para extensões de renderização (Reporting Services)
   No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], as configurações de informações de dispositivo são usadas para passar parâmetros de renderização para uma extensão de renderização. Cada extensão de renderização aceita um conjunto específico de configurações.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 |[Configurações de informações do dispositivo RGDI](../reporting-services/rgdi-device-information-settings.md)|Descreve as configurações de informações de dispositivos que estão associadas à saída de renderização do RGDI.|  
 |[Configurações de informações do dispositivo PPTX](../reporting-services/pptx-device-information-settings.md)|Descreve as configurações de informações de dispositivos que estão associadas à saída de renderização do PPTX.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Personalizar parâmetros de extensão de renderização em RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   

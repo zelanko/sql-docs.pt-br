@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5326ae33eada7dc692607d14779180174a045959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 914afdde95e3b3a130cb71e5b9277f7331ee4e56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-variables-programmatically"></a>Trabalhando com variáveis programaticamente
   As variáveis são uma forma de definir valores e controlar processos dinamicamente em pacotes, contêineres, tarefas e manipuladores de eventos. As variáveis também podem ser usadas por restrições de precedência para controlar a direção do fluxo de dados para tarefas diferentes. As variáveis têm uma série de usos:  
@@ -235,7 +235,7 @@ End Module
 ## <a name="configuration-files"></a>Arquivos de configuração  
  Se um arquivo de configuração incluir uma variável personalizada, a variável poderá ser atualizada em tempo de execução. Isso significa que quando o pacote é executado, o valor da variável originalmente no pacote é substituído por um novo valor do arquivo de configuração. Essa técnica de substituição é útil quando um pacote é implantado em vários servidores que requerem valores de variável diferentes. Por exemplo, uma variável pode especificar o número de vezes que um contêiner **Loop Foreach** repete seu fluxo de trabalho ou então listar os recipientes para os quais um manipulador de eventos envia email quando um erro é gerado ou alterar o número de erros que podem ocorrer antes de o pacote falhar. Essas variáveis são fornecidas dinamicamente em arquivos de configuração para cada ambiente. Portanto, somente as variáveis de leitura/gravação são permitidas em arquivos de configuração. Para obter mais informações, consulte [Criar configurações de pacote](../../integration-services/packages/create-package-configurations.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c146c2fe80f27ace8a8f03ce2767efd9751acf48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 68cbb3437a7f994a60e13163a8372f2e5c0a7174
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Usar uma conexão de dados do Office (.odc) com relatórios
   Em cenários limitados, você pode usar um arquivo de conexão de dados do Office (.odc) para fornecer informações sobre conexão com um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Um arquivo .odc pode ser usado no lugar de um arquivo .rsds quando você cria uma fonte de dados compartilhados. O servidor de relatório usa um arquivo .odc do mesmo modo que usa um arquivo .rsds; ele lê o arquivo para detectar informações sobre tipo de fonte de dados, cadeia de caracteres de conexão e credenciais.  
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/05/2017
   
      Se você estiver experimentando essas etapas com o banco de dados e os relatórios de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , considere que somente o relatório Vendas da Empresa funcionará prontamente com um arquivo .odc. Os outros relatórios de amostra contêm parâmetros de consulta e recursos que não funcionam com o provedor do OLE DB. Entretanto, você pode fazer com que os relatórios funcionem com o provedor do OLE DB, se os modificar primeiramente no Designer de Relatórios.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

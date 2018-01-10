@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 13af28f9c90f848c77a1709bbac115a0e70943b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3f349916c1047360afa77ee81a9ff9e33699ed65
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Fixar itens do Reporting Services nos painéis do Power BI
+# <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Fixar itens do Reporting Services nos dashboards do Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permite que os usuários fixem itens de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] da barra de ferramentas do visualizador de relatórios em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] como um novo bloco.   Para fixar, o administrador precisa primeiro integrar o servidor de relatório ao Azure Active Directory e ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
  ![rs_powerbi_icon](../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")  
@@ -146,7 +146,7 @@ No painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , o item de rela
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integração do servidor de relatório do Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
  [Minhas Configurações para integração do Power BI &#40;portal Web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Painéis no Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  

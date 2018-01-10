@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10012"
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20cfc19fedbf8bc1369804c2795f180228b6a88b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta relacional (Construtor de Relatórios)
   O Construtor de Relatórios e o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fornecem um designer de consulta gráfica e um designer de consulta com base em texto para ajudá-lo a criar uma consulta que especifique os dados a serem recuperados dos bancos de dados relacionais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para um conjunto de dados de relatório. Use o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
@@ -107,11 +105,11 @@ ms.lasthandoff: 12/05/2017
 |Avg|Retorna a média dos valores em um grupo. Implementa a agregação SQL AVG.|  
 |Count|Retorna o número de itens de um grupo. Implementa a agregação SQL COUNT.|  
 |Count Big|Retorna o número de itens de um grupo. Ela é a agregação SQL COUNT_BIG. A diferença entre COUNT e COUNT_BIG é que COUNT_BIG sempre retorna um valor de tipo de dados **bigint** .|  
-|Min|Retorna o valor mínimo de um grupo. Implementa a agregação SQL MIN.|  
+|Mín|Retorna o valor mínimo de um grupo. Implementa a agregação SQL MIN.|  
 |Max|Retorna o valor máximo em um grupo. Implementa a agregação SQL MAX.|  
 |StDev|Retorna o desvio padrão estatístico de todos os valores de um grupo. Implementa a agregação SQL STDEV.|  
 |StDevP|Retorna o desvio padrão estatístico para a população de todos os valores da expressão especificada de um grupo. Implementa a agregação SQL STDEVP.|  
-|Sum|Retorna a soma de todos os valores do grupo. Implementa a agregação SQL SUM.|  
+|SUM|Retorna a soma de todos os valores do grupo. Implementa a agregação SQL SUM.|  
 |Var|Retorna a variação estatística de todos os valores do grupo. Implementa a agregação SQL VAR.|  
 |VarP|Retorna a variação estatística para a população de todos os valores do grupo. Implementa a agregação SQL VARP.|  
 |Avg Distinct|Retorna médias exclusivas. Implementa uma combinação da agregação AVG e da palavra-chave DISTINCT.|  
@@ -203,7 +201,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="text-based-query-designer"></a>Designer de Consulta com Base em Texto  
  Para ter o máximo controle sobre sua consulta, use o designer de consulta baseado em texto. Para mudar para o designer de consulta baseado em texto, na barra de ferramentas, clique em **Editar como Texto**. Depois que você editar uma consulta no designer de consulta baseado em texto, não poderá mais usar o designer de consulta relacional. A consulta sempre será aberta no designer de consulta baseado em texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Designers de Consultas &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

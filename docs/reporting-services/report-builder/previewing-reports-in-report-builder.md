@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 629decc021a33945c5a4baae9aef1cda70d22f0b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a9e34b37436a71d34def9aaae26c38866098a5b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="previewing-reports-in-report-builder"></a>Visualizando relatórios no Construtor de Relatórios
   Durante a criação de um relatório paginado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é útil visualizar o relatório frequentemente para verificar se o relatório exibe o que você deseja. Para visualizar o relatório, clique em **Executar**. O relatório é renderizado no modo de visualização.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
   
  Se um sub-relatório usado por seu relatório for alterado depois que sua sessão de edição for criada, o relatório não será renderizado na visualização. Para visualizar o relatório com êxito, salve-o ou clique em **Atualizar** para obter dados atualizados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

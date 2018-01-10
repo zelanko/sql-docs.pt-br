@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,15 +17,15 @@ f1_keywords:
 - "10025"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09641c40b04ad3b4db2aa6449d7bd9227a0eae43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7df325a93902e8c1cd3414b562b30c27864dd372
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Filtros
   Selecione **Filtros** na caixa de diálogo **Propriedades do Conjunto de Dados** para criar filtros para o conjunto de dados.  
@@ -45,19 +43,19 @@ ms.lasthandoff: 12/05/2017
  **Seta para baixo**  
  Mova o filtro selecionado para baixo na lista.  
   
- **Expressão**  
+ **Expression**  
  Digite ou escolha a expressão à qual deseja aplicar um filtro. Clique no botão Expressão (**fx**) para editar a expressão.  
   
- **Tipo de dados**  
+ **Data type**  
  Escolha o tipo de dados para **Valor**. Sempre que possível, escolha um tipo de dados correspondente ao tipo de dados de **Expressão**. Para obter mais informações, consulte [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
  **Operador**  
  Selecione o operador que será usado para comparar a expressão e o valor.  
   
- **Valor**  
+ **Value**  
  Digite a expressão ou o valor a ser usado quando for avaliar a expressão especificada na caixa **Expressão** . Clique no botão Expressão (**fx**) para editar a expressão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   

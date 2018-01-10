@@ -1,7 +1,10 @@
 ---
 title: "Fazer upgrade das instâncias do SQL Server em execução em clusters do Windows Server 2008/2008 R2/2012 | Microsoft Docs"
 ms.date: 11/10/2017
-ms.prod: sql-server-2017
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: failover-clustuers
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91fe880168482d29e796c2bbe23c278c60bfa6c1
-ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
+ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Fazer upgrade das instâncias do SQL Server em execução em clusters do Windows Server 2008/2008 R2/2012
 
@@ -127,7 +130,7 @@ Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssno
 
 Se você tiver uma instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que não usa nenhuma instância autônoma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)], apenas FCIs do SQL, que estão contidas em, pelo menos, um Grupo de Disponibilidade, poderá migrar isso para um novo cluster usando métodos semelhantes ao cenário “nenhum Grupo de Disponibilidade, nenhuma instância autônoma”. Antes de copiar as tabelas do sistema para os discos compartilhados da FCI de destino, você deverá remover todos os Grupos de Disponibilidade do ambiente original. Depois que todos os bancos de dados forem migrados para os computadores de destino, você recriará os Grupos de Disponibilidade com os mesmos nomes de esquema e de ouvinte. Ao fazer isso, os recursos de cluster de failover do Windows Server serão formados corretamente e gerenciados no cluster de destino. **O Always On deve estar habilitado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager em cada computador no ambiente de destino antes da migração.**
 
-###  <a name="to-perform-the-upgrade"></a>Para fazer o upgrade
+### <a name="to-perform-the-upgrade"></a>Para fazer o upgrade
 
 1.  Pare o tráfego em direção ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
 

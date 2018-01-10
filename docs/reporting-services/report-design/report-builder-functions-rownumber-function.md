@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33f3b559c924f6a5cb9751ad938a01f495172701
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6edb97aaf3da5499568c4893c02cfd208d556696
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---rownumber-function"></a>Funções do Construtor de Relatórios – Função RowNumber
   Retorna uma contagem contínua do número de linhas para o escopo especificado.  
@@ -42,7 +40,7 @@ RowNumber(scope)
  *escopo*  
  (**String**) O nome de um conjunto de dados, região de dados ou grupo ou nulo (**Nothing** no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica o contexto no qual avaliar o número de linhas. **Nothing** especifica o contexto mais externo, geralmente o conjunto de dados do relatório.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O**RowNumber** retorna um valor em uso da contagem de linhas dentro do escopo especificado, assim como [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) retorna o valor em uso de uma função de agregação. Ao especificar um escopo, você especifica quando redefinir a contagem de linhas como 1.  
   
  O*scope* não pode ser uma expressão. *scope* deve ser um escopo contentor. Escopos típicos, do confinamento mais externo ao mais interno, são conjuntos de dados de relatório, região de dados, grupos de linhas ou grupos de colunas.  
@@ -61,7 +59,7 @@ RowNumber(scope)
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

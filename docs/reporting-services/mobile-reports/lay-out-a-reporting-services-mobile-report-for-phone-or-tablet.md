@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a73a3bf4f6a0cddfe35849e653d5d30b756a3fbf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1d5b0d607f3e111c5cc2e05f303d43d236c76b50
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Formatar um relatório móvel do Reporting Services para telefone ou tablet
 Agora que você já [criou seu relatório móvel do Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) no [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], você pode formatar uma versão dele para telefone e tablet.  

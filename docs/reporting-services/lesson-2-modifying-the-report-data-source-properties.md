@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ba7880d9cc6f316b7ce06b73dda896becd892797
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52547af895d362214e6a33c69c29fe2cd2c3cb8a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 Nesta lição do tutorial do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , você usa o portal da Web para selecionar um relatório que será entregue aos destinatários. A assinatura controlada por dados que será definida distribuirá o relatório **Pedidos de Vendas** criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nas etapas a seguir, você modificará as informações da conexão de fonte de dados usadas pelo relatório para obter dados. Somente relatórios que usam **credenciais armazenadas** para acessar uma fonte de dados de relatório podem ser distribuídos por uma assinatura controlada por dados. Credenciais armazenadas são necessárias para o processamento de relatório autônomo.  
@@ -61,7 +61,7 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
 10. Clique em **Salvar**.
 11. Clique em **Cancelar**  
   
-11. Exiba o relatório para verificar se o relatório está sendo executado com as credenciais especificadas. .  
+11. Exiba o relatório para verificar se o relatório está sendo executado com as credenciais especificadas. para obter informações sobre a ferramenta de configuração e recursos adicionais.  
   
 ## <a name="bkmk_modify_dataset"></a>Para modificar o AdventureWorksDataset  
  Nas etapas a seguir, você modificará o conjunto de dados para usar um parâmetro a fim de filtrar o conjunto de dados com base em um número de pedido.
@@ -118,11 +118,11 @@ Você também modificará o conjunto de dados e relatório para usar um parâmet
   
 2.  Na barra de ferramentas, clique em **Compilar** e, em seguida, em **Implantar tutorial**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 + Você configurou o relatório com êxito para obter dados usando as credenciais armazenadas, e os dados podem ser filtrados com um parâmetro. 
 + Na próxima lição, você configura a assinatura usando as páginas Assinatura Controlada por Dados do portal da Web. Consulte [Lição 3: Definindo uma assinatura controlada por dados](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Gerenciar fontes de dados de relatório](../reporting-services/report-data/manage-report-data-sources.md)  
 [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  

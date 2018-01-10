@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96f9e2414135a31481b866fe340138c7304fe409
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aaa0c4a8bccf85ddb3e3d58322cd2617db715f03
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai
 Depois que você criar um novo projeto de site usando o modelo de site ASP.NET para o Visual C #, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório pai. Neste tutorial, a conexão de dados é estabelecida com o banco de dados AdventureWorks2014.  

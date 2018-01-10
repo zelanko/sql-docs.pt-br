@@ -8,17 +8,17 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: 
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jt000
 ms.author: jasontre
 ms.workload: Inactive
-ms.openlocfilehash: a263e598133491f68590e072dcee2c9ffab75a52
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5fa90156519843a81538dd4f867939910fc25d1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>Configurações do site do SharePoint para a web part do Visualizador de Relatórios – Reporting Services
 

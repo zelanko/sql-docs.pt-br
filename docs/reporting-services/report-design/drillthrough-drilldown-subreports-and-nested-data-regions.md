@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4e87d6484f1a04e61907939bd2fa69d93dff426
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79bb5cfbe014006c6400ec54d56b69ce435910fb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas
   É possível organizar dados de várias formas para mostrar a relação entre o geral e o detalhado.  É possível colocar todos os dados no relatório, mas defini-lo como oculto até que um usuário clique para revelar detalhes; trata-se de uma ação de *busca detalhada* . É possível exibir os dados em uma região de dados, como uma tabela ou um gráfico, *aninhado* em outra região de dados, como uma tabela ou matriz. É possível exibir os dados em um *sub-relatório* totalmente contido em um relatório principal. Se preferir, você pode colocar os dados detalhados em relatórios de *detalhamento* , relatórios à parte que são exibidos quando um usuário clica em um link.  
@@ -46,13 +44,13 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="SummaryCharacteristics"></a> Resumo das características  
  Esta tabela resume essas características diferentes. Os detalhes estarão em seções separadas posteriormente neste tópico. A busca detalhada não está incluída nessas comparações porque é possível aplicar a ação de exibição e ocultação a qualquer item de relatório.  
   
-|Característica|sub-relatório|detalhamento|aninhado|  
+|Característica|Sub-relatório|detalhamento|aninhado|  
 |-----------|---------------|------------------|------------|  
 |Usa o conjunto de dados do relatório principal|Igual ou diferente|Igual ou diferente|Igual|  
 |Recupera dados|Dados recuperados ao mesmo tempo que o relatório principal|Dados recuperaram um relatório detalhado por vez|Dados recuperados todos ao mesmo tempo que o relatório principal|  
 |São processados e renderizados|Com o relatório principal|Quando o link é clicado|Com o relatório principal.|  
 |É executado|Mais lenta (mas recupera todos os dados com o relatório principal)|Mais rápida (mas não recupera todos os dados com o relatório principal)|Mais rápida (e recupera todos os dados com o relatório principal)|  
-|Usa parâmetros|Sim|Sim|Não|  
+|Usa parâmetros|Sim|Sim|não|  
 |Podem ser reutilizados.|Como relatório, sub-relatório ou relatório detalhado em outros relatórios|Como relatório, sub-relatório ou relatório detalhado em outros relatórios|Não podem ser reutilizados.|  
 |São localizados|Externos ao relatório principal, mesmo servidor de relatório ou diferente|Externos ao relatório principal, mesmo servidor de relatório|Internos ao relatório principal|  
 |São exibidos|No relatório principal|Em um relatório diferente|No relatório principal|  
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/05/2017
  [Especificando caminhos para itens externos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explica como se referir a itens que são externo ao arquivo de definição de relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d89029ffc521d08ea3152ca164d3985de4644a32
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b70d9cbcbca9a8898d6b838f667f786cecf64805
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexão Hyperion Essbase (SSRS)
   Para incluir dados de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] no relatório, você deve ter um conjunto de dados baseado em uma fonte de dados do relatório do tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Esse tipo de fonte de dados interna se baseia na extensão de dados do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], que permite recuperar dados multidimensionais de uma fonte de dados externa do [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -91,10 +89,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Objeto**|Especifica o valor de dados do campo.<br /><br /> Em uma propriedade de dimensão, é mapeada para MEMBER_CAPTION. Em uma medida, é mapeada para um valor de dados.|  
 |**IsMissing**|**Booliano**|Indica se o campo foi encontrado no conjunto de dados resultante.|  
-|**FormattedValue**|**Cadeia de caracteres**|Retorna um valor formatado para o número chave.<br /><br /> Mapeada a partir de FORMATTED_VALUE na expressão MDX.|  
-|**BackgroundColor**|**Cadeia de caracteres**|Retorna a cor do segundo plano definida no banco de dados para o campo.<br /><br /> Mapeada a partir de BACK_COLOR na expressão MDX.|  
-|**Color**|**Cadeia de caracteres**|Retorna a cor do primeiro plano definida no banco de dados para o item.<br /><br /> Mapeada a partir de FORE_COLOR na expressão MDX.|  
-|**UniqueName**|**Cadeia de caracteres**|Retorna o nome totalmente qualificado de um nível.<br /><br /> Mapeada a partir de MEMBER_UNIQUE_NAME na expressão MDX.|  
+|**FormattedValue**|**String**|Retorna um valor formatado para o número chave.<br /><br /> Mapeada a partir de FORMATTED_VALUE na expressão MDX.|  
+|**BackgroundColor**|**String**|Retorna a cor do segundo plano definida no banco de dados para o campo.<br /><br /> Mapeada a partir de BACK_COLOR na expressão MDX.|  
+|**Color**|**String**|Retorna a cor do primeiro plano definida no banco de dados para o item.<br /><br /> Mapeada a partir de FORE_COLOR na expressão MDX.|  
+|**UniqueName**|**String**|Retorna o nome totalmente qualificado de um nível.<br /><br /> Mapeada a partir de MEMBER_UNIQUE_NAME na expressão MDX.|  
   
  Para obter mais informações sobre como usar campos e propriedades de campo em uma expressão, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -110,7 +108,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Propriedade**|**Tipo**|**Descrição ou valor esperado**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**Cadeia de caracteres**|Definida em uma medida, este é o **FormattedValue** disponível como um tipo String.|  
+|**FORMAT_STRING**|**String**|Definida em uma medida, este é o **FormattedValue** disponível como um tipo String.|  
   
   
 ##  <a name="Remarks"></a> Comentários  
@@ -151,7 +149,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Fornece informações detalhadas sobre como trabalhar com esta extensão de dados.  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

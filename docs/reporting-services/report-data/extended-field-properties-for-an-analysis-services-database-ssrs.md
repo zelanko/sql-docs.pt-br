@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5d09ae6530bc9180b23a4ec81eeaeaabf1c41110
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d5c9c11ddf274af9bf8f1851509dae5bff8e27a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
   A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo **Value** e **IsMissing** que estão disponíveis na fonte de dados e que têm suporte na extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode inclui os valores de propriedade do campo estendido em seu relatório escrevendo expressões que os especifiquem por nome usando a coleção interna de **Fields** .  
@@ -54,18 +52,18 @@ ms.lasthandoff: 12/05/2017
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Objeto**|Especifica o valor de dados do campo.|  
 |**IsMissing**|**Booliano**|Indica se o campo foi encontrado no conjunto de dados resultante.|  
-|**UniqueName**|**Cadeia de caracteres**|Retorna o nome totalmente qualificado de um nível. Por exemplo, o valor **UniqueName** de um funcionário pode ser *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*.|  
-|**BackgroundColor**|**Cadeia de caracteres**|Retorna a cor do segundo plano definida no banco de dados para o campo.|  
-|**Color**|**Cadeia de caracteres**|Retorna a cor do primeiro plano definida no banco de dados para o item.|  
-|**FontFamily**|**Cadeia de caracteres**|Retorna o nome da fonte definido no banco de dados para o item.|  
-|**FontSize**|**Cadeia de caracteres**|Retorna o tamanho da fonte definido no banco de dados para o item.|  
-|**FontWeight**|**Cadeia de caracteres**|Retorna a espessura da fonte definida no banco de dados para o item.|  
-|**FontStyle**|**Cadeia de caracteres**|Retorna o estilo da fonte definido no banco de dados para o item.|  
-|**TextDecoration**|**Cadeia de caracteres**|Retorna a formatação de texto especial definida no banco de dados para o item.|  
-|**FormattedValue**|**Cadeia de caracteres**|Retorna um valor formatado para a medida ou o número chave. Por exemplo, a propriedade **FormattedValue** para **Cota do Valor de Vendas** retorna um formato de moeda como US$ 1.124.400,00.|  
+|**UniqueName**|**String**|Retorna o nome totalmente qualificado de um nível. Por exemplo, o valor **UniqueName** de um funcionário pode ser *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*.|  
+|**BackgroundColor**|**String**|Retorna a cor do segundo plano definida no banco de dados para o campo.|  
+|**Color**|**String**|Retorna a cor do primeiro plano definida no banco de dados para o item.|  
+|**FontFamily**|**String**|Retorna o nome da fonte definido no banco de dados para o item.|  
+|**FontSize**|**String**|Retorna o tamanho da fonte definido no banco de dados para o item.|  
+|**FontWeight**|**String**|Retorna a espessura da fonte definida no banco de dados para o item.|  
+|**FontStyle**|**String**|Retorna o estilo da fonte definido no banco de dados para o item.|  
+|**TextDecoration**|**String**|Retorna a formatação de texto especial definida no banco de dados para o item.|  
+|**FormattedValue**|**String**|Retorna um valor formatado para a medida ou o número chave. Por exemplo, a propriedade **FormattedValue** para **Cota do Valor de Vendas** retorna um formato de moeda como US$ 1.124.400,00.|  
 |**Chave**|**Objeto**|Retorna a chave para um nível.|  
 |**LevelNumber**|**Integer**|Para hierarquias pai-filho, retorna o nível ou o número de dimensões.|  
-|**ParentUniqueName**|**Cadeia de caracteres**|Para hierarquias pai-filho, retorna um nome totalmente qualificado do nível pai.|  
+|**ParentUniqueName**|**String**|Para hierarquias pai-filho, retorna um nome totalmente qualificado do nível pai.|  
   
 > [!NOTE]  
 >  Os valores dessas propriedades de campo estendidas passarão a existir somente se a fonte de dados (por exemplo, o cubo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) fornecer esses valores quando você executar e recuperar os dados de seus conjuntos de dados. Dessa forma, você poderá consultar esses valores da propriedade de campo a partir de qualquer expressão usando a sintaxe descrita na seguinte seção. Entretanto, como esses campos são específicos para esse provedor de dados, as alterações que forem feitas nesse valor não serão salvas com a definição de relatório.  
@@ -136,7 +134,7 @@ CELL PROPERTIES
   
  Embora as propriedades façam parte da instrução de seleção MDX, elas não são exibidas nas colunas de conjunto de resultados. No entanto, os dados são disponibilizados para um relatório usando o recurso de propriedades estendidas. No painel de resultados da consulta MDX no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode clicar duas vezes na célula e ver os valores de propriedade da célula, caso eles estejam definidos no cubo. Se clicar duas vezes na primeira célula Contagem de Pedidos que contém 1379, será exibida uma janela com as seguintes propriedades da célula:  
   
-|Propriedade|Value|  
+|Propriedade|Valor|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  
@@ -156,7 +154,7 @@ CELL PROPERTIES
   
  Isso classifica o valor do campo em seu tipo de dados de inteiro original a partir da fonte de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

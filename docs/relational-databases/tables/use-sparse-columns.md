@@ -21,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f387e9c2dae2da689476a4b38290569c8b5c6cc9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 33e750a4fbbd1dc7ae9d1cdec930189f85f3d129
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20 a 40 por cento. As colunas esparsas e os conjuntos de colunas são definidos usando as instruções [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   
@@ -176,11 +176,11 @@ ms.lasthandoff: 11/17/2017
   
      A replicação de mesclagem não oferece suporte a colunas esparsas ou conjuntos de colunas.  
   
--   Controle de alterações  
+-   controle de alterações  
   
      O controle de alterações oferece suporte a colunas esparsas e conjuntos de colunas. Quando um conjunto de colunas é atualizado em uma tabela, o controle de alterações trata isso como uma atualização em toda a linha. Nenhum controle de alteração detalhado é fornecido para obter o conjunto exato de colunas esparsas atualizadas pela operação de atualização de conjunto de colunas. Se as colunas esparsas forem atualizadas explicitamente por uma instrução DML, o controle de alterações funcionará de forma comum e poderá identificar o conjunto exato das colunas alteradas.  
   
--   Change Data Capture  
+-   captura de dados de alterações  
   
      O Change Data Capture oferece suporte a colunas esparsas, mas não a conjuntos de colunas.  
   
@@ -241,7 +241,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

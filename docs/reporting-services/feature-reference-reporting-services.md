@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a6d0e82fcfde8c0cc1cde1daf124bdf6b191ac7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8c0339ff6e6662c4deb271cf38b744ac33678f2f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="feature-reference-reporting-services"></a>Referência de recurso (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui várias ferramentas e aplicativos que podem ser usados para criar, gerenciar e exibir relatórios. Esta seção fornece tópicos específicos que descrevem as caixas de diálogo, as páginas da Web e os assistentes dessas ferramentas e desses aplicativos.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
  [Visualizador de HTML e a barra de ferramentas de relatório](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  Fornece ajuda para o componente Visualizador de HTML usado para exibir relatórios em um navegador da Web.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Relatórios do Reporting Services &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   

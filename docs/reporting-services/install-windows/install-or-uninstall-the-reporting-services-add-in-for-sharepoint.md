@@ -8,20 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2d4daa75f8a339b1b0c83d7920b770e80f44525
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7c5db49ed18a5c025b1f237b59ca78ca5fbdbf71
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Instalar ou desinstalar o suplemento Reporting Services para SharePoint
 
@@ -81,11 +81,11 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\` (SharePoint 2013)
   
-     ou  
+     ou em  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  Configure as definições do servidor de relatório e a ativação de recursos na Administração Central do SharePoint. . Para obter mais informações sobre a instalação e a configuração do modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , veja [Instalar o Primeiro Servidor de Relatório no Modo do SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+3.  Configure as definições do servidor de relatório e a ativação de recursos na Administração Central do SharePoint. para obter informações sobre a ferramenta de configuração e recursos adicionais. Para obter mais informações sobre a instalação e a configuração do modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , veja [Instalar o Primeiro Servidor de Relatório no Modo do SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ###  <a name="bkmk_files_only_installation"></a> Instalação somente de arquivos  
  Para instalar os arquivos, mas ignorar a fase de ações personalizadas da instalação, execute o rssharepoint.msi na linha de comando com a opção SKIPCA.  
@@ -264,7 +264,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  A seguinte tabela resume as opções de rscustomaction.exe:  
   
-|Opção|Descrição|  
+|Opção|Description|  
 |------------|-----------------|  
 |i|Instale as ações personalizadas. Isso registrará os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no SharePoint. Isso reiniciará o W3SVCservice.|  
 |r|Reparar|  
@@ -275,7 +275,7 @@ Rssharepoint.msi /?
 ## <a name="configuring-reporting-services"></a>Configurando o Reporting Services  
  Depois de instalar o suplemento em todos os computadores necessários, configure o servidor de relatório na Administração Central do SharePoint. As etapas necessárias dependem da ordem em que as diferentes tecnologias foram instaladas. Para obter mais informações, veja [Instalar o Primeiro Servidor de Relatório no Modo do SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538) and [Servidor de relatório do Reporting Services &#40;Modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Instalar o Primeiro Servidor de Relatório no Modo do SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
 [Servidor de relatório do Reporting Services &#40;Modo do SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
