@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c15c407c7fae442d7d96b6679d177e864aa632
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fea3020fe77c6f5ac3f69f489a4ab1f0c4af8ccb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-a-custom-task"></a>Codificando uma tarefa personalizada
   Depois de criar uma classe que herda da classe base <xref:Microsoft.SqlServer.Dts.Runtime.Task> e aplicar o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> a essa classe, você deve substituir a implementação das propriedades e dos métodos da classe base para fornecer sua funcionalidade personalizada.  
@@ -176,7 +176,7 @@ End Class
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Contém as variáveis disponíveis para a tarefa. As tarefas usam variáveis pelo VariableDispenser; as tarefas não usam variáveis diretamente. O VariableDispenser bloqueia e desbloqueia as variáveis e impede deadlocks ou substituições.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Contém os métodos chamados pela tarefa para gerar eventos ao mecanismo de tempo de execução.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Contém métodos e propriedades usados pela tarefa para gravar entradas no log de eventos.|  
-|Objeto|Contém o objeto de transação do qual o contêiner faz parte, se houver. Esse valor é passado como um parâmetro ao método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> de um objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
+|Object|Contém o objeto de transação do qual o contêiner faz parte, se houver. Esse valor é passado como um parâmetro ao método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> de um objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
   
 ### <a name="providing-execution-feedback"></a>Fornecendo comentários de execução  
  As tarefas encapsulam seu código em blocos **try/catch** para evitar que sejam geradas exceções para o mecanismo de tempo de execução. Isso assegura que o pacote conclua a execução e não pare inesperadamente. Porém, o mecanismo de tempo de execução fornece outros mecanismos para tratar condições de erro que podem ocorrer durante a execução de uma tarefa. Eles incluem postar mensagens de erro e de aviso, retornar um valor da estrutura do <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>, postar mensagens, retornar o valor <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> e divulgar informações sobre os resultados da execução da tarefa através da propriedade <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>.  
@@ -292,7 +292,7 @@ Public Class SampleTask
 End Class  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
  [Codificar uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [Desenvolver uma interface do usuário para uma tarefa personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  

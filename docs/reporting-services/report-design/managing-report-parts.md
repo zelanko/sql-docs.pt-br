@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
   Partes de relatório podem ser reutilizadas em relatórios paginados por vários usuários e em vários relatórios. Os usuários podem pesquisar partes de relatório no servidor e adicioná-las a um relatório.  Também podem ser informados de atualizações para a parte de relatório no servidor e republicar novas versões de uma parte de relatório. Essas ações de criação de relatório podem ser afetadas e controladas pelas permissões de segurança dos serviços de relatório.  Este tópico revisa as propriedades de parte de relatório e o comportamento depois que elas estão no servidor.  
@@ -81,11 +79,11 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Servidor em modo integrado do SharePoint  
   
-|Ações|Função|  
+|Ações|Role|  
 |-------------|----------|  
 |Adicionar, excluir, editar propriedades de item, gerenciar a segurança e baixar partes de relatório|Controle total|  
 |Adicionar, excluir, editar propriedades de item e baixar partes de relatório|Design<br /><br /> Contribuir|  
-|Pesquisar e reutilizar|Leitura<br /><br /> Exibir Apenas|  
+|Pesquisar e reutilizar|leitura<br /><br /> Exibir Apenas|  
   
 ### <a name="security-considerations"></a>Considerações sobre segurança  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 -   As partes de relatório usam as mesmas políticas de permissão que as existentes no tipo de item "Resource". Dentro de uma pasta, não há nenhuma diferenciação entre itens de recurso tradicionais e partes de relatório a partir de uma perspectiva de herança de segurança. A parte de relatório herdará a mesma política de permissão que as imagens na mesma pasta. Quando esta distinção é necessária, a segurança de nível de item pode ser configurada para as partes de relatório desejadas. Ou você pode colocar partes de relatório que deveriam estar em pastas separadas e que têm as permissões corretas configuradas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Solução de problemas de partes de relatório (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   

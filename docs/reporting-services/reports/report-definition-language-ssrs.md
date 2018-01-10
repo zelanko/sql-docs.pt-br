@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 735811c38ce6073e9dee4dd5b35cf18645a74a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>Linguagem RDL (SSRS)
   A linguagem RDL é uma representação XML de uma definição de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Uma definição de relatório contém informações de layout e recuperação de dados de um relatório. A linguagem RDL é composta por elementos XML que correspondem a uma gramática XML criada para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Você pode adicionar suas próprias funções personalizadas para controlar valores de itens de relatório, estilos e formatação com o acesso a assemblies de código de arquivos de definição de relatório.  
@@ -67,11 +65,11 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_RDL_Types"></a> Tipos RDL  
  A tabela a seguir lista os tipos usados em elementos e atributos RDL.  
   
-|Type|Description|  
+|Tipo|Description|  
 |----------|-----------------|  
 |**Binary**|Uma propriedade com um valor binário codificado na base 64.|  
-|**Boolean**|Uma propriedade que define o valor do objeto como **true** ou **false** . A menos que seja especificado o contrário, o valor de um objeto Booliano opcional omitido é **False**.|  
-|**Data**|Uma propriedade com data ou valor de data/hora completamente especificados no formato de data ISO8601: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
+|**Booliano**|Uma propriedade que define o valor do objeto como **true** ou **false** . A menos que seja especificado o contrário, o valor de um objeto Booliano opcional omitido é **False**.|  
+|**Date**|Uma propriedade com data ou valor de data/hora completamente especificados no formato de data ISO8601: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
 |**Enum**|Uma propriedade com um valor de texto de cadeia de caracteres que deve estar na lista de valores designados.|  
 |**Float**|Uma propriedade com um valor flutuante. O ponto (.) é usado como o separador decimal opcional.|  
 |**Integer**|Uma propriedade com um valor inteiro (int32).|  
@@ -88,13 +86,13 @@ ms.lasthandoff: 12/05/2017
   
 |**Tipo(s) CLR**|**Tipo de dados correspondente**|  
 |-----------------------|---------------------------------|  
-|Boolean|Boolean|  
+|Booliano|Booliano|  
 |DateTime, DateTimeOffset|DateTime|  
 |Int16, Int32, UInt16, Byte, SByte|Integer|  
 |Single, Double|Float|  
-|String, Char, GUID, Timespan|String|  
+|String, Char, GUID, Timespan|Cadeia de caracteres|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Usando assemblies personalizados com relatórios](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Itens de relatório personalizados](../../reporting-services/custom-report-items/custom-report-items.md)  

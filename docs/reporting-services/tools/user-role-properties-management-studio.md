@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 caps.latest.revision: "27"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c6aac4f204d63b6b07a0f84615bb2a37669a781
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f5f631a74f1dfe77e5b7ee8c1f42f7335523576
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="user-role-properties-management-studio"></a>Propriedades de Função do Usuário (Management Studio)
   Use essa página para exibir quais tarefas são incluídas em uma definição de função de nível de item. Essa página também pode ser usada para alterar a lista de tarefas ou modificar uma descrição de função.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/05/2017
  **Nome**  
  Especifica o nome da definição de função.  
   
- **Description**  
+ **Descrição**  
  Exibe uma descrição da definição da função. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esta descrição só é visível nesta página. No Gerenciador de Relatórios, essa descrição ajuda os usuários a decidir se a função deve ser usada em atribuição de função.  
   
  **Tarefa**  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/05/2017
  **Descrição da tarefa**  
  Fornece informações sobre cada tarefa. Você não pode modificar descrições de tarefa.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas em nível de item](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
  [Definições de função](../../reporting-services/security/role-definitions.md)   
  [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   

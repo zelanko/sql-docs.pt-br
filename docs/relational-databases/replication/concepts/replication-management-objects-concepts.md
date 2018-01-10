@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c39d933b13d2ab43432d850c0233c2d0e8916142
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86e4725f0963e5f1f79b4a730b3ae2db6f353b97
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
  [Criar, modificar e excluir publicações e artigos &#40;Replicação&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
  Os tópicos desta seção mostram como usar o RMO para criar, excluir e modificar publicações e artigos.  
   
- [Assinar Publicações](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Assinar publicações](../../../relational-databases/replication/subscribe-to-publications.md)  
  Os tópicos desta seção mostram como usar o RMO para criar, excluir e modificar assinaturas.  
   
  [Proteger uma topologia de replicação](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
@@ -197,8 +197,8 @@ ms.lasthandoff: 11/17/2017
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos dos procedimentos armazenados no sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Conceitos de programação da replicação](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

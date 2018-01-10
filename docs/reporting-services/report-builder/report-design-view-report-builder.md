@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,13 +26,13 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d98e581133e48ec19c9123973a39b6a9c0d3a0ac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c5b5bc4bfaac7322b902cc4ea941c64c6b58f4f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
   A janela do Construtor de Relatórios foi criada para ajudá-lo a organizar facilmente seus recursos de relatório e criar rapidamente os relatórios paginados de que você precisa. A superfície de design está no centro da janela, com a faixa de opções e os painéis em torno dela. A superfície de design é o local em que você adiciona e organiza seus itens de relatório. Este artigo explica os painéis usados para adicionar, selecionar e organizar os recursos de relatório e alterar as propriedades de item de relatório.  
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/05/2017
  O tamanho da superfície de design pode ser diferente do tamanho da área de impressão da página que você especifica para imprimir o relatório. A alteração do tamanho da superfície de design não alterará a área de impressão de seu relatório. Não importa que tamanho você definiu para a área de impressão de seu relatório, o tamanho de área de design completo não é alterado. Para obter mais informações, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!TIP]  
->  Para exibir a régua, na guia **Exibir** , marque a caixa de seleção **Régua** .  
+>  Para exibir a régua, na guia **Exibir**, marque a caixa de seleção **Régua**.  
   
   
 ##  <a name="ReptDataPane"></a> The Report Data Pane  
@@ -172,13 +170,13 @@ ms.lasthandoff: 12/05/2017
  Leia mais sobre [como visualizar um relatório no construtor de relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ### <a name="running-a-report-with-parameters"></a>Executando um relatório com parâmetros  
- Quando é processado, o relatório é processado automaticamente. Se o relatório contiver parâmetros, todos os parâmetros devem ter valores padrão para que o relatório possa ser executado automaticamente. Se um parâmetro não tiver um valor padrão ao ser executado, você precisará escolher um valor para o parâmetro e clicar em **Exibir Relatório** na guia Executar. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Quando é processado, o relatório é processado automaticamente. Se o relatório contiver parâmetros, todos os parâmetros devem ter valores padrão para que o relatório possa ser executado automaticamente. Se um parâmetro não tiver um valor padrão ao ser executado, você precisará escolher um valor para o parâmetro e clicar em **Exibir Relatório** na guia Executar. Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="print-preview"></a>Visualizar Impressão  
  Quando um relatório é visualizado no modo de execução, ele é semelhante a um relatório gerado em HTML. A visualização não é HTML, mas o layout e a paginação do relatório são semelhantes a uma saída em HTML. Você pode alterar a exibição para representar um relatório impresso alternando para o modo Visualizar Impressão. Clique no botão **Visualizar Impressão** na guia **Execução** . O relatório será exibido como se tivesse sido impresso. Essa exibição é semelhante à saída produzida pelas extensões de renderização de Imagem e PDF. Visualizar Impressão não é um arquivo de imagem ou PDF, embora o layout e a paginação do relatório sejam semelhantes à saída desses formatos.  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Construtor de Relatórios no SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

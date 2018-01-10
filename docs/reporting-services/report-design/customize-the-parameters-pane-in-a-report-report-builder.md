@@ -8,20 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7c214ec5fccd3c94d3c910d3d2d887b556ba6884
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0cd8a2752084f8b4f6be1675b657e5a6b5e3dfb3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Personalizar o painel de parâmetros em um relatório (Construtor de Relatórios)
   Ao criar relatórios paginados com parâmetros no Construtor de Relatórios, você pode personalizar o painel Parâmetros. No modo de exibição de Design de relatório, você pode arrastar um parâmetro para uma coluna e linha específicas no painel Parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
     -   No painel de **Dados do Relatório** , clique com o botão direito do mouse no parâmetro e depois clique em **Excluir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

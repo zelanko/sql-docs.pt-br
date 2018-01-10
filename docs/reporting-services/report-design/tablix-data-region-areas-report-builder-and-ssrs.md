@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad8d4cf48040ffca40f971fe1dc070c347b3351b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3bd85c7fee051173c5b6b6860d0e978dacc42d4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Áreas da região de dados Tablix (Construtor de Relatórios e SSRS)
  Em um [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] relatório paginado, uma região de dados tablix tem quatro áreas que contêm células tablix:   
@@ -56,7 +54,7 @@ Na superfície de design, linhas pontilhadas denotam as quatro áreas de uma reg
   
  A área de grupo de linhas exibe duas instâncias de grupo de categoria para Clothing e Components. O grupo de colunas exibe uma instância de grupo de geografia para North America, com duas instâncias de grupo país/região aninhadas para Canada (CA) e United States (US). Além disso, a coluna adjacente exibe duas instâncias de grupo de ano para 2003 e 2004. A linha da coluna Total exibe os totais da linha; a linha de totais que se repete com o grupo da categoria mostra os totais das subcategorias, e a linha de total geral exibe os totais das categorias uma vez para essa região de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tutoriais do Construtor de Relatórios](../../reporting-services/report-builder-tutorials.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

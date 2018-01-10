@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7e004056a630e55ef90112c909b77ca7e801c4d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c05dfdbb99322caa42412c9d2bc2636625cf0b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  
@@ -66,26 +64,26 @@ ms.lasthandoff: 12/05/2017
 |Campo|Description|Padrão|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Esse valor é opcional. O valor padrão é ReportServerServiceHTTP_. Você pode especificar um valor diferente se desejar usar uma convenção de nomeação de arquivo diferente (por exemplo, para incluir o nome do servidor se estiver salvando arquivos de log em um local central).|Sim|  
-|HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|Não|  
-|Data|A data em que a atividade ocorreu.|Não|  
-|Hora|A hora em que a atividade ocorreu.|Não|  
+|HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|não|  
+|data|A data em que a atividade ocorreu.|não|  
+|Hora|A hora em que a atividade ocorreu.|não|  
 |ClientIp|O endereço IP do cliente que acessa o servidor de relatório.|Sim|  
-|UserName|O nome do usuário que acessou o servidor de relatório.|Não|  
-|ServerPort|O número da porta usada para a conexão.|Não|  
-|Host|O conteúdo do cabeçalho do host.|Não|  
+|UserName|O nome do usuário que acessou o servidor de relatório.|não|  
+|ServerPort|O número da porta usada para a conexão.|não|  
+|Host|O conteúdo do cabeçalho do host.|não|  
 |Método|A ação ou método SOAP chamado do cliente.|Sim|  
 |UriStem|O recurso acessado.|Sim|  
-|UriQuery|A consulta usada para acessar o recurso.|Não|  
+|UriQuery|A consulta usada para acessar o recurso.|não|  
 |ProtocolStatus|O código de status HTTP.|Sim|  
-|BytesReceived|O número de bytes recebidos pelo servidor.|Não|  
-|TimeTaken|O tempo (em milissegundos) desde o instante em que HTTP.SYS retorna os dados da solicitação até o servidor concluir o último envio, sem contar o tempo de transmissão de rede.|Não|  
-|ProtocolVersion|A versão de protocolo usada pelo cliente.|Não|  
-|UserAgent|O tipo de navegador usado pelo cliente.|Não|  
-|CookieReceived|O conteúdo do cookie recebido pelo servidor.|Não|  
-|CookieSent|O conteúdo do cookie enviado pelo servidor.|Não|  
-|Referenciador|O site anterior visitado pelo cliente.|Não|  
+|BytesReceived|O número de bytes recebidos pelo servidor.|não|  
+|TimeTaken|O tempo (em milissegundos) desde o instante em que HTTP.SYS retorna os dados da solicitação até o servidor concluir o último envio, sem contar o tempo de transmissão de rede.|não|  
+|ProtocolVersion|A versão de protocolo usada pelo cliente.|não|  
+|UserAgent|O tipo de navegador usado pelo cliente.|não|  
+|CookieReceived|O conteúdo do cookie recebido pelo servidor.|não|  
+|CookieSent|O conteúdo do cookie enviado pelo servidor.|não|  
+|Referenciador|O site anterior visitado pelo cliente.|não|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Log de rastreamento do serviço Servidor de Relatório](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

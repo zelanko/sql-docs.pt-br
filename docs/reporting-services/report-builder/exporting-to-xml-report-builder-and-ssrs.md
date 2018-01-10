@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 450aab8382de0a22729a65b7fe506b2db41d9fc2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d87aa313c0bec7dccfd97feaf3e1771633d773ea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportando para XML (Construtor de Relatórios e SSRS)
   A extensão XML de renderização retorna um relatório paginado no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 |**Float** (ou **Decimal** e qualquer tipo de dados inteiro ou byte)|**xsd:float**|  
 |**Double** (ou **Decimal** e qualquer tipo de dados inteiro ou byte)|**xsd:double**|  
 |**DateTime ou DataTime Offset**|**xsd:dateTime**|  
-|**Hora**|**xsd:string**|  
+|**Time**|**xsd:string**|  
 |**Booliano**|**xsd:boolean**|  
 |**String**, **Char**|**xsd:string**|  
 |Outro|**xsd:string**|  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
  Os valores das variáveis são os seguintes:  
   
-|Nome|Value|  
+|Nome|Valor|  
 |----------|-----------|  
 |Relatório|Report.DataElementName|  
 |ReportURL|URLEncoded URL absoluto para o relatório no servidor.|  
@@ -196,7 +194,7 @@ ms.lasthandoff: 12/05/2017
  Para obter mais informações, consulte [XML Device Information Settings](../../reporting-services/xml-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

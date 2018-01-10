@@ -8,24 +8,22 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: "33"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 981aa87df38c43e33fe573ea769cb686d3fbf59e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c66c095233b8e7642e4c491767ce678218d8ef42
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
+# <a name="reporting-services-data-alerts"></a>Alertas de dados do Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)][!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -140,7 +138,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  A tabela a seguir lista os elementos da configuração para alertas de dados e seus valores padrão, descrições e locais.  
   
-|Configuração|Valor padrão|Description|Local|  
+|Configuração|Valor Padrão|Description|Local|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Número de minutos entre inícios do ciclo de limpeza.|Arquivo de configuração do servidor de relatório|  
 |AlertingExecutionLogCleanupMinutes|10080|Número de minutos para manter entradas do log de execução.|Arquivo de configuração do servidor de relatório|  
@@ -318,13 +316,13 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
 -   [Editar um alerta de dados no Designer de Alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
--   [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
+-   [Gerenciar Meus alertas de dados no Gerenciador de alertas de dados](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
 -   [Gerenciar todos os alertas de dados em um site do SharePoint no Gerenciador de Alertas de Dados](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
 -   [Conceder permissões a usuários e administradores de alerta](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Designer de Alertas de Dados](../reporting-services/data-alert-designer.md)   
 [Gerenciador de Alertas de dados para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4889d5aabf66b97c4dfaae3c59117f678da4f6a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implantação e suporte de versão no SSDT (SQL Server Data Tools)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oferece suporte aos seguintes cenários:  
@@ -69,15 +67,15 @@ ms.lasthandoff: 12/05/2017
   
 |Tipo de Projeto ou Arquivo|Versão|Criar Relatórios|Publicar Relatórios|Observações|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Esquema 2016 RDL|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Esquema 2014 RDL|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Esquema 2012 RDL|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Esquema do 2008 R2 RDL|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Projeto do Servidor de Relatório<br /><br /> ou<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Esquema 2008 RDL|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] apenas|Atualiza o 2003 RDL e o 2005 RDL localmente para o esquema 2008 RDL.|  
+|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Esquema 2016 RDL|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Esquema 2014 RDL|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Esquema 2012 RDL|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Esquema do 2008 R2 RDL|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Esquema 2008 RDL|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] apenas|Atualiza o 2003 RDL e o 2005 RDL localmente para o esquema 2008 RDL.|  
   
  Para obter mais informações sobre como abrir relatórios em uma versão anterior do esquema de definição de relatório, consulte [Atualizar relatórios](../../reporting-services/install-windows/upgrade-reports.md). Para obter mais informações sobre esquemas de definição de relatório específicos, consulte [Especificação de linguagem RDL](http://go.microsoft.com/fwlink/?linkid=116865).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicando fontes de dados e relatórios](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

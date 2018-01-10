@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f105f34e6e5d5c06159c40c8958f097ca5b2512
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd273c3dd52eb3feb0ab4f5db30b4569744e78c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
 A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  
@@ -34,7 +32,7 @@ A tabela a seguir lista as configurações de informações de dispositivos para
 > [!IMPORTANT]  
 >  As configurações de informações de dispositivo listadas na tabela abaixo com um **(\*)** foram preteridas e não devem ser usadas em novos aplicativos. Para obter mais informações, consulte [Recursos preteridos no SQL Server Reporting Services no SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
-|Configuração|Value|  
+|Configuração|Valor|  
 |-------------|-----------|  
 |**AccessibleTablix**|Indica se a renderização será realizada com metadados de acessibilidade adicionais para uso com leitores de tela. Os metadados de acessibilidade adicionais tornam o relatório renderizado compatível com os seguintes padrões técnicos da seção "Informações e Aplicativos de Intranet e Internet na Web" (1194.22) do documento de Normas de Acessibilidade Eletrônica e de Tecnologia da Informação (Seção 508):<br /><br /> (g) Os cabeçalhos de linhas e colunas das tabelas de dados serão identificados.<br /><br /> (h) A marcação será usada para associar células de dados e células de cabeçalho de tabelas de dados que tenham dois ou mais níveis lógicos de cabeçalhos de linha ou coluna.|  
 |**ActionScript(\*)**|Especifica o nome da função JavaScript a usar quando um evento de ação ocorre, como detalhar ou clicar no indicador. Se esse parâmetro for especificado, um evento de ação disparará a função JavaScript nomeada em vez de um postback para o servidor.|  
@@ -61,7 +59,7 @@ A tabela a seguir lista as configurações de informações de dispositivos para
 |**Zoom (\*)**|O valor de zoom do relatório como uma porcentagem de número inteiro ou uma constante de cadeia de caracteres. Os valores de cadeia de caracteres padrão incluem **Page Width** e **Whole Page**. Esse parâmetro é ignorado pelas versões do [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer anteriores ao Internet Explorer 5.0 e por todos os navegadores que não são da[!INCLUDE[msCoName](../includes/msconame-md.md)] . O valor padrão desse parâmetro é **100**.|  
 |**DataVisualizationFitSizing**|Indica comportamento de ajuste de visualização de dados quando dentro de um tablix. Isso inclui gráfico, medidor e mapa.<br /><br /> Os valores possíveis são **Aproximado** e **Exato**.<br /><br /> O valor padrão é **Aproximado**. Se a configuração for removida do arquivo **rsreportserver.config** , o comportamento padrão será **Exato**.<br /><br /> Habilitar **Exato** pode ter impacto de desempenho porque o processamento para determinar o tamanho exato pode levar mais tempo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Passando configurações de informações de dispositivos para extensões de renderização](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  

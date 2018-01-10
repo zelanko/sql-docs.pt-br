@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords: Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d683ce26988ec3edda4706f3fa6903bb52ca556
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 43b324699b0e462f452b106846fe86d5e5e0919a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-view"></a>Modo Design
 No Designer de Relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use o modo de exibição de Design para organizar itens no relatório. O modo Design também é chamado de superfície de design ou modo de layout.  
@@ -41,7 +39,7 @@ Use a Caixa de Ferramentas para selecionar itens a serem colocados nessas três 
 ## <a name="toolbox"></a>Caixa de Ferramentas  
  A Caixa de Ferramentas lista regiões de dados e outros itens que estão disponíveis para seu relatório. Para adicionar itens de relatório da Caixa de Ferramentas, clique duas vezes no item ou arraste-o para a superfície de design. Você poderá alterar a forma e o tamanho usando os identificadores de objetos.  
   
-## <a name="report-data-pane"></a>Painel de Dados do Relatório  
+## <a name="report-data-pane"></a>painel Dados do Relatório  
  Para exibir o painel de dados do relatório, no menu **Exibir** , clique em **Dados do Relatório**. Use esse painel para definir parâmetros, imagens, fontes de dados e conjuntos de dados, bem como para referenciar campos internos, como ReportName. Para adicionar um novo item, clique no menu **Novo** e selecione um item. Para adicionar campos calculados a um conjunto de dados existente, clique em **Conjunto de Dados**e, na caixa de diálogo **Propriedades do Conjunto de Dados** , selecione **Campos**. Selecione um item e clique em **Editar** para abrir a caixa de diálogo **Propriedades** . Você também poderá clicar com o botão direito do mouse em itens do painel de dados do relatório para adicionar itens ou atualizar suas propriedades.  
   
  Arraste itens do painel de dados do relatório para regiões de dados e caixas de texto na superfície de design para adicionar dados e imagens a um relatório.  
@@ -61,7 +59,7 @@ Use a Caixa de Ferramentas para selecionar itens a serem colocados nessas três 
 ## <a name="properties-pane"></a>Painel Propriedades  
  Use o painel Propriedades para exibir as propriedades do item de relatório selecionado na superfície de design ou do grupo selecionado no painel Agrupamento. Se preferir, clique com o botão direito do mouse em um item de relatório ou grupo selecionado e clique em **Propriedades** para abrir a caixa de diálogo **Propriedades** do item de relatório ou do grupo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Dicas de design de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   

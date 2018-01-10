@@ -1,7 +1,7 @@
 ---
 title: Exibir ou alterar as propriedades de um banco de dados | Microsoft Docs
 ms.custom: 
-ms.date: 08/25/2016
+ms.date: 01/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2c3595bd32156fd1a88b343820e46a88d0f2c6a6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6859e361ef42515f13aefc3d648647585d160376
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Exibir ou alterar as propriedades de um banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,8 +135,8 @@ ms.lasthandoff: 01/02/2018
   
 3.  Copie e cole o exemplo a seguir na janela de consulta. O exemplo a seguir define MAXDOP para um banco de dados secundário com o valor do banco de dados primário.  
   
-    ```  
-    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
+    ```sql  
+    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY   
     ```  
   
 ## <a name="see-also"></a>Consulte Também  

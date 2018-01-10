@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,13 +28,13 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b230522d04db42f66884acfcd110e1f1594df5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé nas partes superior e inferior de cada página, respectivamente. Os cabeçalhos e rodapés podem conter texto estático, imagens, linhas, retângulos, bordas, cor e imagens de plano de fundo e expressões. Expressões incluem referências a campos de conjunto de dados de relatórios com exatamente um conjunto de dados e chamadas de função de agregação que incluem o conjunto de dados como um escopo.  
@@ -65,9 +63,9 @@ ms.lasthandoff: 12/05/2017
   
 |Suportado na expressão|Agregações de ReportItems|Agregações de conjunto de dados (o escopo deve ser o nome do conjunto de dados)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Caixas de texto no corpo do relatório|Sim|Não|  
-|&PageNumber|Sim|Não|  
-|&TotalPages|Sim|Não|  
+|Caixas de texto no corpo do relatório|Sim|não|  
+|&PageNumber|Sim|não|  
+|&TotalPages|Sim|não|  
 |Função de agregação|Sim. Por exemplo,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sim. Por exemplo,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Coleção de campos para itens da página|Indiretamente. Por exemplo,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sim. Por exemplo,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Imagem vinculada a dados|Indiretamente. Por exemplo, `=ReportItems!TXT_Photo.Value`|Sim. Por exemplo,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
@@ -134,7 +132,7 @@ ms.lasthandoff: 12/05/2017
   
  Para obter mais informações, consulte [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Inserir uma imagem em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   

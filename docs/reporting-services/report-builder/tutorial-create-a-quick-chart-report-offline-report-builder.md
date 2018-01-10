@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7aeaa7ce698d5fd2b7f0d9823fb89a201bed96eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3851cd1793ddb98c29fddd82654adfba887b44d3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios)
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Gráfico de pizza rápido do Construtor de Relatórios](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Gráfico de pizza rápido do Construtor de Relatórios")  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Se você usa dados XML ou uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)], precisa ter acesso ao Construtor de Relatórios. Você pode iniciar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em modo nativo ou no modo integrado do SharePoint, ou você pode baixar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] do Centro de Download da Microsoft. Para obter mais informações, consulte [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Duas formas de executar este tutorial  

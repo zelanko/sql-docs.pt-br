@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 80dda6c12477a044a8a12c9b50d8fccb18aebb23
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4fcaa7101ebdd8042d0148b4a216335a74af837b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funções do Construtor de Relatórios – Referência de funções de agregação
   Para incluir valores agregados no relatório, é possível usar funções de agregação internas em expressões. A função de agregação padrão para campos numéricos é SUM. É possível editar a expressão e usar uma função de agregação interna diferente ou especificar outro escopo. O escopo identifica qual conjunto de dados deve ser usado no cálculo.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="CalculatingAggregates"></a> Funções de agregação internas  
  As seguintes funções internas calculam valores resumidos para um conjunto de dados numéricos não nulos no escopo padrão ou no escopo nomeado.  
   
-|**Função**|**Description**|  
+|**Função**|**Descrição**|  
 |------------------|---------------------|  
 |[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)|Retorna a média de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.|  
 |[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)|Retorna uma contagem de valores não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.|  
@@ -82,18 +80,18 @@ ms.lasthandoff: 12/05/2017
 |Local no relatório|Campos|Parâmetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variáveis|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Cabeçalho de página<br /><br /> Rodapé de página|Sim|Sim|No máximo um<br /><br /> Observação 1|Sim|Sim|Sim|Sim|  
-|Corpo|Sim<br /><br /> Observação 2|Sim|Apenas itens no escopo atual ou em um escopo contentor<br /><br /> Observação 3|Não|Sim|Sim|Sim|  
-|Parâmetro de relatório|Não|Apenas parâmetros anteriores da lista<br /><br /> Observação 4|Não|Não|Não|Não|Não|  
-|Campo|Sim|Sim|Não|Não|Não|Não|Não|  
-|Parâmetro de consulta|Não|Sim|Não|Não|Não|Não|Não|  
-|Expressão de grupo|Sim|Sim|Não|Não|Sim|Não|Não|  
-|Expressão de classificação|Sim|Sim|Não|Não|Sim|Sim<br /><br /> Observação 5|Não|  
-|Expressão de filtro|Sim|Sim|Não|Não|Sim|Sim<br /><br /> Observação 6|Não|  
-|Código|Não|Sim<br /><br /> Observação 7|Não|Não|Não|Não|Não|  
-|Report.Language|Não|Sim|Não|Não|Não|Não|Não|  
-|Variáveis|Sim|Sim|Não|Não|Sim|Escopo atual ou contentor|Não|  
-|Agregações|Sim|Sim|Apenas cabeçalho da página/rodapé da página|Apenas em agregações de item de relatório|Sim|Não|Não|  
-|Funções de Lookup|Sim|Sim|Sim|Não|Sim|Não|Não|  
+|Corpo|Sim<br /><br /> Observação 2|Sim|Apenas itens no escopo atual ou em um escopo contentor<br /><br /> Observação 3|não|Sim|Sim|Sim|  
+|Parâmetro de relatório|não|Apenas parâmetros anteriores da lista<br /><br /> Observação 4|não|não|não|não|não|  
+|Campo|Sim|Sim|não|não|não|não|não|  
+|Parâmetro de consulta|não|Sim|não|não|não|não|não|  
+|Expressão de grupo|Sim|Sim|não|não|Sim|não|não|  
+|Expressão de classificação|Sim|Sim|não|não|Sim|Sim<br /><br /> Observação 5|não|  
+|Expressão de filtro|Sim|Sim|não|não|Sim|Sim<br /><br /> Observação 6|não|  
+|Código|não|Sim<br /><br /> Observação 7|não|não|não|não|não|  
+|Report.Language|não|Sim|não|não|não|não|não|  
+|Variáveis|Sim|Sim|não|não|Sim|Escopo atual ou contentor|não|  
+|Agregações|Sim|Sim|Apenas cabeçalho da página/rodapé da página|Apenas em agregações de item de relatório|Sim|não|não|  
+|Funções de Lookup|Sim|Sim|Sim|não|Sim|não|não|  
   
 -   **Observação 1.** ReportItems deve existir na página de relatório renderizada ou o seu valor será Nulo. Se a visibilidade de um item de relatório depender de uma expressão que é avaliada como False, o item de relatório não existirá na página.  
   
@@ -118,13 +116,13 @@ ms.lasthandoff: 12/05/2017
   
 |Contexto|RunningValue|RowNumber|First<br /><br /> Last|Previous|Sum e outras funções de classificação prévia|Agregações de ReportItem|Funções de Lookup|Função de agregação|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valor em uso|Não|Não|Não|Não|Sim|Não|Sim|Não|  
-|First<br /><br /> Last|Não|Não|Não|Não|Sim|Não|Não|Não|  
-|Previous|Sim|Sim|Sim|Não|Sim|Não|Sim|Não|  
-|Sum e outras funções de classificação prévia|Não|Não|Não|Não|Sim|Não|Sim|Não|  
-|Agregações de ReportItem|Não|Não|Não|Não|Não|Não|Não|Não|  
-|Funções de Lookup|Sim|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Não|Não|  
-|Função de agregação|Não|Não|Não|Não|Não|Não|Não|Não|  
+|Valor em uso|não|não|não|não|Sim|não|Sim|não|  
+|Primeiro<br /><br /> Last|não|não|não|não|Sim|não|não|não|  
+|Previous|Sim|Sim|Sim|não|Sim|não|Sim|não|  
+|Sum e outras funções de classificação prévia|não|não|não|não|Sim|não|Sim|não|  
+|Agregações de ReportItem|não|não|não|não|não|não|não|não|  
+|Funções de Lookup|Sim|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|Sim<br /><br /> Observação 1|não|não|  
+|Função de agregação|não|não|não|não|não|não|não|não|  
   
 -   **Observação 1.** As funções de agregação só serão permitidas na expressão *Source* de uma função Lookup se a função Lookup não estiver contida em uma agregação. As funções de agregação não são permitidas nas expressões *Destination* ou *Result* de uma função Lookup.  
   
@@ -133,7 +131,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="CalculatingRunningValues"></a> Calculando valores em uso  
  As funções internas a seguir calculam os valores em uso de um conjunto de dados. **RowNumber** é semelhante a **RunningValue** pois retorna o valor em uso de uma contagem que é incrementada para cada linha no escopo contentor. O parâmetro do escopo dessas funções deve especificar um escopo de contenção que controle quando a contagem é reiniciada.  
   
-|**Função**|**Description**|  
+|**Função**|**Descrição**|  
 |------------------|---------------------|  
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|Retorna uma contagem contínua do número de linhas para o escopo especificado. A função **RowNumber** reinicia a contagem em 1, não em 0.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|Retorna uma agregação contínua de todos os valores numéricos não nulos especificados pela expressão, avaliados para o escopo fornecido.|  
@@ -143,7 +141,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingRowCounts"></a> Recuperando contagens de linhas  
  A função interna a seguir calcula o número de linhas no escopo fornecido. Use esta função para contar todas as linhas, inclusive as linhas com valores nulos.  
   
-|**Função**|**Description**|  
+|**Função**|**Descrição**|  
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Retorna o número de linhas no escopo especificado, inclusive as linhas com valores nulos.|  
   
@@ -152,7 +150,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="LookupFunctions"></a> Procurando valores de outro conjunto de dados  
  As funções de pesquisa a seguir recuperam valores de um conjunto de dados especificado.  
   
-|**Função**|**Description**|  
+|**Função**|**Descrição**|  
 |------------------|---------------------|  
 |[Função Lookup](../../reporting-services/report-design/report-builder-functions-lookup-function.md)|Retorna um valor de um conjunto de dados para uma expressão especificada.|  
 |[Função LookupSet](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|Retorna um conjunto de valores de um conjunto de dados para uma expressão especificada.|  
@@ -163,7 +161,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingPostsortValues"></a> Recuperando valores dependentes de classificação  
  As funções internas a seguir retornam o primeiro, o último ou o valor anterior de um escopo fornecido. Estas funções dependem da ordem de classificação dos valores dos dados. Use estas funções, por exemplo, para localizar o primeiro e o último valor em uma página para criar um cabeçalho de página em estilo de dicionário. Use **Previous** para comparar um valor em uma linha com o valor da linha anterior dentro de um escopo específico, por exemplo, para localizar valores de porcentagem ano a ano em uma tabela.  
   
-|**Função**|**Description**|  
+|**Função**|**Descrição**|  
 |------------------|---------------------|  
 |[First](../../reporting-services/report-design/report-builder-functions-first-function.md)|Retorna o primeiro valor no escopo fornecido da expressão especificada.|  
 |[Last](../../reporting-services/report-design/report-builder-functions-last-function.md)|Retorna o último valor no escopo fornecido da expressão especificada.|  
@@ -174,7 +172,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingServerAggregates"></a> Recuperando agregações do servidor  
  A função interna a seguir recupera agregações personalizadas do provedor de dados. Por exemplo, usando um tipo de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , é possível recuperar agregações calculadas no servidor de fonte de dados para uso em um cabeçalho de grupo.  
   
-|**Função**|**Description**|  
+|**Função**|**Descrição**|  
 |------------------|---------------------|  
 |[Agregado](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Retorna uma agregação personalizada da expressão especificada, conforme definido pelo provedor de dados.|  
   
@@ -198,7 +196,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")Voltar ao início  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  

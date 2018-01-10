@@ -8,7 +8,7 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b836c6af9d5862949ec7844d7a88dbc0d349228d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c135d96f93aea211b260c104b260eb9378a5d2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-engine-developer-documentation"></a>Documentação do desenvolvedor do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um rico conjunto de ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
  [Programação da caixa de mensagem de exceção](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Descreve como você pode usar a interface programática da caixa de mensagens de exceção em seus aplicativos de forma a fornecer mais controle sobre a experiência de mensagens, dar aos usuários a opção de salvar o conteúdo de mensagens de erro para referência posterior e obter ajuda com as mensagens.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação de mineração de dados](../analysis-services/data-mining-programming.md)   
  [Documentação do desenvolvedor do Analysis Services](../analysis-services/analysis-services-developer-documentation.md)   
  [Documentação do desenvolvedor do Integration Services](../integration-services/integration-services-developer-documentation.md)   

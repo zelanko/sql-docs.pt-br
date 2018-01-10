@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 2972097a7cc52ee5c73ec05d684de19b56cd1fd6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 722fd9bb97ee8fc3dc5ec618467b9ce028a0bf8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configure-basic-authentication-on-the-report-server"></a>Configurar a autenticação Básica no servidor de relatório
+# <a name="configure-basic-authentication-on-the-report-server"></a>Configurar autenticação básica no Servidor de Relatório
   Por padrão, o Reporting Services aceita solicitações que especificam a autenticação Negotiate e NTLM. Se a sua implantação inclui aplicativos cliente ou navegadores que usam autenticação Básica, adicione a autenticação Básica à lista de tipos suportados. Além disso, para usar o Construtor de Relatórios, você deve habilitar o acesso Anônimo aos arquivos do Construtor de Relatórios.  
   
  Para configurar a autenticação Básica no servidor de relatório, edite os elementos XML e os valores no arquivo RSReportServer.config. É possível copiar e colar os exemplos deste tópico para substituir os valores padrão.  
@@ -89,13 +87,13 @@ ms.lasthandoff: 12/05/2017
 ## <a name="rswindowsbasic-reference"></a>Referência de RSWindowsBasic  
  Os elementos a seguir podem ser especificados na configuração da autenticação Básica.  
   
-|Elemento|Required|Valores válidos|  
+|Elemento|Obrigatório|Valores válidos|  
 |-------------|--------------|------------------|  
 |LogonMethod|Sim<br /><br /> Se você não especificar um valor, será usado 3.|**2** = Logon de rede, indicado para servidores de alto desempenho na autenticação de senhas em texto sem formatação.<br /><br /> **3** = Logon de texto não criptografado, que preserva as credenciais de logon no pacote de autenticação enviado com cada solicitação HTTP, permitindo que o servidor represente o usuário durante a conexão com outros servidores da rede. (Padrão)<br /><br /> Observação: valores 0 (para logon interativo) e 1 (para logon em lotes) **NÃO** têm suporte no [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Opcional|Especifica uma partição de recursos que inclui recursos de autorização e autenticação usados para controlar o acesso a recursos protegidos da organização.|  
 |DefaultDomain|Opcional|Especifica o domínio usado pelo servidor para autenticar o usuário. Este valor é opcional, mas, caso seja omitido, o servidor de relatório usará o nome do computador como domínio. Se o computador for um membro de domínio, esse domínio será o padrão. Se você instalou o servidor de relatório em um controlador de domínio, o domínio usado será o que é controlado pelo computador.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Domínios do aplicativo para aplicativos do Servidor de Relatório](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   
  [Segurança e proteção do Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   

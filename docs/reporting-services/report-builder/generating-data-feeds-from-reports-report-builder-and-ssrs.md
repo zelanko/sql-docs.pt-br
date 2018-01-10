@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 67302564359a939f6ecd96ab9c38303fc9b18efc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d489c44611a716da78c2777b8455727ad11fae28
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Gerando feeds de dados de relatórios (Construtor de Relatórios e SSRS)
 
@@ -115,7 +113,7 @@ ms.lasthandoff: 12/05/2017
  `</entry>`  
   
 ### <a name="working-with-data-feeds"></a>Trabalhando com feeds de dados  
- Todos os feeds de dados gerados pelo relatório incluem os itens de relatório que estão no escopo do pai da região de dados que gera os feeds de dados. . Imagine um relatório que tenha várias tabelas e um gráfico. As caixas de texto no corpo do relatório fornecem texto descritivo de cada região de dados. Toda entrada em cada feed de dados que o relatório gera inclui o valor da caixa de texto. Por exemplo, se o texto for "O gráfico exibe as médias de vendas mensais por região de vendas", todos os três feeds de dados iincluirão esse texto em cada linha.  
+ Todos os feeds de dados gerados pelo relatório incluem os itens de relatório que estão no escopo do pai da região de dados que gera os feeds de dados. para obter informações sobre a ferramenta de configuração e recursos adicionais. Imagine um relatório que tenha várias tabelas e um gráfico. As caixas de texto no corpo do relatório fornecem texto descritivo de cada região de dados. Toda entrada em cada feed de dados que o relatório gera inclui o valor da caixa de texto. Por exemplo, se o texto for "O gráfico exibe as médias de vendas mensais por região de vendas", todos os três feeds de dados iincluirão esse texto em cada linha.  
   
  Se o layout do relatório incluir relações de dados hierárquicas, como regiões de dados aninhadas, essas relações serão incluídas no conjunto de linhas mescladas de dados de relatório.  
   
