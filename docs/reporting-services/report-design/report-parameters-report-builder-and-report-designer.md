@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,13 +22,13 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: "41"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2daf7d7d92e9e0fe3163a06a08d85f5710a8606f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
   Este tópico descreve os usos comuns dos parâmetros de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , as propriedades que você pode definir e muito mais. Parâmetros de relatório o habilitam a controlar dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório. Você pode usar parâmetros de relatório em relatórios paginados criados no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] e no Designer de Relatórios e, também, em relatórios móveis criados no [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Leia mais sobre os [Conceitos de parâmetros de relatório](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
@@ -156,7 +154,7 @@ ms.lasthandoff: 12/05/2017
 |Permitir valor nulo|Selecione esta opção se o valor do parâmetro puder ser nulo.<br /><br /> Se você especificar valores válidos para um parâmetro e desejar que um valor nulo seja um dos valores válidos, deverá incluir nulo como um dos valores que especificar. A seleção desta opção não inclui um valor nulo automaticamente nos valores disponíveis.|  
 |Permitir diversos valores|Forneça valores disponíveis para criar uma lista suspensa na qual seus usuários possam fazer seleções. Essa é uma boa maneira de assegurar que somente valores válidos sejam enviados na consulta de conjunto de dados.<br /><br /> Selecione esta opção se o valor do parâmetro puder ter diversos valores exibidos em uma lista suspensa. Valores nulos são permitidos. Quando essa opção é selecionada, as caixas marcadas são adicionadas à lista de valores disponíveis em uma lista suspensa de parâmetros. A parte superior da lista inclui uma caixa de seleção para **Selecionar Tudo**. Os usuários podem marcar os valores desejados.<br /><br /> Se os dados que fornecem valores forem alterados rapidamente, a lista que o usuário verá talvez não seja a mais atual.|  
 |Visível|Selecione esta opção para exibir o parâmetro de relatório na parte superior do relatório quando ele for executado. Esta opção permite que os usuários selecionem valores de parâmetro em tempo de execução.|  
-|Oculto|Selecione essa opção para ocultar o parâmetro no relatório publicado. Os valores de parâmetro de relatório ainda podem ser definidos em uma URL de relatório, em uma definição de assinatura ou no servidor de relatório.|  
+|Hidden|Selecione essa opção para ocultar o parâmetro no relatório publicado. Os valores de parâmetro de relatório ainda podem ser definidos em uma URL de relatório, em uma definição de assinatura ou no servidor de relatório.|  
 |Internal|Selecione essa opção para ocultar o parâmetro de relatório. No relatório publicado, o parâmetro de relatório só pode ser exibido na definição do relatório.|  
 |Valores disponíveis|Se você especificou valores disponíveis para um parâmetro, os valores válidos sempre aparecerão como uma lista suspensa. Por exemplo, se você fornecer valores disponíveis para um parâmetro **DateTime** , uma lista suspensa para datas aparecerá no painel de parâmetro em vez de um controle de calendário.<br /><br /> Para assegurar que uma lista de valores seja consistente em um relatório e sub-relatórios, você poderá definir uma opção na fonte de dados para usar uma única transação para todas as consultas nos conjuntos de dados que forem associados a uma fonte de dados.<br /><br /> **Observação de segurança** Em qualquer relatório que inclui um parâmetro do tipo de dados **Text**, use uma lista de valores disponíveis (também conhecida como uma lista de valores válidos) e verifique se todos os usuários que executam o relatório têm somente as permissões necessárias para exibir os dados do relatório. Para obter mais informações, consulte [Segurança &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/security-report-builder.md).|  
 |Valores padrão|Defina os valores padrão usando uma consulta ou uma lista estática.<br /><br /> Quando cada parâmetro tem um valor padrão válido, o relatório é executado automaticamente na primeira exibição.|  
@@ -176,7 +174,7 @@ ms.lasthandoff: 12/05/2017
   
  Para um relatório publicado, você pode usar o seguinte:  
   
--   **Propriedades de parâmetros de relatório.** Altere os valores de parâmetro de relatório diretamente no servidor de relatório, de modo independente da definição de relatório.  
+-   **Propriedades de parâmetros de relatório.** Altere os valores de parâmetros de relatório diretamente no servidor de relatório, de modo independente da definição de relatório.  
   
 -   **Relatórios armazenados em cache.** Para criar um plano de cache para um relatório, cada parâmetro deve ter um valor padrão. Para obter mais informações, consulte [Armazenando relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   

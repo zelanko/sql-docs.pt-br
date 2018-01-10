@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd2500d7c1d3dff0ee0a3c41b40e6f35bb4060d5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 048406ef86bc2442e4d065f5461f85dbbd328495
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceitos do Reporting Services (SSRS)
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
  Em um site do SharePoint, use a página de administradores de site do SharePoint para gerenciar permissões de acesso em relatórios e conteúdo de site relacionado a relatórios.  
   
-### <a name="schedules"></a>Agendas
+### <a name="schedules"></a>Agendamentos
  Em um servidor de relatório nativo, você pode agendar relatórios paginados, conjuntos de dados compartilhados e assinaturas para recuperar dados e entregar relatórios e consultas de conjuntos de dados em horários específicos ou fora dos horários de pico. As agendas podem ser executadas uma vez ou continuamente em intervalos de horas, dias, semanas ou meses. Para obter mais informações, consulte [Schedules](../reporting-services/subscriptions/schedules.md).  
   
 ### <a name="subscriptions-and-delivery"></a>Assinaturas e entrega  
@@ -218,7 +216,7 @@ Diagrama de processamento de relatório
  Um relatório exportado é um relatório totalmente paginável em um formato de arquivo específico. Os formatos de exportação dependem das extensões de renderização instaladas e podem ser personalizados. Por padrão, os formatos de exportação incluem Excel, Word, XML, PDF, TIFF e CSV. Para obter mais informações, consulte [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
  [Referência técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

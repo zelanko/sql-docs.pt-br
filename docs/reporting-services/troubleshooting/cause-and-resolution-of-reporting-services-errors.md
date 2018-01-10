@@ -8,9 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3a628528072e711b0fdb7f3266313b2961a630e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4890b29e4fd865495b2d091571d2e80a814e527c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa e resolução de erros do Reporting Services
   Este tópico contém informações sobre causas e resoluções para diversos erros relacionados ao [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Os tópicos de mensagem de erro nesta seção fornecem uma explicação da mensagem de erro, possíveis causas e ações para a correção do problema.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 |[rrRenderingError - Erro do Reporting Services](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|Ocorreu um erro na renderização do relatório. (rrRenderingError) %1.|  
 |[Serviço Windows Servidor de Relatório &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|O serviço Servidor de Relatórios do Windows (MSSQLSERVER) não pode estabelecer conexão com o banco de dados do servidor de relatórios.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   

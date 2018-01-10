@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Criar e configurar um grupo de disponibilidade para o SQL Server no Linux
 
@@ -415,7 +415,7 @@ Este exemplo mostra como criar um grupo de disponibilidade de duas réplicas que
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -479,7 +479,7 @@ Este exemplo mostra três completo réplicas e roteamento como somente leitura p
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -551,7 +551,7 @@ Um cluster de alta disponibilidade de Pacemaker subjacente [!INCLUDE[ssnoversion
     
     GO
     
-    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABLITY GROUP::<AGThatWasCreated> TO PMLogin;
+    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::<AGThatWasCreated> TO PMLogin;
     
     GO
     ```

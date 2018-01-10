@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e16bc12aa7361cd348caeb34fa73f974d4f74add
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c595b197cab784eb3ccc1ab34257868ecdc9e87
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server"></a>Servidor de relatório do Reporting Services
 
@@ -63,16 +61,16 @@ Um servidor de relatório do Reporting Services é executado em um destes dois m
 |**Configuration Manager**|Sim|**\*\* Importante \*\*** O Configuration Manager não pode ser usado para gerenciar servidor de relatório do modo do SharePoint. Em vez disso, use a administração central do SharePoint.|  
 |**Gerenciador de Relatórios**|Sim|O Gerenciador de Relatórios não pode ser usado para gerenciar o modo do SharePoint. Use as páginas do aplicativo do SharePoint. Para obter mais informações, consulte [Serviço SharePoint do Reporting Services e aplicativos de serviço](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Relatórios vinculados**|Sim|Nenhum.|  
-|**Meus Relatórios**|Sim|Não|  
-|**Minhas Assinaturas** e métodos de envio em lote.|Sim|Não|  
-|**Alertas de dados**|Não|Sim|  
-|**Power View**|Não|Sim<br /><br /> Exige o Silverlight no navegador do cliente. Para obter mais informações sobre os requisitos de navegador, veja [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Meus Relatórios**|Sim|não|  
+|**Minhas Assinaturas** e métodos de envio em lote.|Sim|não|  
+|**Alertas de dados**|não|Sim|  
+|**Power View**|não|Sim<br /><br /> Exige o Silverlight no navegador do cliente. Para obter mais informações sobre os requisitos de navegador, veja [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Relatórios .RDL**|Sim|Sim<br /><br /> Os relatórios .RDL podem ser executados em servidores de relatório do Reporting Services no modo nativo ou no modo do SharePoint.|  
-|**Relatórios .RDLX**|Não|Sim<br /><br /> Os relatórios .RDLX do Power View só podem ser executados em servidores de relatório do Reporting Services no modo do SharePoint.|  
-|**Credenciais do token do usuário do SharePoint para a extensão de lista do SharePoint**|Não|Sim|  
-|**As zonas do AAM para implantações voltadas para a Internet**|Não|Sim|  
-|**Backup e recuperação do SharePoint**|Não|Sim|  
-|**Suporte de log ULS**|Não|Sim|  
+|**Relatórios .RDLX**|não|Sim<br /><br /> Os relatórios .RDLX do Power View só podem ser executados em servidores de relatório do Reporting Services no modo do SharePoint.|  
+|**Credenciais do token do usuário do SharePoint para a extensão de lista do SharePoint**|não|Sim|  
+|**As zonas do AAM para implantações voltadas para a Internet**|não|Sim|  
+|**Backup e recuperação do SharePoint**|não|Sim|  
+|**Suporte de log ULS**|não|Sim|  
   
 ## <a name="native-mode"></a>nativo
 
@@ -129,7 +127,7 @@ Um servidor de relatório do Reporting Services é executado em um destes dois m
   
  O Reporting Services fornece extensões padrão para que você possa usar todos os recursos de servidor sem ter de desenvolver componentes personalizados. A tabela a seguir descreve as extensões padrão que contribuem para uma instância de servidor de relatório completa que fornece funcionalidades prontas para uso:  
   
-|Tipo|Default|  
+|Tipo|Padrão|  
 |----------|-------------|  
 |Autenticação|Uma instância de servidor de relatório padrão oferece suporte à Autenticação do Windows, incluindo recursos de representação e delegação, caso estejam habilitados no seu domínio.|  
 |Processamento de dados|Uma instância do servidor de relatório padrão inclui extensões de processamento de dados para fontes de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Parallel Data Warehouse e ODBC.|  

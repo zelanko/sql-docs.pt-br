@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c874a823a27a10f0b915aa7bf6bf221b7dc6ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c254ee33efb4ddd644690747c407cce237fb9112
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propriedades do Reporting Services – propriedades do item de servidor de relatório
   As propriedades de item são propriedades específicas de itens do banco de dados do servidor de relatório. Tais itens incluem relatórios, relatórios vinculados, pastas, recursos, modelos e fontes de dados.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|-----------------|  
 |**CreatedBy**|O nome do usuário que originalmente adicionou o item ao banco de dados do servidor de relatório.|  
 |**CreationDate**|A data e a hora em que o item foi adicionado ao banco de dados do servidor de relatório.|  
-|**Description**|A descrição do item.|  
+|**Descrição**|A descrição do item.|  
 |**Oculto**|Um valor que indica se o item está visível e disponível para usuários.|  
 |**ID**|A ID de um item no banco de dados do servidor de relatório.|  
 |**ModifiedBy**|O nome do usuário que modificou o item por último no banco de dados do servidor de relatório.|  
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|-----------------|  
 |**MimeType**|O tipo MIME de um recurso no banco de dados do servidor de relatório.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Serviço Web do Servidor de Relatório](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Referência técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

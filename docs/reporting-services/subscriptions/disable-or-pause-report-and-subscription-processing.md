@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: affe8545e4bf5ab1cd2db4b2ce8ce0addfba8b8a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 570d6f884ee1e5b2949c38a5e61873d31a646dc5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Desabilitar ou pausar o processamento de relatório e assinatura
   Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste tópico abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com os dois modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As tabelas a seguir resumem os métodos e os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com suporte:  
@@ -43,11 +41,11 @@ ms.lasthandoff: 12/05/2017
   
 ||Modo de servidor com suporte|  
 |-|---------------------------|  
-|[Habilitar e desabilitar assinaturas](#bkmk_disable_subscription)|Modo nativo|  
+|[Habilitar e desabilitar assinaturas](#bkmk_disable_subscription)|nativo|  
 |[Pausar uma agenda compartilhada](#bkmk_pause_schedule)|Modo nativo e do SharePoint|  
 |[Desabilitar uma fonte de dados compartilhada](#bkmk_disable_shared_datasource)|Modo nativo e do SharePoint|  
-|[Modificar atribuições de função para impedir o acesso a um relatório (Modo Nativo)](#bkmk_modify_role_assignment)|Modo nativo|  
-|[Remover permissões de gerenciamento de assinatura da função (modo Nativo)](#bkmk_remove_manage_subscriptions_permission)|Modo nativo|  
+|[Modificar atribuições de função para impedir o acesso a um relatório (Modo Nativo)](#bkmk_modify_role_assignment)|nativo|  
+|[Remover permissões de gerenciamento de assinatura da função (modo Nativo)](#bkmk_remove_manage_subscriptions_permission)|nativo|  
 |[Desabilitar extensões de entrega](#bkmk_disable_extensions)|Modo nativo e do SharePoint|  
   
 ##  <a name="bkmk_disable_subscription"></a> Habilitar e desabilitar assinaturas  
@@ -172,7 +170,7 @@ ForEach ($subscription in $subscriptions)
   
  Depois de ser removida, a extensão de entrega não está mais disponível no Gerenciador de Relatórios ou em um site do SharePoint. A remoção de uma extensão de entrega pode resultar em assinaturas inativas. Exclua as assinaturas ou configure-as para usar uma extensão de entrega diferente antes de remover uma extensão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Configurar o Gerenciador de Relatórios &#40;modo nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   

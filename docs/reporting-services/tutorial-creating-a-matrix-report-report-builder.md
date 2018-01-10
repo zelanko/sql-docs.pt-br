@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5148e4416998d69822fb7aea96304c92b8c2a1e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com uma matriz de dados de vendas de exemplo em grupos de linhas e colunas aninhados. 
@@ -361,14 +361,14 @@ Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima pa
   
 O nome de território é escrito verticalmente, de baixo para cima. A altura do grupo de linhas Territory varia de acordo com o tamanho do nome do território.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Isso conclui o tutorial sobre como criar um relatório de matriz. Para obter mais informações sobre matrizes, consulte: 
 -    [Tabelas, matrizes e listas](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Criar uma matriz](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
 -    [Áreas da região de dados Tablix](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Células, linhas e colunas da região de dados Tablix](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md)  
 [Construtor de Relatórios no SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

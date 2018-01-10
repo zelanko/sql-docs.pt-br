@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2018c910537ea73bc36d1a41f074d9aeae0e9a37
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9e4181a11fafb1629ce10e8ac21a462a1d95f5b2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
   O Construtor de Relatórios é uma ferramenta de criação de relatórios ad hoc instalada com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para o modo nativo ou o modo de integração no SharePoint.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  Para usar o Construtor de Relatórios, você deve ter um modelo de relatório publicado.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  O Construtor de Relatórios não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  O computador cliente deve ter o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 instalado. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece a infraestrutura para executar aplicativos [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
@@ -170,7 +168,7 @@ ms.lasthandoff: 12/05/2017
 |Autenticação Básica|O ClickOnce não dá suporte à autenticação básica. Ele não fará solicitações que especificam a autenticação básica no cabeçalho de autenticação. Não transmitirá credenciais nem solicitará que o usuário as forneça. Você pode resolver esses problemas habilitando o acesso Anônimo aos arquivos de aplicativo do Construtor de Relatórios.<br /><br /> As solicitações serão bem-sucedidas se o acesso Anônimo for habilitado para os arquivos de aplicativo do Construtor de Relatórios porque o servidor de relatórios ignora o cabeçalho de autenticação. Para obter mais informações sobre como habilitar o acesso Anônimo ao Construtor de Relatórios, consulte [Configurar a autenticação Básica no servidor de relatório](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md).<br /><br /> Depois que o ClickOnce recupera os arquivos de aplicativo, o Construtor de Relatórios abre uma conexão separada com um servidor de relatório. Os usuários devem digitar novamente suas credenciais para conectar o Construtor de Relatórios ao servidor de relatório. O Construtor de Relatórios não coleta credenciais a partir do Internet Explorer ou do ClickOnce.<br /><br /> As solicitações falharão se o servidor de relatório estiver configurado para a autenticação básica e você não tiver habilitado o acesso Anônimo aos arquivos de programa do Construtor de Relatórios. A solicitação falha porque o ClickOnce especifica a segurança integrada do Windows em suas solicitações. Se o servidor de relatório for configurado para a autenticação básica, a solicitação será rejeitada porque especifica um pacote de segurança inválido e não tem as credenciais esperadas pelo servidor de relatório.<br /><br /> Além disso, se o servidor de relatório estiver configurado para usar o modo integrado do SharePoint e o site do SharePoint usar a autenticação Básica, os usuários encontrarão um erro 401 quando tentarem usar o ClickOnce para instalar o Construtor de Relatórios em seus computadores cliente. Isso acontece porque o SharePoint usa um cookie para manter um usuário autenticado enquanto durar a sessão, mas o ClickOnce não dá suporte ao cookie. Quando um usuário iniciar um aplicativo ClickOnce, como o Construtor de Relatórios, o aplicativo não passará o cookie para o SharePoint e, portanto, o SharePoint negará o acesso e retornará um erro 401.<br /><br /> Você pode contornar esse problema tentando uma das seguintes opções:<br /><br /> -Selecione a opção **Lembrar minha senha** ao fornecer suas credenciais de usuário.<br /><br /> -Habilite o acesso Anônimo à coleção de sites do SharePoint.<br /><br /> -Configure o ambiente de forma que o usuário não forneça credenciais. Por exemplo, em um ambiente de Intranet, você poderá configurar o servidor do SharePoint para pertencer a um Grupo de Trabalho e, em seguida, criar contas de usuário no computador local.|  
 |Personalizar|Ao configurar um servidor de relatório para usar a autenticação personalizada, o acesso Anônimo é habilitado no servidor de relatório e as solicitações são aceitas sem nenhuma verificação de autenticação.<br /><br /> Depois que o ClickOnce recupera os arquivos de aplicativo, o Construtor de Relatórios abre uma conexão separada com um servidor de relatório. Os usuários devem digitar novamente suas credenciais para conectar o Construtor de Relatórios ao servidor de relatório. O Construtor de Relatórios não coleta credenciais a partir do Internet Explorer ou do ClickOnce.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Autenticação com o servidor de relatório](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)   

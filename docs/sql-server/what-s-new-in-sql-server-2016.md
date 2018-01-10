@@ -23,14 +23,15 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Com o SQL Server 2016, você pode compilar aplicativos críticos inteligentes usando uma plataforma de banco de dados híbrida e escalonável que contém tudo integrado, desde desempenho na memória e segurança avançada até análise no banco de dados. A versão do SQL Server 2016 adiciona novos recursos de segurança, recursos de consulta, integração do Hadoop com a nuvem, análise R e muito mais, juntamente com vários aprimoramentos e melhorias. 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+ Com o SQL Server 2016, você pode compilar aplicativos críticos inteligentes usando uma plataforma de banco de dados híbrido escalonável que contém tudo integrado, desde desempenho na memória e a segurança avançada até análise no banco de dados. A versão do SQL Server 2016 adiciona novos recursos de segurança, recursos de consulta, integração do Hadoop com a nuvem, análise R e muito mais, juntamente com vários aprimoramentos e melhorias. 
 
 Esta página fornece informações de resumo e links para informações mais detalhadas de novidades do SQL Server 2016 para cada componente do SQL Server. 
 
@@ -103,7 +104,7 @@ Confira [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-serv
 
 ## <a name="next-steps"></a>Próximas etapas   
 - [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   
-- [Notas de Versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
+- [Notas de Versão do SQL Server 2016.](../sql-server/sql-server-2016-release-notes.md) 
 - [Folha de dados do SQL Server 2016](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 - [Recursos com suporte nas edições do SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
 - [Requisitos de hardware e software para a instalação do SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)

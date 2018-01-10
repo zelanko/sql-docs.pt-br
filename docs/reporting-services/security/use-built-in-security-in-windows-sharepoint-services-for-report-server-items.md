@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c213a3cf52c65b83609bb5f7a0a1acc1cbbc906
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c805ba92cc4b83e09b4328ab2cffa9947eb93c33
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório
   O SharePoint fornece recursos de segurança interna que você pode usar para acessar itens do servidor de relatório nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões de site e de lista aos usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o SharePoint e um servidor de relatório.  
@@ -56,11 +54,11 @@ ms.lasthandoff: 12/05/2017
 |---------------------------|--------------------------|-----------------|------------------------------|  
 |**Proprietários**|Controle total|Os proprietários têm permissão total para criar, gerenciar e proteger itens e operações do servidor de relatório.|Definir permissões que controlam o acesso a todos os itens do servidor de relatórios armazenados em bibliotecas em todo o site. Definir permissões em um modelo de relatório (também chamado de segurança de item de modelo). Personalizar uma Web Part do Visualizador de Relatórios. Adicionar relatórios e outros itens a bibliotecas. Editar propriedades de itens para relatórios e outros documentos. Excluir relatórios e outros itens. Exibir relatórios, inclusive aqueles que usam modelos de relatórios para exploração de dados. Definir parâmetros em relatórios. Definir opções de processamento em um relatório. Gerar modelos de relatórios. Criar relatórios no Construtor de Relatórios. Criar e gerenciar fontes de dados compartilhados. Criar, alterar e excluir assinaturas de propriedade de qualquer usuário. Criar e gerenciar agendamentos compartilhados usadas em todo o site. Criar e gerenciar versões de um documento, inclusive o histórico de relatórios. Baixar o arquivo de origem de uma definição de relatório ou de um modelo de relatório. Substituir uma definição de relatório, modelo de relatório, fonte de dados compartilhados ou recursos (preservando propriedades e permissões de itens).|  
 |**Membros**|Contribuir|Os membros podem criar novos itens e publicar relatórios de itens e modelos usando ferramentas de criação em uma biblioteca do SharePoint.|Adicionar relatórios e outros itens a bibliotecas. Editar propriedades de itens para relatórios e outros documentos. Excluir relatórios e outros itens. Exibir relatórios, inclusive aqueles que usam modelos de relatórios para exploração de dados. Exibir versões anteriores de um documento, inclusive instantâneos em um histórico de relatórios (exige que o usuário tenha permissão de abrir o relatório para o qual foi criado o histórico de relatórios). Definir parâmetros em relatórios. Definir opções de processamento em um relatório. Gerar modelos de relatórios. Criar relatórios no Construtor de Relatórios. Criar e gerenciar fontes de dados compartilhados. Criar, alterar e excluir assinaturas de propriedade do usuário. Usar agendamentos compartilhados com assinatura. Criar e gerenciar versões de um documento, inclusive o histórico de relatórios. Baixar o arquivo de origem de uma definição de relatório ou de um modelo de relatório. Substituir uma definição de relatório, modelo de relatório, fonte de dados compartilhados ou recursos (preservando propriedades e permissões de itens).|  
-|**Visitantes** e **Visualizadores**|Leitura|Os visitantes podem exibir relatórios|Exibir relatórios, inclusive aqueles que usam modelos de relatórios para exploração de dados.|  
+|**Visitantes** e **Visualizadores**|leitura|Os visitantes podem exibir relatórios|Exibir relatórios, inclusive aqueles que usam modelos de relatórios para exploração de dados.|  
   
  Se você não estiver usando os grupos internos e níveis de permissão, inclua permissões específicas para acessar recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
