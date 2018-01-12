@@ -34,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>-Cláusula SELECT INTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT…INTO cria uma tabela nova no grupo de arquivos padrão e insere nela as linhas resultantes da consulta. Para exibir a sintaxe completa de SELECT, consulte [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,7 @@ Se alguma dessas condições for verdadeira, a coluna será criada como NOT NULL
  Quando uma coluna computada é incluída na lista de seleção, a coluna correspondente na nova tabela não é uma coluna computada. Os valores na nova coluna são os computados no momento em que SELECT...INTO foi executada.  
   
 ## <a name="logging-behavior"></a>Comportamento de log  
- A quantidade de logs de SELECT...INTO depende do modelo de recuperação em vigor para o banco de dados. Nos modelos de recuperação simples ou bulk-logged, as operações em massa são registradas minimamente. Com log mínimo, usando o SELECT... NA instrução pode ser mais eficiente do que criar uma tabela e, em seguida, preencher a tabela com uma instrução INSERT. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ A quantidade de logs de SELECT...INTO depende do modelo de recuperação em vigor para o banco de dados. Nos modelos de recuperação simples ou bulk-logged, as operações em massa são registradas minimamente. Com log mínimo, usando o SELECT... NA instrução pode ser mais eficiente do que criar uma tabela e, em seguida, preencher a tabela com uma instrução INSERT. Para obter mais informações, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 ## <a name="permissions"></a>Permissões  
  Exige permissão CREATE DATABASE no banco de dados de destino.  
@@ -230,7 +230,7 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Criando uma nova tabela como uma cópia de outra tabela e carregá-lo um grupo de arquivos especificado
-A seguir demostrates exemplo criando uma nova tabela como uma cópia de outra tabela e carregá-lo em um grupo de arquivos especificado diferente do grupo de arquivos padrão do usuário.
+O exemplo a seguir demonstra a criação de uma nova tabela como uma cópia de outra tabela e carregá-lo em um grupo de arquivos especificado diferente do grupo de arquivos padrão do usuário.
 
  **Aplica-se a:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
@@ -247,10 +247,10 @@ GO
 SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ```
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Exemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERIR &#40;O Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [IDENTIDADE &#40; Função &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   
