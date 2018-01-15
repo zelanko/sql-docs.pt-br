@@ -1,5 +1,5 @@
 ---
-title: "Conectar-se às fontes de dados e compartilhamentos de arquivo do Azure locais com a Autenticação do Windows | Microsoft Docs"
+title: "Conectar-se a fontes de dados e compartilhamentos de arquivos com a Autenticação do Windows | Microsoft Docs"
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Conectar-se às fontes de dados e compartilhamentos de arquivo do Azure locais com a Autenticação do Windows
 Este artigo descreve como configurar o catálogo do SSIS no Banco de Dados SQL do Azure para executar pacotes que usam a autenticação do Windows para se conectar a compartilhamentos de arquivos do Azure e fontes de dados locais. Você pode usar a autenticação do Windows para se conectar a fontes de dados na mesma rede virtual usada pelo Azure SSIS Integration Runtime, tanto localmente quanto em máquinas virtuais do Azure e em Arquivos do Azure.
@@ -80,7 +80,7 @@ Para verificar se você pode se conectar a um SQL Server local, faça o seguinte
 
 3.  No SSMS, verifique se você pode se conectar ao SQL Server local que você deseja usar.
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 Para se conectar a um SQL Server local de um pacote em execução no Azure, você deve habilitar os seguintes pré-requisitos:
 
 1.  No SQL Server Configuration Manager, habilite o protocolo TCP/IP.

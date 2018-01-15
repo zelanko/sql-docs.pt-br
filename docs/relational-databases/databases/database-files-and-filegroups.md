@@ -1,7 +1,7 @@
 ---
 title: Arquivos e grupos de Arquivos de Banco de Dados | Microsoft Docs
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="database-files-and-filegroups"></a>Arquivos e grupos de arquivos do banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Todo o banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem, no mínimo, dois arquivos de sistema operacional: um arquivo de dados e um arquivo de log. Os arquivos de dados contêm dados e objetos como tabelas, índices, procedimentos armazenados e exibições. Os arquivos de log contêm as informações necessárias para recuperar todas as transações no banco de dados. Os arquivos de dados podem ser agrupados em grupos de arquivos para propósitos de alocação e administração.  
@@ -62,27 +62,36 @@ ms.lasthandoff: 01/02/2018
  Por padrão, os dados e logs de transação são colocados na mesma unidade e caminho. Isto é feito para controlar os sistemas de um único disco. Porém, isto não é o ideal para ambientes de produção. Recomendamos que você coloque os dados e arquivos de log em discos separados.  
 
 ### <a name="logical-and-physical-file-names"></a>Nomes de arquivos lógico e físico
-Os arquivos do SQL Server têm dois nomes: 
+Os arquivos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm dois tipos de nome de arquivo: 
 
-**logical_file_name:**  O logical_file_name é o nome usado para se referir ao arquivo físico em todas as instruções Transact-SQL. O nome de arquivo lógico deve estar de acordo com as regras de identificadores do SQL Server e deve ser exclusivo entre os nomes de arquivos lógicos no banco de dados.
+**logical_file_name:**  O logical_file_name é o nome usado para se referir ao arquivo físico em todas as instruções Transact-SQL. O nome de arquivo lógico deve estar de acordo com as regras de identificadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve ser exclusivo entre os nomes de arquivos lógicos no banco de dados. Isso é definido pelo argumento `NAME` em `ALTER DATABASE`. Para obter mais informações, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-**os_file_name:** O os_file_name denomina é o nome do arquivo físico que inclui o caminho de diretório. Ele deve seguir as regras dos nomes de arquivo de sistema operacional.
+**os_file_name:** O os_file_name denomina é o nome do arquivo físico que inclui o caminho de diretório. Ele deve seguir as regras dos nomes de arquivo de sistema operacional. Isso é definido pelo argumento `FILENAME` em `ALTER DATABASE`. Para obter mais informações, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-Os arquivos de log e os dados do SQL Server podem ser colocados em sistemas de arquivos FAT ou NTFS. Recomendamos o uso do sistema de arquivos NTFS devido aos aspectos de segurança do NTFS. Os grupos de arquivos de dados de leitura/gravação e os arquivos de log não podem ser colocados em um sistema de arquivos compactados NTFS. Só podem ser colocados bancos de dados somente leitura e grupos de arquivos secundários somente leitura em um sistema de arquivos compactados NTFS.
+> [!IMPORTANT]
+> Os arquivos de log e os dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser colocados em sistemas de arquivos FAT ou NTFS. Em sistemas Windows, recomendamos o uso do sistema de arquivos NTFS devido aos aspectos de segurança do NTFS. 
 
-Quando são executadas várias instâncias do SQL Server em um único computador, cada instância recebe um diretório padrão diferente para manter os arquivos dos bancos de dados criados na instância. Para obter mais informações, consulte [Locais de Arquivos para Instâncias Padrão e Nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
+> [!WARNING]
+> Os grupos de arquivos de dados de leitura/gravação e os arquivos de log não podem ser colocados em um sistema de arquivos compactados NTFS. Só podem ser colocados bancos de dados somente leitura e grupos de arquivos secundários somente leitura em um sistema de arquivos compactados NTFS.
+> Para economia de espaço, é altamente recomendável usar a [compactação de dados](../../relational-databases/data-compression/data-compression.md) em vez da compactação do sistema de arquivos.
+
+Quando várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são executadas em um único computador, cada instância recebe um diretório padrão diferente para manter os arquivos dos bancos de dados criados na instância. Para obter mais informações, consulte [Locais de Arquivos para Instâncias Padrão e Nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
 ### <a name="data-file-pages"></a>Páginas de arquivo de dados
-As páginas de um arquivo de dados do SQL Server são numeradas em sequência, iniciando com zero (0) na primeira página do arquivo. Cada arquivo em um banco de dados tem um número de ID de arquivo exclusivo. Para identificar de forma exclusiva uma página em um banco de dados, são necessários ID do arquivo e número de página. O exemplo a seguir mostra os números de página em um banco de dados que tem um arquivo de dados primário de 4 MB e um arquivo de dados secundário de 1 MB.
+As páginas de um arquivo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são numeradas em sequência, iniciando com zero (0) para a primeira página do arquivo. Cada arquivo em um banco de dados tem um número de ID de arquivo exclusivo. Para identificar de forma exclusiva uma página em um banco de dados, são necessários ID do arquivo e número de página. O exemplo a seguir mostra os números de página em um banco de dados que tem um arquivo de dados primário de 4 MB e um arquivo de dados secundário de 1 MB.
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
 
-A primeira página de cada arquivo é uma página de cabeçalho de arquivo que contém informações sobre os atributos do arquivo. Várias outras páginas do início do arquivo também têm informações de sistema, como mapas de alocação. Uma das páginas de sistema armazenada no arquivo de dados primário e no primeiro arquivo de log é uma página de inicialização de banco de dados que contém informações sobre os atributos do banco de dados. Para obter mais informações sobre essas páginas e os tipos de páginas, consulte Noções Básicas sobre Páginas e Extensões.
+A primeira página de cada arquivo é uma página de cabeçalho de arquivo que contém informações sobre os atributos do arquivo. Várias outras páginas do início do arquivo também têm informações de sistema, como mapas de alocação. Uma das páginas de sistema armazenada no arquivo de dados primário e no primeiro arquivo de log é uma página de inicialização de banco de dados que contém informações sobre os atributos do banco de dados. Para obter mais informações sobre páginas e tipos de página, consulte o [Guia de arquitetura de páginas e extensões](../..//relational-databases/pages-and-extents-architecture-guide.md).
 
 ### <a name="file-size"></a>Tamanho do arquivo
-Os arquivos do SQL Server podem aumentar automaticamente do tamanho original especificado. Ao definir um arquivo, você poderá definir um incremento de crescimento específico. Sempre que o arquivo estiver cheio, seu tamanho aumentará com base no incremento de crescimento. Se houver vários arquivos em um grupo de arquivos, eles não crescerão automaticamente até que todos os arquivos estejam cheios. O crescimento acontece na forma de rodízio.
+Os arquivos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem aumentar automaticamente a partir do tamanho original especificado. Ao definir um arquivo, você poderá definir um incremento de crescimento específico. Sempre que o arquivo estiver cheio, seu tamanho aumentará com base no incremento de crescimento. Se houver vários arquivos em um grupo de arquivos, eles não crescerão automaticamente até que todos os arquivos estejam cheios. O aumento ocorre em um modo round robin usando o [preenchimento proporcional](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill).
 
-Cada arquivo também pode ter um tamanho máximo especificado. Se um tamanho máximo não for especificado, o arquivo continuará crescendo até usar todo o espaço disponível no disco. Esse recurso é muito útil quando o SQL Server é usado como um banco de dados inserido em um aplicativo no qual o usuário não tem acesso conveniente a um administrador de sistema. O usuário pode deixar o crescimento automático de arquivos conforme exigido para reduzir a carga administrativa de monitoramento do espaço livre do banco de dados e de alocação manual de espaço adicional. 
+Cada arquivo também pode ter um tamanho máximo especificado. Se um tamanho máximo não for especificado, o arquivo continuará crescendo até usar todo o espaço disponível no disco. Esse recurso é muito útil quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usado como um banco de dados inserido em um aplicativo em que o usuário não tem acesso conveniente a um administrador de sistema. O usuário pode deixar o crescimento automático de arquivos conforme exigido para reduzir a carga administrativa de monitoramento do espaço livre do banco de dados e de alocação manual de espaço adicional.  
+
+Se a [IFI (Inicialização Instantânea de Arquivo)](../../relational-databases/databases/database-instant-file-initialization.md) estiver habilitada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], haverá uma sobrecarga mínima ao alocar um novo espaço a arquivos de dados.
+
+Para obter mais informações sobre o gerenciamento de arquivos de log de transações, consulte [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 
 ## <a name="database-snapshot-files"></a>Arquivos de instantâneo do banco de dados
 O formulário do arquivo usado por um instantâneo do banco de dados para armazenar seus dados de cópia-na-gravação depende de o instantâneo ser criado por um usuário ou usado internamente:
@@ -174,21 +183,22 @@ As regras a seguir pertencem aos arquivos e grupos de arquivos:
 - Um arquivo pode ser um membro apenas de um único grupo de arquivos.
 - Os arquivos de log de transação nunca integram nenhum grupo de arquivos.
 
-## <a name="recommendations"></a>Recomendações
+## <a name="Recommendations"></a> Recomendações
 A seguir, algumas recomendações gerais para quando se estiver trabalhando com arquivos e grupos de arquivos: 
 - A maioria dos bancos de dados funcionará bem com um único arquivo de dados e um único arquivo de log de transação.
-- Quando vários arquivos forem usados, crie um segundo grupo de arquivos para o arquivo adicional e transforme o grupo de arquivos em padrão do grupo de arquivos. Desse modo, o arquivo primário conterá somente tabelas e objetos do sistema.
+- Se estiver usando vários arquivos de dados, crie um segundo grupo de arquivos para o arquivo adicional e transforme o grupo de arquivos no grupo de arquivos padrão. Desse modo, o arquivo primário conterá somente tabelas e objetos do sistema.
 - Para maximizar o desempenho, crie arquivos ou grupos de arquivos no maior número possível de discos disponíveis diferentes. Insira objetos que disputem pesadamente por espaço em diferentes grupos de arquivos.
 - Use grupos de arquivos para ativar a colocação de objetos em discos físicos específicos.
 - Insira tabelas diferentes usadas nas mesmas consultas de junção em diferentes grupos de arquivos. Isto aperfeiçoará o desempenho por conta da busca por dados adicionados pela E/S paralela do disco.
 - Insira tabelas excessivamente acessadas e índices não clusterizados que pertençam às tabelas de diferentes grupos de arquivos. Isto aperfeiçoará o desempenho por causa da E/S paralela caso os arquivos estejam localizados em discos físicos diferentes.
 - Não insira os arquivos de log de transação no mesmo disco físico que contém os outros arquivos e grupos de arquivos.
 
+Para obter mais informações sobre recomendações sobre o gerenciamento de arquivos de log de transações, consulte [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
+
 ## <a name="related-content"></a>Conteúdo relacionado  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
- [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-  
- [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 
+ [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
+ [Guia de arquitetura de página e extensões](../../relational-databases/pages-and-extents-architecture-guide.md)    
+ [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     

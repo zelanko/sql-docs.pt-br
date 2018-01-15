@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd1193331cc9658a4703a39201219896c0e921d0
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Recursos do Integration Services compatíveis com as edições do SQL Server
  Este tópico fornece detalhes sobre os recursos do SSIS (SQL Server Integration Services) com suporte nas diferentes edições do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
@@ -63,7 +63,7 @@ A edição Evaluation do SQL Server está disponível por um período de avalia�
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Conectores internos de fonte de dados|Sim|Sim|||| 
 |Tarefas e transformações internas|Sim|Sim||||  
-|Origem e destino do ODBC da Attunity|Sim|Sim|||| 
+|Origem e destino ODBC |Sim|Sim|||| 
 |Tarefas e conectores de fonte de dados do Azure|Sim|Sim||||  
 |Tarefas e conectores do Hadoop/HDFS|Sim|Sim||||  
 |Ferramentas de criação de perfil de dados básicos|Sim|Sim|||| 

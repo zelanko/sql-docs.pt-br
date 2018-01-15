@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [Requisitos de hardware e software para a instalação do SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): examine os requisitos de software para a instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se for necessário um software adicional, instale-o em cada nó antes de começar o processo de atualização para minimizar qualquer tempo de inatividade.  
 
 > [!NOTE]  
->  Não há suporte para a combinação de versões do SQL Server no mesmo AG. Para migrar para uma nova versão usando grupos de disponibilidade, o único método com suporte é um grupo de disponibilidade distribuído que esteja no SQL Server 2016 Enterprise Edition ou posterior.
+>  Não há suporte para a combinação de versões do SQL Server no mesmo AG fora de uma atualização sem interrupção que faz upgrade das réplicas em vigor. Isso significa que uma versão posterior do SQL Server não pode ser adicionada como uma nova réplica a um AG existente. Por exemplo, uma réplica do SQL Server 2017 não pode ser adicionada a um AG existente do SQL Server 2016. Para migrar para uma nova versão do SQL Server usando grupos de disponibilidade, o único método com suporte é um grupo de disponibilidade distribuído que esteja no SQL Server 2016 Enterprise Edition ou posterior.
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Práticas recomendadas de atualização sem interrupção de grupos de disponibilidade AlwaysOn  
  As práticas recomendadas a seguir devem ser observadas durante as atualizações de servidor para minimizar o tempo de inatividade e a perda de dados dos grupos de disponibilidade:  

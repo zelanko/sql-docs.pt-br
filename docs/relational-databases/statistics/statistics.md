@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44f813225666c0d4259c061488d776318a27ba72
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c4fc025cd2026ee0310f67c80a3a05fbd3da45c7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="statistics"></a>Estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] O Otimizador de Consulta usa estatísticas para criar planos de consulta que melhoram o desempenho das consultas. Para a maioria das consultas, o otimizador de consulta já gera as estatísticas necessárias para um plano de consulta de alta qualidade. Em alguns casos, é necessário criar estatísticas adicionais ou modificar o design da consulta para obter melhores resultados. Este tópico aborda os conceitos de estatísticas e fornece diretrizes para o uso eficiente de estatísticas de otimização de consultas.  
@@ -73,7 +73,7 @@ Para cada etapa do histograma acima:
   
 -   As linhas pontilhadas representam os valores amostrados usados para estimar o número total de valores distintos no intervalo (*distinct_range_rows*) e o número total de valores no intervalo (*range_rows*). O otimizador de consulta usa *range_rows* e *distinct_range_rows* para calcular *average_range_rows* e não armazena os valores amostrados.   
   
-#### <a name="density"></a> Vetor de densidade  
+#### <a name="density"></a>Vetor de densidade  
 **Densidade** são informações sobre o número de duplicatas em determinada coluna ou em uma combinação de colunas e ele é calculada como 1/(número de valores distintos). O otimizador de consulta usa densidades para aprimorar as estimativas de cardinalidade de consultas que retornam várias colunas da mesma tabela ou exibição indexada. O vetor de densidade contém uma densidade para cada prefixo de colunas no objeto de estatísticas. 
 
 > [!NOTE]
@@ -93,7 +93,7 @@ Por exemplo, se um objeto de estatísticas tiver as colunas de chave `CustomerId
 ### <a name="statistics-options"></a>Opções de estatísticas  
  Há três opções que você pode definir que afetam quando e como as estatísticas são criadas e atualizadas. Estas opções são definidas no nível do banco de dados somente.  
   
-#### <a name="autocreatestatistics-option"></a>Opção AUTO_CREATE_STATISTICS  
+#### <a name="AutoUpdateStats"></a>Opção AUTO_CREATE_STATISTICS  
  Quando a opção de criação automática de estatísticas, [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics), está ativada, o otimizador de consulta cria estatísticas em colunas individuais no predicado da consulta, conforme necessário, a fim de melhorar as estimativas de cardinalidade do plano de consulta. Essas estatísticas de coluna única são criadas em colunas que ainda não têm um [histograma](#histogram) em um objeto de estatísticas existente. A opção AUTO_CREATE_STATISTICS não determina se são criadas estatísticas para índices. Essa opção também não gera estatísticas filtradas. Ela se aplica estritamente a estatísticas de coluna única para a tabela completa.  
   
  Quando o otimizador de consulta cria estatísticas como resultado do uso da opção AUTO_CREATE_STATISTICS, os nomes das estatísticas começam com `_WA`. Você pode usar a consulta a seguir para determinar se o otimizador de consulta criou estatísticas para uma coluna de predicado de consulta.  

@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 514818fce9654a720dac0a0721697b30bdcab787
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-flow-components"></a>Componentes de fluxo ODBC
   Este tópico descreve os conceitos necessários para criar um fluxo de dados ODBC usando [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- O ODBC da Attunity para [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ajuda os desenvolvedores do SSIS facilmente a criar pacotes facilmente que carregam e descarregam dados de bancos de dados com suporte do ODBC.  
+ O Conector para ODBC para o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ajuda os desenvolvedores do SSIS a criar pacotes com facilidade que carregam e descarregam dados de bancos de dados com suporte do ODBC.  
   
  O Conector ODBC foi criado para obter o desempenho ideal ao carregar ou descarregar dados de um banco de dados com suporte ODBC no contexto do [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   

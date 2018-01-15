@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be67496825da165dca22ed5074e0e1ee67a32a56
-ms.sourcegitcommit: d8d602898e80797e330aab54e53ee7dde8282e21
+ms.openlocfilehash: b26a0a774c6f1f6dcb7dd9b01c732be336f76b94
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="configure-distributed-availability-group"></a>Configurar um grupo de disponibilidade distribuído  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Para criar um grupo de disponibilidade distribuído, você deve criar um grupo d
 
 Para obter uma visão geral técnica dos grupos de disponibilidade distribuídos, consulte [Grupos de disponibilidade distribuídos](distributed-availability-groups.md).   
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Definir os ouvintes do ponto de extremidade para escutar em todos os endereços IP
 
@@ -220,7 +220,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];
 No momento, apenas o failover manual é permitido. A seguinte instrução Transact-SQL faz failover de um grupo de disponibilidade distribuído denominado `distributedag`:  
 
 
-1. Defina o modo de disponibilidade como confirmação síncrona para o grupo de disponibilidade secundário. 
+1. Defina o modo de disponibilidade como confirmação síncrona para ambos os grupos de disponibilidade. 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
@@ -229,7 +229,7 @@ No momento, apenas o failover manual é permitido. A seguinte instrução Transa
       'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = MANUAL, 
           SEEDING_MODE = MANUAL 
           ), 

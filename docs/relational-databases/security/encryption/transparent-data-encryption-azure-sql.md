@@ -18,11 +18,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: a3fee8259aab2901eaf7950d4255d78d1860eeda
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 39e1807178f536a1bac2148deae406b1e3bb44b5
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption para Data Warehouse e Banco de Dados SQL do Azure
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ A Microsoft também move e gerencia diretamente as chaves conforme necessário p
 > Todos os bancos de dados SQL recém-criados são criptografados por padrão usando a TDE gerenciada por serviço. Bancos de dados existentes antes de maio de 2017 e bancos de dados criados por meio de restauração, replicação geográfica e cópia de banco de dados não são criptografados por padrão.
 >
 
-## <a name="bring-your-own-key"></a>Bring Your Own Key
+## <a name="bring-your-own-key-preview"></a>Bring Your Own Key (versão prévia)
 
-O suporte a BYOK (Bring Your Own Key) permite que o usuário tenha controle sobre suas chaves de criptografia de TDE e controle quem pode acessá-las e quando. O AKV (Azure Key Vault), que é o sistema de gerenciamento de chaves externas baseado em nuvem do Azure, é o primeiro serviço de gerenciamento de chaves integrado com TDE para suporte a BYOK. Com o BYOK, a chave de criptografia do banco de dados é protegida por uma chave assimétrica armazenada no AKV. A chave assimétrica nunca deixa o Key Vault. Depois que o servidor tem permissões para um cofre de chaves, o servidor envia solicitações de operação de chave básica para ele por meio do serviço do Key Vault. A chave assimétrica é definida no nível do servidor e herdada por todos os bancos de dados no servidor. Com suporte a BYOK, os usuários agora podem controlar tarefas de gerenciamento de chaves, incluindo rotações de chave, permissões do cofre de chaves, exclusão de chaves e habilitação de auditoria/relatórios em todas as chaves de criptografia. O Key Vault fornece o gerenciamento de chaves central, aproveita os HSMs (módulos de segurança de hardware) monitorados e promove a separação do gerenciamento de chaves e de dados para ajudar a atender às conformidades regulatórias. Para saber mais sobre o Key Vault, visite o [página de documentação do Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
+O suporte a BYOK (Bring Your Own Key) (em versão prévia) permite que o usuário tenha controle sobre suas chaves de criptografia TDE e controle sobre quem pode acessá-las e quando. O AKV (Azure Key Vault), que é o sistema de gerenciamento de chaves externas baseado em nuvem do Azure, é o primeiro serviço de gerenciamento de chaves integrado com TDE para suporte a BYOK. Com o BYOK, a chave de criptografia do banco de dados é protegida por uma chave assimétrica armazenada no AKV. A chave assimétrica nunca deixa o Key Vault. Depois que o servidor tem permissões para um cofre de chaves, o servidor envia solicitações de operação de chave básica para ele por meio do serviço do Key Vault. A chave assimétrica é definida no nível do servidor e herdada por todos os bancos de dados no servidor. Com suporte a BYOK, os usuários agora podem controlar tarefas de gerenciamento de chaves, incluindo rotações de chave, permissões do cofre de chaves, exclusão de chaves e habilitação de auditoria/relatórios em todas as chaves de criptografia. O Key Vault fornece o gerenciamento de chaves central, aproveita os HSMs (módulos de segurança de hardware) monitorados e promove a separação do gerenciamento de chaves e de dados para ajudar a atender às conformidades regulatórias. Para saber mais sobre o Key Vault, visite o [página de documentação do Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 
 Para saber mais sobre a TDE com suporte a BYOK para Data Warehouse e Banco de dados SQL do Azure, consulte [Transparent Data Encryption com suporte a Bring Your Own Key](transparent-data-encryption-byok-azure-sql.md).
 

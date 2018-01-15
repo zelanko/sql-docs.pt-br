@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (Banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,20 @@ catalog.create_execution [@folder_name = folder_name
  [@runinscaleout =] *runinscaleout*  
  Indique se a execução está no Scale Out. Use o valor 1 para executar o pacote no Scale Out. Use o valor 0 para executar o pacote sem o Scale Out. Esse parâmetro é opcional. Se o valor não for especificado, ele será definido como DEFAULT_EXECUTION_MODE em [SSISDB].[catalog].[catalog_properties]. O *runinscaleout* é **bit**. 
  
- [@useanyworker =] *useanyworker*  
-  Indique se qualquer Trabalho do Scale Out tem permissão para fazer a execução. Use o valor 1 para executar o pacote com qualquer Trabalho do Scale Out. Use o valor 0 para indicar que nem todos os Trabalhos do Scale Out têm permissão para executar o pacote. Esse parâmetro é opcional. Se o valor não for especificado, ele será definido como 1. O *useanyworker* é **bit**. 
+[@useanyworker =] *useanyworker*  
+Indique se qualquer Trabalho do Scale Out tem permissão para fazer a execução.
+
+-   Use o valor 1 para executar o pacote com qualquer Trabalho do Scale Out. Ao definir `@useanyworker` como verdadeiro, qualquer trabalho cuja contagem máxima de tarefas (conforme especificado no arquivo de configuração do trabalho) ainda não tenha sido atingida estará disponível para executar o pacote.
+
+-   Use o valor 0 para indicar que nem todos os Trabalhos do Scale Out têm permissão para executar o pacote. Ao definir `@useanyworker` como falso, você precisará especificar os trabalhos que têm permissão para executar o pacote usando o Gerenciador do Scale Out ou chamando o procedimento armazenado `[catalog].[add_execution_worker]`.
+
+Esse parâmetro é opcional. Se o valor não for especificado, ele será definido como 1. O *useanyworker* é **bit**. 
   
  [@execution_id =] *execution_id*  
  Retorna o identificador exclusivo de uma instância de execução. O *execution_id* é **bigint**.  
 
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Uma execução é usada para especificar os valores de parâmetro que um pacote usa durante uma única instância de execução do pacote.  
   
  Se uma referência de ambiente for especificada com o parâmetro *reference_id*, o procedimento armazenado populará os parâmetros de projeto e pacote com valores literais ou valores referenciados das variáveis de ambiente correspondentes. Se referência de ambiente for especificada, valores de parâmetro padrão serão usados durante a execução do pacote. Para determinar exatamente quais valores são usados para uma determinada instância de execução, use o valor de parâmetro de saída *execution_id* desse procedimento armazenado e consulte a exibição [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
@@ -97,7 +103,7 @@ GO
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -133,8 +139,8 @@ GO
   
 -   As variáveis de ambiente referenciadas não podem ser localizadas no ambiente especificado pela referência de ambiente *reference_id*.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [catalog.start_execution &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
- [catalog.set_execution_parameter_value &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  [catalog.add_execution_worker &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
   

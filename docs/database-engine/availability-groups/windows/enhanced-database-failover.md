@@ -20,11 +20,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2050eed47dbe036cf0b51c9acb3fb823f4c6fa60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Adicionar um failover de banco de dados avançado a um grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Isso tem a mesma configuração de grupo de disponibilidade do Cenário 1. Em ve
 
 Um grupo de disponibilidade é configurado entre a Instância A e a Instância B, que contém dois bancos de dados: DB1 e DB2. O modo de disponibilidade é definido como confirmação síncrona com um modo de failover automático e o failover de banco de dados avançado está habilitado. O acesso ao disco que contém dados e os arquivos de log de transações do DB2 é perdido. Quando o problema for detectado, o grupo de disponibilidade fará failover automaticamente para a Instância B.
 
-## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Configurar e exibir a opção de failover de banco de dados avançado
+## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Configurar e exibir a opção de failover de banco de dados avançado
 
 O failover de banco de dados avançado pode ser configurado com o SQL Server Management Studio ou o Transact-SQL. Atualmente, os cmdlets do PowerShell não têm essa capacidade. Por padrão, o failover de banco de dados avançado está desabilitado.
 
@@ -55,11 +55,11 @@ O failover de banco de dados avançado pode ser configurado com o SQL Server Man
 
 *Criação manual de grupo de disponibilidade*
 
-Use as instruções encontradas no tópico [Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) para criar o grupo de disponibilidade. Para habilitar o failover de banco de dados avançado, marque sua caixa de seleção ao lado de *Detecção de Integridade no Nível do Banco de Dados*.
+Use as instruções encontradas no artigo [Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) para criar o grupo de disponibilidade. Para habilitar o failover de banco de dados avançado, marque sua caixa de seleção ao lado de *Detecção de Integridade no Nível do Banco de Dados*.
 
 *Usando o Assistente de Grupo de Disponibilidade*
 
-Use as instruções encontradas no tópico [Usar o Assistente de Grupo de Disponibilidade (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md). A opção para habilitar o failover de banco de dados avançado foi encontrada na caixa de diálogo Especificar Nome do Grupo de Disponibilidade. Para habilitá-la, marque a caixa ao lado de *Detecção de Integridade no Nível do Banco de Dados*.
+Use as instruções encontradas no artigo [Usar o Assistente de Grupo de Disponibilidade (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md). A opção para habilitar o failover de banco de dados avançado foi encontrada na caixa de diálogo Especificar Nome do Grupo de Disponibilidade. Para habilitá-la, marque a caixa ao lado de *Detecção de Integridade no Nível do Banco de Dados*.
 
 ### <a name="transact-sql"></a>Transact-SQL
 
@@ -79,7 +79,7 @@ Para desabilitar esse comportamento, emita o seguinte comando ALTER AVAILABILITY
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>Exibição de gerenciamento dinâmico
-Para ver se um grupo de disponibilidade foi habilitado para o failover de banco de dados avançado, consulte a exibição de gerenciamento dinâmico `sys.availablity_groups`. A coluna `db_failover` terá um zero se ele estiver desabilitado ou 1 se estiver habilitado. 
+Para ver se um grupo de disponibilidade foi habilitado para o failover de banco de dados avançado, consulte a exibição de gerenciamento dinâmico `sys.availability_groups`. A coluna `db_failover` terá um zero se ele estiver desabilitado ou 1 se estiver habilitado. 
 
 ## <a name="next-steps"></a>Próximas etapas 
 

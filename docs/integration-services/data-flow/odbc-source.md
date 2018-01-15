@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42eb0885558003d4810e873d95876bd8ac6da14b
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-source"></a>Origem ODBC
   A origem ODBC extrai dados de um banco de dados com suporte do ODBC usando uma tabela de banco de dados, uma exibição ou uma instrução SQL.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
  Dependendo da configuração de comportamento de erro, a origem ODBC oferece suporte ao retorno de erros (conversão de dados, truncamento) que ocorre durante o processo de extração na saída de erro. Para obter mais informações, consulte [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
- Para obter informações sobre os tipos de dados com suporte da origem ODBC, consulte Conector para ODBC da Attunity.  
+ Para obter informações sobre os tipos de dados com suporte da fonte ODBC, consulte Conector para ODBC.  
   
 ## <a name="extract-options"></a>Extrair opções  
  A origem ODBC opera no modo **Lote** ou **Linha a Linha** . O modo usado é determinado pela propriedade **FetchMethod** . A lista seguinte descreve os modos.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obter mais informações sobre a propriedade **FetchMethod** , consulte [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Paralelismo  
+## <a name="parallelism"></a>Parallelism  
  Não há nenhuma limitação no número de componentes de origem ODBC que podem ser executados em paralelo na mesma tabela ou tabelas diferentes, na mesma máquina ou em máquinas diferentes (diferente de limites de sessão globais normais).  
   
  No entanto, as imitações do provedor ODBC sendo usado podem restringir o número de conexões simultâneas pelo provedor. Essas limitações restringem o número de instâncias paralelas com suporte possível para a fonte ODBC. O desenvolvedor SSIS deve estar consciente das limitações de qualquer provedor ODBC usado e considerá-las ao compilar pacotes SSIS.  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="options"></a>Opções  
   
-#### <a name="connection-manager"></a>Gerenciador de Conexões  
+#### <a name="connection-manager"></a>Gerenciador de conexões  
  Selecione na lista um gerenciador de conexões ODBC existente ou clique em **Novo** para criar uma nova conexão. A conexão pode ser com qualquer banco de dados com suporte ODBC.  
   
 #### <a name="new"></a>Nova  
@@ -167,7 +167,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="inputoutput"></a>Entrada/Saída  
  Exibe o nome da fonte de dados.  
   
-#### <a name="column"></a>Coluna  
+#### <a name="column"></a>coluna  
  Não usado.  
   
 #### <a name="error"></a>Erro  
